@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--Akoma_Ntoso document-->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <doc contains="originalVersion" name="Appendix">
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/za/report/2007-03-22/main/appendix1"/>
+                    <FRBRuri value="/za/report/2007-03-22"/>
+                    <FRBRdate date="2007-03-22" name="Generation"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <componentInfo>
+                        <componentData id="wappendix1" href="#wappendix1" name="appendix1" showAs="APPENDIX 1"/>
+                    </componentInfo>
+                    <FRBRcountry value="za"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/za/report/2007-03-22/eng@/main/appendix1"/>
+                    <FRBRuri value="/za/report/2007-03-22/eng@"/>
+                    <FRBRdate date="2009-02-21" name="Generation"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="eappendix1" href="#eappendix1" name="appendix1" showAs="APPENDIX 1"/>
+                    </componentInfo>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/za/report/2007-03-22/eng@/main/appendix1.xml"/>
+                    <FRBRuri value="/za/report/2007-03-22/eng@.akn"/>
+                    <FRBRdate date="2009-02-21" name="XMLMarkup"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="mappendix1" href="annex1.xml" name="appendix1" showAs="APPENDIX 1"/>
+                    </componentInfo>
+                </FRBRManifestation>
+            </identification>
+            <publication name="publication" date="2007-03-22" showAs="publication" number="444"/>
+            <classification source="#bungeni">
+                <keyword value="PORTFOLIO COMMITTEE ON DEFENCE" showAs="PORTFOLIO COMMITTEE ON DEFENCE" dictionary=""/>
+                <keyword value="BUDGET OF THE DEPARTMENT OF DEFENCE" showAs="BUDGET OF THE DEPARTMENT OF DEFENCE"
+                         dictionary=""/>
+            </classification>
+            <lifecycle source="#bungeni">
+                <eventRef id="e1" date="2007-03-22" source="#ro1" type="generation"/>
+            </lifecycle>
+            <references source="#bungeni">
+                <original id="ro1" href="/za/report/2007-03-22/eng@/main" showAs="Original"/>
+                <TLCOrganization id="parliament" href="/ontology/organization/za/za.parliament"
+                                 showAs="Parliament of Kenya"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/za/za.bungeni" showAs="Bungeni"/>
+                <TLCOrganization id="dod" href="/ontology/organization/za/za.departmentofdefence"
+                                 showAs="DEPARTMENT OF DEFENCE"/>
+                <TLCPerson id="cervone" href="/ontology/person/editors/it.cervone" showAs="Luca Cervone"/>
+                <TLCRole id="author" href="/ontology/roles/author" showAs="Author"/>
+                <TLCRole id="editor" href="/ontology/roles/editor" showAs="Editor"/>
+                <TLCRole id="generalDirector" href="/ontology/roles/director" showAs="General Director"/>
+                <TLCPerson id="jm" href="/ontology/organization/za/za.departmentofdefence/januarimasilea"
+                           showAs="Mr January Masilela"/>
+                <TLCPerson id="tm" href="/ontology/organization/za/za.departmentofdefence/tsepemotumi"
+                           showAs="Mr Tsepe Motumi"/>
+                <TLCPerson id="lgr" href="/ontology/organization/za/za.departmentofdefence/liutenants/rinusvanrensburg"
+                           showAs="Lieutenant General Rinus van Rensburg"/>
+                <TLCPerson id="lgm" href="/ontology/organization/za/za.departmentofdefence/liutenants/mtanzima"
+                           showAs="Lieutenant General Mtanzima"/>
+                <TLCPerson id="av" href="/ontology/organization/za/za.departmentofdefence/antonvisser"
+                           showAs="Mr Anton Visser"/>
+                <TLCPerson id="rr" href="/ontology/organization/za/za.departmentofdefence/rodneyrautenbach"
+                           showAs="Mr Rodney Rautenbach"/>
+                <TLCPerson id="bf" href="/ontology/organization/za/za.departmentofdefence/brigadiers/fakir"
+                           showAs="Brigadier Fakir"/>
+                <TLCPerson id="bm" href="/ontology/organization/za/za.departmentofdefence/brigadiers/meyer"
+                           showAs="Brigadier Meyer"/>
+                <TLCPerson id="be" href="/ontology/organization/za/za.departmentofdefence/barneyengelbrecht"
+                           showAs="Mr Barney Engelbrecht"/>
+                <TLCPerson id="mn" href="/ontology/organization/za/za.departmentofdefence/ntsaluba"
+                           showAs="Ms Ntsaluba"/>
+            </references>
+        </meta>
+        <preface>
+            <p class="heading">
+                <docType>APPENDIX 1</docType>
+                <docTitle>OFFICIALS FROM THE
+                    <span refersTo="dod">DEPARTMENT OF DEFENCE</span>
+                </docTitle>
+            </p>
+        </preface>
+        <mainBody>
+            <container id="hco1" name="members" class="memberslist">
+                <ol id="hco1-oli1">
+                    <li>
+                        <span refersTo="#jm">Mr January Masilela </span>(for
+                        <span refersTo="#dod">Defence</span>
+                        and
+                        <span refersTo="#generalDirector">Director General</span>
+                        of the Department)
+                    </li>
+                    <li>
+                        <span refersTo="tm">Mr Tsepe Motumi</span>(Deputy Director General and Chief Director Policy and
+                        Planning)
+                    </li>
+                    <li>
+                        <span refersTo="lgr">Lieutenant General Rinus van Rensburg</span>(SANDF Chief: Corporate Staff)
+                    </li>
+                    <li>
+                        <span refersTo="lgm">Lieutenant General Mtanzima</span>(Chief Human Resources)
+                    </li>
+                    <li>
+                        <span refersTo="av">Mr Anton Visser</span>, (Chief Director Strategy)
+                    </li>
+                    <li>
+                        <span refersTo="rr">Mr Rodney Rautenbach</span>(Chief Director Budget)
+                    </li>
+                    <li>
+                        <span refersTo="bf">Brigadier Fakir</span>(Director Military Strategy)
+                    </li>
+                    <li>
+                        <span refersTo="bm">Brigadier Meyer</span>(Director Human Resources)
+                    </li>
+                    <li>
+                        <span refersTo="be">Mr Barney Engelbrecht</span>(Director Budget)
+                    </li>
+                    <li>
+                        <span refersTo="mn">Ms Ntsaluba</span>(Director Strategy)
+                    </li>
+                </ol>
+            </container>
+        </mainBody>
+    </doc>
+</akomaNtoso>

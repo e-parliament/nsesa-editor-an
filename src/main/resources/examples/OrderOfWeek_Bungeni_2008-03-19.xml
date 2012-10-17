@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <debateReport name="orderOfDay" contains="originalVersion">
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/ak/report/2011-08-04/main"/>
+                    <FRBRuri value="/ak/report/2011-08-04"/>
+                    <FRBRdate date="2011-08-04" name="generation"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <FRBRcountry value="ak"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/ak/report/2011-08-04/eng@/main"/>
+                    <FRBRuri value="/ak/report/2011-08-04/eng@"/>
+                    <FRBRdate date="2012-01-05" name="markup"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/ak/report/2011-08-04/eng@/main.xml"/>
+                    <FRBRuri value="/ak/report/2011-08-04/eng@.akn"/>
+                    <FRBRdate date="2012-01-05" name="publication"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                </FRBRManifestation>
+            </identification>
+            <publication date="2011-08-04" name="internal" showAs="Internal Use Only" number="555"/>
+            <lifecycle source="#bungeni">
+                <eventRef id="e1" date="2011-08-04" source="#ro1" type="generation"/>
+            </lifecycle>
+            <references source="#bungeni">
+                <original id="ro1" href="/ak/report/2011-08-04/eng@/main" showAs="original"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/ak/bungeni" showAs="Bungeni"/>
+                <TLCPerson id="palmirani" href="/ontology/persons/it/editors/cervone" showAs="Monica Palmirani"/>
+                <TLCOrganization id="parliament" href="/ontology/organizations/ak/parliament" showAs="Parliament"/>
+                <TLCRole id="author" href="/ontology/roles/ak/author" showAs="Author of Document"/>
+                <TLCRole id="editor" href="/ontology/roles/it/editor" showAs="Editor of Document"/>
+            </references>
+            <notes source="">
+                <note id="note1">
+                    <p>
+                        * Denotes Motions of which Notices have been given
+                    </p>
+                </note>
+                <note id="note2">
+                    <p>**Denotes Motion of which Notice has not been given</p>
+                </note>
+            </notes>
+        </meta>
+        <coverPage id="cp1">
+            <container id="sbd1" name="sbd1">
+                <p>REPUBLIC OF BUNGENI</p>
+                <p>NATIONAL ASSEMBLY</p>
+                <p>PROGRAMME OF PARLIAMENTARY BUSINESS</p>
+                <p>WEEK COMMENCING TUESDAY 9TH AUGUST, 2011</p>
+                <p>
+                    <session>* 10
+                        <sup>TH</sup>
+                        PARLIAMENT * 4<sup>ND</sup>SESSION
+                    </session>
+                </p>
+            </container>
+        </coverPage>
+        <preface>
+            <p>REF:
+                <docNumber>REF: HB/COMM/2010-2011/VOL.1/(59)</docNumber>
+            </p>
+            <p class="right">
+                Clerk's Chambers
+                <eol/>
+                National Assembly
+                <eol/>
+                Parliament Buildings
+                <eol/>
+                BUNGENI
+            </p>
+            <p>
+                <docDate date="2011-08-09">9th August, 2011</docDate>
+            </p>
+            <p>REPUBLIC OF KENYA</p>
+            <p>NATIONAL ASSEMBLY</p>
+            <p>
+                <session>TENTH PARLIAMENT (FOURTH SESSION)</session>
+            </p>
+            <p>
+                <docType>PROGRAMME OF PARLIAMENTARY BUSINESS</docType>
+            </p>
+            <p class="heading">
+                <docTitle>FOR THE WEEK COMMENCING TUESDAY 25
+                    <span class="sup">TH</span>
+                    MARCH, 2008
+                </docTitle>
+            </p>
+        </preface>
+        <mainBody>
+            <debateSection id="day1" name="day">
+                <heading>
+                    <span class="left">
+                        <span class="day">TUESDAY:</span>
+                        <eol/>
+                        <date date="2008-03-25">25/03/08</date>
+                    </span>
+                    <span class="right">
+                        Communication from the Chair, Petitions, Paper Laid, Notices of Motions and Questions
+                    </span>
+                </heading>
+                <debateSection id="dbs1" name="Bills">
+                    <num>A.</num>
+                    <heading>BILLS: FIRST, SECOND, COMMITTEE STAGE AND THIRD READING</heading>
+                    <subheading>Bills Awaiting First Reading</subheading>
+                    <ol id="ol1">
+                        <li>1. The Water (Amendment) Bill Hon. John Mbadi
+                            (Bill No. 18 of 2011)
+                        </li>
+                        <li>2. The Labour Institutions (Amendment) Hon. John Mututho
+                            Bill (Bill No. 26 of 2011)
+                        </li>
+                        <li>3. The Public Procurement and Disposal Hon. Eugene Wamalwa
+                            (Amendment) Bill (Bill No. 27 of 2011)
+                        </li>
+                        <li>4. The Ratification of Treaties Bill Hon. Millie Odhiambo –
+                            (Bill No. 28 of 2011) Mabona
+                        </li>
+                    </ol>
+                </debateSection>
+                <debateSection id="dbs2" name="memorandumOfBill">
+                    <num>B.</num>
+                    <heading>MEMORANDUM FROM H.E. THE PRESIDENT ON THE PRICECONTROL (ESSENTIAL GOODS) BILL 2009
+                    </heading>
+                </debateSection>
+
+                <debateSection id="dbs3" name="memorandumOfBill">
+                    <num>c.</num>
+                    <heading>MEMORANDUM FROM H.E. THE PRESIDENT ON THE
+                        INDEMNITY (REPEAL) BILL 2010
+                    </heading>
+                </debateSection>
+                <noticesOfMotion id="day1-eve1">
+                    <num>D.</num>
+                    <heading>MOTION – (Leader of the Delegation)</heading>
+                    <other>
+                        <p>
+                            <span class="indented">THAT,</span>
+                            this House adopts the Report of a Parliamentary delegation on a
+                            study tour to Somaliland from 22
+                            <sup>nd</sup>
+                            to 29
+                            <sup>th</sup>
+                            December, 2009, laid on the Table of the
+                            House on Tuesday, March 02, 2010.
+                        </p>
+                    </other>
+                </noticesOfMotion>
+                <debateSection id="day1-eve2" name="anyother">
+                    <num>E.</num>
+                    <other>
+                        <p>
+                            Any Other Government Business.
+                        </p>
+                    </other>
+                </debateSection>
+            </debateSection>
+            <debateSection id="day2" name="day">
+                <debateSection id="day2-mor" name="morningsitting">
+                    <heading class="dayperiod">MORNING SITTING</heading>
+                    <subheading>
+                        <span class="left">
+                            <span class="day">WEDNESDAY:</span>
+                            <eol/>
+                            <date date="2011-08-10">26/03/08</date>
+                        </span>
+                        <span class="right">
+                            Communication from the Chair, Petitions, Papers Laid, Notices
+                            Motion and Questions.
+                        </span>
+                    </subheading>
+                    <noticesOfMotion id="day2-eve1">
+                        <num>A.</num>
+                        <heading id="hdg1">
+                            <noteRef href="#note1" marker="*"/>MOTION – (Ministry of Agriculture)
+                        </heading>
+                        <other>
+                            <p>
+                                <span class="indented">THAT,</span>
+                                appreciating the critical role Bungeni Farmers Association (KFA) once
+                                played in the Agricultural Sector as reliable supply chain for farm inputs and a
+                                marketing conduit for produce; Noting with deep concern that the collapse of the
+                                65,000 Member KFA has adversely affected the welfare of the Bungenian farmer and
+                                stability of the agricultural sector; Aware that the said collapse of KFA was a
+                                consequence of mismanagement and abandonment by Government; Acknowledging
+                                that the gallant efforts by farmers to revive KFA have been hampered by a heavy
+                                burden of bad debts accumulated by reason of the said mismanagement and
+                                Government inertia; Concerned that various creditors, including National Bank of
+                                Bungeni, Barclays Bank and Workers, are moving to auction properties of KFA, further
+                                encumbering the noble revival efforts; Convinced that the immediate resuscitation of
+                                KFA is a matter of strategic national importance; this House urges the Government to
+                                immediately avail a grant of Kshs. 1.3 Billion to KFA to help clear the bad debts and
+                                enable it restructure and contribute to the rapid growth of the Agricultural sector in
+                                line with Vision 2030.
+                            </p>
+                        </other>
+                    </noticesOfMotion>
+                    <noticesOfMotion id="day2-eve2">
+                        <num>B.</num>
+                        <heading id="hdg2">
+                            <noteRef href="#note1" marker="**"/>MOTION – (Ministry of Agriculture)
+                        </heading>
+                        <other>
+                            <p>
+                                <span class="indented">THAT,</span>
+                                deeply concerned with the devastation of the prolonged drought on
+                                farming activities that has occasioned heavy losses to farmers; aware that many affected
+                                farmers have loans from the Agricultural Finance Corporation (AFC) amounting to a total
+                                of Kshs. 4.48 billion; concerned that the prolonged drought has adversely affected
+                                farmers’ capacity to service their said loans with the effect that a loan portfolio of
+                                Kshs
+                                1.81 billion has now been classified by AFC as bad loans due to widespread defaults;
+                                convinced that unless this loan portfolio in default is addressed urgently, AFC and the
+                                agricultural sector face the risk of irreparable damage; acknowledging the key role
+                                played
+                                by AFC in financing the agricultural sector and the importance of supporting farmers
+                                countrywide as the anchor for vision 2030; this House urges the Government to urgently
+                                avail a grant of Kshs. 2 billion to the Agricultural Finance Corporation (AFC) to enable
+                                it
+                                provide appropriate relief to both crop and livestock farmers in all 47 counties
+                                adversely
+                                affected by the prolonged drought in the country.
+                            </p>
+                        </other>
+                    </noticesOfMotion>
+                    <debateSection id="day2-mor-eve1" name="anyother">
+                        <num>C.</num>
+                        <other>
+                            <p>
+                                Any Other Government Business.
+                            </p>
+                        </other>
+                    </debateSection>
+                </debateSection>
+            </debateSection>
+        </mainBody>
+    </debateReport>
+</akomaNtoso>

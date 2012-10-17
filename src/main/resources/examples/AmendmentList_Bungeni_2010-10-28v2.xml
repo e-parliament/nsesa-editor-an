@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <amendmentList>
+        <!-- example of amendmentList using documentCollection structure -->
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/ak/amendmentList/2010-10-28/2010-2088(INI)/main"/>
+                    <FRBRuri value="/ak/amendmentList/2010-10-28/2010-2088(INI)/"/>
+                    <FRBRdate date="2010-10-28" name="Enactment"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <FRBRcountry value="ak"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/ak/amendmentList/2010-10-28/2010-2088(INI)/eng@/main"/>
+                    <FRBRuri value="/ak/amendmentList/2010-10-28/2010-2088(INI)/eng@"/>
+                    <FRBRdate date="2011-11-24" name="Expression"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/ak/amendmentList/2010-10-28/2010-2088(INI)/eng@/main.xml"/>
+                    <FRBRuri value="/ak/amendmentList/2010-10-28/2010-2088(INI)/eng@/main.akn"/>
+                    <FRBRdate date="2011-11-24" name="XMLConversion"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                </FRBRManifestation>
+            </identification>
+            <publication date="2010-10-28" name="bill" showAs="Bungeni Gazette" number="20102088"/>
+            <references source="#bungeni">
+                <TLCOrganization id="parliament" href="/ontology/organizations/akn/parliament" showAs="Parliament"/>
+                <TLCPerson id="palmirani" href="akn.user.monica.palmirani.1966-02-28" showAs="Editor"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/akn/bungeni" showAs="Bungeni"/>
+                <TLCRole id="author" href="/ontology/roles/akn/author" showAs="Author of Document"/>
+                <TLCRole id="editor" href="/ontology/roles/akn/editor" showAs="Editor of Document"/>
+            </references>
+        </meta>
+        <coverPage>
+            <container id="cont-1" name="coverpageA">
+                <p>
+                    <docProponent>EUROPEAN PARLIAMENT 2009 - 2014</docProponent>
+                </p>
+                <p>Committee on Economic and Monetary Affairs</p>
+                <p>
+                    <docNumber>2010/2088(INI)</docNumber>
+                </p>
+                <p>
+                    <docDate date="2010-10-28">28.10.2010</docDate>
+                </p>
+                <p>
+                    <docTitle>AMENDMENTS 1 - 53</docTitle>
+                </p>
+            </container>
+            <container id="cont-2" name="coverpageB">
+                <p>Draft opinion</p>
+                <p>Nikolaos Chountis</p>
+                <p>(PE448.956v01-00)</p>
+                <p>on GDP and beyond: Measuring progress in a changing world
+                    (COM(2009)0433 – 2010/2088(INI))
+                </p>
+                <p>AM\837265EN.doc PE450.680v03-00</p>
+                <p>AM_Com_NonLegOpinion</p>
+            </container>
+        </coverPage>
+        <collectionBody>
+            <interstitial id="int1">
+                <p>Amendment 1</p>
+            </interstitial>
+            <componentRef id="refc1" src="/ak/amendment/2010-10-28/1/eng@/main" showAs="Amendment 1"/>
+            <interstitial id="int2">
+                <p>Introduction</p>
+            </interstitial>
+            <componentRef id="refc2" src="/ak/amendment/2010-10-28/2/eng@/main" showAs="Amendment 2"/>
+            <interstitial id="int3">
+                <p>Introduction</p>
+            </interstitial>
+            <componentRef id="refc3" src="/ak/amendment/2010-10-28/3/eng@/main" showAs="Amendment 3"/>
+        </collectionBody>
+    </amendmentList>
+</akomaNtoso>

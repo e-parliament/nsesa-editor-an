@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--Akoma_Ntoso document-->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <doc contains="originalVersion" name="Appendix">
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/za/report/2007-03-22/main/schedule1"/>
+                    <FRBRuri value="/za/report/2007-03-22"/>
+                    <FRBRdate date="2007-03-22" name="Generation"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <componentInfo>
+                        <componentData id="wschedule1" href="#wschedule1" name="schedule1" showAs="Schedule 1"/>
+                    </componentInfo>
+                    <FRBRcountry value="za"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/za/report/2007-03-22/eng@/main/schedule1"/>
+                    <FRBRuri value="/za/report/2007-03-22/eng@"/>
+                    <FRBRdate date="2009-02-21" name="Generation"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="eappendix1" href="#eschedule1" name="schedule1" showAs="Schedule 1"/>
+                    </componentInfo>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/za/report/2007-03-22/eng@/main/schedule1.xml"/>
+                    <FRBRuri value="/za/report/2007-03-22/eng@.akn"/>
+                    <FRBRdate date="2009-02-21" name="XMLMarkup"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="mschedule1" href="schedule1.xml" name="schedule1" showAs="Schedule 1"/>
+                    </componentInfo>
+                </FRBRManifestation>
+            </identification>
+            <publication name="publication" date="2007-03-22" showAs="publication" number="444"/>
+            <lifecycle source="#bungeni">
+                <eventRef id="e1" date="2007-03-22" source="#ro1" type="generation"/>
+            </lifecycle>
+            <references source="#bungeni">
+                <original id="ro1" href="/za/report/2007-03-22/eng@/main" showAs="Original"/>
+                <TLCOrganization id="parliament" href="/ontology/organization/za/za.parliament"
+                                 showAs="Parliament of South Africa"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/za/za.bungeni" showAs="Bungeni"/>
+            </references>
+        </meta>
+        <coverPage>
+            <container id="cover" name="cover" evolvingId="cover" xml:lang="eng">
+                <p>REPUBLIC OF SOUTH AFRICA</p>
+                <p>
+                    <docTitle id="title" evolvingId="title">INDEPENDENT COMMUNICATIONS AUTHORITY OF SOUTH AFRICA ACT
+                    </docTitle>
+                </p>
+            </container>
+            <container id="coverAfrikan" name="coverAfrikan" evolvingId="cover" xml:lang="afr">
+                <p>REPUBLIEK VAN SUID-AFRIKA</p>
+                <p>
+                    <docTitle id="titleAfrikan" evolvingId="title">WET OP DIE ONAFHANKLIKE KOMMUNIKASIE-OWERHEID VAN
+                        SUID-AFRIKA
+                    </docTitle>
+                </p>
+            </container>
+        </coverPage>
+        <preface>
+            <p class="heading">
+                <docType>APPENDIX 1</docType>
+                <docTitle>Schedule 1
+                </docTitle>
+            </p>
+        </preface>
+        <mainBody>
+            <container id="hco1" class="table" name="table">
+                <table id="tab1" cellpadding="10" border="1" cellspacing="0" width="100"
+                       title="LAWS AMENDED OR REPEALED">
+                    <caption>LAWS AMENDED OR REPEALED</caption>
+                    <tr>
+                        <th>
+                            <p>No. and year of law</p>
+                        </th>
+                        <th>
+                            <p>Short title</p>
+                        </th>
+                        <th>
+                            <p>Extent of amendment or repeal</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Act No. 153 of 1993</p>
+                        </td>
+                        <td>
+                            <p>Independent Broadcasting Act, 1993</p>
+                        </td>
+                        <td>
+                            <blockList id="lst1">
+                                <item id="lst1-itm1">
+                                    <num>1.</num>
+                                    <blockList id="lst1-itm1-list1">
+                                        <listIntroduction>The amendment of section 1 by the substitution
+                                            for the definitions of ‘‘Authority’’,
+                                            ‘‘chairperson’’, ‘‘Council’’ and ‘‘councillor’’
+                                            of the following definitions, respectively:
+                                        </listIntroduction>
+                                        <item id="lst1-itm1-list1-itma">
+                                            <num>(a)</num>
+                                            <p>‘‘ ‘Authority’ means the Independent
+                                                Communications Authority of South
+                                                Africa established by section 3 of the Independent
+                                                Communications Authority of
+                                                South Africa Act, 2000;’’;
+                                            </p>
+                                        </item>
+                                        <item id="lst1-itm1-list1-itmb">
+                                            <num>(b)</num>
+                                            <p>‘‘ ‘chairperson’ means the chairperson
+                                                appointed under section 5(2) of the Independent
+                                                Communications Authority of
+                                                South Africa Act, 2000;’’;
+                                            </p>
+                                        </item>
+                                        <item id="lst1-itm1-list1-itmc">
+                                            <num>(c)</num>
+                                            <p>‘‘ ‘Council’ means the Council contemplated
+                                                in section 3(2) of the Independent
+                                                Communications Authority of South
+                                                Africa Act, 2000;’’;
+                                            </p>
+                                        </item>
+                                    </blockList>
+                                </item>
+                                <item id="lst1-itm2">
+                                    <num>2.</num>
+                                    <p>The amendment of section 2 by the insertion
+                                        of the following paragraph after paragraph (g):
+                                        ‘‘(gA) promote the empowerment and advancement
+                                        of women in the broadcasting
+                                        services;’’.
+                                    </p>
+                                </item>
+                                <item id="lst1-itm3">
+                                    <num>3.</num>
+                                    <p>The repeal of section 3.</p>
+                                </item>
+                            </blockList>
+                        </td>
+                    </tr>
+                </table>
+            </container>
+        </mainBody>
+    </doc>
+</akomaNtoso>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--Akoma_Ntoso document-->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <doc contains="originalVersion" name="Appendix">
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/za/report/2003-03-22/main/schedule1"/>
+                    <FRBRuri value="/za/report/2003-03-22"/>
+                    <FRBRdate date="2003-03-22" name="Generation"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <componentInfo>
+                        <componentData id="wschedule1" href="#wschedule1" name="schedule1" showAs="Schedule 1"/>
+                    </componentInfo>
+                    <FRBRcountry value="za"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/za/report/2003-03-22/eng@/main/schedule1"/>
+                    <FRBRuri value="/za/report/2003-03-22/eng@"/>
+                    <FRBRdate date="2009-02-21" name="Generation"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="eappendix1" href="#eschedule1" name="schedule1" showAs="Schedule 1"/>
+                    </componentInfo>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/za/report/2003-03-22/eng@/main/schedule1.xml"/>
+                    <FRBRuri value="/za/report/2003-03-22/eng@.akn"/>
+                    <FRBRdate date="2009-02-21" name="XMLMarkup"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="mschedule1" href="schedule1.xml" name="schedule1" showAs="Schedule 1"/>
+                    </componentInfo>
+                </FRBRManifestation>
+            </identification>
+            <publication name="publication" date="2003-03-22" showAs="publication" number="444"/>
+            <lifecycle source="#bungeni">
+                <eventRef id="e1" date="2003-03-22" source="#ro1" type="generation"/>
+            </lifecycle>
+            <references source="#bungeni">
+                <original id="ro1" href="/za/report/2003-03-22/eng@/main" showAs="Original"/>
+                <TLCOrganization id="parliament" href="/ontology/organization/za/za.parliament"
+                                 showAs="Parliament of South Africa"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/za/za.bungeni" showAs="Bungeni"/>
+            </references>
+        </meta>
+        <preface>
+            <p class="heading">
+                <docTitle>Schedule To Part XVI
+                </docTitle>
+            </p>
+        </preface>
+        <mainBody>
+            <container id="hco1" class="table" name="table">
+                <p>I certify that the above depositions of C.D. and E.F. were taken and sworn before me in the presence
+                    of the accused person A.B. and that A.B. or his advocate had full opportunity of cross-examining the
+                    several witnesses,
+                </p>
+                <table id="tab1">
+                    <tr>
+                        <td>
+                            <p>At</p>
+                        </td>
+                        <td>
+                            <p>
+                                <fillIn>............................</fillIn>
+                            </p>
+                        </td>
+                        <td>
+                            <p>on this</p>
+                        </td>
+                        <td>
+                            <p>
+                                <fillIn>............................</fillIn>
+                            </p>
+                        </td>
+                        <td>
+                            <p>day of</p>
+                        </td>
+                        <td>
+                            <p>
+                                <fillIn>............................</fillIn>
+                            </p>
+                        </td>
+                        <td>
+                            <p>19</p>
+                        </td>
+                        <td>
+                            <p>
+                                <fillIn>............................</fillIn>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>G.H.,
+                                Magistrate.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </container>
+        </mainBody>
+    </doc>
+</akomaNtoso>

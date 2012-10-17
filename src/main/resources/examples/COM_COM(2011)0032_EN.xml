@@ -1,0 +1,2092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://www.akomantoso.org/1.0"
+        >
+    <documentCollection name="COMProposal">
+        <meta>
+            <identification source="#EPAdministration">
+                <FRBRWork>
+                    <FRBRthis value="urn:lex:eu:commission:proposal:2011:32"/>
+                    <FRBRuri value="urn:lex:eu:commission:proposal:2011:32"/>
+                    <FRBRalias value="COM(2011) 32"/>
+                    <FRBRdate date="2011-02-02" name="referingCOMAdoptedDate"/>
+                    <FRBRauthor href="#COM" as="#initiativeRight"/>
+                    <preservation xmlns:ep="urn:eu:ep:development:schema:akomantoso">
+                        <ep:documentDomain href="#preparatoryAct"/>
+                        <ep:documentMainType href="#COMProposal"/>
+                        <ep:alias href="#id1"/>
+                    </preservation>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="urn:lex:eu:commission:proposal:2011:32@final:en"/>
+                    <FRBRuri value="urn:lex:eu:commission:proposal:2011:32@final:en"/>
+                    <FRBRdate date="2011-02-02" name="referingCOMAdoptedDate"/>
+                    <FRBRauthor href="#COM" as="#initiativeRight"/>
+                    <preservation xmlns:ep="urn:eu:ep:development:schema:akomantoso">
+                        <ep:audience href="#interInstitutional"/>
+                        <ep:expressionVersion source="#COMAdministration" value="final"/>
+                    </preservation>
+                    <FRBRlanguage language="en"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="urn:lex:eu:commission:proposal:2011:32@final:en$text-xml"/>
+                    <FRBRuri value="urn:lex:eu:commission:proposal:2011:32@final:en$text-xml"/>
+                    <FRBRdate date="2011-07-06" name="XMLconversion"/>
+                    <FRBRauthor href="#OJUnit" as="#convertor"/>
+                </FRBRManifestation>
+            </identification>
+
+            <analysis source="#EPAdministration">
+                <otherAnalysis source="#EPAdministration" xmlns:ep="urn:eu:ep:development:schema:akomantoso">
+                    <ep:documentContent>
+                        <ep:documentRole as="#initiativeDocument">
+                            <ep:procedureContext href="#anal-proc-cnt1"/>
+                            <ep:actProposed href="#bill1" actType="#directive"/>
+                        </ep:documentRole>
+                        <ep:isRelatedTo relType="#hasWorkingDoc">
+                            <ep:destination href="#SEC_2011_132"/>
+                            <ep:destination href="#SEC_2011_133"/>
+                        </ep:isRelatedTo>
+                    </ep:documentContent>
+
+                </otherAnalysis>
+            </analysis>
+            <references source="#EPAdministration">
+                <TLCOrganization id="CoA" href="/eu/ep/ontology/EU/institution/CoA"
+                                 showAs="Court of Auditors"/>
+                <TLCOrganization id="COM" href="/eu/ep/ontology/EU/institution/COM"
+                                 showAs="European Commission"/>
+                <TLCOrganization id="COMAdministration"
+                                 href="/eu/ep/ontology/EU/institution/COM/administration/COMadministration"
+                                 showAs="COM administration"/>
+                <TLCOrganization id="CoR" href="/eu/ep/ontology/EU/advisoryBodies/CoR"
+                                 showAs="Committee of the Regions"/>
+                <TLCOrganization id="CSL" href="/eu/ep/ontology/EU/institution/CSL" showAs="Council"/>
+                <TLCOrganization id="EP" href="/eu/ep/ontology/EU/institution/EP"
+                                 showAs="European Parliament"/>
+                <TLCOrganization id="EPAdministration"
+                                 href="/eu/ep/ontology/EU/institution/EP/administration/EPadministration"
+                                 showAs="EP administration"/>
+                <TLCOrganization id="ECB" href="/eu/ep/ontology/EU/institution/ECB"
+                                 showAs="European Central Bank"/>
+                <TLCOrganization id="EDPS" href="/eu/ep/ontology/EU/advisoryBodies/EDPS"
+                                 showAs="European Data Protection Supervisor"/>
+                <TLCOrganization id="EESC" href="/eu/ep/ontology/EU/advisoryBodies/EESC"
+                                 showAs="European Economic and Social Committee"/>
+                <TLCOrganization id="EmpC" href="/eu/ep/ontology/EU/advisoryBodies/EmpC"
+                                 showAs="Employment Committee"/>
+                <TLCOrganization id="docProductionService"
+                                 href="/eu/ep/ontology/EU/institution/EP/administration/docProductionService"
+                                 showAs="Document production service"/>
+                <TLCOrganization id="STC" href="/eu/ep/ontology/EU/advisoryBodies/STC"
+                                 showAs="Scientific and Technical Committee"/>
+                <TLCConcept id="COD" href="/eu/ep/ontology/procedure/type/COD"
+                            showAs="Ordinary legislative procedure"/>
+                <TLCConcept id="CoROpinion" href="/eu/ep/ontology/document/legislative/citation/CoROpinion"
+                            showAs="citation on CoROpinion"/>
+                <TLCConcept id="definitions" href="/eu/ep/ontology/document/legislative/article/definitions"
+                            showAs="article with definition of terms"/>
+                <TLCConcept id="directive" href="/eu/ep/ontology/document/legislative/type/directive"
+                            showAs="directive"/>
+                <TLCConcept id="ECBOpinion" href="/eu/ep/ontology/document/legislative/citation/ECBOpinion"
+                            showAs="citation on ECBOpinion"/>
+                <TLCConcept id="EDPSOpinion"
+                            href="/eu/ep/ontology/document/legislative/citation/EDPSOpinion"
+                            showAs="citation on EDPSOpinion"/>
+                <TLCConcept id="EESCOpinion"
+                            href="/eu/ep/ontology/document/legislative/citation/EESCOpinion"
+                            showAs="citation on EESCOpinion"/>
+                <TLCConcept id="EmpCOpinion"
+                            href="/eu/ep/ontology/document/legislative/citation/EmpCOpinion"
+                            showAs="citation on EmpCOpinion"/>
+                <TLCConcept id="EPConsent" href="/eu/ep/ontology/document/legislative/citation/EPConsent"
+                            showAs="citation on EPConsent"/>
+                <TLCConcept id="EPOpinion" href="/eu/ep/ontology/document/legislative/citation/EPOpinion"
+                            showAs="citation on EPOpinion"/>
+                <TLCConcept id="firstReading" href="/eu/ep/ontology/procedure/step/firstReading"
+                            showAs="First Reading"/>
+                <TLCConcept id="hasWorkingDoc" href="/eu/ep/ontology/document/relation/hasWorkingDoc"
+                            showAs="hasWorkingDoc"/>
+                <TLCConcept id="interInstitutional"
+                            href="/eu/ep/ontology/document/audience/interInstitutional"
+                            showAs="interInstitutional document"/>
+                <TLCConcept id="CoAOpinion" href="/eu/ep/ontology/document/legislative/citation/CoAOpinion"
+                            showAs="citation on CoAOpinion"/>
+                <TLCConcept id="preparatoryAct" href="/eu/ep/ontology/document/domain/preparatoryAct"
+                            showAs="preparatory Act"/>
+                <TLCConcept id="procContext"
+                            href="/eu/ep/ontology/document/legislative/citation/procContext"
+                            showAs="citation on procContext"/>
+                <TLCConcept id="proposal" href="/eu/ep/ontology/document/legislative/status/proposal"
+                            showAs="proposal"/>
+
+                <TLCConcept id="substancialLegalBasis"
+                            href="/eu/ep/ontology/legislativeDocument/preamble/citation/substancialLegalBasis"
+                            showAs="Substancial legal basis"/>
+
+                <TLCConcept id="COMnumber" href="/eu/ep/ontology/document/identifier/COMNumber"
+                            showAs="COM number"/>
+                <TLCConcept id="sessionNumber" href="/eu/ep/ontology/document/identifier/sessionNumber"
+                            showAs="Session number"/>
+                <TLCConcept id="procedureNumber" href="/eu/ep/ontology/procedure/identifier/procedureNumber"
+                            showAs="Procedure number"/>
+
+                <TLCRole id="initiativeDocument"
+                         href="/eu/ep/ontology/procedure/document/role/initiativeDocument" showAs=""/>
+                <TLCRole id="explanatoryDocument"
+                         href="/eu/ep/ontology/procedure/document/role/explanatoryDocument" showAs=""/>
+                <TLCRole id="initiativeRight" href="/eu/ep/ontology/procedure/role/initiativeRight"
+                         showAs=""/>
+                <TLCRole id="legislativePower" href="/eu/ep/ontology/procedure/role/legislativePower"
+                         showAs=""/>
+                <TLCRole id="opinionRole" href="/eu/ep/ontology/procedure/role/opinionRole" showAs=""/>
+                <TLCRole id="convertor" href="/eu/ep/ontology/production/convertor"
+                         showAs="document convertor"/>
+                <TLCRole id="consultationRole"
+                         href="/eu/ep/ontology/legislativeProcedure/role/consultationRole"
+                         showAs="Consultation role"/>
+
+            </references>
+
+            <proprietary source="#EPAdministration" xmlns:ep="urn:eu:ep:development:schema:akomantoso">
+                <ep:documentId id="id1" schema="#COMnumber" value="COM/2011/32">
+                    <ep:idComponent>
+                        <ep:institutionCode value="COM"/>
+                        <ep:Year value="2011"/>
+                        <ep:Number value=" 32"/>
+                    </ep:idComponent>
+                </ep:documentId>
+                <ep:documentId id="id2" schema="#sessionNumber" value="C/7/2011/39">
+                    <ep:idComponent>
+                        <ep:code value="C"/>
+                        <ep:legislature value="7"/>
+                        <ep:Number Value="39"/>
+                        <ep:Year value="11"/>
+                    </ep:idComponent>
+                </ep:documentId>
+                <ep:procedureId id="id3" href="#proc2010-0006" schema="#procedureNumber" value="COD/2011/23">
+                    <ep:idComponent>
+                        <ep:Year value="2011"/>
+                        <ep:Number value="23"/>
+                        <ep:procCode value="COD"/>
+                    </ep:idComponent>
+                </ep:procedureId>
+            </proprietary>
+        </meta>
+        <preface>
+            <p class="enactingDate">Brussels,
+                <docDate date="2011-02-02">2.2.2011</docDate>
+            </p>
+            <p class="docRef"><docNumber refersTo="#id1">COM(2011) 32</docNumber>final
+            </p>
+            <p class="procRef">
+                <process id="prc1" refersTo="#id2">2011/0023 (COD)</process>
+            </p>
+            <longTitle id="pre-lgt">
+                <p>
+                    <docStatus>Proposal</docStatus>
+                    for a
+                </p>
+                <p>
+                    <docType>DIRECTIVE</docType>
+                    OF THE
+                    <docProponent>EUROPEAN PARLIAMENT</docProponent>
+                    AND
+                    OF
+                    <docProponent>THE COUNCIL</docProponent>
+                </p>
+                <p>
+                    <docTitle>on the use of Passenger Name Record data for the prevention, detection,
+                        investigation and prosecution of terrorist offences and serious crime
+                    </docTitle>
+                </p>
+            </longTitle>
+        </preface>
+        <collectionContent>
+            <componentRef id="cpr1" href="#explMemo1" showAs="Explanatory memorandum"/>
+
+            <componentRef id="cpr2" href="#bill1"
+                          showAs="DIRECTIVE OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL"/>
+        </collectionContent>
+    </documentCollection>
+    <components>
+        <component id="explMemo1">
+            <doc name="explanatoryMemorandum">
+                <meta>
+                    <identification source="">
+                        <FRBRWork>
+                            <FRBRthis value="urn:lex:eu:commission:proposal:2011:32/explanatoryMemorandum"/>
+                            <FRBRuri value="urn:lex:eu:commission:proposal:2011:32/explanatoryMemorandum"/>
+                            <FRBRdate date="2011-02-02" name="referingCOMAdoptedDate"/>
+                            <FRBRauthor href="#COM" as="author"/>
+                        </FRBRWork>
+                        <FRBRExpression>
+                            <FRBRthis
+                                    value="urn:lex:eu:commission:proposal:2011:32/explanatoryMemorandum@final:en"/>
+                            <FRBRuri value="urn:lex:eu:commission:proposal:2011:32/explanatoryMemorandum@final:en"/>
+                            <FRBRdate date="2011-02-02" name="referingCOMAdoptedDate"/>
+                            <FRBRauthor href="#COM" as="author"/>
+                        </FRBRExpression>
+                        <FRBRManifestation>
+                            <FRBRthis
+                                    value="urn:lex:eu:commission:proposal:2011:32/explanatoryMemorandum@final:en$text-xml"/>
+                            <FRBRuri
+                                    value="urn:lex:eu:commission:proposal:2011:32explanatoryMemorandum@final:en$text-xml"/>
+                            <FRBRdate date="2011-07-06" name="XMLconversion"/>
+                            <FRBRauthor href=""/>
+                        </FRBRManifestation>
+
+                    </identification>
+                    <analysis source="#EPAdministration">
+                        <otherAnalysis source="#EPAdministration"
+                                       xmlns:ep="urn:eu:ep:development:schema:akomantoso">
+                            <ep:documentContent>
+                                <ep:documentRole as="#explanatoryDocument">
+                                    <ep:procedureContext href="#anal-proc-cnt1"/>
+                                    <ep:isRelatedTo>
+                                        <ep:destination href="#bill1"/>
+                                    </ep:isRelatedTo>
+                                </ep:documentRole>
+                            </ep:documentContent>
+                        </otherAnalysis>
+                    </analysis>
+
+                </meta>
+                <preface>
+                    <longTitle id="pre-lgt_expMem">
+                        <p>EXPLANATORY MEMORANDUM</p>
+                    </longTitle>
+                </preface>
+                <mainContent>
+                    <tblock id="tbk1_expMem" evolvingId="tbk1">
+                        <num>1.</num>
+                        <heading>CONTEXT OF THE PROPOSAL</heading>
+                        <tblock id="tbk1-tbk1">
+                            <num>•</num>
+                            <heading>Grounds for and objectives of the proposal</heading>
+                            <p>Over the last decade the EU and other parts of the world have seen an increase in
+                                serious and organised crime, such as trafficking in human beings
+                                <authorialNote
+                                        id="inl122" marker="1" placement="bottom">
+                                    <p>Europol’s EU Organised Crime Threat Assessment 2009</p>
+                                </authorialNote>
+                                and drugs
+                                <authorialNote id="inl222" marker="1" placement="bottom">
+                                    <p>Eurostat 36/2009.</p>
+                                </authorialNote>
+                                . According to the Sourcebook of Crime and Criminal Justice
+                                Statistics, there were approximately 14 000 criminal offences per 100 000 population
+                                in the EU Member States in 2007 (excluding Italy and Portugal for which data were
+                                not made available), ranging from 14 465 offences in Sweden to 958 in Cyprus.
+                                Europol’s EU Organised Crime Threat Assessment 2009 (OCTA 2009), points out that
+                                most organised crime involves international travel, typically aimed at smuggling
+                                persons, drugs or other illicit goods into the EU.
+                            </p>
+                            <p>At the same time, terrorists and terrorist organisations can be found both inside
+                                and outside the borders of the EU. The terrorist attacks in the United States in
+                                2001, the aborted terrorist attack in August 2006 aimed at blowing up a number of
+                                aircraft on their way from the United Kingdom to the United States, and the
+                                attempted terrorist attack on board a flight from Amsterdam to Detroit in December
+                                2009 showed the ability of terrorists to mount attacks, targeting international
+                                flights, in any country. While terrorism decreased in the EU during 2009, according
+                                to Europol’s EU Terrorism Situation and Trend Report 2010, the threat of terrorism
+                                remains real and serious. Most terrorist activities are transnational in character
+                                and involve international travel
+                                <authorialNote id="inl322" marker="3"
+                                               placement="bottom">
+                                    <p>Europol’s EU Terrorism Situation and Trend Report 2010</p>
+                                </authorialNote>
+                                ,
+                                <i>inter alia</i>
+                                to training camps outside the EU, calling for
+                                increased cooperation between law enforcement authorities.
+                            </p>
+                            <p>Serious crime and terrorist offences cause severe harm to victims, inflict economic
+                                damage on a large scale and undermine the sense of security without which persons
+                                cannot exercise their freedom and individual rights effectively.
+                            </p>
+                            <p>A study published in 2009
+                                <authorialNote id="inl4" marker="4" placement="bottom">
+                                    <p>Measuring the costs of coercion to workers in forced labour- Vinogradova, De
+                                        Cock, Belser.
+                                    </p>
+                                </authorialNote>
+                                for the International Labour Organisation estimated that the cost
+                                of coercion from underpayment of wages resulting from trafficking in human beings in
+                                2007 in industrialised economies was $2 508 3682 18, while the total for the world
+                                was $19 598 020 343.
+                            </p>
+                            <p>The 2010 Annual report on the state of the drugs problem in Europe of the European
+                                Monitoring Centre for Drugs and Drug Addiction points to the global nature of the
+                                drugs problem and the growing and severe harm it entails. By undermining social
+                                development and feeding corruption and organised crime it represents a real threat
+                                for the European Union. Approximately 1 000 lives are lost in the EU annually due to
+                                cocaine-related deaths. The number of opioid users in Europe is cautiously estimated
+                                at 1.35 million. As regards the economic and social impacts of drugs, in 2008, 22 EU
+                                Member States reported a total expenditure relating to illicit drugs of EUR 4.2
+                                billion.
+                            </p>
+                        </tblock>
+                    </tblock>
+                </mainContent>
+            </doc>
+
+        </component>
+        <component id="bill1">
+            <bill>
+                <meta>
+                    <identification source="#EPAdministration">
+                        <FRBRWork>
+                            <FRBRthis value="urn:lex:eu:commission:proposal:2011:32/bill"/>
+                            <FRBRuri value="urn:lex:eu:commission:proposal:2011:32/bill"/>
+                            <FRBRdate date="2011-02-02" name="referingCOMAdoptedDate"/>
+                            <FRBRauthor href="#auth0"/>
+                            <componentInfo>
+                                <componentData id="cmd1" name="technicalAnnex" href="#cmp3" showAs="ANNEX"/>
+                            </componentInfo>
+                            <preservation xmlns:ep="urn:eu:ep:development:schema:akomantoso">
+                                <ep:documentDomain href="#preparatoryAct"/>
+                                <ep:documentMainType href="#directive"/>
+                                <ep:authorInfo id="aut0" source="#EPAdministration">
+                                    <ep:institution href="#COM" as="#initiativeRight"/>
+                                    <ep:institution href="#CSL" as="#legislativePower"/>
+                                    <ep:institution href="#EP" as="#legislativePower"/>
+                                </ep:authorInfo>
+                            </preservation>
+                        </FRBRWork>
+                        <FRBRExpression>
+                            <FRBRthis value="urn:lex:eu:commission:proposal:2011:32/bill@final:en"/>
+                            <FRBRuri value="urn:lex:eu:commission:proposal:2011:32/bill@final:en"/>
+                            <FRBRdate date="2011-02-02" name="referingCOMAdoptedDate"/>
+                            <FRBRauthor href="#COM"/>
+                            <preservation xmlns:ep="urn:eu:ep:development:schema:akomantoso">
+                                <ep:audience href="#interInstitutional"/>
+                                <ep:documentStatus href="#proposal"/>
+                                <ep:expressionVersion source="#COMAdministration" value="final"/>
+                            </preservation>
+                            <FRBRlanguage language="en"/>
+                        </FRBRExpression>
+                        <FRBRManifestation>
+                            <FRBRthis value="urn:lex:eu:commission:proposal:2011:32/bill@final:en$text-xml"/>
+                            <FRBRuri value="urn:lex:eu:commission:proposal:2011:32/bill@final:en$text-xml"/>
+                            <FRBRdate date="2011-07-06" name="XMLconversion"/>
+                            <FRBRauthor href="#OJUnit" as="#convertor"/>
+                        </FRBRManifestation>
+                    </identification>
+                    <analysis source="#EPAdministration">
+                        <otherAnalysis source="#EPAdministration"
+                                       xmlns:ep="urn:eu:ep:development:schema:akomantoso">
+                            <ep:documentContent>
+                                <ep:documentRole as="#initiativeDocument">
+                                    <ep:procedureContext href="#anal-proc-cnt1"/>
+                                    <ep:actProposed actType="#directive"/>
+                                </ep:documentRole>
+                            </ep:documentContent>
+
+                            <ep:procedure id="anal-proc" href="#proc-2011-23" type="#COD">
+                                <ep:identifiant href="#id3"/>
+
+                                <ep:actProposed actType="#directive"/>
+
+
+                                <ep:institution href="#COM" as="#initiativeRight"/>
+                                <ep:institution href="#CSL" as="#legislativePower"/>
+                                <ep:institution href="#EP" as="#legislativePower"/>
+
+                                <ep:advisoryBody href="#EESC" as="#opinionRole">
+                                    <ep:source href="#cit4_bill1"/>
+                                </ep:advisoryBody>
+                                <ep:advisoryBody href="#CoR" as="#opinionRole">
+                                    <ep:source href="#cit5_bill1"/>
+                                </ep:advisoryBody>
+                                <ep:advisoryBody href="#EDPS" as="#consultationRole">
+                                    <ep:source href="#cit6_bill1"/>
+                                </ep:advisoryBody>
+
+                                <ep:basisLegislation id="blg1" refersTo="#substancialLegalBasis">
+                                    <ep:source href="#cit1_bill"/>
+                                    <ep:destination href="#TFUE-art82-par1"/>
+                                    <ep:destination href="#TFUE-art87-par2-pnta"/>
+                                </ep:basisLegislation>
+
+                                <ep:procedurePhase id="anal-proc-cnt1" href="#firstReading">
+                                    <ep:institution href="#COM" as="#initiativeRight"/>
+                                </ep:procedurePhase>
+
+                            </ep:procedure>
+                        </otherAnalysis>
+                    </analysis>
+                </meta>
+                <preface>
+                    <p class="procRef">
+                        <process id="prc1_bill" refersTo="#id2">2011/0023 (COD)</process>
+                    </p>
+                    <longTitle id="pre-lgt_bill">
+                        <p>
+                            <docStatus>Proposal</docStatus>
+                            for a
+                        </p>
+                        <p>
+                            <docType>DIRECTIVE</docType>
+                            OF THE
+                            <docProponent>EUROPEAN PARLIAMENT</docProponent>
+                            AND OF THE
+                            <docProponent>COUNCIL</docProponent>
+                        </p>
+                        <p>
+                            <docTitle>on the use of Passenger Name Record data for the prevention, detection,
+                                investigation and prosecution of terrorist offences and serious crime
+                            </docTitle>
+                        </p>
+                    </longTitle>
+                </preface>
+                <preamble>
+                    <p>THE EUROPEAN PARLIAMENT AND THE COUNCIL OF THE EUROPEAN UNION,</p>
+                    <citations>
+                        <citation id="cit1_bill1" refersTo="#substancialLegalBasis">
+                            <p>Having regard to the Treaty on the Functioning of the European Union, and in
+                                particular Articles 82(1)(d) and 87(2)(a) thereof,
+                            </p>
+                        </citation>
+                        <citation id="cit2_bill1" refersTo="#proposalRef">
+                            <p>Having regard to the proposal from the Commission,</p>
+                        </citation>
+                        <citation id="cit3_bill1" refersTo="#natParliamentsTransmit">
+                            <p>After transmission of the draft legislative act to the national Parliaments,</p>
+                        </citation>
+                        <citation id="cit4_bill1" refersTo="#EESCOpinion">
+                            <p>Having regard to the opinion of the European Economic and Social
+                                Committee
+                                <authorialNote id="inl100" marker="31">
+                                    <p>
+                                        <placeholder>OJ C , , p. .</placeholder>
+                                    </p>
+                                </authorialNote>
+                                ,
+                            </p>
+                        </citation>
+                        <citation id="cit5_bill1" refersTo="#CoROpinion">
+                            <p>Having regard to the opinion of the Committee of the Regions
+                                <authorialNote
+                                        id="inl101" marker="32">
+                                    <p>
+                                        <placeholder>OJ C , , p. .</placeholder>
+                                    </p>
+                                </authorialNote>
+                                ,
+                            </p>
+                        </citation>
+                        <citation id="cit6_bill1" refersTo="#EDPSOpinion">
+                            <p>After having consulted the European Data Protection Supervisor,</p>
+                        </citation>
+                        <citation id="cit7_bill1" refersTo="#procType">
+                            <p>Acting in accordance with the ordinary legislative procedure,</p>
+                        </citation>
+                    </citations>
+                    <p>Whereas:</p>
+                    <recitals>
+                        <recital id="rec1">
+                            <num>(1)</num>
+                            <p>On 6 November 2007 the Commission adopted a proposal for a Council Framework
+                                Decision on the use of Passenger Name Record (PNR) data for law enforcement
+                                purposes
+                                <authorialNote id="inl200" marker="33">
+                                    <p>COM(2007) 654.</p>
+                                </authorialNote>
+                                . However, upon entry into force of the Treaty of Lisbon on 1
+                                December 2009, the Commission’s proposal, which had not been adopted by the Council
+                                by that date, became obsolete.
+                            </p>
+                        </recital>
+                        <recital id="rec2">
+                            <num>(2)</num>
+                            <p>The ‘Stockholm Programme — An open and secure Europe serving and protecting the
+                                citizens’
+                                <authorialNote id="inl201" marker="34">
+                                    <p>Council document 17024/09, 2.12.2009.</p>
+                                </authorialNote>
+                                calls on the Commission to present a proposal for the use of PNR
+                                data to prevent, detect, investigate and prosecute terrorism and serious crime.
+                            </p>
+                        </recital>
+                        <recital id="rec3">
+                            <num>(3)</num>
+                            <p>In its Communication of 21 September 2010 ‘On the global approach to transfers of
+                                Passenger Name Record (PNR) data to third countries’
+                                <authorialNote id="inl202"
+                                               marker="35">
+                                    <p>In its Communication of 21 September 2010 ‘On the global approach to transfers
+                                        of Passenger Name Record (PNR) data to third countries’35 the Commission
+                                        outlined certain core elements of a Union policy in this area.
+                                    </p>
+                                </authorialNote>
+                                the Commission outlined certain core elements of a Union policy in
+                                this area.
+                            </p>
+                        </recital>
+                        <recital id="rec4">
+                            <num>(4)</num>
+                            <p>Council Directive 2004/82/EC of 29 April 2004 on the obligation of air carriers to
+                                communicate passenger data36 regulates the transfer of advance passenger information
+                                by air carriers to the competent national authorities for the purpose of improving
+                                border controls and combating irregular immigration.
+                            </p>
+                        </recital>
+                        <recital id="rec5">
+                            <num>(5)</num>
+                            <p>PNR data are necessary to effectively prevent, detect, investigate and prosecute
+                                terrorist offences and serious crime and thus enhance internal security.
+                            </p>
+                        </recital>
+                        <recital id="rec6">
+                            <num>(6)</num>
+                            <p>PNR data help law enforcement authorities prevent, detect, investigate and
+                                prosecute serious crimes, including acts of terrorism, by comparing them with
+                                various databases of persons and objects sought, to construct evidence and, where
+                                relevant, to find associates of criminals and unravel criminal networks.
+                            </p>
+                        </recital>
+                        <recital id="rec7">
+                            <num>(7)</num>
+                            <p>PNR data enable law enforcement authorities to identify persons who were previously
+                                "unknown", i.e. persons previously unsuspected of involvement in serious crime and
+                                terrorism, but whom an analysis of the data suggests may be involved in such crime
+                                and who should therefore be subject to further examination by the competent
+                                authorities. By using PNR data law enforcement authorities can address the threat of
+                                serious crime and terrorism from a different perspective than through the processing
+                                of other categories of personal data. However, in order to ensure that the
+                                processing of data of innocent and unsuspected persons remains as limited as
+                                possible, the aspects of the use of PNR data relating to the creation and
+                                application of assessment criteria should be further limited to serious crimes that
+                                are also transnational in nature, i.e. are intrinsically linked to travelling and
+                                hence the type of the data being processed.
+                            </p>
+                        </recital>
+                        <recital id="rec8">
+                            <num>(8)</num>
+                            <p>The processing of personal data must be proportionate to the specific security goal
+                                pursued by this Directive.
+                            </p>
+                        </recital>
+                        <recital id="rec9">
+                            <num>(9)</num>
+                            <p>The use of PNR data together with Advance Passenger Information data in certain
+                                cases has added value in assisting Member States in verifying the identity of an
+                                individual and thus reinforcing their law enforcement value.
+                            </p>
+                        </recital>
+                        <recital id="rec10">
+                            <num>(10)</num>
+                            <p>To prevent, detect, investigate and prosecute terrorist offences and serious crime,
+                                it is therefore essential that all Member States introduce provisions laying down
+                                obligations on air carriers operating international flights to or from the territory
+                                of the Member States of the European Union.
+                            </p>
+                        </recital>
+                        <recital id="rec11">
+                            <num>(11)</num>
+                            <p>Air carriers already collect and process PNR data from their passengers for their
+                                own commercial purposes. This Directive should not impose any obligation on air
+                                carriers to collect or retain any additional data from passengers or to impose any
+                                obligation on passengers to provide any data in addition to that already being
+                                provided to air carriers.
+                            </p>
+                        </recital>
+                        <recital id="rec12">
+                            <num>(12)</num>
+                            <p>The definition of terrorist offences should be taken from Articles 1 to 4 of
+                                Council Framework Decision 2002/475/JHA on combating terrorism37. The definition of
+                                serous crime should be taken from Article 2 of Council Framework Decision
+                                2002/584/JHA of 13 June 2002 on the European Arrest Warrant and the surrender
+                                procedure between Member States38. However, Member States may exclude those minor
+                                offences for which, taking into account their respective criminal justice system,
+                                the processing of PNR data pursuant to this directive would not be in line with the
+                                principle of proportionality. The definition of serious transnational crime should
+                                be taken from Article 2 of Council Framework Decision 2002/584/JHA and the United
+                                Nations Convention on Transnational Organised Crime.
+                            </p>
+                        </recital>
+                        <recital id="rec13">
+                            <num>(13)</num>
+                            <p>PNR data should be transferred to a single designated unit (Passenger Information
+                                Unit) in the relevant Member State, so as to ensure clarity and reduce costs to air
+                                carriers.
+                            </p>
+                        </recital>
+                        <recital id="rec14">
+                            <num>(14)</num>
+                            <p>The contents of any lists of required PNR data to be obtained by the Passenger
+                                Information Unit should be drawn up with the objective of reflecting the legitimate
+                                requirements of public authorities to prevent, detect, investigate and prosecute
+                                terrorist offences or serious crime, thereby improving internal security within the
+                                Union as well as protecting the fundamental rights of citizens, notably privacy and
+                                the protection of personal data. Such lists should not contain any personal data
+                                that could reveal racial or ethnic origin, political opinions, religious or
+                                philosophical beliefs, trade union membership or data concerning health or sexual
+                                life of the individual concerned. The PNR data should contain details on the
+                                passenger’s reservation and travel itinerary which enable competent authorities to
+                                identify air passengers representing a threat to internal security.
+                            </p>
+                        </recital>
+                        <recital id="rec15">
+                            <num>(15)</num>
+                            <p>There are two possible methods of data transfer currently available: the ‘pull’
+                                method, under which the competent authorities of the Member State requiring the data
+                                can reach into (access) the air carrier’s reservation system and extract (‘pull’) a
+                                copy of the required data, and the ‘push’ method, under which air carriers transfer
+                                (‘push’) the required PNR data to the authority requesting them, thus allowing air
+                                carriers to retain control of what data is provided. The ‘push’ method is considered
+                                to offer a higher degree of data protection and should be mandatory for all air
+                                carriers.
+                            </p>
+                        </recital>
+                        <recital id="rec16">
+                            <num>(16)</num>
+                            <p>The Commission supports the International Civil Aviation Organisation (ICAO)
+                                guidelines on PNR. These guidelines should thus be the basis for adopting the
+                                supported data formats for transfers of PNR data by air carriers to Member States.
+                                This justifies that such supported data formats, as well as the relevant protocols
+                                applicable to the transfer of data from air carriers should be adopted in accordance
+                                with the advisory procedure foreseen in Regulation (EU) No….. of the European
+                                Parliament and the Council
+                                <placeholder>[……………..]</placeholder>
+                            </p>
+                        </recital>
+                        <recital id="rec17">
+                            <num>(17)</num>
+                            <p>The Member States should take all necessary measures to enable air carriers to
+                                fulfil their obligations under this Directive. Dissuasive, effective and
+                                proportionate penalties, including financial ones, should be provided for by Member
+                                States against those air carriers failing to meet their obligations regarding the
+                                transfer of PNR data. Where there are repeated serious infringements which might
+                                undermine the basic objectives of this Directive, these penalties may include, in
+                                exceptional cases, measures such as the immobilisation, seizure and confiscation of
+                                the means of transport, or the temporary suspension or withdrawal of the operating
+                                licence.
+                            </p>
+                        </recital>
+                        <recital id="rec18">
+                            <num>(18)</num>
+                            <p>Each Member State should be responsible for assessing the potential threats related
+                                to terrorist offences and serious crime.
+                            </p>
+                        </recital>
+                        <recital id="rec19">
+                            <num>(19)</num>
+                            <p>Taking fully into consideration the right to the protection of personal data and
+                                the right to non-discrimination, no decision that produces an adverse legal effect
+                                on a person or seriously affects him/her should be taken only by reason of the
+                                automated processing of PNR data. Moreover, no such decision should be taken by
+                                reason of a person’s race or ethnic origin, religious or philosophical belief,
+                                political opinion, trade union membership, health or sexual life.
+                            </p>
+                        </recital>
+                        <recital id="rec20">
+                            <num>(20)</num>
+                            <p>Member States should share with other Member States the PNR data that they receive
+                                where such transfer is necessary for the prevention, detection, investigation or
+                                prosecution of terrorist offences or serious crime . The provisions of this
+                                Directive should be without prejudice to other Union instruments on the exchange of
+                                information between police and judicial authorities, including Council Decision
+                                2009/371/JHA of 6 April 2009 establishing the European Police Office (Europol)39 and
+                                Council Framework Decision 2006/960/JHA of 18 September 2006 on simplifying the
+                                exchange of information and intelligence between law enforcement authorities of the
+                                Member States of the European Union40. Such exchange of PNR data between law
+                                enforcement and judicial authorities should be governed by the rules on police and
+                                judicial cooperation.
+                            </p>
+                        </recital>
+                        <recital id="rec21">
+                            <num>(21)</num>
+                            <p>The period during which PNR data are to be retained should be proportionate to the
+                                purposes of the prevention, detection, investigation and prosecution of terrorist
+                                offences and serious crime. Because of the nature of the data and their uses, it is
+                                necessary that the PNR data are retained for a sufficiently long period for carrying
+                                out analysis and for use in investigations. In order to avoid disproportionate use,
+                                it is necessary that, after an initial period, the data are anonymised and only
+                                accessible under very strict and limited conditions. (22) (23)
+                            </p>
+                        </recital>
+                        <recital id="rec22">
+                            <num>(22)</num>
+                            <p>Where specific PNR data have been transferred to a competent authority and are used
+                                in the context of specific criminal investigations or prosecutions, the retention of
+                                such data by the competent authority should be regulated by the national law of the
+                                Member State, irrespective of the retention periods set by this Directive.
+                            </p>
+                        </recital>
+                        <recital id="rec23">
+                            <num>(23)</num>
+                            <p>The processing of PNR data domestically in each Member State by the Passenger
+                                Information Unit and by competent authorities should be subject to a standard of
+                                protection of personal data under their national law which is in line with Framework
+                                Decision 2008/977/JHA of 27 November 2008 on the protection of personal data
+                                processed in the framework of police and judicial cooperation in criminal matters41
+                                (‘Framework Decision 2008/977/JHA’).
+                            </p>
+                        </recital>
+                        <recital id="rec24">
+                            <num>(24)</num>
+                            <p>Taking into consideration the right to the protection of personal data, the rights
+                                of the data subjects to processing of their PNR data, such as the right of access,
+                                the right of rectification, erasure and blocking, as well as the rights to
+                                compensation and judicial remedies, should be in line with Framework Decision
+                                2008/977/JHA.
+                            </p>
+                        </recital>
+                        <recital id="rec25">
+                            <num>(25)</num>
+                            <p>Taking into account the right of passengers to be informed of the processing of
+                                their personal data, Member States should ensure they are provided with accurate
+                                information about the collection of PNR data and their transfer to the Passenger
+                                Information Unit.
+                            </p>
+                        </recital>
+                        <recital id="rec26">
+                            <num>(26)</num>
+                            <p>Transfers of PNR data by Member States to third countries should be permitted only
+                                on a case-by-case basis and in compliance with Framework Decision 2008/977/JHA. To
+                                ensure the protection of personal data, such transfers should be subject to
+                                additional requirements relating to the purpose of the transfer, the quality of the
+                                receiving authority and the safeguards applicable to the personal data transferred
+                                to the third country.
+                            </p>
+                        </recital>
+                        <recital id="rec27">
+                            <num>(27)</num>
+                            <p>The national supervisory authority that has been established in implementation of
+                                Framework Decision 2008/977/JHA should also be responsible for advising on and
+                                monitoring of the application and implementation of the provisions of this
+                                Directive.
+                            </p>
+                        </recital>
+                        <recital id="rec28">
+                            <num>(28)</num>
+                            <p>This Directive does not affect the possibility for Member States to provide, under
+                                their domestic law, for a system of collection and handling of PNR data for purposes
+                                other than those specified in this Directive, or from transportation providers other
+                                than those specified in the Directive, regarding internal flights subject to
+                                compliance with relevant data protection provisions, provided that such domestic law
+                                respects the Union acquis. The issue of the collection of PNR data on internal
+                                flights should be the subject of specific reflection at a future date.
+                            </p>
+                        </recital>
+                        <recital id="rec29">
+                            <num>(29)</num>
+                            <p>As a result of the legal and technical differences between national provisions
+                                concerning the processing of personal data, including PNR, air carriers are and will
+                                be faced with different requirements regarding the types of information to be
+                                transmitted, as well as the conditions under which this information needs to be
+                                provided to competent national authorities. These differences may be prejudicial to
+                                effective cooperation between the competent national authorities for the purposes of
+                                preventing, detecting, investigating and prosecuting terrorist offences or serious
+                                crime.
+                            </p>
+                        </recital>
+                        <recital id="rec30">
+                            <num>(30)</num>
+                            <p>Since the objectives of this Directive cannot be sufficiently achieved by the
+                                Member States, and can be better achieved at Union level, the Union may adopt
+                                measures, in accordance with the principle of subsidiarity as set out in Article 5
+                                of the Treaty on European Union. In accordance with the principle of
+                                proportionality, as set out in that Article, this Directive does not go beyond what
+                                is necessary in order to achieve that objective. (31) (32)
+                            </p>
+                        </recital>
+                        <recital id="rec31">
+                            <num>(31)</num>
+                            <p>This Directive respects the fundamental rights and the principles of the Charter of
+                                Fundamental Rights of the European Union, in particular the right to the protection
+                                of personal data, the right to privacy and the right to non-discrimination as
+                                protected by Articles 8, 7 and 21 of the Charter and has to be implemented
+                                accordingly. The Directive is compatible with data protection principles and its
+                                provisions are in line with the Framework Decision 2008/977/JHA. Furthermore, and in
+                                order to comply with the proportionality principle, the Directive, on specific
+                                issues, will have stricter rules on data protection than the Framework Decision
+                                2008/977/JHA.
+                            </p>
+                        </recital>
+                        <recital id="rec32">
+                            <num>(32)</num>
+                            <p>In particular, the scope of the Directive is as limited as possible, it allows
+                                retention of PNR data for period of time not exceeding 5 years, after which the data
+                                must be deleted, the data must be anonymised after a very short period, the
+                                collection and use of sensitive data is prohibited. In order to ensure efficiency
+                                and a high level of data protection, Member States are required to ensure that an
+                                independent national supervisory authority is responsible for advising and
+                                monitoring how PNR data are processed. All processing of PNR data must be logged or
+                                documented for the purpose of verification of the lawfulness of the data processing,
+                                self-monitoring and ensuring proper data integrity and security of the data
+                                processing. Member States must also ensure that passengers are clearly and precisely
+                                informed about the collection of PNR data and their rights.
+                            </p>
+                        </recital>
+                        <recital id="rec33">
+                            <num>(33)</num>
+                            <p>[In accordance with Article 3 of the Protocol (No 21) on the position of United
+                                Kingdom and Ireland in respect of the Area of Freedom, Security and Justice, annexed
+                                to the Treaty on European Union and the Treaty on the Functioning of the European
+                                Union, those Member States have notified their wish to participate in the adoption
+                                and application of this Directive] OR [Without prejudice to Article 4 of the
+                                Protocol (No 21) on the position of the United Kingdom and Ireland in respect of the
+                                Area of Freedom, Security and Justice, annexed to the Treaty on European Union and
+                                the Treaty on the Functioning of the European Union, those Member States will not
+                                participate in the adoption of this Directive and will not be bound by or be subject
+                                to its application].
+                            </p>
+                        </recital>
+                        <recital id="rec34">
+                            <num>(34)</num>
+                            <p>In accordance with Articles 1 and 2 of the Protocol (No 22) on the position of
+                                Denmark annexed to the Treaty on European Union and the Treaty on the Functioning of
+                                the European Union, Denmark is not taking part in the adoption of this Directive and
+                                is not bound by it or subject to its application,
+                            </p>
+                        </recital>
+                    </recitals>
+                    <p>HAVE ADOPTED THIS DIRECTIVE:</p>
+                </preamble>
+                <body>
+                    <chapter id="chp1" evolvingId="chp1">
+                        <num>CHAPTER I</num>
+                        <heading>GENERAL PROVISIONS</heading>
+                        <article id="art1" evolvingId="art1">
+                            <num>Article 1</num>
+                            <heading>Subject matter and scope</heading>
+                            <paragraph id="art1-par1" evolvingId="par1">
+                                <num>1.</num>
+                                <content>
+                                    <p>This Directive provides for the transfer by air carriers of Passenger Name
+                                        Record data of passengers of international flights to and from the Member
+                                        States, as well as the processing of that data, including its collection, use
+                                        and retention by the Member States and its exchange between them.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art1-par2" evolvingId="par2">
+                                <num>2.</num>
+                                <introductory id="art1-par2-int">
+                                    <content>
+                                        <p>The PNR data collected in accordance with this Directive may be processed
+                                            only for the following purposes:
+                                        </p>
+                                    </content>
+                                </introductory>
+                                <point id="art1-par2-pnta" evolvingId="pnta">
+                                    <num>(a)</num>
+                                    <content>
+                                        <p>The prevention, detection, investigation and prosecution of terrorist
+                                            offences and serious crime according to
+                                            <mref>Article 4(2)
+                                                <ref id="inl300"
+                                                     href="#art4-par2-pntb">(b)
+                                                </ref>
+                                                and
+                                                <ref id="inl301"
+                                                     href="#art4-par2-pntc">(c)
+                                                </ref>
+                                            </mref>
+                                            ; and
+                                        </p>
+                                    </content>
+                                </point>
+                                <point id="art1-par2-pntb" evolvingId="pnta">
+                                    <num>(b)</num>
+                                    <content>
+                                        <p>The prevention, detection, investigation and prosecution of terrorist
+                                            offences and serious transnational crime according to
+                                            <mref>Article 4(2)
+                                                <ref
+                                                        id="inl302" href="#art4-par2-pnta">(a)
+                                                </ref>
+                                                and
+                                                <ref id="inl303"
+                                                     href="#art4-par2-pntb">(d)
+                                                </ref>
+                                            </mref>
+                                            .
+                                        </p>
+                                    </content>
+                                </point>
+                            </paragraph>
+                        </article>
+                        <article id="art2" evolvingId="art2" refersTo="#definitions">
+                            <num>Article 2</num>
+                            <heading>Definitions</heading>
+                            <introductory id="art2-int1">
+                                <content>
+                                    <p>For the purposes of this Directive the following definitions shall apply:</p>
+                                </content>
+                            </introductory>
+                            <point id="art2-pnta" evolvingId="pnta">
+                                <num/>
+                                <content>
+                                    <p>‘air carrier’ means an air transport undertaking with a valid operating licence
+                                        or equivalent permitting it to carry out carriage by air of passengers;
+                                    </p>
+                                </content>
+                            </point>
+                            <point id="art2-pntb" evolvingId="pntb">
+                                <num>(b)</num>
+                                <content>
+                                    <p>‘international flight’ means any scheduled or non-scheduled flight by an air
+                                        carrier planned to land on the territory of a Member State originating in a
+                                        third country or to depart from the territory of a Member State with a final
+                                        destination in a third country, including in both cases any transfer or transit
+                                        flights;
+                                    </p>
+                                </content>
+                            </point>
+                            <point id="art2-pntc" evolvingId="pntc">
+                                <num>(c)</num>
+                                <content>
+                                    <p>‘Passenger Name Record’ or 'PNR data' means a record of each passenger’s travel
+                                        requirements which contains information necessary to enable reservations to be
+                                        processed and controlled by the booking and participating air carriers for each
+                                        journey booked by or on behalf of any person, whether it is contained in
+                                        reservation systems, Departure Control Systems (DCS) or equivalent systems
+                                        providing the same functionalities;
+                                    </p>
+                                </content>
+                            </point>
+                            <point id="art2-pntd" evolvingId="pntd">
+                                <num>(d)</num>
+                                <content>
+                                    <p>‘passenger’ means any person, except members of the crew, carried or to be
+                                        carried in an aircraft with the consent of the carrier;
+                                    </p>
+                                </content>
+                            </point>
+                            <point id="art2-pnte" evolvingId="pnte">
+                                <num>(e)</num>
+                                <content>
+                                    <p>‘reservation systems’ means the air carrier’s internal inventory system, in
+                                        which PNR data are collected for the handling of reservations;
+                                    </p>
+                                </content>
+                            </point>
+                            <point id="art2-pntf" evolvingId="pntf">
+                                <num>(f)</num>
+                                <content>
+                                    <p>‘push method’ means the method whereby air carriers transfer the required PNR
+                                        data into the database of the authority requesting them;
+                                    </p>
+                                </content>
+                            </point>
+                            <point id="art2-pntg" evolvingId="pntg">
+                                <num>(g)</num>
+                                <content>
+                                    <p>‘terrorist offences’ means the offences under national law referred to in
+                                        Articles 1 to 4 of Council Framework Decision 2002/475/JHA; (h) ‘serious crime’
+                                        means the offences under national law referred to in Article 2(2) of Council
+                                        Framework Decision 2002/584/JHA if they are punishable by a custodial sentence
+                                        or a detention order for a maximum period of at least three years under the
+                                        national law of a Member State, however, Member States may exclude those minor
+                                        offences for which, taking into account their respective criminal justice
+                                        system, the processing of PNR data pursuant to this directive would not be in
+                                        line with the principle of proportionality;
+                                    </p>
+                                </content>
+                            </point>
+                            <point id="art2-pnth" evolvingId="pnth">
+                                <num>(h)</num>
+                                <introductory id="art2-par2-pnta-int">
+                                    <content>
+                                        <p>‘serious transnational crime’ means the offences under national law referred
+                                            to in Article 2(2) of Council Framework Decision 2002/584/JHA if they are
+                                            punishable by a custodial sentence or a detention order for a maximum period
+                                            of at least three years under the national law of a Member State, and if :
+                                        </p>
+                                    </content>
+                                </introductory>
+                                <point id="art2-pnti-pnt1" evolvingId="pnt1">
+                                    <num>(i)</num>
+                                    <content>
+                                        <p>They are committed in more than one state;</p>
+                                    </content>
+                                </point>
+                                <point id="art2-pnti-pnt2" evolvingId="pnt2">
+                                    <num>(ii)</num>
+                                    <content>
+                                        <p>They are committed in one state but a substantial part of their preparation,
+                                            planning, direction or control takes place in another state;
+                                        </p>
+                                    </content>
+                                </point>
+                                <point id="art2-pnti-pnt3" evolvingId="pnt3">
+                                    <num>(iii)</num>
+                                    <content>
+                                        <p>They are committed in one state but involve an organised criminal group that
+                                            engages in criminal activities in more than one state; or
+                                        </p>
+                                    </content>
+                                </point>
+                                <point id="art2-pnti-pnt4" evolvingId="pnt4">
+                                    <num>(iv)</num>
+                                    <content>
+                                        <p>They are committed in one state but have substantial effects in another
+                                            state.
+                                        </p>
+                                    </content>
+                                </point>
+                            </point>
+                        </article>
+                    </chapter>
+                    <chapter id="chp2" evolvingId="chp2">
+                        <num>CHAPTER II</num>
+                        <heading>RESPONSIBILITES OF THE MEMBER STATES</heading>
+                        <article id="art3" evolvingId="art3">
+                            <num>Article 3</num>
+                            <heading>Passenger Information Unit</heading>
+                            <paragraph id="art3-par1" evolvingId="par1">
+                                <num>1.</num>
+                                <content>
+                                    <p>Each Member State shall set up or designate an authority competent for the
+                                        prevention, detection, investigation or prosecution of terrorist offences and
+                                        serious crime or a branch of such an authority to act as its ‘Passenger
+                                        Information Unit’ responsible for collecting PNR data from the air carriers,
+                                        storing them, analysing them and transmitting the result of the analysis to the
+                                        competent authorities referred to in<ref id="inl1" href="#art5">Article
+                                            5</ref>. Its staff members may be seconded from competent public
+                                        authorities.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art3-par2" evolvingId="par2">
+                                <num>2.</num>
+                                <content>
+                                    <p>Two or more Member States may establish or designate a single authority to
+                                        serve as their Passenger Information Unit. Such Passenger Information Unit shall
+                                        be established in one of the participating Member States and shall be considered
+                                        the national Passenger Information Unit of all such participating Member States.
+                                        The participating Member States shall agree on the detailed rules for the
+                                        operation of the Passenger Information Unit and shall respect the requirements
+                                        laid down in this Directive.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art3-par3" evolvingId="par3">
+                                <num>3.</num>
+                                <content>
+                                    <p>Each Member State shall notify the Commission thereof within one month of the
+                                        establishment of the Passenger Information Unit and may at any time update its
+                                        declaration. The Commission shall publish this information, including any
+                                        updates, in the Official Journal of the European Union
+                                    </p>
+                                </content>
+                            </paragraph>
+                        </article>
+                        <article id="art4" evolvingId="art4">
+                            <num>Article 4</num>
+                            <heading>Processing of PNR data</heading>
+                            <paragraph id="art4-par" evolvingId="par">
+                                <num>1.</num>
+                                <content>
+                                    <p>The PNR data transferred by the air carriers, pursuant to<ref id="inl2"
+                                                                                                     href="#art6">
+                                        Article 6</ref>, in relation to international flights which land
+                                        on or depart from the territory of each Member State shall be collected by the
+                                        Passenger Information Unit of the relevant Member State. Should the PNR data
+                                        transferred by air carriers include data beyond those listed in the<ref
+                                                id="inl3" href="#cmp3">Annex</ref>, the Passenger Information Unit shall
+                                        delete such data immediately upon receipt.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art4-par2" evolvingId="par2">
+                                <num>2.</num>
+                                <introductory id="art4-par2-int">
+                                    <content>
+                                        <p>The Passenger Information Unit shall process PNR data only for the following
+                                            purposes:
+                                        </p>
+                                    </content>
+                                </introductory>
+                                <point id="art4-par2-pnta" evolvingId="pnta">
+                                    <num>(a)</num>
+                                    <content>
+                                        <p>carrying out an assessment of the passengers prior to their scheduled arrival
+                                            or departure from the Member State in order to identify any persons who may
+                                            be
+                                            involved in a terrorist offence or serious transnational crime and who
+                                            require
+                                            further examination by the competent authorities referred to in<ref
+                                                    id="inl422" href="#art5">Article 5</ref>. In carrying out such an
+                                            assessment, the Passenger Information Unit may process PNR data against
+                                            pre-determined criteria. Member States shall ensure that any positive match
+                                            resulting from such automated processing is individually reviewed by
+                                            non-automated means in order to verify whether the competent authority
+                                            referred to in
+                                            <ref id="inl6" href="#art5">Article 5</ref>
+                                            needs to take
+                                            action;
+                                        </p>
+                                    </content>
+                                </point>
+                                <point id="art4-par2-pntb" evolvingId="pntb">
+                                    <num>(b)</num>
+                                    <content>
+                                        <p>carrying out an assessment of the passengers prior to their scheduled arrival
+                                            or departure from the Member State in order to identify any persons who may
+                                            be
+                                            involved in a terrorist offence or serious crime and who require further
+                                            examination by the competent authorities referred to in<ref id="inl7"
+                                                                                                        href="#art5">
+                                                Article 5</ref>. In carrying out such an assessment the
+                                            Passenger Information Unit may compare PNR data against relevant databases,
+                                            including international or national databases or national mirrors of Union
+                                            databases, where they are established on the basis of Union law, on persons
+                                            or
+                                            objects sought or under alert, in accordance with Union, international and
+                                            national rules applicable to such files. Member States shall ensure that any
+                                            positive match resulting from such automated processing is individually
+                                            reviewed by non-automated means in order to verify whether the competent
+                                            authority referred to in
+                                            <ref id="inl8" href="#art5">Article 5</ref>
+                                            needs to
+                                            take action;
+                                        </p>
+                                    </content>
+                                </point>
+                                <point id="art4-par2-pntc" evolvingId="pntc">
+                                    <num>(c)</num>
+                                    <content>
+                                        <p>responding, on a case-by-case basis, to duly reasoned requests from competent
+                                            authorities to provide PNR data and process PNR data in specific cases for
+                                            the
+                                            purpose of prevention, detection, investigation and prosecution of a
+                                            terrorist
+                                            offence or serious crime, and to provide the competent authorities with the
+                                            results of such processing; and
+                                        </p>
+                                    </content>
+                                </point>
+                                <point id="art4-par2-pntd" evolvingId="pntd">
+                                    <num>(d)</num>
+                                    <content>
+                                        <p>analysing PNR data for the purpose of updating or creating new criteria for
+                                            carrying out assessments in order to identify any persons who may be
+                                            involved
+                                            in a terrorist offence or serious transnational crime pursuant to<ref
+                                                    id="inl9" href="#art4-par2-pnta">point (a)</ref>.
+                                        </p>
+                                    </content>
+                                </point>
+                            </paragraph>
+                            <paragraph id="art4-par3" evolvingId="par3">
+                                <num>3.</num>
+                                <content>
+                                    <p>The assessment of the passengers prior to their scheduled arrival or departure
+                                        from the Member State referred to in
+                                        <ref id="inl10" href="#art4-par2-pnta"
+                                                >point (a) of paragraph 2
+                                        </ref>
+                                        shall be carried out in a nondiscriminatory
+                                        manner on the basis of assessment criteria established by its Passenger
+                                        Information Unit. Member States shall ensure that the assessment criteria are
+                                        set by the Passenger Information Units, in cooperation with the competent
+                                        authorities referred to in<ref id="inl11" href="#art5">Article 5</ref>. The
+                                        assessment criteria shall in no circumstances be based on a person’s race or
+                                        ethnic origin, religious or philosophical belief, political opinion, trade union
+                                        membership, health or sexual life.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art4-par4" evolvingId="par4">
+                                <num>4.</num>
+                                <content>
+                                    <p>The Passenger Information Unit of a Member State shall transfer the PNR data or
+                                        the results of the processing of PNR data of the persons identified in
+                                        accordance with points (a) and (b) of paragraph 2 for further examination to the
+                                        relevant competent authorities of the same Member State. Such transfers shall
+                                        only be made on a caseby- case basis.
+                                    </p>
+                                </content>
+                            </paragraph>
+                        </article>
+                        <article id="art5" evolvingId="art5">
+                            <num/>
+                            <heading/>
+                            <paragraph id="art5-par1" evolvingId="par1">
+                                <num>1.</num>
+                                <content>
+                                    <p>Each Member State shall adopt a list of the competent authorities entitled to
+                                        request or receive PNR data or the result of the processing of PNR data from the
+                                        Passenger Information Units in order to examine that information further or take
+                                        appropriate action for the purpose of preventing, detecting, investigating and
+                                        prosecuting terrorist offences and serious crime.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art5-par2" evolvingId="par2">
+                                <num>2.</num>
+                                <content>
+                                    <p>Competent authorities shall consist of authorities competent for the
+                                        prevention, detection, investigation or prosecution of terrorist offences and
+                                        serious crime.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art5-par3" evolvingId="par3">
+                                <num>3.</num>
+                                <content>
+                                    <p>Each Member State shall notify the list of its competent authorities to the
+                                        Commission twelve months after entry into force of this Directive at the latest,
+                                        and may at any time update its declaration. The Commission shall publish this
+                                        information, as well as any updates, in the Official Journal of the European
+                                        Union.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art5-par4" evolvingId="par4">
+                                <num>4.</num>
+                                <content>
+                                    <p>The PNR data of passengers and the result of the processing of PNR data
+                                        received by the Passenger Information Unit may be further processed by the
+                                        competent authorities of the Member States only for the purpose of preventing,
+                                        detecting, investigating or prosecuting terrorist offences or serious crime.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art5-par5" evolvingId="par5">
+                                <num>5.</num>
+                                <content>
+                                    <p>Paragraph 4 shall be without prejudice to national law enforcement or judicial
+                                        powers where other offences, or indications thereof, are detected in the course
+                                        of enforcement action further to such processing.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art5-par6" evolvingId="par6">
+                                <num>6.</num>
+                                <content>
+                                    <p>The competent authorities shall not take any decision that produces an adverse
+                                        legal effect on a person or significantly affects a person only by reason of the
+                                        automated processing of PNR data. Such decisions shall not be taken on the basis
+                                        of a person’s race or ethnic origin, religious or philosophical belief,
+                                        political opinion, trade union membership, health or sexual life.
+                                    </p>
+                                </content>
+                            </paragraph>
+                        </article>
+                        <article id="art6" evolvingId="art6">
+                            <num>Article 6</num>
+                            <heading>Obligations on air carriers</heading>
+                            <paragraph id="art6-par1" evolvingId="par1">
+                                <content>
+                                    <p>Member States shall adopt the necessary measures to ensure that air carriers
+                                        transfer ('push') the PNR data as defined in
+                                        <ref id="inl20" href="#art2-pntc"
+                                                >Article 2(c)
+                                        </ref>
+                                        and specified in the Annex, to the extent that such data
+                                        are already collected by them, to the database of the national Passenger
+                                        Information Unit of the Member State on the territory of which the international
+                                        flight will land or from the territory of which the flight will depart. Where
+                                        the flight is code-shared between one or more air carriers, the obligation to
+                                        transfer the PNR data of all passengers on the flight shall be on the air
+                                        carrier that operates the flight. Where the flight has one or more stop-overs at
+                                        the airports of the Member States, air carriers shall transfer the PNR data to
+                                        the Passenger Information Units of all the Member States concerned.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art6-par2" evolvingId="par2">
+                                <num>1.</num>
+                                <introductory id="art6-par1-int">
+                                    <content>
+                                        <p>Air carriers shall transfer PNR data by electronic means using the common
+                                            protocols and supported data formats to be adopted in accordance with the
+                                            procedure of Articles 13 and 14 or, in the event of technical failure, by
+                                            any
+                                            other appropriate means ensuring an appropriate level of data security:
+                                        </p>
+                                    </content>
+                                </introductory>
+                                <point id="art6-par2-pnta" evolvingId="pnta">
+                                    <num>(a)</num>
+                                    <content>
+                                        <p>24 to 48 hours before the scheduled time for flight departure;</p>
+                                    </content>
+                                </point>
+                                <hcontainer name="esthetic" id="art6-par2-est1">
+                                    <content>
+                                        <p>and</p>
+                                    </content>
+                                </hcontainer>
+                                <point id="art6-par2-pntb" evolvingId="pntb">
+                                    <num>(b)</num>
+                                    <content>
+                                        <p>immediately after flight closure, that is once the passengers have boarded
+                                            the aircraft in preparation for departure and it is no longer possible for
+                                            further passengers to board.
+                                        </p>
+                                    </content>
+                                </point>
+                            </paragraph>
+                            <paragraph id="art6-par3" evolvingId="par3">
+                                <num>3.</num>
+                                <content>
+                                    <p>Member States may permit air carriers to limit the transfer referred to in
+                                        <ref
+                                                id="inl21" href="#art6-par2-pntb">point (b) of paragraph 2
+                                        </ref>
+                                        to updates of
+                                        the transfer referred to in<ref id="inl22" href="#art6-par2-pnta">point (a) of
+                                            paragraph 2</ref>.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art6-par4" evolvingId="par4">
+                                <num>4.</num>
+                                <content>
+                                    <p>On a case-by-case basis, upon request from a Passenger Information Unit in
+                                        accordance with national law, air carriers shall transfer PNR data where access
+                                        earlier than that mentioned in
+                                        <ref id="inl23" href="#art6-par2-pnta">point (a)
+                                            of paragraph 2
+                                        </ref>
+                                        is necessary to assist in responding to a specific and
+                                        actual threat related to terrorist offences or serious crime.
+                                    </p>
+                                </content>
+                            </paragraph>
+                        </article>
+                        <article id="art7" evolvingId="art7">
+                            <num>Article 7</num>
+                            <heading>Exchange of information between Member States</heading>
+                            <paragraph id="art7-par1" evolvingId="par1">
+                                <num>1.</num>
+                                <content>
+                                    <p>Member States shall ensure that, with regard to persons identified by a
+                                        Passenger Information Unit in accordance with Article 4(2)(a) and (b), the
+                                        result of the processing of PNR data is transmitted by that Passenger
+                                        Information Unit to the Passenger Information Units of other Member States where
+                                        the former Passenger Information Unit considers such transfer to be necessary
+                                        for the prevention, detection, investigation or prosecution of terrorist
+                                        offences or serious crime. The Passenger Information Units of the receiving
+                                        Member States shall transmit such PNR data or the result of the processing of
+                                        PNR data to their relevant competent authorities.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art7-par2" evolvingId="par2">
+                                <num>2.</num>
+                                <content>
+                                    <p>The Passenger Information Unit of a Member State shall have the right to
+                                        request, if necessary, the Passenger Information Unit of any other Member State
+                                        to provide it with PNR data that are kept in the latter’s database in accordance
+                                        with Article 9(1), and, if necessary, also the result of the processing of PNR
+                                        data. The request for such data may be based on any one or a combination of data
+                                        elements, as deemed necessary by the requesting Passenger Information Unit for a
+                                        specific case of prevention, detection, investigation or prosecution of
+                                        terrorist offences or serious crime. Passenger Information Units shall provide
+                                        the requested data as soon as practicable and shall provide also the result of
+                                        the processing of PNR data, if it has already been prepared pursuant to Article
+                                        4(2)(a) and (b).
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art7-par3" evolvingId="par3">
+                                <num>3.</num>
+                                <content>
+                                    <p>The Passenger Information Unit of a Member State shall have the right to
+                                        request, if necessary, the Passenger Information Unit of any other Member State
+                                        to provide it with PNR data that are kept in the latter’s database in accordance
+                                        with Article 9(2), and, if necessary, also the result of the processing of PNR
+                                        data. The Passenger Information Unit may request access to specific PNR data
+                                        kept by the Passenger Information Unit of another Member State in their full
+                                        form without the masking out only in exceptional circumstances in response to a
+                                        specific threat or a specific investigation or prosecution related to terrorist
+                                        offences or serious crime.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art7-par4" evolvingId="par4">
+                                <num>4.</num>
+                                <content>
+                                    <p>Only in those cases where it is necessary for the prevention of an immediate
+                                        and serious threat to public security may the competent authorities of a Member
+                                        State request directly the Passenger Information Unit of any other Member State
+                                        to provide it with PNR data that are kept in the latter’s database in accordance
+                                        with Article 9(1) and (2). Such requests shall relate to a specific
+                                        investigation or prosecution of terrorist offences or serious crime and shall be
+                                        reasoned. Passenger Information Units shall respond to such requests as a matter
+                                        of priority. In all other cases the competent authorities shall channel their
+                                        requests through the Passenger Information Unit of their own Member State.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art7-par5" evolvingId="par5">
+                                <num>5.</num>
+                                <content>
+                                    <p>Exceptionally, where early access is necessary to respond to a specific and
+                                        actual threat related to terrorist offences or serious crime, the Passenger
+                                        Information Unit of a Member State shall have the right to request the Passenger
+                                        Information Unit of another Member State to provide it with PNR data of flights
+                                        landing in or departing from the latter’s territory at any time.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art7-par6" evolvingId="par6">
+                                <num>6.</num>
+                                <content>
+                                    <p>Exchange of information under this Article may take place using any existing
+                                        channels for international law enforcement cooperation. The language used for
+                                        the request and the exchange of information shall be the one applicable to the
+                                        channel used. Member States shall, when making their notifications in accordance
+                                        with Article 3(3), also inform the Commission with details of the contacts to
+                                        which requests may be sent in cases of urgency. The Commission shall communicate
+                                        to the Member States the notifications received.
+                                    </p>
+                                </content>
+                            </paragraph>
+                        </article>
+                        <article id="art8">
+                            <num>Article 8</num>
+                            <heading>Transfer of data to third countries</heading>
+                            <introductory id="art8-int">
+                                <content>
+                                    <p>A Member State may transfer PNR data and the results of the processing of PNR
+                                        data to a third country, only on a case-by-case basis and if:
+                                    </p>
+                                </content>
+                            </introductory>
+                            <point id="art8-pnta" evolvingId="pnta">
+                                <num>(a)</num>
+                                <content>
+                                    <p>the conditions laid down in
+                                        <ref id="inl30"
+                                             href="urn:lex:eu:council:frameworkDecision:2008:977#art13">Article 13 of
+                                            Council Framework Decision 2008/977/JHA
+                                        </ref>
+                                        are fulfilled,
+                                    </p>
+                                </content>
+                            </point>
+                            <point id="art8-pntb" evolvingId="pntb">
+                                <num>(b)</num>
+                                <content>
+                                    <p>the transfer is necessary for the purposes of this Directive specified in
+                                        Article 1(2), and
+                                    </p>
+                                </content>
+                            </point>
+                            <point id="art8-pntc" evolvingId="pntc">
+                                <num>(c)</num>
+                                <content>
+                                    <p>the third country agrees to transfer the data to another third country only
+                                        where it is necessary for the purposes of this Directive specified in Article
+                                        1(2) and only with the express authorisation of the Member State.
+                                    </p>
+                                </content>
+                            </point>
+                        </article>
+                        <article id="art9" evolvingId="art9">
+                            <num>Article 9</num>
+                            <heading>Period of data retention</heading>
+                            <paragraph id="art9-par1" evolvingId="par1">
+                                <num>1.</num>
+                                <content>
+                                    <p>Member States shall ensure that the PNR data provided by the air carriers to
+                                        the Passenger Information Unit are retained in a database at the Passenger
+                                        Information Unit for a period of 30 days after their transfer to the Passenger
+                                        Information Unit of the first Member State on whose territory the international
+                                        flight is landing or departing.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art9-par2" evolvingId="par2">
+                                <num>2.</num>
+                                <subparagraph id="art9-par2-spa1">
+                                    <content>
+                                        <p>Upon expiry of the period of 30 days after the transfer of the PNR data to
+                                            the Passenger Information Unit referred to in paragraph 1, the data shall be
+                                            retained at the Passenger Information Unit for a further period of five
+                                            years.
+                                            During this period, all data elements which could serve to identify the
+                                            passenger to whom PNR data relate shall be masked out. Such anonymised PNR
+                                            data shall be accessible only to a limited number of personnel of the
+                                            Passenger Information Unit specifically authorised to carry out analysis of
+                                            PNR data and develop assessment criteria according to Article 4(2)(d).
+                                            Access
+                                            to the full PNR data shall be permitted only by the Head of the Passenger
+                                            Information Unit for the purposes of Article 4(2)(c) and where it could be
+                                            reasonably believed that it is necessary to carry out an investigation and
+                                            in
+                                            response to a specific and actual threat or risk or a specific investigation
+                                            or prosecution.
+                                        </p>
+                                    </content>
+                                </subparagraph>
+                                <introductory id="art9-par2-int1">
+                                    <content>
+                                        <p>For the purposes of this Directive, the data elements which could serve to
+                                            identify the passenger to whom PNR data relate and which should be filtered
+                                            and masked out are:
+                                        </p>
+                                    </content>
+                                </introductory>
+                                <indent id="art9-par2-ind1">
+                                    <num>–</num>
+                                    <content>
+                                        <p>Name (s), including the names of other passengers on PNR and number of
+                                            travellers on PNR travelling together;
+                                        </p>
+                                    </content>
+                                </indent>
+                                <indent id="art9-par2-ind2">
+                                    <num>–</num>
+                                    <content>
+                                        <p>Address and contact information;</p>
+                                    </content>
+                                </indent>
+                                <indent id="art9-par2-ind3">
+                                    <num>–</num>
+                                    <content>
+                                        <p>General remarks to the extent that it contains any information which could
+                                            serve to identify the passenger to whom PNR relate; and
+                                        </p>
+                                    </content>
+                                </indent>
+                                <indent id="art9-par2-ind4">
+                                    <num>–</num>
+                                    <content>
+                                        <p>Any collected Advance Passenger Information.</p>
+                                    </content>
+                                </indent>
+                            </paragraph>
+                            <paragraph id="art9-par3" evolvingId="par3">
+                                <num>3.</num>
+                                <content>
+                                    <p>Member States shall ensure that the PNR data are deleted upon expiry of the
+                                        period specified in paragraph 2. This obligation shall be without prejudice to
+                                        cases where specific PNR data have been transferred to a competent authority and
+                                        are used in the context of specific criminal investigations or prosecutions, in
+                                        which case the retention of such data by the competent authority shall be
+                                        regulated by the national law of the Member State.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art9-par4" evolvingId="par4">
+                                <num>4.</num>
+                                <content>
+                                    <p>The result of matching referred to in Article 4(2)(a) and (b) shall be kept by
+                                        the Passenger Information Unit only as long as necessary to inform the competent
+                                        authorities of a positive match. Where the result of an automated matching
+                                        operation has, further to individual review by non-automated means, proven to be
+                                        negative, it shall, however, be stored so as to avoid future ‘false’ positive
+                                        matches for a maximum period of three years unless the underlying data have not
+                                        yet been deleted in accordance with paragraph 3 at the expiry of the five years,
+                                        in which case the log shall be kept until the underlying data are deleted.
+                                    </p>
+                                </content>
+                            </paragraph>
+                        </article>
+                        <article id="art10" evolvingId="art10">
+                            <num>Article 10</num>
+                            <heading>Penalties against air carriers</heading>
+                            <content>
+                                <p>Member States shall ensure, in conformity with their national law, that
+                                    dissuasive, effective and proportionate penalties, including financial penalties,
+                                    are provided for against air carriers which, do not transmit the data required
+                                    under this Directive, to the extent that they are already collected by the them,
+                                    or do not do so in the required format or otherwise infringe the national
+                                    provisions adopted pursuant to this Directive.
+                                </p>
+                            </content>
+                        </article>
+                        <article id="art11" evolvingId="art11">
+                            <num>Article 11</num>
+                            <heading>Protection of personal data</heading>
+                            <paragraph id="art11-par" evolvingId="par">
+                                <num>1.</num>
+                                <content>
+                                    <p>Each Member State shall provide that, in respect of all processing of personal
+                                        data pursuant to this Directive, every passenger shall have the same right to
+                                        access, the right to rectification, erasure and blocking, the right to
+                                        compensation and the right to judicial redress as those adopted under national
+                                        law in implementation of Articles 17, 18, 19 and 20 of the Council Framework
+                                        Decision 2008/977/JHA. The provisions of Articles 17, 18, 19 and 20 of the
+                                        Council Framework Decision 2008/977/JHA shall therefore be applicable.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art11-par2" evolvingId="par2">
+                                <num>2.</num>
+                                <content>
+                                    <p>Each Member State shall provide that the provisions adopted under national law
+                                        in implementation of Articles 21 and 22 of the Council Framework Decision
+                                        2008/977/JHA regarding confidentiality of processing and data security shall
+                                        also apply to all processing of personal data pursuant to this Directive
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art11-par3" evolvingId="par3">
+                                <num>3.</num>
+                                <content>
+                                    <p>Any processing of PNR data revealing a person’s race or ethnic origin,
+                                        religious or philosophical belief, political opinion, trade union membership,
+                                        health or sexual life shall be prohibited. In the event that PNR data revealing
+                                        such information are received by the Passenger Information Unit they shall be
+                                        deleted immediately.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art11-par4" evolvingId="par4">
+                                <num>4.</num>
+                                <content>
+                                    <p>All processing of PNR data by air carriers, all transfers of PNR data by
+                                        Passenger Information Units and all requests by competent authorities or
+                                        Passenger Information Units of other Member States and third countries, even if
+                                        refused, shall be logged or documented by the Passenger Information Unit and the
+                                        competent authorities for the purposes of verification of the lawfulness of the
+                                        data processing, self-monitoring and ensuring proper data integrity and security
+                                        of data processing, in particular by the national data protection supervisory
+                                        authorities. These logs shall be kept for a period of five years unless the
+                                        underlying data have not yet been deleted in accordance with Article 9(3) at the
+                                        expiry of those five years, in which case the logs shall be kept until the
+                                        underlying data are deleted.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art11-par5" evolvingId="par5">
+                                <num>5.</num>
+                                <content>
+                                    <p>Member States shall ensure that air carriers, their agents or other ticket
+                                        sellers for the carriage of passengers on air service inform passengers of
+                                        international flights at the time of booking a flight and at the time of
+                                        purchase of a ticket in a clear and precise manner about the provision of PNR
+                                        data to the Passenger Information Unit, the purposes of their processing, the
+                                        period of data retention, their possible use to prevent, detect, investigate or
+                                        prosecute terrorist offences and serious crime, the possibility of exchanging
+                                        and sharing such data and their data protection rights, in particular the right
+                                        to complain to a national data protection supervisory authority of their choice.
+                                        The same information shall be made available by the Member States to the
+                                        public.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art11-par6" evolvingId="par6">
+                                <num>6.</num>
+                                <content>
+                                    <p>Any transfer of PNR data by Passenger Information Units and competent
+                                        authorities to private parties in Member States or in third countries shall be
+                                        prohibited.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art11-par7" evolvingId="par7">
+                                <num>7.</num>
+                                <content>
+                                    <p>Without prejudice to Article 10, Member States shall adopt suitable measures to
+                                        ensure the full implementation of the provisions of this Directive and shall in
+                                        particular lay down effective, proportionate and dissuasive penalties to be
+                                        imposed in case of infringements of the provisions adopted pursuant to this
+                                        Directive.
+                                    </p>
+                                </content>
+                            </paragraph>
+                        </article>
+                        <article id="art">
+                            <num>Article 12</num>
+                            <heading>National supervisory authority</heading>
+                            <content>
+                                <p>Each Member State shall provide that the national supervisory authority
+                                    established in implementation of Article 25 of Framework Decision 2008/977/JHA
+                                    shall also be responsible for advising on and monitoring the application within
+                                    its territory of the provisions adopted by the Member States pursuant to the
+                                    present Directive. The further provisions of Article 25 Framework Decision
+                                    2008/977/JHA shall be applicable.
+                                </p>
+                            </content>
+                        </article>
+                    </chapter>
+                    <chapter id="chp4" evolvingId="chp4">
+                        <num>CHAPTER IV</num>
+                        <heading>IMPLEMENTING MEASURES</heading>
+                        <article id="art13" evolvingId="art13">
+                            <num>Article 13</num>
+                            <heading>Common protocols and supported data formats</heading>
+                            <paragraph id="art13-par1" evolvingId="par1">
+                                <num>1.</num>
+                                <content>
+                                    <p>All transfers of PNR data by air carriers to the Passenger Information Units
+                                        for the purposes of this Directive shall be made by electronic means or, in the
+                                        event of technical failure, by any other appropriate means, for a period of one
+                                        year following the adoption of the common protocols and supported data formats
+                                        in accordance with Article 14.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art13-par2" evolvingId="par2">
+                                <num>2.</num>
+                                <content>
+                                    <p>Once the period of one year from the date of adoption of the common protocols
+                                        and supported data formats has elapsed, all transfers of PNR data by air
+                                        carriers to the Passenger Information Units for the purposes of this Directive
+                                        shall be made electronically using secure methods in the form of accepted common
+                                        protocols which shall be common to all transfers to ensure the security of the
+                                        data during transfer, and in a supported data format to ensure their readability
+                                        by all parties involved. All air carriers shall be required to select and
+                                        identify to the Passenger Information Unit the common protocol and data format
+                                        that they intend to use for their transfers.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art13-par3" evolvingId="par3">
+                                <num>3.</num>
+                                <content>
+                                    <p>The list of accepted common protocols and supported data formats shall be drawn
+                                        up and, if need be, adjusted, by the Commission in accordance with the procedure
+                                        referred to in Article 14(2).
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art13-par4" evolvingId="par4">
+                                <num>4.</num>
+                                <content>
+                                    <p>As long as the accepted common protocols and supported data formats referred to
+                                        in paragraphs 2 and 3 are not available, paragraph 1 shall remain
+                                        applicable.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art13-par5" evolvingId="par5">
+                                <num>5.</num>
+                                <content>
+                                    <p>Each Member State shall ensure that the necessary technical measures are
+                                        adopted to be able to use the common protocols and data formats within one year
+                                        from the date the common protocols and supported data formats are adopted.
+                                    </p>
+                                </content>
+                            </paragraph>
+                        </article>
+                        <article id="art14">
+                            <num>Article 14</num>
+                            <heading>Committee procedure</heading>
+                            <paragraph id="art14-par1">
+                                <num>1.</num>
+                                <content>
+                                    <p>The Commission shall be assisted by a committee (‘the Committee’). That
+                                        Committee shall be a committee within the meaning of Regulation
+                                        <placeholder>[…/2011/EU]</placeholder>
+                                        of<date date="2011-02-16">16 February
+                                            2011</date>.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art14-par2">
+                                <num>2.</num>
+                                <content>
+                                    <p>Where reference is made to this paragraph, Article 4 of Regulation
+                                        <placeholder>[…/2011/EU]</placeholder>
+                                        of
+                                        <date date="2011-02-16">16 February
+                                            2011
+                                        </date>
+                                        shall apply.
+                                    </p>
+                                </content>
+                            </paragraph>
+                        </article>
+                    </chapter>
+                    <chapter id="chp5">
+                        <num>CHAPTER V</num>
+                        <heading>FINAL PROVISIONS</heading>
+                        <article id="art15">
+                            <num>Article 15</num>
+                            <heading>Transposition</heading>
+                            <paragraph id="art15-par1">
+                                <num>1.</num>
+                                <subparagraph id="art15-par1-spa1">
+                                    <content>
+                                        <p>Member States shall bring into force the laws, regulations and administrative
+                                            provisions necessary to comply with this Directive at the latest two years
+                                            after the entry into force of this Directive. They shall forthwith
+                                            communicate
+                                            to the Commission the text of those provisions and a correlation table
+                                            between
+                                            those provisions and this Directive.
+                                        </p>
+                                    </content>
+                                </subparagraph>
+                                <subparagraph id="art15-par1-spa2">
+                                    <content>
+                                        <p>When Member States adopt those provisions, they shall contain a reference to
+                                            this Directive or be accompanied by such a reference on the occasion of
+                                            their
+                                            official publication. Member States shall determine how such reference is to
+                                            be made.
+                                        </p>
+                                    </content>
+                                </subparagraph>
+                            </paragraph>
+                            <paragraph id="art15-par2">
+                                <num>2.</num>
+                                <content>
+                                    <p>Member States shall communicate to the Commission the text of the main
+                                        provisions of national law which they adopt in the field covered by this
+                                        Directive.
+                                    </p>
+                                </content>
+                            </paragraph>
+                        </article>
+                        <article id="art16">
+                            <num>Article 16</num>
+                            <heading>Transitional provisions</heading>
+                            <content>
+                                <p>Upon the date referred to in Article 15(1), i.e. two years after the entry into
+                                    force of this Directive, Member States shall ensure that the PNR data of at least
+                                    30% of all flights referred to in Article 6(1) are collected. Until two years
+                                    after the date referred to in Article 15, Member States shall ensure that the PNR
+                                    data from at least 60 % of all flights referred to in Article 6(1) are collected.
+                                    Member States shall ensure that from four years after the date referred to in
+                                    Article 15, the PNR data from all flights referred to in Article 6(1) are
+                                    collected.
+                                </p>
+                            </content>
+                        </article>
+                        <article id="art17" evolvingId="art17">
+                            <num>Article 17</num>
+                            <heading>Review</heading>
+                            <introductory id="art17-int1">
+                                <content>
+                                    <p/>
+                                </content>
+                            </introductory>
+                            <point id="art17-pnta" evolvingId="pnta">
+                                <num>(a)</num>
+                                <content>
+                                    <p>review the feasibility and necessity of including internal flights in the scope
+                                        of this Directive, in the light of the experience gained by those Member States
+                                        that collect PNR data with regard to internal flights. The Commission shall
+                                        submit a report to the European Parliament and the Council within two years
+                                        after the date mentioned in Article 15(1);
+                                    </p>
+                                </content>
+                            </point>
+                            <point id="art17-pntb" evolvingId="pntb">
+                                <num>(b)</num>
+                                <content>
+                                    <p>undertake a review of the operation of this Directive and submit a report to
+                                        the European Parliament and the Council within four years after the date
+                                        mentioned in Article 15(1). Such review shall cover all the elements of this
+                                        Directive, with special attention to the compliance with standard of protection
+                                        of personal data, the length of the data retention period and the quality of the
+                                        assessments. It shall also contain the statistical information gathered pursuant
+                                        to Article 18.
+                                    </p>
+                                </content>
+                            </point>
+                        </article>
+                        <article id="art18" evolvingId="art17">
+                            <num>Article 18</num>
+                            <heading>Statistical data</heading>
+                            <paragraph id="art18-par1" evolvingId="par1">
+                                <num>1.</num>
+                                <content>
+                                    <p>Member States shall prepare a set of statistical information on PNR data
+                                        provided to the Passenger Information Units. Such statistics shall as a minimum
+                                        cover the number of identifications of any persons who may be involved in a
+                                        terrorist offence or serious crime according to Article 4(2) and the number of
+                                        subsequent law enforcement actions that were taken involving the use of PNR data
+                                        per air carrier and destination.
+                                    </p>
+                                </content>
+                            </paragraph>
+                        </article>
+                        <paragraph id="art18-par2" evolvingId="par2">
+                            <num>2.</num>
+                            <content>
+                                <p>These statistics shall not contain any personal data. They shall be transmitted
+                                    to the Commission on a yearly basis.
+                                </p>
+                            </content>
+                        </paragraph>
+                        <article id="art19" evolvingId="art19">
+                            <num>Article 19</num>
+                            <heading>Relationship to other instruments</heading>
+                            <paragraph id="art19-par1" evolvingId="par1">
+                                <num>1.</num>
+                                <content>
+                                    <p>Member States may continue to apply bilateral or multilateral agreements or
+                                        arrangements between themselves on exchange of information between competent
+                                        authorities, in force when this Directive is adopted, in so far as such
+                                        agreements or arrangements are compatible with this Directive.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art19-par2" evolvingId="par2">
+                                <num>2.</num>
+                                <content>
+                                    <p>This Directive is without prejudice to any obligations and commitments of the
+                                        Union by virtue of bilateral and/or multilateral agreements with third
+                                        countries.
+                                    </p>
+                                </content>
+                            </paragraph>
+                        </article>
+                        <article id="art20">
+                            <num>Article 20</num>
+                            <heading>Entry into force</heading>
+                            <paragraph id="art20-par1">
+                                <content>
+                                    <p>This Directive shall enter into force the twentieth day following that of its
+                                        publication in the<i>Official Journal of the European Union</i>.
+                                    </p>
+                                </content>
+                            </paragraph>
+                            <paragraph id="art20-par2">
+                                <content>
+                                    <p>This Directive is addressed to the Member States in accordance with the
+                                        Treaties.
+                                    </p>
+                                </content>
+                            </paragraph>
+                        </article>
+                    </chapter>
+                </body>
+                <conclusions>
+                    <p>Done at Brussels,</p>
+                    <p>For the European Parliament
+                        <signature>The President</signature>
+                    </p>
+                    <p>For the Council
+                        <signature>The President</signature>
+                    </p>
+                </conclusions>
+                <attachments>
+                    <componentRef id="cmpRef" href="#cmp3" showAs="Annex"/>
+                </attachments>
+
+            </bill>
+
+        </component>
+        <component id="cmp3">
+            <doc name="technicalAnnex">
+                <meta>
+                    <identification source="#EPAdministration">
+                        <FRBRWork>
+                            <FRBRthis value="urn:lex:eu:commission:proposal:2011:32/bill/annex"/>
+                            <FRBRuri value="urn:lex:eu:commission:proposal:2011:32/bill/annex"/>
+                            <FRBRdate date="2011-02-02" name="referingCOMAdoptedDate"/>
+                            <FRBRauthor href=""/>
+                        </FRBRWork>
+                        <FRBRExpression>
+                            <FRBRthis value="urn:lex:eu:commission:proposal:2011:32/bill/annex@final:en"/>
+                            <FRBRuri value="urn:lex:eu:commission:proposal:2011:32/bill/annex@final:en"/>
+                            <FRBRdate date="2011-02-02" name="referingCOMAdoptedDate"/>
+                            <FRBRauthor href=""/>
+                            <FRBRlanguage language="en"/>
+                        </FRBRExpression>
+                        <FRBRManifestation>
+                            <FRBRthis value="urn:lex:eu:commission:proposal:2011:32/bill/annex@final:en$text-xml"/>
+                            <FRBRuri value="urn:lex:eu:commission:proposal:2011:32/bill/annex@final:en$text-xml"/>
+                            <FRBRdate date="2011-07-06" name="XMLconversion"/>
+                            <FRBRauthor href=""/>
+                        </FRBRManifestation>
+                    </identification>
+                </meta>
+                <preface>
+                    <longTitle>
+                        <p>ANNEX</p>
+                    </longTitle>
+                </preface>
+                <mainContent>
+                    <tblock id="tbk1_bill1-ann1" evolvingId="tbk1">
+                        <heading>Passenger Name Record data as far as collected by air carriers</heading>
+                        <list id="tbk1-lst1_bill1-ann1" evolvingId="lst1">
+                            <item id="tbk1-lst1-itm1_bill1-ann1" evolvingId="itm1">
+                                <num/>
+                                <p>(1) PNR record locator</p>
+                            </item>
+                            <item id="tbk1-lst1-itm2_bill1-ann1" evolvingId="itm2">
+                                <num>(2)</num>
+                                <p>Date of reservation/issue of ticket</p>
+                            </item>
+                            <item id="tbk1-lst1-itm3_bill1-ann1" evolvingId="itm3">
+                                <num>(3)</num>
+                                <p>Date(s) of intended travel</p>
+                            </item>
+                            <item id="tbk1-lst1-itm4_bill1-ann1" evolvingId="itm4">
+                                <num>(4)</num>
+                                <p>Name(s)</p>
+                            </item>
+                            <item id="tbk1-lst1-itm5_bill1-ann1" evolvingId="itm5">
+                                <num>(5)</num>
+                                <p>Address and contact information (telephone number, e-mail address)</p>
+                            </item>
+                            <item id="tbk1-lst1-itm6_bill1-ann1" evolvingId="itm6">
+                                <num>(6)</num>
+                                <p>All forms of payment information, including billing address</p>
+                            </item>
+                            <item id="tbk1-lst1-itm7_bill1-ann1" evolvingId="itm7">
+                                <num>(7)</num>
+                                <p>Complete travel itinerary for specific PNR</p>
+                            </item>
+                            <item id="tbk1-lst1-itm8_bill1-ann1" evolvingId="itm8">
+                                <num>(8)</num>
+                                <p>Frequent flyer information</p>
+                            </item>
+                            <item id="tbk1-lst1-itm9_bill1-ann1" evolvingId="itm9">
+                                <num>(9)</num>
+                                <p>Travel agency/travel agent</p>
+                            </item>
+                            <item id="tbk1-lst1-itm10_bill1-ann1" evolvingId="itm10">
+                                <num>(10)</num>
+                                <p>Travel status of passenger, including confirmations, check-in status, no show or
+                                    go show information
+                                </p>
+                            </item>
+                            <item id="tbk1-lst1-itm11_bill1-ann1" evolvingId="itm11">
+                                <num>(11)</num>
+                                <p>Split/divided PNR information</p>
+                            </item>
+                            <item id="tbk1-lst1-itm12_bill1-ann1" evolvingId="itm12">
+                                <num>(12)</num>
+                                <p>General remarks (including all available information on unaccompanied minors
+                                    under 18 years, such as name and gender of the minor, age, language(s) spoken,
+                                    name and contact details of guardian on departure and relationship to the minor,
+                                    name and contact details of guardian on arrival and relationship to the minor,
+                                    departure and arrival agent)
+                                </p>
+                            </item>
+                            <item id="tbk1-lst1-itm13_bill1-ann1" evolvingId="itm13">
+                                <num>(13)</num>
+                                <p>Ticketing field information, including ticket number, date of ticket issuance and
+                                    oneway tickets, Automated Ticket Fare Quote fields
+                                </p>
+                            </item>
+                            <item id="tbk1-lst1-itm14_bill1-ann1" evolvingId="itm14">
+                                <num>(14)</num>
+                                <p>Seat number and other seat information</p>
+                            </item>
+                            <item id="tbk1-lst1-itm15_bill1-ann1" evolvingId="itm15">
+                                <num>(15)</num>
+                                <p>Code share information</p>
+                            </item>
+                            <item id="tbk1-lst1-itm16_bill1-ann1" evolvingId="itm16">
+                                <num>(16)</num>
+                                <p>All baggage information</p>
+                            </item>
+                            <item id="tbk1-lst1-itm17_bill1-ann1" evolvingId="itm17">
+                                <num>(17)</num>
+                                <p>Number and other names of travellers on PNR</p>
+                            </item>
+                            <item id="tbk1-lst1-itm18_bill1-ann1" evolvingId="itm18">
+                                <num>(18)</num>
+                                <p>Any Advance Passenger Information (API) data collected</p>
+                            </item>
+                            <item id="tbk1-lst1-itm19_bill1-ann1" evolvingId="itm19">
+                                <num>(19)</num>
+                                <p>All historical changes to the PNR listed in numbers 1 to 18</p>
+                            </item>
+                        </list>
+                    </tblock>
+                </mainContent>
+            </doc>
+
+        </component>
+    </components>
+
+</akomaNtoso>

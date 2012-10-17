@@ -1,0 +1,2429 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--Akoma_Ntoso document-->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <act contains="singleVersion">
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/ke/act/1997-08-22/3/main"/>
+                    <FRBRuri value="/ke/act/1997-08-22/3"/>
+                    <FRBRdate date="1997-08-22" name="Generation"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <componentInfo>
+                        <componentData id="wmain" href="#emain" name="main" showAs="Main document"/>
+                        <componentData id="wschedule" href="#eschedule" name="schedule"
+                                       showAs="SCHEDULE (s.S) PROVISIONS AS TOTHE CONDUCT OF BUSINESS AND AFFAIRS OF THE BOARD."/>
+                    </componentInfo>
+                    <FRBRcountry value="ke"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/ke/act/1997-08-22/3/eng@2003-12-19/main"/>
+                    <FRBRuri value="/ke/act/1997-08-22/3/eng@2003-12-19"/>
+                    <FRBRdate date="2007-11-23" name="Generation"/>
+                    <FRBRauthor href="#bungeni" as="#jurist"/>
+                    <componentInfo>
+                        <componentData id="emain" href="#mmain" name="main" showAs="Main document"/>
+                        <componentData id="eschedule" href="#mschedule" name="schedule"
+                                       showAs="SCHEDULE (s.S) PROVISIONS AS TOTHE CONDUCT OF BUSINESS AND AFFAIRS OF THE BOARD."/>
+                    </componentInfo>
+                    <FRBRlanguage language="eng"/>
+                    <FRBRtranslation href="/ke/act/1997-08-22/3/swa@" fromLanguage="swa" by="#palirament" pivot="fra"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/ke/act/1997-08-22/3/eng@2003-12-19/main.xml"/>
+                    <FRBRuri value="/ke/act/1997-08-22/3/eng@2003-12-19.akn"/>
+                    <FRBRalias value="/ke/act/RETIREMENTS_BENEFITS_ACT/eng@2003-12-19.akn"/>
+                    <FRBRdate date="2007-11-23" name="Generation"/>
+                    <FRBRauthor href="#bungeni" as="#editor"/>
+                    <FRBRauthor href="#be" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="mmain" href="main.xml" name="main" showAs="Main document"/>
+                        <componentData id="mschedule" href="schedule.xml" name="schedule"
+                                       showAs="SCHEDULE (s.S) PROVISIONS AS TOTHE CONDUCT OF BUSINESS AND AFFAIRS OF THE BOARD."/>
+                    </componentInfo>
+                    <FRBRformat value="xml"/>
+                </FRBRManifestation>
+            </identification>
+            <publication name="internal" date="1997-08-22" showAs="Internal Journal" number="999"/>
+            <classification source="eurovoc">
+                <keyword value="k1" showAs="privacy" dictionary="privacy"/>
+            </classification>
+            <lifecycle source="#bungeni">
+                <eventRef id="e1" date="1997-08-29" source="#ro1" type="generation"/>
+                <eventRef id="e2" date="2003-12-19" source="#rp1" type="amendment"/>
+            </lifecycle>
+            <workflow source="#bungeni">
+                <step date="2010-06-30" outcome="firstReading" actor="#parliament" as="#legislator"/>
+                <step date="2010-11-15" outcome="secondReading" actor="#parliament" as="#legislator"/>
+            </workflow>
+            <analysis source="#bungeni">
+                <passiveModifications>
+                    <textualMod type="substitution" id="pm1" incomplete="true">
+                        <source href="/ke/act/2003-12-10/8/eng@/main#ref2"/>
+                        <destination href="#sec2-sub1"/>
+                    </textualMod>
+                    <textualMod type="insertion" id="pm2" incomplete="true">
+                        <source href="/ke/act/2003-12-10/8/eng@/main#ref20"/>
+                        <destination href="#sec2-sub1"/>
+                    </textualMod>
+                    <textualMod type="insertion" id="pm3" incomplete="true">
+                        <source href="/ke/act/2003-12-10/8/eng@/main#ref20"/>
+                        <destination href="#sec2-sub1"/>
+                    </textualMod>
+                    <textualMod type="substitution" id="pm4">
+                        <source href="/ke/act/2003-12-10/8/eng@/main#ref9"/>
+                        <destination href="#sec34-sub2-itma"/>
+
+                    </textualMod>
+                    <textualMod type="insertion" id="pm5">
+                        <source href="/ke/act/2003-12-10/8/eng@/main#ref10"/>
+                        <destination href="#sec34-sub3"/>
+                    </textualMod>
+                    <textualMod type="insertion" id="pm6">
+                        <source href="/ke/act/2003-12-10/8/eng@/main#ref13"/>
+                        <destination href="#sec37-sub1"/>
+                    </textualMod>
+                    <textualMod type="insertion" id="pm7">
+                        <source href="/ke/act/2003-12-10/8/eng@/main#ref15"/>
+                        <destination href="#sec54.a"/>
+                    </textualMod>
+                    <textualMod type="substitution" id="pm8">
+                        <source href="/ke/act/2003-12-10/8/eng@/main#ref5"/>
+                        <destination href="#sec22-sub3"/>
+
+                    </textualMod>
+                    <textualMod type="insertion" id="pm9">
+                        <source href="/ke/act/2003-12-10/8/eng@/main#ref6"/>
+                        <destination href="#sec22-sub3"/>
+
+                    </textualMod>
+                </passiveModifications>
+            </analysis>
+            <temporalData source="#palmirani">
+                <temporalGroup id="t1">
+                    <timeInterval refersTo="#inforce" start="e1" end="e2"/>
+                    <timeInterval refersTo="#efficacy" start="e1" end="e2"/>
+                </temporalGroup>
+                <temporalGroup id="t2">
+                    <timeInterval refersTo="#inforce" start="e2"/>
+                    <timeInterval refersTo="#efficacy" start="e2"/>
+                </temporalGroup>
+            </temporalData>
+            <references source="#bungeni">
+                <original id="ro1" href="/ke/act/1997-08-22/3/eng@/main" showAs="Original"/>
+                <passiveRef id="rp1" href="/ke/act/2003-12-10/8/eng@/main" showAs=""/>
+                <hasAttachment id="a1" href="/ke/act/1997-08-22/3/eng@2003-12-19/schedule"
+                               showAs="SCHEDULE (s.S) PROVISIONS AS TOTHE CONDUCT OF BUSINESS AND AFFAIRS OF THE BOARD."/>
+                <attachmentOf id="a2" href="/ke/act/1997-08-22/3/eng@2003-12-19/folder" showAs="Folder"/>
+                <jurisprudence id="j1" href="/ke/judgment/2010-08-22/22/eng@/main"
+                               showAs="High Court Judgment 22/2010"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/kn/bungeni/kn.bungeni" showAs="bungeni"/>
+                <TLCPerson id="be" href="/ontology/person/editors/kn.be" showAs="A Bungeni Editor"/>
+                <TLCOrganization id="parliament" href="/ontology/organization/ke/ke.parliament"
+                                 showAs="Parliament of Kenya"/>
+                <TLCRole id="editor" href="/ontology/roles/editor" showAs="Editor"/>
+                <TLCRole id="jurist" href="/ontology/roles/jurist" showAs="Jurist"/>
+                <TLCRole id="author" href="/ontology/roles/author" showAs="Author"/>
+                <TLCConcept id="inforce" href="/ontology/concept/inforce" showAs="inforce"/>
+                <TLCConcept id="efficacy" href="/ontology/concept/efficacy" showAs="efficacy"/>
+                <TLCLocation id="nairobi" href="/ontology/location/nairobi" showAs="Nairoby"/>
+            </references>
+            <notes source="#au1">
+                <note id="n1">
+                    <p>1. Substitution. The text - "financial year" means the financial year of the Authority prescribed
+                        by section 19; - has been substituted by the text - financial year" -
+                        <eol/>
+                        (a) in relation to the Authority, has the meaning assigned to it in section 19;'
+                        <eol/>
+                        (b) in relation to a scheme, means such accounting period as may be prescribed in the scheme
+                        rules; - .<eol/>Modification effective as from: 19/12/2003.
+                        <eol/>
+                        <a href="/ke/act/2003-12-10/8/eng@/main#ref2" title="modifiyng">Modificatory document</a>: act
+                        n. 8 10/12/2003 (language: eng).
+                    </p>
+                </note>
+                <note id="n2">
+                    <p>2. Insertion. The text - pooled fund" means a fund established by a limited liability company,
+                        other than an approved issuer, for purposes of pooling scheme funds for collective investment; -
+                        has been inserted.<eol/>Modification effective as from: 19/12/2003.
+                        <eol/>
+                        <a href="/ke/act/2003-12-10/8/eng@/main#ref20" title="modifiyng">Modificatory document</a>: act
+                        n. 8 10/12/2003 (language: eng).
+                    </p>
+                </note>
+                <note id="n3">
+                    <p>3. Insertion. The text - "statutory fund" has the meaning assigned to it in Cap.487 section 2 of
+                        the Insurance Act. - has been inserted.<eol/>Modification effective as from: 19/12/2003.
+                        <eol/>
+                        <a href="/ke/act/2003-12-10/8/eng@/main#ref20" title="modifiyng">Modificatory document</a>: act
+                        n. 8 10/12/2003 (language: eng).
+                    </p>
+                </note>
+                <note id="n4">
+                    <p>4. Substitution. The text - two - has been substituted by the text - one - .<eol/>Modification
+                        effective as from: 19/12/2003.
+                        <eol/>
+                        <a href="/ke/act/2003-12-10/8/eng@/main#ref5" title="modifiyng">Modificatory document</a>: act
+                        n. 8 10/12/2003 (language: eng).
+                    </p>
+                </note>
+                <note id="n5">
+                    <p>5. Insertion. The text - once - has been inserted.<eol/>Modification effective as from:
+                        19/12/2003.
+                        <eol/>
+                        <a href="/ke/act/2003-12-10/8/eng@/main#ref6" title="modifiyng">Modificatory document</a>: act
+                        n. 8 10/12/2003 (language: eng).
+                    </p>
+                </note>
+                <note id="n6">
+                    <p>6. Substitution. The text - balance sheet - has been substituted by the text - statement of
+                        assets and liabilities - .<eol/>Modification effective as from: 19/12/2003.
+                        <eol/>
+                        <a href="/ke/act/2003-12-10/8/eng@/main#ref9" title="modifiyng">Modificatory document</a>: act
+                        n. 8 10/12/2003 (language: eng).
+                    </p>
+                </note>
+                <note id="n7">
+                    <p>7. Insertion. The text - Provided that the appointed auditor shall not be a member, trustee or
+                        sponsor of the scheme - has been inserted.<eol/>Modification effective as from: 19/12/2003.
+                        <eol/>
+                        <a href="/ke/act/2003-12-10/8/eng@/main#ref10" title="modifiyng">Modificatory document</a>: act
+                        n. 8 10/12/2003 (language: eng).
+                    </p>
+                </note>
+                <note id="n8">
+                    <p>8. Insertion. The text - Provided that a scheme with a fund value of five million Kenya shillings
+                        or less may invest up to one hundred per centum of its scheme funds in Government securities -
+                        has been inserted.<eol/>Modification effective as from: 19/12/2003.
+                        <eol/>
+                        <a href="/ke/act/2003-12-10/8/eng@/main#ref13" title="modifiyng">Modificatory document</a>: act
+                        n. 8 10/12/2003 (language: eng).
+                    </p>
+                </note>
+                <note id="n9">
+                    <p>9. Insertion of the following partition: Section 54.a.<eol/>Modification effective as from:
+                        19/12/2003.
+                        <eol/>
+                        <a href="/ke/act/2003-12-10/8/eng@/main#ref15" title="modifiyng">Modificatory document</a>: act
+                        n. 8 10/12/2003 (language: eng).
+                    </p>
+                </note>
+            </notes>
+            <proprietary source="#EP">
+            </proprietary>
+        </meta>
+        <preface>
+            <p>Kenya Gazette Supplement No. 63 (Acts No. 4)<eol/>REPUBLIC OF KENYA<eol/>KENYA GAZETTE SUPPLEMENT
+                <eol/>
+                ACTS, 1997<eol/>NAIROBI, 29th August, 1997
+                <eol/>
+                <docTitle id="ActTitle">THE RETIREMENTS BENEFITS ACT, 1997</docTitle>
+                <eol/>No.
+                <docNumber>3</docNumber>
+                of 1997<eol/>Date of Assent:
+                <docDate date="1997-08-22">22nd August, 1997</docDate>
+                <eol/>Date of Commencement:-By-Notice
+            </p>
+        </preface>
+        <preamble>
+            <toc>
+                <tocItem href="#" level="0">ARRANGEMENT OF SECTIONS</tocItem>
+                <tocItem href="#prtI" level="2">PART I</tocItem>
+                <tocItem href="#" level="0">PRELIMINARY</tocItem>
+                <tocItem href="#sec1" level="6">1. Short title and commencement.</tocItem>
+                <tocItem href="#sec2" level="6">2. Interpretation.</tocItem>
+                <tocItem href="#prtII" level="2">PART II</tocItem>
+                <tocItem href="#" level="0">THE RETIREMENT BENEFITS AUTHORITY</tocItem>
+                <tocItem href="#sec3" level="6">3. Establishment and incorporation of the Retirement Benefits
+                    Authority.
+                </tocItem>
+                <tocItem href="#sec4" level="6">4. Headquarters.</tocItem>
+                <tocItem href="#sec5" level="6">5. Object and functions of the Authourity</tocItem>
+                <tocItem href="#sec6" level="6">6. Board of directors.</tocItem>
+                <tocItem href="#sec7" level="6">7. The powers of the Board.</tocItem>
+                <tocItem href="#sec8" level="6">8. Conduct of business and affairs of the Board.</tocItem>
+                <tocItem href="#sec9" level="6">9. Delegation by the Authority.</tocItem>
+                <tocItem href="#sec10" level="6">10. Remuneration of Board members.</tocItem>
+                <tocItem href="#sec11" level="6">11. The Chief Executive Officer.</tocItem>
+                <tocItem href="#sec12" level="6">12. Staff of the Authority.</tocItem>
+                <tocItem href="#sec13" level="6">13. The common seal of the Authority.</tocItem>
+                <tocItem href="#sec14" level="6">14. Protection from personal liability.</tocItem>
+                <tocItem href="#sec15" level="6">15. Liability of the Authority for damages.</tocItem>
+                <tocItem href="#sec16" level="6">16. The Retirement Benefits Levy.</tocItem>
+                <tocItem href="#sec17" level="6">17. The Retirement Benefits Authority Fund.</tocItem>
+                <tocItem href="#sec18" level="6">18. Investment of funds.</tocItem>
+                <tocItem href="#sec19" level="6">19. Financial year.</tocItem>
+                <tocItem href="#sec20" level="6">20. Annual estimates.</tocItem>
+                <tocItem href="#sec21" level="6">21. Accounts and audit.</tocItem>
+                <tocItem href="#prtIII" level="2">PART III</tocItem>
+                <tocItem href="#" level="0">REGISTRATION OF RETIREMENT BENEFITS SCHEMES AND MANAGERS</tocItem>
+                <tocItem href="#sec22" level="6">22. Retirement benefits schemes and managers to be registered.
+                </tocItem>
+                <tocItem href="#sec23" level="6">23. Registration.</tocItem>
+                <tocItem href="#sec24" level="6">24. Requirements for registration of schemes.</tocItem>
+                <tocItem href="#sec25" level="6">25. Requirements for registration of managers.</tocItem>
+                <tocItem href="#sec26" level="6">26. Requirements with regard to trustees.</tocItem>
+                <tocItem href="#sec27" level="6">27. Refusal of registration.</tocItem>
+                <tocItem href="#sec28" level="6">28. Deregistration.</tocItem>
+                <tocItem href="#sec29" level="6">29. Duration of certificate of registration.</tocItem>
+                <tocItem href="#sec30" level="6">30. Register.</tocItem>
+                <tocItem href="#sec31" level="6">31. Use of register in evidence.</tocItem>
+                <tocItem href="#prtIV" level="2">PART IV</tocItem>
+                <tocItem href="#" level="0">REGULATION AND SUPERVISION OF RETIREMENT BENEFITS SCHEMES</tocItem>
+                <tocItem href="#sec32" level="6">32. Scheme funds.</tocItem>
+                <tocItem href="#sec33" level="6">33. Statutory contributions.</tocItem>
+                <tocItem href="#sec34" level="6">34. Annual report and accounts.</tocItem>
+                <tocItem href="#sec35" level="6">35. Actuarial evaluations.</tocItem>
+                <tocItem href="#sec36" level="6">36. Protection against attachment.</tocItem>
+                <tocItem href="#sec37" level="6">37. Investment of funds.</tocItem>
+                <tocItem href="#sec38" level="6">38. Restrictions on use of scheme funds.</tocItem>
+                <tocItem href="#sec39" level="6">39. Unsafe and unsound practices.</tocItem>
+                <tocItem href="#sec40" level="6">40. General obligations of trustees and managers.</tocItem>
+                <tocItem href="#prtV" level="2">PART V</tocItem>
+                <tocItem href="#" level="0">INSPECTION AND APPOINTMENT OF INTERIM ADMINISTRATOR</tocItem>
+                <tocItem href="#sec41" level="6">41. Inspection.</tocItem>
+                <tocItem href="#sec42" level="6">42. Powers of the inspector.</tocItem>
+                <tocItem href="#sec43" level="6">43. Inspection report.</tocItem>
+                <tocItem href="#sec44" level="6">44. Directions to trustees or manager.</tocItem>
+                <tocItem href="#sec45" level="6">45. Appointment of interim administrator.</tocItem>
+                <tocItem href="#prtVI" level="2">PART VI</tocItem>
+                <tocItem href="#" level="0">APPEALS</tocItem>
+                <tocItem href="#sec46" level="6">46. Appeals to the Chief Executive Officer.</tocItem>
+                <tocItem href="#sec47" level="6">47. Appeals to the Tribunal.</tocItem>
+                <tocItem href="#sec48" level="6">48. Powers of Appeals Tribunal.</tocItem>
+                <tocItem href="#sec49" level="6">49. Establishment of Appeals Tribunal.</tocItem>
+                <tocItem href="#sec50" level="6">50. Refusal or failure to give evidence.</tocItem>
+                <tocItem href="#sec51" level="6">51. Costs.</tocItem>
+                <tocItem href="#sec52" level="6">52. Rules for appeals to the Appeals Tribunal.</tocItem>
+                <tocItem href="#prtVII" level="2">PART VII</tocItem>
+                <tocItem href="#" level="0">MISCELLANEOUS</tocItem>
+                <tocItem href="#sec53" level="6">53. General penalty.</tocItem>
+                <tocItem href="#sec54" level="6">54. Offences by corporate bodies, partnerships, principals and
+                    employees.
+                </tocItem>
+                <tocItem href="#sec55" level="6">55. Regulations.</tocItem>
+                <tocItem href="#sec56" level="6">56. Exemption from Cap. 446.</tocItem>
+                <tocItem href="#sec57" level="6">57. Transitional provisions.</tocItem>
+                <tocItem href="#sec58" level="6">58. Supersession.</tocItem>
+                <tocItem href="#" level="0">SCHEDULE</tocItem>
+                <tocItem href="#" level="0">PROVISIONS AS TO THE CONDUCT OF THE BUSINESS AND AFFAIRS OF THE BOARD.
+                </tocItem>
+            </toc>
+            <p>
+                THE RETIREMENT BENEFITS ACT. 1997
+            </p>
+            <p>
+                An Act of Parliament to establish a Retirement Benefits Authority for the regulation, supervision and
+                promotion of retirement benefits schemes, the development of the retirement benefits sector and for
+                connected purposes
+            </p>
+            <p class="preambleEnacted">
+                ENACTED by the Parliament of Kenya as follows -
+            </p>
+        </preamble>
+        <body>
+            <part id="prtI">
+                <num>PART I</num>
+                <heading>PART IPART I - PRELIMINARY</heading>
+                <section id="sec1">
+                    <heading>Short title and commencement.</heading>
+                    <subsection id="sec1-sub1">
+                        <content>
+                            <p>This Act may be cited as the Retirement Benefits Act. 1997. and shall come into operation
+                                on such date as the Minister may. by notice in the Gazette, appoint and different dates
+                                may be appointed for different provisions.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec2">
+                    <heading>Interpretation.</heading>
+                    <subsection id="sec2-sub1">
+                        <content>
+                            <p>In this Act, unless the context otherwise requires -<eol/>"Actuary" means a fellow of the
+                                Institute of Actuaries in F.ngland. or of the Faculty of Actuaries in Scotland, or of
+                                the Canadian Institute of Actuaries, or a person holding such equivalent qualification
+                                as the Board may, by notice in the Gazette, prescribe;<eol/>"Authority" means the
+                                Retirement Benefits Authority established by<ref id="ref2" href="#sec3" refersTo="sec">
+                                    section 3</ref>;<eol/>"Board" means the Board of Directors of the Authority
+                                constituted under<ref id="ref3" href="#sec6">section 6</ref>;<eol/>"Chief Executive
+                                Officer" means the Chief Executive Officer of the Authority appointed under<ref
+                                        id="ref4" href="#sec11">section 11</ref>;
+                                <eol/>
+                                <span period="t2">financial year" -
+                                    <eol/>
+                                    (a) in relation to the Authority, has the meaning assigned to it in section 19;'
+                                    <eol/>
+                                    (b) in relation to a scheme, means such accounting period as may be prescribed in
+                                    the scheme rules;
+                                </span>
+                                <noteRef marker="1" href="#n1" placement="bottom"/>
+                                <eol/>"Fund" means the Retirement Benefits Authority Fund established by<ref id="ref6"
+                                                                                                             href="#sec17">
+                                    section 17</ref>;<eol/>"Levy" means the Retirement Benefits Levy to be imposed under
+                                <ref id="ref7" href="#sec16">section 16</ref>;<eol/>"manager" means the manager of a
+                                scheme fund;<eol/>"member" means a member of a retirement benefits scheme and includes a
+                                person entitled to or receiving a benefit under a retirement benefits scheme;
+                                <eol/>
+                                "Minister" means the Minister for the time being responsible for matters relating to
+                                finance;
+                                <eol/>
+                                <b>
+                                    <span period="t2">"pooled fund" means a fund established by a limited liability
+                                        company, other than an approved issuer, for purposes of pooling scheme funds for
+                                        collective investment;
+                                        <noteRef href="#n2" marker="2"/>
+                                    </span>
+                                </b>
+                                <eol/>"retirement benefits scheme" means any scheme or arrangement (other than a
+                                contract for life assurance) whether established by a written law for the time being in
+                                force or by any other instrument, under which persons are entitled to benefits in the
+                                form of payments, determined by age, length of service, amount of earnings or otherwise
+                                and payable primarily upon retirement, or upon death, termination of service, or upon
+                                the occurrence of such other event as may be specified in such written law or other
+                                instrument;<eol/>"scheme" means a retirement benefits scheme;<eol/>"scheme fund" means
+                                the retirement benefits scheme fund to be established pursuant to the provisions of<ref
+                                        id="ref8" href="#sec32">section 32</ref>;<eol/>"scheme rules" means the rules
+                                specifically governing the constitution and administration of a particular scheme;
+                                <eol/>
+                                "sponsor" means a person who establishes a scheme;
+                                <eol/>
+                                <b>
+                                    <span period="t2">"statutory fund" has the meaning assigned to it in Cap.487 section
+                                        2 of the Insurance Act.
+                                    </span>
+                                </b>
+                                <noteRef href="#n3" marker="3"/>
+                                <eol/>"Tribunal" means the Appeals Tribunal established under<ref id="ref9"
+                                                                                                  href="#sec48">section
+                                    48</ref>;<eol/>"trustee" means a trustee of a scheme fund.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+            </part>
+            <part id="prtII">
+                <num>PART II</num>
+                <heading>PART IIPART II - THE RETIREMENT BENEFITS AUTHORITY</heading>
+                <section id="sec3">
+                    <num>(1)</num>
+                    <heading>Establishment and incorporation of the Retirement Benefits Authority</heading>
+                    <subsection id="sec3-sub1">
+                        <content>
+                            <p>There is established an Authority to be known as the Retirement Benefits Authority.</p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec3-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>The Authority shall be a body corporate with perpetual succession and a common seal and
+                                shall in its corporate name be capable of -
+                            </p>
+                            <blockList id="sec3-sub2-lst1">
+                                <item id="sec3-sub2-itma">
+                                    <num>(a)</num>
+                                    <p>suing and being sued;</p>
+                                </item>
+                                <item id="sec3-sub2-itmb">
+                                    <num>(b)</num>
+                                    <p>taking, purchasing or otherwise acquiring, holding, charging or disposing of
+                                        movable and immovable property;
+                                    </p>
+                                </item>
+                                <item id="sec3-sub2-itmc">
+                                    <num>(c)</num>
+                                    <p>borrowing or lending money: and</p>
+                                </item>
+                                <item id="sec3-sub2-itmd">
+                                    <num>(d)</num>
+                                    <p>doing or performing all other things or acts for the furtherance of the
+                                        provisions of this Act. which may be lawfully done or performed by a body
+                                        corporate.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec4">
+                    <heading>Headquarters.</heading>
+                    <subsection id="sec4-sub1">
+                        <content>
+                            <p>The-headquarters of the Authority shall be in
+                                <location id="l1" refersTo="#nairobi">Nairobi.</location>
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec5">
+                    <num>5.</num>
+                    <heading>Object and functions of the Authority</heading>
+                    <subsection id="sec5-sub1">
+                        <num>5.</num>
+                        <content>
+                            <p>The object and functions of the Authority shall be to -</p>
+                            <blockList id="sec5-sub1-lst1">
+                                <item id="sec5-sub1-itma">
+                                    <num>(a)</num>
+                                    <p>regulate and supervise the establishment and management of retirement benefits
+                                        schemes:
+                                    </p>
+                                </item>
+                                <item id="sec5-sub1-itmb">
+                                    <num>(b)</num>
+                                    <p>protect the interests of members and sponsors of retirement benefits schemes:</p>
+                                </item>
+                                <item id="sec5-sub1-itmc">
+                                    <num>(c)</num>
+                                    <p>promote the development of the retirement benefits sector:</p>
+                                </item>
+                                <item id="sec5-sub1-itmd">
+                                    <num>(d)</num>
+                                    <p>advise the Minister on the national policy to be followed with regard to
+                                        retirement benefits schemes and to implement all Government policies relating
+                                        thereto; and
+                                    </p>
+                                </item>
+                                <item id="sec5-sub1-itme">
+                                    <num>(e)</num>
+                                    <p>perform such other functions as are conferred on it by this Act or by any other
+                                        written law.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec6">
+                    <num>6.</num>
+                    <heading>Board of Directors</heading>
+                    <subsection id="sec6-sub1">
+                        <num>6.</num>
+                        <content>
+                            <p>The management of the Authority shall vest in a Board of Directors of the Authority which
+                                shall comprise -
+                            </p>
+                            <blockList id="sec6-sub1-lst1">
+                                <item id="sec6-sub1-itma">
+                                    <num>(a)</num>
+                                    <p>a chairman to be appointed by the Minister from amongst the members appointed
+                                        under<ref id="ref10" href="#sec6-sub1-itmd">paragraph (d)</ref>;
+                                    </p>
+                                </item>
+                                <item id="sec6-sub1-itmb">
+                                    <num>(b)</num>
+                                    <p>the Chief Executive Officer appointed under<ref id="ref11" href="#sec11">section
+                                        11</ref>:
+                                    </p>
+                                </item>
+                                <item id="sec6-sub1-itmc">
+                                    <num>(c)</num>
+                                    <p>the Permanent Secretary in the Ministry for the time being responsible for
+                                        matters relating to finance or his representative;
+                                    </p>
+                                </item>
+                                <item id="sec6-sub1-itmd">
+                                    <num>(d)</num>
+                                    <p>the Commissioner of Insurance;</p>
+                                </item>
+                                <item id="sec6-sub1-itme">
+                                    <num>(e)</num>
+                                    <p>the Chief Executive of the Capital Markets Authority; and</p>
+                                </item>
+                                <item id="sec6-sub1-itmf">
+                                    <num>(f)
+                                        <authorialNote id="atn1" placement="side">
+                                            <p>my authorial note</p>
+                                        </authorialNote>
+                                    </num>
+                                    <p>five members, not being public officers, appointed by the Minister by virtue of
+                                        their knowledge or experience in matters relating to the administration of
+                                        scheme funds, banking, insurance, law or actuarial studies.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec7">
+                    <num>7.</num>
+                    <heading>Powers of the Board.</heading>
+                    <subsection id="sec7-sub1">
+                        <num>7.</num>
+                        <content>
+                            <p>The Board shall have all powers necessary for the performance of its functions under this
+                                Act and in particular, the Board shall have power to -
+                            </p>
+                            <blockList id="sec7-sub1-lst1">
+                                <item id="sec7-sub1-itma">
+                                    <num>(a)</num>
+                                    <p>control, supervise and administer the assets of the Authority in such manner and
+                                        for such purposes as best promote the purpose for which the Authority is
+                                        established;
+                                    </p>
+                                </item>
+                                <item id="sec7-sub1-itmb">
+                                    <num>(b)</num>
+                                    <p>determine the provisions to be made for capital and recurrent expenditure and for
+                                        reserves of the Authority;
+                                    </p>
+                                </item>
+                                <item id="sec7-sub1-itmc">
+                                    <num>(c)</num>
+                                    <p>receive any grants, gifts, donations or endowments on behalf of the Authority and
+                                        make legitimate disbursements therefrom;
+                                    </p>
+                                </item>
+                                <item id="sec7-sub1-itmd">
+                                    <num>(d)</num>
+                                    <p>enter into association with other bodies or organisations within or outside Kenya
+                                        as the Board may consider desirable or appropriate and in furtherance of the
+                                        purpose for which the Authority is established;
+                                    </p>
+                                </item>
+                                <item id="sec7-sub1-itme">
+                                    <num>(e)</num>
+                                    <p>open a banking account or banking accounts for the funds of the Authority; and
+                                    </p>
+                                </item>
+                                <item id="sec7-sub1-itmf">
+                                    <num>(f)</num>
+                                    <p>invest the funds of the Authority not currently required for its purposes in the
+                                        manner provided in<ref id="ref12" href="#sec18">section 18</ref>.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec8">
+                    <heading>Conduct of business and affairs of the Board.</heading>
+                    <subsection id="sec8-sub1">
+                        <content>
+                            <p>The conduct and regulation of the business and affairs of the Board shall be as provided
+                                in the Schedule but subject thereto, the Board shall regulate its own procedure.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec9">
+                    <heading>Delegation by the Board.</heading>
+                    <subsection id="sec9-sub1">
+                        <content>
+                            <p>The Board may, by resolution either generally or in any particular case, delegate to any
+                                committee of the Board or to any member, officer, employee or agent of the Authority,
+                                the exercise of any of the powers or the performance of any of the functions or duties
+                                of the Authority under this Act or under any other written law.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec10">
+                    <heading>Remuneration of Board members.</heading>
+                    <subsection id="sec10-sub1">
+                        <content>
+                            <p>The Authority, in consultation with the Minister, shall pay members of the Board such
+                                remuneration, fees or allowances for expenses as it may determine.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec11">
+                    <num>(1)</num>
+                    <heading>The Chief Executive Officer.</heading>
+                    <subsection id="sec11-sub1">
+                        <content>
+                            <p>There shall be a Chief Executive Officer who shall be appointed by the Board in
+                                consultation with the Minister and whose terms and conditions of service shall be
+                                determined by the Board in the instrument of appointment or otherwise in writing from
+                                time to time.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec11-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>No person shall be appointed under this section unless he has at least ten years
+                                experience in a managerial capacity in the retirement benefits, accounting, finance,
+                                insurance or the banking sectors.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec11-sub3">
+                        <num>(3)</num>
+                        <content>
+                            <p>The Chief Executive Officer shall be an ex officio member of the Board but shall have no
+                                right to vote at any meeting of the Board.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec11-sub4">
+                        <num>(4)</num>
+                        <content>
+                            <p>The Chief Executive Officer shall, subject to the directions of the Board, be responsible
+                                for the day to day management of the affairs of the Authority.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec12">
+                    <num>(1)</num>
+                    <heading>Staff of the Authority.</heading>
+                    <subsection id="sec12-sub1">
+                        <content>
+                            <p>The Board shall appoint n secretary lo the Board on such terms and conditions of service
+                                as the Board may determine.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec12-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>The Board may appoint such officers or servants as are necessary for the proper discharge
+                                of the functions of the Authority under his Act or any other written law, upon such
+                                terms and conditions of service as the Board may determine.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec13">
+                    <num>(1)</num>
+                    <heading>The common seal of the Authority.</heading>
+                    <subsection id="sec13-sub1">
+                        <content>
+                            <p>The common seal of the Authority shall be kept in such custody as the Board may direct
+                                and shall not be used except on the order of the Board.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec13-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>The common seal of the Authority when affixed to a document and duly authenticated shall
+                                be judicially and officially noticed and unless and until the contrary is proved, any
+                                necessary order or authorisation by the Board under this section shall be presumed to
+                                have been duly given.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec14">
+                    <heading>Protection from personal liability</heading>
+                    <subsection id="sec14-sub1">
+                        <content>
+                            <p>No matter or thing done by a member of the Board or any officer, employee or agent of the
+                                Authority shall, if the matter or thing is done bona fide for executing the functions,
+                                powers or duties of the Authority, render the member, officer, employee or agent or any
+                                person acting on their directions personally liable to any action, claim or demand
+                                whatsoever.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec15">
+                    <heading>Liability of the Authority for damages.</heading>
+                    <subsection id="sec15-sub1">
+                        <content>
+                            <p>The provisions of this Act shall not relieve the Authority of the liability to pay
+                                compensation or damages to any person for any injury to him, his property or any of his
+                                interests caused by the exercise of any power conferred by this Act or any other written
+                                law or by the failure, whether wholly or partially, of any works.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec16">
+                    <num>(1)</num>
+                    <heading>The Retirement Benefits Levy.</heading>
+                    <subsection id="sec16-sub1">
+                        <content>
+                            <p>The Minister may, in consultation with the Board, by order published in the Gazette,
+                                impose a levy to be known as the Retirement Benefits Levy on the contributions made to
+                                scheme funds, or on the assets of such funds, or on such other base as he may determine.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec16-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>A levy imposed under this section shall be payable at such rate as may be specified in
+                                the order.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec16-sub3">
+                        <num>(3)</num>
+                        <content>
+                            <p>An order under this section may contain provisions as to the time at which any amount
+                                payable by way of the levy shall become due.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec16-sub4">
+                        <num>(4)</num>
+                        <content>
+                            <p>All moneys received in respect of the levy shall be paid into the Fund and if not paid on
+                                or before the date prescribed by the order, the amount due and any sum payable under
+                                <ref id="ref13" href="#sec16-sub5">subsection (5)</ref>
+                                shall be a civil debt recoverable summarily by the Authority.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec16-sub5">
+                        <num>(5)</num>
+                        <content>
+                            <p>If a person fails to pay any amount payable by him by way of the levy on or before the
+                                date prescribed by the order, a sum equal to five per centum of the amount shall be
+                                added to the amount due for each month or part thereof during which the amount due
+                                remains unpaid.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec17">
+                    <num>(1)</num>
+                    <heading>The Retirement Benefits Authority Fund.</heading>
+                    <subsection id="sec17-sub1">
+                        <content>
+                            <p>There is established a fund to be known as the Retirement Benefits Authority Fund which
+                                shall vest in the Authority.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec17-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>There shall be paid into the Fund -</p>
+                            <blockList id="sec17-sub2-lst1">
+                                <item id="sec17-sub2-itma">
+                                    <num>(a)</num>
+                                    <p>all proceeds of the levy established by<ref id="ref14" href="#sec16">section
+                                        16</ref>;
+                                    </p>
+                                </item>
+                                <item id="sec17-sub2-itmb">
+                                    <num>(b)</num>
+                                    <p>such moneys or assets as may accrue to or vest in the Authority in the course of
+                                        the exercise of its powers or the performance of its functions under this Act;
+                                    </p>
+                                </item>
+                                <item id="sec17-sub2-itmc">
+                                    <num>(c)</num>
+                                    <p>such sums as may be payable to the Authority pursuant to this Act or any other
+                                        written law, or pursuant to any gift or trust;
+                                    </p>
+                                </item>
+                                <item id="sec17-sub2-itmd">
+                                    <num>(d)</num>
+                                    <p>such sums as may be granted to the Authority by the Minister pursuant to<ref
+                                            id="ref15" href="#sec17-sub3">subsection (3)</ref>; and
+                                    </p>
+                                </item>
+                                <item id="sec17-sub2-itme">
+                                    <num>(e)</num>
+                                    <p>all moneys from any other source provided for or donated or lent to the
+                                        Authority.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec17-sub3">
+                        <num>(3)</num>
+                        <content>
+                            <p>There shall be made to the Authority out of moneys provided by Parliament for that
+                                purpose, grants towards the expenditure incurred by the Board in the exercise of its
+                                powers or the performance of its functions under this Act.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec18">
+                    <num>(1)</num>
+                    <heading>Investment of funds of the Authority.</heading>
+                    <subsection id="sec18-sub1">
+                        <content>
+                            <p>The Authority may invest any of its funds in securities which for the time being trustees
+                                may by law invest trust funds, or in any other securities which the Treasury may, from
+                                time to time, approve.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec18-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>The Authority may place on deposit with such bank or banks as it may determine, any
+                                moneys not immediately required for the purposes of the Authority.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec19">
+                    <heading>Financial Year.</heading>
+                    <subsection id="sec19-sub1">
+                        <content>
+                            <p>The Financial year of the Authority shall be the period of twelve months ending on the
+                                thirtieth June in each year.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec20">
+                    <num>(1)</num>
+                    <heading>Annual estimates.</heading>
+                    <subsection id="sec20-sub1">
+                        <content>
+                            <p>Before the commencement of each financial year, the Board shall cause to be prepared
+                                estimates of revenue and expenditure of the Authority for that year.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec20-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>The annual estimates shall make provision for all the estimated expenditure of the
+                                Authority for the financial year and in particular, the estimates shall provide for -
+                            </p>
+                            <blockList id="sec20-sub2-lst1">
+                                <item id="sec20-sub2-itma">
+                                    <num>(a)</num>
+                                    <p>the payment of the salaries, allowances and other charges in respect of the staff
+                                        of the Authority;
+                                    </p>
+                                </item>
+                                <item id="sec20-sub2-itmb">
+                                    <num>(b)</num>
+                                    <p>the payment of pensions, gratuities and other charges in respect of the
+                                        retirement benefits which are payable out of the funds of the Authority;
+                                    </p>
+                                </item>
+                                <item id="sec20-sub2-itmc">
+                                    <num>(c)</num>
+                                    <p>the proper maintenance of the buildings and grounds of the Authority;</p>
+                                </item>
+                                <item id="sec20-sub2-itmd">
+                                    <num>(d)</num>
+                                    <p>the maintenance, repair and replacement of the equipment and other property of
+                                        the Authority;
+                                    </p>
+                                </item>
+                                <item id="sec20-sub2-itme">
+                                    <num>(e)</num>
+                                    <p>the creation of such reserve funds to meet future or contingent liabilities in
+                                        respect of retirement benefits, insurance or replacement of buildings or
+                                        equipment, or in respect of such other matter as the Board may deem appropriate.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec20-sub3">
+                        <num>(3)</num>
+                        <content>
+                            <p>The annual estimates shall be prepared at least three months before commencement of the
+                                financial year to which they relate and shall be submitted to the Board for approval and
+                                after such approval, the Authority shall not increase the annual estimates without the
+                                consent of the Minister.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec20-sub4">
+                        <num>(4)</num>
+                        <content>
+                            <p>No expenditure shall be incurred for the purposes of the Board except in accordance with
+                                the annual estimates approved under this section or in pursuance of an authorisation of
+                                the Authority given with the prior approval of the Minister.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec21">
+                    <subsection id="sec21-sub3">
+                        <content>
+                            <p>The accounts of the Authority shall be audited and reported upon in accordance with
+                                <ref id="ref16" href="#sec29">sections 29 and 30A</ref>
+                                of the Exchequer and Audit Act, by the Auditor-General (Corporations) or by an auditor
+                                appointed by the Board under the authority of the Auditor-General (Corporations), given
+                                in accordance with
+                                <ref id="ref17" href="#sec29-sub2-itmb">section 29(2)(b)</ref>
+                                of that Act.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+            </part>
+            <part id="prtIII">
+                <num>PART III</num>
+                <heading>PART IIIPART III - REGISTRATION OF RETIREMENT BENEFITS SCHEMES AND MANAGERS</heading>
+                <section id="sec22">
+                    <num>(l)</num>
+                    <heading>Retirement benefits schemes and managers to be registered.</heading>
+                    <subsection id="sec22-subl">
+                        <content>
+                            <p>No person shall establish a retirement benefits scheme except in accordance with the
+                                provisions of this Act and under the authority of a certificate issued under this Act.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec22-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>No person shall manage a scheme fund unless such person is registered under this Act and
+                                holds a valid certificate of registration issued pursuant to the provisions of this Act.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec22-sub3">
+                        <num>(3)</num>
+                        <content>
+                            <p>A person who establishes a retirement benefits scheme or
+                                <b>
+                                    <span period="t2">one
+                                        <noteRef href="#n4" marker="4"/>
+                                    </span>
+                                </b>
+                                manages a scheme fund contrary to the provisions of this section commits an offence and
+                                shall be liable, on conviction, to
+                                <b>
+                                    <span period="t2">once
+                                        <noteRef href="#n5" marker="5"/>
+                                    </span>
+                                </b>
+                                at least a fine not exceeding five hundred thousand shillings, or to imprisonment for a
+                                term not exceeding two years, or to both.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec23">
+                    <num>(1)</num>
+                    <heading>Registration.</heading>
+                    <subsection id="sec23-sub1">
+                        <content>
+                            <p>A person proposing to establish a retirement benefits scheme or to manage a scheme fund
+                                shall, before establishing the scheme or commencing management of the fund, apply to the
+                                Authority for registration.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec23-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>An application under
+                                <ref id="ref18" href="#sec23-sub1">subsection (1)</ref>
+                                shall be -
+                            </p>
+                            <blockList id="sec23-sub2-lst1">
+                                <item id="sec23-sub2-itma">
+                                    <num>(a)</num>
+                                    <p>addressed to the Chief Executive Officer;</p>
+                                </item>
+                                <item id="sec23-sub2-itmb">
+                                    <num>(b)</num>
+                                    <p>in the prescribed form; and</p>
+                                </item>
+                                <item id="sec23-sub2-itmc">
+                                    <num>(c)</num>
+                                    <p>accompanied by the prescribed fee.</p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec23-sub3">
+                        <num>(3)</num>
+                        <content>
+                            <p>In considering an application under this section, the Authority may request the applicant
+                                to supply such additional information as it considers necessary in determining the
+                                application.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec23-sub4">
+                        <num>(4)</num>
+                        <content>
+                            <p>The Authority may, subject to the provisions of this Act and on payment of the prescribed
+                                fee, register the applicant and issue to the applicant a certificate of registration in
+                                the prescribed form, authorising the applicant to establish a retirement benefits
+                                scheme, or to manage a scheme fund, as the case may be.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec23-sub5">
+                        <num>(5)</num>
+                        <content>
+                            <p>A certificate issued under this section shall be subject to such conditions as the
+                                Minister may, in consultation with the Authority, impose.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec24">
+                    <num>24.</num>
+                    <heading>Requirements for registration of schemes.</heading>
+                    <subsection id="sec24-sub1">
+                        <num>24.</num>
+                        <content>
+                            <p>( 1) No scheme, other than a scheme established by a written law shall be registered
+                                under this Act unless-
+                            </p>
+                            <blockList id="sec24-sub1-lst1">
+                                <item id="sec24-sub1-itma">
+                                    <num>(a)</num>
+                                    <p>it is proposed to be established under an irrevocable trust; and</p>
+                                </item>
+                                <item id="sec24-sub1-itmb">
+                                    <num>(b)</num>
+                                    <p>the proposed scheme rules adequately protect the rights and.-, interests of the
+                                        sponsors and members thereof.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec24-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>No scheme shall be registered under this Act unless the trustees thereof satisfy the
+                                requirements specified in<ref id="ref19" href="#sec26">section 26</ref>.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec25">
+                    <subsection id="sec25-sub25">
+                        <content>
+                            <p>No applicant for registration as a manager shall be registered unless such applicant -
+                            </p>
+                            <blockList id="sec25-sub25-lst1">
+                                <item id="sec25-sub25-itma">
+                                    <num>(a)</num>
+                                    <p>is a limited liability company incorporated under the Companies Act whose
+                                        liability is limited by shares and whose main object is to manage scheme funds;
+                                    </p>
+                                </item>
+                                <item id="sec25-sub25-itmb">
+                                    <num>(b)</num>
+                                    <p>has such minimum paid up share capital as may be prescribed;</p>
+                                </item>
+                                <item id="sec25-sub25-itmc">
+                                    <num>(c)</num>
+                                    <p>is capable of meeting the obligations to members and sponsors specified in the
+                                        scheme rules;
+                                    </p>
+                                </item>
+                                <item id="sec25-sub25-itmd">
+                                    <num>(d)</num>
+                                    <p>has the professional capacity to manage scheme funds;</p>
+                                </item>
+                                <item id="sec25-sub25-itme">
+                                    <num>(e)</num>
+                                    <p>has never been involved in the management of the scheme funds of any scheme which
+                                        was deregistered due to any failure on the part of the management;.
+                                    </p>
+                                </item>
+                                <item id="sec25-sub25-itmf">
+                                    <num>(f)</num>
+                                    <p>meets such additional requirements as may be prescribed.</p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec26">
+                    <num>(1)</num>
+                    <heading>Requirements with regard to trustees.</heading>
+                    <subsection id="sec26-sub1">
+                        <content>
+                            <p>Every scheme, other than a scheme established by a written who shall be established under
+                                an irrevocable trust.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec26-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>No person shall be a trustee of any scheme fund if such person-</p>
+                            <blockList id="sec26-sub2-lst1">
+                                <item id="sec26-sub2-itma">
+                                    <num>(a)</num>
+                                    <p>has been sentenced to imprisonment by a court of competent jurisdiction for a
+                                        period of six months or more;
+                                    </p>
+                                </item>
+                                <item id="sec26-sub2-itmb">
+                                    <num>(b)</num>
+                                    <p>is adjudged bankrupt;</p>
+                                </item>
+                                <item id="sec26-sub2-itmc">
+                                    <num>(c)</num>
+                                    <p>was previously involved in the management or administration of a scheme which was
+                                        deregistered for any failure on the part of the management or the administration
+                                        thereof;
+                                    </p>
+                                </item>
+                                <item id="sec26-sub2-itmd">
+                                    <num>(d)</num>
+                                    <p>is disqualified under any other written law, or his holding office as such is
+                                        deemed by the Authority as being, in any way, detrimental to the scheme.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec27">
+                    <num>(1)</num>
+                    <heading>Refusal of registration.</heading>
+                    <subsection id="sec27-sub1">
+                        <num>(1)</num>
+                        <content>
+                            <p>The Authority may refuse to register a scheme or a manager ider section 23 if satisfied
+                                that -
+                            </p>
+                            <blockList id="sec27-sub1-lst1">
+                                <item id="sec27-sub1-itma">
+                                    <num>(a)</num>
+                                    <p>the information contained in the application for registration is false or untrue
+                                        in any material.particular; or
+                                    </p>
+                                </item>
+                                <item id="sec27-sub1-itmb">
+                                    <num>(b)</num>
+                                    <p>the applicant does not meet the requirements for registration.</p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec27-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>Where the Authority refuses to register a scheme or a manager, shall forthwith notify the
+                                applicant in the prescribed form, specifying 2 reasons for such refusal.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec28">
+                    <num>(1)</num>
+                    <heading>Deregistration.</heading>
+                    <subsection id="sec28-sub1">
+                        <num>(1)</num>
+                        <content>
+                            <p>Subject to<ref id="ref20" href="#sec28-sub2">subsection (2)</ref>, the Authority may
+                                deregister a heme if-
+                            </p>
+                            <blockList id="sec28-sub1-lst1">
+                                <item id="sec28-sub1-itma">
+                                    <num>(a)</num>
+                                    <p>it discovers after registration that a statement was made in connection with the
+                                        application therefor which the applicant knew to be false or untrue in any
+                                        material particular; or
+                                    </p>
+                                </item>
+                                <item id="sec28-sub1-itmb">
+                                    <num>(b)</num>
+                                    <p>the scheme is wound up or is otherwise dissolved; or</p>
+                                </item>
+                                <item id="sec28-sub1-itmc">
+                                    <num>(c)</num>
+                                    <p>the scheme does not conform to the provisions of this Act or any regulations made
+                                        or directions issued under this Act or any condition of the certificate of
+                                        registration.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec28-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>The Authority shall, before deregistering a scheme, give the trustees, sponsors and
+                                members of the scheme at least twenty-eight days notice of its intention and shall
+                                consider any representations made to it in writing by the trustees, sponsors or members
+                                within that period before deregistering the scheme.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec28-sub3">
+                        <num>(3)</num>
+                        <content>
+                            <p>Subject to<ref id="ref22" href="#sec28-sub4">subsection (4)</ref>, the Authority may
+                                deregister a manager if -
+                            </p>
+                            <blockList id="sec28-sub3-lst1">
+                                <item id="sec28-sub3-itma">
+                                    <num>(a)</num>
+                                    <p>it discovers after registration that the manager made a statement in or in
+                                        connection with the application therefor which was false or untrue in any
+                                        material particular; or
+                                    </p>
+                                </item>
+                                <item id="sec28-sub3-itmb">
+                                    <num>(b)</num>
+                                    <p>any event occurs which renders the manager ineligible to manage a scheme fund;
+                                    </p>
+                                </item>
+                                <item id="sec28-sub3-itmc">
+                                    <num>(c)</num>
+                                    <p>the manager's business is wound up or is otherwise dissolved;</p>
+                                </item>
+                                <item id="sec28-sub3-itmd">
+                                    <num>(d)</num>
+                                    <p>the manager is in breach of any condition attached to the certificate of
+                                        registration;
+                                    </p>
+                                </item>
+                                <item id="sec28-sub3-itme">
+                                    <num>(e)</num>
+                                    <p>the manager does not comply with any of provisions of this Act, or with any
+                                        regulations made or directions issued thereunder.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec28-sub4">
+                        <num>(4)</num>
+                        <content>
+                            <p>The Authority shall, before deregistering a manager, give the manager and the sponsors or
+                                trustees of the scheme at least twenty-eight days notice of its intention, and shall
+                                consider any representations made to it in writing by the manager within that period
+                                before deregistering the manager.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec28-sub5">
+                        <num>(5)</num>
+                        <content>
+                            <p>Every notice under
+                                <ref id="ref21" href="#sch28-sec2">subsections (2) and (4)</ref>
+                                shall be in t prescribed form and shall specify the reasons for the intended
+                                deregistration.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec28-sub6">
+                        <num>(6)</num>
+                        <content>
+                            <p>The deregistration of a scheme shall not in any way prejudice the claims of members under
+                                the scheme.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec28-sub7">
+                        <num>(7)</num>
+                        <content>
+                            <p>Where the assets of a deregistered scheme are insufficient to fully discharge its
+                                obligations to its members, the Chief Executive Officer may, subject to the approval of
+                                the Board, take over the distribution or transfer of the assets and the supervision of
+                                the scheme in order to protect the interests of members.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec29">
+                    <heading>Duration of certificate of registration.</heading>
+                    <subsection id="sec29-sub1">
+                        <content>
+                            <p>Subject to this Act, a certificate of registration shall remain in force until, in the
+                                case of a scheme, the scheme is deregistered or wound up in accordance with the scheme
+                                rules or the provisions of the written law under which the scheme is established, as the
+                                case may be, or in the case of a manager, such manager is deregistered.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec30">
+                    <num>(1)</num>
+                    <heading>Register.</heading>
+                    <subsection id="sec30-sub1">
+                        <content>
+                            <p>The Chief Executive Officer shall keep a register in such form as the Board may
+                                determine, of all schemes and managers registered under this Act and shall enter
+                                therein, in respect of the schemes or managers, such particulars as the Board may
+                                specify.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec30-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>The Board may determine the time or times during which, and the extent to which any
+                                person may, on payment of the prescribed fee, inspect the register kept under this
+                                section or obtain copies thereof.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec31">
+                    <num>(1)</num>
+                    <heading>Use of register in evidence.</heading>
+                    <subsection id="sec31-sub1">
+                        <content>
+                            <p>For the purposes of ascertaining the facts concerning the registration of a scheme or a
+                                manager, entries made in the register shall be prima facie evidence as to the facts
+                                specified in the register.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec31-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>A document certified by the Chief Executive Officer as a true copy or extract from the
+                                register shall be admissible in any court as prima facie evidence of the contents of the
+                                register.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+            </part>
+            <part id="prtIV">
+                <num>PART IV</num>
+                <heading>PART IVPART IV REGULATION AND SUPERVISION OF RETIREMENT BENEFITS SCHEMES</heading>
+                <section id="sec32">
+                    <num>(1)</num>
+                    <heading>Scheme funds.</heading>
+                    <subsection id="sec32-sub1">
+                        <content>
+                            <p>There shall be, in respect of every scheme other than a scheme funded out of the
+                                Consolidated Fund, a scheme fund into which all contributions, investment earnings,
+                                income and all other moneys payable under the scheme rules or the provisions of this Act
+                                shall be paid.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec32-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>The scheme fund and all moneys therein shall at all times be maintained separately from
+                                any other funds under the control of the trustees or the manager thereof.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec32-sub3">
+                        <num>(3)</num>
+                        <content>
+                            <p>Subject to the provisions of this Act, the Minister may, in consultation with the
+                                Authority, make regulations with regard to the funding, vesting, custody, management,
+                                application and the transfer of scheme funds and the accounting for such funds.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec33">
+                    <num>(1)</num>
+                    <heading>Statutory contributions.</heading>
+                    <subsection id="sec33-sub1">
+                        <content>
+                            <p>Notwithstanding the provisions of any written law for the time being in force, an
+                                employer may, with the approval of his employees, pay any statutory contributions in
+                                respect of such employees into any scheme fund prescribed for that purpose:
+                                <eol/>
+                                Provided that where such payment involves a transfer of funds from another scheme fund,
+                                the employer shall, at least sixly days before commencing such payment, give written
+                                notice thereof to the Authority and to the trustees of the scheme fund from which such
+                                funds shall be transferred.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec33-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>In this section, the expression "statutory contributions" means contributions required
+                                under the provisions of a written law to be paid into a retirement benefits scheme.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec34">
+                    <num>(1)</num>
+                    <heading>Annual report and accounts.</heading>
+                    <subsection id="sec34-sub1">
+                        <content>
+                            <p>The trustees of every scheme shall cause to be kept all proper books and records of
+                                account of the income, expenditure and assets of the scheme fund.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec34-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>Within a period of three months after the end of each financial year, the trustees shall
+                                cause to be prepared in respect of the scheme fund -
+                            </p>
+                            <blockList id="sec34-sub2-lst1">
+                                <item id="sec34-sub2-itma">
+                                    <num>(a)</num>
+                                    <p>a
+                                        <b>
+                                            <span period="t2">statement of assets and liabilities
+                                                <noteRef href="#n6" marker="6"/>
+                                            </span>
+                                        </b>
+                                        ;
+                                    </p>
+                                </item>
+                                <item id="sec34-sub2-itmb">
+                                    <num>(b)</num>
+                                    <p>a statement of income and expenditure;</p>
+                                </item>
+                                <item id="sec34-sub2-itmc">
+                                    <num>(c)</num>
+                                    <p>a statement of the assets and liabilities of the scheme as on the last day of
+                                        that year;
+                                    </p>
+                                </item>
+                                <item id="sec34-sub2-itmd">
+                                    <num>(d)</num>
+                                    <p>such other documents as may be prescribed.</p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec34-sub3">
+                        <num>(3)</num>
+                        <content>
+                            <p>The accounts of the scheme fund in respect of each financial year shall be audited by an
+                                auditor appointed by the trustees with the approval of the Board.
+                                <b>
+                                    <span period="t2">Provided that the appointed auditor shall not be a member, trustee
+                                        or sponsor of the scheme
+                                        <noteRef href="#n7" marker="7"/>
+                                    </span>
+                                </b>
+                                .
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec34-sub4">
+                        <num>(4)</num>
+                        <content>
+                            <p>Within four months after the end of each financial year, the trustees shall submit a copy
+                                of the audited accounts of the scheme to the Chief Executive Officer.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec35">
+                    <heading>Actuarial evaluations.</heading>
+                    <subsection id="sec35-sub1">
+                        <content>
+                            <p>The Board may require the trustees of such schemes or categories of schemes as it may
+                                specify, to cause the schemes to be evaluated by an actuary appointed by the trustees
+                                with the approval of the Board and to present the actuarial report to the Chief
+                                Executive Officer at such regular intervals as the Board may specify.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec36">
+                    <heading>Protection against attachment.</heading>
+                    <subsection id="sec36-sub1">
+                        <content>
+                            <p>Notwithstanding anything to the contrary contained in any other written law, where a
+                                judgement or order against a member of a scheme is made, no execution or attachment or
+                                process of any nature shall be issued in respect of the contributions or funds of the
+                                member or his employer except in accordance with the scheme the scheme rules and such
+                                contributions shall not form part of the assets of the member or of his employer in the
+                                event of bankruptcy.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec37">
+                    <num>(1)</num>
+                    <heading>Investment of scheme funds.</heading>
+                    <subsection id="sec37-sub1">
+                        <content>
+                            <p>Every scheme shall have a prudent investment policy on the investment of the funds of the
+                                scheme so as to maintain the capital funds of the scheme and to secure market rates of
+                                return on the investment of such funds.
+                                <b>
+                                    <span period="t2">Provided that a scheme with a fund value of five million Kenya
+                                        shillings or less may invest up to one hundred per centum of its scheme funds in
+                                        Government securities
+                                    </span>
+                                </b>
+                                .
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec37-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>The investment policy of a scheme shall be implemented subject to the provisions of any
+                                regulations the Minister may, in consultation with the Authority, make for that purpose.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec37-sub3">
+                        <num>(3)
+                            <noteRef href="#n8" marker="8"/>
+                        </num>
+                        <content>
+                            <p>There shall be submitted to the Chief Executive Officer, in respect of every scheme, a
+                                statement of all investments of the scheme fund, in such form, manner and at such
+                                intervals as may be prescribed.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec38">
+                    <num>(1)</num>
+                    <heading>Restrictions on use of scheme funds.</heading>
+                    <subsection id="sec38-sub1">
+                        <num>(1)</num>
+                        <content>
+                            <p>No scheme funds shall be -</p>
+                            <blockList id="sec38-sub1-lst1">
+                                <item id="sec38-sub1-itma">
+                                    <num>(a)</num>
+                                    <p>used to make direct or indirect loans to any person; or</p>
+                                </item>
+                                <item id="sec38-sub1-itmb">
+                                    <num>(b)</num>
+                                    <p>invested contrary to any guidelines prescribed for that purpose; or</p>
+                                </item>
+                                <item id="sec38-sub1-itmc">
+                                    <num>(c)</num>
+                                    <p>invested with a bank, non-banking financial institution, insurance company,
+                                        building society or other similar institution with a view to securing loans,
+                                        including mortgages, at a preferential rate of interest or for any other
+                                        consideration to the sponsor, trustees, members or the manager of such scheme.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec38-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>The Authority may disqualify a person who acts in contravention of the provisions of this
+                                section from participating in any way in the management or administration of any scheme
+                                fund.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec39">
+                    <num>(1)</num>
+                    <heading>Unsafe and unsound practices.</heading>
+                    <subsection id="sec39-sub1">
+                        <content>
+                            <p>Where, in the opinion of the Chief Executive Officer, a trustee or manager of a scheme is
+                                pursuing an act or course of conduct which the Chief Executive Officer considers to be
+                                an unsafe or unsound practice, or in any way detrimental to the scheme, the Chief
+                                Executive Officer shall, by notice in writing, direct such trustee or manager to refrain
+                                from pursuing such act or course of conduct.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec39-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>A trustee or manager who acts in contravention of a direction under this section commits
+                                an offence and shall be liable, on conviction, to a fine not exceeding five hundred
+                                thousand shillings, or to imprisonment for a term not exceeding two years, or to both.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec40">
+                    <num>40.</num>
+                    <heading>General obligations of trustees and managers.</heading>
+                    <subsection id="sec40-sub40">
+                        <num>40.</num>
+                        <content>
+                            <p>The trustee or manager of a scheme shall -</p>
+                            <blockList id="sec40-sub40-lst1">
+                                <item id="sec40-sub40-itma">
+                                    <num>(a)</num>
+                                    <p>ensure that the scheme fund is at all times managed in accordance with this Act,
+                                        any regulations made thereunder, the scheme rules and any directions given by
+                                        the Chief Executive Officer;
+                                    </p>
+                                </item>
+                                <item id="sec40-sub40-itmb">
+                                    <num>(b)</num>
+                                    <p>take reasonable care to ensure that the management of the scheme is carried out
+                                        in the best interests of the members and sponsors of the scheme;
+                                    </p>
+                                </item>
+                                <item id="sec40-sub40-itmc">
+                                    <num>(c)</num>
+                                    <p>report to the Chief Executive Officer, as soon as reasonably practicable, any
+                                        unusual occurrence which in his view cot'),, jeopardise the rights of the
+                                        members or sponsors of the scheme; and
+                                    </p>
+                                </item>
+                                <item id="sec40-sub40-itmd">
+                                    <num>(d)</num>
+                                    <p>report to the Chief Executive Officer, as soon as reasonably practicable, if any
+                                        contributions into a scheme fund remain due for a period of more than thirty
+                                        days.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                </section>
+            </part>
+            <part id="prtV">
+                <num>PART V</num>
+                <heading>PART VPART V - INSPECTION AND APPOINTMENT OF INTERIM ADMINISTRATOR</heading>
+                <section id="sec41">
+                    <num>(1)</num>
+                    <heading>Inspection.</heading>
+                    <subsection id="sec41-sub1">
+                        <content>
+                            <p>The Chief Executive Officer may, at any time and from time to time, and shall, if so
+                                directed by the Board, cause an inspection to be made by an inspector authorised by him
+                                in writing, of any scheme or of the business of any manager registered under this Act,
+                                and of its books, accounts and records.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec41-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>When an inspection is made under<ref id="ref23" href="#sec41-sub1">subsection (1)</ref>,
+                                the manager of the scheme concerned and every officer, trustee or employee thereof shall
+                                make available to the inspector all the books, accounts records and other documents of
+                                the scheme and such correspondence, statements and information relating to the scheme as
+                                the inspector may require, within seven days or such longer period as the inspector may
+                                direct in writing.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec41-sub3">
+                        <num>(3)</num>
+                        <content>
+                            <p>Any failure to produce any books, accounts, records, documents, correspondence,
+                                statements, returns or other information within the period specified in the direction
+                                under
+                                <ref id="ref24" href="#sec41-sub2">subsection (2)</ref>
+                                constitutes an offence:<eol/>Provided that -
+                            </p>
+                            <blockList id="sec41-sub3-lst1">
+                                <item id="sec41-sub3-itma">
+                                    <num>(a)</num>
+                                    <p>the books, accounts and other documents shall not, in the course of inspection,
+                                        be removed from the premises at which they are produced;
+                                    </p>
+                                </item>
+                                <item id="sec41-sub3-itmb">
+                                    <num>(b)</num>
+                                    <p>the inspector may make copies of any books, accounts and other documents required
+                                        for the purposes of his report; and
+                                    </p>
+                                </item>
+                                <item id="sec41-sub3-itmc">
+                                    <num>(c)</num>
+                                    <p>all information obtained in the course of the inspection shall be treated as
+                                        confidential and used solely for the purposesof this Act.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec42">
+                    <num>(1)</num>
+                    <heading>Powers of the inspector.</heading>
+                    <subsection id="sec42-sub1">
+                        <num>(1)</num>
+                        <content>
+                            <p>An inspector may, by notice in writing, require any person who is or has at any time been
+                                a trustee or a manager of the scheme being inspected, or an officer, employee, agent,
+                                accountant', auditor or actuary appointed by such trustee or manager to -
+                            </p>
+                            <blockList id="sec42-sub1-lst1">
+                                <item id="sec42-sub1-itma">
+                                    <num>(a)</num>
+                                    <p>give to the inspector all reasonable assistance in connection with the
+                                        inspection; or
+                                    </p>
+                                </item>
+                                <item id="sec42-sub1-itmb">
+                                    <num>(b)</num>
+                                    <p>appear before the inspector for examination concerning matters relevant to the
+                                        inspection; or
+                                    </p>
+                                </item>
+                                <item id="sec42-sub1-itmc">
+                                    <num>(c)</num>
+                                    <p>produce any books or documents relating to the affairs of the scheme being
+                                        inspected.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec42-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>A person who -</p>
+                            <blockList id="sec42-sub2-lst1">
+                                <item id="sec42-sub2-itma">
+                                    <num>(a)</num>
+                                    <p>refuses or fails to comply with a requirement of an inspector which is applicable
+                                        to him, to the extent to which he is able to comply with it; or
+                                    </p>
+                                </item>
+                                <item id="sec42-sub2-itmb">
+                                    <num>(b)</num>
+                                    <p>obstructs or hinders an inspector in the exercise of his powers under this Act;
+                                        or
+                                    </p>
+                                </item>
+                                <item id="sec42-sub2-itmc">
+                                    <num>(c)</num>
+                                    <p>furnishes information or makes a false statement which he knows to be false or
+                                        misleading in any material particular; or
+                                    </p>
+                                </item>
+                                <item id="sec42-sub2-itmd">
+                                    <num>(d)</num>
+                                    <p>when appearing before an inspector for examination, makes a statement which he
+                                        knows to be false or misleading in any material particular, commits an offence.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec42-sub4">
+                        <num>(4)</num>
+                        <content>
+                            <p>Where an offence under
+                                <ref id="ref26" href="#sec42-sub2">subsection (2)</ref>
+                                is a continuing offence, the person convicted shall, in addition to the penalty
+                                prescribed in<ref id="ref27" href="#sec42-sub3">subsection (3)</ref>, be liable to a
+                                further fine of one thousand shillings for every day during which the offence continues.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec42-sub5">
+                        <num>(5)</num>
+                        <content>
+                            <p>Where the person convicted under this section is a body corporate, the Authority may,
+                                notwithstanding any other penalty imposed under.this Act, apply to a* court for the
+                                winding up of such body corporate.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec43">
+                    <heading>Inspection report</heading>
+                    <subsection id="sec43-sub1">
+                        <content>
+                            <p>An inspector appointed under this Part shall submit his report to the Chief Executive
+                                Officer and the report shall draw attention to any breach of the requirements of this
+                                Act and any regulations made thereunder, any mismanagement or lack of management skills
+                                in the manager and any other matter revealed or discovered in the course of the
+                                inspection warranting, in the opinion of the inspector, remedial action or further
+                                investigation.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec44">
+                    <heading>Directions t manager.</heading>
+                    <subsection id="sec44-sub1">
+                        <content>
+                            <p>The Chief Executive Officer may, by notice in the prescribed form, require the trustees
+                                or the manager of a scheme inspected under this Part to comply, by such date or within
+                                such period as may be specified therein, with such directions as the Authority considers
+                                necessary in connection with'any matter arising out of the report made under section 43.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec45">
+                    <num>(1)</num>
+                    <heading>Appointment o interim administrator.</heading>
+                    <subsection id="sec45-sub1">
+                        <num>(1)</num>
+                        <content>
+                            <p>This section applies and the powers conferred by
+                                <ref id="ref28" href="#sec45-sub2">subsection (2)</ref>
+                                may be exercised in the following circum5*ances -
+                            </p>
+                            <blockList id="sec45-sub1-lst1">
+                                <item id="sec45-sub1-itma">
+                                    <num>(a)</num>
+                                    <p>if the trustees of a scheme fail to submit to the Chief Executive Officer the
+                                        annual accounts required under
+                                        <ref id="ref29" href="#sec34">section 34</ref>
+                                        for over six months after the end of the financial year to which they relate;
+                                    </p>
+                                </item>
+                                <item id="sec45-sub1-itmb">
+                                    <num>(b)</num>
+                                    <p>if the trustees are found to have submitted or provided any accounts, returns,
+                                        statements, books, records, correspondence, documents or other information
+                                        relating to the scheme fund which are false or misleading; or
+                                    </p>
+                                </item>
+                                <item id="sec45-sub1-itmc">
+                                    <num>(c)</num>
+                                    <p>if the Chief Executive Officer, whether on inspection or otherwise, becomes aware
+                                        of any fact or circumstance which, in his opinion, warrants the exercise of the
+                                        relevant power in the interests of the sponsors and members of the scheme or in
+                                        the public interest.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec45-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>The Chief Executive Officer may, with the approval of the Authority</p>
+                            <blockList id="sec45-sub2-lst1">
+                                <item id="sec45-sub2-itma">
+                                    <num>(a)</num>
+                                    <p>appoint any person (in this Act referred to as "an interim administrator") to
+                                        assume the management, control and conduct of the affairs and business of the
+                                        trustees or the manager, as the case may be, to exercise all the powers of the
+                                        trustees or the manager to the exclusion of such trustees or manager;
+                                    </p>
+                                </item>
+                                <item id="sec45-sub2-itmb">
+                                    <num>(b)</num>
+                                    <p>remove any officer or employee of the trustees or the manager who, in the opinion
+                                        of the Chief Executive Officer, has caused or contributed to any contravention
+                                        of the provisions of this Act or any regulations made thereunder or to any
+                                        deterioration in the financial stability of the scheme or has been guilty of
+                                        conduct detrimental to the interests of the members or sponsors of the scheme;
+                                        or
+                                    </p>
+                                </item>
+                                <item id="sec45-sub2-itmc">
+                                    <num>(c)</num>
+                                    <p>by notice in the Gazette, revoke or cancel any existing power of attorney,
+                                        mandate, appointment or other authority by the trustees or manager in favour of
+                                        any officer, employee or any other person.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec45-sub3">
+                        <num>(3)</num>
+                        <content>
+                            <p>The appointment of an interim administrator shall be for such period, not exceeding
+                                twelve months, as the Chief Executive Officer may specify in the instrument of
+                                appointment but may be extended by the High Court, upon application by the Chief
+                                Executive Officer, if such extension appears justified.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec45-sub4">
+                        <num>(4)</num>
+                        <content>
+                            <p>An interim administrator shall, upon assuming the management, control and conduct of the
+                                affairs and business of the trustees or the manager, discharge his duties with diligence
+                                and in accordance with sound actuarial and financial principles and in particular, with
+                                due regard to the interests of the trustees, the manager, the members and sponsors of
+                                the scheme.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec45-sub5">
+                        <num>(5)</num>
+                        <content>
+                            <p>The responsibilities of the interim administrator shall be -</p>
+                            <blockList id="sec45-sub5-lst1">
+                                <item id="sec45-sub5-itma">
+                                    <num>(a)</num>
+                                    <p>tracing, preserving and securing all the assets and property of the scheme;</p>
+                                </item>
+                                <item id="sec45-sub5-itmb">
+                                    <num>(b)</num>
+                                    <p>recovering all debts and other sums of money due to and owing to the scheme;</p>
+                                </item>
+                                <item id="sec45-sub5-itmc">
+                                    <num>(c)</num>
+                                    <p>evaluating the solvency and the liquidity of the scheme;</p>
+                                </item>
+                                <item id="sec45-sub5-itmd">
+                                    <num>(d)</num>
+                                    <p>assessing the scheme's and the manager's compliance with the provisions of this
+                                        Act and any regulations made thereunder;
+                                    </p>
+                                </item>
+                                <item id="sec45-sub5-itme">
+                                    <num>(e)</num>
+                                    <p>determining the adequacy of the capital and reserves and the management of the
+                                        scheme and recommending to the Chief Executive Officer any restructuring or
+                                        reorganisation which he considers necessary and which, subject to the provisions
+                                        of any other law, may be implemented by him on behalf of the trustees or the
+                                        manager; and to obtain from any former trustee or manager of the scheme or any
+                                        officer, employee or agent thereof, any documents, records accounts, statements,
+                                        correspondence or information relating to the scheme.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec45-sub6">
+                        <num>(6)</num>
+                        <content>
+                            <p>The interim administrator shall, within a period of twelve months from the date of his
+                                appointment, prepare and submit to the Chief Executive Officer, a report on the
+                                financial position and the management of the scheme with recommendations as to whether-
+                            </p>
+                            <blockList id="sec45-sub6-lst1">
+                                <item id="sec45-sub6-itma">
+                                    <num>(a)</num>
+                                    <p>the scheme is capable of being revived; or</p>
+                                </item>
+                                <item id="sec45-sub6-itmb">
+                                    <num>(b)</num>
+                                    <p>the scheme should be deregistered.</p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                    <subsection id="sec45-sub7">
+                        <num>(7)</num>
+                        <content>
+                            <p>The Chief Executive Officer shall, after taking into account the report of the interim
+                                administrator, make appropriate recommendations to the Board which shall take a decision
+                                on the matter.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec45-sub8">
+                        <num>(8)</num>
+                        <content>
+                            <p>Neither the Chief Executive Officer nor any officer, employee or agent of the Authority
+                                nor the interim administrator nor any other person appointed, designated or approved by
+                                the Chief Executive Officer under the provisions of this Part shall be liable in respect
+                                of any act or omission done in good faith in the execution of the duties undertaken by
+                                him.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+            </part>
+            <part id="prtVI">
+                <num>PART VI-</num>
+                <heading>PART VI-PART VI- APPEALS</heading>
+                <section id="sec46">
+                    <num>(1)</num>
+                    <heading>Appeals to the Chief Executive Officer.</heading>
+                    <subsection id="sec46-sub1">
+                        <content>
+                            <p>Any member of a scheme who is dissatisfied with a decision of the manager or trustees of
+                                the scheme may request, in writing, that such decision be reviewed by the Chief
+                                Executive Officer with a view to ensuring that such decision is made in accordance with
+                                the provisions of the relevant scheme rules or the Act under which the scheme is
+                                established.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec46-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>A copy of every request under this section shall be served on the manager or trustees of
+                                the scheme.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec47">
+                    <num>(1)</num>
+                    <heading>Establishment of Appeals Tribunal.</heading>
+                    <subsection id="sec47-sub1">
+                        <content>
+                            <p>The Minister shall, by order published in the Gazette, establish an Appeals Tribunal for
+                                the purpose of hearing appeals under this Act.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec47-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>The Tribunal shall consist of a chairman and four other members who shall be appointed by
+                                the Minister and who shall hold office for a period of three years upon such terms and
+                                conditions as may be prescribed.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec47-sub3">
+                        <num>(3)</num>
+                        <content>
+                            <p>The chairman of the Tribunal shall be an advocate of the High Court of Kenya of not less
+                                than seven years standing.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec47-sub4">
+                        <num>(4)</num>
+                        <content>
+                            <p>All matters before the Tribunal shall, in the event of a difference of opinion, be
+                                decided by the votes of the majority of the members thereof.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec48">
+                    <num>(1)</num>
+                    <heading>Appeals to the Tribunal.</heading>
+                    <subsection id="sec48-sub1">
+                        <content>
+                            <p>Any person aggrieved by a decision of the Authority or of the Chief Executive Officer
+                                under the provisions of this Act or any regulations made thereunder may appeal to the
+                                Tribunal within thirty days of the receipt of the descision.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec48-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>Where any dispute arises between any person and the Authority as to the exercise of the
+                                powers conferred upon the Authority by this Act, either party may appeal to the Tribunal
+                                in such manner as may be prescribed.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec49">
+                    <num>(1)</num>
+                    <heading>Powers of Appeals Tribunal.</heading>
+                    <subsection id="sec49-sub1">
+                        <content>
+                            <p>On the hearing of an appeal, the Tribunal shall have all the powers of a subordinate
+                                court of the first class to summon witnesses, to take evidence upon oath or affirmation
+                                and to call for the production of books and other documents.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec49-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>Where the Tribunal considers it desirable for the purpose of avoiding expense or delay or
+                                any other special reason so to do, it may receive evidence by affidavit and administer
+                                interrogatories and require the person to whom the interrogatories are administered to
+                                make a full and true reply to the interrogatories within the time specified by the
+                                Tribunal.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec49-sub3">
+                        <num>(3)</num>
+                        <content>
+                            <p>In its determination of any matter, the Tribunal may take into consideration any evidence
+                                which it considers relevant to the subject of an appeal before it, notwithstanding that
+                                the evidence would not otherwise be admissible under the law relating to admissibility
+                                of evidence.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec49-sub4">
+                        <num>(4)</num>
+                        <content>
+                            <p>The Tribunal shall have power to award the costs of any proceedings before it and to
+                                direct that costs shall be paid in accordance with any scale prescribed for suits in the
+                                High Court or to award a specific sum as costs.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec49-sub5">
+                        <num>(5)</num>
+                        <content>
+                            <p>All summons, notices or other documents issued under the hand of the chairman of the
+                                Tribunal shall be deemed to be issued by the Tribunal.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec49-sub6">
+                        <num>(6)</num>
+                        <content>
+                            <p>Any interested party may be represented before the Tribunal by an advocate or by any
+                                other person whom the Tribunal may, in its discretion, admit to be heard on behalf of
+                                the party.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec50">
+                    <num>50.</num>
+                    <heading>Refusal or failure to give evidence.</heading>
+                    <subsection id="sec50-sub50">
+                        <num>50.</num>
+                        <content>
+                            <p>Any person summoned by the Tribunal to attend and give evidence or to produce any
+                                records, books of account, statements or other documents, or required to answer
+                                interrogatories and who, without sufficient cause -
+                            </p>
+                            <blockList id="sec50-sub50-lst1">
+                                <item id="sec50-sub50-itma">
+                                    <num>(a)</num>
+                                    <p>refuses or fails to attend at the time and place mentioned in the summons served
+                                        on him; or
+                                    </p>
+                                </item>
+                                <item id="sec50-sub50-itmb">
+                                    <num>(b)</num>
+                                    <p>refuses or fails to answer, fully and satisfactorily, to the best of his
+                                        knowledge and belief, all questions lawfully put to him by the Tribunal; or
+                                    </p>
+                                </item>
+                                <item id="sec50-sub50-itmc">
+                                    <num>(c)</num>
+                                    <p>refuses or fails to produce any records, books of account, statements or other
+                                        documents which are in his possession or under his control or mentioned or
+                                        referred to in any summons served on him, commits an offence and shall be
+                                        liable, on conviction, to a fine not exceeding one hundred thousand shillings,
+                                        or to imprisonment for a term not exceeding two years, or to both.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec51">
+                    <subsection id="sec51-sub2">
+                        <content>
+                            <p>Every certificate issued under
+                                <ref id="ref30" href="#sec51-sub1">subsection (1)</ref>
+                                may be filed in the High Court by the person in whose favour the costs have been awarded
+                                and upon being so filed, shall be deemed to be a decree of the High Court and may be
+                                executed as such.<eol/>Provided that an order for costs against the Government shall not
+                                be enforced save in the manner provided for by the Government Proceedings Act.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec52">
+                    <heading>Cap. 21.</heading>
+                    <subsection id="sec52-sub1">
+                        <content>
+                            <p>The Chief Justice may make rules governing the making of appeals and providing for the
+                                fees
+                            </p>
+                            <p>to be paid, the scale of costs of any such appeal, the procedure to be followed therein,
+                                and the manner
+                            </p>
+                            <p>of notifying the parties thereto; and until such rules are made, and subject thereto, the
+                                provisions of the
+                            </p>
+                            <p>Civil Procedure Act shall apply as if the matter appealed against were a decree of a
+                                subordinate
+                            </p>
+                            <p>court exercising original jurisdiction:</p>
+                        </content>
+                    </subsection>
+                </section>
+            </part>
+            <part id="prtVII">
+                <num>PART VII</num>
+                <heading>PART VIIPART VII - MISCELLANEOUS</heading>
+                <section id="sec53">
+                    <num>(1)</num>
+                    <heading>General penalty.</heading>
+                    <subsection id="sec53-sub1">
+                        <num>(1)</num>
+                        <content>
+                            <p>Any person who -</p>
+                            <blockList id="sec53-sub1-lst1">
+                                <item id="sec53-sub1-itma">
+                                    <num>(a)</num>
+                                    <p>contravenes any provision of this Act which is expressly stated to be an offence
+                                        but for which no other penalty is prescribed; or
+                                    </p>
+                                </item>
+                                <item id="sec53-sub1-itmb">
+                                    <num>(b)</num>
+                                    <p>fails to comply with any direction given by the Chief Executive Officer under
+                                        this Act;
+                                    </p>
+                                </item>
+                            </blockList>
+                            <p>
+                                <eol/>commits an offence and shall be liable, on conviction, to a fine not exceeding one
+                                hundred thousand shillings, or to imprisonment for a term not exceeding one year, or to
+                                both.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec53-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>A person does not commit an offence under<ref id="ref1" href="#sec53-sub1">subsection
+                                (1)</ref>, if he proves, to the satisfaction of the court, that the act or omission
+                                constituting the offence was done without his knowledge, consent or connivance and that
+                                he attempted to prevent the commission of the offence having regard to all the
+                                circumstances of the case.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec54">
+                    <num>(1)</num>
+                    <heading>Offences by corporate bodies, partnerships, principals and employees.</heading>
+                    <subsection id="sec54-sub1">
+                        <content>
+                            <p>When an offence under the provisions of this Act is committed by a body corporate, the
+                                body corporate and every director or officer thereof who had knowledge or should have
+                                had knowledge of the commission of the offence and who did not exercise due diligence to
+                                ensure compliance with this Act commits an offence.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec54-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>Where an offence is committed under this Act by a partnership, every partner or officer
+                                of the partnership who had knowledge or who snould have had knowledge of the commission
+                                of the offence commits an offence.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec54-sub3">
+                        <num>(3)</num>
+                        <content>
+                            <p>A person shall be personally liable for an offence against this Act whether committed by
+                                him on his own account or as an agent or "servant of another person.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec54-sub4">
+                        <num>(4)</num>
+                        <content>
+                            <p>An employer or principal shall be liable for an offence committed by an employee or agent
+                                against this Act unless the employer or principal proves that the offence was committed
+                                against his express or standing directions.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec54.a" period="t2">
+                    <heading>
+                        <b>Conduct of prosecutions.</b>
+                    </heading>
+                    <subsection id="sec54.a-sub1">
+                        <content>
+                            <p>
+                                <authorialNote id="sn03" marker="3" refersTo="sideNote">
+                                    <p>
+                                        <b>Cap 75.</b>
+                                    </p>
+                                </authorialNote>
+                                <b>
+                                    <b>The Attorney-General may, pursuant to the provisions of the Criminal Procedure
+                                        Code, appoint public prosecutors for the purposes of cases arising under this
+                                        Act.
+                                    </b>
+                                </b>
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec54.a-sub2">
+                        <num>
+                            <b>
+                                <b>(2)</b>
+                            </b>
+                        </num>
+                        <content>
+                            <p>
+                                <b>The Authority shall, for the purposes of the Criminal Procedure Code, be deemed to be
+                                    a public authority.
+                                    <noteRef href="#n9" marker="9"/>
+                                </b>
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec55">
+                    <num>(1)</num>
+                    <heading>Regulations.</heading>
+                    <subsection id="sec55-sub1">
+                        <content>
+                            <p>The Minister may, in consultation with the Authority, make regulations generally for the
+                                better carrying out of the provisions of this Act.
+                            </p>
+                        </content>
+                    </subsection>
+                    <subsection id="sec55-sub2">
+                        <num>(2)</num>
+                        <content>
+                            <p>Without prejudice to the generality of<ref id="ref31" href="/ke/act/1997-08-22/3/main">
+                                subsection (1)</ref>, regulations under this section may -
+                            </p>
+                            <blockList id="sec55-sub2-lst1">
+                                <item id="sec55-sub2-itma">
+                                    <num>(a)</num>
+                                    <p>prescribe anything required to be prescribed under this Act;</p>
+                                </item>
+                                <item id="sec55-sub2-itmb">
+                                    <num>(b)</num>
+                                    <p>subject to this Act, provide for the procedure for registration and the
+                                        conditions of registration;
+                                    </p>
+                                </item>
+                                <item id="sec55-sub2-itmc">
+                                    <num>(c)</num>
+                                    <p>provide the eligibility requirements for the membership of schemes and access to
+                                        retirement benefits;
+                                    </p>
+                                </item>
+                                <item id="sec55-sub2-itmd">
+                                    <num>(d)</num>
+                                    <p>provide for any matter relating to the nature of benefits under schemes;</p>
+                                </item>
+                                <item id="sec55-sub2-itme">
+                                    <num>(e)</num>
+                                    <p>prescribe the fees and other charges payable to the Authority;</p>
+                                </item>
+                                <item id="sec55-sub2-itmf">
+                                    <num>(f)</num>
+                                    <p>regulate the transitional period prescribed by section 57.</p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec56">
+                    <heading>Exemption from Cap. 446</heading>
+                    <subsection id="sec56-sub1">
+                        <content>
+                            <p>The provisions of the State Corporations Act shall not apply to the Authority.</p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec57">
+                    <heading>Transitional provisions.</heading>
+                    <subsection id="sec57-sub1">
+                        <content>
+                            <p>Any person who, at the commencement of this Act, is a trustee or manager of a scheme to
+                                which this Act applies shall, within sixty days of the commencement, or within such
+                                longer period as the Minister may, in consultation with the Authority prescribe, apply
+                                for registration' . under this Act.<eol/>Provided that the period prescribed under this
+                                section shall not exceed three years.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+                <section id="sec58">
+                    <heading>Supersession.</heading>
+                    <subsection id="sec58-sub1">
+                        <content>
+                            <p>Where there is a conflict between the provisions of this Act and the provisions of any
+                                written law (other than the Constitution) with regard to the powers or functions of the
+                                Authority under this Act. the provisions of this Act shall prevail.
+                            </p>
+                        </content>
+                    </subsection>
+                </section>
+            </part>
+        </body>
+        <attachments>
+            <componentRef id="at1" src="/ke/act/1997-08-22/3/eng@2003-12-19/schedule"
+                          showAs="SCHEDULE (s.S) PROVISIONS AS TOTHE CONDUCT OF BUSINESS AND AFFAIRS OF THE BOARD."/>
+        </attachments>
+    </act>
+</akomaNtoso>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <!-- Example of debate that includes modifications. Interesting example of mmod, modification in the modification -->
+    <debate>
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/ak/debaterecord/2011-07-03/main"/>
+                    <FRBRuri value="/ak/debaterecord/2011-07-03"/>
+                    <FRBRdate date="2011-07-03" name="generation"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <FRBRcountry value="ak"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/ak/debaterecord/2011-07-03/eng@/main"/>
+                    <FRBRuri value="/ak/debaterecord/2011-07-03/eng@"/>
+                    <FRBRdate date="2011-07-03" name="markup"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/ak/debaterecord/2011-07-03/eng@/main.xml"/>
+                    <FRBRuri value="/ak/debaterecord/2011-07-03/eng@.akn"/>
+                    <FRBRdate date="2011-07-03" name="publication"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                </FRBRManifestation>
+            </identification>
+            <publication date="2011-07-03" name="internal" showAs="Internal Use Only" number="134"/>
+            <analysis source="#bungeni">
+                <activeModifications>
+                    <textualMod id="txm1" type="substitution">
+                        <source href="mod1-mmod1-mod1"/>
+                        <destination href="/ak/bill/234/main#sec5"/>
+                        <new href="qdt1"/>
+                    </textualMod>
+                    <textualMod id="txm2" type="substitution">
+                        <source href="mod1-mmod1-mod2"/>
+                        <destination href="/ak/bill/234/main#sec5"/>
+                        <new href="qdt2"/>
+                    </textualMod>
+                    <textualMod id="txm3" type="substitution">
+                        <source href="mod1-mmod1-mod3"/>
+                        <destination href="/ak/bill/234/main#sec5"/>
+                        <new href="qdt3"/>
+                    </textualMod>
+                    <textualMod id="txm4" type="substitution">
+                        <source href="mod1-mmod1-mod4"/>
+                        <destination href="/ak/bill/234/main#sec5"/>
+                        <new href="qdt4"/>
+                    </textualMod>
+                    <textualMod id="txm5" type="substitution">
+                        <source href="mod1-mmod1-mod5"/>
+                        <destination href="/ak/bill/234/main#sec5"/>
+                        <new href="qdt5"/>
+                    </textualMod>
+                </activeModifications>
+            </analysis>
+            <references source="#bungeni">
+                <original id="ro1" href="/ak/debaterecord/2011-07-03/main" showAs="Debate"/>
+                <TLCOrganization id="bungeni" href="/ontology/organizations/akn/bungeni" showAs="Bungeni"/>
+                <TLCOrganization id="parliament" href="/ontology/organizations/akn/parliament" showAs="Parliament"/>
+            </references>
+        </meta>
+        <coverPage>
+            <block name="block">
+                <docProponent>NATIONAL ASSEMBLY</docProponent>
+                <legislature period="8">8TH LEGISLATIVE PERIOD</legislature>
+                <legislature period="2010 yera">2010 LEGISLATIVE YEAR</legislature>
+                <session>3RD ORDINARY SESSION</session>
+                (NOVEMBER 2010)
+                <docNumber>No. 055 /R/AN/8</docNumber>
+                <docType>R E P O R T</docType>
+                <docTitle>On Bill No. 867/PJL/AN: Finance Bill of the Republic of Cameroon
+                    for the 2011 Financial Year Presented On behalf of the Committee on Finance
+                    and the Budget
+                </docTitle>
+                By
+                <docIntroducer>Hon. KOA Luc, Rapporteur General</docIntroducer>
+            </block>
+        </coverPage>
+        <debateBody>
+            <debateSection name="amendments" id="sub1">
+                <heading>Amendments</heading>
+            </debateSection>
+            <debateSection id="sec1" name="section">
+                <p>Under<ref id="ref1" href="/ak/bill/234/main#sec5">SECTION FIVE</ref>, Government introduced an
+                    amendment which seeks to take into account all sectors of activities covered by the reevaluation of
+                    the nature of investments giving rise to exemption from taxation of capital gains tax, referring the
+                    modalities for application of this provision to the regulatory instrument.
+                </p>
+                <p>This amendment was accepted by your Committee and
+                    <ref href="/ak/bill/234/main#sec5-subsec7" id="ref2">SECTION FIVE (7)</ref>
+                    is reformulated as follows:
+                    <mod id="mod1">
+                        <ref href="/ak/bill/234/main#sec5-subsec7" id="ref3">SECTION FIVE:</ref>
+                        “
+                        <quotedStructure id="qtd1">
+                            <subsection id="sec5-subsec7">
+                                <content>
+                                    <p>
+                                        <mmod id="mod1-mmod1">
+                                            <ref href="/ak/bill/345/main#sec10" id="ref4">Section Ten</ref>
+                                            of the Finance Law of the 2010 financial year is hereby amended and
+                                            supplemented as follows:
+
+                                            <mod id="mod1-mmod1-mod1">
+                                                <quotedText id="qtd2">1) A legal system for the revaluation of tangible
+                                                    and intangible depreciable and non-depreciable fixed assets is
+                                                    hereby instituted.
+                                                </quotedText>
+                                            </mod>
+                                            <omissis>…………………………………………………………………………………………………………………………………………………………………………
+                                            </omissis>
+                                            <mod id="mod1-mmod1-mod3">
+                                                <quotedText id="qtd3">4) Revaluation shall be carried out no later than
+                                                    31 December 2013.
+                                                </quotedText>
+                                            </mod>
+                                            <omissis>…………………………………………………………………………………………………………………………………………………………………………
+                                                ……
+                                            </omissis>
+                                            <mod id="mod1-mmod1-mod4">
+                                                <quotedText id="qtd4">6) The revaluation surplus shall be subject to a
+                                                    5% levy in discharge from
+                                                    any other tax, duty, levy and royalty.
+                                                </quotedText>
+                                            </mod>
+                                            <mod id="mod1-mmod1-mod5">
+                                                <quotedText id="qtd5">7) However, the above 5% levy in discharge shall
+                                                    not be applicable in the case of reinvestment of the revaluation
+                                                    surplus within two fiscal years ended, in accordance with the forms
+                                                    and conditions specified in Sections 105 et seq of the General Tax
+                                                    Code by regulation.
+                                                </quotedText>
+                                            </mod>
+                                            ”
+                                        </mmod>
+                                    </p>
+                                </content>
+                            </subsection>
+                        </quotedStructure>
+                    </mod>
+                </p>
+                <scene>SECTION FIVE was adopted after this amendment.</scene>
+            </debateSection>
+            <adjournment id="adj1">
+                <p>The House rose at<recordedTime time="2011-07-03T06:30:00" type="endEvent"/>6.30 p.m.
+                    <noteRef href="#not01" marker="3"/>
+                </p>
+            </adjournment>
+        </debateBody>
+    </debate>
+</akomaNtoso>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <doc name="report">
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/za/doc/2005-08-29/main"/>
+                    <FRBRuri value="/za/doc/2005-08-29"/>
+                    <FRBRdate date="2005-08-20" name="generation"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <FRBRcountry value="za"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/za/doc/2005-08-29/eng@/main"/>
+                    <FRBRuri value="/za/doc/2005-08-29/eng@"/>
+                    <FRBRdate date="2007-05-31" name="markup"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/za/doc/2005-08-29/eng@/main.xml"/>
+                    <FRBRuri value="/za/doc/2005-08-29/eng@.akn"/>
+                    <FRBRdate date="2007-05-31" name="publication"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                </FRBRManifestation>
+            </identification>
+            <publication date="2005-08-29" name="internal" showAs="Internal Use Only" number="555"/>
+            <lifecycle source="#bungeni">
+                <eventRef id="e1" date="2005-08-29" source="#ro1" type="generation"/>
+            </lifecycle>
+            <references source="#bungeni">
+                <original id="ro1" href="/za/doc/2005-08-29/eng@/main" showAs="original"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/ke/bungeni" showAs="Bungeni"/>
+                <TLCPerson id="cervone" href="/ontology/persons/it/editors/cervone" showAs="Luca Cervone"/>
+                <TLCOrganization id="parliament" href="/ontology/organizations/za/parliament" showAs="Parliament"/>
+                <TLCRole id="author" href="/ontology/roles/za/author" showAs="Author of Document"/>
+                <TLCRole id="editor" href="/ontology/roles/it/editor" showAs="Editor of Document"/>
+            </references>
+        </meta>
+        <preface>
+            <p class="important">PARLIAMENT OF THE REPUBLIC OF SOUTH AFRICA</p>
+            <p class="important">ANNOUNCEMENTS, TABLINGS AND COMMITTEE REPORTS</p>
+            <p class="important">MONDAY, 29 AUGUST 2005</p>
+        </preface>
+        <preamble>
+            <p>TABLE OF CONTENTS</p>
+            <toc>
+                <tocItem level="1" href="#announcements">ANNOUNCEMENTS</tocItem>
+                <tocItem level="2" href="#ann-NANCP">National Assembly and National Council
+                    of Provinces
+                </tocItem>
+                <tocItem level="3" href="#ann-NANCP-Bills">Introduction of Bills</tocItem>
+                <tocItem level="3" href="#ann-NANCP-Classification">Classification of Bills
+                    by JTM
+                </tocItem>
+                <tocItem level="2" href="#ann-NA">National Assembly</tocItem>
+                <tocItem level="3" href="#ann-NA-Membership">Membership of Committees</tocItem>
+                <tocItem level="1" href="#tablings">TABLINGS</tocItem>
+                <tocItem level="2" href="#tablings-NANCP">National Assembly and National
+                    Council of Provinces
+                </tocItem>
+                <tocItem level="3" href="#tablings-NANCP-Speaker">Speaker and Chairperson</tocItem>
+                <tocItem level="3" href="#tablings-NANCP-Minister">Minister in The
+                    Presidency
+                </tocItem>
+                <tocItem level="1" href="#reports">COMMITTEE REPORTS</tocItem>
+                <tocItem level="2" href="#reports-NA">National Assembly</tocItem>
+                <tocItem level="3" href="#reports-NA-itm1">Finance</tocItem>
+            </toc>
+        </preamble>
+        <mainBody>
+            <blockList id="l1">
+                <item id="l1-i1">
+                    <heading>ANNOUNCEMENTS</heading>
+                    <blockList id="l1-i1-l1">
+                        <item id="l1-i1-l1-i1">
+                            <heading>National Assembly and National Council of Provinces</heading>
+                            <subheading>The Speaker and the Chairperson</subheading>
+                            <blockList id="l1-i1-l1-i1-l1">
+                                <item id="l1-i1-l1-i1-l1-i1">
+                                    <num>1.</num>
+                                    <heading>Introduction of Bills</heading>
+                                    <blockList id="l1-i1-l1-i1-l1-i1-l1">
+                                        <item id="l1-i1-l1-i1-l1-i1-l1-i1">
+                                            <num>(1)</num>
+                                            <heading>The Minister of Minerals and Energy</heading>
+                                            <blockList id="l1-i1-l1-i1-l1-i1-l1-i1-l1">
+                                                <item id="l1-i1-l1-i1-l1-i1-l1-i1-l1-i1">
+                                                    <num>(i)</num>
+                                                    <heading>Diamonds Amendment Bill [B 27—2005]
+                                                        (National Assembly—sec 75)
+                                                    </heading>
+                                                    <p>[Bill and prior notice of its introduction
+                                                        published in Government Gazette No 27929 of
+                                                        19 August 2005.]
+                                                    </p>
+                                                </item>
+                                            </blockList>
+                                            <p>Introduction and referral to the
+                                                <b>Portfolio
+                                                    Committee on Minerals and Energy
+                                                </b>
+                                                of the
+                                                National Assembly, as well as referral to the Joint
+                                                Tagging Mechanism (JTM) for classification in terms
+                                                of Joint Rule 160, on 30 August 2005.
+                                            </p>
+                                            <p>In terms of Joint Rule 154 written views on the
+                                                classification of the Bill may be submitted to the
+                                                JTM within three parliamentary working days.
+                                            </p>
+                                        </item>
+                                    </blockList>
+                                </item>
+                                <item id="l1-i1-l1-i1-l1-i2">
+                                    <num>2.</num>
+                                    <heading>Classification of Bill by Joint Tagging Mechanism:</heading>
+                                    <blockList id="l1-i1-l1-i1-l1-i2-l1">
+                                        <item id="l1-i1-l1-i1-l1-i2-l1-i1">
+                                            <p>The Joint Tagging Mechanism (JTM) on 29 August 2005
+                                                in terms of Joint Rule 160(4), classified the<ref id="ref01"
+                                                                                                  href="/bill/2005/24_en.xml">
+                                                    Forestry Laws
+                                                    Amendment Bill [B 24—2005]</ref>, introduced in
+                                                the National Assembly, as a section 76 Bill and as a
+                                                Bill falling within the ambit of<ref id="ref02"
+                                                                                     href="/act/2003/41_en.xml">section
+                                                    18(1) of the
+                                                    Traditional Leadership and Governance Framework
+                                                    Act, 2003 (Act No. 41 of 2003)</ref>.
+                                            </p>
+                                        </item>
+                                    </blockList>
+                                </item>
+                            </blockList>
+                        </item>
+                        <item id="l1-i1-l1-i2">
+                            <heading>National Assembly</heading>
+                            <subheading>The Speaker</subheading>
+                            <blockList id="l1-i1-l1-i2-l1">
+                                <item id="l1-i1-l1-i2-l1-i1">
+                                    <num>1.</num>
+                                    <heading>Membership of Committees</heading>
+                                    <blockList id="l1-i1-l1-i2-l1-i1-l1">
+                                        <item id="l1-i1-l1-i2-l1-i1-l1-i1">
+                                            <p>The following changes have been made to the
+                                                membership of<b>Portfolio Committees</b>, viz:
+                                            </p>
+                                            <p>
+                                                <b>Housing:</b>
+                                            </p>
+                                            <p>Appointed: Cupido, Mr H B</p>
+                                            <p>Discharged: Khumalo, Rev M S</p>
+                                            <p>
+                                                <b>Trade and Industry:</b>
+                                            </p>
+                                            <p>Appointed: Cupido, Mr H B</p>
+                                        </item>
+                                    </blockList>
+                                </item>
+                            </blockList>
+                        </item>
+                    </blockList>
+                </item>
+                <item id="l1-i2">
+                    <heading>TABLINGS</heading>
+                    <blockList id="l1-i2-l1">
+                        <item id="l1-i2-l1-i1">
+                            <heading>National Assembly and National Council of Provinces</heading>
+                            <blockList id="l1-i2-l1-i1-l1">
+                                <item id="l1-i2-l1-i1-l1-i1">
+                                    <num>1.</num>
+                                    <heading>The Speaker and the Chairperson</heading>
+                                    <blockList id="l1-i2-l1-i1-l1-i1-l1">
+                                        <item id="l1-i2-l1-i1-l1-i1-l1-i1">
+                                            <p>Report and Financial Statements of the Municipal
+                                                Demarcation Board for 2004-2005, including the
+                                                Report of the Auditor-General on the Financial
+                                                Statements for 2004-2005 [RP 149-2005].
+                                            </p>
+                                        </item>
+                                    </blockList>
+                                </item>
+                                <item id="l1-i2-l1-i1-l1-i2">
+                                    <num>2.</num>
+                                    <heading>The Minister in The Presidency</heading>
+                                    <blockList id="l1-i2-l1-i1-l1-i2-l1">
+                                        <item id="l1-i2-l1-i1-l1-i2-l1-i1">
+                                            <p>Report and Financial Statements of the International
+                                                Marketing Council (IMC) for 2004-2005, including the
+                                                Report of the Auditor- General on the Financial
+                                                Statements for 2004-2005.
+                                            </p>
+                                        </item>
+                                    </blockList>
+                                </item>
+                            </blockList>
+                        </item>
+                    </blockList>
+                </item>
+                <item id="l1-i3">
+                    <heading>COMMITTEE REPORTS</heading>
+                    <blockList id="l1-i3-l1">
+                        <item id="l1-i3-l1-i1">
+                            <heading>National Assembly:</heading>
+                            <blockList id="l1-i3-l1-i1-l1">
+                                <item id="l1-i3-l1-i1-l1-i1">
+                                    <p>Report of the Portfolio Committee on Finance on the
+                                        <b>Agreement between the Government of the Republic of
+                                            South Africa and the Government of Malaysia for the
+                                            Avoidance of Double Taxation and the Prevention of
+                                            Fiscal Evasion with respect to Taxes</b>, dated 17
+                                        August 2005:
+                                    </p>
+                                    <p class="indented">The Portfolio Committee on Finance, having
+                                        considered the request for approval by Parliament of the
+                                        <b>Agreement between the Government of the Republic of
+                                            South Africa and the Government of Malaysia for the
+                                            Avoidance of Double Taxation and the Prevention of
+                                            Fiscal Evasion with respect to Taxes</b>, referred to
+                                        it, recommends that the House, in terms of<ref id="ref03"
+                                                                                       href="/constitution/en.xml#art231-cla2">
+                                            section 231(2)
+                                            of the Constitution</ref>, approve the said Agreement.
+                                    </p>
+                                    <p>Request to be considered.</p>
+                                </item>
+                            </blockList>
+                        </item>
+                    </blockList>
+                </item>
+            </blockList>
+        </mainBody>
+    </doc>
+</akomaNtoso>

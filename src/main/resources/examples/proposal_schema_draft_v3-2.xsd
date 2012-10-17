@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!--
+        AT4AM schema for validation of incoming source texts.
+        As soon as an XML is validated with this schema, it can
+        be transformed into HTML for use in the AT4AM editor
+        to make amendments.
+    -->
+
+    <!-- The type of the elements that contain data. -->
+    <xs:complexType name="AmendableElementType">
+        <xs:attribute name="id" type="xs:int" use="required"/>
+        <!-- used to align translations of an element. By using
+         this sequence, we can ask another translation of this document
+         to give use the translation for this element. -->
+        <xs:attribute name="sequence" type="xs:int" use="required"/>
+        <!-- used to override the numbering of an element.
+        Normally, indexes are reset for children, but for example in
+        the case of articles, they do not get reset, so we use this
+        to override the default numbering. -->
+        <xs:attribute name="assignedIndex" type="xs:integer"/>
+        <!-- used to assign a literal index to an element (eg. 1., (3), IV), ...) -->
+        <xs:attribute name="literalIndex" type="xs:string"/>
+        <!-- HTML css class attribute, used for styling. -->
+        <xs:attribute name="cssClass" type="xs:string"/>
+        <!-- HTML css style attribute, used for styling - prefer to use the cssClass attribute. -->
+        <xs:attribute name="cssStyle" type="xs:string"/>
+        <!-- flag to set whether or not this element and its children are amendable. -->
+        <xs:attribute name="amendable" type="xs:boolean"/>
+        <!-- string attribute to set the formatting of the index. Can be one of 'bracket', 'double_bracket', 'point', or 'none'. -->
+        <xs:attribute name="format" type="xs:string"/>
+        <!-- string attribute to set the numbering type of the index. Can be one of 'roman', 'number', 'letter', 'indent', 'bullet', 'arrow', or 'none'. -->
+        <xs:attribute name="numberingType" type="xs:string"/>
+        <!--
+            flag to set whether or not this element and its children are visible.
+            Only the top element will be taken into account (meaning it cannot be overridden),
+            and will result in the entire part being _skipped_ during transformation.
+        -->
+        <xs:attribute name="visible" type="xs:boolean"/>
+        <!-- flag to set whether or not this element is immutable. -->
+        <xs:attribute name="immutable" type="xs:boolean"/>
+        <!-- notes the source of the element (commission, council, extern, ..) -->
+        <xs:attribute name="source" type="xs:string"/>
+    </xs:complexType>
+
+    <!-- The type for all title elements. -->
+    <xs:complexType name="TitleElementType" mixed="true">
+        <xs:complexContent>
+            <xs:extension base="AmendableElementType">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" ref="amendableElement"/>
+                </xs:sequence>
+                <xs:attribute name="title" type="xs:string"/>
+                <xs:attribute name="name" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- Type for title elements that are immutable by default. -->
+    <xs:complexType name="ImmutableTitleElementType" mixed="true">
+        <xs:complexContent>
+            <xs:restriction base="TitleElementType">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" ref="amendableElement"/>
+                </xs:sequence>
+                <xs:attribute name="immutable" type="xs:boolean" default="true"/>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- The type of all content elements. -->
+    <xs:complexType name="ContentElementType" mixed="true">
+        <xs:complexContent>
+            <xs:extension base="AmendableElementType">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" ref="amendableElement"/>
+                </xs:sequence>
+                <xs:attribute name="title" type="xs:boolean"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- Type for content elements that are non amendable by default. -->
+    <xs:complexType name="NonAmendableContentElementType" mixed="true">
+        <xs:complexContent>
+            <xs:restriction base="ContentElementType">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" ref="amendableElement"/>
+                </xs:sequence>
+                <xs:attribute name="amendable" type="xs:boolean" default="false"/>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- Type for content elements that are immutable by default. -->
+    <xs:complexType name="ImmutableContentElementType" mixed="true">
+        <xs:complexContent>
+            <xs:restriction base="ContentElementType">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" ref="amendableElement"/>
+                </xs:sequence>
+                <xs:attribute name="immutable" type="xs:boolean" default="true"/>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- The special include element. -->
+    <xs:complexType name="RemoteElementType" mixed="true">
+        <xs:complexContent>
+            <xs:extension base="AmendableElementType">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" ref="amendableElement"/>
+                </xs:sequence>
+                <xs:attribute name="url" type="xs:string"/>
+                <xs:attribute name="silent-fail" default="true" type="xs:boolean"/>
+                <xs:attribute name="blocking" default="true" type="xs:boolean"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <!-- The attachment element. -->
+    <xs:complexType name="AttachmentElementType" mixed="true">
+        <xs:complexContent>
+            <xs:extension base="AmendableElementType">
+                <xs:attribute name="name" type="xs:string"/>
+                <xs:attribute name="silent-fail" default="true" type="xs:boolean"/>
+                <xs:attribute name="blocking" default="true" type="xs:boolean"/>
+                <xs:attribute name="contentType" default="image/jpeg" type="xs:string"/>
+                <xs:attribute name="display" default="download" type="DisplayType"/>
+                <xs:attribute name="width" type="xs:string"/>
+                <xs:attribute name="height" type="xs:string"/>
+
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="DisplayType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="download"/>
+            <xs:enumeration value="inline"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- The root element for a single document. -->
+    <xs:element name="document">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="amendableElement"/>
+            </xs:sequence>
+            <xs:attribute name="language" use="required" type="xs:string"/>
+            <xs:attribute name="name" use="required" type="xs:string"/>
+            <xs:attribute name="title" type="xs:string"/>
+            <xs:attribute name="amendedDoc" type="xs:string"/>
+        </xs:complexType>
+        <xs:unique name="idUnique">
+            <xs:selector xpath=".//*"/>
+            <xs:field xpath="@id"/>
+        </xs:unique>
+        <xs:unique name="sequenceUnique">
+            <xs:selector xpath=".//*"/>
+            <xs:field xpath="@sequence"/>
+        </xs:unique>
+    </xs:element>
+
+    <!-- The root of all documents. One xml file may contain more than one document. -->
+    <xs:element name="documents">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="document"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- This is the parent of all elements in a document. -->
+    <xs:element name="amendableElement" type="AmendableElementType" abstract="true"/>
+
+    <!-- This is the parent of all the elements that have a title and do not contain data. -->
+    <xs:element name="titleElement" type="TitleElementType" substitutionGroup="amendableElement" abstract="true"/>
+
+    <!-- The title elements in a document. -->
+    <xs:element name="annex" type="TitleElementType" substitutionGroup="titleElement"/>
+    <xs:element name="article" type="TitleElementType" substitutionGroup="titleElement"/>
+    <xs:element name="chapter" type="TitleElementType" substitutionGroup="titleElement"/>
+    <!-- used for sections of a document separated by section breaks. -->
+    <xs:element name="documentsection" type="ImmutableTitleElementType" substitutionGroup="titleElement"/>
+    <xs:element name="draftlegislativeresolution" type="ImmutableTitleElementType" substitutionGroup="titleElement"/>
+    <xs:element name="heading" type="TitleElementType" substitutionGroup="titleElement"/>
+    <xs:element name="part" type="TitleElementType" substitutionGroup="titleElement"/>
+    <xs:element name="section" type="TitleElementType" substitutionGroup="titleElement"/>
+    <xs:element name="title" type="TitleElementType" substitutionGroup="titleElement"/>
+    <xs:element name="subsection" type="TitleElementType" substitutionGroup="titleElement"/>
+    <xs:element name="rule" type="TitleElementType" substitutionGroup="titleElement"/>
+
+    <!-- This is the parent of all elements that contain data. -->
+    <xs:element name="contentElement" type="ContentElementType" substitutionGroup="amendableElement" abstract="true"/>
+    <xs:element name="attachment" type="AttachmentElementType" substitutionGroup="amendableElement"/>
+
+    <!-- The content elements in a document. -->
+    <xs:element name="amendingact" type="ImmutableContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="appendix" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="asterisk" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="citation" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="definition" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="element" type="NonAmendableContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="figure" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="figuretitle" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="footnote" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="formula" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="indent" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="paragraph" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="point" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="recital" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="sentence" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="subheading" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="symbol" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="table" type="ContentElementType" substitutionGroup="contentElement"/>
+    <xs:element name="tabletitle" type="ContentElementType" substitutionGroup="contentElement"/>
+</xs:schema>

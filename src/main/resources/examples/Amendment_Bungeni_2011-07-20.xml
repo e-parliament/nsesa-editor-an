@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <amendment contains="originalVersion">
+        <!-- example of bill with memorandum as annex-->
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/ak/amendment /2011-07-20/B24/main"/>
+                    <FRBRuri value="/ak/amendment /2011-07-20/B24/"/>
+                    <FRBRdate date="2011-07-20" name="Enactment"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <FRBRcountry value="ak"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/ak/amendment /2011-07-20/B24/eng@/main"/>
+                    <FRBRuri value="/ak/amendment /2011-07-20/B24//eng@"/>
+                    <FRBRdate date="2011-07-25" name="Expression"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/ak/amendment /2011-07-20/B24/eng@/main.xml"/>
+                    <FRBRuri value="/ak/amendment /2011-07-20/B24/eng@/main.akn"/>
+                    <FRBRdate date="2011-07-25" name="XMLConversion"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                </FRBRManifestation>
+            </identification>
+            <lifecycle source="#bungeni">
+                <eventRef date="2011-07-23" id="e1" source="#ro1" type="generation"/>
+            </lifecycle>
+            <analysis source="#cirsfid">
+                <activeModifications>
+                    <textualMod id="amod1" type="substitution">
+                        <source href="#sec1-lst1-itma-mod1"/>
+                        <destination href="/ak/bill/2000-10-10/101/main#sec1"/>
+                        <old href="#sec1-lst1-itma-mod1-qtd1"/>
+                        <new href="#sec1-lst1-itma-mod1-qtd2"/>
+                    </textualMod>
+                </activeModifications>
+            </analysis>
+            <references source="#bungeni">
+                <original id="ro1" href="/ak/amendment /2011-07-20/B24/main" showAs="Amendment Bill"/>
+                <activeRef id="ra1" href="/ak/bill/863/PJL/AN/main"
+                           showAs="BILL TO REGULATE ELECTRONIC COMMUNICATIONS IN CAMEROON"/>
+                <TLCOrganization id="parliament" href="/ontology/organiaktions/akf/parliament" showAs="Parliament"/>
+                <TLCOrganization id="bungeni" href="/ontology/organiaktion/ak/bungeni" showAs="Bungeni"/>
+                <TLCRole id="author" href="/ontology/roles/akf/author" showAs="Author of Document"/>
+                <TLCRole id="editor" href="/ontology/roles/ita/editor" showAs="Editor of Document"/>
+                <TLCPerson id="palmirani" href="akn.user.monica.palmirani.1966-02-28" showAs="Editor"/>
+                <TLCTerm id="peace" href="ontology/roles/ita/concept/peace" showAs="Peace"/>
+                <TLCTerm id="work" href="ontology/roles/ita/concept/work" showAs="Work"/>
+            </references>
+        </meta>
+        <coverPage xml:lang="eng">
+            <p xml:lang="fra" class="left">REPUBLIQUE DU BUNGENI</p>
+            <p xml:lang="eng" class="right">REPUBLIC OF BUNGENI</p>
+            <block name="legilsature">
+                <legislature period="8">8th LEGISLATION PERIOD</legislature>
+                <term id="trm1" refersTo="#peace">Peace</term>
+                –
+                <term id="trm2" refersTo="#work">Work</term>
+                <legislature period="2010 year">2010 LEGISLATIVE YEAR</legislature>
+                <session>3rd ORDINARY SESSION</session>
+                (November 2010)
+            </block>
+        </coverPage>
+        <preface xml:lang="en">
+            <p>
+                <docTitle>AMENDEMENT TO
+                    <ref id="ref1" href="">BILL NO. 863/PJL/AN</ref>
+                    TO
+                    REGULATE ELECTRONIC COMMUNICATIONS IN BUNGENI
+                </docTitle>
+            </p>
+        </preface>
+        <amendmentBody>
+            <amendmentHeading>
+                <p>
+                    <affectedDocument id="afd1" href="/ak/bill/863/PJL/AN/main#sec6-subs2">Section 6(2):
+                    </affectedDocument>
+                </p>
+                <p>English version</p>
+            </amendmentHeading>
+            <amendmentContent id="amc1" xml:lang="eng">
+                <p>Instead of:
+                    <mod id="mod1">
+                        <ref id="ref3" href="/ak/bill/863/PJL/AN/main#sec6-subs2-line2">Second line</ref>:
+                        “<quotedText id="qtd1">….. may be subject ……</quotedText>”
+                        Read:
+                        “
+                        <quotedText id="qtd2">……may be
+                            <change class="insertion">the subject</change>
+                            …..
+                        </quotedText>
+                        ”
+                    </mod>
+                </p>
+                <p>The rest shall remain unchanged</p>
+            </amendmentContent>
+            <!-- France official version alternative to the English one-->
+            <amendmentContent id="amc2" alternativeTo="#amc1" xml:lang="fra">
+                <p>Section 6(2)</p>
+                <p>France version</p>
+                <p>Au lieu de:
+                    <mod id="mod2" alternativeTo="#mod1">
+                        <ref id="ref4" href="/ak/bill/863/PJL/AN/main#sec6-subs2-line2">Deuxième ligne</ref>
+                        "<quotedText id="qtd3">... .. peuvent faire l'objet ... ...</quotedText>"
+                        Lire:
+                        "
+                        <quotedText id="qtd4">... ...
+                            <change class="substitution">peut être</change>
+                            l'objet... ..
+                        </quotedText>
+                        "
+                    </mod>
+                </p>
+                <p>Le reste sans changement</p>
+            </amendmentContent>
+        </amendmentBody>
+    </amendment>
+</akomaNtoso>

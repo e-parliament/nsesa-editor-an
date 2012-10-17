@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Cirsfid (Alma Mater Studiorum - Universita di Bologna) -->
+<!--?xml-stylesheet type="text/xsl" href="akomantoso.xsl"? -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <documentCollection name="bill">
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/ak/bill/2009-01-27/5/main"/>
+                    <FRBRuri value="/ak/bill/2009-01-27/5/"/>
+                    <FRBRdate date="2009-01-27" name="Enactment"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <FRBRcountry value="ak"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/ak/bill/2009-01-27/5/eng@/main"/>
+                    <FRBRuri value="/ak/bill/2009-01-27/5/eng@"/>
+                    <FRBRdate date="2011-12-19" name="Expression"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/ak/bill/2009-01-27/5/eng@/main.xml"/>
+                    <FRBRuri value="/ak/bill/2009-01-27/5/eng@/main.akn"/>
+                    <FRBRdate date="2011-12-19" name="XMLConversion"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                </FRBRManifestation>
+            </identification>
+            <publication date="2009-01-27" name="bill" showAs="Bungeni Gazette" number="234"/>
+            <references source="#bungeni">
+                <TLCOrganization id="parliament" href="/ontoloak/organizations/ak/parliament" showAs="Parliament"/>
+                <TLCPerson id="palmirani" href="it.monica.palmirani.1966-02-28" showAs="Editor"/>
+                <TLCOrganization id="bungeni" href="/ontoloak/organization/ak/bungeni" showAs="Bungeni"/>
+                <TLCRole id="author" href="/ontoloak/roles/ak/author" showAs="Author of Document"/>
+                <TLCRole id="editor" href="/ontoloak/roles/ita/editor" showAs="Editor of Document"/>
+            </references>
+        </meta>
+        <collectionBody>
+            <componentRef id="refc1" src="#letter" showAs="Letter"/>
+            <componentRef id="refc2" src="#bill" showAs="Bill"/>
+            <componentRef id="refc3" src="#memorandum" showAs="Memorandum"/>
+        </collectionBody>
+    </documentCollection>
+    <components>
+        <component id="letter">
+            <doc name="letter">
+                <meta>
+                    <identification source="#bungeni">
+                        <FRBRWork>
+                            <FRBRthis value="/ak/bill/2009-01-27/5/main"/>
+                            <FRBRuri value="/ak/bill/2009-01-27/5/"/>
+                            <FRBRdate date="2009-01-27" name="Enactment"/>
+                            <FRBRauthor href="#parliament" as="#author"/>
+                            <FRBRcountry value="ak"/>
+                        </FRBRWork>
+                        <FRBRExpression>
+                            <FRBRthis value="/ak/bill/2009-01-27/5/eng@/main"/>
+                            <FRBRuri value="/ak/bill/2009-01-27/5/eng@"/>
+                            <FRBRdate date="2011-12-19" name="Expression"/>
+                            <FRBRauthor href="#palmirani" as="#editor"/>
+                            <FRBRlanguage language="eng"/>
+                        </FRBRExpression>
+                        <FRBRManifestation>
+                            <FRBRthis value="/ak/bill/2009-01-27/5/eng@/main.xml"/>
+                            <FRBRuri value="/ak/bill/2009-01-27/5/eng@/main.akn"/>
+                            <FRBRdate date="2011-12-19" name="XMLConversion"/>
+                            <FRBRauthor href="#user.palmirani" as="#editor"/>
+                        </FRBRManifestation>
+                    </identification>
+                    <publication date="2009-01-27" name="bill" showAs="Bungeni Gazette" number="234"/>
+                </meta>
+                <preface>
+                    <p>
+                        <docType>BILL</docType>
+                        <docNumber>No. 5 of 2009</docNumber>
+                    </p>
+                    <p>
+                        <docDate date="2009-01-27">Tuesday 27th January, 2009</docDate>
+                    </p>
+                    <p>
+                        <docProponent>PARLIAMENT OFFICE
+                            Public Buildings,
+                            Georgetown,
+                            Bungeni.
+                        </docProponent>
+                    </p>
+                </preface>
+                <mainBody>
+                    <p>The following Bill which will be introduced in the National Assembly is published for general
+                        information.
+                    </p>
+                </mainBody>
+                <conclusions>
+                    <p>S.E. Isaacs,
+                        Clerk of the National Assembly.
+                    </p>
+                </conclusions>
+            </doc>
+        </component>
+        <component id="bill">
+            <bill>
+                <meta>
+                    <identification source="#bungeni">
+                        <FRBRWork>
+                            <FRBRthis value="/ak/billBody/2009-01-27/5/main"/>
+                            <FRBRuri value="/ak/billBody/2009-01-27/5/"/>
+                            <FRBRdate date="2009-01-27" name="Enactment"/>
+                            <FRBRauthor href="#parliament" as="#author"/>
+                            <FRBRcountry value="ak"/>
+                        </FRBRWork>
+                        <FRBRExpression>
+                            <FRBRthis value="/ak/billBody/2009-01-27/5/eng@/main"/>
+                            <FRBRuri value="/ak/billBody/2009-01-27/5/eng@"/>
+                            <FRBRdate date="2009-01-27" name="Expression"/>
+                            <FRBRauthor href="#palmirani" as="#editor"/>
+                            <FRBRlanguage language="eng"/>
+                        </FRBRExpression>
+                        <FRBRManifestation>
+                            <FRBRthis value="/ak/billBody/2009-01-27/5/eng@/main.xml"/>
+                            <FRBRuri value="/ak/billBody/2009-01-27/5/eng@/main.akn"/>
+                            <FRBRdate date="2009-01-27" name="XMLConversion"/>
+                            <FRBRauthor href="#user.palmirani" as="#editor"/>
+                        </FRBRManifestation>
+                    </identification>
+                    <!-- deve essere facoltativa perchè per i bill potrebbe non avere senso -->
+                    <publication date="2009-01-27" name="bill" showAs="Bungeni Gazette" number="234"/>
+                    <classification source="#art1">
+                        <keyword value="quorum" showAs="Quorum" dictionary="/eurovoc/passo1/passo2/voce4"/>
+                    </classification>
+                    <classification source="#art2">
+                        <keyword value="referendum" showAs="Referendum" dictionary="/eurovoc/passo1/passo2/voce4"/>
+                    </classification>
+                    <lifecycle source="#bungeni">
+                        <eventRef date="2009-01-27" id="e1" source="#ro1" type="generation"/>
+                    </lifecycle>
+                    <references source="#bungeni">
+                        <activeRef id="ra1" href="/ak/act/2010-08-27/1/main" showAs=""/>
+                    </references>
+                </meta>
+                <preface>
+                    <p>
+                        Bungeni BILL No.
+                        <docNumber>5 of 2009</docNumber>
+                        <docTitle>STATUS OF CHILDREN BILL 2009</docTitle>
+                        ARRANGEMENT OF SECTIONS
+                    </p>
+                    <p>A BILL
+                        Intituled
+                    </p>
+                    <longTitle>
+                        <p>AN ACT to repeal and re-enact the provisions of the Children Born Out of Wedlock (Removal of
+                            Discrimination) Act 1983; to provide for presumptions of parentage and parentage testing
+                            procedures; to effect reform of the law generally and for related purposes.
+                        </p>
+                    </longTitle>
+                </preface>
+                <preamble>
+                    <p>Enacted by the Parliament of Bungeni:-</p>
+                </preamble>
+                <body>
+                    <section id="sct1">
+                        <num>1.</num>
+                        <heading>Short title.</heading>
+                        <content>
+                            <p>
+                                This Act may be cited as the Status of Children Act 2009
+                            </p>
+                        </content>
+                    </section>
+                    <section id="sct2">
+                        <num>2.</num>
+                        <heading>Interpretation</heading>
+                        <clause id="sct2-cls1">
+                            <num>1</num>
+                            <content>
+                                <p>In this Act, unless the context otherwise requires -</p>
+                                <blockList id="sct2-cls1lst1">
+                                    <listIntroduction>
+                                        "body sample" includes one or more of the following -
+                                    </listIntroduction>
+                                    <item id="sct2-cls1-lst1-itma">
+                                        <num>(a)</num>
+                                        <p>a blood sample;</p>
+                                    </item>
+                                    <item id="sct2-cls1-lst1-itmb">
+                                        <num>(b)</num>
+                                        <p>a tissue sample;</p>
+                                    </item>
+                                    <item id="sct2-cls1-lst1-itmc">
+                                        <num>(c)
+                                        </num>
+                                        <p>a sperm sample;</p>
+                                    </item>
+                                    <item id="sct2-cls1-lst1-itmD">
+                                        <num>(D)
+                                        </num>
+                                        <p>other samples of material obtained from the human body;
+                                        </p>
+                                    </item>
+                                </blockList>
+                            </content>
+                        </clause>
+                    </section>
+                </body>
+            </bill>
+        </component>
+        <component id="memorandum">
+            <doc name="memorandum">
+                <meta>
+                    <identification source="#bungeni">
+                        <FRBRWork>
+                            <FRBRthis value="/ak/billReport/2009-01-27/5/main"/>
+                            <FRBRuri value="/ak/billReport/2009-01-27/5/"/>
+                            <FRBRdate date="2009-01-27" name="Enactment"/>
+                            <FRBRauthor href="#parliament" as="#author"/>
+                            <FRBRcountry value="ak"/>
+                        </FRBRWork>
+                        <FRBRExpression>
+                            <FRBRthis value="/ak/billReport/2009-01-27/5/eng@/main"/>
+                            <FRBRuri value="/ak/billReport/2009-01-27/5/eng@"/>
+                            <FRBRdate date="2010-11-24" name="Expression"/>
+                            <FRBRauthor href="#palmirani" as="#editor"/>
+                            <FRBRlanguage language="eng"/>
+                        </FRBRExpression>
+                        <FRBRManifestation>
+                            <FRBRthis value="/ak/billReport/2009-01-27/5/eng@/main.xml"/>
+                            <FRBRuri value="/ak/billReport/2009-01-27/5/eng@/main.akn"/>
+                            <FRBRdate date="2009-01-27" name="XMLConversion"/>
+                            <FRBRauthor href="#user.palmirani" as="#editor"/>
+                        </FRBRManifestation>
+                    </identification>
+                    <publication date="2010-07-16" name="bill" showAs="Bungeni Gazette" number="234"/>
+                </meta>
+                <preface>
+                    <p>
+                        <docTitle>EXPLANATORY MEMORANDUM</docTitle>
+                    </p>
+                </preface>
+                <mainBody>
+                    <container id="ctn1" name="">
+                        <p>Section 1 and 2 state the name of the Bill and define the various terms used in the Bill.</p>
+                        <p>Section 3 explains the persons and situations to which this legislation can be applied.</p>
+                        <p>Section 4 states that all children have equal rights.</p>
+                        <p>Section 5 clarifies that all children whether of natural parents, adoptive parents and born
+                            in or out of wedlock, have equal status and rights.
+                        </p>
+                    </container>
+                </mainBody>
+                <conclusions>
+                    <p>
+                        <date date="2009-01-27">the 27th January, 2009.</date>
+                    </p>
+                    <p>
+                        <span refersTo="manickchand">￼ Priya D. Manickchand</span>
+                    </p>
+                    <p>MInistry of Human Services and Social Security</p>
+                </conclusions>
+            </doc>
+        </component>
+    </components>
+</akomaNtoso>

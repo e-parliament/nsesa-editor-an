@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <amendmentList>
+        <!-- example of amendmentList using documentCollection structure -->
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/ak/amendmentList/2010-10-28/2010-2088(INI)/main"/>
+                    <FRBRuri value="/ak/amendmentList/2010-10-28/2010-2088(INI)/"/>
+                    <FRBRdate date="2010-10-28" name="Enactment"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <FRBRcountry value="ak"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/ak/amendmentList/2010-10-28/2010-2088(INI)/eng@/main"/>
+                    <FRBRuri value="/ak/amendmentList/2010-10-28/2010-2088(INI)/eng@"/>
+                    <FRBRdate date="2011-11-24" name="Expression"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/ak/amendmentList/2010-10-28/2010-2088(INI)/eng@/main.xml"/>
+                    <FRBRuri value="/ak/amendmentList/2010-10-28/2010-2088(INI)/eng@/main.akn"/>
+                    <FRBRdate date="2011-11-24" name="XMLConversion"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                </FRBRManifestation>
+            </identification>
+            <publication date="2010-10-28" name="bill" showAs="Bungeni Gazette" number="20102088"/>
+            <references source="#bungeni">
+                <TLCOrganization id="parliament" href="/ontology/organizations/akn/parliament" showAs="Parliament"/>
+                <TLCPerson id="palmirani" href="akn.user.monica.palmirani.1966-02-28" showAs="Editor"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/akn/bungeni" showAs="Bungeni"/>
+                <TLCRole id="author" href="/ontology/roles/akn/author" showAs="Author of Document"/>
+                <TLCRole id="editor" href="/ontology/roles/akn/editor" showAs="Editor of Document"/>
+            </references>
+        </meta>
+        <coverPage>
+            <container id="cont-1" name="coverpageContainer">
+                <p>
+                    <docProponent>EUROPEAN PARLIAMENT 2009 - 2014</docProponent>
+                </p>
+                <p>Committee on Economic and Monetary Affairs</p>
+                <p>
+                    <docNumber>2010/2088(INI)</docNumber>
+                </p>
+                <p>
+                    <docDate date="2010-10-28">28.10.2010</docDate>
+                </p>
+                <p>
+                    <docTitle>AMENDMENTS 1 - 53</docTitle>
+                </p>
+            </container>
+            <container id="cont-2" name="coverpageAnotherContainer">
+                <p>Draft opinion</p>
+                <p>Nikolaos Chountis</p>
+                <p>(PE448.956v01-00)</p>
+                <p>on GDP and beyond: Measuring progress in a changing world
+                    (COM(2009)0433 – 2010/2088(INI))
+                </p>
+                <p>AM\837265EN.doc PE450.680v03-00</p>
+                <p>AM_Com_NonLegOpinion</p>
+            </container>
+        </coverPage>
+        <collectionBody>
+            <interstitial id="int1">
+                <p>Amendment 1</p>
+            </interstitial>
+            <componentRef id="refc1" src="#amd1" showAs="Amendment 1"/>
+            <interstitial id="int2">
+                <p>Introduction</p>
+            </interstitial>
+            <componentRef id="refc2" src="#amd2" showAs="Amendment 2"/>
+            <interstitial id="int3">
+                <p>Introduction</p>
+            </interstitial>
+            <componentRef id="refc3" src="#amd3" showAs="Amendment 3"/>
+        </collectionBody>
+    </amendmentList>
+    <components>
+        <component id="amd1">
+            <amendment>
+                <meta>
+                    <identification source="#bungeni">
+                        <FRBRWork>
+                            <FRBRthis value="/ak/amendment/2010-10-28/1/main"/>
+                            <FRBRuri value="/ak/amendment/2010-10-28/1/"/>
+                            <FRBRdate date="2010-10-28" name="Enactment"/>
+                            <FRBRauthor href="#parliament" as="#author"/>
+                            <FRBRcountry value="ak"/>
+                        </FRBRWork>
+                        <FRBRExpression>
+                            <FRBRthis value="/ak/amendment/2010-10-28/1/eng@/main"/>
+                            <FRBRuri value="/ak/amendment/2010-10-28/1/eng@"/>
+                            <FRBRdate date="2011-11-24" name="Expression"/>
+                            <FRBRauthor href="#palmirani" as="#editor"/>
+                            <FRBRlanguage language="eng"/>
+                        </FRBRExpression>
+                        <FRBRManifestation>
+                            <FRBRthis value="/ak/amendment/2010-10-28/1/eng@/main.xml"/>
+                            <FRBRuri value="/ak/amendment/2010-10-28/1/eng@/main.akn"/>
+                            <FRBRdate date="2011-11-24" name="XMLConversion"/>
+                            <FRBRauthor href="#user.palmirani" as="#editor"/>
+                        </FRBRManifestation>
+                    </identification>
+                    <analysis source="#EP">
+                        <activeModifications>
+                            <textualMod type="insertion" id="amod1">
+                                <source href="#amd1-mod1"/>
+                                <destination id="amd1-am1-dst1"
+                                             href="urn:lex:eu:commission:proposal:2009:433#cit1-pnt1"/>
+                                <new href="#amd1-mod1-qst1"/>
+                            </textualMod>
+                        </activeModifications>
+                    </analysis>
+                </meta>
+                <preface xml:lang="en">
+                    <p>
+                        <docProponent refersTo="#pers28349" id="pre-pro1">Philippe Lamberts</docProponent>
+                        <affectedDocument refersTo="#COM(2009)0433" href="urn:lex:eu:commission:proposal:2009:0433">
+                            COM(2009)0433
+                        </affectedDocument>
+                    </p>
+                </preface>
+                <amendmentBody xml:lang="en">
+                    <amendmentHeading>
+                        <p>
+                            <span id="amd1-div1" refersTo="#initialVersion">Draft opinion</span>
+                            <ref id="amd1-ref1" href="uri#cit-pnt1">Citation 1 (new)</ref>
+                        </p>
+                    </amendmentHeading>
+                    <amendmentContent xml:lang="en">
+                        <p>
+                            <span id="amd1-div2" refersTo="#initialVersion">Draft Opition</span>
+                        </p>
+                        <p>
+                            <ref id="amd1-ref2" href="#Amendment" refersTo="#newVersionTitle">Amendment</ref>
+                        </p>
+                        <p>
+                            <mod id="amd1-mod1">
+                                <quotedStructure id="amd1-mod1-qst1" refersTo="#newVersion">
+                                    <point id="amd1-mod1-qst1-cit1-pnt1">
+                                        <content>
+                                            <p>
+                                                <change>
+                                                    <ins>- having regard to the OECD Istanbul Declaration on ‘Measuring
+                                                        and Fostering the progress of societies’ adopted on 30 June
+                                                        2007,
+                                                    </ins>
+                                                </change>
+                                            </p>
+                                        </content>
+                                    </point>
+                                </quotedStructure>
+                            </mod>
+                        </p>
+                    </amendmentContent>
+                </amendmentBody>
+            </amendment>
+        </component>
+        <component id="amd2">
+            <amendment>
+                <meta>
+                    <identification source="#bungeni">
+                        <FRBRWork>
+                            <FRBRthis value="/ak/amendment/2010-10-28/2/main"/>
+                            <FRBRuri value="/ak/amendment/2010-10-28/2/"/>
+                            <FRBRdate date="2010-10-28" name="Enactment"/>
+                            <FRBRauthor href="#parliament" as="#author"/>
+                            <FRBRcountry value="ak"/>
+                        </FRBRWork>
+                        <FRBRExpression>
+                            <FRBRthis value="/ak/amendment/2010-10-28/2/eng@/main"/>
+                            <FRBRuri value="/ak/amendment/2010-10-28/2/eng@"/>
+                            <FRBRdate date="2011-11-24" name="Expression"/>
+                            <FRBRauthor href="#palmirani" as="#editor"/>
+                            <FRBRlanguage language="eng"/>
+                        </FRBRExpression>
+                        <FRBRManifestation>
+                            <FRBRthis value="/ak/amendment/2010-10-28/2/eng@/main.xml"/>
+                            <FRBRuri value="/ak/amendment/2010-10-28/2/eng@/main.akn"/>
+                            <FRBRdate date="2011-11-24" name="XMLConversion"/>
+                            <FRBRauthor href="#user.palmirani" as="#editor"/>
+                        </FRBRManifestation>
+                    </identification>
+                    <analysis source="#EP">
+                        <activeModifications>
+                            <textualMod type="substitution" id="amd2-amod1">
+                                <source href="#amd2-mod1"/>
+                                <destination id="amd2-am1-dst1" href="urn:lex:eu:commission:proposal:2009:433#par1"/>
+                                <old href="#amd2-mod1-qst1"/>
+                                <new href="#amd2-mod1-qst2"/>
+                            </textualMod>
+                        </activeModifications>
+                    </analysis>
+                </meta>
+                <preface xml:lang="en">
+                    <p>
+                        <docProponent refersTo="#pers28349" id="pre-pro2">Philippe Lamberts</docProponent>
+                        <affectedDocument refersTo="#COM(2009)0433" href="urn:lex:eu:commission:proposal:2009:0433">
+                            COM(2009)0433
+                        </affectedDocument>
+                    </p>
+                </preface>
+                <amendmentBody xml:lang="en">
+                    <amendmentHeading>
+                        <p>
+                            <span id="amd2-div1" refersTo="#initialVersion">Draft opinion</span>
+                            <ref id="amd2-ref1" href="uri#par1">Paragraph 1</ref>
+                        </p>
+                    </amendmentHeading>
+                    <amendmentContent xml:lang="en">
+                        <p>
+                            <span id="amd2-div2" refersTo="#initialVersion">Draft Opition</span>
+                        </p>
+                        <p>
+                            <ref id="amd2-ref2" href="#Amendment" refersTo="#newVersionTitle">Amendment</ref>
+                        </p>
+                        <p>
+                            <mod id="amd2-mod1">
+                                <quotedStructure id="amd2-mod1-qst1" refersTo="#initialVersion">
+                                    <paragraph id="amd2-mod1-qst1-par1">
+                                        <num>1.</num>
+                                        <content>
+                                            <p>
+                                                <change id="chg1">
+                                                    <del>The European Parliament's Committee
+                                                        on Economic and Monetary Affairs notes
+                                                    </del>
+                                                </change>
+                                                the Commission's initiative to launch a fruitful and serious dialogue on
+                                                improving gross domestic product (GDP) as an indicator for assessing
+                                                economic activity and progress.
+                                            </p>
+                                        </content>
+                                    </paragraph>
+                                </quotedStructure>
+                                <quotedStructure id="amd2-mod1-qst2" refersTo="#newVersion">
+                                    <paragraph id="amd2-mod1-qst2-par1">
+                                        <num>1.</num>
+                                        <content>
+                                            <p>
+                                                <change id="chg2">
+                                                    <ins>Welcomes</ins>
+                                                </change>
+                                                the Commission's initiative to launch a fruitful and serious dialogue on
+                                                improving gross domestic product (GDP) as an indicator for assessing
+                                                economic activity and progress;
+                                            </p>
+                                        </content>
+                                    </paragraph>
+                                </quotedStructure>
+                            </mod>
+                        </p>
+                    </amendmentContent>
+                </amendmentBody>
+            </amendment>
+        </component>
+        <component id="amd3">
+            <amendment>
+                <meta>
+                    <identification source="#bungeni">
+                        <FRBRWork>
+                            <FRBRthis value="/ak/amendment/2010-10-28/3/main"/>
+                            <FRBRuri value="/ak/amendment/2010-10-28/3/"/>
+                            <FRBRdate date="2010-10-28" name="Enactment"/>
+                            <FRBRauthor href="#parliament" as="#author"/>
+                            <FRBRcountry value="ak"/>
+                        </FRBRWork>
+                        <FRBRExpression>
+                            <FRBRthis value="/ak/amendment/2010-10-28/3/eng@/main"/>
+                            <FRBRuri value="/ak/amendment/2010-10-28/3/eng@"/>
+                            <FRBRdate date="2011-11-24" name="Expression"/>
+                            <FRBRauthor href="#palmirani" as="#editor"/>
+                            <FRBRlanguage language="eng"/>
+                        </FRBRExpression>
+                        <FRBRManifestation>
+                            <FRBRthis value="/ak/amendment/2010-10-28/3/eng@/main.xml"/>
+                            <FRBRuri value="/ak/amendment/2010-10-28/3/eng@/main.akn"/>
+                            <FRBRdate date="2011-11-24" name="XMLConversion"/>
+                            <FRBRauthor href="#user.palmirani" as="#editor"/>
+                        </FRBRManifestation>
+                    </identification>
+                    <analysis source="#EP">
+                        <activeModifications>
+                            <textualMod type="repeal" id="amod3">
+                                <source href="#amd3-mod1"/>
+                                <destination id="amd3-am1-dst1" href="urn:lex:eu:commission:proposal:2009:433#par2"/>
+                                <old href="#amd3-mod1-qst1"/>
+                            </textualMod>
+                        </activeModifications>
+                    </analysis>
+                </meta>
+                <preface xml:lang="en">
+                    <p>
+                        <docProponent refersTo="#pers28350" id="pre-pro3">Rodi Kratsa-Tsagaropoulou</docProponent>
+                        <affectedDocument refersTo="#COM(2009)0433" href="urn:lex:eu:commission:proposal:2009:0433">
+                            COM(2009)0433
+                        </affectedDocument>
+                    </p>
+                </preface>
+                <amendmentBody xml:lang="en">
+                    <amendmentHeading>
+                        <p>
+                            <span id="amd3-div1" refersTo="#initialVersion">Draft opinion</span>
+                            <ref id="amd3-ref1" href="uri#par1A">Paragraph 2</ref>
+                        </p>
+                    </amendmentHeading>
+                    <amendmentContent xml:lang="en">
+                        <p>
+                            <span id="amd3-div2" refersTo="#initialVersion">Draft Opition</span>
+                        </p>
+                        <p>
+                            <ref id="amd3-ref2" href="#Amendment" refersTo="#newVersionTitle">Amendment</ref>
+                        </p>
+                        <p>
+                            <mod id="amd3-mod1">
+                                <quotedStructure id="amd3-mod1-qst1" refersTo="#initialVersion">
+                                    <paragraph id="amd3-mod1-qst1-par2">
+                                        <num>2.</num>
+                                        <content>
+                                            <p>
+                                                The committee believes that GDP suffers from many shortcomings - for
+                                                example, it does not record unemployment, underemployment, inequalities
+                                                or environmental disasters -
+                                                particularly bearing in mind the development model followed as a dogma
+                                                by our economies, aimed first and foremost at maximum profit. The use
+                                                and management of the statistical indicators for an economy reflect the
+                                                type of economic development followed by each society. In the dominant
+                                                development model applied until now, the quality of life, well-being of
+                                                citizens and environmental changes play a secondary role.
+                                            </p>
+                                        </content>
+                                    </paragraph>
+                                </quotedStructure>
+                                <quotedStructure id="amd3-mod1-qst2" refersTo="#newVersion">
+                                    <point id="amd3-mod1-qst2-par2">
+                                        <content>
+                                            <p>
+                                                <change>
+                                                    <del status="editorial">delate</del>
+                                                </change>
+                                            </p>
+                                        </content>
+                                    </point>
+                                </quotedStructure>
+                            </mod>
+                        </p>
+                    </amendmentContent>
+                </amendmentBody>
+            </amendment>
+        </component>
+    </components>
+</akomaNtoso>

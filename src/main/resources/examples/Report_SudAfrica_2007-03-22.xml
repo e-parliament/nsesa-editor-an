@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--Akoma_Ntoso document-->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+
+    <debateReport name="report">
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/za/report/2007-03-22/main"/>
+                    <FRBRuri value="/za/report/2007-03-22"/>
+                    <FRBRdate date="2007-03-22" name="Generation"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <componentInfo>
+                        <componentData id="wmain" href="#wmain" name="main" showAs="Main document"/>
+                    </componentInfo>
+                    <FRBRcountry value="za"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/za/report/2007-03-22/eng@/main"/>
+                    <FRBRuri value="/za/report/2007-03-22/eng@"/>
+                    <FRBRdate date="2009-02-21" name="Generation"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="emain" href="#emain" name="main" showAs="Main document"/>
+                    </componentInfo>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/za/report/2007-03-22/eng@/main.xml"/>
+                    <FRBRuri value="/za/report/2007-03-22/eng@.akn"/>
+                    <FRBRdate date="2009-02-21" name="XMLMarkup"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="mmain" href="main.xml" name="main" showAs="Main document"/>
+                    </componentInfo>
+                </FRBRManifestation>
+            </identification>
+            <publication name="publication" date="2007-03-22" showAs="publication" number="444"/>
+            <classification source="#bungeni">
+                <keyword value="PORTFOLIO COMMITTEE ON DEFENCE" showAs="PORTFOLIO COMMITTEE ON DEFENCE" dictionary=""/>
+                <keyword value="BUDGET OF THE DEPARTMENT OF DEFENCE" showAs="BUDGET OF THE DEPARTMENT OF DEFENCE"
+                         dictionary=""/>
+            </classification>
+            <lifecycle source="#bungeni">
+                <eventRef id="e1" date="2007-03-22" source="#ro1" type="generation"/>
+            </lifecycle>
+            <references source="#bungeni">
+                <original id="ro1" href="/za/report/2007-03-22/eng@/main" showAs="Original"/>
+                <TLCOrganization id="parliament" href="/ontology/organization/za/za.parliament"
+                                 showAs="Parliament of Kenya"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/za/za.bungeni"
+                                 showAs="Bungeni"/>
+                <TLCRole id="author" href="/ontology/roles/author" showAs="Author"/>
+                <TLCRole id="editor" href="/ontology/roles/editor" showAs="Editor"/>
+            </references>
+            <notes source="#bungeni">
+                <note id="n1">
+                    <p>Some content of this document is omitted in order to simplify the
+                        reading.
+                    </p>
+                </note>
+            </notes>
+        </meta>
+        <preface>
+            <p class="heading">
+                <docTitle id="reportTitle">1. REPORT OF THE PORTFOLIO COMMITTEE ON DEFENCE ON VOTE 20 – BUDGET OF THE
+                    DEPARTMENT OF DEFENCE
+                </docTitle>
+            </p>
+        </preface>
+        <preamble>
+            <p>
+                The Portfolio Committee on Defence, having conducted departmental hearings on Vote 20,
+                Department of Defence Budget, 2007/08 and 2007/08 -2009/10 Strategic Plan on Tuesday,
+                22 March 2007, reports as follows:
+            </p>
+        </preamble>
+        <mainBody>
+            <hcontainer id="iss1" name="issue">
+                <num>1.</num>
+                <heading>Introduction</heading>
+                <paragraph id="iss1-par1">
+                    <content>
+                        <p>
+                            The Portfolio Committee on Defence considered the 2007/2008 Budget of the Department
+                            of Defence on 22 -23 March 2007, as part of its oversight function over the Department
+                            of Defence. The report is based on both the budget hearings held on 22 March 2007 as
+                            well as the committee deliberations on 23 March 2007.
+                        </p>
+                    </content>
+                </paragraph>
+            </hcontainer>
+            <section id="sec2">
+                <num>2.</num>
+                <heading>Briefing by the Department of Defence on Budget 2007/08 and 2007/08 -2009/10 Strategic Plan
+                </heading>
+                <subsection id="sec2-sse1">
+                    <content>
+                        <p>
+                            The Secretary of Defence, Mr January Masilela gave an overview of the 2007/08 -2009/10
+                            Strategic Plan as well as the 2007/2008 Budget as incorporated in the 2007-2010
+                            Medium Term Expenditure Framework (MTEF) cycle. 
+                        </p>
+                    </content>
+                </subsection>
+                <subsection id="sec2-sse2">
+                    <num>2.1</num>
+                    <heading>General Overview:</heading>
+                    <content>
+                        <p>
+                            The Department’s 2007/08 -2009/10 Strategic Plan is aligned with key government priorities
+                            which includes: the consolidation of the African Agenda; halving unemployment and poverty by
+                            2014;
+                            national human resource development as well as fighting crime and corruption.
+                        </p>
+                        <p>
+                            Through specific cluster and programme interventions the Department would address
+                            the following key departmental strategic objectives: the creation of national and
+                            continental stability through increasing peace mission deployments;
+                            skills development through the Military Skills Development System [MSDS]
+                            and training to military personnel exiting the military; assistance to the South
+                            African police services in emergency cases and the development of scarce skills.
+                        </p>
+                        <p>
+                            The annual budget for the current MTEF period reflects a growth from R20.5 billion
+                            in 2003/2004; to R25.9 billion in 2007/2008 and to R28.9 billion for 2009/2010
+                            financial years.
+                        </p>
+                        <p>
+                            An additional R1.2 billion has been allocated to the department for the current financial
+                            year. The reasons for such additional funding were cited as follows:
+                        </p>
+                        <ul id="sec2-sse2-uli1">
+                            <li>
+                                The general modernisation of capabilities
+                            </li>
+                            <li>
+                                For the strengthening of the Military Skills Development Strategy
+                            </li>
+                            <li>
+                                Foreign exchange rate adjustments
+                            </li>
+                            <li>
+                                Remuneration of health professionals
+                            </li>
+                            <li>
+                                Funding of Strategic munitions
+                            </li>
+                            <li>
+                                Salary adjustments
+                            </li>
+                        </ul>
+                    </content>
+                </subsection>
+                <subsection id="sub2-sse3">
+                    <num>2.2</num>
+                    <heading>Overview of both strategic objectives and budget allocations per programme:</heading>
+                    <paragraph id="sub2-sse3-par1">
+                        <num>2.2.1</num>
+                        <heading>Programme 1 – Administration</heading>
+                        <content>
+                            <p>
+                                The Strategic Business Plan identified the need for IT-based internal control
+                                systems for finance, human resources and procurement, as well as a time frame
+                                for the implementation of the integrated finance management system. 
+                                To date, IT systems have been slightly enhanced in line with the moratorium
+                                placed by the National Treasury on the replacement of the current system.
+                                The alignment would be addressed through projects such as Loquacious,
+                                Lekgadima and Balance Scorecard.
+                            </p>
+                            <p>
+                                A doubling of annual increases for this programme over the current MTEF
+                                cycle was reported, due to the devolution of funding from the Department
+                                of Public Works.
+                            </p>
+                            <p>
+                                R1.93billion had been allocated for the 2007/2008 financial year and
+                                represented a 9.9 percent budgetary increase.
+                            </p>
+                            <p>
+                                Allocations to sub programmes such as property management and departmental
+                                direction have increased by 12.3 and 27.8 percent respectively.
+                                This was mainly due to the relocation of the
+                                National Conventional Arms Control Committee (NCACC) inspectorate.
+                                An increased international representation accounted for the increased
+                                allocation to Defence Foreign Relations (DFR)
+                            </p>
+                        </content>
+                    </paragraph>
+                    <paragraph id="sub2-sse3-par2">
+                        <num>2.2.2</num>
+                        <heading>Programme 2 – Landward Defence</heading>
+                        <content>
+                            <p>
+                                While annual allocations to this programme would increase by 6.1 percent over the next
+                                three
+                                financial years, R4,21billion had been allocated for the current financial year.
+                                The total annual budget for the general training has increased by 41.6 percent to expand
+                                conventional reserves training and the intake into the Military Skills Development
+                                Strategy (MSDS).
+                                Since new generation art equipment had been commissioned,
+                                Artillery and Air Defence reflected a 12.6 and 11.4 percent increase in allocations
+                                respectively.
+                            </p>
+                            <p>
+                                These budget allocations will be utilised to fund the interventions for the improvement
+                                of
+                                the rejuvenation of the MSDS, and the efficiency of the Military Exit Mechanism [MEM],
+                                as discussed in the Strategic Business Plan. Additional risks were also identified which
+                                included: the continued deterioration of facilities; the impact of insufficient funding
+                                and
+                                health of members of the SANDF and combat readiness,
+                            </p>
+                        </content>
+                    </paragraph>
+                    <paragraph id="paromissis" class="omissis">
+                        <content>
+                            <p>
+                                <omissis><noteRef href="#n1" marker="1"/>(...)
+                                </omissis>
+                            </p>
+                        </content>
+                    </paragraph>
+                    <paragraph id="sub2-sse3-par9">
+                        <num>2.2.9</num>
+                        <heading>Programme 9 - Special Defence Account</heading>
+                        <content>
+                            <p>
+                                Through a joint initiative with the Department of Defence, the policy to support
+                                the local defence related industry will be reviewed; a Defence industry sector
+                                strategy will also be developed. Increased investment in the retention and maintenance
+                                of strategic industrial technology will characterise the 2007 – 2010 MTEF cycle.
+                            </p>
+                            <p>
+                                A growth of 21.1 percent in the funding of the procurement services sub
+                                programmes over the next three years was reported. This was mainly due to
+                                the imperatives of the strategic airlift capability, which will grow by 25.1
+                                percent.
+                            </p>
+                        </content>
+                    </paragraph>
+                </subsection>
+                <subsection id="sec2-sse4">
+                    <num>2.3</num>
+                    <heading>Defence Industrial Participation (DIP)</heading>
+                    <content>
+                        <p>
+                            Defence Industrial Participation (DIP) projects:
+                            Obligations versus Actual Programme Performance, 2006/2007:
+                        </p>
+                        <!--
+                        <table id="sec2-sse4-tab1">
+                            <tr id="sec2-sse4-tab1-row1">
+                                <th >
+                                   <p> PROJECT </p>
+                                </th>
+                                <th>
+                                   <p> OBLIGATION</p> (Rm) 
+                                </th>
+                                <th>
+                                    ACTUAL PERFORMANCE 2006-12-31 (Rm)
+                                </th>
+                                <th>
+                                    PERF VS OBLIG (%) 
+                                </th>
+                                <th>
+                                    CUMULATIVE PLANNED PERFORMANCE 2007-03-31 (Rm)
+                                </th>
+                                <th>
+                                    CUMUL.  ACTUAL vs PLANNED (%)
+                                </th>
+                                <th>
+                                    CLAIMS UNDER CONSIDE-RATION (Rm)
+                                </th>
+                            </tr>
+                            <tr id="sec2-sse4-tab1-row2">
+                                <td>
+                                    CORVETTE
+                                </td>
+                                <td>
+                                    2,941
+                                </td>
+                                <td>
+                                    1,811 
+                                </td>
+                                <td>
+                                    61.57%
+                                </td>
+                                <td>
+                                    1,979
+                                </td>
+                                <td>
+                                    91.48%
+                                </td>
+                                <td>
+                                    41
+                                </td>
+                            </tr>
+                            <tr id="sec2-sse4-tab1-row3">
+                                <td>
+                                    SUBMARINE
+                                </td>
+                                <td>
+                                    1,121
+                                </td>
+                                <td>
+                                    708
+                                </td>
+                                <td>
+                                    63.15%
+                                </td>
+                                <td>
+                                    747
+                                </td>
+                                <td>
+                                    94.83%
+                                </td>
+                                <td>
+                                    23
+                                </td>
+                            </tr>
+                            <tr id="sec2-sse4-tab1-row4">
+                                <td>
+                                    LUH
+                                </td>
+                                <td>
+                                    1,194
+                                </td>
+                                <td>
+                                    1,102
+                                </td>
+                                <td>
+                                    92.33%
+                                </td>
+                                <td>
+                                    1,194 
+                                </td>
+                                <td>
+                                    92.33%
+                                </td>
+                                <td>
+                                    39
+                                </td>
+                            </tr>
+                            <tr id="sec2-sse4-tab1-row5">
+                                <td>
+                                    HAWK
+                                </td>
+                                <td>
+                                    4,252
+                                </td>
+                                <td>
+                                    2,953
+                                </td>
+                                <td>
+                                    69.44%
+                                </td>
+                                <td>
+                                    3,616
+                                </td>
+                                <td>
+                                    81.66% 
+                                </td>
+                                <td>
+                                    1,595
+                                </td>
+                            </tr>
+                            <tr id="sec2-sse4-tab1-row6">
+                                <td>
+                                    GRIPEN
+                                </td>
+                                <td>
+                                    5,050
+                                </td>
+                                <td>
+                                    3,434
+                                </td>
+                                <td>
+                                    67.99%
+                                </td>
+                                <td>
+                                    3,130
+                                </td>
+                                <td>
+                                    109.71%
+                                </td>
+                                <td>
+                                    42
+                                </td>
+                            </tr>
+                            <tr id="sec2-sse4-tab1-row7">
+                                <td>
+                                    MARITIME HELICOPTER
+                                </td>
+                                <td>
+                                    553
+                                </td>
+                                <td>
+                                    142
+                                </td>
+                                <td>
+                                    25.75%
+                                </td>
+                                <td>
+                                    188 
+                                </td>
+                                <td>
+                                    75.66%
+                                </td>
+                                <td>
+                                    6
+                                </td>
+                            </tr>
+                            <tr id="sec2-sse4-tab1-row8">
+                                <td>
+                                    TOTAL (ZAR)
+                                </td>
+                                <td>
+                                    15,111
+                                </td>
+                                <td>
+                                    10,149
+                                </td>
+                                <td>
+                                    67.17%
+                                </td>
+                                <td>
+                                    10,853
+                                </td>
+                                <td>
+                                    93.51%
+                                </td>
+                                <td>
+                                    1,747
+                                </td>
+                            </tr>
+                        </table>
+                        -->
+                    </content>
+                </subsection>
+                <subsection id="sec2-sse5">
+                    <num>2.4</num>
+                    <heading>
+                        Possible Changes to Defence Programmes:
+                    </heading>
+                    <content>
+                        <p>
+                            A comprehensive review of defence programmes is currently underway as well
+                            as the consolidation of a research and development focus. 
+                            Transfer payments would assist in the establishment of a Defence
+                            Evaluation and Research Institute [DERI] and the transfer of the naval
+                            dockyard to Armscor.
+                        </p>
+                    </content>
+                </subsection>
+            </section>
+            <section id="sec3">
+                <num>3.</num>
+                <heading>COMMITTEE RECOMMENDATIONS:</heading>
+                <subsection id="sec3-sse1">
+                    <content>
+                        <p>
+                            Following the outcomes of the Portfolio Committee on Defence’s interactions
+                            with the Department as well as careful consideration of information provided,
+                            the Committee submits the following recommendations for consideration by
+                            the Minister of Defence:
+                        </p>
+                        <blockList id="sec3-sse1-lis1">
+                            <item id="sec3-sse1-lis1-ite1">
+                                <heading class="underline">Modernization and renewal of Landward Defence:</heading>
+                                <p>
+                                    The implementation of plans for the modernisation and renewal of the
+                                    landward defence is critical and this needs to commence as soon as possible;
+                                </p>
+                            </item>
+                            <item id="sec3-sse1-lis1-ite2">
+                                <heading class="underline">
+                                    Reduction of flying hours:
+                                </heading>
+                                <p>
+                                    The planned reduction in flying hours threatens the achievement of a
+                                    100 percent capability, and the quality of training of fighter pilots
+                                    at the new air force base. And this needs to be corrected;
+                                </p>
+                            </item>
+                            <item id="sec3-sse1-lis1-iteomissis" class="omissis">
+                                <p>
+                                    <omissis><noteRef href="#n1" marker="2"/>(...)
+                                    </omissis>
+                                </p>
+                            </item>
+                            <item id="sec3-sse1-lis1-ite17">
+                                <heading class="underline">Departmental organogram:</heading>
+                                <p>
+                                    The Committee will interact further with the Department to gain greater
+                                    understanding of the roles of the
+                                    Chief of the South African National Defence Force and
+                                    the Secretary of Defence and the function of the new organogram.
+                                </p>
+                            </item>
+                            <item id="sec3-sse1-lis1-ite18">
+                                <heading class="underline">Maximising the African stand-by force: </heading>
+                                <p>
+                                    The Committee noted with concern South Africa’s increasing contribution
+                                    and participation in peacekeeping operations. However, the Committee recommends
+                                    that efforts be made to ensure that the African Union takes responsibility
+                                    for the bulk of peacekeeping missions on the continent while more funding be
+                                    allocated to the Department for its involvement.
+                                </p>
+                            </item>
+                        </blockList>
+                    </content>
+                </subsection>
+            </section>
+        </mainBody>
+        <attachments>
+            <componentRef id="att1" src="/za/report/2007-03-22/eng@/main/appendix1.xml" showAs="APPENDIX 1"/>
+            <componentRef id="att2" src="/za/report/2007-03-22/eng@/main/appendix2.xml" showAs="APPENDIX 2"/>
+        </attachments>
+    </debateReport>
+</akomaNtoso>

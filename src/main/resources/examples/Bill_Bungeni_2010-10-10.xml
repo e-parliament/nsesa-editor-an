@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <bill contains="originalVersion">
+        <!-- example of bill with memorandum as annex-->
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/ak/bill/2010-07-10/B24/main"/>
+                    <FRBRuri value="/ak/bill/2010-07-10/B24/"/>
+                    <FRBRdate date="2010-07-10" name="Enactment"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <componentInfo>
+                        <componentData id="wmain" href="#emain" name="main" showAs="Main document"/>
+                        <componentData id="wmemorandum" href="#ememorandum" name="memorandum"
+                                       showAs="Memorandum on the objects of the higher education laws amendment bill, 2010"/>
+                    </componentInfo>
+                    <FRBRcountry value="ak"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/ak/bill/2010-07-10/B24/eng@/main"/>
+                    <FRBRuri value="/ak/bill/2010-07-10/B24//eng@"/>
+                    <FRBRdate date="2010-11-24" name="Expression"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="emain" href="#mmain" name="main" showAs="Main document"/>
+                        <componentData id="ememorandum" href="#mmemorandum" name="memorandum"
+                                       showAs="Memorandum on the objects of the higher education laws amendment bill, 2010"/>
+                    </componentInfo>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/ak/bill/2010-07-10/B24/eng@/main.xml"/>
+                    <FRBRuri value="/ak/bill/2010-07-10/B24/eng@/main.akn"/>
+                    <FRBRdate date="2010-11-24" name="XMLConversion"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="mmain" href="main.xml" name="main" showAs="Main document"/>
+                        <componentData id="mmemorandum" href="memorandum.xml" name="memorandum"
+                                       showAs="Memorandum on the objects of the higher education laws amendment bill, 2010"/>
+                    </componentInfo>
+                </FRBRManifestation>
+            </identification>
+            <publication id="publication" date="2010-07-19" showAs="Bungeni Gazette" name="BG" number="999"/>
+            <classification source="#main">
+                <keyword value="education" showAs="Education" dictionary="/eurovoc/passo1/passo2/voce4"/>
+            </classification>
+            <lifecycle source="#bungeni">
+                <eventRef date="2010-07-19" id="e1" source="#ro1" type="generation"/>
+            </lifecycle>
+            <analysis source="#cirsfid">
+                <activeModifications>
+                    <textualMod id="amod1" type="substitution">
+                        <source href="#sec1-lst1-itma-mod1"/>
+                        <destination href="/ak/act/2000-10-10/101/main#sec1"/>
+                        <old href="#sec1-lst1-itma-mod1-qtd1"/>
+                        <new href="#sec1-lst1-itma-mod1-qtd2"/>
+                    </textualMod>
+                    <textualMod id="amod2" type="substitution">
+                        <source href="#sec1-lst1-itmb-mod2"/>
+                        <destination href="/ak/act/2000-10-10/101/main#sec1"/>
+                        <old href="#sec1-lst1-itmb-mod2-qtd1"/>
+                        <new href="#sec1-lst1-itmb-mod2-qtd2"/>
+                    </textualMod>
+                    <textualMod id="amod3" type="insertion">
+                        <source href="#sec2-subsec1"/>
+                        <destination href="/ak/act/2000-10-10/101/main#sec51"/>
+                        <new href="#sec2-subsec1-mod3-qtd1"/>
+                    </textualMod>
+                </activeModifications>
+            </analysis>
+            <references source="#bungeni">
+                <original id="ro1" href="/ak/bill/2010-07-10/B24/main" showAs="Higher Education Laws Amendment Bill"/>
+                <activeRef id="ra1" href="/ak/act/2000-10-10/101/main" showAs="Higher Education Act"/>
+                <activeRef id="ra2" href="/ak/act/2001-10-10/55/main" showAs="Skills Development Act"/>
+                <activeRef id="ra3" href="ak/act/2002-10-10/54/main"
+                           showAs="National Student Financial Aid Scheme Act"/>
+                <hasAttachment id="memorandum" href="ak/bill/2010-07-10/B24/eng@/memorandum"
+                               showAs="Memorandum on the objects of the higher education laws amendment bill, 2010"/>
+                <TLCOrganization id="parliament" href="/ontology/organiaktions/akf/parliament" showAs="Parliament"/>
+                <TLCOrganization id="bungeni" href="/ontology/organiaktion/ak/bungeni" showAs="Bungeni"/>
+                <TLCRole id="author" href="/ontology/roles/akf/author" showAs="Author of Document"/>
+                <TLCRole id="editor" href="/ontology/roles/ita/editor" showAs="Editor of Document"/>
+                <TLCPerson id="palmirani" href="akn.user.monica.palmirani.1966-02-28" showAs="Editor"/>
+            </references>
+        </meta>
+        <preface>
+            <p>
+                <docTitle>REPUBLIC OF BUNGENI HIGHER EDUCATION LAWS AMENDMENT BILL</docTitle>
+                (As introduced in the National Assembly (proposed section 75);
+                explanatory summary of
+                Bill published in Government Gazette No. 33393 of<date date="2010-07-19" refersTo="#publication">19 July
+                2010</date>)
+                (The English text is the offıcial text of the Bill)
+                <docProponent>(MINISTER OF HIGHER EDUCATION AND TRAINING)</docProponent>
+            </p>
+            <p>
+                <docType>BILL</docType>
+            </p>
+            <longTitle>
+                <p>To amend—</p>
+                <p>-the<ref id="ref1" href="/ak/act/2000-10-10/101/main">Higher Education Act, 2000</ref>, so as to
+                    amend certain definitions; to ensure that all higher education programmes offered in Bungeni
+                    Republic by a
+                    foreign juristic person are registered on the National Qualifications
+                    Framework; and to ensure that higher education institutions may offer a
+                    degree, diploma or certificate only if it is registered on the National
+                    Qualifications Framework;
+                </p>
+                <p>-the
+                    <ref id="ref2" href="/ak/act/2001-10-10/55/main">Skills Development Act, 2001</ref>
+                    , so as to amend certain definitions; to provide for the appointment of the chief executive officer
+                    of the Bungeni Committee
+                    and for the transfer to and appointment of staff to the Bungeni Higher Education Council;
+                </p>
+                <p>-the<ref id="ref3" href="/ak/act/2002-10-10/54/main">National Student Financial Aid Scheme Act,
+                    2002</ref>, so as to amend certain definitions.
+                </p>
+            </longTitle>
+        </preface>
+        <preamble>
+            <p>and to provide for matters connected therewith.</p>
+            <p>BE IT ENACTED by the Parliament of the Republic of Bungeni, as
+                follows:—
+            </p>
+        </preamble>
+        <body>
+            <section id="sec1">
+                <num>1.</num>
+                <heading>Amendment of<ref id="ref5" href="/ak/act/2000-10-10/101/main#sec1">section 1 of Act 101 of
+                    2000</ref>, as amended by<ref id="ref6" href="/ak/act/2001-10-10/55/main#sec1">section 1 of Act 55
+                    of 2001</ref>,<ref id="ref7" href="/ak/act/2002-10-10/54/main#sec1">section 1 of Act 54 of
+                    2002</ref>,
+                    <ref id="ref8" href="/ak/act/2002-10-10/63/main#sec1">section 1 of Act 63 of 2002</ref>
+                    and
+                    <ref id="ref9" href="/ak/act/2008-10-10/38/">section 1 of Act 38of 2008</ref>
+                </heading>
+                <content>
+                    <blockList id="sec1-lst1">
+                        <listIntroduction>
+                            <ref id="ref10" href="/ak/act/2000-10-10/101/main#sec1">Section 1 of the Higher Education
+                                Act, 2000</ref>, is hereby amended by
+                        </listIntroduction>
+                        <item id="sec1-lst1-itma">
+                            <p>(a)
+                                <authorialNote id="ath1" refersTo="sideNote" marker="1">
+                                    <p>Side note of publication just for example</p>
+                                </authorialNote>
+                                <!-- example of mod -->
+                                <mod id="mod1">the substitution for the definition of ‘‘
+                                    <!-- example of quotedText -->
+                                    <quotedText id="mod1-qtd1">
+                                        Department of Education
+                                    </quotedText>’’of the following definition:
+                                    <!-- example of definition -->
+                                    ‘‘
+                                    <quotedText id="mod1-qtd2">
+                                        <def id="def1">
+                                            ‘Department of Education’ means the [Government department
+                                            responsible for education at national level] Department of Higher Education
+                                            and Training;
+                                        </def>
+                                    </quotedText>
+                                    ’’;
+                                </mod>
+                                <!-- example of end of line with space 10 -->
+                                <eol breakat="10"/>
+                            </p>
+                        </item>
+                        <item id="sec1-lst1-itmb">
+                            <p>(b)
+                                <mod id="mod2">the substitution for the definition of ‘‘<quotedText id="mod2-qtd1">
+                                    Director-General</quotedText>’’ of the following definition:
+                                    ‘‘
+                                    <quotedText id="mod2-qtd2">
+                                        <def id="def2">‘Director-General’ means the Director-General of the Department
+                                            of
+                                            Higher Education and Training;
+                                        </def>
+                                    </quotedText>
+                                    ’’
+                                </mod>
+                                ; and
+                            </p>
+                        </item>
+                    </blockList>
+                </content>
+            </section>
+            <section id="sec2">
+                <num>2.</num>
+                <heading>Substitution of<ref id="ref11" href="/ak/act/2000-10-10/101#sec51">section 51 of Act 101 of
+                    2000</ref>, as substituted by
+                    <ref id="ref12" href="/ak/act/2001-10-10/55#sec6">section 6 of Act 54 of 2001</ref>
+                </heading>
+                <subsection id="sec2-subsec1">
+                    <content>
+                        <p>The following section is hereby
+                            <mod id="mod3">substituted for<ref id="ref13" href="/ak/act/2000-10-10/101#sec51">section 51
+                                of the Higher Education Act, 2000</ref>:
+                                ‘‘
+                                <!-- example of quotedStructure -->
+                                <quotedStructure id="mod1-qts1">
+                                    <section id="sec51">
+                                        <num>51.</num>
+                                        <heading>Registration of private higher education institutions</heading>
+                                        <subsection id="sec51-subsec1">
+                                            <num>(1)</num>
+                                            <content>
+                                                <blockList id="sec51-subsec1-lst1">
+                                                    <listIntroduction>
+                                                        No person other than a public higher education institution or an
+                                                        organ of state may provide higher education unless that person
+                                                        is-
+                                                    </listIntroduction>
+                                                    <item id="sec51-subsec1-lst1-itma">
+                                                        <p>(a) in the prescribed manner, registered or conditionally
+                                                            registered as a
+                                                            private higher education institution in terms of this Act;
+                                                            and
+                                                        </p>
+                                                    </item>
+                                                    <item id="sec51-subsec1-lst1-itmb">
+                                                        <p>(b) registered or recognised as a juristic person in terms of
+                                                            the Companies
+                                                            Act, 1973 (Act No. 61 of 1973), before such person is
+                                                            registered or
+                                                            conditionally registered [as contemplated in] in accordance
+                                                            with
+                                                            paragraph (a).
+                                                        </p>
+                                                    </item>
+                                                </blockList>
+                                            </content>
+                                        </subsection>
+                                        <subsection id="sec51-subsec2">
+                                            <num>(2)</num>
+                                            <content>
+                                                <p>
+                                                    If the person contemplated in subsection (1) is a foreign juristic
+                                                    person, that person must ensure that any qualification or
+                                                    part-qualification
+                                                    offered within the Republic is registered on the sub-framework for
+                                                    higher
+                                                    education on the National Qualifications Framework contemplated in
+                                                    section 7(b) read with section 13(1)(h) of the National
+                                                    Qualifications
+                                                    Framework Act.
+                                                </p>
+                                            </content>
+                                        </subsection>
+                                    </section>
+                                </quotedStructure>
+                                ’’.
+                            </mod>
+                        </p>
+                    </content>
+                </subsection>
+            </section>
+            <section id="sec4">
+                <num>4.</num>
+                <heading>Short title</heading>
+                <subsection id="sec4-subsec1">
+                    <content>
+                        <p>This Act is the<docTitle>Higher Education Laws Amendment Act, 2010</docTitle>.
+                        </p>
+                    </content>
+                </subsection>
+            </section>
+        </body>
+        <attachments>
+            <componentRef id="annex1" src="ak/bill/2010-07-10/B24/memorandum" showAs="Memorandum"/>
+        </attachments>
+    </bill>
+</akomaNtoso>

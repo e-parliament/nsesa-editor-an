@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./styles/kenya.xsl"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <bill>
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/ken/bill/2006-12-19/8/main"/>
+                    <FRBRuri value="/ken/bill/2006-12-19/8"/>
+                    <FRBRdate date="2006-12-19" name="Enactment"/>
+                    <FRBRauthor href="#Par" as="#author"/>
+                    <FRBRcountry value="ke"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/ken/bill/2006-12-19/8/eng@/main"/>
+                    <FRBRuri value="/ken/bill/2006-12-19/8/eng@"/>
+                    <FRBRdate date="2009-01-10" name="Expression"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/ken/bill/2006-12-19/8/eng@/main.xml"/>
+                    <FRBRuri value="/ken/bill/2006-12-19/8/eng@/main.akn"/>
+                    <FRBRdate date="2009-01-11" name="XMLConversion"/>
+                    <FRBRauthor href="#user.Ashok" as="#editor"/>
+                </FRBRManifestation>
+            </identification>
+            <references source="#bungeni">
+                <TLCOrganization id="Parliament" href="/ontology/organizations/zaf/parliament" showAs="Parliament"/>
+                <TLCPerson id="user.Ashok" href="ken.user.ashok.hariharan.1976-02-12" showAs="Author"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/ken/bungeni" showAs="Bungeni"/>
+                <TLCPerson id="cervone" href="/ontology/persons/ita/editors/cervone" showAs="Luca Cervone"/>
+                <TLCRole id="author" href="/ontology/roles/zaf/author" showAs="Author of Document"/>
+                <TLCRole id="editor" href="/ontology/roles/ita/editor" showAs="Editor of Document"/>
+            </references>
+        </meta>
+        <preface>
+            <p>
+                <docTitle>THE KENYA INFORMATION AND COMMUNICATIONS BILL 2006</docTitle>
+            </p>
+            <p>
+                <docNumber>No.8 of 2006</docNumber>
+            </p>
+            <p>Date of Assent:
+                <docDate date="2006-12-10">10<span class="sup">th</span>December 2006
+                </docDate>
+            </p>
+            <p>Date of Commencement:19<span class="sup">th</span>December 2006
+            </p>
+        </preface>
+        <preamble>
+            <p>AN ACT of Parliament to promote and develop in an orderly manner the carriage and
+                content of communications (including broadcasting, multimedia, telecommunications and
+                postal), for the establishment of a commission to regulate all forms of communications,
+                for the establishment of an appeals tribunal and for connected purposes according to the
+                <ref id="ref1" href="un/act/2009-12-12/9/main">Act. n. 9 at 2009.</ref>
+            </p>
+            <p>WHEREAS it is considered necessary</p>
+            <blockList id="d3e54">
+                <item id="d3e56">
+                    <p>to facilitate development of a national infrastructure for aninformation based
+                        society, and to enable access thereto;
+                    </p>
+                </item>
+                <item id="d3e66">
+                    <p>to provide a choice of services to the people of Kenya with a view to promoting
+                        plurality of news, views and information;
+                    </p>
+                </item>
+                <item id="d3e74">
+                    <p>to establish a regulatory framework for carriage and content of communications in
+                        scenario of convergence of telecommunications, broadcasting, data-communication,
+                        multimedia and other related technologies and services; and
+                    </p>
+                </item>
+                <item id="d3e82">
+                    <p>to provide for the powers, procedures and functions of a singleregulatory and
+                        licensing bodyand of the AppealsTribunal for the ICT sector
+                    </p>
+                </item>
+            </blockList>
+            <p>ENACTED by the Parliament of Kenya as follows:</p>
+        </preamble>
+        <body>
+            <part id="part1">
+                <heading>&lt;A -&gt; ~PART -
+                    PRELIMINARY~
+                </heading>
+                <chapter id="chapter1">
+                    <heading>&lt;I&gt; ~Short title and
+                        commencement~
+                    </heading>
+                    <content>
+                        <p>This Act may be cited as the Kenya Information and Communications Act, 2006 and
+                            shall come into operation on such date as the Minister may, by notice in the
+                            Gazette, appoint and different dates may be appointed for different
+                            provisions.
+                        </p>
+                    </content>
+                </chapter>
+                <chapter id="chapter2">
+                    <heading>&lt;II&gt; ~ Interpretation~</heading>
+                    <subchapter id="subchapter1">
+                        <heading>&lt;I.&gt;</heading>
+                        <content>
+                            <p>In this Act unless, the context otherwise requires</p>
+                            <p>"Board" means the Board of Directors constituted under section 8;</p>
+                            <p>"broadcaster" means any legal or natural person who composes or packages or
+                                distributes television or radio programmeservices for reception by the
+                                public or sections of the public or subscribers to such a service
+                                irrespective of technology used;
+                            </p>
+                            <p>"broadcasting" means unidirectional conveyance of sounds or television
+                                programmes,whether encrypted or not by radio or other means of
+                                telecommunications for reception by the public;
+                            </p>
+                            <p>"broadcasting signal distribution " means the process whereby the output
+                                signal of a broadcasting service is taken from thepoint of origin, being the
+                                point where such signal is made available in its final content format, from
+                                where it is conveyed to anybroadcast target area by means of a
+                                telecommunication process and includes multi-channel distribution;
+                            </p>
+                            <p>"broadcasting service" means any service, which consists of the broadcasting
+                                of television or sound broadcasting programs to the public, sections of the
+                                public or subscribers to such a service;
+                            </p>
+                            <p>"Certificate" means a record which is issued by a Certification Service
+                                Provider for the purpose of supporting a digital signature which purports to
+                                confirm the identity or other significant characteristics of the person who
+                                holds a particular key pair; identifies the certification Service Provider
+                                issuing it; names or identifies the person to whom it is issued; contains
+                                the public key of the person to whom it is issued; and is signed by a
+                                responsible officer of the Certification Service Provider issuing it.
+                            </p>
+                            <p>"Certification Service Provider" means a person who has been granted a
+                                licence to issue a Digital Signature Certificate.
+                            </p>
+                            <p>"Commercial broadcaster' means a person licensed by the Commission under
+                                this Act to provide commercial broadcast services;
+                            </p>
+                            <p>"Commission" means the Communications Commission of Kenya established under
+                                section 3;
+                            </p>
+                            <p>"community" includes a geographically founded community or any group of
+                                persons or sector of the public having a specific,ascertainable common
+                                interest;
+                            </p>
+                            <p>"community broadcasting service" means a broadcasting service which-</p>
+                            <blockList id="d3e272">
+                                <item id="d3e274">
+                                    <p>is fully controlled by a non-profit entity and carried on for
+                                        non-profitable purposes;
+                                    </p>
+                                </item>
+                                <item id="d3e282">
+                                    <p>serves a particular community;</p>
+                                </item>
+                                <item id="d3e290">
+                                    <p>encourages members of the community served by it or persons associated
+                                        with or promoting the interests of suchcommunity to participate in the
+                                        selection and provision of programmes to be broadcast in the course of
+                                        suchbroadcasting service; and
+                                    </p>
+                                    <p/>
+                                </item>
+                                <item id="d3e305">
+                                    <p>may be funded by donations, grants, sponsorships or membership fees,
+                                        or by any combination of the aforementioned;
+                                    </p>
+                                </item>
+                            </blockList>
+                            <p>"Computer System" means a device or collection of devices including input
+                                and output devices but excluding calculators which are not programmable and
+                                capable of being used in conjunction with external files which contain
+                                computer programmes, electronic instructions and data that perform logic,
+                                arithmetic, data storage, data retrieval, communication control and other
+                                functions;
+                            </p>
+                            <p>"Computer" means any electronic, magnetic, optical or other high-speed data
+                                processing device or system which performs logical, arithmetic and
+                                memoryfunctions by manipulations of electronic, magnetic or optical
+                                impulses, and includes all input, output, processing, storage, software and
+                                communication facilities which are connected or related as a system or
+                                network;
+                            </p>
+                            <p>'courier services' means any specialised service for the collection,
+                                despatch, conveyance, handling and delivery of postal articles;
+                            </p>
+                            <p>"Digital Signature Certificate" means trusted electronic credentials that
+                                enable access control, secure messaging, and transaction security. Digital
+                                Certificates are issued by a trusted third party generally referred to as a
+                                Certification Service Provider;
+                            </p>
+                            <p>"direct to home" means a broadcast via satellite directly to the
+                                subscribers;
+                            </p>
+                            <p>"Director-General" means the Director General of the Commission appointed
+                                under section 13;
+                            </p>
+                            <p>"e-Government services" means public service provided electronically by a
+                                Ministry or Government Department, local authority, or body established by
+                                or under any law or controlled or funded by the Government;
+                            </p>
+                            <p>"electronic form", with reference to information, means any information
+                                generated, sent, received or stored in magnetic, optical, computer memory,
+                                microfilm or similar device;
+                            </p>
+                            <p>"electronic gazette" means the Government Gazette published in electronic
+                                form;
+                            </p>
+                            <p>"electronic record" means a record generated in digital form by an
+                                information system, which can betransmitted within an information system or
+                                from one information system to another; and stored in an information system
+                                or other medium;
+                            </p>
+                            <p>"electronic signature" means data in electronic form affixed to or logically
+                                associated with other electronic data which may be used to identify the
+                                signatory in relation to the data message and to indicate the signatory's
+                                approval of the information contained in the data message;
+                            </p>
+                            <p>"encryption" means a method transforming signals in a systematic way so that
+                                the signal would be unintelligible without a suitable receiving
+                                apparatus;
+                            </p>
+                            <p>"equipment" includes any appliance, apparatus or accessory used or intended
+                                to be used for Communication services;
+                            </p>
+                            <p/>
+                            <p>"financial year" means a financial year within the meaning of section
+                                20;
+                            </p>
+                            <p>"franking machine" means a machine for the purpose of making impressions on
+                                postal articles to denote pre payment of postage and includes any meter or
+                                meters and any franking or date-stamping die incidental thereto;
+                            </p>
+                            <p>"free-to-air service" means a service which is broadcast without encryption
+                                and capable of being received by conventional broadcasting receiving
+                                apparatus;
+                            </p>
+                            <p>"installation or plant used for posts" includes all buildings, lands,
+                                structures, machinery, equipment, boxes and receptacles used or intended for
+                                use in connection with the transmission of postal articles by post;
+                            </p>
+                            <p>"Fund" means the Universal Service Fund established by section 132 of this
+                                Act;
+                            </p>
+                            <p>"Kenyan programme" means sounds or vision or a combination of both whose
+                                content comply with the classification of local content as may be required
+                                by the Commission from time to time;
+                            </p>
+                            <p>"letter" means any written or printed communication conveying from one
+                                person to another particular information upon matters personal to such
+                                persons or information upon which it is intended that the recipient should
+                                reply, act or refrain from acting, but does not include any written or
+                                printed communication which is a newspaper or a periodical -accompanied by
+                                any other communication;
+                            </p>
+                            <p>"licence" means any licence issued under this Act;</p>
+                            <p>"mail bag" means any bag, container, envelope or covering in which postal
+                                articles are conveyed;
+                            </p>
+                            <p>"Minister" means the Minister for the time being responsible for Information
+                                and communications;
+                            </p>
+                            <p>"multi-channel distributions' means a service which conveys more than one
+                                broadcast channel at the same time by means of radio waves or any other form
+                                of telecommunications;
+                            </p>
+                            <p>"parcel" means a postal article which is posted at the office of a licensee
+                                as a parcel or is received at another office.
+                            </p>
+                            <p>Provided that the said parcel is not smaller than the minimum size or
+                                heavier than the maximum weight prescribed;
+                            </p>
+                            <p>"possession", "be in possession of' and "have in possession" have the
+                                meanings assigned to such expressions in section 4 of the Penal Code;
+                            </p>
+                            <p>"post office" means any building, house, room, receptacle, vessel, vehicle
+                                or place where postal articles are received, delivered, sorted, made up or
+                                despatched;
+                            </p>
+                            <p>"post" (i)when used with reference to telecommunication includes any pole,
+                                standard, stay, strut or other above-ground contrivance for installing,
+                                carrying, supporting or suspending atelecommunication line; and
+                            </p>
+                            <p>(ii) when used with reference to the transmission of postal articles by
+                                post, means any system for the collection, despatch, conveyance, handling
+                                and delivery of postal articles;
+                            </p>
+                            <p>"postage stamp" means any label or stamp for denoting any postage or other
+                                sum payable in respect of a postal article, and includes an adhesive postage
+                                stamp or a stamp printed, impressed or otherwise indicated on a postal
+                                article, whether issued by the Government of Kenya or any other country;
+                            </p>
+                            <p>"postage" means the fee chargeable for the transmission by post of postal
+                                articles;
+                            </p>
+                            <p>"postal article" means any article or thing transmissible by post, including
+                                but not limited to letters, aerogrammes, postcards and parcels but does
+                                include such article or thing as the Commission determines not to be
+                                transmissible by post.
+                            </p>
+                            <p>"postal service" means any service by post;</p>
+                            <p>"postcard" means a card recognised as a postcard in accordance with the
+                                terms of the Convention regulating the affairs of the Universal Postal
+                                Union;
+                            </p>
+                            <p>"posting box" includes any pillar box, wall box, any other box or receptacle
+                                provided by or under the authority of the public postal licensee for the
+                                purpose of receiving postal articles for transmission by or under the
+                                authority of the public postal licensee;
+                            </p>
+                            <p>"private letter box/bag" means any receptacle whether identified by a
+                                distinctive number or not rented to a person for the receipt of postal
+                                articles and capable of being used whether the person or company renting it
+                                has his business premises open or not.
+                            </p>
+                            <p>"programme" means sound, vision or a combination of both, intended to
+                                inform, educate or entertain, but does not include text or data;
+                            </p>
+                            <p>"public broadcaster" means the Kenya Broadcasting Corporation established by
+                                the Kenya Broadcasting Corporation Act Cap. 221;
+                            </p>
+                            <p>"public broadcasting services": means broadcasting services of the public
+                                broadcaster;
+                            </p>
+                            <p>"public postal licensee's installation or plant" means any installation or
+                                plant used for postal purposes belonging to or used by the public postal
+                                licensee;
+                            </p>
+                            <p>"public postal licensee" means the Postal Corporation of Kenya established
+                                under the Postal Corporation of Kenya Act, 1998;
+                            </p>
+                            <p>"radio-communication apparatus" means any apparatus capable of being used or
+                                adapted for radio communication and where the context so requires, includes
+                                a radio communication station;
+                            </p>
+                            <p>"radio-communication station" means any telecommunication station capable of
+                                being used or being adapted for radio-communication;
+                            </p>
+                            <p>"radio-communication" means the emitting or receiving over paths which are
+                                not provided by any material substance constructed or arranged for that
+                                purpose, of electro-magnetic energy of a frequency not exceeding three
+                                million megahertz being energy which either
+                            </p>
+                            <blockList id="d3e570">
+                                <item id="d3e572">
+                                    <p>is capable of being transmitted through a telecommunication system;
+                                        or
+                                    </p>
+                                </item>
+                                <item id="d3e578">
+                                    <p>is used in connection with the determination of position, bearing or
+                                        distance, or for the gaining of information as to the presence,
+                                        absence or, motion of any object or objects of any class;
+                                    </p>
+                                </item>
+                            </blockList>
+                            <p>"satellite broadcasting service" means a service in which signals
+                                transmitted from aboard a space station are intended for direct reception by
+                                the general public;
+                            </p>
+                            <p>"secure electronic signature" means an electronic signature which meets the
+                                following requirements:
+                            </p>
+                            <blockList id="d3e597">
+                                <item id="d3e599">
+                                    <p>it is uniquely linked to the signatory;</p>
+                                </item>
+                                <item id="d3e607">
+                                    <p>it is capable of identifying the signatory;</p>
+                                </item>
+                                <item id="d3e615">
+                                    <p>it is created using means that the signatory can maintain under his
+                                        sole control; and
+                                    </p>
+                                </item>
+                                <item id="d3e623">
+                                    <p>it is linked to the data to which it relates in such a manner that any
+                                        subsequent change the data is detectable.
+                                    </p>
+                                </item>
+                            </blockList>
+                            <p>"sound broadcasting service" means a broadcasting service destined for
+                                direct reception by the general public with the help of sound radio
+                                receiving apparatus;
+                            </p>
+                            <p>"telecommunication apparatus" means apparatus constructed or adapted for use
+                                in transmitting anything which is transmissible by a telecommunication
+                                system, or in conveying anything which is transmitted through such a
+                                system;
+                            </p>
+                            <p>"telecommunication line" means any wire, cable, tube, pipe or other similar
+                                thing which is designed or adapted for use in connection with the operation
+                                of a telecommunication system or a radio-communication apparatus with any
+                                casing, coating, tube or pipe enclosing the same and any appliances and
+                                apparatus connected therewith for the same; and includes any structure, post
+                                or other thing in, by or from which any telecommunication and
+                                radio-communication apparatus is or may be installed, supported, carried or
+                                suspended;
+                            </p>
+                            <p>"telecommunication officer" means any person employed either permanently or
+                                temporarily by a telecommunication operator in connection with a
+                                telecommunication system licensed under section 73;
+                            </p>
+                            <p>"telecommunication operator" means a telecommunication operator licensed
+                                under section 73;
+                            </p>
+                            <p>"telecommunication service" means any of the following-</p>
+                            <blockList id="d3e667">
+                                <item id="d3e669">
+                                    <p>a service consisting of the conveyance by means of a telecommunication
+                                        system of anything falling within sub-paragraphs (i) to (v) in the
+                                        definition of "telecommunication system";
+                                    </p>
+                                </item>
+                                <item id="d3e677">
+                                    <p>a service consisting of the installation, maintenance, adjustment,
+                                        repair, alteration, moving, removal or replacement of apparatus which
+                                        is or is to be connected to a telecommunication system; or
+                                    </p>
+                                </item>
+                                <item id="d3e687">
+                                    <p>a directory information service, being a service consisting of the
+                                        provision by means of a telecommunication system of directory
+                                        information for the purposes of facilitating the use of a service
+                                        falling within sub paragraph (i) above and provided by means of that
+                                        system;
+                                    </p>
+                                </item>
+                            </blockList>
+                            <p>"telecommunication, system" means a system for the conveyance, through the
+                                agency of electric, magnetic, electro-magnetic, electro-chemical or
+                                electro-mechanical energy, of -
+                            </p>
+                            <blockList id="d3e701">
+                                <item id="d3e703">
+                                    <p>speech, music and other sounds;</p>
+                                </item>
+                                <item id="d3e709">
+                                    <p>visual images;</p>
+                                </item>
+                                <item id="d3e715">
+                                    <p>data</p>
+                                </item>
+                                <item id="d3e721">
+                                    <p>signals serving for the impartation (whether as between persons and
+                                        persons, things and things or persons and things) of any matter
+                                        otherwise than in the form of sound, visual images or data; or
+                                    </p>
+                                </item>
+                                <item id="d3e727">
+                                    <p>signals serving for the activation or control of machinery or
+                                        apparatus and includes any cable for the distribution of anything
+                                        falling within (i) to (iv) above;
+                                    </p>
+                                </item>
+                            </blockList>
+                            <p>"television broadcasting service" means a broadcasting service consisting of
+                                sending of visual images or other visible signals whether with or without
+                                accompanying sounds, where visual images are such that sequences of them are
+                                seen as moving pictures;
+                            </p>
+                            <p>"television" means the transmission or reproduction by radio-communication,
+                                satellite, cable or other electromagnetic system, of images of objects in
+                                movement or at rest;
+                            </p>
+                            <p>"terrestrial broadcasting service" means a service that is broadcast from
+                                the transmitter situated upon the earth's surface.
+                            </p>
+                            <p>"Tribunal" means the Appeals Tribunal set up under section 158 of this
+                                Act;
+                            </p>
+                            <p>"vessel" includes any ship, boat, air-cushioned vehicle or floating rig or
+                                platform used in navigation.
+                            </p>
+                        </content>
+                    </subchapter>
+                    <subchapter id="subchapter2">
+                        <heading>&lt;II.&gt;</heading>
+                        <content>
+                            <p>For the purpose of this Act, a telecommunication system is operated by the
+                                person who controls and manages it by himself or through servants or
+                                agents.
+                            </p>
+                        </content>
+                    </subchapter>
+                    <subchapter id="subchapter3">
+                        <heading>&lt;III.&gt;</heading>
+                        <content>
+                            <p>In this Act-</p>
+                            <p>(a) a postal article shall be deemed to have been delivered -</p>
+                            <blockList id="d3e811">
+                                <item id="d3e813">
+                                    <p>to the addressee, if it is delivered into the private letter box of
+                                        the addressee, leaving it atthe house, or office of the addressee as
+                                        set out thereon, or with his employee or agent or other persons
+                                        authorised to receive it and, where the addressee is a guest or is
+                                        resident at a hotel, hostel or lodgings, it is left with the
+                                        proprietor or manager thereof or with his agent; or
+                                    </p>
+                                </item>
+                                <item id="d3e823">
+                                    <p>to a postal services operator licensed under section 99, if it is
+                                        deposited into a posting box or handed over to an employee or agent of
+                                        a postal services operator authorised to receive it;
+                                    </p>
+                                </item>
+                            </blockList>
+                            <p>(b) a postal article shall be deemed to be in the course of transmission by
+                                post from the time of its being delivered to the public postal licensee
+                                until the time of its being delivered to the addressee, or it is returned to
+                                the sender or otherwise disposed of under the provisions of this Act.
+                            </p>
+                            <p>(c)Save as otherwise agreed to between the originator and the addressee, the
+                                dispatch of an electronic record occurs when it enters a computer resource
+                                outside the control of the originator.
+                            </p>
+                            <p>(d) Save as otherwise agreed between the originator and the addressee, the
+                                time of receipt of an electronic record shall be determined as follows:-
+                            </p>
+                            <p>(e) if the addressee has designated computer resource for the purpose of
+                                receiving electronic record:
+                            </p>
+                            <blockList id="d3e851">
+                                <item id="d3e853">
+                                    <p>receipt occurs at the time when the electronic record enters the
+                                        designated computer resource; or
+                                    </p>
+                                </item>
+                                <item id="d3e861">
+                                    <p>if the electronic record is sent to a computer resource of the
+                                        addressee that is not the designated computer resource, receipt occurs
+                                        at the time when the electronic record is retrieved by the
+                                        addressee;
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </subchapter>
+                </chapter>
+            </part>
+        </body>
+    </bill>
+</akomaNtoso>

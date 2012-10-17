@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <bill>
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/za/bill/2003-09-04/76/main"/>
+                    <FRBRuri value="/za/bill/2003-09-04/76"/>
+                    <FRBRdate date="2003-09-04" name="enactment"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <FRBRcountry value="za"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/za/bill/2003-09-04/76/eng@20051231/main"/>
+                    <FRBRuri value="/za/bill/2003-09-04/76/eng@20051231"/>
+                    <FRBRdate date="2005-12-31" name="repeal"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/za/bill/2003-09-04/76/eng@20051231/main.xml"/>
+                    <FRBRuri value="/za/bill/2003-09-04/76/eng@20051231.akn"/>
+                    <FRBRdate date="2006-09-11" name="XMLConversion"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                </FRBRManifestation>
+            </identification>
+            <lifecycle source="#bungeni">
+                <eventRef id="e1" source="org01" date="2005-08-29" type="generation"/>
+                <eventRef id="e2" source="pas01" date="2005-12-31" type="repeal"/>
+            </lifecycle>
+            <temporalData source="#bungeni">
+                <temporalGroup id="t1">
+                    <timeInterval refersTo="inforce" start="e1" end="e2"/>
+                    <timeInterval refersTo="efficacy" start="e1" end="e2"/>
+                </temporalGroup>
+                <temporalGroup id="t2">
+                    <timeInterval refersTo="inforce" start="e2"/>
+                    <timeInterval refersTo="efficacy" start="e2"/>
+                </temporalGroup>
+            </temporalData>
+            <references source="#bungeni">
+                <original href="/zaf/bill/2003-09-04/76/en.akn" id="org01" showAs="Bill #76/2003"/>
+                <passiveRef href="/zaf/act/2005-12-31/97/en.akn" id="pas01" showAs="Act #97/2005"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/ken/bungeni" showAs="Bungeni"/>
+                <TLCPerson id="cervone" href="/ontology/persons/ita/editors/cervone" showAs="Luca Cervone"/>
+                <TLCOrganization id="parliament" href="/ontology/organizations/zaf/parliament" showAs="Parliament"/>
+                <TLCRole id="author" href="/ontology/roles/zaf/author" showAs="Author of Document"/>
+                <TLCRole id="editor" href="/ontology/roles/ita/editor" showAs="Editor of Document"/>
+            </references>
+        </meta>
+        <preface>
+            <p class="heading">REPUBLIC OF SOUTH AFRICA</p>
+            <p class="subheading">
+                <docTitle>TRADITIONAL LEADERSHIP AND GOVERNANCE FRAMEWORK BILL</docTitle>
+            </p>
+            <p class="center">(As introduced in the National Assembly as a section 76 Bill;
+                explanatory summary of Bill published in Government Gazette No. 25437 of 4 September
+                2003)
+            </p>
+            <p class="center">(The English text is the official text of the Bill)</p>
+            <p class="center">(<docProponent>MINISTER FOR PROVINCIAL AND LOCAL
+                GOVERNMENT</docProponent>)
+            </p>
+            <p class="center">
+                <docType>BILL</docType>
+            </p>
+            <p>To
+                <docPurpose>provide for the recognition of traditional communities; to provide for
+                    the establishment and recognition of traditional councils; to provide for the
+                    functions and roles of traditional leaders; to provide a statutory framework for
+                    leadership positions within the institution of traditional leadership, the
+                    recognition of traditional leaders and the removal from office of traditional
+                    leaders; to provide for houses of traditional leaders; to provide for dispute
+                    resolution and the establishment of the Commission on Traditional Leadership
+                    Disputes and Claims; and to provide for matters connected
+                    therewith.
+                </docPurpose>
+            </p>
+        </preface>
+        <preamble id="pre">
+            <p class="heading">PREAMBLE</p>
+            <p>WHEREAS the State, in accordance with the Constitution, seeks—</p>
+            <ul id="pre-ul1">
+                <li>to set out a national framework and norms and standards that will define the
+                    place and role of traditional leadership within the new system of democratic
+                    governance;
+                </li>
+                <li>to transform the institution in line with constitutional imperatives; and</li>
+                <li>to restore the integrity and legitimacy of the institution of traditional
+                    leadership in line with customary law and practices;
+                </li>
+            </ul>
+            <p>AND WHEREAS the South African indigenous people consist of a diversity of cultural
+                communities;
+            </p>
+            <p>AND WHEREAS the Constitution recognises—</p>
+            <ul id="pre-ul2">
+                <li>the institution, status and role of traditional leadership according to
+                    customary law; and
+                </li>
+                <li>a traditional community that observes a system of customary law;</li>
+            </ul>
+            <p>AND WHEREAS—</p>
+            <ul id="pre-ul3">
+                <li>the State must respect, protect and promote the institution of traditional
+                    leadership in accordance with the dictates of democracy in South Africa;
+                </li>
+                <li>the institution of traditional leadership must be transformed to be in harmony
+                    with the Constitution and the Bill of Rights so that democratic governance and
+                    the values of an open and democratic society may be promoted; and
+                </li>
+                <li>the institution of traditional leadership must
+                    <ul id="pre-ul4">
+                        <li>promote freedom, human dignity and the achievement of equality and
+                            non-sexism;
+                        </li>
+                        <li>derive its mandate and primary authority from applicable customary law
+                            and practices;
+                        </li>
+                        <li>strive to enhance tradition and culture;</li>
+                        <li>promote nation building and harmony and peace amongst people;</li>
+                        <li>promote the principles of co-operative governance in its interaction
+                            with all spheres of government and organs of state; and
+                        </li>
+                        <li>promote an efficient, effective and fair dispute-resolution system, and
+                            a fair system of administration of justice, as envisaged in applicable
+                            legislation,
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p>BE IT THEREFORE ENACTED by the Parliament of the Republic of South Africa, as
+                follows:—
+            </p>
+            <p>ARRANGEMENT OF SECTIONS</p>
+            <toc>
+                <tocItem href="#chap01" level="1">CHAPTER 1 INTERPRETATION AND APPLICATION</tocItem>
+                <tocItem href="#art01" level="2">1. Definitions and application</tocItem>
+                <tocItem href="#chap02" level="1">CHAPTER 2 TRADITIONAL COMMUNITIES AND TRADITIONAL
+                    COUNCILS
+                </tocItem>
+                <tocItem href="#art02" level="2">2. Recognition of traditional communities</tocItem>
+            </toc>
+        </preamble>
+        <body>
+            <chapter id="cha1">
+                <num>CHAPTER 1</num>
+                <heading>INTERPRETATION AND APPLICATION</heading>
+                <article id="cha1-art1">
+                    <num>1.</num>
+                    <heading>Definitions and application</heading>
+                    <clause id="cha1-art1-cla1">
+                        <num>(1)</num>
+                        <content>
+                            <p>In this Act, unless the context indicates otherwise—</p>
+                            <ul id="cha1-art1-cla1-ul1">
+                                <li>
+                                    <def>area of jurisdiction</def>
+                                    means the area of jurisdiction
+                                    designated for a traditional community and traditional council
+                                    that have been recognised as provided for in
+                                    <ref id="ref01" href="#art2">sections 2</ref>
+                                    and<ref id="ref02" href="#art3">3</ref>;
+                                </li>
+                                <li>
+                                    <def>Commission</def>
+                                    means the commission established by<ref id="ref03" href="#art20">section 20</ref>;
+                                </li>
+                                <li>
+                                    <def>customary institution or structure</def>
+                                    means those
+                                    institutions or structures established in terms of customary
+                                    law;
+                                </li>
+                                <li>
+                                    <def>district house of traditional leaders</def>
+                                    means a
+                                    district house of traditional leaders provided for in<ref id="ref04"
+                                                                                              href="#art15-cla02">
+                                    section 15(b)</ref>;
+                                </li>
+                                <li>
+                                    <def>district municipality</def>
+                                    means a district municipality
+                                    as defined in
+                                    <ref id="ref05" href="/act/1998/117_en.xml">section 1 of the
+                                        Local Government: Municipal Structures Act, 1998 (Act No.
+                                        117 of 1998);
+                                    </ref>
+                                </li>
+                                <li>
+                                    <def>headman or headwoman</def>
+                                    means a traditional leader who—
+                                    <ol id="ol1">
+                                        <li>is under the authority of, or exercises authority within
+                                            the area of jurisdiction of, a principal traditional
+                                            leader in accordance with customary law; and
+                                        </li>
+                                        <li>is recognised as such in terms of this Act;</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <omissis>.....</omissis>
+                                </li>
+                            </ul>
+                        </content>
+                    </clause>
+                    <clause id="cha1-art1-cla2">
+                        <num>(2)</num>
+                        <content>
+                            <p>Nothing contained in this Act may be construed as precluding members
+                                of a traditional community from addressing a traditional leader by
+                                the traditional title accorded to him or her by custom, but such
+                                traditional title does not derogate from, or add anything to, the
+                                status, role and functions of a traditional leader as provided for
+                                in this Act.
+                            </p>
+                        </content>
+                    </clause>
+                </article>
+            </chapter>
+            <chapter id="cha2">
+                <num>CHAPTER 2</num>
+                <heading>TRADITIONAL COMMUNITIES AND TRADITIONAL COUNCILS</heading>
+                <article id="cha2-art01">
+                    <num>2.</num>
+                    <heading>Recognition of traditional communities</heading>
+                    <clause id="cha2-art01-cla1">
+                        <num>(1)</num>
+                        <content>
+                            <p>A community may be recognised as a traditional community if it—</p>
+                            <ol id="cha2-art01-cla1-ol2">
+                                <li>is subject to a system of traditional leadership in terms of
+                                    that community’s own customary rules; and
+                                </li>
+                                <li>observes a system of customary law.</li>
+                            </ol>
+                        </content>
+                    </clause>
+                    <clause id="cha2-art01-cla2">
+                        <num>(2)</num>
+                        <content>
+                            <p>The Premier of a province may, by notice in the Provincial Gazette,
+                                in accordance with provincial legislation and after consultation
+                                with the provincial house of traditional leaders in the province and
+                                the community concerned, recognise a community envisaged in
+                                subsection (1) as a traditional community.
+                            </p>
+                        </content>
+                    </clause>
+                    <clause id="cha2-art01-cla3">
+                        <num>(3)</num>
+                        <content>
+                            <p>A traditional community must transform and adapt applicable customs
+                                and customary law so as to comply with the relevant principles
+                                contained in the Bill of Rights in the Constitution.
+                            </p>
+                        </content>
+                    </clause>
+                </article>
+            </chapter>
+        </body>
+    </bill>
+</akomaNtoso>

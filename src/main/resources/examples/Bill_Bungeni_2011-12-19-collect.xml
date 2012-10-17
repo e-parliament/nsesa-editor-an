@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./styles/akya.xsl"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <bill>
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/ak/bill/2011-12-19/100/main"/>
+                    <FRBRuri value="/ak/bill/2011-12-19/8"/>
+                    <FRBRdate date="2011-12-19" name="Enactment"/>
+                    <FRBRauthor href="#Par" as="#author"/>
+                    <FRBRcountry value="ak"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/ak/bill/2011-12-19/100/eng@/main"/>
+                    <FRBRuri value="/ak/bill/2011-12-19/100/eng@"/>
+                    <FRBRdate date="2009-01-10" name="Expression"/>
+                    <FRBRauthor href="#cervone" as="#editor"/>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/ak/bill/2011-12-19/100/eng@/main.xml"/>
+                    <FRBRuri value="/ak/bill/2011-12-19/100/eng@/main.akn"/>
+                    <FRBRdate date="2009-01-11" name="XMLConversion"/>
+                    <FRBRauthor href="#user.Ashok" as="#editor"/>
+                </FRBRManifestation>
+            </identification>
+            <analysis source="#bungni">
+                <activeModifications>
+                    <textualMod type="substitution" id="am1" incomplete="true">
+                        <source href="#mod1"/>
+                        <source href="#art2"/>
+                        <destination href="/ak/act/23/2011/main#art2"/>
+                        <old href="#mod1-qtd1"/>
+                        <new href="#mod1-qtd2"/>
+                    </textualMod>
+                </activeModifications>
+            </analysis>
+            <references source="#bungeni">
+                <TLCOrganization id="Parliament" href="/ontology/organizations/zaf/parliament" showAs="Parliament"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/ak/bungeni" showAs="Bungeni"/>
+                <TLCRole id="author" href="/ontology/roles/zaf/author" showAs="Author of Document"/>
+                <TLCRole id="editor" href="/ontology/roles/ita/editor" showAs="Editor of Document"/>
+            </references>
+        </meta>
+        <coverPage>
+            <container name="csub1" id="sub1" xml:lang="fra">
+                <p>
+                    <docProponent>Republique de Cameroun</docProponent>
+                </p>
+                <p>
+                    <docIntroducer>Assemble Nationale</docIntroducer>
+                </p>
+                <p>
+                    <legislature>8
+                        <sup>ème</sup>
+                        Législature
+                    </legislature>
+                </p>
+                <p>Année Législative 2010</p>
+                <p>
+                    <session>3<sup>ème</sup>Session Ordinare
+                    </session>
+                </p>
+                <p>Novembre</p>
+            </container>
+            <container name="csub2" id="sub2" alternativeTo="sub1" xml:lang="eng">
+                <p>
+                    <docProponent>Republic of Cameroon</docProponent>
+                </p>
+                <p>
+                    <docIntroducer>National Assembly</docIntroducer>
+                </p>
+                <p>
+                    <legislature>8
+                        <sup>th</sup>
+                        Legislation
+                    </legislature>
+                </p>
+                <p>Legislative Year 2010</p>
+                <p>
+                    <session>3<sup>rd</sup>Regular Session
+                    </session>
+                </p>
+                <p>November</p>
+            </container>
+        </coverPage>
+        <preface>
+            <p>
+                <docTitle>THE BUNGENILAND BILL 2011</docTitle>
+            </p>
+            <p>
+                <docNumber>No.100 of 2011</docNumber>
+            </p>
+            <p>Date of Assent:
+                <docDate date="2011-12-10">10<span class="sup">th</span>December 2011
+                </docDate>
+            </p>
+            <p>Date of Commencement:19<span class="sup">th</span>December 2011
+            </p>
+        </preface>
+        <preamble>
+            <!-- example of recital and citation -->
+            <p>THE EUROPEAN PARLIAMENT AND THE COUNCIL OF THE EUROPEAN UNION,</p>
+            <citations>
+                <citation id="cit1">
+                    <p>Having regard to the Treaty establishing the European Community and, in particular, Article
+                        141(3) thereof,
+                    </p>
+                </citation>
+                <citation id="cit2">
+                    <p>Having regard to the proposal from the Commission(1),</p>
+                </citation>
+                <citation id="cit3">
+                    <p>Having regard to the Opinion of the Economic and Social Committee(2),</p>
+                </citation>
+            </citations>
+            <p>Acting in accordance with the procedure laid down in Article 251 of the Treaty(3), in the light of the
+                joint text approved by the Conciliation Committee on 19 April 2002,
+            </p>
+            <p>Whereas:</p>
+            <recitals>
+                <recital id="rec1">
+                    <num>(1)</num>
+                    <p>In accordance with Article 6 of the Treaty on European Union, the European Union is founded on
+                        the principles of liberty, democracy, respect for human rights and fundamental freedoms, and the
+                        rule of law, principles which are common to the Member States, and shall respect fundamental
+                        rights as guaranteed by the European Convention for the Protection of Human Rights and
+                        Fundamental Freedoms and as they result from the constitutional traditions common to the Member
+                        States, as general principles of Community law.
+                    </p>
+                </recital>
+                <recital id="rec2">
+                    <num>(2)</num>
+                    <p>The right to equality before the law and protection against discrimination for all persons
+                        constitutes a universal right recognised by the Universal Declaration of Human Rights, the
+                        United Nations Convention on the Elimination of all forms of Discrimination Against Women, the
+                        International Convention on the Elimination of all Forms of Racial Discrimination and the United
+                        Nations Covenants on Civil and Political Rights and on Economic, Social and Cultural Rights and
+                        by the Convention for the Protection of Human Rights and Fundamental Freedoms, to which all
+                        Member States are signatories.
+                    </p>
+                </recital>
+            </recitals>
+        </preamble>
+        <body>
+            <part id="part1">
+                <heading>PART -
+                    PRELIMINARY
+                </heading>
+                <chapter id="chapter1">
+                    <heading>Short title and
+                        commencement
+                    </heading>
+                    <content>
+                        <p>This Act may be cited as the BUNGENILAND Information and Communications Act, 2011 and
+                            shall come into operation on such date as the Minister may, by notice in the
+                            Gazette, appoint and different dates may be appointed for different
+                            provisions.
+                        </p>
+                    </content>
+                </chapter>
+                <!-- esempio di redline -->
+                <chapter id="chapter2">
+                    <subchapter id="subchapter1">
+                        <content>
+                            <p>The Strategic Growth Council brings together<del>several</del>key agency secretaries in
+                                an effort
+                                <eol class="semanticNum"/>
+                            </p>
+                            <p>to plan
+                                <ins>differently</ins>
+                                for future growth patterns of California, and
+                                <ins>to guide</ins>
+                                how we will
+                                <eol/>
+                            </p>
+                            <p>provide housing, transportation,
+                                <del>food</del>
+                                and other necessities to Californians, while at the
+                                <eol/>
+                            </p>
+                            <p>same time protecting the environment and agriculture and meeting our climate goals.
+                                <eol/>
+                            </p>
+                            <p>
+                                <ins>To do this we must promote infill and reduce sprawl. It is the center and the edge
+                                    that
+                                </ins>
+                                <eol/>
+                            </p>
+                            <p>
+                                <ins>most needs our collective attention. California’s urban centers rely upon the
+                                    success
+                                </ins>
+                                <eol/>
+                            </p>
+                            <p>
+                                <ins>and vitality of rural areas; rural areas equally rely upon the success and vitality
+                                    of its
+                                </ins>
+                                <eol/>
+                            </p>
+                            <p>
+                                <ins>urban centers. For California to prosper, both must thrive.</ins>
+                                <eol/>
+                            </p>
+                        </content>
+                    </subchapter>
+                </chapter>
+            </part>
+            <!-- esempio di emendamento -->
+            <article id="art13">
+                <num>Art. 13</num>
+                <content>
+                    <p>In the
+                        <mod id="mod1">
+                            <ref id="ref3" href="/ak/act/23/2011/main#art2">article 2 of the act 23/2011</ref>
+                            the old text “<quotedText id="mod1-qtd1">bla bla bala</quotedText>” is replaced with “
+                            <quotedText id="mod1-qtd2">bla bla bla</quotedText>”
+                        </mod>
+                    </p>
+                </content>
+            </article>
+            <article id="art15">
+                <num>Art. 15</num>
+                <content>
+                    <p>In the
+                        <mmod id="mmod1">
+                            <mref id="ref4">article
+                                <mod id="mmod1-mod1">
+                                    <ref id="ref5" href="/ak/act/23/2011/main#art2">2</ref>
+                                </mod>
+                                ,
+                                <mod id="mmod1-mod2">
+                                    <ref id="ref6" href="/ak/act/23/2011/main#art5">5</ref>
+                                </mod>
+                                ,
+                                <mod id="mmod1-mod3">
+                                    <ref id="ref7" href="/ak/act/23/2011/main#art16">16</ref>
+                                </mod>
+                            </mref>
+                            the old text “<quotedText id="mmod1-qtd1">
+                            copyright and privacy</quotedText>” is replaced with:
+                            “<quotedText id="mmod1-qtd2">open source and right of privacy</quotedText>”
+                        </mmod>
+                    </p>
+                </content>
+            </article>
+            <article id="art16">
+                <num>Art. 16</num>
+                <content>
+                    <p>The last sentence in the
+                        <mmod id="mmod2">
+                            <mref id="ref8">article
+                                <mod id="mmod2-mod1">
+                                    <ref id="ref9" href="/ak/act/23/2011/main#art2">2</ref>
+                                </mod>
+                                ,
+                                <mod id="mmod2-mod2">
+                                    <ref id="ref10" href="/ak/act/23/2011/main#art5">5</ref>
+                                </mod>
+                                ,
+                                <mod id="mmod2-mod3">
+                                    <ref id="ref11" href="/ak/act/23/2011/main#art16">16</ref>
+                                </mod>
+                            </mref>
+                            modified as follow:
+                            “<quotedText id="mmod2-qtd1" for="mmod2-mod1">copyright</quotedText>”
+                            <omissis/>
+                            “<quotedText id="mmod2-qtd2" for="mmod2-mod2">privacy</quotedText>”
+                            <omissis/>
+                            “<quotedText id="mmod2-qtd3" for="mmod2-mod3">ecommerce</quotedText>”
+                        </mmod>
+                    </p>
+                </content>
+            </article>
+            <!-- esempio di hcontainer -->
+            <hcontainer id="iss1" name="issue">
+                <num>1.</num>
+                <heading>Introduction</heading>
+                <paragraph id="iss1-par1">
+                    <content>
+                        <p>The Portfolio Committee on Defence considered the 2007/2008 Budget of the Department of
+                            Defence on 22 -23 March 2007, as part of its oversight function over the Department of
+                            Defence. The report is based on both the budget hearings held on 22 March 2007 as well as
+                            the committee deliberations on 23 March 2007.
+                        </p>
+                    </content>
+                </paragraph>
+            </hcontainer>
+
+        </body>
+        <conclusions>
+            <!-- example of conclusions -->
+            <p>Approved:</p>
+            <p>President of the Senate</p>
+            <p>Speaker of the House</p>
+            <p>This Act which originated in the House of Representatives was finally passed into the House of
+                Representatives and Senate on February 6, 2007 and January 29, 2007
+            </p>
+            <p>Secretary of the Senate</p>
+            <p>Secretary of the House of Representative</p>
+            <p>Approved:</p>
+            <p>President of the Philippines</p>
+            <p>
+                <location id="loc1" refersTo="#manila">Manila</location>
+                <date date="2007-05-24">May, 24th, 2011</date>
+            </p>
+        </conclusions>
+    </bill>
+</akomaNtoso>

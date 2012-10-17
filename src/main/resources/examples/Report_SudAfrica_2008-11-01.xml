@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <debateReport contains="originalVersion" name="report">
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/za/report/2008-11-01/main"/>
+                    <FRBRuri value="/za/report/2008-11-01/"/>
+                    <FRBRdate date="2008-11-01" name="Generation"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <componentInfo>
+                        <componentData id="wmain" href="#wmain" name="main" showAs="Main document"/>
+                    </componentInfo>
+                    <FRBRcountry value="za"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/za/report/2008-11-01/eng@/main"/>
+                    <FRBRuri value="/za/report/2008-11-01/eng@"/>
+                    <FRBRdate date="2009-02-06" name="Generation"/>
+                    <FRBRauthor href="#author" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="emain" href="#emain" name="main" showAs="Main document"/>
+                    </componentInfo>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/za/report/2008-11-01/eng@/main.xml"/>
+                    <FRBRuri value="/za/report/2008-11-01/eng@.akn"/>
+                    <FRBRdate date="2009-02-06" name="XMLMarkup"/>
+                    <FRBRauthor href="#editor" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="mmain" href="main.xml" name="main" showAs="Main document"/>
+                    </componentInfo>
+                </FRBRManifestation>
+            </identification>
+            <publication name="publication" date="2008-11-01" showAs="publication" number="555"/>
+            <lifecycle source="#bungeni">
+                <eventRef id="e1" date="2008-11-01" source="#ro1" type="generation"/>
+            </lifecycle>
+            <analysis source="#cirsfid">
+
+            </analysis>
+            <references source="#bungeni">
+                <original id="ro1" href="/sa/report/2004-12-21/eng@/main" showAs="Original"/>
+                <hasAttachment id="rat1" href="/za/report/2008-11-01/eng@/main/schedule1.xml"
+                               showAs="SCHEDULE 1 Constitution of the Republic of South Africa, 1996"/>
+                <hasAttachment id="rat2" href="/za/report/2008-11-01/eng@/main/schedule2.xml"
+                               showAs="SCHEDULE 2 Joint Rules of Parliament"/>
+                <hasAttachment id="rat3" href="/za/report/2008-11-01/eng@/main/schedule3.xml"
+                               showAs="SCHEDULE 3 Rules of the National Assembly"/>
+                <hasAttachment id="rat4" href="/za/report/2008-11-01/eng@/main/schedule4.xml"
+                               showAs="SCHEDULE 4 Rules of the National Council of Provinces"/>
+
+                <TLCOrganization id="parliament" href="/ontology/organization/za/za.parliament"
+                                 showAs="Parliament of Kenya"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/za/za.bungeni" showAs="Bungeni"/>
+                <TLCPerson id="fic" href="/ontology/person/conveners/za.fic" showAs="Ms F I Chohan, MP"/>
+                <TLCRole id="author" href="/ontology/roles/author" showAs="Author"/>
+                <TLCRole id="editor" href="/ontology/roles/editor" showAs="Editor"/>
+            </references>
+            <notes source="#bungeni">
+                <note id="n1">
+                    <p>Some content of this document is omitted in order to simplify the reading.</p>
+                </note>
+                <note id="n2">
+                    <p>Section 73 of the Constitution</p>
+                </note>
+                <note id="n3">
+                    <p>
+                        See eg the
+                        <a href="http://www.dpmc.gov.au/guidelines/docs/legislation">
+                            Legislation Handbook of the Commonwealth of Australia
+                            [http://www.dpmc.gov.au/guidelines/docs/legislation – accessed on 8 November 2008].
+                        </a>
+                        The Handbook covers the following subjects, amongst others:
+                        An overview of the legislation process, developing the legislation programme,
+                        policy approval, types of bills, preparation of drafting instructions, drafting a Bill,
+                        the process prior to introduction in Parliament, the passage of a Bill
+                        through Parliament, amendments to Bills, and the procedures after passage of a Bill.
+                        The appendices contain detailed information on certain procedures,
+                        samples of documents, and forms used for certain procedures.
+                    </p>
+                </note>
+            </notes>
+        </meta>
+        <preface>
+            <p class="heading">REVIEWING THE LEGISLATIVE PROCESS IN PARLIAMENT</p>
+            <p class="subheading">[Report prepared by the Joint Task Team on the Legislative Process in Parliament]</p>
+        </preface>
+        <preamble>
+            <p class="heading">INDEX</p>
+            <table id="toc">
+                <tr id="toc-tr1">
+                    <td id="toc-tr1-th1">
+                        <p>CHAPTER</p>
+                    </td>
+                    <td id="toc-tr1-th2">
+                        <p>SUBJECT</p>
+                    </td>
+                    <td id="toc-tr1-th3">
+                        <p>PARAGRAPH</p>
+                    </td>
+                </tr>
+                <tr id="toc-tr2">
+                    <td class="heading" id="toc-tr2-th1">
+                        <p>I</p>
+                    </td>
+                    <td class="heading" id="toc-tr2-th2">
+                        <p>Legislative process</p>
+                    </td>
+                    <td class="heading" id="toc-tr2-th3">
+                        <p>1 - 12</p>
+                    </td>
+                </tr>
+                <tr id="toc-tr3">
+                    <td id="toc-tr3-th1">
+                        <p/>
+                    </td>
+                    <td class="normal" id="toc-tr3-th2">
+                        <p>Stages in legislative process of ordinary Bills</p>
+                    </td>
+                    <td class="heading" id="toc-tr3-th3">
+                        <p>1 - 2</p>
+                    </td>
+                </tr>
+                <tr id="toc-tr4">
+                    <td id="toc-tr4-th1">
+                        <p/>
+                    </td>
+                    <td class="normal" id="toc-tr4-th2">
+                        <p>Language requirements for Bills</p>
+                    </td>
+                    <td class="heading" id="toc-tr4-th3">
+                        <p>3 - 6</p>
+                    </td>
+                </tr>
+                <tr id="toc-tr5">
+                    <td>
+                        <p/>
+                    </td>
+                    <td class="normal">
+                        <p>Committee procedure</p>
+                    </td>
+                    <td class="heading">
+                        <p>7 - 12</p>
+                    </td>
+                </tr>
+                <tr id="toc-tr6">
+                    <td class="heading">
+                        <p>II</p>
+                    </td>
+                    <td class="heading">
+                        <p>Tagging of Bills</p>
+                    </td>
+                    <td class="heading">
+                        <p>13 - 32</p>
+                    </td>
+                </tr>
+                <tr id="toc-tr7">
+                    <td class="heading">
+                        <p>III</p>
+                    </td>
+                    <td class="heading">
+                        <p>Mixed Bills</p>
+                    </td>
+                    <td class="heading">
+                        <p>33 - 37</p>
+                    </td>
+                </tr>
+                <tr id="toc-tr8">
+                    <td class="heading">
+                        <p>IV</p>
+                    </td>
+                    <td class="heading">
+                        <p>Legal advisory and drafting services for parliamentary committees</p>
+                    </td>
+                    <td class="heading">
+                        <p>38 – 49</p>
+                    </td>
+                </tr>
+                <tr id="toc-tr9">
+                    <td class="heading">
+                        <p>V</p>
+                    </td>
+                    <td class="heading">
+                        <p>Public participation in legislative process</p>
+                    </td>
+                    <td class="heading">
+                        <p>50 -55</p>
+                    </td>
+                </tr>
+                <tr id="toc-tr10">
+                    <td class="heading">
+                        <p>VI</p>
+                    </td>
+                    <td class="heading">
+                        <p>Legislative handbook</p>
+                    </td>
+                    <td class="heading">
+                        <p>56 - 57</p>
+                    </td>
+                </tr>
+                <tr id="toc-tr11">
+                    <td class="heading">
+                        <p>SCHEDULE 1</p>
+                    </td>
+                    <td colspan="2" class="heading">
+                        <p>
+                            <ref id="ref2" href="/za/act/1996_1/eng/">Constitution of the Republic of South Africa,
+                                1996
+                            </ref>
+                        </p>
+                    </td>
+                </tr>
+                <tr id="toc-tr12">
+                    <td class="heading">
+                        <p>SCHEDULE 2</p>
+                    </td>
+                    <td colspan="2" class="heading">
+                        <p>Joint Rules of Parliament</p>
+                    </td>
+                </tr>
+                <tr id="toc-tr13">
+                    <td class="heading">
+                        <p>SCHEDULE 3</p>
+                    </td>
+                    <td colspan="2" class="heading">
+                        <p>Rules of the National Assembly</p>
+                    </td>
+                </tr>
+                <tr id="toc-tr14">
+                    <td class="heading">
+                        <p>SCHEDULE 4</p>
+                    </td>
+                    <td colspan="2" class="heading">
+                        <p>Rules of the National Council of Provinces</p>
+                    </td>
+                </tr>
+            </table>
+        </preamble>
+        <mainBody>
+            <chapter id="cha1">
+                <heading>
+                    CHAPTER I: LEGISLATIVE PROCESS
+                </heading>
+                <subchapter id="cha1-sub1">
+                    <heading>
+                        Stages in legislative process of ordinary Bills
+                    </heading>
+                    <paragraph id="cha1-sub1-par1">
+                        <num>1</num>
+                        <content>
+                            <p>
+                                The Constitution provides that Bills may be introduced in Parliament by a member of the
+                                Executive [only in the NA] or any member or committee of the House concerned
+                                <span class="sup">
+                                    <noteRef href="#n2" marker="1"/>1
+                                </span>
+                                .
+                                In practice, with a few exceptions, all Bills coming before Parliament emanate from the
+                                Executive. Ordinary Bills [ie excluding Constitution amendment Bills and money Bills]
+                                normally go through the following stages:
+                            </p>
+                            <blockList id="cha1-sub1-par1-lis1">
+                                <item id="cha1-sub1-par1-lis1-ite1">
+                                    <num>(1)</num>
+                                    <heading>Initiating, development and Cabinet approval</heading>
+                                    <p>
+                                        The first stage involves initiating, developing and formal executive approval
+                                        of the draft legislation. Usually a first draft is prepared by departmental
+                                        specialists, sometimes assisted by consultants, after consultation with
+                                        interested persons and institutions.
+                                        The draft is then submitted to Cabinet for approval in principle.
+                                    </p>
+                                </item>
+                                <item id="cha1-sub1-par1-lis1-ite2">
+                                    <num>(2)</num>
+                                    <heading>Submission of draft Bill to Parliament</heading>
+                                    <p>
+                                        Joint Rule 159 requires that once Cabinet has approved the legislative
+                                        proposals,
+                                        the draft of the proposed Bill must be sent to Parliament,
+                                        together with a memorandum explaining the objects of the proposed legislation.
+                                        The Speaker and the NCOP Chairperson must refer the draft to the responsible
+                                        committees of the respective Houses.
+                                        The purpose of this procedure is to assist the committees in planning their
+                                        work and to enable committee members to acquaint themselves with and to develop
+                                        their positions with regard to the proposed legislation.
+                                    </p>
+                                    <blockList id="cha1-sub1-par1-lis1-ite2-lis1">
+                                        <item id="cha1-sub1-par1-lis1-ite2-lis1-ite1">
+                                            <heading>NOTE (i):</heading>
+                                            <p>
+                                                In practice this rule is not working as it should, with the result that
+                                                its
+                                                purpose is lost. Parliament often does not receive the Rule 159 draft
+                                                before the final Bill is submitted to Parliament for introduction.
+                                            </p>
+                                        </item>
+                                        <item id="cha1-sub1-par1-lis1-ite2-lis1-ite2">
+                                            <heading>NOTE (ii):</heading>
+                                            <p>
+                                                The purpose of Joint rule 159 is to make Parliament aware that proposed
+                                                legislation is coming; hence it is not necessary for the whole draft
+                                                Bill to be sent to Parliament at that stage – the long title or a
+                                                summary of the objectives of the legislation should be sufficient.
+                                                See the recommendation in paragraph 2 (b) below.
+                                            </p>
+                                        </item>
+                                    </blockList>
+                                </item>
+                                <item id="cha1-sub1-par1-lis1-omissis">
+                                    <p>
+                                        <omissis>
+                                            <noteRef href="#n1" marker="2"/>(...)
+                                        </omissis>
+                                    </p>
+                                </item>
+                                <item id="cha1-sub1-par1-lis1-ite11">
+                                    <num>(11)</num>
+                                    <heading>Bill becomes Act</heading>
+                                    <p>
+                                        A Bill assented to and signed by the President becomes an Act of Parliament and
+                                        must be
+                                        published. A signed version of the Act is entrusted to the Constitutional Court
+                                        for
+                                        safekeeping.
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </paragraph>
+                    <paragraph id="cha1-sub1-par2">
+                        <num>2.</num>
+                        <heading>RECOMMENDATIONS REGARDING PRE-INTRODUCTION PROCESSES</heading>
+                        <subparagraph id="cha1-sub1-par2-spa1">
+                            <num>a)</num>
+                            <content>
+                                <p>
+                                    There needs to be substantial engagement between Parliament and the Executive on
+                                    all pre-introduction processes for Bills, and specifically the application of Joint
+                                    rule
+                                    159, NA rule 241 and NCOP rule 186.
+                                </p>
+                            </content>
+                        </subparagraph>
+                        <subparagraph id="cha1-sub1-par2-spa2">
+                            <num>b)</num>
+                            <content>
+                                <p>
+                                    Since the purpose of Joint rule 159 is to alert Parliament about an imminent
+                                    Bill [see paragraph 1(2) above], it is recommended that the rule should
+                                    require only the long title of the draft Bill or a summary of its objectives
+                                    to be sent to Parliament.
+                                </p>
+                            </content>
+                        </subparagraph>
+                        <subparagraph id="cha1-sub1-par2-spa3">
+                            <num>c)</num>
+                            <content>
+                                <p>
+                                    Since the purpose of the notices in terms of NA rule 241 and NCOP rule 186
+                                    is to inform the public of the imminent introduction of a Bill in Parliament
+                                    [see paragraph 1(5) above], consideration should be given to publishing only
+                                    the long title or a summary of the objectives of the Bill concerned.
+                                    Publication of the Bill itself in the Government Gazette could follow at a
+                                    later stage. [See also the recommendation in paragraph 6 (b) below
+                                    regarding translations.]
+                                </p>
+                            </content>
+                        </subparagraph>
+                    </paragraph>
+                </subchapter>
+                <subchapter id="cha1-sub2">
+                    <heading>
+                        Language requirements for Bills
+                    </heading>
+                    <paragraph id="cha1-sub2-par1">
+                        <num>3.</num>
+                        <content>
+                            <p>
+                                In terms of Joint Rule 220(1), a Bill introduced in either House has to be in
+                                one of the official languages. The Bill in that language will be the official
+                                text for purposes of parliamentary proceedings. In parliamentary proceedings
+                                only the official text of a Bill is considered [Joint Rule 220(4)].
+                                A translation of the Bill into at least one of the other official languages has
+                                to be in Parliament’s possession at least three days before the formal
+                                consideration of the Bill by the House in which it was introduced
+                                [Joint Rule 220(2)]. Such a translated version of a Bill is referred to as the
+                                “official translation”. The cover page of a Bill specifies which
+                                language version of the Bill is the official text and which is an official
+                                translation [Joint Rule 220(3)]. Since the adoption of Joint Rule 220 in 1999,
+                                the official text of all Bills has been in English.
+                                The language of the official translations of Bills has varied according to the
+                                preferences of the introducers of the Bills.
+                            </p>
+                        </content>
+                    </paragraph>
+                    <paragraph id="cha1-sub2-omissis">
+                        <content>
+                            <p>
+                                <omissis>
+                                    <noteRef href="#n1" marker="3"/>(...)
+                                </omissis>
+                            </p>
+                        </content>
+                    </paragraph>
+                </subchapter>
+            </chapter>
+            <chapter id="cha6">
+                <heading>
+                    CHAPTER VI: LEGISLATION HANDBOOK
+                </heading>
+                <subchapter id="cha6-sub1">
+                    <paragraph id="cha6-sub1-par1">
+                        <num>56.</num>
+                        <content>
+                            <p>
+                                Some countries have a legislation handbook which sets out the legislative process
+                                in fine detail. It stipulates the roles of the various stakeholders as well as
+                                the procedures to be followed in the different stages of making and amending laws.
+                                The handbook has an official status and serves as a general guide in relation to
+                                the legislative process
+                                <span class="sup">
+                                    <noteRef href="#n3" marker="6"/>38
+                                </span>
+                                .
+                            </p>
+                        </content>
+                    </paragraph>
+                    <paragraph id="cha6-sub1-par2">
+                        <num>57.</num>
+                        <content>
+                            <p>
+                                It is recommended that such a legislation handbook be developed as a joint
+                                initiative between Parliament and the Executive.
+                                The handbook should set out the principles, processes and practices involved
+                                in making Acts of Parliament, from inception to completion.
+                                It should be a guide for everyone involved to better understand the
+                                parliamentary legislative process.
+                            </p>
+                        </content>
+                    </paragraph>
+                </subchapter>
+            </chapter>
+        </mainBody>
+        <conclusions>
+            <p>
+                <span class="signaturePlace">Signed at
+                    <location id="l1" refersTo="#CapeTown">Cape Town</location>
+                    on
+                </span>
+                <span class="signatureDate">
+                    <date date="2008-11-11">November 2008</date>
+                </span>
+            </p>
+            <p>
+                <span class="signatureConvener">
+                    <span refersTo="fic">Convener: Ms F I Chohan, MP</span>
+                </span>
+            </p>
+        </conclusions>
+        <attachments>
+            <componentRef id="at1" src="/za/report/2008-11-01/eng@/main/schedule1.xml"
+                          showAs="SCHEDULE 1 Constitution of the Republic of South Africa, 1996"/>
+            <componentRef id="at2" src="/za/report/2008-11-01/eng@/main/schedule2.xml"
+                          showAs="SCHEDULE 2 Joint Rules of Parliament"/>
+            <componentRef id="at3" src="/za/report/2008-11-01/eng@/main/schedule3.xml"
+                          showAs="SCHEDULE 3 Rules of the National Assembly"/>
+            <componentRef id="at4" src="/za/report/2008-11-01/eng@/main/schedule4.xml"
+                          showAs="SCHEDULE 4 Rules of the National Council of Provinces"/>
+        </attachments>
+    </debateReport>
+</akomaNtoso>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <officialGazette>
+        <!-- example of gazetteList using documentCollection structure -->
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/ak/gazetteList/2011-12-23/126/main"/>
+                    <FRBRuri value="/ak/gazetteList/2011-12-23/126/"/>
+                    <FRBRdate date="2011-12-23" name="Enactment"/>
+                    <FRBRauthor href="#publisher" as="#author"/>
+                    <FRBRcountry value="ak"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/ak/gazetteList/2011-12-23/126/eng@/main"/>
+                    <FRBRuri value="/ak/gazetteList/2011-12-23/126/eng@"/>
+                    <FRBRdate date="2012-01-24" name="Expression"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/ak/gazetteList/2011-12-23/126/eng@/main.xml"/>
+                    <FRBRuri value="/ak/gazetteList/2011-12-23/126/eng@/main.akn"/>
+                    <FRBRdate date="2012-01-24" name="XMLConversion"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                </FRBRManifestation>
+            </identification>
+            <publication date="2011-12-23" name="bill" showAs="Bungeni Gazette" number="20102088"/>
+            <references source="#bungeni">
+                <TLCOrganization id="publisher" href="/ontology/organizations/akn/publisher" showAs="Parliament"/>
+                <TLCPerson id="palmirani" href="akn.user.monica.palmirani.1966-02-28" showAs="Editor"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/akn/bungeni" showAs="Bungeni"/>
+                <TLCRole id="author" href="/ontology/roles/akn/author" showAs="Author of Document"/>
+                <TLCRole id="editor" href="/ontology/roles/akn/editor" showAs="Editor of Document"/>
+            </references>
+        </meta>
+        <coverPage>
+            <container id="cont1" name="coverContainer">
+                <p>
+                    <docType>Special Issue Gazette</docType>
+                    Vol. CXIII - No.<docNumber>126</docNumber>, Dated
+                    <docDate date="2011-12-23">23rd December, 2011</docDate>
+                </p>
+            </container>
+        </coverPage>
+        <collectionBody>
+            <interstitial id="int1">
+                <p>GAZETTE NOTICE NO. 16474</p>
+            </interstitial>
+            <componentRef id="refc1" src="/ak/gazette/2011-12-22/16474/eng@/main" showAs="GAZETTE NOTICE NO. 16474"/>
+            <interstitial id="int2">
+                <p>Introduction</p>
+            </interstitial>
+            <componentRef id="refc2" src="/ak/gazette/2011-12-21/16475/eng@/main" showAs="GAZETTE NOTICE NO. 16475"/>
+            <interstitial id="int3">
+                <p>Introduction</p>
+            </interstitial>
+            <componentRef id="refc3" src="/ak/gazette/2011-12-21/16476/eng@/main" showAs="GAZETTE NOTICE NO. 16476"/>
+        </collectionBody>
+    </officialGazette>
+</akomaNtoso>

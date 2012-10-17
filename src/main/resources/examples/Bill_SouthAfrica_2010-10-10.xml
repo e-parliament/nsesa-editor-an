@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <bill contains="originalVersion">
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/za/bill/2010-07-10/B24/main"/>
+                    <FRBRuri value="/za/bill/2010-07-10/B24/"/>
+                    <FRBRdate date="2010-07-10" name="Enactment"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <componentInfo>
+                        <componentData id="wmain" href="#emain" name="main" showAs="Main document"/>
+                        <componentData id="wmemorandum" href="#ememorandum" name="memorandum"
+                                       showAs="Memorandum on the objects of the higher education laws amendment bill, 2010"/>
+                    </componentInfo>
+                    <FRBRcountry value="za"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/za/bill/2010-07-10/B24/eng@/main"/>
+                    <FRBRuri value="/za/bill/2010-07-10/B24//eng@"/>
+                    <FRBRdate date="2010-11-24" name="Expression"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="emain" href="#mmain" name="main" showAs="Main document"/>
+                        <componentData id="ememorandum" href="#mmemorandum" name="memorandum"
+                                       showAs="Memorandum on the objects of the higher education laws amendment bill, 2010"/>
+                    </componentInfo>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/za/bill/2010-07-10/B24/eng@/main.xml"/>
+                    <FRBRuri value="/za/bill/2010-07-10/B24/eng@/main.akn"/>
+                    <FRBRdate date="2010-11-24" name="XMLConversion"/>
+                    <FRBRauthor href="#user.palmirani" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="mmain" href="main.xml" name="main" showAs="Main document"/>
+                        <componentData id="mmemorandum" href="memorandum.xml" name="memorandum"
+                                       showAs="Memorandum on the objects of the higher education laws amendment bill, 2010"/>
+                    </componentInfo>
+                </FRBRManifestation>
+            </identification>
+            <classification source="#main">
+                <keyword value="education" showAs="Education" dictionary="/eurovoc/passo1/passo2/voce4"/>
+            </classification>
+            <lifecycle source="#bungeni">
+                <eventRef date="2010-07-19" id="e1" source="#ro1" type="generation"/>
+            </lifecycle>
+            <analysis source="#cirsfid">
+                <activeModifications>
+                    <textualMod id="amod1" type="substitution">
+                        <source href="#art2-lst1-itma-mod1"/>
+                        <destination href="/ke/act/2010-08-27/1/main/"/>
+                        <old href="#art2-lst1-itma-mod1-qtd2"/>
+                        <new href="#art2-lst1-itma-mod1-qtd1"/>
+                    </textualMod>
+                    <textualMod id="amod2" type="insertion">
+                        <source href="#art2-lst1-itmb-mod1"/>
+                        <destination href="/ke/act/2010-08-27/1/main/"/>
+                        <new href="#art2-lst1-itmb-mod1-qtd1"/>
+                    </textualMod>
+                    <textualMod id="amod3" type="substitution">
+                        <source href="#art2-lst1-itmc-mod1"/>
+                        <destination href="/ke/act/2010-08-27/1/main/"/>
+                        <new href="#art2-lst1-itmc-mod1-qtd1"/>
+                    </textualMod>
+                </activeModifications>
+            </analysis>
+            <references source="#bungeni">
+                <activeRef id="ra1" href="/ke/act/2010-08-27/1/main" showAs=""/>
+                <hasAttachment id="memorandum" href="za/bill/2010-07-10/B24//eng@/memorandum"
+                               showAs="Memorandum on the objects of the higher education laws amendment bill, 2010"/>
+                <TLCOrganization id="parliament" href="/ontology/organizations/zaf/parliament" showAs="Parliament"/>
+                <TLCPerson id="user.palmirani" href="ken.user.monica.palmirani.1966-02-28" showAs="Editor"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/za/bungeni" showAs="Bungeni"/>
+                <TLCRole id="author" href="/ontology/roles/zaf/author" showAs="Author of Document"/>
+                <TLCRole id="editor" href="/ontology/roles/ita/editor" showAs="Editor of Document"/>
+            </references>
+        </meta>
+        <preface>
+            <p>
+                <docTitle>REPUBLIC OF SOUTH AFRICA HIGHER EDUCATION LAWS AMENDMENT BILL</docTitle>
+                (As introduced in the National Assembly (proposed section 75); explanatory summary of
+                Bill published in Government Gazette No. 33393 of 19 July 2010)
+                (The English text is the offıcial text of the Bill)
+                <docProponent>(MINISTER OF HIGHER EDUCATION AND TRAINING)</docProponent>
+            </p>
+            <p>
+                <docType>BILL</docType>
+            </p>
+            <longTitle>
+                <p>To amend—</p>
+                <p>-the Higher Education Act, 1997, so as to amend certain definitions; to
+                    ensure that all higher education programmes offered in South Africa by a
+                    foreign juristic person are registered on the National Qualifications
+                    Framework; and to ensure that higher education institutions may offer a
+                    degree, diploma or certificate only if it is registered on the National
+                    Qualifications Framework;
+                </p>
+                <p>-the Skills Development Act, 1998, so as to amend certain definitions; to
+                    provide for the appointment of the chief executive officer of the QCTO
+                    and for the transfer to and appointment of staff to the QCTO; and to
+                    further regulate the composition of the QCTO;
+                </p>
+                <p>-the National Student Financial Aid Scheme Act, 1999, so as to amend
+                    certain definitions; and
+                </p>
+                <p>-the National Qualifications Framework Act, 2008, so as to amend a
+                    definition and delete another; to amend the application of the Act in order
+                    to require that all qualifications offered in the Republic are registered on
+                    the National Qualifications Framework; and to remove references in the
+                    said Act to the Minister of Labour;
+                </p>
+            </longTitle>
+        </preface>
+        <preamble class="preamble">
+            <p>and to provide for matters connected therewith.</p>
+            <p>BE IT ENACTED by the Parliament of the Republic of South Africa, as
+                follows:—
+            </p>
+        </preamble>
+        <body>
+            <section id="sec1">
+                <num>1.</num>
+                <heading>Amendment of section 1 of Act 101 of 1997, as amended by section 1 of Act 55 of
+                    1999, section 1 of Act 54 of 2000, section 1 of Act 63 of 2002 and section 1 of Act 38
+                    of 2008
+                    <eol breakat="5"/>
+                </heading>
+                <content>
+                    <blockList id="lst1">
+                        <listIntroduction>
+                            <ref id="ref1" href="">Section 1 of the Higher Education Act, 1997</ref>, is hereby amended
+                            by
+                        </listIntroduction>
+                        <item id="lst1-itm-a">
+                            <num>(a)</num>
+                            <p>
+                                <authorialNote id="ath1" refersTo="sideNote" marker="1">
+                                    <p>Side note of publication just for example</p>
+                                </authorialNote>
+                                <mod id="mod1">the substitution for the definition of ‘‘
+                                    <quotedText id="mod1-qtd1">
+                                        Department of Education
+                                    </quotedText>’’of the
+                                    following definition:
+                                    ‘‘ ‘Department of Education’ means the<del>[Government department
+                                        responsible for education at national level]</del>Department of Higher
+                                    <eol/>
+                                    Education and Training;’’;
+                                </mod>
+                            </p>
+                        </item>
+                        <item id="lst1-itm-b">
+                            <num>(b)</num>
+                            <p>the substitution for the definition of ‘‘Director-General’’ of the following
+                                definition:
+                                ‘‘ ‘Director-General’ means the Director-General of the Department of
+                                Higher<eol/>Education and Training;’’; and
+                            </p>
+                        </item>
+                        <item id="lst1-itm-c">
+                            <num>(c)</num>
+                            <p>the substitution for the definition of ‘‘Minister’’ of the following definition:
+                                ‘‘ ‘Minister’ means the Minister of Higher Education and Training;’’.
+                            </p>
+                        </item>
+                    </blockList>
+                </content>
+            </section>
+            <section id="sec2">
+                <num>2.</num>
+                <heading>Substitution of section 51 of Act 101 of 1997, as substituted by section 6 of Act 54 of
+                    2000
+                </heading>
+                <content>
+                    <p>The following section is hereby substituted for section 51 of the Higher Education
+                        Act, 1997:
+                        <mod id="mod2">‘‘
+                            <quotedStructure id="mod1-qts1">
+                                <section id="sec51">
+                                    <num>51.</num>
+                                    <heading>Registration of private higher education institutions</heading>
+                                    <subsection id="sec51-subs1">
+                                        <num>(1)</num>
+                                        <content>
+                                            <p>
+                                                No person other than a public higher education institution or an
+                                                organ of state may provide higher education unless that person is—
+                                                (a) in the prescribed manner, registered or conditionally registered as
+                                                a
+                                                private higher education institution in terms of this Act; and
+                                                (b) registered or recognised as a juristic person in terms of the
+                                                Companies
+                                                Act, 1973 (Act No. 61 of 1973), before such person is registered or
+                                                conditionally registered [as contemplated in] in accordance with
+                                                paragraph (a).
+                                            </p>
+                                        </content>
+                                    </subsection>
+                                    <subsection id="sec51-subs2">
+                                        <num>(2)</num>
+                                        <content>
+                                            <p>
+                                                If the person contemplated in subsection (1) is a foreign juristic
+                                                person, that person must ensure that any qualification or
+                                                part-qualification
+                                                offered within the Republic is registered on the sub-framework for
+                                                higher
+                                                education on the National Qualifications Framework contemplated in
+                                                section 7(b) read with section 13(1)(h) of the National Qualifications
+                                                Framework Act.
+                                            </p>
+                                        </content>
+                                    </subsection>
+                                </section>
+                            </quotedStructure>
+                            ’’.
+                        </mod>
+                    </p>
+                </content>
+            </section>
+            <section id="sec3">
+                <num>3.</num>
+                <heading>Insertion of section 65D in Act 101 of 1997</heading>
+                <content>
+                    <p>
+                        The following section is hereby inserted in the Higher Education Act, 1997, after
+                        section 65C:
+                        ‘‘Qualifications registered on National Qualifications Framework
+                        65D. (1) No person may offer a degree, diploma or certificate unless such
+                        degree, diploma or certificate is registered on the sub-framework for higher
+                        education on the National Qualifications Framework contemplated in
+                        section 7(b) read with section 13(1)(h) of the National Qualifications
+                        Framework Act.
+                        (2) Notwithstanding subsection (1), a public higher education institution
+                        intending to offer any education programme or trade and occupational
+                        learning programme that leads to a qualification or part-qualification on the
+                        sub-framework for trade and occupation contemplated in section 7(c) of the
+                        National Qualifications Framework Act may offer the qualification or
+                        part-qualification subject to—
+                        (a) the approval of the Minister; and
+                        (b) compliance with any condition set by the Minister.’’.
+
+                    </p>
+                </content>
+            </section>
+            <section id="sec4">
+                <num>4.</num>
+                <heading>Short title</heading>
+                <content>
+                    <p>This Act is the Higher Education Laws Amendment Act, 2010.
+                    </p>
+                </content>
+            </section>
+        </body>
+        <attachments>
+            <componentRef id="annex1" src="/za/bill/2010-07-10/B24/eng@/memorandum.xml" showAs="Memorandum"/>
+        </attachments>
+    </bill>
+</akomaNtoso>

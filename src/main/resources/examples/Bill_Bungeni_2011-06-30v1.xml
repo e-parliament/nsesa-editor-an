@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <documentCollection name="bill">
+        <!-- Example of bill using documentCollection structure: all the documents are encapsulated by the root tag.
+          The root tag is the folder and includes separate meta section.
+          Each single document in the folder has each specific meta section.
+          -->
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/ak/bill/2011-06-30/1234/main"/>
+                    <FRBRuri value="/ak/bill/2011-06-30/1234/"/>
+                    <FRBRdate date="2011-06-30" name="Enactment"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <FRBRcountry value="ak"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/ak/bill/2011-06-30/1234/eng@/main"/>
+                    <FRBRuri value="/ak/bill/2011-06-30/1234/eng@"/>
+                    <FRBRdate date="2011-11-24" name="Expression"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/ak/bill/2011-06-30/1234/eng@/main.xml"/>
+                    <FRBRuri value="/ak/bill/2011-06-30/1234/eng@/main.akn"/>
+                    <FRBRdate date="2011-11-24" name="XMLConversion"/>
+                    <FRBRauthor href="#palmirani" as="#editor"/>
+                </FRBRManifestation>
+            </identification>
+            <publication date="2011-07-16" name="bill" showAs="Bungeni Gazette" number="999"/>
+            <references source="#bungeni">
+                <TLCOrganization id="parliament" href="/ontology/organizations/akn/parliament" showAs="Parliament"/>
+                <TLCPerson id="palmirani" href="akn.user.monica.palmirani.1966-02-28" showAs="Editor"/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/akn/bungeni" showAs="Bungeni"/>
+                <TLCRole id="author" href="/ontology/roles/akn/author" showAs="Author of Document"/>
+                <TLCRole id="editor" href="/ontology/roles/akn/editor" showAs="Editor of Document"/>
+            </references>
+        </meta>
+        <collectionBody>
+            <!-- The bill -->
+            <bill>
+                <meta>
+                    <identification source="#bungeni">
+                        <FRBRWork>
+                            <FRBRthis value="/ak/billBody/2011-06-30/1234/main"/>
+                            <FRBRuri value="/ak/billBody/2011-06-30/1234/"/>
+                            <FRBRdate date="2011-06-30" name="Enactment"/>
+                            <FRBRauthor href="#parliament" as="#author"/>
+                            <FRBRcountry value="ak"/>
+                        </FRBRWork>
+                        <FRBRExpression>
+                            <FRBRthis value="/ak/billBody/2011-06-30/1234/eng@/main"/>
+                            <FRBRuri value="/ak/billBody/2011-06-30/1234/eng@"/>
+                            <FRBRdate date="2011-11-24" name="Expression"/>
+                            <FRBRauthor href="#palmirani" as="#editor"/>
+                            <FRBRlanguage language="eng"/>
+                        </FRBRExpression>
+                        <FRBRManifestation>
+                            <FRBRthis value="/ak/billBody/2011-06-30/1234/eng@/main.xml"/>
+                            <FRBRuri value="/ak/billBody/2011-06-30/1234/eng@/main.akn"/>
+                            <FRBRdate date="2011-11-24" name="XMLConversion"/>
+                            <FRBRauthor href="#user.palmirani" as="#editor"/>
+                        </FRBRManifestation>
+                    </identification>
+                    <!-- note that the publication is not mandatory in the bill,
+                         in case it is the date of publication of the bill in the official journal of the Parliament -->
+                    <!-- classification example -->
+                    <classification source="#sec1">
+                        <keyword value="quorum" showAs="Quorum" dictionary="/eurovoc/passo1/passo2/voce4"/>
+                    </classification>
+                    <classification source="#sec2">
+                        <keyword value="referendum" showAs="Referendum" dictionary="/eurovoc/passo1/passo2/voce4"/>
+                    </classification>
+                    <lifecycle source="#bungeni">
+                        <eventRef date="2011-06-30" id="e1" source="#ro1" type="generation"/>
+                    </lifecycle>
+                    <analysis source="#cirsfid">
+                        <!-- modification annotation example -->
+                        <activeModifications>
+                            <textualMod id="amod1" type="substitution">
+                                <source href="#sec2-lst1-itma-mod1"/>
+                                <destination href="/ak/act/2011-08-27/1/main/"/>
+                                <old href="#sec2-lst1-itma-mod1-qtd2"/>
+                                <new href="#sec2-lst1-itma-mod1-qtd1"/>
+                            </textualMod>
+                            <textualMod id="amod2" type="insertion">
+                                <source href="#sec2-lst1-itmb-mod1"/>
+                                <destination href="/ak/act/2010-08-27/1/main/"/>
+                                <new href="#sec2-lst1-itmb-mod1-qtd1"/>
+                            </textualMod>
+                            <textualMod id="amod3" type="substitution">
+                                <source href="#sec2-lst1-itmc-mod1"/>
+                                <destination href="/ak/act/2010-08-27/1/main/"/>
+                                <new href="#sec2-lst1-itmc-mod1-qtd1"/>
+                            </textualMod>
+                        </activeModifications>
+                    </analysis>
+                    <references source="#bungeni">
+                        <original id="ro1" href="ak/billBody/2011-06-30/1234"
+                                  showAs="THE CONSTITUTION OF BUNGENI (AMENDMENT) BILL"/>
+                        <activeRef id="ra1" href="/ak/act/2010-08-27/1/main" showAs="THE CONSTITUTION OF BUNGENI"/>
+                    </references>
+                </meta>
+                <preface>
+                    <p>
+                        <docTitle>THE CONSTITUTION OF BUNGENI (AMENDMENT) BILL, 2011</docTitle>
+                    </p>
+                </preface>
+                <preamble>
+                    <p>Bill for</p>
+                    <p>AN ACT of Parliament to amend the
+                        <ref id="ref1" href="/ak/act/2010-08-27/1/main">Constitution of BUNGENI</ref>
+                    </p>
+                    <p>ENACTED by the<docProponent>Parliament of BUNGENI</docProponent>, as follows:-
+                    </p>
+                </preamble>
+                <body>
+                    <section id="sec1">
+                        <num>1.</num>
+                        <heading>Amendment of<ref id="ref2" href="/ak/act/2010-08-27/1/main#sct47A">section 47A of the
+                            Constitution</ref>.
+                        </heading>
+                        <content>
+                            <p>This Act may be cited as the Constitution of Bungeni (Amendment) Bill, 2011.</p>
+                        </content>
+                    </section>
+                    <section id="sec2">
+                        <num>2.</num>
+                        <heading>Short title</heading>
+                        <content>
+                            <!-- example of list with introduction before the items -->
+                            <blockList id="sec2-lst1">
+                                <listIntroduction>
+                                    <!-- example of side note: placement attribute indicates the side where to put the sidenote -->
+                                    <authorialNote id="ath1" marker="#sec2-lst1-itma" refersTo="#sideNote"
+                                                   placement="left">
+                                        <p>Side note - just for example</p>
+                                    </authorialNote>
+                                    The Constitution of Bungeni is amended in<ref id="ref3"
+                                                                                  href="/ak/act/2010-08-27/1/main#sect47A">
+                                    section 47A</ref>—
+                                </listIntroduction>
+                                <item id="sec2-lst1-itma">
+                                    <p>
+                                        (a) in<ref id="ref4" href="/ak/act/2010-08-27/1/main#sec47A-sub2-itmb">
+                                        subsection (2) (b)</ref>,
+                                        by deleting the words
+                                        <mod id="sec2-lst1-itma-mod1">“
+                                            <quotedText id="sec2-lst1-itma-mod1-qtd1">sixty-five per cent”</quotedText>
+                                            and substituting therefor the words “<quotedText
+                                                    id="sec2-lst1-itma-mod1-qtd2">
+                                                a majority</quotedText>”;
+                                        </mod>
+                                    </p>
+                                </item>
+                                <item id="sec2-lst1-itmb">
+                                    <p>(b) by inserting the following new subsection immediately after
+                                        <ref id="ref5" href="/ak/act/2010-08-27/1/main#sec47A-sub3">subsection (3)</ref>
+                                        —
+                                        <mod id="sec2-lst1-itmb-mod1">“
+                                            <quotedStructure id="sec2-lst1-itmb-mod1-qtd1">
+                                                <section id="sec2-lst1-itmb-mod1-qtdS1-sec47A-sub3">
+                                                    <num>(3A)</num>
+                                                    <content>
+                                                        <p>Notwithstanding the provisions of this section, but without
+                                                            prejudice to<ref id="ref6"
+                                                                             href="/ak/act/2010-08-27/1/main#sec47A-sub2-itmb">
+                                                                (2) (b)</ref>, an
+                                                            Act of Parliament may provide for re-publication of the
+                                                            draft Constitution and its re-introduction into the
+                                                            National Assembly for re-consideration.
+                                                        </p>
+                                                    </content>
+                                                </section>
+                                            </quotedStructure>
+                                            ”;
+                                        </mod>
+                                    </p>
+                                </item>
+                                <item id="sec2-lst1-itmc">
+                                    <p>(c) by deleting
+                                        <ref id="ref7" href="/ak/act/2010-08-27/1/main#sct47A-subsct4">subsection (4)
+                                        </ref>
+                                        and substituting therefor the
+                                        following new subsection—
+                                        <mod id="sec2-lst1-itmc-mod1">
+                                            “
+                                            <quotedStructure id="sec2-lst1-itmc-mod1-qtd1">
+                                                <section id="sec2-lst1-itmc-mod1-qtd1-sec47A-sub4">
+                                                    <content>
+                                                        <p>
+                                                            (4) The Interim Independent Electoral Commission shall,
+                                                            not later than ninety days from the date of publication of a
+                                                            draft
+                                                            Constitution pursuant to
+                                                            <ref id="ref8" href="/ak/act/2010-08-27/1/main#sec47A-sub2">
+                                                                subsection (2)
+                                                            </ref>
+                                                            or re-publication
+                                                            pursuant to<ref id="ref9"
+                                                                            href="/ak/act/2010-08-27/1/main#sec47A-sub3A">
+                                                            subsection (3A)</ref>, hold a referendum as may be
+                                                            prescribed by an Act of Parliament to give the people of
+                                                            Bungeni Republic
+                                                            the opportunity to ratify the draft Constitution.
+                                                        </p>
+                                                    </content>
+                                                </section>
+                                            </quotedStructure>
+                                            ”
+                                        </mod>
+                                    </p>
+                                </item>
+                            </blockList>
+                        </content>
+                    </section>
+                </body>
+            </bill>
+            <!-- Interstitial part of the document-->
+            <interstitial id="int1">
+                <p>The following document is the MEMORANDUM OF OBJECTS AND REASONS</p>
+            </interstitial>
+            <!-- The memorandum -->
+            <doc name="memorandum">
+                <meta>
+                    <identification source="#bungeni">
+                        <FRBRWork>
+                            <FRBRthis value="/ak/billReport/2011-06-30/1234/main"/>
+                            <FRBRuri value="/ak/billReport/2011-06-30/1234/"/>
+                            <FRBRdate date="2011-06-30" name="Enactment"/>
+                            <FRBRauthor href="#parliament" as="#author"/>
+                            <FRBRcountry value="ak"/>
+                        </FRBRWork>
+                        <FRBRExpression>
+                            <FRBRthis value="/ak/billReport/2011-06-30/1234/eng@/main"/>
+                            <FRBRuri value="/ak/billReport/2011-06-30/1234/eng@"/>
+                            <FRBRdate date="2011-11-24" name="Expression"/>
+                            <FRBRauthor href="#palmirani" as="#editor"/>
+                            <FRBRlanguage language="eng"/>
+                        </FRBRExpression>
+                        <FRBRManifestation>
+                            <FRBRthis value="/ak/billReport/2011-06-30/1234/eng@/main.xml"/>
+                            <FRBRuri value="/ak/billReport/2011-06-30/1234/eng@/main.akn"/>
+                            <FRBRdate date="2011-11-24" name="XMLConversion"/>
+                            <FRBRauthor href="#user.palmirani" as="#editor"/>
+
+                        </FRBRManifestation>
+                    </identification>
+                    <publication date="2011-07-16" name="bill" showAs="Bungeni Gazette" number="999"/>
+                    <references source="">
+                        <original id="ro2" href="/ak/billReport/2011-06-30/1234/" showAs="Memorandum"/>
+                        <TLCPerson id="smith" href="akn.user.john.smith.1946-01-01" showAs="John Smith"/>
+                    </references>
+                </meta>
+                <preface>
+                    <p>
+                        <docTitle>MEMORANDUM OF OBJECTS AND REASONS</docTitle>
+                    </p>
+                </preface>
+                <mainBody>
+                    <container id="ctn1" name="objects">
+                        <p>
+                            The objective of this Bill is to amend the Constitution to facilitate
+                            the re-publication and re-introduction of the draft Constitution
+                            into the National Assembly for re-consideration. This will enable
+                            the National Assembly address the contentious issues which have
+                            polarised the country following the publication of the proposed
+                            Constitution by the Attorney-General. The re-publication of the
+                            Bill contemplated in the Bill would be necessitated if the
+                            National Assembly votes to have the draft Constitution amended
+                            to resolve the contentious issues which have arisen following the
+                            publication of the proposed Constitution. Similarly, this Bill
+                            seeks to lower the threshold required to approve the draft
+                            Constitution by the National Assembly, from sixty-five per cent
+                            of the members, to a majority of the members.
+                            The enactment of this Bill shall entail additional
+                            expenditure of public funds to be provided for through the
+                            estimates.
+                        </p>
+                    </container>
+                </mainBody>
+                <conclusions>
+                    <p>
+                        <date date="2011-06-30">the 30th June, 2011.</date>
+                    </p>
+                    <p>
+                        <!-- The proponent of the bill -->
+                        <docProponent refersTo="#smith">John Smith,</docProponent>
+                    </p>
+                    <p>Member of Parliament.</p>
+                </conclusions>
+            </doc>
+            <!-- An Informative part of the document-->
+            <doc name="billInfo">
+                <meta>
+                    <identification source="#bungeni">
+                        <FRBRWork>
+                            <FRBRthis value="/ak/billInfo/2011-06-30/1234/main"/>
+                            <FRBRuri value="/ak/billInfo/2011-06-30/1234/"/>
+                            <FRBRdate date="2011-06-30" name="Enactment"/>
+                            <FRBRauthor href="#parliament" as="#author"/>
+                            <FRBRcountry value="ak"/>
+                        </FRBRWork>
+                        <FRBRExpression>
+                            <FRBRthis value="/ak/billInfo/2011-06-30/1234/eng@/main"/>
+                            <FRBRuri value="/ak/billBody/2011-06-30/1234/eng@"/>
+                            <FRBRdate date="2011-11-24" name="Expression"/>
+                            <FRBRauthor href="#palmirani" as="#editor"/>
+                            <FRBRlanguage language="eng"/>
+                        </FRBRExpression>
+                        <FRBRManifestation>
+                            <FRBRthis value="/ak/billInfo/2011-06-30/1234/eng@/main.xml"/>
+                            <FRBRuri value="/ak/billInfo/2011-06-30/1234/eng@/main.akn"/>
+                            <FRBRdate date="2011-11-24" name="XMLConversion"/>
+                            <FRBRauthor href="#user.palmirani" as="#editor"/>
+                        </FRBRManifestation>
+                    </identification>
+                </meta>
+                <preface>
+                    <p>
+                        <docTitle>Section 47A which it is proposed to amend—</docTitle>
+                    </p>
+                </preface>
+                <mainBody>
+                    <section id="sec47A">
+                        <num>47A.</num>
+                        <subsection id="sec47A-subsct1">
+                            <num>(1)</num>
+                            <content>
+                                <p>Subject to this section, this Constitution may be replaced.</p>
+                            </content>
+                        </subsection>
+                        <subsection id="sec47A-subsct2">
+                            <num>(2)</num>
+                            <content>
+                                <blockList id="sec47A-subsct2-lst1">
+                                    <listIntroduction>Notwithstanding anything to the contrary in this
+                                        Constitution -
+                                    </listIntroduction>
+                                    <item id="sec47A-subsct2-lst1-itma">
+                                        <p>
+                                            (a) the sovereign right to replace this Constitution with a
+                                            new Constitution vests collectively in the people of
+                                            Bungeni and shall be exercisable by the people of Bungeni
+                                            through a referendum, in accordance with this section;
+                                        </p>
+                                    </item>
+                                    <item id="sec47A-subsct2-lst1-itmb">
+                                        <p>(b) when a draft Constitution proposing the replacement of
+                                            this Constitution has been introduced into the National
+                                            Assembly, no alteration shall be made in it unless such
+                                            alteration shall be made in it unless such alteration is
+                                            supported by the votes of not less than sixty-five per
+                                            cent of all the members of the Assembly (excluding the
+                                            ex officio members); and
+                                        </p>
+                                    </item>
+                                    <item id="sec47A-subsct2-lst1-itmc">
+                                        <p>(c) the National Assembly shall, within thirty days of the
+                                            introduction in the Assembly of draft Constitution
+                                            proposing the replacement of this Constitution
+                                            proposing the replacement of this Constitution
+                                            proposing the replacement of this Constitution, debate
+                                            all proposed amendments to the draft Constitution, and
+                                            submit to the Attorney-General the draft Constitution
+                                            and any proposed amendments thereto as may be
+                                            approved by the Assembly in accordance with
+                                            paragraph (b).
+                                        </p>
+                                    </item>
+                                </blockList>
+                            </content>
+                        </subsection>
+                        <subsection id="sec47A-subsct3">
+                            <num>(3)</num>
+                            <content>
+                                <p>Proposals for amendment to a draft Constitution under
+                                    subsection (2) shall be considered and the draft Constitution
+                                    published in such manner as may be prescribed by or under an
+                                    Act of Parliament.
+                                </p>
+                            </content>
+                        </subsection>
+                        <subsection id="sec47A-subsct4">
+                            <num>(4)</num>
+                            <content>
+                                <p>The Interim Independent Electoral Commission shall,
+                                    not later than ninety days from the date of publication of a draft
+                                    Constitution pursuant to subsection (2), hold a referendum as
+                                    may be prescribed by or under an Act of Parliament to give the
+                                    people of Bungeni the opportunity to ratify the draft Constitution.
+                                </p>
+                            </content>
+                        </subsection>
+                    </section>
+                </mainBody>
+            </doc>
+        </collectionBody>
+    </documentCollection>
+</akomaNtoso>

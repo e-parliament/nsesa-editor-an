@@ -1,0 +1,1415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<releases>
+    <release number="15">
+        <title>Latest Release</title>
+        <title>Diff:Jul 2011 &amp; Oct 2011</title>
+        <notes>
+            &lt;p class="bodyparagraph">This is a new full release of the Akoma Ntoso XML-based document format for
+            legislative documents.
+            This is the first of the 2.0 releases for this schema.&lt;/p&gt;
+        </notes>
+        <diff>http://code.google.com/p/akomantoso/source/diff?spec=svn174&amp;r=174&amp;format=side&amp;path=/release/trunk/schemas2.0/akomantoso20.xsd</diff>
+        <source>http://code.google.com/p/akomantoso/source/browse/release/trunk/schemas2.0/akomantoso20.xsd?spec=svn174&amp;r=174</source>
+    </release>
+    <release number="14">
+        <title>Diff:Jul 2011 &amp; Oct 2011</title>
+        <notes>
+            &lt;p class="bodyparagraph">This a minor release with some additions and bug fixes drawn from discussions
+            held at the Ravenna Legislative XML Summer School in September 2011. This is an almost backward compatible
+            release.&#160; This release is the first one to exclusively use the new namespace declaration
+            http://www.akomantoso.org/2.0.&lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li&gt;A new attribute, &lt;span class="xmlinline">number&lt;/span&gt;, has been specified for the
+            metadata &lt;span class="xmlinline">publication&lt;/span&gt; element&lt;/li&gt;
+            &lt;li&gt;Element &lt;span class="xmlinline">list&lt;/span&gt;, a block-level hierarchical container, is now
+            called&lt;span class="xmlinline"> blockList&lt;/span&gt;, thus freeing the name &lt;span
+            class="xmlinline">list&lt;/span&gt; to become a new hierarchical container in the main hierarchy. &lt;/li&gt;
+            &lt;li&gt;Three new hierarchical containers have been added, &lt;span class="xmlinline">division&lt;/span&gt;,
+            &lt;span class="xmlinline">list&lt;/span&gt; and &lt;span class="xmlinline">sublist&lt;/span&gt;. &lt;/li&gt;
+            &lt;li&gt;Attribute for has been added to &lt;span class="xmlinline">quotedText&lt;/span&gt; for a similar
+            purpose as in &lt;span class="xmlinline">quotedStructure&lt;/span&gt;, in case of multiple quotations within
+            a same &lt;span class="xmlinline">mmod&lt;/span&gt; or &lt;span class="xmlinline">rmod&lt;/span&gt;. &lt;/li&gt;
+            &lt;li&gt;A new element &lt;span class="xmlinline">fillin&lt;/span&gt; has been added as an inline element
+            (to be probably shown as a dotted line or any other typographical characteristics to represent a fill-in
+            element in a printed form, that is as an example of an actual form. It is NOT meant to be used for form
+            elements as in HTML, i.e. as a way to collect input from the reader and deliver to some server-side process.
+            &lt;/li&gt;
+            &lt;li&gt;Element &lt;span class="xmlinline">subheading&lt;/span&gt; can now be placed within a &lt;span
+            class="xmlinline">quotedStructure&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;Two new elements, &lt;span class="xmlinline">extractText&lt;/span&gt; and &lt;span
+            class="xmlinline">extractStructure&lt;/span&gt;, can now be specified in any context to express an extract
+            from a different text. &lt;/li&gt;
+            &lt;li&gt;Two new inline HTML elements have been added, &lt;span class="xmlinline">sup&lt;/span&gt; and &lt;span
+            class="xmlinline">sub&lt;/span&gt;, for respectively superscript and subscript text. &lt;/li&gt;
+            &lt;/ul&gt;
+        </notes>
+        <diff>http://code.google.com/p/akomantoso/source/diff?spec=svn174&amp;r=174&amp;format=side&amp;path=/release/trunk/schemas2.0/akomantoso20.xsd</diff>
+        <source>http://code.google.com/p/akomantoso/source/browse/release/trunk/schemas2.0/akomantoso20.xsd?spec=svn174&amp;r=174</source>
+    </release>
+    <release number="13">
+        <title>Diff:Dec 2009 &amp; Jul 2011</title>
+        <notes>
+            &lt;div class="" id="parent-fieldname-text"&gt;
+            &lt;p style="text-align: justify;"&gt;The 15 July 2011 release represents a major release, sufficiently
+            different and richer than previous ones to justify a new version number and a new namespace version. Many
+            modifications were introduced in intermediate tentative releases throughout 2010 and 2011.&lt;br/&gt; In
+            order to allow a smooth transition to Akoma Ntoso 2.0, this release will accept and support both namespace
+            declarations.&lt;/p&gt;
+            &lt;ol&gt;
+            &lt;li&gt;
+            &lt;h4&gt;General changes&lt;/h4&gt;
+            &lt;div&gt;Namespace declaration can be either &lt;span class="xmlinline"&gt;http://www.akomantoso.org/1.0
+            or http://www.akomantoso.org/2.0 &lt;/span&gt;. This is the only release to exist in both namespaces.
+            Subsequent releases will only use the 2.0 namespace.&lt;br/&gt; An improved specification of the naming
+            convention is presented, introducing the few elements that remained to align it to the CEN Metalex naming
+            convention.&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;Multi-linguism&lt;/h4&gt;
+            &lt;p style="text-align: justify;"&gt;The specification of the human language in which the document was
+            written has always been rented out to a specific part of the Akoma Ntoso naming convention, but is not
+            specified anywhere in the metadata of the document, so that the metadata is not a superset of the
+            information that can be derived from the document’s name, contrarily to the CEN Metalex specifications.
+            Furthermore, it has not be possible, so far, to specify multiple languages for the same document, nor
+            indicating exceptions to the main language of the document, nor specifying the language history of a
+            document,&lt;br/&gt; In this release a number of improvements and additions was made, so that real language
+            annotations can be expressed on the document.&lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;&lt;span style="font-weight: bold;"&gt;Specifying the main language(s) of a
+            document&lt;/span&gt;: the new expression-level FRBRlanguage element was added to the &lt;span
+            class="xmlinline"&gt;FRBRExpression&lt;/span&gt; structure of the metadata, where the main language(s) of
+            the document are specified using the codes of RFC 4646. If more than one language are present in this
+            specific expression, then the &lt;span class="xmlinline"&gt;FRBRlanguage&lt;/span&gt; element can be
+            repeated.&lt;/li&gt;
+            &lt;li class="bullets"&gt;&lt;span style="font-weight: bold;"&gt;Specifying the actual language of
+            individual fragments of the text&lt;/span&gt;: text fragments in a language different from the language
+            specified in the &lt;span class="xmlinline"&gt;FRBRlanguage &lt;/span&gt;needs to be wrapped in a element
+            (if none appropriate exists, a span element) and the &lt;span class="xmlinline"&gt;xml:lang &lt;/span&gt;attribute
+            needs to be used in the fragment with the appropriate RFC4646 code. if two or more &lt;span
+            class="xmlinline"&gt;FRBRlanguage&lt;/span&gt; elements exist, every fragment of the text needs to have its
+            own xml:lang attribute according to the specifications of http://www.w3.org/TR/REC-xml/, section 2.12.&lt;/li&gt;
+            &lt;li class="bullets"&gt;&lt;span style="font-weight: bold;"&gt;Specifying translations&lt;/span&gt;: the
+            expression-level &lt;span class="xmlinline"&gt;FRBRtranslation&lt;/span&gt; element, available in the &lt;span
+            class="xmlinline"&gt;FRBRExpression &lt;/span&gt;structure allows to specify that the document is a
+            (authoritative/non authoritative/unknown according to attribute &lt;span class="xmlinline"&gt;authoritative&lt;/span&gt;)
+            translation from a different language (attribute &lt;span class="xmlinline"&gt;language)&lt;/span&gt; made
+            by some agent (attribute &lt;span class="xmlinline"&gt;by&lt;/span&gt;) of another expression (attribute
+            &lt;span class="xmlinline"&gt;href&lt;/span&gt;).&lt;/li&gt;
+            &lt;li class="bullets"&gt;Attribute “pivot” is available in &lt;span class="xmlinline"&gt;FRBRTranslation&lt;/span&gt;
+            elements to specify the pivot language for non-final translations (e.g., in a translation from Danish to
+            Italian through English, two &lt;span class="xmlinline"&gt;FRBRTranslation &lt;/span&gt;elements need to be
+            added, the first of which will have pivot=”eng” to specify the destination language of the non-final
+            translation. Also, attribute language is now &lt;span class="xmlinline"&gt;fromLanguage.&lt;/span&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;New document collection document types&lt;/h4&gt;
+            &lt;p class="bodyparagraph"&gt;It has recently become apparent that some new types of documents are of
+            interest and need to be taken into consideration. These documents are not containers of (structured or
+            semi-structured) text, but containers of documents that have their own identity and independent
+            addressability. Issues of the Official Gazette, and amendment lists are clear examples of these situations.&lt;br/&gt;
+            A new class of documents has therefore been created, documentCollection, with its own external structure
+            (metadata, preface, conclusions and attachments), and an internal content, the collection itself, composed
+            of either other Akoma Ntoso documents (including acts, bills, minutes, etc.), or interstitial containers of
+            text that separate each document, as follows:&lt;/p&gt;
+            &lt;p class="xmlparagraph"&gt;&lt;xmp&gt;
+            &lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;
+            &lt;akomaNtoso&gt;
+            &lt;documentCollection&gt;
+            &lt;meta&gt;
+            ... the metadata of the collection ...
+            &lt;/meta&gt;
+            &lt;preface&gt;
+            ... the preface of the collection ...
+            &lt;/preface&gt;
+            &lt;collectionContent&gt;
+            &lt;act&gt;
+            &lt;meta&gt;
+            ... the metadata of the first document ...
+            &lt;/meta&gt;
+            &lt;preface&gt;
+            ... the preface of the first document ...
+            &lt;/preface&gt;
+            &lt;body&gt;
+            ... the body of the first document ...
+            &lt;/body&gt;
+            &lt;/act&gt;
+            &lt;interstitial id=”int1”&gt;
+            Any text is in the collection but
+            belongs to no individual document
+            &lt;/interstitial&gt;
+            &lt;act&gt;
+            &lt;meta&gt;
+            ...the metadata of the second document...
+            &lt;/meta&gt;
+            &lt;preface&gt;
+            ...the preface of the second document...
+            &lt;/preface&gt;
+            &lt;body&gt;
+            ...the body of the second document...
+            &lt;/body&gt;
+            &lt;/act&gt;
+            ... other documents and interstitials...
+            &lt;/collectionContent&gt;
+            &lt;/documentCollection&gt;
+            &lt;/akomaNtoso&gt;&lt;/xmp&gt;&lt;/p&gt;
+            &lt;ul style="text-align: justify;"&gt;
+            &lt;li class="bullets"&gt;Document collections can have any number of documents and interstitial elements in
+            any order, and it is possible to have interstitial elements at the beginning of the document.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Components can be present in place, or refer to them via a URI to an external
+            resource, or even placed in the document in an apposite final section called components, and referred to via
+            a newly introduced componentRef element. This modification affects also attachments, which can now be
+            referenced in the same way via a componentRef element. Element attachment within element attachments has
+            therefore been removed. Furthermore, in order to avoid ambiguity of element names, previous elements
+            components and component in FRBR structures are now called componentInfo and componentData respectively.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;New Amendment document type&lt;/h4&gt;
+            &lt;p style="text-align: justify;"&gt;A new document type, amendment, has been added, with accompanying
+            subelements amendmentHeading, amendmentContent, amendmentReference and amendmentJustification and many
+            inline additions.&lt;/p&gt;
+            &lt;div style="text-align: justify;"&gt;&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;Time intervals&lt;/h4&gt;
+            &lt;p style="text-align: justify;"&gt;Managing time intervals in text has been completely modified:
+            attributes &lt;span class="xmlinline"&gt;start, end, startEfficacy&lt;/span&gt; and &lt;span
+            class="xmlinline"&gt;endEfficacy&lt;/span&gt; have been replaced with a single period attribute, and a new
+            metadata section temporalData has been added, containing a list of temporalGroup elements that contain
+            timeInterval elements.&lt;br/&gt; While before one would use the &lt;span class="xmlinline"&gt;start, end,
+            startEfficacy&lt;/span&gt; and &lt;span class="xmlinline"&gt;endEfficacy&lt;/span&gt; attributes to specify
+            the beginning and end, respectively, of in force and efficacy intervals, respectively, the procedure has now
+            been considerably simplified and streamlined and modularized. In the text, a single period attribute is used
+            instead of the four previous attributes, containing a reference pointing to the newly introduced &lt;span
+            class="xmlinline"&gt;temporalGroup&lt;/span&gt; element in the metadata section. Each &lt;span
+            class="xmlinline"&gt;temporalGroup&lt;/span&gt; contains a list of &lt;span class="xmlinline"&gt;timeInterval&lt;/span&gt;
+            elements, each specifying a time interval and a type in terms of the Akoma Ntoso ontology, as follows:&lt;/p&gt;
+            &lt;p&gt;&#160;&lt;/p&gt;
+            &lt;p class="xmlparagraph"&gt;Before: &lt;br/&gt;&lt;xmp&gt;
+
+            &lt;metadata&gt;
+            &lt;lifecycle source="#fv"&gt;
+            &lt;event id="e1" date="1997-08-29" source="#ro1" type="generation" refersTo="#LegislativeCreation"/&gt;
+            &lt;event id="e2" date="2003-12-19" source="#rp1" type="modification" refersTo="#LegislativeModification"/&gt;
+            &lt;/lifecycle&gt;
+            ...
+            &lt;/metadata&gt;
+
+            &lt;body&gt;
+            ...
+            &lt;span start="e1" end="e2"&gt;"pooled fund" means a fund established by a limited liability company, other
+            than an approved issuer, for purposes of pooling scheme funds for collective investment; &lt;/span&gt;
+            ...
+            &lt;/body&gt;
+            &lt;/xmp&gt;
+
+            After:
+            &lt;xmp&gt;
+            &lt;metadata&gt;
+            &lt;temporalData source="#FV"&gt;
+            &lt;temporalGroup id="p1"&gt;
+            &lt;timeInterval start="#e1" end="#e2" refersTo="#inforce"/&gt;
+            &lt;/temporalGroup&gt;
+            &lt;/temporalData&gt;
+            &lt;lifecycle source="#fv"&gt;
+            &lt;event id="e1" date="1997-08-29" source="#ro1" type="generation" refersTo="#LegislativeCreation"/&gt;
+            &lt;event id="e2" date="2003-12-19" source="#rp1" type="modification" refersTo="#LegislativeModification"/&gt;
+            &lt;/lifecycle&gt;
+            ...
+            &lt;/metadata&gt;
+
+            &lt;body&gt;
+            ...
+            &lt;span period="p1"&gt;"pooled fund" means a fund established by a limited liability company, other than an
+            approved issuer, for purposes of pooling scheme funds for collective investment; &lt;/span&gt;
+            ...
+            &lt;/body&gt;
+            &lt;/xmp&gt;
+            &lt;/p&gt;
+
+            &lt;p&gt;&#160;
+
+            &lt;/p&gt;
+            &lt;p style="text-align: justify;"&gt;Time intervals can be specified either by a begin and end date, or
+            with either date and a duration. The advantages of this approach are many:&lt;/p&gt;
+            &lt;ul style="text-align: justify;"&gt;
+            &lt;li class="bullets"&gt;It is possible to introduce time intervals with either two dates, or a start date
+            and a duration or an end date and a duration.&lt;/li&gt;
+            &lt;li class="bullets"&gt;It is possible to specify in force intervals, efficacy intervals and any other
+            type of time information without cluttering the actual content of the document with more and more start and
+            end attributes.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Time information shared by many different elements in the document are grouped in
+            a single collection, so that it becomes possible to understand at a glance how many intervals are relevant
+            for the document.&lt;/li&gt;
+            &lt;li class="bullets"&gt; It is possible to include different and incompatible time information details by
+            different scholars without cluttering with useless information the actual content of the document.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;Footnotes and out-of-lines&lt;/h4&gt;
+            &lt;ul style="text-align: justify;"&gt;
+            &lt;li class="bullets"&gt;In past versions of the Akoma Ntoso standard, footnotes (element &lt;span
+            class="xmlinline"&gt;note&lt;/span&gt;) and side notes (element &lt;span class="xmlinline"&gt;outOfLine)&lt;/span&gt;&lt;br/&gt;
+            were considered editorial content that are not really part of the authoritative content of the document.
+            This is neither universal nor frequent. In fact, in many cases the official author of the document uses
+            footnotes and out of line elements such as side notes as an additional means to convey authoritative
+            content. For this reason, the notes’ model has been simplified:&lt;/li&gt;
+            &lt;li class="bullets"&gt;inlineNote are now called authorialNote,&lt;/li&gt;
+            &lt;li class="bullets"&gt;outOfLineNotes have been removed.&lt;br/&gt; Attribute &lt;span class="xmlinline"&gt;placement&lt;/span&gt;
+            has been added.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Attribute &lt;span class="xmlinline"&gt;num &lt;/span&gt;has been renamed &lt;span
+            class="xmlinline"&gt;marker&lt;/span&gt; and has become optional, given that sometimes one does not have any
+            marker whatsoever for the note.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Furthermore, note references have added a mechanism to specify exactly the
+            placement of the note with re
+            &lt;p class="bodyparagraph"&gt;gards to other elements of the document: an optional &lt;span
+            class="xmlinline"&gt;placementBase &lt;/span&gt;attribute has been added, which contains a local &lt;span
+            class="xmlinline"&gt;href&lt;/span&gt; (i.e. a #id reference) to the element near which the note should be
+            placed.&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p style="margin-left: 40px; text-align: justify;"&gt;To summarize:&lt;/p&gt;
+            &lt;ul style="text-align: justify;"&gt;
+            &lt;li class="bullets"&gt;To place a note at the end of a document, &lt;span class="xmlinline"&gt;placement="bottom"&lt;/span&gt;
+            and &lt;span class="xmlinline"&gt;placementBase="#[document ID]"&lt;/span&gt;&lt;/li&gt;
+            &lt;li class="bullets"&gt;To place a note at the end of a structure, including quotations, &lt;span
+            class="xmlinline"&gt;placement="bottom"&lt;/span&gt; and &lt;span class="xmlinline"&gt;placementBase="#[structure
+            ID].&lt;/span&gt;&lt;/li&gt;
+            &lt;li class="bullets"&gt;To place a note inline, in the closest position to the note reference, &lt;span
+            class="xmlinline"&gt;placement="inline"&lt;/span&gt; and no &lt;span class="xmlinline"&gt;placementBase&lt;/span&gt;.&lt;/li&gt;
+            &lt;li class="bullets"&gt;To place a note inline in the closest position to a specific structure, &lt;span
+            class="xmlinline"&gt;placement="inline"&lt;/span&gt; and &lt;span class="xmlinline"&gt;placementBase="#[structure
+            ID]"&lt;/span&gt;.&lt;/li&gt;
+            &lt;li class="bullets"&gt;To place a note on the side, in the position of the note reference, &lt;span
+            class="xmlinline"&gt; placement="side" &lt;/span&gt;and no &lt;span class="xmlinline"&gt;placementBase.&lt;/span&gt;&lt;/li&gt;
+            &lt;li class="bullets"&gt;To place a note on the side, near to a specific structure, &lt;span
+            class="xmlinline"&gt;placement="side"&lt;/span&gt; and &lt;span class="xmlinline"&gt;placementBase="#[structure
+            ID]"&lt;/span&gt;.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p style="text-align: justify;"&gt;Values "left" and "right" are for those specific cases in which the
+            specific placement on the right has a different legal meaning that a placement on the left, or when both
+            types of placements exists in the same document (a rare occurrence indeed, but they exist).&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;New popup pattern&lt;/h4&gt;
+            &lt;div style="text-align: justify;"&gt;A new pattern was identified, and added both to the conceptual model
+            of patterns, and to the vocabulary of elements in Akoma Ntoso. The pattern is called popup, and represents
+            elements that, within the inline flow of text, create full and fully independent structures, that does not
+            meddle nor interact with the text and inline elements that surround them. The &lt;span class="xmlinline"&gt;quotedStructure
+            &lt;/span&gt;element, which in past versions of the language did not belong to any pattern (being an
+            exception), now fully belongs to the new popup pattern. A new element &lt;span class="xmlinline"&gt;inlineNote&lt;/span&gt;
+            has been added belonging to the same pattern, for notes whose content is placed alongside the text to which
+            it refer. &lt;span class="xmlinline"&gt;inlineNote&lt;/span&gt; elements cannot be used to editorial
+            content, but only for authoritative content that, for some reason, is placed in a note. Finally, the generic
+            popup element has been added for any local extension to the language that needs to use popups.&lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;Parallel speech&lt;/h4&gt;
+            &lt;div style="text-align: justify;"&gt;Support for parallel speech elements was added. This happens through
+            new values for the attribute status (that now include “translated”, “edited”, “verbatim”, “ignore” (for
+            incomplete structures in authoritative documents such as amendments) and a new attribute &lt;span
+            class="xmlinline"&gt;“alternativeTo”&lt;/span&gt; that has been added to all content elements to specify
+            separate and parallel copies of the same structure, that are present in the same document for a number of
+            reasons:&lt;/div&gt;
+            &lt;ol&gt;
+            &lt;li&gt;multi-lingual documents that contain the same structures in different languages.&lt;/li&gt;
+            &lt;li&gt; multi-version documents that contain the same structures in different versions.&lt;/li&gt;
+            &lt;li&gt;multiple transcriptions, that contain the same speech in different transcriptions.&lt;/li&gt;
+            &lt;/ol&gt; &lt;br/&gt;For instance:&lt;br/&gt; &lt;br/&gt;
+            &lt;p class="xmlparagraph"&gt;&lt;xmp&gt;
+
+            &lt;speech id="sp1" by="#fv" status="verbatim"&gt;
+            &lt;from&gt;Fabio Vitali&lt;/from&gt;
+            &lt;p&gt;Questo è il mio discorso in Italiano&lt;/p&gt;
+            &lt;/speech&gt;
+
+            &lt;speech id="sp1-alt1" by="#fv" status="translated" alternativeTo="#sp1"&gt;
+            &lt;from&gt;Fabio Vitali&lt;/from&gt;
+            &lt;p&gt;This is my speech in Italian&lt;/p&gt;
+            &lt;/speech&gt;
+
+            &lt;/xmp&gt;&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;Votes and quorum&lt;/h4&gt;
+            &lt;div style="text-align: justify;"&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;Two new inline elements are added to identify parts of the debate document, vote
+            and &lt;span class="xmlinline"&gt;o&lt;/span&gt;&lt;span class="xmlinline"&gt;utcome.&lt;/span&gt; These are
+            meant to mark in the document the fragments of the text that describe a vote or the outcome of a vote.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element&lt;span class="xmlinline"&gt; parliamentary&lt;/span&gt; allows analysis
+            on votes and quorum verifications that are present in a debate. It is possible to associate summaries of the
+            outcome of a vote in a operable way, as follows:&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;p class="xmlparagraph"&gt;&lt;xmp&gt;
+
+            &lt;parliamentary&gt;
+            &lt;voting id="vot1" href="#smr1" refersTo="#billAppr" outcome="#approved"&gt;
+            &lt;quorum id="vot1-quo1" refersTo="#majority" value="50"/&gt;
+            &lt;count id="vot1-cnt1" refersTo="#yeah" href="#qt1" value="41"/&gt;
+            &lt;count id="vot1-cnt2" refersTo="#nay" href="#qt2" value="34"/&gt;
+            &lt;count id="vot1-cnt3" refersTo="#nulls" href="#span147" value="23"/&gt;
+            &lt;/voting&gt;
+            &lt;/parliamentary&gt;
+
+            ...
+
+            &lt;summary id="smr1"&gt; Bill put to approval:
+            &lt;quantity refersTo="#votes" id="qt1"&gt;34&lt;/quantity&gt; negative votes and
+            &lt;quantity refersTo="#votes" id="qt2"&gt;41&lt;/quantity&gt; positive votes and
+            &lt;quantity refersTo="#votes" id="qt3"&gt;23&lt;/quantity&gt; null votes, final result agreed.
+            &lt;/summary&gt;
+            &lt;/xmp&gt;&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;Renumbering&lt;/h4&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;a new core attribute, &lt;span class="xmlinline"&gt;evolvingId&lt;/span&gt;, has
+            been added to all elements to specify an identifier that can change from expression to expression after
+            modifications, renumbering or coexistence of similarly named structures. A full explanation of it is put in
+            the new section 7.4 of this document&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;Changes in metadata section&lt;/h4&gt;
+            &lt;div style="text-align: justify;"&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;A new metadata section, presentation, has been added for the drafting of important
+            presentation specifications (e.g. for tables and typographical rules mandated by law) using any language
+            (including CSS styles).&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element analysis has an additional parliamentary block for &lt;span
+            class="xmlinline"&gt;parliamentary &lt;/span&gt;analysis and an optional and repeatable element &lt;span
+            class="xmlinline"&gt;otherAnalysis &lt;/span&gt;block for all other kinds of analysis.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Former Top Level Class Place is now called Location. Similarly the TLC element
+            &lt;span class="xmlinline"&gt;TLCPlace&lt;/span&gt; is now known as &lt;span class="xmlinline"&gt;TLCLocation&lt;/span&gt;.&lt;/li&gt;
+            &lt;li class="bullets"&gt;In order to make room for an event element in the list of semantic inline
+            elements, former element event within the &lt;span class="xmlinline"&gt;lifecycle &lt;/span&gt;element is
+            now called &lt;span class="xmlinline"&gt;eventRef.&lt;/span&gt;&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element publication in the metadata is now optional (to allow for unpublished
+            documents such as individual amendments).&lt;/li&gt;
+            &lt;li class="bullets"&gt;Elements event and step, in lifecycle and workflow respectively, can now contain
+            any non-AkomaNtoso elements inside. Attribute originatingExpression (yes/no) can now be used in events to
+            specify that the event being referred to is the one from which this specific Expression originated.&lt;/li&gt;
+            &lt;li class="bullets"&gt;A new attribute pos has been added in all argument elements so that they can now
+            make a more precise reference to the elements to which they are attached.Changes in introductory elements&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;Changes in introductory elements&lt;/h4&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;New preface-level elements: Some new elements have been added to use in prefaces:
+            d&lt;span class="xmlinline"&gt;ocCommittee, docIntroducer, docStage, docStatus, docJurisdiction&lt;/span&gt;,
+            which are meant to be wrapped around the Committee, the introducer, the displayed stage, the displayed
+            status and the displayed jurisdiction of the document being marked up. Again it is worth remembering that
+            preface-level elements are to be used whenever in the official copy of the document these information bits
+            are actually present, and not as a way to specify the information that is for any reason missing in the
+            final copy of the text. Missing information is best specified in the appropriate structures of the metadata.&lt;/li&gt;
+            &lt;li class="bullets"&gt;The content model of elements preface and preamble have been enhanced. Besides
+            allowing blocks, preface and preamble now allow subdivisions called recitals and citations for preamble, and
+            longTitle for preface. Element subdivision is a generic element for a preface/preamble substructure, while
+            the element formerly known as subdivision (in debates) is now called debateSection.&lt;/li&gt;
+            &lt;li class="bullets"&gt;A new coverpage element has been added to specify content that is relevant to the
+            document and that is present in the cover page.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;New inline elements&lt;/h4&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;A new inline element has been added, &lt;span class="xmlinline"&gt;quantity&lt;/span&gt;,
+            to contain quantitative fragments (e.g., numbers, amounts, etc.) that are relevant to the analysis of the
+            text, Attribute &lt;span class="xmlinline"&gt;normalized &lt;/span&gt;allows to markup the numerical content
+            of the element if it is not directly perceivable in its original form (i.e. it is written in letters, etc.).&lt;/li&gt;
+            &lt;li class="bullets"&gt;A new inline element, &lt;span class="xmlinline"&gt;placeholder,&lt;/span&gt; has
+            been added to specify formulaic text structures that can be modified at will during the lifecycle of the
+            document even not-authorially (e.g., a sentence such as ’30 days after the publication of this directive’
+            converted in an actual date once the publication date of the directive is known). The attribute &lt;span
+            class="xmlinline"&gt;originalText &lt;/span&gt;is used to specify the original text of the document after
+            the replacement has taken place.&lt;/li&gt;
+            &lt;li class="bullets"&gt;A complete specification of references to elements of the ontology has been added.
+            Not only person, but now all elements of the Top Level Classes have their own element, &lt;span
+            class="xmlinline"&gt;person, organization, concept, object, event, location, process, role, term&lt;/span&gt;.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;entity&lt;/span&gt; is now fully a generic
+            element and requires a &lt;span class="xmlinline"&gt;name&lt;/span&gt; attribute.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Two new inline elements have been added in the list of preface-specific elements:&lt;span
+            class="xmlinline"&gt; legislature&lt;/span&gt; and &lt;span class="xmlinline"&gt;session&lt;/span&gt;.&lt;/li&gt;
+            &lt;li class="bullets"&gt;A new preface inline element has been added, &lt;span class="xmlinline"&gt;affectedDoc&lt;/span&gt;,
+            to specify the document which is affected by this amendment.&lt;/li&gt;
+            &lt;li class="bullets"&gt;A new inline element, relatedDoc, has been added for the document discussed within
+            report documents.&lt;/li&gt;
+            &lt;li class="bullets"&gt;A new inline element, change, has been added for the changes contained in the
+            face-to-face text of an amendment.&lt;/li&gt;
+            &lt;li class="bullets"&gt;A new HTML element, u, has been added with similar use as in HTML, namely, to
+            specify an underline.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;recordedTime&lt;/span&gt; is now an inline
+            element and not a marker anymore.&lt;/li&gt;
+            &lt;li class="bullets"&gt;The &lt;span class="xmlinline"&gt;popup&lt;/span&gt; content model available in
+            elements such as &lt;span class="xmlinline"&gt;quotedStructure &lt;/span&gt;now allows also substructures of
+            hierarchies such as &lt;span class="xmlinline"&gt;heading, num, content, citation, recital, intro&lt;/span&gt;
+            and &lt;span class="xmlinline"&gt;wrap &lt;/span&gt;to appear in it. Element &lt;span class="xmlinline"&gt;quotedStructure&lt;/span&gt;
+            now has an additional attribute for that allows to associate individual &lt;span class="xmlinline"&gt;quotedStructures
+            &lt;/span&gt;to individual &lt;span class="xmlinline"&gt;mod&lt;/span&gt; elements within a&lt;span
+            class="xmlinline"&gt; mmod &lt;/span&gt;element.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;New hierarchical element&lt;/h4&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;The fundamental structure of hierarchical elements has been modified introducing
+            the intro and wrap elements, respectively before and after the content of the hierarchical elements, to
+            specify introductory and concluding blocks to the lower levels of the containment hierarchy. This
+            modification affects the list element, too.&lt;/li&gt;
+            &lt;li class="bullets"&gt;A new hierarchical element called &lt;span class="xmlinline"&gt;transitional &lt;/span&gt;has
+            been added. This is meant to contain (often unnumbered or differently numbered) hierarchical items that,
+            being of a transitional nature, are placed in a separate section called “transitional clauses” or some such
+            name.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Three new hierarchical elements have been added, &lt;span class="xmlinline"&gt;alinea,
+            point &lt;/span&gt;and&lt;span class="xmlinline"&gt; indent&lt;/span&gt;.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;New speech elements&lt;/h4&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;Two new elements have been added in the description of a debate: &lt;span
+            class="xmlinline"&gt;narrative &lt;/span&gt;and summary. The narrative element is meant to contain all the
+            narrative elements (that are not part of the scene description) that discuss things in the third person,
+            rather than as report of a direct utterance from a participant. The &lt;span class="xmlinline"&gt;summary
+            &lt;/span&gt;element is meant to contain all the summarized description of speeches that are not transcribed
+            verbatim because of their scarce relevance, formulaic nature, or other reasons. E.g.: “Question put and
+            agreed to”.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Several new debate sections have been added to the list. They include: &lt;span
+            class="xmlinline"&gt;rollCall, prayers, adjournement, oralStatements, writtenStatements, personalStatements,
+            ministerialStatements, resolutions, and nationalInterest&lt;/span&gt;.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;from&lt;/span&gt; was made optional.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;debate&lt;/span&gt; (that was the body of
+            the &lt;span class="xmlinline"&gt;debateRecord&lt;/span&gt; element) is now &lt;span class="xmlinline"&gt;debateContent&lt;/span&gt;.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+            &lt;h4&gt;Various other changes&lt;/h4&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;A number of bug fixes in content models of many elements, In particular, &lt;span
+            class="xmlinline"&gt;preface &lt;/span&gt;and &lt;span class="xmlinline"&gt;conclusion&lt;/span&gt; are now
+            optional everywhere, &lt;span class="xmlinline"&gt;conclusion&lt;/span&gt; has become a fully hierarchical
+            element just like &lt;span class="xmlinline"&gt;preface&lt;/span&gt; and&lt;span class="xmlinline"&gt;
+            preamble&lt;/span&gt;,&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;intro &lt;/span&gt;does not belong to the
+            content model of element &lt;span class="xmlinline"&gt;component &lt;/span&gt;anymore.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;table&lt;/span&gt; has now an additional
+            optional caption element as in HTML. Also, the id of HTML elements &lt;span class="xmlinline"&gt;tr,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;th&lt;/span&gt; and &lt;span class="xmlinline"&gt;td&lt;/span&gt; is now
+            optional to reduce the tear in specifying ids for long lists of cells in tables.&lt;/li&gt;
+            &lt;li class="bullets"&gt;&lt;span style="font-style: italic;"&gt;Content model of element&lt;/span&gt; &lt;span
+            class="xmlinline"&gt;td&lt;/span&gt;: So far, the content model of table cells followed the inline content
+            model (i.e., the table cell was comparable to a single paragraph). This was felt inadequate because of the
+            lack of support of multi-paragraph table cells, as well as cells that contain whole structures, such as
+            articles, sections, etc. The element &lt;span class="xmlinline"&gt;td&lt;/span&gt; has thus changed the
+            relevant pattern, being upgraded from block to container. Now any container, or block can be contained in&lt;span
+            class="xmlinline"&gt; td&lt;/span&gt; elements, but not next nor inline elements.&lt;/li&gt;
+            &lt;li class="bullets"&gt;&lt;span style="font-style: italic;"&gt;New content model of&lt;/span&gt; &lt;span
+            class="xmlinline"&gt;list&lt;/span&gt;: the &lt;span class="xmlinline"&gt;list &lt;/span&gt;element now
+            allow for the specification of a &lt;span class="xmlinline"&gt;listIntroduction &lt;/span&gt;element, a
+            block element appearing before the first &lt;span class="xmlinline"&gt;item&lt;/span&gt;, and of
+            listConclusion, a block element appearing after the last &lt;span class="xmlinline"&gt;item&lt;/span&gt; of
+            the &lt;span class="xmlinline"&gt;list&lt;/span&gt; (in Italian legal system, they correspond to alinea and
+            conclusion, which are frequent occurrences in legal texts).&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;/ol&gt;
+            &lt;p class="bodyparagraph"&gt;This release incorporates several major changes to the schema. As described
+            above these changes include additions, modifications and deletions. As such the number of changes is too
+            great to produce a meaningful diff (comparison) document to show the cdifferences between this release and
+            the previous one.&lt;/p&gt;
+
+            &lt;/div&gt;
+        </notes>
+        <diff></diff>
+        <source>http://code.google.com/p/akomantoso/source/browse/release/trunk/schemas2.0/akomantoso20.xsd?spec=svn160&amp;r=160</source>
+    </release>
+    <release number="12">
+        <title>Diff:Oct 2009 &amp; Dec 2009</title>
+        <notes>
+            &lt;div class="" id="parent-fieldname-text"&gt;
+            &lt;p class="bodyparagraph"&gt;This release contains just two minor bug fixes:&lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;The complex Type &lt;span class="xmlinline"&gt;AnyOtherType&lt;/span&gt; (allowing
+            elements of any namespace except Akoma Ntoso) now allows any number (including zero) of
+            elements instead of exactly one. This affects a number of metadata elements. &lt;/li&gt;
+            &lt;li class="bullets"&gt;Attribute &lt;span class="xmlinline"&gt;refersTo&lt;/span&gt; now expects an URI
+            instead of an IDREF value. This means that references to locations inside the document
+            (e.g., in the &lt;span class="xmlinline"&gt;references&lt;/span&gt; section) now need to be prefixed
+            with character “#” instead of being bare (e.g. &lt;span class="xmlinline"&gt;refersTo=”foobar”
+            &lt;/span&gt;needs to become &lt;span class="xmlinline"&gt;refersTo=”#foobar”&lt;/span&gt;). This is in
+            accordance to a general avoidance of the IDREF introduced on the 23/10/2006 release and
+            for some reasons ignored for the &lt;span class="xmlinline"&gt;refersTo&lt;/span&gt; attribute.
+            &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/div&gt;
+        </notes>
+        <diff>http://code.google.com/p/akomantoso/source/diff?spec=svn133&amp;old=133&amp;r=137&amp;format=side&amp;path=%2Frelease%2Ftrunk%2Fschemas%2Fakomantoso10.xsd</diff>
+        <source>http://code.google.com/p/akomantoso/source/browse/release/trunk/schemas/akomantoso10.xsd?spec=svn133&amp;r=137</source>
+    </release>
+    <release number="11">
+        <title>Diff:May 2009 &amp; Oct 2009</title>
+        <notes>&lt;div class="" id="parent-fieldname-text"&gt;
+            &lt;p class="bodyparagraph"&gt;This release contains some differences to previous versions regarding
+            mainly the handling of judgments. Most differences regard metadata to analyze judgments, and
+            only a few of them affect the document content.&#160;&lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;A new inline element, &lt;span class="xmlinline"&gt;docketNumber&lt;/span&gt;, has
+            been introduced to handle the specification of the docket number, case number, file
+            number or in general any number that represents the overall procedure of which this is
+            one document. The term docketNumber has been chosen because it is clear, unambiguous,
+            not overly restrictive (as would have been caseNumber) and not misunderstandable for a
+            computer-related term (as would have been fileNumber).&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;Speech-related containers such as &lt;span class="xmlinline"
+            &gt;administrationOfOaths&lt;/span&gt;, &lt;span class="xmlinline"&gt;declarationOfVote&lt;/span&gt;,
+            etc. have been added to the list of containers that can be specified anywhere.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;Element lawyer has a few difference in its attributes: the attribute
+            &lt;span class="xmlinline"&gt;represents&lt;/span&gt; has become &lt;span class="xmlinline"
+            &gt;for&lt;/span&gt;, and a new attribute &lt;span class="xmlinline"&gt;empoweredBy&lt;/span&gt; has been
+            added for lawyers that receive the representation not directly from the client but
+            indirectly through a delegation of power via another lawyer.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;opinion&lt;/span&gt;, wrapping the opinion
+            of
+            the judges in a judgment, has a new attribute &lt;span class="xmlinline"&gt;type&lt;/span&gt; that
+            specifies whether each individual judge consents or dissents from the judgment.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;The element &lt;span class="xmlinline"&gt;workflow&lt;/span&gt; has been
+            clarified.
+            A &lt;span class="xmlinline"&gt;workflow&lt;/span&gt; is not composed of &lt;span class="xmlinline"
+            &gt;action&lt;/span&gt; elements anymore, but of &lt;span class="xmlinline"&gt;step&lt;/span&gt;
+            elements. Each &lt;span class="xmlinline"&gt;step&lt;/span&gt; element defines (references to
+            instances of) a date, an actor (either a TLCPerson or a TLCOrganization), a role (a
+            TLCRole), and an outcome (a TLCConcept).&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;A new analysis container has been added for judicial analysis. The
+            element, &lt;span class="xmlinline"&gt;judicial&lt;/span&gt;, contains a number of judicial
+            arguments, each of which connects a structure of the document to external sources or
+            other structures of the document itself. The judicial element contains one result
+            element that specifies the actual result of the judgment (one of &lt;span class="xmlinline"
+            &gt;deny, dismiss, uphold, revert, replaceOrder, remit, decide,&lt;/span&gt; and &lt;span
+            class="xmlinline"&gt;approve&lt;/span&gt;), and as many elements as needed of the judicial
+            argument category, which are: s&lt;span class="xmlinline"&gt;upports,&#160; isAnalogTo,
+            applies, extends, restricts, derogates, contrasts, overrules, dissentsFrom,
+            putsInQuestion, distinguishes&lt;/span&gt;. It should be noted that the term &lt;span
+            class="xmlinline"&gt;putsInQuestion&lt;/span&gt; is hardly satisfactory, and different from
+            the proposed &lt;span class="xmlinline"&gt;questions&lt;/span&gt;, which cannot be used in this
+            context because&#160; it is already used as a section of the Speech containers.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/div&gt;
+        </notes>
+        <diff>http://code.google.com/p/akomantoso/source/diff?path=/release/trunk/schemas/akomantoso10.xsd&amp;format=side&amp;r=133</diff>
+        <source>http://code.google.com/p/akomantoso/source/browse/release/trunk/schemas/akomantoso10.xsd?spec=svn133&amp;r=133</source>
+    </release>
+    <release number="10">
+        <title>Diff:Mar 2009 &amp; May 2009</title>
+        <notes>&lt;div class="" id="parent-fieldname-text"&gt;
+            &lt;p class="bodyparagraph"&gt;This release contains no difference from the previous release but a few
+            bug fix. The main justification of this release is to introduce systematic inline
+            documentation to all structures of the language (groups, attribute groups, simple type,
+            complex types and elements.&lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;&lt;br/&gt;Additionally, a few bug fixes have been introduced:&lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;The internal date of the schema has been updated to reflect correctly
+            the revision date of the schema. In previous release, in fact, the release date within
+            the schema had not been updated, resulting in two very different schemas asserting to
+            have been last updated on the same date.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Group &lt;span class="xmlparagraph"&gt;ANotherInline&lt;/span&gt; has been
+            actually
+            added to the &lt;span class="xmlparagraph"&gt;inlineCM&lt;/span&gt; group , allowing elements &lt;span
+            class="xmlparagraph"&gt;entity&lt;/span&gt; and &lt;span class="xmlparagraph"&gt;date&lt;/span&gt; to be
+            actually used in document markup.&lt;/li&gt;
+            &lt;li class="bullets"&gt;&lt;span class="xmlparagraph"&gt;Complex types&lt;/span&gt;
+            &lt;span class="xmlparagraph"&gt;anyOther&lt;/span&gt; and &lt;span class="xmlparagraph"
+            &gt;anyOtherType&lt;/span&gt;, which were identical, have been brought together into &lt;span
+            class="xmlparagraph"&gt;one type&lt;/span&gt;, &lt;span class="xmlparagraph"
+            &gt;anyOtherType&lt;/span&gt;. All elements and attributes have been updated accordingly.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Several reshuffles of relative position of definitions have been made.
+            No difference in content has been performed, though.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/div&gt;
+        </notes>
+        <diff>http://code.google.com/p/akomantoso/source/diff?spec=svn120&amp;r=120&amp;format=side&amp;path=/release/trunk/schemas/akomantoso10.xsd&amp;old_path=/release/trunk/schemas/akomantoso10.xsd&amp;old=118</diff>
+        <source>http://code.google.com/p/akomantoso/source/browse/release/trunk/schemas/akomantoso10.xsd?spec=svn120&amp;r=120</source>
+    </release>
+    <release number="9">
+        <title>Diff:Nov 2008 &amp; Mar 2009</title>
+        <notes>&lt;div class="" id="parent-fieldname-text"&gt;
+            &lt;p class="bodyparagraph"&gt;This is a major release, providing a number of relevant modifications
+            to the previous releases. &lt;span style="font-weight: bold;"&gt;Many of these modifications are
+            NOT backward-compatible&lt;/span&gt;. These will be explicitly noted as such in the
+            following.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;span style="font-weight: bold;"&gt;9.1.1 Sidenotes and out of
+            line
+            texts&lt;/span&gt;&lt;/p&gt;&lt;br/&gt;
+            &lt;p class="bodyparagraph"&gt;A completely new take on side notes has been undertaken in this
+            release. Rather than being header blocks at the beginning of hierarchical structures, side
+            notes are now full members of a new category: authorial notes. An authorial note is by
+            definition a note (i.e., an out-of-line text fragment) that was provided by the original
+            author of the content (i.e., by the author of the specific FRBR expression).&#160;&lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;Thus the element &lt;span class="xmlinline"&gt;sideNote&lt;/span&gt; has been
+            removed, and substituted by a new container element, &lt;span class="xmlinline"
+            &gt;outOfLine&lt;/span&gt;, contained in a collection element &lt;span class="xmlinline"
+            &gt;outOfLines&lt;/span&gt;. Each &lt;span class="xmlinline"&gt;outOfLine&lt;/span&gt; has a type attribute
+            assuming either of the value &lt;span class="xmlinline"&gt;sideNote&lt;/span&gt; or &lt;span
+            class="xmlinline"&gt;publicationNote&lt;/span&gt;, an &lt;span class="xmlinline"&gt;href&lt;/span&gt;
+            attribute pointing to a structure in the document to which the out of line text should be
+            attached to, and contains blocks such as &lt;span class="xmlinline"&gt;p&lt;/span&gt; elements.&lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;Thus the fragment&lt;/p&gt;
+            &lt;p class="xmlparagraph"&gt;&lt;xmp&gt;
+            &lt;akomaNtoso xmlns="http://www.akomantoso.org/1.0"&gt;
+            &lt;act&gt;
+            ...
+            &#160; &lt;body&gt;
+            &#160;&#160;&#160; &lt;section id="sect54.a"&gt;
+            &lt;num&gt;54A&lt;/num&gt;
+            &lt;heading&gt;Conduct of prosecutions.&lt;/heading&gt;
+            &lt;clause id="sect54.a-cla1"&gt;
+            &lt;num&gt;(1)&lt;/num&gt;
+            &lt;sideNote&gt;Cap 75.&lt;/sideNote&gt;
+            &lt;content&gt;
+            &lt;p&gt; Blah blah&lt;/p&gt;
+            &lt;/content&gt;
+            &lt;/clause&gt;
+            &lt;/section&gt;
+            &lt;/body&gt;
+            &lt;/act&gt;
+            &lt;/akomaNtoso&gt;&lt;/xmp&gt;
+            &lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;needs to become:&lt;/p&gt;
+            &lt;p class="xmlparagraph"&gt;&lt;xmp&gt;
+
+            &lt;akomaNtoso xmlns="http://www.akomantoso.org/1.0"&gt;
+            &lt;act&gt;
+            ...
+            &lt;body&gt;
+            &lt;section id="sect54.a"&gt;
+            &lt;num&gt;54A&lt;/num&gt;
+            &lt;heading&gt;Conduct of prosecutions.&lt;/heading&gt;
+            &lt;clause id="sect54.a-cla1"&gt;
+            &lt;num&gt;(1)&lt;/num&gt;&lt;br/&gt;
+            &lt;content&gt;&lt;br/&gt;
+            &lt;p&gt; Blah blah&lt;/p&gt;
+            &lt;/content&gt;
+            &lt;/clause&gt;
+            &lt;/section&gt;
+            &lt;/body&gt;
+            &lt;outOfLines&gt;
+            &lt;outOfLine id="out01" type="sideNote" href="#sect54.a-cla1"&gt;
+            &lt;p&gt;Cap 75.&lt;/p&gt;
+            &lt;/outOfLine&gt;&lt;br/&gt;
+            &lt;/outOfLines&gt;
+            &lt;/act&gt;
+            &lt;/akomaNtoso&gt;
+
+            &lt;/xmp&gt;
+            &lt;/p&gt;
+
+            &lt;p class="bodyparagraph"&gt;Please note three issues:&lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;Reference direction is reversed than with footnotes: rather than the
+            inline content referring to the note, it is the side note referring to the structural
+            fragment it appears with. This allows to get rid of reference markers within the text,
+            and makes more sense in an abstract sense.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Only referable structures can have a side note. This means that side
+            notes are to be considered associated to sections, clauses, etc. and not to the text
+            they contain. If a fragment of text needs to have a side note, it must be wrapped in a
+            referable fragment, such as a &lt;span class="xmlinline"&gt;ref&lt;/span&gt; or a &lt;span
+            class="xmlinline"&gt;span&lt;/span&gt; element.&lt;/li&gt;
+            &lt;li class="bullets"&gt;While the previous &lt;span class="xmlinline"&gt;sideNote&lt;/span&gt; element was
+            a
+            block, and thus could contain directly text, the &lt;span class="xmlinline"
+            &gt;outOfLine&lt;/span&gt; element is a container, and thus must contain one or more blocks
+            that in turn contain text.&lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;p class="bodyparagraph"&gt;This modification is &lt;span style="font-weight: bold;"&gt;NOT
+            backward-compatible. Elements have been removed and a whole new section created in all
+            types of documents.&lt;/span&gt;&lt;/p&gt;&lt;br/&gt;
+            &lt;p class="bodyparagraph"&gt;
+            &lt;span style="font-weight: bold;"&gt;&lt;br/&gt;9.1.2 Content model reorganization for speeches&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;&lt;br/&gt;After being shown an Australian judgement that was really a
+            dialogue between the judge and the lawyers, and considering that AKOMA NTOSO already has all
+            the necessary elements to deal with dialogues, only they were not available in judgements,
+            it was decided that all speech elements should now be available everywhere a container is
+            available. Thus elements such as &lt;span class="xmlinline"&gt;speech&lt;/span&gt;, &lt;span
+            class="xmlinline"&gt;question&lt;/span&gt; and &lt;span class="xmlinline"&gt;answer&lt;/span&gt; are now
+            available even in &lt;span class="xmlinline"&gt;judgements&lt;/span&gt;.&lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;This modification &lt;span style="font-weight: bold;"&gt;IS
+            backward-compatible. Content models have been expanded.&lt;/span&gt;&lt;/p&gt;
+            &lt;br/&gt;&lt;br/&gt;
+            &lt;p class="bodyparagraph" style="font-weight: bold;"&gt;9.1.3 New inline elements&lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;&lt;br/&gt;A number of new inline elements have been added to this
+            release:&lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;lawyer&lt;/span&gt; is used to mark the
+            specification of a lawyer. Attribute &lt;span class="xmlinline"&gt;represents&lt;/span&gt; can be
+            used to refer to the party it represents and the attribute &lt;span class="xmlinline"
+            &gt;role&lt;/span&gt; can be added to provide more detailed information about the kind of
+            lawyer.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;opinion&lt;/span&gt; is used to specify the
+            opinion of the individual judge within the coram of a judgement. Use attribute &lt;span
+            class="xmlinline"&gt;refersTo&lt;/span&gt; to point to a &lt;span class="xmlinline"
+            &gt;TLCConcept&lt;/span&gt; that provides computable assessment of the type of opinion held
+            by the judge.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;signature&lt;/span&gt; is used to specify
+            the
+            presence of a signature in the document. Use attribute &lt;span class="xmlinline"
+            &gt;refersTo&lt;/span&gt; to point to a &lt;span class="xmlinline"&gt;TLCPerson&lt;/span&gt; that
+            provides the identification of the person responsible of the signature.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;entity&lt;/span&gt; is used to wrap any
+            mention to a concept that is worth being mentioned in the &lt;span class="xmlinline"
+            &gt;references&lt;/span&gt; section. This includes persons, organizations, roles, and places,
+            among others. Always use attribute &lt;span class="xmlinline"&gt;refersTo&lt;/span&gt; to point to a
+            Top Level Class element in the &lt;span class="xmlinline"&gt;references&lt;/span&gt; section that
+            provides computable assessment of the concept associated to that element.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;date&lt;/span&gt; is used to wrap explicit
+            dates in the document (that are not &lt;span class="xmlinline"&gt;documentDates&lt;/span&gt;). Use
+            attribute &lt;span class="xmlinline"&gt;date&lt;/span&gt; to provide an unambiguous form of the date
+            in XSD 1.0 syntax yyyy-mm-dd. Use attribute&lt;span class="xmlinline"&gt; refersTo&lt;/span&gt;, if
+            appropriate, to point to a &lt;span class="xmlinline"&gt;TLCEvent&lt;/span&gt; that provides
+            computable assessment of the event associated to that date. Please note that a &lt;span
+            class="xmlinline"&gt;date&lt;/span&gt; element was already present in the schema in the
+            identification section of the metadata, and that it has now been renamed &lt;span
+            class="xmlinline"&gt;FRBRdate&lt;/span&gt; (see section 9.1.5).&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p class="bodyparagraph"&gt;This modification &lt;span style="font-weight: bold;"&gt;IS
+            backward-compatible. Elements have been added.&lt;/span&gt;&lt;/p&gt;
+
+            &lt;br/&gt;
+            &lt;p style="font-weight: bold;" class="bodyparagraph"&gt;&lt;br/&gt;9.1.4 Judgement-specific and
+            act-specific elements reunited&lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;&lt;br/&gt;Elements &lt;span class="xmlinline"&gt;judgementType&lt;/span&gt;,
+            &lt;span
+            class="xmlinline"&gt;judgementTitle&lt;/span&gt; and &lt;span class="xmlinline"
+            &gt;judgementNumber&lt;/span&gt; were considered overlapping and redundant with respect to &lt;span
+            class="xmlinline"&gt;documentType&lt;/span&gt;, &lt;span class="xmlinline"&gt;documentTitle&lt;/span&gt; and
+            &lt;span class="xmlinline"&gt;documentNumber&lt;/span&gt;, and thus removed. Judgements should now
+            use these documents. Furthermore, a new section in the Release Notes has been added
+            providing hints at how to use these elements, section 7.2, that specifies that these
+            elements may be present multiple times in the document, but if there are more than one per
+            type, then the attribute refersTo must be present and point to different instances of
+            TLCConcepts.&lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;This modification is &lt;span style="font-weight: bold;"&gt;NOT
+            backward-compatible. Elements have been removed.&lt;/span&gt;&lt;/p&gt;
+            &lt;br/&gt;
+            &lt;p style="font-weight: bold;" class="bodyparagraph"&gt;&lt;br/&gt;9.1.5 Name changes in metadata
+            elements&lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;&lt;br/&gt;Elements within &lt;span class="xmlinline"&gt;FRBRWork&lt;/span&gt;,&#160;
+            &lt;span class="xmlinline"&gt;FRBRExpression&lt;/span&gt; , &lt;span class="xmlinline"
+            &gt;FRBRManifestation,&lt;/span&gt; and &lt;span class="xmlinline"&gt;FRBRItem&lt;/span&gt; have now an
+            added
+            FRBR prefix, and thus were turned from &lt;span class="xmlinline"&gt;this,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;uri,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;alias,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;date,&lt;/span&gt; and &lt;span class="xmlinline"&gt;author&lt;/span&gt; to
+            &lt;span
+            class="xmlinline"&gt;FRBRthis&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;FRBRuri,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;FRBRalias,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;FRBRdate,&lt;/span&gt; and &lt;span class="xmlinline"&gt;FRBRauthor.&lt;/span&gt;&lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;A new element &lt;span class="xmlinline"&gt;date&lt;/span&gt; was added, and
+            its
+            name clashed with the elements within the FRBR levels. Given the philosophy of giving short
+            names to elements within the content, and longer names to elements within the metadata, it
+            was decided to change the name of the FRBR elements, and of all it neighbors, by introducing
+            the same FRBR prefix for all.&lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;This modification is &lt;span style="font-weight: bold;"&gt;NOT
+            backward-compatible. Element names have been changed.&lt;/span&gt;&lt;/p&gt;
+
+
+            &lt;p class="bodyparagraph"&gt;
+            &lt;span style="font-weight: bold;"&gt;&lt;br/&gt;9.1.6 Bug fixes&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;A few elements now required presence of two main attributes: &lt;span
+            class="xmlinline"&gt;id&lt;/span&gt; and &lt;span class="xmlinline"&gt;refersTo.&lt;/span&gt; These are
+            &lt;span class="xmlinline"&gt;*ref&lt;/span&gt; and &lt;span class="xmlinline"&gt;*mod&lt;/span&gt;
+            elements, plus elements &lt;span class="xmlinline"&gt;party,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;judge&lt;/span&gt; and the new element &lt;span class="xmlinline"
+            &gt;lawyer.&lt;/span&gt; Previously both id and refersTo were optional. This modification is
+            NOT backward-compatible. Attributes have been made required.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;scene&lt;/span&gt; was previously present as
+            both a container and a block. This is an error, and has been fixed. Element &lt;span
+            class="xmlinline"&gt;scene&lt;/span&gt; is now only a container available everywhere a
+            container can be specified. &lt;span style="font-weight: bold;"&gt;This modification is NOT
+            backward-compatible, but minor.&lt;/span&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/div&gt;
+        </notes>
+        <diff>http://code.google.com/p/akomantoso/source/diff?spec=svn120&amp;r=118&amp;format=side&amp;path=/release/trunk/schemas/akomantoso10.xsd&amp;old_path=/release/trunk/schemas/akomantoso10.xsd&amp;old=111</diff>
+        <source>http://code.google.com/p/akomantoso/source/browse/release/trunk/schemas/akomantoso10.xsd?spec=svn118&amp;r=118</source>
+    </release>
+    <release number="8">
+        <title>Diff:Mar 2008 &amp; Nov 2008</title>
+        <notes>
+            &lt;div class="" id="parent-fieldname-text"&gt;
+            &lt;p class="bodyparagraph"&gt;This release comprises a major modification in naming of elements,
+            introducing a systematic usage of&#160; camel case, settling a long-standing issue about
+            incoherence in the usage of lower and uppercase characters in element names (as well as one
+            element group). This change is thus fixing an overall problem of coherence in element
+            naming, rather than a concrete problem of descriptiveness or completeness of the
+            vocabulary.&lt;/p&gt;
+            &lt;p&gt;
+            &lt;span style="font-weight: bold;"&gt;Content differences:&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;The spelling &lt;span class="xmlinline"&gt;“judgment”&lt;/span&gt; has been
+            replaced
+            with &lt;span class="xmlinline"&gt;“judgement”&lt;/span&gt; in observance to the above-mentioned
+            mail by Mariya Badeva. This relates to all elements and attributes containing the word
+            &lt;span class="xmlinline"&gt;judgement.&lt;/span&gt;&lt;/li&gt;
+            &lt;li class="bullets"&gt;All Top Level Classes have now a proposed syntax for IDs (that was up to
+            this day only mentioned as TBD).&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;comment&lt;/span&gt; has been renamed &lt;span
+            class="xmlinline"&gt;scene&lt;/span&gt; according to remarks about adopting a vocabulary more
+            connected to screenplays.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Elements &lt;span class="xmlinline"&gt;ActType,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;ActTitle,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;ActNumber,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;ActProponent,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;ActDate,&lt;/span&gt; and &lt;span class="xmlinline"&gt;ActPurpose&lt;/span&gt;
+            have been renamed &lt;span class="xmlinline"&gt;docType,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;docTitle,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;docNumber,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;docProponent,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;docDate,&lt;/span&gt; and &lt;span class="xmlinline"&gt;docPurpose&lt;/span&gt;
+            so
+            as to reflect a vocabulary apt to describe more than just legislation.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;recordedTime&lt;/span&gt; has now a new
+            attribute &lt;span class="xmlinline"&gt;type&lt;/span&gt; to allow for the specification of recorded
+            times for the beginning of event (&lt;span class="xmlinline"&gt;startEvent&lt;/span&gt;) and end of
+            events (&lt;span class="xmlinline"&gt;endEvent&lt;/span&gt;) if necessary&lt;/li&gt;
+            &lt;li class="bullets"&gt;A new inline element &lt;span class="xmlinline"&gt;remark&lt;/span&gt; has been
+            added to specify editorial inclusions within the main text (for instance the caption of
+            the speaker in the new page continuing from the previous one). An attribute type with an
+            initial list of remark types &lt;span class="xmlinline"&gt;(sceneDescription,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;phenomenon,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;caption,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;translation&lt;/span&gt;) is also added.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p&gt;
+            &lt;span style="font-weight: bold;"&gt;Case differences (specific to the camelCase
+            release):&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;A specific policy for case in names has been decided. It only and
+            specifically regards structure names in the schema (these include names for attributes,
+            elements, simple types, complex types, attribute groups and element groups) that are
+            composed of two separate terms in plain English. The policy is as follows:&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul&gt;
+            &lt;li class="secondlevel_bullets"&gt;A name that is composed of a simple term is all in lowercase
+            (e.g., &lt;span class="xmlinline"&gt;section,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;act,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;publication&lt;/span&gt;).&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul&gt;
+            &lt;li class="secondlevel_bullets"&gt;A name that is composed of two or more full terms has the
+            first one in lowercase, and all the others have their initial letter in uppercase (that
+            I call camelCase, as a reduced form of CamelCase). For instance, &lt;span class="xmlinline"
+            &gt;courtType,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;actDate,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;mainContent.&lt;/span&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul&gt;
+            &lt;li class="secondlevel_bullets"&gt;A name that is composed of an acronym plus one or more full
+            terms has the acronym in all capital letters and the remaining terms in camelCase (i.e.,
+            the first is all lowercase and the others have the first letter in uppercase). For
+            instance, &lt;span class="xmlinline"&gt;FRBRManifestation,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;TLCPerson.&lt;/span&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;The element groups, complex types and simple types &lt;span
+            class="xmlinline"&gt;EventType,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;VersionType&lt;/span&gt;, &lt;span class="xmlinline"&gt;InlineCM&lt;/span&gt;,
+            &lt;span class="xmlinline"&gt;SpeechSection&lt;/span&gt;,&#160; &lt;span class="xmlinline"
+            &gt;HierarchicalStructure&lt;/span&gt;, &lt;span class="xmlinline"&gt;OpenStructure,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;DebateStructure,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;JudgmentStructure&lt;/span&gt; and &lt;span class="xmlinline"
+            &gt;DocumentTypes&lt;/span&gt; are now &lt;span class="xmlinline"&gt;eventType,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;iversionType,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;inlineCM,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;speechSection,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;hierarchicalStructure,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;openStructure,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;debateStructure,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;judgementStructure&lt;/span&gt; (note new spelling for judgement) and
+            &lt;span class="xmlinline"&gt;documentType&lt;/span&gt; (note, also singular now) in
+            camelCase.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;17 elements have changed their case in order to adopt the camelCase
+            approach: elements activeModifications, activeRef, akomaNtoso, attachmentOf,
+            debateRecord, efficacyMod, forceMod, hasAttachment, mainContent, meaningMod, noteRef,
+            passiveModifications, passiveRef, proceduralMotions, scopeMod, textualMod, and
+            tocItem.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/div&gt;
+
+        </notes>
+        <diff>http://code.google.com/p/akomantoso/source/diff?spec=svn111&amp;r=111&amp;format=side&amp;path=/rel_history/trunk/akomantoso10.xsd</diff>
+        <source>http://code.google.com/p/akomantoso/source/browse/rel_history/trunk/akomantoso10.xsd?spec=svn111&amp;r=111</source>
+    </release>
+    <release number="7">
+        <title>Diff:Oct 2007 &amp; Mar 2008</title>
+        <notes>&lt;div class="" id="parent-fieldname-text"&gt;
+            &lt;p class="bodyparagraph"&gt;This is a tentative release of a major evolution, with a specific
+            improvement, namely the support for judgments. Other minor modifications have been included.
+            Existing documents that are not judgments should be unaffected by this release.&lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;Most of the modifications accept and organize the proposal from Monica
+            Palmirani in a document called “Common Open Standard for Judgments”.&lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;Modifications unrelated to the judgment we find:&lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;A new element for debate documents called &lt;span class="xmlinline"
+            &gt;DeclarationofVote&lt;/span&gt;&lt;/li&gt;
+            &lt;li class="bullets"&gt;A new element this is added in all FRBR levels to report the URI of the
+            specific component where the metadata block is found&lt;/li&gt;
+            &lt;li class="bullets"&gt;The name for the &lt;span class="xmlinline"&gt;Attachment&lt;/span&gt; element in
+            the &lt;span class="xmlinline"&gt;analysis&lt;/span&gt; element is now &lt;span class="xmlinline"
+            &gt;HasAttachment&lt;/span&gt; in order to avoid confusions.&#160;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p class="bodyparagraph"&gt;Modifications related to the judgment as specified in Palmirani’s
+            document are:&lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;A new document type &lt;span class="xmlinline"&gt;“judgement”&lt;/span&gt; is
+            introduced, that has its own schema composed of &lt;span class="xmlinline"&gt;meta,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;header,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;judgmentBody,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;conclusions&lt;/span&gt; and &lt;span class="xmlinline"
+            &gt;attachment.&lt;/span&gt;&lt;/li&gt;
+            &lt;li class="bullets"&gt;Within the section &lt;span class="xmlinline"&gt;header&lt;/span&gt; a number of
+            additional inline-level purpose-specific elements have been added, namely: &lt;span
+            class="xmlinline"&gt;judgmentType,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;judgmentTitle,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;judgmentNumber,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;courtType,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;neutralCitation,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;party,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;judge,&lt;/span&gt; and &lt;span class="xmlinline"
+            &gt;judgmentDate.&lt;/span&gt;&lt;/li&gt;
+            &lt;li class="bullets"&gt;The &lt;span class="xmlinline"&gt;judgmentBody&lt;/span&gt; has a repeatable
+            choice
+            of sections named &lt;span class="xmlinline"&gt;introduction,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;background,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;motivation,&lt;/span&gt; and &lt;span class="xmlinline"
+            &gt;decision.&lt;/span&gt;&lt;/li&gt;
+            &lt;li class="bullets"&gt;An additional metadata element, &lt;span class="xmlinline"&gt;workflow,&lt;/span&gt;
+            and its repeatable child &lt;span class="xmlinline"&gt;action&lt;/span&gt; have been added.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p class="bodyparagraph"&gt;Some modifications diverge from Palmirani’s proposal, as follows:&lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;No elements such as &lt;span class="xmlinline"&gt;coram,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;judges&lt;/span&gt; and &lt;span class="xmlinline"&gt;judgmentDates&lt;/span&gt;
+            have been specified, as they are containers, disallowed in the patterned structure of
+            inline elements. The corresponding singular elements are used directly in the flow of
+            the text.&lt;/li&gt;
+            &lt;li class="bullets"&gt;The element &lt;span class="xmlinline"&gt;body&lt;/span&gt; has been substituted
+            with &lt;span class="xmlinline"&gt;judgmentBody,&lt;/span&gt; as &lt;span class="xmlinline"&gt;body&lt;/span&gt;
+            has been used already to refer to the content of hierarchical structures such as acts
+            and bills.&lt;/li&gt;
+            &lt;li class="bullets"&gt;The &lt;span class="xmlinline"&gt;href&lt;/span&gt; attributes in &lt;span
+            class="xmlinline"&gt;part,&lt;/span&gt;
+            &lt;span class="xmlinline"&gt;judge&lt;/span&gt; and &lt;span class="xmlinline"&gt;action,&lt;/span&gt;
+            meant to
+            refer to the ontological section references, have been omitted as the proper attribute
+            &lt;span class="xmlinline"&gt;refersTo&lt;/span&gt; now exist for all elements in the schema,
+            and therefore no need for such attribute was needed. The &lt;span class="xmlinline"
+            &gt;as&lt;/span&gt; attribute, on the other hand, has been kept as proposed.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p&gt;Open issues are as follows:&lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;We have adopted the spelling “judgment” instead of “judgement” as
+            proposed by Palmirani, but we are worried about the last sentence in the following
+            fragment from &lt;a href="http://en.wikipedia.org/wiki/Judgment_%28law%29" class="bodylink"
+            &gt;http://en.wikipedia.org/wiki/Judgment_%28law%29&lt;/a&gt;: “However, the spelling
+            judgement (with e added) largely replaced judgment in the United Kingdom in a non-legal
+            context […] In the context of the law and theology, however, judgment is preferred. In
+            the U.S. judgment strongly prevails. As with many such spelling differences, both forms
+            are equally acceptable in Canada and Australia, although judgment is more common in
+            Canada and judgement in Australia.[1] In New Zealand the form judgment is the preferred
+            spelling in dictionaries, newspapers and legislation, although the variant judgement can
+            also be found in all three categories. In South Africa, judgement is the more common
+            form."&lt;/li&gt;
+            &lt;li class="bullets"&gt;We are not convinced of the need for a &lt;span class="xmlinline"
+            &gt;workflow&lt;/span&gt; element, and would have preferred to have it harmonized and
+            included in the &lt;span class="xmlinline"&gt;lifecycle&lt;/span&gt; element.&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;/div&gt;
+        </notes>
+        <diff>http://code.google.com/p/akomantoso/source/diff?spec=svn109&amp;r=109&amp;format=side&amp;path=/rel_history/trunk/akomantoso10.xsd</diff>
+        <source>http://code.google.com/p/akomantoso/source/browse/release/trunk/schemas/akomantoso10.xsd?spec=svn136&amp;r=33</source>
+    </release>
+    <release number="6">
+        <title>Diff:Sep 2007 &amp; Oct 2007</title>
+        <notes>&lt;div class="" id="parent-fieldname-text"&gt;
+            &lt;div class="paragraph-body"&gt;
+            &lt;div class="plain"&gt;
+            &lt;p class="bodyparagraph"&gt;This is a major release with plenty of differences and
+            improvement. It is worth noting that at least ONE modification (the creation of the
+            content element and the renaming of &lt;span class="xmlinline"&gt;title&lt;/span&gt; and &lt;span
+            class="xmlinline"&gt;subtitle&lt;/span&gt;) is NOT BACKWARD COMPATIBLE, so that documents
+            that were valid against the previous versions most probably will NOT be valid
+            against this version.&lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;Please note the modifications that are not backward compatible
+            are still amenable of automatic conversion. I have added an XSLT stylesheet that
+            takes a valid Akoma Ntoso document of the previous release and converts it into a
+            valid document of the current release. You can find it in the styles directory of
+            the release, called &lt;span class="xmlinline"&gt;convertToThis.xsl.&lt;/span&gt;&lt;/p&gt;
+            &lt;p class="bodyparagraph"&gt;This release also includes and documents an unofficial,
+            undocumented release called &lt;span class="xmlinline"&gt;Tentative Release
+            20071510&lt;/span&gt; dated 15 October, 2007.&#160;&lt;/p&gt;
+            &lt;ul&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;clauses &lt;/span&gt;has been renamed
+            into &lt;span class="xmlinline"&gt;body&lt;/span&gt;. NOT BACKWARD COMPATIBLE&lt;/li&gt;
+            &lt;li class="bullets"&gt;Elements &lt;span class="xmlinline"&gt;title &lt;/span&gt;and &lt;span
+            class="xmlinline"&gt;subtitle &lt;/span&gt;are now called &lt;span class="xmlinline"
+            &gt;heading &lt;/span&gt;and &lt;span class="xmlinline"&gt;subheading&lt;/span&gt;, to allow for
+            the presence of the title hierarchical elements. NOT BACKWARD COMPATIBLE&lt;/li&gt;
+            &lt;li class="bullets"&gt;The list of hierarchical elements is enriched with the addition
+            of elements &lt;span class="xmlinline"&gt;title&lt;/span&gt;, &lt;span class="xmlinline"
+            &gt;book&lt;/span&gt;, &lt;span class="xmlinline"&gt;tome&lt;/span&gt;, &lt;span class="xmlinline"
+            &gt;subsection&lt;/span&gt;, &lt;span class="xmlinline"&gt;subpart&lt;/span&gt;, &lt;span
+            class="xmlinline"&gt;subparagraph&lt;/span&gt;, &lt;span class="xmlinline"
+            &gt;subchapter&lt;/span&gt;, &lt;span class="xmlinline"&gt;subtitle&lt;/span&gt;, and &lt;span
+            class="xmlinline"&gt;subclause&lt;/span&gt;. As mentioned, elements &lt;span
+            class="xmlinline"&gt;title &lt;/span&gt;and &lt;span class="xmlinline"&gt;subtitle
+            &lt;/span&gt;existed for a different purpose, and are now plain hierarchical
+            elements.&lt;/li&gt;
+            &lt;li class="bullets"&gt;A new element &lt;span class="xmlinline"&gt;content &lt;/span&gt;is added to
+            connect the list of hierarchical elements to their actual textual content. Any
+            hierarchical element can contain either other hierarchical elements or the &lt;span
+            class="xmlinline"&gt;content &lt;/span&gt;element which contains blocks. NOT BACKWARD
+            COMPATIBLE&lt;/li&gt;
+            &lt;li class="bullets"&gt;The content model of &lt;span class="xmlinline"&gt;article &lt;/span&gt;and
+            &lt;span class="xmlinline"&gt;clause &lt;/span&gt;has completely changed and is now
+            identical to the other hierarchical elements. NOT BACKWARD COMPATIBLE&lt;/li&gt;
+            &lt;li class="bullets"&gt;A new optional attribute &lt;span class="xmlinline"&gt;refersTo
+            &lt;/span&gt;has been added to all content elements of the Akoma Ntoso schema. The
+            attribute &lt;span class="xmlinline"&gt;refersTo &lt;/span&gt;can be used when necessary to
+            refer to an element of the &lt;span class="xmlinline"&gt;references&lt;/span&gt; section, in
+            order to suggest an ontological interpretation of the content of the element.
+            Also use &lt;span class="xmlinline"&gt;refersTo &lt;/span&gt;to make an element equivalent
+            and referring to another (e.g. for translation purposes).&lt;/li&gt;
+            &lt;li class="bullets"&gt;A new value for the &lt;span class="xmlinline"&gt;status
+            &lt;/span&gt;attribute has been added, “editorial”. The new value is to be added for
+            content that has to appear in the final document with the rest of the text, but
+            was not originally included in the document created by the author. Editorial
+            elements can be used for editorial annotations (e.g.: &lt;span class="xmlinline"
+            &gt;&lt;span status=”editorial”&gt;(Translation of Afrikaans paragraph
+            follows.)&lt;/span&gt;&lt;/span&gt;)&lt;/li&gt;
+            &lt;li class="bullets"&gt;An initial list of &lt;span class="xmlinline"&gt;debaterecord
+            &lt;/span&gt;subdivisions has been created. Debate records can now be organized with
+            subdivisions that reflect the actual nature of the content. The new elements
+            are: &lt;span class="xmlinline"&gt;AdministrationOfOath&lt;/span&gt;, &lt;span
+            class="xmlinline"&gt;Communication&lt;/span&gt;, &lt;span class="xmlinline"
+            &gt;Petitions&lt;/span&gt;, &lt;span class="xmlinline"&gt;Papers&lt;/span&gt;, &lt;span
+            class="xmlinline"&gt;NoticesOfMotion&lt;/span&gt;, &lt;span class="xmlinline"
+            &gt;Questions&lt;/span&gt;, &lt;span class="xmlinline"&gt;Address&lt;/span&gt;, &lt;span
+            class="xmlinline"&gt;ProceduralMotions&lt;/span&gt;, and &lt;span class="xmlinline"
+            &gt;PointOfOrder&lt;/span&gt;, and can be used in all places where previously only
+            subdivision could be used. TENTATIVE MODIFICATION. DO NOT RELY ON THIS.&lt;/li&gt;
+            &lt;li class="bullets"&gt;To avoid confusion between the elements &lt;span class="xmlinline"
+            &gt;item &lt;/span&gt;and &lt;span class="xmlinline"&gt;Item&lt;/span&gt;, the latter has been
+            renamed &lt;span class="xmlinline"&gt;FRBRItem&lt;/span&gt;. For symmetry, all four FRBR
+            levels have similarly changed name. Therefore &lt;span class="xmlinline"
+            &gt;Work&lt;/span&gt;, &lt;span class="xmlinline"&gt;Expression&lt;/span&gt;, &lt;span
+            class="xmlinline"&gt;Manifestation &lt;/span&gt;and &lt;span class="xmlinline"&gt;Item
+            &lt;/span&gt;are now called &lt;span class="xmlinline"&gt;FRBRork&lt;/span&gt;, &lt;span
+            class="xmlinline"&gt;FRBRExpression&lt;/span&gt;, &lt;span class="xmlinline"
+            &gt;FRBRManifestation &lt;/span&gt;and &lt;span class="xmlinline"&gt;FRBRItem&lt;/span&gt;. NOT
+            BACKWARD COMPATIBLE&lt;/li&gt;
+            &lt;li class="bullets"&gt;To avoid confusion between the elements &lt;span class="xmlinline"
+            &gt;force &lt;/span&gt;and &lt;span class="xmlinline"&gt;Force&lt;/span&gt;, and &lt;span
+            class="xmlinline"&gt;efficacy &lt;/span&gt;and &lt;span class="xmlinline"
+            &gt;Efficacy&lt;/span&gt;, the latter ones have been renamed &lt;span class="xmlinline"
+            &gt;ForceMod &lt;/span&gt;and &lt;span class="xmlinline"&gt;EfficacyMod&lt;/span&gt;. For
+            symmetry, all other modification elements have similarly changed name. Therefore
+            &lt;span class="xmlinline"&gt;Textual&lt;/span&gt;, &lt;span class="xmlinline"
+            &gt;Meaning&lt;/span&gt;, &lt;span class="xmlinline"&gt;Scope&lt;/span&gt;, &lt;span
+            class="xmlinline"&gt;Force&lt;/span&gt;, &lt;span class="xmlinline"&gt;Efficacy &lt;/span&gt;and
+            &lt;span class="xmlinline"&gt;LegalSystem &lt;/span&gt;are now called &lt;span
+            class="xmlinline"&gt;TextualMod&lt;/span&gt;, &lt;span class="xmlinline"
+            &gt;MeaningMod&lt;/span&gt;, &lt;span class="xmlinline"&gt;ScopeMod&lt;/span&gt;, &lt;span
+            class="xmlinline"&gt;ForceMod&lt;/span&gt;, &lt;span class="xmlinline"&gt;EfficacyMod
+            &lt;/span&gt;and &lt;span class="xmlinline"&gt;LegalSystemMod&lt;/span&gt;. NOT BACKWARD
+            COMPATIBLE&lt;/li&gt;
+            &lt;li class="bullets"&gt;The &lt;span class="xmlinline"&gt;uri &lt;/span&gt;element specifies the URI
+            in a &lt;span class="xmlinline"&gt;value &lt;/span&gt;attribute rather than in an &lt;span
+            class="xmlinline"&gt;href &lt;/span&gt;attribute. (Bug fix from previous error) NOT
+            BACKWARD COMPATIBLE&lt;/li&gt;
+            &lt;li class="bullets"&gt;The value &lt;span class="xmlinline"&gt;Suspension &lt;/span&gt;for the
+            &lt;span class="xmlinline"&gt;type &lt;/span&gt;attribute of the &lt;span class="xmlinline"
+            &gt;EfficacyMod &lt;/span&gt;(formerly &lt;span class="xmlinline"&gt;Efficacy&lt;/span&gt;)
+            element&#160; has been replaced by two values, &lt;span class="xmlinline"
+            &gt;EntryIntoEfficacy &lt;/span&gt;and &lt;span class="xmlinline"
+            &gt;EndOfEfficacy&lt;/span&gt;.&lt;/li&gt;
+            &lt;li class="bullets"&gt;All TLC are now present in the &lt;span class="xmlinline"&gt;reference
+            &lt;/span&gt;section. Newly added terms are: &lt;span class="xmlinline"
+            &gt;TLCConcept&lt;/span&gt;, &lt;span class="xmlinline"&gt;TLCObject&lt;/span&gt;, &lt;span
+            class="xmlinline"&gt;TLCEvent&lt;/span&gt;, &lt;span class="xmlinline"&gt;TLCPlace&lt;/span&gt;,
+            &lt;span class="xmlinline"&gt;TLCProcess&lt;/span&gt;, &lt;span class="xmlinline"
+            &gt;TLCRole&lt;/span&gt;, and &lt;span class="xmlinline"&gt;TLCTerm&lt;/span&gt;.&lt;/li&gt;
+            &lt;li class="bullets"&gt;Existing TLC elements have been renamed to include the prefix
+            “TLC” to clarify their role. This include the renaming of &lt;span
+            class="xmlinline"&gt;Person&lt;/span&gt;, &lt;span class="xmlinline"
+            &gt;Organization&lt;/span&gt;, &lt;span class="xmlinline"&gt;Role&lt;/span&gt;, and &lt;span
+            class="xmlinline"&gt;Reference &lt;/span&gt;into &lt;span class="xmlinline"
+            &gt;TLCPerson&lt;/span&gt;, &lt;span class="xmlinline"&gt;TLCOrganization&lt;/span&gt;, &lt;span
+            class="xmlinline"&gt;TLCRole&lt;/span&gt;, and &lt;span class="xmlinline"
+            &gt;TLCReference&lt;/span&gt;. NOT BACKWARD COMPATIBLE&lt;/li&gt;
+            &lt;li class="bullets"&gt;Element &lt;span class="xmlinline"&gt;TLCReference &lt;/span&gt;(formerly
+            &lt;span class="xmlinline"&gt;Reference) &lt;/span&gt;is now a generic element in all
+            respects, and has a new required &lt;span class="xmlinline"&gt;name &lt;/span&gt;attribute.
+            NOT BACKWARD COMPATIBLE&lt;/li&gt;
+            &lt;li class="bullets"&gt;The &lt;span class="xmlinline"&gt;Work &lt;/span&gt;element now contains
+            components just like the other elements of the &lt;span class="xmlinline"
+            &gt;identification &lt;/span&gt;element, such as &lt;span class="xmlinline"&gt;Expression,
+            &lt;/span&gt;&lt;span class="xmlinline"&gt;Manifestation &lt;/span&gt;and &lt;span
+            class="xmlinline"&gt;Item &lt;/span&gt;(Added in &lt;span class="xmlinline"&gt;Tentative
+            Release 20071510&lt;/span&gt;).&lt;/li&gt;
+            &lt;li class="bullets"&gt;Within the &lt;span class="xmlinline"&gt;identification
+            &lt;/span&gt;elements, &lt;span class="xmlinline"&gt;component &lt;/span&gt;can now nest and
+            contain other &lt;span class="xmlinline"&gt;component &lt;/span&gt;elements&#160; (Added in
+            &lt;span class="xmlinline"&gt;Tentative Release 20071510&lt;/span&gt;).&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;p&gt;&#160;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;/div&gt;
+        </notes>
+        <diff>http://code.google.com/p/akomantoso/source/diff?spec=svn107&amp;r=107&amp;format=side&amp;path=/rel_history/trunk/akomantoso10.xsd&amp;old_path=/rel_history/trunk/akomantoso10.xsd&amp;old=105</diff>
+        <source>http://code.google.com/p/akomantoso/source/browse/rel_history/trunk/akomantoso10.xsd?spec=svn107&amp;r=107</source>
+    </release>
+    <release number="5">
+        <title>Diff:Jun 2007 &amp; Sep 2007</title>
+        <notes>&lt;div style="background-color: rgb(255, 255, 255);" colspan="1" rowspan="1" align="left" width="20%"&gt;This
+            is a minor bug-fix release
+            managing better the interaction between Akoma Ntoso elements and
+            elements coming from different vocabularies. &lt;br/&gt;
+            &lt;br/&gt;
+            The attribute &lt;span class="xmlinline">processContent&lt;/span&gt;
+            of the &lt;span class="xmlinline">&lt;xsd:any&gt;&lt;/span&gt;
+            element is set to &lt;span class="xmlinline">lax&lt;/span&gt;, so
+            that if proprietary elements are added here and there, users do not
+            have to have the proprietary schema to validate the documents, but just
+            the main Akoma Ntoso one.&lt;br/&gt;
+            &lt;br/&gt;
+            A new &lt;span class="xmlinline">href&lt;/span&gt; attribute is
+            added to a few inner elements of the provisions in the active
+            modifications part of the metadata. This is to prevent the creation of
+            useless proprietary elements&#160; to point to the positions in the
+            document that contain the text being referenced.&lt;br/&gt;
+            &lt;/div&gt;</notes>
+        <diff>http://code.google.com/p/akomantoso/source/diff?spec=svn105&amp;r=105&amp;format=side&amp;path=/rel_history/trunk/akomantoso10.xsd&amp;old_path=/rel_history/trunk/akomantoso10.xsd&amp;old=103</diff>
+        <source>http://code.google.com/p/akomantoso/source/browse/rel_history/trunk/akomantoso10.xsd?spec=svn109&amp;r=105</source>
+    </release>
+    <release number="4">
+        <title>Diff:Feb 2007 &amp; Jun 2007</title>
+        <notes>&lt;div style="text-align: justify;"&gt;&lt;span style="color: rgb(0, 0, 0);"&gt;This is a bug-fix
+            release for managing
+            the expected content model of elements such as &lt;span class="xmlinline">mod,&lt;/span&gt; &lt;span
+            class="xmlinline">mmod,&lt;/span&gt; and &lt;span class="xmlinline">rmod,&lt;/span&gt; which were expected
+            to be
+            mixed content model with a free choice of inline elements and quotes,
+            and due to the odd behavior of complex type derivation through
+            extension in XML Schema 1.0, ended up being a mixed content model with
+            an ordered &lt;span style="font-style: italic;"&gt;sequence&lt;/span&gt; of a free
+            choice of inline elements and a free choice of quotes, in this order.
+            Similar problem could be found with li elements. &lt;/span&gt;&lt;br style="color: rgb(0, 0, 0);"&gt;
+            &lt;span style="color: rgb(0, 0, 0);"&gt;&lt;/span&gt;&lt;br/&gt;
+            &lt;span style="color: rgb(0, 0, 0);"&gt;The solution has been to
+            revoke the type of &lt;span class="xmlinline">mod, mmod&lt;/span&gt;
+            and &lt;span class="xmlinline">rmod&lt;/span&gt; from being
+            derivations of the inline type, and create a new type modType, which is
+            disconnected from inline but has all the right elements. A similar
+            solution has been taken for li. &lt;/span&gt;&lt;br style="color: rgb(0, 0, 0);"&gt;
+            &lt;span style="color: rgb(0, 0, 0);"&gt;&lt;/span&gt;&lt;br/&gt;
+            &lt;span style="color: rgb(0, 0, 0);"&gt;Also, for greater precision,
+            the previously defined type &lt;span class="xmlinline">modType&lt;/span&gt;
+            (which collected modification metadata) has been renamed &lt;span class="xmlinline">modificationType&lt;/span&gt;
+            in order to
+            prevent further confusion.&#160; &lt;/span&gt;&lt;br style="color: rgb(0, 0, 0);"&gt;
+            &lt;span style="color: rgb(0, 0, 0);"&gt;&lt;/span&gt;&lt;br/&gt;
+            &lt;span style="color: rgb(0, 0, 0);"&gt;Small bug fix in the content
+            model of the &lt;span class="xmlinline">quotedStructure&lt;/span&gt;
+            element that now allows &lt;span class="xmlinline">clause&lt;/span&gt;
+            elements to be present.&lt;/span&gt;&lt;br style="color: rgb(0, 0, 0);"&gt;
+            &lt;span style="color: rgb(0, 0, 0);"&gt;&lt;/span&gt;&lt;br/&gt;
+            &lt;span style="color: rgb(0, 0, 0);"&gt;The examples and xslt
+            stylesheets were changed to reflect changes in naming policies in
+            metadata sections. &lt;/span&gt;&lt;br/&gt;
+            &lt;span style="color: rgb(0, 0, 0);"&gt;&lt;/span&gt;&lt;/div&gt;</notes>
+        <diff>http://code.google.com/p/akomantoso/source/diff?spec=svn103&amp;r=103&amp;format=side&amp;path=/rel_history/trunk/akomantoso10.xsd&amp;old_path=/rel_history/trunk/akomantoso10.xsd&amp;old=101</diff>
+        <source>http://code.google.com/p/akomantoso/source/browse/rel_history/trunk/akomantoso10.xsd?spec=svn109&amp;r=103</source>
+    </release>
+    <release number="3">
+        <title>Diff:Nov 2006 &amp; Feb 2007</title>
+        <notes>
+            &lt;div style="text-align: justify;" colspan="3" rowspan="1"&gt;The Naming Convention is introduced and
+            officially raised to standard level. Correspondingly, section 10 of this document has been
+            mostly emptied and now refers to the external document “AKOMA NTOSO Naming Convention”.
+            &lt;br/&gt;&lt;br/&gt;The element and attribute synopsis has been completely revised and reorganized.
+            &lt;br/&gt;&lt;br/&gt;The schema only received minor modifications covering only the rename of the
+            &lt;span class="xmlinline">minutes&lt;/span&gt; element into debaterecord, a few bug fixes in
+            attributes, plus the support for differences in force and efficacy periods (&lt;span
+            style="font-weight: bold;"&gt;Please note&lt;/span&gt;: an intermediate, non official release dated
+            30/11/2006 already contains some of these modifications). &lt;br/&gt;&lt;ul&gt;&lt;li&gt;Two new core
+            optional
+            attributes, &lt;span class="xmlinline">startEfficacy&lt;/span&gt; and
+            &lt;span class="xmlinline">endEfficacy,&lt;/span&gt; have been added to all content
+            elements. &lt;/li&gt;&lt;li&gt;Elements &lt;span class="xmlinline">list,&lt;/span&gt;
+            &lt;span class="xmlinline">ul, ol&lt;/span&gt;, and &lt;span class="xmlinline">table&lt;/span&gt; now have
+            the full set of core
+            attributes, i.e., &lt;span class="xmlinline">id, class, style, title&lt;/span&gt;,
+            and enactment attributes. &lt;/li&gt;&lt;li&gt;Element
+            &lt;span class="xmlinline">ActDate&lt;/span&gt; now has a &lt;span class="xmlinline">date&lt;/span&gt;
+            attribute
+            for normalized dates. &lt;/li&gt;&lt;li&gt;A bug in the content model of
+            &lt;span class="xmlinline">mod, mmod&lt;/span&gt; and
+            &lt;span class="xmlinline">rmod&lt;/span&gt; has been fixed and now their content
+            model allows plain text to be inserted as well as other types of content.
+            &lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+        </notes>
+        <diff>http://code.google.com/p/akomantoso/source/diff?spec=svn101&amp;r=101&amp;format=side&amp;path=/rel_history/trunk/akomantoso10.xsd&amp;old_path=/rel_history/trunk/akomantoso10.xsd&amp;old=99</diff>
+        <source>http://code.google.com/p/akomantoso/source/browse/rel_history/trunk/akomantoso10.xsd?spec=svn101&amp;r=101</source>
+    </release>
+    <release number="2">
+        <title>Diff:Oct 2006 &amp; Nov 2006</title>
+        <notes>&lt;div style="text-align: justify;" colspan="4" rowspan="1"&gt;A minor release covering mostly only the
+            attributes and elements of the metadata section. &lt;br/&gt;&lt;ul&gt;&lt;li&gt;Elements
+            &lt;span class="xmlinline">attachments, clauses, debate&lt;/span&gt; and
+            &lt;span class="xmlinline">maincontent&lt;/span&gt; now have the core set of
+            attributes (they were forgotten in previous versions). &lt;/li&gt;&lt;li&gt;
+            &lt;span class="xmlinline">Analysis&lt;/span&gt; now distinguish between active
+            modifications (stored in amending acts) and passive modifications (stored in amended
+            acts). The old &lt;span class="xmlinline">amendments&lt;/span&gt; element has been
+            replaced with &lt;span class="xmlinline">ActiveModifications&lt;/span&gt; and
+            &lt;span class="xmlinline">PassiveModifications.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;
+            &lt;span class="xmlinline">Attachment&lt;/span&gt; and
+            &lt;span class="xmlinline">AttachmentOf&lt;/span&gt; have a new attribute,
+            &lt;span class="xmlinline">type.&lt;/span&gt; No restricted set of values is foreseen
+            yet, but this is bound to change in future release. &lt;/li&gt;&lt;li&gt;
+            &lt;span class="xmlinline">source&lt;/span&gt; and
+            &lt;span class="xmlinline">destination&lt;/span&gt; elements of all analytical
+            elements can now be repeated. The attribute
+            &lt;span class="xmlinline">upTo&lt;/span&gt; has also been added to deal with range references for
+            analytical
+            elements. &lt;/li&gt;&lt;li&gt;Two new attributes,
+            &lt;span class="xmlinline">exclusion&lt;/span&gt; and &lt;span class="xmlinline">incomplete,&lt;/span&gt;
+            are
+            added for modifications that are specified with exceptions and in an incomplete manner.
+            &lt;/li&gt;&lt;li&gt;A new textual modification has been added,
+            &lt;span class="xmlinline">Renumbering.&lt;/span&gt;
+            &lt;/li&gt;&lt;li&gt;The elements &lt;span class="xmlinline">oldText&lt;/span&gt; and
+            &lt;span class="xmlinline">newText&lt;/span&gt; have been renamed into
+            &lt;span class="xmlinline">old&lt;/span&gt; and
+            &lt;span class="xmlinline">new&lt;/span&gt;&lt;/li&gt;&lt;li&gt;The element
+            &lt;span class="xmlinline">condition&lt;/span&gt; has now a new &lt;span class="xmlinline">frozen&lt;/span&gt;
+            attribute. &lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+        </notes>
+        <diff>http://code.google.com/p/akomantoso/source/diff?spec=svn99&amp;r=99&amp;format=side&amp;path=/rel_history/trunk/akomantoso10.xsd&amp;old_path=/rel_history/trunk/akomantoso10.xsd&amp;old=97</diff>
+        <source>
+            http://code.google.com/p/akomantoso/source/browse/rel_history/trunk/akomantoso10.xsd?spec=svn99&amp;r=99
+        </source>
+    </release>
+    <release number="1">
+        <title>Diff:Jun 2006 &amp; Oct 2006</title>
+        <notes>
+            &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+            &lt;div style="text-align: justify;" colspan="4" rowspan="1"&gt;Many major modifications have been brought
+            into this release. Metadata are now completely reorganized, introducing the organization in four
+            levels and a section on amendment analysis. Within document, new elements have been added to
+            handle strange hierarchies, line and page numbering, and multiple and range-based modifications
+            and references. In detail: &lt;br/&gt;&lt;ul&gt;&lt;li&gt;New block elements called
+            &lt;span class="xmlinline">list&lt;/span&gt;,titled block (&lt;span class="xmlinline">tblock&lt;/span&gt;)
+            and
+            &lt;span class="xmlinline">foreign&lt;/span&gt; are added.&lt;/li&gt;&lt;li&gt;New inline elements
+            &lt;span class="xmlinline">eol &lt;/span&gt;and &lt;span class="xmlinline">eop&lt;/span&gt; for managing
+            end-of-line and end-of-page
+            situations when they are relevant&lt;/li&gt;&lt;li&gt;All
+            &lt;span class="xmlinline">IDREF&lt;/span&gt; attributes are now &lt;span class="xmlinline">ANYURI
+            &lt;/span&gt;(thus allowing for references to be stored outside of the document). A reference
+            to item foobar used to be &lt;span class="xmlinline">idref=”foobar”&lt;/span&gt;,
+            needs now to be &lt;span class="xmlinline">href=”#foobar”&lt;/span&gt;. &lt;/li&gt;&lt;li&gt;The
+            attribute &lt;span class="xmlinline">numbering&lt;/span&gt; has been removed because
+            of doubts of its real usefulness. Can be reinstated if found needed. &lt;/li&gt;&lt;li&gt;Two new
+            elements appear close to &lt;span class="xmlinline">num&lt;/span&gt; and
+            &lt;span class="xmlinline">title&lt;/span&gt; at the beginning of hierarchical
+            elements, &lt;span class="xmlinline">subtitle&lt;/span&gt; and
+            &lt;span class="xmlinline">sidenote&lt;/span&gt;. It’s left to markers to decide when
+            to use either one. &lt;/li&gt;&lt;li&gt;The content model of all metadata elements has been
+            simplified removing the attributes for style and enactment that made little sense for
+            them. &lt;/li&gt;&lt;li&gt;Element &lt;span class="xmlinline">item&lt;/span&gt; has completely
+            been reformulated. Its former role as plain member of a hierarchy of subdivision
+            elements within &lt;span class="xmlinline">maincontent&lt;/span&gt; has been
+            replaced by item &lt;span class="xmlinline">list&lt;/span&gt;, which &lt;span
+            style="font-style: italic;"&gt;contains&lt;/span&gt; any of a number of
+            &lt;span class="xmlinline">item&lt;/span&gt; elements. Use
+            &lt;span class="xmlinline">list&lt;/span&gt; instead of
+            &lt;span class="xmlinline">item&lt;/span&gt;, and place
+            &lt;span class="xmlinline">item&lt;/span&gt; within
+            &lt;span class="xmlinline">list&lt;/span&gt; elements. &lt;/li&gt;&lt;li&gt;Elements
+            &lt;span class="xmlinline">ref&lt;/span&gt; and &lt;span class="xmlinline">
+            mod&lt;/span&gt; have been enriched with derivative elements
+            &lt;span class="xmlinline">mref&lt;/span&gt; (multiple references),
+            &lt;span class="xmlinline">rref&lt;/span&gt; (range of references),
+            &lt;span class="xmlinline">mmod&lt;/span&gt; (multiple modifications) and
+            &lt;span class="xmlinline">rmod&lt;/span&gt; (range of modifications) to manage
+            references and modifications that explicitly list in brief multiple different locations
+            of destination document (e.g., “The Provisions of sections 1(1) and (2), 24, 25, 29(2),
+            30, 31, 43, 55, 56, 57, 58, 60, 61, 62, 63, 67, 80, 84, 92, 93, 94, 95, 96, 97, 98, 99,
+            100, 101, 102, 103, 104, 105, 106, 107, 108 and 115 of law n° 92-10 of 17 september 1992
+            to lay down the conditions governing the vacancy of and election to the Presidency of
+            the Republic are amended and supplemented” and “The existing sections 34 to 54 of the
+            Principal Act shall be amended by renumbering them as sections 33 to 53 respectively”).
+            &lt;/li&gt;&lt;li&gt;New inline elements &lt;span class="xmlinline">ins&lt;/span&gt;,
+            &lt;span class="xmlinline">del&lt;/span&gt; and
+            &lt;span class="xmlinline">omissis&lt;/span&gt; are included for managing explicit newly inserted text,
+            deleted text
+            or omitted text in presentation of norms. &lt;/li&gt;&lt;li&gt;All HTML
+            &lt;span class="xmlinline">table&lt;/span&gt; elements now have required id. HTML
+            &lt;span class="xmlinline">li&lt;/span&gt; element has now optional value.
+            &lt;/li&gt;&lt;li&gt;The section &lt;span class="xmlinline">meta&lt;/span&gt; has been
+            completely rewritten and has new a completely different structure and philosophy. See
+            section 7 for details on how to use it. The structure splits open the old
+            &lt;span class="xmlinline">descriptor&lt;/span&gt; section, which now is separated
+            into &lt;span class="xmlinline">identification,&lt;/span&gt;
+            &lt;span class="xmlinline">publication&lt;/span&gt; and
+            &lt;span class="xmlinline">classification,&lt;/span&gt; and introduces the wholly new
+            &lt;span class="xmlinline">analysis&lt;/span&gt; section. &lt;/li&gt;&lt;li&gt;
+            &lt;span class="xmlinline">Identification&lt;/span&gt; is a new structure that
+            contains information about the URIs relative to the four levels of organization of
+            metadata, &lt;span class="xmlinline">Work,&lt;/span&gt;
+            &lt;span class="xmlinline">Expression,&lt;/span&gt;
+            &lt;span class="xmlinline">Manifestation&lt;/span&gt; and
+            &lt;span class="xmlinline">Item.&lt;/span&gt; For each of these levels a number of
+            metadata elements are required: &lt;span class="xmlinline">author,&lt;/span&gt;
+            &lt;span class="xmlinline">date,&lt;/span&gt;
+            &lt;span class="xmlinline">URI,&lt;/span&gt;
+            &lt;span class="xmlinline">components&lt;/span&gt; (except for
+            &lt;span class="xmlinline">Work&lt;/span&gt;) and &lt;span class="xmlinline">preservation.&lt;/span&gt;
+            &lt;/li&gt;&lt;li&gt;&lt;span class="xmlinline">Analysis&lt;/span&gt; is a container of provisions
+            about the actual content of the norm. Currently it contains only modification
+            provisions, that are used to classify and manage amendment acts and documents. A total
+            of 6 types of amendments have been added, for a total of 32 subcases, and a collection
+            of 10 parameters to describe them. &lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+        </notes>
+        <diff>http://code.google.com/p/akomantoso/source/diff?spec=svn97&amp;r=97&amp;format=side&amp;path=/rel_history/trunk/akomantoso10.xsd&amp;old_path=/rel_history/trunk/akomantoso10.xsd&amp;old=94</diff>
+        <source>
+            http://code.google.com/p/akomantoso/source/browse/rel_history/trunk/akomantoso10.xsd?spec=svn97&amp;r=97
+        </source>
+    </release>
+</releases>

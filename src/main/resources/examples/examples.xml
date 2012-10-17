@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<examples>
+    <file name="Act_Kenya_1980-01-01@1989-12-15.xml">
+        <desc>versioned act</desc>
+    </file>
+    <file name="Act_Kenya_1989-12-06.xml">
+        <desc>modificatory act</desc>
+    </file>
+    <file name="Act_Kenya_1997-08-22_3@2003-12-19.xml">
+        <desc>versioned act</desc>
+    </file>
+    <file name="Act_Kenya_2003-12-10-short.xml">
+        <desc>modificatory act</desc>
+    </file>
+    <file name="Amendment_Bungeni_2011-07-20.xml">
+        <desc>European Parliament amendment</desc>
+    </file>
+    <file name="Amendment_Bungeni_2009.xml">
+        <desc>multiple linguistic amendment, use of the attribute &lt;code&gt;alternativeTo&lt;/code&gt;</desc>
+    </file>
+    <file name="AmendmentList_Bungeni_2010-10-28v1.xml">
+        <desc/>
+    </file>
+    <file name="AmendmentList_Bungeni_2010-10-28v2.xml">
+        <desc/>
+    </file>
+    <file name="Bill_Bungeni_2009-01-27.xml">
+        <desc>&lt;code&gt;documentCollection&lt;/code&gt; with &lt;code&gt;ComponentRef&lt;/code&gt; and &lt;code&gt;Component&lt;/code&gt;</desc>
+    </file>
+    <file name="Bill_Bungeni_2010-10-10.xml">
+        <desc>&lt;code&gt;bill&lt;/code&gt; with the memorandum as &lt;code&gt;attachment&lt;/code&gt;</desc>
+    </file>
+    <file name="Bill_Bungeni_2010-10-10-memorandum.xml">
+        <desc>memorandum of the previous bill</desc>
+    </file>
+    <file name="Bill_Bungeni_2011-06-30v1.xml">
+        <desc>&lt;code&gt;documentCollection&lt;/code&gt; with embedded a &lt;code&gt;bill&lt;/code&gt;, a &lt;code&gt;memorandum&lt;/code&gt;,
+            an &lt;code&gt;annex&lt;/code&gt;.
+        </desc>
+    </file>
+    <file name="Bill_Bungeni_2011-06-30v2.xml">
+        <desc>&lt;code&gt;documentCollection&lt;/code&gt; with &lt;code&gt;ComponentRef&lt;/code&gt; and &lt;code&gt;Component&lt;/code&gt;</desc>
+    </file>
+    <file name="Bill_Bungeni_2011-12-19-collect.xml">
+        <desc>different fragment of neutral examples, like: recitals, citations, conclusions, mmod</desc>
+    </file>
+    <file name="Bill_Kenya_2006-12-19.xml">
+        <desc>old bill translated for maintaining the compatibility with AK 2.0</desc>
+    </file>
+    <file name="Bill_southAfrica_2006-12-23.xml">
+        <desc>red-line method</desc>
+    </file>
+    <file name="Bill_SouthAfrica_2010-10-10.xml">
+        <desc>old bill with memorandum translated for maintaining the compatibility with AK 2.0</desc>
+    </file>
+    <file name="Bill_SouthAfrica_2010-10-10-memorandum.xml">
+        <desc>memorandum</desc>
+    </file>
+    <file name="Bill_SudAfrica_2003-09-04@20051231.xml">
+        <desc>old bill with memorandum translated for maintaining the compatibility with AK 2.0</desc>
+    </file>
+    <file name="constitution_final-Kenya.xml">
+        <desc>constitution of Kenya, interesting case of use of article in common law</desc>
+    </file>
+    <file name="Debate_Bungeni_1995-10-31.xml">
+        <desc>debate with &lt;code&gt;scene&lt;/code&gt;, &lt;code&gt;summary&lt;/code&gt;, &lt;code&gt;narrative&lt;/code&gt;</desc>
+    </file>
+    <file name="Debate_Bungeni_2010-12-07.xml">
+        <desc>several example of debateContent: &lt;code&gt;questions&lt;/code&gt;, &lt;code&gt;pointOfOrder&lt;/code&gt;,
+            &lt;code&gt;ministerialStatements&lt;/code&gt;</desc>
+    </file>
+    <file name="Debate_Bungeni_2011-06-10.xml">
+        <desc>example of &lt;code&gt;vote, Motion, Quorum, Division, Recount, Oral answers to
+            questions&lt;/code&gt;</desc>
+    </file>
+    <file name="Debate_Bungeni_2011-07-03.xml">
+        <desc>Example of debate that includes amendment. Interesting example of mmod, modification in the modification
+        </desc>
+    </file>
+    <file name="Doc_SudAfrica_2005-08-29.xml">
+        <desc>Committe Report</desc>
+    </file>
+    <file name="Judgement_Bungeni_2007-07-25.xml">
+        <desc>classification of the reference. Useful for improving the information retrieval query for discovery the
+            proper case-law.
+        </desc>
+    </file>
+    <file name="Judgement_SudAfrica_2008-11-26.xml">
+        <desc>use of the metadata and semantic relationships among the advocates, roles, firms. Useful for improving the
+            information retrieval query for discovery the proper case-law
+        </desc>
+    </file>
+    <file name="officialGazette_Bungeni_2011-12-23v1.xml">
+        <desc/>
+    </file>
+    <file name="officialGazette_Bungeni_2011-12-23v2.xml">
+        <desc/>
+    </file>
+    <file name="OrderOfWeek_Bungeni_2008-03-19.xml">
+        <desc/>
+    </file>
+    <file name="Questions_Bungeni_2010.xml">
+        <desc>question paper</desc>
+    </file>
+    <file name="Report_SudAfrica_2007-03-22.xml">
+        <desc>Debate Report with 2 annexes</desc>
+    </file>
+    <file name="Report_SudAfrica_2008-11-01.xml">
+        <desc/>
+    </file>
+    <file name="Report_SudAfrica_APPENDIX1_Of_Report_2007-03-22.xml">
+        <desc/>
+    </file>
+    <file name="Report_SudAfrica_APPENDIX2_Of_Report_2007-03-22.xml">
+        <desc/>
+    </file>
+    <file name="Table_APPENDIX1_2003.xml">
+        <desc>example of usage of &lt;code&gt;filling&lt;/code&gt;</desc>
+    </file>
+    <file name="Table_APPENDIX1_2007.xml">
+        <desc>example of table where are included articles.</desc>
+    </file>
+</examples>

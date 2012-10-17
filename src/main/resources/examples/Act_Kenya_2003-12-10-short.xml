@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--Akoma_Ntoso document-->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.akomantoso.org/2.0 ./akomantoso20.xsd" xmlns="http://www.akomantoso.org/2.0">
+    <act contains="originalVersion">
+        <meta>
+            <identification source="#bungeni">
+                <FRBRWork>
+                    <FRBRthis value="/ke/act/2003-12-10/8/main"/>
+                    <FRBRuri value="/ke/act/2003-12-10/8"/>
+                    <FRBRdate date="2003-12-10" name="Generation"/>
+                    <FRBRauthor href="#parliament" as="#author"/>
+                    <componentInfo>
+                        <componentData id="wmain" href="#emain" name="main" showAs="Main document"/>
+                    </componentInfo>
+                    <FRBRcountry value="ke"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="/ke/act/2003-12-10/8/eng@/main"/>
+                    <FRBRuri value="/ke/act/2003-12-10/8/eng@"/>
+                    <FRBRdate date="2007-11-23" name="Generation"/>
+                    <FRBRauthor href="#bungeni" as="#jurist"/>
+                    <componentInfo>
+                        <componentData id="emain" href="#mmain" name="main" showAs="Main document"/>
+                    </componentInfo>
+                    <FRBRlanguage language="eng"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="/ke/act/2003-12-10/8/eng@/main.xml"/>
+                    <FRBRuri value="/ke/act/2003-12-10/8/eng@.akn"/>
+                    <FRBRdate date="2007-11-23" name="Generation"/>
+                    <FRBRauthor href="#bungeni" as="#editor"/>
+                    <FRBRauthor href="#be" as="#editor"/>
+                    <componentInfo>
+                        <componentData id="mmain" href="main.xml" name="main" showAs="Main document"/>
+                    </componentInfo>
+                </FRBRManifestation>
+            </identification>
+            <publication name="internal" date="2003-12-19" showAs="Internal Jurnal" number="999"/>
+            <lifecycle source="#bungeni">
+                <eventRef id="e1" date="2003-12-19" source="#ro1" type="generation"/>
+            </lifecycle>
+            <analysis source="#bungeni">
+                <activeModifications>
+                    <textualMod type="substitution" id="am1" incomplete="true">
+                        <source href="#ref2"/>
+                        <source href="#sec2-sub1-itma"/>
+                        <destination href="/ke/act/1997-08-22/3/main#sec2-sub1"/>
+                        <new href="#mod6-qtd1"/>
+                    </textualMod>
+                    <textualMod type="insertion" id="am2" incomplete="true">
+                        <source href="#ref20"/>
+                        <source href="#sec2-sub1-itmb"/>
+                        <destination href="/ke/act/1997-08-22/3/main#sec2-sub1"/>
+                        <new href="#mod7-qtd1"/>
+                    </textualMod>
+                    <textualMod type="substitution" id="am3">
+                        <source href="#ref5"/>
+                        <source href="#sec3-sub1-itma"/>
+                        <destination href="/ke/act/1997-08-22/3/main#sec22-sub3"/>
+                        <old href="#mod8-qtd1"/>
+                        <new href="#mod8-qtd2"/>
+                    </textualMod>
+                    <textualMod type="insertion" id="am4">
+                        <source href="#ref6"/>
+                        <source href="#sec3-sub1-itmb"/>
+                        <destination href="/ke/act/1997-08-22/3/main#sec22-sub3"/>
+                        <old href="#mod9-qtd2"/>
+                        <new href="#mod9-qtd1"/>
+                    </textualMod>
+                    <textualMod type="substitution" id="am5">
+                        <source href="#ref9"/>
+                        <source href="#sec4-sub1-itma"/>
+                        <destination href="/ke/act/1997-08-22/3/main#sec34-sub2-itma"/>
+                        <old href="#mod10-qtd1"/>
+                        <new href="#mod10-qtd2"/>
+                    </textualMod>
+                    <textualMod type="insertion" id="am6">
+                        <source href="#ref10"/>
+                        <source href="#sec4-sub1-itmb"/>
+                        <destination href="/ke/act/1997-08-22/3/main#sec34-sub3"/>
+                        <new href="#mod1-qtd1"/>
+                    </textualMod>
+                    <textualMod type="insertion" id="am7">
+                        <source href="#ref13"/>
+                        <source href="#sec5-sub1"/>
+                        <destination href="/ke/act/1997-08-22/3/main#sec37-sub1"/>
+                        <new href="#mod2-qtd1"/>
+                    </textualMod>
+                    <textualMod type="insertion" id="am8">
+                        <source href="#ref15"/>
+                        <source href="#sec6-sub1"/>
+                        <destination href="/ke/act/1997-08-22/3/main#sec54"/>
+                        <new href="#mod3-qtd1"/>
+                    </textualMod>
+                    <textualMod type="insertion" id="am9">
+                        <source href="#ref17"/>
+                        <source href="#sec7-sub1-itma"/>
+                        <destination href="/ke/act/2002-12-12/5/main#sec311-sub1-itmc"/>
+                        <new href="#mod4-qtd1"/>
+                    </textualMod>
+                    <textualMod type="substitution" id="am10">
+                        <source href="#ref18"/>
+                        <source href="#sec7-sub1-itmb"/>
+                        <destination href="/ke/act/2002-12-12/5/main#sec311-sub2"/>
+                        <new href="#mod5-qtd1"/>
+                    </textualMod>
+                </activeModifications>
+            </analysis>
+            <references source="#bungeni">
+                <original id="ro1" href="/ke/act/2003-12-10/8/eng@/main" showAs="Original"/>
+                <activeRef id="ra1" href="/ke/act/1997-08-22/3/main" showAs=""/>
+                <activeRef id="ra2" href="/ke/act/2002-12-12/5/main" showAs=""/>
+                <TLCOrganization id="bungeni" href="/ontology/organization/kn/bungeni/kn.bungeni" showAs="bungeni"/>
+                <TLCPerson id="be" href="/ontology/person/editors/kn.be" showAs="A Bungeni Editor"/>
+                <TLCOrganization id="parliament" href="/ontology/organization/ke/ke.parliament"
+                                 showAs="Parliament of Kenya"/>
+                <TLCRole id="editor" href="/ontology/roles/editor" showAs="Editor"/>
+                <TLCRole id="jurist" href="/ontology/roles/jurist" showAs="Jurist"/>
+                <TLCRole id="author" href="/ontology/roles/author" showAs="Author"/>
+            </references>
+        </meta>
+        <preface>
+            <p>SPECIAL ISSUE<eol/>Kenya Gazette Supplement No. 102 (Acts No. 9)
+                <eol/>
+                <docTitle id="ActTitle">THE RETIREMENT BENEFITS (AMENDMENT)</docTitle>
+                <eol/>
+                <docType>ACT</docType>, 2003<eol/>No.
+                <docNumber>8</docNumber>
+                of 2003<eol/>Date of
+                Assent:
+                <docDate date="2003-12-10">10th December, 2003</docDate>
+                <eol/>Date of Commencement:
+                19th December, 2003
+            </p>
+        </preface>
+        <preamble>
+            <p>
+                An Act of Parliament to amend the Retirement Benefits Act, 1997
+            </p>
+            <p class="preambleEnacted">
+                ENACTED by the
+                Parliament of Kenya, as follows: -
+            </p>
+        </preamble>
+        <body>
+            <section id="sec1">
+                <num>1.</num>
+                <heading>Short title.</heading>
+                <subsection id="sec1-sub1">
+                    <content>
+                        <p>This Act may be cited as the Retirement Benefits (Amendment) Act, 2003.</p>
+                    </content>
+                </subsection>
+            </section>
+            <section id="sec2">
+                <num>2.</num>
+                <heading>Amendment of
+                    <ref id="ref19" href="/ke/act/1997-08-22/3/main#sec2">section 2 of No3
+                        of 1997
+                    </ref>
+                </heading>
+                <intro>
+                    <p>example of introduction before a subsection</p>
+                </intro>
+                <subsection id="sec2-sub1">
+                    <num>2.</num>
+                    <content>
+                        <p>The Retirement Benefits Act, 1997, in this Act referred to as the principal Act, is
+                            amended -
+                        </p>
+                        <blockList id="sec2-sub1-lst1">
+                            <item id="sec2-sub1-itma">
+                                <num>(a)</num>
+                                <p>by deleting the definition of "financial year" and
+                                    <mod id="mod6">
+                                        <ref id="ref2" href="/ke/act/1997-08-22/3/main#sec2-sub1">substituting</ref>
+                                        therefor the
+                                        following new definition - "
+                                        <quotedText id="mod6-qtd1">financial year" -
+                                            <eol/>
+                                            (a) in relation to the Authority, has the meaning assigned to it in section
+                                            19;'
+                                            <eol/>
+                                            (b) in relation to a scheme, means such accounting period as may be
+                                            prescribed in the scheme rules;
+                                        </quotedText>
+                                    </mod>
+                                </p>
+                            </item>
+                            <item id="sec2-sub1-itmb">
+                                <num>(b)</num>
+                                <p>by
+                                    <mod id="mod7">
+                                        <ref id="ref20" href="/ke/act/1997-08-22/3/main#sec2-sub1">inserting</ref>
+                                        the following new definitions in their proper alphabetical
+                                        sequence - "
+                                        <quotedText id="mod7-qtd1">pooled fund" means a fund established by
+                                            a limited liability company, other than an approved issuer, for purposes of
+                                            pooling scheme funds for collective investment;<eol/>"statutory fund" has
+                                            the
+                                            meaning assigned to it in Cap.487 section 2 of the Insurance
+                                            Act.
+                                        </quotedText>
+                                    </mod>
+                                </p>
+                            </item>
+                        </blockList>
+                    </content>
+                </subsection>
+                <wrap>
+                    <p>example of conclusion</p>
+                </wrap>
+            </section>
+            <section id="sec3">
+                <num>3.</num>
+                <heading>Amendment of<ref id="ref3" href="/ke/act/1997-08-22/3/main#sec22">section 22 of
+                    No. 3 of 1997</ref>.
+                </heading>
+                <subsection id="sec3-sub1">
+                    <num>3.</num>
+                    <content>
+                        <p>Section 22 of the principal Act is amended<ref id="ref4"
+                                                                          href="/ke/act/1997-08-22/3/main#sec22-sub3">in
+                            subsection (3)</ref>-
+                        </p>
+                        <blockList id="sec3-sub1-lst1">
+                            <item id="sec3-sub1-itma">
+                                <num>(a)</num>
+                                <p>by
+                                    <mod id="mod8">
+                                        <ref id="ref5" href="/ke/act/1997-08-22/3/main#sec22-sub3">deleting</ref>
+                                        the word "<quotedText id="mod8-qtd1">two</quotedText>" and
+                                        substituting therefore the word "<quotedText id="mod8-qtd2">one</quotedText>"
+                                    </mod>
+                                    ;
+                                </p>
+                            </item>
+                            <item id="sec3-sub1-itmb">
+                                <num>(b)</num>
+                                <p>by
+                                    <mod id="mod9">
+                                        <ref id="ref6" href="/ke/act/1997-08-22/3/main#sec22-sub3">inserting</ref>
+                                        the words "<quotedText id="mod9-qtd1">at least</quotedText>"
+                                        immediately before the word "<quotedText id="mod9-qtd2">once</quotedText>"
+                                    </mod>
+                                    .
+                                </p>
+                            </item>
+                        </blockList>
+                    </content>
+                </subsection>
+            </section>
+            <section id="sec4">
+                <num>4.</num>
+                <heading>Amendment of<ref id="ref7" href="/ke/act/1997-08-22/3/main#sec34">section 34 of
+                    No.3 of 1997</ref>.
+                </heading>
+                <subsection id="sec4-sub1">
+                    <num>4.</num>
+                    <content>
+                        <p>
+                            <ref id="ref8" href="/ke/act/1997-08-22/3/main#sec34">Section 34</ref>
+                            of the
+                            principal Act is amended -
+                        </p>
+                        <blockList id="sec4-sub1-lst1">
+                            <item id="sec4-sub1-itma">
+                                <num>(a)</num>
+                                <p>in
+                                    <mod id="mod10">
+                                        <ref id="ref9" href="/ke/act/1997-08-22/3/main#sec34-sub2-itma">subsection
+                                            (2)</ref>, by
+                                        deleting the words "<quotedText id="mod10-qtd1">balance sheet</quotedText>"
+                                        appearing in paragraph (a) and substituting therefor the words "<quotedText
+                                            id="mod10-qtd2">statement of assets and liabilities</quotedText>"
+                                    </mod>
+                                    ;
+                                </p>
+                            </item>
+                            <item id="sec4-sub1-itmb">
+                                <num>(b)</num>
+                                <p>by inserting the following proviso at the end of
+                                    <mod id="mod1">
+                                        <ref id="ref10" href="/ke/act/1997-08-22/3/main#sec34-sub3">subsection (3)</ref>
+                                        -
+                                        "<quotedText id="mod1-qtd1">Provided that the appointed auditor shall not be a
+                                        member, trustee or sponsor of the scheme</quotedText>"
+                                    </mod>
+                                    .
+                                </p>
+                            </item>
+                        </blockList>
+                    </content>
+                </subsection>
+            </section>
+            <section id="sec5">
+                <num>5.</num>
+                <heading>Amendment of<ref id="ref11" href="/ke/act/1997-08-22/3/main#sec37">section 37 of
+                    No.3 of 1997</ref>.
+                </heading>
+                <subsection id="sec5-sub1">
+                    <content>
+                        <p>Section 37 of the principal Act is amended by inserting the following proviso at the
+                            end of
+                            <mod id="mod2">
+                                <ref id="ref13" href="/ke/act/1997-08-22/3/main#sec37-sub1">subsection (1)</ref>
+                                - "<quotedText id="mod2-qtd1">Provided that a scheme with a
+                                fund value of five million Kenya shillings or less may invest up to one hundred
+                                per centum of its scheme funds in Government securities</quotedText>"
+                            </mod>
+                            .
+                        </p>
+                    </content>
+                </subsection>
+            </section>
+            <section id="sec6">
+                <num>6.</num>
+                <heading>Insertion of
+                    <ref id="ref14" href="/ke/act/1997-08-22/3/main#sec54">section 54A in
+                        No. 3 of 1997
+                    </ref>
+                </heading>
+                <subsection id="sec6-sub1">
+                    <num>6.</num>
+                    <content>
+                        <p>The principal Act is amended by inserting the following new section immediately after
+                            <mod id="mod3">
+                                <ref id="ref15" href="/ke/act/1997-08-22/3/main#sec54">section
+                                    54
+                                </ref>
+                                -
+                                <quotedStructure id="mod3-qtd1">
+                                    <section id="mod3-qtd1-sec54.a">
+                                        <num>54A</num>
+                                        <heading>Conduct of prosecutions.</heading>
+                                        <subsection id="mod3-qtd1-sec54.a-sub1">
+                                            <num>(1)</num>
+                                            <content>
+                                                <p>The Attorney-General may, pursuant to the provisions of the Criminal
+                                                    Procedure Code, appoint public prosecutors for the purposes of cases
+                                                    arising under this Act.
+                                                </p>
+                                            </content>
+                                        </subsection>
+                                        <subsection id="mod3-qtd1-sec54.a-sub2">
+                                            <num>(2)</num>
+                                            <content>
+                                                <p>The Authority shall, for the purposes of the Criminal Procedure Code,
+                                                    be
+                                                    deemed to be a public authority.
+                                                </p>
+                                            </content>
+                                        </subsection>
+                                    </section>
+                                </quotedStructure>
+                            </mod>
+                        </p>
+                    </content>
+                </subsection>
+            </section>
+            <section id="sec7">
+                <num>7.</num>
+                <heading>Amendment of
+                    <ref id="ref16" href="/ke/act/2002-12-12/5/main#sec311">section 311 of
+                        Cap 486
+                    </ref>
+                </heading>
+                <subsection id="sec7-sub1">
+                    <num>7.</num>
+                    <content>
+                        <p>Section 311 of Companies Act is amended -</p>
+                        <blockList id="sec7-sub1-lst1">
+                            <item id="sec7-sub1-itma">
+                                <num>(a)</num>
+                                <p>in subsection (1), by inserting the following paragraph immediately after
+                                    <mod id="mod4">
+                                        <ref id="ref17" href="/ke/act/2002-12-12/5/main#sec311-sub1-itmc">paragraph (c
+                                            )
+                                        </ref>
+                                        -
+                                        <quotedStructure id="mod4-qtd1">
+                                            <blockList id="mod4-qtd1-lst1">
+                                                <item id="mod4-qtd1-itmcA">
+                                                    <num>(cA)</num>
+                                                    <p>all retirement benefits contributions and vested benefits of any
+                                                        clerk
+                                                        or servant of the company;
+                                                    </p>
+                                                </item>
+                                            </blockList>
+                                        </quotedStructure>
+                                    </mod>
+                                </p>
+                            </item>
+                            <item id="sec7-sub1-itmb">
+                                <num>(b)</num>
+                                <p>by deleting the operative paragraph of
+                                    <mod id="mod5">
+                                        <ref id="ref18" href="/ke/act/2002-12-12/5/main#sec311-sub2">subsection (2)
+                                        </ref>
+                                        and
+                                        substituting therefor the following - "
+                                        <quotedStructure id="mod5-qtd1">
+                                            <subsection id="mod5-qtd1-sub2">
+                                                <num>(2)</num>
+                                                <content>
+                                                    <p>Notwithstanding anything in paragraph (c) or (cA) of subsection
+                                                        (1),
+                                                        the sum to which priority is to be given under these paragraphs
+                                                        shall
+                                                        not, in the case of any claimant, exceed twenty thousand
+                                                        shillings:
+                                                    </p>
+                                                </content>
+                                            </subsection>
+                                        </quotedStructure>
+                                        "
+                                    </mod>
+                                    .
+                                </p>
+                            </item>
+                        </blockList>
+                    </content>
+                </subsection>
+            </section>
+        </body>
+    </act>
+</akomaNtoso>
