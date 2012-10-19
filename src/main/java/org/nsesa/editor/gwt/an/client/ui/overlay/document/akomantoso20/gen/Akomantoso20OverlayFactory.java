@@ -1,15 +1,22 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.akomantoso20.gen;
 
 import com.google.gwt.dom.client.Element;
+import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayFactory;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
 
 /**
  * This file is generated.
  */
-public class Akomantoso20OverlayFactory implements OverlayFactory {
+public class Akomantoso20OverlayFactory extends DefaultOverlayFactory {
 
-    public AmendableWidget getAmendableWidget(final Element element) {
+    @Inject
+    public Akomantoso20OverlayFactory(final OverlayStrategy overlayStrategy) {
+        super(overlayStrategy);
+    }
+
+    public AmendableWidget toAmendableWidget(final Element element) {
         if ("".equals(element.getTagName())) {
             throw new IllegalArgumentException("Empty element or null passed.");
         } else if ("summary".equalsIgnoreCase(element.getTagName())) {

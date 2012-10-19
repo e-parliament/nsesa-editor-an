@@ -5,18 +5,23 @@ package ${overlayClass.packageName};
 <#list overlayClass.imports as import>
 import ${import}.*;
 </#list>
-import org.nsesa.editor.gwt.core.client.ui.overlay.xml.*;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
-
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
+import com.google.inject.Inject;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayFactory;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
 
 /**
 * This file is generated.
 */
-public class ${overlayClass.name?cap_first} implements OverlayFactory {
+public class ${overlayClass.name?cap_first} extends DefaultOverlayFactory {
 
-public AmendableWidget getAmendableWidget(final Element element) {
+@Inject
+public ${overlayClass.name?cap_first}(final OverlayStrategy overlayStrategy) {
+super(overlayStrategy);
+}
+
+public AmendableWidget toAmendableWidget(final Element element) {
 if ("".equals(element.getTagName())) {
 throw new IllegalArgumentException("Empty element or null passed.");
 }
