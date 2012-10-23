@@ -1,20 +1,20 @@
 <#-- @ftlvariable name="overlayClasses" type="java.util.List<OverlayClass>" -->
 <#-- @ftlvariable name="overlayClass" type="org.nsesa.editor.app.xsd.model.OverlayClass" -->
-package ${overlayClass.packageName};
+package ${packageNameGenerator.getPackageName(overlayClass)};
 
-<#list overlayClass.imports as import>
-import ${import}.*;
+<#list overlayClasses as cl>
+import ${packageNameGenerator.getPackageName(cl)}.${cl.name?cap_first};
 </#list>
-import com.google.gwt.dom.client.Element;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
+import com.google.gwt.dom.client.Element;
 
 /**
 * This file is generated.
 */
-public class ${overlayClass.name?cap_first} extends DefaultOverlayFactory {
+public class ${overlayClass.name?cap_first} extends DefaultOverlayFactory  {
 
 @Inject
 public ${overlayClass.name?cap_first}(final OverlayStrategy overlayStrategy) {

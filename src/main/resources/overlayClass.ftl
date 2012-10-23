@@ -1,35 +1,37 @@
 <#-- @ftlvariable name="overlayClass" type="org.nsesa.editor.app.xsd.model.OverlayClass" -->
-package ${overlayClass.packageName};
+package ${packageNameGenerator.getPackageName(overlayClass)};
 
-<#list overlayClass.imports as import>
-import ${import}.*;
+<#list overlayClass.properties as prop>
+import ${packageNameGenerator.getPackageName(prop)}.${prop.className?cap_first};
 </#list>
 import org.nsesa.editor.gwt.core.client.ui.overlay.xml.*;
-
+<#list overlayClass.getImports(packageNameGenerator) as import>
+import ${import};
+</#list>
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-
+<#if overlayClass.complex || overlayClass.element>
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+</#if>
 /**
 * This file is generated.
 */
-public class ${overlayClass.name?cap_first} <#if overlayClass.superClassName??>extends ${overlayClass.superClassName}</#if> <#if overlayClass.interfaces??>implements <#list overlayClass.interfaces as interface>${interface.getSimpleName()}<#if interface_has_next>, </#if></#list> </#if>{
+public class ${overlayClass.name?cap_first} <#if overlayClass.superClassName??>extends ${overlayClass.superClassName?cap_first}<#else><#if overlayClass.complex || overlayClass.element>extends AmendableWidgetImpl</#if></#if>  <#if overlayClass.interfaces??>implements <#list overlayClass.interfaces as interface>${interface.getSimpleName()}<#if interface_has_next>, </#if></#list> </#if>{
+
+// CONSTRUCTORS ------------------
+<#if overlayClass.complex || overlayClass.element>
+public ${overlayClass.name?cap_first}(Element element) {
+    super(element);
+}
+</#if>
 
 // FIELDS ------------------
-
 <#list overlayClass.properties as property>
     <@generateField property=property/>
 </#list>
 
-// CONSTRUCTORS ------------------
-
-public ${overlayClass.name?cap_first}(final Element amendableElement) {
-super(amendableElement);
-}
-
-// ACCESSORS ------------------
-
 <#list overlayClass.properties as property>
-public <@propertyClassName property=property/> <#if property.className == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>() {
+public <@propertyClassName property=property/> <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>() {
 return <@propertyName property = property/>;
 }
 
@@ -42,9 +44,9 @@ this.<@propertyName property = property/> = <@propertyName property = property/>
 
 <#macro propertyClassName property><#compress>
     <#if property.collection>
-    java.util.List<${property.className}>
+    java.util.List<${property.className?cap_first}>
     <#else>
-    ${property.className}
+    ${property.className?cap_first}
     </#if>
 </#compress></#macro>
 
@@ -71,7 +73,7 @@ this.<@propertyName property = property/> = <@propertyName property = property/>
 </#compress></#macro>
 
 <#macro generateField property>
-private <@propertyClassName property=property/> <#if property.collection><@pl property=property/> = new ArrayList<${property.className}>();<#else><@propertyName property = property/>;</#if>
+private <@propertyClassName property=property/> <#if property.collection><@pl property=property/> = new ArrayList<${property.className?cap_first}>();<#else><@propertyName property = property/>;</#if>
 </#macro>
 
 <#macro pl property><#compress>
