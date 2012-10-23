@@ -1,0 +1,42 @@
+package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
+
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.core.client.ui.overlay.xml.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.InlinereqComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+/**
+* This file is generated.
+*/
+public class Rref extends InlinereqComplexType  {
+
+// CONSTRUCTORS ------------------
+public Rref(Element element) {
+    super(element);
+}
+
+// FIELDS ------------------
+private AnyURISimpleType from;
+private AnyURISimpleType upTo;
+
+public AnyURISimpleType getFrom() {
+return from;
+}
+
+public void setFrom(final AnyURISimpleType from) {
+this.from = from;
+}
+
+public AnyURISimpleType getUpTo() {
+return upTo;
+}
+
+public void setUpTo(final AnyURISimpleType upTo) {
+this.upTo = upTo;
+}
+
+}
+
