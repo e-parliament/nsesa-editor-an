@@ -2,12 +2,12 @@ package org.nsesa.editor.gwt.an.client;
 
 import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Singleton;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.akomantoso20.AkomaNtoso20Locator;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.akomantoso20.AkomaNtoso20OverlayStrategy;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.akomantoso20.gen.Akomantoso20OverlayFactory;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Locator;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20OverlayStrategy;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.Akomantoso20OverlayFactory;
 import org.nsesa.editor.gwt.editor.client.ui.main.EditorModule;
 
 /**
