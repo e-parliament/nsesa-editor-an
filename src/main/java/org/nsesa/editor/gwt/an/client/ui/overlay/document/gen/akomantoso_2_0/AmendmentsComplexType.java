@@ -6,7 +6,6 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Sco
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ForceMod;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EfficacyMod;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LegalSystemMod;
-import org.nsesa.editor.gwt.core.client.ui.overlay.xml.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TextualMod;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MeaningMod;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ScopeMod;

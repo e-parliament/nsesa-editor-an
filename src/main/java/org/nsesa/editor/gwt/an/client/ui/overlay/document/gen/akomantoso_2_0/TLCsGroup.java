@@ -10,7 +10,6 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLC
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCRole;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCTerm;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCReference;
-import org.nsesa.editor.gwt.core.client.ui.overlay.xml.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCPerson;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCOrganization;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCConcept;

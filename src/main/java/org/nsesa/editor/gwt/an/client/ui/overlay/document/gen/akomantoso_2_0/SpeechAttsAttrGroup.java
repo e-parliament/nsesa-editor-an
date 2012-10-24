@@ -5,7 +5,6 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.An
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DateTimeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DateTimeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.xml.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DateTimeSimpleType;
 import com.google.gwt.dom.client.Element;

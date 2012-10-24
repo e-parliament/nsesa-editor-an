@@ -4,7 +4,6 @@ package ${packageNameGenerator.getPackageName(overlayClass)};
 <#list overlayClass.properties as prop>
 import ${packageNameGenerator.getPackageName(prop)}.${prop.className?cap_first};
 </#list>
-import org.nsesa.editor.gwt.core.client.ui.overlay.xml.*;
 <#list overlayClass.getImports(packageNameGenerator) as import>
 import ${import};
 </#list>

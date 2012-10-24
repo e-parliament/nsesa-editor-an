@@ -1,14 +1,13 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RoleAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OutcomeAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ActorAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RoleAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DateAttrGroup;
-import org.nsesa.editor.gwt.core.client.ui.overlay.xml.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AnyOtherTypeComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RoleAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OutcomeAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ActorAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RoleAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DateAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
@@ -24,18 +23,10 @@ public Step(Element element) {
 }
 
 // FIELDS ------------------
-private RoleAttrGroup role;
 private OutcomeAttrGroup outcome;
 private ActorAttrGroup actor;
+private RoleAttrGroup role;
 private DateAttrGroup date;
-
-public RoleAttrGroup getRole() {
-return role;
-}
-
-public void setRole(final RoleAttrGroup role) {
-this.role = role;
-}
 
 public OutcomeAttrGroup getOutcome() {
 return outcome;
@@ -51,6 +42,14 @@ return actor;
 
 public void setActor(final ActorAttrGroup actor) {
 this.actor = actor;
+}
+
+public RoleAttrGroup getRole() {
+return role;
+}
+
+public void setRole(final RoleAttrGroup role) {
+this.role = role;
 }
 
 public DateAttrGroup getDate() {

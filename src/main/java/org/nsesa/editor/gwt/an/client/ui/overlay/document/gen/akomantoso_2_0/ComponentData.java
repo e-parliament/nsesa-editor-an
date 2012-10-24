@@ -1,17 +1,16 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NameAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NameAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ComponentData;
-import org.nsesa.editor.gwt.core.client.ui.overlay.xml.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NameAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NameAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ComponentData;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
@@ -28,10 +27,10 @@ public ComponentData(Element element) {
 
 // FIELDS ------------------
 private ShowAttrGroup show;
-private IdreqAttrGroup idreq;
-private CoreAttrGroup core;
-private NameAttrGroup name;
 private LinkAttrGroup link;
+private CoreAttrGroup core;
+private IdreqAttrGroup idreq;
+private NameAttrGroup name;
 private java.util.List<ComponentData> componentDatas = new ArrayList<ComponentData>();
 
 public ShowAttrGroup getShow() {
@@ -42,12 +41,12 @@ public void setShow(final ShowAttrGroup show) {
 this.show = show;
 }
 
-public IdreqAttrGroup getIdreq() {
-return idreq;
+public LinkAttrGroup getLink() {
+return link;
 }
 
-public void setIdreq(final IdreqAttrGroup idreq) {
-this.idreq = idreq;
+public void setLink(final LinkAttrGroup link) {
+this.link = link;
 }
 
 public CoreAttrGroup getCore() {
@@ -58,20 +57,20 @@ public void setCore(final CoreAttrGroup core) {
 this.core = core;
 }
 
+public IdreqAttrGroup getIdreq() {
+return idreq;
+}
+
+public void setIdreq(final IdreqAttrGroup idreq) {
+this.idreq = idreq;
+}
+
 public NameAttrGroup getName() {
 return name;
 }
 
 public void setName(final NameAttrGroup name) {
 this.name = name;
-}
-
-public LinkAttrGroup getLink() {
-return link;
-}
-
-public void setLink(final LinkAttrGroup link) {
-this.link = link;
 }
 
 public java.util.List<ComponentData> getComponentData() {

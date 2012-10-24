@@ -12,7 +12,6 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ove
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DissentsFrom;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PutsInQuestion;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Distinguishes;
-import org.nsesa.editor.gwt.core.client.ui.overlay.xml.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Result;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Supports;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IsAnalogTo;

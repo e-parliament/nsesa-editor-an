@@ -1,7 +1,6 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema;
 
 import java.lang.String;
-import org.nsesa.editor.gwt.core.client.ui.overlay.xml.*;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 /**

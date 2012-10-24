@@ -1,6 +1,5 @@
 <#-- @ftlvariable name="overlayClass" type="org.nsesa.editor.app.xsd.model.OverlayClass" -->
 package ${packageNameGenerator.getPackageName(overlayClass)};
-import org.nsesa.editor.gwt.core.client.ui.overlay.xml.*;
 
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
