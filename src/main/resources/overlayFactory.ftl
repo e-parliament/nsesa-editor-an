@@ -16,23 +16,23 @@ import com.google.gwt.dom.client.Element;
 */
 public class ${overlayClass.name?cap_first} extends DefaultOverlayFactory  {
 
-@Inject
-public ${overlayClass.name?cap_first}(final OverlayStrategy overlayStrategy) {
-super(overlayStrategy);
-}
+    @Inject
+    public ${overlayClass.name?cap_first}(final OverlayStrategy overlayStrategy) {
+        super(overlayStrategy);
+    }
 
-public AmendableWidget toAmendableWidget(final Element element) {
-if ("".equals(element.getTagName())) {
-throw new IllegalArgumentException("Empty element or null passed.");
-}
+    public AmendableWidget toAmendableWidget(final Element element) {
+        if ("".equals(element.getNodeName())) {
+            throw new IllegalArgumentException("Empty element or null passed.");
+        }
 
-<#list overlayClasses as cl>
-else if ("${cl.name}".equalsIgnoreCase(element.getTagName())) {
-return new ${cl.name?cap_first}(element);
-}
-</#list>
+        <#list overlayClasses as cl>
+        else if ("${cl.name}".equalsIgnoreCase(element.getNodeName())) {
+            return new ${cl.name?cap_first}(element);
+        }
+        </#list>
 
-// nothing found
-return null;
-}
+        // nothing found
+        return null;
+    }
 }
