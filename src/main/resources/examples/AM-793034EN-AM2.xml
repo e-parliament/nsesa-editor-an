@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.akomantoso.org/2.0 ../schema/akomantoso20-20120722.xsd
+    http://europarl.europa.eu/xml4ep/1.0 ../schema/ep-1-0.xsd"
+    xmlns="http://www.akomantoso.org/2.0" xmlns:ep="http://europarl.europa.eu/xml4ep/1.0">
+    <!--  _______________________________________________________________________________________________________     
+    -->
+    <!--  Amendment 2 -->
+    <!--  _______________________________________________________________________________________________________     
+    -->
+    <amendment>
+
+        <meta>
+            <identification source="http://www.europarl.europa.eu/">
+                <FRBRWork>
+                    <FRBRthis value="eu.europa.europarl:IBI1:(2012)0123457"/>
+                    <FRBRuri value=""/>
+                    <FRBRdate date="2009-09-15" name="instantiation"/>
+                    <FRBRauthor href=""/>
+                    <FRBRcountry value="eu"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="eu.europa.europarl:DIN1:(2012)0123457@1.0-en-1.0"/>
+                    <FRBRuri value=""/>
+                    <FRBRdate date="2009-09-15" name="instantiation"/>
+                    <FRBRauthor href=""/>
+                    <FRBRlanguage id="_999889" language="en"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="eu.europa.europarl:DIN1:(2012)0123457@1.0-en-1.0@text/xml"/>
+                    <FRBRuri value=""/>
+                    <FRBRdate date="2009-09-15" name="instantiation"/>
+                    <FRBRauthor href=""/>
+                </FRBRManifestation>
+            </identification>
+
+            <analysis source="http://www.europarl.europa.eu/">
+                <activeModifications>
+                    <textualMod type="substitution" id="_777">
+                        <source href=""/>
+                        <destination
+                            href="udi:eu.europa.ec:DIN1:[COM proposal/bill(Expression)]~[recital 4]"/>
+                    </textualMod>
+                </activeModifications>
+
+                <otherAnalysis source="http://www.europarl.europa.eu/">
+                    <ep:instanceInfo id="_991">
+                        <ep:standalone id="_992" value="false"/>
+                        <ep:tablingType id="_993" ep:ref="xml4ep:/concept/doc/tabling/written"/>
+                        <ep:contentFormat id="_1000"
+                            ep:ref="xml4ep:/concept/presentation/withSource"/>
+                        <ep:docClass id="_555444"
+                            ep:category="xml4ep:/doc/category/amendment"/>
+                        <ep:EPstatus id="_994" ep:ref="xml4ep:/EPstatus/legislative"/>
+                        <ep:stakeholder id="_0" ep:role="xml4ep:/role/stakeholder/proponent">
+                            <ep:authority id="_999050"
+                                ep:ref="xml4ep:/codict/organization/institution/EP">
+                                <ep:organization id="_28571"
+                                    ep:ref="xml4ep:/codict/organization/commitee/3750">
+                                    <ep:person id="_999051" ep:ref="xml4ep:/codict/person/96835"
+                                        ep:role="xml4ep:/role/doc/author"/>
+                                    <ep:person id="_999052" ep:ref="xml4ep:/codict/person/96832"
+                                        ep:role="xml4ep:/role/doc/author"/>
+                                </ep:organization>
+                            </ep:authority>
+                        </ep:stakeholder>
+
+                    </ep:instanceInfo>
+
+                    <ep:targetInfo id="_125">
+                        <ep:docClass id="_996" 
+                            ep:category="xml4ep:/act/category/decision"
+                            ep:stage="xml4ep:/doc/stage/proposal"/>
+                        <ep:stakeholder id="_1995" ep:role="xml4ep:/role/stakeholder/proponent">
+                            <ep:authority id="_995"
+                                ep:ref="xml4ep:/codict/organization/institution/COM"/>
+                        </ep:stakeholder>
+
+                    </ep:targetInfo>
+
+
+                    <ep:otherRelations>
+                        <ep:relatedDoc id="_997" ep:tref="xml4ep:/doc/RefType/amend"
+                            href="udi:eu.europa.ec:DIN1:[COM proposal]"/>
+                    </ep:otherRelations>
+
+                </otherAnalysis>
+            </analysis>
+
+        </meta>
+
+        <preface>
+            <container id="_444" name="mainDoc" refersTo="~_0">
+                <p><docIntroducer><person id="_7562" refersTo="~_999051">Traian Ungureanu</person>
+                        and <person id="_7563" refersTo="~_999052">Pascale
+                        Gruny</person></docIntroducer></p>
+            </container>
+        </preface>
+
+        <amendmentBody refersTo="~_1000">
+            <amendmentHeading>
+                <block name="amendedAct"><docType id="_999060" refersTo="~_996">Proposal for a
+                        decision</docType> - amending act</block>
+                <block name="amendedAct"><inline name="AMposition">Recital 4</inline></block>
+            </amendmentHeading>
+            <amendmentContent>
+                <block name="versionTitle" ep:tref="xml4ep:/concept/content/current">Text proposed by
+                    the Commission</block>
+                <block name="versionTitle" ep:tref="xml4ep:/concept/content/proposed"
+                    >Amendment</block>
+                <block name="changeBlock">
+                    <mod id="_123" refersTo="~_777">
+                        <quotedStructure id="_1234" ep:tref="xml4ep:/concept/content/current">
+                            <recital id="_5569">
+                                <num>(4)</num>
+                                <p>After <change>examining all possible options, the amount of EUR
+                                        100 million should be</change> reallocated from the Progress
+                                    Programme, set up by Decision No 1672/2006/EC of the European
+                                    Parliament and of the Council of 24 October 2006 establishing a
+                                    Community Programme for Employment and Social Solidarity
+                                    –Progress, to the new European microfinance facility for
+                                    employment and social inclusion – Progress.</p>
+                            </recital>
+                        </quotedStructure>
+                        <quotedStructure id="_1235" ep:tref="xml4ep:/concept/content/proposed">
+                            <recital id="_5570">
+                                <num>(4)</num>
+                                <p>After <change>a thorough examination of all financing
+                                        possibilities and for a maximization of the final outcome,
+                                        and in the event that no additional appropriations are
+                                        allocated, the amount of EUR 50 million could be</change>
+                                    reallocated from the Progress <change>programme</change>, set up
+                                    by Decision No 1672/2006/EC of the European Parliament and of
+                                    the Council of 24 October 2006 establishing a Community
+                                    Programme for Employment and Social Solidarity –Progress, to the
+                                    new European microfinance facility for employment and social
+                                    inclusion – Progress.</p>
+                            </recital>
+                        </quotedStructure>
+                    </mod>
+                </block>
+                <block name="comment">
+                    <remark type="translation">Or. en</remark>
+                </block>
+            </amendmentContent>
+            <amendmentJustification>
+                <block name="justificationHeading">Justification</block>
+                <p>Taking into account all the other projects that are already developed under the
+                    Progress framework they could be endagered if the total amount of EUR 100 mil
+                    will be reallocated to the microfinance facility.</p>
+            </amendmentJustification>
+        </amendmentBody>
+    </amendment>
+
+</akomaNtoso>

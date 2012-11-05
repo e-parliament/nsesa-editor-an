@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.akomantoso.org/2.0 ../schema/akomantoso20-20120722.xsd
+    http://europarl.europa.eu/xml4ep/1.0 ../schema/ep-1-0.xsd"
+    xmlns="http://www.akomantoso.org/2.0" xmlns:ep="http://europarl.europa.eu/xml4ep/1.0">
+    <!--  _______________________________________________________________________________________________________     
+    -->
+    <!--  Amendment 1 -->
+    <!--  _______________________________________________________________________________________________________     
+    -->
+    <amendment>
+
+        <meta>
+            <identification source="http://www.europarl.europa.eu/">
+                <FRBRWork>
+                    <FRBRthis value="eu.europa.europarl:IBI1:(2012)0123456"/>
+                    <FRBRuri value=""/>
+                    <FRBRdate date="2009-09-15" name="instantiation"/>
+                    <FRBRauthor href=""/>
+                    <FRBRcountry value="eu"/>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="eu.europa.europarl:IBI1:(2012)0123456@1.1-en-1.0"/>
+                    <FRBRuri value=""/>
+                    <FRBRdate date="2009-09-15" name="instantiation"/>
+                    <FRBRauthor href=""/>
+                    <FRBRlanguage id="_999889" language="en"/>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="eu.europa.europarl:IBI1:(2012)0123456@1.1-en-1.0@text/xml"/>
+                    <FRBRuri value=""/>
+                    <FRBRdate date="2009-09-15" name="instantiation"/>
+                    <FRBRauthor href=""/>
+                </FRBRManifestation>
+            </identification>
+
+            <analysis source="http://www.europarl.europa.eu/">
+                <activeModifications>
+                    <textualMod type="substitution" id="_777">
+                        <source href=""/>
+                        <destination
+                            href="udi:eu.europa.ec:DIN1:[COM proposal/bill(Expression)]~[recital 3]"/>
+                    </textualMod>
+                </activeModifications>
+
+                <otherAnalysis source="http://www.europarl.europa.eu/">
+                    <ep:instanceInfo id="_9910">
+                        <ep:standalone id="_990" value="false"/>
+                        <ep:tablingType id="_991" ep:ref="xml4ep:/concept/doc/tabling/written"/>
+                        <ep:contentFormat id="_1000"
+                            ep:ref="xml4ep:/concept/presentation/withSource"/>
+                        <ep:docClass id="_555444" ep:category="xml4ep:/doc/category/amendment"/>
+                        <ep:EPstatus id="_992" ep:ref="xml4ep:/EPstatus/legislative"/>
+                        <ep:stakeholder id="_0" ep:role="xml4ep:/role/stakeholder/proponent">
+                            <ep:authority id="_999050"
+                                ep:ref="xml4ep:/codict/organization/institution/EP">
+                                <ep:organization id="_28571"
+                                    ep:ref="xml4ep:/codict/organization/commitee/3750">
+                                    <ep:person id="_999051" ep:ref="xml4ep:/codict/person/96835"
+                                        ep:role="xml4ep:/role/doc/author"/>
+                                    <ep:person id="_999052" ep:ref="xml4ep:/codict/person/96832"
+                                        ep:role="xml4ep:/role/doc/author"/>
+                                </ep:organization>
+                            </ep:authority>
+                        </ep:stakeholder>
+                    </ep:instanceInfo>
+
+                    <ep:targetInfo id="_125">
+                        <ep:docClass id="_994" 
+                            ep:category="xml4ep:/act/category/decision"
+                            ep:stage="xml4ep:/doc/stage/proposal"/>
+                        <ep:stakeholder id="_1993" ep:role="xml4ep:/role/stakeholder/proponent">
+                            <ep:authority id="_993"
+                                ep:ref="xml4ep:/codict/organization/institution/COM"/>
+                        </ep:stakeholder>
+                    </ep:targetInfo>
+
+                    <ep:otherRelations>
+                        <ep:relatedDoc id="_995" ep:tref="xml4ep:/doc/RefType/amend"
+                            href="udi:eu.europa.europarl:DIN1:[COM proposal]"/>
+                    </ep:otherRelations>
+
+                </otherAnalysis>
+            </analysis>
+
+        </meta>
+
+        <preface>
+            <container id="_888001" name="header" refersTo="~_0">
+                <p>
+                    <docIntroducer><person id="_7562" refersTo="~_999051">Traian Ungureanu</person>
+                        and <person id="_7563" refersTo="~_999052">Pascale
+                        Gruny</person></docIntroducer>
+                </p>
+            </container>
+        </preface>
+
+        <amendmentBody refersTo="~_1000">
+            <amendmentHeading>
+                <block name="amendedAct"><docType id="_999060" refersTo="~_994">Proposal for a
+                        decision</docType> - amending act</block>
+                <block name="amendedAct">
+                    <inline name="AMposition">Recital 3</inline>
+                </block>
+            </amendmentHeading>
+            <amendmentContent>
+                <block name="versionTitle" ep:tref="xml4ep:/concept/content/current">Text proposed by
+                    the Commission</block>
+                <block name="versionTitle" ep:tref="xml4ep:/concept/content/proposed"
+                    >Amendment</block>
+                <block name="changeBlock">
+                    <mod id="_123" refersTo="~_777">
+                        <quotedStructure id="_1234" ep:tref="xml4ep:/concept/content/current">
+                            <recital id="_5569">
+                                <num>(3)</num>
+                                <p>In line with the Inter-institutional agreement of 17 May 2006
+                                    between the European Parliament, the Council and the Commission
+                                    on budgetary discipline and sound financial management,
+                                        <change>EUR 100 million needs to be reallocated from the
+                                        existing budget to finance</change> the new European
+                                    microfinance facility <change>for employment and social
+                                        inclusion – Progress</change></p>
+                            </recital>
+                        </quotedStructure>
+                        <quotedStructure id="_1235" ep:tref="xml4ep:/concept/content/proposed">
+                            <recital id="_5570">
+                                <num>(3)</num>
+                                <p>In line with the Inter-institutional agreement of 17 May 2006
+                                    between the European Parliament, the Council and the Commission
+                                    on budgetary discipline and sound financial management,
+                                        <change>in the event that no additional appropriations are
+                                        allocated, then</change> the new European microfinance
+                                    facility <change>should be financed by reallocating resources
+                                        from other budgetary sources.</change></p>
+                            </recital>
+                        </quotedStructure>
+                    </mod>
+                </block>
+                <block name="comment">
+                    <remark type="translation">Or. en</remark>
+                </block>
+            </amendmentContent>
+            <amendmentJustification>
+                <block name="justificationHeading">Justification</block>
+                <p>Due to the present financial situation there is a clear need to find the best
+                    financil solution for the new instrument. From this poin of view, there should
+                    be furtherconsultations to find the optimal solution in order for the facility
+                    to deliver to its aims.</p>
+            </amendmentJustification>
+        </amendmentBody>
+    </amendment>
+
+</akomaNtoso>

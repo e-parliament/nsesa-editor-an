@@ -27,7 +27,15 @@
             </map>
         </property>
     </bean>
-    <bean id="gwtAmendmentService" class="org.nsesa.editor.gwt.core.server.service.gwt.GWTAmendmentServiceImpl"/>
+    <bean id="gwtAmendmentService" class="org.nsesa.editor.gwt.core.server.service.gwt.GWTAmendmentServiceImpl">
+        <property name="documents">
+            <map>
+                <entry key="amendment-1" value="classpath:examples/AM-793034EN-AM1.xml"/>
+                <entry key="amendment-2" value="classpath:examples/AM-793034EN-AM2.xml"/>
+                <entry key="amendment-3" value="classpath:examples/AM-793034EN-AM3.xml"/>
+            </map>
+        </property>
+    </bean>
 
     <bean id="gwtLogController" class="org.springframework.web.servlet.mvc.ServletWrappingController">
         <property name="servletClass" value="com.allen_sauer.gwt.log.server.RemoteLoggerServlet"/>
