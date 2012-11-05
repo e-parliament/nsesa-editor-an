@@ -1,0 +1,1961 @@
+/*
+* --------------------------------------------------------------------------
+* Akoma Ntoso default stylesheet.
+* Note: this is generated!
+* --------------------------------------------------------------------------
+*/
+
+/* no base */
+anySimpleType {
+}
+
+/* anySimpleType */
+gDay {
+}
+
+/* token */
+Name {
+}
+
+/* Name */
+NCName {
+}
+
+/* anySimpleType */
+NMTOKENS {
+}
+
+/* anySimpleType */
+anyURI {
+}
+
+/* anySimpleType */
+gYearMonth {
+}
+
+/* anySimpleType */
+dateTime {
+}
+
+/* anySimpleType */
+NOTATION {
+}
+
+/* anySimpleType */
+QName {
+}
+
+/* decimal */
+integer {
+}
+
+/* integer */
+nonPositiveInteger {
+}
+
+/* unsignedLong */
+unsignedInt {
+}
+
+/* unsignedInt */
+unsignedShort {
+}
+
+/* integer */
+long {
+}
+
+/* anySimpleType */
+date {
+}
+
+/* normalizedString */
+token {
+}
+
+/* token */
+NMTOKEN {
+}
+
+/* anySimpleType */
+float {
+}
+
+/* integer */
+nonNegativeInteger {
+}
+
+/* long */
+int {
+}
+
+/* int */
+short {
+}
+
+/* anySimpleType */
+gYear {
+}
+
+/* anySimpleType */
+time {
+}
+
+/* anySimpleType */
+base64Binary {
+}
+
+/* anySimpleType */
+gMonthDay {
+}
+
+/* short */
+byte {
+}
+
+/* string */
+normalizedString {
+}
+
+/* anySimpleType */
+hexBinary {
+}
+
+/* NCName */
+ID {
+}
+
+/* anySimpleType */
+boolean {
+}
+
+/* anySimpleType */
+gMonth {
+}
+
+/* NCName */
+ENTITY {
+}
+
+/* nonPositiveInteger */
+negativeInteger {
+}
+
+/* unsignedShort */
+unsignedByte {
+}
+
+/* anySimpleType */
+decimal {
+}
+
+/* nonNegativeInteger */
+unsignedLong {
+}
+
+/* anySimpleType */
+IDREFS {
+}
+
+/* anySimpleType */
+string {
+}
+
+/* anySimpleType */
+double {
+}
+
+/* nonNegativeInteger */
+positiveInteger {
+}
+
+/* anySimpleType */
+duration {
+}
+
+/* anySimpleType */
+ENTITIES {
+}
+
+/* NCName */
+IDREF {
+}
+
+/* token */
+language {
+}
+
+/* no base */
+anyType {
+}
+
+/* no base */
+specialAttrs {
+}
+
+/* no base */
+anyURI {
+}
+
+/* anyURI */
+base {
+}
+
+/* no base */
+NCName {
+}
+
+/* NCName */
+space {
+}
+
+/* no base */
+language {
+}
+
+/* language */
+lang {
+}
+
+/* no base */
+string {
+}
+
+/* string */
+LegalSystemMods {
+}
+
+/* string */
+EfficacyMods {
+}
+
+/* string */
+statusType {
+}
+
+/* string */
+ForceMods {
+}
+
+/* string */
+eventType {
+}
+
+/* string */
+timeType {
+}
+
+/* string */
+TextualMods {
+}
+
+/* string */
+posType {
+}
+
+/* string */
+opinionType {
+}
+
+/* string */
+MeaningMods {
+}
+
+/* string */
+ScopeMods {
+}
+
+/* string */
+remarkType {
+}
+
+/* string */
+resultType {
+}
+
+/* string */
+language {
+}
+
+/* string */
+yesNoType {
+}
+
+/* string */
+versionType {
+}
+
+/* string */
+placementType {
+}
+
+/* no base */
+containerType {
+}
+
+/* no base */
+judgementStructure {
+}
+
+/* no base */
+listItems {
+}
+
+/* no base */
+parliamentaryAnalysis {
+}
+
+/* no base */
+markeropt {
+}
+
+/* markeropt */
+eolType {
+}
+
+/* no base */
+akomaNtosoType {
+}
+
+/* no base */
+amendmentStructure {
+}
+
+/* no base */
+parliamentaryAnalysisType {
+}
+
+/* no base */
+metaopt {
+}
+
+/* no base */
+blocksopt {
+}
+
+/* no base */
+hierarchicalStructure {
+}
+
+/* no base */
+judgementBodyType {
+}
+
+/* no base */
+inlinereq {
+}
+
+/* no base */
+basehierarchy {
+}
+
+/* basehierarchy */
+speechType {
+}
+
+/* no base */
+amendmentBodyType {
+}
+
+/* no base */
+preambleopt {
+}
+
+/* no base */
+judicialArguments {
+}
+
+/* no base */
+modType {
+}
+
+/* no base */
+periodType {
+}
+
+/* no base */
+refItems {
+}
+
+/* no base */
+collectionBodyType {
+}
+
+/* no base */
+prefaceopt {
+}
+
+/* no base */
+countType {
+}
+
+/* no base */
+debateStructure {
+}
+
+/* no base */
+modificationType {
+}
+
+/* no base */
+judicialArgumentType {
+}
+
+/* no base */
+basicopt {
+}
+
+/* no base */
+srcType {
+}
+
+/* no base */
+bodyType {
+}
+
+/* no base */
+coreProperties {
+}
+
+/* no base */
+Amendments {
+}
+
+/* no base */
+referenceType {
+}
+
+/* no base */
+fragmentBodyType {
+}
+
+/* no base */
+inline {
+ display:inline;
+}
+
+/* no base */
+maincontent {
+}
+
+/* metaopt */
+valueType {
+}
+
+/* basehierarchy */
+hierarchy {
+}
+
+/* no base */
+metareq {
+}
+
+/* basehierarchy */
+itemType {
+}
+
+/* no base */
+anyOtherType {
+}
+
+/* no base */
+debateBodyType {
+}
+
+/* basehierarchy */
+althierarchy {
+}
+
+/* no base */
+inlinereqreq {
+}
+
+/* no base */
+blocksreq {
+}
+
+/* no base */
+fragmentStructure {
+}
+
+/* no base */
+popupStructure {
+}
+
+/* no base */
+argumentType {
+}
+
+/* no base */
+openStructure {
+}
+
+/* no base */
+markerreq {
+}
+
+/* no base */
+collectionStructure {
+}
+
+/* no base */
+voteAtts {
+}
+
+/* no base */
+link {
+}
+
+/* no base */
+show {
+}
+
+/* no base */
+actor {
+}
+
+/* no base */
+date {
+}
+
+/* no base */
+pos {
+}
+
+/* no base */
+time {
+}
+
+/* no base */
+corereqreq {
+}
+
+/* no base */
+alt {
+}
+
+/* no base */
+name {
+}
+
+/* no base */
+coreopt {
+}
+
+/* no base */
+refersreq {
+}
+
+/* no base */
+value {
+}
+
+/* no base */
+xmllang {
+}
+
+/* no base */
+enactment {
+}
+
+/* no base */
+role {
+}
+
+/* no base */
+src {
+}
+
+/* no base */
+modifiers {
+}
+
+/* no base */
+idreq {
+}
+
+/* no base */
+number {
+}
+
+/* no base */
+refers {
+}
+
+/* no base */
+optvalue {
+}
+
+/* no base */
+period {
+}
+
+/* no base */
+outcome {
+}
+
+/* no base */
+linkopt {
+}
+
+/* no base */
+idopt {
+}
+
+/* no base */
+source {
+}
+
+/* no base */
+speechAtts {
+}
+
+/* no base */
+cellattrs {
+}
+
+/* no base */
+HTMLattrs {
+}
+
+/* no base */
+core {
+}
+
+/* no base */
+corereq {
+}
+
+/* no base */
+notes {
+}
+
+/* no base */
+amendmentInline {
+}
+
+/* no base */
+HTMLmarker {
+}
+
+/* no base */
+documentType {
+}
+
+/* no base */
+HTMLinline {
+}
+
+/* no base */
+ANinline {
+}
+
+/* no base */
+blockElements {
+}
+
+/* no base */
+ANpopup {
+}
+
+/* no base */
+amendmentBlock {
+}
+
+/* no base */
+hierElements {
+}
+
+/* no base */
+ANhier {
+}
+
+/* no base */
+preambleContainers {
+}
+
+/* no base */
+basicContainers {
+}
+
+/* no base */
+containerElements {
+}
+
+/* no base */
+inlineElements {
+}
+
+/* no base */
+ANheaderInline {
+}
+
+/* no base */
+ANtitleInline {
+}
+
+/* no base */
+docRefs {
+}
+
+/* no base */
+prefaceContainers {
+}
+
+/* no base */
+TLCs {
+}
+
+/* no base */
+inlineCM {
+}
+
+/* no base */
+judgementBlock {
+}
+
+/* no base */
+manifProperties {
+}
+
+/* no base */
+ANblock {
+}
+
+/* no base */
+ANmarker {
+}
+
+/* no base */
+HTMLblock {
+}
+
+/* no base */
+markerElements {
+}
+
+/* no base */
+HTMLcontainers {
+}
+
+/* no base */
+popupElements {
+}
+
+/* no base */
+workProperties {
+}
+
+/* no base */
+exprProperties {
+}
+
+/* no base */
+speechSection {
+}
+
+/* no base */
+ANcontainers {
+}
+
+/* no base */
+ANsemanticInline {
+}
+
+/* inline */
+summary {
+ display:inline;
+}
+
+/* judicialArgumentType */
+supports {
+}
+
+/* inlinereqreq */
+party {
+}
+
+/* valueType */
+FRBRalias {
+}
+
+/* prefaceopt */
+preface {
+}
+
+/* refItems */
+references {
+}
+
+/* metaopt */
+FRBRlanguage {
+}
+
+/* inlinereqreq */
+event {
+}
+
+/* popupStructure */
+quotedStructure {
+}
+
+/* inlinereqreq */
+role {
+}
+
+/* judgementStructure */
+judgement {
+}
+
+/* inlinereqreq */
+quantity {
+}
+
+/* parliamentaryAnalysisType */
+quorumVerification {
+}
+
+/* popupStructure */
+extractStructure {
+}
+
+/* inline */
+fillIn {
+ display:inline;
+}
+
+/* inline */
+signature {
+ display:inline;
+}
+
+/* srcType */
+componentRef {
+}
+
+/* althierarchy */
+administrationOfOath {
+}
+
+/* inline */
+vote {
+ display:inline;
+}
+
+/* modType */
+mod {
+}
+
+/* speechType */
+answer {
+}
+
+/* debateBodyType */
+debateBody {
+}
+
+/* althierarchy */
+papers {
+}
+
+/* markeropt */
+noteRef {
+}
+
+/* blocksopt */
+header {
+}
+
+/* althierarchy */
+proceduralMotions {
+}
+
+/* inline */
+listIntroduction {
+ display:inline;
+}
+
+/* blocksopt */
+content {
+}
+
+/* inlinereq */
+rref {
+}
+
+/* althierarchy */
+nationalInterest {
+}
+
+/* judicialArgumentType */
+contrasts {
+}
+
+/* no base */
+components {
+}
+
+/* inline */
+docPurpose {
+ display:inline;
+}
+
+/* maincontent */
+introduction {
+}
+
+/* referenceType */
+TLCEvent {
+}
+
+/* hierarchy */
+tome {
+}
+
+/* referenceType */
+TLCLocation {
+}
+
+/* inline */
+date {
+ display:inline;
+}
+
+/* no base */
+meta {
+}
+
+/* referenceType */
+passiveRef {
+}
+
+/* hierarchy */
+division {
+}
+
+/* Amendments */
+activeModifications {
+}
+
+/* inline */
+quotedText {
+ display:inline;
+}
+
+/* popupStructure */
+popup {
+}
+
+/* inline */
+inline {
+ display:inline;
+}
+
+/* anyOtherType */
+domain {
+}
+
+/* debateStructure */
+debate {
+}
+
+/* referenceType */
+activeRef {
+}
+
+/* inline */
+relatedDocument {
+ display:inline;
+}
+
+/* inline */
+docIntroducer {
+ display:inline;
+}
+
+/* valueType */
+FRBRthis {
+}
+
+/* listItems */
+ul {
+}
+
+/* inline */
+b {
+ display:inline;
+}
+
+/* no base */
+temporalData {
+}
+
+/* althierarchy */
+noticesOfMotion {
+}
+
+/* inline */
+a {
+ display:inline;
+}
+
+/* blocksopt */
+intro {
+}
+
+/* coreProperties */
+FRBRExpression {
+}
+
+/* inline */
+i {
+ display:inline;
+}
+
+/* inlinereq */
+ref {
+}
+
+/* anyOtherType */
+new {
+}
+
+/* inline */
+num {
+ display:inline;
+}
+
+/* inline */
+u {
+ display:inline;
+}
+
+/* blocksopt */
+amendmentJustification {
+}
+
+/* judicialArgumentType */
+restricts {
+}
+
+/* maincontent */
+background {
+}
+
+/* inline */
+p {
+ display:inline;
+}
+
+/* referenceType */
+original {
+}
+
+/* openStructure */
+doc {
+}
+
+/* no base */
+notes {
+}
+
+/* hierarchy */
+part {
+}
+
+/* amendmentStructure */
+amendment {
+}
+
+/* bodyType */
+body {
+}
+
+/* inline */
+docType {
+ display:inline;
+}
+
+/* no base */
+tr {
+}
+
+/* inline */
+change {
+ display:inline;
+}
+
+/* inlinereqreq */
+entity {
+}
+
+/* popupStructure */
+authorialNote {
+}
+
+/* blocksopt */
+td {
+}
+
+/* markeropt */
+br {
+}
+
+/* blocksopt */
+th {
+}
+
+/* no base */
+component {
+}
+
+/* eolType */
+eol {
+}
+
+/* althierarchy */
+adjournment {
+}
+
+/* inline */
+opinion {
+ display:inline;
+}
+
+/* eolType */
+eop {
+}
+
+/* judicialArgumentType */
+putsInQuestion {
+}
+
+/* inline */
+docStage {
+ display:inline;
+}
+
+/* hierarchy */
+subchapter {
+}
+
+/* collectionStructure */
+amendmentList {
+}
+
+/* inline */
+docCommittee {
+ display:inline;
+}
+
+/* anyOtherType */
+condition {
+}
+
+/* coreProperties */
+FRBRItem {
+}
+
+/* blocksopt */
+amendmentReference {
+}
+
+/* periodType */
+efficacy {
+}
+
+/* anyOtherType */
+otherAnalysis {
+}
+
+/* inline */
+docNumber {
+ display:inline;
+}
+
+/* no base */
+workflow {
+}
+
+/* coreProperties */
+FRBRManifestation {
+}
+
+/* speechType */
+speech {
+}
+
+/* maincontent */
+mainBody {
+}
+
+/* anyOtherType */
+foreign {
+}
+
+/* inline */
+extractText {
+ display:inline;
+}
+
+/* inline */
+span {
+ display:inline;
+}
+
+/* hierarchy */
+subdivision {
+}
+
+/* anyOtherType */
+result {
+}
+
+/* countType */
+quorum {
+}
+
+/* inline */
+sub {
+ display:inline;
+}
+
+/* no base */
+toc {
+}
+
+/* hierarchicalStructure */
+bill {
+}
+
+/* hierarchy */
+subsection {
+}
+
+/* hierarchy */
+transitional {
+}
+
+/* no base */
+analysis {
+}
+
+/* inline */
+sup {
+ display:inline;
+}
+
+/* referenceType */
+TLCConcept {
+}
+
+/* referenceType */
+jurisprudence {
+}
+
+/* hierarchy */
+chapter {
+}
+
+/* inlinereqreq */
+organization {
+}
+
+/* inline */
+docketNumber {
+ display:inline;
+}
+
+/* openStructure */
+debateReport {
+}
+
+/* speechType */
+question {
+}
+
+/* parliamentaryAnalysisType */
+voting {
+}
+
+/* anyOtherType */
+eventRef {
+}
+
+/* fragmentStructure */
+fragment {
+}
+
+/* inline */
+mref {
+ display:inline;
+}
+
+/* metaopt */
+timeInterval {
+}
+
+/* althierarchy */
+communication {
+}
+
+/* parliamentaryAnalysisType */
+recount {
+}
+
+/* basicopt */
+coverPage {
+}
+
+/* collectionBodyType */
+collectionBody {
+}
+
+/* referenceType */
+attachmentOf {
+}
+
+/* referenceType */
+TLCObject {
+}
+
+/* argumentType */
+source {
+}
+
+/* valueType */
+FRBRname {
+}
+
+/* hierarchy */
+clause {
+}
+
+/* inlinereqreq */
+person {
+}
+
+/* referenceType */
+TLCPerson {
+}
+
+/* no base */
+citations {
+}
+
+/* hierarchy */
+paragraph {
+}
+
+/* inline */
+neutralCitation {
+ display:inline;
+}
+
+/* inline */
+docStatus {
+ display:inline;
+}
+
+/* judicialArgumentType */
+applies {
+}
+
+/* maincontent */
+motivation {
+}
+
+/* referenceType */
+TLCReference {
+}
+
+/* inline */
+legislature {
+ display:inline;
+}
+
+/* althierarchy */
+oralStatements {
+}
+
+/* no base */
+recitals {
+}
+
+/* no base */
+lifecycle {
+}
+
+/* valueType */
+FRBRuri {
+}
+
+/* preambleopt */
+preamble {
+}
+
+/* referenceType */
+TLCRole {
+}
+
+/* listItems */
+ol {
+}
+
+/* blocksopt */
+amendmentContent {
+}
+
+/* itemType */
+citation {
+}
+
+/* modType */
+mmod {
+}
+
+/* valueType */
+FRBRsubtype {
+}
+
+/* hierarchy */
+subclause {
+}
+
+/* althierarchy */
+questions {
+}
+
+/* inline */
+tocItem {
+ display:inline;
+}
+
+/* no base */
+table {
+}
+
+/* hierarchy */
+sublist {
+}
+
+/* argumentType */
+destination {
+}
+
+/* inline */
+session {
+ display:inline;
+}
+
+/* modificationType */
+textualMod {
+}
+
+/* inline */
+recordedTime {
+ display:inline;
+}
+
+/* containerType */
+container {
+ display:block;
+}
+
+/* blocksopt */
+longTitle {
+}
+
+/* inline */
+scene {
+ display:inline;
+}
+
+/* judicialArgumentType */
+distinguishes {
+}
+
+/* inline */
+heading {
+ display:inline;
+}
+
+/* hierarchy */
+subparagraph {
+}
+
+/* althierarchy */
+debateSection {
+}
+
+/* inline */
+block {
+ display:inline;
+}
+
+/* inline */
+docJurisdiction {
+ display:inline;
+}
+
+/* inline */
+docProponent {
+ display:inline;
+}
+
+/* maincontent */
+decision {
+}
+
+/* althierarchy */
+personalStatements {
+}
+
+/* inline */
+omissis {
+ display:inline;
+}
+
+/* modType */
+rmod {
+}
+
+/* hierarchy */
+title {
+}
+
+/* no base */
+componentData {
+}
+
+/* inline */
+def {
+ display:inline;
+}
+
+/* inlinereqreq */
+judge {
+}
+
+/* inline */
+docTitle {
+ display:inline;
+}
+
+/* judicialArgumentType */
+isAnalogTo {
+}
+
+/* inline */
+del {
+ display:inline;
+}
+
+/* metaopt */
+FRBRdate {
+}
+
+/* inline */
+affectedDocument {
+ display:inline;
+}
+
+/* blocksreq */
+note {
+}
+
+/* judicialArgumentType */
+dissentsFrom {
+}
+
+/* referenceType */
+TLCProcess {
+}
+
+/* Amendments */
+passiveModifications {
+}
+
+/* inline */
+placeholder {
+ display:inline;
+}
+
+/* inline */
+caption {
+ display:inline;
+}
+
+/* inline */
+outcome {
+ display:inline;
+}
+
+/* collectionStructure */
+documentCollection {
+}
+
+/* inlinereqreq */
+process {
+}
+
+/* hierarchy */
+point {
+}
+
+/* hierarchy */
+article {
+}
+
+/* inline */
+shortTitle {
+ display:inline;
+}
+
+/* anyOtherType */
+proprietary {
+}
+
+/* no base */
+classification {
+}
+
+/* itemType */
+item {
+}
+
+/* hierarchy */
+hcontainer {
+}
+
+/* althierarchy */
+pointOfOrder {
+}
+
+/* fragmentBodyType */
+fragmentBody {
+}
+
+/* periodType */
+force {
+}
+
+/* anyOtherType */
+old {
+}
+
+/* countType */
+count {
+}
+
+/* modificationType */
+scopeMod {
+}
+
+/* itemType */
+tblock {
+}
+
+/* inlinereqreq */
+location {
+}
+
+/* inline */
+remark {
+ display:inline;
+}
+
+/* inline */
+narrative {
+ display:inline;
+}
+
+/* collectionStructure */
+officialGazette {
+}
+
+/* markeropt */
+img {
+}
+
+/* inline */
+listConclusion {
+ display:inline;
+}
+
+/* judicialArgumentType */
+overrules {
+}
+
+/* judicialArgumentType */
+derogates {
+}
+
+/* hierarchy */
+alinea {
+}
+
+/* no base */
+blockList {
+}
+
+/* althierarchy */
+declarationOfVote {
+}
+
+/* no base */
+temporalGroup {
+}
+
+/* modificationType */
+legalSystemMod {
+}
+
+/* althierarchy */
+petitions {
+}
+
+/* blocksopt */
+wrap {
+}
+
+/* hierarchy */
+indent {
+}
+
+/* judicialArgumentType */
+extends {
+}
+
+/* referenceType */
+hasAttachment {
+}
+
+/* inline */
+ins {
+ display:inline;
+}
+
+/* amendmentBodyType */
+amendmentBody {
+}
+
+/* no base */
+li {
+}
+
+/* parliamentaryAnalysis */
+parliamentary {
+}
+
+/* anyOtherType */
+presentation {
+}
+
+/* markerreq */
+marker {
+}
+
+/* modificationType */
+meaningMod {
+}
+
+/* blocksopt */
+amendmentHeading {
+}
+
+/* metaopt */
+FRBRauthor {
+}
+
+/* inlinereqreq */
+lawyer {
+}
+
+/* inlinereqreq */
+concept {
+}
+
+/* blocksopt */
+other {
+}
+
+/* no base */
+componentInfo {
+}
+
+/* inline */
+subheading {
+ display:inline;
+}
+
+/* inline */
+courtType {
+ display:inline;
+}
+
+/* blocksreq */
+div {
+}
+
+/* althierarchy */
+resolutions {
+}
+
+/* inline */
+from {
+ display:inline;
+}
+
+/* inlinereqreq */
+object {
+}
+
+/* blocksreq */
+interstitial {
+}
+
+/* itemType */
+recital {
+}
+
+/* judicialArguments */
+judicial {
+}
+
+/* valueType */
+FRBRcountry {
+}
+
+/* modificationType */
+efficacyMod {
+}
+
+/* althierarchy */
+rollCall {
+}
+
+/* valueType */
+FRBRformat {
+}
+
+/* inline */
+docDate {
+ display:inline;
+}
+
+/* no base */
+attachments {
+}
+
+/* referenceType */
+TLCOrganization {
+}
+
+/* periodType */
+application {
+}
+
+/* coreProperties */
+FRBRWork {
+}
+
+/* akomaNtosoType */
+akomaNtoso {
+}
+
+/* modificationType */
+forceMod {
+}
+
+/* metaopt */
+keyword {
+}
+
+/* valueType */
+FRBRnumber {
+}
+
+/* hierarchy */
+list {
+}
+
+/* hierarchy */
+section {
+}
+
+/* metaopt */
+publication {
+}
+
+/* metaopt */
+FRBRtranslation {
+}
+
+/* referenceType */
+TLCTerm {
+}
+
+/* basicopt */
+conclusions {
+}
+
+/* periodType */
+duration {
+}
+
+/* judgementBodyType */
+judgementBody {
+}
+
+/* hierarchy */
+subpart {
+}
+
+/* althierarchy */
+address {
+}
+
+/* inlinereqreq */
+term {
+}
+
+/* no base */
+identification {
+}
+
+/* althierarchy */
+writtenStatements {
+}
+
+/* hierarchy */
+subtitle {
+}
+
+/* hierarchy */
+book {
+}
+
+/* althierarchy */
+prayers {
+}
+
+/* althierarchy */
+ministerialStatements {
+}
+
+/* hierarchicalStructure */
+act {
+}
+
+/* anyOtherType */
+step {
+}
+
+/* anyOtherType */
+preservation {
+}
+
+/* blocksopt */
+formula {
+}
