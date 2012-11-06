@@ -1,15 +1,16 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkoptAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ValueAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ValueAttrGroup;
+import java.lang.String;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkoptAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ValueAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ValueAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
@@ -24,11 +25,20 @@ public CountTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
+private RefersAttrGroup refers;
 private CoreAttrGroup core;
 private LinkoptAttrGroup linkopt;
-private RefersAttrGroup refers;
-private ValueAttrGroup value;
 private IdreqAttrGroup idreq;
+private ValueAttrGroup value;
+private java.util.List<String> wildcardContents = new ArrayList<String>();
+
+public RefersAttrGroup getRefers() {
+return refers;
+}
+
+public void setRefers(final RefersAttrGroup refers) {
+this.refers = refers;
+}
 
 public CoreAttrGroup getCore() {
 return core;
@@ -46,12 +56,12 @@ public void setLinkopt(final LinkoptAttrGroup linkopt) {
 this.linkopt = linkopt;
 }
 
-public RefersAttrGroup getRefers() {
-return refers;
+public IdreqAttrGroup getIdreq() {
+return idreq;
 }
 
-public void setRefers(final RefersAttrGroup refers) {
-this.refers = refers;
+public void setIdreq(final IdreqAttrGroup idreq) {
+this.idreq = idreq;
 }
 
 public ValueAttrGroup getValue() {
@@ -62,12 +72,12 @@ public void setValue(final ValueAttrGroup value) {
 this.value = value;
 }
 
-public IdreqAttrGroup getIdreq() {
-return idreq;
+public java.util.List<String> getWildcardContent() {
+return wildcardContents;
 }
 
-public void setIdreq(final IdreqAttrGroup idreq) {
-this.idreq = idreq;
+public void setWildcardContent(final java.util.List<String> wildcardContents) {
+this.wildcardContents = wildcardContents;
 }
 
 }

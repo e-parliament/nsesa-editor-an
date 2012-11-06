@@ -1,6 +1,5 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkAttrGroup;
@@ -8,6 +7,7 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Idr
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
@@ -22,18 +22,10 @@ public ReferenceTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private IdreqAttrGroup idreq;
 private ShowAttrGroup show;
 private CoreAttrGroup core;
 private LinkAttrGroup link;
-
-public IdreqAttrGroup getIdreq() {
-return idreq;
-}
-
-public void setIdreq(final IdreqAttrGroup idreq) {
-this.idreq = idreq;
-}
+private IdreqAttrGroup idreq;
 
 public ShowAttrGroup getShow() {
 return show;
@@ -57,6 +49,14 @@ return link;
 
 public void setLink(final LinkAttrGroup link) {
 this.link = link;
+}
+
+public IdreqAttrGroup getIdreq() {
+return idreq;
+}
+
+public void setIdreq(final IdreqAttrGroup idreq) {
+this.idreq = idreq;
 }
 
 }

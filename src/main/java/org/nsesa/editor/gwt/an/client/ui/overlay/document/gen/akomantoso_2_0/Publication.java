@@ -1,15 +1,15 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DateAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NameAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NumberAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MetaoptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DateAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NameAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NumberAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
@@ -25,27 +25,11 @@ public Publication(Element element) {
 }
 
 // FIELDS ------------------
-private RefersAttrGroup refers;
-private ShowAttrGroup show;
 private DateAttrGroup date;
 private NameAttrGroup name;
+private ShowAttrGroup show;
+private RefersAttrGroup refers;
 private NumberAttrGroup number;
-
-public RefersAttrGroup getRefers() {
-return refers;
-}
-
-public void setRefers(final RefersAttrGroup refers) {
-this.refers = refers;
-}
-
-public ShowAttrGroup getShow() {
-return show;
-}
-
-public void setShow(final ShowAttrGroup show) {
-this.show = show;
-}
 
 public DateAttrGroup getDate() {
 return date;
@@ -61,6 +45,22 @@ return name;
 
 public void setName(final NameAttrGroup name) {
 this.name = name;
+}
+
+public ShowAttrGroup getShow() {
+return show;
+}
+
+public void setShow(final ShowAttrGroup show) {
+this.show = show;
+}
+
+public RefersAttrGroup getRefers() {
+return refers;
+}
+
+public void setRefers(final RefersAttrGroup refers) {
+this.refers = refers;
 }
 
 public NumberAttrGroup getNumber() {

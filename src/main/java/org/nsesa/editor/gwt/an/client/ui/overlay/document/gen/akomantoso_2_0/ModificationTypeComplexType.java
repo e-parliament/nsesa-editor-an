@@ -1,10 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ModifiersAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EnactmentAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EnactmentAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ModifiersAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Source;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Destination;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Force;
@@ -12,11 +12,11 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Eff
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Application;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Duration;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Condition;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ModifiersAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EnactmentAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EnactmentAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ModifiersAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Source;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Destination;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Force;
@@ -38,11 +38,11 @@ public ModificationTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
+private ModifiersAttrGroup modifiers;
+private EnactmentAttrGroup enactment;
 private RefersAttrGroup refers;
 private CoreAttrGroup core;
 private IdreqAttrGroup idreq;
-private EnactmentAttrGroup enactment;
-private ModifiersAttrGroup modifiers;
 private java.util.List<Source> sources = new ArrayList<Source>();
 private java.util.List<Destination> destinations = new ArrayList<Destination>();
 private Force force;
@@ -50,6 +50,22 @@ private Efficacy efficacy;
 private Application application;
 private Duration duration;
 private Condition condition;
+
+public ModifiersAttrGroup getModifiers() {
+return modifiers;
+}
+
+public void setModifiers(final ModifiersAttrGroup modifiers) {
+this.modifiers = modifiers;
+}
+
+public EnactmentAttrGroup getEnactment() {
+return enactment;
+}
+
+public void setEnactment(final EnactmentAttrGroup enactment) {
+this.enactment = enactment;
+}
 
 public RefersAttrGroup getRefers() {
 return refers;
@@ -73,22 +89,6 @@ return idreq;
 
 public void setIdreq(final IdreqAttrGroup idreq) {
 this.idreq = idreq;
-}
-
-public EnactmentAttrGroup getEnactment() {
-return enactment;
-}
-
-public void setEnactment(final EnactmentAttrGroup enactment) {
-this.enactment = enactment;
-}
-
-public ModifiersAttrGroup getModifiers() {
-return modifiers;
-}
-
-public void setModifiers(final ModifiersAttrGroup modifiers) {
-this.modifiers = modifiers;
 }
 
 public java.util.List<Source> getSource() {

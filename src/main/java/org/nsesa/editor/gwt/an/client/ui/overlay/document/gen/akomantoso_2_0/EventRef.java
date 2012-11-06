@@ -2,13 +2,13 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EventTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.YesNoTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DateAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SourceAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DateAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AnyOtherTypeComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EventTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.YesNoTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DateAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SourceAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DateAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
@@ -25,8 +25,8 @@ public EventRef(Element element) {
 // FIELDS ------------------
 private EventTypeSimpleType typez;
 private YesNoTypeSimpleType originatingExpression;
-private DateAttrGroup date;
 private SourceAttrGroup source;
+private DateAttrGroup date;
 
 public EventTypeSimpleType getTypez() {
 return typez;
@@ -44,20 +44,20 @@ public void setOriginatingExpression(final YesNoTypeSimpleType originatingExpres
 this.originatingExpression = originatingExpression;
 }
 
-public DateAttrGroup getDate() {
-return date;
-}
-
-public void setDate(final DateAttrGroup date) {
-this.date = date;
-}
-
 public SourceAttrGroup getSource() {
 return source;
 }
 
 public void setSource(final SourceAttrGroup source) {
 this.source = source;
+}
+
+public DateAttrGroup getDate() {
+return date;
+}
+
+public void setDate(final DateAttrGroup date) {
+this.date = date;
 }
 
 }

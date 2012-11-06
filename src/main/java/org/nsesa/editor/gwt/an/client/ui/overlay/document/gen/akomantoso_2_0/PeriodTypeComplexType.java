@@ -1,11 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdoptAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PeriodAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdoptAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PeriodAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdoptAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PeriodAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
@@ -20,9 +20,17 @@ public PeriodTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
+private CoreAttrGroup core;
 private IdoptAttrGroup idopt;
 private PeriodAttrGroup period;
-private CoreAttrGroup core;
+
+public CoreAttrGroup getCore() {
+return core;
+}
+
+public void setCore(final CoreAttrGroup core) {
+this.core = core;
+}
 
 public IdoptAttrGroup getIdopt() {
 return idopt;
@@ -38,14 +46,6 @@ return period;
 
 public void setPeriod(final PeriodAttrGroup period) {
 this.period = period;
-}
-
-public CoreAttrGroup getCore() {
-return core;
-}
-
-public void setCore(final CoreAttrGroup core) {
-this.core = core;
 }
 
 }

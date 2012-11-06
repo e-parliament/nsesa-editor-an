@@ -1,13 +1,13 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreoptAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OptvalueAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreoptAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.InlineCMGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ul;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ol;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.P;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreoptAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OptvalueAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreoptAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.InlineCMGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ul;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ol;
@@ -26,20 +26,12 @@ public Li(Element element) {
 }
 
 // FIELDS ------------------
-private CoreoptAttrGroup coreopt;
 private OptvalueAttrGroup optvalue;
+private CoreoptAttrGroup coreopt;
 private java.util.List<InlineCMGroup> inlineCMs = new ArrayList<InlineCMGroup>();
 private java.util.List<Ul> uls = new ArrayList<Ul>();
 private java.util.List<Ol> ols = new ArrayList<Ol>();
 private java.util.List<P> ps = new ArrayList<P>();
-
-public CoreoptAttrGroup getCoreopt() {
-return coreopt;
-}
-
-public void setCoreopt(final CoreoptAttrGroup coreopt) {
-this.coreopt = coreopt;
-}
 
 public OptvalueAttrGroup getOptvalue() {
 return optvalue;
@@ -47,6 +39,14 @@ return optvalue;
 
 public void setOptvalue(final OptvalueAttrGroup optvalue) {
 this.optvalue = optvalue;
+}
+
+public CoreoptAttrGroup getCoreopt() {
+return coreopt;
+}
+
+public void setCoreopt(final CoreoptAttrGroup coreopt) {
+this.coreopt = coreopt;
 }
 
 public java.util.List<InlineCMGroup> getInlineCM() {

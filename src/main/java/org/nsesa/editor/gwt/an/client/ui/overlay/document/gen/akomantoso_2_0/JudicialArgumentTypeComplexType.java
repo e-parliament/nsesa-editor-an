@@ -1,18 +1,18 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ModifiersAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EnactmentAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ModifiersAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EnactmentAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Source;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Destination;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Condition;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ModifiersAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EnactmentAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ModifiersAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EnactmentAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Source;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Destination;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Condition;
@@ -30,14 +30,38 @@ public JudicialArgumentTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
+private ModifiersAttrGroup modifiers;
+private RefersAttrGroup refers;
+private EnactmentAttrGroup enactment;
 private CoreAttrGroup core;
 private IdreqAttrGroup idreq;
-private RefersAttrGroup refers;
-private ModifiersAttrGroup modifiers;
-private EnactmentAttrGroup enactment;
 private java.util.List<Source> sources = new ArrayList<Source>();
 private java.util.List<Destination> destinations = new ArrayList<Destination>();
 private Condition condition;
+
+public ModifiersAttrGroup getModifiers() {
+return modifiers;
+}
+
+public void setModifiers(final ModifiersAttrGroup modifiers) {
+this.modifiers = modifiers;
+}
+
+public RefersAttrGroup getRefers() {
+return refers;
+}
+
+public void setRefers(final RefersAttrGroup refers) {
+this.refers = refers;
+}
+
+public EnactmentAttrGroup getEnactment() {
+return enactment;
+}
+
+public void setEnactment(final EnactmentAttrGroup enactment) {
+this.enactment = enactment;
+}
 
 public CoreAttrGroup getCore() {
 return core;
@@ -53,30 +77,6 @@ return idreq;
 
 public void setIdreq(final IdreqAttrGroup idreq) {
 this.idreq = idreq;
-}
-
-public RefersAttrGroup getRefers() {
-return refers;
-}
-
-public void setRefers(final RefersAttrGroup refers) {
-this.refers = refers;
-}
-
-public ModifiersAttrGroup getModifiers() {
-return modifiers;
-}
-
-public void setModifiers(final ModifiersAttrGroup modifiers) {
-this.modifiers = modifiers;
-}
-
-public EnactmentAttrGroup getEnactment() {
-return enactment;
-}
-
-public void setEnactment(final EnactmentAttrGroup enactment) {
-this.enactment = enactment;
 }
 
 public java.util.List<Source> getSource() {
