@@ -3,7 +3,7 @@
 package ${packageNameGenerator.getPackageName(overlayClass)};
 
 <#list overlayClasses as cl>
-import ${packageNameGenerator.getPackageName(cl)}.${cl.name?cap_first};
+import ${packageNameGenerator.getPackageName(cl)}.${cl.className?cap_first};
 </#list>
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
@@ -28,7 +28,7 @@ public class ${overlayClass.name?cap_first} extends DefaultOverlayFactory  {
 
         <#list overlayClasses as cl>
         else if ("${cl.name}".equalsIgnoreCase(element.getNodeName())) {
-            return new ${cl.name?cap_first}(element);
+            return new ${cl.className?cap_first}(element);
         }
         </#list>
 

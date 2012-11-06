@@ -15,7 +15,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
 */
-public class ${overlayClass.name?cap_first} <#if overlayClass.superClassName??>extends ${overlayClass.superClassName?cap_first}<#else><#if overlayClass.complex || overlayClass.element>extends AmendableWidgetImpl</#if></#if>  <#if overlayClass.interfaces??>implements <#list overlayClass.interfaces as interface>${interface.getSimpleName()}<#if interface_has_next>, </#if></#list> </#if>{
+public class ${overlayClass.className?cap_first} <#if overlayClass.parent??>extends ${overlayClass.parent.className?cap_first}<#else><#if overlayClass.complex || overlayClass.element>extends AmendableWidgetImpl</#if></#if>  <#if overlayClass.interfaces??>implements <#list overlayClass.interfaces as interface>${interface.getSimpleName()}<#if interface_has_next>, </#if></#list> </#if>{
 
 // CONSTRUCTORS ------------------
 <#if overlayClass.complex || overlayClass.element>

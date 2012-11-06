@@ -16,7 +16,7 @@ public enum ${overlayClass.name?cap_first} {
 </#list>;
 private final String value;
 
-${overlayClass.name?cap_first}(String v) {
+${overlayClass.className?cap_first}(String v) {
     value = v;
 }
 
