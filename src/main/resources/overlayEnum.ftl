@@ -7,7 +7,7 @@ import java.util.ArrayList;
 /**
 * This file is generated.
 */
-public enum ${overlayClass.name?cap_first} {
+public enum ${overlayClass.className?cap_first} {
 
 // FIELDS ------------------
 

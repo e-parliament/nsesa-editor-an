@@ -19,7 +19,7 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent??>exte
 
 // CONSTRUCTORS ------------------
 <#if overlayClass.complex || overlayClass.element>
-public ${overlayClass.name?cap_first}(Element element) {
+public ${overlayClass.className?cap_first}(Element element) {
     super(element);
 }
 </#if>
