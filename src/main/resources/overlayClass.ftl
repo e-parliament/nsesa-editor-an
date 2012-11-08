@@ -9,7 +9,7 @@ import ${import};
 </#list>
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-<#if overlayClass.complex || overlayClass.element>
+<#if overlayClass.complex || overlayClass.element || overlayClass.hasWildCardProperties()>
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 </#if>
 /**
@@ -42,10 +42,16 @@ this.<@propertyName property = property/> = <@propertyName property = property/>
 }
 
 <#macro propertyClassName property><#compress>
-    <#if property.collection>
-    java.util.List<${property.className?cap_first}>
+    <#assign propName="AmendableWidgetImpl">
+    <#if property.wildCard>
+        <#assign propName="AmendableWidgetImpl">
     <#else>
-    ${property.className?cap_first}
+        <#assign propName=property.className?cap_first>
+    </#if>
+    <#if property.collection>
+    java.util.List<${propName}>
+    <#else>
+    ${propName}
     </#if>
 </#compress></#macro>
 
@@ -72,7 +78,7 @@ this.<@propertyName property = property/> = <@propertyName property = property/>
 </#compress></#macro>
 
 <#macro generateField property>
-private <@propertyClassName property=property/> <#if property.collection><@pl property=property/> = new ArrayList<${property.className?cap_first}>();<#else><@propertyName property = property/>;</#if>
+private <@propertyClassName property=property/> <#if property.collection><@pl property=property/> = new ArrayList<<#if property.wildCard>AmendableWidgetImpl>();<#else>${property.className?cap_first}>();</#if><#else><@propertyName property = property/>;</#if>
 </#macro>
 
 <#macro pl property><#compress>
