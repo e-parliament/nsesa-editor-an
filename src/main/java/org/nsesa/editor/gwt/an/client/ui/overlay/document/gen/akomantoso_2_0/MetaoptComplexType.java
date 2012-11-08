@@ -1,9 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdoptAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdoptAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
@@ -18,16 +18,8 @@ public MetaoptComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private CoreAttrGroup core;
 private IdoptAttrGroup idopt;
-
-public CoreAttrGroup getCore() {
-return core;
-}
-
-public void setCore(final CoreAttrGroup core) {
-this.core = core;
-}
+private CoreAttrGroup core;
 
 public IdoptAttrGroup getIdopt() {
 return idopt;
@@ -35,6 +27,14 @@ return idopt;
 
 public void setIdopt(final IdoptAttrGroup idopt) {
 this.idopt = idopt;
+}
+
+public CoreAttrGroup getCore() {
+return core;
+}
+
+public void setCore(final CoreAttrGroup core) {
+this.core = core;
 }
 
 }

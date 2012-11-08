@@ -1,15 +1,15 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkoptAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ValueAttrGroup;
 import java.lang.String;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkoptAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ValueAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
@@ -25,12 +25,20 @@ public CountTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
+private IdreqAttrGroup idreq;
 private RefersAttrGroup refers;
 private CoreAttrGroup core;
 private LinkoptAttrGroup linkopt;
-private IdreqAttrGroup idreq;
 private ValueAttrGroup value;
-private java.util.List<String> wildcardContents = new ArrayList<String>();
+private java.util.List<AmendableWidgetImpl> wildcardContents = new ArrayList<AmendableWidgetImpl>();
+
+public IdreqAttrGroup getIdreq() {
+return idreq;
+}
+
+public void setIdreq(final IdreqAttrGroup idreq) {
+this.idreq = idreq;
+}
 
 public RefersAttrGroup getRefers() {
 return refers;
@@ -56,14 +64,6 @@ public void setLinkopt(final LinkoptAttrGroup linkopt) {
 this.linkopt = linkopt;
 }
 
-public IdreqAttrGroup getIdreq() {
-return idreq;
-}
-
-public void setIdreq(final IdreqAttrGroup idreq) {
-this.idreq = idreq;
-}
-
 public ValueAttrGroup getValue() {
 return value;
 }
@@ -72,11 +72,11 @@ public void setValue(final ValueAttrGroup value) {
 this.value = value;
 }
 
-public java.util.List<String> getWildcardContent() {
+public java.util.List<AmendableWidgetImpl> getWildcardContent() {
 return wildcardContents;
 }
 
-public void setWildcardContent(final java.util.List<String> wildcardContents) {
+public void setWildcardContent(final java.util.List<AmendableWidgetImpl> wildcardContents) {
 this.wildcardContents = wildcardContents;
 }
 

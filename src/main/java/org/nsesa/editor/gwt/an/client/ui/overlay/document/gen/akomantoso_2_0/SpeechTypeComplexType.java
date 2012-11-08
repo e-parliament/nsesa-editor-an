@@ -1,12 +1,12 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SpeechAttsAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreoptAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SpeechAttsAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.From;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.BlockElementsGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.BasehierarchyComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SpeechAttsAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreoptAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SpeechAttsAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.From;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.BlockElementsGroup;
 import com.google.gwt.dom.client.Element;
@@ -23,18 +23,10 @@ public SpeechTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private SpeechAttsAttrGroup speechAtts;
 private CoreoptAttrGroup coreopt;
+private SpeechAttsAttrGroup speechAtts;
 private From from;
 private java.util.List<BlockElementsGroup> blockElementses = new ArrayList<BlockElementsGroup>();
-
-public SpeechAttsAttrGroup getSpeechAtts() {
-return speechAtts;
-}
-
-public void setSpeechAtts(final SpeechAttsAttrGroup speechAtts) {
-this.speechAtts = speechAtts;
-}
 
 public CoreoptAttrGroup getCoreopt() {
 return coreopt;
@@ -42,6 +34,14 @@ return coreopt;
 
 public void setCoreopt(final CoreoptAttrGroup coreopt) {
 this.coreopt = coreopt;
+}
+
+public SpeechAttsAttrGroup getSpeechAtts() {
+return speechAtts;
+}
+
+public void setSpeechAtts(final SpeechAttsAttrGroup speechAtts) {
+this.speechAtts = speechAtts;
 }
 
 public From getFrom() {
