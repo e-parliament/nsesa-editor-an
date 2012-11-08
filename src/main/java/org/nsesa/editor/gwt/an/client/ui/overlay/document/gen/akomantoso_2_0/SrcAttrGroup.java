@@ -30,12 +30,5 @@ return alt;
 public void setAlt(final StringSimpleType alt) {
 this.alt = alt;
 }
-/**
-* Returns possible children as list of String
-*/
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{};
-    return  new ArrayList(Arrays.asList(arrayChildren));
-}
 }
 

@@ -56,9 +56,10 @@ this.source = source;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"coreAttrGroup","*","linkoptAttrGroup","yesNoTypeSimpleType","sourceAttrGroup","eventTypeSimpleType","idoptAttrGroup","dateAttrGroup"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"coreAttrGroup","*","linkoptAttrGroup","yesNoTypeSimpleType","sourceAttrGroup","eventTypeSimpleType","idoptAttrGroup","dateAttrGroup"};
+    return  subtypes;
 }
 }
 

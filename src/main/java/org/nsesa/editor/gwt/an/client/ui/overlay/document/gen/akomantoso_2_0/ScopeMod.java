@@ -38,9 +38,10 @@ this.domain = domain;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"application","ScopeModsSimpleType","modifiersAttrGroup","coreAttrGroup","condition","idreqAttrGroup","efficacy","destination","duration","source","domain","enactmentAttrGroup","force","refersAttrGroup"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"application","ScopeModsSimpleType","modifiersAttrGroup","coreAttrGroup","condition","idreqAttrGroup","efficacy","destination","duration","source","domain","enactmentAttrGroup","force","refersAttrGroup"};
+    return  subtypes;
 }
 }
 

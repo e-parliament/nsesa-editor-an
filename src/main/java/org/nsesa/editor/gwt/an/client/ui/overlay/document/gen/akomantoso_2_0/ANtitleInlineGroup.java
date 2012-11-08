@@ -147,12 +147,5 @@ return docketNumber;
 public void setDocketNumber(final DocketNumber docketNumber) {
 this.docketNumber = docketNumber;
 }
-/**
-* Returns possible children as list of String
-*/
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{};
-    return  new ArrayList(Arrays.asList(arrayChildren));
-}
 }
 

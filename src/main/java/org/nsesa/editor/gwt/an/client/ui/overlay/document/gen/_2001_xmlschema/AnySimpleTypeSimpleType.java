@@ -20,12 +20,5 @@ return contentz;
 public void setContentz(final String contentz) {
 this.contentz = contentz;
 }
-/**
-* Returns possible children as list of String
-*/
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"String"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
-}
 }
 

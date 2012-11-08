@@ -55,9 +55,10 @@ this.listConclusion = listConclusion;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"item","corereqAttrGroup","listConclusion","listIntroduction"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"item","corereqAttrGroup","listConclusion","listIntroduction"};
+    return  subtypes;
 }
 }
 

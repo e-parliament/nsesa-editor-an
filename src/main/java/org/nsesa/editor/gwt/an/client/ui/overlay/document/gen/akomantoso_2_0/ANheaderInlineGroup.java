@@ -75,12 +75,5 @@ return opinion;
 public void setOpinion(final Opinion opinion) {
 this.opinion = opinion;
 }
-/**
-* Returns possible children as list of String
-*/
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{};
-    return  new ArrayList(Arrays.asList(arrayChildren));
-}
 }
 

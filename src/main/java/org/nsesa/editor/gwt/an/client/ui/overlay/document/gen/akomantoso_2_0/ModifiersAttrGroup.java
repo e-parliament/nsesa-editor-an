@@ -29,12 +29,5 @@ return incomplete;
 public void setIncomplete(final BooleanSimpleType incomplete) {
 this.incomplete = incomplete;
 }
-/**
-* Returns possible children as list of String
-*/
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{};
-    return  new ArrayList(Arrays.asList(arrayChildren));
-}
 }
 

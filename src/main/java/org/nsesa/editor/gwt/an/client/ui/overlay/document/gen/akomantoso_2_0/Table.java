@@ -79,9 +79,10 @@ this.trs = trs;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"tr","caption","corereqAttrGroup","integerSimpleType"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"tr","caption","corereqAttrGroup","integerSimpleType"};
+    return  subtypes;
 }
 }
 

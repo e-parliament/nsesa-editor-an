@@ -73,9 +73,10 @@ this.legalSystemMods = legalSystemMods;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"efficacyMod","scopeMod","forceMod","textualMod","meaningMod","legalSystemMod"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"efficacyMod","scopeMod","forceMod","textualMod","meaningMod","legalSystemMod"};
+    return  subtypes;
 }
 }
 

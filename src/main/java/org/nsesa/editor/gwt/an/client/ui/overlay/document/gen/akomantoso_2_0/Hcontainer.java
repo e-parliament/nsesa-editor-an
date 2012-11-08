@@ -29,9 +29,10 @@ this.name = name;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"content","componentRef","wrap","num","subheading","nameAttrGroup","hierElementsGroup","corereqAttrGroup","heading","intro"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"content","componentRef","wrap","num","subheading","nameAttrGroup","hierElementsGroup","corereqAttrGroup","heading","intro"};
+    return  subtypes;
 }
 }
 

@@ -39,12 +39,5 @@ return change;
 public void setChange(final Change change) {
 this.change = change;
 }
-/**
-* Returns possible children as list of String
-*/
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{};
-    return  new ArrayList(Arrays.asList(arrayChildren));
-}
 }
 

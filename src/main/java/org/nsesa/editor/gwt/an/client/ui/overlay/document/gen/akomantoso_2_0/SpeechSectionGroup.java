@@ -192,12 +192,5 @@ return debateSection;
 public void setDebateSection(final DebateSection debateSection) {
 this.debateSection = debateSection;
 }
-/**
-* Returns possible children as list of String
-*/
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{};
-    return  new ArrayList(Arrays.asList(arrayChildren));
-}
 }
 

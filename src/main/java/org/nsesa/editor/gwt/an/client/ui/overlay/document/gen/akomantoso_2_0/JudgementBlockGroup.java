@@ -48,12 +48,5 @@ return decision;
 public void setDecision(final Decision decision) {
 this.decision = decision;
 }
-/**
-* Returns possible children as list of String
-*/
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{};
-    return  new ArrayList(Arrays.asList(arrayChildren));
-}
 }
 

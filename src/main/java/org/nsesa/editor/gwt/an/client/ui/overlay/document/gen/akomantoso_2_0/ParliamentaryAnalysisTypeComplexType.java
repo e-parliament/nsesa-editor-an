@@ -1,10 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkoptAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OutcomeAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Quorum;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Count;
 import com.google.gwt.dom.client.Element;
@@ -22,20 +22,20 @@ public ParliamentaryAnalysisTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private RefersAttrGroup refers;
-private CoreAttrGroup core;
 private LinkoptAttrGroup linkopt;
+private CoreAttrGroup core;
 private IdreqAttrGroup idreq;
 private OutcomeAttrGroup outcome;
+private RefersAttrGroup refers;
 private java.util.List<Quorum> quorums = new ArrayList<Quorum>();
 private java.util.List<Count> counts = new ArrayList<Count>();
 
-public RefersAttrGroup getRefers() {
-return refers;
+public LinkoptAttrGroup getLinkopt() {
+return linkopt;
 }
 
-public void setRefers(final RefersAttrGroup refers) {
-this.refers = refers;
+public void setLinkopt(final LinkoptAttrGroup linkopt) {
+this.linkopt = linkopt;
 }
 public CoreAttrGroup getCore() {
 return core;
@@ -43,13 +43,6 @@ return core;
 
 public void setCore(final CoreAttrGroup core) {
 this.core = core;
-}
-public LinkoptAttrGroup getLinkopt() {
-return linkopt;
-}
-
-public void setLinkopt(final LinkoptAttrGroup linkopt) {
-this.linkopt = linkopt;
 }
 public IdreqAttrGroup getIdreq() {
 return idreq;
@@ -64,6 +57,13 @@ return outcome;
 
 public void setOutcome(final OutcomeAttrGroup outcome) {
 this.outcome = outcome;
+}
+public RefersAttrGroup getRefers() {
+return refers;
+}
+
+public void setRefers(final RefersAttrGroup refers) {
+this.refers = refers;
 }
 public java.util.List<Quorum> getQuorum() {
 return quorums;
@@ -82,9 +82,10 @@ this.counts = counts;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"quorum","coreAttrGroup","count","linkoptAttrGroup","idreqAttrGroup","outcomeAttrGroup","refersAttrGroup"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"quorum","coreAttrGroup","count","linkoptAttrGroup","idreqAttrGroup","outcomeAttrGroup","refersAttrGroup"};
+    return  subtypes;
 }
 }
 

@@ -21,12 +21,5 @@ return value;
 public void setValue(final StringSimpleType value) {
 this.value = value;
 }
-/**
-* Returns possible children as list of String
-*/
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{};
-    return  new ArrayList(Arrays.asList(arrayChildren));
-}
 }
 

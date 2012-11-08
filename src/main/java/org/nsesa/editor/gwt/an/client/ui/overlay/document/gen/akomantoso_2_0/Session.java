@@ -29,9 +29,10 @@ this.optvalue = optvalue;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"inlineCMGroup","optvalueAttrGroup","coreoptAttrGroup"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"inlineCMGroup","optvalueAttrGroup","coreoptAttrGroup"};
+    return  subtypes;
 }
 }
 

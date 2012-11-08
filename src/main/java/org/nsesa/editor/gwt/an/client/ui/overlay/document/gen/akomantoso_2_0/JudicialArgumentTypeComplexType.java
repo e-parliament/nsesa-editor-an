@@ -1,10 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ModifiersAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EnactmentAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Source;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Destination;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Condition;
@@ -24,10 +24,10 @@ public JudicialArgumentTypeComplexType(Element element) {
 
 // FIELDS ------------------
 private RefersAttrGroup refers;
-private CoreAttrGroup core;
-private IdreqAttrGroup idreq;
 private ModifiersAttrGroup modifiers;
+private IdreqAttrGroup idreq;
 private EnactmentAttrGroup enactment;
+private CoreAttrGroup core;
 private java.util.List<Source> sources = new ArrayList<Source>();
 private java.util.List<Destination> destinations = new ArrayList<Destination>();
 private Condition condition;
@@ -39,12 +39,12 @@ return refers;
 public void setRefers(final RefersAttrGroup refers) {
 this.refers = refers;
 }
-public CoreAttrGroup getCore() {
-return core;
+public ModifiersAttrGroup getModifiers() {
+return modifiers;
 }
 
-public void setCore(final CoreAttrGroup core) {
-this.core = core;
+public void setModifiers(final ModifiersAttrGroup modifiers) {
+this.modifiers = modifiers;
 }
 public IdreqAttrGroup getIdreq() {
 return idreq;
@@ -53,19 +53,19 @@ return idreq;
 public void setIdreq(final IdreqAttrGroup idreq) {
 this.idreq = idreq;
 }
-public ModifiersAttrGroup getModifiers() {
-return modifiers;
-}
-
-public void setModifiers(final ModifiersAttrGroup modifiers) {
-this.modifiers = modifiers;
-}
 public EnactmentAttrGroup getEnactment() {
 return enactment;
 }
 
 public void setEnactment(final EnactmentAttrGroup enactment) {
 this.enactment = enactment;
+}
+public CoreAttrGroup getCore() {
+return core;
+}
+
+public void setCore(final CoreAttrGroup core) {
+this.core = core;
 }
 public java.util.List<Source> getSource() {
 return sources;
@@ -91,9 +91,10 @@ this.condition = condition;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"modifiersAttrGroup","coreAttrGroup","source","condition","enactmentAttrGroup","idreqAttrGroup","destination","refersAttrGroup"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"coreAttrGroup","modifiersAttrGroup","source","condition","enactmentAttrGroup","idreqAttrGroup","destination","refersAttrGroup"};
+    return  subtypes;
 }
 }
 

@@ -21,12 +21,5 @@ return FRBRformat;
 public void setFRBRformat(final FRBRformat FRBRformat) {
 this.FRBRformat = FRBRformat;
 }
-/**
-* Returns possible children as list of String
-*/
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{};
-    return  new ArrayList(Arrays.asList(arrayChildren));
-}
 }
 

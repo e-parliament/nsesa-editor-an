@@ -38,9 +38,10 @@ this.time = time;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"inlineCMGroup","timeAttrGroup","coreoptAttrGroup","timeTypeSimpleType"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"inlineCMGroup","timeAttrGroup","coreoptAttrGroup","timeTypeSimpleType"};
+    return  subtypes;
 }
 }
 

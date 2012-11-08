@@ -39,12 +39,5 @@ return eop;
 public void setEop(final Eop eop) {
 this.eop = eop;
 }
-/**
-* Returns possible children as list of String
-*/
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{};
-    return  new ArrayList(Arrays.asList(arrayChildren));
-}
 }
 

@@ -127,9 +127,10 @@ this.condition = condition;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"duration","application","coreAttrGroup","modifiersAttrGroup","source","condition","enactmentAttrGroup","efficacy","idreqAttrGroup","force","destination","refersAttrGroup"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"duration","application","coreAttrGroup","modifiersAttrGroup","source","condition","enactmentAttrGroup","efficacy","idreqAttrGroup","force","destination","refersAttrGroup"};
+    return  subtypes;
 }
 }
 

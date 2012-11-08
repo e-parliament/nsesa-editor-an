@@ -13,12 +13,5 @@ public class UnsignedShortSimpleType extends UnsignedIntSimpleType  {
 
 // FIELDS ------------------
 
-/**
-* Returns possible children as list of String
-*/
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"String"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
-}
 }
 

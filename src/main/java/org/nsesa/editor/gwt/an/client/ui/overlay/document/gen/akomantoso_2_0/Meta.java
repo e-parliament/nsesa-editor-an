@@ -118,9 +118,10 @@ this.presentations = presentations;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"references","presentation","temporalData","lifecycle","identification","proprietary","classification","notes","analysis","workflow","publication"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"references","presentation","temporalData","lifecycle","identification","proprietary","classification","notes","analysis","workflow","publication"};
+    return  subtypes;
 }
 }
 

@@ -1,7 +1,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DocumentTypeGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
@@ -18,23 +18,23 @@ public Component(Element element) {
 }
 
 // FIELDS ------------------
-private IdreqAttrGroup idreq;
 private CoreAttrGroup core;
+private IdreqAttrGroup idreq;
 private DocumentTypeGroup documentType;
 
-public IdreqAttrGroup getIdreq() {
-return idreq;
-}
-
-public void setIdreq(final IdreqAttrGroup idreq) {
-this.idreq = idreq;
-}
 public CoreAttrGroup getCore() {
 return core;
 }
 
 public void setCore(final CoreAttrGroup core) {
 this.core = core;
+}
+public IdreqAttrGroup getIdreq() {
+return idreq;
+}
+
+public void setIdreq(final IdreqAttrGroup idreq) {
+this.idreq = idreq;
 }
 public DocumentTypeGroup getDocumentType() {
 return documentType;
@@ -46,9 +46,10 @@ this.documentType = documentType;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"coreAttrGroup","idreqAttrGroup","documentTypeGroup"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"coreAttrGroup","idreqAttrGroup","documentTypeGroup"};
+    return  subtypes;
 }
 }
 

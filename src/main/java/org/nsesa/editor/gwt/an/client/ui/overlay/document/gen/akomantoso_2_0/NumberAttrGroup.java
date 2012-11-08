@@ -21,12 +21,5 @@ return number;
 public void setNumber(final StringSimpleType number) {
 this.number = number;
 }
-/**
-* Returns possible children as list of String
-*/
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{};
-    return  new ArrayList(Arrays.asList(arrayChildren));
-}
 }
 

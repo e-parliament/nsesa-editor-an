@@ -37,9 +37,10 @@ this.upTo = upTo;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"inlineCMGroup","quotedText","quotedStructure","corereqAttrGroup","anyURISimpleType"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"inlineCMGroup","quotedText","quotedStructure","corereqAttrGroup","anyURISimpleType"};
+    return  subtypes;
 }
 }
 

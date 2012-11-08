@@ -36,14 +36,17 @@ public void set<@propertyNameCap property = property/>(final <@propertyClassName
 this.<@propertyName property = property/> = <@propertyName property = property/>;
 }
 </#list>
+<#if overlayClass.element || overlayClass.complex || overlayClass.complex>
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
+@Override
+public String[] getAllowedChildTypes() {
 <#assign delimiter = "">
-    String[] arrayChildren = new String[]{<#list overlayClass.allowedSubTypes as child>${delimiter}"${child}"<#assign delimiter = ","></#list>};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+    String[] subtypes = new String[]{<#list overlayClass.allowedSubTypes as child>${delimiter}"${child}"<#assign delimiter = ","></#list>};
+    return  subtypes;
 }
+</#if>
 }
 
 <#macro propertyClassName property><#compress>

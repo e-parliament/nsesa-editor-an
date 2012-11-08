@@ -20,9 +20,10 @@ public Quorum(Element element) {
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"coreAttrGroup","valueAttrGroup","*","linkoptAttrGroup","idreqAttrGroup","refersAttrGroup"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"coreAttrGroup","valueAttrGroup","*","linkoptAttrGroup","idreqAttrGroup","refersAttrGroup"};
+    return  subtypes;
 }
 }
 

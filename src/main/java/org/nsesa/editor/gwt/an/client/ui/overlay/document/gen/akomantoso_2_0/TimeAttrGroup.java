@@ -21,12 +21,5 @@ return time;
 public void setTime(final DateTimeSimpleType time) {
 this.time = time;
 }
-/**
-* Returns possible children as list of String
-*/
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{};
-    return  new ArrayList(Arrays.asList(arrayChildren));
-}
 }
 

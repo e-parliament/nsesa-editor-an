@@ -37,9 +37,10 @@ this.eventRefs = eventRefs;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"sourceAttrGroup","eventRef"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"sourceAttrGroup","eventRef"};
+    return  subtypes;
 }
 }
 

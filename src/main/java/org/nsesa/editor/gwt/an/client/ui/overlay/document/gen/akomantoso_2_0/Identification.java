@@ -64,9 +64,10 @@ this.FRBRItem = FRBRItem;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"FRBRManifestation","FRBRWork","FRBRItem","sourceAttrGroup","FRBRExpression"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"FRBRManifestation","FRBRWork","FRBRItem","sourceAttrGroup","FRBRExpression"};
+    return  subtypes;
 }
 }
 

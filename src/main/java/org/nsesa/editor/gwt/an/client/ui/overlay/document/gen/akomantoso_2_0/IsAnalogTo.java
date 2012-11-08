@@ -20,9 +20,10 @@ public IsAnalogTo(Element element) {
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"modifiersAttrGroup","coreAttrGroup","source","condition","enactmentAttrGroup","idreqAttrGroup","destination","refersAttrGroup"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"coreAttrGroup","modifiersAttrGroup","source","condition","enactmentAttrGroup","idreqAttrGroup","destination","refersAttrGroup"};
+    return  subtypes;
 }
 }
 

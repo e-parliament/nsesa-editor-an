@@ -1,7 +1,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TimeInterval;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
@@ -18,23 +18,23 @@ public TemporalGroup(Element element) {
 }
 
 // FIELDS ------------------
-private CoreAttrGroup core;
 private IdreqAttrGroup idreq;
+private CoreAttrGroup core;
 private java.util.List<TimeInterval> timeIntervals = new ArrayList<TimeInterval>();
 
-public CoreAttrGroup getCore() {
-return core;
-}
-
-public void setCore(final CoreAttrGroup core) {
-this.core = core;
-}
 public IdreqAttrGroup getIdreq() {
 return idreq;
 }
 
 public void setIdreq(final IdreqAttrGroup idreq) {
 this.idreq = idreq;
+}
+public CoreAttrGroup getCore() {
+return core;
+}
+
+public void setCore(final CoreAttrGroup core) {
+this.core = core;
 }
 public java.util.List<TimeInterval> getTimeInterval() {
 return timeIntervals;
@@ -46,9 +46,10 @@ this.timeIntervals = timeIntervals;
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"timeInterval","coreAttrGroup","idreqAttrGroup"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"timeInterval","coreAttrGroup","idreqAttrGroup"};
+    return  subtypes;
 }
 }
 

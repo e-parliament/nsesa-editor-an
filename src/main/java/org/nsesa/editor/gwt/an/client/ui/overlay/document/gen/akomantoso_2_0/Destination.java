@@ -20,9 +20,10 @@ public Destination(Element element) {
 /**
 * Returns possible children as list of String
 */
-public ArrayList<String> getAllowedSubTypes() {
-    String[] arrayChildren = new String[]{"coreAttrGroup","posAttrGroup","linkAttrGroup","idoptAttrGroup","anyURISimpleType"};
-    return  new ArrayList(Arrays.asList(arrayChildren));
+@Override
+public String[] getAllowedChildTypes() {
+    String[] subtypes = new String[]{"coreAttrGroup","posAttrGroup","linkAttrGroup","idoptAttrGroup","anyURISimpleType"};
+    return  subtypes;
 }
 }
 
