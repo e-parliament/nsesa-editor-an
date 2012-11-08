@@ -1,13 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IntegerSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IntegerSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SrcAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MarkeroptComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IntegerSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SrcAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -31,7 +29,6 @@ return width;
 public void setWidth(final IntegerSimpleType width) {
 this.width = width;
 }
-
 public IntegerSimpleType getHeight() {
 return height;
 }
@@ -39,7 +36,6 @@ return height;
 public void setHeight(final IntegerSimpleType height) {
 this.height = height;
 }
-
 public SrcAttrGroup getSrc() {
 return src;
 }
@@ -47,6 +43,12 @@ return src;
 public void setSrc(final SrcAttrGroup src) {
 this.src = src;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"integerSimpleType","coreoptAttrGroup","srcAttrGroup"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

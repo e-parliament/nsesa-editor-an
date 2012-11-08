@@ -3,11 +3,9 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Num;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Heading;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Subheading;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Num;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Heading;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Subheading;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -31,7 +29,6 @@ return num;
 public void setNum(final Num num) {
 this.num = num;
 }
-
 public Heading getHeading() {
 return heading;
 }
@@ -39,7 +36,6 @@ return heading;
 public void setHeading(final Heading heading) {
 this.heading = heading;
 }
-
 public Subheading getSubheading() {
 return subheading;
 }
@@ -47,6 +43,12 @@ return subheading;
 public void setSubheading(final Subheading subheading) {
 this.subheading = subheading;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"num","subheading","heading"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

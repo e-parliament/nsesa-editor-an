@@ -6,14 +6,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Act
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Jurisprudence;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.HasAttachment;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AttachmentOf;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Original;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PassiveRef;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ActiveRef;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Jurisprudence;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.HasAttachment;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AttachmentOf;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
 * This file is generated.
 */
@@ -36,7 +31,6 @@ return original;
 public void setOriginal(final Original original) {
 this.original = original;
 }
-
 public PassiveRef getPassiveRef() {
 return passiveRef;
 }
@@ -44,7 +38,6 @@ return passiveRef;
 public void setPassiveRef(final PassiveRef passiveRef) {
 this.passiveRef = passiveRef;
 }
-
 public ActiveRef getActiveRef() {
 return activeRef;
 }
@@ -52,7 +45,6 @@ return activeRef;
 public void setActiveRef(final ActiveRef activeRef) {
 this.activeRef = activeRef;
 }
-
 public Jurisprudence getJurisprudence() {
 return jurisprudence;
 }
@@ -60,7 +52,6 @@ return jurisprudence;
 public void setJurisprudence(final Jurisprudence jurisprudence) {
 this.jurisprudence = jurisprudence;
 }
-
 public HasAttachment getHasAttachment() {
 return hasAttachment;
 }
@@ -68,7 +59,6 @@ return hasAttachment;
 public void setHasAttachment(final HasAttachment hasAttachment) {
 this.hasAttachment = hasAttachment;
 }
-
 public AttachmentOf getAttachmentOf() {
 return attachmentOf;
 }
@@ -76,6 +66,12 @@ return attachmentOf;
 public void setAttachmentOf(final AttachmentOf attachmentOf) {
 this.attachmentOf = attachmentOf;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

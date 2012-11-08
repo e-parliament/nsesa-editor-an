@@ -1,14 +1,12 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ValueAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MetaoptComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ValueAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -32,7 +30,6 @@ return dictionary;
 public void setDictionary(final AnyURISimpleType dictionary) {
 this.dictionary = dictionary;
 }
-
 public ShowAttrGroup getShow() {
 return show;
 }
@@ -40,7 +37,6 @@ return show;
 public void setShow(final ShowAttrGroup show) {
 this.show = show;
 }
-
 public ValueAttrGroup getValue() {
 return value;
 }
@@ -48,6 +44,12 @@ return value;
 public void setValue(final ValueAttrGroup value) {
 this.value = value;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"coreAttrGroup","valueAttrGroup","showAttrGroup","idoptAttrGroup","anyURISimpleType"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

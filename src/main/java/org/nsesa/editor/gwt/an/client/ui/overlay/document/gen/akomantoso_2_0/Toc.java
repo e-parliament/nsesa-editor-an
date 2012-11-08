@@ -1,9 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TocItem;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TocItem;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -25,6 +25,12 @@ return tocItems;
 public void setTocItem(final java.util.List<TocItem> tocItems) {
 this.tocItems = tocItems;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"tocItem"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

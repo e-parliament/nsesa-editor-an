@@ -3,11 +3,9 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._1998_namespace;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NCNameSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NCNameSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
 * This file is generated.
 */
@@ -27,7 +25,6 @@ return base;
 public void setBase(final AnyURISimpleType base) {
 this.base = base;
 }
-
 public LanguageSimpleType getLang() {
 return lang;
 }
@@ -35,7 +32,6 @@ return lang;
 public void setLang(final LanguageSimpleType lang) {
 this.lang = lang;
 }
-
 public NCNameSimpleType getSpace() {
 return space;
 }
@@ -43,6 +39,12 @@ return space;
 public void setSpace(final NCNameSimpleType space) {
 this.space = space;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

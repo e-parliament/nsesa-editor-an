@@ -6,14 +6,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Inl
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ul;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ol;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.P;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OptvalueAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreoptAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.InlineCMGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ul;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ol;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.P;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -40,7 +35,6 @@ return optvalue;
 public void setOptvalue(final OptvalueAttrGroup optvalue) {
 this.optvalue = optvalue;
 }
-
 public CoreoptAttrGroup getCoreopt() {
 return coreopt;
 }
@@ -48,7 +42,6 @@ return coreopt;
 public void setCoreopt(final CoreoptAttrGroup coreopt) {
 this.coreopt = coreopt;
 }
-
 public java.util.List<InlineCMGroup> getInlineCM() {
 return inlineCMs;
 }
@@ -56,7 +49,6 @@ return inlineCMs;
 public void setInlineCM(final java.util.List<InlineCMGroup> inlineCMs) {
 this.inlineCMs = inlineCMs;
 }
-
 public java.util.List<Ul> getUl() {
 return uls;
 }
@@ -64,7 +56,6 @@ return uls;
 public void setUl(final java.util.List<Ul> uls) {
 this.uls = uls;
 }
-
 public java.util.List<Ol> getOl() {
 return ols;
 }
@@ -72,7 +63,6 @@ return ols;
 public void setOl(final java.util.List<Ol> ols) {
 this.ols = ols;
 }
-
 public java.util.List<P> getP() {
 return ps;
 }
@@ -80,6 +70,12 @@ return ps;
 public void setP(final java.util.List<P> ps) {
 this.ps = ps;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"inlineCMGroup","ul","optvalueAttrGroup","p","ol","coreoptAttrGroup"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

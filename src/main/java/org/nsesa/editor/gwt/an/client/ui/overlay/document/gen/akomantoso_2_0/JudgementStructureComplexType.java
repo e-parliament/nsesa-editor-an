@@ -7,15 +7,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Hea
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.JudgementBody;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Conclusions;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Attachments;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.VersionTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Meta;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoverPage;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Header;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.JudgementBody;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Conclusions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Attachments;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -43,7 +37,6 @@ return contains;
 public void setContains(final VersionTypeSimpleType contains) {
 this.contains = contains;
 }
-
 public Meta getMeta() {
 return meta;
 }
@@ -51,7 +44,6 @@ return meta;
 public void setMeta(final Meta meta) {
 this.meta = meta;
 }
-
 public CoverPage getCoverPage() {
 return coverPage;
 }
@@ -59,7 +51,6 @@ return coverPage;
 public void setCoverPage(final CoverPage coverPage) {
 this.coverPage = coverPage;
 }
-
 public Header getHeader() {
 return header;
 }
@@ -67,7 +58,6 @@ return header;
 public void setHeader(final Header header) {
 this.header = header;
 }
-
 public JudgementBody getJudgementBody() {
 return judgementBody;
 }
@@ -75,7 +65,6 @@ return judgementBody;
 public void setJudgementBody(final JudgementBody judgementBody) {
 this.judgementBody = judgementBody;
 }
-
 public Conclusions getConclusions() {
 return conclusions;
 }
@@ -83,7 +72,6 @@ return conclusions;
 public void setConclusions(final Conclusions conclusions) {
 this.conclusions = conclusions;
 }
-
 public Attachments getAttachments() {
 return attachments;
 }
@@ -91,6 +79,12 @@ return attachments;
 public void setAttachments(final Attachments attachments) {
 this.attachments = attachments;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"conclusions","judgementBody","versionTypeSimpleType","coverPage","attachments","header","meta"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

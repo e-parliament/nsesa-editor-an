@@ -4,12 +4,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Int
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Background;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Motivation;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Decision;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Introduction;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Background;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Motivation;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Decision;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
 * This file is generated.
 */
@@ -30,7 +27,6 @@ return introduction;
 public void setIntroduction(final Introduction introduction) {
 this.introduction = introduction;
 }
-
 public Background getBackground() {
 return background;
 }
@@ -38,7 +34,6 @@ return background;
 public void setBackground(final Background background) {
 this.background = background;
 }
-
 public Motivation getMotivation() {
 return motivation;
 }
@@ -46,7 +41,6 @@ return motivation;
 public void setMotivation(final Motivation motivation) {
 this.motivation = motivation;
 }
-
 public Decision getDecision() {
 return decision;
 }
@@ -54,6 +48,12 @@ return decision;
 public void setDecision(final Decision decision) {
 this.decision = decision;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

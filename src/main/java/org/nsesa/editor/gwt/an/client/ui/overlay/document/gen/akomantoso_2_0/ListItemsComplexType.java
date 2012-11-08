@@ -2,10 +2,9 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CorereqAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Li;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CorereqAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Li;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -28,7 +27,6 @@ return corereq;
 public void setCorereq(final CorereqAttrGroup corereq) {
 this.corereq = corereq;
 }
-
 public java.util.List<Li> getLi() {
 return lis;
 }
@@ -36,6 +34,12 @@ return lis;
 public void setLi(final java.util.List<Li> lis) {
 this.lis = lis;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"li","corereqAttrGroup"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

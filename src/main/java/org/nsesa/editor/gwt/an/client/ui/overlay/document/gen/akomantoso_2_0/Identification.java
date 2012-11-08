@@ -5,13 +5,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRB
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRExpression;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRManifestation;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRItem;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SourceAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRWork;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRExpression;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRManifestation;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRItem;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -37,7 +33,6 @@ return source;
 public void setSource(final SourceAttrGroup source) {
 this.source = source;
 }
-
 public FRBRWork getFRBRWork() {
 return FRBRWork;
 }
@@ -45,7 +40,6 @@ return FRBRWork;
 public void setFRBRWork(final FRBRWork FRBRWork) {
 this.FRBRWork = FRBRWork;
 }
-
 public FRBRExpression getFRBRExpression() {
 return FRBRExpression;
 }
@@ -53,7 +47,6 @@ return FRBRExpression;
 public void setFRBRExpression(final FRBRExpression FRBRExpression) {
 this.FRBRExpression = FRBRExpression;
 }
-
 public FRBRManifestation getFRBRManifestation() {
 return FRBRManifestation;
 }
@@ -61,7 +54,6 @@ return FRBRManifestation;
 public void setFRBRManifestation(final FRBRManifestation FRBRManifestation) {
 this.FRBRManifestation = FRBRManifestation;
 }
-
 public FRBRItem getFRBRItem() {
 return FRBRItem;
 }
@@ -69,6 +61,12 @@ return FRBRItem;
 public void setFRBRItem(final FRBRItem FRBRItem) {
 this.FRBRItem = FRBRItem;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"FRBRManifestation","FRBRWork","FRBRItem","sourceAttrGroup","FRBRExpression"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

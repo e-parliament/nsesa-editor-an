@@ -1,14 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DateTimeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DateTimeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DateTimeSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
 * This file is generated.
 */
@@ -30,7 +26,6 @@ return by;
 public void setBy(final AnyURISimpleType by) {
 this.by = by;
 }
-
 public AnyURISimpleType getAs() {
 return as;
 }
@@ -38,7 +33,6 @@ return as;
 public void setAs(final AnyURISimpleType as) {
 this.as = as;
 }
-
 public DateTimeSimpleType getStartTime() {
 return startTime;
 }
@@ -46,7 +40,6 @@ return startTime;
 public void setStartTime(final DateTimeSimpleType startTime) {
 this.startTime = startTime;
 }
-
 public DateTimeSimpleType getEndTime() {
 return endTime;
 }
@@ -54,7 +47,6 @@ return endTime;
 public void setEndTime(final DateTimeSimpleType endTime) {
 this.endTime = endTime;
 }
-
 public AnyURISimpleType getTo() {
 return to;
 }
@@ -62,6 +54,12 @@ return to;
 public void setTo(final AnyURISimpleType to) {
 this.to = to;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

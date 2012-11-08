@@ -1,11 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ModTypeComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -28,7 +27,6 @@ return from;
 public void setFrom(final AnyURISimpleType from) {
 this.from = from;
 }
-
 public AnyURISimpleType getUpTo() {
 return upTo;
 }
@@ -36,6 +34,12 @@ return upTo;
 public void setUpTo(final AnyURISimpleType upTo) {
 this.upTo = upTo;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"inlineCMGroup","quotedText","quotedStructure","corereqAttrGroup","anyURISimpleType"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

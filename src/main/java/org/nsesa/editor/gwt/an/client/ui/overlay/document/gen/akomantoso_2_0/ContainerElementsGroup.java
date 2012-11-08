@@ -3,11 +3,9 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SpeechSectionGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.HTMLcontainersGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Container;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SpeechSectionGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.HTMLcontainersGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Container;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
 * This file is generated.
 */
@@ -27,7 +25,6 @@ return speechSection;
 public void setSpeechSection(final SpeechSectionGroup speechSection) {
 this.speechSection = speechSection;
 }
-
 public HTMLcontainersGroup getHTMLcontainers() {
 return HTMLcontainers;
 }
@@ -35,7 +32,6 @@ return HTMLcontainers;
 public void setHTMLcontainers(final HTMLcontainersGroup HTMLcontainers) {
 this.HTMLcontainers = HTMLcontainers;
 }
-
 public Container getContainer() {
 return container;
 }
@@ -43,6 +39,12 @@ return container;
 public void setContainer(final Container container) {
 this.container = container;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

@@ -4,12 +4,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ido
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SrcAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdoptAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SrcAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -34,7 +31,6 @@ return idopt;
 public void setIdopt(final IdoptAttrGroup idopt) {
 this.idopt = idopt;
 }
-
 public CoreAttrGroup getCore() {
 return core;
 }
@@ -42,7 +38,6 @@ return core;
 public void setCore(final CoreAttrGroup core) {
 this.core = core;
 }
-
 public ShowAttrGroup getShow() {
 return show;
 }
@@ -50,7 +45,6 @@ return show;
 public void setShow(final ShowAttrGroup show) {
 this.show = show;
 }
-
 public SrcAttrGroup getSrc() {
 return src;
 }
@@ -58,6 +52,12 @@ return src;
 public void setSrc(final SrcAttrGroup src) {
 this.src = src;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"coreAttrGroup","showAttrGroup","idoptAttrGroup","srcAttrGroup"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

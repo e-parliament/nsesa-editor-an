@@ -4,12 +4,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ul;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ol;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Table;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.P;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ul;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ol;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Table;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.P;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
 * This file is generated.
 */
@@ -30,7 +27,6 @@ return ul;
 public void setUl(final Ul ul) {
 this.ul = ul;
 }
-
 public Ol getOl() {
 return ol;
 }
@@ -38,7 +34,6 @@ return ol;
 public void setOl(final Ol ol) {
 this.ol = ol;
 }
-
 public Table getTable() {
 return table;
 }
@@ -46,7 +41,6 @@ return table;
 public void setTable(final Table table) {
 this.table = table;
 }
-
 public P getP() {
 return p;
 }
@@ -54,6 +48,12 @@ return p;
 public void setP(final P p) {
 this.p = p;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

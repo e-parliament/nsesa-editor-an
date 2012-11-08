@@ -3,11 +3,9 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TimeInterval;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TimeInterval;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -31,7 +29,6 @@ return core;
 public void setCore(final CoreAttrGroup core) {
 this.core = core;
 }
-
 public IdreqAttrGroup getIdreq() {
 return idreq;
 }
@@ -39,7 +36,6 @@ return idreq;
 public void setIdreq(final IdreqAttrGroup idreq) {
 this.idreq = idreq;
 }
-
 public java.util.List<TimeInterval> getTimeInterval() {
 return timeIntervals;
 }
@@ -47,6 +43,12 @@ return timeIntervals;
 public void setTimeInterval(final java.util.List<TimeInterval> timeIntervals) {
 this.timeIntervals = timeIntervals;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"timeInterval","coreAttrGroup","idreqAttrGroup"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

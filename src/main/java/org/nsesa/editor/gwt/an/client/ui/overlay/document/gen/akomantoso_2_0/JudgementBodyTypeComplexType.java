@@ -2,10 +2,9 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreoptAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.JudgementBlockGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreoptAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.JudgementBlockGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -28,7 +27,6 @@ return coreopt;
 public void setCoreopt(final CoreoptAttrGroup coreopt) {
 this.coreopt = coreopt;
 }
-
 public java.util.List<JudgementBlockGroup> getJudgementBlock() {
 return judgementBlocks;
 }
@@ -36,6 +34,12 @@ return judgementBlocks;
 public void setJudgementBlock(final java.util.List<JudgementBlockGroup> judgementBlocks) {
 this.judgementBlocks = judgementBlocks;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"judgementBlockGroup","coreoptAttrGroup"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

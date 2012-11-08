@@ -3,11 +3,9 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreoptAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Intro;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Citation;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreoptAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Intro;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Citation;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -31,7 +29,6 @@ return coreopt;
 public void setCoreopt(final CoreoptAttrGroup coreopt) {
 this.coreopt = coreopt;
 }
-
 public Intro getIntro() {
 return intro;
 }
@@ -39,7 +36,6 @@ return intro;
 public void setIntro(final Intro intro) {
 this.intro = intro;
 }
-
 public java.util.List<Citation> getCitation() {
 return citations;
 }
@@ -47,6 +43,12 @@ return citations;
 public void setCitation(final java.util.List<Citation> citations) {
 this.citations = citations;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"citation","coreoptAttrGroup","intro"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

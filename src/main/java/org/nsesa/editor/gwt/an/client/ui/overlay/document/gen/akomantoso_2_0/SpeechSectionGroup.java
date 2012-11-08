@@ -20,28 +20,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Pro
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PointOfOrder;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Adjournment;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DebateSection;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AdministrationOfOath;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RollCall;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Prayers;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OralStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.WrittenStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PersonalStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MinisterialStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Resolutions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NationalInterest;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DeclarationOfVote;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Communication;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Petitions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Papers;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NoticesOfMotion;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Questions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Address;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ProceduralMotions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PointOfOrder;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Adjournment;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DebateSection;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
 * This file is generated.
 */
@@ -78,7 +59,6 @@ return administrationOfOath;
 public void setAdministrationOfOath(final AdministrationOfOath administrationOfOath) {
 this.administrationOfOath = administrationOfOath;
 }
-
 public RollCall getRollCall() {
 return rollCall;
 }
@@ -86,7 +66,6 @@ return rollCall;
 public void setRollCall(final RollCall rollCall) {
 this.rollCall = rollCall;
 }
-
 public Prayers getPrayers() {
 return prayers;
 }
@@ -94,7 +73,6 @@ return prayers;
 public void setPrayers(final Prayers prayers) {
 this.prayers = prayers;
 }
-
 public OralStatements getOralStatements() {
 return oralStatements;
 }
@@ -102,7 +80,6 @@ return oralStatements;
 public void setOralStatements(final OralStatements oralStatements) {
 this.oralStatements = oralStatements;
 }
-
 public WrittenStatements getWrittenStatements() {
 return writtenStatements;
 }
@@ -110,7 +87,6 @@ return writtenStatements;
 public void setWrittenStatements(final WrittenStatements writtenStatements) {
 this.writtenStatements = writtenStatements;
 }
-
 public PersonalStatements getPersonalStatements() {
 return personalStatements;
 }
@@ -118,7 +94,6 @@ return personalStatements;
 public void setPersonalStatements(final PersonalStatements personalStatements) {
 this.personalStatements = personalStatements;
 }
-
 public MinisterialStatements getMinisterialStatements() {
 return ministerialStatements;
 }
@@ -126,7 +101,6 @@ return ministerialStatements;
 public void setMinisterialStatements(final MinisterialStatements ministerialStatements) {
 this.ministerialStatements = ministerialStatements;
 }
-
 public Resolutions getResolutions() {
 return resolutions;
 }
@@ -134,7 +108,6 @@ return resolutions;
 public void setResolutions(final Resolutions resolutions) {
 this.resolutions = resolutions;
 }
-
 public NationalInterest getNationalInterest() {
 return nationalInterest;
 }
@@ -142,7 +115,6 @@ return nationalInterest;
 public void setNationalInterest(final NationalInterest nationalInterest) {
 this.nationalInterest = nationalInterest;
 }
-
 public DeclarationOfVote getDeclarationOfVote() {
 return declarationOfVote;
 }
@@ -150,7 +122,6 @@ return declarationOfVote;
 public void setDeclarationOfVote(final DeclarationOfVote declarationOfVote) {
 this.declarationOfVote = declarationOfVote;
 }
-
 public Communication getCommunication() {
 return communication;
 }
@@ -158,7 +129,6 @@ return communication;
 public void setCommunication(final Communication communication) {
 this.communication = communication;
 }
-
 public Petitions getPetitions() {
 return petitions;
 }
@@ -166,7 +136,6 @@ return petitions;
 public void setPetitions(final Petitions petitions) {
 this.petitions = petitions;
 }
-
 public Papers getPapers() {
 return papers;
 }
@@ -174,7 +143,6 @@ return papers;
 public void setPapers(final Papers papers) {
 this.papers = papers;
 }
-
 public NoticesOfMotion getNoticesOfMotion() {
 return noticesOfMotion;
 }
@@ -182,7 +150,6 @@ return noticesOfMotion;
 public void setNoticesOfMotion(final NoticesOfMotion noticesOfMotion) {
 this.noticesOfMotion = noticesOfMotion;
 }
-
 public Questions getQuestions() {
 return questions;
 }
@@ -190,7 +157,6 @@ return questions;
 public void setQuestions(final Questions questions) {
 this.questions = questions;
 }
-
 public Address getAddress() {
 return address;
 }
@@ -198,7 +164,6 @@ return address;
 public void setAddress(final Address address) {
 this.address = address;
 }
-
 public ProceduralMotions getProceduralMotions() {
 return proceduralMotions;
 }
@@ -206,7 +171,6 @@ return proceduralMotions;
 public void setProceduralMotions(final ProceduralMotions proceduralMotions) {
 this.proceduralMotions = proceduralMotions;
 }
-
 public PointOfOrder getPointOfOrder() {
 return pointOfOrder;
 }
@@ -214,7 +178,6 @@ return pointOfOrder;
 public void setPointOfOrder(final PointOfOrder pointOfOrder) {
 this.pointOfOrder = pointOfOrder;
 }
-
 public Adjournment getAdjournment() {
 return adjournment;
 }
@@ -222,7 +185,6 @@ return adjournment;
 public void setAdjournment(final Adjournment adjournment) {
 this.adjournment = adjournment;
 }
-
 public DebateSection getDebateSection() {
 return debateSection;
 }
@@ -230,6 +192,12 @@ return debateSection;
 public void setDebateSection(final DebateSection debateSection) {
 this.debateSection = debateSection;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

@@ -1,10 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.BooleanSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.BooleanSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.BooleanSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
 * This file is generated.
 */
@@ -23,7 +22,6 @@ return exclusion;
 public void setExclusion(final BooleanSimpleType exclusion) {
 this.exclusion = exclusion;
 }
-
 public BooleanSimpleType getIncomplete() {
 return incomplete;
 }
@@ -31,6 +29,12 @@ return incomplete;
 public void setIncomplete(final BooleanSimpleType incomplete) {
 this.incomplete = incomplete;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

@@ -17,25 +17,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ext
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ExtractStructure;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Placeholder;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FillIn;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ref;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Mref;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Rref;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Mod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Mmod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Rmod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Remark;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RecordedTime;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Vote;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Outcome;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ins;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Del;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Omissis;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ExtractText;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ExtractStructure;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Placeholder;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FillIn;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
 * This file is generated.
 */
@@ -69,7 +53,6 @@ return ref;
 public void setRef(final Ref ref) {
 this.ref = ref;
 }
-
 public Mref getMref() {
 return mref;
 }
@@ -77,7 +60,6 @@ return mref;
 public void setMref(final Mref mref) {
 this.mref = mref;
 }
-
 public Rref getRref() {
 return rref;
 }
@@ -85,7 +67,6 @@ return rref;
 public void setRref(final Rref rref) {
 this.rref = rref;
 }
-
 public Mod getMod() {
 return mod;
 }
@@ -93,7 +74,6 @@ return mod;
 public void setMod(final Mod mod) {
 this.mod = mod;
 }
-
 public Mmod getMmod() {
 return mmod;
 }
@@ -101,7 +81,6 @@ return mmod;
 public void setMmod(final Mmod mmod) {
 this.mmod = mmod;
 }
-
 public Rmod getRmod() {
 return rmod;
 }
@@ -109,7 +88,6 @@ return rmod;
 public void setRmod(final Rmod rmod) {
 this.rmod = rmod;
 }
-
 public Remark getRemark() {
 return remark;
 }
@@ -117,7 +95,6 @@ return remark;
 public void setRemark(final Remark remark) {
 this.remark = remark;
 }
-
 public RecordedTime getRecordedTime() {
 return recordedTime;
 }
@@ -125,7 +102,6 @@ return recordedTime;
 public void setRecordedTime(final RecordedTime recordedTime) {
 this.recordedTime = recordedTime;
 }
-
 public Vote getVote() {
 return vote;
 }
@@ -133,7 +109,6 @@ return vote;
 public void setVote(final Vote vote) {
 this.vote = vote;
 }
-
 public Outcome getOutcome() {
 return outcome;
 }
@@ -141,7 +116,6 @@ return outcome;
 public void setOutcome(final Outcome outcome) {
 this.outcome = outcome;
 }
-
 public Ins getIns() {
 return ins;
 }
@@ -149,7 +123,6 @@ return ins;
 public void setIns(final Ins ins) {
 this.ins = ins;
 }
-
 public Del getDel() {
 return del;
 }
@@ -157,7 +130,6 @@ return del;
 public void setDel(final Del del) {
 this.del = del;
 }
-
 public Omissis getOmissis() {
 return omissis;
 }
@@ -165,7 +137,6 @@ return omissis;
 public void setOmissis(final Omissis omissis) {
 this.omissis = omissis;
 }
-
 public ExtractText getExtractText() {
 return extractText;
 }
@@ -173,7 +144,6 @@ return extractText;
 public void setExtractText(final ExtractText extractText) {
 this.extractText = extractText;
 }
-
 public ExtractStructure getExtractStructure() {
 return extractStructure;
 }
@@ -181,7 +151,6 @@ return extractStructure;
 public void setExtractStructure(final ExtractStructure extractStructure) {
 this.extractStructure = extractStructure;
 }
-
 public Placeholder getPlaceholder() {
 return placeholder;
 }
@@ -189,7 +158,6 @@ return placeholder;
 public void setPlaceholder(final Placeholder placeholder) {
 this.placeholder = placeholder;
 }
-
 public FillIn getFillIn() {
 return fillIn;
 }
@@ -197,6 +165,12 @@ return fillIn;
 public void setFillIn(final FillIn fillIn) {
 this.fillIn = fillIn;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

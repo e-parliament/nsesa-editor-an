@@ -1,18 +1,12 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IntegerSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IntegerSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IntegerSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IntegerSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CorereqAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Caption;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Tr;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IntegerSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CorereqAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Caption;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Tr;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -40,7 +34,6 @@ return width;
 public void setWidth(final IntegerSimpleType width) {
 this.width = width;
 }
-
 public IntegerSimpleType getBorder() {
 return border;
 }
@@ -48,7 +41,6 @@ return border;
 public void setBorder(final IntegerSimpleType border) {
 this.border = border;
 }
-
 public IntegerSimpleType getCellspacing() {
 return cellspacing;
 }
@@ -56,7 +48,6 @@ return cellspacing;
 public void setCellspacing(final IntegerSimpleType cellspacing) {
 this.cellspacing = cellspacing;
 }
-
 public IntegerSimpleType getCellpadding() {
 return cellpadding;
 }
@@ -64,7 +55,6 @@ return cellpadding;
 public void setCellpadding(final IntegerSimpleType cellpadding) {
 this.cellpadding = cellpadding;
 }
-
 public CorereqAttrGroup getCorereq() {
 return corereq;
 }
@@ -72,7 +62,6 @@ return corereq;
 public void setCorereq(final CorereqAttrGroup corereq) {
 this.corereq = corereq;
 }
-
 public Caption getCaption() {
 return caption;
 }
@@ -80,7 +69,6 @@ return caption;
 public void setCaption(final Caption caption) {
 this.caption = caption;
 }
-
 public java.util.List<Tr> getTr() {
 return trs;
 }
@@ -88,6 +76,12 @@ return trs;
 public void setTr(final java.util.List<Tr> trs) {
 this.trs = trs;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"tr","caption","corereqAttrGroup","integerSimpleType"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

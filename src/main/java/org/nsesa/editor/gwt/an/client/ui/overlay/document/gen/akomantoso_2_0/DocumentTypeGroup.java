@@ -10,18 +10,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Deb
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Amendment;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Judgement;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Doc;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AmendmentList;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OfficialGazette;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DocumentCollection;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Act;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Bill;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DebateReport;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Debate;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Amendment;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Judgement;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Doc;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
 * This file is generated.
 */
@@ -48,7 +39,6 @@ return amendmentList;
 public void setAmendmentList(final AmendmentList amendmentList) {
 this.amendmentList = amendmentList;
 }
-
 public OfficialGazette getOfficialGazette() {
 return officialGazette;
 }
@@ -56,7 +46,6 @@ return officialGazette;
 public void setOfficialGazette(final OfficialGazette officialGazette) {
 this.officialGazette = officialGazette;
 }
-
 public DocumentCollection getDocumentCollection() {
 return documentCollection;
 }
@@ -64,7 +53,6 @@ return documentCollection;
 public void setDocumentCollection(final DocumentCollection documentCollection) {
 this.documentCollection = documentCollection;
 }
-
 public Act getAct() {
 return act;
 }
@@ -72,7 +60,6 @@ return act;
 public void setAct(final Act act) {
 this.act = act;
 }
-
 public Bill getBill() {
 return bill;
 }
@@ -80,7 +67,6 @@ return bill;
 public void setBill(final Bill bill) {
 this.bill = bill;
 }
-
 public DebateReport getDebateReport() {
 return debateReport;
 }
@@ -88,7 +74,6 @@ return debateReport;
 public void setDebateReport(final DebateReport debateReport) {
 this.debateReport = debateReport;
 }
-
 public Debate getDebate() {
 return debate;
 }
@@ -96,7 +81,6 @@ return debate;
 public void setDebate(final Debate debate) {
 this.debate = debate;
 }
-
 public Amendment getAmendment() {
 return amendment;
 }
@@ -104,7 +88,6 @@ return amendment;
 public void setAmendment(final Amendment amendment) {
 this.amendment = amendment;
 }
-
 public Judgement getJudgement() {
 return judgement;
 }
@@ -112,7 +95,6 @@ return judgement;
 public void setJudgement(final Judgement judgement) {
 this.judgement = judgement;
 }
-
 public Doc getDoc() {
 return doc;
 }
@@ -120,6 +102,12 @@ return doc;
 public void setDoc(final Doc doc) {
 this.doc = doc;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

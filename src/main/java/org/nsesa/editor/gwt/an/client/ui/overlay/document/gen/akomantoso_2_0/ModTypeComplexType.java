@@ -4,12 +4,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Cor
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.InlineCMGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.QuotedText;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.QuotedStructure;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CorereqAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.InlineCMGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.QuotedText;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.QuotedStructure;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -34,7 +31,6 @@ return corereq;
 public void setCorereq(final CorereqAttrGroup corereq) {
 this.corereq = corereq;
 }
-
 public java.util.List<InlineCMGroup> getInlineCM() {
 return inlineCMs;
 }
@@ -42,7 +38,6 @@ return inlineCMs;
 public void setInlineCM(final java.util.List<InlineCMGroup> inlineCMs) {
 this.inlineCMs = inlineCMs;
 }
-
 public java.util.List<QuotedText> getQuotedText() {
 return quotedTexts;
 }
@@ -50,7 +45,6 @@ return quotedTexts;
 public void setQuotedText(final java.util.List<QuotedText> quotedTexts) {
 this.quotedTexts = quotedTexts;
 }
-
 public java.util.List<QuotedStructure> getQuotedStructure() {
 return quotedStructures;
 }
@@ -58,6 +52,12 @@ return quotedStructures;
 public void setQuotedStructure(final java.util.List<QuotedStructure> quotedStructures) {
 this.quotedStructures = quotedStructures;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"inlineCMGroup","quotedText","quotedStructure","corereqAttrGroup"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

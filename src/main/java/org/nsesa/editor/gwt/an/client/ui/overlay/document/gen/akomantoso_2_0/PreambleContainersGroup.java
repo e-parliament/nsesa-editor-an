@@ -4,12 +4,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Rec
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Citations;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Formula;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Container;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Recitals;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Citations;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Formula;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Container;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
 * This file is generated.
 */
@@ -30,7 +27,6 @@ return recitals;
 public void setRecitals(final Recitals recitals) {
 this.recitals = recitals;
 }
-
 public Citations getCitations() {
 return citations;
 }
@@ -38,7 +34,6 @@ return citations;
 public void setCitations(final Citations citations) {
 this.citations = citations;
 }
-
 public Formula getFormula() {
 return formula;
 }
@@ -46,7 +41,6 @@ return formula;
 public void setFormula(final Formula formula) {
 this.formula = formula;
 }
-
 public Container getContainer() {
 return container;
 }
@@ -54,6 +48,12 @@ return container;
 public void setContainer(final Container container) {
 this.container = container;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

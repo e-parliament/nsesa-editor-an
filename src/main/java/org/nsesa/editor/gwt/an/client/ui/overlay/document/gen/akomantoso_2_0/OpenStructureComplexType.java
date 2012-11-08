@@ -9,17 +9,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Pre
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MainBody;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Conclusions;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Attachments;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.VersionTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NameAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Meta;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoverPage;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Preface;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Preamble;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MainBody;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Conclusions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Attachments;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -49,7 +41,6 @@ return contains;
 public void setContains(final VersionTypeSimpleType contains) {
 this.contains = contains;
 }
-
 public NameAttrGroup getName() {
 return name;
 }
@@ -57,7 +48,6 @@ return name;
 public void setName(final NameAttrGroup name) {
 this.name = name;
 }
-
 public Meta getMeta() {
 return meta;
 }
@@ -65,7 +55,6 @@ return meta;
 public void setMeta(final Meta meta) {
 this.meta = meta;
 }
-
 public CoverPage getCoverPage() {
 return coverPage;
 }
@@ -73,7 +62,6 @@ return coverPage;
 public void setCoverPage(final CoverPage coverPage) {
 this.coverPage = coverPage;
 }
-
 public Preface getPreface() {
 return preface;
 }
@@ -81,7 +69,6 @@ return preface;
 public void setPreface(final Preface preface) {
 this.preface = preface;
 }
-
 public Preamble getPreamble() {
 return preamble;
 }
@@ -89,7 +76,6 @@ return preamble;
 public void setPreamble(final Preamble preamble) {
 this.preamble = preamble;
 }
-
 public MainBody getMainBody() {
 return mainBody;
 }
@@ -97,7 +83,6 @@ return mainBody;
 public void setMainBody(final MainBody mainBody) {
 this.mainBody = mainBody;
 }
-
 public Conclusions getConclusions() {
 return conclusions;
 }
@@ -105,7 +90,6 @@ return conclusions;
 public void setConclusions(final Conclusions conclusions) {
 this.conclusions = conclusions;
 }
-
 public Attachments getAttachments() {
 return attachments;
 }
@@ -113,6 +97,12 @@ return attachments;
 public void setAttachments(final Attachments attachments) {
 this.attachments = attachments;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"conclusions","preface","versionTypeSimpleType","mainBody","preamble","coverPage","nameAttrGroup","attachments","meta"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

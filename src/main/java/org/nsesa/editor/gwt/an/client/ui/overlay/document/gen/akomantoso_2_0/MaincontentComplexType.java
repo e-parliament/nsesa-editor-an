@@ -5,13 +5,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Com
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.HierElementsGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.BlockElementsGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ContainerElementsGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreoptAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ComponentRef;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.HierElementsGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.BlockElementsGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ContainerElementsGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -37,7 +33,6 @@ return coreopt;
 public void setCoreopt(final CoreoptAttrGroup coreopt) {
 this.coreopt = coreopt;
 }
-
 public java.util.List<ComponentRef> getComponentRef() {
 return componentRefs;
 }
@@ -45,7 +40,6 @@ return componentRefs;
 public void setComponentRef(final java.util.List<ComponentRef> componentRefs) {
 this.componentRefs = componentRefs;
 }
-
 public java.util.List<HierElementsGroup> getHierElements() {
 return hierElementses;
 }
@@ -53,7 +47,6 @@ return hierElementses;
 public void setHierElements(final java.util.List<HierElementsGroup> hierElementses) {
 this.hierElementses = hierElementses;
 }
-
 public java.util.List<BlockElementsGroup> getBlockElements() {
 return blockElementses;
 }
@@ -61,7 +54,6 @@ return blockElementses;
 public void setBlockElements(final java.util.List<BlockElementsGroup> blockElementses) {
 this.blockElementses = blockElementses;
 }
-
 public java.util.List<ContainerElementsGroup> getContainerElements() {
 return containerElementses;
 }
@@ -69,6 +61,12 @@ return containerElementses;
 public void setContainerElements(final java.util.List<ContainerElementsGroup> containerElementses) {
 this.containerElementses = containerElementses;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"blockElementsGroup","componentRef","containerElementsGroup","hierElementsGroup","coreoptAttrGroup"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

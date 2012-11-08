@@ -1,9 +1,5 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ActorAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OutcomeAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RoleAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DateAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AnyOtherTypeComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ActorAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OutcomeAttrGroup;
@@ -11,6 +7,7 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Rol
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DateAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -35,7 +32,6 @@ return actor;
 public void setActor(final ActorAttrGroup actor) {
 this.actor = actor;
 }
-
 public OutcomeAttrGroup getOutcome() {
 return outcome;
 }
@@ -43,7 +39,6 @@ return outcome;
 public void setOutcome(final OutcomeAttrGroup outcome) {
 this.outcome = outcome;
 }
-
 public RoleAttrGroup getRole() {
 return role;
 }
@@ -51,7 +46,6 @@ return role;
 public void setRole(final RoleAttrGroup role) {
 this.role = role;
 }
-
 public DateAttrGroup getDate() {
 return date;
 }
@@ -59,6 +53,12 @@ return date;
 public void setDate(final DateAttrGroup date) {
 this.date = date;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"coreAttrGroup","roleAttrGroup","actorAttrGroup","*","linkoptAttrGroup","idoptAttrGroup","outcomeAttrGroup","dateAttrGroup"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

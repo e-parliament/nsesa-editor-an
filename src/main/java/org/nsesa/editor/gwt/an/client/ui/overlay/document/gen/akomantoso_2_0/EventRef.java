@@ -1,9 +1,5 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EventTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.YesNoTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DateAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SourceAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AnyOtherTypeComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EventTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.YesNoTypeSimpleType;
@@ -11,6 +7,7 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Dat
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SourceAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -35,7 +32,6 @@ return typez;
 public void setTypez(final EventTypeSimpleType typez) {
 this.typez = typez;
 }
-
 public YesNoTypeSimpleType getOriginatingExpression() {
 return originatingExpression;
 }
@@ -43,7 +39,6 @@ return originatingExpression;
 public void setOriginatingExpression(final YesNoTypeSimpleType originatingExpression) {
 this.originatingExpression = originatingExpression;
 }
-
 public DateAttrGroup getDate() {
 return date;
 }
@@ -51,7 +46,6 @@ return date;
 public void setDate(final DateAttrGroup date) {
 this.date = date;
 }
-
 public SourceAttrGroup getSource() {
 return source;
 }
@@ -59,6 +53,12 @@ return source;
 public void setSource(final SourceAttrGroup source) {
 this.source = source;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"coreAttrGroup","*","linkoptAttrGroup","yesNoTypeSimpleType","sourceAttrGroup","eventTypeSimpleType","idoptAttrGroup","dateAttrGroup"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

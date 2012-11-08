@@ -1,21 +1,19 @@
 <#-- @ftlvariable name="overlayClass" type="org.nsesa.editor.app.xsd.model.OverlayClass" -->
 package ${packageNameGenerator.getPackageName(overlayClass)};
 
-<#list overlayClass.properties as prop>
-import ${packageNameGenerator.getPackageName(prop)}.${prop.className?cap_first};
-</#list>
 <#list overlayClass.getImports(packageNameGenerator) as import>
 import ${import};
 </#list>
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 <#if overlayClass.complex || overlayClass.element || overlayClass.hasWildCardProperties()>
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 </#if>
 /**
 * This file is generated.
 */
-public class ${overlayClass.className?cap_first} <#if overlayClass.parent??>extends ${overlayClass.parent.className?cap_first}<#else><#if overlayClass.complex || overlayClass.element>extends AmendableWidgetImpl</#if></#if>  <#if overlayClass.interfaces??>implements <#list overlayClass.interfaces as interface>${interface.getSimpleName()}<#if interface_has_next>, </#if></#list> </#if>{
+public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (overlayClass.parent.complex || overlayClass.parent.element || overlayClass.parent.simple)>extends ${overlayClass.parent.className?cap_first}<#else><#if overlayClass.complex || overlayClass.element>extends AmendableWidgetImpl</#if></#if>  <#if overlayClass.interfaces??>implements <#list overlayClass.interfaces as interface>${interface.getSimpleName()}<#if interface_has_next>, </#if></#list> </#if>{
 
 // CONSTRUCTORS ------------------
 <#if overlayClass.complex || overlayClass.element>
@@ -37,8 +35,15 @@ return <@propertyName property = property/>;
 public void set<@propertyNameCap property = property/>(final <@propertyClassName property=property/> <@propertyName property = property/>) {
 this.<@propertyName property = property/> = <@propertyName property = property/>;
 }
-
 </#list>
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+<#assign delimiter = "">
+    String[] arrayChildren = new String[]{<#list overlayClass.allowedSubTypes as child>${delimiter}"${child}"<#assign delimiter = ","></#list>};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 
 <#macro propertyClassName property><#compress>

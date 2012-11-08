@@ -1,10 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ExprPropertiesGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CorePropertiesComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ExprPropertiesGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -26,6 +26,12 @@ return exprProperties;
 public void setExprProperties(final ExprPropertiesGroup exprProperties) {
 this.exprProperties = exprProperties;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"FRBRthis","FRBRalias","exprPropertiesGroup","componentInfo","FRBRuri","FRBRauthor","FRBRdate","preservation"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

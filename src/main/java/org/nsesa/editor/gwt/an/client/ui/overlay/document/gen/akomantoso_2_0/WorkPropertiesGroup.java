@@ -4,12 +4,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRB
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRsubtype;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRnumber;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRname;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRcountry;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRsubtype;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRnumber;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRname;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
 * This file is generated.
 */
@@ -30,7 +27,6 @@ return FRBRcountry;
 public void setFRBRcountry(final FRBRcountry FRBRcountry) {
 this.FRBRcountry = FRBRcountry;
 }
-
 public FRBRsubtype getFRBRsubtype() {
 return FRBRsubtype;
 }
@@ -38,7 +34,6 @@ return FRBRsubtype;
 public void setFRBRsubtype(final FRBRsubtype FRBRsubtype) {
 this.FRBRsubtype = FRBRsubtype;
 }
-
 public FRBRnumber getFRBRnumber() {
 return FRBRnumber;
 }
@@ -46,7 +41,6 @@ return FRBRnumber;
 public void setFRBRnumber(final FRBRnumber FRBRnumber) {
 this.FRBRnumber = FRBRnumber;
 }
-
 public FRBRname getFRBRname() {
 return FRBRname;
 }
@@ -54,6 +48,12 @@ return FRBRname;
 public void setFRBRname(final FRBRname FRBRname) {
 this.FRBRname = FRBRname;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

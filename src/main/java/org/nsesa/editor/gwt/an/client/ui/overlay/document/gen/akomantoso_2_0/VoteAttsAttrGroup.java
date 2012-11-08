@@ -1,11 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
 * This file is generated.
 */
@@ -25,7 +23,6 @@ return by;
 public void setBy(final AnyURISimpleType by) {
 this.by = by;
 }
-
 public AnyURISimpleType getAs() {
 return as;
 }
@@ -33,7 +30,6 @@ return as;
 public void setAs(final AnyURISimpleType as) {
 this.as = as;
 }
-
 public AnyURISimpleType getChoice() {
 return choice;
 }
@@ -41,6 +37,12 @@ return choice;
 public void setChoice(final AnyURISimpleType choice) {
 this.choice = choice;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

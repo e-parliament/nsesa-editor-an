@@ -4,12 +4,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ame
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AmendmentContent;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AmendmentReference;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AmendmentJustification;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AmendmentHeading;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AmendmentContent;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AmendmentReference;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AmendmentJustification;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
 * This file is generated.
 */
@@ -30,7 +27,6 @@ return amendmentHeading;
 public void setAmendmentHeading(final AmendmentHeading amendmentHeading) {
 this.amendmentHeading = amendmentHeading;
 }
-
 public AmendmentContent getAmendmentContent() {
 return amendmentContent;
 }
@@ -38,7 +34,6 @@ return amendmentContent;
 public void setAmendmentContent(final AmendmentContent amendmentContent) {
 this.amendmentContent = amendmentContent;
 }
-
 public AmendmentReference getAmendmentReference() {
 return amendmentReference;
 }
@@ -46,7 +41,6 @@ return amendmentReference;
 public void setAmendmentReference(final AmendmentReference amendmentReference) {
 this.amendmentReference = amendmentReference;
 }
-
 public AmendmentJustification getAmendmentJustification() {
 return amendmentJustification;
 }
@@ -54,6 +48,12 @@ return amendmentJustification;
 public void setAmendmentJustification(final AmendmentJustification amendmentJustification) {
 this.amendmentJustification = amendmentJustification;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

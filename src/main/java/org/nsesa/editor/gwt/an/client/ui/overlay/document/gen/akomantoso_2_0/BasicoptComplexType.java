@@ -3,11 +3,9 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreoptAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.BlockElementsGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.BasicContainersGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreoptAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.BlockElementsGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.BasicContainersGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -31,7 +29,6 @@ return coreopt;
 public void setCoreopt(final CoreoptAttrGroup coreopt) {
 this.coreopt = coreopt;
 }
-
 public java.util.List<BlockElementsGroup> getBlockElements() {
 return blockElementses;
 }
@@ -39,7 +36,6 @@ return blockElementses;
 public void setBlockElements(final java.util.List<BlockElementsGroup> blockElementses) {
 this.blockElementses = blockElementses;
 }
-
 public java.util.List<BasicContainersGroup> getBasicContainers() {
 return basicContainerses;
 }
@@ -47,6 +43,12 @@ return basicContainerses;
 public void setBasicContainers(final java.util.List<BasicContainersGroup> basicContainerses) {
 this.basicContainerses = basicContainerses;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"blockElementsGroup","basicContainersGroup","coreoptAttrGroup"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 

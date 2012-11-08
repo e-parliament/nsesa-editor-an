@@ -6,14 +6,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Pas
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Judicial;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Parliamentary;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OtherAnalysis;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SourceAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ActiveModifications;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PassiveModifications;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Judicial;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Parliamentary;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OtherAnalysis;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 /**
 * This file is generated.
@@ -40,7 +35,6 @@ return source;
 public void setSource(final SourceAttrGroup source) {
 this.source = source;
 }
-
 public ActiveModifications getActiveModifications() {
 return activeModifications;
 }
@@ -48,7 +42,6 @@ return activeModifications;
 public void setActiveModifications(final ActiveModifications activeModifications) {
 this.activeModifications = activeModifications;
 }
-
 public PassiveModifications getPassiveModifications() {
 return passiveModifications;
 }
@@ -56,7 +49,6 @@ return passiveModifications;
 public void setPassiveModifications(final PassiveModifications passiveModifications) {
 this.passiveModifications = passiveModifications;
 }
-
 public Judicial getJudicial() {
 return judicial;
 }
@@ -64,7 +56,6 @@ return judicial;
 public void setJudicial(final Judicial judicial) {
 this.judicial = judicial;
 }
-
 public Parliamentary getParliamentary() {
 return parliamentary;
 }
@@ -72,7 +63,6 @@ return parliamentary;
 public void setParliamentary(final Parliamentary parliamentary) {
 this.parliamentary = parliamentary;
 }
-
 public java.util.List<OtherAnalysis> getOtherAnalysis() {
 return otherAnalysises;
 }
@@ -80,6 +70,12 @@ return otherAnalysises;
 public void setOtherAnalysis(final java.util.List<OtherAnalysis> otherAnalysises) {
 this.otherAnalysises = otherAnalysises;
 }
-
+/**
+* Returns possible children as list of String
+*/
+public ArrayList<String> getAllowedSubTypes() {
+    String[] arrayChildren = new String[]{"judicial","parliamentary","activeModifications","passiveModifications","sourceAttrGroup","otherAnalysis"};
+    return  new ArrayList(Arrays.asList(arrayChildren));
+}
 }
 
