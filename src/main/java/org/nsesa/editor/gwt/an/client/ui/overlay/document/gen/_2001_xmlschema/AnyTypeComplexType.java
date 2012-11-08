@@ -15,13 +15,13 @@ public AnyTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private java.util.List<String> wildcardContents = new ArrayList<String>();
+private java.util.List<AmendableWidgetImpl> wildcardContents = new ArrayList<AmendableWidgetImpl>();
 
-public java.util.List<String> getWildcardContent() {
+public java.util.List<AmendableWidgetImpl> getWildcardContent() {
 return wildcardContents;
 }
 
-public void setWildcardContent(final java.util.List<String> wildcardContents) {
+public void setWildcardContent(final java.util.List<AmendableWidgetImpl> wildcardContents) {
 this.wildcardContents = wildcardContents;
 }
 

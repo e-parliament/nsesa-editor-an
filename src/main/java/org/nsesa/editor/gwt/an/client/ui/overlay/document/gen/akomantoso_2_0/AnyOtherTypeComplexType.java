@@ -1,11 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdoptAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkoptAttrGroup;
 import java.lang.String;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdoptAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkoptAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
@@ -21,18 +21,10 @@ public AnyOtherTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private CoreAttrGroup core;
 private IdoptAttrGroup idopt;
+private CoreAttrGroup core;
 private LinkoptAttrGroup linkopt;
-private java.util.List<String> wildcardContents = new ArrayList<String>();
-
-public CoreAttrGroup getCore() {
-return core;
-}
-
-public void setCore(final CoreAttrGroup core) {
-this.core = core;
-}
+private java.util.List<AmendableWidgetImpl> wildcardContents = new ArrayList<AmendableWidgetImpl>();
 
 public IdoptAttrGroup getIdopt() {
 return idopt;
@@ -40,6 +32,14 @@ return idopt;
 
 public void setIdopt(final IdoptAttrGroup idopt) {
 this.idopt = idopt;
+}
+
+public CoreAttrGroup getCore() {
+return core;
+}
+
+public void setCore(final CoreAttrGroup core) {
+this.core = core;
 }
 
 public LinkoptAttrGroup getLinkopt() {
@@ -50,11 +50,11 @@ public void setLinkopt(final LinkoptAttrGroup linkopt) {
 this.linkopt = linkopt;
 }
 
-public java.util.List<String> getWildcardContent() {
+public java.util.List<AmendableWidgetImpl> getWildcardContent() {
 return wildcardContents;
 }
 
-public void setWildcardContent(final java.util.List<String> wildcardContents) {
+public void setWildcardContent(final java.util.List<AmendableWidgetImpl> wildcardContents) {
 this.wildcardContents = wildcardContents;
 }
 
