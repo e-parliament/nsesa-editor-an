@@ -7,6 +7,7 @@
 .amendment {
     max-width: 1400px;
     background-color: #ccc;
+    border: 1px solid black;
     padding: 10px;
 }
 
@@ -40,7 +41,6 @@
     display: block;
     width: 100%;
     clear: both;
-    padding: 10px;
 }
 
 .amendment mod quotedstructure {
