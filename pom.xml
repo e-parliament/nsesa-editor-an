@@ -260,7 +260,7 @@
                 <version>${gwtplugin.version}</version>
                 <configuration>
                     <!--<extraJvmArgs>-Xss2M -XX:MaxPermSize=512M -Xmx2048m -Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=localhost:8008</extraJvmArgs>-->
-                    <extraJvmArgs>-Xss2M -XX:MaxPermSize=512M -Xmx1048m</extraJvmArgs>
+                    <extraJvmArgs>-Xss1M -XX:MaxPermSize=300M -Xmx512M</extraJvmArgs>
                     <hostedWebapp>web</hostedWebapp>
                     <modules>
                         <module>org.nsesa.editor.gwt.an.AkomaNtosoEditor</module>
