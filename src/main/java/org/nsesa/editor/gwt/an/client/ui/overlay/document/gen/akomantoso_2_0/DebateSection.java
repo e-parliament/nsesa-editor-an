@@ -1,7 +1,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AlthierarchyComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NameAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,21 +17,21 @@ public DebateSection(Element element) {
 }
 
 // FIELDS ------------------
-private NameAttrGroup name;
+private StringSimpleType nameAttr;
 
-public NameAttrGroup getName() {
-return name;
+public StringSimpleType getNameAttr() {
+return nameAttr;
 }
 
-public void setName(final NameAttrGroup name) {
-this.name = name;
+public void setNameAttr(final StringSimpleType nameAttr) {
+this.nameAttr = nameAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"blockElementsGroup","componentRef","containerElementsGroup","num","ANcontainersGroup","subheading","nameAttrGroup","corereqAttrGroup","heading"};
+    String[] subtypes = new String[]{"summary","toc","other","tblock","subheading","narrative","debateSection","div","block","resolutions","personalStatements","oralStatements","rollCall","blockList","declarationOfVote","adjournment","ol","question","componentRef","petitions","administrationOfOath","ul","communication","noticesOfMotion","answer","questions","papers","table","proceduralMotions","num","speech","address","nationalInterest","container","p","writtenStatements","pointOfOrder","scene","prayers","ministerialStatements","foreign","heading"};
     return  subtypes;
 }
 }

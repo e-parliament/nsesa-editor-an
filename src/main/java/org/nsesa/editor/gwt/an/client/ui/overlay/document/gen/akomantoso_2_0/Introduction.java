@@ -22,7 +22,7 @@ public Introduction(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"blockElementsGroup","componentRef","containerElementsGroup","hierElementsGroup","coreoptAttrGroup"};
+    String[] subtypes = new String[]{"paragraph","tblock","oralStatements","alinea","blockList","declarationOfVote","adjournment","ol","subchapter","componentRef","petitions","administrationOfOath","indent","subclause","questions","papers","table","sublist","proceduralMotions","nationalInterest","container","foreign","tome","subparagraph","toc","subsection","debateSection","div","block","resolutions","personalStatements","chapter","title","division","rollCall","ul","communication","noticesOfMotion","list","section","point","subpart","article","address","hcontainer","p","writtenStatements","subtitle","book","pointOfOrder","prayers","ministerialStatements","part","clause"};
     return  subtypes;
 }
 }

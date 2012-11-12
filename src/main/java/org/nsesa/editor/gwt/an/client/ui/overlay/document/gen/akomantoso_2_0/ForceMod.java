@@ -17,21 +17,21 @@ public ForceMod(Element element) {
 }
 
 // FIELDS ------------------
-private ForceModsSimpleType typez;
+private ForceModsSimpleType typeAttr;
 
-public ForceModsSimpleType getTypez() {
-return typez;
+public ForceModsSimpleType getTypeAttr() {
+return typeAttr;
 }
 
-public void setTypez(final ForceModsSimpleType typez) {
-this.typez = typez;
+public void setTypeAttr(final ForceModsSimpleType typeAttr) {
+this.typeAttr = typeAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"application","modifiersAttrGroup","coreAttrGroup","condition","idreqAttrGroup","efficacy","destination","duration","source","enactmentAttrGroup","ForceModsSimpleType","force","refersAttrGroup"};
+    String[] subtypes = new String[]{"duration","application","source","condition","efficacy","force","destination"};
     return  subtypes;
 }
 }

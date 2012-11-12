@@ -1,11 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MetaoptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NameAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NumberAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DateAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DateSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,53 +19,61 @@ public Publication(Element element) {
 }
 
 // FIELDS ------------------
-private NameAttrGroup name;
-private RefersAttrGroup refers;
-private NumberAttrGroup number;
-private ShowAttrGroup show;
-private DateAttrGroup date;
+private StringSimpleType showAsAttr;
+private StringSimpleType shortFormAttr;
+private StringSimpleType numberAttr;
+private StringSimpleType nameAttr;
+private AnyURISimpleType refersToAttr;
+private DateSimpleType dateAttr;
 
-public NameAttrGroup getName() {
-return name;
-}
-
-public void setName(final NameAttrGroup name) {
-this.name = name;
-}
-public RefersAttrGroup getRefers() {
-return refers;
+public StringSimpleType getShowAsAttr() {
+return showAsAttr;
 }
 
-public void setRefers(final RefersAttrGroup refers) {
-this.refers = refers;
+public void setShowAsAttr(final StringSimpleType showAsAttr) {
+this.showAsAttr = showAsAttr;
 }
-public NumberAttrGroup getNumber() {
-return number;
-}
-
-public void setNumber(final NumberAttrGroup number) {
-this.number = number;
-}
-public ShowAttrGroup getShow() {
-return show;
+public StringSimpleType getShortFormAttr() {
+return shortFormAttr;
 }
 
-public void setShow(final ShowAttrGroup show) {
-this.show = show;
+public void setShortFormAttr(final StringSimpleType shortFormAttr) {
+this.shortFormAttr = shortFormAttr;
 }
-public DateAttrGroup getDate() {
-return date;
+public StringSimpleType getNumberAttr() {
+return numberAttr;
 }
 
-public void setDate(final DateAttrGroup date) {
-this.date = date;
+public void setNumberAttr(final StringSimpleType numberAttr) {
+this.numberAttr = numberAttr;
+}
+public StringSimpleType getNameAttr() {
+return nameAttr;
+}
+
+public void setNameAttr(final StringSimpleType nameAttr) {
+this.nameAttr = nameAttr;
+}
+public AnyURISimpleType getRefersToAttr() {
+return refersToAttr;
+}
+
+public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+this.refersToAttr = refersToAttr;
+}
+public DateSimpleType getDateAttr() {
+return dateAttr;
+}
+
+public void setDateAttr(final DateSimpleType dateAttr) {
+this.dateAttr = dateAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","nameAttrGroup","showAttrGroup","idoptAttrGroup","numberAttrGroup","dateAttrGroup","refersAttrGroup"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

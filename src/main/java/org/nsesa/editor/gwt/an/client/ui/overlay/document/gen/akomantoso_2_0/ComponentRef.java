@@ -22,7 +22,7 @@ public ComponentRef(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","showAttrGroup","idoptAttrGroup","srcAttrGroup"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

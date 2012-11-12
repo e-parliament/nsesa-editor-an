@@ -2,7 +2,7 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.InlineComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,29 +18,29 @@ public A(Element element) {
 }
 
 // FIELDS ------------------
-private StringSimpleType target;
-private LinkAttrGroup link;
+private StringSimpleType targetAttr;
+private AnyURISimpleType hrefAttr;
 
-public StringSimpleType getTarget() {
-return target;
+public StringSimpleType getTargetAttr() {
+return targetAttr;
 }
 
-public void setTarget(final StringSimpleType target) {
-this.target = target;
+public void setTargetAttr(final StringSimpleType targetAttr) {
+this.targetAttr = targetAttr;
 }
-public LinkAttrGroup getLink() {
-return link;
+public AnyURISimpleType getHrefAttr() {
+return hrefAttr;
 }
 
-public void setLink(final LinkAttrGroup link) {
-this.link = link;
+public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+this.hrefAttr = hrefAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"inlineCMGroup","linkAttrGroup","coreoptAttrGroup","stringSimpleType"};
+    String[] subtypes = new String[]{"person","neutralCitation","docType","remark","docStatus","location","change","entity","authorialNote","img","party","legislature","event","eol","role","opinion","quantity","extractStructure","eop","fillIn","signature","docStage","mmod","docCommittee","vote","ins","mod","noteRef","docNumber","rref","marker","session","recordedTime","lawyer","docPurpose","extractText","span","sub","concept","courtType","docJurisdiction","object","sup","docProponent","date","omissis","rmod","organization","def","docketNumber","judge","popup","inline","docTitle","del","docDate","relatedDocument","affectedDocument","mref","docIntroducer","b","placeholder","a","outcome","i","process","ref","u","term","shortTitle"};
     return  subtypes;
 }
 }

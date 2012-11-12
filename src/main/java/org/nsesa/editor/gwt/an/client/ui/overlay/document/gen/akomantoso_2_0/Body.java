@@ -22,7 +22,7 @@ public Body(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"componentRef","hierElementsGroup","coreoptAttrGroup"};
+    String[] subtypes = new String[]{"subchapter","componentRef","tome","subparagraph","indent","paragraph","subsection","subclause","list","sublist","section","point","chapter","title","division","subpart","article","alinea","hcontainer","subtitle","book","part","clause"};
     return  subtypes;
 }
 }

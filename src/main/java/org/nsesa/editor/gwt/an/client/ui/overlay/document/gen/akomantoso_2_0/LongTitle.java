@@ -22,7 +22,7 @@ public LongTitle(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"blockElementsGroup","coreoptAttrGroup"};
+    String[] subtypes = new String[]{"ul","toc","tblock","blockList","p","block","table","ol","foreign"};
     return  subtypes;
 }
 }

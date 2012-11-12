@@ -18,15 +18,15 @@ public ScopeMod(Element element) {
 }
 
 // FIELDS ------------------
-private ScopeModsSimpleType typez;
+private ScopeModsSimpleType typeAttr;
 private Domain domain;
 
-public ScopeModsSimpleType getTypez() {
-return typez;
+public ScopeModsSimpleType getTypeAttr() {
+return typeAttr;
 }
 
-public void setTypez(final ScopeModsSimpleType typez) {
-this.typez = typez;
+public void setTypeAttr(final ScopeModsSimpleType typeAttr) {
+this.typeAttr = typeAttr;
 }
 public Domain getDomain() {
 return domain;
@@ -40,7 +40,7 @@ this.domain = domain;
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"application","ScopeModsSimpleType","modifiersAttrGroup","coreAttrGroup","condition","idreqAttrGroup","efficacy","destination","duration","source","domain","enactmentAttrGroup","force","refersAttrGroup"};
+    String[] subtypes = new String[]{"duration","application","source","condition","domain","efficacy","force","destination"};
     return  subtypes;
 }
 }

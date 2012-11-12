@@ -18,15 +18,15 @@ public MeaningMod(Element element) {
 }
 
 // FIELDS ------------------
-private MeaningModsSimpleType typez;
+private MeaningModsSimpleType typeAttr;
 private Domain domain;
 
-public MeaningModsSimpleType getTypez() {
-return typez;
+public MeaningModsSimpleType getTypeAttr() {
+return typeAttr;
 }
 
-public void setTypez(final MeaningModsSimpleType typez) {
-this.typez = typez;
+public void setTypeAttr(final MeaningModsSimpleType typeAttr) {
+this.typeAttr = typeAttr;
 }
 public Domain getDomain() {
 return domain;
@@ -40,7 +40,7 @@ this.domain = domain;
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"application","modifiersAttrGroup","coreAttrGroup","condition","MeaningModsSimpleType","idreqAttrGroup","efficacy","destination","duration","source","domain","enactmentAttrGroup","force","refersAttrGroup"};
+    String[] subtypes = new String[]{"duration","application","source","condition","domain","efficacy","force","destination"};
     return  subtypes;
 }
 }

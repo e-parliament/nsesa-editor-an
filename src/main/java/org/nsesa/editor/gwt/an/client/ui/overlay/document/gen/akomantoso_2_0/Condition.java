@@ -17,21 +17,21 @@ public Condition(Element element) {
 }
 
 // FIELDS ------------------
-private BooleanSimpleType frozen;
+private BooleanSimpleType frozenAttr;
 
-public BooleanSimpleType getFrozen() {
-return frozen;
+public BooleanSimpleType getFrozenAttr() {
+return frozenAttr;
 }
 
-public void setFrozen(final BooleanSimpleType frozen) {
-this.frozen = frozen;
+public void setFrozenAttr(final BooleanSimpleType frozenAttr) {
+this.frozenAttr = frozenAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","*","linkoptAttrGroup","booleanSimpleType","idoptAttrGroup"};
+    String[] subtypes = new String[]{"*"};
     return  subtypes;
 }
 }

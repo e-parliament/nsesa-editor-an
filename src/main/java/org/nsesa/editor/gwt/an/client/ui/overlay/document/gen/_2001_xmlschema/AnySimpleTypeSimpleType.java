@@ -11,14 +11,14 @@ public class AnySimpleTypeSimpleType   {
 // CONSTRUCTORS ------------------
 
 // FIELDS ------------------
-private String contentz;
+private String content_;
 
-public String getContentz() {
-return contentz;
+public String getContent_() {
+return content_;
 }
 
-public void setContentz(final String contentz) {
-this.contentz = contentz;
+public void setContent_(final String content_) {
+this.content_ = content_;
 }
 }
 

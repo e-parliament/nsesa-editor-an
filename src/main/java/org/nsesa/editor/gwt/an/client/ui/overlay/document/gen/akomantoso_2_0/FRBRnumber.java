@@ -22,7 +22,7 @@ public FRBRnumber(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","valueAttrGroup","idoptAttrGroup"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

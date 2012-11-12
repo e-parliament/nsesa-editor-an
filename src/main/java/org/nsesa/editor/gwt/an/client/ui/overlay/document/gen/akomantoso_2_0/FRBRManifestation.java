@@ -1,7 +1,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CorePropertiesComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ManifPropertiesGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRformat;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,21 +17,21 @@ public FRBRManifestation(Element element) {
 }
 
 // FIELDS ------------------
-private ManifPropertiesGroup manifProperties;
+private FRBRformat FRBRformat;
 
-public ManifPropertiesGroup getManifProperties() {
-return manifProperties;
+public FRBRformat getFRBRformat() {
+return FRBRformat;
 }
 
-public void setManifProperties(final ManifPropertiesGroup manifProperties) {
-this.manifProperties = manifProperties;
+public void setFRBRformat(final FRBRformat FRBRformat) {
+this.FRBRformat = FRBRformat;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"FRBRthis","FRBRalias","componentInfo","FRBRuri","FRBRauthor","FRBRdate","manifPropertiesGroup","preservation"};
+    String[] subtypes = new String[]{"FRBRthis","FRBRalias","FRBRformat","componentInfo","FRBRuri","FRBRauthor","FRBRdate","preservation"};
     return  subtypes;
 }
 }

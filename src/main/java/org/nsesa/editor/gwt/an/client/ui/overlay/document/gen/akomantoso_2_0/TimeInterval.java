@@ -3,7 +3,6 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MetaoptComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DurationSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersreqAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,45 +18,45 @@ public TimeInterval(Element element) {
 }
 
 // FIELDS ------------------
-private AnyURISimpleType start;
-private AnyURISimpleType end;
-private DurationSimpleType duration;
-private RefersreqAttrGroup refersreq;
+private AnyURISimpleType startAttr;
+private AnyURISimpleType endAttr;
+private DurationSimpleType durationAttr;
+private AnyURISimpleType refersToAttr;
 
-public AnyURISimpleType getStart() {
-return start;
-}
-
-public void setStart(final AnyURISimpleType start) {
-this.start = start;
-}
-public AnyURISimpleType getEnd() {
-return end;
+public AnyURISimpleType getStartAttr() {
+return startAttr;
 }
 
-public void setEnd(final AnyURISimpleType end) {
-this.end = end;
+public void setStartAttr(final AnyURISimpleType startAttr) {
+this.startAttr = startAttr;
 }
-public DurationSimpleType getDuration() {
-return duration;
-}
-
-public void setDuration(final DurationSimpleType duration) {
-this.duration = duration;
-}
-public RefersreqAttrGroup getRefersreq() {
-return refersreq;
+public AnyURISimpleType getEndAttr() {
+return endAttr;
 }
 
-public void setRefersreq(final RefersreqAttrGroup refersreq) {
-this.refersreq = refersreq;
+public void setEndAttr(final AnyURISimpleType endAttr) {
+this.endAttr = endAttr;
+}
+public DurationSimpleType getDurationAttr() {
+return durationAttr;
+}
+
+public void setDurationAttr(final DurationSimpleType durationAttr) {
+this.durationAttr = durationAttr;
+}
+public AnyURISimpleType getRefersToAttr() {
+return refersToAttr;
+}
+
+public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+this.refersToAttr = refersToAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","refersreqAttrGroup","durationSimpleType","idoptAttrGroup","anyURISimpleType"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

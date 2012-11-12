@@ -1,10 +1,5 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.EnactmentAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ModifiersAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Source;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Destination;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Force;
@@ -12,6 +7,11 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Eff
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Application;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Duration;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Condition;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.BooleanSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,11 +27,6 @@ public ModificationTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private IdreqAttrGroup idreq;
-private RefersAttrGroup refers;
-private EnactmentAttrGroup enactment;
-private ModifiersAttrGroup modifiers;
-private CoreAttrGroup core;
 private java.util.List<Source> sources = new ArrayList<Source>();
 private java.util.List<Destination> destinations = new ArrayList<Destination>();
 private Force force;
@@ -39,42 +34,15 @@ private Efficacy efficacy;
 private Application application;
 private Duration duration;
 private Condition condition;
+private AnyURISimpleType refersToAttr;
+private AmendableWidgetImpl wildcardContentAttr;
+private BooleanSimpleType exclusionAttr;
+private BooleanSimpleType incompleteAttr;
+private IDSimpleType idAttr;
+private NMTOKENSimpleType evolvingIdAttr;
+private StatusTypeSimpleType statusAttr;
+private AnyURISimpleType periodAttr;
 
-public IdreqAttrGroup getIdreq() {
-return idreq;
-}
-
-public void setIdreq(final IdreqAttrGroup idreq) {
-this.idreq = idreq;
-}
-public RefersAttrGroup getRefers() {
-return refers;
-}
-
-public void setRefers(final RefersAttrGroup refers) {
-this.refers = refers;
-}
-public EnactmentAttrGroup getEnactment() {
-return enactment;
-}
-
-public void setEnactment(final EnactmentAttrGroup enactment) {
-this.enactment = enactment;
-}
-public ModifiersAttrGroup getModifiers() {
-return modifiers;
-}
-
-public void setModifiers(final ModifiersAttrGroup modifiers) {
-this.modifiers = modifiers;
-}
-public CoreAttrGroup getCore() {
-return core;
-}
-
-public void setCore(final CoreAttrGroup core) {
-this.core = core;
-}
 public java.util.List<Source> getSource() {
 return sources;
 }
@@ -124,12 +92,68 @@ return condition;
 public void setCondition(final Condition condition) {
 this.condition = condition;
 }
+public AnyURISimpleType getRefersToAttr() {
+return refersToAttr;
+}
+
+public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+this.refersToAttr = refersToAttr;
+}
+public AmendableWidgetImpl getWildcardContentAttr() {
+return wildcardContentAttr;
+}
+
+public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+this.wildcardContentAttr = wildcardContentAttr;
+}
+public BooleanSimpleType getExclusionAttr() {
+return exclusionAttr;
+}
+
+public void setExclusionAttr(final BooleanSimpleType exclusionAttr) {
+this.exclusionAttr = exclusionAttr;
+}
+public BooleanSimpleType getIncompleteAttr() {
+return incompleteAttr;
+}
+
+public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
+this.incompleteAttr = incompleteAttr;
+}
+public IDSimpleType getIdAttr() {
+return idAttr;
+}
+
+public void setIdAttr(final IDSimpleType idAttr) {
+this.idAttr = idAttr;
+}
+public NMTOKENSimpleType getEvolvingIdAttr() {
+return evolvingIdAttr;
+}
+
+public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+this.evolvingIdAttr = evolvingIdAttr;
+}
+public StatusTypeSimpleType getStatusAttr() {
+return statusAttr;
+}
+
+public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+this.statusAttr = statusAttr;
+}
+public AnyURISimpleType getPeriodAttr() {
+return periodAttr;
+}
+
+public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+this.periodAttr = periodAttr;
+}
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"duration","application","coreAttrGroup","modifiersAttrGroup","source","condition","enactmentAttrGroup","efficacy","idreqAttrGroup","force","destination","refersAttrGroup"};
+    String[] subtypes = new String[]{"duration","application","source","condition","efficacy","force","destination"};
     return  subtypes;
 }
 }

@@ -22,7 +22,7 @@ public NoticesOfMotion(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"blockElementsGroup","componentRef","containerElementsGroup","num","ANcontainersGroup","subheading","corereqAttrGroup","heading"};
+    String[] subtypes = new String[]{"summary","toc","other","tblock","subheading","narrative","debateSection","div","block","resolutions","personalStatements","oralStatements","rollCall","blockList","declarationOfVote","adjournment","ol","question","componentRef","petitions","administrationOfOath","ul","communication","noticesOfMotion","answer","questions","papers","table","proceduralMotions","num","speech","address","nationalInterest","container","p","writtenStatements","pointOfOrder","scene","prayers","ministerialStatements","foreign","heading"};
     return  subtypes;
 }
 }

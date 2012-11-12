@@ -17,21 +17,21 @@ public QuotedStructure(Element element) {
 }
 
 // FIELDS ------------------
-private AnyURISimpleType forURI;
+private AnyURISimpleType forAttr;
 
-public AnyURISimpleType getFor() {
-return forURI;
+public AnyURISimpleType getForAttr() {
+return forAttr;
 }
 
-public void setFor(final AnyURISimpleType forURI) {
-this.forURI = forURI;
+public void setForAttr(final AnyURISimpleType forAttr) {
+this.forAttr = forAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"componentRef","citation","wrap","containerElementsGroup","ANcontainersGroup","subheading","hierElementsGroup","anyURISimpleType","intro","blockElementsGroup","content","recital","num","corereqAttrGroup","heading"};
+    String[] subtypes = new String[]{"summary","paragraph","tblock","narrative","oralStatements","alinea","blockList","declarationOfVote","adjournment","ol","petitions","componentRef","subchapter","wrap","citation","administrationOfOath","indent","subclause","answer","questions","papers","table","sublist","proceduralMotions","content","speech","nationalInterest","container","scene","foreign","heading","tome","other","subparagraph","toc","subheading","subsection","debateSection","div","resolutions","block","personalStatements","recital","chapter","title","rollCall","division","question","ul","communication","noticesOfMotion","list","section","intro","point","num","article","subpart","address","writtenStatements","hcontainer","p","book","subtitle","pointOfOrder","prayers","ministerialStatements","part","clause"};
     return  subtypes;
 }
 }

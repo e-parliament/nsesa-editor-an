@@ -22,7 +22,7 @@ public Br(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreoptAttrGroup"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

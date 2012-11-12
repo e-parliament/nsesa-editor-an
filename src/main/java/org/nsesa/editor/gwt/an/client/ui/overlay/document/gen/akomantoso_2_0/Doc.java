@@ -22,7 +22,7 @@ public Doc(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"conclusions","preface","versionTypeSimpleType","mainBody","preamble","coverPage","nameAttrGroup","attachments","meta"};
+    String[] subtypes = new String[]{"conclusions","preface","mainBody","preamble","coverPage","attachments","meta"};
     return  subtypes;
 }
 }

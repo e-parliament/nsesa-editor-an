@@ -22,7 +22,7 @@ public OfficialGazette(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"conclusions","preface","versionTypeSimpleType","coverPage","collectionBody","attachments","meta"};
+    String[] subtypes = new String[]{"conclusions","preface","coverPage","collectionBody","attachments","meta"};
     return  subtypes;
 }
 }

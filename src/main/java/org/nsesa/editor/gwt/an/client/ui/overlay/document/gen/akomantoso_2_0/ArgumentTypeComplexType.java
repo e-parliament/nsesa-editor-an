@@ -1,10 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdoptAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PosAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PosTypeSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,53 +19,61 @@ public ArgumentTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private AnyURISimpleType upTo;
-private IdoptAttrGroup idopt;
-private LinkAttrGroup link;
-private PosAttrGroup pos;
-private CoreAttrGroup core;
+private AnyURISimpleType upToAttr;
+private IDSimpleType idAttr;
+private NMTOKENSimpleType evolvingIdAttr;
+private AnyURISimpleType hrefAttr;
+private PosTypeSimpleType posAttr;
+private AmendableWidgetImpl wildcardContentAttr;
 
-public AnyURISimpleType getUpTo() {
-return upTo;
-}
-
-public void setUpTo(final AnyURISimpleType upTo) {
-this.upTo = upTo;
-}
-public IdoptAttrGroup getIdopt() {
-return idopt;
+public AnyURISimpleType getUpToAttr() {
+return upToAttr;
 }
 
-public void setIdopt(final IdoptAttrGroup idopt) {
-this.idopt = idopt;
+public void setUpToAttr(final AnyURISimpleType upToAttr) {
+this.upToAttr = upToAttr;
 }
-public LinkAttrGroup getLink() {
-return link;
-}
-
-public void setLink(final LinkAttrGroup link) {
-this.link = link;
-}
-public PosAttrGroup getPos() {
-return pos;
+public IDSimpleType getIdAttr() {
+return idAttr;
 }
 
-public void setPos(final PosAttrGroup pos) {
-this.pos = pos;
+public void setIdAttr(final IDSimpleType idAttr) {
+this.idAttr = idAttr;
 }
-public CoreAttrGroup getCore() {
-return core;
+public NMTOKENSimpleType getEvolvingIdAttr() {
+return evolvingIdAttr;
 }
 
-public void setCore(final CoreAttrGroup core) {
-this.core = core;
+public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+this.evolvingIdAttr = evolvingIdAttr;
+}
+public AnyURISimpleType getHrefAttr() {
+return hrefAttr;
+}
+
+public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+this.hrefAttr = hrefAttr;
+}
+public PosTypeSimpleType getPosAttr() {
+return posAttr;
+}
+
+public void setPosAttr(final PosTypeSimpleType posAttr) {
+this.posAttr = posAttr;
+}
+public AmendableWidgetImpl getWildcardContentAttr() {
+return wildcardContentAttr;
+}
+
+public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+this.wildcardContentAttr = wildcardContentAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","posAttrGroup","linkAttrGroup","idoptAttrGroup","anyURISimpleType"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

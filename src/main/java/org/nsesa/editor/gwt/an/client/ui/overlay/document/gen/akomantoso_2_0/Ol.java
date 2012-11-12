@@ -22,7 +22,7 @@ public Ol(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"li","corereqAttrGroup"};
+    String[] subtypes = new String[]{"li"};
     return  subtypes;
 }
 }

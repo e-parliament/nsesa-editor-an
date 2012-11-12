@@ -17,21 +17,21 @@ public AttachmentOf(Element element) {
 }
 
 // FIELDS ------------------
-private StringSimpleType typez;
+private StringSimpleType typeAttr;
 
-public StringSimpleType getTypez() {
-return typez;
+public StringSimpleType getTypeAttr() {
+return typeAttr;
 }
 
-public void setTypez(final StringSimpleType typez) {
-this.typez = typez;
+public void setTypeAttr(final StringSimpleType typeAttr) {
+this.typeAttr = typeAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","showAttrGroup","idreqAttrGroup","linkAttrGroup","stringSimpleType"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

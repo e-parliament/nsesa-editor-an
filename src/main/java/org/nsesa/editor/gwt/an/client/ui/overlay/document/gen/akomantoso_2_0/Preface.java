@@ -22,7 +22,7 @@ public Preface(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"blockElementsGroup","prefaceContainersGroup","coreoptAttrGroup"};
+    String[] subtypes = new String[]{"ul","toc","tblock","blockList","container","p","longTitle","block","table","ol","foreign","formula"};
     return  subtypes;
 }
 }

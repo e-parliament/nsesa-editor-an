@@ -22,7 +22,7 @@ public Preamble(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"blockElementsGroup","preambleContainersGroup","coreoptAttrGroup"};
+    String[] subtypes = new String[]{"toc","ul","citations","tblock","block","table","recitals","container","blockList","p","ol","foreign","formula"};
     return  subtypes;
 }
 }

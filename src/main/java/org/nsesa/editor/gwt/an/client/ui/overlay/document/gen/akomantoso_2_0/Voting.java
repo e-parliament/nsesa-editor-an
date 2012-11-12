@@ -22,7 +22,7 @@ public Voting(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"quorum","coreAttrGroup","count","linkoptAttrGroup","idreqAttrGroup","outcomeAttrGroup","refersAttrGroup"};
+    String[] subtypes = new String[]{"quorum","count"};
     return  subtypes;
 }
 }

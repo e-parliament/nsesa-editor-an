@@ -22,7 +22,7 @@ public Eol(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"integerSimpleType","coreoptAttrGroup"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

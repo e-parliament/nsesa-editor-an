@@ -2,8 +2,7 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MetaoptComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ValueAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,37 +18,45 @@ public Keyword(Element element) {
 }
 
 // FIELDS ------------------
-private AnyURISimpleType dictionary;
-private ShowAttrGroup show;
-private ValueAttrGroup value;
+private AnyURISimpleType dictionaryAttr;
+private StringSimpleType valueAttr;
+private StringSimpleType showAsAttr;
+private StringSimpleType shortFormAttr;
 
-public AnyURISimpleType getDictionary() {
-return dictionary;
-}
-
-public void setDictionary(final AnyURISimpleType dictionary) {
-this.dictionary = dictionary;
-}
-public ShowAttrGroup getShow() {
-return show;
+public AnyURISimpleType getDictionaryAttr() {
+return dictionaryAttr;
 }
 
-public void setShow(final ShowAttrGroup show) {
-this.show = show;
+public void setDictionaryAttr(final AnyURISimpleType dictionaryAttr) {
+this.dictionaryAttr = dictionaryAttr;
 }
-public ValueAttrGroup getValue() {
-return value;
+public StringSimpleType getValueAttr() {
+return valueAttr;
 }
 
-public void setValue(final ValueAttrGroup value) {
-this.value = value;
+public void setValueAttr(final StringSimpleType valueAttr) {
+this.valueAttr = valueAttr;
+}
+public StringSimpleType getShowAsAttr() {
+return showAsAttr;
+}
+
+public void setShowAsAttr(final StringSimpleType showAsAttr) {
+this.showAsAttr = showAsAttr;
+}
+public StringSimpleType getShortFormAttr() {
+return shortFormAttr;
+}
+
+public void setShortFormAttr(final StringSimpleType shortFormAttr) {
+this.shortFormAttr = shortFormAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","valueAttrGroup","showAttrGroup","idoptAttrGroup","anyURISimpleType"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

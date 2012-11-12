@@ -31,7 +31,7 @@ private Result result;
 private java.util.List<Supports> supportses = new ArrayList<Supports>();
 private java.util.List<IsAnalogTo> isAnalogTos = new ArrayList<IsAnalogTo>();
 private java.util.List<Applies> applieses = new ArrayList<Applies>();
-private java.util.List<Extends> extendzs = new ArrayList<Extends>();
+private java.util.List<Extends> extend_s = new ArrayList<Extends>();
 private java.util.List<Restricts> restrictses = new ArrayList<Restricts>();
 private java.util.List<Derogates> derogateses = new ArrayList<Derogates>();
 private java.util.List<Contrasts> contrastses = new ArrayList<Contrasts>();
@@ -68,12 +68,12 @@ return applieses;
 public void setApplies(final java.util.List<Applies> applieses) {
 this.applieses = applieses;
 }
-public java.util.List<Extends> getExtendz() {
-return extendzs;
+public java.util.List<Extends> getExtend_() {
+return extend_s;
 }
 
-public void setExtendz(final java.util.List<Extends> extendzs) {
-this.extendzs = extendzs;
+public void setExtend_(final java.util.List<Extends> extend_s) {
+this.extend_s = extend_s;
 }
 public java.util.List<Restricts> getRestricts() {
 return restrictses;

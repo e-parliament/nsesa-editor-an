@@ -17,29 +17,29 @@ public Rmod(Element element) {
 }
 
 // FIELDS ------------------
-private AnyURISimpleType from;
-private AnyURISimpleType upTo;
+private AnyURISimpleType fromAttr;
+private AnyURISimpleType upToAttr;
 
-public AnyURISimpleType getFrom() {
-return from;
+public AnyURISimpleType getFromAttr() {
+return fromAttr;
 }
 
-public void setFrom(final AnyURISimpleType from) {
-this.from = from;
+public void setFromAttr(final AnyURISimpleType fromAttr) {
+this.fromAttr = fromAttr;
 }
-public AnyURISimpleType getUpTo() {
-return upTo;
+public AnyURISimpleType getUpToAttr() {
+return upToAttr;
 }
 
-public void setUpTo(final AnyURISimpleType upTo) {
-this.upTo = upTo;
+public void setUpToAttr(final AnyURISimpleType upToAttr) {
+this.upToAttr = upToAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"inlineCMGroup","quotedText","quotedStructure","corereqAttrGroup","anyURISimpleType"};
+    String[] subtypes = new String[]{"person","neutralCitation","docType","location","remark","docStatus","change","entity","authorialNote","img","party","legislature","event","quotedStructure","eol","role","opinion","quantity","extractStructure","eop","fillIn","signature","docStage","mmod","docCommittee","vote","ins","mod","noteRef","docNumber","rref","marker","session","recordedTime","lawyer","docPurpose","extractText","span","sub","concept","courtType","docJurisdiction","object","sup","docProponent","date","omissis","rmod","organization","def","docketNumber","judge","quotedText","popup","inline","docTitle","del","docDate","relatedDocument","affectedDocument","mref","docIntroducer","b","placeholder","a","outcome","i","process","ref","u","term","shortTitle"};
     return  subtypes;
 }
 }

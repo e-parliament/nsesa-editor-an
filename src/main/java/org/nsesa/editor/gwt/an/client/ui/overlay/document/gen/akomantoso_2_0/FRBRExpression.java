@@ -1,7 +1,8 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CorePropertiesComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ExprPropertiesGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRlanguage;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRtranslation;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,21 +18,29 @@ public FRBRExpression(Element element) {
 }
 
 // FIELDS ------------------
-private ExprPropertiesGroup exprProperties;
+private java.util.List<FRBRlanguage> FRBRlanguages = new ArrayList<FRBRlanguage>();
+private java.util.List<FRBRtranslation> FRBRtranslations = new ArrayList<FRBRtranslation>();
 
-public ExprPropertiesGroup getExprProperties() {
-return exprProperties;
+public java.util.List<FRBRlanguage> getFRBRlanguage() {
+return FRBRlanguages;
 }
 
-public void setExprProperties(final ExprPropertiesGroup exprProperties) {
-this.exprProperties = exprProperties;
+public void setFRBRlanguage(final java.util.List<FRBRlanguage> FRBRlanguages) {
+this.FRBRlanguages = FRBRlanguages;
+}
+public java.util.List<FRBRtranslation> getFRBRtranslation() {
+return FRBRtranslations;
+}
+
+public void setFRBRtranslation(final java.util.List<FRBRtranslation> FRBRtranslations) {
+this.FRBRtranslations = FRBRtranslations;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"FRBRthis","FRBRalias","exprPropertiesGroup","componentInfo","FRBRuri","FRBRauthor","FRBRdate","preservation"};
+    String[] subtypes = new String[]{"FRBRthis","FRBRalias","FRBRlanguage","componentInfo","FRBRuri","FRBRauthor","FRBRdate","preservation","FRBRtranslation"};
     return  subtypes;
 }
 }

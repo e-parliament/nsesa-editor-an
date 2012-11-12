@@ -22,7 +22,7 @@ public Conclusions(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"blockElementsGroup","basicContainersGroup","coreoptAttrGroup"};
+    String[] subtypes = new String[]{"ul","toc","tblock","blockList","container","p","block","table","ol","foreign","formula"};
     return  subtypes;
 }
 }

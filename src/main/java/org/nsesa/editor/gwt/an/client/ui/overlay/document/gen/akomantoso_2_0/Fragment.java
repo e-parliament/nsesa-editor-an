@@ -22,7 +22,7 @@ public Fragment(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"fragmentBody","anyURISimpleType","meta"};
+    String[] subtypes = new String[]{"fragmentBody","meta"};
     return  subtypes;
 }
 }

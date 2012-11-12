@@ -22,7 +22,7 @@ public Application(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","periodAttrGroup","idoptAttrGroup"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

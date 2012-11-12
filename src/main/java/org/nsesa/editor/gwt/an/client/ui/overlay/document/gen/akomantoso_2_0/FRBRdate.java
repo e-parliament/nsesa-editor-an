@@ -1,8 +1,8 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MetaoptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NameAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DateAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DateSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,29 +18,29 @@ public FRBRdate(Element element) {
 }
 
 // FIELDS ------------------
-private NameAttrGroup name;
-private DateAttrGroup date;
+private DateSimpleType dateAttr;
+private StringSimpleType nameAttr;
 
-public NameAttrGroup getName() {
-return name;
+public DateSimpleType getDateAttr() {
+return dateAttr;
 }
 
-public void setName(final NameAttrGroup name) {
-this.name = name;
+public void setDateAttr(final DateSimpleType dateAttr) {
+this.dateAttr = dateAttr;
 }
-public DateAttrGroup getDate() {
-return date;
+public StringSimpleType getNameAttr() {
+return nameAttr;
 }
 
-public void setDate(final DateAttrGroup date) {
-this.date = date;
+public void setNameAttr(final StringSimpleType nameAttr) {
+this.nameAttr = nameAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","nameAttrGroup","idoptAttrGroup","dateAttrGroup"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

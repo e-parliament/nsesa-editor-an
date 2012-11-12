@@ -17,21 +17,21 @@ public FRBRlanguage(Element element) {
 }
 
 // FIELDS ------------------
-private LanguageSimpleType language;
+private LanguageSimpleType languageAttr;
 
-public LanguageSimpleType getLanguage() {
-return language;
+public LanguageSimpleType getLanguageAttr() {
+return languageAttr;
 }
 
-public void setLanguage(final LanguageSimpleType language) {
-this.language = language;
+public void setLanguageAttr(final LanguageSimpleType languageAttr) {
+this.languageAttr = languageAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","languageSimpleType","idoptAttrGroup"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

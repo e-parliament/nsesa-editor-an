@@ -1,11 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NameAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ComponentData;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,48 +20,15 @@ public ComponentData(Element element) {
 }
 
 // FIELDS ------------------
-private NameAttrGroup name;
-private CoreAttrGroup core;
-private IdreqAttrGroup idreq;
-private ShowAttrGroup show;
-private LinkAttrGroup link;
 private java.util.List<ComponentData> componentDatas = new ArrayList<ComponentData>();
+private IDSimpleType idAttr;
+private NMTOKENSimpleType evolvingIdAttr;
+private AmendableWidgetImpl wildcardContentAttr;
+private AnyURISimpleType hrefAttr;
+private StringSimpleType nameAttr;
+private StringSimpleType showAsAttr;
+private StringSimpleType shortFormAttr;
 
-public NameAttrGroup getName() {
-return name;
-}
-
-public void setName(final NameAttrGroup name) {
-this.name = name;
-}
-public CoreAttrGroup getCore() {
-return core;
-}
-
-public void setCore(final CoreAttrGroup core) {
-this.core = core;
-}
-public IdreqAttrGroup getIdreq() {
-return idreq;
-}
-
-public void setIdreq(final IdreqAttrGroup idreq) {
-this.idreq = idreq;
-}
-public ShowAttrGroup getShow() {
-return show;
-}
-
-public void setShow(final ShowAttrGroup show) {
-this.show = show;
-}
-public LinkAttrGroup getLink() {
-return link;
-}
-
-public void setLink(final LinkAttrGroup link) {
-this.link = link;
-}
 public java.util.List<ComponentData> getComponentData() {
 return componentDatas;
 }
@@ -70,12 +36,61 @@ return componentDatas;
 public void setComponentData(final java.util.List<ComponentData> componentDatas) {
 this.componentDatas = componentDatas;
 }
+public IDSimpleType getIdAttr() {
+return idAttr;
+}
+
+public void setIdAttr(final IDSimpleType idAttr) {
+this.idAttr = idAttr;
+}
+public NMTOKENSimpleType getEvolvingIdAttr() {
+return evolvingIdAttr;
+}
+
+public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+this.evolvingIdAttr = evolvingIdAttr;
+}
+public AmendableWidgetImpl getWildcardContentAttr() {
+return wildcardContentAttr;
+}
+
+public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+this.wildcardContentAttr = wildcardContentAttr;
+}
+public AnyURISimpleType getHrefAttr() {
+return hrefAttr;
+}
+
+public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+this.hrefAttr = hrefAttr;
+}
+public StringSimpleType getNameAttr() {
+return nameAttr;
+}
+
+public void setNameAttr(final StringSimpleType nameAttr) {
+this.nameAttr = nameAttr;
+}
+public StringSimpleType getShowAsAttr() {
+return showAsAttr;
+}
+
+public void setShowAsAttr(final StringSimpleType showAsAttr) {
+this.showAsAttr = showAsAttr;
+}
+public StringSimpleType getShortFormAttr() {
+return shortFormAttr;
+}
+
+public void setShortFormAttr(final StringSimpleType shortFormAttr) {
+this.shortFormAttr = shortFormAttr;
+}
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","componentData","nameAttrGroup","showAttrGroup","idreqAttrGroup","linkAttrGroup"};
+    String[] subtypes = new String[]{"componentData"};
     return  subtypes;
 }
 }

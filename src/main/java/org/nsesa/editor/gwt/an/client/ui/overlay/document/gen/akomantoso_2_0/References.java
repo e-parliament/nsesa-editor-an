@@ -22,7 +22,7 @@ public References(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"TLCsGroup","sourceAttrGroup","docRefsGroup"};
+    String[] subtypes = new String[]{"TLCEvent","TLCPerson","TLCProcess","hasAttachment","TLCReference","TLCLocation","attachmentOf","TLCConcept","TLCObject","jurisprudence","TLCTerm","passiveRef","original","TLCRole","activeRef","TLCOrganization"};
     return  subtypes;
 }
 }

@@ -17,21 +17,21 @@ public EolTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private IntegerSimpleType breakat;
+private IntegerSimpleType breakatAttr;
 
-public IntegerSimpleType getBreakat() {
-return breakat;
+public IntegerSimpleType getBreakatAttr() {
+return breakatAttr;
 }
 
-public void setBreakat(final IntegerSimpleType breakat) {
-this.breakat = breakat;
+public void setBreakatAttr(final IntegerSimpleType breakatAttr) {
+this.breakatAttr = breakatAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"integerSimpleType","coreoptAttrGroup"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

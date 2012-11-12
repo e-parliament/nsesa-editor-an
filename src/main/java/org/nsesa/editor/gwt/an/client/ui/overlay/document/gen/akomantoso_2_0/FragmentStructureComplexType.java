@@ -18,16 +18,16 @@ public FragmentStructureComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private AnyURISimpleType includedIn;
+private AnyURISimpleType includedInAttr;
 private Meta meta;
 private FragmentBody fragmentBody;
 
-public AnyURISimpleType getIncludedIn() {
-return includedIn;
+public AnyURISimpleType getIncludedInAttr() {
+return includedInAttr;
 }
 
-public void setIncludedIn(final AnyURISimpleType includedIn) {
-this.includedIn = includedIn;
+public void setIncludedInAttr(final AnyURISimpleType includedInAttr) {
+this.includedInAttr = includedInAttr;
 }
 public Meta getMeta() {
 return meta;
@@ -48,7 +48,7 @@ this.fragmentBody = fragmentBody;
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"fragmentBody","anyURISimpleType","meta"};
+    String[] subtypes = new String[]{"fragmentBody","meta"};
     return  subtypes;
 }
 }

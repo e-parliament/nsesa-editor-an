@@ -1,11 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SourceAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ActiveModifications;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PassiveModifications;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Judicial;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Parliamentary;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OtherAnalysis;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,20 +21,13 @@ public Analysis(Element element) {
 }
 
 // FIELDS ------------------
-private SourceAttrGroup source;
 private ActiveModifications activeModifications;
 private PassiveModifications passiveModifications;
 private Judicial judicial;
 private Parliamentary parliamentary;
 private java.util.List<OtherAnalysis> otherAnalysises = new ArrayList<OtherAnalysis>();
+private AnyURISimpleType sourceAttr;
 
-public SourceAttrGroup getSource() {
-return source;
-}
-
-public void setSource(final SourceAttrGroup source) {
-this.source = source;
-}
 public ActiveModifications getActiveModifications() {
 return activeModifications;
 }
@@ -70,12 +63,19 @@ return otherAnalysises;
 public void setOtherAnalysis(final java.util.List<OtherAnalysis> otherAnalysises) {
 this.otherAnalysises = otherAnalysises;
 }
+public AnyURISimpleType getSourceAttr() {
+return sourceAttr;
+}
+
+public void setSourceAttr(final AnyURISimpleType sourceAttr) {
+this.sourceAttr = sourceAttr;
+}
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"judicial","parliamentary","activeModifications","passiveModifications","sourceAttrGroup","otherAnalysis"};
+    String[] subtypes = new String[]{"judicial","parliamentary","activeModifications","passiveModifications","otherAnalysis"};
     return  subtypes;
 }
 }

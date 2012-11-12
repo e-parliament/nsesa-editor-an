@@ -4,7 +4,6 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Met
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.YesNoTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,53 +19,53 @@ public FRBRtranslation(Element element) {
 }
 
 // FIELDS ------------------
-private LanguageSimpleType fromLanguage;
-private YesNoTypeSimpleType authoritative;
-private LanguageSimpleType pivot;
-private AnyURISimpleType by;
-private LinkAttrGroup link;
+private LanguageSimpleType fromLanguageAttr;
+private YesNoTypeSimpleType authoritativeAttr;
+private LanguageSimpleType pivotAttr;
+private AnyURISimpleType byAttr;
+private AnyURISimpleType hrefAttr;
 
-public LanguageSimpleType getFromLanguage() {
-return fromLanguage;
-}
-
-public void setFromLanguage(final LanguageSimpleType fromLanguage) {
-this.fromLanguage = fromLanguage;
-}
-public YesNoTypeSimpleType getAuthoritative() {
-return authoritative;
+public LanguageSimpleType getFromLanguageAttr() {
+return fromLanguageAttr;
 }
 
-public void setAuthoritative(final YesNoTypeSimpleType authoritative) {
-this.authoritative = authoritative;
+public void setFromLanguageAttr(final LanguageSimpleType fromLanguageAttr) {
+this.fromLanguageAttr = fromLanguageAttr;
 }
-public LanguageSimpleType getPivot() {
-return pivot;
-}
-
-public void setPivot(final LanguageSimpleType pivot) {
-this.pivot = pivot;
-}
-public AnyURISimpleType getBy() {
-return by;
+public YesNoTypeSimpleType getAuthoritativeAttr() {
+return authoritativeAttr;
 }
 
-public void setBy(final AnyURISimpleType by) {
-this.by = by;
+public void setAuthoritativeAttr(final YesNoTypeSimpleType authoritativeAttr) {
+this.authoritativeAttr = authoritativeAttr;
 }
-public LinkAttrGroup getLink() {
-return link;
+public LanguageSimpleType getPivotAttr() {
+return pivotAttr;
 }
 
-public void setLink(final LinkAttrGroup link) {
-this.link = link;
+public void setPivotAttr(final LanguageSimpleType pivotAttr) {
+this.pivotAttr = pivotAttr;
+}
+public AnyURISimpleType getByAttr() {
+return byAttr;
+}
+
+public void setByAttr(final AnyURISimpleType byAttr) {
+this.byAttr = byAttr;
+}
+public AnyURISimpleType getHrefAttr() {
+return hrefAttr;
+}
+
+public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+this.hrefAttr = hrefAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","languageSimpleType","yesNoTypeSimpleType","linkAttrGroup","idoptAttrGroup","anyURISimpleType"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

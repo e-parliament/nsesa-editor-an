@@ -22,7 +22,7 @@ public JudgementStructureComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private VersionTypeSimpleType contains;
+private VersionTypeSimpleType containsAttr;
 private Meta meta;
 private CoverPage coverPage;
 private Header header;
@@ -30,12 +30,12 @@ private JudgementBody judgementBody;
 private Conclusions conclusions;
 private Attachments attachments;
 
-public VersionTypeSimpleType getContains() {
-return contains;
+public VersionTypeSimpleType getContainsAttr() {
+return containsAttr;
 }
 
-public void setContains(final VersionTypeSimpleType contains) {
-this.contains = contains;
+public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
+this.containsAttr = containsAttr;
 }
 public Meta getMeta() {
 return meta;
@@ -84,7 +84,7 @@ this.attachments = attachments;
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"conclusions","judgementBody","versionTypeSimpleType","coverPage","attachments","header","meta"};
+    String[] subtypes = new String[]{"conclusions","judgementBody","coverPage","attachments","header","meta"};
     return  subtypes;
 }
 }

@@ -22,7 +22,7 @@ public AkomaNtoso(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"components","documentTypeGroup"};
+    String[] subtypes = new String[]{"amendment","amendmentList","bill","officialGazette","doc","debate","judgement","debateReport","components","act","documentCollection"};
     return  subtypes;
 }
 }

@@ -22,7 +22,7 @@ public Bill(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"conclusions","body","preface","versionTypeSimpleType","preamble","coverPage","attachments","meta"};
+    String[] subtypes = new String[]{"conclusions","body","preface","preamble","coverPage","attachments","meta"};
     return  subtypes;
 }
 }

@@ -17,21 +17,21 @@ public LegalSystemMod(Element element) {
 }
 
 // FIELDS ------------------
-private LegalSystemModsSimpleType typez;
+private LegalSystemModsSimpleType typeAttr;
 
-public LegalSystemModsSimpleType getTypez() {
-return typez;
+public LegalSystemModsSimpleType getTypeAttr() {
+return typeAttr;
 }
 
-public void setTypez(final LegalSystemModsSimpleType typez) {
-this.typez = typez;
+public void setTypeAttr(final LegalSystemModsSimpleType typeAttr) {
+this.typeAttr = typeAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"application","modifiersAttrGroup","coreAttrGroup","condition","LegalSystemModsSimpleType","idreqAttrGroup","efficacy","destination","duration","source","enactmentAttrGroup","force","refersAttrGroup"};
+    String[] subtypes = new String[]{"duration","application","source","condition","efficacy","force","destination"};
     return  subtypes;
 }
 }

@@ -22,7 +22,7 @@ public TLCObject(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","showAttrGroup","idreqAttrGroup","linkAttrGroup"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

@@ -1,10 +1,8 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AnyOtherTypeComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ActorAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OutcomeAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RoleAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DateAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DateSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,45 +18,45 @@ public Step(Element element) {
 }
 
 // FIELDS ------------------
-private ActorAttrGroup actor;
-private OutcomeAttrGroup outcome;
-private RoleAttrGroup role;
-private DateAttrGroup date;
+private DateSimpleType dateAttr;
+private AnyURISimpleType asAttr;
+private AnyURISimpleType actorAttr;
+private AnyURISimpleType outcomeAttr;
 
-public ActorAttrGroup getActor() {
-return actor;
-}
-
-public void setActor(final ActorAttrGroup actor) {
-this.actor = actor;
-}
-public OutcomeAttrGroup getOutcome() {
-return outcome;
+public DateSimpleType getDateAttr() {
+return dateAttr;
 }
 
-public void setOutcome(final OutcomeAttrGroup outcome) {
-this.outcome = outcome;
+public void setDateAttr(final DateSimpleType dateAttr) {
+this.dateAttr = dateAttr;
 }
-public RoleAttrGroup getRole() {
-return role;
-}
-
-public void setRole(final RoleAttrGroup role) {
-this.role = role;
-}
-public DateAttrGroup getDate() {
-return date;
+public AnyURISimpleType getAsAttr() {
+return asAttr;
 }
 
-public void setDate(final DateAttrGroup date) {
-this.date = date;
+public void setAsAttr(final AnyURISimpleType asAttr) {
+this.asAttr = asAttr;
+}
+public AnyURISimpleType getActorAttr() {
+return actorAttr;
+}
+
+public void setActorAttr(final AnyURISimpleType actorAttr) {
+this.actorAttr = actorAttr;
+}
+public AnyURISimpleType getOutcomeAttr() {
+return outcomeAttr;
+}
+
+public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
+this.outcomeAttr = outcomeAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","roleAttrGroup","actorAttrGroup","*","linkoptAttrGroup","idoptAttrGroup","outcomeAttrGroup","dateAttrGroup"};
+    String[] subtypes = new String[]{"*"};
     return  subtypes;
 }
 }

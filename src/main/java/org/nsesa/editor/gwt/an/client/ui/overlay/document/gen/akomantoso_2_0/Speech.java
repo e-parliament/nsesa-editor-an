@@ -22,7 +22,7 @@ public Speech(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"blockElementsGroup","num","subheading","speechAttsAttrGroup","from","coreoptAttrGroup","heading"};
+    String[] subtypes = new String[]{"toc","ul","tblock","subheading","block","from","table","num","blockList","p","ol","foreign","heading"};
     return  subtypes;
 }
 }

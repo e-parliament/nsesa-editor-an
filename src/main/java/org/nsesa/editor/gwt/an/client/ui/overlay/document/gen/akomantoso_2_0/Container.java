@@ -22,7 +22,7 @@ public Container(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"blockElementsGroup","container","nameAttrGroup","corereqAttrGroup"};
+    String[] subtypes = new String[]{"ul","toc","tblock","blockList","container","p","block","table","ol","foreign"};
     return  subtypes;
 }
 }

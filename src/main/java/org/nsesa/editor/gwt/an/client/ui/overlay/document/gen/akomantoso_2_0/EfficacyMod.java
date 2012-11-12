@@ -17,21 +17,21 @@ public EfficacyMod(Element element) {
 }
 
 // FIELDS ------------------
-private EfficacyModsSimpleType typez;
+private EfficacyModsSimpleType typeAttr;
 
-public EfficacyModsSimpleType getTypez() {
-return typez;
+public EfficacyModsSimpleType getTypeAttr() {
+return typeAttr;
 }
 
-public void setTypez(final EfficacyModsSimpleType typez) {
-this.typez = typez;
+public void setTypeAttr(final EfficacyModsSimpleType typeAttr) {
+this.typeAttr = typeAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"application","modifiersAttrGroup","coreAttrGroup","condition","EfficacyModsSimpleType","idreqAttrGroup","efficacy","destination","duration","source","enactmentAttrGroup","force","refersAttrGroup"};
+    String[] subtypes = new String[]{"duration","application","source","condition","efficacy","force","destination"};
     return  subtypes;
 }
 }

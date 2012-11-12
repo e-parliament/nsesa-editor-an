@@ -17,21 +17,21 @@ public Placeholder(Element element) {
 }
 
 // FIELDS ------------------
-private StringSimpleType originalText;
+private StringSimpleType originalTextAttr;
 
-public StringSimpleType getOriginalText() {
-return originalText;
+public StringSimpleType getOriginalTextAttr() {
+return originalTextAttr;
 }
 
-public void setOriginalText(final StringSimpleType originalText) {
-this.originalText = originalText;
+public void setOriginalTextAttr(final StringSimpleType originalTextAttr) {
+this.originalTextAttr = originalTextAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"inlineCMGroup","coreoptAttrGroup","stringSimpleType"};
+    String[] subtypes = new String[]{"person","neutralCitation","docType","remark","docStatus","location","change","entity","authorialNote","img","party","legislature","event","eol","role","opinion","quantity","extractStructure","eop","fillIn","signature","docStage","mmod","docCommittee","vote","ins","mod","noteRef","docNumber","rref","marker","session","recordedTime","lawyer","docPurpose","extractText","span","sub","concept","courtType","docJurisdiction","object","sup","docProponent","date","omissis","rmod","organization","def","docketNumber","judge","popup","inline","docTitle","del","docDate","relatedDocument","affectedDocument","mref","docIntroducer","b","placeholder","a","outcome","i","process","ref","u","term","shortTitle"};
     return  subtypes;
 }
 }

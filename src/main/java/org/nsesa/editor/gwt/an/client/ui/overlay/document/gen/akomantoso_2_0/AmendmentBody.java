@@ -22,7 +22,7 @@ public AmendmentBody(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"amendmentBlockGroup","coreoptAttrGroup"};
+    String[] subtypes = new String[]{"amendmentJustification","amendmentReference","amendmentHeading","amendmentContent"};
     return  subtypes;
 }
 }

@@ -22,7 +22,7 @@ public JudgementBody(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"judgementBlockGroup","coreoptAttrGroup"};
+    String[] subtypes = new String[]{"background","motivation","decision","introduction"};
     return  subtypes;
 }
 }

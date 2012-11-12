@@ -22,7 +22,7 @@ public Applies(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","modifiersAttrGroup","source","condition","enactmentAttrGroup","idreqAttrGroup","destination","refersAttrGroup"};
+    String[] subtypes = new String[]{"source","condition","destination"};
     return  subtypes;
 }
 }

@@ -1,12 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkoptAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OutcomeAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RefersAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Quorum;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Count;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,49 +20,15 @@ public ParliamentaryAnalysisTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private LinkoptAttrGroup linkopt;
-private CoreAttrGroup core;
-private IdreqAttrGroup idreq;
-private OutcomeAttrGroup outcome;
-private RefersAttrGroup refers;
 private java.util.List<Quorum> quorums = new ArrayList<Quorum>();
 private java.util.List<Count> counts = new ArrayList<Count>();
+private AnyURISimpleType hrefAttr;
+private AmendableWidgetImpl wildcardContentAttr;
+private IDSimpleType idAttr;
+private NMTOKENSimpleType evolvingIdAttr;
+private AnyURISimpleType outcomeAttr;
+private AnyURISimpleType refersToAttr;
 
-public LinkoptAttrGroup getLinkopt() {
-return linkopt;
-}
-
-public void setLinkopt(final LinkoptAttrGroup linkopt) {
-this.linkopt = linkopt;
-}
-public CoreAttrGroup getCore() {
-return core;
-}
-
-public void setCore(final CoreAttrGroup core) {
-this.core = core;
-}
-public IdreqAttrGroup getIdreq() {
-return idreq;
-}
-
-public void setIdreq(final IdreqAttrGroup idreq) {
-this.idreq = idreq;
-}
-public OutcomeAttrGroup getOutcome() {
-return outcome;
-}
-
-public void setOutcome(final OutcomeAttrGroup outcome) {
-this.outcome = outcome;
-}
-public RefersAttrGroup getRefers() {
-return refers;
-}
-
-public void setRefers(final RefersAttrGroup refers) {
-this.refers = refers;
-}
 public java.util.List<Quorum> getQuorum() {
 return quorums;
 }
@@ -79,12 +43,54 @@ return counts;
 public void setCount(final java.util.List<Count> counts) {
 this.counts = counts;
 }
+public AnyURISimpleType getHrefAttr() {
+return hrefAttr;
+}
+
+public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+this.hrefAttr = hrefAttr;
+}
+public AmendableWidgetImpl getWildcardContentAttr() {
+return wildcardContentAttr;
+}
+
+public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+this.wildcardContentAttr = wildcardContentAttr;
+}
+public IDSimpleType getIdAttr() {
+return idAttr;
+}
+
+public void setIdAttr(final IDSimpleType idAttr) {
+this.idAttr = idAttr;
+}
+public NMTOKENSimpleType getEvolvingIdAttr() {
+return evolvingIdAttr;
+}
+
+public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+this.evolvingIdAttr = evolvingIdAttr;
+}
+public AnyURISimpleType getOutcomeAttr() {
+return outcomeAttr;
+}
+
+public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
+this.outcomeAttr = outcomeAttr;
+}
+public AnyURISimpleType getRefersToAttr() {
+return refersToAttr;
+}
+
+public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+this.refersToAttr = refersToAttr;
+}
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"quorum","coreAttrGroup","count","linkoptAttrGroup","idreqAttrGroup","outcomeAttrGroup","refersAttrGroup"};
+    String[] subtypes = new String[]{"quorum","count"};
     return  subtypes;
 }
 }

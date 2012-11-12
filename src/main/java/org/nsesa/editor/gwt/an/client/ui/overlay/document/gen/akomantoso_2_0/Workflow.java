@@ -1,7 +1,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SourceAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Step;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,16 +17,9 @@ public Workflow(Element element) {
 }
 
 // FIELDS ------------------
-private SourceAttrGroup source;
 private java.util.List<Step> steps = new ArrayList<Step>();
+private AnyURISimpleType sourceAttr;
 
-public SourceAttrGroup getSource() {
-return source;
-}
-
-public void setSource(final SourceAttrGroup source) {
-this.source = source;
-}
 public java.util.List<Step> getStep() {
 return steps;
 }
@@ -34,12 +27,19 @@ return steps;
 public void setStep(final java.util.List<Step> steps) {
 this.steps = steps;
 }
+public AnyURISimpleType getSourceAttr() {
+return sourceAttr;
+}
+
+public void setSourceAttr(final AnyURISimpleType sourceAttr) {
+this.sourceAttr = sourceAttr;
+}
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"sourceAttrGroup","step"};
+    String[] subtypes = new String[]{"step"};
     return  subtypes;
 }
 }

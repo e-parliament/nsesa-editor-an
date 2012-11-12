@@ -1,8 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MarkeroptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NotesAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PlacementTypeSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,29 +19,45 @@ public NoteRef(Element element) {
 }
 
 // FIELDS ------------------
-private LinkAttrGroup link;
-private NotesAttrGroup notes;
+private AnyURISimpleType hrefAttr;
+private StringSimpleType markerAttr;
+private PlacementTypeSimpleType placementAttr;
+private AnyURISimpleType placementBaseAttr;
 
-public LinkAttrGroup getLink() {
-return link;
+public AnyURISimpleType getHrefAttr() {
+return hrefAttr;
 }
 
-public void setLink(final LinkAttrGroup link) {
-this.link = link;
+public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+this.hrefAttr = hrefAttr;
 }
-public NotesAttrGroup getNotes() {
-return notes;
+public StringSimpleType getMarkerAttr() {
+return markerAttr;
 }
 
-public void setNotes(final NotesAttrGroup notes) {
-this.notes = notes;
+public void setMarkerAttr(final StringSimpleType markerAttr) {
+this.markerAttr = markerAttr;
+}
+public PlacementTypeSimpleType getPlacementAttr() {
+return placementAttr;
+}
+
+public void setPlacementAttr(final PlacementTypeSimpleType placementAttr) {
+this.placementAttr = placementAttr;
+}
+public AnyURISimpleType getPlacementBaseAttr() {
+return placementBaseAttr;
+}
+
+public void setPlacementBaseAttr(final AnyURISimpleType placementBaseAttr) {
+this.placementBaseAttr = placementBaseAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"notesAttrGroup","linkAttrGroup","coreoptAttrGroup"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

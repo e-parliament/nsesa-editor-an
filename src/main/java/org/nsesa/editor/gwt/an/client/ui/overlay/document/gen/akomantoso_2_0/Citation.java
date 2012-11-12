@@ -22,7 +22,7 @@ public Citation(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"blockElementsGroup","num","subheading","corereqAttrGroup","heading"};
+    String[] subtypes = new String[]{"num","ul","toc","tblock","subheading","blockList","p","block","table","ol","foreign","heading"};
     return  subtypes;
 }
 }

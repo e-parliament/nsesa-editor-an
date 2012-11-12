@@ -1,10 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SourceAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRWork;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRExpression;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRManifestation;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FRBRItem;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,19 +20,12 @@ public Identification(Element element) {
 }
 
 // FIELDS ------------------
-private SourceAttrGroup source;
 private FRBRWork FRBRWork;
 private FRBRExpression FRBRExpression;
 private FRBRManifestation FRBRManifestation;
 private FRBRItem FRBRItem;
+private AnyURISimpleType sourceAttr;
 
-public SourceAttrGroup getSource() {
-return source;
-}
-
-public void setSource(final SourceAttrGroup source) {
-this.source = source;
-}
 public FRBRWork getFRBRWork() {
 return FRBRWork;
 }
@@ -61,12 +54,19 @@ return FRBRItem;
 public void setFRBRItem(final FRBRItem FRBRItem) {
 this.FRBRItem = FRBRItem;
 }
+public AnyURISimpleType getSourceAttr() {
+return sourceAttr;
+}
+
+public void setSourceAttr(final AnyURISimpleType sourceAttr) {
+this.sourceAttr = sourceAttr;
+}
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"FRBRManifestation","FRBRWork","FRBRItem","sourceAttrGroup","FRBRExpression"};
+    String[] subtypes = new String[]{"FRBRManifestation","FRBRWork","FRBRItem","FRBRExpression"};
     return  subtypes;
 }
 }

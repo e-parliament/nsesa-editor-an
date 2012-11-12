@@ -1,7 +1,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MetaoptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ValueAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,21 +17,21 @@ public ValueTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private ValueAttrGroup value;
+private StringSimpleType valueAttr;
 
-public ValueAttrGroup getValue() {
-return value;
+public StringSimpleType getValueAttr() {
+return valueAttr;
 }
 
-public void setValue(final ValueAttrGroup value) {
-this.value = value;
+public void setValueAttr(final StringSimpleType valueAttr) {
+this.valueAttr = valueAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","valueAttrGroup","idoptAttrGroup"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

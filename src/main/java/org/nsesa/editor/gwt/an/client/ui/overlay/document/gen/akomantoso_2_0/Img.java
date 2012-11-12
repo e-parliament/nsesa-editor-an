@@ -2,7 +2,8 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MarkeroptComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IntegerSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SrcAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,37 +19,45 @@ public Img(Element element) {
 }
 
 // FIELDS ------------------
-private IntegerSimpleType width;
-private IntegerSimpleType height;
-private SrcAttrGroup src;
+private IntegerSimpleType widthAttr;
+private IntegerSimpleType heightAttr;
+private AnyURISimpleType srcAttr;
+private StringSimpleType altAttr;
 
-public IntegerSimpleType getWidth() {
-return width;
-}
-
-public void setWidth(final IntegerSimpleType width) {
-this.width = width;
-}
-public IntegerSimpleType getHeight() {
-return height;
+public IntegerSimpleType getWidthAttr() {
+return widthAttr;
 }
 
-public void setHeight(final IntegerSimpleType height) {
-this.height = height;
+public void setWidthAttr(final IntegerSimpleType widthAttr) {
+this.widthAttr = widthAttr;
 }
-public SrcAttrGroup getSrc() {
-return src;
+public IntegerSimpleType getHeightAttr() {
+return heightAttr;
 }
 
-public void setSrc(final SrcAttrGroup src) {
-this.src = src;
+public void setHeightAttr(final IntegerSimpleType heightAttr) {
+this.heightAttr = heightAttr;
+}
+public AnyURISimpleType getSrcAttr() {
+return srcAttr;
+}
+
+public void setSrcAttr(final AnyURISimpleType srcAttr) {
+this.srcAttr = srcAttr;
+}
+public StringSimpleType getAltAttr() {
+return altAttr;
+}
+
+public void setAltAttr(final StringSimpleType altAttr) {
+this.altAttr = altAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"integerSimpleType","coreoptAttrGroup","srcAttrGroup"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

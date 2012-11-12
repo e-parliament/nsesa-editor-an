@@ -22,7 +22,7 @@ public Foreign(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","*","linkoptAttrGroup","idoptAttrGroup"};
+    String[] subtypes = new String[]{"*"};
     return  subtypes;
 }
 }

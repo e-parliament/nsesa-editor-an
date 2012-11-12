@@ -2,7 +2,6 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MetaoptComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkAttrGroup;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,29 +17,29 @@ public FRBRauthor(Element element) {
 }
 
 // FIELDS ------------------
-private AnyURISimpleType as;
-private LinkAttrGroup link;
+private AnyURISimpleType asAttr;
+private AnyURISimpleType hrefAttr;
 
-public AnyURISimpleType getAs() {
-return as;
+public AnyURISimpleType getAsAttr() {
+return asAttr;
 }
 
-public void setAs(final AnyURISimpleType as) {
-this.as = as;
+public void setAsAttr(final AnyURISimpleType asAttr) {
+this.asAttr = asAttr;
 }
-public LinkAttrGroup getLink() {
-return link;
+public AnyURISimpleType getHrefAttr() {
+return hrefAttr;
 }
 
-public void setLink(final LinkAttrGroup link) {
-this.link = link;
+public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+this.hrefAttr = hrefAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","linkAttrGroup","idoptAttrGroup","anyURISimpleType"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

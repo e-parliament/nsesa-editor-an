@@ -1,7 +1,6 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.VersionTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NameAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Meta;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoverPage;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Preface;
@@ -9,6 +8,7 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Pre
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MainBody;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Conclusions;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Attachments;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,8 +24,7 @@ public OpenStructureComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private VersionTypeSimpleType contains;
-private NameAttrGroup name;
+private VersionTypeSimpleType containsAttr;
 private Meta meta;
 private CoverPage coverPage;
 private Preface preface;
@@ -33,20 +32,14 @@ private Preamble preamble;
 private MainBody mainBody;
 private Conclusions conclusions;
 private Attachments attachments;
+private StringSimpleType nameAttr;
 
-public VersionTypeSimpleType getContains() {
-return contains;
+public VersionTypeSimpleType getContainsAttr() {
+return containsAttr;
 }
 
-public void setContains(final VersionTypeSimpleType contains) {
-this.contains = contains;
-}
-public NameAttrGroup getName() {
-return name;
-}
-
-public void setName(final NameAttrGroup name) {
-this.name = name;
+public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
+this.containsAttr = containsAttr;
 }
 public Meta getMeta() {
 return meta;
@@ -97,12 +90,19 @@ return attachments;
 public void setAttachments(final Attachments attachments) {
 this.attachments = attachments;
 }
+public StringSimpleType getNameAttr() {
+return nameAttr;
+}
+
+public void setNameAttr(final StringSimpleType nameAttr) {
+this.nameAttr = nameAttr;
+}
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"conclusions","preface","versionTypeSimpleType","mainBody","preamble","coverPage","nameAttrGroup","attachments","meta"};
+    String[] subtypes = new String[]{"conclusions","preface","mainBody","preamble","coverPage","attachments","meta"};
     return  subtypes;
 }
 }

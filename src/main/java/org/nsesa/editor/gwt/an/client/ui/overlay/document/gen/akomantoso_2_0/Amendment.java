@@ -22,7 +22,7 @@ public Amendment(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"conclusions","preface","versionTypeSimpleType","coverPage","attachments","amendmentBody","meta"};
+    String[] subtypes = new String[]{"conclusions","preface","coverPage","attachments","amendmentBody","meta"};
     return  subtypes;
 }
 }

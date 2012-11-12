@@ -17,21 +17,21 @@ public Result(Element element) {
 }
 
 // FIELDS ------------------
-private ResultTypeSimpleType typez;
+private ResultTypeSimpleType typeAttr;
 
-public ResultTypeSimpleType getTypez() {
-return typez;
+public ResultTypeSimpleType getTypeAttr() {
+return typeAttr;
 }
 
-public void setTypez(final ResultTypeSimpleType typez) {
-this.typez = typez;
+public void setTypeAttr(final ResultTypeSimpleType typeAttr) {
+this.typeAttr = typeAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","resultTypeSimpleType","*","linkoptAttrGroup","idoptAttrGroup"};
+    String[] subtypes = new String[]{"*"};
     return  subtypes;
 }
 }

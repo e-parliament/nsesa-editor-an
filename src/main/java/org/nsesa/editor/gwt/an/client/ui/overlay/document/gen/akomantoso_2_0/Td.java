@@ -1,7 +1,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.BlocksoptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CellattrsAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IntegerSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,21 +17,29 @@ public Td(Element element) {
 }
 
 // FIELDS ------------------
-private CellattrsAttrGroup cellattrs;
+private IntegerSimpleType rowspanAttr;
+private IntegerSimpleType colspanAttr;
 
-public CellattrsAttrGroup getCellattrs() {
-return cellattrs;
+public IntegerSimpleType getRowspanAttr() {
+return rowspanAttr;
 }
 
-public void setCellattrs(final CellattrsAttrGroup cellattrs) {
-this.cellattrs = cellattrs;
+public void setRowspanAttr(final IntegerSimpleType rowspanAttr) {
+this.rowspanAttr = rowspanAttr;
+}
+public IntegerSimpleType getColspanAttr() {
+return colspanAttr;
+}
+
+public void setColspanAttr(final IntegerSimpleType colspanAttr) {
+this.colspanAttr = colspanAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"blockElementsGroup","cellattrsAttrGroup","coreoptAttrGroup"};
+    String[] subtypes = new String[]{"ul","toc","tblock","blockList","p","block","table","ol","foreign"};
     return  subtypes;
 }
 }

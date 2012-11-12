@@ -1,7 +1,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.SourceAttrGroup;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Note;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,16 +17,9 @@ public Notes(Element element) {
 }
 
 // FIELDS ------------------
-private SourceAttrGroup source;
 private java.util.List<Note> notes = new ArrayList<Note>();
+private AnyURISimpleType sourceAttr;
 
-public SourceAttrGroup getSource() {
-return source;
-}
-
-public void setSource(final SourceAttrGroup source) {
-this.source = source;
-}
 public java.util.List<Note> getNote() {
 return notes;
 }
@@ -34,12 +27,19 @@ return notes;
 public void setNote(final java.util.List<Note> notes) {
 this.notes = notes;
 }
+public AnyURISimpleType getSourceAttr() {
+return sourceAttr;
+}
+
+public void setSourceAttr(final AnyURISimpleType sourceAttr) {
+this.sourceAttr = sourceAttr;
+}
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"sourceAttrGroup","note"};
+    String[] subtypes = new String[]{"note"};
     return  subtypes;
 }
 }

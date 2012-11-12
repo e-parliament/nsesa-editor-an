@@ -1,9 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IdreqAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoreAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShowAttrGroup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.LinkAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,45 +19,61 @@ public ReferenceTypeComplexType(Element element) {
 }
 
 // FIELDS ------------------
-private IdreqAttrGroup idreq;
-private CoreAttrGroup core;
-private ShowAttrGroup show;
-private LinkAttrGroup link;
+private IDSimpleType idAttr;
+private NMTOKENSimpleType evolvingIdAttr;
+private AmendableWidgetImpl wildcardContentAttr;
+private StringSimpleType showAsAttr;
+private StringSimpleType shortFormAttr;
+private AnyURISimpleType hrefAttr;
 
-public IdreqAttrGroup getIdreq() {
-return idreq;
-}
-
-public void setIdreq(final IdreqAttrGroup idreq) {
-this.idreq = idreq;
-}
-public CoreAttrGroup getCore() {
-return core;
+public IDSimpleType getIdAttr() {
+return idAttr;
 }
 
-public void setCore(final CoreAttrGroup core) {
-this.core = core;
+public void setIdAttr(final IDSimpleType idAttr) {
+this.idAttr = idAttr;
 }
-public ShowAttrGroup getShow() {
-return show;
-}
-
-public void setShow(final ShowAttrGroup show) {
-this.show = show;
-}
-public LinkAttrGroup getLink() {
-return link;
+public NMTOKENSimpleType getEvolvingIdAttr() {
+return evolvingIdAttr;
 }
 
-public void setLink(final LinkAttrGroup link) {
-this.link = link;
+public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+this.evolvingIdAttr = evolvingIdAttr;
+}
+public AmendableWidgetImpl getWildcardContentAttr() {
+return wildcardContentAttr;
+}
+
+public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+this.wildcardContentAttr = wildcardContentAttr;
+}
+public StringSimpleType getShowAsAttr() {
+return showAsAttr;
+}
+
+public void setShowAsAttr(final StringSimpleType showAsAttr) {
+this.showAsAttr = showAsAttr;
+}
+public StringSimpleType getShortFormAttr() {
+return shortFormAttr;
+}
+
+public void setShortFormAttr(final StringSimpleType shortFormAttr) {
+this.shortFormAttr = shortFormAttr;
+}
+public AnyURISimpleType getHrefAttr() {
+return hrefAttr;
+}
+
+public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+this.hrefAttr = hrefAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","showAttrGroup","idreqAttrGroup","linkAttrGroup"};
+    String[] subtypes = new String[]{};
     return  subtypes;
 }
 }

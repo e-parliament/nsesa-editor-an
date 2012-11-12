@@ -22,7 +22,7 @@ public CollectionBody(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"componentRef","interstitial","coreoptAttrGroup","documentTypeGroup"};
+    String[] subtypes = new String[]{"amendment","componentRef","amendmentList","bill","officialGazette","doc","debate","judgement","debateReport","act","interstitial","documentCollection"};
     return  subtypes;
 }
 }

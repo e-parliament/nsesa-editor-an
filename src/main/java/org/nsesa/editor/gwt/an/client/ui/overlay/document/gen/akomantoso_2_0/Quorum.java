@@ -22,7 +22,7 @@ public Quorum(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"coreAttrGroup","valueAttrGroup","*","linkoptAttrGroup","idreqAttrGroup","refersAttrGroup"};
+    String[] subtypes = new String[]{"*"};
     return  subtypes;
 }
 }

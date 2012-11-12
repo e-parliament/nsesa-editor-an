@@ -22,7 +22,7 @@ public Judgement(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"conclusions","judgementBody","versionTypeSimpleType","coverPage","attachments","header","meta"};
+    String[] subtypes = new String[]{"conclusions","judgementBody","coverPage","attachments","header","meta"};
     return  subtypes;
 }
 }

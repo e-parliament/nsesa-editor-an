@@ -1,7 +1,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.HierarchyComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NameAttrGroup;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,21 +17,21 @@ public Hcontainer(Element element) {
 }
 
 // FIELDS ------------------
-private NameAttrGroup name;
+private StringSimpleType nameAttr;
 
-public NameAttrGroup getName() {
-return name;
+public StringSimpleType getNameAttr() {
+return nameAttr;
 }
 
-public void setName(final NameAttrGroup name) {
-this.name = name;
+public void setNameAttr(final StringSimpleType nameAttr) {
+this.nameAttr = nameAttr;
 }
 /**
 * Returns possible children as list of String
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"content","componentRef","wrap","num","subheading","nameAttrGroup","hierElementsGroup","corereqAttrGroup","heading","intro"};
+    String[] subtypes = new String[]{"tome","subparagraph","paragraph","subheading","subsection","title","chapter","division","alinea","componentRef","subchapter","wrap","indent","subclause","list","sublist","section","intro","content","point","num","article","subpart","hcontainer","book","subtitle","part","heading","clause"};
     return  subtypes;
 }
 }

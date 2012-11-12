@@ -22,7 +22,7 @@ public Subpart(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"content","componentRef","wrap","num","subheading","hierElementsGroup","corereqAttrGroup","heading","intro"};
+    String[] subtypes = new String[]{"tome","subparagraph","paragraph","subheading","subsection","title","chapter","division","alinea","componentRef","subchapter","wrap","indent","subclause","list","sublist","section","intro","content","point","num","article","subpart","hcontainer","book","subtitle","part","heading","clause"};
     return  subtypes;
 }
 }

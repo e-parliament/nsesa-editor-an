@@ -19,16 +19,16 @@ public TextualMod(Element element) {
 }
 
 // FIELDS ------------------
-private TextualModsSimpleType typez;
+private TextualModsSimpleType typeAttr;
 private Old old;
 private New newEl;
 
-public TextualModsSimpleType getTypez() {
-return typez;
+public TextualModsSimpleType getTypeAttr() {
+return typeAttr;
 }
 
-public void setTypez(final TextualModsSimpleType typez) {
-this.typez = typez;
+public void setTypeAttr(final TextualModsSimpleType typeAttr) {
+this.typeAttr = typeAttr;
 }
 public Old getOld() {
 return old;
@@ -49,7 +49,7 @@ this.newEl = newEl;
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"old","application","modifiersAttrGroup","coreAttrGroup","condition","TextualModsSimpleType","idreqAttrGroup","efficacy","destination","duration","new","source","enactmentAttrGroup","force","refersAttrGroup"};
+    String[] subtypes = new String[]{"duration","application","new","old","source","condition","efficacy","force","destination"};
     return  subtypes;
 }
 }

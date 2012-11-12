@@ -22,7 +22,7 @@ public Debate(Element element) {
 */
 @Override
 public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"conclusions","preface","versionTypeSimpleType","coverPage","debateBody","attachments","meta"};
+    String[] subtypes = new String[]{"conclusions","preface","coverPage","debateBody","attachments","meta"};
     return  subtypes;
 }
 }
