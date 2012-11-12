@@ -4,1958 +4,1121 @@
 * Note: this is generated!
 * --------------------------------------------------------------------------
 */
-
-/* no base */
-anySimpleType {
-}
-
-/* anySimpleType */
-gDay {
-}
-
-/* token */
-Name {
-}
-
-/* Name */
-NCName {
-}
-
-/* anySimpleType */
-NMTOKENS {
-}
-
-/* anySimpleType */
-anyURI {
-}
-
-/* anySimpleType */
-gYearMonth {
-}
-
-/* anySimpleType */
-dateTime {
-}
-
-/* anySimpleType */
-NOTATION {
-}
-
-/* anySimpleType */
-QName {
-}
-
-/* decimal */
-integer {
-}
-
-/* integer */
-nonPositiveInteger {
-}
-
-/* unsignedLong */
-unsignedInt {
-}
-
-/* unsignedInt */
-unsignedShort {
-}
-
-/* integer */
-long {
-}
-
-/* anySimpleType */
-date {
-}
-
-/* normalizedString */
-token {
-}
-
-/* token */
-NMTOKEN {
-}
-
-/* anySimpleType */
-float {
-}
-
-/* integer */
-nonNegativeInteger {
-}
-
-/* long */
-int {
-}
-
-/* int */
-short {
-}
-
-/* anySimpleType */
-gYear {
-}
-
-/* anySimpleType */
-time {
-}
-
-/* anySimpleType */
-base64Binary {
-}
-
-/* anySimpleType */
-gMonthDay {
-}
-
-/* short */
-byte {
-}
-
-/* string */
-normalizedString {
-}
-
-/* anySimpleType */
-hexBinary {
-}
-
-/* NCName */
-ID {
-}
-
-/* anySimpleType */
-boolean {
-}
-
-/* anySimpleType */
-gMonth {
-}
-
-/* NCName */
-ENTITY {
-}
-
-/* nonPositiveInteger */
-negativeInteger {
-}
-
-/* unsignedShort */
-unsignedByte {
-}
-
-/* anySimpleType */
-decimal {
-}
-
-/* nonNegativeInteger */
-unsignedLong {
-}
-
-/* anySimpleType */
-IDREFS {
-}
-
-/* anySimpleType */
-string {
-}
-
-/* anySimpleType */
-double {
-}
-
-/* nonNegativeInteger */
-positiveInteger {
-}
-
-/* anySimpleType */
-duration {
-}
-
-/* anySimpleType */
-ENTITIES {
-}
-
-/* NCName */
-IDREF {
-}
-
-/* token */
-language {
-}
-
-/* no base */
-anyType {
-}
-
-/* no base */
-specialAttrs {
-}
-
-/* no base */
-anyURI {
-}
-
-/* anyURI */
-base {
-}
-
-/* no base */
-NCName {
-}
-
-/* NCName */
-space {
-}
-
-/* no base */
-language {
-}
-
-/* language */
-lang {
-}
-
-/* no base */
-string {
-}
-
-/* string */
-LegalSystemMods {
-}
-
-/* string */
-EfficacyMods {
-}
-
-/* string */
-statusType {
-}
-
-/* string */
-ForceMods {
-}
-
-/* string */
-eventType {
-}
-
-/* string */
-timeType {
-}
-
-/* string */
-TextualMods {
-}
-
-/* string */
-posType {
-}
-
-/* string */
-opinionType {
-}
-
-/* string */
-MeaningMods {
-}
-
-/* string */
-ScopeMods {
-}
-
-/* string */
-remarkType {
-}
-
-/* string */
-resultType {
-}
-
-/* string */
-language {
-}
-
-/* string */
-yesNoType {
-}
-
-/* string */
-versionType {
-}
-
-/* string */
-placementType {
-}
-
-/* no base */
-containerType {
-}
-
-/* no base */
-judgementStructure {
-}
-
-/* no base */
-listItems {
-}
-
-/* no base */
-parliamentaryAnalysis {
-}
-
-/* no base */
-markeropt {
-}
-
-/* markeropt */
-eolType {
-}
-
-/* no base */
-akomaNtosoType {
-}
-
-/* no base */
-amendmentStructure {
-}
-
-/* no base */
-parliamentaryAnalysisType {
-}
-
-/* no base */
-metaopt {
-}
-
-/* no base */
-blocksopt {
-}
-
-/* no base */
-hierarchicalStructure {
-}
-
-/* no base */
-judgementBodyType {
-}
-
-/* no base */
-inlinereq {
-}
-
-/* no base */
-basehierarchy {
-}
-
-/* basehierarchy */
-speechType {
-}
-
-/* no base */
-amendmentBodyType {
-}
-
-/* no base */
-preambleopt {
-}
-
-/* no base */
-judicialArguments {
-}
-
-/* no base */
-modType {
-}
-
-/* no base */
-periodType {
-}
-
-/* no base */
-refItems {
-}
-
-/* no base */
-collectionBodyType {
-}
-
-/* no base */
-prefaceopt {
-}
-
-/* no base */
-countType {
-}
-
-/* no base */
-debateStructure {
-}
-
-/* no base */
-modificationType {
-}
-
-/* no base */
-judicialArgumentType {
-}
-
-/* no base */
-basicopt {
-}
-
-/* no base */
-srcType {
-}
-
-/* no base */
-bodyType {
-}
-
-/* no base */
-coreProperties {
-}
-
-/* no base */
-Amendments {
-}
-
-/* no base */
-referenceType {
-}
-
-/* no base */
-fragmentBodyType {
-}
-
-/* no base */
-inline {
- display:inline;
-}
-
-/* no base */
-maincontent {
-}
-
-/* metaopt */
-valueType {
-}
-
-/* basehierarchy */
-hierarchy {
-}
-
-/* no base */
-metareq {
-}
-
-/* basehierarchy */
-itemType {
-}
-
-/* no base */
-anyOtherType {
-}
-
-/* no base */
-debateBodyType {
-}
-
-/* basehierarchy */
-althierarchy {
-}
-
-/* no base */
-inlinereqreq {
-}
-
-/* no base */
-blocksreq {
-}
-
-/* no base */
-fragmentStructure {
-}
-
-/* no base */
-popupStructure {
-}
-
-/* no base */
-argumentType {
-}
-
-/* no base */
-openStructure {
-}
-
-/* no base */
-markerreq {
-}
-
-/* no base */
-collectionStructure {
-}
-
-/* no base */
-voteAtts {
-}
-
-/* no base */
-link {
-}
-
-/* no base */
-show {
-}
-
-/* no base */
-actor {
-}
-
-/* no base */
-date {
-}
-
-/* no base */
-pos {
-}
-
-/* no base */
-time {
-}
-
-/* no base */
-corereqreq {
-}
-
-/* no base */
-alt {
-}
-
-/* no base */
-name {
-}
-
-/* no base */
-coreopt {
-}
-
-/* no base */
-refersreq {
-}
-
-/* no base */
-value {
-}
-
-/* no base */
-xmllang {
-}
-
-/* no base */
-enactment {
-}
-
-/* no base */
-role {
-}
-
-/* no base */
-src {
-}
-
-/* no base */
-modifiers {
-}
-
-/* no base */
-idreq {
-}
-
-/* no base */
-number {
-}
-
-/* no base */
-refers {
-}
-
-/* no base */
-optvalue {
-}
-
-/* no base */
-period {
-}
-
-/* no base */
-outcome {
-}
-
-/* no base */
-linkopt {
-}
-
-/* no base */
-idopt {
-}
-
-/* no base */
-source {
-}
-
-/* no base */
-speechAtts {
-}
-
-/* no base */
-cellattrs {
-}
-
-/* no base */
-HTMLattrs {
-}
-
-/* no base */
-core {
-}
-
-/* no base */
-corereq {
-}
-
-/* no base */
-notes {
-}
-
-/* no base */
-amendmentInline {
-}
-
-/* no base */
-HTMLmarker {
-}
-
-/* no base */
-documentType {
-}
-
-/* no base */
-HTMLinline {
-}
-
-/* no base */
-ANinline {
-}
-
-/* no base */
-blockElements {
-}
-
-/* no base */
-ANpopup {
-}
-
-/* no base */
-amendmentBlock {
-}
-
-/* no base */
-hierElements {
-}
-
-/* no base */
-ANhier {
-}
-
-/* no base */
-preambleContainers {
-}
-
-/* no base */
-basicContainers {
-}
-
-/* no base */
-containerElements {
-}
-
-/* no base */
-inlineElements {
-}
-
-/* no base */
-ANheaderInline {
-}
-
-/* no base */
-ANtitleInline {
-}
-
-/* no base */
-docRefs {
-}
-
-/* no base */
-prefaceContainers {
-}
-
-/* no base */
-TLCs {
-}
-
-/* no base */
-inlineCM {
-}
-
-/* no base */
-judgementBlock {
-}
-
-/* no base */
-manifProperties {
-}
-
-/* no base */
-ANblock {
-}
-
-/* no base */
-ANmarker {
-}
-
-/* no base */
-HTMLblock {
-}
-
-/* no base */
-markerElements {
-}
-
-/* no base */
-HTMLcontainers {
-}
-
-/* no base */
-popupElements {
-}
-
-/* no base */
-workProperties {
+/*
+* --------------------------
+* Amendments
+* --------------------------
+*/
+akomaNtoso Amendments {
 }
-
-/* no base */
-exprProperties {
+akomaNtoso activeModifications {
 }
-
-/* no base */
-speechSection {
+akomaNtoso passiveModifications {
 }
-
-/* no base */
-ANcontainers {
+/*
+* --------------------------
+* akomaNtosoType
+* --------------------------
+*/
+akomaNtoso akomaNtosoType {
 }
-
-/* no base */
-ANsemanticInline {
+akomaNtoso akomaNtoso {
 }
-
-/* inline */
-summary {
- display:inline;
+/*
+* --------------------------
+* amendmentBodyType
+* --------------------------
+*/
+akomaNtoso amendmentBodyType {
 }
-
-/* judicialArgumentType */
-supports {
+akomaNtoso amendmentBody {
 }
-
-/* inlinereqreq */
-party {
+/*
+* --------------------------
+* amendmentStructure
+* --------------------------
+*/
+akomaNtoso amendmentStructure {
 }
-
-/* valueType */
-FRBRalias {
+akomaNtoso amendment {
 }
-
-/* prefaceopt */
-preface {
+akomaNtoso analysis {
 }
-
-/* refItems */
-references {
+/*
+* --------------------------
+* anyOtherType
+* --------------------------
+*/
+akomaNtoso anyOtherType {
 }
-
-/* metaopt */
-FRBRlanguage {
+akomaNtoso condition {
 }
-
-/* inlinereqreq */
-event {
+akomaNtoso domain {
 }
-
-/* popupStructure */
-quotedStructure {
+akomaNtoso eventRef {
 }
-
-/* inlinereqreq */
-role {
+akomaNtoso foreign {
 }
-
-/* judgementStructure */
-judgement {
+akomaNtoso new {
 }
-
-/* inlinereqreq */
-quantity {
+akomaNtoso old {
 }
-
-/* parliamentaryAnalysisType */
-quorumVerification {
+akomaNtoso otherAnalysis {
 }
-
-/* popupStructure */
-extractStructure {
+akomaNtoso presentation {
 }
-
-/* inline */
-fillIn {
- display:inline;
+akomaNtoso preservation {
 }
-
-/* inline */
-signature {
- display:inline;
+akomaNtoso proprietary {
 }
-
-/* srcType */
-componentRef {
+akomaNtoso result {
 }
-
-/* althierarchy */
-administrationOfOath {
+akomaNtoso step {
 }
-
-/* inline */
-vote {
- display:inline;
+/*
+* --------------------------
+* argumentType
+* --------------------------
+*/
+akomaNtoso argumentType {
 }
-
-/* modType */
-mod {
+akomaNtoso destination {
 }
-
-/* speechType */
-answer {
+akomaNtoso source {
 }
-
-/* debateBodyType */
-debateBody {
+akomaNtoso attachments {
 }
-
-/* althierarchy */
-papers {
+/*
+* --------------------------
+* basehierarchy
+* --------------------------
+*/
+akomaNtoso basehierarchy {
+    text-align:left;
+    display:block;
 }
-
-/* markeropt */
-noteRef {
+/*
+* --------------------------
+* althierarchy
+* --------------------------
+*/
+akomaNtoso althierarchy {
+    text-align:left;
+    display:block;
+}
+akomaNtoso address {
+    text-align:left;
+    display:block;
+}
+akomaNtoso adjournment {
+    text-align:left;
+    display:block;
+}
+akomaNtoso administrationOfOath {
+    text-align:left;
+    display:block;
+}
+akomaNtoso communication {
+    text-align:left;
+    display:block;
+}
+akomaNtoso debateSection {
+    text-align:left;
+    display:block;
+}
+akomaNtoso declarationOfVote {
+    text-align:left;
+    display:block;
+}
+akomaNtoso ministerialStatements {
+    text-align:left;
+    display:block;
+}
+akomaNtoso nationalInterest {
+    text-align:left;
+    display:block;
+}
+akomaNtoso noticesOfMotion {
+    text-align:left;
+    display:block;
+}
+akomaNtoso oralStatements {
+    text-align:left;
+    display:block;
+}
+akomaNtoso papers {
+    text-align:left;
+    display:block;
+}
+akomaNtoso personalStatements {
+    text-align:left;
+    display:block;
+}
+akomaNtoso petitions {
+    text-align:left;
+    display:block;
+}
+akomaNtoso pointOfOrder {
+    text-align:left;
+    display:block;
+}
+akomaNtoso prayers {
+    text-align:left;
+    display:block;
+}
+akomaNtoso proceduralMotions {
+    text-align:left;
+    display:block;
+}
+akomaNtoso questions {
+    text-align:left;
+    display:block;
+}
+akomaNtoso resolutions {
+    text-align:left;
+    display:block;
+}
+akomaNtoso rollCall {
+    text-align:left;
+    display:block;
+}
+akomaNtoso writtenStatements {
+    text-align:left;
+    display:block;
+}
+/*
+* --------------------------
+* hierarchy
+* --------------------------
+*/
+akomaNtoso hierarchy {
+    text-align:left;
+    display:block;
+}
+akomaNtoso alinea {
+    text-align:left;
+    display:block;
+}
+akomaNtoso article {
+    text-align:center;
+    display:block;
+}
+akomaNtoso book {
+    text-align:left;
+    display:block;
+}
+akomaNtoso chapter {
+    text-align:left;
+    display:block;
+}
+akomaNtoso clause {
+    text-align:left;
+    display:block;
+}
+akomaNtoso division {
+    text-align:left;
+    display:block;
+}
+akomaNtoso hcontainer {
+    text-align:left;
+    display:block;
+}
+akomaNtoso indent {
+    text-align:left;
+    display:block;
+}
+akomaNtoso list {
+    text-align:left;
+    display:block;
+}
+akomaNtoso paragraph {
+    text-align:left;
+    display:block;
+}
+akomaNtoso part {
+    text-align:left;
+    display:block;
+}
+akomaNtoso point {
+    text-align:left;
+    display:block;
+}
+akomaNtoso section {
+    text-align:left;
+    display:block;
+}
+akomaNtoso subchapter {
+    text-align:left;
+    display:block;
+}
+akomaNtoso subclause {
+    text-align:left;
+    display:block;
+}
+akomaNtoso subdivision {
+    text-align:left;
+    display:block;
+}
+akomaNtoso sublist {
+    text-align:left;
+    display:block;
+}
+akomaNtoso subparagraph {
+    text-align:left;
+    display:inline;
+}
+akomaNtoso subpart {
+    text-align:left;
+    display:block;
+}
+akomaNtoso subsection {
+    text-align:left;
+    display:block;
+}
+akomaNtoso subtitle {
+    text-align:left;
+    display:block;
+}
+akomaNtoso title {
+    text-align:left;
+    display:block;
+}
+akomaNtoso tome {
+    text-align:left;
+    display:block;
 }
-
-/* blocksopt */
-header {
+akomaNtoso transitional {
+    text-align:left;
+    display:block;
 }
-
-/* althierarchy */
-proceduralMotions {
+/*
+* --------------------------
+* itemType
+* --------------------------
+*/
+akomaNtoso itemType {
+    padding-top:10px;
+    text-align:left;
+    display:block;
 }
-
-/* inline */
-listIntroduction {
- display:inline;
+akomaNtoso citation {
+    padding-top:10px;
+    text-align:left;
+    display:block;
+}
+akomaNtoso item {
+    padding-top:10px;
+    text-align:left;
+    display:block;
 }
-
-/* blocksopt */
-content {
+akomaNtoso recital {
+    padding-top:10px;
+    text-align:left;
+    display:block;
+}
+akomaNtoso tblock {
+    padding-top:10px;
+    text-align:left;
+    display:block;
 }
-
-/* inlinereq */
-rref {
+/*
+* --------------------------
+* speechType
+* --------------------------
+*/
+akomaNtoso speechType {
+    text-align:left;
+    display:block;
+}
+akomaNtoso answer {
+    text-align:left;
+    display:block;
 }
-
-/* althierarchy */
-nationalInterest {
+akomaNtoso question {
+    text-align:left;
+    display:block;
+}
+akomaNtoso speech {
+    text-align:left;
+    display:block;
 }
-
-/* judicialArgumentType */
-contrasts {
+/*
+* --------------------------
+* basicopt
+* --------------------------
+*/
+akomaNtoso basicopt {
 }
-
-/* no base */
-components {
+akomaNtoso conclusions {
 }
-
-/* inline */
-docPurpose {
- display:inline;
+akomaNtoso coverPage {
 }
-
-/* maincontent */
-introduction {
+akomaNtoso blockList {
 }
-
-/* referenceType */
-TLCEvent {
+/*
+* --------------------------
+* blocksopt
+* --------------------------
+*/
+akomaNtoso blocksopt {
 }
-
-/* hierarchy */
-tome {
+akomaNtoso amendmentContent {
 }
-
-/* referenceType */
-TLCLocation {
+akomaNtoso amendmentHeading {
 }
-
-/* inline */
-date {
- display:inline;
+akomaNtoso amendmentJustification {
 }
-
-/* no base */
-meta {
+akomaNtoso amendmentReference {
 }
-
-/* referenceType */
-passiveRef {
+akomaNtoso content {
+    text-align:left;
 }
-
-/* hierarchy */
-division {
+akomaNtoso formula {
 }
-
-/* Amendments */
-activeModifications {
+akomaNtoso header {
 }
-
-/* inline */
-quotedText {
- display:inline;
+akomaNtoso intro {
 }
-
-/* popupStructure */
-popup {
+akomaNtoso longTitle {
 }
-
-/* inline */
-inline {
- display:inline;
+akomaNtoso other {
 }
-
-/* anyOtherType */
-domain {
+akomaNtoso td {
 }
-
-/* debateStructure */
-debate {
+akomaNtoso th {
 }
-
-/* referenceType */
-activeRef {
+akomaNtoso wrap {
 }
-
-/* inline */
-relatedDocument {
- display:inline;
+/*
+* --------------------------
+* blocksreq
+* --------------------------
+*/
+akomaNtoso blocksreq {
+    padding-top:10px;
+    display:block;
 }
-
-/* inline */
-docIntroducer {
- display:inline;
+akomaNtoso div {
+    padding-top:10px;
+    display:block;
 }
-
-/* valueType */
-FRBRthis {
+akomaNtoso interstitial {
+    padding-top:10px;
+    display:block;
 }
-
-/* listItems */
-ul {
+akomaNtoso note {
+    padding-top:10px;
+    display:block;
 }
-
-/* inline */
-b {
- display:inline;
+/*
+* --------------------------
+* bodyType
+* --------------------------
+*/
+akomaNtoso bodyType {
 }
-
-/* no base */
-temporalData {
+akomaNtoso body {
 }
-
-/* althierarchy */
-noticesOfMotion {
+akomaNtoso citations {
 }
-
-/* inline */
-a {
- display:inline;
+akomaNtoso classification {
 }
-
-/* blocksopt */
-intro {
+/*
+* --------------------------
+* collectionBodyType
+* --------------------------
+*/
+akomaNtoso collectionBodyType {
 }
-
-/* coreProperties */
-FRBRExpression {
+akomaNtoso collectionBody {
 }
-
-/* inline */
-i {
- display:inline;
+/*
+* --------------------------
+* collectionStructure
+* --------------------------
+*/
+akomaNtoso collectionStructure {
 }
-
-/* inlinereq */
-ref {
+akomaNtoso amendmentList {
 }
-
-/* anyOtherType */
-new {
+akomaNtoso documentCollection {
 }
-
-/* inline */
-num {
- display:inline;
+akomaNtoso officialGazette {
 }
-
-/* inline */
-u {
- display:inline;
+akomaNtoso component {
 }
-
-/* blocksopt */
-amendmentJustification {
+akomaNtoso componentData {
 }
-
-/* judicialArgumentType */
-restricts {
+akomaNtoso componentInfo {
 }
-
-/* maincontent */
-background {
+akomaNtoso components {
 }
-
-/* inline */
-p {
- display:inline;
+/*
+* --------------------------
+* containerType
+* --------------------------
+*/
+akomaNtoso containerType {
 }
-
-/* referenceType */
-original {
+akomaNtoso container {
+    padding-top:10px;
+    display:block;
 }
-
-/* openStructure */
-doc {
+/*
+* --------------------------
+* coreProperties
+* --------------------------
+*/
+akomaNtoso coreProperties {
 }
-
-/* no base */
-notes {
+akomaNtoso FRBRExpression {
 }
-
-/* hierarchy */
-part {
+akomaNtoso FRBRItem {
 }
-
-/* amendmentStructure */
-amendment {
+akomaNtoso FRBRManifestation {
 }
-
-/* bodyType */
-body {
+akomaNtoso FRBRWork {
 }
-
-/* inline */
-docType {
- display:inline;
+/*
+* --------------------------
+* countType
+* --------------------------
+*/
+akomaNtoso countType {
 }
-
-/* no base */
-tr {
+akomaNtoso count {
 }
-
-/* inline */
-change {
- display:inline;
+akomaNtoso quorum {
 }
-
-/* inlinereqreq */
-entity {
+/*
+* --------------------------
+* debateBodyType
+* --------------------------
+*/
+akomaNtoso debateBodyType {
 }
-
-/* popupStructure */
-authorialNote {
+akomaNtoso debateBody {
 }
-
-/* blocksopt */
-td {
+/*
+* --------------------------
+* debateStructure
+* --------------------------
+*/
+akomaNtoso debateStructure {
 }
-
-/* markeropt */
-br {
+akomaNtoso debate {
 }
-
-/* blocksopt */
-th {
+/*
+* --------------------------
+* fragmentBodyType
+* --------------------------
+*/
+akomaNtoso fragmentBodyType {
 }
-
-/* no base */
-component {
+akomaNtoso fragmentBody {
 }
-
-/* eolType */
-eol {
+/*
+* --------------------------
+* fragmentStructure
+* --------------------------
+*/
+akomaNtoso fragmentStructure {
 }
-
-/* althierarchy */
-adjournment {
+akomaNtoso fragment {
 }
-
-/* inline */
-opinion {
- display:inline;
+/*
+* --------------------------
+* hierarchicalStructure
+* --------------------------
+*/
+akomaNtoso hierarchicalStructure {
 }
-
-/* eolType */
-eop {
+akomaNtoso act {
 }
-
-/* judicialArgumentType */
-putsInQuestion {
+akomaNtoso bill {
 }
-
-/* inline */
-docStage {
- display:inline;
+akomaNtoso identification {
 }
-
-/* hierarchy */
-subchapter {
+/*
+* --------------------------
+* inline
+* --------------------------
+*/
+akomaNtoso inline {
+    display:inline;
 }
-
-/* collectionStructure */
-amendmentList {
+akomaNtoso a {
+    display:inline;
 }
-
-/* inline */
-docCommittee {
- display:inline;
+akomaNtoso affectedDocument {
+    display:inline;
 }
-
-/* anyOtherType */
-condition {
+akomaNtoso b {
+    display:inline;
 }
-
-/* coreProperties */
-FRBRItem {
+akomaNtoso block {
+    padding-top:10px;
+    display:block;
 }
-
-/* blocksopt */
-amendmentReference {
+akomaNtoso caption {
+    display:inline;
 }
-
-/* periodType */
-efficacy {
+akomaNtoso change {
+    display:inline;
 }
-
-/* anyOtherType */
-otherAnalysis {
+akomaNtoso courtType {
+    display:inline;
 }
-
-/* inline */
-docNumber {
- display:inline;
+akomaNtoso date {
+    display:inline;
 }
-
-/* no base */
-workflow {
+akomaNtoso def {
+    display:inline;
 }
-
-/* coreProperties */
-FRBRManifestation {
+akomaNtoso del {
+    display:inline;
 }
-
-/* speechType */
-speech {
+akomaNtoso docCommittee {
+    display:inline;
 }
-
-/* maincontent */
-mainBody {
+akomaNtoso docDate {
+    display:inline;
 }
-
-/* anyOtherType */
-foreign {
+akomaNtoso docIntroducer {
+    display:inline;
 }
-
-/* inline */
-extractText {
- display:inline;
+akomaNtoso docJurisdiction {
+    display:inline;
 }
-
-/* inline */
-span {
- display:inline;
+akomaNtoso docNumber {
+    display:inline;
 }
-
-/* hierarchy */
-subdivision {
+akomaNtoso docProponent {
+    display:inline;
 }
-
-/* anyOtherType */
-result {
+akomaNtoso docPurpose {
+    display:inline;
 }
-
-/* countType */
-quorum {
+akomaNtoso docStage {
+    display:inline;
 }
-
-/* inline */
-sub {
- display:inline;
+akomaNtoso docStatus {
+    display:inline;
 }
-
-/* no base */
-toc {
+akomaNtoso docTitle {
+    display:inline;
 }
-
-/* hierarchicalStructure */
-bill {
+akomaNtoso docType {
+    display:inline;
 }
-
-/* hierarchy */
-subsection {
+akomaNtoso docketNumber {
+    display:inline;
 }
-
-/* hierarchy */
-transitional {
+akomaNtoso extractText {
+    display:inline;
 }
-
-/* no base */
-analysis {
+akomaNtoso fillIn {
+    display:inline;
 }
-
-/* inline */
-sup {
- display:inline;
+akomaNtoso from {
+    display:inline;
 }
-
-/* referenceType */
-TLCConcept {
+akomaNtoso heading {
+    text-align:center;
+    display:inline;
 }
-
-/* referenceType */
-jurisprudence {
+akomaNtoso i {
+    display:inline;
 }
-
-/* hierarchy */
-chapter {
+akomaNtoso inline {
+    display:inline;
 }
-
-/* inlinereqreq */
-organization {
+akomaNtoso ins {
+    display:inline;
 }
-
-/* inline */
-docketNumber {
- display:inline;
+akomaNtoso legislature {
+    display:inline;
 }
-
-/* openStructure */
-debateReport {
+akomaNtoso listConclusion {
+    display:inline;
 }
-
-/* speechType */
-question {
+akomaNtoso listIntroduction {
+    display:inline;
 }
-
-/* parliamentaryAnalysisType */
-voting {
+akomaNtoso mref {
+    display:inline;
 }
-
-/* anyOtherType */
-eventRef {
+akomaNtoso narrative {
+    display:inline;
 }
-
-/* fragmentStructure */
-fragment {
+akomaNtoso neutralCitation {
+    display:inline;
 }
-
-/* inline */
-mref {
- display:inline;
+akomaNtoso num {
+    display:inline;
 }
-
-/* metaopt */
-timeInterval {
+akomaNtoso omissis {
+    display:inline;
 }
-
-/* althierarchy */
-communication {
+akomaNtoso opinion {
+    display:inline;
 }
-
-/* parliamentaryAnalysisType */
-recount {
+akomaNtoso outcome {
+    display:inline;
 }
-
-/* basicopt */
-coverPage {
+akomaNtoso p {
+    display:inline;
 }
-
-/* collectionBodyType */
-collectionBody {
+akomaNtoso placeholder {
+    display:inline;
 }
-
-/* referenceType */
-attachmentOf {
+akomaNtoso quotedText {
+    display:inline;
 }
-
-/* referenceType */
-TLCObject {
+akomaNtoso recordedTime {
+    display:inline;
 }
-
-/* argumentType */
-source {
+akomaNtoso relatedDocument {
+    display:inline;
 }
-
-/* valueType */
-FRBRname {
+akomaNtoso remark {
+    display:inline;
 }
-
-/* hierarchy */
-clause {
+akomaNtoso scene {
+    display:inline;
 }
-
-/* inlinereqreq */
-person {
+akomaNtoso session {
+    display:inline;
 }
-
-/* referenceType */
-TLCPerson {
+akomaNtoso shortTitle {
+    display:inline;
 }
-
-/* no base */
-citations {
+akomaNtoso signature {
+    display:inline;
 }
-
-/* hierarchy */
-paragraph {
+akomaNtoso span {
+    display:inline;
 }
-
-/* inline */
-neutralCitation {
- display:inline;
+akomaNtoso sub {
+    display:inline;
 }
-
-/* inline */
-docStatus {
- display:inline;
+akomaNtoso subheading {
+    display:inline;
 }
-
-/* judicialArgumentType */
-applies {
+akomaNtoso summary {
+    display:inline;
 }
-
-/* maincontent */
-motivation {
+akomaNtoso sup {
+    display:inline;
 }
-
-/* referenceType */
-TLCReference {
+akomaNtoso tocItem {
+    display:inline;
 }
-
-/* inline */
-legislature {
- display:inline;
+akomaNtoso u {
+    display:inline;
 }
-
-/* althierarchy */
-oralStatements {
+akomaNtoso vote {
+    display:inline;
 }
-
-/* no base */
-recitals {
+/*
+* --------------------------
+* inlinereq
+* --------------------------
+*/
+akomaNtoso inlinereq {
 }
-
-/* no base */
-lifecycle {
+akomaNtoso ref {
 }
-
-/* valueType */
-FRBRuri {
+akomaNtoso rref {
 }
-
-/* preambleopt */
-preamble {
+/*
+* --------------------------
+* inlinereqreq
+* --------------------------
+*/
+akomaNtoso inlinereqreq {
 }
-
-/* referenceType */
-TLCRole {
+akomaNtoso concept {
 }
-
-/* listItems */
-ol {
+akomaNtoso entity {
 }
-
-/* blocksopt */
-amendmentContent {
+akomaNtoso event {
 }
-
-/* itemType */
-citation {
+akomaNtoso judge {
 }
-
-/* modType */
-mmod {
+akomaNtoso lawyer {
 }
-
-/* valueType */
-FRBRsubtype {
+akomaNtoso location {
 }
-
-/* hierarchy */
-subclause {
+akomaNtoso object {
 }
-
-/* althierarchy */
-questions {
+akomaNtoso organization {
 }
-
-/* inline */
-tocItem {
- display:inline;
+akomaNtoso party {
 }
-
-/* no base */
-table {
+akomaNtoso person {
 }
-
-/* hierarchy */
-sublist {
+akomaNtoso process {
 }
-
-/* argumentType */
-destination {
+akomaNtoso quantity {
 }
-
-/* inline */
-session {
- display:inline;
+akomaNtoso role {
 }
-
-/* modificationType */
-textualMod {
+akomaNtoso term {
 }
-
-/* inline */
-recordedTime {
- display:inline;
+/*
+* --------------------------
+* judgementBodyType
+* --------------------------
+*/
+akomaNtoso judgementBodyType {
 }
-
-/* containerType */
-container {
- display:block;
+akomaNtoso judgementBody {
 }
-
-/* blocksopt */
-longTitle {
+/*
+* --------------------------
+* judgementStructure
+* --------------------------
+*/
+akomaNtoso judgementStructure {
 }
-
-/* inline */
-scene {
- display:inline;
+akomaNtoso judgement {
 }
-
-/* judicialArgumentType */
-distinguishes {
+/*
+* --------------------------
+* judicialArgumentType
+* --------------------------
+*/
+akomaNtoso judicialArgumentType {
 }
-
-/* inline */
-heading {
- display:inline;
+akomaNtoso applies {
 }
-
-/* hierarchy */
-subparagraph {
+akomaNtoso contrasts {
 }
-
-/* althierarchy */
-debateSection {
+akomaNtoso derogates {
 }
-
-/* inline */
-block {
- display:inline;
+akomaNtoso dissentsFrom {
 }
-
-/* inline */
-docJurisdiction {
- display:inline;
+akomaNtoso distinguishes {
 }
-
-/* inline */
-docProponent {
- display:inline;
+akomaNtoso extends {
 }
-
-/* maincontent */
-decision {
+akomaNtoso isAnalogTo {
 }
-
-/* althierarchy */
-personalStatements {
+akomaNtoso overrules {
 }
-
-/* inline */
-omissis {
- display:inline;
+akomaNtoso putsInQuestion {
 }
-
-/* modType */
-rmod {
+akomaNtoso restricts {
 }
-
-/* hierarchy */
-title {
+akomaNtoso supports {
 }
-
-/* no base */
-componentData {
+/*
+* --------------------------
+* judicialArguments
+* --------------------------
+*/
+akomaNtoso judicialArguments {
 }
-
-/* inline */
-def {
- display:inline;
+akomaNtoso judicial {
 }
-
-/* inlinereqreq */
-judge {
+akomaNtoso li {
 }
-
-/* inline */
-docTitle {
- display:inline;
+akomaNtoso lifecycle {
 }
-
-/* judicialArgumentType */
-isAnalogTo {
+/*
+* --------------------------
+* listItems
+* --------------------------
+*/
+akomaNtoso listItems {
 }
-
-/* inline */
-del {
- display:inline;
+akomaNtoso ol {
 }
-
-/* metaopt */
-FRBRdate {
+akomaNtoso ul {
 }
-
-/* inline */
-affectedDocument {
- display:inline;
+/*
+* --------------------------
+* maincontent
+* --------------------------
+*/
+akomaNtoso maincontent {
 }
-
-/* blocksreq */
-note {
+akomaNtoso background {
 }
-
-/* judicialArgumentType */
-dissentsFrom {
+akomaNtoso decision {
 }
-
-/* referenceType */
-TLCProcess {
+akomaNtoso introduction {
 }
-
-/* Amendments */
-passiveModifications {
+akomaNtoso mainBody {
 }
-
-/* inline */
-placeholder {
- display:inline;
+akomaNtoso motivation {
 }
-
-/* inline */
-caption {
- display:inline;
+/*
+* --------------------------
+* markeropt
+* --------------------------
+*/
+akomaNtoso markeropt {
 }
-
-/* inline */
-outcome {
- display:inline;
+akomaNtoso br {
 }
-
-/* collectionStructure */
-documentCollection {
+/*
+* --------------------------
+* eolType
+* --------------------------
+*/
+akomaNtoso eolType {
 }
-
-/* inlinereqreq */
-process {
+akomaNtoso eol {
 }
-
-/* hierarchy */
-point {
+akomaNtoso eop {
 }
-
-/* hierarchy */
-article {
+akomaNtoso img {
 }
-
-/* inline */
-shortTitle {
- display:inline;
+akomaNtoso noteRef {
 }
-
-/* anyOtherType */
-proprietary {
+/*
+* --------------------------
+* markerreq
+* --------------------------
+*/
+akomaNtoso markerreq {
 }
-
-/* no base */
-classification {
+akomaNtoso marker {
 }
-
-/* itemType */
-item {
+akomaNtoso meta {
 }
-
-/* hierarchy */
-hcontainer {
+/*
+* --------------------------
+* metaopt
+* --------------------------
+*/
+akomaNtoso metaopt {
 }
-
-/* althierarchy */
-pointOfOrder {
+akomaNtoso FRBRauthor {
 }
-
-/* fragmentBodyType */
-fragmentBody {
+akomaNtoso FRBRdate {
 }
-
-/* periodType */
-force {
+akomaNtoso FRBRlanguage {
 }
-
-/* anyOtherType */
-old {
+akomaNtoso FRBRtranslation {
 }
-
-/* countType */
-count {
+akomaNtoso keyword {
 }
-
-/* modificationType */
-scopeMod {
+akomaNtoso publication {
 }
-
-/* itemType */
-tblock {
+akomaNtoso timeInterval {
 }
-
-/* inlinereqreq */
-location {
+/*
+* --------------------------
+* valueType
+* --------------------------
+*/
+akomaNtoso valueType {
 }
-
-/* inline */
-remark {
- display:inline;
+akomaNtoso FRBRalias {
 }
-
-/* inline */
-narrative {
- display:inline;
+akomaNtoso FRBRcountry {
 }
-
-/* collectionStructure */
-officialGazette {
+akomaNtoso FRBRformat {
 }
-
-/* markeropt */
-img {
+akomaNtoso FRBRname {
 }
-
-/* inline */
-listConclusion {
- display:inline;
+akomaNtoso FRBRnumber {
 }
-
-/* judicialArgumentType */
-overrules {
+akomaNtoso FRBRsubtype {
 }
-
-/* judicialArgumentType */
-derogates {
+akomaNtoso FRBRthis {
 }
-
-/* hierarchy */
-alinea {
+akomaNtoso FRBRuri {
 }
-
-/* no base */
-blockList {
+akomaNtoso metareq {
 }
-
-/* althierarchy */
-declarationOfVote {
+/*
+* --------------------------
+* modType
+* --------------------------
+*/
+akomaNtoso modType {
 }
-
-/* no base */
-temporalGroup {
+akomaNtoso mmod {
 }
-
-/* modificationType */
-legalSystemMod {
+akomaNtoso mod {
 }
-
-/* althierarchy */
-petitions {
+akomaNtoso rmod {
 }
-
-/* blocksopt */
-wrap {
+/*
+* --------------------------
+* modificationType
+* --------------------------
+*/
+akomaNtoso modificationType {
 }
-
-/* hierarchy */
-indent {
+akomaNtoso efficacyMod {
 }
-
-/* judicialArgumentType */
-extends {
+akomaNtoso forceMod {
 }
-
-/* referenceType */
-hasAttachment {
+akomaNtoso legalSystemMod {
 }
-
-/* inline */
-ins {
- display:inline;
+akomaNtoso meaningMod {
 }
-
-/* amendmentBodyType */
-amendmentBody {
+akomaNtoso scopeMod {
 }
-
-/* no base */
-li {
+akomaNtoso textualMod {
 }
-
-/* parliamentaryAnalysis */
-parliamentary {
+akomaNtoso notes {
 }
-
-/* anyOtherType */
-presentation {
+/*
+* --------------------------
+* openStructure
+* --------------------------
+*/
+akomaNtoso openStructure {
 }
-
-/* markerreq */
-marker {
+akomaNtoso debateReport {
 }
-
-/* modificationType */
-meaningMod {
+akomaNtoso doc {
 }
-
-/* blocksopt */
-amendmentHeading {
+/*
+* --------------------------
+* parliamentaryAnalysis
+* --------------------------
+*/
+akomaNtoso parliamentaryAnalysis {
 }
-
-/* metaopt */
-FRBRauthor {
+akomaNtoso parliamentary {
 }
-
-/* inlinereqreq */
-lawyer {
+/*
+* --------------------------
+* parliamentaryAnalysisType
+* --------------------------
+*/
+akomaNtoso parliamentaryAnalysisType {
 }
-
-/* inlinereqreq */
-concept {
+akomaNtoso quorumVerification {
 }
-
-/* blocksopt */
-other {
+akomaNtoso recount {
 }
-
-/* no base */
-componentInfo {
+akomaNtoso voting {
 }
-
-/* inline */
-subheading {
- display:inline;
+/*
+* --------------------------
+* periodType
+* --------------------------
+*/
+akomaNtoso periodType {
 }
-
-/* inline */
-courtType {
- display:inline;
+akomaNtoso application {
 }
-
-/* blocksreq */
-div {
+akomaNtoso duration {
 }
-
-/* althierarchy */
-resolutions {
+akomaNtoso efficacy {
 }
-
-/* inline */
-from {
- display:inline;
+akomaNtoso force {
 }
-
-/* inlinereqreq */
-object {
+/*
+* --------------------------
+* popupStructure
+* --------------------------
+*/
+akomaNtoso popupStructure {
 }
-
-/* blocksreq */
-interstitial {
+akomaNtoso authorialNote {
 }
-
-/* itemType */
-recital {
+akomaNtoso extractStructure {
 }
-
-/* judicialArguments */
-judicial {
+akomaNtoso popup {
 }
-
-/* valueType */
-FRBRcountry {
+akomaNtoso quotedStructure {
 }
-
-/* modificationType */
-efficacyMod {
+/*
+* --------------------------
+* preambleopt
+* --------------------------
+*/
+akomaNtoso preambleopt {
 }
-
-/* althierarchy */
-rollCall {
+akomaNtoso preamble {
 }
-
-/* valueType */
-FRBRformat {
+/*
+* --------------------------
+* prefaceopt
+* --------------------------
+*/
+akomaNtoso prefaceopt {
 }
-
-/* inline */
-docDate {
- display:inline;
+akomaNtoso preface {
 }
-
-/* no base */
-attachments {
+akomaNtoso recitals {
 }
-
-/* referenceType */
-TLCOrganization {
+/*
+* --------------------------
+* refItems
+* --------------------------
+*/
+akomaNtoso refItems {
 }
-
-/* periodType */
-application {
+akomaNtoso references {
 }
-
-/* coreProperties */
-FRBRWork {
+/*
+* --------------------------
+* referenceType
+* --------------------------
+*/
+akomaNtoso referenceType {
 }
-
-/* akomaNtosoType */
-akomaNtoso {
+akomaNtoso TLCConcept {
 }
-
-/* modificationType */
-forceMod {
+akomaNtoso TLCEvent {
 }
-
-/* metaopt */
-keyword {
+akomaNtoso TLCLocation {
 }
-
-/* valueType */
-FRBRnumber {
+akomaNtoso TLCObject {
 }
-
-/* hierarchy */
-list {
+akomaNtoso TLCOrganization {
 }
-
-/* hierarchy */
-section {
+akomaNtoso TLCPerson {
 }
-
-/* metaopt */
-publication {
+akomaNtoso TLCProcess {
 }
-
-/* metaopt */
-FRBRtranslation {
+akomaNtoso TLCReference {
 }
-
-/* referenceType */
-TLCTerm {
+akomaNtoso TLCRole {
 }
-
-/* basicopt */
-conclusions {
+akomaNtoso TLCTerm {
 }
-
-/* periodType */
-duration {
+akomaNtoso activeRef {
 }
-
-/* judgementBodyType */
-judgementBody {
+akomaNtoso attachmentOf {
 }
-
-/* hierarchy */
-subpart {
+akomaNtoso hasAttachment {
 }
-
-/* althierarchy */
-address {
+akomaNtoso jurisprudence {
 }
-
-/* inlinereqreq */
-term {
+akomaNtoso original {
 }
-
-/* no base */
-identification {
+akomaNtoso passiveRef {
 }
-
-/* althierarchy */
-writtenStatements {
+/*
+* --------------------------
+* srcType
+* --------------------------
+*/
+akomaNtoso srcType {
 }
-
-/* hierarchy */
-subtitle {
+akomaNtoso componentRef {
 }
-
-/* hierarchy */
-book {
+akomaNtoso table {
 }
-
-/* althierarchy */
-prayers {
+akomaNtoso temporalData {
 }
-
-/* althierarchy */
-ministerialStatements {
+akomaNtoso temporalGroup {
 }
-
-/* hierarchicalStructure */
-act {
+akomaNtoso toc {
 }
-
-/* anyOtherType */
-step {
+akomaNtoso tr {
 }
-
-/* anyOtherType */
-preservation {
+akomaNtoso workflow {
 }
 
-/* blocksopt */
-formula {
-}
