@@ -6,7 +6,7 @@
         <property name="mappings">
             <props>
                 <!-- GWT Log -->
-                <prop key="**/gwt-log">gwtLogController</prop>
+                <prop key="**/remote_logging">gwtLogController</prop>
                 <!-- GWT -->
                 <prop key="**/gwtService">gwtService</prop>
                 <prop key="**/gwtDocumentService">gwtDocumentService</prop>
@@ -38,7 +38,7 @@
     </bean>
 
     <bean id="gwtLogController" class="org.springframework.web.servlet.mvc.ServletWrappingController">
-        <property name="servletClass" value="com.allen_sauer.gwt.log.server.RemoteLoggerServlet"/>
+        <property name="servletClass" value="com.google.gwt.logging.server.RemoteLoggingServiceImpl"/>
         <property name="initParameters">
             <props>
                 <prop key="symbolMaps_1">${gwt-log.symbolMaps.editor}</prop>
