@@ -12,9 +12,11 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
 import com.google.gwt.dom.client.Element;
 
 /**
-* This file is generated.
+* Note: this file is generated. Rather than changing this file, correct the template called <tt>overlayFactory.ftl</tt>.
 */
 public class ${overlayClass.name?cap_first} extends DefaultOverlayFactory  {
+
+    private final static Logger LOG = Logger.getLogger(${overlayClass.name?cap_first}.class.getName());
 
     @Inject
     public ${overlayClass.name?cap_first}(final OverlayStrategy overlayStrategy) {
@@ -25,14 +27,19 @@ public class ${overlayClass.name?cap_first} extends DefaultOverlayFactory  {
         if ("".equals(element.getNodeName())) {
             throw new IllegalArgumentException("Empty element or null passed.");
         }
+        else if (element.getNodeName().startsWith("/")) {
+            // assume IE8
+            LOG.warning("A node with a name starting with a slash was passed. Enjoy IE8!");
+            return null;
+        }
 
         <#list overlayClasses as cl>
         else if ("${cl.name}".equalsIgnoreCase(element.getNodeName())) {
             return new ${cl.className?cap_first}(element);
         }
         </#list>
-
         // nothing found
+        LOG.warning("Could not find overlay element (nodename: " + element.getNodeName() + ", tagname: " + element.getTagName() + ")");
         return null;
     }
 }
