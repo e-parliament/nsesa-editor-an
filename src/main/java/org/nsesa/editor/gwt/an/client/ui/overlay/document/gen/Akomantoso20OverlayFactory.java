@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 */
 public class Akomantoso20OverlayFactory extends DefaultOverlayFactory  {
 
-    private final static Logger LOG = Logger.getLogger("Akomantoso20OverlayFactory");
+    private final static Logger LOG = Logger.getLogger(Akomantoso20OverlayFactory.class.getName());
 
     @Inject
     public Akomantoso20OverlayFactory(final OverlayStrategy overlayStrategy) {
@@ -24,9 +24,13 @@ public class Akomantoso20OverlayFactory extends DefaultOverlayFactory  {
     }
 
     public AmendableWidget toAmendableWidget(final Element element) {
-        LOG.info("Overlaying element " + element + " (nodename: " + element.getNodeName() + ", tagname: " + element.getTagName());
+        //LOG.info("Overlaying element (nodename: " + element.getNodeName() + ", tagname: " + element.getTagName() + ")");
         if ("".equals(element.getNodeName())) {
             throw new IllegalArgumentException("Empty element or null passed.");
+        } else if (element.getNodeName().startsWith("/")) {
+            // assume IE8
+            LOG.warning("A node with a name starting with a slash was passed. Enjoy IE8!");
+            return null;
         }
 
         else if ("container".equalsIgnoreCase(element.getNodeName())) {
@@ -884,7 +888,7 @@ public class Akomantoso20OverlayFactory extends DefaultOverlayFactory  {
         else if ("identification".equalsIgnoreCase(element.getNodeName())) {
             return new Identification(element);
         }
-
+        LOG.warning("Could not find overlay element (nodename: " + element.getNodeName() + ", tagname: " + element.getTagName() + ")");
         // nothing found
         return null;
     }
