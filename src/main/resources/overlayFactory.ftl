@@ -16,30 +16,31 @@ import com.google.gwt.dom.client.Element;
 */
 public class ${overlayClass.name?cap_first} extends DefaultOverlayFactory  {
 
-    private final static Logger LOG = Logger.getLogger(${overlayClass.name?cap_first}.class.getName());
+private final static Logger LOG = Logger.getLogger(${overlayClass.name?cap_first}.class.getName());
 
-    @Inject
-    public ${overlayClass.name?cap_first}(final OverlayStrategy overlayStrategy) {
-        super(overlayStrategy);
-    }
+@Inject
+public ${overlayClass.name?cap_first}(final OverlayStrategy overlayStrategy) {
+super(overlayStrategy);
+}
 
-    public AmendableWidget toAmendableWidget(final Element element) {
-        if ("".equals(element.getNodeName())) {
-            throw new IllegalArgumentException("Empty element or null passed.");
-        }
-        else if (element.getNodeName().startsWith("/")) {
-            // assume IE8
-            LOG.warning("A node with a name starting with a slash was passed. Enjoy IE8!");
-            return null;
-        }
+public AmendableWidget toAmendableWidget(final Element element, final Map
+<String, String> namespaces) {
+if ("".equals(element.getNodeName())) {
+throw new IllegalArgumentException("Empty element or null passed.");
+}
+else if (element.getNodeName().startsWith("/")) {
+// assume IE8
+LOG.warning("A node with a name starting with a slash was passed. Enjoy IE8!");
+return null;
+}
 
-        <#list overlayClasses as cl>
-        else if ("${cl.name}".equalsIgnoreCase(element.getNodeName())) {
-            return new ${cl.className?cap_first}(element);
-        }
-        </#list>
-        // nothing found
-        LOG.warning("Could not find overlay element (nodename: " + element.getNodeName() + ", tagname: " + element.getTagName() + ")");
-        return null;
-    }
+<#list overlayClasses as cl>
+else if ("${cl.name}".equalsIgnoreCase(element.getNodeName())) {
+return new ${cl.className?cap_first}(element);
+}
+</#list>
+// nothing found
+LOG.warning("Could not find overlay element (nodename: " + element.getNodeName() + ", tagname: " + element.getTagName() + ")");
+return null;
+}
 }
