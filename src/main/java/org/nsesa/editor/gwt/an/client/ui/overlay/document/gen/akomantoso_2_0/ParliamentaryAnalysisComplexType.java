@@ -7,49 +7,69 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class ParliamentaryAnalysisComplexType extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public ParliamentaryAnalysisComplexType(Element element) {
-    super(element);
-}
+
+    public ParliamentaryAnalysisComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private java.util.List<QuorumVerification> quorumVerifications = new ArrayList<QuorumVerification>();
-private java.util.List<Voting> votings = new ArrayList<Voting>();
-private java.util.List<Recount> recounts = new ArrayList<Recount>();
+    public java.util.List<QuorumVerification> getQuorumVerifications() {
+        java.util.List<QuorumVerification> result = new ArrayList<QuorumVerification>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("QuorumVerification".equalsIgnoreCase(widget.getType())) {
+                result.add((QuorumVerification)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Voting> getVotings() {
+        java.util.List<Voting> result = new ArrayList<Voting>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Voting".equalsIgnoreCase(widget.getType())) {
+                result.add((Voting)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Recount> getRecounts() {
+        java.util.List<Recount> result = new ArrayList<Recount>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Recount".equalsIgnoreCase(widget.getType())) {
+                result.add((Recount)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"recount","quorumVerification","voting"};
+        return  subtypes;
+    }
 
-public java.util.List<QuorumVerification> getQuorumVerification() {
-return quorumVerifications;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setQuorumVerification(final java.util.List<QuorumVerification> quorumVerifications) {
-this.quorumVerifications = quorumVerifications;
-}
-public java.util.List<Voting> getVoting() {
-return votings;
-}
-
-public void setVoting(final java.util.List<Voting> votings) {
-this.votings = votings;
-}
-public java.util.List<Recount> getRecount() {
-return recounts;
-}
-
-public void setRecount(final java.util.List<Recount> recounts) {
-this.recounts = recounts;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"recount","quorumVerification","voting"};
-    return  subtypes;
-}
 }
 

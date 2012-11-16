@@ -9,89 +9,102 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public ParliamentaryAnalysisTypeComplexType(Element element) {
-    super(element);
-}
+
+    public ParliamentaryAnalysisTypeComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private java.util.List<Quorum> quorums = new ArrayList<Quorum>();
-private java.util.List<Count> counts = new ArrayList<Count>();
-private AnyURISimpleType hrefAttr;
-private AmendableWidgetImpl wildcardContentAttr;
-private IDSimpleType idAttr;
-private NMTOKENSimpleType evolvingIdAttr;
-private AnyURISimpleType outcomeAttr;
-private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType outcomeAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
+    private AnyURISimpleType refersToAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType hrefAttr;
+    public java.util.List<Quorum> getQuorums() {
+        java.util.List<Quorum> result = new ArrayList<Quorum>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Quorum".equalsIgnoreCase(widget.getType())) {
+                result.add((Quorum)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Count> getCounts() {
+        java.util.List<Count> result = new ArrayList<Count>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Count".equalsIgnoreCase(widget.getType())) {
+                result.add((Count)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public AnyURISimpleType getOutcomeAttr() {
+        return outcomeAttr;
+    }
+    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
+        this.outcomeAttr = outcomeAttr;
+    }
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+    public IDSimpleType getIdAttr() {
+        return idAttr;
+    }
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+    }
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        return evolvingIdAttr;
+    }
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+    }
+    public AnyURISimpleType getHrefAttr() {
+        return hrefAttr;
+    }
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"quorum","count"};
+        return  subtypes;
+    }
 
-public java.util.List<Quorum> getQuorum() {
-return quorums;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setQuorum(final java.util.List<Quorum> quorums) {
-this.quorums = quorums;
-}
-public java.util.List<Count> getCount() {
-return counts;
-}
-
-public void setCount(final java.util.List<Count> counts) {
-this.counts = counts;
-}
-public AnyURISimpleType getHrefAttr() {
-return hrefAttr;
-}
-
-public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-this.hrefAttr = hrefAttr;
-}
-public AmendableWidgetImpl getWildcardContentAttr() {
-return wildcardContentAttr;
-}
-
-public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-this.wildcardContentAttr = wildcardContentAttr;
-}
-public IDSimpleType getIdAttr() {
-return idAttr;
-}
-
-public void setIdAttr(final IDSimpleType idAttr) {
-this.idAttr = idAttr;
-}
-public NMTOKENSimpleType getEvolvingIdAttr() {
-return evolvingIdAttr;
-}
-
-public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-this.evolvingIdAttr = evolvingIdAttr;
-}
-public AnyURISimpleType getOutcomeAttr() {
-return outcomeAttr;
-}
-
-public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
-this.outcomeAttr = outcomeAttr;
-}
-public AnyURISimpleType getRefersToAttr() {
-return refersToAttr;
-}
-
-public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-this.refersToAttr = refersToAttr;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"quorum","count"};
-    return  subtypes;
-}
 }
 

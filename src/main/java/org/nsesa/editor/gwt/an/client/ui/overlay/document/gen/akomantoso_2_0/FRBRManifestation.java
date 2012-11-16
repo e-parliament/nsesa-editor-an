@@ -6,33 +6,56 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import com.google.gwt.user.client.DOM;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class FRBRManifestation extends CorePropertiesComplexType  {
 
 // CONSTRUCTORS ------------------
-public FRBRManifestation(Element element) {
-    super(element);
-}
+    public FRBRManifestation() {
+        super(DOM.createElement("FRBRManifestation"));
+    }
+
+    public FRBRManifestation(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private FRBRformat FRBRformat;
+    public FRBRformat getFRBRformat() {
+        FRBRformat result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("FRBRformat".equalsIgnoreCase(widget.getType())) {
+                result = (FRBRformat)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"FRBRthis","FRBRalias","FRBRformat","componentInfo","FRBRuri","FRBRauthor","FRBRdate","preservation"};
+        return  subtypes;
+    }
 
-public FRBRformat getFRBRformat() {
-return FRBRformat;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setFRBRformat(final FRBRformat FRBRformat) {
-this.FRBRformat = FRBRformat;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"FRBRthis","FRBRalias","FRBRformat","componentInfo","FRBRuri","FRBRauthor","FRBRdate","preservation"};
-    return  subtypes;
-}
 }
 

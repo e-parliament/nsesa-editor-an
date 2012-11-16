@@ -15,113 +15,152 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public AkomaNtosoTypeComplexType(Element element) {
-    super(element);
-}
+
+    public AkomaNtosoTypeComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private Components components;
-private AmendmentList amendmentList;
-private OfficialGazette officialGazette;
-private DocumentCollection documentCollection;
-private Act act;
-private Bill bill;
-private DebateReport debateReport;
-private Debate debate;
-private Amendment amendment;
-private Judgement judgement;
-private Doc doc;
+    public Components getComponents() {
+        Components result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Components".equalsIgnoreCase(widget.getType())) {
+                result = (Components)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public AmendmentList getAmendmentList() {
+        AmendmentList result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("AmendmentList".equalsIgnoreCase(widget.getType())) {
+                result = (AmendmentList)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public OfficialGazette getOfficialGazette() {
+        OfficialGazette result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("OfficialGazette".equalsIgnoreCase(widget.getType())) {
+                result = (OfficialGazette)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public DocumentCollection getDocumentCollection() {
+        DocumentCollection result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("DocumentCollection".equalsIgnoreCase(widget.getType())) {
+                result = (DocumentCollection)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Act getAct() {
+        Act result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Act".equalsIgnoreCase(widget.getType())) {
+                result = (Act)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Bill getBill() {
+        Bill result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Bill".equalsIgnoreCase(widget.getType())) {
+                result = (Bill)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public DebateReport getDebateReport() {
+        DebateReport result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("DebateReport".equalsIgnoreCase(widget.getType())) {
+                result = (DebateReport)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Debate getDebate() {
+        Debate result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Debate".equalsIgnoreCase(widget.getType())) {
+                result = (Debate)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Amendment getAmendment() {
+        Amendment result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Amendment".equalsIgnoreCase(widget.getType())) {
+                result = (Amendment)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Judgement getJudgement() {
+        Judgement result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Judgement".equalsIgnoreCase(widget.getType())) {
+                result = (Judgement)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Doc getDoc() {
+        Doc result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Doc".equalsIgnoreCase(widget.getType())) {
+                result = (Doc)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"amendment","amendmentList","bill","officialGazette","doc","debate","judgement","debateReport","components","act","documentCollection"};
+        return  subtypes;
+    }
 
-public Components getComponents() {
-return components;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setComponents(final Components components) {
-this.components = components;
-}
-public AmendmentList getAmendmentList() {
-return amendmentList;
-}
-
-public void setAmendmentList(final AmendmentList amendmentList) {
-this.amendmentList = amendmentList;
-}
-public OfficialGazette getOfficialGazette() {
-return officialGazette;
-}
-
-public void setOfficialGazette(final OfficialGazette officialGazette) {
-this.officialGazette = officialGazette;
-}
-public DocumentCollection getDocumentCollection() {
-return documentCollection;
-}
-
-public void setDocumentCollection(final DocumentCollection documentCollection) {
-this.documentCollection = documentCollection;
-}
-public Act getAct() {
-return act;
-}
-
-public void setAct(final Act act) {
-this.act = act;
-}
-public Bill getBill() {
-return bill;
-}
-
-public void setBill(final Bill bill) {
-this.bill = bill;
-}
-public DebateReport getDebateReport() {
-return debateReport;
-}
-
-public void setDebateReport(final DebateReport debateReport) {
-this.debateReport = debateReport;
-}
-public Debate getDebate() {
-return debate;
-}
-
-public void setDebate(final Debate debate) {
-this.debate = debate;
-}
-public Amendment getAmendment() {
-return amendment;
-}
-
-public void setAmendment(final Amendment amendment) {
-this.amendment = amendment;
-}
-public Judgement getJudgement() {
-return judgement;
-}
-
-public void setJudgement(final Judgement judgement) {
-this.judgement = judgement;
-}
-public Doc getDoc() {
-return doc;
-}
-
-public void setDoc(final Doc doc) {
-this.doc = doc;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"amendment","amendmentList","bill","officialGazette","doc","debate","judgement","debateReport","components","act","documentCollection"};
-    return  subtypes;
-}
 }
 

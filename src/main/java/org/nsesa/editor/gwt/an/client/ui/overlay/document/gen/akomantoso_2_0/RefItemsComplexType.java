@@ -21,161 +21,193 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class RefItemsComplexType extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public RefItemsComplexType(Element element) {
-    super(element);
-}
+
+    public RefItemsComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private AnyURISimpleType sourceAttr;
-private java.util.List<Original> originals = new ArrayList<Original>();
-private java.util.List<PassiveRef> passiveRefs = new ArrayList<PassiveRef>();
-private java.util.List<ActiveRef> activeRefs = new ArrayList<ActiveRef>();
-private java.util.List<Jurisprudence> jurisprudences = new ArrayList<Jurisprudence>();
-private java.util.List<HasAttachment> hasAttachments = new ArrayList<HasAttachment>();
-private java.util.List<AttachmentOf> attachmentOfs = new ArrayList<AttachmentOf>();
-private java.util.List<TLCPerson> TLCPersons = new ArrayList<TLCPerson>();
-private java.util.List<TLCOrganization> TLCOrganizations = new ArrayList<TLCOrganization>();
-private java.util.List<TLCConcept> TLCConcepts = new ArrayList<TLCConcept>();
-private java.util.List<TLCObject> TLCObjects = new ArrayList<TLCObject>();
-private java.util.List<TLCEvent> TLCEvents = new ArrayList<TLCEvent>();
-private java.util.List<TLCLocation> TLCLocations = new ArrayList<TLCLocation>();
-private java.util.List<TLCProcess> TLCProcesses = new ArrayList<TLCProcess>();
-private java.util.List<TLCRole> TLCRoles = new ArrayList<TLCRole>();
-private java.util.List<TLCTerm> TLCTerms = new ArrayList<TLCTerm>();
-private java.util.List<TLCReference> TLCReferences = new ArrayList<TLCReference>();
+    private AnyURISimpleType sourceAttr;
+    public AnyURISimpleType getSourceAttr() {
+        return sourceAttr;
+    }
+    public void setSourceAttr(final AnyURISimpleType sourceAttr) {
+        this.sourceAttr = sourceAttr;
+    }
+    public java.util.List<Original> getOriginals() {
+        java.util.List<Original> result = new ArrayList<Original>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Original".equalsIgnoreCase(widget.getType())) {
+                result.add((Original)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<PassiveRef> getPassiveRefs() {
+        java.util.List<PassiveRef> result = new ArrayList<PassiveRef>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("PassiveRef".equalsIgnoreCase(widget.getType())) {
+                result.add((PassiveRef)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<ActiveRef> getActiveRefs() {
+        java.util.List<ActiveRef> result = new ArrayList<ActiveRef>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("ActiveRef".equalsIgnoreCase(widget.getType())) {
+                result.add((ActiveRef)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Jurisprudence> getJurisprudences() {
+        java.util.List<Jurisprudence> result = new ArrayList<Jurisprudence>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Jurisprudence".equalsIgnoreCase(widget.getType())) {
+                result.add((Jurisprudence)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<HasAttachment> getHasAttachments() {
+        java.util.List<HasAttachment> result = new ArrayList<HasAttachment>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("HasAttachment".equalsIgnoreCase(widget.getType())) {
+                result.add((HasAttachment)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<AttachmentOf> getAttachmentOfs() {
+        java.util.List<AttachmentOf> result = new ArrayList<AttachmentOf>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("AttachmentOf".equalsIgnoreCase(widget.getType())) {
+                result.add((AttachmentOf)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<TLCPerson> getTLCPersons() {
+        java.util.List<TLCPerson> result = new ArrayList<TLCPerson>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("TLCPerson".equalsIgnoreCase(widget.getType())) {
+                result.add((TLCPerson)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<TLCOrganization> getTLCOrganizations() {
+        java.util.List<TLCOrganization> result = new ArrayList<TLCOrganization>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("TLCOrganization".equalsIgnoreCase(widget.getType())) {
+                result.add((TLCOrganization)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<TLCConcept> getTLCConcepts() {
+        java.util.List<TLCConcept> result = new ArrayList<TLCConcept>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("TLCConcept".equalsIgnoreCase(widget.getType())) {
+                result.add((TLCConcept)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<TLCObject> getTLCObjects() {
+        java.util.List<TLCObject> result = new ArrayList<TLCObject>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("TLCObject".equalsIgnoreCase(widget.getType())) {
+                result.add((TLCObject)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<TLCEvent> getTLCEvents() {
+        java.util.List<TLCEvent> result = new ArrayList<TLCEvent>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("TLCEvent".equalsIgnoreCase(widget.getType())) {
+                result.add((TLCEvent)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<TLCLocation> getTLCLocations() {
+        java.util.List<TLCLocation> result = new ArrayList<TLCLocation>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("TLCLocation".equalsIgnoreCase(widget.getType())) {
+                result.add((TLCLocation)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<TLCProcess> getTLCProcesses() {
+        java.util.List<TLCProcess> result = new ArrayList<TLCProcess>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("TLCProcess".equalsIgnoreCase(widget.getType())) {
+                result.add((TLCProcess)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<TLCRole> getTLCRoles() {
+        java.util.List<TLCRole> result = new ArrayList<TLCRole>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("TLCRole".equalsIgnoreCase(widget.getType())) {
+                result.add((TLCRole)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<TLCTerm> getTLCTerms() {
+        java.util.List<TLCTerm> result = new ArrayList<TLCTerm>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("TLCTerm".equalsIgnoreCase(widget.getType())) {
+                result.add((TLCTerm)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<TLCReference> getTLCReferences() {
+        java.util.List<TLCReference> result = new ArrayList<TLCReference>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("TLCReference".equalsIgnoreCase(widget.getType())) {
+                result.add((TLCReference)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"TLCEvent","TLCPerson","TLCProcess","hasAttachment","TLCReference","TLCLocation","attachmentOf","TLCConcept","TLCObject","jurisprudence","TLCTerm","passiveRef","original","TLCRole","activeRef","TLCOrganization"};
+        return  subtypes;
+    }
 
-public AnyURISimpleType getSourceAttr() {
-return sourceAttr;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setSourceAttr(final AnyURISimpleType sourceAttr) {
-this.sourceAttr = sourceAttr;
-}
-public java.util.List<Original> getOriginal() {
-return originals;
-}
-
-public void setOriginal(final java.util.List<Original> originals) {
-this.originals = originals;
-}
-public java.util.List<PassiveRef> getPassiveRef() {
-return passiveRefs;
-}
-
-public void setPassiveRef(final java.util.List<PassiveRef> passiveRefs) {
-this.passiveRefs = passiveRefs;
-}
-public java.util.List<ActiveRef> getActiveRef() {
-return activeRefs;
-}
-
-public void setActiveRef(final java.util.List<ActiveRef> activeRefs) {
-this.activeRefs = activeRefs;
-}
-public java.util.List<Jurisprudence> getJurisprudence() {
-return jurisprudences;
-}
-
-public void setJurisprudence(final java.util.List<Jurisprudence> jurisprudences) {
-this.jurisprudences = jurisprudences;
-}
-public java.util.List<HasAttachment> getHasAttachment() {
-return hasAttachments;
-}
-
-public void setHasAttachment(final java.util.List<HasAttachment> hasAttachments) {
-this.hasAttachments = hasAttachments;
-}
-public java.util.List<AttachmentOf> getAttachmentOf() {
-return attachmentOfs;
-}
-
-public void setAttachmentOf(final java.util.List<AttachmentOf> attachmentOfs) {
-this.attachmentOfs = attachmentOfs;
-}
-public java.util.List<TLCPerson> getTLCPerson() {
-return TLCPersons;
-}
-
-public void setTLCPerson(final java.util.List<TLCPerson> TLCPersons) {
-this.TLCPersons = TLCPersons;
-}
-public java.util.List<TLCOrganization> getTLCOrganization() {
-return TLCOrganizations;
-}
-
-public void setTLCOrganization(final java.util.List<TLCOrganization> TLCOrganizations) {
-this.TLCOrganizations = TLCOrganizations;
-}
-public java.util.List<TLCConcept> getTLCConcept() {
-return TLCConcepts;
-}
-
-public void setTLCConcept(final java.util.List<TLCConcept> TLCConcepts) {
-this.TLCConcepts = TLCConcepts;
-}
-public java.util.List<TLCObject> getTLCObject() {
-return TLCObjects;
-}
-
-public void setTLCObject(final java.util.List<TLCObject> TLCObjects) {
-this.TLCObjects = TLCObjects;
-}
-public java.util.List<TLCEvent> getTLCEvent() {
-return TLCEvents;
-}
-
-public void setTLCEvent(final java.util.List<TLCEvent> TLCEvents) {
-this.TLCEvents = TLCEvents;
-}
-public java.util.List<TLCLocation> getTLCLocation() {
-return TLCLocations;
-}
-
-public void setTLCLocation(final java.util.List<TLCLocation> TLCLocations) {
-this.TLCLocations = TLCLocations;
-}
-public java.util.List<TLCProcess> getTLCProcess() {
-return TLCProcesses;
-}
-
-public void setTLCProcess(final java.util.List<TLCProcess> TLCProcesses) {
-this.TLCProcesses = TLCProcesses;
-}
-public java.util.List<TLCRole> getTLCRole() {
-return TLCRoles;
-}
-
-public void setTLCRole(final java.util.List<TLCRole> TLCRoles) {
-this.TLCRoles = TLCRoles;
-}
-public java.util.List<TLCTerm> getTLCTerm() {
-return TLCTerms;
-}
-
-public void setTLCTerm(final java.util.List<TLCTerm> TLCTerms) {
-this.TLCTerms = TLCTerms;
-}
-public java.util.List<TLCReference> getTLCReference() {
-return TLCReferences;
-}
-
-public void setTLCReference(final java.util.List<TLCReference> TLCReferences) {
-this.TLCReferences = TLCReferences;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"TLCEvent","TLCPerson","TLCProcess","hasAttachment","TLCReference","TLCLocation","attachmentOf","TLCConcept","TLCObject","jurisprudence","TLCTerm","passiveRef","original","TLCRole","activeRef","TLCOrganization"};
-    return  subtypes;
-}
 }
 

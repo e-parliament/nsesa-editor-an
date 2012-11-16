@@ -7,41 +7,63 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import com.google.gwt.user.client.DOM;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class MeaningMod extends ModificationTypeComplexType  {
 
 // CONSTRUCTORS ------------------
-public MeaningMod(Element element) {
-    super(element);
-}
+    public MeaningMod() {
+        super(DOM.createElement("meaningMod"));
+    }
+
+    public MeaningMod(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private MeaningModsSimpleType typeAttr;
-private Domain domain;
+    private MeaningModsSimpleType typeAttr;
+    public MeaningModsSimpleType getTypeAttr() {
+        return typeAttr;
+    }
+    public void setTypeAttr(final MeaningModsSimpleType typeAttr) {
+        this.typeAttr = typeAttr;
+    }
+    public Domain getDomain() {
+        Domain result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Domain".equalsIgnoreCase(widget.getType())) {
+                result = (Domain)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"duration","application","source","condition","domain","efficacy","force","destination"};
+        return  subtypes;
+    }
 
-public MeaningModsSimpleType getTypeAttr() {
-return typeAttr;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setTypeAttr(final MeaningModsSimpleType typeAttr) {
-this.typeAttr = typeAttr;
-}
-public Domain getDomain() {
-return domain;
-}
-
-public void setDomain(final Domain domain) {
-this.domain = domain;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"duration","application","source","condition","domain","efficacy","force","destination"};
-    return  subtypes;
-}
 }
 

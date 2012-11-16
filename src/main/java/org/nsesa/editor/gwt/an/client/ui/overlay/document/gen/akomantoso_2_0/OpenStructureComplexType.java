@@ -13,97 +13,126 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class OpenStructureComplexType extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public OpenStructureComplexType(Element element) {
-    super(element);
-}
+
+    public OpenStructureComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private VersionTypeSimpleType containsAttr;
-private Meta meta;
-private CoverPage coverPage;
-private Preface preface;
-private Preamble preamble;
-private MainBody mainBody;
-private Conclusions conclusions;
-private Attachments attachments;
-private StringSimpleType nameAttr;
+    private VersionTypeSimpleType containsAttr;
+    private StringSimpleType nameAttr;
+    public VersionTypeSimpleType getContainsAttr() {
+        return containsAttr;
+    }
+    public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
+        this.containsAttr = containsAttr;
+    }
+    public Meta getMeta() {
+        Meta result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Meta".equalsIgnoreCase(widget.getType())) {
+                result = (Meta)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public CoverPage getCoverPage() {
+        CoverPage result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("CoverPage".equalsIgnoreCase(widget.getType())) {
+                result = (CoverPage)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Preface getPreface() {
+        Preface result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Preface".equalsIgnoreCase(widget.getType())) {
+                result = (Preface)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Preamble getPreamble() {
+        Preamble result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Preamble".equalsIgnoreCase(widget.getType())) {
+                result = (Preamble)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public MainBody getMainBody() {
+        MainBody result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("MainBody".equalsIgnoreCase(widget.getType())) {
+                result = (MainBody)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Conclusions getConclusions() {
+        Conclusions result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Conclusions".equalsIgnoreCase(widget.getType())) {
+                result = (Conclusions)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Attachments getAttachments() {
+        Attachments result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Attachments".equalsIgnoreCase(widget.getType())) {
+                result = (Attachments)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public StringSimpleType getNameAttr() {
+        return nameAttr;
+    }
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"conclusions","preface","mainBody","preamble","coverPage","attachments","meta"};
+        return  subtypes;
+    }
 
-public VersionTypeSimpleType getContainsAttr() {
-return containsAttr;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
-this.containsAttr = containsAttr;
-}
-public Meta getMeta() {
-return meta;
-}
-
-public void setMeta(final Meta meta) {
-this.meta = meta;
-}
-public CoverPage getCoverPage() {
-return coverPage;
-}
-
-public void setCoverPage(final CoverPage coverPage) {
-this.coverPage = coverPage;
-}
-public Preface getPreface() {
-return preface;
-}
-
-public void setPreface(final Preface preface) {
-this.preface = preface;
-}
-public Preamble getPreamble() {
-return preamble;
-}
-
-public void setPreamble(final Preamble preamble) {
-this.preamble = preamble;
-}
-public MainBody getMainBody() {
-return mainBody;
-}
-
-public void setMainBody(final MainBody mainBody) {
-this.mainBody = mainBody;
-}
-public Conclusions getConclusions() {
-return conclusions;
-}
-
-public void setConclusions(final Conclusions conclusions) {
-this.conclusions = conclusions;
-}
-public Attachments getAttachments() {
-return attachments;
-}
-
-public void setAttachments(final Attachments attachments) {
-this.attachments = attachments;
-}
-public StringSimpleType getNameAttr() {
-return nameAttr;
-}
-
-public void setNameAttr(final StringSimpleType nameAttr) {
-this.nameAttr = nameAttr;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"conclusions","preface","mainBody","preamble","coverPage","attachments","meta"};
-    return  subtypes;
-}
 }
 

@@ -6,33 +6,53 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import com.google.gwt.user.client.DOM;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class Hcontainer extends HierarchyComplexType  {
 
 // CONSTRUCTORS ------------------
-public Hcontainer(Element element) {
-    super(element);
-}
+    public Hcontainer() {
+        super(DOM.createElement("hcontainer"));
+    }
+
+    public Hcontainer(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private StringSimpleType nameAttr;
+    private StringSimpleType nameAttr;
+    public StringSimpleType getNameAttr() {
+        return nameAttr;
+    }
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"tome","subparagraph","paragraph","subheading","subsection","title","chapter","division","alinea","componentRef","subchapter","wrap","indent","subclause","list","sublist","section","intro","content","point","num","article","subpart","hcontainer","book","subtitle","part","heading","clause"};
+        return  subtypes;
+    }
 
-public StringSimpleType getNameAttr() {
-return nameAttr;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setNameAttr(final StringSimpleType nameAttr) {
-this.nameAttr = nameAttr;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"tome","subparagraph","paragraph","subheading","subsection","title","chapter","division","alinea","componentRef","subchapter","wrap","indent","subclause","list","sublist","section","intro","content","point","num","article","subpart","hcontainer","book","subtitle","part","heading","clause"};
-    return  subtypes;
-}
 }
 

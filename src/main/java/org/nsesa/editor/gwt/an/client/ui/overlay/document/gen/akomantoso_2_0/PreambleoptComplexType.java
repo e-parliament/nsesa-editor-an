@@ -6,12 +6,12 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Rec
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Citations;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Formula;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Container;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.BlockList;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Toc;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Tblock;
@@ -23,217 +23,236 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class PreambleoptComplexType extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public PreambleoptComplexType(Element element) {
-    super(element);
-}
+
+    public PreambleoptComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private java.util.List<Foreign> foreigns = new ArrayList<Foreign>();
-private java.util.List<Block> blocks = new ArrayList<Block>();
-private java.util.List<Recitals> recitalses = new ArrayList<Recitals>();
-private java.util.List<Citations> citationses = new ArrayList<Citations>();
-private java.util.List<Formula> formulas = new ArrayList<Formula>();
-private java.util.List<Container> containers = new ArrayList<Container>();
-private LanguageSimpleType langAttr;
-private IDSimpleType idAttr;
-private NMTOKENSimpleType evolvingIdAttr;
-private AnyURISimpleType alternativeToAttr;
-private StringSimpleType classAttr;
-private StringSimpleType styleAttr;
-private StringSimpleType titleAttr;
-private StatusTypeSimpleType statusAttr;
-private AmendableWidgetImpl wildcardContentAttr;
-private AnyURISimpleType refersToAttr;
-private java.util.List<BlockList> blockLists = new ArrayList<BlockList>();
-private java.util.List<Toc> tocs = new ArrayList<Toc>();
-private java.util.List<Tblock> tblocks = new ArrayList<Tblock>();
-private java.util.List<Ul> uls = new ArrayList<Ul>();
-private java.util.List<Ol> ols = new ArrayList<Ol>();
-private java.util.List<Table> tables = new ArrayList<Table>();
-private java.util.List<P> ps = new ArrayList<P>();
-private AnyURISimpleType periodAttr;
+    private AnyURISimpleType alternativeToAttr;
+    private LanguageSimpleType langAttr;
+    private StringSimpleType classAttr;
+    private StringSimpleType styleAttr;
+    private StringSimpleType titleAttr;
+    private StatusTypeSimpleType statusAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType periodAttr;
+    public java.util.List<Foreign> getForeigns() {
+        java.util.List<Foreign> result = new ArrayList<Foreign>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Foreign".equalsIgnoreCase(widget.getType())) {
+                result.add((Foreign)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Block> getBlocks() {
+        java.util.List<Block> result = new ArrayList<Block>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Block".equalsIgnoreCase(widget.getType())) {
+                result.add((Block)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Recitals> getRecitalses() {
+        java.util.List<Recitals> result = new ArrayList<Recitals>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Recitals".equalsIgnoreCase(widget.getType())) {
+                result.add((Recitals)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Citations> getCitationses() {
+        java.util.List<Citations> result = new ArrayList<Citations>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Citations".equalsIgnoreCase(widget.getType())) {
+                result.add((Citations)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Formula> getFormulas() {
+        java.util.List<Formula> result = new ArrayList<Formula>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Formula".equalsIgnoreCase(widget.getType())) {
+                result.add((Formula)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Container> getContainers() {
+        java.util.List<Container> result = new ArrayList<Container>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Container".equalsIgnoreCase(widget.getType())) {
+                result.add((Container)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public AnyURISimpleType getAlternativeToAttr() {
+        return alternativeToAttr;
+    }
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+    }
+    public LanguageSimpleType getLangAttr() {
+        return langAttr;
+    }
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+    }
+    public StringSimpleType getClassAttr() {
+        return classAttr;
+    }
+    public void setClassAttr(final StringSimpleType classAttr) {
+        this.classAttr = classAttr;
+    }
+    public StringSimpleType getStyleAttr() {
+        return styleAttr;
+    }
+    public void setStyleAttr(final StringSimpleType styleAttr) {
+        this.styleAttr = styleAttr;
+    }
+    public StringSimpleType getTitleAttr() {
+        return titleAttr;
+    }
+    public void setTitleAttr(final StringSimpleType titleAttr) {
+        this.titleAttr = titleAttr;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        return statusAttr;
+    }
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+    }
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+    public IDSimpleType getIdAttr() {
+        return idAttr;
+    }
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+    }
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        return evolvingIdAttr;
+    }
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+    public java.util.List<BlockList> getBlockLists() {
+        java.util.List<BlockList> result = new ArrayList<BlockList>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("BlockList".equalsIgnoreCase(widget.getType())) {
+                result.add((BlockList)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Toc> getTocs() {
+        java.util.List<Toc> result = new ArrayList<Toc>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Toc".equalsIgnoreCase(widget.getType())) {
+                result.add((Toc)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Tblock> getTblocks() {
+        java.util.List<Tblock> result = new ArrayList<Tblock>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Tblock".equalsIgnoreCase(widget.getType())) {
+                result.add((Tblock)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Ul> getUls() {
+        java.util.List<Ul> result = new ArrayList<Ul>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Ul".equalsIgnoreCase(widget.getType())) {
+                result.add((Ul)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Ol> getOls() {
+        java.util.List<Ol> result = new ArrayList<Ol>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Ol".equalsIgnoreCase(widget.getType())) {
+                result.add((Ol)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Table> getTables() {
+        java.util.List<Table> result = new ArrayList<Table>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Table".equalsIgnoreCase(widget.getType())) {
+                result.add((Table)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<P> getPs() {
+        java.util.List<P> result = new ArrayList<P>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("P".equalsIgnoreCase(widget.getType())) {
+                result.add((P)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public AnyURISimpleType getPeriodAttr() {
+        return periodAttr;
+    }
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"toc","ul","citations","tblock","block","table","recitals","container","blockList","p","ol","foreign","formula"};
+        return  subtypes;
+    }
 
-public java.util.List<Foreign> getForeign() {
-return foreigns;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setForeign(final java.util.List<Foreign> foreigns) {
-this.foreigns = foreigns;
-}
-public java.util.List<Block> getBlock() {
-return blocks;
-}
-
-public void setBlock(final java.util.List<Block> blocks) {
-this.blocks = blocks;
-}
-public java.util.List<Recitals> getRecitals() {
-return recitalses;
-}
-
-public void setRecitals(final java.util.List<Recitals> recitalses) {
-this.recitalses = recitalses;
-}
-public java.util.List<Citations> getCitations() {
-return citationses;
-}
-
-public void setCitations(final java.util.List<Citations> citationses) {
-this.citationses = citationses;
-}
-public java.util.List<Formula> getFormula() {
-return formulas;
-}
-
-public void setFormula(final java.util.List<Formula> formulas) {
-this.formulas = formulas;
-}
-public java.util.List<Container> getContainer() {
-return containers;
-}
-
-public void setContainer(final java.util.List<Container> containers) {
-this.containers = containers;
-}
-public LanguageSimpleType getLangAttr() {
-return langAttr;
-}
-
-public void setLangAttr(final LanguageSimpleType langAttr) {
-this.langAttr = langAttr;
-}
-public IDSimpleType getIdAttr() {
-return idAttr;
-}
-
-public void setIdAttr(final IDSimpleType idAttr) {
-this.idAttr = idAttr;
-}
-public NMTOKENSimpleType getEvolvingIdAttr() {
-return evolvingIdAttr;
-}
-
-public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-this.evolvingIdAttr = evolvingIdAttr;
-}
-public AnyURISimpleType getAlternativeToAttr() {
-return alternativeToAttr;
-}
-
-public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-this.alternativeToAttr = alternativeToAttr;
-}
-public StringSimpleType getClassAttr() {
-return classAttr;
-}
-
-public void setClassAttr(final StringSimpleType classAttr) {
-this.classAttr = classAttr;
-}
-public StringSimpleType getStyleAttr() {
-return styleAttr;
-}
-
-public void setStyleAttr(final StringSimpleType styleAttr) {
-this.styleAttr = styleAttr;
-}
-public StringSimpleType getTitleAttr() {
-return titleAttr;
-}
-
-public void setTitleAttr(final StringSimpleType titleAttr) {
-this.titleAttr = titleAttr;
-}
-public StatusTypeSimpleType getStatusAttr() {
-return statusAttr;
-}
-
-public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-this.statusAttr = statusAttr;
-}
-public AmendableWidgetImpl getWildcardContentAttr() {
-return wildcardContentAttr;
-}
-
-public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-this.wildcardContentAttr = wildcardContentAttr;
-}
-public AnyURISimpleType getRefersToAttr() {
-return refersToAttr;
-}
-
-public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-this.refersToAttr = refersToAttr;
-}
-public java.util.List<BlockList> getBlockList() {
-return blockLists;
-}
-
-public void setBlockList(final java.util.List<BlockList> blockLists) {
-this.blockLists = blockLists;
-}
-public java.util.List<Toc> getToc() {
-return tocs;
-}
-
-public void setToc(final java.util.List<Toc> tocs) {
-this.tocs = tocs;
-}
-public java.util.List<Tblock> getTblock() {
-return tblocks;
-}
-
-public void setTblock(final java.util.List<Tblock> tblocks) {
-this.tblocks = tblocks;
-}
-public java.util.List<Ul> getUl() {
-return uls;
-}
-
-public void setUl(final java.util.List<Ul> uls) {
-this.uls = uls;
-}
-public java.util.List<Ol> getOl() {
-return ols;
-}
-
-public void setOl(final java.util.List<Ol> ols) {
-this.ols = ols;
-}
-public java.util.List<Table> getTable() {
-return tables;
-}
-
-public void setTable(final java.util.List<Table> tables) {
-this.tables = tables;
-}
-public java.util.List<P> getP() {
-return ps;
-}
-
-public void setP(final java.util.List<P> ps) {
-this.ps = ps;
-}
-public AnyURISimpleType getPeriodAttr() {
-return periodAttr;
-}
-
-public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-this.periodAttr = periodAttr;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"toc","ul","citations","tblock","block","table","recitals","container","blockList","p","ol","foreign","formula"};
-    return  subtypes;
-}
 }
 

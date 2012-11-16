@@ -6,12 +6,12 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Com
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Wrap;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Content;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Hcontainer;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Clause;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Section;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Part;
@@ -37,321 +37,356 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class HierarchyComplexType extends BasehierarchyComplexType  {
 
 // CONSTRUCTORS ------------------
-public HierarchyComplexType(Element element) {
-    super(element);
-}
+
+    public HierarchyComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private Intro intro;
-private java.util.List<ComponentRef> componentRefs = new ArrayList<ComponentRef>();
-private Wrap wrap;
-private Content content_;
-private java.util.List<Hcontainer> hcontainers = new ArrayList<Hcontainer>();
-private AnyURISimpleType alternativeToAttr;
-private AmendableWidgetImpl wildcardContentAttr;
-private StringSimpleType classAttr;
-private StringSimpleType styleAttr;
-private StringSimpleType titleAttr;
-private LanguageSimpleType langAttr;
-private IDSimpleType idAttr;
-private NMTOKENSimpleType evolvingIdAttr;
-private AnyURISimpleType refersToAttr;
-private StatusTypeSimpleType statusAttr;
-private java.util.List<Clause> clauses = new ArrayList<Clause>();
-private java.util.List<Section> sections = new ArrayList<Section>();
-private java.util.List<Part> parts = new ArrayList<Part>();
-private java.util.List<Paragraph> paragraphs = new ArrayList<Paragraph>();
-private java.util.List<Chapter> chapters = new ArrayList<Chapter>();
-private java.util.List<Title> title_s = new ArrayList<Title>();
-private java.util.List<Article> articles = new ArrayList<Article>();
-private java.util.List<Book> books = new ArrayList<Book>();
-private java.util.List<Tome> tomes = new ArrayList<Tome>();
-private java.util.List<Division> divisions = new ArrayList<Division>();
-private java.util.List<List> lists = new ArrayList<List>();
-private java.util.List<Point> points = new ArrayList<Point>();
-private java.util.List<Indent> indents = new ArrayList<Indent>();
-private java.util.List<Alinea> alineas = new ArrayList<Alinea>();
-private java.util.List<Subsection> subsections = new ArrayList<Subsection>();
-private java.util.List<Subpart> subparts = new ArrayList<Subpart>();
-private java.util.List<Subparagraph> subparagraphs = new ArrayList<Subparagraph>();
-private java.util.List<Subchapter> subchapters = new ArrayList<Subchapter>();
-private java.util.List<Subtitle> subtitles = new ArrayList<Subtitle>();
-private java.util.List<Subclause> subclauses = new ArrayList<Subclause>();
-private java.util.List<Sublist> sublists = new ArrayList<Sublist>();
-private AnyURISimpleType periodAttr;
+    private StringSimpleType classAttr;
+    private StringSimpleType styleAttr;
+    private StringSimpleType titleAttr;
+    private StatusTypeSimpleType statusAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
+    private AnyURISimpleType alternativeToAttr;
+    private LanguageSimpleType langAttr;
+    private AnyURISimpleType refersToAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType periodAttr;
+    public Intro getIntro() {
+        Intro result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Intro".equalsIgnoreCase(widget.getType())) {
+                result = (Intro)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public java.util.List<ComponentRef> getComponentRefs() {
+        java.util.List<ComponentRef> result = new ArrayList<ComponentRef>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("ComponentRef".equalsIgnoreCase(widget.getType())) {
+                result.add((ComponentRef)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public Wrap getWrap() {
+        Wrap result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Wrap".equalsIgnoreCase(widget.getType())) {
+                result = (Wrap)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Content getContent_() {
+        Content result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Content".equalsIgnoreCase(widget.getType())) {
+                result = (Content)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public java.util.List<Hcontainer> getHcontainers() {
+        java.util.List<Hcontainer> result = new ArrayList<Hcontainer>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Hcontainer".equalsIgnoreCase(widget.getType())) {
+                result.add((Hcontainer)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public StringSimpleType getClassAttr() {
+        return classAttr;
+    }
+    public void setClassAttr(final StringSimpleType classAttr) {
+        this.classAttr = classAttr;
+    }
+    public StringSimpleType getStyleAttr() {
+        return styleAttr;
+    }
+    public void setStyleAttr(final StringSimpleType styleAttr) {
+        this.styleAttr = styleAttr;
+    }
+    public StringSimpleType getTitleAttr() {
+        return titleAttr;
+    }
+    public void setTitleAttr(final StringSimpleType titleAttr) {
+        this.titleAttr = titleAttr;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        return statusAttr;
+    }
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+    }
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+    public AnyURISimpleType getAlternativeToAttr() {
+        return alternativeToAttr;
+    }
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+    }
+    public LanguageSimpleType getLangAttr() {
+        return langAttr;
+    }
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+    public IDSimpleType getIdAttr() {
+        return idAttr;
+    }
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+    }
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        return evolvingIdAttr;
+    }
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+    }
+    public java.util.List<Clause> getClauses() {
+        java.util.List<Clause> result = new ArrayList<Clause>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Clause".equalsIgnoreCase(widget.getType())) {
+                result.add((Clause)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Section> getSections() {
+        java.util.List<Section> result = new ArrayList<Section>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Section".equalsIgnoreCase(widget.getType())) {
+                result.add((Section)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Part> getParts() {
+        java.util.List<Part> result = new ArrayList<Part>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Part".equalsIgnoreCase(widget.getType())) {
+                result.add((Part)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Paragraph> getParagraphs() {
+        java.util.List<Paragraph> result = new ArrayList<Paragraph>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Paragraph".equalsIgnoreCase(widget.getType())) {
+                result.add((Paragraph)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Chapter> getChapters() {
+        java.util.List<Chapter> result = new ArrayList<Chapter>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Chapter".equalsIgnoreCase(widget.getType())) {
+                result.add((Chapter)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Title> getTitle_s() {
+        java.util.List<Title> result = new ArrayList<Title>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Title".equalsIgnoreCase(widget.getType())) {
+                result.add((Title)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Article> getArticles() {
+        java.util.List<Article> result = new ArrayList<Article>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Article".equalsIgnoreCase(widget.getType())) {
+                result.add((Article)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Book> getBooks() {
+        java.util.List<Book> result = new ArrayList<Book>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Book".equalsIgnoreCase(widget.getType())) {
+                result.add((Book)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Tome> getTomes() {
+        java.util.List<Tome> result = new ArrayList<Tome>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Tome".equalsIgnoreCase(widget.getType())) {
+                result.add((Tome)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Division> getDivisions() {
+        java.util.List<Division> result = new ArrayList<Division>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Division".equalsIgnoreCase(widget.getType())) {
+                result.add((Division)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<List> getLists() {
+        java.util.List<List> result = new ArrayList<List>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("List".equalsIgnoreCase(widget.getType())) {
+                result.add((List)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Point> getPoints() {
+        java.util.List<Point> result = new ArrayList<Point>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Point".equalsIgnoreCase(widget.getType())) {
+                result.add((Point)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Indent> getIndents() {
+        java.util.List<Indent> result = new ArrayList<Indent>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Indent".equalsIgnoreCase(widget.getType())) {
+                result.add((Indent)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Alinea> getAlineas() {
+        java.util.List<Alinea> result = new ArrayList<Alinea>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Alinea".equalsIgnoreCase(widget.getType())) {
+                result.add((Alinea)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Subsection> getSubsections() {
+        java.util.List<Subsection> result = new ArrayList<Subsection>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Subsection".equalsIgnoreCase(widget.getType())) {
+                result.add((Subsection)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Subpart> getSubparts() {
+        java.util.List<Subpart> result = new ArrayList<Subpart>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Subpart".equalsIgnoreCase(widget.getType())) {
+                result.add((Subpart)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Subparagraph> getSubparagraphs() {
+        java.util.List<Subparagraph> result = new ArrayList<Subparagraph>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Subparagraph".equalsIgnoreCase(widget.getType())) {
+                result.add((Subparagraph)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Subchapter> getSubchapters() {
+        java.util.List<Subchapter> result = new ArrayList<Subchapter>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Subchapter".equalsIgnoreCase(widget.getType())) {
+                result.add((Subchapter)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Subtitle> getSubtitles() {
+        java.util.List<Subtitle> result = new ArrayList<Subtitle>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Subtitle".equalsIgnoreCase(widget.getType())) {
+                result.add((Subtitle)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Subclause> getSubclauses() {
+        java.util.List<Subclause> result = new ArrayList<Subclause>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Subclause".equalsIgnoreCase(widget.getType())) {
+                result.add((Subclause)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Sublist> getSublists() {
+        java.util.List<Sublist> result = new ArrayList<Sublist>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Sublist".equalsIgnoreCase(widget.getType())) {
+                result.add((Sublist)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public AnyURISimpleType getPeriodAttr() {
+        return periodAttr;
+    }
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"tome","subparagraph","paragraph","subheading","subsection","title","chapter","division","alinea","componentRef","subchapter","wrap","indent","subclause","list","sublist","section","intro","content","point","num","article","subpart","hcontainer","book","subtitle","part","heading","clause"};
+        return  subtypes;
+    }
 
-public Intro getIntro() {
-return intro;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setIntro(final Intro intro) {
-this.intro = intro;
-}
-public java.util.List<ComponentRef> getComponentRef() {
-return componentRefs;
-}
-
-public void setComponentRef(final java.util.List<ComponentRef> componentRefs) {
-this.componentRefs = componentRefs;
-}
-public Wrap getWrap() {
-return wrap;
-}
-
-public void setWrap(final Wrap wrap) {
-this.wrap = wrap;
-}
-public Content getContent_() {
-return content_;
-}
-
-public void setContent_(final Content content_) {
-this.content_ = content_;
-}
-public java.util.List<Hcontainer> getHcontainer() {
-return hcontainers;
-}
-
-public void setHcontainer(final java.util.List<Hcontainer> hcontainers) {
-this.hcontainers = hcontainers;
-}
-public AnyURISimpleType getAlternativeToAttr() {
-return alternativeToAttr;
-}
-
-public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-this.alternativeToAttr = alternativeToAttr;
-}
-public AmendableWidgetImpl getWildcardContentAttr() {
-return wildcardContentAttr;
-}
-
-public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-this.wildcardContentAttr = wildcardContentAttr;
-}
-public StringSimpleType getClassAttr() {
-return classAttr;
-}
-
-public void setClassAttr(final StringSimpleType classAttr) {
-this.classAttr = classAttr;
-}
-public StringSimpleType getStyleAttr() {
-return styleAttr;
-}
-
-public void setStyleAttr(final StringSimpleType styleAttr) {
-this.styleAttr = styleAttr;
-}
-public StringSimpleType getTitleAttr() {
-return titleAttr;
-}
-
-public void setTitleAttr(final StringSimpleType titleAttr) {
-this.titleAttr = titleAttr;
-}
-public LanguageSimpleType getLangAttr() {
-return langAttr;
-}
-
-public void setLangAttr(final LanguageSimpleType langAttr) {
-this.langAttr = langAttr;
-}
-public IDSimpleType getIdAttr() {
-return idAttr;
-}
-
-public void setIdAttr(final IDSimpleType idAttr) {
-this.idAttr = idAttr;
-}
-public NMTOKENSimpleType getEvolvingIdAttr() {
-return evolvingIdAttr;
-}
-
-public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-this.evolvingIdAttr = evolvingIdAttr;
-}
-public AnyURISimpleType getRefersToAttr() {
-return refersToAttr;
-}
-
-public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-this.refersToAttr = refersToAttr;
-}
-public StatusTypeSimpleType getStatusAttr() {
-return statusAttr;
-}
-
-public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-this.statusAttr = statusAttr;
-}
-public java.util.List<Clause> getClause() {
-return clauses;
-}
-
-public void setClause(final java.util.List<Clause> clauses) {
-this.clauses = clauses;
-}
-public java.util.List<Section> getSection() {
-return sections;
-}
-
-public void setSection(final java.util.List<Section> sections) {
-this.sections = sections;
-}
-public java.util.List<Part> getPart() {
-return parts;
-}
-
-public void setPart(final java.util.List<Part> parts) {
-this.parts = parts;
-}
-public java.util.List<Paragraph> getParagraph() {
-return paragraphs;
-}
-
-public void setParagraph(final java.util.List<Paragraph> paragraphs) {
-this.paragraphs = paragraphs;
-}
-public java.util.List<Chapter> getChapter() {
-return chapters;
-}
-
-public void setChapter(final java.util.List<Chapter> chapters) {
-this.chapters = chapters;
-}
-public java.util.List<Title> getTitle_() {
-return title_s;
-}
-
-public void setTitle_(final java.util.List<Title> title_s) {
-this.title_s = title_s;
-}
-public java.util.List<Article> getArticle() {
-return articles;
-}
-
-public void setArticle(final java.util.List<Article> articles) {
-this.articles = articles;
-}
-public java.util.List<Book> getBook() {
-return books;
-}
-
-public void setBook(final java.util.List<Book> books) {
-this.books = books;
-}
-public java.util.List<Tome> getTome() {
-return tomes;
-}
-
-public void setTome(final java.util.List<Tome> tomes) {
-this.tomes = tomes;
-}
-public java.util.List<Division> getDivision() {
-return divisions;
-}
-
-public void setDivision(final java.util.List<Division> divisions) {
-this.divisions = divisions;
-}
-public java.util.List<List> getList() {
-return lists;
-}
-
-public void setList(final java.util.List<List> lists) {
-this.lists = lists;
-}
-public java.util.List<Point> getPoint() {
-return points;
-}
-
-public void setPoint(final java.util.List<Point> points) {
-this.points = points;
-}
-public java.util.List<Indent> getIndent() {
-return indents;
-}
-
-public void setIndent(final java.util.List<Indent> indents) {
-this.indents = indents;
-}
-public java.util.List<Alinea> getAlinea() {
-return alineas;
-}
-
-public void setAlinea(final java.util.List<Alinea> alineas) {
-this.alineas = alineas;
-}
-public java.util.List<Subsection> getSubsection() {
-return subsections;
-}
-
-public void setSubsection(final java.util.List<Subsection> subsections) {
-this.subsections = subsections;
-}
-public java.util.List<Subpart> getSubpart() {
-return subparts;
-}
-
-public void setSubpart(final java.util.List<Subpart> subparts) {
-this.subparts = subparts;
-}
-public java.util.List<Subparagraph> getSubparagraph() {
-return subparagraphs;
-}
-
-public void setSubparagraph(final java.util.List<Subparagraph> subparagraphs) {
-this.subparagraphs = subparagraphs;
-}
-public java.util.List<Subchapter> getSubchapter() {
-return subchapters;
-}
-
-public void setSubchapter(final java.util.List<Subchapter> subchapters) {
-this.subchapters = subchapters;
-}
-public java.util.List<Subtitle> getSubtitle() {
-return subtitles;
-}
-
-public void setSubtitle(final java.util.List<Subtitle> subtitles) {
-this.subtitles = subtitles;
-}
-public java.util.List<Subclause> getSubclause() {
-return subclauses;
-}
-
-public void setSubclause(final java.util.List<Subclause> subclauses) {
-this.subclauses = subclauses;
-}
-public java.util.List<Sublist> getSublist() {
-return sublists;
-}
-
-public void setSublist(final java.util.List<Sublist> sublists) {
-this.sublists = sublists;
-}
-public AnyURISimpleType getPeriodAttr() {
-return periodAttr;
-}
-
-public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-this.periodAttr = periodAttr;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"tome","subparagraph","paragraph","subheading","subsection","title","chapter","division","alinea","componentRef","subchapter","wrap","indent","subclause","list","sublist","section","intro","content","point","num","article","subpart","hcontainer","book","subtitle","part","heading","clause"};
-    return  subtypes;
-}
 }
 

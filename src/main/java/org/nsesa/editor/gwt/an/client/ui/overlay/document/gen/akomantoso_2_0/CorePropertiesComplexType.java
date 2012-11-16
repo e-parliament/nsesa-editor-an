@@ -11,81 +11,108 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class CorePropertiesComplexType extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public CorePropertiesComplexType(Element element) {
-    super(element);
-}
+
+    public CorePropertiesComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private FRBRthis FRBRthis;
-private java.util.List<FRBRuri> FRBRuris = new ArrayList<FRBRuri>();
-private java.util.List<FRBRalias> FRBRaliases = new ArrayList<FRBRalias>();
-private java.util.List<FRBRdate> FRBRdates = new ArrayList<FRBRdate>();
-private java.util.List<FRBRauthor> FRBRauthors = new ArrayList<FRBRauthor>();
-private ComponentInfo componentInfo;
-private Preservation preservation;
+    public FRBRthis getFRBRthis() {
+        FRBRthis result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("FRBRthis".equalsIgnoreCase(widget.getType())) {
+                result = (FRBRthis)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public java.util.List<FRBRuri> getFRBRuris() {
+        java.util.List<FRBRuri> result = new ArrayList<FRBRuri>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("FRBRuri".equalsIgnoreCase(widget.getType())) {
+                result.add((FRBRuri)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<FRBRalias> getFRBRaliases() {
+        java.util.List<FRBRalias> result = new ArrayList<FRBRalias>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("FRBRalias".equalsIgnoreCase(widget.getType())) {
+                result.add((FRBRalias)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<FRBRdate> getFRBRdates() {
+        java.util.List<FRBRdate> result = new ArrayList<FRBRdate>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("FRBRdate".equalsIgnoreCase(widget.getType())) {
+                result.add((FRBRdate)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<FRBRauthor> getFRBRauthors() {
+        java.util.List<FRBRauthor> result = new ArrayList<FRBRauthor>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("FRBRauthor".equalsIgnoreCase(widget.getType())) {
+                result.add((FRBRauthor)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public ComponentInfo getComponentInfo() {
+        ComponentInfo result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("ComponentInfo".equalsIgnoreCase(widget.getType())) {
+                result = (ComponentInfo)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Preservation getPreservation() {
+        Preservation result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Preservation".equalsIgnoreCase(widget.getType())) {
+                result = (Preservation)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"FRBRthis","FRBRalias","componentInfo","FRBRuri","FRBRauthor","FRBRdate","preservation"};
+        return  subtypes;
+    }
 
-public FRBRthis getFRBRthis() {
-return FRBRthis;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setFRBRthis(final FRBRthis FRBRthis) {
-this.FRBRthis = FRBRthis;
-}
-public java.util.List<FRBRuri> getFRBRuri() {
-return FRBRuris;
-}
-
-public void setFRBRuri(final java.util.List<FRBRuri> FRBRuris) {
-this.FRBRuris = FRBRuris;
-}
-public java.util.List<FRBRalias> getFRBRalias() {
-return FRBRaliases;
-}
-
-public void setFRBRalias(final java.util.List<FRBRalias> FRBRaliases) {
-this.FRBRaliases = FRBRaliases;
-}
-public java.util.List<FRBRdate> getFRBRdate() {
-return FRBRdates;
-}
-
-public void setFRBRdate(final java.util.List<FRBRdate> FRBRdates) {
-this.FRBRdates = FRBRdates;
-}
-public java.util.List<FRBRauthor> getFRBRauthor() {
-return FRBRauthors;
-}
-
-public void setFRBRauthor(final java.util.List<FRBRauthor> FRBRauthors) {
-this.FRBRauthors = FRBRauthors;
-}
-public ComponentInfo getComponentInfo() {
-return componentInfo;
-}
-
-public void setComponentInfo(final ComponentInfo componentInfo) {
-this.componentInfo = componentInfo;
-}
-public Preservation getPreservation() {
-return preservation;
-}
-
-public void setPreservation(final Preservation preservation) {
-this.preservation = preservation;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"FRBRthis","FRBRalias","componentInfo","FRBRuri","FRBRauthor","FRBRdate","preservation"};
-    return  subtypes;
-}
 }
 

@@ -5,33 +5,55 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import com.google.gwt.user.client.DOM;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class Toc extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public Toc(Element element) {
-    super(element);
-}
+    public Toc() {
+        super(DOM.createElement("toc"));
+    }
+
+    public Toc(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private java.util.List<TocItem> tocItems = new ArrayList<TocItem>();
+    public java.util.List<TocItem> getTocItems() {
+        java.util.List<TocItem> result = new ArrayList<TocItem>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("TocItem".equalsIgnoreCase(widget.getType())) {
+                result.add((TocItem)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"tocItem"};
+        return  subtypes;
+    }
 
-public java.util.List<TocItem> getTocItem() {
-return tocItems;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setTocItem(final java.util.List<TocItem> tocItems) {
-this.tocItems = tocItems;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"tocItem"};
-    return  subtypes;
-}
 }
 

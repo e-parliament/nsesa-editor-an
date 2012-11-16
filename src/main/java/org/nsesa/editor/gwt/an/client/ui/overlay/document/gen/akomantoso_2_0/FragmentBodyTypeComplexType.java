@@ -2,12 +2,12 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Hcontainer;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Container;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Clause;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Section;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Part;
@@ -54,465 +54,559 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public FragmentBodyTypeComplexType(Element element) {
-    super(element);
-}
+
+    public FragmentBodyTypeComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private Hcontainer hcontainer;
-private Container container;
-private LanguageSimpleType langAttr;
-private IDSimpleType idAttr;
-private NMTOKENSimpleType evolvingIdAttr;
-private AnyURISimpleType alternativeToAttr;
-private StringSimpleType classAttr;
-private StringSimpleType styleAttr;
-private StringSimpleType titleAttr;
-private StatusTypeSimpleType statusAttr;
-private AmendableWidgetImpl wildcardContentAttr;
-private AnyURISimpleType refersToAttr;
-private Clause clause;
-private Section section;
-private Part part;
-private Paragraph paragraph;
-private Chapter chapter;
-private Title title_;
-private Article article;
-private Book book;
-private Tome tome;
-private Division division;
-private List list;
-private Point point;
-private Indent indent;
-private Alinea alinea;
-private Subsection subsection;
-private Subpart subpart;
-private Subparagraph subparagraph;
-private Subchapter subchapter;
-private Subtitle subtitle;
-private Subclause subclause;
-private Sublist sublist;
-private AdministrationOfOath administrationOfOath;
-private RollCall rollCall;
-private Prayers prayers;
-private OralStatements oralStatements;
-private WrittenStatements writtenStatements;
-private PersonalStatements personalStatements;
-private MinisterialStatements ministerialStatements;
-private Resolutions resolutions;
-private NationalInterest nationalInterest;
-private DeclarationOfVote declarationOfVote;
-private Communication communication;
-private Petitions petitions;
-private Papers papers;
-private NoticesOfMotion noticesOfMotion;
-private Questions questions;
-private Address address;
-private ProceduralMotions proceduralMotions;
-private PointOfOrder pointOfOrder;
-private Adjournment adjournment;
-private DebateSection debateSection;
-private Div div;
-private AnyURISimpleType periodAttr;
+    private AnyURISimpleType alternativeToAttr;
+    private LanguageSimpleType langAttr;
+    private StringSimpleType classAttr;
+    private StringSimpleType styleAttr;
+    private StringSimpleType titleAttr;
+    private StatusTypeSimpleType statusAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType periodAttr;
+    public Hcontainer getHcontainer() {
+        Hcontainer result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Hcontainer".equalsIgnoreCase(widget.getType())) {
+                result = (Hcontainer)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Container getContainer() {
+        Container result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Container".equalsIgnoreCase(widget.getType())) {
+                result = (Container)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public AnyURISimpleType getAlternativeToAttr() {
+        return alternativeToAttr;
+    }
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+    }
+    public LanguageSimpleType getLangAttr() {
+        return langAttr;
+    }
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+    }
+    public StringSimpleType getClassAttr() {
+        return classAttr;
+    }
+    public void setClassAttr(final StringSimpleType classAttr) {
+        this.classAttr = classAttr;
+    }
+    public StringSimpleType getStyleAttr() {
+        return styleAttr;
+    }
+    public void setStyleAttr(final StringSimpleType styleAttr) {
+        this.styleAttr = styleAttr;
+    }
+    public StringSimpleType getTitleAttr() {
+        return titleAttr;
+    }
+    public void setTitleAttr(final StringSimpleType titleAttr) {
+        this.titleAttr = titleAttr;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        return statusAttr;
+    }
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+    }
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+    public IDSimpleType getIdAttr() {
+        return idAttr;
+    }
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+    }
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        return evolvingIdAttr;
+    }
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+    public Clause getClause() {
+        Clause result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Clause".equalsIgnoreCase(widget.getType())) {
+                result = (Clause)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Section getSection() {
+        Section result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Section".equalsIgnoreCase(widget.getType())) {
+                result = (Section)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Part getPart() {
+        Part result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Part".equalsIgnoreCase(widget.getType())) {
+                result = (Part)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Paragraph getParagraph() {
+        Paragraph result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Paragraph".equalsIgnoreCase(widget.getType())) {
+                result = (Paragraph)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Chapter getChapter() {
+        Chapter result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Chapter".equalsIgnoreCase(widget.getType())) {
+                result = (Chapter)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Title getTitle_() {
+        Title result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Title".equalsIgnoreCase(widget.getType())) {
+                result = (Title)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Article getArticle() {
+        Article result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Article".equalsIgnoreCase(widget.getType())) {
+                result = (Article)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Book getBook() {
+        Book result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Book".equalsIgnoreCase(widget.getType())) {
+                result = (Book)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Tome getTome() {
+        Tome result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Tome".equalsIgnoreCase(widget.getType())) {
+                result = (Tome)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Division getDivision() {
+        Division result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Division".equalsIgnoreCase(widget.getType())) {
+                result = (Division)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public List getList() {
+        List result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("List".equalsIgnoreCase(widget.getType())) {
+                result = (List)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Point getPoint() {
+        Point result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Point".equalsIgnoreCase(widget.getType())) {
+                result = (Point)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Indent getIndent() {
+        Indent result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Indent".equalsIgnoreCase(widget.getType())) {
+                result = (Indent)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Alinea getAlinea() {
+        Alinea result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Alinea".equalsIgnoreCase(widget.getType())) {
+                result = (Alinea)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Subsection getSubsection() {
+        Subsection result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Subsection".equalsIgnoreCase(widget.getType())) {
+                result = (Subsection)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Subpart getSubpart() {
+        Subpart result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Subpart".equalsIgnoreCase(widget.getType())) {
+                result = (Subpart)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Subparagraph getSubparagraph() {
+        Subparagraph result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Subparagraph".equalsIgnoreCase(widget.getType())) {
+                result = (Subparagraph)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Subchapter getSubchapter() {
+        Subchapter result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Subchapter".equalsIgnoreCase(widget.getType())) {
+                result = (Subchapter)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Subtitle getSubtitle() {
+        Subtitle result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Subtitle".equalsIgnoreCase(widget.getType())) {
+                result = (Subtitle)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Subclause getSubclause() {
+        Subclause result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Subclause".equalsIgnoreCase(widget.getType())) {
+                result = (Subclause)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Sublist getSublist() {
+        Sublist result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Sublist".equalsIgnoreCase(widget.getType())) {
+                result = (Sublist)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public AdministrationOfOath getAdministrationOfOath() {
+        AdministrationOfOath result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("AdministrationOfOath".equalsIgnoreCase(widget.getType())) {
+                result = (AdministrationOfOath)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public RollCall getRollCall() {
+        RollCall result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("RollCall".equalsIgnoreCase(widget.getType())) {
+                result = (RollCall)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Prayers getPrayers() {
+        Prayers result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Prayers".equalsIgnoreCase(widget.getType())) {
+                result = (Prayers)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public OralStatements getOralStatements() {
+        OralStatements result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("OralStatements".equalsIgnoreCase(widget.getType())) {
+                result = (OralStatements)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public WrittenStatements getWrittenStatements() {
+        WrittenStatements result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("WrittenStatements".equalsIgnoreCase(widget.getType())) {
+                result = (WrittenStatements)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public PersonalStatements getPersonalStatements() {
+        PersonalStatements result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("PersonalStatements".equalsIgnoreCase(widget.getType())) {
+                result = (PersonalStatements)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public MinisterialStatements getMinisterialStatements() {
+        MinisterialStatements result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("MinisterialStatements".equalsIgnoreCase(widget.getType())) {
+                result = (MinisterialStatements)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Resolutions getResolutions() {
+        Resolutions result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Resolutions".equalsIgnoreCase(widget.getType())) {
+                result = (Resolutions)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public NationalInterest getNationalInterest() {
+        NationalInterest result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("NationalInterest".equalsIgnoreCase(widget.getType())) {
+                result = (NationalInterest)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public DeclarationOfVote getDeclarationOfVote() {
+        DeclarationOfVote result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("DeclarationOfVote".equalsIgnoreCase(widget.getType())) {
+                result = (DeclarationOfVote)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Communication getCommunication() {
+        Communication result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Communication".equalsIgnoreCase(widget.getType())) {
+                result = (Communication)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Petitions getPetitions() {
+        Petitions result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Petitions".equalsIgnoreCase(widget.getType())) {
+                result = (Petitions)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Papers getPapers() {
+        Papers result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Papers".equalsIgnoreCase(widget.getType())) {
+                result = (Papers)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public NoticesOfMotion getNoticesOfMotion() {
+        NoticesOfMotion result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("NoticesOfMotion".equalsIgnoreCase(widget.getType())) {
+                result = (NoticesOfMotion)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Questions getQuestions() {
+        Questions result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Questions".equalsIgnoreCase(widget.getType())) {
+                result = (Questions)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Address getAddress() {
+        Address result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Address".equalsIgnoreCase(widget.getType())) {
+                result = (Address)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public ProceduralMotions getProceduralMotions() {
+        ProceduralMotions result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("ProceduralMotions".equalsIgnoreCase(widget.getType())) {
+                result = (ProceduralMotions)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public PointOfOrder getPointOfOrder() {
+        PointOfOrder result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("PointOfOrder".equalsIgnoreCase(widget.getType())) {
+                result = (PointOfOrder)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Adjournment getAdjournment() {
+        Adjournment result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Adjournment".equalsIgnoreCase(widget.getType())) {
+                result = (Adjournment)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public DebateSection getDebateSection() {
+        DebateSection result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("DebateSection".equalsIgnoreCase(widget.getType())) {
+                result = (DebateSection)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Div getDiv() {
+        Div result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Div".equalsIgnoreCase(widget.getType())) {
+                result = (Div)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public AnyURISimpleType getPeriodAttr() {
+        return periodAttr;
+    }
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"tome","subparagraph","paragraph","subsection","debateSection","div","resolutions","personalStatements","oralStatements","title","chapter","division","rollCall","alinea","declarationOfVote","adjournment","petitions","subchapter","administrationOfOath","indent","communication","noticesOfMotion","subclause","questions","papers","list","sublist","section","proceduralMotions","point","article","subpart","address","nationalInterest","container","writtenStatements","hcontainer","book","subtitle","pointOfOrder","prayers","ministerialStatements","part","clause"};
+        return  subtypes;
+    }
 
-public Hcontainer getHcontainer() {
-return hcontainer;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setHcontainer(final Hcontainer hcontainer) {
-this.hcontainer = hcontainer;
-}
-public Container getContainer() {
-return container;
-}
-
-public void setContainer(final Container container) {
-this.container = container;
-}
-public LanguageSimpleType getLangAttr() {
-return langAttr;
-}
-
-public void setLangAttr(final LanguageSimpleType langAttr) {
-this.langAttr = langAttr;
-}
-public IDSimpleType getIdAttr() {
-return idAttr;
-}
-
-public void setIdAttr(final IDSimpleType idAttr) {
-this.idAttr = idAttr;
-}
-public NMTOKENSimpleType getEvolvingIdAttr() {
-return evolvingIdAttr;
-}
-
-public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-this.evolvingIdAttr = evolvingIdAttr;
-}
-public AnyURISimpleType getAlternativeToAttr() {
-return alternativeToAttr;
-}
-
-public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-this.alternativeToAttr = alternativeToAttr;
-}
-public StringSimpleType getClassAttr() {
-return classAttr;
-}
-
-public void setClassAttr(final StringSimpleType classAttr) {
-this.classAttr = classAttr;
-}
-public StringSimpleType getStyleAttr() {
-return styleAttr;
-}
-
-public void setStyleAttr(final StringSimpleType styleAttr) {
-this.styleAttr = styleAttr;
-}
-public StringSimpleType getTitleAttr() {
-return titleAttr;
-}
-
-public void setTitleAttr(final StringSimpleType titleAttr) {
-this.titleAttr = titleAttr;
-}
-public StatusTypeSimpleType getStatusAttr() {
-return statusAttr;
-}
-
-public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-this.statusAttr = statusAttr;
-}
-public AmendableWidgetImpl getWildcardContentAttr() {
-return wildcardContentAttr;
-}
-
-public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-this.wildcardContentAttr = wildcardContentAttr;
-}
-public AnyURISimpleType getRefersToAttr() {
-return refersToAttr;
-}
-
-public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-this.refersToAttr = refersToAttr;
-}
-public Clause getClause() {
-return clause;
-}
-
-public void setClause(final Clause clause) {
-this.clause = clause;
-}
-public Section getSection() {
-return section;
-}
-
-public void setSection(final Section section) {
-this.section = section;
-}
-public Part getPart() {
-return part;
-}
-
-public void setPart(final Part part) {
-this.part = part;
-}
-public Paragraph getParagraph() {
-return paragraph;
-}
-
-public void setParagraph(final Paragraph paragraph) {
-this.paragraph = paragraph;
-}
-public Chapter getChapter() {
-return chapter;
-}
-
-public void setChapter(final Chapter chapter) {
-this.chapter = chapter;
-}
-public Title getTitle_() {
-return title_;
-}
-
-public void setTitle_(final Title title_) {
-this.title_ = title_;
-}
-public Article getArticle() {
-return article;
-}
-
-public void setArticle(final Article article) {
-this.article = article;
-}
-public Book getBook() {
-return book;
-}
-
-public void setBook(final Book book) {
-this.book = book;
-}
-public Tome getTome() {
-return tome;
-}
-
-public void setTome(final Tome tome) {
-this.tome = tome;
-}
-public Division getDivision() {
-return division;
-}
-
-public void setDivision(final Division division) {
-this.division = division;
-}
-public List getList() {
-return list;
-}
-
-public void setList(final List list) {
-this.list = list;
-}
-public Point getPoint() {
-return point;
-}
-
-public void setPoint(final Point point) {
-this.point = point;
-}
-public Indent getIndent() {
-return indent;
-}
-
-public void setIndent(final Indent indent) {
-this.indent = indent;
-}
-public Alinea getAlinea() {
-return alinea;
-}
-
-public void setAlinea(final Alinea alinea) {
-this.alinea = alinea;
-}
-public Subsection getSubsection() {
-return subsection;
-}
-
-public void setSubsection(final Subsection subsection) {
-this.subsection = subsection;
-}
-public Subpart getSubpart() {
-return subpart;
-}
-
-public void setSubpart(final Subpart subpart) {
-this.subpart = subpart;
-}
-public Subparagraph getSubparagraph() {
-return subparagraph;
-}
-
-public void setSubparagraph(final Subparagraph subparagraph) {
-this.subparagraph = subparagraph;
-}
-public Subchapter getSubchapter() {
-return subchapter;
-}
-
-public void setSubchapter(final Subchapter subchapter) {
-this.subchapter = subchapter;
-}
-public Subtitle getSubtitle() {
-return subtitle;
-}
-
-public void setSubtitle(final Subtitle subtitle) {
-this.subtitle = subtitle;
-}
-public Subclause getSubclause() {
-return subclause;
-}
-
-public void setSubclause(final Subclause subclause) {
-this.subclause = subclause;
-}
-public Sublist getSublist() {
-return sublist;
-}
-
-public void setSublist(final Sublist sublist) {
-this.sublist = sublist;
-}
-public AdministrationOfOath getAdministrationOfOath() {
-return administrationOfOath;
-}
-
-public void setAdministrationOfOath(final AdministrationOfOath administrationOfOath) {
-this.administrationOfOath = administrationOfOath;
-}
-public RollCall getRollCall() {
-return rollCall;
-}
-
-public void setRollCall(final RollCall rollCall) {
-this.rollCall = rollCall;
-}
-public Prayers getPrayers() {
-return prayers;
-}
-
-public void setPrayers(final Prayers prayers) {
-this.prayers = prayers;
-}
-public OralStatements getOralStatements() {
-return oralStatements;
-}
-
-public void setOralStatements(final OralStatements oralStatements) {
-this.oralStatements = oralStatements;
-}
-public WrittenStatements getWrittenStatements() {
-return writtenStatements;
-}
-
-public void setWrittenStatements(final WrittenStatements writtenStatements) {
-this.writtenStatements = writtenStatements;
-}
-public PersonalStatements getPersonalStatements() {
-return personalStatements;
-}
-
-public void setPersonalStatements(final PersonalStatements personalStatements) {
-this.personalStatements = personalStatements;
-}
-public MinisterialStatements getMinisterialStatements() {
-return ministerialStatements;
-}
-
-public void setMinisterialStatements(final MinisterialStatements ministerialStatements) {
-this.ministerialStatements = ministerialStatements;
-}
-public Resolutions getResolutions() {
-return resolutions;
-}
-
-public void setResolutions(final Resolutions resolutions) {
-this.resolutions = resolutions;
-}
-public NationalInterest getNationalInterest() {
-return nationalInterest;
-}
-
-public void setNationalInterest(final NationalInterest nationalInterest) {
-this.nationalInterest = nationalInterest;
-}
-public DeclarationOfVote getDeclarationOfVote() {
-return declarationOfVote;
-}
-
-public void setDeclarationOfVote(final DeclarationOfVote declarationOfVote) {
-this.declarationOfVote = declarationOfVote;
-}
-public Communication getCommunication() {
-return communication;
-}
-
-public void setCommunication(final Communication communication) {
-this.communication = communication;
-}
-public Petitions getPetitions() {
-return petitions;
-}
-
-public void setPetitions(final Petitions petitions) {
-this.petitions = petitions;
-}
-public Papers getPapers() {
-return papers;
-}
-
-public void setPapers(final Papers papers) {
-this.papers = papers;
-}
-public NoticesOfMotion getNoticesOfMotion() {
-return noticesOfMotion;
-}
-
-public void setNoticesOfMotion(final NoticesOfMotion noticesOfMotion) {
-this.noticesOfMotion = noticesOfMotion;
-}
-public Questions getQuestions() {
-return questions;
-}
-
-public void setQuestions(final Questions questions) {
-this.questions = questions;
-}
-public Address getAddress() {
-return address;
-}
-
-public void setAddress(final Address address) {
-this.address = address;
-}
-public ProceduralMotions getProceduralMotions() {
-return proceduralMotions;
-}
-
-public void setProceduralMotions(final ProceduralMotions proceduralMotions) {
-this.proceduralMotions = proceduralMotions;
-}
-public PointOfOrder getPointOfOrder() {
-return pointOfOrder;
-}
-
-public void setPointOfOrder(final PointOfOrder pointOfOrder) {
-this.pointOfOrder = pointOfOrder;
-}
-public Adjournment getAdjournment() {
-return adjournment;
-}
-
-public void setAdjournment(final Adjournment adjournment) {
-this.adjournment = adjournment;
-}
-public DebateSection getDebateSection() {
-return debateSection;
-}
-
-public void setDebateSection(final DebateSection debateSection) {
-this.debateSection = debateSection;
-}
-public Div getDiv() {
-return div;
-}
-
-public void setDiv(final Div div) {
-this.div = div;
-}
-public AnyURISimpleType getPeriodAttr() {
-return periodAttr;
-}
-
-public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-this.periodAttr = periodAttr;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"tome","subparagraph","paragraph","subsection","debateSection","div","resolutions","personalStatements","oralStatements","title","chapter","division","rollCall","alinea","declarationOfVote","adjournment","petitions","subchapter","administrationOfOath","indent","communication","noticesOfMotion","subclause","questions","papers","list","sublist","section","proceduralMotions","point","article","subpart","address","nationalInterest","container","writtenStatements","hcontainer","book","subtitle","pointOfOrder","prayers","ministerialStatements","part","clause"};
-    return  subtypes;
-}
 }
 

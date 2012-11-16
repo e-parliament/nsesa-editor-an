@@ -20,283 +20,309 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Pro
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PointOfOrder;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Adjournment;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DebateSection;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public DebateBodyTypeComplexType(Element element) {
-    super(element);
-}
+
+    public DebateBodyTypeComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private java.util.List<AdministrationOfOath> administrationOfOaths = new ArrayList<AdministrationOfOath>();
-private java.util.List<RollCall> rollCalls = new ArrayList<RollCall>();
-private java.util.List<Prayers> prayerses = new ArrayList<Prayers>();
-private java.util.List<OralStatements> oralStatementses = new ArrayList<OralStatements>();
-private java.util.List<WrittenStatements> writtenStatementses = new ArrayList<WrittenStatements>();
-private java.util.List<PersonalStatements> personalStatementses = new ArrayList<PersonalStatements>();
-private java.util.List<MinisterialStatements> ministerialStatementses = new ArrayList<MinisterialStatements>();
-private java.util.List<Resolutions> resolutionses = new ArrayList<Resolutions>();
-private java.util.List<NationalInterest> nationalInterests = new ArrayList<NationalInterest>();
-private java.util.List<DeclarationOfVote> declarationOfVotes = new ArrayList<DeclarationOfVote>();
-private java.util.List<Communication> communications = new ArrayList<Communication>();
-private java.util.List<Petitions> petitionses = new ArrayList<Petitions>();
-private java.util.List<Papers> paperses = new ArrayList<Papers>();
-private java.util.List<NoticesOfMotion> noticesOfMotions = new ArrayList<NoticesOfMotion>();
-private java.util.List<Questions> questionses = new ArrayList<Questions>();
-private java.util.List<Address> addresses = new ArrayList<Address>();
-private java.util.List<ProceduralMotions> proceduralMotionses = new ArrayList<ProceduralMotions>();
-private java.util.List<PointOfOrder> pointOfOrders = new ArrayList<PointOfOrder>();
-private java.util.List<Adjournment> adjournments = new ArrayList<Adjournment>();
-private java.util.List<DebateSection> debateSections = new ArrayList<DebateSection>();
-private LanguageSimpleType langAttr;
-private IDSimpleType idAttr;
-private NMTOKENSimpleType evolvingIdAttr;
-private AnyURISimpleType alternativeToAttr;
-private StringSimpleType classAttr;
-private StringSimpleType styleAttr;
-private StringSimpleType titleAttr;
-private StatusTypeSimpleType statusAttr;
-private AmendableWidgetImpl wildcardContentAttr;
-private AnyURISimpleType refersToAttr;
-private AnyURISimpleType periodAttr;
+    private AnyURISimpleType alternativeToAttr;
+    private LanguageSimpleType langAttr;
+    private StringSimpleType classAttr;
+    private StringSimpleType styleAttr;
+    private StringSimpleType titleAttr;
+    private StatusTypeSimpleType statusAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType periodAttr;
+    public java.util.List<AdministrationOfOath> getAdministrationOfOaths() {
+        java.util.List<AdministrationOfOath> result = new ArrayList<AdministrationOfOath>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("AdministrationOfOath".equalsIgnoreCase(widget.getType())) {
+                result.add((AdministrationOfOath)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<RollCall> getRollCalls() {
+        java.util.List<RollCall> result = new ArrayList<RollCall>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("RollCall".equalsIgnoreCase(widget.getType())) {
+                result.add((RollCall)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Prayers> getPrayerses() {
+        java.util.List<Prayers> result = new ArrayList<Prayers>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Prayers".equalsIgnoreCase(widget.getType())) {
+                result.add((Prayers)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<OralStatements> getOralStatementses() {
+        java.util.List<OralStatements> result = new ArrayList<OralStatements>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("OralStatements".equalsIgnoreCase(widget.getType())) {
+                result.add((OralStatements)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<WrittenStatements> getWrittenStatementses() {
+        java.util.List<WrittenStatements> result = new ArrayList<WrittenStatements>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("WrittenStatements".equalsIgnoreCase(widget.getType())) {
+                result.add((WrittenStatements)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<PersonalStatements> getPersonalStatementses() {
+        java.util.List<PersonalStatements> result = new ArrayList<PersonalStatements>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("PersonalStatements".equalsIgnoreCase(widget.getType())) {
+                result.add((PersonalStatements)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<MinisterialStatements> getMinisterialStatementses() {
+        java.util.List<MinisterialStatements> result = new ArrayList<MinisterialStatements>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("MinisterialStatements".equalsIgnoreCase(widget.getType())) {
+                result.add((MinisterialStatements)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Resolutions> getResolutionses() {
+        java.util.List<Resolutions> result = new ArrayList<Resolutions>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Resolutions".equalsIgnoreCase(widget.getType())) {
+                result.add((Resolutions)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<NationalInterest> getNationalInterests() {
+        java.util.List<NationalInterest> result = new ArrayList<NationalInterest>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("NationalInterest".equalsIgnoreCase(widget.getType())) {
+                result.add((NationalInterest)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<DeclarationOfVote> getDeclarationOfVotes() {
+        java.util.List<DeclarationOfVote> result = new ArrayList<DeclarationOfVote>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("DeclarationOfVote".equalsIgnoreCase(widget.getType())) {
+                result.add((DeclarationOfVote)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Communication> getCommunications() {
+        java.util.List<Communication> result = new ArrayList<Communication>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Communication".equalsIgnoreCase(widget.getType())) {
+                result.add((Communication)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Petitions> getPetitionses() {
+        java.util.List<Petitions> result = new ArrayList<Petitions>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Petitions".equalsIgnoreCase(widget.getType())) {
+                result.add((Petitions)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Papers> getPaperses() {
+        java.util.List<Papers> result = new ArrayList<Papers>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Papers".equalsIgnoreCase(widget.getType())) {
+                result.add((Papers)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<NoticesOfMotion> getNoticesOfMotions() {
+        java.util.List<NoticesOfMotion> result = new ArrayList<NoticesOfMotion>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("NoticesOfMotion".equalsIgnoreCase(widget.getType())) {
+                result.add((NoticesOfMotion)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Questions> getQuestionses() {
+        java.util.List<Questions> result = new ArrayList<Questions>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Questions".equalsIgnoreCase(widget.getType())) {
+                result.add((Questions)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Address> getAddresses() {
+        java.util.List<Address> result = new ArrayList<Address>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Address".equalsIgnoreCase(widget.getType())) {
+                result.add((Address)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<ProceduralMotions> getProceduralMotionses() {
+        java.util.List<ProceduralMotions> result = new ArrayList<ProceduralMotions>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("ProceduralMotions".equalsIgnoreCase(widget.getType())) {
+                result.add((ProceduralMotions)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<PointOfOrder> getPointOfOrders() {
+        java.util.List<PointOfOrder> result = new ArrayList<PointOfOrder>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("PointOfOrder".equalsIgnoreCase(widget.getType())) {
+                result.add((PointOfOrder)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Adjournment> getAdjournments() {
+        java.util.List<Adjournment> result = new ArrayList<Adjournment>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Adjournment".equalsIgnoreCase(widget.getType())) {
+                result.add((Adjournment)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<DebateSection> getDebateSections() {
+        java.util.List<DebateSection> result = new ArrayList<DebateSection>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("DebateSection".equalsIgnoreCase(widget.getType())) {
+                result.add((DebateSection)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public AnyURISimpleType getAlternativeToAttr() {
+        return alternativeToAttr;
+    }
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+    }
+    public LanguageSimpleType getLangAttr() {
+        return langAttr;
+    }
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+    }
+    public StringSimpleType getClassAttr() {
+        return classAttr;
+    }
+    public void setClassAttr(final StringSimpleType classAttr) {
+        this.classAttr = classAttr;
+    }
+    public StringSimpleType getStyleAttr() {
+        return styleAttr;
+    }
+    public void setStyleAttr(final StringSimpleType styleAttr) {
+        this.styleAttr = styleAttr;
+    }
+    public StringSimpleType getTitleAttr() {
+        return titleAttr;
+    }
+    public void setTitleAttr(final StringSimpleType titleAttr) {
+        this.titleAttr = titleAttr;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        return statusAttr;
+    }
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+    }
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+    public IDSimpleType getIdAttr() {
+        return idAttr;
+    }
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+    }
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        return evolvingIdAttr;
+    }
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+    public AnyURISimpleType getPeriodAttr() {
+        return periodAttr;
+    }
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"petitions","administrationOfOath","communication","debateSection","noticesOfMotion","questions","resolutions","papers","personalStatements","proceduralMotions","oralStatements","rollCall","address","nationalInterest","writtenStatements","declarationOfVote","pointOfOrder","adjournment","prayers","ministerialStatements"};
+        return  subtypes;
+    }
 
-public java.util.List<AdministrationOfOath> getAdministrationOfOath() {
-return administrationOfOaths;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setAdministrationOfOath(final java.util.List<AdministrationOfOath> administrationOfOaths) {
-this.administrationOfOaths = administrationOfOaths;
-}
-public java.util.List<RollCall> getRollCall() {
-return rollCalls;
-}
-
-public void setRollCall(final java.util.List<RollCall> rollCalls) {
-this.rollCalls = rollCalls;
-}
-public java.util.List<Prayers> getPrayers() {
-return prayerses;
-}
-
-public void setPrayers(final java.util.List<Prayers> prayerses) {
-this.prayerses = prayerses;
-}
-public java.util.List<OralStatements> getOralStatements() {
-return oralStatementses;
-}
-
-public void setOralStatements(final java.util.List<OralStatements> oralStatementses) {
-this.oralStatementses = oralStatementses;
-}
-public java.util.List<WrittenStatements> getWrittenStatements() {
-return writtenStatementses;
-}
-
-public void setWrittenStatements(final java.util.List<WrittenStatements> writtenStatementses) {
-this.writtenStatementses = writtenStatementses;
-}
-public java.util.List<PersonalStatements> getPersonalStatements() {
-return personalStatementses;
-}
-
-public void setPersonalStatements(final java.util.List<PersonalStatements> personalStatementses) {
-this.personalStatementses = personalStatementses;
-}
-public java.util.List<MinisterialStatements> getMinisterialStatements() {
-return ministerialStatementses;
-}
-
-public void setMinisterialStatements(final java.util.List<MinisterialStatements> ministerialStatementses) {
-this.ministerialStatementses = ministerialStatementses;
-}
-public java.util.List<Resolutions> getResolutions() {
-return resolutionses;
-}
-
-public void setResolutions(final java.util.List<Resolutions> resolutionses) {
-this.resolutionses = resolutionses;
-}
-public java.util.List<NationalInterest> getNationalInterest() {
-return nationalInterests;
-}
-
-public void setNationalInterest(final java.util.List<NationalInterest> nationalInterests) {
-this.nationalInterests = nationalInterests;
-}
-public java.util.List<DeclarationOfVote> getDeclarationOfVote() {
-return declarationOfVotes;
-}
-
-public void setDeclarationOfVote(final java.util.List<DeclarationOfVote> declarationOfVotes) {
-this.declarationOfVotes = declarationOfVotes;
-}
-public java.util.List<Communication> getCommunication() {
-return communications;
-}
-
-public void setCommunication(final java.util.List<Communication> communications) {
-this.communications = communications;
-}
-public java.util.List<Petitions> getPetitions() {
-return petitionses;
-}
-
-public void setPetitions(final java.util.List<Petitions> petitionses) {
-this.petitionses = petitionses;
-}
-public java.util.List<Papers> getPapers() {
-return paperses;
-}
-
-public void setPapers(final java.util.List<Papers> paperses) {
-this.paperses = paperses;
-}
-public java.util.List<NoticesOfMotion> getNoticesOfMotion() {
-return noticesOfMotions;
-}
-
-public void setNoticesOfMotion(final java.util.List<NoticesOfMotion> noticesOfMotions) {
-this.noticesOfMotions = noticesOfMotions;
-}
-public java.util.List<Questions> getQuestions() {
-return questionses;
-}
-
-public void setQuestions(final java.util.List<Questions> questionses) {
-this.questionses = questionses;
-}
-public java.util.List<Address> getAddress() {
-return addresses;
-}
-
-public void setAddress(final java.util.List<Address> addresses) {
-this.addresses = addresses;
-}
-public java.util.List<ProceduralMotions> getProceduralMotions() {
-return proceduralMotionses;
-}
-
-public void setProceduralMotions(final java.util.List<ProceduralMotions> proceduralMotionses) {
-this.proceduralMotionses = proceduralMotionses;
-}
-public java.util.List<PointOfOrder> getPointOfOrder() {
-return pointOfOrders;
-}
-
-public void setPointOfOrder(final java.util.List<PointOfOrder> pointOfOrders) {
-this.pointOfOrders = pointOfOrders;
-}
-public java.util.List<Adjournment> getAdjournment() {
-return adjournments;
-}
-
-public void setAdjournment(final java.util.List<Adjournment> adjournments) {
-this.adjournments = adjournments;
-}
-public java.util.List<DebateSection> getDebateSection() {
-return debateSections;
-}
-
-public void setDebateSection(final java.util.List<DebateSection> debateSections) {
-this.debateSections = debateSections;
-}
-public LanguageSimpleType getLangAttr() {
-return langAttr;
-}
-
-public void setLangAttr(final LanguageSimpleType langAttr) {
-this.langAttr = langAttr;
-}
-public IDSimpleType getIdAttr() {
-return idAttr;
-}
-
-public void setIdAttr(final IDSimpleType idAttr) {
-this.idAttr = idAttr;
-}
-public NMTOKENSimpleType getEvolvingIdAttr() {
-return evolvingIdAttr;
-}
-
-public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-this.evolvingIdAttr = evolvingIdAttr;
-}
-public AnyURISimpleType getAlternativeToAttr() {
-return alternativeToAttr;
-}
-
-public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-this.alternativeToAttr = alternativeToAttr;
-}
-public StringSimpleType getClassAttr() {
-return classAttr;
-}
-
-public void setClassAttr(final StringSimpleType classAttr) {
-this.classAttr = classAttr;
-}
-public StringSimpleType getStyleAttr() {
-return styleAttr;
-}
-
-public void setStyleAttr(final StringSimpleType styleAttr) {
-this.styleAttr = styleAttr;
-}
-public StringSimpleType getTitleAttr() {
-return titleAttr;
-}
-
-public void setTitleAttr(final StringSimpleType titleAttr) {
-this.titleAttr = titleAttr;
-}
-public StatusTypeSimpleType getStatusAttr() {
-return statusAttr;
-}
-
-public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-this.statusAttr = statusAttr;
-}
-public AmendableWidgetImpl getWildcardContentAttr() {
-return wildcardContentAttr;
-}
-
-public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-this.wildcardContentAttr = wildcardContentAttr;
-}
-public AnyURISimpleType getRefersToAttr() {
-return refersToAttr;
-}
-
-public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-this.refersToAttr = refersToAttr;
-}
-public AnyURISimpleType getPeriodAttr() {
-return periodAttr;
-}
-
-public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-this.periodAttr = periodAttr;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"petitions","administrationOfOath","communication","debateSection","noticesOfMotion","questions","resolutions","papers","personalStatements","proceduralMotions","oralStatements","rollCall","address","nationalInterest","writtenStatements","declarationOfVote","pointOfOrder","adjournment","prayers","ministerialStatements"};
-    return  subtypes;
-}
 }
 

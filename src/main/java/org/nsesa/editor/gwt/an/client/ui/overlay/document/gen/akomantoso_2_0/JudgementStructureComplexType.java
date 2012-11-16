@@ -11,81 +11,109 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class JudgementStructureComplexType extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public JudgementStructureComplexType(Element element) {
-    super(element);
-}
+
+    public JudgementStructureComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private VersionTypeSimpleType containsAttr;
-private Meta meta;
-private CoverPage coverPage;
-private Header header;
-private JudgementBody judgementBody;
-private Conclusions conclusions;
-private Attachments attachments;
+    private VersionTypeSimpleType containsAttr;
+    public VersionTypeSimpleType getContainsAttr() {
+        return containsAttr;
+    }
+    public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
+        this.containsAttr = containsAttr;
+    }
+    public Meta getMeta() {
+        Meta result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Meta".equalsIgnoreCase(widget.getType())) {
+                result = (Meta)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public CoverPage getCoverPage() {
+        CoverPage result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("CoverPage".equalsIgnoreCase(widget.getType())) {
+                result = (CoverPage)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Header getHeader() {
+        Header result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Header".equalsIgnoreCase(widget.getType())) {
+                result = (Header)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public JudgementBody getJudgementBody() {
+        JudgementBody result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("JudgementBody".equalsIgnoreCase(widget.getType())) {
+                result = (JudgementBody)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Conclusions getConclusions() {
+        Conclusions result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Conclusions".equalsIgnoreCase(widget.getType())) {
+                result = (Conclusions)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Attachments getAttachments() {
+        Attachments result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Attachments".equalsIgnoreCase(widget.getType())) {
+                result = (Attachments)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"conclusions","judgementBody","coverPage","attachments","header","meta"};
+        return  subtypes;
+    }
 
-public VersionTypeSimpleType getContainsAttr() {
-return containsAttr;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
-this.containsAttr = containsAttr;
-}
-public Meta getMeta() {
-return meta;
-}
-
-public void setMeta(final Meta meta) {
-this.meta = meta;
-}
-public CoverPage getCoverPage() {
-return coverPage;
-}
-
-public void setCoverPage(final CoverPage coverPage) {
-this.coverPage = coverPage;
-}
-public Header getHeader() {
-return header;
-}
-
-public void setHeader(final Header header) {
-this.header = header;
-}
-public JudgementBody getJudgementBody() {
-return judgementBody;
-}
-
-public void setJudgementBody(final JudgementBody judgementBody) {
-this.judgementBody = judgementBody;
-}
-public Conclusions getConclusions() {
-return conclusions;
-}
-
-public void setConclusions(final Conclusions conclusions) {
-this.conclusions = conclusions;
-}
-public Attachments getAttachments() {
-return attachments;
-}
-
-public void setAttachments(final Attachments attachments) {
-this.attachments = attachments;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"conclusions","judgementBody","coverPage","attachments","header","meta"};
-    return  subtypes;
-}
 }
 

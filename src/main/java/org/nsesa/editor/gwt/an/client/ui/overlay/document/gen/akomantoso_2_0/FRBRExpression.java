@@ -7,41 +7,64 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import com.google.gwt.user.client.DOM;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class FRBRExpression extends CorePropertiesComplexType  {
 
 // CONSTRUCTORS ------------------
-public FRBRExpression(Element element) {
-    super(element);
-}
+    public FRBRExpression() {
+        super(DOM.createElement("FRBRExpression"));
+    }
+
+    public FRBRExpression(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private java.util.List<FRBRlanguage> FRBRlanguages = new ArrayList<FRBRlanguage>();
-private java.util.List<FRBRtranslation> FRBRtranslations = new ArrayList<FRBRtranslation>();
+    public java.util.List<FRBRlanguage> getFRBRlanguages() {
+        java.util.List<FRBRlanguage> result = new ArrayList<FRBRlanguage>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("FRBRlanguage".equalsIgnoreCase(widget.getType())) {
+                result.add((FRBRlanguage)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<FRBRtranslation> getFRBRtranslations() {
+        java.util.List<FRBRtranslation> result = new ArrayList<FRBRtranslation>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("FRBRtranslation".equalsIgnoreCase(widget.getType())) {
+                result.add((FRBRtranslation)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"FRBRthis","FRBRalias","FRBRlanguage","componentInfo","FRBRuri","FRBRauthor","FRBRdate","preservation","FRBRtranslation"};
+        return  subtypes;
+    }
 
-public java.util.List<FRBRlanguage> getFRBRlanguage() {
-return FRBRlanguages;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setFRBRlanguage(final java.util.List<FRBRlanguage> FRBRlanguages) {
-this.FRBRlanguages = FRBRlanguages;
-}
-public java.util.List<FRBRtranslation> getFRBRtranslation() {
-return FRBRtranslations;
-}
-
-public void setFRBRtranslation(final java.util.List<FRBRtranslation> FRBRtranslations) {
-this.FRBRtranslations = FRBRtranslations;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"FRBRthis","FRBRalias","FRBRlanguage","componentInfo","FRBRuri","FRBRauthor","FRBRdate","preservation","FRBRtranslation"};
-    return  subtypes;
-}
 }
 

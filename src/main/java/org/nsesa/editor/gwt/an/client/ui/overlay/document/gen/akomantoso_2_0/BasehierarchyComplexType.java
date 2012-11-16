@@ -7,49 +7,72 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class BasehierarchyComplexType extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public BasehierarchyComplexType(Element element) {
-    super(element);
-}
+
+    public BasehierarchyComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private Num num;
-private Heading heading;
-private Subheading subheading;
+    public Num getNum() {
+        Num result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Num".equalsIgnoreCase(widget.getType())) {
+                result = (Num)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Heading getHeading() {
+        Heading result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Heading".equalsIgnoreCase(widget.getType())) {
+                result = (Heading)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Subheading getSubheading() {
+        Subheading result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Subheading".equalsIgnoreCase(widget.getType())) {
+                result = (Subheading)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"num","subheading","heading"};
+        return  subtypes;
+    }
 
-public Num getNum() {
-return num;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setNum(final Num num) {
-this.num = num;
-}
-public Heading getHeading() {
-return heading;
-}
-
-public void setHeading(final Heading heading) {
-this.heading = heading;
-}
-public Subheading getSubheading() {
-return subheading;
-}
-
-public void setSubheading(final Subheading subheading) {
-this.subheading = subheading;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"num","subheading","heading"};
-    return  subtypes;
-}
 }
 

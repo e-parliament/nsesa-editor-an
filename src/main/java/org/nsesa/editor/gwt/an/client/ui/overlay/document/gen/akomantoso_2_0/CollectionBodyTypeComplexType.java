@@ -12,219 +12,237 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Deb
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Amendment;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Judgement;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Doc;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class CollectionBodyTypeComplexType extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public CollectionBodyTypeComplexType(Element element) {
-    super(element);
-}
+
+    public CollectionBodyTypeComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private java.util.List<ComponentRef> componentRefs = new ArrayList<ComponentRef>();
-private java.util.List<Interstitial> interstitials = new ArrayList<Interstitial>();
-private java.util.List<AmendmentList> amendmentLists = new ArrayList<AmendmentList>();
-private java.util.List<OfficialGazette> officialGazettes = new ArrayList<OfficialGazette>();
-private java.util.List<DocumentCollection> documentCollections = new ArrayList<DocumentCollection>();
-private java.util.List<Act> acts = new ArrayList<Act>();
-private java.util.List<Bill> bills = new ArrayList<Bill>();
-private java.util.List<DebateReport> debateReports = new ArrayList<DebateReport>();
-private java.util.List<Debate> debates = new ArrayList<Debate>();
-private java.util.List<Amendment> amendments = new ArrayList<Amendment>();
-private java.util.List<Judgement> judgements = new ArrayList<Judgement>();
-private java.util.List<Doc> docs = new ArrayList<Doc>();
-private LanguageSimpleType langAttr;
-private IDSimpleType idAttr;
-private NMTOKENSimpleType evolvingIdAttr;
-private AnyURISimpleType alternativeToAttr;
-private StringSimpleType classAttr;
-private StringSimpleType styleAttr;
-private StringSimpleType titleAttr;
-private StatusTypeSimpleType statusAttr;
-private AmendableWidgetImpl wildcardContentAttr;
-private AnyURISimpleType refersToAttr;
-private AnyURISimpleType periodAttr;
+    private AnyURISimpleType alternativeToAttr;
+    private LanguageSimpleType langAttr;
+    private StringSimpleType classAttr;
+    private StringSimpleType styleAttr;
+    private StringSimpleType titleAttr;
+    private StatusTypeSimpleType statusAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType periodAttr;
+    public java.util.List<ComponentRef> getComponentRefs() {
+        java.util.List<ComponentRef> result = new ArrayList<ComponentRef>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("ComponentRef".equalsIgnoreCase(widget.getType())) {
+                result.add((ComponentRef)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Interstitial> getInterstitials() {
+        java.util.List<Interstitial> result = new ArrayList<Interstitial>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Interstitial".equalsIgnoreCase(widget.getType())) {
+                result.add((Interstitial)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<AmendmentList> getAmendmentLists() {
+        java.util.List<AmendmentList> result = new ArrayList<AmendmentList>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("AmendmentList".equalsIgnoreCase(widget.getType())) {
+                result.add((AmendmentList)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<OfficialGazette> getOfficialGazettes() {
+        java.util.List<OfficialGazette> result = new ArrayList<OfficialGazette>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("OfficialGazette".equalsIgnoreCase(widget.getType())) {
+                result.add((OfficialGazette)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<DocumentCollection> getDocumentCollections() {
+        java.util.List<DocumentCollection> result = new ArrayList<DocumentCollection>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("DocumentCollection".equalsIgnoreCase(widget.getType())) {
+                result.add((DocumentCollection)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Act> getActs() {
+        java.util.List<Act> result = new ArrayList<Act>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Act".equalsIgnoreCase(widget.getType())) {
+                result.add((Act)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Bill> getBills() {
+        java.util.List<Bill> result = new ArrayList<Bill>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Bill".equalsIgnoreCase(widget.getType())) {
+                result.add((Bill)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<DebateReport> getDebateReports() {
+        java.util.List<DebateReport> result = new ArrayList<DebateReport>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("DebateReport".equalsIgnoreCase(widget.getType())) {
+                result.add((DebateReport)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Debate> getDebates() {
+        java.util.List<Debate> result = new ArrayList<Debate>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Debate".equalsIgnoreCase(widget.getType())) {
+                result.add((Debate)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Amendment> getAmendments() {
+        java.util.List<Amendment> result = new ArrayList<Amendment>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Amendment".equalsIgnoreCase(widget.getType())) {
+                result.add((Amendment)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Judgement> getJudgements() {
+        java.util.List<Judgement> result = new ArrayList<Judgement>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Judgement".equalsIgnoreCase(widget.getType())) {
+                result.add((Judgement)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Doc> getDocs() {
+        java.util.List<Doc> result = new ArrayList<Doc>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Doc".equalsIgnoreCase(widget.getType())) {
+                result.add((Doc)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public AnyURISimpleType getAlternativeToAttr() {
+        return alternativeToAttr;
+    }
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+    }
+    public LanguageSimpleType getLangAttr() {
+        return langAttr;
+    }
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+    }
+    public StringSimpleType getClassAttr() {
+        return classAttr;
+    }
+    public void setClassAttr(final StringSimpleType classAttr) {
+        this.classAttr = classAttr;
+    }
+    public StringSimpleType getStyleAttr() {
+        return styleAttr;
+    }
+    public void setStyleAttr(final StringSimpleType styleAttr) {
+        this.styleAttr = styleAttr;
+    }
+    public StringSimpleType getTitleAttr() {
+        return titleAttr;
+    }
+    public void setTitleAttr(final StringSimpleType titleAttr) {
+        this.titleAttr = titleAttr;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        return statusAttr;
+    }
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+    }
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+    public IDSimpleType getIdAttr() {
+        return idAttr;
+    }
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+    }
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        return evolvingIdAttr;
+    }
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+    public AnyURISimpleType getPeriodAttr() {
+        return periodAttr;
+    }
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"amendment","componentRef","amendmentList","bill","officialGazette","doc","debate","judgement","debateReport","act","interstitial","documentCollection"};
+        return  subtypes;
+    }
 
-public java.util.List<ComponentRef> getComponentRef() {
-return componentRefs;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setComponentRef(final java.util.List<ComponentRef> componentRefs) {
-this.componentRefs = componentRefs;
-}
-public java.util.List<Interstitial> getInterstitial() {
-return interstitials;
-}
-
-public void setInterstitial(final java.util.List<Interstitial> interstitials) {
-this.interstitials = interstitials;
-}
-public java.util.List<AmendmentList> getAmendmentList() {
-return amendmentLists;
-}
-
-public void setAmendmentList(final java.util.List<AmendmentList> amendmentLists) {
-this.amendmentLists = amendmentLists;
-}
-public java.util.List<OfficialGazette> getOfficialGazette() {
-return officialGazettes;
-}
-
-public void setOfficialGazette(final java.util.List<OfficialGazette> officialGazettes) {
-this.officialGazettes = officialGazettes;
-}
-public java.util.List<DocumentCollection> getDocumentCollection() {
-return documentCollections;
-}
-
-public void setDocumentCollection(final java.util.List<DocumentCollection> documentCollections) {
-this.documentCollections = documentCollections;
-}
-public java.util.List<Act> getAct() {
-return acts;
-}
-
-public void setAct(final java.util.List<Act> acts) {
-this.acts = acts;
-}
-public java.util.List<Bill> getBill() {
-return bills;
-}
-
-public void setBill(final java.util.List<Bill> bills) {
-this.bills = bills;
-}
-public java.util.List<DebateReport> getDebateReport() {
-return debateReports;
-}
-
-public void setDebateReport(final java.util.List<DebateReport> debateReports) {
-this.debateReports = debateReports;
-}
-public java.util.List<Debate> getDebate() {
-return debates;
-}
-
-public void setDebate(final java.util.List<Debate> debates) {
-this.debates = debates;
-}
-public java.util.List<Amendment> getAmendment() {
-return amendments;
-}
-
-public void setAmendment(final java.util.List<Amendment> amendments) {
-this.amendments = amendments;
-}
-public java.util.List<Judgement> getJudgement() {
-return judgements;
-}
-
-public void setJudgement(final java.util.List<Judgement> judgements) {
-this.judgements = judgements;
-}
-public java.util.List<Doc> getDoc() {
-return docs;
-}
-
-public void setDoc(final java.util.List<Doc> docs) {
-this.docs = docs;
-}
-public LanguageSimpleType getLangAttr() {
-return langAttr;
-}
-
-public void setLangAttr(final LanguageSimpleType langAttr) {
-this.langAttr = langAttr;
-}
-public IDSimpleType getIdAttr() {
-return idAttr;
-}
-
-public void setIdAttr(final IDSimpleType idAttr) {
-this.idAttr = idAttr;
-}
-public NMTOKENSimpleType getEvolvingIdAttr() {
-return evolvingIdAttr;
-}
-
-public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-this.evolvingIdAttr = evolvingIdAttr;
-}
-public AnyURISimpleType getAlternativeToAttr() {
-return alternativeToAttr;
-}
-
-public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-this.alternativeToAttr = alternativeToAttr;
-}
-public StringSimpleType getClassAttr() {
-return classAttr;
-}
-
-public void setClassAttr(final StringSimpleType classAttr) {
-this.classAttr = classAttr;
-}
-public StringSimpleType getStyleAttr() {
-return styleAttr;
-}
-
-public void setStyleAttr(final StringSimpleType styleAttr) {
-this.styleAttr = styleAttr;
-}
-public StringSimpleType getTitleAttr() {
-return titleAttr;
-}
-
-public void setTitleAttr(final StringSimpleType titleAttr) {
-this.titleAttr = titleAttr;
-}
-public StatusTypeSimpleType getStatusAttr() {
-return statusAttr;
-}
-
-public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-this.statusAttr = statusAttr;
-}
-public AmendableWidgetImpl getWildcardContentAttr() {
-return wildcardContentAttr;
-}
-
-public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-this.wildcardContentAttr = wildcardContentAttr;
-}
-public AnyURISimpleType getRefersToAttr() {
-return refersToAttr;
-}
-
-public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-this.refersToAttr = refersToAttr;
-}
-public AnyURISimpleType getPeriodAttr() {
-return periodAttr;
-}
-
-public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-this.periodAttr = periodAttr;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"amendment","componentRef","amendmentList","bill","officialGazette","doc","debate","judgement","debateReport","act","interstitial","documentCollection"};
-    return  subtypes;
-}
 }
 

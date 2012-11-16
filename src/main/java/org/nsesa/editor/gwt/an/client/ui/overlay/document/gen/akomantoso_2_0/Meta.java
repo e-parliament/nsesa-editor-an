@@ -15,113 +15,147 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import com.google.gwt.user.client.DOM;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class Meta extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public Meta(Element element) {
-    super(element);
-}
+    public Meta() {
+        super(DOM.createElement("meta"));
+    }
+
+    public Meta(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private Identification identification;
-private Publication publication;
-private java.util.List<Classification> classifications = new ArrayList<Classification>();
-private java.util.List<Lifecycle> lifecycles = new ArrayList<Lifecycle>();
-private java.util.List<Workflow> workflows = new ArrayList<Workflow>();
-private java.util.List<Analysis> analysises = new ArrayList<Analysis>();
-private java.util.List<TemporalData> temporalDatas = new ArrayList<TemporalData>();
-private java.util.List<References> referenceses = new ArrayList<References>();
-private java.util.List<Notes> noteses = new ArrayList<Notes>();
-private java.util.List<Proprietary> proprietaries = new ArrayList<Proprietary>();
-private java.util.List<Presentation> presentations = new ArrayList<Presentation>();
+    public Identification getIdentification() {
+        Identification result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Identification".equalsIgnoreCase(widget.getType())) {
+                result = (Identification)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public Publication getPublication() {
+        Publication result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Publication".equalsIgnoreCase(widget.getType())) {
+                result = (Publication)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public java.util.List<Classification> getClassifications() {
+        java.util.List<Classification> result = new ArrayList<Classification>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Classification".equalsIgnoreCase(widget.getType())) {
+                result.add((Classification)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Lifecycle> getLifecycles() {
+        java.util.List<Lifecycle> result = new ArrayList<Lifecycle>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Lifecycle".equalsIgnoreCase(widget.getType())) {
+                result.add((Lifecycle)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Workflow> getWorkflows() {
+        java.util.List<Workflow> result = new ArrayList<Workflow>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Workflow".equalsIgnoreCase(widget.getType())) {
+                result.add((Workflow)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Analysis> getAnalysises() {
+        java.util.List<Analysis> result = new ArrayList<Analysis>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Analysis".equalsIgnoreCase(widget.getType())) {
+                result.add((Analysis)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<TemporalData> getTemporalDatas() {
+        java.util.List<TemporalData> result = new ArrayList<TemporalData>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("TemporalData".equalsIgnoreCase(widget.getType())) {
+                result.add((TemporalData)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<References> getReferenceses() {
+        java.util.List<References> result = new ArrayList<References>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("References".equalsIgnoreCase(widget.getType())) {
+                result.add((References)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Notes> getNoteses() {
+        java.util.List<Notes> result = new ArrayList<Notes>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Notes".equalsIgnoreCase(widget.getType())) {
+                result.add((Notes)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Proprietary> getProprietaries() {
+        java.util.List<Proprietary> result = new ArrayList<Proprietary>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Proprietary".equalsIgnoreCase(widget.getType())) {
+                result.add((Proprietary)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public java.util.List<Presentation> getPresentations() {
+        java.util.List<Presentation> result = new ArrayList<Presentation>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("Presentation".equalsIgnoreCase(widget.getType())) {
+                result.add((Presentation)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"references","presentation","temporalData","lifecycle","identification","proprietary","classification","notes","analysis","workflow","publication"};
+        return  subtypes;
+    }
 
-public Identification getIdentification() {
-return identification;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setIdentification(final Identification identification) {
-this.identification = identification;
-}
-public Publication getPublication() {
-return publication;
-}
-
-public void setPublication(final Publication publication) {
-this.publication = publication;
-}
-public java.util.List<Classification> getClassification() {
-return classifications;
-}
-
-public void setClassification(final java.util.List<Classification> classifications) {
-this.classifications = classifications;
-}
-public java.util.List<Lifecycle> getLifecycle() {
-return lifecycles;
-}
-
-public void setLifecycle(final java.util.List<Lifecycle> lifecycles) {
-this.lifecycles = lifecycles;
-}
-public java.util.List<Workflow> getWorkflow() {
-return workflows;
-}
-
-public void setWorkflow(final java.util.List<Workflow> workflows) {
-this.workflows = workflows;
-}
-public java.util.List<Analysis> getAnalysis() {
-return analysises;
-}
-
-public void setAnalysis(final java.util.List<Analysis> analysises) {
-this.analysises = analysises;
-}
-public java.util.List<TemporalData> getTemporalData() {
-return temporalDatas;
-}
-
-public void setTemporalData(final java.util.List<TemporalData> temporalDatas) {
-this.temporalDatas = temporalDatas;
-}
-public java.util.List<References> getReferences() {
-return referenceses;
-}
-
-public void setReferences(final java.util.List<References> referenceses) {
-this.referenceses = referenceses;
-}
-public java.util.List<Notes> getNotes() {
-return noteses;
-}
-
-public void setNotes(final java.util.List<Notes> noteses) {
-this.noteses = noteses;
-}
-public java.util.List<Proprietary> getProprietary() {
-return proprietaries;
-}
-
-public void setProprietary(final java.util.List<Proprietary> proprietaries) {
-this.proprietaries = proprietaries;
-}
-public java.util.List<Presentation> getPresentation() {
-return presentations;
-}
-
-public void setPresentation(final java.util.List<Presentation> presentations) {
-this.presentations = presentations;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"references","presentation","temporalData","lifecycle","identification","proprietary","classification","notes","analysis","workflow","publication"};
-    return  subtypes;
-}
 }
 

@@ -9,65 +9,93 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import com.google.gwt.user.client.DOM;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class Identification extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public Identification(Element element) {
-    super(element);
-}
+    public Identification() {
+        super(DOM.createElement("identification"));
+    }
+
+    public Identification(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private FRBRWork FRBRWork;
-private FRBRExpression FRBRExpression;
-private FRBRManifestation FRBRManifestation;
-private FRBRItem FRBRItem;
-private AnyURISimpleType sourceAttr;
+    private AnyURISimpleType sourceAttr;
+    public FRBRWork getFRBRWork() {
+        FRBRWork result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("FRBRWork".equalsIgnoreCase(widget.getType())) {
+                result = (FRBRWork)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public FRBRExpression getFRBRExpression() {
+        FRBRExpression result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("FRBRExpression".equalsIgnoreCase(widget.getType())) {
+                result = (FRBRExpression)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public FRBRManifestation getFRBRManifestation() {
+        FRBRManifestation result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("FRBRManifestation".equalsIgnoreCase(widget.getType())) {
+                result = (FRBRManifestation)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public FRBRItem getFRBRItem() {
+        FRBRItem result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("FRBRItem".equalsIgnoreCase(widget.getType())) {
+                result = (FRBRItem)widget;
+                break;
+            }
+        }
+        return result;
+    }
+    public AnyURISimpleType getSourceAttr() {
+        return sourceAttr;
+    }
+    public void setSourceAttr(final AnyURISimpleType sourceAttr) {
+        this.sourceAttr = sourceAttr;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"FRBRManifestation","FRBRWork","FRBRItem","FRBRExpression"};
+        return  subtypes;
+    }
 
-public FRBRWork getFRBRWork() {
-return FRBRWork;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setFRBRWork(final FRBRWork FRBRWork) {
-this.FRBRWork = FRBRWork;
-}
-public FRBRExpression getFRBRExpression() {
-return FRBRExpression;
-}
-
-public void setFRBRExpression(final FRBRExpression FRBRExpression) {
-this.FRBRExpression = FRBRExpression;
-}
-public FRBRManifestation getFRBRManifestation() {
-return FRBRManifestation;
-}
-
-public void setFRBRManifestation(final FRBRManifestation FRBRManifestation) {
-this.FRBRManifestation = FRBRManifestation;
-}
-public FRBRItem getFRBRItem() {
-return FRBRItem;
-}
-
-public void setFRBRItem(final FRBRItem FRBRItem) {
-this.FRBRItem = FRBRItem;
-}
-public AnyURISimpleType getSourceAttr() {
-return sourceAttr;
-}
-
-public void setSourceAttr(final AnyURISimpleType sourceAttr) {
-this.sourceAttr = sourceAttr;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"FRBRManifestation","FRBRWork","FRBRItem","FRBRExpression"};
-    return  subtypes;
-}
 }
 

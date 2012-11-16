@@ -6,41 +6,62 @@ import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import com.google.gwt.user.client.DOM;
+
 /**
-* This file is generated.
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class TemporalData extends AmendableWidgetImpl  {
 
 // CONSTRUCTORS ------------------
-public TemporalData(Element element) {
-    super(element);
-}
+    public TemporalData() {
+        super(DOM.createElement("temporalData"));
+    }
+
+    public TemporalData(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private java.util.List<TemporalGroup> temporalGroups = new ArrayList<TemporalGroup>();
-private AnyURISimpleType sourceAttr;
+    private AnyURISimpleType sourceAttr;
+    public java.util.List<TemporalGroup> getTemporalGroups() {
+        java.util.List<TemporalGroup> result = new ArrayList<TemporalGroup>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            if ("TemporalGroup".equalsIgnoreCase(widget.getType())) {
+                result.add((TemporalGroup)widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+    public AnyURISimpleType getSourceAttr() {
+        return sourceAttr;
+    }
+    public void setSourceAttr(final AnyURISimpleType sourceAttr) {
+        this.sourceAttr = sourceAttr;
+    }
+    /**
+    * Returns possible children as list of String
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        String[] subtypes = new String[]{"temporalGroup"};
+        return  subtypes;
+    }
 
-public java.util.List<TemporalGroup> getTemporalGroup() {
-return temporalGroups;
-}
+    @Override
+    public void addAmendableWidget(final AmendableWidget widget) {
+        boolean canAdd = false;
+        for (String type : getAllowedChildTypes()) {
+            if (type.equalsIgnoreCase(widget.getType())) {
+                canAdd = true;
+            }
+        }
+        if (!canAdd) {
+            throw new RuntimeException("Not supported child type:" + widget);
+        }
+        super.addAmendableWidget(widget);
+    }
 
-public void setTemporalGroup(final java.util.List<TemporalGroup> temporalGroups) {
-this.temporalGroups = temporalGroups;
-}
-public AnyURISimpleType getSourceAttr() {
-return sourceAttr;
-}
-
-public void setSourceAttr(final AnyURISimpleType sourceAttr) {
-this.sourceAttr = sourceAttr;
-}
-/**
-* Returns possible children as list of String
-*/
-@Override
-public String[] getAllowedChildTypes() {
-    String[] subtypes = new String[]{"temporalGroup"};
-    return  subtypes;
-}
 }
 
