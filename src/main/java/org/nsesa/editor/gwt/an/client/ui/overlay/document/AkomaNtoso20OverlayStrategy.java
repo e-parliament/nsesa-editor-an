@@ -20,7 +20,7 @@ public class AkomaNtoso20OverlayStrategy implements OverlayStrategy {
     private OverlayStrategySupport overlayStrategySupport = new OverlayStrategySupport();
 
     public AkomaNtoso20OverlayStrategy() {
-        //overlayStrategySupport.asProperties(Num.class, B.class, I.class, Span.class, Content.class);
+        overlayStrategySupport.asProperties(Num.class, B.class, I.class, Span.class, Content.class);
     }
 
     @Override
