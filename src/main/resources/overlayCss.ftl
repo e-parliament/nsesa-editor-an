@@ -20,7 +20,7 @@
 */
     </#if>
     <#if overlayStyle.name??>
-akomaNtoso ${overlayStyle.name} {
+.akomaNtoso .${overlayStyle.name} {
             <#assign m = overlayStyle.values>
             <#assign keys = m?keys>
             <#list keys as key>

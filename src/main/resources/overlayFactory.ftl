@@ -53,6 +53,6 @@ public class ${overlayClass.name?cap_first} extends DefaultOverlayFactory  {
 </#list>
         // nothing found
         LOG.warning("Could not find overlay element (nodename: " + nodeName + " in namespace URI '" + namespaceURI + "')");
-        return new AmendableWidgetImpl(element);
-}
+        return null;
+    }
 }
