@@ -15,16 +15,16 @@
     font-size: 1.3em;
 }
 
-.amendment amendmentcontent {
+.amendment .amendmentcontent {
     display: block;
     width: 100%;
 }
 
-.amendment amendmentcontent block {
+.amendment .amendmentcontent .block {
 
 }
 
-.amendment amendmentcontent block[name="versionTitle"] {
+.amendment .amendmentcontent .block[name="versionTitle"] {
     width: 50%;
     float: left;
     display: inline-block;
@@ -37,43 +37,43 @@
     padding-top: 15px;
 }
 
-.amendment mod {
+.amendment .mod {
     display: block;
     width: 100%;
     clear: both;
 }
 
-.amendment mod quotedstructure {
+.amendment .mod .quotedstructure {
     width: 50%;
     display: table-cell;
     padding: 15px;
 }
 
-.amendment block[name="comment"] {
+.amendment .block[name="comment"] {
     display: block;
     text-align: right;
     font-style: italic;
     width: 100%;
 }
 
-.amendment amendmentJustification {
+.amendment .amendmentJustification {
     display: block;
     width: 100%;
 }
 
-.amendment amendmentJustification block {
+.amendment .amendmentJustification .block {
     display: block;
     width: 100%;
 }
 
-.amendment amendmentJustification block[name="justificationHeading"] {
+.amendment .amendmentJustification .block[name="justificationHeading"] {
     display: block;
     font-style: italic;
     text-align: center;
     width: 100%;
 }
 
-.amendment amendmentcontent change {
+.amendment .amendmentcontent .change {
     display: inline;
     font-weight: bold;
     font-style: italic;

@@ -26,6 +26,7 @@
                 <entry key="5" value="classpath:examples/Debate_Bungeni_2010-12-07.xml"/>
             </map>
         </property>
+        <property name="documentTemplate" value="classpath:document.ftl"/>
     </bean>
     <bean id="gwtAmendmentService" class="org.nsesa.editor.gwt.core.server.service.gwt.GWTAmendmentServiceImpl">
         <property name="documents">
@@ -35,6 +36,7 @@
                 <entry key="amendment-3" value="classpath:examples/AM-793034EN-AM3.xml"/>
             </map>
         </property>
+        <property name="documentTemplate" value="classpath:document.ftl"/>
     </bean>
 
     <bean id="gwtLogController" class="org.springframework.web.servlet.mvc.ServletWrappingController">
