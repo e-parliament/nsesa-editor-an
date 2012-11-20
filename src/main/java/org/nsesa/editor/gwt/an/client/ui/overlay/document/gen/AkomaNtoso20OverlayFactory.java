@@ -296,12 +296,12 @@ import java.util.logging.Logger;
 /**
 * Note: this file is generated. Rather than changing this file, correct the template called <tt>overlayFactory.ftl</tt>.
 */
-public class YAAkomaNtoso20OverlayFactory extends DefaultOverlayFactory  {
+public class AkomaNtoso20OverlayFactory extends DefaultOverlayFactory  {
 
-    private final static Logger LOG = Logger.getLogger(YAAkomaNtoso20OverlayFactory.class.getName());
+    private final static Logger LOG = Logger.getLogger(AkomaNtoso20OverlayFactory.class.getName());
 
     @Inject
-    public YAAkomaNtoso20OverlayFactory(final OverlayStrategy overlayStrategy) {
+    public AkomaNtoso20OverlayFactory(final OverlayStrategy overlayStrategy) {
         super(overlayStrategy);
     }
 
