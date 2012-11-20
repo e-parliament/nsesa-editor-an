@@ -1,86 +1,12 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Inline;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Marker;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Popup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ref;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Mref;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Rref;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Mod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Mmod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Rmod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Remark;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RecordedTime;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Vote;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Outcome;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ins;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Del;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Omissis;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ExtractText;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ExtractStructure;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Placeholder;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.FillIn;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.B;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.I;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.A;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.U;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Sub;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Sup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Span;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DocType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DocTitle;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DocNumber;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DocProponent;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DocDate;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Legislature;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Session;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ShortTitle;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DocPurpose;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DocCommittee;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DocIntroducer;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DocStage;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DocStatus;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DocJurisdiction;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DocketNumber;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Date;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Person;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Organization;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Concept;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Object;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Event;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Location;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Process;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Role;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Term;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Quantity;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Def;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Entity;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CourtType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NeutralCitation;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Party;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Judge;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Lawyer;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Signature;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Opinion;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AffectedDocument;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RelatedDocument;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Change;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NoteRef;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Eol;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Eop;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Img;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AuthorialNote;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -95,15 +21,15 @@ public class InlineComplexType extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType alternativeToAttr;
-    private LanguageSimpleType langAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
+    private AnyURISimpleType refersToAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
     private StatusTypeSimpleType statusAttr;
-    private AmendableWidgetImpl wildcardContentAttr;
+    private LanguageSimpleType langAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
     public AnyURISimpleType getAlternativeToAttr() {
         return alternativeToAttr;
@@ -111,11 +37,17 @@ public class InlineComplexType extends AmendableWidgetImpl  {
     public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         this.alternativeToAttr = alternativeToAttr;
     }
-    public LanguageSimpleType getLangAttr() {
-        return langAttr;
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
     }
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
     }
     public StringSimpleType getClassAttr() {
         return classAttr;
@@ -141,11 +73,11 @@ public class InlineComplexType extends AmendableWidgetImpl  {
     public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
         this.statusAttr = statusAttr;
     }
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
+    public LanguageSimpleType getLangAttr() {
+        return langAttr;
     }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
     }
     public IDSimpleType getIdAttr() {
         return idAttr;
@@ -158,12 +90,6 @@ public class InlineComplexType extends AmendableWidgetImpl  {
     }
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
-    }
-    public AnyURISimpleType getRefersToAttr() {
-        return refersToAttr;
-    }
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
     }
     public java.util.List<Inline> getInlines() {
         java.util.List<Inline> result = new ArrayList<Inline>();
@@ -806,22 +732,7 @@ public class InlineComplexType extends AmendableWidgetImpl  {
     */
     @Override
     public String[] getAllowedChildTypes() {
-        String[] subtypes = new String[]{"person","neutralCitation","docType","remark","docStatus","location","change","entity","authorialNote","img","party","legislature","event","eol","role","opinion","quantity","extractStructure","eop","fillIn","signature","docStage","mmod","docCommittee","vote","ins","mod","noteRef","docNumber","rref","marker","session","recordedTime","lawyer","docPurpose","extractText","span","sub","concept","courtType","docJurisdiction","object","sup","docProponent","date","omissis","rmod","organization","def","docketNumber","judge","popup","inline","docTitle","del","docDate","relatedDocument","affectedDocument","mref","docIntroducer","b","placeholder","a","outcome","i","process","ref","u","term","shortTitle"};
-        return  subtypes;
-    }
-
-    @Override
-    public void addAmendableWidget(final AmendableWidget widget) {
-        boolean canAdd = false;
-        for (String type : getAllowedChildTypes()) {
-            if (type.equalsIgnoreCase(widget.getType())) {
-                canAdd = true;
-            }
-        }
-        if (!canAdd) {
-            throw new RuntimeException("Not supported child type:" + widget);
-        }
-        super.addAmendableWidget(widget);
+        return new String[]{"person","neutralCitation","docType","remark","docStatus","location","change","entity","authorialNote","img","party","legislature","event","eol","role","opinion","quantity","extractStructure","eop","fillIn","signature","docStage","mmod","docCommittee","vote","ins","mod","noteRef","docNumber","rref","marker","session","recordedTime","lawyer","docPurpose","extractText","span","sub","concept","courtType","docJurisdiction","object","sup","docProponent","date","omissis","rmod","organization","def","docketNumber","judge","popup","inline","docTitle","del","docDate","relatedDocument","affectedDocument","mref","docIntroducer","b","placeholder","a","outcome","i","process","ref","u","term","shortTitle"};
     }
 
 }

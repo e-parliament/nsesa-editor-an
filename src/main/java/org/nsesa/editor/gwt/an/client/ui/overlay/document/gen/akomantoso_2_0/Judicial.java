@@ -1,11 +1,6 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.JudicialArgumentsComplexType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -28,22 +23,7 @@ public class Judicial extends JudicialArgumentsComplexType  {
     */
     @Override
     public String[] getAllowedChildTypes() {
-        String[] subtypes = new String[]{"overrules","result","dissentsFrom","derogates","extends","contrasts","restricts","applies","isAnalogTo","supports","distinguishes","putsInQuestion"};
-        return  subtypes;
-    }
-
-    @Override
-    public void addAmendableWidget(final AmendableWidget widget) {
-        boolean canAdd = false;
-        for (String type : getAllowedChildTypes()) {
-            if (type.equalsIgnoreCase(widget.getType())) {
-                canAdd = true;
-            }
-        }
-        if (!canAdd) {
-            throw new RuntimeException("Not supported child type:" + widget);
-        }
-        super.addAmendableWidget(widget);
+        return new String[]{"overrules","result","dissentsFrom","derogates","extends","contrasts","restricts","applies","isAnalogTo","supports","distinguishes","putsInQuestion"};
     }
 
 }

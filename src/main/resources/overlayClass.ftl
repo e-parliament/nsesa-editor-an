@@ -91,23 +91,7 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
     @Override
     public String[] getAllowedChildTypes() {
     <#assign delimiter = "">
-        String[] subtypes = new String[]{<#list overlayClass.allowedSubTypes as child>${delimiter}"${child}"<#assign delimiter = ","></#list>};
-        return  subtypes;
-    }
-
-    @Override
-    public void addAmendableWidget(final AmendableWidget widget) {
-        boolean canAdd = false;
-        for (String type : getAllowedChildTypes()) {
-            if (type.equalsIgnoreCase(widget.getType())) {
-                canAdd = true;
-                break;
-            }
-        }
-        if (!canAdd) {
-            throw new RuntimeException("Not supported child type:" + widget);
-        }
-        super.addAmendableWidget(widget);
+        return new String[]{<#list overlayClass.allowedSubTypes as child>${delimiter}"${child}"<#assign delimiter = ","></#list>};
     }
 
 </#if>

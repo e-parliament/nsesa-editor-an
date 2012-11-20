@@ -1,19 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.VersionTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Meta;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.CoverPage;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Preface;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Preamble;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MainBody;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Conclusions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Attachments;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -116,22 +106,7 @@ public class OpenStructureComplexType extends AmendableWidgetImpl  {
     */
     @Override
     public String[] getAllowedChildTypes() {
-        String[] subtypes = new String[]{"conclusions","preface","mainBody","preamble","coverPage","attachments","meta"};
-        return  subtypes;
-    }
-
-    @Override
-    public void addAmendableWidget(final AmendableWidget widget) {
-        boolean canAdd = false;
-        for (String type : getAllowedChildTypes()) {
-            if (type.equalsIgnoreCase(widget.getType())) {
-                canAdd = true;
-            }
-        }
-        if (!canAdd) {
-            throw new RuntimeException("Not supported child type:" + widget);
-        }
-        super.addAmendableWidget(widget);
+        return new String[]{"conclusions","preface","mainBody","preamble","coverPage","attachments","meta"};
     }
 
 }

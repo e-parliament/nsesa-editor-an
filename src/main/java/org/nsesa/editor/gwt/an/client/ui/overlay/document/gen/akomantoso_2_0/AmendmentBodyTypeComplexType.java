@@ -1,20 +1,12 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AmendmentHeading;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AmendmentContent;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AmendmentReference;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AmendmentJustification;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -29,15 +21,15 @@ public class AmendmentBodyTypeComplexType extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType alternativeToAttr;
-    private LanguageSimpleType langAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
+    private AnyURISimpleType refersToAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
     private StatusTypeSimpleType statusAttr;
-    private AmendableWidgetImpl wildcardContentAttr;
+    private LanguageSimpleType langAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
     public java.util.List<AmendmentHeading> getAmendmentHeadings() {
         java.util.List<AmendmentHeading> result = new ArrayList<AmendmentHeading>();
@@ -81,11 +73,17 @@ public class AmendmentBodyTypeComplexType extends AmendableWidgetImpl  {
     public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         this.alternativeToAttr = alternativeToAttr;
     }
-    public LanguageSimpleType getLangAttr() {
-        return langAttr;
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
     }
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
     }
     public StringSimpleType getClassAttr() {
         return classAttr;
@@ -111,11 +109,11 @@ public class AmendmentBodyTypeComplexType extends AmendableWidgetImpl  {
     public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
         this.statusAttr = statusAttr;
     }
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
+    public LanguageSimpleType getLangAttr() {
+        return langAttr;
     }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
     }
     public IDSimpleType getIdAttr() {
         return idAttr;
@@ -129,12 +127,6 @@ public class AmendmentBodyTypeComplexType extends AmendableWidgetImpl  {
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
-    public AnyURISimpleType getRefersToAttr() {
-        return refersToAttr;
-    }
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-    }
     public AnyURISimpleType getPeriodAttr() {
         return periodAttr;
     }
@@ -146,22 +138,7 @@ public class AmendmentBodyTypeComplexType extends AmendableWidgetImpl  {
     */
     @Override
     public String[] getAllowedChildTypes() {
-        String[] subtypes = new String[]{"amendmentJustification","amendmentReference","amendmentHeading","amendmentContent"};
-        return  subtypes;
-    }
-
-    @Override
-    public void addAmendableWidget(final AmendableWidget widget) {
-        boolean canAdd = false;
-        for (String type : getAllowedChildTypes()) {
-            if (type.equalsIgnoreCase(widget.getType())) {
-                canAdd = true;
-            }
-        }
-        if (!canAdd) {
-            throw new RuntimeException("Not supported child type:" + widget);
-        }
-        super.addAmendableWidget(widget);
+        return new String[]{"amendmentJustification","amendmentReference","amendmentHeading","amendmentContent"};
     }
 
 }

@@ -1,22 +1,14 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Source;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Destination;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Force;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Efficacy;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Application;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Duration;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Condition;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
+import com.google.gwt.dom.client.Element;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.BooleanSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -30,13 +22,13 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+    private AnyURISimpleType refersToAttr;
     private StatusTypeSimpleType statusAttr;
     private BooleanSimpleType exclusionAttr;
     private BooleanSimpleType incompleteAttr;
-    private AmendableWidgetImpl wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType refersToAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
     private AnyURISimpleType periodAttr;
     public java.util.List<Source> getSources() {
         java.util.List<Source> result = new ArrayList<Source>();
@@ -106,6 +98,12 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
         }
         return result;
     }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
     public StatusTypeSimpleType getStatusAttr() {
         return statusAttr;
     }
@@ -124,12 +122,6 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
     public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
         this.incompleteAttr = incompleteAttr;
     }
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-    }
     public IDSimpleType getIdAttr() {
         return idAttr;
     }
@@ -142,11 +134,11 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
-    public AnyURISimpleType getRefersToAttr() {
-        return refersToAttr;
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
     }
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
     }
     public AnyURISimpleType getPeriodAttr() {
         return periodAttr;
@@ -159,22 +151,7 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
     */
     @Override
     public String[] getAllowedChildTypes() {
-        String[] subtypes = new String[]{"duration","application","source","condition","efficacy","force","destination"};
-        return  subtypes;
-    }
-
-    @Override
-    public void addAmendableWidget(final AmendableWidget widget) {
-        boolean canAdd = false;
-        for (String type : getAllowedChildTypes()) {
-            if (type.equalsIgnoreCase(widget.getType())) {
-                canAdd = true;
-            }
-        }
-        if (!canAdd) {
-            throw new RuntimeException("Not supported child type:" + widget);
-        }
-        super.addAmendableWidget(widget);
+        return new String[]{"duration","application","source","condition","efficacy","force","destination"};
     }
 
 }
