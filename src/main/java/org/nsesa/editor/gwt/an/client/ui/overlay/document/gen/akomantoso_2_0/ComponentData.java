@@ -1,15 +1,17 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ComponentData;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.LinkedHashMap;
+import com.google.gwt.user.client.DOM;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -26,13 +28,13 @@ public class ComponentData extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private AmendableWidgetImpl wildcardContentAttr;
+    private StringSimpleType nameAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
-    private AnyURISimpleType hrefAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private StringSimpleType nameAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
+    private AnyURISimpleType hrefAttr;
     public java.util.List<ComponentData> getComponentDatas() {
         java.util.List<ComponentData> result = new ArrayList<ComponentData>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -42,11 +44,11 @@ public class ComponentData extends AmendableWidgetImpl  {
         }
         return java.util.Collections.unmodifiableList(result);
     }
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
+    public StringSimpleType getNameAttr() {
+        return nameAttr;
     }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
     }
     public StringSimpleType getShowAsAttr() {
         return showAsAttr;
@@ -60,12 +62,6 @@ public class ComponentData extends AmendableWidgetImpl  {
     public void setShortFormAttr(final StringSimpleType shortFormAttr) {
         this.shortFormAttr = shortFormAttr;
     }
-    public AnyURISimpleType getHrefAttr() {
-        return hrefAttr;
-    }
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-    }
     public IDSimpleType getIdAttr() {
         return idAttr;
     }
@@ -78,11 +74,17 @@ public class ComponentData extends AmendableWidgetImpl  {
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
-    public StringSimpleType getNameAttr() {
-        return nameAttr;
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
     }
-    public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+    public AnyURISimpleType getHrefAttr() {
+        return hrefAttr;
+    }
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
     }
     /**
     * Returns possible children as list of String
@@ -90,6 +92,21 @@ public class ComponentData extends AmendableWidgetImpl  {
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{"componentData"};
+    }
+
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        LinkedHashMap attrs = new LinkedHashMap();
+        attrs.putAll(super.getAttributes());
+        attrs.put("nameAttr", getNameAttr().getValue());
+        attrs.put("showAsAttr", getShowAsAttr().getValue());
+        attrs.put("shortFormAttr", getShortFormAttr().getValue());
+        attrs.put("idAttr", getIdAttr().getValue());
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
+        attrs.put("hrefAttr", getHrefAttr().getValue());
+
+        return attrs;
     }
 
 }

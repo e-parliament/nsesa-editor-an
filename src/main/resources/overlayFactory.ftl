@@ -7,6 +7,7 @@ import ${packageNameGenerator.getPackageName(cl)}.${cl.className?cap_first};
 </#list>
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
 import com.google.gwt.dom.client.Element;
@@ -52,6 +53,6 @@ public class ${overlayClass.name?cap_first} extends DefaultOverlayFactory  {
 </#list>
         // nothing found
         LOG.warning("Could not find overlay element (nodename: " + nodeName + " in namespace URI '" + namespaceURI + "')");
-        return null;
-    }
+        return new AmendableWidgetImpl(element);
+}
 }

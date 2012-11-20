@@ -1,10 +1,23 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Result;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Supports;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.IsAnalogTo;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Applies;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Extends;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Restricts;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Derogates;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Contrasts;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Overrules;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DissentsFrom;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PutsInQuestion;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Distinguishes;
 import com.google.gwt.dom.client.Element;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
 import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -133,6 +146,14 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{"overrules","result","dissentsFrom","derogates","extends","contrasts","restricts","applies","isAnalogTo","supports","distinguishes","putsInQuestion"};
+    }
+
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        LinkedHashMap attrs = new LinkedHashMap();
+        attrs.putAll(super.getAttributes());
+
+        return attrs;
     }
 
 }

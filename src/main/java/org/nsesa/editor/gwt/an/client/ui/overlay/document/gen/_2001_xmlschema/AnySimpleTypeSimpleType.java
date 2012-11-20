@@ -16,12 +16,12 @@ public class AnySimpleTypeSimpleType   {
     }
 
 // FIELDS ------------------
-    private String content_;
-    public String getContent_() {
-        return content_;
+    private String value;
+    public String getValue() {
+        return value;
     }
-    public void setContent_(final String content_) {
-        this.content_ = content_;
+    public void setValue(final String value) {
+        this.value = value;
     }
 }
 

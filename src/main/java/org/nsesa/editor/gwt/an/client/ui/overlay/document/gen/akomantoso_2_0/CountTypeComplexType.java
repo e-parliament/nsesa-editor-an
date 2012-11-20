@@ -1,14 +1,15 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import com.google.gwt.dom.client.Element;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
+import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -24,10 +25,10 @@ public class CountTypeComplexType extends AmendableWidgetImpl  {
 // FIELDS ------------------
     private AnyURISimpleType refersToAttr;
     private StringSimpleType valueAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType hrefAttr;
-    private AmendableWidgetImpl wildcardContentAttr;
     public java.util.List<AmendableWidgetImpl> getWildcardContents() {
         java.util.List<AmendableWidgetImpl> result = new ArrayList<AmendableWidgetImpl>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -49,6 +50,12 @@ public class CountTypeComplexType extends AmendableWidgetImpl  {
     public void setValueAttr(final StringSimpleType valueAttr) {
         this.valueAttr = valueAttr;
     }
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
     public IDSimpleType getIdAttr() {
         return idAttr;
     }
@@ -67,18 +74,26 @@ public class CountTypeComplexType extends AmendableWidgetImpl  {
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {
         this.hrefAttr = hrefAttr;
     }
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-    }
     /**
     * Returns possible children as list of String
     */
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{"*"};
+    }
+
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        LinkedHashMap attrs = new LinkedHashMap();
+        attrs.putAll(super.getAttributes());
+        attrs.put("refersToAttr", getRefersToAttr().getValue());
+        attrs.put("valueAttr", getValueAttr().getValue());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
+        attrs.put("idAttr", getIdAttr().getValue());
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
+        attrs.put("hrefAttr", getHrefAttr().getValue());
+
+        return attrs;
     }
 
 }

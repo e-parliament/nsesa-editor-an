@@ -1,12 +1,86 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import com.google.gwt.dom.client.Element;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Intro;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Wrap;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Heading;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Subheading;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Content;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Num;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Recital;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Citation;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ComponentRef;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Hcontainer;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Foreign;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Block;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Container;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Speech;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Question;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Answer;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Other;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Scene;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Narrative;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Summary;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Clause;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Section;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Part;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Paragraph;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Chapter;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Title;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Article;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Book;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Tome;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Division;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.List;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Point;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Indent;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Alinea;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Subsection;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Subpart;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Subparagraph;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Subchapter;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Subtitle;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Subclause;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Sublist;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.BlockList;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Toc;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Tblock;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ul;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Ol;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Table;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.P;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AdministrationOfOath;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RollCall;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Prayers;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.OralStatements;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.WrittenStatements;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PersonalStatements;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MinisterialStatements;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Resolutions;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NationalInterest;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DeclarationOfVote;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Communication;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Petitions;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Papers;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.NoticesOfMotion;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Questions;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Address;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ProceduralMotions;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PointOfOrder;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Adjournment;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.DebateSection;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Div;
+import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -20,16 +94,16 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType alternativeToAttr;
     private LanguageSimpleType langAttr;
-    private StatusTypeSimpleType statusAttr;
-    private AmendableWidgetImpl wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType refersToAttr;
+    private StatusTypeSimpleType statusAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
-    private AnyURISimpleType alternativeToAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
     private AnyURISimpleType periodAttr;
     public java.util.List<Intro> getIntros() {
         java.util.List<Intro> result = new ArrayList<Intro>();
@@ -211,29 +285,17 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
         }
         return java.util.Collections.unmodifiableList(result);
     }
-    public AnyURISimpleType getRefersToAttr() {
-        return refersToAttr;
+    public AnyURISimpleType getAlternativeToAttr() {
+        return alternativeToAttr;
     }
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
     }
     public LanguageSimpleType getLangAttr() {
         return langAttr;
     }
     public void setLangAttr(final LanguageSimpleType langAttr) {
         this.langAttr = langAttr;
-    }
-    public StatusTypeSimpleType getStatusAttr() {
-        return statusAttr;
-    }
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-    }
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
     }
     public IDSimpleType getIdAttr() {
         return idAttr;
@@ -246,6 +308,18 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        return statusAttr;
+    }
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
     }
     public StringSimpleType getClassAttr() {
         return classAttr;
@@ -265,11 +339,11 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     public void setTitleAttr(final StringSimpleType titleAttr) {
         this.titleAttr = titleAttr;
     }
-    public AnyURISimpleType getAlternativeToAttr() {
-        return alternativeToAttr;
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
     }
-    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
     }
     public java.util.List<Clause> getClauses() {
         java.util.List<Clause> result = new ArrayList<Clause>();
@@ -724,6 +798,25 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{"summary","paragraph","tblock","narrative","oralStatements","alinea","blockList","declarationOfVote","adjournment","ol","petitions","componentRef","subchapter","wrap","citation","administrationOfOath","indent","subclause","answer","questions","papers","table","sublist","proceduralMotions","content","speech","nationalInterest","container","scene","foreign","heading","tome","other","subparagraph","toc","subheading","subsection","debateSection","div","resolutions","block","personalStatements","recital","chapter","title","rollCall","division","question","ul","communication","noticesOfMotion","list","section","intro","point","num","article","subpart","address","writtenStatements","hcontainer","p","book","subtitle","pointOfOrder","prayers","ministerialStatements","part","clause"};
+    }
+
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        LinkedHashMap attrs = new LinkedHashMap();
+        attrs.putAll(super.getAttributes());
+        attrs.put("alternativeToAttr", getAlternativeToAttr().getValue());
+        attrs.put("langAttr", getLangAttr().getValue());
+        attrs.put("idAttr", getIdAttr().getValue());
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
+        attrs.put("refersToAttr", getRefersToAttr().getValue());
+        attrs.put("statusAttr", getStatusAttr().value());
+        attrs.put("classAttr", getClassAttr().getValue());
+        attrs.put("styleAttr", getStyleAttr().getValue());
+        attrs.put("titleAttr", getTitleAttr().getValue());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
+        attrs.put("periodAttr", getPeriodAttr().getValue());
+
+        return attrs;
     }
 
 }

@@ -1,13 +1,21 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IntegerSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Caption;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Tr;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
+import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.LinkedHashMap;
+import com.google.gwt.user.client.DOM;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -28,16 +36,16 @@ public class Table extends AmendableWidgetImpl  {
     private IntegerSimpleType borderAttr;
     private IntegerSimpleType cellspacingAttr;
     private IntegerSimpleType cellpaddingAttr;
-    private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType alternativeToAttr;
     private LanguageSimpleType langAttr;
-    private StatusTypeSimpleType statusAttr;
-    private AmendableWidgetImpl wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType refersToAttr;
+    private StatusTypeSimpleType statusAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
-    private AnyURISimpleType alternativeToAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
     private AnyURISimpleType periodAttr;
     public IntegerSimpleType getWidthAttr() {
         return widthAttr;
@@ -82,29 +90,17 @@ public class Table extends AmendableWidgetImpl  {
         }
         return java.util.Collections.unmodifiableList(result);
     }
-    public AnyURISimpleType getRefersToAttr() {
-        return refersToAttr;
+    public AnyURISimpleType getAlternativeToAttr() {
+        return alternativeToAttr;
     }
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
     }
     public LanguageSimpleType getLangAttr() {
         return langAttr;
     }
     public void setLangAttr(final LanguageSimpleType langAttr) {
         this.langAttr = langAttr;
-    }
-    public StatusTypeSimpleType getStatusAttr() {
-        return statusAttr;
-    }
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-    }
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
     }
     public IDSimpleType getIdAttr() {
         return idAttr;
@@ -117,6 +113,18 @@ public class Table extends AmendableWidgetImpl  {
     }
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        return statusAttr;
+    }
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
     }
     public StringSimpleType getClassAttr() {
         return classAttr;
@@ -136,11 +144,11 @@ public class Table extends AmendableWidgetImpl  {
     public void setTitleAttr(final StringSimpleType titleAttr) {
         this.titleAttr = titleAttr;
     }
-    public AnyURISimpleType getAlternativeToAttr() {
-        return alternativeToAttr;
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
     }
-    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
     }
     public AnyURISimpleType getPeriodAttr() {
         return periodAttr;
@@ -154,6 +162,29 @@ public class Table extends AmendableWidgetImpl  {
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{"tr","caption"};
+    }
+
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        LinkedHashMap attrs = new LinkedHashMap();
+        attrs.putAll(super.getAttributes());
+        attrs.put("widthAttr", getWidthAttr().getValue());
+        attrs.put("borderAttr", getBorderAttr().getValue());
+        attrs.put("cellspacingAttr", getCellspacingAttr().getValue());
+        attrs.put("cellpaddingAttr", getCellpaddingAttr().getValue());
+        attrs.put("alternativeToAttr", getAlternativeToAttr().getValue());
+        attrs.put("langAttr", getLangAttr().getValue());
+        attrs.put("idAttr", getIdAttr().getValue());
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
+        attrs.put("refersToAttr", getRefersToAttr().getValue());
+        attrs.put("statusAttr", getStatusAttr().value());
+        attrs.put("classAttr", getClassAttr().getValue());
+        attrs.put("styleAttr", getStyleAttr().getValue());
+        attrs.put("titleAttr", getTitleAttr().getValue());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
+        attrs.put("periodAttr", getPeriodAttr().getValue());
+
+        return attrs;
     }
 
 }

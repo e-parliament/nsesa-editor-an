@@ -1,11 +1,28 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import com.google.gwt.dom.client.Element;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Original;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PassiveRef;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ActiveRef;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Jurisprudence;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.HasAttachment;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AttachmentOf;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCPerson;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCOrganization;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCConcept;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCObject;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCEvent;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCLocation;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCProcess;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCRole;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCTerm;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.TLCReference;
+import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -176,6 +193,15 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{"TLCEvent","TLCPerson","TLCProcess","hasAttachment","TLCReference","TLCLocation","attachmentOf","TLCConcept","TLCObject","jurisprudence","TLCTerm","passiveRef","original","TLCRole","activeRef","TLCOrganization"};
+    }
+
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        LinkedHashMap attrs = new LinkedHashMap();
+        attrs.putAll(super.getAttributes());
+        attrs.put("sourceAttr", getSourceAttr().getValue());
+
+        return attrs;
     }
 
 }

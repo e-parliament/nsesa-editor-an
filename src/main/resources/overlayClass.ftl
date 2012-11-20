@@ -10,6 +10,7 @@ import java.util.Arrays;
 <#if overlayClass.complex || overlayClass.element || overlayClass.hasWildCardProperties()>
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.LinkedHashMap;
 </#if>
 <#if overlayClass.element>
 import com.google.gwt.user.client.DOM;
@@ -92,6 +93,19 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
     public String[] getAllowedChildTypes() {
     <#assign delimiter = "">
         return new String[]{<#list overlayClass.allowedSubTypes as child>${delimiter}"${child}"<#assign delimiter = ","></#list>};
+    }
+
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        LinkedHashMap attrs = new LinkedHashMap();
+        attrs.putAll(super.getAttributes());
+        <#list overlayClass.properties as property>
+            <#if property.attribute>
+        attrs.put("<@propertyName property=property/>", <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>()<#if property.baseClass?? && property.baseClass.enumeration>.value()<#elseif property.baseClass?? && property.baseClass.simple>.getValue()<#elseif property.wildCard>.getContent()<#else>.toString()</#if>);
+            </#if>
+        </#list>
+
+        return attrs;
     }
 
 </#if>

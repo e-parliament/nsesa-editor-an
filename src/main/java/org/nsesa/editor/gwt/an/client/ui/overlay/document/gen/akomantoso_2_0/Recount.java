@@ -1,6 +1,12 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.ParliamentaryAnalysisTypeComplexType;
 import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.LinkedHashMap;
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -24,6 +30,14 @@ public class Recount extends ParliamentaryAnalysisTypeComplexType  {
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{"quorum","count"};
+    }
+
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        LinkedHashMap attrs = new LinkedHashMap();
+        attrs.putAll(super.getAttributes());
+
+        return attrs;
     }
 
 }

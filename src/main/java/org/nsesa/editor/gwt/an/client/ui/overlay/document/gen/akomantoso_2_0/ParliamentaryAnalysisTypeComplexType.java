@@ -1,13 +1,16 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import com.google.gwt.dom.client.Element;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Quorum;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Count;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
+import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -21,12 +24,12 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+    private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType hrefAttr;
+    private AnyURISimpleType outcomeAttr;
     private AmendableWidgetImpl wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType outcomeAttr;
-    private AnyURISimpleType hrefAttr;
-    private AnyURISimpleType refersToAttr;
     public java.util.List<Quorum> getQuorums() {
         java.util.List<Quorum> result = new ArrayList<Quorum>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -44,6 +47,24 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
             }
         }
         return java.util.Collections.unmodifiableList(result);
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+    public AnyURISimpleType getHrefAttr() {
+        return hrefAttr;
+    }
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+    }
+    public AnyURISimpleType getOutcomeAttr() {
+        return outcomeAttr;
+    }
+    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
+        this.outcomeAttr = outcomeAttr;
     }
     public AmendableWidgetImpl getWildcardContentAttr() {
         return wildcardContentAttr;
@@ -63,30 +84,26 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
-    public AnyURISimpleType getOutcomeAttr() {
-        return outcomeAttr;
-    }
-    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
-        this.outcomeAttr = outcomeAttr;
-    }
-    public AnyURISimpleType getHrefAttr() {
-        return hrefAttr;
-    }
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-    }
-    public AnyURISimpleType getRefersToAttr() {
-        return refersToAttr;
-    }
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-    }
     /**
     * Returns possible children as list of String
     */
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{"quorum","count"};
+    }
+
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        LinkedHashMap attrs = new LinkedHashMap();
+        attrs.putAll(super.getAttributes());
+        attrs.put("refersToAttr", getRefersToAttr().getValue());
+        attrs.put("hrefAttr", getHrefAttr().getValue());
+        attrs.put("outcomeAttr", getOutcomeAttr().getValue());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
+        attrs.put("idAttr", getIdAttr().getValue());
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
+
+        return attrs;
     }
 
 }
