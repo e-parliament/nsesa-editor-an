@@ -4,6 +4,7 @@
     <span class="widget ${el?node_name} <#if el.@class[0]??>${el.@class}</#if>"
         <#list el.@@ as attr><#if attr?node_name?lower_case != "xmlns">${attr?node_name}="${attr}" </#if></#list>
             type="${el?node_name}"
+            ns="${el?node_namespace}"
             >
         <#if el?children?size gt 0>
             <#list el?children as child>

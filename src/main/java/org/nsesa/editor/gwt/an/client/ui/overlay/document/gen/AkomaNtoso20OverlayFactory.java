@@ -23,17 +23,12 @@ public class AkomaNtoso20OverlayFactory extends DefaultOverlayFactory  {
     }
 
     @Override
-    public AmendableWidget toAmendableWidget(final Element element, final String namespaceURI) {
-        String prefix = null;
-        String nodeName = overlayStrategy.getType(element);
+    public AmendableWidget toAmendableWidget(final Element element) {
+        final String nodeName = overlayStrategy.getType(element);
+        final String namespaceURI = overlayStrategy.getNamespaceURI(element);
 
         if ("".equals(nodeName)) {
             throw new IllegalArgumentException("Empty element or null passed.");
-        }
-        else if (nodeName.startsWith("/")) {
-            // assume IE8
-            LOG.warning("A node with a name starting with a slash was passed. Enjoy IE8!");
-            return null;
         }
         else if ("container".equalsIgnoreCase(nodeName)) {
             return new Container(element);

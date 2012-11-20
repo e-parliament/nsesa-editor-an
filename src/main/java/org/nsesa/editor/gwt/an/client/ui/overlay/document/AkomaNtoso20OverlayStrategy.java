@@ -49,6 +49,11 @@ public class AkomaNtoso20OverlayStrategy implements OverlayStrategy {
     }
 
     @Override
+    public String getNamespaceURI(Element element) {
+        return overlayStrategySupport.getNamespaceURI(element);
+    }
+
+    @Override
     public String getIndex(Element element) {
         return overlayStrategySupport.getLiteralIndex(element);
     }

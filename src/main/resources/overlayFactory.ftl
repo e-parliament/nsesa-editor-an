@@ -27,24 +27,11 @@ public class ${overlayClass.name?cap_first} extends DefaultOverlayFactory  {
 
     @Override
     public AmendableWidget toAmendableWidget(final Element element, final String namespaceURI) {
-        String prefix = null;
-        String nodeName = null;
-        if (element.getNodeName().contains(":")) {
-            final String[] prefixAndName = element.getNodeName().split(":");
-            prefix = prefixAndName[0];
-            nodeName = prefixAndName[1];
-        }
-        else {
-            nodeName = element.getNodeName();
-        }
+        final String nodeName = overlayStrategy.getType(element);
+        final String namespaceURI = overlayStrategy.getNamespaceURI(element);
 
         if ("".equals(nodeName)) {
             throw new IllegalArgumentException("Empty element or null passed.");
-        }
-        else if (nodeName.startsWith("/")) {
-            // assume IE8
-            LOG.warning("A node with a name starting with a slash was passed. Enjoy IE8!");
-            return null;
         }
 <#list overlayClasses as cl>
         else if ("${cl.name}".equalsIgnoreCase(nodeName)) {
