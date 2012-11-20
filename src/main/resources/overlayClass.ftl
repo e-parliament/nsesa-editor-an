@@ -101,6 +101,7 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
         for (String type : getAllowedChildTypes()) {
             if (type.equalsIgnoreCase(widget.getType())) {
                 canAdd = true;
+                break;
             }
         }
         if (!canAdd) {
