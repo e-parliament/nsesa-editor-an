@@ -31,8 +31,8 @@ public class AnOverlayGeneratorTest {
                 result.add(overlayClassGenerator.getResult());
             }
         };
-        String[] schemas = {"xml.xsd", "akomantoso20.xsd"};
-        generator.parse(schemas);
+        String schema = "akomantoso20.xsd";
+        generator.parse(schema);
         generator.analyze();
         generator.print();
         rootClass = result.get(0);

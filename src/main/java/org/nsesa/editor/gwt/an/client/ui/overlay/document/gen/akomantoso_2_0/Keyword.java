@@ -27,14 +27,20 @@ public class Keyword extends MetaoptComplexType  {
 
 // FIELDS ------------------
     private AnyURISimpleType dictionaryAttr;
+    private StringSimpleType valueAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
-    private StringSimpleType valueAttr;
     public AnyURISimpleType getDictionaryAttr() {
         return dictionaryAttr;
     }
     public void setDictionaryAttr(final AnyURISimpleType dictionaryAttr) {
         this.dictionaryAttr = dictionaryAttr;
+    }
+    public StringSimpleType getValueAttr() {
+        return valueAttr;
+    }
+    public void setValueAttr(final StringSimpleType valueAttr) {
+        this.valueAttr = valueAttr;
     }
     public StringSimpleType getShowAsAttr() {
         return showAsAttr;
@@ -47,12 +53,6 @@ public class Keyword extends MetaoptComplexType  {
     }
     public void setShortFormAttr(final StringSimpleType shortFormAttr) {
         this.shortFormAttr = shortFormAttr;
-    }
-    public StringSimpleType getValueAttr() {
-        return valueAttr;
-    }
-    public void setValueAttr(final StringSimpleType valueAttr) {
-        this.valueAttr = valueAttr;
     }
     /**
     * Returns possible children as list of String
@@ -67,9 +67,9 @@ public class Keyword extends MetaoptComplexType  {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
         attrs.put("dictionaryAttr", getDictionaryAttr().getValue());
+        attrs.put("valueAttr", getValueAttr().getValue());
         attrs.put("showAsAttr", getShowAsAttr().getValue());
         attrs.put("shortFormAttr", getShortFormAttr().getValue());
-        attrs.put("valueAttr", getValueAttr().getValue());
 
         return attrs;
     }

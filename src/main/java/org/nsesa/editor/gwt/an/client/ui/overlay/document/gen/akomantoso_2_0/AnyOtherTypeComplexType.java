@@ -23,9 +23,9 @@ public class AnyOtherTypeComplexType extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType hrefAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AmendableWidgetImpl wildcardContentAttr;
     public java.util.List<AmendableWidgetImpl> getWildcardContents() {
         java.util.List<AmendableWidgetImpl> result = new ArrayList<AmendableWidgetImpl>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -41,6 +41,12 @@ public class AnyOtherTypeComplexType extends AmendableWidgetImpl  {
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {
         this.hrefAttr = hrefAttr;
     }
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
     public IDSimpleType getIdAttr() {
         return idAttr;
     }
@@ -52,12 +58,6 @@ public class AnyOtherTypeComplexType extends AmendableWidgetImpl  {
     }
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
-    }
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
     }
     /**
     * Returns possible children as list of String
@@ -72,9 +72,9 @@ public class AnyOtherTypeComplexType extends AmendableWidgetImpl  {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
         attrs.put("hrefAttr", getHrefAttr().getValue());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
         attrs.put("idAttr", getIdAttr().getValue());
         attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
 
         return attrs;
     }

@@ -1,9 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MetaoptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DateSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,36 +27,12 @@ public class Publication extends MetaoptComplexType  {
     }
 
 // FIELDS ------------------
-    private AnyURISimpleType refersToAttr;
-    private StringSimpleType nameAttr;
-    private DateSimpleType dateAttr;
-    private StringSimpleType numberAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
-    public AnyURISimpleType getRefersToAttr() {
-        return refersToAttr;
-    }
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-    }
-    public StringSimpleType getNameAttr() {
-        return nameAttr;
-    }
-    public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-    }
-    public DateSimpleType getDateAttr() {
-        return dateAttr;
-    }
-    public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-    }
-    public StringSimpleType getNumberAttr() {
-        return numberAttr;
-    }
-    public void setNumberAttr(final StringSimpleType numberAttr) {
-        this.numberAttr = numberAttr;
-    }
+    private StringSimpleType numberAttr;
+    private DateSimpleType dateAttr;
+    private AnyURISimpleType refersToAttr;
+    private StringSimpleType nameAttr;
     public StringSimpleType getShowAsAttr() {
         return showAsAttr;
     }
@@ -68,6 +44,30 @@ public class Publication extends MetaoptComplexType  {
     }
     public void setShortFormAttr(final StringSimpleType shortFormAttr) {
         this.shortFormAttr = shortFormAttr;
+    }
+    public StringSimpleType getNumberAttr() {
+        return numberAttr;
+    }
+    public void setNumberAttr(final StringSimpleType numberAttr) {
+        this.numberAttr = numberAttr;
+    }
+    public DateSimpleType getDateAttr() {
+        return dateAttr;
+    }
+    public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+    public StringSimpleType getNameAttr() {
+        return nameAttr;
+    }
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
     }
     /**
     * Returns possible children as list of String
@@ -81,12 +81,12 @@ public class Publication extends MetaoptComplexType  {
     public LinkedHashMap<String, String> getAttributes() {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
-        attrs.put("refersToAttr", getRefersToAttr().getValue());
-        attrs.put("nameAttr", getNameAttr().getValue());
-        attrs.put("dateAttr", getDateAttr().getValue());
-        attrs.put("numberAttr", getNumberAttr().getValue());
         attrs.put("showAsAttr", getShowAsAttr().getValue());
         attrs.put("shortFormAttr", getShortFormAttr().getValue());
+        attrs.put("numberAttr", getNumberAttr().getValue());
+        attrs.put("dateAttr", getDateAttr().getValue());
+        attrs.put("refersToAttr", getRefersToAttr().getValue());
+        attrs.put("nameAttr", getNameAttr().getValue());
 
         return attrs;
     }

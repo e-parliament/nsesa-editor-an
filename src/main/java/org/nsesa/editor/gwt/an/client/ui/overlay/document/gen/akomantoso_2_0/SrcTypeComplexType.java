@@ -23,13 +23,19 @@ public class SrcTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+    private AmendableWidgetImpl wildcardContentAttr;
     private AnyURISimpleType srcAttr;
     private StringSimpleType altAttr;
-    private StringSimpleType showAsAttr;
-    private StringSimpleType shortFormAttr;
-    private AmendableWidgetImpl wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private StringSimpleType showAsAttr;
+    private StringSimpleType shortFormAttr;
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
     public AnyURISimpleType getSrcAttr() {
         return srcAttr;
     }
@@ -41,24 +47,6 @@ public class SrcTypeComplexType extends AmendableWidgetImpl  {
     }
     public void setAltAttr(final StringSimpleType altAttr) {
         this.altAttr = altAttr;
-    }
-    public StringSimpleType getShowAsAttr() {
-        return showAsAttr;
-    }
-    public void setShowAsAttr(final StringSimpleType showAsAttr) {
-        this.showAsAttr = showAsAttr;
-    }
-    public StringSimpleType getShortFormAttr() {
-        return shortFormAttr;
-    }
-    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
-        this.shortFormAttr = shortFormAttr;
-    }
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
     }
     public IDSimpleType getIdAttr() {
         return idAttr;
@@ -72,6 +60,18 @@ public class SrcTypeComplexType extends AmendableWidgetImpl  {
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
+    public StringSimpleType getShowAsAttr() {
+        return showAsAttr;
+    }
+    public void setShowAsAttr(final StringSimpleType showAsAttr) {
+        this.showAsAttr = showAsAttr;
+    }
+    public StringSimpleType getShortFormAttr() {
+        return shortFormAttr;
+    }
+    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
+        this.shortFormAttr = shortFormAttr;
+    }
     /**
     * Returns possible children as list of String
     */
@@ -84,13 +84,13 @@ public class SrcTypeComplexType extends AmendableWidgetImpl  {
     public LinkedHashMap<String, String> getAttributes() {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
         attrs.put("srcAttr", getSrcAttr().getValue());
         attrs.put("altAttr", getAltAttr().getValue());
-        attrs.put("showAsAttr", getShowAsAttr().getValue());
-        attrs.put("shortFormAttr", getShortFormAttr().getValue());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
         attrs.put("idAttr", getIdAttr().getValue());
         attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
+        attrs.put("showAsAttr", getShowAsAttr().getValue());
+        attrs.put("shortFormAttr", getShortFormAttr().getValue());
 
         return attrs;
     }

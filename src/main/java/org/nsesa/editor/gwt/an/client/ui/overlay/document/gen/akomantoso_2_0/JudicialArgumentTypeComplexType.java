@@ -4,10 +4,10 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Sou
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Destination;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Condition;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.BooleanSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,12 +28,12 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType refersToAttr;
-    private AmendableWidgetImpl wildcardContentAttr;
-    private StatusTypeSimpleType statusAttr;
     private BooleanSimpleType exclusionAttr;
     private BooleanSimpleType incompleteAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private StatusTypeSimpleType statusAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
     private AnyURISimpleType periodAttr;
     public java.util.List<Source> getSources() {
         java.util.List<Source> result = new ArrayList<Source>();
@@ -69,18 +69,6 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
     public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
         this.refersToAttr = refersToAttr;
     }
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-    }
-    public StatusTypeSimpleType getStatusAttr() {
-        return statusAttr;
-    }
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-    }
     public BooleanSimpleType getExclusionAttr() {
         return exclusionAttr;
     }
@@ -105,6 +93,18 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
+    public StatusTypeSimpleType getStatusAttr() {
+        return statusAttr;
+    }
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+    }
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
     public AnyURISimpleType getPeriodAttr() {
         return periodAttr;
     }
@@ -124,12 +124,12 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
         attrs.put("refersToAttr", getRefersToAttr().getValue());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
-        attrs.put("statusAttr", getStatusAttr().value());
         attrs.put("exclusionAttr", getExclusionAttr().getValue());
         attrs.put("incompleteAttr", getIncompleteAttr().getValue());
         attrs.put("idAttr", getIdAttr().getValue());
         attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
+        attrs.put("statusAttr", getStatusAttr().value());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
         attrs.put("periodAttr", getPeriodAttr().getValue());
 
         return attrs;

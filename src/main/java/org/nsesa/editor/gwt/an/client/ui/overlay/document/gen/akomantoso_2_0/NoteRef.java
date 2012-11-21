@@ -1,9 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MarkeroptComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PlacementTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,10 +27,16 @@ public class NoteRef extends MarkeroptComplexType  {
     }
 
 // FIELDS ------------------
+    private AnyURISimpleType hrefAttr;
     private StringSimpleType markerAttr;
     private PlacementTypeSimpleType placementAttr;
     private AnyURISimpleType placementBaseAttr;
-    private AnyURISimpleType hrefAttr;
+    public AnyURISimpleType getHrefAttr() {
+        return hrefAttr;
+    }
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+    }
     public StringSimpleType getMarkerAttr() {
         return markerAttr;
     }
@@ -49,12 +55,6 @@ public class NoteRef extends MarkeroptComplexType  {
     public void setPlacementBaseAttr(final AnyURISimpleType placementBaseAttr) {
         this.placementBaseAttr = placementBaseAttr;
     }
-    public AnyURISimpleType getHrefAttr() {
-        return hrefAttr;
-    }
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-    }
     /**
     * Returns possible children as list of String
     */
@@ -67,10 +67,10 @@ public class NoteRef extends MarkeroptComplexType  {
     public LinkedHashMap<String, String> getAttributes() {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
+        attrs.put("hrefAttr", getHrefAttr().getValue());
         attrs.put("markerAttr", getMarkerAttr().getValue());
         attrs.put("placementAttr", getPlacementAttr().value());
         attrs.put("placementBaseAttr", getPlacementBaseAttr().getValue());
-        attrs.put("hrefAttr", getHrefAttr().getValue());
 
         return attrs;
     }

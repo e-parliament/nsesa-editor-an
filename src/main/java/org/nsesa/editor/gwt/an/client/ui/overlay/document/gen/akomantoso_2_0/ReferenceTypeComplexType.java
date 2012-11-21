@@ -23,18 +23,12 @@ public class ReferenceTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private AmendableWidgetImpl wildcardContentAttr;
     private AnyURISimpleType hrefAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-    }
     public AnyURISimpleType getHrefAttr() {
         return hrefAttr;
     }
@@ -52,6 +46,12 @@ public class ReferenceTypeComplexType extends AmendableWidgetImpl  {
     }
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
+    }
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
     }
     public StringSimpleType getShowAsAttr() {
         return showAsAttr;
@@ -77,10 +77,10 @@ public class ReferenceTypeComplexType extends AmendableWidgetImpl  {
     public LinkedHashMap<String, String> getAttributes() {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
         attrs.put("hrefAttr", getHrefAttr().getValue());
         attrs.put("idAttr", getIdAttr().getValue());
         attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
         attrs.put("showAsAttr", getShowAsAttr().getValue());
         attrs.put("shortFormAttr", getShortFormAttr().getValue());
 

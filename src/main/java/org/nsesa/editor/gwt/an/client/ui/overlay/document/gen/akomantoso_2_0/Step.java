@@ -1,8 +1,8 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AnyOtherTypeComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DateSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,21 +26,21 @@ public class Step extends AnyOtherTypeComplexType  {
     }
 
 // FIELDS ------------------
-    private AnyURISimpleType actorAttr;
     private DateSimpleType dateAttr;
+    private AnyURISimpleType actorAttr;
     private AnyURISimpleType asAttr;
     private AnyURISimpleType outcomeAttr;
-    public AnyURISimpleType getActorAttr() {
-        return actorAttr;
-    }
-    public void setActorAttr(final AnyURISimpleType actorAttr) {
-        this.actorAttr = actorAttr;
-    }
     public DateSimpleType getDateAttr() {
         return dateAttr;
     }
     public void setDateAttr(final DateSimpleType dateAttr) {
         this.dateAttr = dateAttr;
+    }
+    public AnyURISimpleType getActorAttr() {
+        return actorAttr;
+    }
+    public void setActorAttr(final AnyURISimpleType actorAttr) {
+        this.actorAttr = actorAttr;
     }
     public AnyURISimpleType getAsAttr() {
         return asAttr;
@@ -66,8 +66,8 @@ public class Step extends AnyOtherTypeComplexType  {
     public LinkedHashMap<String, String> getAttributes() {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
-        attrs.put("actorAttr", getActorAttr().getValue());
         attrs.put("dateAttr", getDateAttr().getValue());
+        attrs.put("actorAttr", getActorAttr().getValue());
         attrs.put("asAttr", getAsAttr().getValue());
         attrs.put("outcomeAttr", getOutcomeAttr().getValue());
 

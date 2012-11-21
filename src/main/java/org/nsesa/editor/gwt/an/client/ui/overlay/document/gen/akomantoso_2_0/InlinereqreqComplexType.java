@@ -1,11 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Inline;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Marker;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Popup;
@@ -95,41 +95,17 @@ public class InlinereqreqComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private LanguageSimpleType langAttr;
-    private StatusTypeSimpleType statusAttr;
-    private AnyURISimpleType alternativeToAttr;
-    private AnyURISimpleType refersToAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType alternativeToAttr;
+    private StatusTypeSimpleType statusAttr;
+    private AmendableWidgetImpl wildcardContentAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
-    private AmendableWidgetImpl wildcardContentAttr;
+    private LanguageSimpleType langAttr;
+    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
-    public LanguageSimpleType getLangAttr() {
-        return langAttr;
-    }
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-    }
-    public StatusTypeSimpleType getStatusAttr() {
-        return statusAttr;
-    }
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-    }
-    public AnyURISimpleType getAlternativeToAttr() {
-        return alternativeToAttr;
-    }
-    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
-    }
-    public AnyURISimpleType getRefersToAttr() {
-        return refersToAttr;
-    }
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-    }
     public IDSimpleType getIdAttr() {
         return idAttr;
     }
@@ -141,6 +117,24 @@ public class InlinereqreqComplexType extends AmendableWidgetImpl  {
     }
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
+    }
+    public AnyURISimpleType getAlternativeToAttr() {
+        return alternativeToAttr;
+    }
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        return statusAttr;
+    }
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+    }
+    public AmendableWidgetImpl getWildcardContentAttr() {
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
     }
     public StringSimpleType getClassAttr() {
         return classAttr;
@@ -160,11 +154,17 @@ public class InlinereqreqComplexType extends AmendableWidgetImpl  {
     public void setTitleAttr(final StringSimpleType titleAttr) {
         this.titleAttr = titleAttr;
     }
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
+    public LanguageSimpleType getLangAttr() {
+        return langAttr;
     }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
     }
     public java.util.List<Inline> getInlines() {
         java.util.List<Inline> result = new ArrayList<Inline>();
@@ -814,16 +814,16 @@ public class InlinereqreqComplexType extends AmendableWidgetImpl  {
     public LinkedHashMap<String, String> getAttributes() {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
-        attrs.put("langAttr", getLangAttr().getValue());
-        attrs.put("statusAttr", getStatusAttr().value());
-        attrs.put("alternativeToAttr", getAlternativeToAttr().getValue());
-        attrs.put("refersToAttr", getRefersToAttr().getValue());
         attrs.put("idAttr", getIdAttr().getValue());
         attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
+        attrs.put("alternativeToAttr", getAlternativeToAttr().getValue());
+        attrs.put("statusAttr", getStatusAttr().value());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
         attrs.put("classAttr", getClassAttr().getValue());
         attrs.put("styleAttr", getStyleAttr().getValue());
         attrs.put("titleAttr", getTitleAttr().getValue());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
+        attrs.put("langAttr", getLangAttr().getValue());
+        attrs.put("refersToAttr", getRefersToAttr().getValue());
         attrs.put("periodAttr", getPeriodAttr().getValue());
 
         return attrs;

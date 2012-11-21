@@ -25,11 +25,11 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType refersToAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType hrefAttr;
     private AnyURISimpleType outcomeAttr;
     private AmendableWidgetImpl wildcardContentAttr;
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
     public java.util.List<Quorum> getQuorums() {
         java.util.List<Quorum> result = new ArrayList<Quorum>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -54,6 +54,18 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
     public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
         this.refersToAttr = refersToAttr;
     }
+    public IDSimpleType getIdAttr() {
+        return idAttr;
+    }
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+    }
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        return evolvingIdAttr;
+    }
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+    }
     public AnyURISimpleType getHrefAttr() {
         return hrefAttr;
     }
@@ -72,18 +84,6 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
     public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
     }
-    public IDSimpleType getIdAttr() {
-        return idAttr;
-    }
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-    }
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        return evolvingIdAttr;
-    }
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-    }
     /**
     * Returns possible children as list of String
     */
@@ -97,11 +97,11 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
         attrs.put("refersToAttr", getRefersToAttr().getValue());
+        attrs.put("idAttr", getIdAttr().getValue());
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
         attrs.put("hrefAttr", getHrefAttr().getValue());
         attrs.put("outcomeAttr", getOutcomeAttr().getValue());
         attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
-        attrs.put("idAttr", getIdAttr().getValue());
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
 
         return attrs;
     }

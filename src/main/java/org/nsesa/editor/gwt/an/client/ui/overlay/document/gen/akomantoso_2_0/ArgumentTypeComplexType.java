@@ -1,9 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PosTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.PosTypeSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,9 +24,9 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType upToAttr;
-    private PosTypeSimpleType posAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private PosTypeSimpleType posAttr;
     private AmendableWidgetImpl wildcardContentAttr;
     private AnyURISimpleType hrefAttr;
     public AnyURISimpleType getUpToAttr() {
@@ -34,12 +34,6 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl  {
     }
     public void setUpToAttr(final AnyURISimpleType upToAttr) {
         this.upToAttr = upToAttr;
-    }
-    public PosTypeSimpleType getPosAttr() {
-        return posAttr;
-    }
-    public void setPosAttr(final PosTypeSimpleType posAttr) {
-        this.posAttr = posAttr;
     }
     public IDSimpleType getIdAttr() {
         return idAttr;
@@ -52,6 +46,12 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl  {
     }
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
+    }
+    public PosTypeSimpleType getPosAttr() {
+        return posAttr;
+    }
+    public void setPosAttr(final PosTypeSimpleType posAttr) {
+        this.posAttr = posAttr;
     }
     public AmendableWidgetImpl getWildcardContentAttr() {
         return wildcardContentAttr;
@@ -78,9 +78,9 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl  {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
         attrs.put("upToAttr", getUpToAttr().getValue());
-        attrs.put("posAttr", getPosAttr().value());
         attrs.put("idAttr", getIdAttr().getValue());
         attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
+        attrs.put("posAttr", getPosAttr().value());
         attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
         attrs.put("hrefAttr", getHrefAttr().getValue());
 

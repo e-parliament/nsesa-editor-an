@@ -1,8 +1,8 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.MetaoptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DateSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,19 +26,19 @@ public class FRBRdate extends MetaoptComplexType  {
     }
 
 // FIELDS ------------------
-    private StringSimpleType nameAttr;
     private DateSimpleType dateAttr;
-    public StringSimpleType getNameAttr() {
-        return nameAttr;
-    }
-    public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-    }
+    private StringSimpleType nameAttr;
     public DateSimpleType getDateAttr() {
         return dateAttr;
     }
     public void setDateAttr(final DateSimpleType dateAttr) {
         this.dateAttr = dateAttr;
+    }
+    public StringSimpleType getNameAttr() {
+        return nameAttr;
+    }
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
     }
     /**
     * Returns possible children as list of String
@@ -52,8 +52,8 @@ public class FRBRdate extends MetaoptComplexType  {
     public LinkedHashMap<String, String> getAttributes() {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
-        attrs.put("nameAttr", getNameAttr().getValue());
         attrs.put("dateAttr", getDateAttr().getValue());
+        attrs.put("nameAttr", getNameAttr().getValue());
 
         return attrs;
     }

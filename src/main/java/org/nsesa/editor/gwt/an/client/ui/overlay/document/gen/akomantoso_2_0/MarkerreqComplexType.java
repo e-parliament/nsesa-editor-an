@@ -1,11 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,28 +25,22 @@ public class MarkerreqComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private AnyURISimpleType alternativeToAttr;
-    private LanguageSimpleType langAttr;
+    private StatusTypeSimpleType statusAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType refersToAttr;
-    private StatusTypeSimpleType statusAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
     private AmendableWidgetImpl wildcardContentAttr;
+    private AnyURISimpleType alternativeToAttr;
+    private LanguageSimpleType langAttr;
+    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
-    public AnyURISimpleType getAlternativeToAttr() {
-        return alternativeToAttr;
+    public StatusTypeSimpleType getStatusAttr() {
+        return statusAttr;
     }
-    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
-    }
-    public LanguageSimpleType getLangAttr() {
-        return langAttr;
-    }
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
     }
     public IDSimpleType getIdAttr() {
         return idAttr;
@@ -59,18 +53,6 @@ public class MarkerreqComplexType extends AmendableWidgetImpl  {
     }
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
-    }
-    public AnyURISimpleType getRefersToAttr() {
-        return refersToAttr;
-    }
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-    }
-    public StatusTypeSimpleType getStatusAttr() {
-        return statusAttr;
-    }
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
     }
     public StringSimpleType getClassAttr() {
         return classAttr;
@@ -96,6 +78,24 @@ public class MarkerreqComplexType extends AmendableWidgetImpl  {
     public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
     }
+    public AnyURISimpleType getAlternativeToAttr() {
+        return alternativeToAttr;
+    }
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+    }
+    public LanguageSimpleType getLangAttr() {
+        return langAttr;
+    }
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        return refersToAttr;
+    }
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
     public AnyURISimpleType getPeriodAttr() {
         return periodAttr;
     }
@@ -114,16 +114,16 @@ public class MarkerreqComplexType extends AmendableWidgetImpl  {
     public LinkedHashMap<String, String> getAttributes() {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
-        attrs.put("alternativeToAttr", getAlternativeToAttr().getValue());
-        attrs.put("langAttr", getLangAttr().getValue());
+        attrs.put("statusAttr", getStatusAttr().value());
         attrs.put("idAttr", getIdAttr().getValue());
         attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-        attrs.put("refersToAttr", getRefersToAttr().getValue());
-        attrs.put("statusAttr", getStatusAttr().value());
         attrs.put("classAttr", getClassAttr().getValue());
         attrs.put("styleAttr", getStyleAttr().getValue());
         attrs.put("titleAttr", getTitleAttr().getValue());
         attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
+        attrs.put("alternativeToAttr", getAlternativeToAttr().getValue());
+        attrs.put("langAttr", getLangAttr().getValue());
+        attrs.put("refersToAttr", getRefersToAttr().getValue());
         attrs.put("periodAttr", getPeriodAttr().getValue());
 
         return attrs;
