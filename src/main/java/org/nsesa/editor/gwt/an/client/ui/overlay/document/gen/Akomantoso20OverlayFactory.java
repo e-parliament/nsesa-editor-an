@@ -295,14 +295,14 @@ import java.util.logging.Logger;
 /**
 * Note: this file is generated. Rather than changing this file, correct the template called <tt>overlayFactory.ftl</tt>.
 */
-public class YAAkomantoso20OverlayFactory extends DefaultOverlayFactory  {
+public class Akomantoso20OverlayFactory extends DefaultOverlayFactory  {
 
-    private final static Logger LOG = Logger.getLogger(YAAkomantoso20OverlayFactory.class.getName());
+    private final static Logger LOG = Logger.getLogger(Akomantoso20OverlayFactory.class.getName());
     // the namespace of the overlay factory
     private final String namespace = "http://www.akomantoso.org/2.0";
 
     @Inject
-    public YAAkomantoso20OverlayFactory(final OverlayStrategy overlayStrategy) {
+    public Akomantoso20OverlayFactory(final OverlayStrategy overlayStrategy) {
         super(overlayStrategy);
     }
     @Override
