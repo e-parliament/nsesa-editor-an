@@ -101,7 +101,7 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
         attrs.putAll(super.getAttributes());
         <#list overlayClass.properties as property>
             <#if property.attribute>
-        attrs.put("<@propertyName property=property/>", <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>()<#if property.baseClass?? && property.baseClass.enumeration>.value()<#elseif property.baseClass?? && property.baseClass.simple>.getValue()<#elseif property.wildCard>.getContent()<#else>.toString()</#if>);
+        attrs.put("<@propertyName property=property/>", <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>()<#if property.baseClass?? && property.baseClass.enumeration>.value()<#elseif property.baseClass?? && property.baseClass.simple>.getValue()<#elseif property.wildCard && !property.attribute>.getContent()<#else>.toString()</#if>);
             </#if>
         </#list>
 
@@ -124,7 +124,11 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
 <#macro propertyClassName property><#compress>
     <#assign propName="AmendableWidgetImpl">
     <#if property.wildCard>
-        <#assign propName="AmendableWidgetImpl">
+        <#if property.attribute>
+            <#assign propName="String">
+        <#else>
+            <#assign propName="AmendableWidgetImpl">
+        </#if>
     <#else>
         <#assign propName=property.className?cap_first>
     </#if>
@@ -138,7 +142,11 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
 <#macro elementClassName property><#compress>
     <#assign propName="AmendableWidgetImpl">
     <#if property.wildCard>
-        <#assign propName="AmendableWidgetImpl">
+        <#if property.attribute>
+            <#assign propName="String">
+        <#else>
+            <#assign propName="AmendableWidgetImpl">
+        </#if>
     <#else>
         <#assign propName=property.className?cap_first>
     </#if>
@@ -168,7 +176,7 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
 </#compress></#macro>
 
 <#macro generateField property>
-    private <@propertyClassName property=property/> <#if property.collection><@pl property=property/> = new ArrayList<<#if property.wildCard>AmendableWidgetImpl>();<#else>${property.className?cap_first}>();</#if><#else><@propertyName property = property/>;</#if>
+    private <@propertyClassName property=property/> <#if property.collection><@pl property=property/> = new ArrayList<<#if property.wildCard && !property.attribute>AmendableWidgetImpl>();<#elseif property.wildCard && property.attribute> String>()<#else>${property.className?cap_first}>();</#if><#else><@propertyName property = property/>;</#if>
 </#macro>
 
 <#macro pl property><#compress>
