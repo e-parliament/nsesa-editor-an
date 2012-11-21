@@ -3,9 +3,11 @@ package org.nsesa.editor.gwt.an.client;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Singleton;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Creator;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Locator;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20OverlayStrategy;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.Akomantoso20OverlayFactory;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
@@ -27,5 +29,6 @@ public class AkomaNtoso20Module extends AbstractGinModule {
         bind(OverlayFactory.class).to(Akomantoso20OverlayFactory.class).in(Singleton.class);
         bind(OverlayStrategy.class).to(AkomaNtoso20OverlayStrategy.class).in(Singleton.class);
         bind(Locator.class).to(AkomaNtoso20Locator.class).in(Singleton.class);
+        bind(Creator.class).to(AkomaNtoso20Creator.class).in(Singleton.class);
     }
 }
