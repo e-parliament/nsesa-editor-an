@@ -23,17 +23,17 @@ public class SrcTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private AmendableWidgetImpl wildcardContentAttr;
+    private String wildcardContentAttr;
     private AnyURISimpleType srcAttr;
     private StringSimpleType altAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
-    public AmendableWidgetImpl getWildcardContentAttr() {
+    public String getWildcardContentAttr() {
         return wildcardContentAttr;
     }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
     }
     public AnyURISimpleType getSrcAttr() {
@@ -84,7 +84,7 @@ public class SrcTypeComplexType extends AmendableWidgetImpl  {
     public LinkedHashMap<String, String> getAttributes() {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
         attrs.put("srcAttr", getSrcAttr().getValue());
         attrs.put("altAttr", getAltAttr().getValue());
         attrs.put("idAttr", getIdAttr().getValue());

@@ -24,8 +24,8 @@ public class PeriodTypeComplexType extends AmendableWidgetImpl  {
 // FIELDS ------------------
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AmendableWidgetImpl wildcardContentAttr;
     private AnyURISimpleType periodAttr;
+    private String wildcardContentAttr;
     public IDSimpleType getIdAttr() {
         return idAttr;
     }
@@ -38,17 +38,17 @@ public class PeriodTypeComplexType extends AmendableWidgetImpl  {
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-    }
     public AnyURISimpleType getPeriodAttr() {
         return periodAttr;
     }
     public void setPeriodAttr(final AnyURISimpleType periodAttr) {
         this.periodAttr = periodAttr;
+    }
+    public String getWildcardContentAttr() {
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
     }
     /**
     * Returns possible children as list of String
@@ -64,8 +64,8 @@ public class PeriodTypeComplexType extends AmendableWidgetImpl  {
         attrs.putAll(super.getAttributes());
         attrs.put("idAttr", getIdAttr().getValue());
         attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
         attrs.put("periodAttr", getPeriodAttr().getValue());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
 
         return attrs;
     }

@@ -26,9 +26,9 @@ public class TemporalGroup extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private AmendableWidgetImpl wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private String wildcardContentAttr;
     public java.util.List<TimeInterval> getTimeIntervals() {
         java.util.List<TimeInterval> result = new ArrayList<TimeInterval>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -37,12 +37,6 @@ public class TemporalGroup extends AmendableWidgetImpl  {
             }
         }
         return java.util.Collections.unmodifiableList(result);
-    }
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
     }
     public IDSimpleType getIdAttr() {
         return idAttr;
@@ -56,6 +50,12 @@ public class TemporalGroup extends AmendableWidgetImpl  {
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
+    public String getWildcardContentAttr() {
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
     /**
     * Returns possible children as list of String
     */
@@ -68,9 +68,9 @@ public class TemporalGroup extends AmendableWidgetImpl  {
     public LinkedHashMap<String, String> getAttributes() {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
         attrs.put("idAttr", getIdAttr().getValue());
         attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
 
         return attrs;
     }

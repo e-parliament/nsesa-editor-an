@@ -12,12 +12,12 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Nar
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Summary;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Foreign;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Block;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.LanguageSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AdministrationOfOath;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.RollCall;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.Prayers;
@@ -65,16 +65,16 @@ public class AlthierarchyComplexType extends BasehierarchyComplexType  {
     }
 
 // FIELDS ------------------
-    private StatusTypeSimpleType statusAttr;
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
+    private String wildcardContentAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
-    private AmendableWidgetImpl wildcardContentAttr;
-    private AnyURISimpleType alternativeToAttr;
     private LanguageSimpleType langAttr;
+    private AnyURISimpleType alternativeToAttr;
     private AnyURISimpleType refersToAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private StatusTypeSimpleType statusAttr;
     private AnyURISimpleType periodAttr;
     public java.util.List<ComponentRef> getComponentRefs() {
         java.util.List<ComponentRef> result = new ArrayList<ComponentRef>();
@@ -175,23 +175,11 @@ public class AlthierarchyComplexType extends BasehierarchyComplexType  {
         }
         return java.util.Collections.unmodifiableList(result);
     }
-    public StatusTypeSimpleType getStatusAttr() {
-        return statusAttr;
+    public String getWildcardContentAttr() {
+        return wildcardContentAttr;
     }
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-    }
-    public IDSimpleType getIdAttr() {
-        return idAttr;
-    }
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-    }
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        return evolvingIdAttr;
-    }
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
     }
     public StringSimpleType getClassAttr() {
         return classAttr;
@@ -211,11 +199,11 @@ public class AlthierarchyComplexType extends BasehierarchyComplexType  {
     public void setTitleAttr(final StringSimpleType titleAttr) {
         this.titleAttr = titleAttr;
     }
-    public AmendableWidgetImpl getWildcardContentAttr() {
-        return wildcardContentAttr;
+    public LanguageSimpleType getLangAttr() {
+        return langAttr;
     }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
     }
     public AnyURISimpleType getAlternativeToAttr() {
         return alternativeToAttr;
@@ -223,17 +211,29 @@ public class AlthierarchyComplexType extends BasehierarchyComplexType  {
     public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         this.alternativeToAttr = alternativeToAttr;
     }
-    public LanguageSimpleType getLangAttr() {
-        return langAttr;
-    }
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-    }
     public AnyURISimpleType getRefersToAttr() {
         return refersToAttr;
     }
     public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
         this.refersToAttr = refersToAttr;
+    }
+    public IDSimpleType getIdAttr() {
+        return idAttr;
+    }
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+    }
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        return evolvingIdAttr;
+    }
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        return statusAttr;
+    }
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
     }
     public java.util.List<AdministrationOfOath> getAdministrationOfOaths() {
         java.util.List<AdministrationOfOath> result = new ArrayList<AdministrationOfOath>();
@@ -505,16 +505,16 @@ public class AlthierarchyComplexType extends BasehierarchyComplexType  {
     public LinkedHashMap<String, String> getAttributes() {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
-        attrs.put("statusAttr", getStatusAttr().value());
-        attrs.put("idAttr", getIdAttr().getValue());
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
         attrs.put("classAttr", getClassAttr().getValue());
         attrs.put("styleAttr", getStyleAttr().getValue());
         attrs.put("titleAttr", getTitleAttr().getValue());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
-        attrs.put("alternativeToAttr", getAlternativeToAttr().getValue());
         attrs.put("langAttr", getLangAttr().getValue());
+        attrs.put("alternativeToAttr", getAlternativeToAttr().getValue());
         attrs.put("refersToAttr", getRefersToAttr().getValue());
+        attrs.put("idAttr", getIdAttr().getValue());
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
+        attrs.put("statusAttr", getStatusAttr().value());
         attrs.put("periodAttr", getPeriodAttr().getValue());
 
         return attrs;

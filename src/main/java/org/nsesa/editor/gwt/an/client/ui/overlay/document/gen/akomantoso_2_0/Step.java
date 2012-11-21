@@ -1,8 +1,8 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.AnyOtherTypeComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DateSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen._2001_xmlschema.DateSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,10 +26,22 @@ public class Step extends AnyOtherTypeComplexType  {
     }
 
 // FIELDS ------------------
+    private AnyURISimpleType outcomeAttr;
+    private AnyURISimpleType asAttr;
     private DateSimpleType dateAttr;
     private AnyURISimpleType actorAttr;
-    private AnyURISimpleType asAttr;
-    private AnyURISimpleType outcomeAttr;
+    public AnyURISimpleType getOutcomeAttr() {
+        return outcomeAttr;
+    }
+    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
+        this.outcomeAttr = outcomeAttr;
+    }
+    public AnyURISimpleType getAsAttr() {
+        return asAttr;
+    }
+    public void setAsAttr(final AnyURISimpleType asAttr) {
+        this.asAttr = asAttr;
+    }
     public DateSimpleType getDateAttr() {
         return dateAttr;
     }
@@ -41,18 +53,6 @@ public class Step extends AnyOtherTypeComplexType  {
     }
     public void setActorAttr(final AnyURISimpleType actorAttr) {
         this.actorAttr = actorAttr;
-    }
-    public AnyURISimpleType getAsAttr() {
-        return asAttr;
-    }
-    public void setAsAttr(final AnyURISimpleType asAttr) {
-        this.asAttr = asAttr;
-    }
-    public AnyURISimpleType getOutcomeAttr() {
-        return outcomeAttr;
-    }
-    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
-        this.outcomeAttr = outcomeAttr;
     }
     /**
     * Returns possible children as list of String
@@ -66,10 +66,10 @@ public class Step extends AnyOtherTypeComplexType  {
     public LinkedHashMap<String, String> getAttributes() {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
+        attrs.put("outcomeAttr", getOutcomeAttr().getValue());
+        attrs.put("asAttr", getAsAttr().getValue());
         attrs.put("dateAttr", getDateAttr().getValue());
         attrs.put("actorAttr", getActorAttr().getValue());
-        attrs.put("asAttr", getAsAttr().getValue());
-        attrs.put("outcomeAttr", getOutcomeAttr().getValue());
 
         return attrs;
     }

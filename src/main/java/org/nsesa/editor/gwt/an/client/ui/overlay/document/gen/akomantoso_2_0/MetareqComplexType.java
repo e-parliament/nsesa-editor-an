@@ -23,7 +23,7 @@ public class MetareqComplexType extends AmendableWidgetImpl  {
 // FIELDS ------------------
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AmendableWidgetImpl wildcardContentAttr;
+    private String wildcardContentAttr;
     public IDSimpleType getIdAttr() {
         return idAttr;
     }
@@ -36,10 +36,10 @@ public class MetareqComplexType extends AmendableWidgetImpl  {
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
-    public AmendableWidgetImpl getWildcardContentAttr() {
+    public String getWildcardContentAttr() {
         return wildcardContentAttr;
     }
-    public void setWildcardContentAttr(final AmendableWidgetImpl wildcardContentAttr) {
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
     }
     /**
@@ -56,7 +56,7 @@ public class MetareqComplexType extends AmendableWidgetImpl  {
         attrs.putAll(super.getAttributes());
         attrs.put("idAttr", getIdAttr().getValue());
         attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().getContent());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
 
         return attrs;
     }
