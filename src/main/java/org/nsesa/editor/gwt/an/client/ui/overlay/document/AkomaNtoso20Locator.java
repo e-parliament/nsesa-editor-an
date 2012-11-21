@@ -1,6 +1,6 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultLocator;
 
 /**

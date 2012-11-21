@@ -1,7 +1,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document;
 
 import com.google.gwt.dom.client.Element;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso_2_0.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Format;
 import org.nsesa.editor.gwt.core.client.ui.overlay.NumberingType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
