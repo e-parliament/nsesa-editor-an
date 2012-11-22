@@ -2,7 +2,11 @@ package org.nsesa.editor.gwt.an.client;
 
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.inject.client.AbstractGinModule;
+import com.google.inject.Inject;
+import com.google.inject.Provider;
 import com.google.inject.Singleton;
+import com.google.inject.TypeLiteral;
+import com.google.inject.name.Names;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Creator;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Locator;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20OverlayStrategy;
@@ -11,8 +15,14 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
+import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentModifyAwareController;
+import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.author.AuthorPanelController;
+import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.content.ContentPanelController;
 import org.nsesa.editor.gwt.editor.client.activity.EditorActivityMapper;
 import org.nsesa.editor.gwt.editor.client.ui.main.EditorModule;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Date: 15/10/12 21:23
@@ -30,5 +40,21 @@ public class AkomaNtoso20Module extends AbstractGinModule {
         bind(OverlayStrategy.class).to(AkomaNtoso20OverlayStrategy.class).in(Singleton.class);
         bind(Locator.class).to(AkomaNtoso20Locator.class).in(Singleton.class);
         bind(Creator.class).to(AkomaNtoso20Creator.class).in(Singleton.class);
+
+        bind(new TypeLiteral<List<AmendmentModifyAwareController>>(){}).annotatedWith(Names.named("modify.controllers")).toProvider(ModifyControllersProvider.class);
+    }
+
+    public static class ModifyControllersProvider implements Provider<List<AmendmentModifyAwareController>> {
+
+        @Inject
+        AuthorPanelController authorPanelController;
+
+        @Inject
+        ContentPanelController contentPanelController;
+
+        @Override
+        public List<AmendmentModifyAwareController> get() {
+            return Arrays.asList(contentPanelController, authorPanelController);
+        }
     }
 }
