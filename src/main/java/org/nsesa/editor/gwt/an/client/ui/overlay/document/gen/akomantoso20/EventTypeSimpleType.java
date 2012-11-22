@@ -14,13 +14,23 @@ public enum EventTypeSimpleType {
     AMENDMENT("amendment"),
     REPEAL("repeal")
 ;
-private final String value;
+    private final String value;
 
-EventTypeSimpleType(String v) {
-    value = v;
-}
+    EventTypeSimpleType(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static EventTypeSimpleType fromString(String text) {
+        if (text == null) return null;
+        for (EventTypeSimpleType en : EventTypeSimpleType.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

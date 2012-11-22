@@ -28,6 +28,10 @@ public class DebateStructureComplexType extends AmendableWidgetImpl  {
 // FIELDS ------------------
     private VersionTypeSimpleType containsAttr;
     public VersionTypeSimpleType getContainsAttr() {
+        if (containsAttr == null) {
+            containsAttr = VersionTypeSimpleType.fromString(amendableElement.getAttribute("contains"));
+        }
+
         return containsAttr;
     }
     public void setContainsAttr(final VersionTypeSimpleType containsAttr) {

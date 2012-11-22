@@ -23,6 +23,11 @@ public class EolTypeComplexType extends MarkeroptComplexType  {
 // FIELDS ------------------
     private IntegerSimpleType breakatAttr;
     public IntegerSimpleType getBreakatAttr() {
+        if (breakatAttr == null) {
+            breakatAttr = new IntegerSimpleType();
+            breakatAttr.setValue(amendableElement.getAttribute("breakat"));
+        }
+
         return breakatAttr;
     }
     public void setBreakatAttr(final IntegerSimpleType breakatAttr) {

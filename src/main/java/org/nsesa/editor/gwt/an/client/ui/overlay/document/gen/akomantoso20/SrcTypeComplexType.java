@@ -31,42 +31,76 @@ public class SrcTypeComplexType extends AmendableWidgetImpl  {
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
     public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
         return wildcardContentAttr;
     }
     public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
     }
     public AnyURISimpleType getSrcAttr() {
+        if (srcAttr == null) {
+            srcAttr = new AnyURISimpleType();
+            srcAttr.setValue(amendableElement.getAttribute("src"));
+        }
+
         return srcAttr;
     }
     public void setSrcAttr(final AnyURISimpleType srcAttr) {
         this.srcAttr = srcAttr;
     }
     public StringSimpleType getAltAttr() {
+        if (altAttr == null) {
+            altAttr = new StringSimpleType();
+            altAttr.setValue(amendableElement.getAttribute("alt"));
+        }
+
         return altAttr;
     }
     public void setAltAttr(final StringSimpleType altAttr) {
         this.altAttr = altAttr;
     }
     public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(amendableElement.getAttribute("id"));
+        }
+
         return idAttr;
     }
     public void setIdAttr(final IDSimpleType idAttr) {
         this.idAttr = idAttr;
     }
     public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(amendableElement.getAttribute("evolvingId"));
+        }
+
         return evolvingIdAttr;
     }
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
     public StringSimpleType getShowAsAttr() {
+        if (showAsAttr == null) {
+            showAsAttr = new StringSimpleType();
+            showAsAttr.setValue(amendableElement.getAttribute("showAs"));
+        }
+
         return showAsAttr;
     }
     public void setShowAsAttr(final StringSimpleType showAsAttr) {
         this.showAsAttr = showAsAttr;
     }
     public StringSimpleType getShortFormAttr() {
+        if (shortFormAttr == null) {
+            shortFormAttr = new StringSimpleType();
+            shortFormAttr.setValue(amendableElement.getAttribute("shortForm"));
+        }
+
         return shortFormAttr;
     }
     public void setShortFormAttr(final StringSimpleType shortFormAttr) {

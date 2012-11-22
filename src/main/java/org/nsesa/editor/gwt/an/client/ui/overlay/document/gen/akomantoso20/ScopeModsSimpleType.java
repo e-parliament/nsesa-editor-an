@@ -13,13 +13,23 @@ public enum ScopeModsSimpleType {
     EXCEPTIONOFSCOPE("exceptionOfScope"),
     EXTENSIONOFSCOPE("extensionOfScope")
 ;
-private final String value;
+    private final String value;
 
-ScopeModsSimpleType(String v) {
-    value = v;
-}
+    ScopeModsSimpleType(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static ScopeModsSimpleType fromString(String text) {
+        if (text == null) return null;
+        for (ScopeModsSimpleType en : ScopeModsSimpleType.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

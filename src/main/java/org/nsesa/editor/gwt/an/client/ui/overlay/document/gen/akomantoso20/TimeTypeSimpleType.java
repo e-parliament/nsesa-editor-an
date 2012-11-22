@@ -13,13 +13,23 @@ public enum TimeTypeSimpleType {
     STARTEVENT("startEvent"),
     ENDEVENT("endEvent")
 ;
-private final String value;
+    private final String value;
 
-TimeTypeSimpleType(String v) {
-    value = v;
-}
+    TimeTypeSimpleType(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static TimeTypeSimpleType fromString(String text) {
+        if (text == null) return null;
+        for (TimeTypeSimpleType en : TimeTypeSimpleType.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

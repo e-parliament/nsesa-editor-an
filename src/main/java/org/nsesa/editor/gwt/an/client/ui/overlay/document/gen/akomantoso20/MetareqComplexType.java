@@ -25,18 +25,32 @@ public class MetareqComplexType extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private String wildcardContentAttr;
     public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(amendableElement.getAttribute("id"));
+        }
+
         return idAttr;
     }
     public void setIdAttr(final IDSimpleType idAttr) {
         this.idAttr = idAttr;
     }
     public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(amendableElement.getAttribute("evolvingId"));
+        }
+
         return evolvingIdAttr;
     }
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
     public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
         return wildcardContentAttr;
     }
     public void setWildcardContentAttr(final String wildcardContentAttr) {

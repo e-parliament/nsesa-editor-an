@@ -27,6 +27,11 @@ public class FRBRlanguage extends MetaoptComplexType  {
 // FIELDS ------------------
     private LanguageSimpleType languageAttr;
     public LanguageSimpleType getLanguageAttr() {
+        if (languageAttr == null) {
+            languageAttr = new LanguageSimpleType();
+            languageAttr.setValue(amendableElement.getAttribute("language"));
+        }
+
         return languageAttr;
     }
     public void setLanguageAttr(final LanguageSimpleType languageAttr) {

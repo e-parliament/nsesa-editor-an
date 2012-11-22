@@ -23,13 +23,23 @@ public enum LegalSystemModsSimpleType {
     REPUBLICATION("republication"),
     COORDINATION("coordination")
 ;
-private final String value;
+    private final String value;
 
-LegalSystemModsSimpleType(String v) {
-    value = v;
-}
+    LegalSystemModsSimpleType(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static LegalSystemModsSimpleType fromString(String text) {
+        if (text == null) return null;
+        for (LegalSystemModsSimpleType en : LegalSystemModsSimpleType.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

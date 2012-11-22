@@ -29,12 +29,21 @@ public class RecordedTime extends InlineComplexType  {
     private TimeTypeSimpleType typeAttr;
     private DateTimeSimpleType timeAttr;
     public TimeTypeSimpleType getTypeAttr() {
+        if (typeAttr == null) {
+            typeAttr = TimeTypeSimpleType.fromString(amendableElement.getAttribute("type"));
+        }
+
         return typeAttr;
     }
     public void setTypeAttr(final TimeTypeSimpleType typeAttr) {
         this.typeAttr = typeAttr;
     }
     public DateTimeSimpleType getTimeAttr() {
+        if (timeAttr == null) {
+            timeAttr = new DateTimeSimpleType();
+            timeAttr.setValue(amendableElement.getAttribute("time"));
+        }
+
         return timeAttr;
     }
     public void setTimeAttr(final DateTimeSimpleType timeAttr) {

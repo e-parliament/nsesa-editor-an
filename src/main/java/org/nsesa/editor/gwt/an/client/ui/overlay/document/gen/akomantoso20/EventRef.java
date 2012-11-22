@@ -33,24 +33,42 @@ public class EventRef extends AnyOtherTypeComplexType  {
     private DateSimpleType dateAttr;
     private AnyURISimpleType sourceAttr;
     public EventTypeSimpleType getTypeAttr() {
+        if (typeAttr == null) {
+            typeAttr = EventTypeSimpleType.fromString(amendableElement.getAttribute("type"));
+        }
+
         return typeAttr;
     }
     public void setTypeAttr(final EventTypeSimpleType typeAttr) {
         this.typeAttr = typeAttr;
     }
     public YesNoTypeSimpleType getOriginatingExpressionAttr() {
+        if (originatingExpressionAttr == null) {
+            originatingExpressionAttr = YesNoTypeSimpleType.fromString(amendableElement.getAttribute("originatingExpression"));
+        }
+
         return originatingExpressionAttr;
     }
     public void setOriginatingExpressionAttr(final YesNoTypeSimpleType originatingExpressionAttr) {
         this.originatingExpressionAttr = originatingExpressionAttr;
     }
     public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(amendableElement.getAttribute("date"));
+        }
+
         return dateAttr;
     }
     public void setDateAttr(final DateSimpleType dateAttr) {
         this.dateAttr = dateAttr;
     }
     public AnyURISimpleType getSourceAttr() {
+        if (sourceAttr == null) {
+            sourceAttr = new AnyURISimpleType();
+            sourceAttr.setValue(amendableElement.getAttribute("source"));
+        }
+
         return sourceAttr;
     }
     public void setSourceAttr(final AnyURISimpleType sourceAttr) {

@@ -32,24 +32,44 @@ public class Img extends MarkeroptComplexType  {
     private AnyURISimpleType srcAttr;
     private StringSimpleType altAttr;
     public IntegerSimpleType getWidthAttr() {
+        if (widthAttr == null) {
+            widthAttr = new IntegerSimpleType();
+            widthAttr.setValue(amendableElement.getAttribute("width"));
+        }
+
         return widthAttr;
     }
     public void setWidthAttr(final IntegerSimpleType widthAttr) {
         this.widthAttr = widthAttr;
     }
     public IntegerSimpleType getHeightAttr() {
+        if (heightAttr == null) {
+            heightAttr = new IntegerSimpleType();
+            heightAttr.setValue(amendableElement.getAttribute("height"));
+        }
+
         return heightAttr;
     }
     public void setHeightAttr(final IntegerSimpleType heightAttr) {
         this.heightAttr = heightAttr;
     }
     public AnyURISimpleType getSrcAttr() {
+        if (srcAttr == null) {
+            srcAttr = new AnyURISimpleType();
+            srcAttr.setValue(amendableElement.getAttribute("src"));
+        }
+
         return srcAttr;
     }
     public void setSrcAttr(final AnyURISimpleType srcAttr) {
         this.srcAttr = srcAttr;
     }
     public StringSimpleType getAltAttr() {
+        if (altAttr == null) {
+            altAttr = new StringSimpleType();
+            altAttr.setValue(amendableElement.getAttribute("alt"));
+        }
+
         return altAttr;
     }
     public void setAltAttr(final StringSimpleType altAttr) {

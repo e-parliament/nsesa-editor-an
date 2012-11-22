@@ -28,12 +28,22 @@ public class Rref extends InlinereqComplexType  {
     private AnyURISimpleType fromAttr;
     private AnyURISimpleType upToAttr;
     public AnyURISimpleType getFromAttr() {
+        if (fromAttr == null) {
+            fromAttr = new AnyURISimpleType();
+            fromAttr.setValue(amendableElement.getAttribute("from"));
+        }
+
         return fromAttr;
     }
     public void setFromAttr(final AnyURISimpleType fromAttr) {
         this.fromAttr = fromAttr;
     }
     public AnyURISimpleType getUpToAttr() {
+        if (upToAttr == null) {
+            upToAttr = new AnyURISimpleType();
+            upToAttr.setValue(amendableElement.getAttribute("upTo"));
+        }
+
         return upToAttr;
     }
     public void setUpToAttr(final AnyURISimpleType upToAttr) {

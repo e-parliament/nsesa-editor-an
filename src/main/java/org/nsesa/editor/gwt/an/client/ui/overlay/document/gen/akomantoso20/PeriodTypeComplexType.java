@@ -24,31 +24,50 @@ public class PeriodTypeComplexType extends AmendableWidgetImpl  {
 // FIELDS ------------------
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType periodAttr;
     private String wildcardContentAttr;
+    private AnyURISimpleType periodAttr;
     public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(amendableElement.getAttribute("id"));
+        }
+
         return idAttr;
     }
     public void setIdAttr(final IDSimpleType idAttr) {
         this.idAttr = idAttr;
     }
     public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(amendableElement.getAttribute("evolvingId"));
+        }
+
         return evolvingIdAttr;
     }
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
-    public AnyURISimpleType getPeriodAttr() {
-        return periodAttr;
-    }
-    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-        this.periodAttr = periodAttr;
-    }
     public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
         return wildcardContentAttr;
     }
     public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
+    }
+    public AnyURISimpleType getPeriodAttr() {
+        if (periodAttr == null) {
+            periodAttr = new AnyURISimpleType();
+            periodAttr.setValue(amendableElement.getAttribute("period"));
+        }
+
+        return periodAttr;
+    }
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
     }
     /**
     * Returns possible children as list of String
@@ -64,8 +83,8 @@ public class PeriodTypeComplexType extends AmendableWidgetImpl  {
         attrs.putAll(super.getAttributes());
         attrs.put("idAttr", getIdAttr().getValue());
         attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-        attrs.put("periodAttr", getPeriodAttr().getValue());
         attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
+        attrs.put("periodAttr", getPeriodAttr().getValue());
 
         return attrs;
     }

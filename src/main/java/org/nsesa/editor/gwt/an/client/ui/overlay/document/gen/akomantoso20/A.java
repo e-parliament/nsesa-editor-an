@@ -29,12 +29,22 @@ public class A extends InlineComplexType  {
     private StringSimpleType targetAttr;
     private AnyURISimpleType hrefAttr;
     public StringSimpleType getTargetAttr() {
+        if (targetAttr == null) {
+            targetAttr = new StringSimpleType();
+            targetAttr.setValue(amendableElement.getAttribute("target"));
+        }
+
         return targetAttr;
     }
     public void setTargetAttr(final StringSimpleType targetAttr) {
         this.targetAttr = targetAttr;
     }
     public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(amendableElement.getAttribute("href"));
+        }
+
         return hrefAttr;
     }
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {

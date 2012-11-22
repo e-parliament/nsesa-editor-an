@@ -27,6 +27,11 @@ public class Judge extends InlinereqreqComplexType  {
 // FIELDS ------------------
     private AnyURISimpleType asAttr;
     public AnyURISimpleType getAsAttr() {
+        if (asAttr == null) {
+            asAttr = new AnyURISimpleType();
+            asAttr.setValue(amendableElement.getAttribute("as"));
+        }
+
         return asAttr;
     }
     public void setAsAttr(final AnyURISimpleType asAttr) {

@@ -56,6 +56,19 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
 <#list overlayClass.properties as property>
     <#if property.attribute>
     public <@propertyClassName property=property/> <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>() {
+        if (<@propertyName property = property/> == null) {
+            <#if property.baseClass?? && !property.baseClass.enumeration>
+            <@propertyName property = property/> = new ${property.className?cap_first}();
+            <@propertyName property = property/>.setValue(amendableElement.getAttribute("${property.name}"));
+            <#elseif property.baseClass?? && property.baseClass.enumeration>
+            <@propertyName property = property/> = ${property.className?cap_first}.fromString(amendableElement.getAttribute("${property.name}"));
+            <#elseif !property.wildCard>
+            <@propertyName property = property/> = amendableElement.getAttribute("${property.name}");
+            <#else>
+            //hmm nothing to do here
+            </#if>
+        }
+
         return <@propertyName property = property/>;
     }
     public void set<@propertyNameCap property = property/>(final <@propertyClassName property=property/> <@propertyName property = property/>) {
@@ -154,24 +167,24 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
 </#compress></#macro>
 
 <#macro propertyName property><#compress>
-    <#if property.name == "class">
+    <#if property.javaName == "class">
     className
-    <#elseif property.name == "extends">
+    <#elseif property.javaName == "extends">
     extendz
-    <#elseif property.name == "for">
+    <#elseif property.javaName == "for">
     forURI
-    <#elseif property.name == "new">
+    <#elseif property.javaName == "new">
     newEl
     <#else>
-        <#if property.collection><@pl property=property/><#else>${property.name}</#if>
+        <#if property.collection><@pl property=property/><#else>${property.javaName}</#if>
     </#if>
 </#compress></#macro>
 
 <#macro propertyNameCap property><#compress>
-    <#if property.name == "class">
+    <#if property.javaName == "class">
     ClassName
     <#else>
-        <#if property.collection><@plural propertyName=property.name?cap_first/><#else>${property.name?cap_first}</#if>
+        <#if property.collection><@plural propertyName=property.javaName?cap_first/><#else>${property.javaName?cap_first}</#if>
     </#if>
 </#compress></#macro>
 
@@ -180,7 +193,7 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
 </#macro>
 
 <#macro pl property><#compress>
-    <@plural propertyName=property.name/>
+    <@plural propertyName=property.javaName/>
 </#compress></#macro>
 
 <#macro plural propertyName><#compress>

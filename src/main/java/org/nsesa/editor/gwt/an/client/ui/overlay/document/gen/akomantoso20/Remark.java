@@ -27,6 +27,10 @@ public class Remark extends InlineComplexType  {
 // FIELDS ------------------
     private RemarkTypeSimpleType typeAttr;
     public RemarkTypeSimpleType getTypeAttr() {
+        if (typeAttr == null) {
+            typeAttr = RemarkTypeSimpleType.fromString(amendableElement.getAttribute("type"));
+        }
+
         return typeAttr;
     }
     public void setTypeAttr(final RemarkTypeSimpleType typeAttr) {

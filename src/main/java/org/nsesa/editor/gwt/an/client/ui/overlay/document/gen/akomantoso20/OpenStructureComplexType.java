@@ -31,6 +31,10 @@ public class OpenStructureComplexType extends AmendableWidgetImpl  {
     private VersionTypeSimpleType containsAttr;
     private StringSimpleType nameAttr;
     public VersionTypeSimpleType getContainsAttr() {
+        if (containsAttr == null) {
+            containsAttr = VersionTypeSimpleType.fromString(amendableElement.getAttribute("contains"));
+        }
+
         return containsAttr;
     }
     public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
@@ -107,6 +111,11 @@ public class OpenStructureComplexType extends AmendableWidgetImpl  {
         return result;
     }
     public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+            nameAttr = new StringSimpleType();
+            nameAttr.setValue(amendableElement.getAttribute("name"));
+        }
+
         return nameAttr;
     }
     public void setNameAttr(final StringSimpleType nameAttr) {

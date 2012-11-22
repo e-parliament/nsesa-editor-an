@@ -27,6 +27,11 @@ public class Session extends InlineComplexType  {
 // FIELDS ------------------
     private StringSimpleType valueAttr;
     public StringSimpleType getValueAttr() {
+        if (valueAttr == null) {
+            valueAttr = new StringSimpleType();
+            valueAttr.setValue(amendableElement.getAttribute("value"));
+        }
+
         return valueAttr;
     }
     public void setValueAttr(final StringSimpleType valueAttr) {

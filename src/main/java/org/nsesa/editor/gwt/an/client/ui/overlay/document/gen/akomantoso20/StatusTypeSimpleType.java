@@ -19,13 +19,23 @@ public enum StatusTypeSimpleType {
     EDITED("edited"),
     VERBATIM("verbatim")
 ;
-private final String value;
+    private final String value;
 
-StatusTypeSimpleType(String v) {
-    value = v;
-}
+    StatusTypeSimpleType(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static StatusTypeSimpleType fromString(String text) {
+        if (text == null) return null;
+        for (StatusTypeSimpleType en : StatusTypeSimpleType.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

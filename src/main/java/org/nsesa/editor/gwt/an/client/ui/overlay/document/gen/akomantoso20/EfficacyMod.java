@@ -27,6 +27,10 @@ public class EfficacyMod extends ModificationTypeComplexType  {
 // FIELDS ------------------
     private EfficacyModsSimpleType typeAttr;
     public EfficacyModsSimpleType getTypeAttr() {
+        if (typeAttr == null) {
+            typeAttr = EfficacyModsSimpleType.fromString(amendableElement.getAttribute("type"));
+        }
+
         return typeAttr;
     }
     public void setTypeAttr(final EfficacyModsSimpleType typeAttr) {

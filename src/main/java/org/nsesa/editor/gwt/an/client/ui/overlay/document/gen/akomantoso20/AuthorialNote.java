@@ -31,18 +31,32 @@ public class AuthorialNote extends PopupStructureComplexType  {
     private PlacementTypeSimpleType placementAttr;
     private AnyURISimpleType placementBaseAttr;
     public StringSimpleType getMarkerAttr() {
+        if (markerAttr == null) {
+            markerAttr = new StringSimpleType();
+            markerAttr.setValue(amendableElement.getAttribute("marker"));
+        }
+
         return markerAttr;
     }
     public void setMarkerAttr(final StringSimpleType markerAttr) {
         this.markerAttr = markerAttr;
     }
     public PlacementTypeSimpleType getPlacementAttr() {
+        if (placementAttr == null) {
+            placementAttr = PlacementTypeSimpleType.fromString(amendableElement.getAttribute("placement"));
+        }
+
         return placementAttr;
     }
     public void setPlacementAttr(final PlacementTypeSimpleType placementAttr) {
         this.placementAttr = placementAttr;
     }
     public AnyURISimpleType getPlacementBaseAttr() {
+        if (placementBaseAttr == null) {
+            placementBaseAttr = new AnyURISimpleType();
+            placementBaseAttr.setValue(amendableElement.getAttribute("placementBase"));
+        }
+
         return placementBaseAttr;
     }
     public void setPlacementBaseAttr(final AnyURISimpleType placementBaseAttr) {

@@ -27,6 +27,11 @@ public class Quantity extends InlinereqreqComplexType  {
 // FIELDS ------------------
     private StringSimpleType normalizedAttr;
     public StringSimpleType getNormalizedAttr() {
+        if (normalizedAttr == null) {
+            normalizedAttr = new StringSimpleType();
+            normalizedAttr.setValue(amendableElement.getAttribute("normalized"));
+        }
+
         return normalizedAttr;
     }
     public void setNormalizedAttr(final StringSimpleType normalizedAttr) {

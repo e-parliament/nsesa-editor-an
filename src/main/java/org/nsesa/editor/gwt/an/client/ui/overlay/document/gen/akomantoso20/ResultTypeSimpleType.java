@@ -19,13 +19,23 @@ public enum ResultTypeSimpleType {
     DECIDE("decide"),
     APPROVE("approve")
 ;
-private final String value;
+    private final String value;
 
-ResultTypeSimpleType(String v) {
-    value = v;
-}
+    ResultTypeSimpleType(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static ResultTypeSimpleType fromString(String text) {
+        if (text == null) return null;
+        for (ResultTypeSimpleType en : ResultTypeSimpleType.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

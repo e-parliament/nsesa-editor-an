@@ -27,6 +27,11 @@ public class AttachmentOf extends ReferenceTypeComplexType  {
 // FIELDS ------------------
     private StringSimpleType typeAttr;
     public StringSimpleType getTypeAttr() {
+        if (typeAttr == null) {
+            typeAttr = new StringSimpleType();
+            typeAttr.setValue(amendableElement.getAttribute("type"));
+        }
+
         return typeAttr;
     }
     public void setTypeAttr(final StringSimpleType typeAttr) {

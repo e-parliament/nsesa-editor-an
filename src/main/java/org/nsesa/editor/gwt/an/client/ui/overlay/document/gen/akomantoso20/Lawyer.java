@@ -29,18 +29,33 @@ public class Lawyer extends InlinereqreqComplexType  {
     private AnyURISimpleType empoweredByAttr;
     private AnyURISimpleType asAttr;
     public AnyURISimpleType getForAttr() {
+        if (forAttr == null) {
+            forAttr = new AnyURISimpleType();
+            forAttr.setValue(amendableElement.getAttribute("for"));
+        }
+
         return forAttr;
     }
     public void setForAttr(final AnyURISimpleType forAttr) {
         this.forAttr = forAttr;
     }
     public AnyURISimpleType getEmpoweredByAttr() {
+        if (empoweredByAttr == null) {
+            empoweredByAttr = new AnyURISimpleType();
+            empoweredByAttr.setValue(amendableElement.getAttribute("empoweredBy"));
+        }
+
         return empoweredByAttr;
     }
     public void setEmpoweredByAttr(final AnyURISimpleType empoweredByAttr) {
         this.empoweredByAttr = empoweredByAttr;
     }
     public AnyURISimpleType getAsAttr() {
+        if (asAttr == null) {
+            asAttr = new AnyURISimpleType();
+            asAttr.setValue(amendableElement.getAttribute("as"));
+        }
+
         return asAttr;
     }
     public void setAsAttr(final AnyURISimpleType asAttr) {

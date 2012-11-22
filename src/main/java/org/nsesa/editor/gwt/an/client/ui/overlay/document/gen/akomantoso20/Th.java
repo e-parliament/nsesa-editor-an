@@ -28,12 +28,22 @@ public class Th extends BlocksoptComplexType  {
     private IntegerSimpleType rowspanAttr;
     private IntegerSimpleType colspanAttr;
     public IntegerSimpleType getRowspanAttr() {
+        if (rowspanAttr == null) {
+            rowspanAttr = new IntegerSimpleType();
+            rowspanAttr.setValue(amendableElement.getAttribute("rowspan"));
+        }
+
         return rowspanAttr;
     }
     public void setRowspanAttr(final IntegerSimpleType rowspanAttr) {
         this.rowspanAttr = rowspanAttr;
     }
     public IntegerSimpleType getColspanAttr() {
+        if (colspanAttr == null) {
+            colspanAttr = new IntegerSimpleType();
+            colspanAttr.setValue(amendableElement.getAttribute("colspan"));
+        }
+
         return colspanAttr;
     }
     public void setColspanAttr(final IntegerSimpleType colspanAttr) {

@@ -27,6 +27,11 @@ public class FillIn extends InlineComplexType  {
 // FIELDS ------------------
     private StringSimpleType widthAttr;
     public StringSimpleType getWidthAttr() {
+        if (widthAttr == null) {
+            widthAttr = new StringSimpleType();
+            widthAttr.setValue(amendableElement.getAttribute("width"));
+        }
+
         return widthAttr;
     }
     public void setWidthAttr(final StringSimpleType widthAttr) {

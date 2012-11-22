@@ -27,6 +27,11 @@ public class Date extends InlineComplexType  {
 // FIELDS ------------------
     private DateSimpleType dateAttr;
     public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(amendableElement.getAttribute("date"));
+        }
+
         return dateAttr;
     }
     public void setDateAttr(final DateSimpleType dateAttr) {

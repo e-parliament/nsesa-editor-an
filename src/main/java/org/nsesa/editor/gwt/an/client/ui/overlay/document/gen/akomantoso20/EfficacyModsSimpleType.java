@@ -18,13 +18,23 @@ public enum EfficacyModsSimpleType {
     POSTPONEMENTOFEFFICACY("postponementOfEfficacy"),
     PROROGATIONOFEFFICACY("prorogationOfEfficacy")
 ;
-private final String value;
+    private final String value;
 
-EfficacyModsSimpleType(String v) {
-    value = v;
-}
+    EfficacyModsSimpleType(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static EfficacyModsSimpleType fromString(String text) {
+        if (text == null) return null;
+        for (EfficacyModsSimpleType en : EfficacyModsSimpleType.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

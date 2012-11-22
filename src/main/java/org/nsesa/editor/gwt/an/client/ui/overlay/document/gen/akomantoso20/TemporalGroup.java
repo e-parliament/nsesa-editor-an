@@ -26,9 +26,9 @@ public class TemporalGroup extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private String wildcardContentAttr;
     public java.util.List<TimeInterval> getTimeIntervals() {
         java.util.List<TimeInterval> result = new ArrayList<TimeInterval>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -38,23 +38,37 @@ public class TemporalGroup extends AmendableWidgetImpl  {
         }
         return java.util.Collections.unmodifiableList(result);
     }
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
     public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(amendableElement.getAttribute("id"));
+        }
+
         return idAttr;
     }
     public void setIdAttr(final IDSimpleType idAttr) {
         this.idAttr = idAttr;
     }
     public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(amendableElement.getAttribute("evolvingId"));
+        }
+
         return evolvingIdAttr;
     }
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
-    }
-    public String getWildcardContentAttr() {
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
     }
     /**
     * Returns possible children as list of String
@@ -68,9 +82,9 @@ public class TemporalGroup extends AmendableWidgetImpl  {
     public LinkedHashMap<String, String> getAttributes() {
         LinkedHashMap attrs = new LinkedHashMap();
         attrs.putAll(super.getAttributes());
+        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
         attrs.put("idAttr", getIdAttr().getValue());
         attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
 
         return attrs;
     }

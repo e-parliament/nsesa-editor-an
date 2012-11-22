@@ -16,13 +16,23 @@ public enum TextualModsSimpleType {
     REPLACEMENT("replacement"),
     RENUMBERING("renumbering")
 ;
-private final String value;
+    private final String value;
 
-TextualModsSimpleType(String v) {
-    value = v;
-}
+    TextualModsSimpleType(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static TextualModsSimpleType fromString(String text) {
+        if (text == null) return null;
+        for (TextualModsSimpleType en : TextualModsSimpleType.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

@@ -27,6 +27,11 @@ public class Ref extends InlinereqComplexType  {
 // FIELDS ------------------
     private AnyURISimpleType hrefAttr;
     public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(amendableElement.getAttribute("href"));
+        }
+
         return hrefAttr;
     }
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {

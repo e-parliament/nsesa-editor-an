@@ -27,6 +27,11 @@ public class QuotedStructure extends PopupStructureComplexType  {
 // FIELDS ------------------
     private AnyURISimpleType forAttr;
     public AnyURISimpleType getForAttr() {
+        if (forAttr == null) {
+            forAttr = new AnyURISimpleType();
+            forAttr.setValue(amendableElement.getAttribute("for"));
+        }
+
         return forAttr;
     }
     public void setForAttr(final AnyURISimpleType forAttr) {

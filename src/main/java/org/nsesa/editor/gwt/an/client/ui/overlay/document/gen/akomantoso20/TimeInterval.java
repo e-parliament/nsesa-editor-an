@@ -31,24 +31,44 @@ public class TimeInterval extends MetaoptComplexType  {
     private DurationSimpleType durationAttr;
     private AnyURISimpleType refersToAttr;
     public AnyURISimpleType getStartAttr() {
+        if (startAttr == null) {
+            startAttr = new AnyURISimpleType();
+            startAttr.setValue(amendableElement.getAttribute("start"));
+        }
+
         return startAttr;
     }
     public void setStartAttr(final AnyURISimpleType startAttr) {
         this.startAttr = startAttr;
     }
     public AnyURISimpleType getEndAttr() {
+        if (endAttr == null) {
+            endAttr = new AnyURISimpleType();
+            endAttr.setValue(amendableElement.getAttribute("end"));
+        }
+
         return endAttr;
     }
     public void setEndAttr(final AnyURISimpleType endAttr) {
         this.endAttr = endAttr;
     }
     public DurationSimpleType getDurationAttr() {
+        if (durationAttr == null) {
+            durationAttr = new DurationSimpleType();
+            durationAttr.setValue(amendableElement.getAttribute("duration"));
+        }
+
         return durationAttr;
     }
     public void setDurationAttr(final DurationSimpleType durationAttr) {
         this.durationAttr = durationAttr;
     }
     public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(amendableElement.getAttribute("refersTo"));
+        }
+
         return refersToAttr;
     }
     public void setRefersToAttr(final AnyURISimpleType refersToAttr) {

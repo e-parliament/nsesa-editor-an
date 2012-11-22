@@ -28,6 +28,10 @@ public class ScopeMod extends ModificationTypeComplexType  {
 // FIELDS ------------------
     private ScopeModsSimpleType typeAttr;
     public ScopeModsSimpleType getTypeAttr() {
+        if (typeAttr == null) {
+            typeAttr = ScopeModsSimpleType.fromString(amendableElement.getAttribute("type"));
+        }
+
         return typeAttr;
     }
     public void setTypeAttr(final ScopeModsSimpleType typeAttr) {

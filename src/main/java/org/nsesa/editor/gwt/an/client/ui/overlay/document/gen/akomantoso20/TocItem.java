@@ -29,12 +29,22 @@ public class TocItem extends InlineComplexType  {
     private IntegerSimpleType levelAttr;
     private AnyURISimpleType hrefAttr;
     public IntegerSimpleType getLevelAttr() {
+        if (levelAttr == null) {
+            levelAttr = new IntegerSimpleType();
+            levelAttr.setValue(amendableElement.getAttribute("level"));
+        }
+
         return levelAttr;
     }
     public void setLevelAttr(final IntegerSimpleType levelAttr) {
         this.levelAttr = levelAttr;
     }
     public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(amendableElement.getAttribute("href"));
+        }
+
         return hrefAttr;
     }
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {

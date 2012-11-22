@@ -16,13 +16,23 @@ public enum PlacementTypeSimpleType {
     BOTTOM("bottom"),
     INLINE("inline")
 ;
-private final String value;
+    private final String value;
 
-PlacementTypeSimpleType(String v) {
-    value = v;
-}
+    PlacementTypeSimpleType(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static PlacementTypeSimpleType fromString(String text) {
+        if (text == null) return null;
+        for (PlacementTypeSimpleType en : PlacementTypeSimpleType.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

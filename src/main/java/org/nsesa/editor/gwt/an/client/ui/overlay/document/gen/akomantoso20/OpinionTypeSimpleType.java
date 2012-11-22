@@ -14,13 +14,23 @@ public enum OpinionTypeSimpleType {
     AGREEING("agreeing"),
     NULL("null")
 ;
-private final String value;
+    private final String value;
 
-OpinionTypeSimpleType(String v) {
-    value = v;
-}
+    OpinionTypeSimpleType(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static OpinionTypeSimpleType fromString(String text) {
+        if (text == null) return null;
+        for (OpinionTypeSimpleType en : OpinionTypeSimpleType.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

@@ -13,13 +13,23 @@ public enum YesNoTypeSimpleType {
     YES("yes"),
     NO("no")
 ;
-private final String value;
+    private final String value;
 
-YesNoTypeSimpleType(String v) {
-    value = v;
-}
+    YesNoTypeSimpleType(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static YesNoTypeSimpleType fromString(String text) {
+        if (text == null) return null;
+        for (YesNoTypeSimpleType en : YesNoTypeSimpleType.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

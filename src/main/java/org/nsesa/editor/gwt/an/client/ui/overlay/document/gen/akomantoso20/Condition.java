@@ -27,6 +27,11 @@ public class Condition extends AnyOtherTypeComplexType  {
 // FIELDS ------------------
     private BooleanSimpleType frozenAttr;
     public BooleanSimpleType getFrozenAttr() {
+        if (frozenAttr == null) {
+            frozenAttr = new BooleanSimpleType();
+            frozenAttr.setValue(amendableElement.getAttribute("frozen"));
+        }
+
         return frozenAttr;
     }
     public void setFrozenAttr(final BooleanSimpleType frozenAttr) {

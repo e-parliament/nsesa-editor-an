@@ -33,30 +33,54 @@ public class FRBRtranslation extends MetaoptComplexType  {
     private AnyURISimpleType byAttr;
     private AnyURISimpleType hrefAttr;
     public LanguageSimpleType getFromLanguageAttr() {
+        if (fromLanguageAttr == null) {
+            fromLanguageAttr = new LanguageSimpleType();
+            fromLanguageAttr.setValue(amendableElement.getAttribute("fromLanguage"));
+        }
+
         return fromLanguageAttr;
     }
     public void setFromLanguageAttr(final LanguageSimpleType fromLanguageAttr) {
         this.fromLanguageAttr = fromLanguageAttr;
     }
     public YesNoTypeSimpleType getAuthoritativeAttr() {
+        if (authoritativeAttr == null) {
+            authoritativeAttr = YesNoTypeSimpleType.fromString(amendableElement.getAttribute("authoritative"));
+        }
+
         return authoritativeAttr;
     }
     public void setAuthoritativeAttr(final YesNoTypeSimpleType authoritativeAttr) {
         this.authoritativeAttr = authoritativeAttr;
     }
     public LanguageSimpleType getPivotAttr() {
+        if (pivotAttr == null) {
+            pivotAttr = new LanguageSimpleType();
+            pivotAttr.setValue(amendableElement.getAttribute("pivot"));
+        }
+
         return pivotAttr;
     }
     public void setPivotAttr(final LanguageSimpleType pivotAttr) {
         this.pivotAttr = pivotAttr;
     }
     public AnyURISimpleType getByAttr() {
+        if (byAttr == null) {
+            byAttr = new AnyURISimpleType();
+            byAttr.setValue(amendableElement.getAttribute("by"));
+        }
+
         return byAttr;
     }
     public void setByAttr(final AnyURISimpleType byAttr) {
         this.byAttr = byAttr;
     }
     public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(amendableElement.getAttribute("href"));
+        }
+
         return hrefAttr;
     }
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {

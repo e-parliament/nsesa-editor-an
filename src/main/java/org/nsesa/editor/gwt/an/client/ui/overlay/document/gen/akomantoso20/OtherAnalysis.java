@@ -27,6 +27,11 @@ public class OtherAnalysis extends AnyOtherTypeComplexType  {
 // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
     public AnyURISimpleType getSourceAttr() {
+        if (sourceAttr == null) {
+            sourceAttr = new AnyURISimpleType();
+            sourceAttr.setValue(amendableElement.getAttribute("source"));
+        }
+
         return sourceAttr;
     }
     public void setSourceAttr(final AnyURISimpleType sourceAttr) {

@@ -70,6 +70,11 @@ public class Identification extends AmendableWidgetImpl  {
         return result;
     }
     public AnyURISimpleType getSourceAttr() {
+        if (sourceAttr == null) {
+            sourceAttr = new AnyURISimpleType();
+            sourceAttr.setValue(amendableElement.getAttribute("source"));
+        }
+
         return sourceAttr;
     }
     public void setSourceAttr(final AnyURISimpleType sourceAttr) {

@@ -17,13 +17,23 @@ public enum ForceModsSimpleType {
     REENACTMENT("reEnactment"),
     UNCOSTITUTIONALITY("uncostitutionality")
 ;
-private final String value;
+    private final String value;
 
-ForceModsSimpleType(String v) {
-    value = v;
-}
+    ForceModsSimpleType(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static ForceModsSimpleType fromString(String text) {
+        if (text == null) return null;
+        for (ForceModsSimpleType en : ForceModsSimpleType.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

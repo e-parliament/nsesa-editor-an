@@ -14,13 +14,23 @@ public enum ${overlayClass.className?cap_first} {
 <#list overlayClass.restriction.enumeration as enum>
     ${enum?upper_case}("${enum}")<#if enum_has_next>,</#if>
 </#list>;
-private final String value;
+    private final String value;
 
-${overlayClass.className?cap_first}(String v) {
-    value = v;
-}
+    ${overlayClass.className?cap_first}(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static ${overlayClass.className?cap_first} fromString(String text) {
+        if (text == null) return null;
+        for (${overlayClass.className?cap_first} en : ${overlayClass.className?cap_first}.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

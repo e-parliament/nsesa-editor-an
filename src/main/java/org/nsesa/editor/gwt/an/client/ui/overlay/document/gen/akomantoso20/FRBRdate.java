@@ -29,12 +29,22 @@ public class FRBRdate extends MetaoptComplexType  {
     private DateSimpleType dateAttr;
     private StringSimpleType nameAttr;
     public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(amendableElement.getAttribute("date"));
+        }
+
         return dateAttr;
     }
     public void setDateAttr(final DateSimpleType dateAttr) {
         this.dateAttr = dateAttr;
     }
     public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+            nameAttr = new StringSimpleType();
+            nameAttr.setValue(amendableElement.getAttribute("name"));
+        }
+
         return nameAttr;
     }
     public void setNameAttr(final StringSimpleType nameAttr) {

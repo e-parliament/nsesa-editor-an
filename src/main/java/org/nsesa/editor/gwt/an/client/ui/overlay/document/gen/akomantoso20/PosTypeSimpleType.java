@@ -17,13 +17,23 @@ public enum PosTypeSimpleType {
     END("end"),
     UNSPECIFIED("unspecified")
 ;
-private final String value;
+    private final String value;
 
-PosTypeSimpleType(String v) {
-    value = v;
-}
+    PosTypeSimpleType(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static PosTypeSimpleType fromString(String text) {
+        if (text == null) return null;
+        for (PosTypeSimpleType en : PosTypeSimpleType.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

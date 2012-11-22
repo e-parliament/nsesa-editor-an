@@ -27,6 +27,10 @@ public class Opinion extends InlineComplexType  {
 // FIELDS ------------------
     private OpinionTypeSimpleType typeAttr;
     public OpinionTypeSimpleType getTypeAttr() {
+        if (typeAttr == null) {
+            typeAttr = OpinionTypeSimpleType.fromString(amendableElement.getAttribute("type"));
+        }
+
         return typeAttr;
     }
     public void setTypeAttr(final OpinionTypeSimpleType typeAttr) {

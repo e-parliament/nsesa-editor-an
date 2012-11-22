@@ -28,12 +28,22 @@ public class FRBRauthor extends MetaoptComplexType  {
     private AnyURISimpleType asAttr;
     private AnyURISimpleType hrefAttr;
     public AnyURISimpleType getAsAttr() {
+        if (asAttr == null) {
+            asAttr = new AnyURISimpleType();
+            asAttr.setValue(amendableElement.getAttribute("as"));
+        }
+
         return asAttr;
     }
     public void setAsAttr(final AnyURISimpleType asAttr) {
         this.asAttr = asAttr;
     }
     public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(amendableElement.getAttribute("href"));
+        }
+
         return hrefAttr;
     }
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {

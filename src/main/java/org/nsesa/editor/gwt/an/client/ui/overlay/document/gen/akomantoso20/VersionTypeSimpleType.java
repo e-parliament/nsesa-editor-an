@@ -14,13 +14,23 @@ public enum VersionTypeSimpleType {
     SINGLEVERSION("singleVersion"),
     MULTIPLEVERSIONS("multipleVersions")
 ;
-private final String value;
+    private final String value;
 
-VersionTypeSimpleType(String v) {
-    value = v;
-}
+    VersionTypeSimpleType(String v) {
+        value = v;
+    }
 
-public String value() {
-    return value;
-}
+    public String value() {
+        return value;
+    }
+
+    public static VersionTypeSimpleType fromString(String text) {
+        if (text == null) return null;
+        for (VersionTypeSimpleType en : VersionTypeSimpleType.values()) {
+            if(text.equalsIgnoreCase(en.value())) {
+                return en;
+            }
+        }
+        return null;
+    }
 }

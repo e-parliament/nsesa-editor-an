@@ -80,6 +80,11 @@ public class Analysis extends AmendableWidgetImpl  {
         return java.util.Collections.unmodifiableList(result);
     }
     public AnyURISimpleType getSourceAttr() {
+        if (sourceAttr == null) {
+            sourceAttr = new AnyURISimpleType();
+            sourceAttr.setValue(amendableElement.getAttribute("source"));
+        }
+
         return sourceAttr;
     }
     public void setSourceAttr(final AnyURISimpleType sourceAttr) {

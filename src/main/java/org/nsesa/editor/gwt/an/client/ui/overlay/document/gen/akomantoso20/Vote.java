@@ -29,18 +29,33 @@ public class Vote extends InlineComplexType  {
     private AnyURISimpleType asAttr;
     private AnyURISimpleType choiceAttr;
     public AnyURISimpleType getByAttr() {
+        if (byAttr == null) {
+            byAttr = new AnyURISimpleType();
+            byAttr.setValue(amendableElement.getAttribute("by"));
+        }
+
         return byAttr;
     }
     public void setByAttr(final AnyURISimpleType byAttr) {
         this.byAttr = byAttr;
     }
     public AnyURISimpleType getAsAttr() {
+        if (asAttr == null) {
+            asAttr = new AnyURISimpleType();
+            asAttr.setValue(amendableElement.getAttribute("as"));
+        }
+
         return asAttr;
     }
     public void setAsAttr(final AnyURISimpleType asAttr) {
         this.asAttr = asAttr;
     }
     public AnyURISimpleType getChoiceAttr() {
+        if (choiceAttr == null) {
+            choiceAttr = new AnyURISimpleType();
+            choiceAttr.setValue(amendableElement.getAttribute("choice"));
+        }
+
         return choiceAttr;
     }
     public void setChoiceAttr(final AnyURISimpleType choiceAttr) {
