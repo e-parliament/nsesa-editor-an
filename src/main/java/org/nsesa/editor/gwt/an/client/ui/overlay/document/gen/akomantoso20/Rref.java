@@ -1,14 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.InlinereqComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.LinkedHashMap;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -50,7 +46,7 @@ public class Rref extends InlinereqComplexType  {
         this.upToAttr = upToAttr;
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -59,11 +55,10 @@ public class Rref extends InlinereqComplexType  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("fromAttr", getFromAttr().getValue());
-        attrs.put("upToAttr", getUpToAttr().getValue());
-
+        attrs.put("fromAttr", getFromAttr() != null ? getFromAttr().getValue() : null);
+        attrs.put("upToAttr", getUpToAttr() != null ? getUpToAttr().getValue() : null);
         return attrs;
     }
 

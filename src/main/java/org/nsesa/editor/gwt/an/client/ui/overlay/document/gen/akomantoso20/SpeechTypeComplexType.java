@@ -1,28 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.From;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateTimeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Foreign;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Block;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.BlockList;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Toc;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Tblock;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Ul;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Ol;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Table;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.P;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
@@ -42,16 +25,16 @@ public class SpeechTypeComplexType extends BasehierarchyComplexType  {
     private DateTimeSimpleType startTimeAttr;
     private DateTimeSimpleType endTimeAttr;
     private AnyURISimpleType toAttr;
-    private AnyURISimpleType alternativeToAttr;
-    private StatusTypeSimpleType statusAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private String wildcardContentAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
     private AnyURISimpleType refersToAttr;
-    private String wildcardContentAttr;
+    private AnyURISimpleType alternativeToAttr;
     private LanguageSimpleType langAttr;
+    private StatusTypeSimpleType statusAttr;
     private AnyURISimpleType periodAttr;
     public From getFrom() {
         From result = null;
@@ -136,27 +119,6 @@ public class SpeechTypeComplexType extends BasehierarchyComplexType  {
         }
         return java.util.Collections.unmodifiableList(result);
     }
-    public AnyURISimpleType getAlternativeToAttr() {
-        if (alternativeToAttr == null) {
-            alternativeToAttr = new AnyURISimpleType();
-            alternativeToAttr.setValue(amendableElement.getAttribute("alternativeTo"));
-        }
-
-        return alternativeToAttr;
-    }
-    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
-    }
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));
-        }
-
-        return statusAttr;
-    }
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-    }
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
             idAttr = new IDSimpleType();
@@ -178,6 +140,16 @@ public class SpeechTypeComplexType extends BasehierarchyComplexType  {
     }
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
+    }
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
     }
     public StringSimpleType getClassAttr() {
         if (classAttr == null) {
@@ -223,15 +195,16 @@ public class SpeechTypeComplexType extends BasehierarchyComplexType  {
     public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
         this.refersToAttr = refersToAttr;
     }
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+    public AnyURISimpleType getAlternativeToAttr() {
+        if (alternativeToAttr == null) {
+            alternativeToAttr = new AnyURISimpleType();
+            alternativeToAttr.setValue(amendableElement.getAttribute("alternativeTo"));
         }
 
-        return wildcardContentAttr;
+        return alternativeToAttr;
     }
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
     }
     public LanguageSimpleType getLangAttr() {
         if (langAttr == null) {
@@ -243,6 +216,16 @@ public class SpeechTypeComplexType extends BasehierarchyComplexType  {
     }
     public void setLangAttr(final LanguageSimpleType langAttr) {
         this.langAttr = langAttr;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));
+        }
+
+        return statusAttr;
+    }
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
     }
     public java.util.List<BlockList> getBlockLists() {
         java.util.List<BlockList> result = new ArrayList<BlockList>();
@@ -319,7 +302,7 @@ public class SpeechTypeComplexType extends BasehierarchyComplexType  {
         this.periodAttr = periodAttr;
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -328,25 +311,24 @@ public class SpeechTypeComplexType extends BasehierarchyComplexType  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("byAttr", getByAttr().getValue());
-        attrs.put("asAttr", getAsAttr().getValue());
-        attrs.put("startTimeAttr", getStartTimeAttr().getValue());
-        attrs.put("endTimeAttr", getEndTimeAttr().getValue());
-        attrs.put("toAttr", getToAttr().getValue());
-        attrs.put("alternativeToAttr", getAlternativeToAttr().getValue());
-        attrs.put("statusAttr", getStatusAttr().value());
-        attrs.put("idAttr", getIdAttr().getValue());
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-        attrs.put("classAttr", getClassAttr().getValue());
-        attrs.put("styleAttr", getStyleAttr().getValue());
-        attrs.put("titleAttr", getTitleAttr().getValue());
-        attrs.put("refersToAttr", getRefersToAttr().getValue());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
-        attrs.put("langAttr", getLangAttr().getValue());
-        attrs.put("periodAttr", getPeriodAttr().getValue());
-
+        attrs.put("byAttr", getByAttr() != null ? getByAttr().getValue() : null);
+        attrs.put("asAttr", getAsAttr() != null ? getAsAttr().getValue() : null);
+        attrs.put("startTimeAttr", getStartTimeAttr() != null ? getStartTimeAttr().getValue() : null);
+        attrs.put("endTimeAttr", getEndTimeAttr() != null ? getEndTimeAttr().getValue() : null);
+        attrs.put("toAttr", getToAttr() != null ? getToAttr().getValue() : null);
+        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("classAttr", getClassAttr() != null ? getClassAttr().getValue() : null);
+        attrs.put("styleAttr", getStyleAttr() != null ? getStyleAttr().getValue() : null);
+        attrs.put("titleAttr", getTitleAttr() != null ? getTitleAttr().getValue() : null);
+        attrs.put("refersToAttr", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("alternativeToAttr", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
+        attrs.put("langAttr", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("statusAttr", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("periodAttr", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
 

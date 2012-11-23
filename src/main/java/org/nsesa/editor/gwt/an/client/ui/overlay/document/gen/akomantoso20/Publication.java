@@ -1,16 +1,12 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MetaoptComplexType;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 import java.util.LinkedHashMap;
-import com.google.gwt.user.client.DOM;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -27,22 +23,22 @@ public class Publication extends MetaoptComplexType  {
     }
 
 // FIELDS ------------------
-    private DateSimpleType dateAttr;
+    private AnyURISimpleType refersToAttr;
     private StringSimpleType nameAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
-    private AnyURISimpleType refersToAttr;
     private StringSimpleType numberAttr;
-    public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-            dateAttr = new DateSimpleType();
-            dateAttr.setValue(amendableElement.getAttribute("date"));
+    private DateSimpleType dateAttr;
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(amendableElement.getAttribute("refersTo"));
         }
 
-        return dateAttr;
+        return refersToAttr;
     }
-    public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
     }
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
@@ -77,17 +73,6 @@ public class Publication extends MetaoptComplexType  {
     public void setShortFormAttr(final StringSimpleType shortFormAttr) {
         this.shortFormAttr = shortFormAttr;
     }
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(amendableElement.getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-    }
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-    }
     public StringSimpleType getNumberAttr() {
         if (numberAttr == null) {
             numberAttr = new StringSimpleType();
@@ -99,8 +84,19 @@ public class Publication extends MetaoptComplexType  {
     public void setNumberAttr(final StringSimpleType numberAttr) {
         this.numberAttr = numberAttr;
     }
+    public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(amendableElement.getAttribute("date"));
+        }
+
+        return dateAttr;
+    }
+    public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+    }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -109,15 +105,14 @@ public class Publication extends MetaoptComplexType  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("dateAttr", getDateAttr().getValue());
-        attrs.put("nameAttr", getNameAttr().getValue());
-        attrs.put("showAsAttr", getShowAsAttr().getValue());
-        attrs.put("shortFormAttr", getShortFormAttr().getValue());
-        attrs.put("refersToAttr", getRefersToAttr().getValue());
-        attrs.put("numberAttr", getNumberAttr().getValue());
-
+        attrs.put("refersToAttr", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("nameAttr", getNameAttr() != null ? getNameAttr().getValue() : null);
+        attrs.put("showAsAttr", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
+        attrs.put("shortFormAttr", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("numberAttr", getNumberAttr() != null ? getNumberAttr().getValue() : null);
+        attrs.put("dateAttr", getDateAttr() != null ? getDateAttr().getValue() : null);
         return attrs;
     }
 

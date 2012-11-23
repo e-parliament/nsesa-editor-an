@@ -1,14 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import com.google.gwt.dom.client.Element;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PosTypeSimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 import java.util.LinkedHashMap;
 
 /**
@@ -24,10 +21,10 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType upToAttr;
+    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private PosTypeSimpleType posAttr;
-    private String wildcardContentAttr;
     private AnyURISimpleType hrefAttr;
     public AnyURISimpleType getUpToAttr() {
         if (upToAttr == null) {
@@ -39,6 +36,16 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl  {
     }
     public void setUpToAttr(final AnyURISimpleType upToAttr) {
         this.upToAttr = upToAttr;
+    }
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
     }
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
@@ -72,16 +79,6 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl  {
     public void setPosAttr(final PosTypeSimpleType posAttr) {
         this.posAttr = posAttr;
     }
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-    }
     public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
             hrefAttr = new AnyURISimpleType();
@@ -94,7 +91,7 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl  {
         this.hrefAttr = hrefAttr;
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -103,15 +100,14 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("upToAttr", getUpToAttr().getValue());
-        attrs.put("idAttr", getIdAttr().getValue());
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-        attrs.put("posAttr", getPosAttr().value());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
-        attrs.put("hrefAttr", getHrefAttr().getValue());
-
+        attrs.put("upToAttr", getUpToAttr() != null ? getUpToAttr().getValue() : null);
+        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("posAttr", getPosAttr() != null ? getPosAttr().value() : null);
+        attrs.put("hrefAttr", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         return attrs;
     }
 

@@ -1,18 +1,14 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Source;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Destination;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Condition;
+import com.google.gwt.dom.client.Element;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
@@ -27,13 +23,13 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private AnyURISimpleType refersToAttr;
-    private BooleanSimpleType exclusionAttr;
-    private BooleanSimpleType incompleteAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private StatusTypeSimpleType statusAttr;
     private String wildcardContentAttr;
+    private StatusTypeSimpleType statusAttr;
+    private BooleanSimpleType exclusionAttr;
+    private BooleanSimpleType incompleteAttr;
+    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
     public java.util.List<Source> getSources() {
         java.util.List<Source> result = new ArrayList<Source>();
@@ -63,16 +59,47 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
         }
         return result;
     }
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(amendableElement.getAttribute("refersTo"));
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(amendableElement.getAttribute("id"));
         }
 
-        return refersToAttr;
+        return idAttr;
     }
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+    }
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(amendableElement.getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+    }
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+    }
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));
+        }
+
+        return statusAttr;
+    }
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
     }
     public BooleanSimpleType getExclusionAttr() {
         if (exclusionAttr == null) {
@@ -96,47 +123,16 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
     public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
         this.incompleteAttr = incompleteAttr;
     }
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(amendableElement.getAttribute("id"));
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(amendableElement.getAttribute("refersTo"));
         }
 
-        return idAttr;
+        return refersToAttr;
     }
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-    }
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(amendableElement.getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-    }
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-    }
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));
-        }
-
-        return statusAttr;
-    }
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-    }
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
     }
     public AnyURISimpleType getPeriodAttr() {
         if (periodAttr == null) {
@@ -150,7 +146,7 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
         this.periodAttr = periodAttr;
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -159,17 +155,16 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("refersToAttr", getRefersToAttr().getValue());
-        attrs.put("exclusionAttr", getExclusionAttr().getValue());
-        attrs.put("incompleteAttr", getIncompleteAttr().getValue());
-        attrs.put("idAttr", getIdAttr().getValue());
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-        attrs.put("statusAttr", getStatusAttr().value());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
-        attrs.put("periodAttr", getPeriodAttr().getValue());
-
+        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("statusAttr", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("exclusionAttr", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
+        attrs.put("incompleteAttr", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
+        attrs.put("refersToAttr", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("periodAttr", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
 

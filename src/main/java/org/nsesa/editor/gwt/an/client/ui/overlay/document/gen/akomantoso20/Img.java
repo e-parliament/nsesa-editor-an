@@ -1,16 +1,12 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MarkeroptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IntegerSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.LinkedHashMap;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IntegerSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -76,7 +72,7 @@ public class Img extends MarkeroptComplexType  {
         this.altAttr = altAttr;
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -85,13 +81,12 @@ public class Img extends MarkeroptComplexType  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("widthAttr", getWidthAttr().getValue());
-        attrs.put("heightAttr", getHeightAttr().getValue());
-        attrs.put("srcAttr", getSrcAttr().getValue());
-        attrs.put("altAttr", getAltAttr().getValue());
-
+        attrs.put("widthAttr", getWidthAttr() != null ? getWidthAttr().getValue() : null);
+        attrs.put("heightAttr", getHeightAttr() != null ? getHeightAttr().getValue() : null);
+        attrs.put("srcAttr", getSrcAttr() != null ? getSrcAttr().getValue() : null);
+        attrs.put("altAttr", getAltAttr() != null ? getAltAttr().getValue() : null);
         return attrs;
     }
 

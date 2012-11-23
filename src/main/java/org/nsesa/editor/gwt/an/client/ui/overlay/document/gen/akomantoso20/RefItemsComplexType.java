@@ -1,27 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Original;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PassiveRef;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ActiveRef;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Jurisprudence;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.HasAttachment;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AttachmentOf;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCPerson;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCOrganization;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCConcept;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCObject;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCEvent;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCLocation;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCProcess;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCRole;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCTerm;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCReference;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
@@ -193,7 +177,7 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
         return java.util.Collections.unmodifiableList(result);
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -202,10 +186,9 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("sourceAttr", getSourceAttr().getValue());
-
+        attrs.put("sourceAttr", getSourceAttr() != null ? getSourceAttr().getValue() : null);
         return attrs;
     }
 

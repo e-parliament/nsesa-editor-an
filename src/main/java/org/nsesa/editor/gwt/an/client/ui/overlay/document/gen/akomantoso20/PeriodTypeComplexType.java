@@ -1,13 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import com.google.gwt.dom.client.Element;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 import java.util.LinkedHashMap;
 
 /**
@@ -22,10 +20,21 @@ public class PeriodTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+    private AnyURISimpleType periodAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private String wildcardContentAttr;
-    private AnyURISimpleType periodAttr;
+    public AnyURISimpleType getPeriodAttr() {
+        if (periodAttr == null) {
+            periodAttr = new AnyURISimpleType();
+            periodAttr.setValue(amendableElement.getAttribute("period"));
+        }
+
+        return periodAttr;
+    }
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
+    }
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
             idAttr = new IDSimpleType();
@@ -58,19 +67,8 @@ public class PeriodTypeComplexType extends AmendableWidgetImpl  {
     public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
     }
-    public AnyURISimpleType getPeriodAttr() {
-        if (periodAttr == null) {
-            periodAttr = new AnyURISimpleType();
-            periodAttr.setValue(amendableElement.getAttribute("period"));
-        }
-
-        return periodAttr;
-    }
-    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-        this.periodAttr = periodAttr;
-    }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -79,13 +77,12 @@ public class PeriodTypeComplexType extends AmendableWidgetImpl  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("idAttr", getIdAttr().getValue());
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
-        attrs.put("periodAttr", getPeriodAttr().getValue());
-
+        attrs.put("periodAttr", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
+        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }
 

@@ -1,12 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import com.google.gwt.dom.client.Element;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 import java.util.LinkedHashMap;
 
 /**
@@ -21,9 +19,19 @@ public class MetareqComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private String wildcardContentAttr;
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
             idAttr = new IDSimpleType();
@@ -46,18 +54,8 @@ public class MetareqComplexType extends AmendableWidgetImpl  {
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-    }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -66,12 +64,11 @@ public class MetareqComplexType extends AmendableWidgetImpl  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("idAttr", getIdAttr().getValue());
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
-
+        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         return attrs;
     }
 

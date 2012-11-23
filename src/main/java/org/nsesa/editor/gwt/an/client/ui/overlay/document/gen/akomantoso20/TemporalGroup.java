@@ -1,15 +1,14 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TimeInterval;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
-import com.google.gwt.user.client.DOM;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -26,9 +25,9 @@ public class TemporalGroup extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private String wildcardContentAttr;
     public java.util.List<TimeInterval> getTimeIntervals() {
         java.util.List<TimeInterval> result = new ArrayList<TimeInterval>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -37,16 +36,6 @@ public class TemporalGroup extends AmendableWidgetImpl  {
             }
         }
         return java.util.Collections.unmodifiableList(result);
-    }
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
     }
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
@@ -70,8 +59,18 @@ public class TemporalGroup extends AmendableWidgetImpl  {
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -80,12 +79,11 @@ public class TemporalGroup extends AmendableWidgetImpl  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
-        attrs.put("idAttr", getIdAttr().getValue());
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-
+        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }
 

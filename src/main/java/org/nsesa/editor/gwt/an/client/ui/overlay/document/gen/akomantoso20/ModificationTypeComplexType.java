@@ -1,22 +1,14 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Source;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Destination;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Force;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Efficacy;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Application;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Duration;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Condition;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
+import com.google.gwt.dom.client.Element;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
@@ -31,13 +23,13 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private BooleanSimpleType exclusionAttr;
-    private BooleanSimpleType incompleteAttr;
-    private AnyURISimpleType refersToAttr;
     private String wildcardContentAttr;
+    private AnyURISimpleType refersToAttr;
+    private StatusTypeSimpleType statusAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private StatusTypeSimpleType statusAttr;
+    private BooleanSimpleType exclusionAttr;
+    private BooleanSimpleType incompleteAttr;
     private AnyURISimpleType periodAttr;
     public java.util.List<Source> getSources() {
         java.util.List<Source> result = new ArrayList<Source>();
@@ -107,27 +99,15 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
         }
         return result;
     }
-    public BooleanSimpleType getExclusionAttr() {
-        if (exclusionAttr == null) {
-            exclusionAttr = new BooleanSimpleType();
-            exclusionAttr.setValue(amendableElement.getAttribute("exclusion"));
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return exclusionAttr;
+        return wildcardContentAttr;
     }
-    public void setExclusionAttr(final BooleanSimpleType exclusionAttr) {
-        this.exclusionAttr = exclusionAttr;
-    }
-    public BooleanSimpleType getIncompleteAttr() {
-        if (incompleteAttr == null) {
-            incompleteAttr = new BooleanSimpleType();
-            incompleteAttr.setValue(amendableElement.getAttribute("incomplete"));
-        }
-
-        return incompleteAttr;
-    }
-    public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
-        this.incompleteAttr = incompleteAttr;
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
     }
     public AnyURISimpleType getRefersToAttr() {
         if (refersToAttr == null) {
@@ -140,15 +120,15 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
     public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
         this.refersToAttr = refersToAttr;
     }
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));
         }
 
-        return wildcardContentAttr;
+        return statusAttr;
     }
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
     }
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
@@ -172,15 +152,27 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));
+    public BooleanSimpleType getExclusionAttr() {
+        if (exclusionAttr == null) {
+            exclusionAttr = new BooleanSimpleType();
+            exclusionAttr.setValue(amendableElement.getAttribute("exclusion"));
         }
 
-        return statusAttr;
+        return exclusionAttr;
     }
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
+    public void setExclusionAttr(final BooleanSimpleType exclusionAttr) {
+        this.exclusionAttr = exclusionAttr;
+    }
+    public BooleanSimpleType getIncompleteAttr() {
+        if (incompleteAttr == null) {
+            incompleteAttr = new BooleanSimpleType();
+            incompleteAttr.setValue(amendableElement.getAttribute("incomplete"));
+        }
+
+        return incompleteAttr;
+    }
+    public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
+        this.incompleteAttr = incompleteAttr;
     }
     public AnyURISimpleType getPeriodAttr() {
         if (periodAttr == null) {
@@ -194,7 +186,7 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
         this.periodAttr = periodAttr;
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -203,17 +195,16 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("exclusionAttr", getExclusionAttr().getValue());
-        attrs.put("incompleteAttr", getIncompleteAttr().getValue());
-        attrs.put("refersToAttr", getRefersToAttr().getValue());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
-        attrs.put("idAttr", getIdAttr().getValue());
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-        attrs.put("statusAttr", getStatusAttr().value());
-        attrs.put("periodAttr", getPeriodAttr().getValue());
-
+        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("refersToAttr", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("statusAttr", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("exclusionAttr", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
+        attrs.put("incompleteAttr", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
+        attrs.put("periodAttr", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
 

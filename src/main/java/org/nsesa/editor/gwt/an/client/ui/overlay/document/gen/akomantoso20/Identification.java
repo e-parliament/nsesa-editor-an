@@ -1,17 +1,12 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRWork;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRExpression;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRManifestation;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRItem;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.LinkedHashMap;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -81,7 +76,7 @@ public class Identification extends AmendableWidgetImpl  {
         this.sourceAttr = sourceAttr;
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -90,10 +85,9 @@ public class Identification extends AmendableWidgetImpl  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("sourceAttr", getSourceAttr().getValue());
-
+        attrs.put("sourceAttr", getSourceAttr() != null ? getSourceAttr().getValue() : null);
         return attrs;
     }
 

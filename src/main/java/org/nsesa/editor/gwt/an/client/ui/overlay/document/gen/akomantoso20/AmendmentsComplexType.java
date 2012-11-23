@@ -1,16 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TextualMod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MeaningMod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ScopeMod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ForceMod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.EfficacyMod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.LegalSystemMod;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
@@ -80,7 +74,7 @@ public class AmendmentsComplexType extends AmendableWidgetImpl  {
         return java.util.Collections.unmodifiableList(result);
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -89,9 +83,8 @@ public class AmendmentsComplexType extends AmendableWidgetImpl  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-
         return attrs;
     }
 

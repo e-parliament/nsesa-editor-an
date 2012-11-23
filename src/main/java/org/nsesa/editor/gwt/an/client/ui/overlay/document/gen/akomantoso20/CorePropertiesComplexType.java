@@ -1,17 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRthis;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRuri;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRalias;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRdate;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRauthor;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ComponentInfo;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Preservation;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
@@ -93,7 +86,7 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
         return result;
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -102,9 +95,8 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-
         return attrs;
     }
 

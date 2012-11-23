@@ -1,15 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MetaoptComplexType;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DurationSimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 import java.util.LinkedHashMap;
-import com.google.gwt.user.client.DOM;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -75,7 +71,7 @@ public class TimeInterval extends MetaoptComplexType  {
         this.refersToAttr = refersToAttr;
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -84,13 +80,12 @@ public class TimeInterval extends MetaoptComplexType  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("startAttr", getStartAttr().getValue());
-        attrs.put("endAttr", getEndAttr().getValue());
-        attrs.put("durationAttr", getDurationAttr().getValue());
-        attrs.put("refersToAttr", getRefersToAttr().getValue());
-
+        attrs.put("startAttr", getStartAttr() != null ? getStartAttr().getValue() : null);
+        attrs.put("endAttr", getEndAttr() != null ? getEndAttr().getValue() : null);
+        attrs.put("durationAttr", getDurationAttr() != null ? getDurationAttr().getValue() : null);
+        attrs.put("refersToAttr", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         return attrs;
     }
 

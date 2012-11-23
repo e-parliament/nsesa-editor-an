@@ -1,15 +1,13 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Quorum;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Count;
+import com.google.gwt.dom.client.Element;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
@@ -24,11 +22,11 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+    private AnyURISimpleType hrefAttr;
+    private AnyURISimpleType outcomeAttr;
     private AnyURISimpleType refersToAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType hrefAttr;
-    private AnyURISimpleType outcomeAttr;
     private String wildcardContentAttr;
     public java.util.List<Quorum> getQuorums() {
         java.util.List<Quorum> result = new ArrayList<Quorum>();
@@ -47,6 +45,28 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
             }
         }
         return java.util.Collections.unmodifiableList(result);
+    }
+    public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(amendableElement.getAttribute("href"));
+        }
+
+        return hrefAttr;
+    }
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+    }
+    public AnyURISimpleType getOutcomeAttr() {
+        if (outcomeAttr == null) {
+            outcomeAttr = new AnyURISimpleType();
+            outcomeAttr.setValue(amendableElement.getAttribute("outcome"));
+        }
+
+        return outcomeAttr;
+    }
+    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
+        this.outcomeAttr = outcomeAttr;
     }
     public AnyURISimpleType getRefersToAttr() {
         if (refersToAttr == null) {
@@ -81,28 +101,6 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
-    public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-            hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(amendableElement.getAttribute("href"));
-        }
-
-        return hrefAttr;
-    }
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-    }
-    public AnyURISimpleType getOutcomeAttr() {
-        if (outcomeAttr == null) {
-            outcomeAttr = new AnyURISimpleType();
-            outcomeAttr.setValue(amendableElement.getAttribute("outcome"));
-        }
-
-        return outcomeAttr;
-    }
-    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
-        this.outcomeAttr = outcomeAttr;
-    }
     public String getWildcardContentAttr() {
         if (wildcardContentAttr == null) {
             //hmm nothing to do here
@@ -114,7 +112,7 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         this.wildcardContentAttr = wildcardContentAttr;
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -123,15 +121,14 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("refersToAttr", getRefersToAttr().getValue());
-        attrs.put("idAttr", getIdAttr().getValue());
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-        attrs.put("hrefAttr", getHrefAttr().getValue());
-        attrs.put("outcomeAttr", getOutcomeAttr().getValue());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
-
+        attrs.put("hrefAttr", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("outcomeAttr", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
+        attrs.put("refersToAttr", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }
 

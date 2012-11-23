@@ -1,24 +1,13 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AmendmentList;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.OfficialGazette;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocumentCollection;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Act;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Bill;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DebateReport;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Debate;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Amendment;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Judgement;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Doc;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
 import java.util.LinkedHashMap;
-import com.google.gwt.user.client.DOM;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -171,7 +160,7 @@ public class Component extends AmendableWidgetImpl  {
         return result;
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -180,12 +169,11 @@ public class Component extends AmendableWidgetImpl  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("idAttr", getIdAttr().getValue());
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr().getValue());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr().toString());
-
+        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }
 

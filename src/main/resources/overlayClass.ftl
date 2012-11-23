@@ -100,7 +100,7 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
     </#if>
 </#list>
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -110,14 +110,13 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         <#list overlayClass.properties as property>
             <#if property.attribute>
-        attrs.put("<@propertyName property=property/>", <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>()<#if property.baseClass?? && property.baseClass.enumeration>.value()<#elseif property.baseClass?? && property.baseClass.simple>.getValue()<#elseif property.wildCard && !property.attribute>.getContent()<#else>.toString()</#if>);
+        attrs.put("<@propertyName property=property/>", <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>() != null ? <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>()<#if property.baseClass?? && property.baseClass.enumeration>.value()<#elseif property.baseClass?? && property.baseClass.simple>.getValue()<#elseif property.wildCard && !property.attribute>.getContent()<#else>.toString()</#if> : null);
             </#if>
         </#list>
-
         return attrs;
     }
 

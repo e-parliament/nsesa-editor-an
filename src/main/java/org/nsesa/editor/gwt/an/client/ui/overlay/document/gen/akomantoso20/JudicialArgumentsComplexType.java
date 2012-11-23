@@ -1,22 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Result;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Supports;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.IsAnalogTo;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Applies;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Extends;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Restricts;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Derogates;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Contrasts;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Overrules;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DissentsFrom;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PutsInQuestion;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Distinguishes;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
@@ -141,7 +129,7 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
         return java.util.Collections.unmodifiableList(result);
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -150,9 +138,8 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-
         return attrs;
     }
 

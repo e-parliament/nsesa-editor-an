@@ -1,18 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.VersionTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Meta;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.CoverPage;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Preface;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Preamble;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Body;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Conclusions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Attachments;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
 import java.util.LinkedHashMap;
 
 /**
@@ -109,7 +100,7 @@ public class HierarchicalStructureComplexType extends AmendableWidgetImpl  {
         return result;
     }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -118,10 +109,9 @@ public class HierarchicalStructureComplexType extends AmendableWidgetImpl  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("containsAttr", getContainsAttr().value());
-
+        attrs.put("containsAttr", getContainsAttr() != null ? getContainsAttr().value() : null);
         return attrs;
     }
 

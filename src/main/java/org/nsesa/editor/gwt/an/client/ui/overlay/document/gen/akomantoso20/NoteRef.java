@@ -1,16 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MarkeroptComplexType;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PlacementTypeSimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 import java.util.LinkedHashMap;
-import com.google.gwt.user.client.DOM;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -27,21 +22,10 @@ public class NoteRef extends MarkeroptComplexType  {
     }
 
 // FIELDS ------------------
-    private AnyURISimpleType hrefAttr;
     private StringSimpleType markerAttr;
     private PlacementTypeSimpleType placementAttr;
     private AnyURISimpleType placementBaseAttr;
-    public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-            hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(amendableElement.getAttribute("href"));
-        }
-
-        return hrefAttr;
-    }
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-    }
+    private AnyURISimpleType hrefAttr;
     public StringSimpleType getMarkerAttr() {
         if (markerAttr == null) {
             markerAttr = new StringSimpleType();
@@ -74,8 +58,19 @@ public class NoteRef extends MarkeroptComplexType  {
     public void setPlacementBaseAttr(final AnyURISimpleType placementBaseAttr) {
         this.placementBaseAttr = placementBaseAttr;
     }
+    public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(amendableElement.getAttribute("href"));
+        }
+
+        return hrefAttr;
+    }
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+    }
     /**
-    * Returns possible children as list of String
+    * Returns possible children as a list of <tt>String</tt>s.
     */
     @Override
     public String[] getAllowedChildTypes() {
@@ -84,13 +79,12 @@ public class NoteRef extends MarkeroptComplexType  {
 
     @Override
     public LinkedHashMap<String, String> getAttributes() {
-        LinkedHashMap attrs = new LinkedHashMap();
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("hrefAttr", getHrefAttr().getValue());
-        attrs.put("markerAttr", getMarkerAttr().getValue());
-        attrs.put("placementAttr", getPlacementAttr().value());
-        attrs.put("placementBaseAttr", getPlacementBaseAttr().getValue());
-
+        attrs.put("markerAttr", getMarkerAttr() != null ? getMarkerAttr().getValue() : null);
+        attrs.put("placementAttr", getPlacementAttr() != null ? getPlacementAttr().value() : null);
+        attrs.put("placementBaseAttr", getPlacementBaseAttr() != null ? getPlacementBaseAttr().getValue() : null);
+        attrs.put("hrefAttr", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         return attrs;
     }
 
