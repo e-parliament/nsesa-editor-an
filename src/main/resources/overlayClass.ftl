@@ -71,8 +71,18 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
 
         return <@propertyName property = property/>;
     }
+    //DSL Style get value
+    public <@propertyClassName property=property/> <@propertyName property = property/>() {
+         return  <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>();
+    }
+
     public void set<@propertyNameCap property = property/>(final <@propertyClassName property=property/> <@propertyName property = property/>) {
         this.<@propertyName property = property/> = <@propertyName property = property/>;
+    }
+    //DSL Style set value
+    public ${overlayClass.className?cap_first} <@propertyName property = property/>(final <@propertyClassName property=property/> <@propertyName property = property/>) {
+        set<@propertyNameCap property = property/>(<@propertyName property = property/>);
+        return this;
     }
     <#else>
     <#if property.collection>
@@ -85,6 +95,20 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
         }
         return java.util.Collections.unmodifiableList(result);
     }
+    //DSL Style get value
+    public <@propertyClassName property=property/> get${property.javaName?cap_first}List() {
+        return  <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>();
+    }
+    //DSL Style set value
+    public ${property.className?cap_first} add${property.javaName?cap_first}(${property.className?cap_first} ${property.javaName}Elem) {
+        <#if property.wildCard>
+        throw new RuntimeException("Adding wildcard content is not supported yet");
+        <#else>
+        this.addAmendableWidget(${property.javaName}Elem);
+        return ${property.javaName}Elem;
+        </#if>
+    }
+
     <#else>
     public <@propertyClassName property=property/> <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>() {
         <@propertyClassName property=property/> result = null;
@@ -95,6 +119,23 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
             }
         }
         return result;
+    }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public ${property.className?cap_first} set${property.javaName?cap_first}(${property.className?cap_first} ${property.javaName}Elem) {
+        <#if property.wildCard>
+        throw new RuntimeException("Setting wildcard content is not supported yet");
+        <#else>
+        <@propertyClassName property=property/> result = <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(${property.javaName}Elem);
+
+        return ${property.javaName}Elem;
+        </#if>
     }
     </#if>
     </#if>

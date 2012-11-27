@@ -1,10 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema;
 
 import com.google.gwt.dom.client.Element;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
 import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
 
 /**
@@ -28,6 +28,15 @@ public class AnyTypeComplexType extends AmendableWidgetImpl  {
         }
         return java.util.Collections.unmodifiableList(result);
     }
+    //DSL Style get value
+    public java.util.List<AmendableWidgetImpl> getWildcardContentList() {
+        return  getWildcardContents();
+    }
+    //DSL Style set value
+    public String addWildcardContent(String wildcardContentElem) {
+        throw new RuntimeException("Adding wildcard content is not supported yet");
+    }
+
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */
