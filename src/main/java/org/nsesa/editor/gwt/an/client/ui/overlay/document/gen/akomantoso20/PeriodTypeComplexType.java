@@ -26,6 +26,7 @@ public class PeriodTypeComplexType extends AmendableWidgetImpl  {
     private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+
     public AnyURISimpleType getPeriodAttr() {
         if (periodAttr == null) {
             periodAttr = new AnyURISimpleType();

@@ -24,6 +24,7 @@ public class MetaoptComplexType extends AmendableWidgetImpl  {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private String wildcardContentAttr;
+
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
             idAttr = new IDSimpleType();

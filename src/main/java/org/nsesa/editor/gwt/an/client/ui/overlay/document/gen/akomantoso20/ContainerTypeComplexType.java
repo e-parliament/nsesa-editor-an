@@ -47,6 +47,7 @@ public class ContainerTypeComplexType extends AmendableWidgetImpl  {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType periodAttr;
+
     public java.util.List<Container> getContainers() {
         java.util.List<Container> result = new ArrayList<Container>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

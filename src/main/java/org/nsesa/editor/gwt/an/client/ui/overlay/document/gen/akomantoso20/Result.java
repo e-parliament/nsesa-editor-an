@@ -26,6 +26,7 @@ public class Result extends AnyOtherTypeComplexType  {
 
 // FIELDS ------------------
     private ResultTypeSimpleType typeAttr;
+
     public ResultTypeSimpleType getTypeAttr() {
         if (typeAttr == null) {
             typeAttr = ResultTypeSimpleType.fromString(amendableElement.getAttribute("type"));

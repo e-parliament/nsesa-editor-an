@@ -27,6 +27,7 @@ public class Rref extends InlinereqComplexType  {
 // FIELDS ------------------
     private AnyURISimpleType fromAttr;
     private AnyURISimpleType upToAttr;
+
     public AnyURISimpleType getFromAttr() {
         if (fromAttr == null) {
             fromAttr = new AnyURISimpleType();

@@ -26,6 +26,7 @@ public class Ref extends InlinereqComplexType  {
 
 // FIELDS ------------------
     private AnyURISimpleType hrefAttr;
+
     public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
             hrefAttr = new AnyURISimpleType();

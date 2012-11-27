@@ -24,6 +24,7 @@ public class AmendmentBody extends AmendmentBodyTypeComplexType  {
     }
 
 // FIELDS ------------------
+
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */

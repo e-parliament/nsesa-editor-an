@@ -26,6 +26,7 @@ public class AnyOtherTypeComplexType extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType hrefAttr;
     private String wildcardContentAttr;
+
     public java.util.List<AmendableWidgetImpl> getWildcardContents() {
         java.util.List<AmendableWidgetImpl> result = new ArrayList<AmendableWidgetImpl>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

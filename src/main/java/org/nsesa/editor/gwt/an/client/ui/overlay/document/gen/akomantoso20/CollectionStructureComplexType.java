@@ -27,6 +27,7 @@ public class CollectionStructureComplexType extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private VersionTypeSimpleType containsAttr;
+
     public VersionTypeSimpleType getContainsAttr() {
         if (containsAttr == null) {
             containsAttr = VersionTypeSimpleType.fromString(amendableElement.getAttribute("contains"));

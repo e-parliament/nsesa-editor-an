@@ -26,6 +26,7 @@ public class QuotedText extends InlineComplexType  {
 
 // FIELDS ------------------
     private AnyURISimpleType forAttr;
+
     public AnyURISimpleType getForAttr() {
         if (forAttr == null) {
             forAttr = new AnyURISimpleType();

@@ -56,6 +56,7 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
+
     public java.util.List<AdministrationOfOath> getAdministrationOfOaths() {
         java.util.List<AdministrationOfOath> result = new ArrayList<AdministrationOfOath>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

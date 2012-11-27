@@ -23,6 +23,7 @@ public class FragmentStructureComplexType extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType includedInAttr;
+
     public AnyURISimpleType getIncludedInAttr() {
         if (includedInAttr == null) {
             includedInAttr = new AnyURISimpleType();

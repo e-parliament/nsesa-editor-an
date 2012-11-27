@@ -30,6 +30,7 @@ public class SrcTypeComplexType extends AmendableWidgetImpl  {
     private String wildcardContentAttr;
     private AnyURISimpleType srcAttr;
     private StringSimpleType altAttr;
+
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
             idAttr = new IDSimpleType();

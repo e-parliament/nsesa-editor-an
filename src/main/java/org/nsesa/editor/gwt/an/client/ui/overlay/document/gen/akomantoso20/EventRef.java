@@ -32,6 +32,7 @@ public class EventRef extends AnyOtherTypeComplexType  {
     private YesNoTypeSimpleType originatingExpressionAttr;
     private AnyURISimpleType sourceAttr;
     private DateSimpleType dateAttr;
+
     public EventTypeSimpleType getTypeAttr() {
         if (typeAttr == null) {
             typeAttr = EventTypeSimpleType.fromString(amendableElement.getAttribute("type"));

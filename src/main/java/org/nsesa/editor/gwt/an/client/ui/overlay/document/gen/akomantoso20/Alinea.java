@@ -24,6 +24,7 @@ public class Alinea extends HierarchyComplexType  {
     }
 
 // FIELDS ------------------
+
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */

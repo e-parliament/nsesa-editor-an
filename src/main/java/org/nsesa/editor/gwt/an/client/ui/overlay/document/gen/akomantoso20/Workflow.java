@@ -26,6 +26,7 @@ public class Workflow extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
+
     public java.util.List<Step> getSteps() {
         java.util.List<Step> result = new ArrayList<Step>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

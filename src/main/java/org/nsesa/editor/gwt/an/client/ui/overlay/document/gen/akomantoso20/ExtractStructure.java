@@ -24,6 +24,7 @@ public class ExtractStructure extends PopupStructureComplexType  {
     }
 
 // FIELDS ------------------
+
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */

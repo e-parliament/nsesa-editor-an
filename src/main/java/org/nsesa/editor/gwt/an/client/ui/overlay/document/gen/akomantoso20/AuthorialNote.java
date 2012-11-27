@@ -30,6 +30,7 @@ public class AuthorialNote extends PopupStructureComplexType  {
     private StringSimpleType markerAttr;
     private PlacementTypeSimpleType placementAttr;
     private AnyURISimpleType placementBaseAttr;
+
     public StringSimpleType getMarkerAttr() {
         if (markerAttr == null) {
             markerAttr = new StringSimpleType();

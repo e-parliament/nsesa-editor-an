@@ -29,6 +29,7 @@ public class ReferenceTypeComplexType extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private String wildcardContentAttr;
     private AnyURISimpleType hrefAttr;
+
     public StringSimpleType getShowAsAttr() {
         if (showAsAttr == null) {
             showAsAttr = new StringSimpleType();

@@ -43,6 +43,7 @@ public class BlockList extends AmendableWidgetImpl  {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType periodAttr;
+
     public ListIntroduction getListIntroduction() {
         ListIntroduction result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {

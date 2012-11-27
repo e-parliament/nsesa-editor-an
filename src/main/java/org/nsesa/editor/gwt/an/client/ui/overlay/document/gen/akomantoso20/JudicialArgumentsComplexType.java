@@ -31,6 +31,7 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+
     public Result getResult() {
         Result result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {

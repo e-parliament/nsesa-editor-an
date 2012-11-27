@@ -29,6 +29,7 @@ public class Identification extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
+
     public FRBRWork getFRBRWork() {
         FRBRWork result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {

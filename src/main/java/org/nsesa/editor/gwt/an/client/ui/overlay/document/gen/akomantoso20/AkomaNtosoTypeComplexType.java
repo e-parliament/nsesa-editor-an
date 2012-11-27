@@ -30,6 +30,7 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+
     public Components getComponents() {
         Components result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {

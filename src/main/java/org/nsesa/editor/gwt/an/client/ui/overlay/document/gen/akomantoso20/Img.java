@@ -31,6 +31,7 @@ public class Img extends MarkeroptComplexType  {
     private IntegerSimpleType heightAttr;
     private AnyURISimpleType srcAttr;
     private StringSimpleType altAttr;
+
     public IntegerSimpleType getWidthAttr() {
         if (widthAttr == null) {
             widthAttr = new IntegerSimpleType();

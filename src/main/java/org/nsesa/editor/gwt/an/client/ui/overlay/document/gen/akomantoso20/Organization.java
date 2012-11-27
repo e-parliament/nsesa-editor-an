@@ -24,6 +24,7 @@ public class Organization extends InlinereqreqComplexType  {
     }
 
 // FIELDS ------------------
+
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */

@@ -26,6 +26,7 @@ public class Marker extends MarkerreqComplexType  {
 
 // FIELDS ------------------
     private StringSimpleType nameAttr;
+
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();

@@ -24,6 +24,7 @@ public class Contrasts extends JudicialArgumentTypeComplexType  {
     }
 
 // FIELDS ------------------
+
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */

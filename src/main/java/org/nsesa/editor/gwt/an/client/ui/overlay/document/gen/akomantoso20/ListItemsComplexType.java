@@ -37,6 +37,7 @@ public class ListItemsComplexType extends AmendableWidgetImpl  {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType periodAttr;
+
     public java.util.List<Li> getLis() {
         java.util.List<Li> result = new ArrayList<Li>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

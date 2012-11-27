@@ -31,6 +31,7 @@ public class NoteRef extends MarkeroptComplexType  {
     private PlacementTypeSimpleType placementAttr;
     private AnyURISimpleType placementBaseAttr;
     private AnyURISimpleType hrefAttr;
+
     public StringSimpleType getMarkerAttr() {
         if (markerAttr == null) {
             markerAttr = new StringSimpleType();

@@ -30,6 +30,7 @@ public class TimeInterval extends MetaoptComplexType  {
     private AnyURISimpleType endAttr;
     private DurationSimpleType durationAttr;
     private AnyURISimpleType refersToAttr;
+
     public AnyURISimpleType getStartAttr() {
         if (startAttr == null) {
             startAttr = new AnyURISimpleType();

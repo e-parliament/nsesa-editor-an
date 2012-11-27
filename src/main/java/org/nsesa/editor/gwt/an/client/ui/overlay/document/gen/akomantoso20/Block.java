@@ -26,6 +26,7 @@ public class Block extends InlineComplexType  {
 
 // FIELDS ------------------
     private StringSimpleType nameAttr;
+
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();

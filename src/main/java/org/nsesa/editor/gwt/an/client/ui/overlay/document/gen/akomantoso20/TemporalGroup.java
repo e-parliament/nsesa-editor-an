@@ -29,6 +29,7 @@ public class TemporalGroup extends AmendableWidgetImpl  {
     private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+
     public java.util.List<TimeInterval> getTimeIntervals() {
         java.util.List<TimeInterval> result = new ArrayList<TimeInterval>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

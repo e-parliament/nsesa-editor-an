@@ -27,6 +27,7 @@ public class MeaningMod extends ModificationTypeComplexType  {
 
 // FIELDS ------------------
     private MeaningModsSimpleType typeAttr;
+
     public MeaningModsSimpleType getTypeAttr() {
         if (typeAttr == null) {
             typeAttr = MeaningModsSimpleType.fromString(amendableElement.getAttribute("type"));

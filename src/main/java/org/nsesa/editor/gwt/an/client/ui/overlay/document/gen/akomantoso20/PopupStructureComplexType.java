@@ -105,6 +105,7 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType periodAttr;
+
     public java.util.List<Intro> getIntros() {
         java.util.List<Intro> result = new ArrayList<Intro>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

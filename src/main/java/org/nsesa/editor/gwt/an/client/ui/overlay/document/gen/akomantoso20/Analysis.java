@@ -30,6 +30,7 @@ public class Analysis extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
+
     public ActiveModifications getActiveModifications() {
         ActiveModifications result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {

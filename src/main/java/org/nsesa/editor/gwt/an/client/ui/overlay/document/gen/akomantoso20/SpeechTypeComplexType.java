@@ -53,6 +53,7 @@ public class SpeechTypeComplexType extends BasehierarchyComplexType  {
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
+
     public From getFrom() {
         From result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {

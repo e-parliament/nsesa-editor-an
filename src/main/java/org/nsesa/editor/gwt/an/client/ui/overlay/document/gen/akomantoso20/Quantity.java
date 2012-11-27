@@ -26,6 +26,7 @@ public class Quantity extends InlinereqreqComplexType  {
 
 // FIELDS ------------------
     private StringSimpleType normalizedAttr;
+
     public StringSimpleType getNormalizedAttr() {
         if (normalizedAttr == null) {
             normalizedAttr = new StringSimpleType();

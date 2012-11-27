@@ -26,6 +26,7 @@ public class OtherAnalysis extends AnyOtherTypeComplexType  {
 
 // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
+
     public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
             sourceAttr = new AnyURISimpleType();

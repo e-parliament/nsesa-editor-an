@@ -39,6 +39,7 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
+
     public java.util.List<Source> getSources() {
         java.util.List<Source> result = new ArrayList<Source>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

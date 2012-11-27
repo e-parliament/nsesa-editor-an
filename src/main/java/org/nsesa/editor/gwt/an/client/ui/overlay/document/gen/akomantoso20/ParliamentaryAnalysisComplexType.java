@@ -22,6 +22,7 @@ public class ParliamentaryAnalysisComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+
     public java.util.List<QuorumVerification> getQuorumVerifications() {
         java.util.List<QuorumVerification> result = new ArrayList<QuorumVerification>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

@@ -40,6 +40,7 @@ public class AmendmentBodyTypeComplexType extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
+
     public java.util.List<AmendmentHeading> getAmendmentHeadings() {
         java.util.List<AmendmentHeading> result = new ArrayList<AmendmentHeading>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

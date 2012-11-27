@@ -48,6 +48,7 @@ public class PrefaceoptComplexType extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
+
     public java.util.List<Foreign> getForeigns() {
         java.util.List<Foreign> result = new ArrayList<Foreign>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

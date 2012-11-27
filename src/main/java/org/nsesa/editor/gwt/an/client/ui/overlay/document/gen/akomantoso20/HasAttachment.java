@@ -26,6 +26,7 @@ public class HasAttachment extends ReferenceTypeComplexType  {
 
 // FIELDS ------------------
     private StringSimpleType typeAttr;
+
     public StringSimpleType getTypeAttr() {
         if (typeAttr == null) {
             typeAttr = new StringSimpleType();

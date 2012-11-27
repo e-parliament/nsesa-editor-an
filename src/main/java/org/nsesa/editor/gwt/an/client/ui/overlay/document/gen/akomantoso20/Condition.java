@@ -26,6 +26,7 @@ public class Condition extends AnyOtherTypeComplexType  {
 
 // FIELDS ------------------
     private BooleanSimpleType frozenAttr;
+
     public BooleanSimpleType getFrozenAttr() {
         if (frozenAttr == null) {
             frozenAttr = new BooleanSimpleType();

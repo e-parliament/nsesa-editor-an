@@ -35,6 +35,7 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType periodAttr;
+
     public java.util.List<Source> getSources() {
         java.util.List<Source> result = new ArrayList<Source>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

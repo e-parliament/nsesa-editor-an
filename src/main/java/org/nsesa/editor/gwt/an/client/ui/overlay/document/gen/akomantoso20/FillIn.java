@@ -26,6 +26,7 @@ public class FillIn extends InlineComplexType  {
 
 // FIELDS ------------------
     private StringSimpleType widthAttr;
+
     public StringSimpleType getWidthAttr() {
         if (widthAttr == null) {
             widthAttr = new StringSimpleType();

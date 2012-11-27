@@ -45,6 +45,7 @@ public class BlocksreqComplexType extends AmendableWidgetImpl  {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType periodAttr;
+
     public java.util.List<Foreign> getForeigns() {
         java.util.List<Foreign> result = new ArrayList<Foreign>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

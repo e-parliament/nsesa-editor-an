@@ -114,6 +114,7 @@ public class Li extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
+
     public java.util.List<Ul> getUls() {
         java.util.List<Ul> result = new ArrayList<Ul>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

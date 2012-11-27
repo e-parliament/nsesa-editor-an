@@ -26,6 +26,7 @@ public class Placeholder extends InlineComplexType  {
 
 // FIELDS ------------------
     private StringSimpleType originalTextAttr;
+
     public StringSimpleType getOriginalTextAttr() {
         if (originalTextAttr == null) {
             originalTextAttr = new StringSimpleType();

@@ -24,6 +24,7 @@ public class Old extends AnyOtherTypeComplexType  {
     }
 
 // FIELDS ------------------
+
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */

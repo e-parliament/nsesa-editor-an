@@ -40,6 +40,7 @@ public class JudgementBodyTypeComplexType extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
+
     public java.util.List<Introduction> getIntroductions() {
         java.util.List<Introduction> result = new ArrayList<Introduction>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

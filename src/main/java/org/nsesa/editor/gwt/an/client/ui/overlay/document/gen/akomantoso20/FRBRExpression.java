@@ -26,6 +26,7 @@ public class FRBRExpression extends CorePropertiesComplexType  {
     }
 
 // FIELDS ------------------
+
     public java.util.List<FRBRlanguage> getFRBRlanguages() {
         java.util.List<FRBRlanguage> result = new ArrayList<FRBRlanguage>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

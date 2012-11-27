@@ -24,6 +24,7 @@ public class Header extends BlocksoptComplexType  {
     }
 
 // FIELDS ------------------
+
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */

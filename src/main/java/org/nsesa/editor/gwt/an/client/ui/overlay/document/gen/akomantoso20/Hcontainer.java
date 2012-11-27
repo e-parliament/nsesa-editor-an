@@ -26,6 +26,7 @@ public class Hcontainer extends HierarchyComplexType  {
 
 // FIELDS ------------------
     private StringSimpleType nameAttr;
+
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();

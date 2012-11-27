@@ -28,6 +28,7 @@ public class TextualMod extends ModificationTypeComplexType  {
 
 // FIELDS ------------------
     private TextualModsSimpleType typeAttr;
+
     public TextualModsSimpleType getTypeAttr() {
         if (typeAttr == null) {
             typeAttr = TextualModsSimpleType.fromString(amendableElement.getAttribute("type"));

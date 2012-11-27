@@ -80,6 +80,7 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
+
     public Hcontainer getHcontainer() {
         Hcontainer result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {

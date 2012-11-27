@@ -28,6 +28,7 @@ public class FRBRdate extends MetaoptComplexType  {
 // FIELDS ------------------
     private StringSimpleType nameAttr;
     private DateSimpleType dateAttr;
+
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();

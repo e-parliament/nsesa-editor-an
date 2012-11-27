@@ -42,6 +42,7 @@ public class Citations extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
+
     public Intro getIntro() {
         Intro result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {

@@ -26,6 +26,7 @@ public class FRBRlanguage extends MetaoptComplexType  {
 
 // FIELDS ------------------
     private LanguageSimpleType languageAttr;
+
     public LanguageSimpleType getLanguageAttr() {
         if (languageAttr == null) {
             languageAttr = new LanguageSimpleType();

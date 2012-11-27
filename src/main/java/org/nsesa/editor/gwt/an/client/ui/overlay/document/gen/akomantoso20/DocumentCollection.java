@@ -26,6 +26,7 @@ public class DocumentCollection extends CollectionStructureComplexType  {
 
 // FIELDS ------------------
     private StringSimpleType nameAttr;
+
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();

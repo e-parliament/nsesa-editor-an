@@ -28,6 +28,7 @@ public class Lawyer extends InlinereqreqComplexType  {
     private AnyURISimpleType forAttr;
     private AnyURISimpleType empoweredByAttr;
     private AnyURISimpleType asAttr;
+
     public AnyURISimpleType getForAttr() {
         if (forAttr == null) {
             forAttr = new AnyURISimpleType();

@@ -26,6 +26,7 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+
     public FRBRthis getFRBRthis() {
         FRBRthis result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {

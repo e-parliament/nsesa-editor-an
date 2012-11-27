@@ -29,6 +29,7 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl  {
     private PosTypeSimpleType posAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+
     public AnyURISimpleType getUpToAttr() {
         if (upToAttr == null) {
             upToAttr = new AnyURISimpleType();

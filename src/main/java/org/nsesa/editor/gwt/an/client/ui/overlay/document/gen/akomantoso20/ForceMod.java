@@ -26,6 +26,7 @@ public class ForceMod extends ModificationTypeComplexType  {
 
 // FIELDS ------------------
     private ForceModsSimpleType typeAttr;
+
     public ForceModsSimpleType getTypeAttr() {
         if (typeAttr == null) {
             typeAttr = ForceModsSimpleType.fromString(amendableElement.getAttribute("type"));

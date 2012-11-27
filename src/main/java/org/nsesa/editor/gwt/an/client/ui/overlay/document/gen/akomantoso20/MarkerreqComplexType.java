@@ -36,6 +36,7 @@ public class MarkerreqComplexType extends AmendableWidgetImpl  {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType periodAttr;
+
     public StringSimpleType getClassAttr() {
         if (classAttr == null) {
             classAttr = new StringSimpleType();

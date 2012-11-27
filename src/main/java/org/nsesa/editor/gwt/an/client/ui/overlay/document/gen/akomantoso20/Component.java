@@ -38,6 +38,7 @@ public class Component extends AmendableWidgetImpl  {
     private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+
     public String getWildcardContentAttr() {
         if (wildcardContentAttr == null) {
             //hmm nothing to do here

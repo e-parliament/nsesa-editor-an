@@ -28,6 +28,7 @@ public class A extends InlineComplexType  {
 // FIELDS ------------------
     private StringSimpleType targetAttr;
     private AnyURISimpleType hrefAttr;
+
     public StringSimpleType getTargetAttr() {
         if (targetAttr == null) {
             targetAttr = new StringSimpleType();

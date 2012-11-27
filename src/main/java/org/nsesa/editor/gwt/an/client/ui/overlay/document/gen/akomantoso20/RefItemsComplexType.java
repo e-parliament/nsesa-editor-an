@@ -37,6 +37,7 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
+
     public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
             sourceAttr = new AnyURISimpleType();

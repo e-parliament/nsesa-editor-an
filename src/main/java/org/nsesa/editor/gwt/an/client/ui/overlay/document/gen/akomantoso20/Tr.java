@@ -42,6 +42,7 @@ public class Tr extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
+
     public java.util.List<Th> getThs() {
         java.util.List<Th> result = new ArrayList<Th>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

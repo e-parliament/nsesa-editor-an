@@ -28,6 +28,7 @@ public class FRBRWork extends CorePropertiesComplexType  {
     }
 
 // FIELDS ------------------
+
     public FRBRcountry getFRBRcountry() {
         FRBRcountry result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {

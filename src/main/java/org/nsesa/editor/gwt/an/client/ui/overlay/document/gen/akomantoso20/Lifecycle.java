@@ -26,6 +26,7 @@ public class Lifecycle extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
+
     public java.util.List<EventRef> getEventRefs() {
         java.util.List<EventRef> result = new ArrayList<EventRef>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

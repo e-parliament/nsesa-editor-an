@@ -19,6 +19,7 @@ public class AnyTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+
     public java.util.List<AmendableWidgetImpl> getWildcardContents() {
         java.util.List<AmendableWidgetImpl> result = new ArrayList<AmendableWidgetImpl>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

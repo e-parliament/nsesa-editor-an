@@ -48,6 +48,7 @@ public class CollectionBodyTypeComplexType extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
+
     public java.util.List<ComponentRef> getComponentRefs() {
         java.util.List<ComponentRef> result = new ArrayList<ComponentRef>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

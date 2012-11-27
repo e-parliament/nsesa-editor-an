@@ -27,6 +27,7 @@ public class FRBRauthor extends MetaoptComplexType  {
 // FIELDS ------------------
     private AnyURISimpleType asAttr;
     private AnyURISimpleType hrefAttr;
+
     public AnyURISimpleType getAsAttr() {
         if (asAttr == null) {
             asAttr = new AnyURISimpleType();

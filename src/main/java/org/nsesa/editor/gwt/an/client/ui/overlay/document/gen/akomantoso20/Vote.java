@@ -28,6 +28,7 @@ public class Vote extends InlineComplexType  {
     private AnyURISimpleType byAttr;
     private AnyURISimpleType asAttr;
     private AnyURISimpleType choiceAttr;
+
     public AnyURISimpleType getByAttr() {
         if (byAttr == null) {
             byAttr = new AnyURISimpleType();

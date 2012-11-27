@@ -47,6 +47,7 @@ public class Table extends AmendableWidgetImpl  {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType periodAttr;
+
     public IntegerSimpleType getWidthAttr() {
         if (widthAttr == null) {
             widthAttr = new IntegerSimpleType();

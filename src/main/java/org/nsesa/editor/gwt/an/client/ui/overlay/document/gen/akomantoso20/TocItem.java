@@ -28,6 +28,7 @@ public class TocItem extends InlineComplexType  {
 // FIELDS ------------------
     private IntegerSimpleType levelAttr;
     private AnyURISimpleType hrefAttr;
+
     public IntegerSimpleType getLevelAttr() {
         if (levelAttr == null) {
             levelAttr = new IntegerSimpleType();

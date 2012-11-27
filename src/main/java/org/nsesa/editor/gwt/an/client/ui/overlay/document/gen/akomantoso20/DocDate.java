@@ -26,6 +26,7 @@ public class DocDate extends InlineComplexType  {
 
 // FIELDS ------------------
     private DateSimpleType dateAttr;
+
     public DateSimpleType getDateAttr() {
         if (dateAttr == null) {
             dateAttr = new DateSimpleType();

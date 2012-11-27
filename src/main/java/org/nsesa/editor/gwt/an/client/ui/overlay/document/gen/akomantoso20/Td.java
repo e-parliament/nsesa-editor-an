@@ -27,6 +27,7 @@ public class Td extends BlocksoptComplexType  {
 // FIELDS ------------------
     private IntegerSimpleType rowspanAttr;
     private IntegerSimpleType colspanAttr;
+
     public IntegerSimpleType getRowspanAttr() {
         if (rowspanAttr == null) {
             rowspanAttr = new IntegerSimpleType();

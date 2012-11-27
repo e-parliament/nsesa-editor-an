@@ -63,6 +63,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType periodAttr;
+
     public Intro getIntro() {
         Intro result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {

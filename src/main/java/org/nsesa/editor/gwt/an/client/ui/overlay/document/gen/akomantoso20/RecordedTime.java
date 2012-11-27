@@ -28,6 +28,7 @@ public class RecordedTime extends InlineComplexType  {
 // FIELDS ------------------
     private TimeTypeSimpleType typeAttr;
     private DateTimeSimpleType timeAttr;
+
     public TimeTypeSimpleType getTypeAttr() {
         if (typeAttr == null) {
             typeAttr = TimeTypeSimpleType.fromString(amendableElement.getAttribute("type"));

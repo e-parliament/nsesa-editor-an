@@ -25,6 +25,7 @@ public class FRBRManifestation extends CorePropertiesComplexType  {
     }
 
 // FIELDS ------------------
+
     public FRBRformat getFRBRformat() {
         FRBRformat result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {

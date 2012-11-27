@@ -26,6 +26,7 @@ public class TLCReference extends ReferenceTypeComplexType  {
 
 // FIELDS ------------------
     private StringSimpleType nameAttr;
+
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();

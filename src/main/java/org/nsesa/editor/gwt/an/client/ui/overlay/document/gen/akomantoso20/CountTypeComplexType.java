@@ -29,6 +29,7 @@ public class CountTypeComplexType extends AmendableWidgetImpl  {
     private String wildcardContentAttr;
     private AnyURISimpleType refersToAttr;
     private AnyURISimpleType hrefAttr;
+
     public java.util.List<AmendableWidgetImpl> getWildcardContents() {
         java.util.List<AmendableWidgetImpl> result = new ArrayList<AmendableWidgetImpl>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

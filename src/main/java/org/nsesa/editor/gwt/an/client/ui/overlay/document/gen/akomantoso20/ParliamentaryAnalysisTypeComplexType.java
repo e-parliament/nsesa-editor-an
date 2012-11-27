@@ -30,6 +30,7 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType hrefAttr;
+
     public java.util.List<Quorum> getQuorums() {
         java.util.List<Quorum> result = new ArrayList<Quorum>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

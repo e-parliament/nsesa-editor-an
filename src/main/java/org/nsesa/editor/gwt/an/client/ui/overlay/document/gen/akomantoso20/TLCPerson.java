@@ -24,6 +24,7 @@ public class TLCPerson extends ReferenceTypeComplexType  {
     }
 
 // FIELDS ------------------
+
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */

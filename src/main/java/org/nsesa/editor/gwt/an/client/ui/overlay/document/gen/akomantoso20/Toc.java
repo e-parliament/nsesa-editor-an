@@ -24,6 +24,7 @@ public class Toc extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+
     public java.util.List<TocItem> getTocItems() {
         java.util.List<TocItem> result = new ArrayList<TocItem>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

@@ -30,6 +30,7 @@ public class OpenStructureComplexType extends AmendableWidgetImpl  {
 // FIELDS ------------------
     private VersionTypeSimpleType containsAttr;
     private StringSimpleType nameAttr;
+
     public VersionTypeSimpleType getContainsAttr() {
         if (containsAttr == null) {
             containsAttr = VersionTypeSimpleType.fromString(amendableElement.getAttribute("contains"));

@@ -33,6 +33,7 @@ public class Publication extends MetaoptComplexType  {
     private AnyURISimpleType refersToAttr;
     private StringSimpleType numberAttr;
     private StringSimpleType nameAttr;
+
     public StringSimpleType getShowAsAttr() {
         if (showAsAttr == null) {
             showAsAttr = new StringSimpleType();

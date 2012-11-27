@@ -30,6 +30,7 @@ public class Step extends AnyOtherTypeComplexType  {
     private AnyURISimpleType actorAttr;
     private AnyURISimpleType asAttr;
     private DateSimpleType dateAttr;
+
     public AnyURISimpleType getOutcomeAttr() {
         if (outcomeAttr == null) {
             outcomeAttr = new AnyURISimpleType();

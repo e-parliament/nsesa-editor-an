@@ -53,6 +53,7 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
     </#list>
 </#if>
 <#if overlayClass.complex || overlayClass.element>
+
 <#list overlayClass.properties as property>
     <#if property.attribute>
     public <@propertyClassName property=property/> <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>() {

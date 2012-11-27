@@ -32,6 +32,7 @@ public class FRBRtranslation extends MetaoptComplexType  {
     private LanguageSimpleType pivotAttr;
     private AnyURISimpleType byAttr;
     private AnyURISimpleType hrefAttr;
+
     public LanguageSimpleType getFromLanguageAttr() {
         if (fromLanguageAttr == null) {
             fromLanguageAttr = new LanguageSimpleType();

@@ -106,6 +106,7 @@ public class InlinereqreqComplexType extends AmendableWidgetImpl  {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType periodAttr;
+
     public StatusTypeSimpleType getStatusAttr() {
         if (statusAttr == null) {
             statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));

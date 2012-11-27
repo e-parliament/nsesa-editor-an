@@ -24,6 +24,7 @@ public class Components extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+
     public java.util.List<Component> getComponents() {
         java.util.List<Component> result = new ArrayList<Component>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

@@ -26,6 +26,7 @@ public class Session extends InlineComplexType  {
 
 // FIELDS ------------------
     private StringSimpleType valueAttr;
+
     public StringSimpleType getValueAttr() {
         if (valueAttr == null) {
             valueAttr = new StringSimpleType();

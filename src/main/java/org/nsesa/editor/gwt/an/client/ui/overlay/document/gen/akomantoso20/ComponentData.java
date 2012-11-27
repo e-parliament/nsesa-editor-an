@@ -35,6 +35,7 @@ public class ComponentData extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType hrefAttr;
     private String wildcardContentAttr;
+
     public java.util.List<ComponentData> getComponentDatas() {
         java.util.List<ComponentData> result = new ArrayList<ComponentData>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

@@ -108,6 +108,7 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType periodAttr;
+
     public java.util.List<QuotedText> getQuotedTexts() {
         java.util.List<QuotedText> result = new ArrayList<QuotedText>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

@@ -26,6 +26,7 @@ public class Notes extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
+
     public java.util.List<Note> getNotes() {
         java.util.List<Note> result = new ArrayList<Note>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

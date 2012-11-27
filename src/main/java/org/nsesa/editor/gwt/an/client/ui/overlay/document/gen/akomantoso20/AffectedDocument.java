@@ -26,6 +26,7 @@ public class AffectedDocument extends InlineComplexType  {
 
 // FIELDS ------------------
     private AnyURISimpleType hrefAttr;
+
     public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
             hrefAttr = new AnyURISimpleType();

@@ -22,6 +22,7 @@ public class BasehierarchyComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+
     public Num getNum() {
         Num result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {

@@ -26,6 +26,7 @@ public class Classification extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
+
     public java.util.List<Keyword> getKeywords() {
         java.util.List<Keyword> result = new ArrayList<Keyword>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

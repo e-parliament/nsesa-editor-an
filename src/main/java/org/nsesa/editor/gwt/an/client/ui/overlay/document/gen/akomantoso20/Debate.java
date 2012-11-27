@@ -24,6 +24,7 @@ public class Debate extends DebateStructureComplexType  {
     }
 
 // FIELDS ------------------
+
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */

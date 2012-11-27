@@ -30,6 +30,7 @@ public class Keyword extends MetaoptComplexType  {
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
     private StringSimpleType valueAttr;
+
     public AnyURISimpleType getDictionaryAttr() {
         if (dictionaryAttr == null) {
             dictionaryAttr = new AnyURISimpleType();

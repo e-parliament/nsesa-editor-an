@@ -25,6 +25,7 @@ public class AmendmentsComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+
     public java.util.List<TextualMod> getTextualMods() {
         java.util.List<TextualMod> result = new ArrayList<TextualMod>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

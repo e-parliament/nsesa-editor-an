@@ -26,6 +26,7 @@ public class TemporalData extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
+
     public java.util.List<TemporalGroup> getTemporalGroups() {
         java.util.List<TemporalGroup> result = new ArrayList<TemporalGroup>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {

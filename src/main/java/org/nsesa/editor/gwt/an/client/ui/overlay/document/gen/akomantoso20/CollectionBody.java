@@ -24,6 +24,7 @@ public class CollectionBody extends CollectionBodyTypeComplexType  {
     }
 
 // FIELDS ------------------
+
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */

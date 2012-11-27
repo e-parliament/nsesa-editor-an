@@ -26,6 +26,7 @@ public class Party extends InlinereqreqComplexType  {
 
 // FIELDS ------------------
     private AnyURISimpleType asAttr;
+
     public AnyURISimpleType getAsAttr() {
         if (asAttr == null) {
             asAttr = new AnyURISimpleType();

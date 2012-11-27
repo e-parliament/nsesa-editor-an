@@ -106,6 +106,7 @@ public class InlineComplexType extends AmendableWidgetImpl  {
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
+
     public AnyURISimpleType getAlternativeToAttr() {
         if (alternativeToAttr == null) {
             alternativeToAttr = new AnyURISimpleType();

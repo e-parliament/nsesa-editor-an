@@ -34,6 +34,7 @@ public class Meta extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+
     public Identification getIdentification() {
         Identification result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {

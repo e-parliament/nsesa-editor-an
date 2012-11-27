@@ -24,6 +24,7 @@ public class ListIntroduction extends InlineComplexType  {
     }
 
 // FIELDS ------------------
+
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */

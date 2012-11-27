@@ -26,6 +26,7 @@ public class LegalSystemMod extends ModificationTypeComplexType  {
 
 // FIELDS ------------------
     private LegalSystemModsSimpleType typeAttr;
+
     public LegalSystemModsSimpleType getTypeAttr() {
         if (typeAttr == null) {
             typeAttr = LegalSystemModsSimpleType.fromString(amendableElement.getAttribute("type"));
