@@ -1,14 +1,22 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Source;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Destination;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Force;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Efficacy;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Application;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Duration;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Condition;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
 
 /**
@@ -23,13 +31,13 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private String wildcardContentAttr;
-    private AnyURISimpleType refersToAttr;
     private StatusTypeSimpleType statusAttr;
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
     private BooleanSimpleType exclusionAttr;
     private BooleanSimpleType incompleteAttr;
+    private String wildcardContentAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
     public java.util.List<Source> getSources() {
         java.util.List<Source> result = new ArrayList<Source>();
@@ -40,6 +48,16 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
         }
         return java.util.Collections.unmodifiableList(result);
     }
+    //DSL Style get value
+    public java.util.List<Source> getSourceList() {
+        return  getSources();
+    }
+    //DSL Style set value
+    public Source addSource(Source sourceElem) {
+        this.addAmendableWidget(sourceElem);
+        return sourceElem;
+    }
+
     public java.util.List<Destination> getDestinations() {
         java.util.List<Destination> result = new ArrayList<Destination>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -49,6 +67,16 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
         }
         return java.util.Collections.unmodifiableList(result);
     }
+    //DSL Style get value
+    public java.util.List<Destination> getDestinationList() {
+        return  getDestinations();
+    }
+    //DSL Style set value
+    public Destination addDestination(Destination destinationElem) {
+        this.addAmendableWidget(destinationElem);
+        return destinationElem;
+    }
+
     public Force getForce() {
         Force result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -58,6 +86,19 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
             }
         }
         return result;
+    }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public Force setForce(Force forceElem) {
+        Force result = getForce();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(forceElem);
+
+        return forceElem;
     }
     public Efficacy getEfficacy() {
         Efficacy result = null;
@@ -69,6 +110,19 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
         }
         return result;
     }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public Efficacy setEfficacy(Efficacy efficacyElem) {
+        Efficacy result = getEfficacy();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(efficacyElem);
+
+        return efficacyElem;
+    }
     public Application getApplication() {
         Application result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -78,6 +132,19 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
             }
         }
         return result;
+    }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public Application setApplication(Application applicationElem) {
+        Application result = getApplication();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(applicationElem);
+
+        return applicationElem;
     }
     public Duration getDuration() {
         Duration result = null;
@@ -89,6 +156,19 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
         }
         return result;
     }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public Duration setDuration(Duration durationElem) {
+        Duration result = getDuration();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(durationElem);
+
+        return durationElem;
+    }
     public Condition getCondition() {
         Condition result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -99,26 +179,18 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
         }
         return result;
     }
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
+    //DSL Style get value already exists
 
-        return wildcardContentAttr;
-    }
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-    }
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(amendableElement.getAttribute("refersTo"));
+    //DSL Style set value
+    public Condition setCondition(Condition conditionElem) {
+        Condition result = getCondition();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
         }
+        this.addAmendableWidget(conditionElem);
 
-        return refersToAttr;
-    }
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
+        return conditionElem;
     }
     public StatusTypeSimpleType getStatusAttr() {
         if (statusAttr == null) {
@@ -127,30 +199,18 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
 
         return statusAttr;
     }
+    //DSL Style get value
+    public StatusTypeSimpleType statusAttr() {
+         return  getStatusAttr();
+    }
+
     public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
         this.statusAttr = statusAttr;
     }
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(amendableElement.getAttribute("id"));
-        }
-
-        return idAttr;
-    }
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-    }
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(amendableElement.getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-    }
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
+    //DSL Style set value
+    public ModificationTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
     }
     public BooleanSimpleType getExclusionAttr() {
         if (exclusionAttr == null) {
@@ -160,8 +220,18 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
 
         return exclusionAttr;
     }
+    //DSL Style get value
+    public BooleanSimpleType exclusionAttr() {
+         return  getExclusionAttr();
+    }
+
     public void setExclusionAttr(final BooleanSimpleType exclusionAttr) {
         this.exclusionAttr = exclusionAttr;
+    }
+    //DSL Style set value
+    public ModificationTypeComplexType exclusionAttr(final BooleanSimpleType exclusionAttr) {
+        setExclusionAttr(exclusionAttr);
+        return this;
     }
     public BooleanSimpleType getIncompleteAttr() {
         if (incompleteAttr == null) {
@@ -171,8 +241,101 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
 
         return incompleteAttr;
     }
+    //DSL Style get value
+    public BooleanSimpleType incompleteAttr() {
+         return  getIncompleteAttr();
+    }
+
     public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
         this.incompleteAttr = incompleteAttr;
+    }
+    //DSL Style set value
+    public ModificationTypeComplexType incompleteAttr(final BooleanSimpleType incompleteAttr) {
+        setIncompleteAttr(incompleteAttr);
+        return this;
+    }
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+    //DSL Style get value
+    public String wildcardContentAttr() {
+         return  getWildcardContentAttr();
+    }
+
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+    //DSL Style set value
+    public ModificationTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(amendableElement.getAttribute("id"));
+        }
+
+        return idAttr;
+    }
+    //DSL Style get value
+    public IDSimpleType idAttr() {
+         return  getIdAttr();
+    }
+
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+    }
+    //DSL Style set value
+    public ModificationTypeComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(amendableElement.getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+    }
+    //DSL Style get value
+    public NMTOKENSimpleType evolvingIdAttr() {
+         return  getEvolvingIdAttr();
+    }
+
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+    }
+    //DSL Style set value
+    public ModificationTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(amendableElement.getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+    //DSL Style get value
+    public AnyURISimpleType refersToAttr() {
+         return  getRefersToAttr();
+    }
+
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+    //DSL Style set value
+    public ModificationTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
     }
     public AnyURISimpleType getPeriodAttr() {
         if (periodAttr == null) {
@@ -182,8 +345,18 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
 
         return periodAttr;
     }
+    //DSL Style get value
+    public AnyURISimpleType periodAttr() {
+         return  getPeriodAttr();
+    }
+
     public void setPeriodAttr(final AnyURISimpleType periodAttr) {
         this.periodAttr = periodAttr;
+    }
+    //DSL Style set value
+    public ModificationTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
     }
     /**
     * Returns possible children as a list of <tt>String</tt>s.
@@ -197,13 +370,13 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("refersToAttr", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("statusAttr", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("exclusionAttr", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
         attrs.put("incompleteAttr", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
+        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("refersToAttr", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("periodAttr", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }

@@ -1,10 +1,12 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
+import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
 
 /**
@@ -29,8 +31,18 @@ public class MetareqComplexType extends AmendableWidgetImpl  {
 
         return wildcardContentAttr;
     }
+    //DSL Style get value
+    public String wildcardContentAttr() {
+         return  getWildcardContentAttr();
+    }
+
     public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
+    }
+    //DSL Style set value
+    public MetareqComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
     }
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
@@ -40,8 +52,18 @@ public class MetareqComplexType extends AmendableWidgetImpl  {
 
         return idAttr;
     }
+    //DSL Style get value
+    public IDSimpleType idAttr() {
+         return  getIdAttr();
+    }
+
     public void setIdAttr(final IDSimpleType idAttr) {
         this.idAttr = idAttr;
+    }
+    //DSL Style set value
+    public MetareqComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
     }
     public NMTOKENSimpleType getEvolvingIdAttr() {
         if (evolvingIdAttr == null) {
@@ -51,8 +73,18 @@ public class MetareqComplexType extends AmendableWidgetImpl  {
 
         return evolvingIdAttr;
     }
+    //DSL Style get value
+    public NMTOKENSimpleType evolvingIdAttr() {
+         return  getEvolvingIdAttr();
+    }
+
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
+    }
+    //DSL Style set value
+    public MetareqComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
     }
     /**
     * Returns possible children as a list of <tt>String</tt>s.

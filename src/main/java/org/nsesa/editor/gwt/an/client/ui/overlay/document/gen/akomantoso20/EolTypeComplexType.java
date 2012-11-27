@@ -1,8 +1,12 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MarkeroptComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IntegerSimpleType;
-
+import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
 
 /**
@@ -26,8 +30,18 @@ public class EolTypeComplexType extends MarkeroptComplexType  {
 
         return breakatAttr;
     }
+    //DSL Style get value
+    public IntegerSimpleType breakatAttr() {
+         return  getBreakatAttr();
+    }
+
     public void setBreakatAttr(final IntegerSimpleType breakatAttr) {
         this.breakatAttr = breakatAttr;
+    }
+    //DSL Style set value
+    public EolTypeComplexType breakatAttr(final IntegerSimpleType breakatAttr) {
+        setBreakatAttr(breakatAttr);
+        return this;
     }
     /**
     * Returns possible children as a list of <tt>String</tt>s.

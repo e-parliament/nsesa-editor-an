@@ -1,10 +1,13 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.QuorumVerification;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Voting;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Recount;
 import com.google.gwt.dom.client.Element;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
 import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
 
 /**
@@ -28,6 +31,16 @@ public class ParliamentaryAnalysisComplexType extends AmendableWidgetImpl  {
         }
         return java.util.Collections.unmodifiableList(result);
     }
+    //DSL Style get value
+    public java.util.List<QuorumVerification> getQuorumVerificationList() {
+        return  getQuorumVerifications();
+    }
+    //DSL Style set value
+    public QuorumVerification addQuorumVerification(QuorumVerification quorumVerificationElem) {
+        this.addAmendableWidget(quorumVerificationElem);
+        return quorumVerificationElem;
+    }
+
     public java.util.List<Voting> getVotings() {
         java.util.List<Voting> result = new ArrayList<Voting>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -37,6 +50,16 @@ public class ParliamentaryAnalysisComplexType extends AmendableWidgetImpl  {
         }
         return java.util.Collections.unmodifiableList(result);
     }
+    //DSL Style get value
+    public java.util.List<Voting> getVotingList() {
+        return  getVotings();
+    }
+    //DSL Style set value
+    public Voting addVoting(Voting votingElem) {
+        this.addAmendableWidget(votingElem);
+        return votingElem;
+    }
+
     public java.util.List<Recount> getRecounts() {
         java.util.List<Recount> result = new ArrayList<Recount>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -46,6 +69,16 @@ public class ParliamentaryAnalysisComplexType extends AmendableWidgetImpl  {
         }
         return java.util.Collections.unmodifiableList(result);
     }
+    //DSL Style get value
+    public java.util.List<Recount> getRecountList() {
+        return  getRecounts();
+    }
+    //DSL Style set value
+    public Recount addRecount(Recount recountElem) {
+        this.addAmendableWidget(recountElem);
+        return recountElem;
+    }
+
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */

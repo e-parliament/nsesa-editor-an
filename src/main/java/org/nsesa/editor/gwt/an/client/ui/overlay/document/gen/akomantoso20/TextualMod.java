@@ -1,10 +1,16 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ModificationTypeComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TextualModsSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Old;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.New;
 import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
+import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-
 import java.util.LinkedHashMap;
+import com.google.gwt.user.client.DOM;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -29,8 +35,18 @@ public class TextualMod extends ModificationTypeComplexType  {
 
         return typeAttr;
     }
+    //DSL Style get value
+    public TextualModsSimpleType typeAttr() {
+         return  getTypeAttr();
+    }
+
     public void setTypeAttr(final TextualModsSimpleType typeAttr) {
         this.typeAttr = typeAttr;
+    }
+    //DSL Style set value
+    public TextualMod typeAttr(final TextualModsSimpleType typeAttr) {
+        setTypeAttr(typeAttr);
+        return this;
     }
     public Old getOld() {
         Old result = null;
@@ -42,6 +58,19 @@ public class TextualMod extends ModificationTypeComplexType  {
         }
         return result;
     }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public Old setOld(Old oldElem) {
+        Old result = getOld();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(oldElem);
+
+        return oldElem;
+    }
     public New getNew() {
         New result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -51,6 +80,19 @@ public class TextualMod extends ModificationTypeComplexType  {
             }
         }
         return result;
+    }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public New setNew(New newElem) {
+        New result = getNew();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(newElem);
+
+        return newElem;
     }
     /**
     * Returns possible children as a list of <tt>String</tt>s.

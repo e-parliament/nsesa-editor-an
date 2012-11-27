@@ -1,10 +1,15 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ModificationTypeComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ScopeModsSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Domain;
 import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
+import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-
 import java.util.LinkedHashMap;
+import com.google.gwt.user.client.DOM;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -29,8 +34,18 @@ public class ScopeMod extends ModificationTypeComplexType  {
 
         return typeAttr;
     }
+    //DSL Style get value
+    public ScopeModsSimpleType typeAttr() {
+         return  getTypeAttr();
+    }
+
     public void setTypeAttr(final ScopeModsSimpleType typeAttr) {
         this.typeAttr = typeAttr;
+    }
+    //DSL Style set value
+    public ScopeMod typeAttr(final ScopeModsSimpleType typeAttr) {
+        setTypeAttr(typeAttr);
+        return this;
     }
     public Domain getDomain() {
         Domain result = null;
@@ -41,6 +56,19 @@ public class ScopeMod extends ModificationTypeComplexType  {
             }
         }
         return result;
+    }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public Domain setDomain(Domain domainElem) {
+        Domain result = getDomain();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(domainElem);
+
+        return domainElem;
     }
     /**
     * Returns possible children as a list of <tt>String</tt>s.

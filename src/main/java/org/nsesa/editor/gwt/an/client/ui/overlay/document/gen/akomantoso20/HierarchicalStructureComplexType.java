@@ -1,9 +1,18 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.VersionTypeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Meta;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.CoverPage;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Preface;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Preamble;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Body;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Conclusions;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Attachments;
 import com.google.gwt.dom.client.Element;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
 
 /**
@@ -26,8 +35,18 @@ public class HierarchicalStructureComplexType extends AmendableWidgetImpl  {
 
         return containsAttr;
     }
+    //DSL Style get value
+    public VersionTypeSimpleType containsAttr() {
+         return  getContainsAttr();
+    }
+
     public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
         this.containsAttr = containsAttr;
+    }
+    //DSL Style set value
+    public HierarchicalStructureComplexType containsAttr(final VersionTypeSimpleType containsAttr) {
+        setContainsAttr(containsAttr);
+        return this;
     }
     public Meta getMeta() {
         Meta result = null;
@@ -39,6 +58,19 @@ public class HierarchicalStructureComplexType extends AmendableWidgetImpl  {
         }
         return result;
     }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public Meta setMeta(Meta metaElem) {
+        Meta result = getMeta();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(metaElem);
+
+        return metaElem;
+    }
     public CoverPage getCoverPage() {
         CoverPage result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -48,6 +80,19 @@ public class HierarchicalStructureComplexType extends AmendableWidgetImpl  {
             }
         }
         return result;
+    }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public CoverPage setCoverPage(CoverPage coverPageElem) {
+        CoverPage result = getCoverPage();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(coverPageElem);
+
+        return coverPageElem;
     }
     public Preface getPreface() {
         Preface result = null;
@@ -59,6 +104,19 @@ public class HierarchicalStructureComplexType extends AmendableWidgetImpl  {
         }
         return result;
     }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public Preface setPreface(Preface prefaceElem) {
+        Preface result = getPreface();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(prefaceElem);
+
+        return prefaceElem;
+    }
     public Preamble getPreamble() {
         Preamble result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -68,6 +126,19 @@ public class HierarchicalStructureComplexType extends AmendableWidgetImpl  {
             }
         }
         return result;
+    }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public Preamble setPreamble(Preamble preambleElem) {
+        Preamble result = getPreamble();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(preambleElem);
+
+        return preambleElem;
     }
     public Body getBody() {
         Body result = null;
@@ -79,6 +150,19 @@ public class HierarchicalStructureComplexType extends AmendableWidgetImpl  {
         }
         return result;
     }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public Body setBody(Body bodyElem) {
+        Body result = getBody();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(bodyElem);
+
+        return bodyElem;
+    }
     public Conclusions getConclusions() {
         Conclusions result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -89,6 +173,19 @@ public class HierarchicalStructureComplexType extends AmendableWidgetImpl  {
         }
         return result;
     }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public Conclusions setConclusions(Conclusions conclusionsElem) {
+        Conclusions result = getConclusions();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(conclusionsElem);
+
+        return conclusionsElem;
+    }
     public Attachments getAttachments() {
         Attachments result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -98,6 +195,19 @@ public class HierarchicalStructureComplexType extends AmendableWidgetImpl  {
             }
         }
         return result;
+    }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public Attachments setAttachments(Attachments attachmentsElem) {
+        Attachments result = getAttachments();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(attachmentsElem);
+
+        return attachmentsElem;
     }
     /**
     * Returns possible children as a list of <tt>String</tt>s.

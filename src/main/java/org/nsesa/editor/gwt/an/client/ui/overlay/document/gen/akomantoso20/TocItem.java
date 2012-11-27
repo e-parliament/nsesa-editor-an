@@ -1,11 +1,15 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.InlineComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IntegerSimpleType;
-
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
+import com.google.gwt.user.client.DOM;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -32,8 +36,18 @@ public class TocItem extends InlineComplexType  {
 
         return levelAttr;
     }
+    //DSL Style get value
+    public IntegerSimpleType levelAttr() {
+         return  getLevelAttr();
+    }
+
     public void setLevelAttr(final IntegerSimpleType levelAttr) {
         this.levelAttr = levelAttr;
+    }
+    //DSL Style set value
+    public TocItem levelAttr(final IntegerSimpleType levelAttr) {
+        setLevelAttr(levelAttr);
+        return this;
     }
     public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
@@ -43,8 +57,18 @@ public class TocItem extends InlineComplexType  {
 
         return hrefAttr;
     }
+    //DSL Style get value
+    public AnyURISimpleType hrefAttr() {
+         return  getHrefAttr();
+    }
+
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {
         this.hrefAttr = hrefAttr;
+    }
+    //DSL Style set value
+    public TocItem hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
     }
     /**
     * Returns possible children as a list of <tt>String</tt>s.

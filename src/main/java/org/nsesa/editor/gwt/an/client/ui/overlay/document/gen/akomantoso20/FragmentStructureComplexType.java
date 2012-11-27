@@ -1,10 +1,13 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Meta;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FragmentBody;
+import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
 
 /**
@@ -28,8 +31,18 @@ public class FragmentStructureComplexType extends AmendableWidgetImpl  {
 
         return includedInAttr;
     }
+    //DSL Style get value
+    public AnyURISimpleType includedInAttr() {
+         return  getIncludedInAttr();
+    }
+
     public void setIncludedInAttr(final AnyURISimpleType includedInAttr) {
         this.includedInAttr = includedInAttr;
+    }
+    //DSL Style set value
+    public FragmentStructureComplexType includedInAttr(final AnyURISimpleType includedInAttr) {
+        setIncludedInAttr(includedInAttr);
+        return this;
     }
     public Meta getMeta() {
         Meta result = null;
@@ -41,6 +54,19 @@ public class FragmentStructureComplexType extends AmendableWidgetImpl  {
         }
         return result;
     }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public Meta setMeta(Meta metaElem) {
+        Meta result = getMeta();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(metaElem);
+
+        return metaElem;
+    }
     public FragmentBody getFragmentBody() {
         FragmentBody result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
@@ -50,6 +76,19 @@ public class FragmentStructureComplexType extends AmendableWidgetImpl  {
             }
         }
         return result;
+    }
+    //DSL Style get value already exists
+
+    //DSL Style set value
+    public FragmentBody setFragmentBody(FragmentBody fragmentBodyElem) {
+        FragmentBody result = getFragmentBody();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(fragmentBodyElem);
+
+        return fragmentBodyElem;
     }
     /**
     * Returns possible children as a list of <tt>String</tt>s.

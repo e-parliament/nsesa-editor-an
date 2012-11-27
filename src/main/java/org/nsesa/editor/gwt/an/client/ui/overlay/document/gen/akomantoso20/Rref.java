@@ -1,10 +1,14 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.InlinereqComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-
+import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
+import com.google.gwt.user.client.DOM;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -31,8 +35,18 @@ public class Rref extends InlinereqComplexType  {
 
         return fromAttr;
     }
+    //DSL Style get value
+    public AnyURISimpleType fromAttr() {
+         return  getFromAttr();
+    }
+
     public void setFromAttr(final AnyURISimpleType fromAttr) {
         this.fromAttr = fromAttr;
+    }
+    //DSL Style set value
+    public Rref fromAttr(final AnyURISimpleType fromAttr) {
+        setFromAttr(fromAttr);
+        return this;
     }
     public AnyURISimpleType getUpToAttr() {
         if (upToAttr == null) {
@@ -42,8 +56,18 @@ public class Rref extends InlinereqComplexType  {
 
         return upToAttr;
     }
+    //DSL Style get value
+    public AnyURISimpleType upToAttr() {
+         return  getUpToAttr();
+    }
+
     public void setUpToAttr(final AnyURISimpleType upToAttr) {
         this.upToAttr = upToAttr;
+    }
+    //DSL Style set value
+    public Rref upToAttr(final AnyURISimpleType upToAttr) {
+        setUpToAttr(upToAttr);
+        return this;
     }
     /**
     * Returns possible children as a list of <tt>String</tt>s.

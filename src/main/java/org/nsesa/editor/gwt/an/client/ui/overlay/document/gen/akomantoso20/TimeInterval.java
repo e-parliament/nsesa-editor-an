@@ -1,11 +1,15 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MetaoptComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DurationSimpleType;
-
+import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
+import com.google.gwt.user.client.DOM;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -34,8 +38,18 @@ public class TimeInterval extends MetaoptComplexType  {
 
         return startAttr;
     }
+    //DSL Style get value
+    public AnyURISimpleType startAttr() {
+         return  getStartAttr();
+    }
+
     public void setStartAttr(final AnyURISimpleType startAttr) {
         this.startAttr = startAttr;
+    }
+    //DSL Style set value
+    public TimeInterval startAttr(final AnyURISimpleType startAttr) {
+        setStartAttr(startAttr);
+        return this;
     }
     public AnyURISimpleType getEndAttr() {
         if (endAttr == null) {
@@ -45,8 +59,18 @@ public class TimeInterval extends MetaoptComplexType  {
 
         return endAttr;
     }
+    //DSL Style get value
+    public AnyURISimpleType endAttr() {
+         return  getEndAttr();
+    }
+
     public void setEndAttr(final AnyURISimpleType endAttr) {
         this.endAttr = endAttr;
+    }
+    //DSL Style set value
+    public TimeInterval endAttr(final AnyURISimpleType endAttr) {
+        setEndAttr(endAttr);
+        return this;
     }
     public DurationSimpleType getDurationAttr() {
         if (durationAttr == null) {
@@ -56,8 +80,18 @@ public class TimeInterval extends MetaoptComplexType  {
 
         return durationAttr;
     }
+    //DSL Style get value
+    public DurationSimpleType durationAttr() {
+         return  getDurationAttr();
+    }
+
     public void setDurationAttr(final DurationSimpleType durationAttr) {
         this.durationAttr = durationAttr;
+    }
+    //DSL Style set value
+    public TimeInterval durationAttr(final DurationSimpleType durationAttr) {
+        setDurationAttr(durationAttr);
+        return this;
     }
     public AnyURISimpleType getRefersToAttr() {
         if (refersToAttr == null) {
@@ -67,8 +101,18 @@ public class TimeInterval extends MetaoptComplexType  {
 
         return refersToAttr;
     }
+    //DSL Style get value
+    public AnyURISimpleType refersToAttr() {
+         return  getRefersToAttr();
+    }
+
     public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
         this.refersToAttr = refersToAttr;
+    }
+    //DSL Style set value
+    public TimeInterval refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
     }
     /**
     * Returns possible children as a list of <tt>String</tt>s.

@@ -1,8 +1,12 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MetaoptComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-
+import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
 
 /**
@@ -26,8 +30,18 @@ public class ValueTypeComplexType extends MetaoptComplexType  {
 
         return valueAttr;
     }
+    //DSL Style get value
+    public StringSimpleType valueAttr() {
+         return  getValueAttr();
+    }
+
     public void setValueAttr(final StringSimpleType valueAttr) {
         this.valueAttr = valueAttr;
+    }
+    //DSL Style set value
+    public ValueTypeComplexType valueAttr(final StringSimpleType valueAttr) {
+        setValueAttr(valueAttr);
+        return this;
     }
     /**
     * Returns possible children as a list of <tt>String</tt>s.
