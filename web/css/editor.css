@@ -41,3 +41,16 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+/*
+    Navigation bar ...
+*/
+.navbar {
+    width: 100%;
+    background-color: #000;
+}
+
+.navbar > li {
+    color:white;
+    float: left;
+}
