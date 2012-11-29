@@ -15,8 +15,8 @@
         </property>
     </bean>
 
-    <bean id="gwtService" class="org.nsesa.editor.gwt.core.server.service.gwt.GWTServiceImpl"/>
-    <bean id="gwtDocumentService" class="org.nsesa.editor.gwt.core.server.service.gwt.GWTDocumentServiceImpl">
+    <bean id="gwtService" class="org.nsesa.editor.gwt.an.server.service.gwt.GWTServiceImpl"/>
+    <bean id="gwtDocumentService" class="org.nsesa.editor.gwt.an.server.service.gwt.GWTDocumentServiceImpl">
         <property name="documents">
             <map>
                 <entry key="1" value="classpath:examples/COM_COM(2011)0032_EN.xml"/>
@@ -28,7 +28,7 @@
         </property>
         <property name="documentTemplate" value="classpath:document.ftl"/>
     </bean>
-    <bean id="gwtAmendmentService" class="org.nsesa.editor.gwt.core.server.service.gwt.GWTAmendmentServiceImpl">
+    <bean id="gwtAmendmentService" class="org.nsesa.editor.gwt.an.server.service.gwt.GWTAmendmentServiceImpl">
         <property name="documents">
             <map>
                 <entry key="amendment-1" value="classpath:examples/AM-793034EN-AM1.xml"/>
