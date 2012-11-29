@@ -4,27 +4,27 @@
 * amendment style.
 * --------------------------------------------------------------------------
 */
-.amendment {
+.amendmentHolder {
     max-width: 1400px;
     background-color: #ccc;
     border: 1px solid black;
     padding: 10px;
 }
 
-.amendment .header {
+.amendmentHolder .header {
     font-size: 1.3em;
 }
 
-.amendment .amendmentcontent {
+.amendmentHolder .amendmentContent {
     display: block;
     width: 100%;
 }
 
-.amendment .amendmentcontent .block {
+.amendmentHolder .amendmentContent .block {
 
 }
 
-.amendment .amendmentcontent span[name="versionTitle"].block {
+.amendmentHolder span[name="versionTitle"] {
     width: 50%;
     float: left;
     display: inline-block;
@@ -37,43 +37,43 @@
     padding-top: 15px;
 }
 
-.amendment .mod {
+.amendmentHolder .mod {
     display: block;
     width: 100%;
     clear: both;
 }
 
-.amendment .mod .quotedstructure {
+.amendmentHolder .mod .quotedStructure {
     width: 50%;
     display: table-cell;
     padding: 15px;
 }
 
-.amendment span[name="comment"].block {
+.amendmentHolder span[name="comment"] {
     display: block;
     text-align: right;
     font-style: italic;
     width: 100%;
 }
 
-.amendment .amendmentJustification {
+.amendmentHolder .amendmentJustification {
     display: block;
     width: 100%;
 }
 
-.amendment .amendmentJustification .block {
+.amendmentHolder .amendmentJustification .block {
     display: block;
     width: 100%;
 }
 
-.amendment .amendmentJustification span[name="justificationHeading"].block {
+.amendmentHolder .amendmentJustification span[name="justificationHeading"] {
     display: block;
     font-style: italic;
     text-align: center;
     width: 100%;
 }
 
-.amendment .amendmentcontent .change {
+.amendmentHolder .amendmentContent .change {
     display: inline;
     font-weight: bold;
     font-style: italic;
