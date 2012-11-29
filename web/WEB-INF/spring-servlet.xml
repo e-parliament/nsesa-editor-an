@@ -37,6 +37,7 @@
             </map>
         </property>
         <property name="documentTemplate" value="classpath:document.ftl"/>
+        <property name="amendmentDirectory" value="file://R:/"/>
     </bean>
 
     <bean id="gwtLogController" class="org.springframework.web.servlet.mvc.ServletWrappingController">

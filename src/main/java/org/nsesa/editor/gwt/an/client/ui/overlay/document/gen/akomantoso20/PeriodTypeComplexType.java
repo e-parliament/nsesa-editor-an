@@ -29,52 +29,11 @@ public class PeriodTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private String wildcardContentAttr;
-    private AnyURISimpleType periodAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private String wildcardContentAttr;
+    private AnyURISimpleType periodAttr;
 
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-    //DSL Style get value
-    public String wildcardContentAttr() {
-         return  getWildcardContentAttr();
-    }
-
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-    }
-    //DSL Style set value
-    public PeriodTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-    public AnyURISimpleType getPeriodAttr() {
-        if (periodAttr == null) {
-            periodAttr = new AnyURISimpleType();
-            periodAttr.setValue(amendableElement.getAttribute("period"));
-        }
-
-        return periodAttr;
-    }
-    //DSL Style get value
-    public AnyURISimpleType periodAttr() {
-         return  getPeriodAttr();
-    }
-
-    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-        this.periodAttr = periodAttr;
-    }
-    //DSL Style set value
-    public PeriodTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
-        return this;
-    }
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
             idAttr = new IDSimpleType();
@@ -117,6 +76,47 @@ public class PeriodTypeComplexType extends AmendableWidgetImpl  {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+    //DSL Style get value
+    public String wildcardContentAttr() {
+         return  getWildcardContentAttr();
+    }
+
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+    //DSL Style set value
+    public PeriodTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+    public AnyURISimpleType getPeriodAttr() {
+        if (periodAttr == null) {
+            periodAttr = new AnyURISimpleType();
+            periodAttr.setValue(amendableElement.getAttribute("period"));
+        }
+
+        return periodAttr;
+    }
+    //DSL Style get value
+    public AnyURISimpleType periodAttr() {
+         return  getPeriodAttr();
+    }
+
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
+    }
+    //DSL Style set value
+    public PeriodTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */
@@ -125,14 +125,22 @@ public class PeriodTypeComplexType extends AmendableWidgetImpl  {
         return new String[]{};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("periodAttr", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
-        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
 }

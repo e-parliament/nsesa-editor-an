@@ -83,12 +83,20 @@ public class Rref extends InlinereqComplexType  {
         return new String[]{"person","neutralCitation","docType","remark","docStatus","location","change","entity","authorialNote","img","party","legislature","event","eol","role","opinion","quantity","extractStructure","eop","fillIn","signature","docStage","mmod","docCommittee","vote","ins","mod","noteRef","docNumber","rref","marker","session","recordedTime","lawyer","docPurpose","extractText","span","sub","concept","courtType","docJurisdiction","object","sup","docProponent","date","omissis","rmod","organization","def","docketNumber","judge","popup","inline","docTitle","del","docDate","relatedDocument","affectedDocument","mref","docIntroducer","b","placeholder","a","outcome","i","process","ref","u","term","shortTitle"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("fromAttr", getFromAttr() != null ? getFromAttr().getValue() : null);
-        attrs.put("upToAttr", getUpToAttr() != null ? getUpToAttr().getValue() : null);
+        attrs.put("from", getFromAttr() != null ? getFromAttr().getValue() : null);
+        attrs.put("upTo", getUpToAttr() != null ? getUpToAttr().getValue() : null);
         return attrs;
     }
 }

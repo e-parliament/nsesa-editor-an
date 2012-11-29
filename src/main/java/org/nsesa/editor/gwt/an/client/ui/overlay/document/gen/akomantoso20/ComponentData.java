@@ -36,13 +36,13 @@ public class ComponentData extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private StringSimpleType showAsAttr;
-    private StringSimpleType shortFormAttr;
     private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType hrefAttr;
     private StringSimpleType nameAttr;
+    private StringSimpleType showAsAttr;
+    private StringSimpleType shortFormAttr;
+    private AnyURISimpleType hrefAttr;
 
     public java.util.List<ComponentData> getComponentDatas() {
         java.util.List<ComponentData> result = new ArrayList<ComponentData>();
@@ -63,48 +63,6 @@ public class ComponentData extends AmendableWidgetImpl  {
         return componentDataElem;
     }
 
-    public StringSimpleType getShowAsAttr() {
-        if (showAsAttr == null) {
-            showAsAttr = new StringSimpleType();
-            showAsAttr.setValue(amendableElement.getAttribute("showAs"));
-        }
-
-        return showAsAttr;
-    }
-    //DSL Style get value
-    public StringSimpleType showAsAttr() {
-         return  getShowAsAttr();
-    }
-
-    public void setShowAsAttr(final StringSimpleType showAsAttr) {
-        this.showAsAttr = showAsAttr;
-    }
-    //DSL Style set value
-    public ComponentData showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-    public StringSimpleType getShortFormAttr() {
-        if (shortFormAttr == null) {
-            shortFormAttr = new StringSimpleType();
-            shortFormAttr.setValue(amendableElement.getAttribute("shortForm"));
-        }
-
-        return shortFormAttr;
-    }
-    //DSL Style get value
-    public StringSimpleType shortFormAttr() {
-         return  getShortFormAttr();
-    }
-
-    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
-        this.shortFormAttr = shortFormAttr;
-    }
-    //DSL Style set value
-    public ComponentData shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
-        return this;
-    }
     public String getWildcardContentAttr() {
         if (wildcardContentAttr == null) {
             //hmm nothing to do here
@@ -167,27 +125,6 @@ public class ComponentData extends AmendableWidgetImpl  {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
-    public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-            hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(amendableElement.getAttribute("href"));
-        }
-
-        return hrefAttr;
-    }
-    //DSL Style get value
-    public AnyURISimpleType hrefAttr() {
-         return  getHrefAttr();
-    }
-
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-    }
-    //DSL Style set value
-    public ComponentData hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();
@@ -209,6 +146,69 @@ public class ComponentData extends AmendableWidgetImpl  {
         setNameAttr(nameAttr);
         return this;
     }
+    public StringSimpleType getShowAsAttr() {
+        if (showAsAttr == null) {
+            showAsAttr = new StringSimpleType();
+            showAsAttr.setValue(amendableElement.getAttribute("showAs"));
+        }
+
+        return showAsAttr;
+    }
+    //DSL Style get value
+    public StringSimpleType showAsAttr() {
+         return  getShowAsAttr();
+    }
+
+    public void setShowAsAttr(final StringSimpleType showAsAttr) {
+        this.showAsAttr = showAsAttr;
+    }
+    //DSL Style set value
+    public ComponentData showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+    public StringSimpleType getShortFormAttr() {
+        if (shortFormAttr == null) {
+            shortFormAttr = new StringSimpleType();
+            shortFormAttr.setValue(amendableElement.getAttribute("shortForm"));
+        }
+
+        return shortFormAttr;
+    }
+    //DSL Style get value
+    public StringSimpleType shortFormAttr() {
+         return  getShortFormAttr();
+    }
+
+    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
+        this.shortFormAttr = shortFormAttr;
+    }
+    //DSL Style set value
+    public ComponentData shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
+        return this;
+    }
+    public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(amendableElement.getAttribute("href"));
+        }
+
+        return hrefAttr;
+    }
+    //DSL Style get value
+    public AnyURISimpleType hrefAttr() {
+         return  getHrefAttr();
+    }
+
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+    }
+    //DSL Style set value
+    public ComponentData hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */
@@ -217,17 +217,25 @@ public class ComponentData extends AmendableWidgetImpl  {
         return new String[]{"componentData"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("showAsAttr", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
-        attrs.put("shortFormAttr", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
-        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("hrefAttr", getHrefAttr() != null ? getHrefAttr().getValue() : null);
-        attrs.put("nameAttr", getNameAttr() != null ? getNameAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
+        attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
+        attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         return attrs;
     }
 }

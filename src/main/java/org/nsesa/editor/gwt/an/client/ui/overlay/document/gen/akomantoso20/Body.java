@@ -38,6 +38,14 @@ public class Body extends BodyTypeComplexType  {
         return new String[]{"subchapter","componentRef","tome","subparagraph","indent","paragraph","subsection","subclause","list","sublist","section","point","chapter","title","division","subpart","article","alinea","hcontainer","subtitle","book","part","clause"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();

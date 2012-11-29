@@ -127,14 +127,22 @@ public class NoteRef extends MarkeroptComplexType  {
         return new String[]{};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("hrefAttr", getHrefAttr() != null ? getHrefAttr().getValue() : null);
-        attrs.put("markerAttr", getMarkerAttr() != null ? getMarkerAttr().getValue() : null);
-        attrs.put("placementAttr", getPlacementAttr() != null ? getPlacementAttr().value() : null);
-        attrs.put("placementBaseAttr", getPlacementBaseAttr() != null ? getPlacementBaseAttr().getValue() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("marker", getMarkerAttr() != null ? getMarkerAttr().getValue() : null);
+        attrs.put("placement", getPlacementAttr() != null ? getPlacementAttr().value() : null);
+        attrs.put("placementBase", getPlacementBaseAttr() != null ? getPlacementBaseAttr().getValue() : null);
         return attrs;
     }
 }

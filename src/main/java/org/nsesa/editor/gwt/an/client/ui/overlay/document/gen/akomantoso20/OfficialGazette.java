@@ -38,6 +38,14 @@ public class OfficialGazette extends CollectionStructureComplexType  {
         return new String[]{"conclusions","preface","coverPage","collectionBody","attachments","meta"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();

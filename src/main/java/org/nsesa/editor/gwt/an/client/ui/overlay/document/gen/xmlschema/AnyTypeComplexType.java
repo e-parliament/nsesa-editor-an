@@ -55,6 +55,14 @@ public class AnyTypeComplexType extends AmendableWidgetImpl  {
         return new String[]{"*"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.w3.org/2001/XMLSchema";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();

@@ -57,11 +57,19 @@ public class EolTypeComplexType extends MarkeroptComplexType  {
         return new String[]{};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("breakatAttr", getBreakatAttr() != null ? getBreakatAttr().getValue() : null);
+        attrs.put("breakat", getBreakatAttr() != null ? getBreakatAttr().getValue() : null);
         return attrs;
     }
 }

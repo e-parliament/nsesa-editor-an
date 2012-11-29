@@ -241,12 +241,20 @@ public class OpenStructureComplexType extends AmendableWidgetImpl  {
         return new String[]{"conclusions","preface","mainBody","preamble","coverPage","attachments","meta"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("containsAttr", getContainsAttr() != null ? getContainsAttr().value() : null);
-        attrs.put("nameAttr", getNameAttr() != null ? getNameAttr().getValue() : null);
+        attrs.put("contains", getContainsAttr() != null ? getContainsAttr().value() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         return attrs;
     }
 }

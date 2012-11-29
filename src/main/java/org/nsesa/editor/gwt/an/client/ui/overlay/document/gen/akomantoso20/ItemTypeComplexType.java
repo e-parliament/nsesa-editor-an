@@ -29,16 +29,16 @@ public class ItemTypeComplexType extends BasehierarchyComplexType  {
     }
 
 // FIELDS ------------------
-    private AnyURISimpleType refersToAttr;
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
     private LanguageSimpleType langAttr;
+    private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType alternativeToAttr;
+    private String wildcardContentAttr;
+    private StatusTypeSimpleType statusAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
-    private String wildcardContentAttr;
-    private StatusTypeSimpleType statusAttr;
-    private AnyURISimpleType alternativeToAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType periodAttr;
 
     public java.util.List<Foreign> getForeigns() {
@@ -79,6 +79,27 @@ public class ItemTypeComplexType extends BasehierarchyComplexType  {
         return blockElem;
     }
 
+    public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+            langAttr = new LanguageSimpleType();
+            langAttr.setValue(amendableElement.getAttribute("lang"));
+        }
+
+        return langAttr;
+    }
+    //DSL Style get value
+    public LanguageSimpleType langAttr() {
+         return  getLangAttr();
+    }
+
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+    }
+    //DSL Style set value
+    public ItemTypeComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
     public AnyURISimpleType getRefersToAttr() {
         if (refersToAttr == null) {
             refersToAttr = new AnyURISimpleType();
@@ -100,67 +121,65 @@ public class ItemTypeComplexType extends BasehierarchyComplexType  {
         setRefersToAttr(refersToAttr);
         return this;
     }
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(amendableElement.getAttribute("id"));
+    public AnyURISimpleType getAlternativeToAttr() {
+        if (alternativeToAttr == null) {
+            alternativeToAttr = new AnyURISimpleType();
+            alternativeToAttr.setValue(amendableElement.getAttribute("alternativeTo"));
         }
 
-        return idAttr;
+        return alternativeToAttr;
     }
     //DSL Style get value
-    public IDSimpleType idAttr() {
-         return  getIdAttr();
+    public AnyURISimpleType alternativeToAttr() {
+         return  getAlternativeToAttr();
     }
 
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
     }
     //DSL Style set value
-    public ItemTypeComplexType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
+    public ItemTypeComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(amendableElement.getAttribute("evolvingId"));
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return evolvingIdAttr;
+        return wildcardContentAttr;
     }
     //DSL Style get value
-    public NMTOKENSimpleType evolvingIdAttr() {
-         return  getEvolvingIdAttr();
+    public String wildcardContentAttr() {
+         return  getWildcardContentAttr();
     }
 
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
     }
     //DSL Style set value
-    public ItemTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public ItemTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
-    public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-            langAttr = new LanguageSimpleType();
-            langAttr.setValue(amendableElement.getAttribute("lang"));
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));
         }
 
-        return langAttr;
+        return statusAttr;
     }
     //DSL Style get value
-    public LanguageSimpleType langAttr() {
-         return  getLangAttr();
+    public StatusTypeSimpleType statusAttr() {
+         return  getStatusAttr();
     }
 
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
     }
     //DSL Style set value
-    public ItemTypeComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
+    public ItemTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
     public StringSimpleType getClassAttr() {
@@ -226,65 +245,46 @@ public class ItemTypeComplexType extends BasehierarchyComplexType  {
         setTitleAttr(titleAttr);
         return this;
     }
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(amendableElement.getAttribute("id"));
         }
 
-        return wildcardContentAttr;
+        return idAttr;
     }
     //DSL Style get value
-    public String wildcardContentAttr() {
-         return  getWildcardContentAttr();
+    public IDSimpleType idAttr() {
+         return  getIdAttr();
     }
 
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
     }
     //DSL Style set value
-    public ItemTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public ItemTypeComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(amendableElement.getAttribute("evolvingId"));
         }
 
-        return statusAttr;
+        return evolvingIdAttr;
     }
     //DSL Style get value
-    public StatusTypeSimpleType statusAttr() {
-         return  getStatusAttr();
+    public NMTOKENSimpleType evolvingIdAttr() {
+         return  getEvolvingIdAttr();
     }
 
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
     }
     //DSL Style set value
-    public ItemTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-    public AnyURISimpleType getAlternativeToAttr() {
-        if (alternativeToAttr == null) {
-            alternativeToAttr = new AnyURISimpleType();
-            alternativeToAttr.setValue(amendableElement.getAttribute("alternativeTo"));
-        }
-
-        return alternativeToAttr;
-    }
-    //DSL Style get value
-    public AnyURISimpleType alternativeToAttr() {
-         return  getAlternativeToAttr();
-    }
-
-    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
-    }
-    //DSL Style set value
-    public ItemTypeComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public ItemTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
     public java.util.List<BlockList> getBlockLists() {
@@ -449,21 +449,29 @@ public class ItemTypeComplexType extends BasehierarchyComplexType  {
         return new String[]{"num","ul","toc","tblock","subheading","blockList","p","block","table","ol","foreign","heading"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("refersToAttr", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("langAttr", getLangAttr() != null ? getLangAttr().getValue() : null);
-        attrs.put("classAttr", getClassAttr() != null ? getClassAttr().getValue() : null);
-        attrs.put("styleAttr", getStyleAttr() != null ? getStyleAttr().getValue() : null);
-        attrs.put("titleAttr", getTitleAttr() != null ? getTitleAttr().getValue() : null);
-        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("statusAttr", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("alternativeToAttr", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
-        attrs.put("periodAttr", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
+        attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
+        attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
 }

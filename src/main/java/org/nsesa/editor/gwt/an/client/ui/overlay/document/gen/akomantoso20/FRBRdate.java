@@ -31,30 +31,9 @@ public class FRBRdate extends MetaoptComplexType  {
     }
 
 // FIELDS ------------------
-    private DateSimpleType dateAttr;
     private StringSimpleType nameAttr;
+    private DateSimpleType dateAttr;
 
-    public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-            dateAttr = new DateSimpleType();
-            dateAttr.setValue(amendableElement.getAttribute("date"));
-        }
-
-        return dateAttr;
-    }
-    //DSL Style get value
-    public DateSimpleType dateAttr() {
-         return  getDateAttr();
-    }
-
-    public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-    }
-    //DSL Style set value
-    public FRBRdate dateAttr(final DateSimpleType dateAttr) {
-        setDateAttr(dateAttr);
-        return this;
-    }
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();
@@ -76,6 +55,27 @@ public class FRBRdate extends MetaoptComplexType  {
         setNameAttr(nameAttr);
         return this;
     }
+    public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(amendableElement.getAttribute("date"));
+        }
+
+        return dateAttr;
+    }
+    //DSL Style get value
+    public DateSimpleType dateAttr() {
+         return  getDateAttr();
+    }
+
+    public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+    }
+    //DSL Style set value
+    public FRBRdate dateAttr(final DateSimpleType dateAttr) {
+        setDateAttr(dateAttr);
+        return this;
+    }
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */
@@ -84,12 +84,20 @@ public class FRBRdate extends MetaoptComplexType  {
         return new String[]{};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("dateAttr", getDateAttr() != null ? getDateAttr().getValue() : null);
-        attrs.put("nameAttr", getNameAttr() != null ? getNameAttr().getValue() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         return attrs;
     }
 }

@@ -155,11 +155,19 @@ public class Identification extends AmendableWidgetImpl  {
         return new String[]{"FRBRManifestation","FRBRWork","FRBRItem","FRBRExpression"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("sourceAttr", getSourceAttr() != null ? getSourceAttr().getValue() : null);
+        attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
         return attrs;
     }
 }

@@ -32,13 +32,13 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private AnyURISimpleType refersToAttr;
-    private BooleanSimpleType exclusionAttr;
-    private BooleanSimpleType incompleteAttr;
     private String wildcardContentAttr;
-    private StatusTypeSimpleType statusAttr;
+    private AnyURISimpleType refersToAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private BooleanSimpleType exclusionAttr;
+    private BooleanSimpleType incompleteAttr;
+    private StatusTypeSimpleType statusAttr;
     private AnyURISimpleType periodAttr;
 
     public java.util.List<Source> getSources() {
@@ -102,69 +102,6 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
 
         return conditionElem;
     }
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(amendableElement.getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-    }
-    //DSL Style get value
-    public AnyURISimpleType refersToAttr() {
-         return  getRefersToAttr();
-    }
-
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-    }
-    //DSL Style set value
-    public JudicialArgumentTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-    public BooleanSimpleType getExclusionAttr() {
-        if (exclusionAttr == null) {
-            exclusionAttr = new BooleanSimpleType();
-            exclusionAttr.setValue(amendableElement.getAttribute("exclusion"));
-        }
-
-        return exclusionAttr;
-    }
-    //DSL Style get value
-    public BooleanSimpleType exclusionAttr() {
-         return  getExclusionAttr();
-    }
-
-    public void setExclusionAttr(final BooleanSimpleType exclusionAttr) {
-        this.exclusionAttr = exclusionAttr;
-    }
-    //DSL Style set value
-    public JudicialArgumentTypeComplexType exclusionAttr(final BooleanSimpleType exclusionAttr) {
-        setExclusionAttr(exclusionAttr);
-        return this;
-    }
-    public BooleanSimpleType getIncompleteAttr() {
-        if (incompleteAttr == null) {
-            incompleteAttr = new BooleanSimpleType();
-            incompleteAttr.setValue(amendableElement.getAttribute("incomplete"));
-        }
-
-        return incompleteAttr;
-    }
-    //DSL Style get value
-    public BooleanSimpleType incompleteAttr() {
-         return  getIncompleteAttr();
-    }
-
-    public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
-        this.incompleteAttr = incompleteAttr;
-    }
-    //DSL Style set value
-    public JudicialArgumentTypeComplexType incompleteAttr(final BooleanSimpleType incompleteAttr) {
-        setIncompleteAttr(incompleteAttr);
-        return this;
-    }
     public String getWildcardContentAttr() {
         if (wildcardContentAttr == null) {
             //hmm nothing to do here
@@ -185,24 +122,25 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(amendableElement.getAttribute("refersTo"));
         }
 
-        return statusAttr;
+        return refersToAttr;
     }
     //DSL Style get value
-    public StatusTypeSimpleType statusAttr() {
-         return  getStatusAttr();
+    public AnyURISimpleType refersToAttr() {
+         return  getRefersToAttr();
     }
 
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
     }
     //DSL Style set value
-    public JudicialArgumentTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public JudicialArgumentTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
     public IDSimpleType getIdAttr() {
@@ -247,6 +185,68 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
+    public BooleanSimpleType getExclusionAttr() {
+        if (exclusionAttr == null) {
+            exclusionAttr = new BooleanSimpleType();
+            exclusionAttr.setValue(amendableElement.getAttribute("exclusion"));
+        }
+
+        return exclusionAttr;
+    }
+    //DSL Style get value
+    public BooleanSimpleType exclusionAttr() {
+         return  getExclusionAttr();
+    }
+
+    public void setExclusionAttr(final BooleanSimpleType exclusionAttr) {
+        this.exclusionAttr = exclusionAttr;
+    }
+    //DSL Style set value
+    public JudicialArgumentTypeComplexType exclusionAttr(final BooleanSimpleType exclusionAttr) {
+        setExclusionAttr(exclusionAttr);
+        return this;
+    }
+    public BooleanSimpleType getIncompleteAttr() {
+        if (incompleteAttr == null) {
+            incompleteAttr = new BooleanSimpleType();
+            incompleteAttr.setValue(amendableElement.getAttribute("incomplete"));
+        }
+
+        return incompleteAttr;
+    }
+    //DSL Style get value
+    public BooleanSimpleType incompleteAttr() {
+         return  getIncompleteAttr();
+    }
+
+    public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
+        this.incompleteAttr = incompleteAttr;
+    }
+    //DSL Style set value
+    public JudicialArgumentTypeComplexType incompleteAttr(final BooleanSimpleType incompleteAttr) {
+        setIncompleteAttr(incompleteAttr);
+        return this;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));
+        }
+
+        return statusAttr;
+    }
+    //DSL Style get value
+    public StatusTypeSimpleType statusAttr() {
+         return  getStatusAttr();
+    }
+
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+    }
+    //DSL Style set value
+    public JudicialArgumentTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
     public AnyURISimpleType getPeriodAttr() {
         if (periodAttr == null) {
             periodAttr = new AnyURISimpleType();
@@ -276,18 +276,26 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
         return new String[]{"source","condition","destination"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("refersToAttr", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("exclusionAttr", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
-        attrs.put("incompleteAttr", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
-        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("statusAttr", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("periodAttr", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("exclusion", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
+        attrs.put("incomplete", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
 }

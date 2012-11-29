@@ -157,13 +157,22 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
         return new String[]{<#list overlayClass.allowedSubTypes as child>${delimiter}"${child}"<#assign delimiter = ","></#list>};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "${overlayClass.nameSpace}";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         <#list overlayClass.properties as property>
             <#if property.attribute>
-        attrs.put("<@propertyName property=property/>", <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>() != null ? <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>()<#if property.baseClass?? && property.baseClass.enumeration>.value()<#elseif property.baseClass?? && property.baseClass.simple>.getValue()<#elseif property.wildCard && !property.attribute>.getContent()<#else>.toString()</#if> : null);
+            <#assign stripped><@propertyName property=property/></#assign>
+        attrs.put("<#if stripped?ends_with("Attr")>${stripped?substring(0, stripped?length - 4)}<#else>${stripped}</#if>", <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>() != null ? <#if property.className?cap_first == "Boolean">is<#else>get</#if><@propertyNameCap property = property/>()<#if property.baseClass?? && property.baseClass.enumeration>.value()<#elseif property.baseClass?? && property.baseClass.simple>.getValue()<#elseif property.wildCard && !property.attribute>.getContent()<#else>.toString()</#if> : null);
             </#if>
         </#list>
         return attrs;

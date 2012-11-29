@@ -33,8 +33,8 @@ public class EventRef extends AnyOtherTypeComplexType  {
 // FIELDS ------------------
     private EventTypeSimpleType typeAttr;
     private YesNoTypeSimpleType originatingExpressionAttr;
-    private AnyURISimpleType sourceAttr;
     private DateSimpleType dateAttr;
+    private AnyURISimpleType sourceAttr;
 
     public EventTypeSimpleType getTypeAttr() {
         if (typeAttr == null) {
@@ -76,27 +76,6 @@ public class EventRef extends AnyOtherTypeComplexType  {
         setOriginatingExpressionAttr(originatingExpressionAttr);
         return this;
     }
-    public AnyURISimpleType getSourceAttr() {
-        if (sourceAttr == null) {
-            sourceAttr = new AnyURISimpleType();
-            sourceAttr.setValue(amendableElement.getAttribute("source"));
-        }
-
-        return sourceAttr;
-    }
-    //DSL Style get value
-    public AnyURISimpleType sourceAttr() {
-         return  getSourceAttr();
-    }
-
-    public void setSourceAttr(final AnyURISimpleType sourceAttr) {
-        this.sourceAttr = sourceAttr;
-    }
-    //DSL Style set value
-    public EventRef sourceAttr(final AnyURISimpleType sourceAttr) {
-        setSourceAttr(sourceAttr);
-        return this;
-    }
     public DateSimpleType getDateAttr() {
         if (dateAttr == null) {
             dateAttr = new DateSimpleType();
@@ -118,6 +97,27 @@ public class EventRef extends AnyOtherTypeComplexType  {
         setDateAttr(dateAttr);
         return this;
     }
+    public AnyURISimpleType getSourceAttr() {
+        if (sourceAttr == null) {
+            sourceAttr = new AnyURISimpleType();
+            sourceAttr.setValue(amendableElement.getAttribute("source"));
+        }
+
+        return sourceAttr;
+    }
+    //DSL Style get value
+    public AnyURISimpleType sourceAttr() {
+         return  getSourceAttr();
+    }
+
+    public void setSourceAttr(final AnyURISimpleType sourceAttr) {
+        this.sourceAttr = sourceAttr;
+    }
+    //DSL Style set value
+    public EventRef sourceAttr(final AnyURISimpleType sourceAttr) {
+        setSourceAttr(sourceAttr);
+        return this;
+    }
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */
@@ -126,14 +126,22 @@ public class EventRef extends AnyOtherTypeComplexType  {
         return new String[]{"*"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("typeAttr", getTypeAttr() != null ? getTypeAttr().value() : null);
-        attrs.put("originatingExpressionAttr", getOriginatingExpressionAttr() != null ? getOriginatingExpressionAttr().value() : null);
-        attrs.put("sourceAttr", getSourceAttr() != null ? getSourceAttr().getValue() : null);
-        attrs.put("dateAttr", getDateAttr() != null ? getDateAttr().getValue() : null);
+        attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
+        attrs.put("originatingExpression", getOriginatingExpressionAttr() != null ? getOriginatingExpressionAttr().value() : null);
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
+        attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
         return attrs;
     }
 }

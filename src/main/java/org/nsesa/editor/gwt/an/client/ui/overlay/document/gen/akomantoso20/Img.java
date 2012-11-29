@@ -129,14 +129,22 @@ public class Img extends MarkeroptComplexType  {
         return new String[]{};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("widthAttr", getWidthAttr() != null ? getWidthAttr().getValue() : null);
-        attrs.put("heightAttr", getHeightAttr() != null ? getHeightAttr().getValue() : null);
-        attrs.put("srcAttr", getSrcAttr() != null ? getSrcAttr().getValue() : null);
-        attrs.put("altAttr", getAltAttr() != null ? getAltAttr().getValue() : null);
+        attrs.put("width", getWidthAttr() != null ? getWidthAttr().getValue() : null);
+        attrs.put("height", getHeightAttr() != null ? getHeightAttr().getValue() : null);
+        attrs.put("src", getSrcAttr() != null ? getSrcAttr().getValue() : null);
+        attrs.put("alt", getAltAttr() != null ? getAltAttr().getValue() : null);
         return attrs;
     }
 }

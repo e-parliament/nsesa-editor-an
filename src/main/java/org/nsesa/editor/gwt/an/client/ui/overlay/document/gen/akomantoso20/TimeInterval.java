@@ -128,14 +128,22 @@ public class TimeInterval extends MetaoptComplexType  {
         return new String[]{};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("startAttr", getStartAttr() != null ? getStartAttr().getValue() : null);
-        attrs.put("endAttr", getEndAttr() != null ? getEndAttr().getValue() : null);
-        attrs.put("durationAttr", getDurationAttr() != null ? getDurationAttr().getValue() : null);
-        attrs.put("refersToAttr", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("start", getStartAttr() != null ? getStartAttr().getValue() : null);
+        attrs.put("end", getEndAttr() != null ? getEndAttr().getValue() : null);
+        attrs.put("duration", getDurationAttr() != null ? getDurationAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         return attrs;
     }
 }

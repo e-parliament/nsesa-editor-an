@@ -35,16 +35,16 @@ public class Li extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private StringSimpleType valueAttr;
-    private String wildcardContentAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
+    private StatusTypeSimpleType statusAttr;
+    private AnyURISimpleType refersToAttr;
+    private LanguageSimpleType langAttr;
     private AnyURISimpleType alternativeToAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType refersToAttr;
-    private LanguageSimpleType langAttr;
-    private StatusTypeSimpleType statusAttr;
+    private String wildcardContentAttr;
     private AnyURISimpleType periodAttr;
 
     public java.util.List<Ul> getUls() {
@@ -125,26 +125,6 @@ public class Li extends AmendableWidgetImpl  {
         setValueAttr(valueAttr);
         return this;
     }
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-    //DSL Style get value
-    public String wildcardContentAttr() {
-         return  getWildcardContentAttr();
-    }
-
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-    }
-    //DSL Style set value
-    public Li wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
     public StringSimpleType getClassAttr() {
         if (classAttr == null) {
             classAttr = new StringSimpleType();
@@ -206,6 +186,68 @@ public class Li extends AmendableWidgetImpl  {
     //DSL Style set value
     public Li titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));
+        }
+
+        return statusAttr;
+    }
+    //DSL Style get value
+    public StatusTypeSimpleType statusAttr() {
+         return  getStatusAttr();
+    }
+
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+    }
+    //DSL Style set value
+    public Li statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(amendableElement.getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+    //DSL Style get value
+    public AnyURISimpleType refersToAttr() {
+         return  getRefersToAttr();
+    }
+
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+    //DSL Style set value
+    public Li refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+    public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+            langAttr = new LanguageSimpleType();
+            langAttr.setValue(amendableElement.getAttribute("lang"));
+        }
+
+        return langAttr;
+    }
+    //DSL Style get value
+    public LanguageSimpleType langAttr() {
+         return  getLangAttr();
+    }
+
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+    }
+    //DSL Style set value
+    public Li langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
     public AnyURISimpleType getAlternativeToAttr() {
@@ -271,66 +313,24 @@ public class Li extends AmendableWidgetImpl  {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(amendableElement.getAttribute("refersTo"));
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return refersToAttr;
+        return wildcardContentAttr;
     }
     //DSL Style get value
-    public AnyURISimpleType refersToAttr() {
-         return  getRefersToAttr();
+    public String wildcardContentAttr() {
+         return  getWildcardContentAttr();
     }
 
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
     }
     //DSL Style set value
-    public Li refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-    public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-            langAttr = new LanguageSimpleType();
-            langAttr.setValue(amendableElement.getAttribute("lang"));
-        }
-
-        return langAttr;
-    }
-    //DSL Style get value
-    public LanguageSimpleType langAttr() {
-         return  getLangAttr();
-    }
-
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-    }
-    //DSL Style set value
-    public Li langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));
-        }
-
-        return statusAttr;
-    }
-    //DSL Style get value
-    public StatusTypeSimpleType statusAttr() {
-         return  getStatusAttr();
-    }
-
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-    }
-    //DSL Style set value
-    public Li statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Li wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
     public java.util.List<Inline> getInlines() {
@@ -1692,22 +1692,30 @@ public class Li extends AmendableWidgetImpl  {
         return new String[]{"person","neutralCitation","docType","location","remark","docStatus","change","entity","authorialNote","img","party","legislature","event","eol","role","opinion","quantity","ol","extractStructure","eop","fillIn","signature","docStage","mmod","docCommittee","vote","ins","mod","noteRef","docNumber","rref","marker","session","recordedTime","lawyer","docPurpose","extractText","span","sub","concept","courtType","object","docJurisdiction","sup","docProponent","date","omissis","rmod","organization","def","docketNumber","judge","popup","inline","docTitle","del","docDate","relatedDocument","affectedDocument","mref","docIntroducer","ul","b","placeholder","a","outcome","i","process","ref","u","term","shortTitle","p"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("valueAttr", getValueAttr() != null ? getValueAttr().getValue() : null);
-        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("classAttr", getClassAttr() != null ? getClassAttr().getValue() : null);
-        attrs.put("styleAttr", getStyleAttr() != null ? getStyleAttr().getValue() : null);
-        attrs.put("titleAttr", getTitleAttr() != null ? getTitleAttr().getValue() : null);
-        attrs.put("alternativeToAttr", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
-        attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("refersToAttr", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("langAttr", getLangAttr() != null ? getLangAttr().getValue() : null);
-        attrs.put("statusAttr", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("periodAttr", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
+        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
+        attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
+        attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
+        attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
 }

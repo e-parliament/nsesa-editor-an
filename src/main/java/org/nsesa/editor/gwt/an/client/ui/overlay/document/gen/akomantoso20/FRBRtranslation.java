@@ -148,15 +148,23 @@ public class FRBRtranslation extends MetaoptComplexType  {
         return new String[]{};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("fromLanguageAttr", getFromLanguageAttr() != null ? getFromLanguageAttr().getValue() : null);
-        attrs.put("authoritativeAttr", getAuthoritativeAttr() != null ? getAuthoritativeAttr().value() : null);
-        attrs.put("pivotAttr", getPivotAttr() != null ? getPivotAttr().getValue() : null);
-        attrs.put("byAttr", getByAttr() != null ? getByAttr().getValue() : null);
-        attrs.put("hrefAttr", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("fromLanguage", getFromLanguageAttr() != null ? getFromLanguageAttr().getValue() : null);
+        attrs.put("authoritative", getAuthoritativeAttr() != null ? getAuthoritativeAttr().value() : null);
+        attrs.put("pivot", getPivotAttr() != null ? getPivotAttr().getValue() : null);
+        attrs.put("by", getByAttr() != null ? getByAttr().getValue() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         return attrs;
     }
 }

@@ -61,11 +61,19 @@ public class AttachmentOf extends ReferenceTypeComplexType  {
         return new String[]{};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("typeAttr", getTypeAttr() != null ? getTypeAttr().getValue() : null);
+        attrs.put("type", getTypeAttr() != null ? getTypeAttr().getValue() : null);
         return attrs;
     }
 }

@@ -32,9 +32,9 @@ public class Keyword extends MetaoptComplexType  {
 
 // FIELDS ------------------
     private AnyURISimpleType dictionaryAttr;
-    private StringSimpleType valueAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
+    private StringSimpleType valueAttr;
 
     public AnyURISimpleType getDictionaryAttr() {
         if (dictionaryAttr == null) {
@@ -55,27 +55,6 @@ public class Keyword extends MetaoptComplexType  {
     //DSL Style set value
     public Keyword dictionaryAttr(final AnyURISimpleType dictionaryAttr) {
         setDictionaryAttr(dictionaryAttr);
-        return this;
-    }
-    public StringSimpleType getValueAttr() {
-        if (valueAttr == null) {
-            valueAttr = new StringSimpleType();
-            valueAttr.setValue(amendableElement.getAttribute("value"));
-        }
-
-        return valueAttr;
-    }
-    //DSL Style get value
-    public StringSimpleType valueAttr() {
-         return  getValueAttr();
-    }
-
-    public void setValueAttr(final StringSimpleType valueAttr) {
-        this.valueAttr = valueAttr;
-    }
-    //DSL Style set value
-    public Keyword valueAttr(final StringSimpleType valueAttr) {
-        setValueAttr(valueAttr);
         return this;
     }
     public StringSimpleType getShowAsAttr() {
@@ -120,6 +99,27 @@ public class Keyword extends MetaoptComplexType  {
         setShortFormAttr(shortFormAttr);
         return this;
     }
+    public StringSimpleType getValueAttr() {
+        if (valueAttr == null) {
+            valueAttr = new StringSimpleType();
+            valueAttr.setValue(amendableElement.getAttribute("value"));
+        }
+
+        return valueAttr;
+    }
+    //DSL Style get value
+    public StringSimpleType valueAttr() {
+         return  getValueAttr();
+    }
+
+    public void setValueAttr(final StringSimpleType valueAttr) {
+        this.valueAttr = valueAttr;
+    }
+    //DSL Style set value
+    public Keyword valueAttr(final StringSimpleType valueAttr) {
+        setValueAttr(valueAttr);
+        return this;
+    }
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */
@@ -128,14 +128,22 @@ public class Keyword extends MetaoptComplexType  {
         return new String[]{};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("dictionaryAttr", getDictionaryAttr() != null ? getDictionaryAttr().getValue() : null);
-        attrs.put("valueAttr", getValueAttr() != null ? getValueAttr().getValue() : null);
-        attrs.put("showAsAttr", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
-        attrs.put("shortFormAttr", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("dictionary", getDictionaryAttr() != null ? getDictionaryAttr().getValue() : null);
+        attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
+        attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
         return attrs;
     }
 }

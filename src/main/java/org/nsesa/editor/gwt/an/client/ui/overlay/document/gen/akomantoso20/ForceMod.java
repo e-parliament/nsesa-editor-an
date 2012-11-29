@@ -59,11 +59,19 @@ public class ForceMod extends ModificationTypeComplexType  {
         return new String[]{"duration","application","source","condition","efficacy","force","destination"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("typeAttr", getTypeAttr() != null ? getTypeAttr().value() : null);
+        attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
         return attrs;
     }
 }

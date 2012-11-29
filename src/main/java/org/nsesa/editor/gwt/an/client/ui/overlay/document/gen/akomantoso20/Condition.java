@@ -61,11 +61,19 @@ public class Condition extends AnyOtherTypeComplexType  {
         return new String[]{"*"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("frozenAttr", getFrozenAttr() != null ? getFrozenAttr().getValue() : null);
+        attrs.put("frozen", getFrozenAttr() != null ? getFrozenAttr().getValue() : null);
         return attrs;
     }
 }

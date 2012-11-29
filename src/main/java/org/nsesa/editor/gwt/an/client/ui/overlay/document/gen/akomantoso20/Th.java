@@ -83,12 +83,20 @@ public class Th extends BlocksoptComplexType  {
         return new String[]{"ul","toc","tblock","blockList","p","block","table","ol","foreign"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("rowspanAttr", getRowspanAttr() != null ? getRowspanAttr().getValue() : null);
-        attrs.put("colspanAttr", getColspanAttr() != null ? getColspanAttr().getValue() : null);
+        attrs.put("rowspan", getRowspanAttr() != null ? getRowspanAttr().getValue() : null);
+        attrs.put("colspan", getColspanAttr() != null ? getColspanAttr().getValue() : null);
         return attrs;
     }
 }

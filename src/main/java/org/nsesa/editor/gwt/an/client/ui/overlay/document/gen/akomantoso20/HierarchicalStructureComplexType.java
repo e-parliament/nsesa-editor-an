@@ -218,11 +218,19 @@ public class HierarchicalStructureComplexType extends AmendableWidgetImpl  {
         return new String[]{"conclusions","body","preface","preamble","coverPage","attachments","meta"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("containsAttr", getContainsAttr() != null ? getContainsAttr().value() : null);
+        attrs.put("contains", getContainsAttr() != null ? getContainsAttr().value() : null);
         return attrs;
     }
 }

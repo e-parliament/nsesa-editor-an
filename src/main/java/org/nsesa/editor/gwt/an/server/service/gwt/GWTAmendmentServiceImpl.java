@@ -17,10 +17,8 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.StringWriter;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
+import java.nio.charset.Charset;
 import java.util.*;
 
 /**
@@ -35,6 +33,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
     private Map<String, Resource> documents;
     private Resource documentTemplate;
+    private Resource amendmentDirectory;
 
     @Override
     public AmendmentContainerDTO getAmendmentContainer(final ClientContext clientContext, final String id) throws UnsupportedOperationException, ResourceNotFoundException {
@@ -113,11 +112,11 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     public AmendmentContainerDTO[] saveAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, StaleResourceException {
         List<AmendmentContainerDTO> amendmentContainerDTOs = new ArrayList<AmendmentContainerDTO>();
         for (AmendmentContainerDTO data : amendmentContainers) {
-            /*try {
-                Files.write(data.getXmlContent(), new File(new File("R:/"), "amendment.xml"), Charset.forName("UTF-8"));
+            try {
+                Files.write(data.getXmlContent(), new File(amendmentDirectory.getFile(), data.getId() + "-am.xml"), Charset.forName("UTF-8"));
             } catch (IOException e) {
                 LOG.error("Could not write file.", e);
-            }*/
+            }
             try {
                 data.setXmlContent(toHTML(data.getXmlContent().getBytes("UTF-8")));
             } catch (UnsupportedEncodingException e) {
@@ -152,5 +151,9 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
     public void setDocumentTemplate(Resource documentTemplate) {
         this.documentTemplate = documentTemplate;
+    }
+
+    public void setAmendmentDirectory(Resource amendmentDirectory) {
+        this.amendmentDirectory = amendmentDirectory;
     }
 }

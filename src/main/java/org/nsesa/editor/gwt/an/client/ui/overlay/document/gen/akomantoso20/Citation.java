@@ -38,6 +38,14 @@ public class Citation extends ItemTypeComplexType  {
         return new String[]{"num","ul","toc","tblock","subheading","blockList","p","block","table","ol","foreign","heading"};
     }
 
+    /**
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
     @Override
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
