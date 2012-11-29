@@ -7,6 +7,7 @@ import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
@@ -64,12 +65,12 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
                 .addAmendmentContent(new AmendmentContent());
 
         amendmentContent
-                .addBlock(new Block()).text("Text proposed by the Commission");
+                .addBlock(new Block()).nameAttr(s("versionTitle")).text("Text proposed by the Commission");
         amendmentContent
-                .addBlock(new Block()).text("Amendment");
+                .addBlock(new Block()).nameAttr(s("versionTitle")).text("Amendment");
 
         final Mod mod = amendmentContent
-                .addBlock(new Block())
+                .addBlock(new Block()).nameAttr(s("changeBlock"))
                     .addMod(new Mod());
 
         // original content
@@ -104,5 +105,11 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
 
     private <T extends AmendableWidget> T a(final String tag) {
         return (T) overlayFactory.getAmendableWidget(tag);
+    }
+
+    private StringSimpleType s(final String text) {
+        StringSimpleType s = new StringSimpleType();
+        s.setValue(text);
+        return s;
     }
 }
