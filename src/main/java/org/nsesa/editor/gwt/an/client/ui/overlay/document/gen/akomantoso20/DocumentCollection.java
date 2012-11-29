@@ -1,23 +1,28 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.CollectionStructureComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.LinkedHashMap;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class DocumentCollection extends CollectionStructureComplexType  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "documentCollection");
+        span.setClassName("widget documentCollection");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
     public DocumentCollection() {
-        super(DOM.createElement("documentCollection"));
+        super(create());
+        setType("documentCollection");
     }
 
     public DocumentCollection(Element element) {
@@ -63,6 +68,5 @@ public class DocumentCollection extends CollectionStructureComplexType  {
         attrs.put("nameAttr", getNameAttr() != null ? getNameAttr().getValue() : null);
         return attrs;
     }
-
 }
 

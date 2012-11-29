@@ -1,12 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
 import java.util.LinkedHashMap;
 
 /**
@@ -14,7 +13,15 @@ import java.util.LinkedHashMap;
 */
 public class MetaoptComplexType extends AmendableWidgetImpl  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "metaoptComplexType");
+        span.setClassName("widget metaoptComplexType");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
 
     public MetaoptComplexType(Element element) {
         super(element);
@@ -104,6 +111,5 @@ public class MetaoptComplexType extends AmendableWidgetImpl  {
         attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }
-
 }
 

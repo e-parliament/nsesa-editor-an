@@ -1,25 +1,30 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MarkeroptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IntegerSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.LinkedHashMap;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IntegerSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class Img extends MarkeroptComplexType  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "img");
+        span.setClassName("widget img");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
     public Img() {
-        super(DOM.createElement("img"));
+        super(create());
+        setType("img");
     }
 
     public Img(Element element) {
@@ -134,6 +139,5 @@ public class Img extends MarkeroptComplexType  {
         attrs.put("altAttr", getAltAttr() != null ? getAltAttr().getValue() : null);
         return attrs;
     }
-
 }
 

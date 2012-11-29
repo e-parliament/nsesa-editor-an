@@ -1,28 +1,12 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.From;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateTimeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Foreign;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Block;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.BlockList;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Toc;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Tblock;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Ul;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Ol;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Table;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.P;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
@@ -30,7 +14,15 @@ import java.util.LinkedHashMap;
 */
 public class SpeechTypeComplexType extends BasehierarchyComplexType  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "speechTypeComplexType");
+        span.setClassName("widget speechTypeComplexType");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
 
     public SpeechTypeComplexType(Element element) {
         super(element);
@@ -42,16 +34,16 @@ public class SpeechTypeComplexType extends BasehierarchyComplexType  {
     private DateTimeSimpleType startTimeAttr;
     private DateTimeSimpleType endTimeAttr;
     private AnyURISimpleType toAttr;
-    private AnyURISimpleType alternativeToAttr;
-    private LanguageSimpleType langAttr;
+    private String wildcardContentAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
-    private StatusTypeSimpleType statusAttr;
-    private String wildcardContentAttr;
+    private AnyURISimpleType alternativeToAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType refersToAttr;
+    private LanguageSimpleType langAttr;
+    private StatusTypeSimpleType statusAttr;
     private AnyURISimpleType periodAttr;
 
     public From getFrom() {
@@ -220,46 +212,24 @@ public class SpeechTypeComplexType extends BasehierarchyComplexType  {
         return blockElem;
     }
 
-    public AnyURISimpleType getAlternativeToAttr() {
-        if (alternativeToAttr == null) {
-            alternativeToAttr = new AnyURISimpleType();
-            alternativeToAttr.setValue(amendableElement.getAttribute("alternativeTo"));
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return alternativeToAttr;
+        return wildcardContentAttr;
     }
     //DSL Style get value
-    public AnyURISimpleType alternativeToAttr() {
-         return  getAlternativeToAttr();
+    public String wildcardContentAttr() {
+         return  getWildcardContentAttr();
     }
 
-    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
     }
     //DSL Style set value
-    public SpeechTypeComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-    public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-            langAttr = new LanguageSimpleType();
-            langAttr.setValue(amendableElement.getAttribute("lang"));
-        }
-
-        return langAttr;
-    }
-    //DSL Style get value
-    public LanguageSimpleType langAttr() {
-         return  getLangAttr();
-    }
-
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-    }
-    //DSL Style set value
-    public SpeechTypeComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
+    public SpeechTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
     public StringSimpleType getClassAttr() {
@@ -325,44 +295,25 @@ public class SpeechTypeComplexType extends BasehierarchyComplexType  {
         setTitleAttr(titleAttr);
         return this;
     }
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));
+    public AnyURISimpleType getAlternativeToAttr() {
+        if (alternativeToAttr == null) {
+            alternativeToAttr = new AnyURISimpleType();
+            alternativeToAttr.setValue(amendableElement.getAttribute("alternativeTo"));
         }
 
-        return statusAttr;
+        return alternativeToAttr;
     }
     //DSL Style get value
-    public StatusTypeSimpleType statusAttr() {
-         return  getStatusAttr();
+    public AnyURISimpleType alternativeToAttr() {
+         return  getAlternativeToAttr();
     }
 
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
     }
     //DSL Style set value
-    public SpeechTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-    //DSL Style get value
-    public String wildcardContentAttr() {
-         return  getWildcardContentAttr();
-    }
-
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-    }
-    //DSL Style set value
-    public SpeechTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public SpeechTypeComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
     public IDSimpleType getIdAttr() {
@@ -426,6 +377,47 @@ public class SpeechTypeComplexType extends BasehierarchyComplexType  {
     //DSL Style set value
     public SpeechTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
+        return this;
+    }
+    public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+            langAttr = new LanguageSimpleType();
+            langAttr.setValue(amendableElement.getAttribute("lang"));
+        }
+
+        return langAttr;
+    }
+    //DSL Style get value
+    public LanguageSimpleType langAttr() {
+         return  getLangAttr();
+    }
+
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+    }
+    //DSL Style set value
+    public SpeechTypeComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(amendableElement.getAttribute("status"));
+        }
+
+        return statusAttr;
+    }
+    //DSL Style get value
+    public StatusTypeSimpleType statusAttr() {
+         return  getStatusAttr();
+    }
+
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+    }
+    //DSL Style set value
+    public SpeechTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
     public java.util.List<BlockList> getBlockLists() {
@@ -599,19 +591,18 @@ public class SpeechTypeComplexType extends BasehierarchyComplexType  {
         attrs.put("startTimeAttr", getStartTimeAttr() != null ? getStartTimeAttr().getValue() : null);
         attrs.put("endTimeAttr", getEndTimeAttr() != null ? getEndTimeAttr().getValue() : null);
         attrs.put("toAttr", getToAttr() != null ? getToAttr().getValue() : null);
-        attrs.put("alternativeToAttr", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
-        attrs.put("langAttr", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("classAttr", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("styleAttr", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("titleAttr", getTitleAttr() != null ? getTitleAttr().getValue() : null);
-        attrs.put("statusAttr", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("wildcardContentAttr", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("alternativeToAttr", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
         attrs.put("idAttr", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingIdAttr", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("refersToAttr", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("langAttr", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("statusAttr", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("periodAttr", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
-
 }
 

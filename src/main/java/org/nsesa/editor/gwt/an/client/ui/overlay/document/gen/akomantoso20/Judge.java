@@ -1,23 +1,28 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.InlinereqreqComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.LinkedHashMap;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class Judge extends InlinereqreqComplexType  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "judge");
+        span.setClassName("widget judge");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
     public Judge() {
-        super(DOM.createElement("judge"));
+        super(create());
+        setType("judge");
     }
 
     public Judge(Element element) {
@@ -63,6 +68,5 @@ public class Judge extends InlinereqreqComplexType  {
         attrs.put("asAttr", getAsAttr() != null ? getAsAttr().getValue() : null);
         return attrs;
     }
-
 }
 

@@ -1,17 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRthis;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRuri;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRalias;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRdate;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRauthor;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ComponentInfo;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Preservation;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
@@ -19,7 +13,15 @@ import java.util.LinkedHashMap;
 */
 public class CorePropertiesComplexType extends AmendableWidgetImpl  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "corePropertiesComplexType");
+        span.setClassName("widget corePropertiesComplexType");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
 
     public CorePropertiesComplexType(Element element) {
         super(element);
@@ -186,6 +188,5 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
-
 }
 

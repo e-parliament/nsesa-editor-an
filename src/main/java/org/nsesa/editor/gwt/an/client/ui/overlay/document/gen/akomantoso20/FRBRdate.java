@@ -1,24 +1,29 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MetaoptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.LinkedHashMap;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class FRBRdate extends MetaoptComplexType  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "FRBRdate");
+        span.setClassName("widget FRBRdate");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
     public FRBRdate() {
-        super(DOM.createElement("FRBRdate"));
+        super(create());
+        setType("FRBRdate");
     }
 
     public FRBRdate(Element element) {
@@ -26,30 +31,9 @@ public class FRBRdate extends MetaoptComplexType  {
     }
 
 // FIELDS ------------------
-    private StringSimpleType nameAttr;
     private DateSimpleType dateAttr;
+    private StringSimpleType nameAttr;
 
-    public StringSimpleType getNameAttr() {
-        if (nameAttr == null) {
-            nameAttr = new StringSimpleType();
-            nameAttr.setValue(amendableElement.getAttribute("name"));
-        }
-
-        return nameAttr;
-    }
-    //DSL Style get value
-    public StringSimpleType nameAttr() {
-         return  getNameAttr();
-    }
-
-    public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-    }
-    //DSL Style set value
-    public FRBRdate nameAttr(final StringSimpleType nameAttr) {
-        setNameAttr(nameAttr);
-        return this;
-    }
     public DateSimpleType getDateAttr() {
         if (dateAttr == null) {
             dateAttr = new DateSimpleType();
@@ -71,6 +55,27 @@ public class FRBRdate extends MetaoptComplexType  {
         setDateAttr(dateAttr);
         return this;
     }
+    public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+            nameAttr = new StringSimpleType();
+            nameAttr.setValue(amendableElement.getAttribute("name"));
+        }
+
+        return nameAttr;
+    }
+    //DSL Style get value
+    public StringSimpleType nameAttr() {
+         return  getNameAttr();
+    }
+
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+    }
+    //DSL Style set value
+    public FRBRdate nameAttr(final StringSimpleType nameAttr) {
+        setNameAttr(nameAttr);
+        return this;
+    }
     /**
     * Returns possible children as a list of <tt>String</tt>s.
     */
@@ -83,10 +88,9 @@ public class FRBRdate extends MetaoptComplexType  {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("nameAttr", getNameAttr() != null ? getNameAttr().getValue() : null);
         attrs.put("dateAttr", getDateAttr() != null ? getDateAttr().getValue() : null);
+        attrs.put("nameAttr", getNameAttr() != null ? getNameAttr().getValue() : null);
         return attrs;
     }
-
 }
 

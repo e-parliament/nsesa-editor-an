@@ -1,19 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.VersionTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Meta;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.CoverPage;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Preface;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Preamble;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MainBody;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Conclusions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Attachments;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
 import java.util.LinkedHashMap;
 
 /**
@@ -21,7 +13,15 @@ import java.util.LinkedHashMap;
 */
 public class OpenStructureComplexType extends AmendableWidgetImpl  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "openStructureComplexType");
+        span.setClassName("widget openStructureComplexType");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
 
     public OpenStructureComplexType(Element element) {
         super(element);
@@ -249,6 +249,5 @@ public class OpenStructureComplexType extends AmendableWidgetImpl  {
         attrs.put("nameAttr", getNameAttr() != null ? getNameAttr().getValue() : null);
         return attrs;
     }
-
 }
 

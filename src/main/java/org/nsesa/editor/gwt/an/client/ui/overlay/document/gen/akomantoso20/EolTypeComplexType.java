@@ -1,12 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MarkeroptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IntegerSimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IntegerSimpleType;
+
 import java.util.LinkedHashMap;
 
 /**
@@ -14,7 +11,15 @@ import java.util.LinkedHashMap;
 */
 public class EolTypeComplexType extends MarkeroptComplexType  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "eolTypeComplexType");
+        span.setClassName("widget eolTypeComplexType");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
 
     public EolTypeComplexType(Element element) {
         super(element);
@@ -59,6 +64,5 @@ public class EolTypeComplexType extends MarkeroptComplexType  {
         attrs.put("breakatAttr", getBreakatAttr() != null ? getBreakatAttr().getValue() : null);
         return attrs;
     }
-
 }
 

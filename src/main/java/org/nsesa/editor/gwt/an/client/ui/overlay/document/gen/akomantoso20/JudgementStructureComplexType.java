@@ -1,17 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.VersionTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Meta;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.CoverPage;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Header;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.JudgementBody;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Conclusions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Attachments;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
 import java.util.LinkedHashMap;
 
 /**
@@ -19,7 +12,15 @@ import java.util.LinkedHashMap;
 */
 public class JudgementStructureComplexType extends AmendableWidgetImpl  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "judgementStructureComplexType");
+        span.setClassName("widget judgementStructureComplexType");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
 
     public JudgementStructureComplexType(Element element) {
         super(element);
@@ -201,6 +202,5 @@ public class JudgementStructureComplexType extends AmendableWidgetImpl  {
         attrs.put("containsAttr", getContainsAttr() != null ? getContainsAttr().value() : null);
         return attrs;
     }
-
 }
 

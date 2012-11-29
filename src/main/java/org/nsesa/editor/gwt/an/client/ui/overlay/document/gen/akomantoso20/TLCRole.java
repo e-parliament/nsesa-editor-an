@@ -1,22 +1,27 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ReferenceTypeComplexType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.LinkedHashMap;
 import com.google.gwt.user.client.DOM;
+
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class TLCRole extends ReferenceTypeComplexType  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "TLCRole");
+        span.setClassName("widget TLCRole");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
     public TLCRole() {
-        super(DOM.createElement("TLCRole"));
+        super(create());
+        setType("TLCRole");
     }
 
     public TLCRole(Element element) {
@@ -39,6 +44,5 @@ public class TLCRole extends ReferenceTypeComplexType  {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
-
 }
 

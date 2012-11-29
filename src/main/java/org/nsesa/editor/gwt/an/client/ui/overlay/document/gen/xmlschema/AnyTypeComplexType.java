@@ -1,10 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema;
 
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
@@ -12,7 +13,15 @@ import java.util.LinkedHashMap;
 */
 public class AnyTypeComplexType extends AmendableWidgetImpl  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "anyTypeComplexType");
+        span.setClassName("widget anyTypeComplexType");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
 
     public AnyTypeComplexType(Element element) {
         super(element);
@@ -52,6 +61,5 @@ public class AnyTypeComplexType extends AmendableWidgetImpl  {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
-
 }
 

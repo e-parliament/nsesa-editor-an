@@ -1,22 +1,27 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.InlineComplexType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.LinkedHashMap;
 import com.google.gwt.user.client.DOM;
+
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class Def extends InlineComplexType  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "def");
+        span.setClassName("widget def");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
     public Def() {
-        super(DOM.createElement("def"));
+        super(create());
+        setType("def");
     }
 
     public Def(Element element) {
@@ -39,6 +44,5 @@ public class Def extends InlineComplexType  {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
-
 }
 

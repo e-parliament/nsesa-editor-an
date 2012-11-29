@@ -1,13 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Num;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Heading;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subheading;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
 import java.util.LinkedHashMap;
 
 /**
@@ -15,7 +12,15 @@ import java.util.LinkedHashMap;
 */
 public class BasehierarchyComplexType extends AmendableWidgetImpl  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "basehierarchyComplexType");
+        span.setClassName("widget basehierarchyComplexType");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
 
     public BasehierarchyComplexType(Element element) {
         super(element);
@@ -106,6 +111,5 @@ public class BasehierarchyComplexType extends AmendableWidgetImpl  {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
-
 }
 

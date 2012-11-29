@@ -12,19 +12,26 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
 </#if>
-<#if overlayClass.element>
 import com.google.gwt.user.client.DOM;
-</#if>
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (overlayClass.parent.complex || overlayClass.parent.element || overlayClass.parent.simple)>extends ${overlayClass.parent.className?cap_first}<#else><#if overlayClass.complex || overlayClass.element>extends AmendableWidgetImpl</#if></#if>  <#if overlayClass.interfaces??>implements <#list overlayClass.interfaces as interface>${interface.getSimpleName()}<#if interface_has_next>, </#if></#list> </#if>{
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "${overlayClass.className}");
+        span.setClassName("widget ${overlayClass.className}");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
 <#if overlayClass.element>
     public ${overlayClass.className?cap_first}() {
-        super(DOM.createElement("${overlayClass.className}"));
+        super(create());
+        setType("${overlayClass.className}");
     }
 </#if>
 
@@ -161,7 +168,6 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
         </#list>
         return attrs;
     }
-
 </#if>
 <#if overlayClass.simple>
     <#list overlayClass.properties as property>

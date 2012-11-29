@@ -1,24 +1,28 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ModificationTypeComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MeaningModsSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Domain;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.LinkedHashMap;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class MeaningMod extends ModificationTypeComplexType  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "meaningMod");
+        span.setClassName("widget meaningMod");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
     public MeaningMod() {
-        super(DOM.createElement("meaningMod"));
+        super(create());
+        setType("meaningMod");
     }
 
     public MeaningMod(Element element) {
@@ -86,6 +90,5 @@ public class MeaningMod extends ModificationTypeComplexType  {
         attrs.put("typeAttr", getTypeAttr() != null ? getTypeAttr().value() : null);
         return attrs;
     }
-
 }
 

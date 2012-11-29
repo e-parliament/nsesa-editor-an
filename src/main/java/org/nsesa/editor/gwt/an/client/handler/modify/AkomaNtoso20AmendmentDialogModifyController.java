@@ -6,6 +6,7 @@ import com.google.gwt.dom.client.NodeList;
 import com.google.gwt.user.client.ui.Panel;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
@@ -43,49 +44,37 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
 
     @Override
     public void handleSave() {
-        // TODO: just testing ...
-        AmendableWidget root = as("amendment");
+
+        final Amendment root = new AkomaNtoso().setAmendment(new Amendment());
 
         // preface
-        AmendableWidget p = as("p");
-        p.setContent(clientFactory.getClientContext().getPrincipal());
-        AmendableWidget container = as("container");
-        container.addAmendableWidget(p);
-        AmendableWidget preface = as("preface");
-        preface.addAmendableWidget(container);
-        root.addAmendableWidget(preface);
+        root.setPreface(new Preface())
+                .addContainer(new Container())
+                        .addP(new P()).text(clientFactory.getClientContext().getPrincipal());
 
         // amendment body
+        final AmendmentBody amendmentBody = root.setAmendmentBody(new AmendmentBody());
 
-        AmendableWidget amendmentBody = as("amendmentBody");
-        root.addAmendableWidget(amendmentBody);
-
-        AmendableWidget amendmentHeading = as("amendmentHeading");
-        AmendableWidget amendedActBlock = as("block");
-        amendedActBlock.setContent(locator.getLocation(amendableWidget, "EN", true));
-        amendmentHeading.addAmendableWidget(amendedActBlock);
-        amendmentBody.addAmendableWidget(amendmentHeading);
+        amendmentBody
+                .addAmendmentHeading(new AmendmentHeading())
+                    .addBlock(new Block()).text(locator.getLocation(amendableWidget, "EN", true));
 
         // amendment content
-        AmendableWidget amendmentContent = as("amendmentContent");
-        amendmentBody.addAmendableWidget(amendmentContent);
+        final AmendmentContent amendmentContent = amendmentBody
+                .addAmendmentContent(new AmendmentContent());
 
-        AmendableWidget blockCommission = as("block");
-        blockCommission.setContent("Text proposed by the Commission");
-        amendmentContent.addAmendableWidget(blockCommission);
-        AmendableWidget blockAmendment = as("block");
-        blockAmendment.setContent("Amendment");
-        amendmentContent.addAmendableWidget(blockAmendment);
+        amendmentContent
+                .addBlock(new Block()).text("Text proposed by the Commission");
+        amendmentContent
+                .addBlock(new Block()).text("Amendment");
 
-        AmendableWidget changeBlock = as("block");
-        amendmentContent.addAmendableWidget(changeBlock);
+        final Mod mod = amendmentContent
+                .addBlock(new Block())
+                    .addMod(new Mod());
 
-        AmendableWidget mod = as("mod");
-        changeBlock.addAmendableWidget(mod);
-
-        AmendableWidget quotedStructureOriginal = as("quotedStructure");
-        // NOTE: this should come from the original panel - just for demonstration
-        Panel temp = new SimplePanel();
+        // original content
+        final QuotedStructure quotedStructureOriginal = mod.addQuotedStructure(new QuotedStructure());
+        final Panel temp = new SimplePanel();
         temp.getElement().setInnerHTML(contentPanelController.getView().getOriginalText());
         NodeList<Node> childNodes = temp.getElement().getChildNodes();
         for (int i = 0; i < childNodes.getLength(); i++) {
@@ -95,9 +84,9 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
                 quotedStructureOriginal.addAmendableWidget(overlayed);
             }
         }
-        mod.addAmendableWidget(quotedStructureOriginal);
 
-        AmendableWidget quotedStructureAmendment = as("quotedStructure");
+        // amendment content
+        final QuotedStructure quotedStructureAmendment = mod.addQuotedStructure(new QuotedStructure());
         temp.getElement().setInnerHTML(view.getAmendmentContent());
         childNodes = temp.getElement().getChildNodes();
         for (int i = 0; i < childNodes.getLength(); i++) {
@@ -107,14 +96,13 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
                 quotedStructureAmendment.addAmendableWidget(overlayed);
             }
         }
-        mod.addAmendableWidget(quotedStructureAmendment);
 
         amendment.setRoot(root);
 
         super.handleSave();
     }
 
-    private AmendableWidget as(final String tag) {
-        return overlayFactory.getAmendableWidget(tag);
+    private <T extends AmendableWidget> T a(final String tag) {
+        return (T) overlayFactory.getAmendableWidget(tag);
     }
 }

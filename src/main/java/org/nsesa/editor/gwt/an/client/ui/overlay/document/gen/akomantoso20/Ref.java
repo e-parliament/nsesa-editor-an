@@ -1,23 +1,28 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.InlinereqComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.LinkedHashMap;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class Ref extends InlinereqComplexType  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "ref");
+        span.setClassName("widget ref");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
     public Ref() {
-        super(DOM.createElement("ref"));
+        super(create());
+        setType("ref");
     }
 
     public Ref(Element element) {
@@ -63,6 +68,5 @@ public class Ref extends InlinereqComplexType  {
         attrs.put("hrefAttr", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         return attrs;
     }
-
 }
 

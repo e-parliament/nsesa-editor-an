@@ -1,13 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.QuorumVerification;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Voting;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Recount;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
@@ -15,7 +13,15 @@ import java.util.LinkedHashMap;
 */
 public class ParliamentaryAnalysisComplexType extends AmendableWidgetImpl  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "parliamentaryAnalysisComplexType");
+        span.setClassName("widget parliamentaryAnalysisComplexType");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
 
     public ParliamentaryAnalysisComplexType(Element element) {
         super(element);
@@ -94,6 +100,5 @@ public class ParliamentaryAnalysisComplexType extends AmendableWidgetImpl  {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
-
 }
 

@@ -1,23 +1,28 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AnyOtherTypeComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.LinkedHashMap;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
+
+import java.util.LinkedHashMap;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 public class Condition extends AnyOtherTypeComplexType  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "condition");
+        span.setClassName("widget condition");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
     public Condition() {
-        super(DOM.createElement("condition"));
+        super(create());
+        setType("condition");
     }
 
     public Condition(Element element) {
@@ -63,6 +68,5 @@ public class Condition extends AnyOtherTypeComplexType  {
         attrs.put("frozenAttr", getFrozenAttr() != null ? getFrozenAttr().getValue() : null);
         return attrs;
     }
-
 }
 

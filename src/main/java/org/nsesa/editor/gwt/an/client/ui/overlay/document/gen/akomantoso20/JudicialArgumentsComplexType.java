@@ -1,22 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Result;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Supports;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.IsAnalogTo;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Applies;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Extends;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Restricts;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Derogates;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Contrasts;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Overrules;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DissentsFrom;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PutsInQuestion;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Distinguishes;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
@@ -24,7 +13,15 @@ import java.util.LinkedHashMap;
 */
 public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
 
-// CONSTRUCTORS ------------------
+    // STATIC create method
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "judicialArgumentsComplexType");
+        span.setClassName("widget judicialArgumentsComplexType");
+        return span;
+    }
+
+    // CONSTRUCTORS ------------------
 
     public JudicialArgumentsComplexType(Element element) {
         super(element);
@@ -278,6 +275,5 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
-
 }
 
