@@ -1,7 +1,7 @@
 <#-- Freemarker template to handle XML transformations for IE -->
 <#macro element el debug=false>
     <#compress>
-    <span class="widget ${el?node_name} <#if el.@class[0]??>${el.@class}</#if>"
+    <span class="widget ${el?node_name}<#compress><#if el.@class[0]??> ${el.@class}</#if></#compress>"
         <#list el.@@ as attr><#if attr?node_name?lower_case != "xmlns">${attr?node_name}="${attr}" </#if></#list>
             type="${el?node_name}"
             ns="${el?node_namespace}"
