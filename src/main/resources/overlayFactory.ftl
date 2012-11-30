@@ -23,8 +23,8 @@ public class ${overlayClass.name?cap_first} extends DefaultOverlayFactory  {
     private final String namespace = "${overlayClass.nameSpace}";
 
     @Inject
-    public ${overlayClass.name?cap_first}(final OverlayStrategy overlayStrategy) {
-        super(overlayStrategy);
+    public ${overlayClass.name?cap_first}(final OverlayStrategy overlayStrategy, final ClientFactory clientFactory) {
+        super(overlayStrategy, clientFactory);
     }
     @Override
     public String getNamespace() {

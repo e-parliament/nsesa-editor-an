@@ -1,13 +1,13 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen;
 
+import com.google.gwt.dom.client.Element;
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
-import com.google.gwt.dom.client.Element;
+
 import java.util.logging.Logger;
-import java.util.Map;
 /**
 * Note: this file is generated. Rather than changing this file, correct the template called <tt>overlayFactory.ftl</tt>.
 */
@@ -18,8 +18,8 @@ public class NamespaceOverlayFactory extends DefaultOverlayFactory  {
     private final String namespace = "http://www.w3.org/XML/1998/namespace";
 
     @Inject
-    public NamespaceOverlayFactory(final OverlayStrategy overlayStrategy) {
-        super(overlayStrategy);
+    public NamespaceOverlayFactory(final OverlayStrategy overlayStrategy, final ClientFactory clientFactory) {
+        super(overlayStrategy, clientFactory);
     }
     @Override
     public String getNamespace() {

@@ -24,6 +24,7 @@
                 <entry key="3" value="classpath:examples/Act_Kenya_1989-12-06.xml"/>
                 <entry key="4" value="classpath:examples/AmendmentList_Bungeni_2010-10-28v1.xml"/>
                 <entry key="5" value="classpath:examples/Debate_Bungeni_2010-12-07.xml"/>
+                <entry key="6" value="classpath:examples/constitution_final-Kenya.xml"/>
             </map>
         </property>
         <property name="documentTemplate" value="classpath:document.ftl"/>
