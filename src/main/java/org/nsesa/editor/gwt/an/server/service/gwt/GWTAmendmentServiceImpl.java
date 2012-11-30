@@ -45,13 +45,13 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
         try {
             final AmendmentContainerDTO amendment1 = new AmendmentContainerDTO();
-            amendment1.setAmendmentContainerID("1");
+            amendment1.setId(UUID.randomUUID().toString());
             final AmendableWidgetReference reference1 = new AmendableWidgetReference("rec1");
             amendment1.setSourceReference(reference1);
             amendment1.setXmlContent(getAmendmentDocument("amendment-1"));
 
             final AmendmentContainerDTO amendment2 = new AmendmentContainerDTO();
-            amendment2.setAmendmentContainerID("2");
+            amendment2.setId(UUID.randomUUID().toString());
             final AmendableWidgetReference reference2 = new AmendableWidgetReference("rec2");
             final AmendableWidgetReference reference2a = new AmendableWidgetReference("rec3");
             final AmendableWidgetReference reference2b = new AmendableWidgetReference("rec1");
@@ -60,7 +60,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
             amendment2.setXmlContent(getAmendmentDocument("amendment-2"));
 
             final AmendmentContainerDTO amendment3 = new AmendmentContainerDTO();
-            amendment3.setAmendmentContainerID("3");
+            amendment3.setId(UUID.randomUUID().toString());
             final AmendableWidgetReference reference3 = new AmendableWidgetReference("art2-pnta");
             amendment3.setSourceReference(reference3);
             amendment3.setXmlContent(getAmendmentDocument("amendment-3"));
