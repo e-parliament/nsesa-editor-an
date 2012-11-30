@@ -55,6 +55,12 @@ table {
     float: left;
 }
 
+.navbar .loggedInPerson {
+    position: relative;
+    float: right;
+    right:15px;
+}
+
 .gwt-DecoratedPopupPanel {
     z-index: 100;
 }
