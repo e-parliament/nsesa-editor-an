@@ -1,3 +1,8 @@
+.chapter {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 .chapter > .num {
     font-size: 1.4em;
     padding-top: 15px;
@@ -6,6 +11,11 @@
 
 .chapter > .heading {
     font-size: 1.4em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.article {
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -22,6 +32,19 @@
     padding-bottom: 15px;
 }
 
+.paragraph {
+    display: block;
+}
+
+.p {
+    display: block;
+}
+
 .subparagraph {
+    display: block;
     padding-left: 10px;
+}
+
+.eol:after {
+    content:"\\A"; white-space:pre;
 }
