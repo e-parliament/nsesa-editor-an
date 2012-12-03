@@ -1,0 +1,27 @@
+.chapter > .num {
+    font-size: 1.4em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.chapter > .heading {
+    font-size: 1.4em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.article > .num {
+    font-size: 1.2em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.article > .heading {
+    font-size: 1.2em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.subparagraph {
+    padding-left: 10px;
+}
