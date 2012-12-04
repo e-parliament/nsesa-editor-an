@@ -3,6 +3,7 @@ package org.nsesa.editor.gwt.an.client;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Singleton;
+import com.google.inject.name.Names;
 import org.nsesa.editor.gwt.an.client.handler.modify.AkomaNtoso20AmendmentDialogModifyController;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Creator;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Locator;
@@ -25,6 +26,7 @@ import org.nsesa.editor.gwt.editor.client.ui.main.EditorModule;
 public class AkomaNtoso20Module extends AbstractGinModule {
     @Override
     protected void configure() {
+        bindConstant().annotatedWith(Names.named("richTextEditorCss")).to("css/akomaNtoso.css,css/editor.css,css/document.css,css/akomaNtoso-override.css");
         install(new EditorModule());
    		// bind the mapper
    		bind(ActivityMapper.class).to(EditorActivityMapper.class).in(Singleton.class);
