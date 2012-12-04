@@ -1,0 +1,1124 @@
+/*
+* --------------------------------------------------------------------------
+* Akoma Ntoso default stylesheet.
+* Note: this is generated!
+* --------------------------------------------------------------------------
+*/
+/*
+* --------------------------
+* Amendments
+* --------------------------
+*/
+.akomaNtoso .Amendments {
+}
+.akomaNtoso .activeModifications {
+}
+.akomaNtoso .passiveModifications {
+}
+/*
+* --------------------------
+* akomaNtosoType
+* --------------------------
+*/
+.akomaNtoso .akomaNtosoType {
+}
+.akomaNtoso .akomaNtoso {
+}
+/*
+* --------------------------
+* amendmentBodyType
+* --------------------------
+*/
+.akomaNtoso .amendmentBodyType {
+}
+.akomaNtoso .amendmentBody {
+}
+/*
+* --------------------------
+* amendmentStructure
+* --------------------------
+*/
+.akomaNtoso .amendmentStructure {
+}
+.akomaNtoso .amendment {
+}
+.akomaNtoso .analysis {
+}
+/*
+* --------------------------
+* anyOtherType
+* --------------------------
+*/
+.akomaNtoso .anyOtherType {
+}
+.akomaNtoso .condition {
+}
+.akomaNtoso .domain {
+}
+.akomaNtoso .eventRef {
+}
+.akomaNtoso .foreign {
+}
+.akomaNtoso .new {
+}
+.akomaNtoso .old {
+}
+.akomaNtoso .otherAnalysis {
+}
+.akomaNtoso .presentation {
+}
+.akomaNtoso .preservation {
+}
+.akomaNtoso .proprietary {
+}
+.akomaNtoso .result {
+}
+.akomaNtoso .step {
+}
+/*
+* --------------------------
+* argumentType
+* --------------------------
+*/
+.akomaNtoso .argumentType {
+}
+.akomaNtoso .destination {
+}
+.akomaNtoso .source {
+}
+.akomaNtoso .attachments {
+}
+/*
+* --------------------------
+* basehierarchy
+* --------------------------
+*/
+.akomaNtoso .basehierarchy {
+    text-align:left;
+    display:block;
+}
+/*
+* --------------------------
+* althierarchy
+* --------------------------
+*/
+.akomaNtoso .althierarchy {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .address {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .adjournment {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .administrationOfOath {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .communication {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .debateSection {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .declarationOfVote {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .ministerialStatements {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .nationalInterest {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .noticesOfMotion {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .oralStatements {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .papers {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .personalStatements {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .petitions {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .pointOfOrder {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .prayers {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .proceduralMotions {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .questions {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .resolutions {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .rollCall {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .writtenStatements {
+    text-align:left;
+    display:block;
+}
+/*
+* --------------------------
+* hierarchy
+* --------------------------
+*/
+.akomaNtoso .hierarchy {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .alinea {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .article {
+    text-align:center;
+    display:block;
+}
+.akomaNtoso .book {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .chapter {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .clause {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .division {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .hcontainer {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .indent {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .list {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .paragraph {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .part {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .point {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .section {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .subchapter {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .subclause {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .subdivision {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .sublist {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .subparagraph {
+    text-align:left;
+    display:inline;
+}
+.akomaNtoso .subpart {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .subsection {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .subtitle {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .title {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .tome {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .transitional {
+    text-align:left;
+    display:block;
+}
+/*
+* --------------------------
+* itemType
+* --------------------------
+*/
+.akomaNtoso .itemType {
+    padding-top:10px;
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .citation {
+    padding-top:10px;
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .item {
+    padding-top:10px;
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .recital {
+    padding-top:10px;
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .tblock {
+    padding-top:10px;
+    text-align:left;
+    display:block;
+}
+/*
+* --------------------------
+* speechType
+* --------------------------
+*/
+.akomaNtoso .speechType {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .answer {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .question {
+    text-align:left;
+    display:block;
+}
+.akomaNtoso .speech {
+    text-align:left;
+    display:block;
+}
+/*
+* --------------------------
+* basicopt
+* --------------------------
+*/
+.akomaNtoso .basicopt {
+}
+.akomaNtoso .conclusions {
+}
+.akomaNtoso .coverPage {
+}
+.akomaNtoso .blockList {
+}
+/*
+* --------------------------
+* blocksopt
+* --------------------------
+*/
+.akomaNtoso .blocksopt {
+}
+.akomaNtoso .amendmentContent {
+}
+.akomaNtoso .amendmentHeading {
+}
+.akomaNtoso .amendmentJustification {
+}
+.akomaNtoso .amendmentReference {
+}
+.akomaNtoso .content {
+    text-align:left;
+}
+.akomaNtoso .formula {
+}
+.akomaNtoso .header {
+}
+.akomaNtoso .intro {
+}
+.akomaNtoso .longTitle {
+}
+.akomaNtoso .other {
+}
+.akomaNtoso .td {
+}
+.akomaNtoso .th {
+}
+.akomaNtoso .wrap {
+}
+/*
+* --------------------------
+* blocksreq
+* --------------------------
+*/
+.akomaNtoso .blocksreq {
+    padding-top:10px;
+    display:block;
+}
+.akomaNtoso .div {
+    padding-top:10px;
+    display:block;
+}
+.akomaNtoso .interstitial {
+    padding-top:10px;
+    display:block;
+}
+.akomaNtoso .note {
+    padding-top:10px;
+    display:block;
+}
+/*
+* --------------------------
+* bodyType
+* --------------------------
+*/
+.akomaNtoso .bodyType {
+}
+.akomaNtoso .body {
+}
+.akomaNtoso .citations {
+}
+.akomaNtoso .classification {
+}
+/*
+* --------------------------
+* collectionBodyType
+* --------------------------
+*/
+.akomaNtoso .collectionBodyType {
+}
+.akomaNtoso .collectionBody {
+}
+/*
+* --------------------------
+* collectionStructure
+* --------------------------
+*/
+.akomaNtoso .collectionStructure {
+}
+.akomaNtoso .amendmentList {
+}
+.akomaNtoso .documentCollection {
+}
+.akomaNtoso .officialGazette {
+}
+.akomaNtoso .component {
+}
+.akomaNtoso .componentData {
+}
+.akomaNtoso .componentInfo {
+}
+.akomaNtoso .components {
+}
+/*
+* --------------------------
+* containerType
+* --------------------------
+*/
+.akomaNtoso .containerType {
+}
+.akomaNtoso .container {
+    padding-top:10px;
+    display:block;
+}
+/*
+* --------------------------
+* coreProperties
+* --------------------------
+*/
+.akomaNtoso .coreProperties {
+}
+.akomaNtoso .FRBRExpression {
+}
+.akomaNtoso .FRBRItem {
+}
+.akomaNtoso .FRBRManifestation {
+}
+.akomaNtoso .FRBRWork {
+}
+/*
+* --------------------------
+* countType
+* --------------------------
+*/
+.akomaNtoso .countType {
+}
+.akomaNtoso .count {
+}
+.akomaNtoso .quorum {
+}
+/*
+* --------------------------
+* debateBodyType
+* --------------------------
+*/
+.akomaNtoso .debateBodyType {
+}
+.akomaNtoso .debateBody {
+}
+/*
+* --------------------------
+* debateStructure
+* --------------------------
+*/
+.akomaNtoso .debateStructure {
+}
+.akomaNtoso .debate {
+}
+/*
+* --------------------------
+* fragmentBodyType
+* --------------------------
+*/
+.akomaNtoso .fragmentBodyType {
+}
+.akomaNtoso .fragmentBody {
+}
+/*
+* --------------------------
+* fragmentStructure
+* --------------------------
+*/
+.akomaNtoso .fragmentStructure {
+}
+.akomaNtoso .fragment {
+}
+/*
+* --------------------------
+* hierarchicalStructure
+* --------------------------
+*/
+.akomaNtoso .hierarchicalStructure {
+}
+.akomaNtoso .act {
+}
+.akomaNtoso .bill {
+}
+.akomaNtoso .identification {
+}
+/*
+* --------------------------
+* inline
+* --------------------------
+*/
+.akomaNtoso .inline {
+    display:inline;
+}
+.akomaNtoso .a {
+    display:inline;
+}
+.akomaNtoso .affectedDocument {
+    display:inline;
+}
+.akomaNtoso .b {
+    display:inline;
+}
+.akomaNtoso .block {
+    padding-top:10px;
+    display:block;
+}
+.akomaNtoso .caption {
+    display:inline;
+}
+.akomaNtoso .change {
+    display:inline;
+}
+.akomaNtoso .courtType {
+    display:inline;
+}
+.akomaNtoso .date {
+    display:inline;
+}
+.akomaNtoso .def {
+    display:inline;
+}
+.akomaNtoso .del {
+    display:inline;
+}
+.akomaNtoso .docCommittee {
+    display:inline;
+}
+.akomaNtoso .docDate {
+    display:inline;
+}
+.akomaNtoso .docIntroducer {
+    display:inline;
+}
+.akomaNtoso .docJurisdiction {
+    display:inline;
+}
+.akomaNtoso .docNumber {
+    display:inline;
+}
+.akomaNtoso .docProponent {
+    display:inline;
+}
+.akomaNtoso .docPurpose {
+    display:inline;
+}
+.akomaNtoso .docStage {
+    display:inline;
+}
+.akomaNtoso .docStatus {
+    display:inline;
+}
+.akomaNtoso .docTitle {
+    display:inline;
+}
+.akomaNtoso .docType {
+    display:inline;
+}
+.akomaNtoso .docketNumber {
+    display:inline;
+}
+.akomaNtoso .extractText {
+    display:inline;
+}
+.akomaNtoso .fillIn {
+    display:inline;
+}
+.akomaNtoso .from {
+    display:inline;
+}
+.akomaNtoso .heading {
+    text-align:center;
+    display:inline;
+}
+.akomaNtoso .i {
+    display:inline;
+}
+.akomaNtoso .inline {
+    display:inline;
+}
+.akomaNtoso .ins {
+    display:inline;
+}
+.akomaNtoso .legislature {
+    display:inline;
+}
+.akomaNtoso .listConclusion {
+    display:inline;
+}
+.akomaNtoso .listIntroduction {
+    display:inline;
+}
+.akomaNtoso .mref {
+    display:inline;
+}
+.akomaNtoso .narrative {
+    display:inline;
+}
+.akomaNtoso .neutralCitation {
+    display:inline;
+}
+.akomaNtoso .num {
+    display:inline;
+}
+.akomaNtoso .omissis {
+    display:inline;
+}
+.akomaNtoso .opinion {
+    display:inline;
+}
+.akomaNtoso .outcome {
+    display:inline;
+}
+.akomaNtoso .p {
+    display:inline;
+}
+.akomaNtoso .placeholder {
+    display:inline;
+}
+.akomaNtoso .quotedText {
+    display:inline;
+}
+.akomaNtoso .recordedTime {
+    display:inline;
+}
+.akomaNtoso .relatedDocument {
+    display:inline;
+}
+.akomaNtoso .remark {
+    display:inline;
+}
+.akomaNtoso .scene {
+    display:inline;
+}
+.akomaNtoso .session {
+    display:inline;
+}
+.akomaNtoso .shortTitle {
+    display:inline;
+}
+.akomaNtoso .signature {
+    display:inline;
+}
+.akomaNtoso .span {
+    display:inline;
+}
+.akomaNtoso .sub {
+    display:inline;
+}
+.akomaNtoso .subheading {
+    display:inline;
+}
+.akomaNtoso .summary {
+    display:inline;
+}
+.akomaNtoso .sup {
+    display:inline;
+}
+.akomaNtoso .tocItem {
+    display:inline;
+}
+.akomaNtoso .u {
+    display:inline;
+}
+.akomaNtoso .vote {
+    display:inline;
+}
+/*
+* --------------------------
+* inlinereq
+* --------------------------
+*/
+.akomaNtoso .inlinereq {
+}
+.akomaNtoso .ref {
+}
+.akomaNtoso .rref {
+}
+/*
+* --------------------------
+* inlinereqreq
+* --------------------------
+*/
+.akomaNtoso .inlinereqreq {
+}
+.akomaNtoso .concept {
+}
+.akomaNtoso .entity {
+}
+.akomaNtoso .event {
+}
+.akomaNtoso .judge {
+}
+.akomaNtoso .lawyer {
+}
+.akomaNtoso .location {
+}
+.akomaNtoso .object {
+}
+.akomaNtoso .organization {
+}
+.akomaNtoso .party {
+}
+.akomaNtoso .person {
+}
+.akomaNtoso .process {
+}
+.akomaNtoso .quantity {
+}
+.akomaNtoso .role {
+}
+.akomaNtoso .term {
+}
+/*
+* --------------------------
+* judgementBodyType
+* --------------------------
+*/
+.akomaNtoso .judgementBodyType {
+}
+.akomaNtoso .judgementBody {
+}
+/*
+* --------------------------
+* judgementStructure
+* --------------------------
+*/
+.akomaNtoso .judgementStructure {
+}
+.akomaNtoso .judgement {
+}
+/*
+* --------------------------
+* judicialArgumentType
+* --------------------------
+*/
+.akomaNtoso .judicialArgumentType {
+}
+.akomaNtoso .applies {
+}
+.akomaNtoso .contrasts {
+}
+.akomaNtoso .derogates {
+}
+.akomaNtoso .dissentsFrom {
+}
+.akomaNtoso .distinguishes {
+}
+.akomaNtoso .extends {
+}
+.akomaNtoso .isAnalogTo {
+}
+.akomaNtoso .overrules {
+}
+.akomaNtoso .putsInQuestion {
+}
+.akomaNtoso .restricts {
+}
+.akomaNtoso .supports {
+}
+/*
+* --------------------------
+* judicialArguments
+* --------------------------
+*/
+.akomaNtoso .judicialArguments {
+}
+.akomaNtoso .judicial {
+}
+.akomaNtoso .li {
+}
+.akomaNtoso .lifecycle {
+}
+/*
+* --------------------------
+* listItems
+* --------------------------
+*/
+.akomaNtoso .listItems {
+}
+.akomaNtoso .ol {
+}
+.akomaNtoso .ul {
+}
+/*
+* --------------------------
+* maincontent
+* --------------------------
+*/
+.akomaNtoso .maincontent {
+}
+.akomaNtoso .background {
+}
+.akomaNtoso .decision {
+}
+.akomaNtoso .introduction {
+}
+.akomaNtoso .mainBody {
+}
+.akomaNtoso .motivation {
+}
+/*
+* --------------------------
+* markeropt
+* --------------------------
+*/
+.akomaNtoso .markeropt {
+}
+.akomaNtoso .br {
+}
+/*
+* --------------------------
+* eolType
+* --------------------------
+*/
+.akomaNtoso .eolType {
+}
+.akomaNtoso .eol {
+}
+.akomaNtoso .eop {
+}
+.akomaNtoso .img {
+}
+.akomaNtoso .noteRef {
+}
+/*
+* --------------------------
+* markerreq
+* --------------------------
+*/
+.akomaNtoso .markerreq {
+}
+.akomaNtoso .marker {
+}
+.akomaNtoso .meta {
+}
+/*
+* --------------------------
+* metaopt
+* --------------------------
+*/
+.akomaNtoso .metaopt {
+}
+.akomaNtoso .FRBRauthor {
+}
+.akomaNtoso .FRBRdate {
+}
+.akomaNtoso .FRBRlanguage {
+}
+.akomaNtoso .FRBRtranslation {
+}
+.akomaNtoso .keyword {
+}
+.akomaNtoso .publication {
+}
+.akomaNtoso .timeInterval {
+}
+/*
+* --------------------------
+* valueType
+* --------------------------
+*/
+.akomaNtoso .valueType {
+}
+.akomaNtoso .FRBRalias {
+}
+.akomaNtoso .FRBRcountry {
+}
+.akomaNtoso .FRBRformat {
+}
+.akomaNtoso .FRBRname {
+}
+.akomaNtoso .FRBRnumber {
+}
+.akomaNtoso .FRBRsubtype {
+}
+.akomaNtoso .FRBRthis {
+}
+.akomaNtoso .FRBRuri {
+}
+.akomaNtoso .metareq {
+}
+/*
+* --------------------------
+* modType
+* --------------------------
+*/
+.akomaNtoso .modType {
+}
+.akomaNtoso .mmod {
+}
+.akomaNtoso .mod {
+}
+.akomaNtoso .rmod {
+}
+/*
+* --------------------------
+* modificationType
+* --------------------------
+*/
+.akomaNtoso .modificationType {
+}
+.akomaNtoso .efficacyMod {
+}
+.akomaNtoso .forceMod {
+}
+.akomaNtoso .legalSystemMod {
+}
+.akomaNtoso .meaningMod {
+}
+.akomaNtoso .scopeMod {
+}
+.akomaNtoso .textualMod {
+}
+.akomaNtoso .notes {
+}
+/*
+* --------------------------
+* openStructure
+* --------------------------
+*/
+.akomaNtoso .openStructure {
+}
+.akomaNtoso .debateReport {
+}
+.akomaNtoso .doc {
+}
+/*
+* --------------------------
+* parliamentaryAnalysis
+* --------------------------
+*/
+.akomaNtoso .parliamentaryAnalysis {
+}
+.akomaNtoso .parliamentary {
+}
+/*
+* --------------------------
+* parliamentaryAnalysisType
+* --------------------------
+*/
+.akomaNtoso .parliamentaryAnalysisType {
+}
+.akomaNtoso .quorumVerification {
+}
+.akomaNtoso .recount {
+}
+.akomaNtoso .voting {
+}
+/*
+* --------------------------
+* periodType
+* --------------------------
+*/
+.akomaNtoso .periodType {
+}
+.akomaNtoso .application {
+}
+.akomaNtoso .duration {
+}
+.akomaNtoso .efficacy {
+}
+.akomaNtoso .force {
+}
+/*
+* --------------------------
+* popupStructure
+* --------------------------
+*/
+.akomaNtoso .popupStructure {
+}
+.akomaNtoso .authorialNote {
+}
+.akomaNtoso .extractStructure {
+}
+.akomaNtoso .popup {
+}
+.akomaNtoso .quotedStructure {
+}
+/*
+* --------------------------
+* preambleopt
+* --------------------------
+*/
+.akomaNtoso .preambleopt {
+}
+.akomaNtoso .preamble {
+}
+/*
+* --------------------------
+* prefaceopt
+* --------------------------
+*/
+.akomaNtoso .prefaceopt {
+}
+.akomaNtoso .preface {
+}
+.akomaNtoso .recitals {
+}
+/*
+* --------------------------
+* refItems
+* --------------------------
+*/
+.akomaNtoso .refItems {
+}
+.akomaNtoso .references {
+}
+/*
+* --------------------------
+* referenceType
+* --------------------------
+*/
+.akomaNtoso .referenceType {
+}
+.akomaNtoso .TLCConcept {
+}
+.akomaNtoso .TLCEvent {
+}
+.akomaNtoso .TLCLocation {
+}
+.akomaNtoso .TLCObject {
+}
+.akomaNtoso .TLCOrganization {
+}
+.akomaNtoso .TLCPerson {
+}
+.akomaNtoso .TLCProcess {
+}
+.akomaNtoso .TLCReference {
+}
+.akomaNtoso .TLCRole {
+}
+.akomaNtoso .TLCTerm {
+}
+.akomaNtoso .activeRef {
+}
+.akomaNtoso .attachmentOf {
+}
+.akomaNtoso .hasAttachment {
+}
+.akomaNtoso .jurisprudence {
+}
+.akomaNtoso .original {
+}
+.akomaNtoso .passiveRef {
+}
+/*
+* --------------------------
+* srcType
+* --------------------------
+*/
+.akomaNtoso .srcType {
+}
+.akomaNtoso .componentRef {
+}
+.akomaNtoso .table {
+}
+.akomaNtoso .temporalData {
+}
+.akomaNtoso .temporalGroup {
+}
+.akomaNtoso .toc {
+}
+.akomaNtoso .tr {
+}
+.akomaNtoso .workflow {
+}
+
