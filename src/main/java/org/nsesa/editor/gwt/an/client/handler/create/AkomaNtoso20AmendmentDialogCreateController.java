@@ -1,10 +1,5 @@
 package org.nsesa.editor.gwt.an.client.handler.create;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.Node;
-import com.google.gwt.dom.client.NodeList;
-import com.google.gwt.user.client.ui.Panel;
-import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
@@ -63,18 +58,14 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
                 .addBlock(new Block()).nameAttr(s("changeBlock"))
                 .addMod(new Mod());
 
+        // empty block
+        mod.addQuotedStructure(new QuotedStructure()).text("");
+
         // amendment content
         final QuotedStructure quotedStructureAmendment = mod.addQuotedStructure(new QuotedStructure());
-        final Panel temp = new SimplePanel();
-        temp.getElement().setInnerHTML(view.getAmendmentContent());
-        NodeList<Node> childNodes = temp.getElement().getChildNodes();
-        for (int i = 0; i < childNodes.getLength(); i++) {
-            final Node node = childNodes.getItem(i);
-            if (node.getNodeType() == Node.ELEMENT_NODE) {
-                final AmendableWidget overlayed = overlayFactory.getAmendableWidget(Element.as(node));
-                quotedStructureAmendment.addAmendableWidget(overlayed);
-            }
-        }
+        amendableWidget.getAmendableElement().setInnerHTML(view.getAmendmentContent());
+        final AmendableWidget overlayed = overlayFactory.getAmendableWidget(amendableWidget.getAmendableElement());
+        quotedStructureAmendment.addAmendableWidget(overlayed);
 
         amendment.setRoot(root);
 
