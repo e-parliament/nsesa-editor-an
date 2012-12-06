@@ -51,14 +51,14 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         // preface
         root.setPreface(new Preface())
                 .addContainer(new Container())
-                        .addP(new P()).text(clientFactory.getClientContext().getPrincipal());
+                .addP(new P()).text(clientFactory.getClientContext().getPrincipal());
 
         // amendment body
         final AmendmentBody amendmentBody = root.setAmendmentBody(new AmendmentBody());
 
         amendmentBody
                 .addAmendmentHeading(new AmendmentHeading())
-                    .addBlock(new Block()).text(locator.getLocation(amendableWidget, "EN", true));
+                .addBlock(new Block()).text(locator.getLocation(amendableWidget, null, "EN", true));
 
         // amendment content
         final AmendmentContent amendmentContent = amendmentBody
@@ -71,7 +71,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
 
         final Mod mod = amendmentContent
                 .addBlock(new Block()).nameAttr(s("changeBlock"))
-                    .addMod(new Mod());
+                .addMod(new Mod());
 
         // original content
         final QuotedStructure quotedStructureOriginal = mod.addQuotedStructure(new QuotedStructure());

@@ -43,7 +43,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
         amendmentBody
                 .addAmendmentHeading(new AmendmentHeading())
-                .addBlock(new Block()).text(locator.getLocation(amendableWidget, "EN", true));
+                .addBlock(new Block()).text(locator.getLocation(parentAmendableWidget, amendableWidget, "EN", true));
 
         // amendment content
         final AmendmentContent amendmentContent = amendmentBody
