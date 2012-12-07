@@ -1,50 +1,137 @@
+.docTitle {
+    font-size: 1.5em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.title {
+    font-size: 1.4em;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    display: block;
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.heading {
+    display: block;
+}
+
+.heading:after {
+    content: "\A";
+    white-space: pre;
+}
+
+.part {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.part > .num {
+    font-size: 1.4em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.part > .heading {
+    font-size: 1.4em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.section {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.section > .num {
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.section > .heading {
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 .chapter {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .chapter > .num {
     font-size: 1.4em;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .chapter > .heading {
     font-size: 1.4em;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .article {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .article > .num {
     font-size: 1.2em;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .article > .heading {
     font-size: 1.2em;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
-.paragraph {
-    display: block;
+.p:after {
+    content: "\A";
+    white-space: pre;
 }
 
-.p {
-    display: block;
+.paragraph:after {
+    content: "\A";
+    white-space: pre;
+}
+
+.point {
+    padding-left: 15px;;
 }
 
 .subparagraph {
-    display: block;
-    padding-left: 10px;
+    padding-left: 15px;;
+}
+
+.subparagraph:after {
+    content: "\A";
+    white-space: pre;
 }
 
 .eol:after {
-    content:"\A"; white-space:pre;
+    content: "\A";
+    white-space: pre;
+}
+
+.b {
+    font-weight: bold;
+}
+
+.i {
+    font-style: italic;
 }
