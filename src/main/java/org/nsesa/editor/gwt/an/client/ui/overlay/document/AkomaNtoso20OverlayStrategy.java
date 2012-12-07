@@ -79,4 +79,13 @@ public class AkomaNtoso20OverlayStrategy implements OverlayStrategy {
         return children.toArray(new Element[children.size()]);
     }
 
+    @Override
+    public String getFormattedIndex(Element element) {
+        return overlayStrategySupport.getLiteralIndex(element);
+    }
+
+    @Override
+    public String getUnFormattedIndex(Element element) {
+        return overlayStrategySupport.getUnformattedIndex(element);
+    }
 }
