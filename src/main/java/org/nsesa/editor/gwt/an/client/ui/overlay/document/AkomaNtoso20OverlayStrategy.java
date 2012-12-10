@@ -1,12 +1,12 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document;
 
 import com.google.gwt.dom.client.Element;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Format;
 import org.nsesa.editor.gwt.core.client.ui.overlay.NumberingType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategySupport;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -20,7 +20,7 @@ public class AkomaNtoso20OverlayStrategy implements OverlayStrategy {
     private OverlayStrategySupport overlayStrategySupport = new OverlayStrategySupport();
 
     public AkomaNtoso20OverlayStrategy() {
-        overlayStrategySupport.asProperties(Num.class, P.class, B.class, I.class, Span.class, Content.class);
+        //overlayStrategySupport.asProperties(Num.class, P.class, B.class, I.class, Span.class, Content.class);
     }
 
     @Override
@@ -35,7 +35,9 @@ public class AkomaNtoso20OverlayStrategy implements OverlayStrategy {
 
     @Override
     public Boolean isAmendable(Element element) {
-        return overlayStrategySupport.isAmendable(element);
+        if (!Arrays.asList("num", "p", "b", "i", "span", "content").contains(element.getAttribute("type").toLowerCase()))
+            return overlayStrategySupport.isAmendable(element);
+        return false;
     }
 
     @Override
@@ -69,8 +71,8 @@ public class AkomaNtoso20OverlayStrategy implements OverlayStrategy {
     }
 
     @Override
-    public String getContent(Element element) {
-        return overlayStrategySupport.getAmendableContent(element);
+    public String getInnerHTML(Element element) {
+        return overlayStrategySupport.getInnerHTML(element);
     }
 
     @Override

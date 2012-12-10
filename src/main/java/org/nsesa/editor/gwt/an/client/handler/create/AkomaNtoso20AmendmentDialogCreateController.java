@@ -1,5 +1,7 @@
 package org.nsesa.editor.gwt.an.client.handler.create;
 
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
@@ -36,35 +38,36 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         // preface
         root.setPreface(new Preface())
                 .addContainer(new Container())
-                .addP(new P()).text(clientFactory.getClientContext().getPrincipal());
+                .addP(new P()).html(clientFactory.getClientContext().getPrincipal());
 
         // amendment body
         final AmendmentBody amendmentBody = root.setAmendmentBody(new AmendmentBody());
 
         amendmentBody
                 .addAmendmentHeading(new AmendmentHeading())
-                .addBlock(new Block()).text(locator.getLocation(parentAmendableWidget, amendableWidget, "EN", true));
+                .addBlock(new Block()).html(locator.getLocation(parentAmendableWidget, amendableWidget, "EN", true));
 
         // amendment content
         final AmendmentContent amendmentContent = amendmentBody
                 .addAmendmentContent(new AmendmentContent());
 
         amendmentContent
-                .addBlock(new Block()).nameAttr(s("versionTitle")).text("Text proposed by the Commission");
+                .addBlock(new Block()).nameAttr(s("versionTitle")).html("Text proposed by the Commission");
         amendmentContent
-                .addBlock(new Block()).nameAttr(s("versionTitle")).text("Amendment");
+                .addBlock(new Block()).nameAttr(s("versionTitle")).html("Amendment");
 
         final Mod mod = amendmentContent
                 .addBlock(new Block()).nameAttr(s("changeBlock"))
                 .addMod(new Mod());
 
         // empty block
-        mod.addQuotedStructure(new QuotedStructure()).text("");
+        mod.addQuotedStructure(new QuotedStructure()).html("");
 
         // amendment content
         final QuotedStructure quotedStructureAmendment = mod.addQuotedStructure(new QuotedStructure());
-        amendableWidget.getAmendableElement().setInnerHTML(view.getAmendmentContent());
-        final AmendableWidget overlayed = overlayFactory.getAmendableWidget(amendableWidget.getAmendableElement());
+        final Element clone = DOM.clone(amendableWidget.asWidget().getElement(), false);
+        clone.setInnerHTML(view.getAmendmentContent());
+        final AmendableWidget overlayed = overlayFactory.getAmendableWidget(clone);
         quotedStructureAmendment.addAmendableWidget(overlayed);
 
         amendment.setRoot(root);
