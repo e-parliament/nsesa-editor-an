@@ -80,6 +80,7 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
     @Override
     public String getDocumentContent(final ClientContext clientContext, final String documentID) {
         final Resource documentResource = documents.get(documentID);
+        final InputSource inputSource;
         if (documentResource != null) {
             /*
 
@@ -87,25 +88,10 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
             */
             try {
                 byte[] bytes = Files.toByteArray(documentResource.getFile());
-                final InputSource inputSource = new InputSource(new ByteArrayInputStream(bytes));
-                final NodeModel model = NodeModel.parse(inputSource);
-                final Configuration configuration = new Configuration();
-                configuration.setDefaultEncoding("UTF-8");
-                configuration.setDirectoryForTemplateLoading(documentTemplate.getFile().getParentFile());
-                final StringWriter sw = new StringWriter();
-                Map<String, Object> root = new HashMap<String, Object>();
-                root.put("doc", model);
-                configuration.getTemplate(documentTemplate.getFile().getName()).process(root, sw);
-                return sw.toString();
+                inputSource = new InputSource(new ByteArrayInputStream(bytes));
 
             } catch (IOException e) {
                 throw new RuntimeException("Could not read file.", e);
-            } catch (SAXException e) {
-                throw new RuntimeException("Could not parse file.", e);
-            } catch (ParserConfigurationException e) {
-                throw new RuntimeException("Could not parse file.", e);
-            } catch (TemplateException e) {
-                throw new RuntimeException("Could not load template.", e);
             }
 
 //            try {
@@ -113,8 +99,30 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
 //            } catch (IOException e) {
 //                throw new RuntimeException("Could not read file resource.", e);
 //            }
+        } else {
+            inputSource = new InputSource(documentID);
         }
-        return null;
+
+        try {
+            final NodeModel model = NodeModel.parse(inputSource);
+            final Configuration configuration = new Configuration();
+            configuration.setDefaultEncoding("UTF-8");
+            configuration.setDirectoryForTemplateLoading(documentTemplate.getFile().getParentFile());
+            final StringWriter sw = new StringWriter();
+            Map<String, Object> root = new HashMap<String, Object>();
+            root.put("doc", model);
+            configuration.getTemplate(documentTemplate.getFile().getName()).process(root, sw);
+            return sw.toString();
+
+        } catch (IOException e) {
+            throw new RuntimeException("Could not read file.", e);
+        } catch (SAXException e) {
+            throw new RuntimeException("Could not parse file.", e);
+        } catch (ParserConfigurationException e) {
+            throw new RuntimeException("Could not parse file.", e);
+        } catch (TemplateException e) {
+            throw new RuntimeException("Could not load template.", e);
+        }
     }
 
     // Spring setters ----------------------
