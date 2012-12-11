@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class Analysis extends AmendableWidgetImpl  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class Analysis extends AmendableWidgetImpl {
 
     // STATIC create method
     public static Element create() {
@@ -32,14 +32,14 @@ public class Analysis extends AmendableWidgetImpl  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
 
     public ActiveModifications getActiveModifications() {
         ActiveModifications result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("ActiveModifications".equalsIgnoreCase(widget.getType())) {
-                result = (ActiveModifications)widget;
+                result = (ActiveModifications) widget;
                 break;
             }
         }
@@ -58,11 +58,12 @@ public class Analysis extends AmendableWidgetImpl  {
 
         return activeModificationsElem;
     }
+
     public PassiveModifications getPassiveModifications() {
         PassiveModifications result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("PassiveModifications".equalsIgnoreCase(widget.getType())) {
-                result = (PassiveModifications)widget;
+                result = (PassiveModifications) widget;
                 break;
             }
         }
@@ -81,11 +82,12 @@ public class Analysis extends AmendableWidgetImpl  {
 
         return passiveModificationsElem;
     }
+
     public Judicial getJudicial() {
         Judicial result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Judicial".equalsIgnoreCase(widget.getType())) {
-                result = (Judicial)widget;
+                result = (Judicial) widget;
                 break;
             }
         }
@@ -104,11 +106,12 @@ public class Analysis extends AmendableWidgetImpl  {
 
         return judicialElem;
     }
+
     public Parliamentary getParliamentary() {
         Parliamentary result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Parliamentary".equalsIgnoreCase(widget.getType())) {
-                result = (Parliamentary)widget;
+                result = (Parliamentary) widget;
                 break;
             }
         }
@@ -127,19 +130,22 @@ public class Analysis extends AmendableWidgetImpl  {
 
         return parliamentaryElem;
     }
+
     public java.util.List<OtherAnalysis> getOtherAnalysises() {
         java.util.List<OtherAnalysis> result = new ArrayList<OtherAnalysis>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("OtherAnalysis".equalsIgnoreCase(widget.getType())) {
-                result.add((OtherAnalysis)widget);
+                result.add((OtherAnalysis) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
+
     //DSL Style get value
     public java.util.List<OtherAnalysis> getOtherAnalysisList() {
-        return  getOtherAnalysises();
+        return getOtherAnalysises();
     }
+
     //DSL Style set value
     public OtherAnalysis addOtherAnalysis(OtherAnalysis otherAnalysisElem) {
         this.addAmendableWidget(otherAnalysisElem);
@@ -149,35 +155,38 @@ public class Analysis extends AmendableWidgetImpl  {
     public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
             sourceAttr = new AnyURISimpleType();
-            sourceAttr.setValue(amendableElement.getAttribute("source"));
+            sourceAttr.setValue(getElement().getAttribute("source"));
         }
 
         return sourceAttr;
     }
+
     //DSL Style get value
     public AnyURISimpleType sourceAttr() {
-         return  getSourceAttr();
+        return getSourceAttr();
     }
 
     public void setSourceAttr(final AnyURISimpleType sourceAttr) {
         this.sourceAttr = sourceAttr;
     }
+
     //DSL Style set value
     public Analysis sourceAttr(final AnyURISimpleType sourceAttr) {
         setSourceAttr(sourceAttr);
         return this;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"judicial","parliamentary","activeModifications","passiveModifications","otherAnalysis"};
+        return new String[]{"judicial", "parliamentary", "activeModifications", "passiveModifications", "otherAnalysis"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

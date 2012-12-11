@@ -9,9 +9,9 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class FragmentStructureComplexType extends AmendableWidgetImpl  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class FragmentStructureComplexType extends AmendableWidgetImpl {
 
     // STATIC create method
     public static Element create() {
@@ -27,35 +27,38 @@ public class FragmentStructureComplexType extends AmendableWidgetImpl  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private AnyURISimpleType includedInAttr;
 
     public AnyURISimpleType getIncludedInAttr() {
         if (includedInAttr == null) {
             includedInAttr = new AnyURISimpleType();
-            includedInAttr.setValue(amendableElement.getAttribute("includedIn"));
+            includedInAttr.setValue(getElement().getAttribute("includedIn"));
         }
 
         return includedInAttr;
     }
+
     //DSL Style get value
     public AnyURISimpleType includedInAttr() {
-         return  getIncludedInAttr();
+        return getIncludedInAttr();
     }
 
     public void setIncludedInAttr(final AnyURISimpleType includedInAttr) {
         this.includedInAttr = includedInAttr;
     }
+
     //DSL Style set value
     public FragmentStructureComplexType includedInAttr(final AnyURISimpleType includedInAttr) {
         setIncludedInAttr(includedInAttr);
         return this;
     }
+
     public Meta getMeta() {
         Meta result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Meta".equalsIgnoreCase(widget.getType())) {
-                result = (Meta)widget;
+                result = (Meta) widget;
                 break;
             }
         }
@@ -74,11 +77,12 @@ public class FragmentStructureComplexType extends AmendableWidgetImpl  {
 
         return metaElem;
     }
+
     public FragmentBody getFragmentBody() {
         FragmentBody result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FragmentBody".equalsIgnoreCase(widget.getType())) {
-                result = (FragmentBody)widget;
+                result = (FragmentBody) widget;
                 break;
             }
         }
@@ -97,17 +101,18 @@ public class FragmentStructureComplexType extends AmendableWidgetImpl  {
 
         return fragmentBodyElem;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"fragmentBody","meta"};
+        return new String[]{"fragmentBody", "meta"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

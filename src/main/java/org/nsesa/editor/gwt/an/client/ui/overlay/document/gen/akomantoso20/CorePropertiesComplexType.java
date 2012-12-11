@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class CorePropertiesComplexType extends AmendableWidgetImpl  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class CorePropertiesComplexType extends AmendableWidgetImpl {
 
     // STATIC create method
     public static Element create() {
@@ -33,7 +33,7 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
         FRBRthis result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRthis".equalsIgnoreCase(widget.getType())) {
-                result = (FRBRthis)widget;
+                result = (FRBRthis) widget;
                 break;
             }
         }
@@ -52,19 +52,22 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
 
         return FRBRthisElem;
     }
+
     public java.util.List<FRBRuri> getFRBRuris() {
         java.util.List<FRBRuri> result = new ArrayList<FRBRuri>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRuri".equalsIgnoreCase(widget.getType())) {
-                result.add((FRBRuri)widget);
+                result.add((FRBRuri) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
+
     //DSL Style get value
     public java.util.List<FRBRuri> getFRBRuriList() {
-        return  getFRBRuris();
+        return getFRBRuris();
     }
+
     //DSL Style set value
     public FRBRuri addFRBRuri(FRBRuri FRBRuriElem) {
         this.addAmendableWidget(FRBRuriElem);
@@ -75,15 +78,17 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
         java.util.List<FRBRalias> result = new ArrayList<FRBRalias>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRalias".equalsIgnoreCase(widget.getType())) {
-                result.add((FRBRalias)widget);
+                result.add((FRBRalias) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
+
     //DSL Style get value
     public java.util.List<FRBRalias> getFRBRaliasList() {
-        return  getFRBRaliases();
+        return getFRBRaliases();
     }
+
     //DSL Style set value
     public FRBRalias addFRBRalias(FRBRalias FRBRaliasElem) {
         this.addAmendableWidget(FRBRaliasElem);
@@ -94,15 +99,17 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
         java.util.List<FRBRdate> result = new ArrayList<FRBRdate>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRdate".equalsIgnoreCase(widget.getType())) {
-                result.add((FRBRdate)widget);
+                result.add((FRBRdate) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
+
     //DSL Style get value
     public java.util.List<FRBRdate> getFRBRdateList() {
-        return  getFRBRdates();
+        return getFRBRdates();
     }
+
     //DSL Style set value
     public FRBRdate addFRBRdate(FRBRdate FRBRdateElem) {
         this.addAmendableWidget(FRBRdateElem);
@@ -113,15 +120,17 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
         java.util.List<FRBRauthor> result = new ArrayList<FRBRauthor>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRauthor".equalsIgnoreCase(widget.getType())) {
-                result.add((FRBRauthor)widget);
+                result.add((FRBRauthor) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
+
     //DSL Style get value
     public java.util.List<FRBRauthor> getFRBRauthorList() {
-        return  getFRBRauthors();
+        return getFRBRauthors();
     }
+
     //DSL Style set value
     public FRBRauthor addFRBRauthor(FRBRauthor FRBRauthorElem) {
         this.addAmendableWidget(FRBRauthorElem);
@@ -132,7 +141,7 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
         ComponentInfo result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("ComponentInfo".equalsIgnoreCase(widget.getType())) {
-                result = (ComponentInfo)widget;
+                result = (ComponentInfo) widget;
                 break;
             }
         }
@@ -151,11 +160,12 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
 
         return componentInfoElem;
     }
+
     public Preservation getPreservation() {
         Preservation result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Preservation".equalsIgnoreCase(widget.getType())) {
-                result = (Preservation)widget;
+                result = (Preservation) widget;
                 break;
             }
         }
@@ -174,17 +184,18 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
 
         return preservationElem;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"FRBRthis","FRBRalias","componentInfo","FRBRuri","FRBRauthor","FRBRdate","preservation"};
+        return new String[]{"FRBRthis", "FRBRalias", "componentInfo", "FRBRuri", "FRBRauthor", "FRBRdate", "preservation"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

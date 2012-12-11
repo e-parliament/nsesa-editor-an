@@ -7,9 +7,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.BooleanS
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class Condition extends AnyOtherTypeComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class Condition extends AnyOtherTypeComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -29,41 +29,44 @@ public class Condition extends AnyOtherTypeComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private BooleanSimpleType frozenAttr;
 
     public BooleanSimpleType getFrozenAttr() {
         if (frozenAttr == null) {
             frozenAttr = new BooleanSimpleType();
-            frozenAttr.setValue(amendableElement.getAttribute("frozen"));
+            frozenAttr.setValue(getElement().getAttribute("frozen"));
         }
 
         return frozenAttr;
     }
+
     //DSL Style get value
     public BooleanSimpleType frozenAttr() {
-         return  getFrozenAttr();
+        return getFrozenAttr();
     }
 
     public void setFrozenAttr(final BooleanSimpleType frozenAttr) {
         this.frozenAttr = frozenAttr;
     }
+
     //DSL Style set value
     public Condition frozenAttr(final BooleanSimpleType frozenAttr) {
         setFrozenAttr(frozenAttr);
         return this;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{"*"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

@@ -6,9 +6,9 @@ import com.google.gwt.user.client.DOM;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class Article extends HierarchyComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class Article extends HierarchyComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -31,16 +31,16 @@ public class Article extends HierarchyComplexType  {
 // FIELDS ------------------
 
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"tome","subparagraph","paragraph","subheading","subsection","title","chapter","division","alinea","componentRef","subchapter","wrap","indent","subclause","list","sublist","section","intro","content","point","num","article","subpart","hcontainer","book","subtitle","part","heading","clause"};
+        return new String[]{"tome", "subparagraph", "paragraph", "subheading", "subsection", "title", "chapter", "division", "alinea", "componentRef", "subchapter", "wrap", "indent", "subclause", "list", "sublist", "section", "intro", "content", "point", "num", "article", "subpart", "hcontainer", "book", "subtitle", "part", "heading", "clause"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

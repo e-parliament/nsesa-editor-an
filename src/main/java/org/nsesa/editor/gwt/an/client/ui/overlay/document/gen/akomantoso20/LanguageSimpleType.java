@@ -5,9 +5,9 @@ import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class LanguageSimpleType extends StringSimpleType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class LanguageSimpleType extends StringSimpleType {
 
     // STATIC create method
     public static Element create() {
@@ -20,7 +20,7 @@ public class LanguageSimpleType extends StringSimpleType  {
     // CONSTRUCTORS ------------------
 
     public LanguageSimpleType() {
-    super();
+        super();
     }
 
 // FIELDS ------------------

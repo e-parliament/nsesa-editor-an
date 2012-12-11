@@ -8,10 +8,11 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayFactor
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
 
 import java.util.logging.Logger;
+
 /**
-* Note: this file is generated. Rather than changing this file, correct the template called <tt>overlayFactory.ftl</tt>.
-*/
-public class XmlschemaOverlayFactory extends DefaultOverlayFactory  {
+ * Note: this file is generated. Rather than changing this file, correct the template called <tt>overlayFactory.ftl</tt>.
+ */
+public class XmlschemaOverlayFactory extends DefaultOverlayFactory {
 
     private final static Logger LOG = Logger.getLogger(XmlschemaOverlayFactory.class.getName());
     // the namespace of the overlay factory
@@ -21,10 +22,12 @@ public class XmlschemaOverlayFactory extends DefaultOverlayFactory  {
     public XmlschemaOverlayFactory(final OverlayStrategy overlayStrategy, final ClientFactory clientFactory) {
         super(overlayStrategy, clientFactory);
     }
+
     @Override
     public String getNamespace() {
         return namespace;
     }
+
     @Override
     public AmendableWidget toAmendableWidget(final Element element) {
         final String nodeName = overlayStrategy.getType(element);

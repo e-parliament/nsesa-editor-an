@@ -7,9 +7,9 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class ScopeMod extends ModificationTypeComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class ScopeMod extends ModificationTypeComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -29,34 +29,37 @@ public class ScopeMod extends ModificationTypeComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private ScopeModsSimpleType typeAttr;
 
     public ScopeModsSimpleType getTypeAttr() {
         if (typeAttr == null) {
-            typeAttr = ScopeModsSimpleType.fromString(amendableElement.getAttribute("type"));
+            typeAttr = ScopeModsSimpleType.fromString(getElement().getAttribute("type"));
         }
 
         return typeAttr;
     }
+
     //DSL Style get value
     public ScopeModsSimpleType typeAttr() {
-         return  getTypeAttr();
+        return getTypeAttr();
     }
 
     public void setTypeAttr(final ScopeModsSimpleType typeAttr) {
         this.typeAttr = typeAttr;
     }
+
     //DSL Style set value
     public ScopeMod typeAttr(final ScopeModsSimpleType typeAttr) {
         setTypeAttr(typeAttr);
         return this;
     }
+
     public Domain getDomain() {
         Domain result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Domain".equalsIgnoreCase(widget.getType())) {
-                result = (Domain)widget;
+                result = (Domain) widget;
                 break;
             }
         }
@@ -75,17 +78,18 @@ public class ScopeMod extends ModificationTypeComplexType  {
 
         return domainElem;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"duration","application","source","condition","domain","efficacy","force","destination"};
+        return new String[]{"duration", "application", "source", "condition", "domain", "efficacy", "force", "destination"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

@@ -9,9 +9,9 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class OpenStructureComplexType extends AmendableWidgetImpl  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class OpenStructureComplexType extends AmendableWidgetImpl {
 
     // STATIC create method
     public static Element create() {
@@ -27,35 +27,38 @@ public class OpenStructureComplexType extends AmendableWidgetImpl  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private VersionTypeSimpleType containsAttr;
     private StringSimpleType nameAttr;
 
     public VersionTypeSimpleType getContainsAttr() {
         if (containsAttr == null) {
-            containsAttr = VersionTypeSimpleType.fromString(amendableElement.getAttribute("contains"));
+            containsAttr = VersionTypeSimpleType.fromString(getElement().getAttribute("contains"));
         }
 
         return containsAttr;
     }
+
     //DSL Style get value
     public VersionTypeSimpleType containsAttr() {
-         return  getContainsAttr();
+        return getContainsAttr();
     }
 
     public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
         this.containsAttr = containsAttr;
     }
+
     //DSL Style set value
     public OpenStructureComplexType containsAttr(final VersionTypeSimpleType containsAttr) {
         setContainsAttr(containsAttr);
         return this;
     }
+
     public Meta getMeta() {
         Meta result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Meta".equalsIgnoreCase(widget.getType())) {
-                result = (Meta)widget;
+                result = (Meta) widget;
                 break;
             }
         }
@@ -74,11 +77,12 @@ public class OpenStructureComplexType extends AmendableWidgetImpl  {
 
         return metaElem;
     }
+
     public CoverPage getCoverPage() {
         CoverPage result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("CoverPage".equalsIgnoreCase(widget.getType())) {
-                result = (CoverPage)widget;
+                result = (CoverPage) widget;
                 break;
             }
         }
@@ -97,11 +101,12 @@ public class OpenStructureComplexType extends AmendableWidgetImpl  {
 
         return coverPageElem;
     }
+
     public Preface getPreface() {
         Preface result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Preface".equalsIgnoreCase(widget.getType())) {
-                result = (Preface)widget;
+                result = (Preface) widget;
                 break;
             }
         }
@@ -120,11 +125,12 @@ public class OpenStructureComplexType extends AmendableWidgetImpl  {
 
         return prefaceElem;
     }
+
     public Preamble getPreamble() {
         Preamble result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Preamble".equalsIgnoreCase(widget.getType())) {
-                result = (Preamble)widget;
+                result = (Preamble) widget;
                 break;
             }
         }
@@ -143,11 +149,12 @@ public class OpenStructureComplexType extends AmendableWidgetImpl  {
 
         return preambleElem;
     }
+
     public MainBody getMainBody() {
         MainBody result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("MainBody".equalsIgnoreCase(widget.getType())) {
-                result = (MainBody)widget;
+                result = (MainBody) widget;
                 break;
             }
         }
@@ -166,11 +173,12 @@ public class OpenStructureComplexType extends AmendableWidgetImpl  {
 
         return mainBodyElem;
     }
+
     public Conclusions getConclusions() {
         Conclusions result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Conclusions".equalsIgnoreCase(widget.getType())) {
-                result = (Conclusions)widget;
+                result = (Conclusions) widget;
                 break;
             }
         }
@@ -189,11 +197,12 @@ public class OpenStructureComplexType extends AmendableWidgetImpl  {
 
         return conclusionsElem;
     }
+
     public Attachments getAttachments() {
         Attachments result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Attachments".equalsIgnoreCase(widget.getType())) {
-                result = (Attachments)widget;
+                result = (Attachments) widget;
                 break;
             }
         }
@@ -212,38 +221,42 @@ public class OpenStructureComplexType extends AmendableWidgetImpl  {
 
         return attachmentsElem;
     }
+
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();
-            nameAttr.setValue(amendableElement.getAttribute("name"));
+            nameAttr.setValue(getElement().getAttribute("name"));
         }
 
         return nameAttr;
     }
+
     //DSL Style get value
     public StringSimpleType nameAttr() {
-         return  getNameAttr();
+        return getNameAttr();
     }
 
     public void setNameAttr(final StringSimpleType nameAttr) {
         this.nameAttr = nameAttr;
     }
+
     //DSL Style set value
     public OpenStructureComplexType nameAttr(final StringSimpleType nameAttr) {
         setNameAttr(nameAttr);
         return this;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"conclusions","preface","mainBody","preamble","coverPage","attachments","meta"};
+        return new String[]{"conclusions", "preface", "mainBody", "preamble", "coverPage", "attachments", "meta"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

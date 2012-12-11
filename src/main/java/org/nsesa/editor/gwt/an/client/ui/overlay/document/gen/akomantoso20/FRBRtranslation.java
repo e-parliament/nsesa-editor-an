@@ -7,9 +7,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISi
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class FRBRtranslation extends MetaoptComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class FRBRtranslation extends MetaoptComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -29,7 +29,7 @@ public class FRBRtranslation extends MetaoptComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private LanguageSimpleType fromLanguageAttr;
     private YesNoTypeSimpleType authoritativeAttr;
     private LanguageSimpleType pivotAttr;
@@ -39,118 +39,133 @@ public class FRBRtranslation extends MetaoptComplexType  {
     public LanguageSimpleType getFromLanguageAttr() {
         if (fromLanguageAttr == null) {
             fromLanguageAttr = new LanguageSimpleType();
-            fromLanguageAttr.setValue(amendableElement.getAttribute("fromLanguage"));
+            fromLanguageAttr.setValue(getElement().getAttribute("fromLanguage"));
         }
 
         return fromLanguageAttr;
     }
+
     //DSL Style get value
     public LanguageSimpleType fromLanguageAttr() {
-         return  getFromLanguageAttr();
+        return getFromLanguageAttr();
     }
 
     public void setFromLanguageAttr(final LanguageSimpleType fromLanguageAttr) {
         this.fromLanguageAttr = fromLanguageAttr;
     }
+
     //DSL Style set value
     public FRBRtranslation fromLanguageAttr(final LanguageSimpleType fromLanguageAttr) {
         setFromLanguageAttr(fromLanguageAttr);
         return this;
     }
+
     public YesNoTypeSimpleType getAuthoritativeAttr() {
         if (authoritativeAttr == null) {
-            authoritativeAttr = YesNoTypeSimpleType.fromString(amendableElement.getAttribute("authoritative"));
+            authoritativeAttr = YesNoTypeSimpleType.fromString(getElement().getAttribute("authoritative"));
         }
 
         return authoritativeAttr;
     }
+
     //DSL Style get value
     public YesNoTypeSimpleType authoritativeAttr() {
-         return  getAuthoritativeAttr();
+        return getAuthoritativeAttr();
     }
 
     public void setAuthoritativeAttr(final YesNoTypeSimpleType authoritativeAttr) {
         this.authoritativeAttr = authoritativeAttr;
     }
+
     //DSL Style set value
     public FRBRtranslation authoritativeAttr(final YesNoTypeSimpleType authoritativeAttr) {
         setAuthoritativeAttr(authoritativeAttr);
         return this;
     }
+
     public LanguageSimpleType getPivotAttr() {
         if (pivotAttr == null) {
             pivotAttr = new LanguageSimpleType();
-            pivotAttr.setValue(amendableElement.getAttribute("pivot"));
+            pivotAttr.setValue(getElement().getAttribute("pivot"));
         }
 
         return pivotAttr;
     }
+
     //DSL Style get value
     public LanguageSimpleType pivotAttr() {
-         return  getPivotAttr();
+        return getPivotAttr();
     }
 
     public void setPivotAttr(final LanguageSimpleType pivotAttr) {
         this.pivotAttr = pivotAttr;
     }
+
     //DSL Style set value
     public FRBRtranslation pivotAttr(final LanguageSimpleType pivotAttr) {
         setPivotAttr(pivotAttr);
         return this;
     }
+
     public AnyURISimpleType getByAttr() {
         if (byAttr == null) {
             byAttr = new AnyURISimpleType();
-            byAttr.setValue(amendableElement.getAttribute("by"));
+            byAttr.setValue(getElement().getAttribute("by"));
         }
 
         return byAttr;
     }
+
     //DSL Style get value
     public AnyURISimpleType byAttr() {
-         return  getByAttr();
+        return getByAttr();
     }
 
     public void setByAttr(final AnyURISimpleType byAttr) {
         this.byAttr = byAttr;
     }
+
     //DSL Style set value
     public FRBRtranslation byAttr(final AnyURISimpleType byAttr) {
         setByAttr(byAttr);
         return this;
     }
+
     public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
             hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(amendableElement.getAttribute("href"));
+            hrefAttr.setValue(getElement().getAttribute("href"));
         }
 
         return hrefAttr;
     }
+
     //DSL Style get value
     public AnyURISimpleType hrefAttr() {
-         return  getHrefAttr();
+        return getHrefAttr();
     }
 
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {
         this.hrefAttr = hrefAttr;
     }
+
     //DSL Style set value
     public FRBRtranslation hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
         return this;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

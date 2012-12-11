@@ -7,9 +7,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IntegerS
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class EolTypeComplexType extends MarkeroptComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class EolTypeComplexType extends MarkeroptComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -25,41 +25,44 @@ public class EolTypeComplexType extends MarkeroptComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private IntegerSimpleType breakatAttr;
 
     public IntegerSimpleType getBreakatAttr() {
         if (breakatAttr == null) {
             breakatAttr = new IntegerSimpleType();
-            breakatAttr.setValue(amendableElement.getAttribute("breakat"));
+            breakatAttr.setValue(getElement().getAttribute("breakat"));
         }
 
         return breakatAttr;
     }
+
     //DSL Style get value
     public IntegerSimpleType breakatAttr() {
-         return  getBreakatAttr();
+        return getBreakatAttr();
     }
 
     public void setBreakatAttr(final IntegerSimpleType breakatAttr) {
         this.breakatAttr = breakatAttr;
     }
+
     //DSL Style set value
     public EolTypeComplexType breakatAttr(final IntegerSimpleType breakatAttr) {
         setBreakatAttr(breakatAttr);
         return this;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

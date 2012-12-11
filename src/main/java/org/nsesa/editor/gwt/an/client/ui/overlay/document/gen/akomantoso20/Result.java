@@ -6,9 +6,9 @@ import com.google.gwt.user.client.DOM;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class Result extends AnyOtherTypeComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class Result extends AnyOtherTypeComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -28,40 +28,43 @@ public class Result extends AnyOtherTypeComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private ResultTypeSimpleType typeAttr;
 
     public ResultTypeSimpleType getTypeAttr() {
         if (typeAttr == null) {
-            typeAttr = ResultTypeSimpleType.fromString(amendableElement.getAttribute("type"));
+            typeAttr = ResultTypeSimpleType.fromString(getElement().getAttribute("type"));
         }
 
         return typeAttr;
     }
+
     //DSL Style get value
     public ResultTypeSimpleType typeAttr() {
-         return  getTypeAttr();
+        return getTypeAttr();
     }
 
     public void setTypeAttr(final ResultTypeSimpleType typeAttr) {
         this.typeAttr = typeAttr;
     }
+
     //DSL Style set value
     public Result typeAttr(final ResultTypeSimpleType typeAttr) {
         setTypeAttr(typeAttr);
         return this;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{"*"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

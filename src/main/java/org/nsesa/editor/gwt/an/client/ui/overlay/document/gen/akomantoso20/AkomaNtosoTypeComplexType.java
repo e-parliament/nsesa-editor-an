@@ -8,9 +8,9 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl {
 
     // STATIC create method
     public static Element create() {
@@ -32,7 +32,7 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
         Components result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Components".equalsIgnoreCase(widget.getType())) {
-                result = (Components)widget;
+                result = (Components) widget;
                 break;
             }
         }
@@ -51,11 +51,12 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
 
         return componentsElem;
     }
+
     public AmendmentList getAmendmentList() {
         AmendmentList result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("AmendmentList".equalsIgnoreCase(widget.getType())) {
-                result = (AmendmentList)widget;
+                result = (AmendmentList) widget;
                 break;
             }
         }
@@ -74,11 +75,12 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
 
         return amendmentListElem;
     }
+
     public OfficialGazette getOfficialGazette() {
         OfficialGazette result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("OfficialGazette".equalsIgnoreCase(widget.getType())) {
-                result = (OfficialGazette)widget;
+                result = (OfficialGazette) widget;
                 break;
             }
         }
@@ -97,11 +99,12 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
 
         return officialGazetteElem;
     }
+
     public DocumentCollection getDocumentCollection() {
         DocumentCollection result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("DocumentCollection".equalsIgnoreCase(widget.getType())) {
-                result = (DocumentCollection)widget;
+                result = (DocumentCollection) widget;
                 break;
             }
         }
@@ -120,11 +123,12 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
 
         return documentCollectionElem;
     }
+
     public Act getAct() {
         Act result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Act".equalsIgnoreCase(widget.getType())) {
-                result = (Act)widget;
+                result = (Act) widget;
                 break;
             }
         }
@@ -143,11 +147,12 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
 
         return actElem;
     }
+
     public Bill getBill() {
         Bill result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Bill".equalsIgnoreCase(widget.getType())) {
-                result = (Bill)widget;
+                result = (Bill) widget;
                 break;
             }
         }
@@ -166,11 +171,12 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
 
         return billElem;
     }
+
     public DebateReport getDebateReport() {
         DebateReport result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("DebateReport".equalsIgnoreCase(widget.getType())) {
-                result = (DebateReport)widget;
+                result = (DebateReport) widget;
                 break;
             }
         }
@@ -189,11 +195,12 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
 
         return debateReportElem;
     }
+
     public Debate getDebate() {
         Debate result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Debate".equalsIgnoreCase(widget.getType())) {
-                result = (Debate)widget;
+                result = (Debate) widget;
                 break;
             }
         }
@@ -212,11 +219,12 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
 
         return debateElem;
     }
+
     public Amendment getAmendment() {
         Amendment result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Amendment".equalsIgnoreCase(widget.getType())) {
-                result = (Amendment)widget;
+                result = (Amendment) widget;
                 break;
             }
         }
@@ -235,11 +243,12 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
 
         return amendmentElem;
     }
+
     public Judgement getJudgement() {
         Judgement result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Judgement".equalsIgnoreCase(widget.getType())) {
-                result = (Judgement)widget;
+                result = (Judgement) widget;
                 break;
             }
         }
@@ -258,11 +267,12 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
 
         return judgementElem;
     }
+
     public Doc getDoc() {
         Doc result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Doc".equalsIgnoreCase(widget.getType())) {
-                result = (Doc)widget;
+                result = (Doc) widget;
                 break;
             }
         }
@@ -281,17 +291,18 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
 
         return docElem;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"amendment","amendmentList","bill","officialGazette","doc","debate","judgement","debateReport","components","act","documentCollection"};
+        return new String[]{"amendment", "amendmentList", "bill", "officialGazette", "doc", "debate", "judgement", "debateReport", "components", "act", "documentCollection"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

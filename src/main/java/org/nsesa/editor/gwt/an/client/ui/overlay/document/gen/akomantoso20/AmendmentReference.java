@@ -6,9 +6,9 @@ import com.google.gwt.user.client.DOM;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class AmendmentReference extends BlocksoptComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class AmendmentReference extends BlocksoptComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -31,16 +31,16 @@ public class AmendmentReference extends BlocksoptComplexType  {
 // FIELDS ------------------
 
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"ul","toc","tblock","blockList","p","block","table","ol","foreign"};
+        return new String[]{"ul", "toc", "tblock", "blockList", "p", "block", "table", "ol", "foreign"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

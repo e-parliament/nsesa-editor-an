@@ -8,9 +8,9 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class BasehierarchyComplexType extends AmendableWidgetImpl  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class BasehierarchyComplexType extends AmendableWidgetImpl {
 
     // STATIC create method
     public static Element create() {
@@ -32,7 +32,7 @@ public class BasehierarchyComplexType extends AmendableWidgetImpl  {
         Num result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Num".equalsIgnoreCase(widget.getType())) {
-                result = (Num)widget;
+                result = (Num) widget;
                 break;
             }
         }
@@ -51,11 +51,12 @@ public class BasehierarchyComplexType extends AmendableWidgetImpl  {
 
         return numElem;
     }
+
     public Heading getHeading() {
         Heading result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Heading".equalsIgnoreCase(widget.getType())) {
-                result = (Heading)widget;
+                result = (Heading) widget;
                 break;
             }
         }
@@ -74,11 +75,12 @@ public class BasehierarchyComplexType extends AmendableWidgetImpl  {
 
         return headingElem;
     }
+
     public Subheading getSubheading() {
         Subheading result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Subheading".equalsIgnoreCase(widget.getType())) {
-                result = (Subheading)widget;
+                result = (Subheading) widget;
                 break;
             }
         }
@@ -97,17 +99,18 @@ public class BasehierarchyComplexType extends AmendableWidgetImpl  {
 
         return subheadingElem;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"num","subheading","heading"};
+        return new String[]{"num", "subheading", "heading"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

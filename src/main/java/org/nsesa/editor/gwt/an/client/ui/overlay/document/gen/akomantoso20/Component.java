@@ -10,9 +10,9 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class Component extends AmendableWidgetImpl  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class Component extends AmendableWidgetImpl {
 
     // STATIC create method
     public static Element create() {
@@ -32,7 +32,7 @@ public class Component extends AmendableWidgetImpl  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private String wildcardContentAttr;
@@ -40,45 +40,51 @@ public class Component extends AmendableWidgetImpl  {
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
             idAttr = new IDSimpleType();
-            idAttr.setValue(amendableElement.getAttribute("id"));
+            idAttr.setValue(getElement().getAttribute("id"));
         }
 
         return idAttr;
     }
+
     //DSL Style get value
     public IDSimpleType idAttr() {
-         return  getIdAttr();
+        return getIdAttr();
     }
 
     public void setIdAttr(final IDSimpleType idAttr) {
         this.idAttr = idAttr;
     }
+
     //DSL Style set value
     public Component idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
+
     public NMTOKENSimpleType getEvolvingIdAttr() {
         if (evolvingIdAttr == null) {
             evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(amendableElement.getAttribute("evolvingId"));
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
         }
 
         return evolvingIdAttr;
     }
+
     //DSL Style get value
     public NMTOKENSimpleType evolvingIdAttr() {
-         return  getEvolvingIdAttr();
+        return getEvolvingIdAttr();
     }
 
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
+
     //DSL Style set value
     public Component evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
+
     public String getWildcardContentAttr() {
         if (wildcardContentAttr == null) {
             //hmm nothing to do here
@@ -86,24 +92,27 @@ public class Component extends AmendableWidgetImpl  {
 
         return wildcardContentAttr;
     }
+
     //DSL Style get value
     public String wildcardContentAttr() {
-         return  getWildcardContentAttr();
+        return getWildcardContentAttr();
     }
 
     public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
     }
+
     //DSL Style set value
     public Component wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
+
     public AmendmentList getAmendmentList() {
         AmendmentList result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("AmendmentList".equalsIgnoreCase(widget.getType())) {
-                result = (AmendmentList)widget;
+                result = (AmendmentList) widget;
                 break;
             }
         }
@@ -122,11 +131,12 @@ public class Component extends AmendableWidgetImpl  {
 
         return amendmentListElem;
     }
+
     public OfficialGazette getOfficialGazette() {
         OfficialGazette result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("OfficialGazette".equalsIgnoreCase(widget.getType())) {
-                result = (OfficialGazette)widget;
+                result = (OfficialGazette) widget;
                 break;
             }
         }
@@ -145,11 +155,12 @@ public class Component extends AmendableWidgetImpl  {
 
         return officialGazetteElem;
     }
+
     public DocumentCollection getDocumentCollection() {
         DocumentCollection result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("DocumentCollection".equalsIgnoreCase(widget.getType())) {
-                result = (DocumentCollection)widget;
+                result = (DocumentCollection) widget;
                 break;
             }
         }
@@ -168,11 +179,12 @@ public class Component extends AmendableWidgetImpl  {
 
         return documentCollectionElem;
     }
+
     public Act getAct() {
         Act result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Act".equalsIgnoreCase(widget.getType())) {
-                result = (Act)widget;
+                result = (Act) widget;
                 break;
             }
         }
@@ -191,11 +203,12 @@ public class Component extends AmendableWidgetImpl  {
 
         return actElem;
     }
+
     public Bill getBill() {
         Bill result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Bill".equalsIgnoreCase(widget.getType())) {
-                result = (Bill)widget;
+                result = (Bill) widget;
                 break;
             }
         }
@@ -214,11 +227,12 @@ public class Component extends AmendableWidgetImpl  {
 
         return billElem;
     }
+
     public DebateReport getDebateReport() {
         DebateReport result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("DebateReport".equalsIgnoreCase(widget.getType())) {
-                result = (DebateReport)widget;
+                result = (DebateReport) widget;
                 break;
             }
         }
@@ -237,11 +251,12 @@ public class Component extends AmendableWidgetImpl  {
 
         return debateReportElem;
     }
+
     public Debate getDebate() {
         Debate result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Debate".equalsIgnoreCase(widget.getType())) {
-                result = (Debate)widget;
+                result = (Debate) widget;
                 break;
             }
         }
@@ -260,11 +275,12 @@ public class Component extends AmendableWidgetImpl  {
 
         return debateElem;
     }
+
     public Amendment getAmendment() {
         Amendment result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Amendment".equalsIgnoreCase(widget.getType())) {
-                result = (Amendment)widget;
+                result = (Amendment) widget;
                 break;
             }
         }
@@ -283,11 +299,12 @@ public class Component extends AmendableWidgetImpl  {
 
         return amendmentElem;
     }
+
     public Judgement getJudgement() {
         Judgement result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Judgement".equalsIgnoreCase(widget.getType())) {
-                result = (Judgement)widget;
+                result = (Judgement) widget;
                 break;
             }
         }
@@ -306,11 +323,12 @@ public class Component extends AmendableWidgetImpl  {
 
         return judgementElem;
     }
+
     public Doc getDoc() {
         Doc result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Doc".equalsIgnoreCase(widget.getType())) {
-                result = (Doc)widget;
+                result = (Doc) widget;
                 break;
             }
         }
@@ -329,17 +347,18 @@ public class Component extends AmendableWidgetImpl  {
 
         return docElem;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"amendment","amendmentList","bill","officialGazette","doc","debate","judgement","debateReport","act","documentCollection"};
+        return new String[]{"amendment", "amendmentList", "bill", "officialGazette", "doc", "debate", "judgement", "debateReport", "act", "documentCollection"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

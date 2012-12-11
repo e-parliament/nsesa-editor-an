@@ -4,9 +4,9 @@ import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class NonPositiveIntegerSimpleType extends IntegerSimpleType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class NonPositiveIntegerSimpleType extends IntegerSimpleType {
 
     // STATIC create method
     public static Element create() {
@@ -19,7 +19,7 @@ public class NonPositiveIntegerSimpleType extends IntegerSimpleType  {
     // CONSTRUCTORS ------------------
 
     public NonPositiveIntegerSimpleType() {
-    super();
+        super();
     }
 
 // FIELDS ------------------

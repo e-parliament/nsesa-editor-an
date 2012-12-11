@@ -9,9 +9,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSi
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class Img extends MarkeroptComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class Img extends MarkeroptComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -31,7 +31,7 @@ public class Img extends MarkeroptComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private IntegerSimpleType widthAttr;
     private IntegerSimpleType heightAttr;
     private AnyURISimpleType srcAttr;
@@ -40,98 +40,110 @@ public class Img extends MarkeroptComplexType  {
     public IntegerSimpleType getWidthAttr() {
         if (widthAttr == null) {
             widthAttr = new IntegerSimpleType();
-            widthAttr.setValue(amendableElement.getAttribute("width"));
+            widthAttr.setValue(getElement().getAttribute("width"));
         }
 
         return widthAttr;
     }
+
     //DSL Style get value
     public IntegerSimpleType widthAttr() {
-         return  getWidthAttr();
+        return getWidthAttr();
     }
 
     public void setWidthAttr(final IntegerSimpleType widthAttr) {
         this.widthAttr = widthAttr;
     }
+
     //DSL Style set value
     public Img widthAttr(final IntegerSimpleType widthAttr) {
         setWidthAttr(widthAttr);
         return this;
     }
+
     public IntegerSimpleType getHeightAttr() {
         if (heightAttr == null) {
             heightAttr = new IntegerSimpleType();
-            heightAttr.setValue(amendableElement.getAttribute("height"));
+            heightAttr.setValue(getElement().getAttribute("height"));
         }
 
         return heightAttr;
     }
+
     //DSL Style get value
     public IntegerSimpleType heightAttr() {
-         return  getHeightAttr();
+        return getHeightAttr();
     }
 
     public void setHeightAttr(final IntegerSimpleType heightAttr) {
         this.heightAttr = heightAttr;
     }
+
     //DSL Style set value
     public Img heightAttr(final IntegerSimpleType heightAttr) {
         setHeightAttr(heightAttr);
         return this;
     }
+
     public AnyURISimpleType getSrcAttr() {
         if (srcAttr == null) {
             srcAttr = new AnyURISimpleType();
-            srcAttr.setValue(amendableElement.getAttribute("src"));
+            srcAttr.setValue(getElement().getAttribute("src"));
         }
 
         return srcAttr;
     }
+
     //DSL Style get value
     public AnyURISimpleType srcAttr() {
-         return  getSrcAttr();
+        return getSrcAttr();
     }
 
     public void setSrcAttr(final AnyURISimpleType srcAttr) {
         this.srcAttr = srcAttr;
     }
+
     //DSL Style set value
     public Img srcAttr(final AnyURISimpleType srcAttr) {
         setSrcAttr(srcAttr);
         return this;
     }
+
     public StringSimpleType getAltAttr() {
         if (altAttr == null) {
             altAttr = new StringSimpleType();
-            altAttr.setValue(amendableElement.getAttribute("alt"));
+            altAttr.setValue(getElement().getAttribute("alt"));
         }
 
         return altAttr;
     }
+
     //DSL Style get value
     public StringSimpleType altAttr() {
-         return  getAltAttr();
+        return getAltAttr();
     }
 
     public void setAltAttr(final StringSimpleType altAttr) {
         this.altAttr = altAttr;
     }
+
     //DSL Style set value
     public Img altAttr(final StringSimpleType altAttr) {
         setAltAttr(altAttr);
         return this;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

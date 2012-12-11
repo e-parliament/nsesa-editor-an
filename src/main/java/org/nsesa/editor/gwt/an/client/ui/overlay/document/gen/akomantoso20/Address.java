@@ -6,9 +6,9 @@ import com.google.gwt.user.client.DOM;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class Address extends AlthierarchyComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class Address extends AlthierarchyComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -31,16 +31,16 @@ public class Address extends AlthierarchyComplexType  {
 // FIELDS ------------------
 
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"summary","toc","other","tblock","subheading","narrative","debateSection","div","block","resolutions","personalStatements","oralStatements","rollCall","blockList","declarationOfVote","adjournment","ol","question","componentRef","petitions","administrationOfOath","ul","communication","noticesOfMotion","answer","questions","papers","table","proceduralMotions","num","speech","address","nationalInterest","container","p","writtenStatements","pointOfOrder","scene","prayers","ministerialStatements","foreign","heading"};
+        return new String[]{"summary", "toc", "other", "tblock", "subheading", "narrative", "debateSection", "div", "block", "resolutions", "personalStatements", "oralStatements", "rollCall", "blockList", "declarationOfVote", "adjournment", "ol", "question", "componentRef", "petitions", "administrationOfOath", "ul", "communication", "noticesOfMotion", "answer", "questions", "papers", "table", "proceduralMotions", "num", "speech", "address", "nationalInterest", "container", "p", "writtenStatements", "pointOfOrder", "scene", "prayers", "ministerialStatements", "foreign", "heading"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

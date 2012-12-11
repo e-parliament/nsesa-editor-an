@@ -7,9 +7,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISi
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class Judge extends InlinereqreqComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class Judge extends InlinereqreqComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -29,41 +29,44 @@ public class Judge extends InlinereqreqComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private AnyURISimpleType asAttr;
 
     public AnyURISimpleType getAsAttr() {
         if (asAttr == null) {
             asAttr = new AnyURISimpleType();
-            asAttr.setValue(amendableElement.getAttribute("as"));
+            asAttr.setValue(getElement().getAttribute("as"));
         }
 
         return asAttr;
     }
+
     //DSL Style get value
     public AnyURISimpleType asAttr() {
-         return  getAsAttr();
+        return getAsAttr();
     }
 
     public void setAsAttr(final AnyURISimpleType asAttr) {
         this.asAttr = asAttr;
     }
+
     //DSL Style set value
     public Judge asAttr(final AnyURISimpleType asAttr) {
         setAsAttr(asAttr);
         return this;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"person","neutralCitation","docType","remark","docStatus","location","change","entity","authorialNote","img","party","legislature","event","eol","role","opinion","quantity","extractStructure","eop","fillIn","signature","docStage","mmod","docCommittee","vote","ins","mod","noteRef","docNumber","rref","marker","session","recordedTime","lawyer","docPurpose","extractText","span","sub","concept","courtType","docJurisdiction","object","sup","docProponent","date","omissis","rmod","organization","def","docketNumber","judge","popup","inline","docTitle","del","docDate","relatedDocument","affectedDocument","mref","docIntroducer","b","placeholder","a","outcome","i","process","ref","u","term","shortTitle"};
+        return new String[]{"person", "neutralCitation", "docType", "remark", "docStatus", "location", "change", "entity", "authorialNote", "img", "party", "legislature", "event", "eol", "role", "opinion", "quantity", "extractStructure", "eop", "fillIn", "signature", "docStage", "mmod", "docCommittee", "vote", "ins", "mod", "noteRef", "docNumber", "rref", "marker", "session", "recordedTime", "lawyer", "docPurpose", "extractText", "span", "sub", "concept", "courtType", "docJurisdiction", "object", "sup", "docProponent", "date", "omissis", "rmod", "organization", "def", "docketNumber", "judge", "popup", "inline", "docTitle", "del", "docDate", "relatedDocument", "affectedDocument", "mref", "docIntroducer", "b", "placeholder", "a", "outcome", "i", "process", "ref", "u", "term", "shortTitle"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

@@ -9,9 +9,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSi
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class Publication extends MetaoptComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class Publication extends MetaoptComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -31,151 +31,169 @@ public class Publication extends MetaoptComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
-    private StringSimpleType nameAttr;
-    private DateSimpleType dateAttr;
+    // FIELDS ------------------
     private StringSimpleType numberAttr;
+    private DateSimpleType dateAttr;
+    private StringSimpleType nameAttr;
+    private AnyURISimpleType refersToAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
-    private AnyURISimpleType refersToAttr;
 
-    public StringSimpleType getNameAttr() {
-        if (nameAttr == null) {
-            nameAttr = new StringSimpleType();
-            nameAttr.setValue(amendableElement.getAttribute("name"));
-        }
-
-        return nameAttr;
-    }
-    //DSL Style get value
-    public StringSimpleType nameAttr() {
-         return  getNameAttr();
-    }
-
-    public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-    }
-    //DSL Style set value
-    public Publication nameAttr(final StringSimpleType nameAttr) {
-        setNameAttr(nameAttr);
-        return this;
-    }
-    public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-            dateAttr = new DateSimpleType();
-            dateAttr.setValue(amendableElement.getAttribute("date"));
-        }
-
-        return dateAttr;
-    }
-    //DSL Style get value
-    public DateSimpleType dateAttr() {
-         return  getDateAttr();
-    }
-
-    public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-    }
-    //DSL Style set value
-    public Publication dateAttr(final DateSimpleType dateAttr) {
-        setDateAttr(dateAttr);
-        return this;
-    }
     public StringSimpleType getNumberAttr() {
         if (numberAttr == null) {
             numberAttr = new StringSimpleType();
-            numberAttr.setValue(amendableElement.getAttribute("number"));
+            numberAttr.setValue(getElement().getAttribute("number"));
         }
 
         return numberAttr;
     }
+
     //DSL Style get value
     public StringSimpleType numberAttr() {
-         return  getNumberAttr();
+        return getNumberAttr();
     }
 
     public void setNumberAttr(final StringSimpleType numberAttr) {
         this.numberAttr = numberAttr;
     }
+
     //DSL Style set value
     public Publication numberAttr(final StringSimpleType numberAttr) {
         setNumberAttr(numberAttr);
         return this;
     }
-    public StringSimpleType getShowAsAttr() {
-        if (showAsAttr == null) {
-            showAsAttr = new StringSimpleType();
-            showAsAttr.setValue(amendableElement.getAttribute("showAs"));
+
+    public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(getElement().getAttribute("date"));
         }
 
-        return showAsAttr;
-    }
-    //DSL Style get value
-    public StringSimpleType showAsAttr() {
-         return  getShowAsAttr();
+        return dateAttr;
     }
 
-    public void setShowAsAttr(final StringSimpleType showAsAttr) {
-        this.showAsAttr = showAsAttr;
+    //DSL Style get value
+    public DateSimpleType dateAttr() {
+        return getDateAttr();
     }
+
+    public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+    }
+
     //DSL Style set value
-    public Publication showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
+    public Publication dateAttr(final DateSimpleType dateAttr) {
+        setDateAttr(dateAttr);
         return this;
     }
-    public StringSimpleType getShortFormAttr() {
-        if (shortFormAttr == null) {
-            shortFormAttr = new StringSimpleType();
-            shortFormAttr.setValue(amendableElement.getAttribute("shortForm"));
+
+    public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+            nameAttr = new StringSimpleType();
+            nameAttr.setValue(getElement().getAttribute("name"));
         }
 
-        return shortFormAttr;
-    }
-    //DSL Style get value
-    public StringSimpleType shortFormAttr() {
-         return  getShortFormAttr();
+        return nameAttr;
     }
 
-    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
-        this.shortFormAttr = shortFormAttr;
+    //DSL Style get value
+    public StringSimpleType nameAttr() {
+        return getNameAttr();
     }
+
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+    }
+
     //DSL Style set value
-    public Publication shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
+    public Publication nameAttr(final StringSimpleType nameAttr) {
+        setNameAttr(nameAttr);
         return this;
     }
+
     public AnyURISimpleType getRefersToAttr() {
         if (refersToAttr == null) {
             refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(amendableElement.getAttribute("refersTo"));
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
         }
 
         return refersToAttr;
     }
+
     //DSL Style get value
     public AnyURISimpleType refersToAttr() {
-         return  getRefersToAttr();
+        return getRefersToAttr();
     }
 
     public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
         this.refersToAttr = refersToAttr;
     }
+
     //DSL Style set value
     public Publication refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
         return this;
     }
+
+    public StringSimpleType getShowAsAttr() {
+        if (showAsAttr == null) {
+            showAsAttr = new StringSimpleType();
+            showAsAttr.setValue(getElement().getAttribute("showAs"));
+        }
+
+        return showAsAttr;
+    }
+
+    //DSL Style get value
+    public StringSimpleType showAsAttr() {
+        return getShowAsAttr();
+    }
+
+    public void setShowAsAttr(final StringSimpleType showAsAttr) {
+        this.showAsAttr = showAsAttr;
+    }
+
+    //DSL Style set value
+    public Publication showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    public StringSimpleType getShortFormAttr() {
+        if (shortFormAttr == null) {
+            shortFormAttr = new StringSimpleType();
+            shortFormAttr.setValue(getElement().getAttribute("shortForm"));
+        }
+
+        return shortFormAttr;
+    }
+
+    //DSL Style get value
+    public StringSimpleType shortFormAttr() {
+        return getShortFormAttr();
+    }
+
+    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
+        this.shortFormAttr = shortFormAttr;
+    }
+
+    //DSL Style set value
+    public Publication shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";
@@ -185,12 +203,12 @@ public class Publication extends MetaoptComplexType  {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
-        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("number", getNumberAttr() != null ? getNumberAttr().getValue() : null);
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         return attrs;
     }
 }

@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class AnyTypeComplexType extends AmendableWidgetImpl  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class AnyTypeComplexType extends AmendableWidgetImpl {
 
     // STATIC create method
     public static Element create() {
@@ -33,31 +33,33 @@ public class AnyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<AmendableWidgetImpl> result = new ArrayList<AmendableWidgetImpl>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("AmendableWidgetImpl".equalsIgnoreCase(widget.getType())) {
-                result.add((AmendableWidgetImpl)widget);
+                result.add((AmendableWidgetImpl) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
+
     //DSL Style get value
     public java.util.List<AmendableWidgetImpl> getWildcardContentList() {
-        return  getWildcardContents();
+        return getWildcardContents();
     }
+
     //DSL Style set value
     public String addWildcardContent(String wildcardContentElem) {
         throw new RuntimeException("Adding wildcard content is not supported yet");
     }
 
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{"*"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.w3.org/2001/XMLSchema";

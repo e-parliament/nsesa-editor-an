@@ -7,9 +7,9 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class FRBRWork extends CorePropertiesComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class FRBRWork extends CorePropertiesComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -35,7 +35,7 @@ public class FRBRWork extends CorePropertiesComplexType  {
         FRBRcountry result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRcountry".equalsIgnoreCase(widget.getType())) {
-                result = (FRBRcountry)widget;
+                result = (FRBRcountry) widget;
                 break;
             }
         }
@@ -54,11 +54,12 @@ public class FRBRWork extends CorePropertiesComplexType  {
 
         return FRBRcountryElem;
     }
+
     public FRBRsubtype getFRBRsubtype() {
         FRBRsubtype result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRsubtype".equalsIgnoreCase(widget.getType())) {
-                result = (FRBRsubtype)widget;
+                result = (FRBRsubtype) widget;
                 break;
             }
         }
@@ -77,11 +78,12 @@ public class FRBRWork extends CorePropertiesComplexType  {
 
         return FRBRsubtypeElem;
     }
+
     public FRBRnumber getFRBRnumber() {
         FRBRnumber result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRnumber".equalsIgnoreCase(widget.getType())) {
-                result = (FRBRnumber)widget;
+                result = (FRBRnumber) widget;
                 break;
             }
         }
@@ -100,11 +102,12 @@ public class FRBRWork extends CorePropertiesComplexType  {
 
         return FRBRnumberElem;
     }
+
     public FRBRname getFRBRname() {
         FRBRname result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRname".equalsIgnoreCase(widget.getType())) {
-                result = (FRBRname)widget;
+                result = (FRBRname) widget;
                 break;
             }
         }
@@ -123,17 +126,18 @@ public class FRBRWork extends CorePropertiesComplexType  {
 
         return FRBRnameElem;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"FRBRthis","FRBRalias","FRBRcountry","FRBRsubtype","componentInfo","FRBRuri","FRBRnumber","FRBRname","FRBRauthor","FRBRdate","preservation"};
+        return new String[]{"FRBRthis", "FRBRalias", "FRBRcountry", "FRBRsubtype", "componentInfo", "FRBRuri", "FRBRnumber", "FRBRname", "FRBRauthor", "FRBRdate", "preservation"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

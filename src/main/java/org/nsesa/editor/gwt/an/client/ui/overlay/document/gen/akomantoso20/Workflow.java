@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class Workflow extends AmendableWidgetImpl  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class Workflow extends AmendableWidgetImpl {
 
     // STATIC create method
     public static Element create() {
@@ -32,22 +32,24 @@ public class Workflow extends AmendableWidgetImpl  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
 
     public java.util.List<Step> getSteps() {
         java.util.List<Step> result = new ArrayList<Step>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Step".equalsIgnoreCase(widget.getType())) {
-                result.add((Step)widget);
+                result.add((Step) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
+
     //DSL Style get value
     public java.util.List<Step> getStepList() {
-        return  getSteps();
+        return getSteps();
     }
+
     //DSL Style set value
     public Step addStep(Step stepElem) {
         this.addAmendableWidget(stepElem);
@@ -57,35 +59,38 @@ public class Workflow extends AmendableWidgetImpl  {
     public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
             sourceAttr = new AnyURISimpleType();
-            sourceAttr.setValue(amendableElement.getAttribute("source"));
+            sourceAttr.setValue(getElement().getAttribute("source"));
         }
 
         return sourceAttr;
     }
+
     //DSL Style get value
     public AnyURISimpleType sourceAttr() {
-         return  getSourceAttr();
+        return getSourceAttr();
     }
 
     public void setSourceAttr(final AnyURISimpleType sourceAttr) {
         this.sourceAttr = sourceAttr;
     }
+
     //DSL Style set value
     public Workflow sourceAttr(final AnyURISimpleType sourceAttr) {
         setSourceAttr(sourceAttr);
         return this;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{"step"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

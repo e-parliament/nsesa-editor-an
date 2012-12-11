@@ -7,9 +7,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISi
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class FRBRauthor extends MetaoptComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class FRBRauthor extends MetaoptComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -29,63 +29,69 @@ public class FRBRauthor extends MetaoptComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private AnyURISimpleType asAttr;
     private AnyURISimpleType hrefAttr;
 
     public AnyURISimpleType getAsAttr() {
         if (asAttr == null) {
             asAttr = new AnyURISimpleType();
-            asAttr.setValue(amendableElement.getAttribute("as"));
+            asAttr.setValue(getElement().getAttribute("as"));
         }
 
         return asAttr;
     }
+
     //DSL Style get value
     public AnyURISimpleType asAttr() {
-         return  getAsAttr();
+        return getAsAttr();
     }
 
     public void setAsAttr(final AnyURISimpleType asAttr) {
         this.asAttr = asAttr;
     }
+
     //DSL Style set value
     public FRBRauthor asAttr(final AnyURISimpleType asAttr) {
         setAsAttr(asAttr);
         return this;
     }
+
     public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
             hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(amendableElement.getAttribute("href"));
+            hrefAttr.setValue(getElement().getAttribute("href"));
         }
 
         return hrefAttr;
     }
+
     //DSL Style get value
     public AnyURISimpleType hrefAttr() {
-         return  getHrefAttr();
+        return getHrefAttr();
     }
 
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {
         this.hrefAttr = hrefAttr;
     }
+
     //DSL Style set value
     public FRBRauthor hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
         return this;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
         return new String[]{};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

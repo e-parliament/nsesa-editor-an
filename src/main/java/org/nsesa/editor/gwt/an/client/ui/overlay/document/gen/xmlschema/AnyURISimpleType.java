@@ -4,9 +4,9 @@ import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class AnyURISimpleType extends AnySimpleTypeSimpleType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class AnyURISimpleType extends AnySimpleTypeSimpleType {
 
     // STATIC create method
     public static Element create() {
@@ -19,7 +19,7 @@ public class AnyURISimpleType extends AnySimpleTypeSimpleType  {
     // CONSTRUCTORS ------------------
 
     public AnyURISimpleType() {
-    super();
+        super();
     }
 
 // FIELDS ------------------

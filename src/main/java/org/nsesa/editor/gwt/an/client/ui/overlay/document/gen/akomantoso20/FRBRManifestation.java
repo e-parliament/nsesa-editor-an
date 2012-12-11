@@ -7,9 +7,9 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class FRBRManifestation extends CorePropertiesComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class FRBRManifestation extends CorePropertiesComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -35,7 +35,7 @@ public class FRBRManifestation extends CorePropertiesComplexType  {
         FRBRformat result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRformat".equalsIgnoreCase(widget.getType())) {
-                result = (FRBRformat)widget;
+                result = (FRBRformat) widget;
                 break;
             }
         }
@@ -54,17 +54,18 @@ public class FRBRManifestation extends CorePropertiesComplexType  {
 
         return FRBRformatElem;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"FRBRthis","FRBRalias","FRBRformat","componentInfo","FRBRuri","FRBRauthor","FRBRdate","preservation"};
+        return new String[]{"FRBRthis", "FRBRalias", "FRBRformat", "componentInfo", "FRBRuri", "FRBRauthor", "FRBRdate", "preservation"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

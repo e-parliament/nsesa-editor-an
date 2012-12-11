@@ -7,9 +7,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IntegerS
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class Td extends BlocksoptComplexType  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class Td extends BlocksoptComplexType {
 
     // STATIC create method
     public static Element create() {
@@ -29,63 +29,69 @@ public class Td extends BlocksoptComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private IntegerSimpleType rowspanAttr;
     private IntegerSimpleType colspanAttr;
 
     public IntegerSimpleType getRowspanAttr() {
         if (rowspanAttr == null) {
             rowspanAttr = new IntegerSimpleType();
-            rowspanAttr.setValue(amendableElement.getAttribute("rowspan"));
+            rowspanAttr.setValue(getElement().getAttribute("rowspan"));
         }
 
         return rowspanAttr;
     }
+
     //DSL Style get value
     public IntegerSimpleType rowspanAttr() {
-         return  getRowspanAttr();
+        return getRowspanAttr();
     }
 
     public void setRowspanAttr(final IntegerSimpleType rowspanAttr) {
         this.rowspanAttr = rowspanAttr;
     }
+
     //DSL Style set value
     public Td rowspanAttr(final IntegerSimpleType rowspanAttr) {
         setRowspanAttr(rowspanAttr);
         return this;
     }
+
     public IntegerSimpleType getColspanAttr() {
         if (colspanAttr == null) {
             colspanAttr = new IntegerSimpleType();
-            colspanAttr.setValue(amendableElement.getAttribute("colspan"));
+            colspanAttr.setValue(getElement().getAttribute("colspan"));
         }
 
         return colspanAttr;
     }
+
     //DSL Style get value
     public IntegerSimpleType colspanAttr() {
-         return  getColspanAttr();
+        return getColspanAttr();
     }
 
     public void setColspanAttr(final IntegerSimpleType colspanAttr) {
         this.colspanAttr = colspanAttr;
     }
+
     //DSL Style set value
     public Td colspanAttr(final IntegerSimpleType colspanAttr) {
         setColspanAttr(colspanAttr);
         return this;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"ul","toc","tblock","blockList","p","block","table","ol","foreign"};
+        return new String[]{"ul", "toc", "tblock", "blockList", "p", "block", "table", "ol", "foreign"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

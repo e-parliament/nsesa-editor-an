@@ -9,9 +9,9 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import java.util.LinkedHashMap;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
-public class Identification extends AmendableWidgetImpl  {
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
+public class Identification extends AmendableWidgetImpl {
 
     // STATIC create method
     public static Element create() {
@@ -31,14 +31,14 @@ public class Identification extends AmendableWidgetImpl  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
 
     public FRBRWork getFRBRWork() {
         FRBRWork result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRWork".equalsIgnoreCase(widget.getType())) {
-                result = (FRBRWork)widget;
+                result = (FRBRWork) widget;
                 break;
             }
         }
@@ -57,11 +57,12 @@ public class Identification extends AmendableWidgetImpl  {
 
         return FRBRWorkElem;
     }
+
     public FRBRExpression getFRBRExpression() {
         FRBRExpression result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRExpression".equalsIgnoreCase(widget.getType())) {
-                result = (FRBRExpression)widget;
+                result = (FRBRExpression) widget;
                 break;
             }
         }
@@ -80,11 +81,12 @@ public class Identification extends AmendableWidgetImpl  {
 
         return FRBRExpressionElem;
     }
+
     public FRBRManifestation getFRBRManifestation() {
         FRBRManifestation result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRManifestation".equalsIgnoreCase(widget.getType())) {
-                result = (FRBRManifestation)widget;
+                result = (FRBRManifestation) widget;
                 break;
             }
         }
@@ -103,11 +105,12 @@ public class Identification extends AmendableWidgetImpl  {
 
         return FRBRManifestationElem;
     }
+
     public FRBRItem getFRBRItem() {
         FRBRItem result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRItem".equalsIgnoreCase(widget.getType())) {
-                result = (FRBRItem)widget;
+                result = (FRBRItem) widget;
                 break;
             }
         }
@@ -126,38 +129,42 @@ public class Identification extends AmendableWidgetImpl  {
 
         return FRBRItemElem;
     }
+
     public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
             sourceAttr = new AnyURISimpleType();
-            sourceAttr.setValue(amendableElement.getAttribute("source"));
+            sourceAttr.setValue(getElement().getAttribute("source"));
         }
 
         return sourceAttr;
     }
+
     //DSL Style get value
     public AnyURISimpleType sourceAttr() {
-         return  getSourceAttr();
+        return getSourceAttr();
     }
 
     public void setSourceAttr(final AnyURISimpleType sourceAttr) {
         this.sourceAttr = sourceAttr;
     }
+
     //DSL Style set value
     public Identification sourceAttr(final AnyURISimpleType sourceAttr) {
         setSourceAttr(sourceAttr);
         return this;
     }
+
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
+     * Returns possible children as a list of <tt>String</tt>s.
+     */
     @Override
     public String[] getAllowedChildTypes() {
-        return new String[]{"FRBRManifestation","FRBRWork","FRBRItem","FRBRExpression"};
+        return new String[]{"FRBRManifestation", "FRBRWork", "FRBRItem", "FRBRExpression"};
     }
 
     /**
-    * Returns the namespace URI of this amendable widget.
-    */
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";
