@@ -9,6 +9,7 @@
                 <prop key="**/remote_logging">gwtLogController</prop>
                 <!-- GWT -->
                 <prop key="**/gwtService">gwtService</prop>
+                <prop key="**/gwtDiffService">gwtDiffService</prop>
                 <prop key="**/gwtDocumentService">gwtDocumentService</prop>
                 <prop key="**/gwtAmendmentService">gwtAmendmentService</prop>
             </props>
@@ -16,6 +17,7 @@
     </bean>
 
     <bean id="gwtService" class="org.nsesa.editor.gwt.an.server.service.gwt.GWTServiceImpl"/>
+    <bean id="gwtDiffService" class="org.nsesa.editor.gwt.an.server.service.gwt.GWTDiffServiceImpl"/>
     <bean id="gwtDocumentService" class="org.nsesa.editor.gwt.an.server.service.gwt.GWTDocumentServiceImpl">
         <property name="documents">
             <map>
@@ -25,6 +27,7 @@
                 <entry key="4" value="classpath:examples/AmendmentList_Bungeni_2010-10-28v1.xml"/>
                 <entry key="5" value="classpath:examples/Debate_Bungeni_2010-12-07.xml"/>
                 <entry key="6" value="classpath:examples/constitution_final-Kenya.xml"/>
+                <entry key="7" value="classpath:examples/Bill_southAfrica_2006-12-23.xml"/>
             </map>
         </property>
         <property name="documentTemplate" value="classpath:document.ftl"/>
@@ -38,7 +41,8 @@
             </map>
         </property>
         <property name="documentTemplate" value="classpath:document.ftl"/>
-        <property name="amendmentDirectory" value="file://R:/"/>
+        <property name="amendmentDirectory"
+                  value="file:///Users/pluppens/Projects/Work/e-parliament/nsesa-editor-an/export/"/>
     </bean>
 
     <bean id="gwtLogController" class="org.springframework.web.servlet.mvc.ServletWrappingController">
