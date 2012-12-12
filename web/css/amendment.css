@@ -4,11 +4,18 @@
 * amendment style.
 * --------------------------------------------------------------------------
 */
+.contentPanel .amendmentHolder {
+    position: relative;
+    width: 122%;
+    left: -100px;
+}
+
 .amendmentHolder {
-    max-width: 1400px;
-    background-color: #ccc;
-    border: 1px solid black;
-    padding: 10px;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .amendmentHolder .header {
