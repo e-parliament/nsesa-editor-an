@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="amendmentDiffingService" class="ec.ep.diff4ep.service.AmendmentDiffingService"
+          factory-bean="amendmentDiffingServiceClientFactory"
+          factory-method="create" autowire="byName"/>
+
+    <bean id="amendmentDiffingServiceClientFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+        <property name="serviceClass" value="ec.ep.diff4ep.service.AmendmentDiffingService"/>
+        <property name="address" value="http://localhost:9090/diff4ep/ws/AmendmentDiffService"/>
+    </bean>
+
+</beans>
