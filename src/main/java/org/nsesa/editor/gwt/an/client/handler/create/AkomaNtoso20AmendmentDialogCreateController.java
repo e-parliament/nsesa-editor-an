@@ -52,7 +52,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
                 .addAmendmentContent(new AmendmentContent());
 
         amendmentContent
-                .addBlock(new Block()).nameAttr(s("versionTitle")).html("Text proposed by the Commission");
+                .addBlock(new Block()).nameAttr(s("versionTitle")).html("Text proposed by ...");
         amendmentContent
                 .addBlock(new Block()).nameAttr(s("versionTitle")).html("Amendment");
 
