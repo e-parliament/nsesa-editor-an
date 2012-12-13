@@ -1,10 +1,10 @@
 package org.nsesa.editor.gwt.an.server.service.gwt;
 
 import ec.ep.diff4ep.service.AmendmentDiffingService;
-import ec.ep.diff4ep.service.model.ComplexDiffContext;
 import ec.ep.diff4ep.service.model.DiffMethod;
 import org.nsesa.editor.gwt.core.client.service.gwt.GWTDiffService;
 import org.nsesa.editor.gwt.core.shared.ComplexDiffCommand;
+import org.nsesa.editor.gwt.core.shared.ComplexDiffContext;
 import org.nsesa.editor.gwt.core.shared.ComplexDiffResult;
 
 import java.util.ArrayList;
@@ -18,25 +18,20 @@ import java.util.List;
  */
 public class GWTDiffServiceImpl extends SpringRemoteServiceServlet implements GWTDiffService {
 
-    // style for BI diffing
-    public static final String originalChangeTemplate = "<span class=\"widget change highlight-diff\">{0}</span>";
-
-    // style for complex diffing
-    public static final String originalComplexChangeTemplate = "<span class=\"widget change highlight-red\">{0}</span>";
-    public static final String complexInsertTemplate = "<span class=\"widget change highlight-ins\">{0}</span>";
-    public static final String complexDeleteTemplate = "<span class=\"widget change highlight-del\">{0}</span>";
-    public static final String complexInsertNormalTemplate = "<span class=\"widget change highlight-ins-normal\">{0}</span>";
-    public static final String complexDeleteNormalTemplate = "<span class=\"widget change highlight-del-normal\">{0}</span>";
-    public static final String complexChangeTemplate = "<span class=\"widget change highlight-change\">{0}</span>";
-
     private AmendmentDiffingService amendmentDiffingService;
 
     @Override
     public ArrayList<ComplexDiffResult> complexDiff(ArrayList<ComplexDiffCommand> commands) {
         List<ec.ep.diff4ep.service.model.ComplexDiffCommand> epComplexDiffCommands = new ArrayList<ec.ep.diff4ep.service.model.ComplexDiffCommand>();
         for (final ComplexDiffCommand complexDiffCommand : commands) {
+            final ComplexDiffContext context = complexDiffCommand.getContext();
+            final ec.ep.diff4ep.service.model.ComplexDiffContext epContext = new ec.ep.diff4ep.service.model.ComplexDiffContext(
+                    context.getOriginalChangeTemplate(), context.getOriginalComplexChangeTemplate(), context.getComplexInsertTemplate(), context.getComplexDeleteTemplate(),
+                    context.getComplexChangeTemplate(), DiffMethod.valueOf(context.getDiffMethod().toString())
+            );
+
             ec.ep.diff4ep.service.model.ComplexDiffCommand epComplexDiffCommand = new ec.ep.diff4ep.service.model.ComplexDiffCommand(
-                    complexDiffCommand.getOriginal(), complexDiffCommand.getModified(), complexDiffCommand.getOverrideModified(), new ComplexDiffContext(originalChangeTemplate, originalComplexChangeTemplate, complexInsertTemplate, complexDeleteTemplate, complexChangeTemplate, DiffMethod.WORD));
+                    complexDiffCommand.getOriginal(), complexDiffCommand.getModified(), complexDiffCommand.getOverrideModified(), epContext);
             epComplexDiffCommands.add(epComplexDiffCommand);
         }
         final List<ec.ep.diff4ep.service.model.ComplexDiffResult> epComplexDiffResults = amendmentDiffingService.complexDiff(epComplexDiffCommands);
