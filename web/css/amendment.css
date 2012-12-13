@@ -85,3 +85,49 @@
     font-weight: bold;
     font-style: italic;
 }
+
+/*
+    DIFFING
+*/
+
+.highlight-diff {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.highlight-ins {
+    color: blue;
+    background-color: lightblue;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.highlight-ins-normal {
+    color: blue;
+    background-color: lightblue;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.highlight-del {
+    color: red;
+    background-color: pink;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+.highlight-del-normal {
+    color: red;
+    background-color: pink;
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+.highlight-red {
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+}
