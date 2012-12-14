@@ -29,7 +29,7 @@ public class AkomaNtoso20Module extends AbstractGinModule {
     @Override
     protected void configure() {
         bindConstant().annotatedWith(Names.named("richTextEditorBodyClass")).to("akomaNtoso");
-        bindConstant().annotatedWith(Names.named("richTextEditorCss")).to("css/akomaNtoso.css,css/editor.css,css/document.css,css/akomaNtoso-override.css,css/ckeditor.css");
+        bindConstant().annotatedWith(Names.named("richTextEditorCss")).to("css/editor.css,css/document.css,css/amendment.css,css/akomaNtoso.css,css/akomaNtoso-override.css,css/ckeditor.css");
         install(new EditorModule());
         // bind the mapper
         bind(ActivityMapper.class).to(EditorActivityMapper.class).in(Singleton.class);
