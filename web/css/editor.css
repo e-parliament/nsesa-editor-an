@@ -50,15 +50,22 @@ table {
     background-color: #000;
 }
 
+span.logo {
+    font-size: 3em;
+    position: relative;
+    left: 6px;
+}
+
 .navbar > li {
-    color:white;
+    color: white;
     float: left;
 }
 
 .navbar .loggedInPerson {
     position: relative;
     float: right;
-    right:15px;
+    right: 15px;
+    top: 15px;
 }
 
 .gwt-DecoratedPopupPanel {
