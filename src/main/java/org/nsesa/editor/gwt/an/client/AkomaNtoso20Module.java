@@ -28,10 +28,11 @@ import org.nsesa.editor.gwt.editor.client.ui.main.EditorModule;
 public class AkomaNtoso20Module extends AbstractGinModule {
     @Override
     protected void configure() {
-        bindConstant().annotatedWith(Names.named("richTextEditorCss")).to("css/akomaNtoso.css,css/editor.css,css/document.css,css/akomaNtoso-override.css");
+        bindConstant().annotatedWith(Names.named("richTextEditorBodyClass")).to("akomaNtoso");
+        bindConstant().annotatedWith(Names.named("richTextEditorCss")).to("css/akomaNtoso.css,css/editor.css,css/document.css,css/akomaNtoso-override.css,css/ckeditor.css");
         install(new EditorModule());
-   		// bind the mapper
-   		bind(ActivityMapper.class).to(EditorActivityMapper.class).in(Singleton.class);
+        // bind the mapper
+        bind(ActivityMapper.class).to(EditorActivityMapper.class).in(Singleton.class);
         bind(OverlayFactory.class).to(Akomantoso20OverlayFactory.class).in(Singleton.class);
         bind(OverlayStrategy.class).to(AkomaNtoso20OverlayStrategy.class).in(Singleton.class);
         bind(Locator.class).to(AkomaNtoso20Locator.class).in(Singleton.class);
