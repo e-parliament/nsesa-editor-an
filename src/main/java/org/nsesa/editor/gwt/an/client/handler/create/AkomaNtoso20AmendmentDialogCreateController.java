@@ -33,7 +33,8 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
     @Override
     public void handleSave() {
-        final Amendment root = new AkomaNtoso().setAmendment(new Amendment());
+        final AkomaNtoso akomaNtoso = new AkomaNtoso();
+        final Amendment root = akomaNtoso.setAmendment(new Amendment());
 
         // preface
         root.setPreface(new Preface())
@@ -70,7 +71,8 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         final AmendableWidget overlayed = overlayFactory.getAmendableWidget(clone);
         quotedStructureAmendment.addAmendableWidget(overlayed);
 
-        amendment.setRoot(root);
+        akomaNtoso.addAmendableWidget(root);
+        amendment.setRoot(akomaNtoso);
 
         super.handleSave();
     }
