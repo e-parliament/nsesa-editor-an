@@ -44,7 +44,7 @@
         </property>
         <property name="documentTemplate" value="classpath:document.ftl"/>
         <property name="amendmentDirectory"
-                  value="file:///Users/pluppens/Projects/Work/e-parliament/nsesa-editor-an/export/"/>
+                  value="file:///${user.home}/nsesa-export/"/>
     </bean>
 
     <bean id="gwtLogController" class="org.springframework.web.servlet.mvc.ServletWrappingController">

@@ -113,7 +113,16 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         List<AmendmentContainerDTO> amendmentContainerDTOs = new ArrayList<AmendmentContainerDTO>();
         for (AmendmentContainerDTO data : amendmentContainers) {
             try {
-                Files.write(data.getXmlContent(), new File(amendmentDirectory.getFile(), data.getId() + "-am.xml"), Charset.forName("UTF-8"));
+                final File amendmentDirectoryFile = amendmentDirectory.getFile();
+                if (!amendmentDirectoryFile.exists()) {
+                    if (!amendmentDirectoryFile.mkdirs()) {
+                        throw new RuntimeException("Could not create amendment export directory at '" + amendmentDirectoryFile.getAbsolutePath() + "'");
+                    }
+                }
+                if (!amendmentDirectoryFile.canWrite()) {
+                    throw new RuntimeException("No permission to write to '" + amendmentDirectoryFile.getAbsolutePath() + "'");
+                }
+                Files.write(data.getXmlContent(), new File(amendmentDirectoryFile, data.getSourceReference().getPath() + "-" + data.getId() + "-am.xml"), Charset.forName("UTF-8"));
             } catch (IOException e) {
                 LOG.error("Could not write file.", e);
             }
