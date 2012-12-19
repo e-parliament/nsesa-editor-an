@@ -2,6 +2,20 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 3.0//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 
 <beans>
+    <!-- Configure the properties via placeholders. We will first read the properties file on the classpath,
+        which can be overridden via another properties file in the local home directory. -->
+    <bean id="propertyConfigurer"
+          class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:nsesa-editor-an.properties</value>
+                <value>file:///${user.home}/nsesa-editor-an.properties</value>
+            </list>
+        </property>
+        <property name="ignoreUnresolvablePlaceholders" value="false"/>
+        <property name="ignoreResourceNotFound" value="true"/>
+    </bean>
+
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
