@@ -33,6 +33,10 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
     @Override
     public void handleSave() {
+
+        final AmendableWidget parentAmendableWidget = dialogContext.getParentAmendableWidget();
+        final AmendableWidget amendableWidget = dialogContext.getAmendableWidget();
+
         final AkomaNtoso akomaNtoso = new AkomaNtoso();
         final Amendment root = akomaNtoso.setAmendment(new Amendment());
 
@@ -72,7 +76,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         quotedStructureAmendment.addAmendableWidget(overlayed);
 
         akomaNtoso.addAmendableWidget(root);
-        amendment.setRoot(akomaNtoso);
+        dialogContext.getAmendment().setRoot(akomaNtoso);
 
         super.handleSave();
     }
