@@ -2,8 +2,9 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 3.0//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 
 <beans>
+
     <!-- Configure the properties via placeholders. We will first read the properties file on the classpath,
-        which can be overridden via another properties file in the local home directory. -->
+    which can be overridden via another properties file in the local home directory. -->
     <bean id="propertyConfigurer"
           class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
         <property name="locations">
@@ -58,7 +59,7 @@
         </property>
         <property name="documentTemplate" value="classpath:document.ftl"/>
         <property name="amendmentDirectory"
-                  value="file:///${user.home}/nsesa-export/"/>
+                  value="${amendment.directory}"/>
     </bean>
 
     <bean id="gwtLogController" class="org.springframework.web.servlet.mvc.ServletWrappingController">
