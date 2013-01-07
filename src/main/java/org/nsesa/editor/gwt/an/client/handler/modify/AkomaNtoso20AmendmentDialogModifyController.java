@@ -4,10 +4,12 @@ import com.google.gwt.user.client.DOM;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.util.AmendmentUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
+import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentDialogModifyController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentDialogModifyView;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.author.AuthorPanelController;
@@ -106,5 +108,19 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         StringSimpleType s = new StringSimpleType();
         s.setValue(text);
         return s;
+    }
+
+    @Override
+    public void setContext(DialogContext dialogContext) {
+        super.setContext(dialogContext);
+        if (dialogContext.getAmendmentController() != null) {
+            // get the location from the amendable widget, if it is passed
+            view.setTitle("Edit amendment");
+            final String amendmendContent = AmendmentUtil.getAmendmendContent(dialogContext.getAmendmentController().asAmendableWidget());
+            view.setAmendmentContent(amendmendContent);
+        } else {
+            view.setTitle(locator.getLocation(dialogContext.getAmendableWidget(), clientFactory.getClientContext().getDocumentIso(), false));
+            view.setAmendmentContent(dialogContext.getAmendableWidget().getInnerHTML());
+        }
     }
 }
