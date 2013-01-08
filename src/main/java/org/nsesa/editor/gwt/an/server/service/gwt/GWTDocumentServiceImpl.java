@@ -78,6 +78,25 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
     }
 
     @Override
+    public ArrayList<DocumentDTO> getRelatedDocuments(ClientContext clientContext, String documentID) {
+        ArrayList<DocumentDTO> related = new ArrayList<DocumentDTO>();
+
+        final DocumentDTO documentDTO1 = new DocumentDTO();
+        documentDTO1.setLanguageIso("EN");
+        documentDTO1.setName("Related 1");
+        documentDTO1.setDocumentID("4");
+        related.add(documentDTO1);
+
+        final DocumentDTO documentDTO2 = new DocumentDTO();
+        documentDTO2.setLanguageIso("EN");
+        documentDTO2.setName("Related 2");
+        documentDTO2.setDocumentID("5");
+        related.add(documentDTO2);
+
+        return related;
+    }
+
+    @Override
     public String getDocumentContent(final ClientContext clientContext, final String documentID) {
         final Resource documentResource = documents.get(documentID);
         final InputSource inputSource;
