@@ -48,9 +48,10 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         // amendment body
         final AmendmentBody amendmentBody = root.setAmendmentBody(new AmendmentBody());
 
+        final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
         amendmentBody
                 .addAmendmentHeading(new AmendmentHeading())
-                .addBlock(new Block()).html(locator.getLocation(parentAmendableWidget, amendableWidget, "EN", true));
+                .addBlock(new Block()).html(locator.getLocation(parentAmendableWidget, amendableWidget, languageIso, true));
 
         // amendment content
         final AmendmentContent amendmentContent = amendmentBody
