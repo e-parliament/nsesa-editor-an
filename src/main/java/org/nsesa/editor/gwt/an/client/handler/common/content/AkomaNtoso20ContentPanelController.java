@@ -1,11 +1,11 @@
-package org.nsesa.editor.gwt.an.client.handler.modify.content;
+package org.nsesa.editor.gwt.an.client.handler.common.content;
 
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.util.AmendmentUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
-import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.content.ContentControllerView;
-import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.content.ContentPanelController;
+import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentControllerView;
+import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentPanelController;
 
 /**
  * Date: 23/11/12 11:02
