@@ -10,6 +10,7 @@ import org.nsesa.editor.gwt.an.client.handler.delete.AkomaNtoso20AmendmentDialog
 import org.nsesa.editor.gwt.an.client.handler.modify.AkomaNtoso20AmendmentDialogModifyController;
 import org.nsesa.editor.gwt.an.client.ui.amendment.AkomaNtoso20AmendmentController;
 import org.nsesa.editor.gwt.an.client.ui.amendment.action.AkomaNtoso20AmendmentActionPanelController;
+import org.nsesa.editor.gwt.an.client.ui.document.AkomaNtoso20DocumentController;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Creator;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Locator;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20OverlayStrategy;
@@ -26,6 +27,7 @@ import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreat
 import org.nsesa.editor.gwt.dialog.client.ui.handler.delete.AmendmentDialogDeleteController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentDialogModifyController;
 import org.nsesa.editor.gwt.editor.client.activity.EditorActivityMapper;
+import org.nsesa.editor.gwt.editor.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.editor.client.ui.main.EditorModule;
 
 /**
@@ -51,6 +53,9 @@ public class AkomaNtoso20Module extends AbstractGinModule {
         bind(AmendmentDialogCreateController.class).to(AkomaNtoso20AmendmentDialogCreateController.class);
         bind(AmendmentDialogDeleteController.class).to(AkomaNtoso20AmendmentDialogDeleteController.class);
         bind(ContentPanelController.class).to(AkomaNtoso20ContentPanelController.class);
+
+        bind(DocumentController.class).to(AkomaNtoso20DocumentController.class);
+
         bind(AmendmentController.class).to(AkomaNtoso20AmendmentController.class);
         bind(AmendmentActionPanelController.class).to(AkomaNtoso20AmendmentActionPanelController.class);
     }
