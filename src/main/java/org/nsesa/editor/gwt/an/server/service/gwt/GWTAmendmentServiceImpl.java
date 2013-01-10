@@ -1,5 +1,7 @@
 package org.nsesa.editor.gwt.an.server.service.gwt;
 
+import com.google.common.base.Function;
+import com.google.common.collect.Collections2;
 import com.google.common.io.Files;
 import freemarker.ext.dom.NodeModel;
 import freemarker.template.Configuration;
@@ -138,17 +140,38 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
     @Override
     public AmendmentContainerDTO[] deleteAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
-        return amendmentContainers.toArray(new AmendmentContainerDTO[amendmentContainers.size()]);
+        final Collection<AmendmentContainerDTO> deleted = Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, AmendmentContainerDTO>() {
+            @Override
+            public AmendmentContainerDTO apply(AmendmentContainerDTO input) {
+                input.setAmendmentContainerStatus("DELETED");
+                return input;
+            }
+        });
+        return deleted.toArray(new AmendmentContainerDTO[deleted.size()]);
     }
 
     @Override
     public AmendmentContainerDTO[] tableAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
-        return amendmentContainers.toArray(new AmendmentContainerDTO[amendmentContainers.size()]);
+        final Collection<AmendmentContainerDTO> tabled = Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, AmendmentContainerDTO>() {
+            @Override
+            public AmendmentContainerDTO apply(AmendmentContainerDTO input) {
+                input.setAmendmentContainerStatus("TABLED");
+                return input;
+            }
+        });
+        return tabled.toArray(new AmendmentContainerDTO[tabled.size()]);
     }
 
     @Override
     public AmendmentContainerDTO[] withdrawAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
-        return amendmentContainers.toArray(new AmendmentContainerDTO[amendmentContainers.size()]);
+        final Collection<AmendmentContainerDTO> withdrawn = Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, AmendmentContainerDTO>() {
+            @Override
+            public AmendmentContainerDTO apply(AmendmentContainerDTO input) {
+                input.setAmendmentContainerStatus("WITHDRAWN");
+                return input;
+            }
+        });
+        return withdrawn.toArray(new AmendmentContainerDTO[withdrawn.size()]);
     }
 
     // SPRING SETTERS -------------------------------------------

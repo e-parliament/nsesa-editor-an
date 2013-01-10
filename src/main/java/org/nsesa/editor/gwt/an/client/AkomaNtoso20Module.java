@@ -8,16 +8,12 @@ import org.nsesa.editor.gwt.an.client.handler.common.content.AkomaNtoso20Content
 import org.nsesa.editor.gwt.an.client.handler.create.AkomaNtoso20AmendmentDialogCreateController;
 import org.nsesa.editor.gwt.an.client.handler.delete.AkomaNtoso20AmendmentDialogDeleteController;
 import org.nsesa.editor.gwt.an.client.handler.modify.AkomaNtoso20AmendmentDialogModifyController;
-import org.nsesa.editor.gwt.an.client.ui.amendment.AkomaNtoso20AmendmentController;
-import org.nsesa.editor.gwt.an.client.ui.amendment.action.AkomaNtoso20AmendmentActionPanelController;
 import org.nsesa.editor.gwt.an.client.ui.document.AkomaNtoso20DocumentController;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Creator;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Locator;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20OverlayStrategy;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.Akomantoso20OverlayFactory;
 import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
-import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
-import org.nsesa.editor.gwt.core.client.ui.amendment.action.AmendmentActionPanelController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
@@ -55,8 +51,5 @@ public class AkomaNtoso20Module extends AbstractGinModule {
         bind(ContentPanelController.class).to(AkomaNtoso20ContentPanelController.class);
 
         bind(DocumentController.class).to(AkomaNtoso20DocumentController.class);
-
-        bind(AmendmentController.class).to(AkomaNtoso20AmendmentController.class);
-        bind(AmendmentActionPanelController.class).to(AkomaNtoso20AmendmentActionPanelController.class);
     }
 }
