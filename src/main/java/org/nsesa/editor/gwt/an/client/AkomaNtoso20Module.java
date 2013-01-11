@@ -13,6 +13,7 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Creator;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Locator;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20OverlayStrategy;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.Akomantoso20OverlayFactory;
+import org.nsesa.editor.gwt.an.client.ui.rte.ckeditor.Akomantoso20RichTextEditorPlugin;
 import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
@@ -22,9 +23,12 @@ import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentPanel
 import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreateController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.delete.AmendmentDialogDeleteController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentDialogModifyController;
+import org.nsesa.editor.gwt.dialog.client.ui.rte.RichTextEditorPlugin;
 import org.nsesa.editor.gwt.editor.client.activity.EditorActivityMapper;
 import org.nsesa.editor.gwt.editor.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.editor.client.ui.main.EditorModule;
+
+import java.util.List;
 
 /**
  * Date: 15/10/12 21:23
@@ -37,6 +41,8 @@ public class AkomaNtoso20Module extends AbstractGinModule {
     protected void configure() {
         bindConstant().annotatedWith(Names.named("richTextEditorBodyClass")).to("akomaNtoso");
         bindConstant().annotatedWith(Names.named("richTextEditorCss")).to("css/editor.css,css/document.css,css/amendment.css,css/akomaNtoso.css,css/akomaNtoso-override.css,css/ckeditor.css");
+        bindConstant().annotatedWith(Names.named("richTextEditorExtraPlugins")).to("nsesa");
+        bind(RichTextEditorPlugin.class).to(Akomantoso20RichTextEditorPlugin.class);
         install(new EditorModule());
         // bind the mapper
         bind(ActivityMapper.class).to(EditorActivityMapper.class).in(Singleton.class);
