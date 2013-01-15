@@ -11,6 +11,6 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultLocator;
  */
 public class AkomaNtoso20Locator extends DefaultLocator {
     public AkomaNtoso20Locator() {
-        hide(AkomaNtoso.class, Body.class, Preamble.class, Components.class, Component.class, Eol.class, P.class, B.class, I.class, Span.class, Recitals.class, Content.class/*, Num.class*/);
+        hide(AkomaNtoso.class, Body.class, Preamble.class, Bill.class, Components.class, Component.class, Eol.class, P.class, B.class, I.class, Span.class, Recitals.class, Content.class/*, Num.class*/);
     }
 }
