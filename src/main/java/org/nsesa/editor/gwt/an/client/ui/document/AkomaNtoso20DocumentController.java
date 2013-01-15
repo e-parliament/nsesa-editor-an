@@ -55,17 +55,20 @@ public class AkomaNtoso20DocumentController extends DocumentController {
                             if (state.isActive()) {
                                 // build up a new panel
                                 final StringBuilder sb = new StringBuilder();
-                                boolean first = true;
+                                boolean addSplitter = false;
                                 for (final AmendmentController amendmentController : visited.getAmendmentControllers()) {
-                                    if (!first) {
-                                        sb.append(new HTML("<h2>Or</h2>"));
-                                        first = !first;
+                                    if (addSplitter) {
+                                        sb.append(new HTML("<div style='width:100%;text-align:center;'><h2> -Or- </h2></div>"));
                                     }
                                     sb.append(amendmentController.getAmendmentContent());
+                                    addSplitter = true;
                                 }
-                                final com.google.gwt.dom.client.Element firstChildElement = new HTML(sb.toString()).getElement().getFirstChildElement();
-                                firstChildElement.setClassName(firstChildElement.getClassName() + " consolidationCopy");
-                                DOM.insertBefore(visited.getParentAmendableWidget().asWidget().getElement(), (Element) firstChildElement, visited.asWidget().getElement());
+
+                                final com.google.gwt.dom.client.Element amendmentsHolder = DOM.createSpan();
+                                amendmentsHolder.setInnerHTML(sb.toString());
+                                amendmentsHolder.setClassName(amendmentsHolder.getClassName() + " amendments consolidationCopy");
+                                DOM.insertBefore(visited.getParentAmendableWidget().asWidget().getElement(), (Element) amendmentsHolder, visited.asWidget().getElement());
+                                amendmentsHolder.getStyle().setColor("green");
                                 visited.asWidget().setVisible(false);
                             } else {
                                 // restore from the first amendment
@@ -86,7 +89,8 @@ public class AkomaNtoso20DocumentController extends DocumentController {
                         return true;
                     }
                 });
-                clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(topVisibleAmenableWidget.asWidget(), AkomaNtoso20DocumentController.this));
+                if (topVisibleAmenableWidget != null)
+                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(topVisibleAmenableWidget.asWidget(), AkomaNtoso20DocumentController.this));
                 return super.apply(state);
             }
         });
