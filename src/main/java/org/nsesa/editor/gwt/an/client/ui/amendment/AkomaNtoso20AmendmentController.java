@@ -46,6 +46,34 @@ public class AkomaNtoso20AmendmentController extends DefaultAmendmentController 
         quotedStructures.get(1).setInnerHTML(amendmentContent);
     }
 
+    @Override
+    public void setAmendmentNum(String num) {
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay());
+        final List<AmendableWidget> nums = OverlayUtil.find("num", quotedStructures.get(1));
+        if (nums.size() > 0) nums.get(0).setInnerHTML(num);
+    }
+
+    @Override
+    public void setOriginalNum(String num) {
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay());
+        final List<AmendableWidget> nums = OverlayUtil.find("num", quotedStructures.get(0));
+        if (nums.size() > 0) nums.get(0).setInnerHTML(num);
+    }
+
+    @Override
+    public String getAmendmentNum() {
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay());
+        final List<AmendableWidget> nums = OverlayUtil.find("num", quotedStructures.get(1));
+        return nums.size() > 0 ? nums.get(0).getInnerHTML().trim() : null;
+    }
+
+    @Override
+    public String getOriginalNum() {
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay());
+        final List<AmendableWidget> nums = OverlayUtil.find("num", quotedStructures.get(0));
+        return nums.size() > 0 ? nums.get(0).getInnerHTML().trim() : null;
+    }
+
     protected AmendableWidget overlay() {
         if (overlayAmendableWidget == null) {
             overlayAmendableWidget = documentController.getOverlayFactory().getAmendableWidget(view.getBody().getFirstChildElement());
