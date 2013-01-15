@@ -654,19 +654,20 @@
 }
 
 .akomaNtoso .sub {
-    display: inline;
+    vertical-align:sub;
+    font-size:xx-small;
+    display:inline;
 }
-
 .akomaNtoso .subheading {
-    display: inline;
+    display:inline;
 }
-
 .akomaNtoso .summary {
-    display: inline;
+    display:inline;
 }
-
 .akomaNtoso .sup {
-    display: inline;
+    vertical-align:super;
+    font-size:xx-small;
+    display:inline;
 }
 
 .akomaNtoso .tocItem {
@@ -726,6 +727,9 @@
 * markeropt
 * --------------------------
 */
+.akomaNtoso .br {
+    display:block;
+}
 /*
 * --------------------------
 * eolType

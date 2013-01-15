@@ -2,6 +2,7 @@ package org.nsesa.editor.gwt.an.client.ui.rte.ckeditor;
 
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
+import org.nsesa.editor.gwt.dialog.client.ui.rte.ckeditor.CKEditorBasicStylesPlugin;
 import org.nsesa.editor.gwt.dialog.client.ui.rte.ckeditor.CKEditorEnterKeyPlugin;
 import org.nsesa.editor.gwt.dialog.client.ui.rte.ckeditor.CkEditorCompositePlugin;
 
@@ -17,5 +18,6 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
     public Akomantoso20RichTextEditorPlugin(OverlayFactory overlayFactory) {
         //register here the available plugin
         registerPlugin(new CKEditorEnterKeyPlugin(overlayFactory, "br"));
+        registerPlugin(new CKEditorBasicStylesPlugin());
     }
 }
