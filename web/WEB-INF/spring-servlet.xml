@@ -32,6 +32,9 @@
     </bean>
 
     <bean id="gwtService" class="org.nsesa.editor.gwt.an.server.service.gwt.GWTServiceImpl" autowire="byName"/>
+
+    <bean id="diffService" class="org.nsesa.diff.diffUtils.service.impl.DefaultDiffService" autowire="byName"/>
+
     <bean id="gwtDiffService" class="org.nsesa.editor.gwt.an.server.service.gwt.GWTDiffServiceImpl" autowire="byName"/>
     <bean id="gwtDocumentService" class="org.nsesa.editor.gwt.an.server.service.gwt.GWTDocumentServiceImpl"
           autowire="byName">

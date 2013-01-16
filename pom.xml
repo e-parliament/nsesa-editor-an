@@ -58,6 +58,13 @@
             <version>0.0.1</version>
         </dependency>
 
+        <!-- Diffing -->
+        <dependency>
+            <groupId>org.nsesa</groupId>
+            <artifactId>nsesa-diff</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
         <!--Spring-->
         <dependency>
             <groupId>org.springframework</groupId>
