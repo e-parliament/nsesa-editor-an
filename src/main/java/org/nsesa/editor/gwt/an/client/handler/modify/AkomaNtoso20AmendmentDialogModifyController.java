@@ -5,6 +5,7 @@ import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
+import org.nsesa.editor.gwt.core.client.ui.drafting.DraftingController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
@@ -35,10 +36,11 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
                                                        final AmendmentDialogModifyView view,
                                                        final Locator locator,
                                                        final OverlayFactory overlayFactory,
+                                                       final DraftingController draftingController,
                                                        final AuthorPanelController authorPanelController,
                                                        final ContentPanelController contentPanelController
     ) {
-        super(clientFactory, view, locator, overlayFactory, Arrays.asList(contentPanelController, authorPanelController));
+        super(clientFactory, view, locator, overlayFactory, draftingController, Arrays.asList(contentPanelController, authorPanelController));
         this.authorPanelController = authorPanelController;
         this.contentPanelController = contentPanelController;
     }

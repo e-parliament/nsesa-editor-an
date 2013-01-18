@@ -44,6 +44,7 @@ public class Akomantoso20RichTextEditorConfig extends CKEditorConfig {
     public void setReadOnly(boolean readOnly) {
         this.readOnly(readOnly)
                 .setStartupFocus(!readOnly)
+                .setExtraPlugins(readOnly ? "" : "nsesa")
                 .setToolbar(readOnly ? CKEditorToolbar.EMPTY_TOOLBAR : CKEditorToolbar.DEFAULT_TOOLBAR);
 
     }

@@ -1,10 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.rte.ckeditor;
 
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
-import org.nsesa.editor.gwt.dialog.client.ui.rte.ckeditor.CKEditorBasicStylesPlugin;
-import org.nsesa.editor.gwt.dialog.client.ui.rte.ckeditor.CKEditorEnterKeyPlugin;
-import org.nsesa.editor.gwt.dialog.client.ui.rte.ckeditor.CkEditorCompositePlugin;
+import org.nsesa.editor.gwt.dialog.client.ui.rte.ckeditor.*;
 
 
 /**
@@ -14,10 +13,13 @@ import org.nsesa.editor.gwt.dialog.client.ui.rte.ckeditor.CkEditorCompositePlugi
  * Time: 12:13
  */
 public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
+
     @Inject
-    public Akomantoso20RichTextEditorPlugin(OverlayFactory overlayFactory) {
+    public Akomantoso20RichTextEditorPlugin(OverlayFactory overlayFactory, ClientFactory clientFactory) {
         //register here the available plugin
         registerPlugin(new CKEditorEnterKeyPlugin(overlayFactory, "br"));
         registerPlugin(new CKEditorBasicStylesPlugin());
+        registerPlugin(new CKEditorSelectionChangedPlugin(clientFactory));
+        registerPlugin(new CKEditorDraftingInsertionPlugin(clientFactory));
     }
 }
