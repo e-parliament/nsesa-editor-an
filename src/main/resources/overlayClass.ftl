@@ -23,6 +23,7 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
 public static Element create() {
 com.google.gwt.user.client.Element span = DOM.createSpan();
 span.setAttribute("type", "${overlayClass.className}");
+span.setAttribute("ns", "${overlayClass.nameSpace}");
 span.setClassName("widget ${overlayClass.className}");
 return span;
 }
