@@ -2,7 +2,6 @@ package org.nsesa.editor.gwt.an.client;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
-import org.nsesa.editor.gwt.an.client.util.AmendmentUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.diffing.DefaultDiffingManager;
@@ -34,8 +33,8 @@ public class AkomaNtoso20DiffingManager extends DefaultDiffingManager {
     public void diff(final DiffMethod method, final AmendmentController... amendmentControllers) {
         final ArrayList<DiffRequest> diffRequests = new ArrayList<DiffRequest>();
         for (final AmendmentController amendmentController : amendmentControllers) {
-            diffRequests.add(new DiffRequest(AmendmentUtil.getOriginalContent(amendmentController.asAmendableWidget()),
-                    AmendmentUtil.getAmendmendContent(amendmentController.asAmendableWidget())));
+            diffRequests.add(new DiffRequest(amendmentController.getOriginalContentFromModel(),
+                    amendmentController.getAmendmentContentFromModel()));
         }
 
         // request diffing from the backend service
@@ -50,8 +49,8 @@ public class AkomaNtoso20DiffingManager extends DefaultDiffingManager {
                 int index = 0;
                 for (final DiffResult complexDiffResult : result) {
                     final AmendmentController amendmentController = amendmentControllers[index];
-                    AmendmentUtil.setOriginalContent(amendmentController.asAmendableWidget(), complexDiffResult.getOriginal());
-                    AmendmentUtil.setAmendmentContent(amendmentController.asAmendableWidget(), complexDiffResult.getAmendment());
+                    amendmentController.setOriginalContent(complexDiffResult.getOriginal());
+                    amendmentController.setAmendmentContent(complexDiffResult.getAmendment());
                     index++;
                 }
             }

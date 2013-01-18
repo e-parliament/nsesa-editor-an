@@ -1,5 +1,7 @@
 package org.nsesa.editor.gwt.an.client.ui.amendment;
 
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentView;
@@ -24,60 +26,90 @@ public class AkomaNtoso20AmendmentController extends DefaultAmendmentController 
 
     @Override
     public String getOriginalContent() {
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay());
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", asAmendableWidget());
+        return quotedStructures.get(0).getInnerHTML();
+    }
+
+    @Override
+    public String getOriginalContentFromModel() {
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay(true));
         return quotedStructures.get(0).getInnerHTML();
     }
 
     @Override
     public void setOriginalContent(final String originalContent) {
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay());
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", asAmendableWidget());
         quotedStructures.get(0).setInnerHTML(originalContent);
     }
 
     @Override
     public String getAmendmentContent() {
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay());
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", asAmendableWidget());
+        return quotedStructures.get(1).getInnerHTML();
+    }
+
+    @Override
+    public String getAmendmentContentFromModel() {
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay(true));
         return quotedStructures.get(1).getInnerHTML();
     }
 
     @Override
     public void setAmendmentContent(final String amendmentContent) {
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay());
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", asAmendableWidget());
         quotedStructures.get(1).setInnerHTML(amendmentContent);
     }
 
     @Override
     public void setAmendmentNum(String num) {
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay());
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", asAmendableWidget());
         final List<AmendableWidget> nums = OverlayUtil.find("num", quotedStructures.get(1));
         if (nums.size() > 0) nums.get(0).setInnerHTML(num);
     }
 
     @Override
     public void setOriginalNum(String num) {
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay());
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", asAmendableWidget());
         final List<AmendableWidget> nums = OverlayUtil.find("num", quotedStructures.get(0));
         if (nums.size() > 0) nums.get(0).setInnerHTML(num);
     }
 
     @Override
     public String getAmendmentNum() {
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay());
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", asAmendableWidget());
+        final List<AmendableWidget> nums = OverlayUtil.find("num", quotedStructures.get(1));
+        return nums.size() > 0 ? nums.get(0).getInnerHTML().trim() : null;
+    }
+
+    @Override
+    public String getAmendmentNumFromModel() {
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay(true));
         final List<AmendableWidget> nums = OverlayUtil.find("num", quotedStructures.get(1));
         return nums.size() > 0 ? nums.get(0).getInnerHTML().trim() : null;
     }
 
     @Override
     public String getOriginalNum() {
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay());
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", asAmendableWidget());
         final List<AmendableWidget> nums = OverlayUtil.find("num", quotedStructures.get(0));
         return nums.size() > 0 ? nums.get(0).getInnerHTML().trim() : null;
     }
 
-    protected AmendableWidget overlay() {
-        if (overlayAmendableWidget == null) {
-            overlayAmendableWidget = documentController.getOverlayFactory().getAmendableWidget(view.getBody().getFirstChildElement());
-        }
-        return overlayAmendableWidget;
+    @Override
+    public String getOriginalNumFromModel() {
+        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlay(true));
+        final List<AmendableWidget> nums = OverlayUtil.find("num", quotedStructures.get(0));
+        return nums.size() > 0 ? nums.get(0).getInnerHTML().trim() : null;
     }
+
+    protected AmendableWidget overlay(boolean useModel) {
+        if (!useModel) {
+            return asAmendableWidget();
+        } else {
+            final Element span = DOM.createSpan();
+            span.setInnerHTML(getModel().getXmlContent());
+            return documentController.getOverlayFactory().getAmendableWidget(span.getFirstChildElement());
+        }
+    }
+
 }

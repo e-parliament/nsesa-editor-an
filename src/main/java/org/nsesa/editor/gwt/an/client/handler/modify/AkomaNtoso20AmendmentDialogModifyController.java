@@ -4,7 +4,6 @@ import com.google.gwt.user.client.DOM;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.util.AmendmentUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
@@ -117,7 +116,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         if (dialogContext.getAmendmentController() != null) {
             // get the location from the amendable widget, if it is passed
             view.setTitle("Edit amendment");
-            final String amendmendContent = AmendmentUtil.getAmendmendContent(dialogContext.getAmendmentController().asAmendableWidget());
+            final String amendmendContent = dialogContext.getAmendmentController().getAmendmentContentFromModel();
             view.setAmendmentContent(amendmendContent);
         } else {
             view.setTitle(locator.getLocation(dialogContext.getAmendableWidget(), clientFactory.getClientContext().getDocumentIso(), false));
