@@ -27,6 +27,7 @@ public class Akomantoso20RichTextEditorConfig extends CKEditorConfig {
                 GWT.getModuleBaseURL() + "../" + "css/document.css",
                 GWT.getModuleBaseURL() + "../" + "css/amendment.css",
                 GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-all.css",
+                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-display.css",
                 GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-override.css",
                 GWT.getModuleBaseURL() + "../" + "css/ckeditor.css"})
                 .setBodyClass("akomaNtoso")
@@ -37,8 +38,8 @@ public class Akomantoso20RichTextEditorConfig extends CKEditorConfig {
                 .setAutoParagraph(false)
                 .setFillEmptyBlocks(false)
                 .setForcePasteAsPlainText(true);
-                //.replaceSubStyle("span", "widget " + sub.getType(), sub.getType(), sub.getNamespaceURI())
-                //.replaceSupStyle("span", "widget " + sup.getType(), sup.getType(), sup.getNamespaceURI());
+        //.replaceSubStyle("span", "widget " + sub.getType(), sub.getType(), sub.getNamespaceURI())
+        //.replaceSupStyle("span", "widget " + sup.getType(), sup.getType(), sup.getNamespaceURI());
     }
 
     public void setReadOnly(boolean readOnly) {
