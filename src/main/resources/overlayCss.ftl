@@ -22,7 +22,7 @@
 */
     </#if>
     <#if overlayStyle.name??>
-    <#if cssConfiguration['printEmptyCss'] || (overlayStyle.values?size != 0)>
+        <#if cssConfiguration['printEmptyCss'] || (overlayStyle.values?size != 0)>
 .akomaNtoso .${overlayStyle.name} {
             <#assign m = overlayStyle.values>
             <#assign keys = m?keys>
@@ -30,7 +30,7 @@
     ${key}:${m[key]};
             </#list>
 }
-    </#if>
+        </#if>
     </#if>
     <#if overlayClass.children?size != 0 >
         <#list overlayClass.orderedChildren as child>

@@ -1,0 +1,2947 @@
+/*
+* --------------------------------------------------------------------------
+* Akoma Ntoso Display default stylesheet.
+* Note: this file is generated!
+* --------------------------------------------------------------------------
+*/
+/*
+* --------------------------
+* Amendments
+* --------------------------
+*/
+.akomaNtoso .Amendments:before {
+    content: "Amendments";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .Amendments {
+    border:1px solid #fd2747;
+}
+.akomaNtoso .activeModifications:before {
+    content: "activeModifications";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .activeModifications {
+    border:1px solid #04cbae;
+}
+.akomaNtoso .passiveModifications:before {
+    content: "passiveModifications";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .passiveModifications {
+    border:1px solid #77e4cd;
+}
+/*
+* --------------------------
+* akomaNtosoType
+* --------------------------
+*/
+.akomaNtoso .akomaNtosoType:before {
+    content: "akomaNtosoType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .akomaNtosoType {
+    border:1px solid #426956;
+}
+.akomaNtoso .akomaNtoso:before {
+    content: "akomaNtoso";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .akomaNtoso {
+    border:1px solid #cad9d3;
+}
+/*
+* --------------------------
+* amendmentBodyType
+* --------------------------
+*/
+.akomaNtoso .amendmentBodyType:before {
+    content: "amendmentBodyType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .amendmentBodyType {
+    border:1px solid #48568b;
+}
+.akomaNtoso .amendmentBody:before {
+    content: "amendmentBody";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .amendmentBody {
+    border:1px solid #a0d286;
+}
+/*
+* --------------------------
+* amendmentStructure
+* --------------------------
+*/
+.akomaNtoso .amendmentStructure:before {
+    content: "amendmentStructure";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .amendmentStructure {
+    border:1px solid #673967;
+}
+.akomaNtoso .amendment:before {
+    content: "amendment";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .amendment {
+    border:1px solid #9e8379;
+}
+.akomaNtoso .analysis:before {
+    content: "analysis";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .analysis {
+    border:1px solid #7c815e;
+}
+/*
+* --------------------------
+* anyOtherType
+* --------------------------
+*/
+.akomaNtoso .anyOtherType:before {
+    content: "anyOtherType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .anyOtherType {
+    border:1px solid #e0b263;
+}
+.akomaNtoso .condition:before {
+    content: "condition";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .condition {
+    border:1px solid #d00217;
+}
+.akomaNtoso .domain:before {
+    content: "domain";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .domain {
+    border:1px solid #70cf59;
+}
+.akomaNtoso .eventRef:before {
+    content: "eventRef";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .eventRef {
+    border:1px solid #266bdf;
+}
+.akomaNtoso .foreign:before {
+    content: "foreign";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .foreign {
+    border:1px solid #df676b;
+}
+.akomaNtoso .new:before {
+    content: "new";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .new {
+    border:1px solid #8caea6;
+}
+.akomaNtoso .old:before {
+    content: "old";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .old {
+    border:1px solid #60580b;
+}
+.akomaNtoso .otherAnalysis:before {
+    content: "otherAnalysis";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .otherAnalysis {
+    border:1px solid #31705a;
+}
+.akomaNtoso .presentation:before {
+    content: "presentation";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .presentation {
+    border:1px solid #cd247c;
+}
+.akomaNtoso .preservation:before {
+    content: "preservation";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .preservation {
+    border:1px solid #6d4d3e;
+}
+.akomaNtoso .proprietary:before {
+    content: "proprietary";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .proprietary {
+    border:1px solid #fc4a19;
+}
+.akomaNtoso .result:before {
+    content: "result";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .result {
+    border:1px solid #873681;
+}
+.akomaNtoso .step:before {
+    content: "step";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .step {
+    border:1px solid #837d34;
+}
+/*
+* --------------------------
+* argumentType
+* --------------------------
+*/
+.akomaNtoso .argumentType:before {
+    content: "argumentType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .argumentType {
+    border:1px solid #c0ac2d;
+}
+.akomaNtoso .destination:before {
+    content: "destination";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .destination {
+    border:1px solid #f74231;
+}
+.akomaNtoso .source:before {
+    content: "source";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .source {
+    border:1px solid #80cbdc;
+}
+.akomaNtoso .attachments:before {
+    content: "attachments";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .attachments {
+    border:1px solid #c008c8;
+}
+/*
+* --------------------------
+* basehierarchy
+* --------------------------
+*/
+.akomaNtoso .basehierarchy:before {
+    content: "basehierarchy";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .basehierarchy {
+    border:1px solid #feeb68;
+}
+/*
+* --------------------------
+* althierarchy
+* --------------------------
+*/
+.akomaNtoso .althierarchy:before {
+    content: "althierarchy";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .althierarchy {
+    border:1px solid #d0be52;
+}
+.akomaNtoso .address:before {
+    content: "address";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .address {
+    border:1px solid #564c96;
+}
+.akomaNtoso .adjournment:before {
+    content: "adjournment";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .adjournment {
+    border:1px solid #12f224;
+}
+.akomaNtoso .administrationOfOath:before {
+    content: "administrationOfOath";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .administrationOfOath {
+    border:1px solid #7b4fe5;
+}
+.akomaNtoso .communication:before {
+    content: "communication";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .communication {
+    border:1px solid #82961f;
+}
+.akomaNtoso .debateSection:before {
+    content: "debateSection";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .debateSection {
+    border:1px solid #3db3ec;
+}
+.akomaNtoso .declarationOfVote:before {
+    content: "declarationOfVote";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .declarationOfVote {
+    border:1px solid #a1ce36;
+}
+.akomaNtoso .ministerialStatements:before {
+    content: "ministerialStatements";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .ministerialStatements {
+    border:1px solid #273b97;
+}
+.akomaNtoso .nationalInterest:before {
+    content: "nationalInterest";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .nationalInterest {
+    border:1px solid #4be3af;
+}
+.akomaNtoso .noticesOfMotion:before {
+    content: "noticesOfMotion";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .noticesOfMotion {
+    border:1px solid #5fe456;
+}
+.akomaNtoso .oralStatements:before {
+    content: "oralStatements";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .oralStatements {
+    border:1px solid #c9f47d;
+}
+.akomaNtoso .papers:before {
+    content: "papers";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .papers {
+    border:1px solid #db385f;
+}
+.akomaNtoso .personalStatements:before {
+    content: "personalStatements";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .personalStatements {
+    border:1px solid #10315b;
+}
+.akomaNtoso .petitions:before {
+    content: "petitions";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .petitions {
+    border:1px solid #def659;
+}
+.akomaNtoso .pointOfOrder:before {
+    content: "pointOfOrder";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .pointOfOrder {
+    border:1px solid #8ee7a7;
+}
+.akomaNtoso .prayers:before {
+    content: "prayers";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .prayers {
+    border:1px solid #46c7cc;
+}
+.akomaNtoso .proceduralMotions:before {
+    content: "proceduralMotions";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .proceduralMotions {
+    border:1px solid #ce2410;
+}
+.akomaNtoso .questions:before {
+    content: "questions";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .questions {
+    border:1px solid #1cbddd;
+}
+.akomaNtoso .resolutions:before {
+    content: "resolutions";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .resolutions {
+    border:1px solid #e748d6;
+}
+.akomaNtoso .rollCall:before {
+    content: "rollCall";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .rollCall {
+    border:1px solid #be90a6;
+}
+.akomaNtoso .writtenStatements:before {
+    content: "writtenStatements";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .writtenStatements {
+    border:1px solid #1206c1;
+}
+/*
+* --------------------------
+* hierarchy
+* --------------------------
+*/
+.akomaNtoso .hierarchy:before {
+    content: "hierarchy";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .hierarchy {
+    border:1px solid #2e4754;
+}
+.akomaNtoso .alinea:before {
+    content: "alinea";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .alinea {
+    border:1px solid #e24844;
+}
+.akomaNtoso .article:before {
+    content: "article";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .article {
+    border:1px solid #5b7981;
+}
+.akomaNtoso .book:before {
+    content: "book";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .book {
+    border:1px solid #3b8454;
+}
+.akomaNtoso .chapter:before {
+    content: "chapter";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .chapter {
+    border:1px solid #e02029;
+}
+.akomaNtoso .clause:before {
+    content: "clause";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .clause {
+    border:1px solid #5f4105;
+}
+.akomaNtoso .division:before {
+    content: "division";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .division {
+    border:1px solid #5d9a3f;
+}
+.akomaNtoso .hcontainer:before {
+    content: "hcontainer";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .hcontainer {
+    border:1px solid #550eeb;
+}
+.akomaNtoso .indent:before {
+    content: "indent";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .indent {
+    border:1px solid #0cc30b;
+}
+.akomaNtoso .list:before {
+    content: "list";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .list {
+    border:1px solid #3767ae;
+}
+.akomaNtoso .paragraph:before {
+    content: "paragraph";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .paragraph {
+    border:1px solid #34cf86;
+}
+.akomaNtoso .part:before {
+    content: "part";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .part {
+    border:1px solid #6f4203;
+}
+.akomaNtoso .point:before {
+    content: "point";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .point {
+    border:1px solid #d0fb4e;
+}
+.akomaNtoso .section:before {
+    content: "section";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .section {
+    border:1px solid #a9ae0a;
+}
+.akomaNtoso .subchapter:before {
+    content: "subchapter";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .subchapter {
+    border:1px solid #25efc8;
+}
+.akomaNtoso .subclause:before {
+    content: "subclause";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .subclause {
+    border:1px solid #ba810d;
+}
+.akomaNtoso .subdivision:before {
+    content: "subdivision";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .subdivision {
+    border:1px solid #33c628;
+}
+.akomaNtoso .sublist:before {
+    content: "sublist";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .sublist {
+    border:1px solid #630a4f;
+}
+.akomaNtoso .subparagraph:before {
+    content: "subparagraph";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .subparagraph {
+    border:1px solid #fb1a92;
+}
+.akomaNtoso .subpart:before {
+    content: "subpart";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .subpart {
+    border:1px solid #c88296;
+}
+.akomaNtoso .subsection:before {
+    content: "subsection";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .subsection {
+    border:1px solid #6301b5;
+}
+.akomaNtoso .subtitle:before {
+    content: "subtitle";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .subtitle {
+    border:1px solid #6a75c0;
+}
+.akomaNtoso .title:before {
+    content: "title";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .title {
+    border:1px solid #f7dc5c;
+}
+.akomaNtoso .tome:before {
+    content: "tome";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .tome {
+    border:1px solid #d4fb08;
+}
+.akomaNtoso .transitional:before {
+    content: "transitional";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .transitional {
+    border:1px solid #29e4e4;
+}
+/*
+* --------------------------
+* itemType
+* --------------------------
+*/
+.akomaNtoso .itemType:before {
+    content: "itemType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .itemType {
+    border:1px solid #9bdd78;
+}
+.akomaNtoso .citation:before {
+    content: "citation";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .citation {
+    border:1px solid #84bcb4;
+}
+.akomaNtoso .item:before {
+    content: "item";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .item {
+    border:1px solid #c38c14;
+}
+.akomaNtoso .recital:before {
+    content: "recital";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .recital {
+    border:1px solid #efa996;
+}
+.akomaNtoso .tblock:before {
+    content: "tblock";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .tblock {
+    border:1px solid #5d5aa6;
+}
+/*
+* --------------------------
+* speechType
+* --------------------------
+*/
+.akomaNtoso .speechType:before {
+    content: "speechType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .speechType {
+    border:1px solid #d2c8fe;
+}
+.akomaNtoso .answer:before {
+    content: "answer";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .answer {
+    border:1px solid #817c90;
+}
+.akomaNtoso .question:before {
+    content: "question";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .question {
+    border:1px solid #35c7b2;
+}
+.akomaNtoso .speech:before {
+    content: "speech";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .speech {
+    border:1px solid #342dd0;
+}
+/*
+* --------------------------
+* basicopt
+* --------------------------
+*/
+.akomaNtoso .basicopt:before {
+    content: "basicopt";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .basicopt {
+    border:1px solid #6abc2a;
+}
+.akomaNtoso .conclusions:before {
+    content: "conclusions";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .conclusions {
+    border:1px solid #b6991d;
+}
+.akomaNtoso .coverPage:before {
+    content: "coverPage";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .coverPage {
+    border:1px solid #1e9e4f;
+}
+.akomaNtoso .blockList:before {
+    content: "blockList";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .blockList {
+    border:1px solid #239752;
+}
+/*
+* --------------------------
+* blocksopt
+* --------------------------
+*/
+.akomaNtoso .blocksopt:before {
+    content: "blocksopt";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .blocksopt {
+    border:1px solid #b2476c;
+}
+.akomaNtoso .amendmentContent:before {
+    content: "amendmentContent";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .amendmentContent {
+    border:1px solid #b9ae8c;
+}
+.akomaNtoso .amendmentHeading:before {
+    content: "amendmentHeading";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .amendmentHeading {
+    border:1px solid #ca062c;
+}
+.akomaNtoso .amendmentJustification:before {
+    content: "amendmentJustification";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .amendmentJustification {
+    border:1px solid #c6bc7b;
+}
+.akomaNtoso .amendmentReference:before {
+    content: "amendmentReference";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .amendmentReference {
+    border:1px solid #ee4a09;
+}
+.akomaNtoso .content:before {
+    content: "content";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .content {
+    border:1px solid #f933dd;
+}
+.akomaNtoso .formula:before {
+    content: "formula";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .formula {
+    border:1px solid #7c3fbd;
+}
+.akomaNtoso .header:before {
+    content: "header";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .header {
+    border:1px solid #966c17;
+}
+.akomaNtoso .intro:before {
+    content: "intro";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .intro {
+    border:1px solid #2c8761;
+}
+.akomaNtoso .longTitle:before {
+    content: "longTitle";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .longTitle {
+    border:1px solid #8bcd0c;
+}
+.akomaNtoso .other:before {
+    content: "other";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .other {
+    border:1px solid #c4e02a;
+}
+.akomaNtoso .td:before {
+    content: "td";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .td {
+    border:1px solid #6bd163;
+}
+.akomaNtoso .th:before {
+    content: "th";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .th {
+    border:1px solid #c77178;
+}
+.akomaNtoso .wrap:before {
+    content: "wrap";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .wrap {
+    border:1px solid #77e9cb;
+}
+/*
+* --------------------------
+* blocksreq
+* --------------------------
+*/
+.akomaNtoso .blocksreq:before {
+    content: "blocksreq";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .blocksreq {
+    border:1px solid #9065db;
+}
+.akomaNtoso .div:before {
+    content: "div";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .div {
+    border:1px solid #2218e9;
+}
+.akomaNtoso .interstitial:before {
+    content: "interstitial";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .interstitial {
+    border:1px solid #d62b3c;
+}
+.akomaNtoso .note:before {
+    content: "note";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .note {
+    border:1px solid #32a3a5;
+}
+/*
+* --------------------------
+* bodyType
+* --------------------------
+*/
+.akomaNtoso .bodyType:before {
+    content: "bodyType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .bodyType {
+    border:1px solid #f09c50;
+}
+.akomaNtoso .body:before {
+    content: "body";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .body {
+    border:1px solid #071555;
+}
+.akomaNtoso .citations:before {
+    content: "citations";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .citations {
+    border:1px solid #16aa12;
+}
+.akomaNtoso .classification:before {
+    content: "classification";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .classification {
+    border:1px solid #caf664;
+}
+/*
+* --------------------------
+* collectionBodyType
+* --------------------------
+*/
+.akomaNtoso .collectionBodyType:before {
+    content: "collectionBodyType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .collectionBodyType {
+    border:1px solid #19f62d;
+}
+.akomaNtoso .collectionBody:before {
+    content: "collectionBody";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .collectionBody {
+    border:1px solid #14741a;
+}
+/*
+* --------------------------
+* collectionStructure
+* --------------------------
+*/
+.akomaNtoso .collectionStructure:before {
+    content: "collectionStructure";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .collectionStructure {
+    border:1px solid #0b6300;
+}
+.akomaNtoso .amendmentList:before {
+    content: "amendmentList";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .amendmentList {
+    border:1px solid #351468;
+}
+.akomaNtoso .documentCollection:before {
+    content: "documentCollection";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .documentCollection {
+    border:1px solid #b2358e;
+}
+.akomaNtoso .officialGazette:before {
+    content: "officialGazette";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .officialGazette {
+    border:1px solid #3fd791;
+}
+.akomaNtoso .component:before {
+    content: "component";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .component {
+    border:1px solid #c5160b;
+}
+.akomaNtoso .componentData:before {
+    content: "componentData";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .componentData {
+    border:1px solid #9ffdbc;
+}
+.akomaNtoso .componentInfo:before {
+    content: "componentInfo";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .componentInfo {
+    border:1px solid #d4cd36;
+}
+.akomaNtoso .components:before {
+    content: "components";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .components {
+    border:1px solid #dd942b;
+}
+/*
+* --------------------------
+* containerType
+* --------------------------
+*/
+.akomaNtoso .containerType:before {
+    content: "containerType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .containerType {
+    border:1px solid #937cfd;
+}
+.akomaNtoso .container:before {
+    content: "container";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .container {
+    border:1px solid #a271cd;
+}
+/*
+* --------------------------
+* coreProperties
+* --------------------------
+*/
+.akomaNtoso .coreProperties:before {
+    content: "coreProperties";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .coreProperties {
+    border:1px solid #c53741;
+}
+.akomaNtoso .FRBRExpression:before {
+    content: "FRBRExpression";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRExpression {
+    border:1px solid #a98342;
+}
+.akomaNtoso .FRBRItem:before {
+    content: "FRBRItem";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRItem {
+    border:1px solid #3a5fc9;
+}
+.akomaNtoso .FRBRManifestation:before {
+    content: "FRBRManifestation";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRManifestation {
+    border:1px solid #fe2751;
+}
+.akomaNtoso .FRBRWork:before {
+    content: "FRBRWork";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRWork {
+    border:1px solid #785299;
+}
+/*
+* --------------------------
+* countType
+* --------------------------
+*/
+.akomaNtoso .countType:before {
+    content: "countType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .countType {
+    border:1px solid #eeb234;
+}
+.akomaNtoso .count:before {
+    content: "count";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .count {
+    border:1px solid #5ba91b;
+}
+.akomaNtoso .quorum:before {
+    content: "quorum";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .quorum {
+    border:1px solid #cd498e;
+}
+/*
+* --------------------------
+* debateBodyType
+* --------------------------
+*/
+.akomaNtoso .debateBodyType:before {
+    content: "debateBodyType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .debateBodyType {
+    border:1px solid #d63e87;
+}
+.akomaNtoso .debateBody:before {
+    content: "debateBody";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .debateBody {
+    border:1px solid #12f0bc;
+}
+/*
+* --------------------------
+* debateStructure
+* --------------------------
+*/
+.akomaNtoso .debateStructure:before {
+    content: "debateStructure";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .debateStructure {
+    border:1px solid #1b1108;
+}
+.akomaNtoso .debate:before {
+    content: "debate";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .debate {
+    border:1px solid #a9ad4f;
+}
+/*
+* --------------------------
+* fragmentBodyType
+* --------------------------
+*/
+.akomaNtoso .fragmentBodyType:before {
+    content: "fragmentBodyType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .fragmentBodyType {
+    border:1px solid #efce18;
+}
+.akomaNtoso .fragmentBody:before {
+    content: "fragmentBody";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .fragmentBody {
+    border:1px solid #99cb58;
+}
+/*
+* --------------------------
+* fragmentStructure
+* --------------------------
+*/
+.akomaNtoso .fragmentStructure:before {
+    content: "fragmentStructure";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .fragmentStructure {
+    border:1px solid #e2a893;
+}
+.akomaNtoso .fragment:before {
+    content: "fragment";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .fragment {
+    border:1px solid #2023ae;
+}
+/*
+* --------------------------
+* hierarchicalStructure
+* --------------------------
+*/
+.akomaNtoso .hierarchicalStructure:before {
+    content: "hierarchicalStructure";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .hierarchicalStructure {
+    border:1px solid #fa0867;
+}
+.akomaNtoso .act:before {
+    content: "act";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .act {
+    border:1px solid #70f296;
+}
+.akomaNtoso .bill:before {
+    content: "bill";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .bill {
+    border:1px solid #3b173d;
+}
+.akomaNtoso .identification:before {
+    content: "identification";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .identification {
+    border:1px solid #be2162;
+}
+/*
+* --------------------------
+* inline
+* --------------------------
+*/
+.akomaNtoso .inline {
+    background-color:#bbd72c;
+}
+.akomaNtoso .a {
+    background-color:#bc187a;
+}
+.akomaNtoso .affectedDocument {
+    background-color:#6a5762;
+}
+.akomaNtoso .b {
+    background-color:#f600c9;
+}
+.akomaNtoso .block {
+    background-color:#50087b;
+}
+.akomaNtoso .caption {
+    background-color:#044fa0;
+}
+.akomaNtoso .change {
+    background-color:#d22989;
+}
+.akomaNtoso .courtType {
+    background-color:#4d54e2;
+}
+.akomaNtoso .date {
+    background-color:#a7e584;
+}
+.akomaNtoso .def {
+    background-color:#83a58c;
+}
+.akomaNtoso .del {
+    background-color:#b1b557;
+}
+.akomaNtoso .docCommittee {
+    background-color:#c4755d;
+}
+.akomaNtoso .docDate {
+    background-color:#7ba1cd;
+}
+.akomaNtoso .docIntroducer {
+    background-color:#b68503;
+}
+.akomaNtoso .docJurisdiction {
+    background-color:#585a0d;
+}
+.akomaNtoso .docNumber {
+    background-color:#c65c22;
+}
+.akomaNtoso .docProponent {
+    background-color:#aab5ae;
+}
+.akomaNtoso .docPurpose {
+    background-color:#5b4fa1;
+}
+.akomaNtoso .docStage {
+    background-color:#807104;
+}
+.akomaNtoso .docStatus {
+    background-color:#cc3296;
+}
+.akomaNtoso .docTitle {
+    background-color:#ab19a1;
+}
+.akomaNtoso .docType {
+    background-color:#bbba26;
+}
+.akomaNtoso .docketNumber {
+    background-color:#223fe8;
+}
+.akomaNtoso .extractText {
+    background-color:#847220;
+}
+.akomaNtoso .fillIn {
+    background-color:#f4bcda;
+}
+.akomaNtoso .from {
+    background-color:#4ff5a3;
+}
+.akomaNtoso .heading {
+    background-color:#b3fa15;
+}
+.akomaNtoso .i {
+    background-color:#75d6a5;
+}
+.akomaNtoso .inline {
+    background-color:#bbd72c;
+}
+.akomaNtoso .ins {
+    background-color:#772ef0;
+}
+.akomaNtoso .legislature {
+    background-color:#9d190c;
+}
+.akomaNtoso .listConclusion {
+    background-color:#8ca6a6;
+}
+.akomaNtoso .listIntroduction {
+    background-color:#5b1d94;
+}
+.akomaNtoso .mref {
+    background-color:#43e84c;
+}
+.akomaNtoso .narrative {
+    background-color:#36a0ae;
+}
+.akomaNtoso .neutralCitation {
+    background-color:#ad972c;
+}
+.akomaNtoso .num {
+    background-color:#1e839e;
+}
+.akomaNtoso .omissis {
+    background-color:#df6c64;
+}
+.akomaNtoso .opinion {
+    background-color:#5d63c9;
+}
+.akomaNtoso .outcome {
+    background-color:#793427;
+}
+.akomaNtoso .p {
+    background-color:#b391bd;
+}
+.akomaNtoso .placeholder {
+    background-color:#a384d5;
+}
+.akomaNtoso .quotedText {
+    background-color:#23ecaf;
+}
+.akomaNtoso .recordedTime {
+    background-color:#488e18;
+}
+.akomaNtoso .relatedDocument {
+    background-color:#309516;
+}
+.akomaNtoso .remark {
+    background-color:#cc93f7;
+}
+.akomaNtoso .scene {
+    background-color:#ba6148;
+}
+.akomaNtoso .session {
+    background-color:#ab13b5;
+}
+.akomaNtoso .shortTitle {
+    background-color:#5c5c74;
+}
+.akomaNtoso .signature {
+    background-color:#ad2507;
+}
+.akomaNtoso .span {
+    background-color:#894a59;
+}
+.akomaNtoso .sub {
+    background-color:#bf39b2;
+}
+.akomaNtoso .subheading {
+    background-color:#802804;
+}
+.akomaNtoso .summary {
+    background-color:#59b2bc;
+}
+.akomaNtoso .sup {
+    background-color:#a60829;
+}
+.akomaNtoso .tocItem {
+    background-color:#eb4e86;
+}
+.akomaNtoso .u {
+    background-color:#a639b8;
+}
+.akomaNtoso .vote {
+    background-color:#99986e;
+}
+/*
+* --------------------------
+* inlinereq
+* --------------------------
+*/
+.akomaNtoso .inlinereq:before {
+    content: "inlinereq";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .inlinereq {
+    border:1px solid #c26dd0;
+}
+.akomaNtoso .ref:before {
+    content: "ref";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .ref {
+    border:1px solid #8309d3;
+}
+.akomaNtoso .rref:before {
+    content: "rref";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .rref {
+    border:1px solid #22f9f3;
+}
+/*
+* --------------------------
+* inlinereqreq
+* --------------------------
+*/
+.akomaNtoso .inlinereqreq:before {
+    content: "inlinereqreq";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .inlinereqreq {
+    border:1px solid #94efe9;
+}
+.akomaNtoso .concept:before {
+    content: "concept";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .concept {
+    border:1px solid #f198ce;
+}
+.akomaNtoso .entity:before {
+    content: "entity";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .entity {
+    border:1px solid #f2fbbe;
+}
+.akomaNtoso .event:before {
+    content: "event";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .event {
+    border:1px solid #49fb4d;
+}
+.akomaNtoso .judge:before {
+    content: "judge";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .judge {
+    border:1px solid #5d020a;
+}
+.akomaNtoso .lawyer:before {
+    content: "lawyer";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .lawyer {
+    border:1px solid #10f04d;
+}
+.akomaNtoso .location:before {
+    content: "location";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .location {
+    border:1px solid #bc83b7;
+}
+.akomaNtoso .object:before {
+    content: "object";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .object {
+    border:1px solid #7846f9;
+}
+.akomaNtoso .organization:before {
+    content: "organization";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .organization {
+    border:1px solid #9ff2bd;
+}
+.akomaNtoso .party:before {
+    content: "party";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .party {
+    border:1px solid #7f158a;
+}
+.akomaNtoso .person:before {
+    content: "person";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .person {
+    border:1px solid #18a8cb;
+}
+.akomaNtoso .process:before {
+    content: "process";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .process {
+    border:1px solid #daa89a;
+}
+.akomaNtoso .quantity:before {
+    content: "quantity";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .quantity {
+    border:1px solid #bbbdaa;
+}
+.akomaNtoso .role:before {
+    content: "role";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .role {
+    border:1px solid #b0b44a;
+}
+.akomaNtoso .term:before {
+    content: "term";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .term {
+    border:1px solid #2d3815;
+}
+/*
+* --------------------------
+* judgementBodyType
+* --------------------------
+*/
+.akomaNtoso .judgementBodyType:before {
+    content: "judgementBodyType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .judgementBodyType {
+    border:1px solid #441af2;
+}
+.akomaNtoso .judgementBody:before {
+    content: "judgementBody";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .judgementBody {
+    border:1px solid #308257;
+}
+/*
+* --------------------------
+* judgementStructure
+* --------------------------
+*/
+.akomaNtoso .judgementStructure:before {
+    content: "judgementStructure";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .judgementStructure {
+    border:1px solid #4cd874;
+}
+.akomaNtoso .judgement:before {
+    content: "judgement";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .judgement {
+    border:1px solid #2b1e09;
+}
+/*
+* --------------------------
+* judicialArgumentType
+* --------------------------
+*/
+.akomaNtoso .judicialArgumentType:before {
+    content: "judicialArgumentType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .judicialArgumentType {
+    border:1px solid #56f07c;
+}
+.akomaNtoso .applies:before {
+    content: "applies";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .applies {
+    border:1px solid #86590a;
+}
+.akomaNtoso .contrasts:before {
+    content: "contrasts";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .contrasts {
+    border:1px solid #499f7f;
+}
+.akomaNtoso .derogates:before {
+    content: "derogates";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .derogates {
+    border:1px solid #d3c54a;
+}
+.akomaNtoso .dissentsFrom:before {
+    content: "dissentsFrom";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .dissentsFrom {
+    border:1px solid #f41e2d;
+}
+.akomaNtoso .distinguishes:before {
+    content: "distinguishes";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .distinguishes {
+    border:1px solid #4a4aa6;
+}
+.akomaNtoso .extends:before {
+    content: "extends";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .extends {
+    border:1px solid #1485d2;
+}
+.akomaNtoso .isAnalogTo:before {
+    content: "isAnalogTo";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .isAnalogTo {
+    border:1px solid #12066b;
+}
+.akomaNtoso .overrules:before {
+    content: "overrules";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .overrules {
+    border:1px solid #fa8dc5;
+}
+.akomaNtoso .putsInQuestion:before {
+    content: "putsInQuestion";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .putsInQuestion {
+    border:1px solid #e6f3ba;
+}
+.akomaNtoso .restricts:before {
+    content: "restricts";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .restricts {
+    border:1px solid #fe1f0c;
+}
+.akomaNtoso .supports:before {
+    content: "supports";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .supports {
+    border:1px solid #d71920;
+}
+/*
+* --------------------------
+* judicialArguments
+* --------------------------
+*/
+.akomaNtoso .judicialArguments:before {
+    content: "judicialArguments";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .judicialArguments {
+    border:1px solid #5bd62e;
+}
+.akomaNtoso .judicial:before {
+    content: "judicial";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .judicial {
+    border:1px solid #e818f3;
+}
+.akomaNtoso .li:before {
+    content: "li";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .li {
+    border:1px solid #ac17c1;
+}
+.akomaNtoso .lifecycle:before {
+    content: "lifecycle";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .lifecycle {
+    border:1px solid #00f50d;
+}
+/*
+* --------------------------
+* listItems
+* --------------------------
+*/
+.akomaNtoso .listItems:before {
+    content: "listItems";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .listItems {
+    border:1px solid #2384e7;
+}
+.akomaNtoso .ol:before {
+    content: "ol";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .ol {
+    border:1px solid #36aadc;
+}
+.akomaNtoso .ul:before {
+    content: "ul";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .ul {
+    border:1px solid #f084d3;
+}
+/*
+* --------------------------
+* maincontent
+* --------------------------
+*/
+.akomaNtoso .maincontent:before {
+    content: "maincontent";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .maincontent {
+    border:1px solid #9d1860;
+}
+.akomaNtoso .background:before {
+    content: "background";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .background {
+    border:1px solid #bc8186;
+}
+.akomaNtoso .decision:before {
+    content: "decision";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .decision {
+    border:1px solid #c2b815;
+}
+.akomaNtoso .introduction:before {
+    content: "introduction";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .introduction {
+    border:1px solid #891690;
+}
+.akomaNtoso .mainBody:before {
+    content: "mainBody";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .mainBody {
+    border:1px solid #fd1abc;
+}
+.akomaNtoso .motivation:before {
+    content: "motivation";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .motivation {
+    border:1px solid #27771c;
+}
+/*
+* --------------------------
+* markeropt
+* --------------------------
+*/
+.akomaNtoso .markeropt:before {
+    content: "markeropt";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .markeropt {
+    border:1px solid #d5b723;
+}
+.akomaNtoso .br:before {
+    content: "br";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .br {
+    border:1px solid #3f15da;
+}
+/*
+* --------------------------
+* eolType
+* --------------------------
+*/
+.akomaNtoso .eolType:before {
+    content: "eolType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .eolType {
+    border:1px solid #314b27;
+}
+.akomaNtoso .eol:before {
+    content: "eol";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .eol {
+    border:1px solid #8e0cb8;
+}
+.akomaNtoso .eop:before {
+    content: "eop";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .eop {
+    border:1px solid #eaabce;
+}
+.akomaNtoso .img:before {
+    content: "img";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .img {
+    border:1px solid #145be7;
+}
+.akomaNtoso .noteRef:before {
+    content: "noteRef";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .noteRef {
+    border:1px solid #571d75;
+}
+/*
+* --------------------------
+* markerreq
+* --------------------------
+*/
+.akomaNtoso .markerreq:before {
+    content: "markerreq";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .markerreq {
+    border:1px solid #17e387;
+}
+.akomaNtoso .marker:before {
+    content: "marker";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .marker {
+    border:1px solid #33a672;
+}
+.akomaNtoso .meta:before {
+    content: "meta";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .meta {
+    border:1px solid #398d17;
+}
+/*
+* --------------------------
+* metaopt
+* --------------------------
+*/
+.akomaNtoso .metaopt:before {
+    content: "metaopt";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .metaopt {
+    border:1px solid #25992f;
+}
+.akomaNtoso .FRBRauthor:before {
+    content: "FRBRauthor";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRauthor {
+    border:1px solid #a9c09a;
+}
+.akomaNtoso .FRBRdate:before {
+    content: "FRBRdate";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRdate {
+    border:1px solid #051c76;
+}
+.akomaNtoso .FRBRlanguage:before {
+    content: "FRBRlanguage";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRlanguage {
+    border:1px solid #4a98d5;
+}
+.akomaNtoso .FRBRtranslation:before {
+    content: "FRBRtranslation";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRtranslation {
+    border:1px solid #9488d9;
+}
+.akomaNtoso .keyword:before {
+    content: "keyword";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .keyword {
+    border:1px solid #d3582f;
+}
+.akomaNtoso .publication:before {
+    content: "publication";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .publication {
+    border:1px solid #19ba2a;
+}
+.akomaNtoso .timeInterval:before {
+    content: "timeInterval";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .timeInterval {
+    border:1px solid #b4c2dd;
+}
+/*
+* --------------------------
+* valueType
+* --------------------------
+*/
+.akomaNtoso .valueType:before {
+    content: "valueType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .valueType {
+    border:1px solid #57be6f;
+}
+.akomaNtoso .FRBRalias:before {
+    content: "FRBRalias";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRalias {
+    border:1px solid #034900;
+}
+.akomaNtoso .FRBRcountry:before {
+    content: "FRBRcountry";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRcountry {
+    border:1px solid #2cda47;
+}
+.akomaNtoso .FRBRformat:before {
+    content: "FRBRformat";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRformat {
+    border:1px solid #4cc337;
+}
+.akomaNtoso .FRBRname:before {
+    content: "FRBRname";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRname {
+    border:1px solid #8b5a62;
+}
+.akomaNtoso .FRBRnumber:before {
+    content: "FRBRnumber";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRnumber {
+    border:1px solid #4de3a5;
+}
+.akomaNtoso .FRBRsubtype:before {
+    content: "FRBRsubtype";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRsubtype {
+    border:1px solid #f1c13e;
+}
+.akomaNtoso .FRBRthis:before {
+    content: "FRBRthis";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRthis {
+    border:1px solid #3fb43c;
+}
+.akomaNtoso .FRBRuri:before {
+    content: "FRBRuri";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .FRBRuri {
+    border:1px solid #ec6326;
+}
+.akomaNtoso .metareq:before {
+    content: "metareq";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .metareq {
+    border:1px solid #c0c2a4;
+}
+/*
+* --------------------------
+* modType
+* --------------------------
+*/
+.akomaNtoso .modType:before {
+    content: "modType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .modType {
+    border:1px solid #8e7263;
+}
+.akomaNtoso .mmod:before {
+    content: "mmod";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .mmod {
+    border:1px solid #3e2ad2;
+}
+.akomaNtoso .mod:before {
+    content: "mod";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .mod {
+    border:1px solid #8357df;
+}
+.akomaNtoso .rmod:before {
+    content: "rmod";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .rmod {
+    border:1px solid #1d3c77;
+}
+/*
+* --------------------------
+* modificationType
+* --------------------------
+*/
+.akomaNtoso .modificationType:before {
+    content: "modificationType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .modificationType {
+    border:1px solid #35c7f9;
+}
+.akomaNtoso .efficacyMod:before {
+    content: "efficacyMod";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .efficacyMod {
+    border:1px solid #dcce8d;
+}
+.akomaNtoso .forceMod:before {
+    content: "forceMod";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .forceMod {
+    border:1px solid #5d2829;
+}
+.akomaNtoso .legalSystemMod:before {
+    content: "legalSystemMod";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .legalSystemMod {
+    border:1px solid #6c3408;
+}
+.akomaNtoso .meaningMod:before {
+    content: "meaningMod";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .meaningMod {
+    border:1px solid #ed08dc;
+}
+.akomaNtoso .scopeMod:before {
+    content: "scopeMod";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .scopeMod {
+    border:1px solid #b03c42;
+}
+.akomaNtoso .textualMod:before {
+    content: "textualMod";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .textualMod {
+    border:1px solid #910184;
+}
+.akomaNtoso .notes:before {
+    content: "notes";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .notes {
+    border:1px solid #f08c16;
+}
+/*
+* --------------------------
+* openStructure
+* --------------------------
+*/
+.akomaNtoso .openStructure:before {
+    content: "openStructure";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .openStructure {
+    border:1px solid #ecc931;
+}
+.akomaNtoso .debateReport:before {
+    content: "debateReport";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .debateReport {
+    border:1px solid #e85a49;
+}
+.akomaNtoso .doc:before {
+    content: "doc";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .doc {
+    border:1px solid #965ba6;
+}
+/*
+* --------------------------
+* parliamentaryAnalysis
+* --------------------------
+*/
+.akomaNtoso .parliamentaryAnalysis:before {
+    content: "parliamentaryAnalysis";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .parliamentaryAnalysis {
+    border:1px solid #92b84d;
+}
+.akomaNtoso .parliamentary:before {
+    content: "parliamentary";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .parliamentary {
+    border:1px solid #5eac34;
+}
+/*
+* --------------------------
+* parliamentaryAnalysisType
+* --------------------------
+*/
+.akomaNtoso .parliamentaryAnalysisType:before {
+    content: "parliamentaryAnalysisType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .parliamentaryAnalysisType {
+    border:1px solid #e838fd;
+}
+.akomaNtoso .quorumVerification:before {
+    content: "quorumVerification";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .quorumVerification {
+    border:1px solid #cdde11;
+}
+.akomaNtoso .recount:before {
+    content: "recount";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .recount {
+    border:1px solid #a927f7;
+}
+.akomaNtoso .voting:before {
+    content: "voting";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .voting {
+    border:1px solid #be9b5f;
+}
+/*
+* --------------------------
+* periodType
+* --------------------------
+*/
+.akomaNtoso .periodType:before {
+    content: "periodType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .periodType {
+    border:1px solid #60e4e8;
+}
+.akomaNtoso .application:before {
+    content: "application";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .application {
+    border:1px solid #a8b58d;
+}
+.akomaNtoso .duration:before {
+    content: "duration";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .duration {
+    border:1px solid #31b50a;
+}
+.akomaNtoso .efficacy:before {
+    content: "efficacy";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .efficacy {
+    border:1px solid #148316;
+}
+.akomaNtoso .force:before {
+    content: "force";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .force {
+    border:1px solid #c68918;
+}
+/*
+* --------------------------
+* popupStructure
+* --------------------------
+*/
+.akomaNtoso .popupStructure:before {
+    content: "popupStructure";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .popupStructure {
+    border:1px solid #471bc0;
+}
+.akomaNtoso .authorialNote:before {
+    content: "authorialNote";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .authorialNote {
+    border:1px solid #f7130b;
+}
+.akomaNtoso .extractStructure:before {
+    content: "extractStructure";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .extractStructure {
+    border:1px solid #d55c57;
+}
+.akomaNtoso .popup:before {
+    content: "popup";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .popup {
+    border:1px solid #cfbbf7;
+}
+.akomaNtoso .quotedStructure:before {
+    content: "quotedStructure";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .quotedStructure {
+    border:1px solid #3317f8;
+}
+/*
+* --------------------------
+* preambleopt
+* --------------------------
+*/
+.akomaNtoso .preambleopt:before {
+    content: "preambleopt";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .preambleopt {
+    border:1px solid #c630c8;
+}
+.akomaNtoso .preamble:before {
+    content: "preamble";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .preamble {
+    border:1px solid #9d2dbe;
+}
+/*
+* --------------------------
+* prefaceopt
+* --------------------------
+*/
+.akomaNtoso .prefaceopt:before {
+    content: "prefaceopt";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .prefaceopt {
+    border:1px solid #c3e359;
+}
+.akomaNtoso .preface:before {
+    content: "preface";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .preface {
+    border:1px solid #fdc7fe;
+}
+.akomaNtoso .recitals:before {
+    content: "recitals";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .recitals {
+    border:1px solid #17700a;
+}
+/*
+* --------------------------
+* refItems
+* --------------------------
+*/
+.akomaNtoso .refItems:before {
+    content: "refItems";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .refItems {
+    border:1px solid #5799bd;
+}
+.akomaNtoso .references:before {
+    content: "references";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .references {
+    border:1px solid #e4cd2a;
+}
+/*
+* --------------------------
+* referenceType
+* --------------------------
+*/
+.akomaNtoso .referenceType:before {
+    content: "referenceType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .referenceType {
+    border:1px solid #6bf6f5;
+}
+.akomaNtoso .TLCConcept:before {
+    content: "TLCConcept";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .TLCConcept {
+    border:1px solid #f7a691;
+}
+.akomaNtoso .TLCEvent:before {
+    content: "TLCEvent";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .TLCEvent {
+    border:1px solid #4dec2e;
+}
+.akomaNtoso .TLCLocation:before {
+    content: "TLCLocation";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .TLCLocation {
+    border:1px solid #1e0bb2;
+}
+.akomaNtoso .TLCObject:before {
+    content: "TLCObject";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .TLCObject {
+    border:1px solid #71f89b;
+}
+.akomaNtoso .TLCOrganization:before {
+    content: "TLCOrganization";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .TLCOrganization {
+    border:1px solid #67dca4;
+}
+.akomaNtoso .TLCPerson:before {
+    content: "TLCPerson";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .TLCPerson {
+    border:1px solid #f95abb;
+}
+.akomaNtoso .TLCProcess:before {
+    content: "TLCProcess";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .TLCProcess {
+    border:1px solid #86a219;
+}
+.akomaNtoso .TLCReference:before {
+    content: "TLCReference";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .TLCReference {
+    border:1px solid #a4008a;
+}
+.akomaNtoso .TLCRole:before {
+    content: "TLCRole";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .TLCRole {
+    border:1px solid #38d083;
+}
+.akomaNtoso .TLCTerm:before {
+    content: "TLCTerm";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .TLCTerm {
+    border:1px solid #339cc7;
+}
+.akomaNtoso .activeRef:before {
+    content: "activeRef";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .activeRef {
+    border:1px solid #c035ae;
+}
+.akomaNtoso .attachmentOf:before {
+    content: "attachmentOf";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .attachmentOf {
+    border:1px solid #0ca98e;
+}
+.akomaNtoso .hasAttachment:before {
+    content: "hasAttachment";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .hasAttachment {
+    border:1px solid #19422e;
+}
+.akomaNtoso .jurisprudence:before {
+    content: "jurisprudence";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .jurisprudence {
+    border:1px solid #20ec51;
+}
+.akomaNtoso .original:before {
+    content: "original";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .original {
+    border:1px solid #e05593;
+}
+.akomaNtoso .passiveRef:before {
+    content: "passiveRef";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .passiveRef {
+    border:1px solid #4f6226;
+}
+/*
+* --------------------------
+* srcType
+* --------------------------
+*/
+.akomaNtoso .srcType:before {
+    content: "srcType";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .srcType {
+    border:1px solid #0d89d7;
+}
+.akomaNtoso .componentRef:before {
+    content: "componentRef";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .componentRef {
+    border:1px solid #9e088b;
+}
+.akomaNtoso .table:before {
+    content: "table";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .table {
+    border:1px solid #c2241c;
+}
+.akomaNtoso .temporalData:before {
+    content: "temporalData";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .temporalData {
+    border:1px solid #90c795;
+}
+.akomaNtoso .temporalGroup:before {
+    content: "temporalGroup";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .temporalGroup {
+    border:1px solid #3a911a;
+}
+.akomaNtoso .toc:before {
+    content: "toc";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .toc {
+    border:1px solid #d9e3cc;
+}
+.akomaNtoso .tr:before {
+    content: "tr";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .tr {
+    border:1px solid #529f59;
+}
+.akomaNtoso .workflow:before {
+    content: "workflow";
+    display:block;
+    text-align:right;
+    color: #000000;
+}
+.akomaNtoso .workflow {
+    border:1px solid #2b223f;
+}
+  
