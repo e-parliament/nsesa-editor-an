@@ -7,6 +7,7 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.amendment.AmendmentInjectionPointFinder;
+import org.nsesa.editor.gwt.core.client.ui.drafting.DraftingController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
@@ -26,9 +27,10 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
                                                        final AmendmentDialogCreateView view,
                                                        final Locator locator,
                                                        final OverlayFactory overlayFactory,
+                                                       final DraftingController draftingController,
                                                        final AmendmentInjectionPointFinder amendmentInjectionPointFinder
     ) {
-        super(clientFactory, view, locator, overlayFactory, amendmentInjectionPointFinder);
+        super(clientFactory, view, locator, overlayFactory, draftingController, amendmentInjectionPointFinder);
     }
 
     @Override

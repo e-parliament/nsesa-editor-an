@@ -1,8 +1,6 @@
 package org.nsesa.editor.gwt.an.client.ui.rte.ckeditor;
 
 import com.google.gwt.core.client.GWT;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Sub;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Sup;
 import org.nsesa.editor.gwt.dialog.client.ui.rte.ckeditor.CKEditorConfig;
 import org.nsesa.editor.gwt.dialog.client.ui.rte.ckeditor.CKEditorToolbar;
 
@@ -19,16 +17,15 @@ public class Akomantoso20RichTextEditorConfig extends CKEditorConfig {
 
     public Akomantoso20RichTextEditorConfig() {
         super();
-        Sub sub = new Sub();
-        Sup sup = new Sup();
         //configure the editor
         setContentCss(new String[]{
                 GWT.getModuleBaseURL() + "../" + "css/editor.css",
                 GWT.getModuleBaseURL() + "../" + "css/document.css",
                 GWT.getModuleBaseURL() + "../" + "css/amendment.css",
                 GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-all.css",
-                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-display.css",
                 GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-override.css",
+                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-display.css",
+                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-drafting.css",
                 GWT.getModuleBaseURL() + "../" + "css/ckeditor.css"})
                 .setBodyClass("akomaNtoso")
                 .setRemovePlugins("elementspath")
@@ -38,8 +35,6 @@ public class Akomantoso20RichTextEditorConfig extends CKEditorConfig {
                 .setAutoParagraph(false)
                 .setFillEmptyBlocks(false)
                 .setForcePasteAsPlainText(true);
-        //.replaceSubStyle("span", "widget " + sub.getType(), sub.getType(), sub.getNamespaceURI())
-        //.replaceSupStyle("span", "widget " + sup.getType(), sup.getType(), sup.getNamespaceURI());
     }
 
     public void setReadOnly(boolean readOnly) {
