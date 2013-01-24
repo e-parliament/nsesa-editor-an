@@ -16,6 +16,9 @@
     padding: 15px;
     margin-bottom: 20px;
     margin-top: 10px;
+    font-family: "Times New Roman", serif !important;
+    font-size: large;
+    line-height: 1.1em;
 }
 
 .amendmentHolder .header {
