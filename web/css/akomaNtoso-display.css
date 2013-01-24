@@ -18,6 +18,7 @@
 .akomaNtoso .Amendments {
     border:1px solid #fd2747;
 }
+
 .akomaNtoso .activeModifications:before {
     content: "activeModifications";
     display:block;
@@ -27,6 +28,7 @@
 .akomaNtoso .activeModifications {
     border:1px solid #04cbae;
 }
+
 .akomaNtoso .passiveModifications:before {
     content: "passiveModifications";
     display:block;
@@ -36,6 +38,7 @@
 .akomaNtoso .passiveModifications {
     border:1px solid #77e4cd;
 }
+
 /*
 * --------------------------
 * akomaNtosoType
@@ -50,6 +53,7 @@
 .akomaNtoso .akomaNtosoType {
     border:1px solid #426956;
 }
+
 .akomaNtoso .akomaNtoso:before {
     content: "akomaNtoso";
     display:block;
@@ -59,6 +63,7 @@
 .akomaNtoso .akomaNtoso {
     border:1px solid #cad9d3;
 }
+
 /*
 * --------------------------
 * amendmentBodyType
@@ -73,6 +78,7 @@
 .akomaNtoso .amendmentBodyType {
     border:1px solid #48568b;
 }
+
 .akomaNtoso .amendmentBody:before {
     content: "amendmentBody";
     display:block;
@@ -82,6 +88,7 @@
 .akomaNtoso .amendmentBody {
     border:1px solid #a0d286;
 }
+
 /*
 * --------------------------
 * amendmentStructure
@@ -96,6 +103,7 @@
 .akomaNtoso .amendmentStructure {
     border:1px solid #673967;
 }
+
 .akomaNtoso .amendment:before {
     content: "amendment";
     display:block;
@@ -105,6 +113,7 @@
 .akomaNtoso .amendment {
     border:1px solid #9e8379;
 }
+
 .akomaNtoso .analysis:before {
     content: "analysis";
     display:block;
@@ -114,6 +123,7 @@
 .akomaNtoso .analysis {
     border:1px solid #7c815e;
 }
+
 /*
 * --------------------------
 * anyOtherType
@@ -128,6 +138,7 @@
 .akomaNtoso .anyOtherType {
     border:1px solid #e0b263;
 }
+
 .akomaNtoso .condition:before {
     content: "condition";
     display:block;
@@ -137,6 +148,7 @@
 .akomaNtoso .condition {
     border:1px solid #d00217;
 }
+
 .akomaNtoso .domain:before {
     content: "domain";
     display:block;
@@ -146,6 +158,7 @@
 .akomaNtoso .domain {
     border:1px solid #70cf59;
 }
+
 .akomaNtoso .eventRef:before {
     content: "eventRef";
     display:block;
@@ -155,6 +168,7 @@
 .akomaNtoso .eventRef {
     border:1px solid #266bdf;
 }
+
 .akomaNtoso .foreign:before {
     content: "foreign";
     display:block;
@@ -164,6 +178,7 @@
 .akomaNtoso .foreign {
     border:1px solid #df676b;
 }
+
 .akomaNtoso .new:before {
     content: "new";
     display:block;
@@ -173,6 +188,7 @@
 .akomaNtoso .new {
     border:1px solid #8caea6;
 }
+
 .akomaNtoso .old:before {
     content: "old";
     display:block;
@@ -182,6 +198,7 @@
 .akomaNtoso .old {
     border:1px solid #60580b;
 }
+
 .akomaNtoso .otherAnalysis:before {
     content: "otherAnalysis";
     display:block;
@@ -191,6 +208,7 @@
 .akomaNtoso .otherAnalysis {
     border:1px solid #31705a;
 }
+
 .akomaNtoso .presentation:before {
     content: "presentation";
     display:block;
@@ -200,6 +218,7 @@
 .akomaNtoso .presentation {
     border:1px solid #cd247c;
 }
+
 .akomaNtoso .preservation:before {
     content: "preservation";
     display:block;
@@ -209,6 +228,7 @@
 .akomaNtoso .preservation {
     border:1px solid #6d4d3e;
 }
+
 .akomaNtoso .proprietary:before {
     content: "proprietary";
     display:block;
@@ -218,6 +238,7 @@
 .akomaNtoso .proprietary {
     border:1px solid #fc4a19;
 }
+
 .akomaNtoso .result:before {
     content: "result";
     display:block;
@@ -227,6 +248,7 @@
 .akomaNtoso .result {
     border:1px solid #873681;
 }
+
 .akomaNtoso .step:before {
     content: "step";
     display:block;
@@ -236,6 +258,7 @@
 .akomaNtoso .step {
     border:1px solid #837d34;
 }
+
 /*
 * --------------------------
 * argumentType
@@ -250,6 +273,7 @@
 .akomaNtoso .argumentType {
     border:1px solid #c0ac2d;
 }
+
 .akomaNtoso .destination:before {
     content: "destination";
     display:block;
@@ -259,6 +283,7 @@
 .akomaNtoso .destination {
     border:1px solid #f74231;
 }
+
 .akomaNtoso .source:before {
     content: "source";
     display:block;
@@ -268,6 +293,7 @@
 .akomaNtoso .source {
     border:1px solid #80cbdc;
 }
+
 .akomaNtoso .attachments:before {
     content: "attachments";
     display:block;
@@ -277,6 +303,7 @@
 .akomaNtoso .attachments {
     border:1px solid #c008c8;
 }
+
 /*
 * --------------------------
 * basehierarchy
@@ -291,6 +318,7 @@
 .akomaNtoso .basehierarchy {
     border:1px solid #feeb68;
 }
+
 /*
 * --------------------------
 * althierarchy
@@ -305,6 +333,7 @@
 .akomaNtoso .althierarchy {
     border:1px solid #d0be52;
 }
+
 .akomaNtoso .address:before {
     content: "address";
     display:block;
@@ -314,6 +343,7 @@
 .akomaNtoso .address {
     border:1px solid #564c96;
 }
+
 .akomaNtoso .adjournment:before {
     content: "adjournment";
     display:block;
@@ -323,6 +353,7 @@
 .akomaNtoso .adjournment {
     border:1px solid #12f224;
 }
+
 .akomaNtoso .administrationOfOath:before {
     content: "administrationOfOath";
     display:block;
@@ -332,6 +363,7 @@
 .akomaNtoso .administrationOfOath {
     border:1px solid #7b4fe5;
 }
+
 .akomaNtoso .communication:before {
     content: "communication";
     display:block;
@@ -341,6 +373,7 @@
 .akomaNtoso .communication {
     border:1px solid #82961f;
 }
+
 .akomaNtoso .debateSection:before {
     content: "debateSection";
     display:block;
@@ -350,6 +383,7 @@
 .akomaNtoso .debateSection {
     border:1px solid #3db3ec;
 }
+
 .akomaNtoso .declarationOfVote:before {
     content: "declarationOfVote";
     display:block;
@@ -359,6 +393,7 @@
 .akomaNtoso .declarationOfVote {
     border:1px solid #a1ce36;
 }
+
 .akomaNtoso .ministerialStatements:before {
     content: "ministerialStatements";
     display:block;
@@ -368,6 +403,7 @@
 .akomaNtoso .ministerialStatements {
     border:1px solid #273b97;
 }
+
 .akomaNtoso .nationalInterest:before {
     content: "nationalInterest";
     display:block;
@@ -377,6 +413,7 @@
 .akomaNtoso .nationalInterest {
     border:1px solid #4be3af;
 }
+
 .akomaNtoso .noticesOfMotion:before {
     content: "noticesOfMotion";
     display:block;
@@ -386,6 +423,7 @@
 .akomaNtoso .noticesOfMotion {
     border:1px solid #5fe456;
 }
+
 .akomaNtoso .oralStatements:before {
     content: "oralStatements";
     display:block;
@@ -395,6 +433,7 @@
 .akomaNtoso .oralStatements {
     border:1px solid #c9f47d;
 }
+
 .akomaNtoso .papers:before {
     content: "papers";
     display:block;
@@ -404,6 +443,7 @@
 .akomaNtoso .papers {
     border:1px solid #db385f;
 }
+
 .akomaNtoso .personalStatements:before {
     content: "personalStatements";
     display:block;
@@ -413,6 +453,7 @@
 .akomaNtoso .personalStatements {
     border:1px solid #10315b;
 }
+
 .akomaNtoso .petitions:before {
     content: "petitions";
     display:block;
@@ -422,6 +463,7 @@
 .akomaNtoso .petitions {
     border:1px solid #def659;
 }
+
 .akomaNtoso .pointOfOrder:before {
     content: "pointOfOrder";
     display:block;
@@ -431,6 +473,7 @@
 .akomaNtoso .pointOfOrder {
     border:1px solid #8ee7a7;
 }
+
 .akomaNtoso .prayers:before {
     content: "prayers";
     display:block;
@@ -440,6 +483,7 @@
 .akomaNtoso .prayers {
     border:1px solid #46c7cc;
 }
+
 .akomaNtoso .proceduralMotions:before {
     content: "proceduralMotions";
     display:block;
@@ -449,6 +493,7 @@
 .akomaNtoso .proceduralMotions {
     border:1px solid #ce2410;
 }
+
 .akomaNtoso .questions:before {
     content: "questions";
     display:block;
@@ -458,6 +503,7 @@
 .akomaNtoso .questions {
     border:1px solid #1cbddd;
 }
+
 .akomaNtoso .resolutions:before {
     content: "resolutions";
     display:block;
@@ -467,6 +513,7 @@
 .akomaNtoso .resolutions {
     border:1px solid #e748d6;
 }
+
 .akomaNtoso .rollCall:before {
     content: "rollCall";
     display:block;
@@ -476,6 +523,7 @@
 .akomaNtoso .rollCall {
     border:1px solid #be90a6;
 }
+
 .akomaNtoso .writtenStatements:before {
     content: "writtenStatements";
     display:block;
@@ -485,6 +533,7 @@
 .akomaNtoso .writtenStatements {
     border:1px solid #1206c1;
 }
+
 /*
 * --------------------------
 * hierarchy
@@ -499,6 +548,7 @@
 .akomaNtoso .hierarchy {
     border:1px solid #2e4754;
 }
+
 .akomaNtoso .alinea:before {
     content: "alinea";
     display:block;
@@ -508,6 +558,7 @@
 .akomaNtoso .alinea {
     border:1px solid #e24844;
 }
+
 .akomaNtoso .article:before {
     content: "article";
     display:block;
@@ -517,6 +568,7 @@
 .akomaNtoso .article {
     border:1px solid #5b7981;
 }
+
 .akomaNtoso .book:before {
     content: "book";
     display:block;
@@ -526,6 +578,7 @@
 .akomaNtoso .book {
     border:1px solid #3b8454;
 }
+
 .akomaNtoso .chapter:before {
     content: "chapter";
     display:block;
@@ -535,6 +588,7 @@
 .akomaNtoso .chapter {
     border:1px solid #e02029;
 }
+
 .akomaNtoso .clause:before {
     content: "clause";
     display:block;
@@ -544,6 +598,7 @@
 .akomaNtoso .clause {
     border:1px solid #5f4105;
 }
+
 .akomaNtoso .division:before {
     content: "division";
     display:block;
@@ -553,6 +608,7 @@
 .akomaNtoso .division {
     border:1px solid #5d9a3f;
 }
+
 .akomaNtoso .hcontainer:before {
     content: "hcontainer";
     display:block;
@@ -562,6 +618,7 @@
 .akomaNtoso .hcontainer {
     border:1px solid #550eeb;
 }
+
 .akomaNtoso .indent:before {
     content: "indent";
     display:block;
@@ -571,6 +628,7 @@
 .akomaNtoso .indent {
     border:1px solid #0cc30b;
 }
+
 .akomaNtoso .list:before {
     content: "list";
     display:block;
@@ -580,15 +638,12 @@
 .akomaNtoso .list {
     border:1px solid #3767ae;
 }
-.akomaNtoso .paragraph:before {
-    content: "paragraph";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
+
 .akomaNtoso .paragraph {
-    border:1px solid #34cf86;
+    background-color:#34cf86;
+    color:#000000;
 }
+
 .akomaNtoso .part:before {
     content: "part";
     display:block;
@@ -598,6 +653,7 @@
 .akomaNtoso .part {
     border:1px solid #6f4203;
 }
+
 .akomaNtoso .point:before {
     content: "point";
     display:block;
@@ -607,6 +663,7 @@
 .akomaNtoso .point {
     border:1px solid #d0fb4e;
 }
+
 .akomaNtoso .section:before {
     content: "section";
     display:block;
@@ -616,6 +673,7 @@
 .akomaNtoso .section {
     border:1px solid #a9ae0a;
 }
+
 .akomaNtoso .subchapter:before {
     content: "subchapter";
     display:block;
@@ -625,6 +683,7 @@
 .akomaNtoso .subchapter {
     border:1px solid #25efc8;
 }
+
 .akomaNtoso .subclause:before {
     content: "subclause";
     display:block;
@@ -634,6 +693,7 @@
 .akomaNtoso .subclause {
     border:1px solid #ba810d;
 }
+
 .akomaNtoso .subdivision:before {
     content: "subdivision";
     display:block;
@@ -643,6 +703,7 @@
 .akomaNtoso .subdivision {
     border:1px solid #33c628;
 }
+
 .akomaNtoso .sublist:before {
     content: "sublist";
     display:block;
@@ -652,15 +713,12 @@
 .akomaNtoso .sublist {
     border:1px solid #630a4f;
 }
-.akomaNtoso .subparagraph:before {
-    content: "subparagraph";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
+
 .akomaNtoso .subparagraph {
-    border:1px solid #fb1a92;
+    background-color:#fb1a92;
+    color:#000000;
 }
+
 .akomaNtoso .subpart:before {
     content: "subpart";
     display:block;
@@ -670,6 +728,7 @@
 .akomaNtoso .subpart {
     border:1px solid #c88296;
 }
+
 .akomaNtoso .subsection:before {
     content: "subsection";
     display:block;
@@ -679,6 +738,7 @@
 .akomaNtoso .subsection {
     border:1px solid #6301b5;
 }
+
 .akomaNtoso .subtitle:before {
     content: "subtitle";
     display:block;
@@ -688,6 +748,7 @@
 .akomaNtoso .subtitle {
     border:1px solid #6a75c0;
 }
+
 .akomaNtoso .title:before {
     content: "title";
     display:block;
@@ -697,6 +758,7 @@
 .akomaNtoso .title {
     border:1px solid #f7dc5c;
 }
+
 .akomaNtoso .tome:before {
     content: "tome";
     display:block;
@@ -706,6 +768,7 @@
 .akomaNtoso .tome {
     border:1px solid #d4fb08;
 }
+
 .akomaNtoso .transitional:before {
     content: "transitional";
     display:block;
@@ -715,6 +778,7 @@
 .akomaNtoso .transitional {
     border:1px solid #29e4e4;
 }
+
 /*
 * --------------------------
 * itemType
@@ -729,6 +793,7 @@
 .akomaNtoso .itemType {
     border:1px solid #9bdd78;
 }
+
 .akomaNtoso .citation:before {
     content: "citation";
     display:block;
@@ -738,6 +803,7 @@
 .akomaNtoso .citation {
     border:1px solid #84bcb4;
 }
+
 .akomaNtoso .item:before {
     content: "item";
     display:block;
@@ -747,6 +813,7 @@
 .akomaNtoso .item {
     border:1px solid #c38c14;
 }
+
 .akomaNtoso .recital:before {
     content: "recital";
     display:block;
@@ -756,6 +823,7 @@
 .akomaNtoso .recital {
     border:1px solid #efa996;
 }
+
 .akomaNtoso .tblock:before {
     content: "tblock";
     display:block;
@@ -765,6 +833,7 @@
 .akomaNtoso .tblock {
     border:1px solid #5d5aa6;
 }
+
 /*
 * --------------------------
 * speechType
@@ -779,6 +848,7 @@
 .akomaNtoso .speechType {
     border:1px solid #d2c8fe;
 }
+
 .akomaNtoso .answer:before {
     content: "answer";
     display:block;
@@ -788,6 +858,7 @@
 .akomaNtoso .answer {
     border:1px solid #817c90;
 }
+
 .akomaNtoso .question:before {
     content: "question";
     display:block;
@@ -797,6 +868,7 @@
 .akomaNtoso .question {
     border:1px solid #35c7b2;
 }
+
 .akomaNtoso .speech:before {
     content: "speech";
     display:block;
@@ -806,6 +878,7 @@
 .akomaNtoso .speech {
     border:1px solid #342dd0;
 }
+
 /*
 * --------------------------
 * basicopt
@@ -820,6 +893,7 @@
 .akomaNtoso .basicopt {
     border:1px solid #6abc2a;
 }
+
 .akomaNtoso .conclusions:before {
     content: "conclusions";
     display:block;
@@ -829,6 +903,7 @@
 .akomaNtoso .conclusions {
     border:1px solid #b6991d;
 }
+
 .akomaNtoso .coverPage:before {
     content: "coverPage";
     display:block;
@@ -838,6 +913,7 @@
 .akomaNtoso .coverPage {
     border:1px solid #1e9e4f;
 }
+
 .akomaNtoso .blockList:before {
     content: "blockList";
     display:block;
@@ -847,6 +923,7 @@
 .akomaNtoso .blockList {
     border:1px solid #239752;
 }
+
 /*
 * --------------------------
 * blocksopt
@@ -861,6 +938,7 @@
 .akomaNtoso .blocksopt {
     border:1px solid #b2476c;
 }
+
 .akomaNtoso .amendmentContent:before {
     content: "amendmentContent";
     display:block;
@@ -870,6 +948,7 @@
 .akomaNtoso .amendmentContent {
     border:1px solid #b9ae8c;
 }
+
 .akomaNtoso .amendmentHeading:before {
     content: "amendmentHeading";
     display:block;
@@ -879,6 +958,7 @@
 .akomaNtoso .amendmentHeading {
     border:1px solid #ca062c;
 }
+
 .akomaNtoso .amendmentJustification:before {
     content: "amendmentJustification";
     display:block;
@@ -888,6 +968,7 @@
 .akomaNtoso .amendmentJustification {
     border:1px solid #c6bc7b;
 }
+
 .akomaNtoso .amendmentReference:before {
     content: "amendmentReference";
     display:block;
@@ -897,6 +978,7 @@
 .akomaNtoso .amendmentReference {
     border:1px solid #ee4a09;
 }
+
 .akomaNtoso .content:before {
     content: "content";
     display:block;
@@ -906,6 +988,7 @@
 .akomaNtoso .content {
     border:1px solid #f933dd;
 }
+
 .akomaNtoso .formula:before {
     content: "formula";
     display:block;
@@ -915,6 +998,7 @@
 .akomaNtoso .formula {
     border:1px solid #7c3fbd;
 }
+
 .akomaNtoso .header:before {
     content: "header";
     display:block;
@@ -924,6 +1008,7 @@
 .akomaNtoso .header {
     border:1px solid #966c17;
 }
+
 .akomaNtoso .intro:before {
     content: "intro";
     display:block;
@@ -933,6 +1018,7 @@
 .akomaNtoso .intro {
     border:1px solid #2c8761;
 }
+
 .akomaNtoso .longTitle:before {
     content: "longTitle";
     display:block;
@@ -942,6 +1028,7 @@
 .akomaNtoso .longTitle {
     border:1px solid #8bcd0c;
 }
+
 .akomaNtoso .other:before {
     content: "other";
     display:block;
@@ -951,6 +1038,7 @@
 .akomaNtoso .other {
     border:1px solid #c4e02a;
 }
+
 .akomaNtoso .td:before {
     content: "td";
     display:block;
@@ -960,6 +1048,7 @@
 .akomaNtoso .td {
     border:1px solid #6bd163;
 }
+
 .akomaNtoso .th:before {
     content: "th";
     display:block;
@@ -969,6 +1058,7 @@
 .akomaNtoso .th {
     border:1px solid #c77178;
 }
+
 .akomaNtoso .wrap:before {
     content: "wrap";
     display:block;
@@ -978,6 +1068,7 @@
 .akomaNtoso .wrap {
     border:1px solid #77e9cb;
 }
+
 /*
 * --------------------------
 * blocksreq
@@ -992,6 +1083,7 @@
 .akomaNtoso .blocksreq {
     border:1px solid #9065db;
 }
+
 .akomaNtoso .div:before {
     content: "div";
     display:block;
@@ -1001,6 +1093,7 @@
 .akomaNtoso .div {
     border:1px solid #2218e9;
 }
+
 .akomaNtoso .interstitial:before {
     content: "interstitial";
     display:block;
@@ -1010,6 +1103,7 @@
 .akomaNtoso .interstitial {
     border:1px solid #d62b3c;
 }
+
 .akomaNtoso .note:before {
     content: "note";
     display:block;
@@ -1019,6 +1113,7 @@
 .akomaNtoso .note {
     border:1px solid #32a3a5;
 }
+
 /*
 * --------------------------
 * bodyType
@@ -1033,6 +1128,7 @@
 .akomaNtoso .bodyType {
     border:1px solid #f09c50;
 }
+
 .akomaNtoso .body:before {
     content: "body";
     display:block;
@@ -1042,6 +1138,7 @@
 .akomaNtoso .body {
     border:1px solid #071555;
 }
+
 .akomaNtoso .citations:before {
     content: "citations";
     display:block;
@@ -1051,6 +1148,7 @@
 .akomaNtoso .citations {
     border:1px solid #16aa12;
 }
+
 .akomaNtoso .classification:before {
     content: "classification";
     display:block;
@@ -1060,6 +1158,7 @@
 .akomaNtoso .classification {
     border:1px solid #caf664;
 }
+
 /*
 * --------------------------
 * collectionBodyType
@@ -1074,6 +1173,7 @@
 .akomaNtoso .collectionBodyType {
     border:1px solid #19f62d;
 }
+
 .akomaNtoso .collectionBody:before {
     content: "collectionBody";
     display:block;
@@ -1083,6 +1183,7 @@
 .akomaNtoso .collectionBody {
     border:1px solid #14741a;
 }
+
 /*
 * --------------------------
 * collectionStructure
@@ -1097,6 +1198,7 @@
 .akomaNtoso .collectionStructure {
     border:1px solid #0b6300;
 }
+
 .akomaNtoso .amendmentList:before {
     content: "amendmentList";
     display:block;
@@ -1106,6 +1208,7 @@
 .akomaNtoso .amendmentList {
     border:1px solid #351468;
 }
+
 .akomaNtoso .documentCollection:before {
     content: "documentCollection";
     display:block;
@@ -1115,6 +1218,7 @@
 .akomaNtoso .documentCollection {
     border:1px solid #b2358e;
 }
+
 .akomaNtoso .officialGazette:before {
     content: "officialGazette";
     display:block;
@@ -1124,6 +1228,7 @@
 .akomaNtoso .officialGazette {
     border:1px solid #3fd791;
 }
+
 .akomaNtoso .component:before {
     content: "component";
     display:block;
@@ -1133,6 +1238,7 @@
 .akomaNtoso .component {
     border:1px solid #c5160b;
 }
+
 .akomaNtoso .componentData:before {
     content: "componentData";
     display:block;
@@ -1142,6 +1248,7 @@
 .akomaNtoso .componentData {
     border:1px solid #9ffdbc;
 }
+
 .akomaNtoso .componentInfo:before {
     content: "componentInfo";
     display:block;
@@ -1151,6 +1258,7 @@
 .akomaNtoso .componentInfo {
     border:1px solid #d4cd36;
 }
+
 .akomaNtoso .components:before {
     content: "components";
     display:block;
@@ -1160,6 +1268,7 @@
 .akomaNtoso .components {
     border:1px solid #dd942b;
 }
+
 /*
 * --------------------------
 * containerType
@@ -1174,6 +1283,7 @@
 .akomaNtoso .containerType {
     border:1px solid #937cfd;
 }
+
 .akomaNtoso .container:before {
     content: "container";
     display:block;
@@ -1183,6 +1293,7 @@
 .akomaNtoso .container {
     border:1px solid #a271cd;
 }
+
 /*
 * --------------------------
 * coreProperties
@@ -1197,6 +1308,7 @@
 .akomaNtoso .coreProperties {
     border:1px solid #c53741;
 }
+
 .akomaNtoso .FRBRExpression:before {
     content: "FRBRExpression";
     display:block;
@@ -1206,6 +1318,7 @@
 .akomaNtoso .FRBRExpression {
     border:1px solid #a98342;
 }
+
 .akomaNtoso .FRBRItem:before {
     content: "FRBRItem";
     display:block;
@@ -1215,6 +1328,7 @@
 .akomaNtoso .FRBRItem {
     border:1px solid #3a5fc9;
 }
+
 .akomaNtoso .FRBRManifestation:before {
     content: "FRBRManifestation";
     display:block;
@@ -1224,6 +1338,7 @@
 .akomaNtoso .FRBRManifestation {
     border:1px solid #fe2751;
 }
+
 .akomaNtoso .FRBRWork:before {
     content: "FRBRWork";
     display:block;
@@ -1233,6 +1348,7 @@
 .akomaNtoso .FRBRWork {
     border:1px solid #785299;
 }
+
 /*
 * --------------------------
 * countType
@@ -1247,6 +1363,7 @@
 .akomaNtoso .countType {
     border:1px solid #eeb234;
 }
+
 .akomaNtoso .count:before {
     content: "count";
     display:block;
@@ -1256,6 +1373,7 @@
 .akomaNtoso .count {
     border:1px solid #5ba91b;
 }
+
 .akomaNtoso .quorum:before {
     content: "quorum";
     display:block;
@@ -1265,6 +1383,7 @@
 .akomaNtoso .quorum {
     border:1px solid #cd498e;
 }
+
 /*
 * --------------------------
 * debateBodyType
@@ -1279,6 +1398,7 @@
 .akomaNtoso .debateBodyType {
     border:1px solid #d63e87;
 }
+
 .akomaNtoso .debateBody:before {
     content: "debateBody";
     display:block;
@@ -1288,6 +1408,7 @@
 .akomaNtoso .debateBody {
     border:1px solid #12f0bc;
 }
+
 /*
 * --------------------------
 * debateStructure
@@ -1302,6 +1423,7 @@
 .akomaNtoso .debateStructure {
     border:1px solid #1b1108;
 }
+
 .akomaNtoso .debate:before {
     content: "debate";
     display:block;
@@ -1311,6 +1433,7 @@
 .akomaNtoso .debate {
     border:1px solid #a9ad4f;
 }
+
 /*
 * --------------------------
 * fragmentBodyType
@@ -1325,6 +1448,7 @@
 .akomaNtoso .fragmentBodyType {
     border:1px solid #efce18;
 }
+
 .akomaNtoso .fragmentBody:before {
     content: "fragmentBody";
     display:block;
@@ -1334,6 +1458,7 @@
 .akomaNtoso .fragmentBody {
     border:1px solid #99cb58;
 }
+
 /*
 * --------------------------
 * fragmentStructure
@@ -1348,6 +1473,7 @@
 .akomaNtoso .fragmentStructure {
     border:1px solid #e2a893;
 }
+
 .akomaNtoso .fragment:before {
     content: "fragment";
     display:block;
@@ -1357,6 +1483,7 @@
 .akomaNtoso .fragment {
     border:1px solid #2023ae;
 }
+
 /*
 * --------------------------
 * hierarchicalStructure
@@ -1371,6 +1498,7 @@
 .akomaNtoso .hierarchicalStructure {
     border:1px solid #fa0867;
 }
+
 .akomaNtoso .act:before {
     content: "act";
     display:block;
@@ -1380,6 +1508,7 @@
 .akomaNtoso .act {
     border:1px solid #70f296;
 }
+
 .akomaNtoso .bill:before {
     content: "bill";
     display:block;
@@ -1389,6 +1518,7 @@
 .akomaNtoso .bill {
     border:1px solid #3b173d;
 }
+
 .akomaNtoso .identification:before {
     content: "identification";
     display:block;
@@ -1398,6 +1528,7 @@
 .akomaNtoso .identification {
     border:1px solid #be2162;
 }
+
 /*
 * --------------------------
 * inline
@@ -1405,178 +1536,299 @@
 */
 .akomaNtoso .inline {
     background-color:#bbd72c;
+    color:#000000;
 }
+
 .akomaNtoso .a {
     background-color:#bc187a;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .affectedDocument {
     background-color:#6a5762;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .b {
     background-color:#f600c9;
+    color:#000000;
+}
+
+.akomaNtoso .block:before {
+    content: "block";
+    display:block;
+    text-align:right;
+    color: #000000;
 }
 .akomaNtoso .block {
-    background-color:#50087b;
+    border:1px solid #50087b;
 }
+
 .akomaNtoso .caption {
     background-color:#044fa0;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .change {
     background-color:#d22989;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .courtType {
     background-color:#4d54e2;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .date {
     background-color:#a7e584;
+    color:#000000;
 }
+
 .akomaNtoso .def {
     background-color:#83a58c;
+    color:#000000;
 }
+
 .akomaNtoso .del {
     background-color:#b1b557;
+    color:#000000;
 }
+
 .akomaNtoso .docCommittee {
     background-color:#c4755d;
+    color:#000000;
 }
+
 .akomaNtoso .docDate {
     background-color:#7ba1cd;
+    color:#000000;
 }
+
 .akomaNtoso .docIntroducer {
     background-color:#b68503;
+    color:#000000;
 }
+
 .akomaNtoso .docJurisdiction {
     background-color:#585a0d;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .docNumber {
     background-color:#c65c22;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .docProponent {
     background-color:#aab5ae;
+    color:#000000;
 }
+
 .akomaNtoso .docPurpose {
     background-color:#5b4fa1;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .docStage {
     background-color:#807104;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .docStatus {
     background-color:#cc3296;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .docTitle {
     background-color:#ab19a1;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .docType {
     background-color:#bbba26;
+    color:#000000;
 }
+
 .akomaNtoso .docketNumber {
     background-color:#223fe8;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .extractText {
     background-color:#847220;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .fillIn {
     background-color:#f4bcda;
+    color:#000000;
 }
+
 .akomaNtoso .from {
     background-color:#4ff5a3;
+    color:#000000;
 }
+
 .akomaNtoso .heading {
     background-color:#b3fa15;
+    color:#000000;
 }
+
 .akomaNtoso .i {
     background-color:#75d6a5;
+    color:#000000;
 }
+
 .akomaNtoso .inline {
     background-color:#bbd72c;
+    color:#000000;
 }
+
 .akomaNtoso .ins {
     background-color:#772ef0;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .legislature {
     background-color:#9d190c;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .listConclusion {
     background-color:#8ca6a6;
+    color:#000000;
 }
+
 .akomaNtoso .listIntroduction {
     background-color:#5b1d94;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .mref {
     background-color:#43e84c;
+    color:#000000;
 }
+
 .akomaNtoso .narrative {
     background-color:#36a0ae;
+    color:#000000;
 }
+
 .akomaNtoso .neutralCitation {
     background-color:#ad972c;
+    color:#000000;
 }
+
 .akomaNtoso .num {
     background-color:#1e839e;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .omissis {
     background-color:#df6c64;
+    color:#000000;
 }
+
 .akomaNtoso .opinion {
     background-color:#5d63c9;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .outcome {
     background-color:#793427;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .p {
     background-color:#b391bd;
+    color:#000000;
 }
+
 .akomaNtoso .placeholder {
     background-color:#a384d5;
+    color:#000000;
 }
+
 .akomaNtoso .quotedText {
     background-color:#23ecaf;
+    color:#000000;
 }
+
 .akomaNtoso .recordedTime {
     background-color:#488e18;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .relatedDocument {
     background-color:#309516;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .remark {
     background-color:#cc93f7;
+    color:#000000;
 }
+
 .akomaNtoso .scene {
     background-color:#ba6148;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .session {
     background-color:#ab13b5;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .shortTitle {
     background-color:#5c5c74;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .signature {
     background-color:#ad2507;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .span {
     background-color:#894a59;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .sub {
     background-color:#bf39b2;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .subheading {
     background-color:#802804;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .summary {
     background-color:#59b2bc;
+    color:#000000;
 }
+
 .akomaNtoso .sup {
     background-color:#a60829;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .tocItem {
     background-color:#eb4e86;
+    color:#000000;
 }
+
 .akomaNtoso .u {
     background-color:#a639b8;
+    color:#FFFFFF;
 }
+
 .akomaNtoso .vote {
     background-color:#99986e;
+    color:#000000;
 }
+
 /*
 * --------------------------
 * inlinereq
@@ -1591,6 +1843,7 @@
 .akomaNtoso .inlinereq {
     border:1px solid #c26dd0;
 }
+
 .akomaNtoso .ref:before {
     content: "ref";
     display:block;
@@ -1600,6 +1853,7 @@
 .akomaNtoso .ref {
     border:1px solid #8309d3;
 }
+
 .akomaNtoso .rref:before {
     content: "rref";
     display:block;
@@ -1609,6 +1863,7 @@
 .akomaNtoso .rref {
     border:1px solid #22f9f3;
 }
+
 /*
 * --------------------------
 * inlinereqreq
@@ -1623,6 +1878,7 @@
 .akomaNtoso .inlinereqreq {
     border:1px solid #94efe9;
 }
+
 .akomaNtoso .concept:before {
     content: "concept";
     display:block;
@@ -1632,6 +1888,7 @@
 .akomaNtoso .concept {
     border:1px solid #f198ce;
 }
+
 .akomaNtoso .entity:before {
     content: "entity";
     display:block;
@@ -1641,6 +1898,7 @@
 .akomaNtoso .entity {
     border:1px solid #f2fbbe;
 }
+
 .akomaNtoso .event:before {
     content: "event";
     display:block;
@@ -1650,6 +1908,7 @@
 .akomaNtoso .event {
     border:1px solid #49fb4d;
 }
+
 .akomaNtoso .judge:before {
     content: "judge";
     display:block;
@@ -1659,6 +1918,7 @@
 .akomaNtoso .judge {
     border:1px solid #5d020a;
 }
+
 .akomaNtoso .lawyer:before {
     content: "lawyer";
     display:block;
@@ -1668,6 +1928,7 @@
 .akomaNtoso .lawyer {
     border:1px solid #10f04d;
 }
+
 .akomaNtoso .location:before {
     content: "location";
     display:block;
@@ -1677,6 +1938,7 @@
 .akomaNtoso .location {
     border:1px solid #bc83b7;
 }
+
 .akomaNtoso .object:before {
     content: "object";
     display:block;
@@ -1686,6 +1948,7 @@
 .akomaNtoso .object {
     border:1px solid #7846f9;
 }
+
 .akomaNtoso .organization:before {
     content: "organization";
     display:block;
@@ -1695,6 +1958,7 @@
 .akomaNtoso .organization {
     border:1px solid #9ff2bd;
 }
+
 .akomaNtoso .party:before {
     content: "party";
     display:block;
@@ -1704,6 +1968,7 @@
 .akomaNtoso .party {
     border:1px solid #7f158a;
 }
+
 .akomaNtoso .person:before {
     content: "person";
     display:block;
@@ -1713,6 +1978,7 @@
 .akomaNtoso .person {
     border:1px solid #18a8cb;
 }
+
 .akomaNtoso .process:before {
     content: "process";
     display:block;
@@ -1722,6 +1988,7 @@
 .akomaNtoso .process {
     border:1px solid #daa89a;
 }
+
 .akomaNtoso .quantity:before {
     content: "quantity";
     display:block;
@@ -1731,6 +1998,7 @@
 .akomaNtoso .quantity {
     border:1px solid #bbbdaa;
 }
+
 .akomaNtoso .role:before {
     content: "role";
     display:block;
@@ -1740,6 +2008,7 @@
 .akomaNtoso .role {
     border:1px solid #b0b44a;
 }
+
 .akomaNtoso .term:before {
     content: "term";
     display:block;
@@ -1749,6 +2018,7 @@
 .akomaNtoso .term {
     border:1px solid #2d3815;
 }
+
 /*
 * --------------------------
 * judgementBodyType
@@ -1763,6 +2033,7 @@
 .akomaNtoso .judgementBodyType {
     border:1px solid #441af2;
 }
+
 .akomaNtoso .judgementBody:before {
     content: "judgementBody";
     display:block;
@@ -1772,6 +2043,7 @@
 .akomaNtoso .judgementBody {
     border:1px solid #308257;
 }
+
 /*
 * --------------------------
 * judgementStructure
@@ -1786,6 +2058,7 @@
 .akomaNtoso .judgementStructure {
     border:1px solid #4cd874;
 }
+
 .akomaNtoso .judgement:before {
     content: "judgement";
     display:block;
@@ -1795,6 +2068,7 @@
 .akomaNtoso .judgement {
     border:1px solid #2b1e09;
 }
+
 /*
 * --------------------------
 * judicialArgumentType
@@ -1809,6 +2083,7 @@
 .akomaNtoso .judicialArgumentType {
     border:1px solid #56f07c;
 }
+
 .akomaNtoso .applies:before {
     content: "applies";
     display:block;
@@ -1818,6 +2093,7 @@
 .akomaNtoso .applies {
     border:1px solid #86590a;
 }
+
 .akomaNtoso .contrasts:before {
     content: "contrasts";
     display:block;
@@ -1827,6 +2103,7 @@
 .akomaNtoso .contrasts {
     border:1px solid #499f7f;
 }
+
 .akomaNtoso .derogates:before {
     content: "derogates";
     display:block;
@@ -1836,6 +2113,7 @@
 .akomaNtoso .derogates {
     border:1px solid #d3c54a;
 }
+
 .akomaNtoso .dissentsFrom:before {
     content: "dissentsFrom";
     display:block;
@@ -1845,6 +2123,7 @@
 .akomaNtoso .dissentsFrom {
     border:1px solid #f41e2d;
 }
+
 .akomaNtoso .distinguishes:before {
     content: "distinguishes";
     display:block;
@@ -1854,6 +2133,7 @@
 .akomaNtoso .distinguishes {
     border:1px solid #4a4aa6;
 }
+
 .akomaNtoso .extends:before {
     content: "extends";
     display:block;
@@ -1863,6 +2143,7 @@
 .akomaNtoso .extends {
     border:1px solid #1485d2;
 }
+
 .akomaNtoso .isAnalogTo:before {
     content: "isAnalogTo";
     display:block;
@@ -1872,6 +2153,7 @@
 .akomaNtoso .isAnalogTo {
     border:1px solid #12066b;
 }
+
 .akomaNtoso .overrules:before {
     content: "overrules";
     display:block;
@@ -1881,6 +2163,7 @@
 .akomaNtoso .overrules {
     border:1px solid #fa8dc5;
 }
+
 .akomaNtoso .putsInQuestion:before {
     content: "putsInQuestion";
     display:block;
@@ -1890,6 +2173,7 @@
 .akomaNtoso .putsInQuestion {
     border:1px solid #e6f3ba;
 }
+
 .akomaNtoso .restricts:before {
     content: "restricts";
     display:block;
@@ -1899,6 +2183,7 @@
 .akomaNtoso .restricts {
     border:1px solid #fe1f0c;
 }
+
 .akomaNtoso .supports:before {
     content: "supports";
     display:block;
@@ -1908,6 +2193,7 @@
 .akomaNtoso .supports {
     border:1px solid #d71920;
 }
+
 /*
 * --------------------------
 * judicialArguments
@@ -1922,6 +2208,7 @@
 .akomaNtoso .judicialArguments {
     border:1px solid #5bd62e;
 }
+
 .akomaNtoso .judicial:before {
     content: "judicial";
     display:block;
@@ -1931,6 +2218,7 @@
 .akomaNtoso .judicial {
     border:1px solid #e818f3;
 }
+
 .akomaNtoso .li:before {
     content: "li";
     display:block;
@@ -1940,6 +2228,7 @@
 .akomaNtoso .li {
     border:1px solid #ac17c1;
 }
+
 .akomaNtoso .lifecycle:before {
     content: "lifecycle";
     display:block;
@@ -1949,6 +2238,7 @@
 .akomaNtoso .lifecycle {
     border:1px solid #00f50d;
 }
+
 /*
 * --------------------------
 * listItems
@@ -1963,6 +2253,7 @@
 .akomaNtoso .listItems {
     border:1px solid #2384e7;
 }
+
 .akomaNtoso .ol:before {
     content: "ol";
     display:block;
@@ -1972,6 +2263,7 @@
 .akomaNtoso .ol {
     border:1px solid #36aadc;
 }
+
 .akomaNtoso .ul:before {
     content: "ul";
     display:block;
@@ -1981,6 +2273,7 @@
 .akomaNtoso .ul {
     border:1px solid #f084d3;
 }
+
 /*
 * --------------------------
 * maincontent
@@ -1995,6 +2288,7 @@
 .akomaNtoso .maincontent {
     border:1px solid #9d1860;
 }
+
 .akomaNtoso .background:before {
     content: "background";
     display:block;
@@ -2004,6 +2298,7 @@
 .akomaNtoso .background {
     border:1px solid #bc8186;
 }
+
 .akomaNtoso .decision:before {
     content: "decision";
     display:block;
@@ -2013,6 +2308,7 @@
 .akomaNtoso .decision {
     border:1px solid #c2b815;
 }
+
 .akomaNtoso .introduction:before {
     content: "introduction";
     display:block;
@@ -2022,6 +2318,7 @@
 .akomaNtoso .introduction {
     border:1px solid #891690;
 }
+
 .akomaNtoso .mainBody:before {
     content: "mainBody";
     display:block;
@@ -2031,6 +2328,7 @@
 .akomaNtoso .mainBody {
     border:1px solid #fd1abc;
 }
+
 .akomaNtoso .motivation:before {
     content: "motivation";
     display:block;
@@ -2040,6 +2338,7 @@
 .akomaNtoso .motivation {
     border:1px solid #27771c;
 }
+
 /*
 * --------------------------
 * markeropt
@@ -2054,6 +2353,7 @@
 .akomaNtoso .markeropt {
     border:1px solid #d5b723;
 }
+
 .akomaNtoso .br:before {
     content: "br";
     display:block;
@@ -2063,6 +2363,7 @@
 .akomaNtoso .br {
     border:1px solid #3f15da;
 }
+
 /*
 * --------------------------
 * eolType
@@ -2077,6 +2378,7 @@
 .akomaNtoso .eolType {
     border:1px solid #314b27;
 }
+
 .akomaNtoso .eol:before {
     content: "eol";
     display:block;
@@ -2086,6 +2388,7 @@
 .akomaNtoso .eol {
     border:1px solid #8e0cb8;
 }
+
 .akomaNtoso .eop:before {
     content: "eop";
     display:block;
@@ -2095,6 +2398,7 @@
 .akomaNtoso .eop {
     border:1px solid #eaabce;
 }
+
 .akomaNtoso .img:before {
     content: "img";
     display:block;
@@ -2104,6 +2408,7 @@
 .akomaNtoso .img {
     border:1px solid #145be7;
 }
+
 .akomaNtoso .noteRef:before {
     content: "noteRef";
     display:block;
@@ -2113,6 +2418,7 @@
 .akomaNtoso .noteRef {
     border:1px solid #571d75;
 }
+
 /*
 * --------------------------
 * markerreq
@@ -2127,6 +2433,7 @@
 .akomaNtoso .markerreq {
     border:1px solid #17e387;
 }
+
 .akomaNtoso .marker:before {
     content: "marker";
     display:block;
@@ -2136,6 +2443,7 @@
 .akomaNtoso .marker {
     border:1px solid #33a672;
 }
+
 .akomaNtoso .meta:before {
     content: "meta";
     display:block;
@@ -2145,6 +2453,7 @@
 .akomaNtoso .meta {
     border:1px solid #398d17;
 }
+
 /*
 * --------------------------
 * metaopt
@@ -2159,6 +2468,7 @@
 .akomaNtoso .metaopt {
     border:1px solid #25992f;
 }
+
 .akomaNtoso .FRBRauthor:before {
     content: "FRBRauthor";
     display:block;
@@ -2168,6 +2478,7 @@
 .akomaNtoso .FRBRauthor {
     border:1px solid #a9c09a;
 }
+
 .akomaNtoso .FRBRdate:before {
     content: "FRBRdate";
     display:block;
@@ -2177,6 +2488,7 @@
 .akomaNtoso .FRBRdate {
     border:1px solid #051c76;
 }
+
 .akomaNtoso .FRBRlanguage:before {
     content: "FRBRlanguage";
     display:block;
@@ -2186,6 +2498,7 @@
 .akomaNtoso .FRBRlanguage {
     border:1px solid #4a98d5;
 }
+
 .akomaNtoso .FRBRtranslation:before {
     content: "FRBRtranslation";
     display:block;
@@ -2195,6 +2508,7 @@
 .akomaNtoso .FRBRtranslation {
     border:1px solid #9488d9;
 }
+
 .akomaNtoso .keyword:before {
     content: "keyword";
     display:block;
@@ -2204,6 +2518,7 @@
 .akomaNtoso .keyword {
     border:1px solid #d3582f;
 }
+
 .akomaNtoso .publication:before {
     content: "publication";
     display:block;
@@ -2213,6 +2528,7 @@
 .akomaNtoso .publication {
     border:1px solid #19ba2a;
 }
+
 .akomaNtoso .timeInterval:before {
     content: "timeInterval";
     display:block;
@@ -2222,6 +2538,7 @@
 .akomaNtoso .timeInterval {
     border:1px solid #b4c2dd;
 }
+
 /*
 * --------------------------
 * valueType
@@ -2236,6 +2553,7 @@
 .akomaNtoso .valueType {
     border:1px solid #57be6f;
 }
+
 .akomaNtoso .FRBRalias:before {
     content: "FRBRalias";
     display:block;
@@ -2245,6 +2563,7 @@
 .akomaNtoso .FRBRalias {
     border:1px solid #034900;
 }
+
 .akomaNtoso .FRBRcountry:before {
     content: "FRBRcountry";
     display:block;
@@ -2254,6 +2573,7 @@
 .akomaNtoso .FRBRcountry {
     border:1px solid #2cda47;
 }
+
 .akomaNtoso .FRBRformat:before {
     content: "FRBRformat";
     display:block;
@@ -2263,6 +2583,7 @@
 .akomaNtoso .FRBRformat {
     border:1px solid #4cc337;
 }
+
 .akomaNtoso .FRBRname:before {
     content: "FRBRname";
     display:block;
@@ -2272,6 +2593,7 @@
 .akomaNtoso .FRBRname {
     border:1px solid #8b5a62;
 }
+
 .akomaNtoso .FRBRnumber:before {
     content: "FRBRnumber";
     display:block;
@@ -2281,6 +2603,7 @@
 .akomaNtoso .FRBRnumber {
     border:1px solid #4de3a5;
 }
+
 .akomaNtoso .FRBRsubtype:before {
     content: "FRBRsubtype";
     display:block;
@@ -2290,6 +2613,7 @@
 .akomaNtoso .FRBRsubtype {
     border:1px solid #f1c13e;
 }
+
 .akomaNtoso .FRBRthis:before {
     content: "FRBRthis";
     display:block;
@@ -2299,6 +2623,7 @@
 .akomaNtoso .FRBRthis {
     border:1px solid #3fb43c;
 }
+
 .akomaNtoso .FRBRuri:before {
     content: "FRBRuri";
     display:block;
@@ -2308,6 +2633,7 @@
 .akomaNtoso .FRBRuri {
     border:1px solid #ec6326;
 }
+
 .akomaNtoso .metareq:before {
     content: "metareq";
     display:block;
@@ -2317,6 +2643,7 @@
 .akomaNtoso .metareq {
     border:1px solid #c0c2a4;
 }
+
 /*
 * --------------------------
 * modType
@@ -2331,6 +2658,7 @@
 .akomaNtoso .modType {
     border:1px solid #8e7263;
 }
+
 .akomaNtoso .mmod:before {
     content: "mmod";
     display:block;
@@ -2340,6 +2668,7 @@
 .akomaNtoso .mmod {
     border:1px solid #3e2ad2;
 }
+
 .akomaNtoso .mod:before {
     content: "mod";
     display:block;
@@ -2349,6 +2678,7 @@
 .akomaNtoso .mod {
     border:1px solid #8357df;
 }
+
 .akomaNtoso .rmod:before {
     content: "rmod";
     display:block;
@@ -2358,6 +2688,7 @@
 .akomaNtoso .rmod {
     border:1px solid #1d3c77;
 }
+
 /*
 * --------------------------
 * modificationType
@@ -2372,6 +2703,7 @@
 .akomaNtoso .modificationType {
     border:1px solid #35c7f9;
 }
+
 .akomaNtoso .efficacyMod:before {
     content: "efficacyMod";
     display:block;
@@ -2381,6 +2713,7 @@
 .akomaNtoso .efficacyMod {
     border:1px solid #dcce8d;
 }
+
 .akomaNtoso .forceMod:before {
     content: "forceMod";
     display:block;
@@ -2390,6 +2723,7 @@
 .akomaNtoso .forceMod {
     border:1px solid #5d2829;
 }
+
 .akomaNtoso .legalSystemMod:before {
     content: "legalSystemMod";
     display:block;
@@ -2399,6 +2733,7 @@
 .akomaNtoso .legalSystemMod {
     border:1px solid #6c3408;
 }
+
 .akomaNtoso .meaningMod:before {
     content: "meaningMod";
     display:block;
@@ -2408,6 +2743,7 @@
 .akomaNtoso .meaningMod {
     border:1px solid #ed08dc;
 }
+
 .akomaNtoso .scopeMod:before {
     content: "scopeMod";
     display:block;
@@ -2417,6 +2753,7 @@
 .akomaNtoso .scopeMod {
     border:1px solid #b03c42;
 }
+
 .akomaNtoso .textualMod:before {
     content: "textualMod";
     display:block;
@@ -2426,6 +2763,7 @@
 .akomaNtoso .textualMod {
     border:1px solid #910184;
 }
+
 .akomaNtoso .notes:before {
     content: "notes";
     display:block;
@@ -2435,6 +2773,7 @@
 .akomaNtoso .notes {
     border:1px solid #f08c16;
 }
+
 /*
 * --------------------------
 * openStructure
@@ -2449,6 +2788,7 @@
 .akomaNtoso .openStructure {
     border:1px solid #ecc931;
 }
+
 .akomaNtoso .debateReport:before {
     content: "debateReport";
     display:block;
@@ -2458,6 +2798,7 @@
 .akomaNtoso .debateReport {
     border:1px solid #e85a49;
 }
+
 .akomaNtoso .doc:before {
     content: "doc";
     display:block;
@@ -2467,6 +2808,7 @@
 .akomaNtoso .doc {
     border:1px solid #965ba6;
 }
+
 /*
 * --------------------------
 * parliamentaryAnalysis
@@ -2481,6 +2823,7 @@
 .akomaNtoso .parliamentaryAnalysis {
     border:1px solid #92b84d;
 }
+
 .akomaNtoso .parliamentary:before {
     content: "parliamentary";
     display:block;
@@ -2490,6 +2833,7 @@
 .akomaNtoso .parliamentary {
     border:1px solid #5eac34;
 }
+
 /*
 * --------------------------
 * parliamentaryAnalysisType
@@ -2504,6 +2848,7 @@
 .akomaNtoso .parliamentaryAnalysisType {
     border:1px solid #e838fd;
 }
+
 .akomaNtoso .quorumVerification:before {
     content: "quorumVerification";
     display:block;
@@ -2513,6 +2858,7 @@
 .akomaNtoso .quorumVerification {
     border:1px solid #cdde11;
 }
+
 .akomaNtoso .recount:before {
     content: "recount";
     display:block;
@@ -2522,6 +2868,7 @@
 .akomaNtoso .recount {
     border:1px solid #a927f7;
 }
+
 .akomaNtoso .voting:before {
     content: "voting";
     display:block;
@@ -2531,6 +2878,7 @@
 .akomaNtoso .voting {
     border:1px solid #be9b5f;
 }
+
 /*
 * --------------------------
 * periodType
@@ -2545,6 +2893,7 @@
 .akomaNtoso .periodType {
     border:1px solid #60e4e8;
 }
+
 .akomaNtoso .application:before {
     content: "application";
     display:block;
@@ -2554,6 +2903,7 @@
 .akomaNtoso .application {
     border:1px solid #a8b58d;
 }
+
 .akomaNtoso .duration:before {
     content: "duration";
     display:block;
@@ -2563,6 +2913,7 @@
 .akomaNtoso .duration {
     border:1px solid #31b50a;
 }
+
 .akomaNtoso .efficacy:before {
     content: "efficacy";
     display:block;
@@ -2572,6 +2923,7 @@
 .akomaNtoso .efficacy {
     border:1px solid #148316;
 }
+
 .akomaNtoso .force:before {
     content: "force";
     display:block;
@@ -2581,6 +2933,7 @@
 .akomaNtoso .force {
     border:1px solid #c68918;
 }
+
 /*
 * --------------------------
 * popupStructure
@@ -2595,6 +2948,7 @@
 .akomaNtoso .popupStructure {
     border:1px solid #471bc0;
 }
+
 .akomaNtoso .authorialNote:before {
     content: "authorialNote";
     display:block;
@@ -2604,6 +2958,7 @@
 .akomaNtoso .authorialNote {
     border:1px solid #f7130b;
 }
+
 .akomaNtoso .extractStructure:before {
     content: "extractStructure";
     display:block;
@@ -2613,6 +2968,7 @@
 .akomaNtoso .extractStructure {
     border:1px solid #d55c57;
 }
+
 .akomaNtoso .popup:before {
     content: "popup";
     display:block;
@@ -2622,6 +2978,7 @@
 .akomaNtoso .popup {
     border:1px solid #cfbbf7;
 }
+
 .akomaNtoso .quotedStructure:before {
     content: "quotedStructure";
     display:block;
@@ -2631,6 +2988,7 @@
 .akomaNtoso .quotedStructure {
     border:1px solid #3317f8;
 }
+
 /*
 * --------------------------
 * preambleopt
@@ -2645,6 +3003,7 @@
 .akomaNtoso .preambleopt {
     border:1px solid #c630c8;
 }
+
 .akomaNtoso .preamble:before {
     content: "preamble";
     display:block;
@@ -2654,6 +3013,7 @@
 .akomaNtoso .preamble {
     border:1px solid #9d2dbe;
 }
+
 /*
 * --------------------------
 * prefaceopt
@@ -2668,6 +3028,7 @@
 .akomaNtoso .prefaceopt {
     border:1px solid #c3e359;
 }
+
 .akomaNtoso .preface:before {
     content: "preface";
     display:block;
@@ -2677,6 +3038,7 @@
 .akomaNtoso .preface {
     border:1px solid #fdc7fe;
 }
+
 .akomaNtoso .recitals:before {
     content: "recitals";
     display:block;
@@ -2686,6 +3048,7 @@
 .akomaNtoso .recitals {
     border:1px solid #17700a;
 }
+
 /*
 * --------------------------
 * refItems
@@ -2700,6 +3063,7 @@
 .akomaNtoso .refItems {
     border:1px solid #5799bd;
 }
+
 .akomaNtoso .references:before {
     content: "references";
     display:block;
@@ -2709,6 +3073,7 @@
 .akomaNtoso .references {
     border:1px solid #e4cd2a;
 }
+
 /*
 * --------------------------
 * referenceType
@@ -2723,6 +3088,7 @@
 .akomaNtoso .referenceType {
     border:1px solid #6bf6f5;
 }
+
 .akomaNtoso .TLCConcept:before {
     content: "TLCConcept";
     display:block;
@@ -2732,6 +3098,7 @@
 .akomaNtoso .TLCConcept {
     border:1px solid #f7a691;
 }
+
 .akomaNtoso .TLCEvent:before {
     content: "TLCEvent";
     display:block;
@@ -2741,6 +3108,7 @@
 .akomaNtoso .TLCEvent {
     border:1px solid #4dec2e;
 }
+
 .akomaNtoso .TLCLocation:before {
     content: "TLCLocation";
     display:block;
@@ -2750,6 +3118,7 @@
 .akomaNtoso .TLCLocation {
     border:1px solid #1e0bb2;
 }
+
 .akomaNtoso .TLCObject:before {
     content: "TLCObject";
     display:block;
@@ -2759,6 +3128,7 @@
 .akomaNtoso .TLCObject {
     border:1px solid #71f89b;
 }
+
 .akomaNtoso .TLCOrganization:before {
     content: "TLCOrganization";
     display:block;
@@ -2768,6 +3138,7 @@
 .akomaNtoso .TLCOrganization {
     border:1px solid #67dca4;
 }
+
 .akomaNtoso .TLCPerson:before {
     content: "TLCPerson";
     display:block;
@@ -2777,6 +3148,7 @@
 .akomaNtoso .TLCPerson {
     border:1px solid #f95abb;
 }
+
 .akomaNtoso .TLCProcess:before {
     content: "TLCProcess";
     display:block;
@@ -2786,6 +3158,7 @@
 .akomaNtoso .TLCProcess {
     border:1px solid #86a219;
 }
+
 .akomaNtoso .TLCReference:before {
     content: "TLCReference";
     display:block;
@@ -2795,6 +3168,7 @@
 .akomaNtoso .TLCReference {
     border:1px solid #a4008a;
 }
+
 .akomaNtoso .TLCRole:before {
     content: "TLCRole";
     display:block;
@@ -2804,6 +3178,7 @@
 .akomaNtoso .TLCRole {
     border:1px solid #38d083;
 }
+
 .akomaNtoso .TLCTerm:before {
     content: "TLCTerm";
     display:block;
@@ -2813,6 +3188,7 @@
 .akomaNtoso .TLCTerm {
     border:1px solid #339cc7;
 }
+
 .akomaNtoso .activeRef:before {
     content: "activeRef";
     display:block;
@@ -2822,6 +3198,7 @@
 .akomaNtoso .activeRef {
     border:1px solid #c035ae;
 }
+
 .akomaNtoso .attachmentOf:before {
     content: "attachmentOf";
     display:block;
@@ -2831,6 +3208,7 @@
 .akomaNtoso .attachmentOf {
     border:1px solid #0ca98e;
 }
+
 .akomaNtoso .hasAttachment:before {
     content: "hasAttachment";
     display:block;
@@ -2840,6 +3218,7 @@
 .akomaNtoso .hasAttachment {
     border:1px solid #19422e;
 }
+
 .akomaNtoso .jurisprudence:before {
     content: "jurisprudence";
     display:block;
@@ -2849,6 +3228,7 @@
 .akomaNtoso .jurisprudence {
     border:1px solid #20ec51;
 }
+
 .akomaNtoso .original:before {
     content: "original";
     display:block;
@@ -2858,6 +3238,7 @@
 .akomaNtoso .original {
     border:1px solid #e05593;
 }
+
 .akomaNtoso .passiveRef:before {
     content: "passiveRef";
     display:block;
@@ -2867,6 +3248,7 @@
 .akomaNtoso .passiveRef {
     border:1px solid #4f6226;
 }
+
 /*
 * --------------------------
 * srcType
@@ -2881,6 +3263,7 @@
 .akomaNtoso .srcType {
     border:1px solid #0d89d7;
 }
+
 .akomaNtoso .componentRef:before {
     content: "componentRef";
     display:block;
@@ -2890,6 +3273,7 @@
 .akomaNtoso .componentRef {
     border:1px solid #9e088b;
 }
+
 .akomaNtoso .table:before {
     content: "table";
     display:block;
@@ -2899,6 +3283,7 @@
 .akomaNtoso .table {
     border:1px solid #c2241c;
 }
+
 .akomaNtoso .temporalData:before {
     content: "temporalData";
     display:block;
@@ -2908,6 +3293,7 @@
 .akomaNtoso .temporalData {
     border:1px solid #90c795;
 }
+
 .akomaNtoso .temporalGroup:before {
     content: "temporalGroup";
     display:block;
@@ -2917,6 +3303,7 @@
 .akomaNtoso .temporalGroup {
     border:1px solid #3a911a;
 }
+
 .akomaNtoso .toc:before {
     content: "toc";
     display:block;
@@ -2926,6 +3313,7 @@
 .akomaNtoso .toc {
     border:1px solid #d9e3cc;
 }
+
 .akomaNtoso .tr:before {
     content: "tr";
     display:block;
@@ -2935,6 +3323,7 @@
 .akomaNtoso .tr {
     border:1px solid #529f59;
 }
+
 .akomaNtoso .workflow:before {
     content: "workflow";
     display:block;
@@ -2944,4 +3333,5 @@
 .akomaNtoso .workflow {
     border:1px solid #2b223f;
 }
+
   
