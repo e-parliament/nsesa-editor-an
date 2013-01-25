@@ -107,7 +107,7 @@ public class AkomaNtoso20AmendmentController extends DefaultAmendmentController 
             return asAmendableWidget();
         } else {
             final Element span = DOM.createSpan();
-            span.setInnerHTML(getModel().getXmlContent());
+            span.setInnerHTML(getModel().getBody());
             return documentController.getOverlayFactory().getAmendableWidget(span.getFirstChildElement());
         }
     }

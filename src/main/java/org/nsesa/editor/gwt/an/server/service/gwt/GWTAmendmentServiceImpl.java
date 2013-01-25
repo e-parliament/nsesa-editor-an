@@ -50,7 +50,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
             amendment1.setId(UUID.randomUUID().toString());
             final AmendableWidgetReference reference1 = new AmendableWidgetReference("rec1");
             amendment1.setSourceReference(reference1);
-            amendment1.setXmlContent(getAmendmentDocument("amendment-1"));
+            amendment1.setBody(getAmendmentDocument("amendment-1"));
 
             final AmendmentContainerDTO amendment2 = new AmendmentContainerDTO();
             amendment2.setId(UUID.randomUUID().toString());
@@ -59,13 +59,13 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
             final AmendableWidgetReference reference2b = new AmendableWidgetReference("rec1");
             amendment2.setTargetReferences(new ArrayList<AmendableWidgetReference>(Arrays.asList(reference2a, reference2b)));
             amendment2.setSourceReference(reference2);
-            amendment2.setXmlContent(getAmendmentDocument("amendment-2"));
+            amendment2.setBody(getAmendmentDocument("amendment-2"));
 
             final AmendmentContainerDTO amendment3 = new AmendmentContainerDTO();
             amendment3.setId(UUID.randomUUID().toString());
             final AmendableWidgetReference reference3 = new AmendableWidgetReference("art2-pnta");
             amendment3.setSourceReference(reference3);
-            amendment3.setXmlContent(getAmendmentDocument("amendment-3"));
+            amendment3.setBody(getAmendmentDocument("amendment-3"));
 
             return new AmendmentContainerDTO[]{amendment1, amendment2, amendment3};
 
@@ -124,12 +124,12 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
                 if (!amendmentDirectoryFile.canWrite()) {
                     throw new RuntimeException("No permission to write to '" + amendmentDirectoryFile.getAbsolutePath() + "'");
                 }
-                Files.write(data.getXmlContent(), new File(amendmentDirectoryFile, data.getSourceReference().getPath() + "-" + data.getId() + "-am.xml"), Charset.forName("UTF-8"));
+                Files.write(data.getBody(), new File(amendmentDirectoryFile, data.getSourceReference().getPath() + "-" + data.getId() + "-am.xml"), Charset.forName("UTF-8"));
             } catch (IOException e) {
                 LOG.error("Could not write file.", e);
             }
             try {
-                data.setXmlContent(toHTML(data.getXmlContent().getBytes("UTF-8")));
+                data.setBody(toHTML(data.getBody().getBytes("UTF-8")));
             } catch (UnsupportedEncodingException e) {
                 LOG.error("Could not get encoding.", e);
             }
