@@ -1,75 +1,78 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema;
 
 import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
 import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
+import com.google.gwt.user.client.DOM;
 
 /**
- * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
- */
-public class AnyTypeComplexType extends AmendableWidgetImpl {
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+*/
 
-    // STATIC create method
-    public static Element create() {
-        com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "anyTypeComplexType");
-        span.setClassName("widget anyTypeComplexType");
-        return span;
-    }
+public class AnyTypeComplexType extends AmendableWidgetImpl  {
 
-    // CONSTRUCTORS ------------------
+// STATIC create method
+public static Element create() {
+com.google.gwt.user.client.Element span = DOM.createSpan();
+span.setAttribute("type", "anyTypeComplexType");
+span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
+span.setClassName("widget anyTypeComplexType");
+return span;
+}
 
-    public AnyTypeComplexType(Element element) {
-        super(element);
-    }
+// CONSTRUCTORS ------------------
+
+public AnyTypeComplexType(Element element) {
+super(element);
+}
 
 // FIELDS ------------------
 
-    public java.util.List<AmendableWidgetImpl> getWildcardContents() {
-        java.util.List<AmendableWidgetImpl> result = new ArrayList<AmendableWidgetImpl>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            public java.util.List<AmendableWidgetImpl> getWildcardContents() {
+                java.util.List<AmendableWidgetImpl> result = new ArrayList<AmendableWidgetImpl>();
+            for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("AmendableWidgetImpl".equalsIgnoreCase(widget.getType())) {
-                result.add((AmendableWidgetImpl) widget);
+            result.add((AmendableWidgetImpl)widget);
             }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
+            }
+            return java.util.Collections.unmodifiableList(result);
+            }
+            //DSL Style get value
+            public java.util.List<AmendableWidgetImpl> getWildcardContentList() {
+            return  getWildcardContents();
+            }
+            //DSL Style set value
+            public String addWildcardContent(String wildcardContentElem) {
+                throw new RuntimeException("Adding wildcard content is not supported yet");
+            }
 
-    //DSL Style get value
-    public java.util.List<AmendableWidgetImpl> getWildcardContentList() {
-        return getWildcardContents();
-    }
+/**
+* Returns possible children as a list of <tt>String</tt>s.
+*/
+@Override
+public String[] getAllowedChildTypes() {
+return new String[]{"*"};
+}
 
-    //DSL Style set value
-    public String addWildcardContent(String wildcardContentElem) {
-        throw new RuntimeException("Adding wildcard content is not supported yet");
-    }
+/**
+* Returns the namespace URI of this amendable widget.
+*/
+@Override
+public String getNamespaceURI() {
+return "http://www.w3.org/2001/XMLSchema";
+}
 
-    /**
-     * Returns possible children as a list of <tt>String</tt>s.
-     */
-    @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"*"};
-    }
-
-    /**
-     * Returns the namespace URI of this amendable widget.
-     */
-    @Override
-    public String getNamespaceURI() {
-        return "http://www.w3.org/2001/XMLSchema";
-    }
-
-    @Override
-    public LinkedHashMap<String, String> getAttributes() {
-        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
-        attrs.putAll(super.getAttributes());
-        return attrs;
-    }
+@Override
+public LinkedHashMap
+<String, String> getAttributes() {
+final LinkedHashMap
+<String, String> attrs = new LinkedHashMap
+<String, String>();
+attrs.putAll(super.getAttributes());
+return attrs;
+}
 }
 

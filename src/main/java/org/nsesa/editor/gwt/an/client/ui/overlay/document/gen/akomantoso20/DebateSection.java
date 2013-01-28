@@ -1,83 +1,89 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AlthierarchyComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-
+import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
+import com.google.gwt.user.client.DOM;
 
 /**
- * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
- */
-public class DebateSection extends AlthierarchyComplexType {
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+*/
 
-    // STATIC create method
-    public static Element create() {
-        com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "debateSection");
-        span.setClassName("widget debateSection");
-        return span;
-    }
+public class DebateSection extends AlthierarchyComplexType  {
 
-    // CONSTRUCTORS ------------------
-    public DebateSection() {
-        super(create());
-        setType("debateSection");
-    }
+// STATIC create method
+public static Element create() {
+com.google.gwt.user.client.Element span = DOM.createSpan();
+span.setAttribute("type", "debateSection");
+span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+span.setClassName("widget debateSection");
+return span;
+}
 
-    public DebateSection(Element element) {
-        super(element);
-    }
+// CONSTRUCTORS ------------------
+public DebateSection() {
+super(create());
+setType("debateSection");
+}
 
-    // FIELDS ------------------
-    private StringSimpleType nameAttr;
+public DebateSection(Element element) {
+super(element);
+}
 
-    public StringSimpleType getNameAttr() {
+// FIELDS ------------------
+private StringSimpleType nameAttr;
+
+        public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
-            nameAttr = new StringSimpleType();
-            nameAttr.setValue(getElement().getAttribute("name"));
+                nameAttr = new StringSimpleType();
+                nameAttr.setValue(getElement().getAttribute("name"));
         }
 
         return nameAttr;
-    }
+        }
+        //DSL Style get value
+        public StringSimpleType nameAttr() {
+        return  getNameAttr();
+        }
 
-    //DSL Style get value
-    public StringSimpleType nameAttr() {
-        return getNameAttr();
-    }
-
-    public void setNameAttr(final StringSimpleType nameAttr) {
+        public void setNameAttr(final StringSimpleType nameAttr) {
         this.nameAttr = nameAttr;
-    }
-
-    //DSL Style set value
-    public DebateSection nameAttr(final StringSimpleType nameAttr) {
+        }
+        //DSL Style set value
+        public DebateSection nameAttr(final StringSimpleType nameAttr) {
         setNameAttr(nameAttr);
         return this;
-    }
+        }
+/**
+* Returns possible children as a list of <tt>String</tt>s.
+*/
+@Override
+public String[] getAllowedChildTypes() {
+return new String[]{"address","adjournment","administrationOfOath","answer","block","blockList","communication","componentRef","container","debateSection","declarationOfVote","div","foreign","heading","ministerialStatements","narrative","nationalInterest","noticesOfMotion","num","ol","oralStatements","other","p","papers","personalStatements","petitions","pointOfOrder","prayers","proceduralMotions","question","questions","resolutions","rollCall","scene","speech","subheading","summary","table","tblock","toc","ul","writtenStatements"};
+}
 
-    /**
-     * Returns possible children as a list of <tt>String</tt>s.
-     */
-    @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"summary", "toc", "other", "tblock", "subheading", "narrative", "debateSection", "div", "block", "resolutions", "personalStatements", "oralStatements", "rollCall", "blockList", "declarationOfVote", "adjournment", "ol", "question", "componentRef", "petitions", "administrationOfOath", "ul", "communication", "noticesOfMotion", "answer", "questions", "papers", "table", "proceduralMotions", "num", "speech", "address", "nationalInterest", "container", "p", "writtenStatements", "pointOfOrder", "scene", "prayers", "ministerialStatements", "foreign", "heading"};
-    }
+/**
+* Returns the namespace URI of this amendable widget.
+*/
+@Override
+public String getNamespaceURI() {
+return "http://www.akomantoso.org/2.0";
+}
 
-    /**
-     * Returns the namespace URI of this amendable widget.
-     */
-    @Override
-    public String getNamespaceURI() {
-        return "http://www.akomantoso.org/2.0";
-    }
-
-    @Override
-    public LinkedHashMap<String, String> getAttributes() {
-        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
-        attrs.putAll(super.getAttributes());
+@Override
+public LinkedHashMap
+<String, String> getAttributes() {
+final LinkedHashMap
+<String, String> attrs = new LinkedHashMap
+<String, String>();
+attrs.putAll(super.getAttributes());
         attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
-        return attrs;
-    }
+return attrs;
+}
 }
 

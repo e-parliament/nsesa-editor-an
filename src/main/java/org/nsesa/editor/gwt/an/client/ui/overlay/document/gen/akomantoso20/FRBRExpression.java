@@ -1,100 +1,105 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.CorePropertiesComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRlanguage;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRtranslation;
 import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-
 import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
+import com.google.gwt.user.client.DOM;
 
 /**
- * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
- */
-public class FRBRExpression extends CorePropertiesComplexType {
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+*/
 
-    // STATIC create method
-    public static Element create() {
-        com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "FRBRExpression");
-        span.setClassName("widget FRBRExpression");
-        return span;
-    }
+public class FRBRExpression extends CorePropertiesComplexType  {
 
-    // CONSTRUCTORS ------------------
-    public FRBRExpression() {
-        super(create());
-        setType("FRBRExpression");
-    }
+// STATIC create method
+public static Element create() {
+com.google.gwt.user.client.Element span = DOM.createSpan();
+span.setAttribute("type", "FRBRExpression");
+span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+span.setClassName("widget FRBRExpression");
+return span;
+}
 
-    public FRBRExpression(Element element) {
-        super(element);
-    }
+// CONSTRUCTORS ------------------
+public FRBRExpression() {
+super(create());
+setType("FRBRExpression");
+}
+
+public FRBRExpression(Element element) {
+super(element);
+}
 
 // FIELDS ------------------
 
-    public java.util.List<FRBRlanguage> getFRBRlanguages() {
-        java.util.List<FRBRlanguage> result = new ArrayList<FRBRlanguage>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            public java.util.List<FRBRlanguage> getFRBRlanguages() {
+                java.util.List<FRBRlanguage> result = new ArrayList<FRBRlanguage>();
+            for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRlanguage".equalsIgnoreCase(widget.getType())) {
-                result.add((FRBRlanguage) widget);
+            result.add((FRBRlanguage)widget);
             }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
+            }
+            return java.util.Collections.unmodifiableList(result);
+            }
+            //DSL Style get value
+            public java.util.List<FRBRlanguage> getFRBRlanguageList() {
+            return  getFRBRlanguages();
+            }
+            //DSL Style set value
+            public FRBRlanguage addFRBRlanguage(FRBRlanguage FRBRlanguageElem) {
+                this.addAmendableWidget(FRBRlanguageElem);
+                return FRBRlanguageElem;
+            }
 
-    //DSL Style get value
-    public java.util.List<FRBRlanguage> getFRBRlanguageList() {
-        return getFRBRlanguages();
-    }
-
-    //DSL Style set value
-    public FRBRlanguage addFRBRlanguage(FRBRlanguage FRBRlanguageElem) {
-        this.addAmendableWidget(FRBRlanguageElem);
-        return FRBRlanguageElem;
-    }
-
-    public java.util.List<FRBRtranslation> getFRBRtranslations() {
-        java.util.List<FRBRtranslation> result = new ArrayList<FRBRtranslation>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+            public java.util.List<FRBRtranslation> getFRBRtranslations() {
+                java.util.List<FRBRtranslation> result = new ArrayList<FRBRtranslation>();
+            for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("FRBRtranslation".equalsIgnoreCase(widget.getType())) {
-                result.add((FRBRtranslation) widget);
+            result.add((FRBRtranslation)widget);
             }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
+            }
+            return java.util.Collections.unmodifiableList(result);
+            }
+            //DSL Style get value
+            public java.util.List<FRBRtranslation> getFRBRtranslationList() {
+            return  getFRBRtranslations();
+            }
+            //DSL Style set value
+            public FRBRtranslation addFRBRtranslation(FRBRtranslation FRBRtranslationElem) {
+                this.addAmendableWidget(FRBRtranslationElem);
+                return FRBRtranslationElem;
+            }
 
-    //DSL Style get value
-    public java.util.List<FRBRtranslation> getFRBRtranslationList() {
-        return getFRBRtranslations();
-    }
+/**
+* Returns possible children as a list of <tt>String</tt>s.
+*/
+@Override
+public String[] getAllowedChildTypes() {
+return new String[]{"componentInfo","FRBRalias","FRBRauthor","FRBRdate","FRBRlanguage","FRBRthis","FRBRtranslation","FRBRuri","preservation"};
+}
 
-    //DSL Style set value
-    public FRBRtranslation addFRBRtranslation(FRBRtranslation FRBRtranslationElem) {
-        this.addAmendableWidget(FRBRtranslationElem);
-        return FRBRtranslationElem;
-    }
+/**
+* Returns the namespace URI of this amendable widget.
+*/
+@Override
+public String getNamespaceURI() {
+return "http://www.akomantoso.org/2.0";
+}
 
-    /**
-     * Returns possible children as a list of <tt>String</tt>s.
-     */
-    @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"FRBRthis", "FRBRalias", "FRBRlanguage", "componentInfo", "FRBRuri", "FRBRauthor", "FRBRdate", "preservation", "FRBRtranslation"};
-    }
-
-    /**
-     * Returns the namespace URI of this amendable widget.
-     */
-    @Override
-    public String getNamespaceURI() {
-        return "http://www.akomantoso.org/2.0";
-    }
-
-    @Override
-    public LinkedHashMap<String, String> getAttributes() {
-        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
-        attrs.putAll(super.getAttributes());
-        return attrs;
-    }
+@Override
+public LinkedHashMap
+<String, String> getAttributes() {
+final LinkedHashMap
+<String, String> attrs = new LinkedHashMap
+<String, String>();
+attrs.putAll(super.getAttributes());
+return attrs;
+}
 }
 

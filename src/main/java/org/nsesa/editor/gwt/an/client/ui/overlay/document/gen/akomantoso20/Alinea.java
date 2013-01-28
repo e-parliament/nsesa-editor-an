@@ -1,56 +1,65 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.HierarchyComplexType;
 import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.LinkedHashMap;
 import com.google.gwt.user.client.DOM;
 
-import java.util.LinkedHashMap;
-
 /**
- * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
- */
-public class Alinea extends HierarchyComplexType {
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+*/
 
-    // STATIC create method
-    public static Element create() {
-        com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "alinea");
-        span.setClassName("widget alinea");
-        return span;
-    }
+public class Alinea extends HierarchyComplexType  {
 
-    // CONSTRUCTORS ------------------
-    public Alinea() {
-        super(create());
-        setType("alinea");
-    }
+// STATIC create method
+public static Element create() {
+com.google.gwt.user.client.Element span = DOM.createSpan();
+span.setAttribute("type", "alinea");
+span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+span.setClassName("widget alinea");
+return span;
+}
 
-    public Alinea(Element element) {
-        super(element);
-    }
+// CONSTRUCTORS ------------------
+public Alinea() {
+super(create());
+setType("alinea");
+}
+
+public Alinea(Element element) {
+super(element);
+}
 
 // FIELDS ------------------
 
-    /**
-     * Returns possible children as a list of <tt>String</tt>s.
-     */
-    @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"tome", "subparagraph", "paragraph", "subheading", "subsection", "title", "chapter", "division", "alinea", "componentRef", "subchapter", "wrap", "indent", "subclause", "list", "sublist", "section", "intro", "content", "point", "num", "article", "subpart", "hcontainer", "book", "subtitle", "part", "heading", "clause"};
-    }
+/**
+* Returns possible children as a list of <tt>String</tt>s.
+*/
+@Override
+public String[] getAllowedChildTypes() {
+return new String[]{"alinea","article","book","chapter","clause","componentRef","content","division","hcontainer","heading","indent","intro","list","num","paragraph","part","point","section","subchapter","subclause","subheading","sublist","subparagraph","subpart","subsection","subtitle","title","tome","wrap"};
+}
 
-    /**
-     * Returns the namespace URI of this amendable widget.
-     */
-    @Override
-    public String getNamespaceURI() {
-        return "http://www.akomantoso.org/2.0";
-    }
+/**
+* Returns the namespace URI of this amendable widget.
+*/
+@Override
+public String getNamespaceURI() {
+return "http://www.akomantoso.org/2.0";
+}
 
-    @Override
-    public LinkedHashMap<String, String> getAttributes() {
-        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
-        attrs.putAll(super.getAttributes());
-        return attrs;
-    }
+@Override
+public LinkedHashMap
+<String, String> getAttributes() {
+final LinkedHashMap
+<String, String> attrs = new LinkedHashMap
+<String, String>();
+attrs.putAll(super.getAttributes());
+return attrs;
+}
 }
 

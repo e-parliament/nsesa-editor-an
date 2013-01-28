@@ -260,7 +260,4 @@ private <@propertyClassName property=property/> <#if property.collection><@pl pr
     <@plural propertyName=property.javaName/>
 </#compress></#macro>
 
-<#macro plural propertyName><#compress>
-    <#if propertyName?ends_with("y")>${propertyName?substring(0, propertyName?length - 1)}
-        ies<#elseif propertyName?ends_with("s")>${propertyName}es<#else>${propertyName}s</#if>
-</#compress></#macro>
+<#macro plural propertyName><#compress><#if propertyName?ends_with("y")>${propertyName?substring(0, propertyName?length - 1)}ies<#elseif propertyName?ends_with("s")>${propertyName}es<#else>${propertyName}s</#if></#compress></#macro>

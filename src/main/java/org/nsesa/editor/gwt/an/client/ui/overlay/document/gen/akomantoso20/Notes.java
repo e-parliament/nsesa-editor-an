@@ -1,107 +1,108 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Note;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-
+import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
+import com.google.gwt.user.client.DOM;
 
 /**
- * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
- */
-public class Notes extends AmendableWidgetImpl {
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+*/
 
-    // STATIC create method
-    public static Element create() {
-        com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "notes");
-        span.setClassName("widget notes");
-        return span;
-    }
+public class Notes extends AmendableWidgetImpl  {
 
-    // CONSTRUCTORS ------------------
-    public Notes() {
-        super(create());
-        setType("notes");
-    }
+// STATIC create method
+public static Element create() {
+com.google.gwt.user.client.Element span = DOM.createSpan();
+span.setAttribute("type", "notes");
+span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+span.setClassName("widget notes");
+return span;
+}
 
-    public Notes(Element element) {
-        super(element);
-    }
+// CONSTRUCTORS ------------------
+public Notes() {
+super(create());
+setType("notes");
+}
 
-    // FIELDS ------------------
-    private AnyURISimpleType sourceAttr;
+public Notes(Element element) {
+super(element);
+}
 
-    public java.util.List<Note> getNotes() {
-        java.util.List<Note> result = new ArrayList<Note>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+// FIELDS ------------------
+private AnyURISimpleType sourceAttr;
+
+            public java.util.List<Note> getNotes() {
+                java.util.List<Note> result = new ArrayList<Note>();
+            for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Note".equalsIgnoreCase(widget.getType())) {
-                result.add((Note) widget);
+            result.add((Note)widget);
             }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
+            }
+            return java.util.Collections.unmodifiableList(result);
+            }
+            //DSL Style get value
+            public java.util.List<Note> getNoteList() {
+            return  getNotes();
+            }
+            //DSL Style set value
+            public Note addNote(Note noteElem) {
+                this.addAmendableWidget(noteElem);
+                return noteElem;
+            }
 
-    //DSL Style get value
-    public java.util.List<Note> getNoteList() {
-        return getNotes();
-    }
-
-    //DSL Style set value
-    public Note addNote(Note noteElem) {
-        this.addAmendableWidget(noteElem);
-        return noteElem;
-    }
-
-    public AnyURISimpleType getSourceAttr() {
+        public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
-            sourceAttr = new AnyURISimpleType();
-            sourceAttr.setValue(getElement().getAttribute("source"));
+                sourceAttr = new AnyURISimpleType();
+                sourceAttr.setValue(getElement().getAttribute("source"));
         }
 
         return sourceAttr;
-    }
+        }
+        //DSL Style get value
+        public AnyURISimpleType sourceAttr() {
+        return  getSourceAttr();
+        }
 
-    //DSL Style get value
-    public AnyURISimpleType sourceAttr() {
-        return getSourceAttr();
-    }
-
-    public void setSourceAttr(final AnyURISimpleType sourceAttr) {
+        public void setSourceAttr(final AnyURISimpleType sourceAttr) {
         this.sourceAttr = sourceAttr;
-    }
-
-    //DSL Style set value
-    public Notes sourceAttr(final AnyURISimpleType sourceAttr) {
+        }
+        //DSL Style set value
+        public Notes sourceAttr(final AnyURISimpleType sourceAttr) {
         setSourceAttr(sourceAttr);
         return this;
-    }
+        }
+/**
+* Returns possible children as a list of <tt>String</tt>s.
+*/
+@Override
+public String[] getAllowedChildTypes() {
+return new String[]{"note"};
+}
 
-    /**
-     * Returns possible children as a list of <tt>String</tt>s.
-     */
-    @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"note"};
-    }
+/**
+* Returns the namespace URI of this amendable widget.
+*/
+@Override
+public String getNamespaceURI() {
+return "http://www.akomantoso.org/2.0";
+}
 
-    /**
-     * Returns the namespace URI of this amendable widget.
-     */
-    @Override
-    public String getNamespaceURI() {
-        return "http://www.akomantoso.org/2.0";
-    }
-
-    @Override
-    public LinkedHashMap<String, String> getAttributes() {
-        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
-        attrs.putAll(super.getAttributes());
+@Override
+public LinkedHashMap
+<String, String> getAttributes() {
+final LinkedHashMap
+<String, String> attrs = new LinkedHashMap
+<String, String>();
+attrs.putAll(super.getAttributes());
         attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
-        return attrs;
-    }
+return attrs;
+}
 }
 

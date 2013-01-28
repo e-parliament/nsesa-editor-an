@@ -1,83 +1,89 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.InlineComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-
+import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
+import com.google.gwt.user.client.DOM;
 
 /**
- * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
- */
-public class QuotedText extends InlineComplexType {
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+*/
 
-    // STATIC create method
-    public static Element create() {
-        com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "quotedText");
-        span.setClassName("widget quotedText");
-        return span;
-    }
+public class QuotedText extends InlineComplexType  {
 
-    // CONSTRUCTORS ------------------
-    public QuotedText() {
-        super(create());
-        setType("quotedText");
-    }
+// STATIC create method
+public static Element create() {
+com.google.gwt.user.client.Element span = DOM.createSpan();
+span.setAttribute("type", "quotedText");
+span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+span.setClassName("widget quotedText");
+return span;
+}
 
-    public QuotedText(Element element) {
-        super(element);
-    }
+// CONSTRUCTORS ------------------
+public QuotedText() {
+super(create());
+setType("quotedText");
+}
 
-    // FIELDS ------------------
-    private AnyURISimpleType forAttr;
+public QuotedText(Element element) {
+super(element);
+}
 
-    public AnyURISimpleType getForAttr() {
+// FIELDS ------------------
+private AnyURISimpleType forAttr;
+
+        public AnyURISimpleType getForAttr() {
         if (forAttr == null) {
-            forAttr = new AnyURISimpleType();
-            forAttr.setValue(getElement().getAttribute("for"));
+                forAttr = new AnyURISimpleType();
+                forAttr.setValue(getElement().getAttribute("for"));
         }
 
         return forAttr;
-    }
+        }
+        //DSL Style get value
+        public AnyURISimpleType forAttr() {
+        return  getForAttr();
+        }
 
-    //DSL Style get value
-    public AnyURISimpleType forAttr() {
-        return getForAttr();
-    }
-
-    public void setForAttr(final AnyURISimpleType forAttr) {
+        public void setForAttr(final AnyURISimpleType forAttr) {
         this.forAttr = forAttr;
-    }
-
-    //DSL Style set value
-    public QuotedText forAttr(final AnyURISimpleType forAttr) {
+        }
+        //DSL Style set value
+        public QuotedText forAttr(final AnyURISimpleType forAttr) {
         setForAttr(forAttr);
         return this;
-    }
+        }
+/**
+* Returns possible children as a list of <tt>String</tt>s.
+*/
+@Override
+public String[] getAllowedChildTypes() {
+return new String[]{"a","affectedDocument","authorialNote","b","change","concept","courtType","date","def","del","docCommittee","docDate","docIntroducer","docJurisdiction","docketNumber","docNumber","docProponent","docPurpose","docStage","docStatus","docTitle","docType","entity","eol","eop","event","extractStructure","extractText","fillIn","i","img","inline","ins","judge","lawyer","legislature","location","marker","mmod","mod","mref","neutralCitation","noteRef","object","omissis","opinion","organization","outcome","party","person","placeholder","popup","process","quantity","recordedTime","ref","relatedDocument","remark","rmod","role","rref","session","shortTitle","signature","span","sub","sup","term","u","vote"};
+}
 
-    /**
-     * Returns possible children as a list of <tt>String</tt>s.
-     */
-    @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"person", "neutralCitation", "docType", "remark", "docStatus", "location", "change", "entity", "authorialNote", "img", "party", "legislature", "event", "eol", "role", "opinion", "quantity", "extractStructure", "eop", "fillIn", "signature", "docStage", "mmod", "docCommittee", "vote", "ins", "mod", "noteRef", "docNumber", "rref", "marker", "session", "recordedTime", "lawyer", "docPurpose", "extractText", "span", "sub", "concept", "courtType", "docJurisdiction", "object", "sup", "docProponent", "date", "omissis", "rmod", "organization", "def", "docketNumber", "judge", "popup", "inline", "docTitle", "del", "docDate", "relatedDocument", "affectedDocument", "mref", "docIntroducer", "b", "placeholder", "a", "outcome", "i", "process", "ref", "u", "term", "shortTitle"};
-    }
+/**
+* Returns the namespace URI of this amendable widget.
+*/
+@Override
+public String getNamespaceURI() {
+return "http://www.akomantoso.org/2.0";
+}
 
-    /**
-     * Returns the namespace URI of this amendable widget.
-     */
-    @Override
-    public String getNamespaceURI() {
-        return "http://www.akomantoso.org/2.0";
-    }
-
-    @Override
-    public LinkedHashMap<String, String> getAttributes() {
-        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
-        attrs.putAll(super.getAttributes());
+@Override
+public LinkedHashMap
+<String, String> getAttributes() {
+final LinkedHashMap
+<String, String> attrs = new LinkedHashMap
+<String, String>();
+attrs.putAll(super.getAttributes());
         attrs.put("for", getForAttr() != null ? getForAttr().getValue() : null);
-        return attrs;
-    }
+return attrs;
+}
 }
 

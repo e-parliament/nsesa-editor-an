@@ -1,83 +1,89 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AnyOtherTypeComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-
+import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.LinkedHashMap;
+import com.google.gwt.user.client.DOM;
 
 /**
- * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
- */
-public class Proprietary extends AnyOtherTypeComplexType {
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+*/
 
-    // STATIC create method
-    public static Element create() {
-        com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "proprietary");
-        span.setClassName("widget proprietary");
-        return span;
-    }
+public class Proprietary extends AnyOtherTypeComplexType  {
 
-    // CONSTRUCTORS ------------------
-    public Proprietary() {
-        super(create());
-        setType("proprietary");
-    }
+// STATIC create method
+public static Element create() {
+com.google.gwt.user.client.Element span = DOM.createSpan();
+span.setAttribute("type", "proprietary");
+span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+span.setClassName("widget proprietary");
+return span;
+}
 
-    public Proprietary(Element element) {
-        super(element);
-    }
+// CONSTRUCTORS ------------------
+public Proprietary() {
+super(create());
+setType("proprietary");
+}
 
-    // FIELDS ------------------
-    private AnyURISimpleType sourceAttr;
+public Proprietary(Element element) {
+super(element);
+}
 
-    public AnyURISimpleType getSourceAttr() {
+// FIELDS ------------------
+private AnyURISimpleType sourceAttr;
+
+        public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
-            sourceAttr = new AnyURISimpleType();
-            sourceAttr.setValue(getElement().getAttribute("source"));
+                sourceAttr = new AnyURISimpleType();
+                sourceAttr.setValue(getElement().getAttribute("source"));
         }
 
         return sourceAttr;
-    }
+        }
+        //DSL Style get value
+        public AnyURISimpleType sourceAttr() {
+        return  getSourceAttr();
+        }
 
-    //DSL Style get value
-    public AnyURISimpleType sourceAttr() {
-        return getSourceAttr();
-    }
-
-    public void setSourceAttr(final AnyURISimpleType sourceAttr) {
+        public void setSourceAttr(final AnyURISimpleType sourceAttr) {
         this.sourceAttr = sourceAttr;
-    }
-
-    //DSL Style set value
-    public Proprietary sourceAttr(final AnyURISimpleType sourceAttr) {
+        }
+        //DSL Style set value
+        public Proprietary sourceAttr(final AnyURISimpleType sourceAttr) {
         setSourceAttr(sourceAttr);
         return this;
-    }
+        }
+/**
+* Returns possible children as a list of <tt>String</tt>s.
+*/
+@Override
+public String[] getAllowedChildTypes() {
+return new String[]{"*"};
+}
 
-    /**
-     * Returns possible children as a list of <tt>String</tt>s.
-     */
-    @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"*"};
-    }
+/**
+* Returns the namespace URI of this amendable widget.
+*/
+@Override
+public String getNamespaceURI() {
+return "http://www.akomantoso.org/2.0";
+}
 
-    /**
-     * Returns the namespace URI of this amendable widget.
-     */
-    @Override
-    public String getNamespaceURI() {
-        return "http://www.akomantoso.org/2.0";
-    }
-
-    @Override
-    public LinkedHashMap<String, String> getAttributes() {
-        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
-        attrs.putAll(super.getAttributes());
+@Override
+public LinkedHashMap
+<String, String> getAttributes() {
+final LinkedHashMap
+<String, String> attrs = new LinkedHashMap
+<String, String>();
+attrs.putAll(super.getAttributes());
         attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
-        return attrs;
-    }
+return attrs;
+}
 }
 
