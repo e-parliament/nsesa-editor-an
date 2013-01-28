@@ -10,6 +10,7 @@ import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.AkomaNtoso20DocumentInjector;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
+import org.nsesa.editor.gwt.core.client.amendment.AmendableWidgetWalker;
 import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.mode.ConsolidationMode;
@@ -47,8 +48,8 @@ public class AkomaNtoso20DocumentController extends DocumentController {
         registerMode(ConsolidationMode.KEY, new ConsolidationMode(this, clientFactory) {
             @Override
             public boolean apply(final ActiveState state) {
-                final AmendableWidget topVisibleAmenableWidget = AkomaNtoso20DocumentController.this.getTopVisibleAmenableWidget();
-                walk(new AmendableVisitor() {
+                final AmendableWidget topVisibleAmenableWidget = getSourceFileController().getTopVisibleAmenableWidget();
+                getSourceFileController().walk(new AmendableWidgetWalker.AmendableVisitor() {
                     @Override
                     public boolean visit(final AmendableWidget visited) {
                         if (visited.isAmended()) {
