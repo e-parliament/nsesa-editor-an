@@ -1,137 +1,191 @@
-.docTitle {
+.akomaNtoso .preface {
+    display: block !important;
+    text-align: center;
+}
+
+.akomaNtoso .docTitle {
     font-size: 1.5em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    display: block;
-}
-
-.title {
-    font-size: 1.4em;
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.subtitle {
-    display: block;
-    font-size: 1.2em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.heading {
-    display: block;
-}
-
-.heading:after {
-    content: "\A";
-    white-space: pre;
-}
-
-.part {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    display: block;
-}
-
-.part > .num {
-    font-size: 1.4em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.part > .heading {
-    font-size: 1.4em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.section {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.section > .num {
-    font-size: 1.2em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.section > .heading {
-    font-size: 1.2em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.chapter {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.chapter > .num {
-    font-size: 1.4em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.chapter > .heading {
-    font-size: 1.4em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.article {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.article > .num {
-    font-size: 1.2em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.article > .heading {
-    font-size: 1.2em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.p:after {
-    content: "\A";
-    white-space: pre;
-}
-
-.paragraph:after {
-    content: "\A";
-    white-space: pre;
-}
-
-.point {
-    padding-left: 15px;;
-}
-
-.subparagraph {
-    padding-left: 15px;;
-}
-
-.subparagraph:after {
-    content: "\A";
-    white-space: pre;
-}
-
-.eol:after {
-    content: "\A";
-    white-space: pre;
-}
-
-.b {
+    #margin-top: 15px;
+    #margin-bottom: 15px;
+    #display: block;
     font-weight: bold;
 }
 
-.i {
+.akomaNtoso .docNumber {
+    font-weight: bold;
+}
+
+.akomaNtoso .docDate {
+    font-weight: bold;
+}
+
+.akomaNtoso .item {
+    display: block !important;
+    padding-left: 15px;
+    margin-top: 1em;
+}
+
+.akomaNtoso .item > .num {
+    padding-right: 3px;
+    font-weight: bold;
+}
+
+.akomaNtoso .item > .p {
+    display: inline !important;
+}
+
+.akomaNtoso .title {
+    font-size: 1.4em;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.akomaNtoso .subtitle {
+    display: block;
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.akomaNtoso .heading {
+    display: block;
+}
+
+.akomaNtoso .heading:after {
+    content: "\A";
+    white-space: pre;
+}
+
+.akomaNtoso .heading > .content {
+    #display: block !important;
+    margin-top: 1em;
+}
+
+.akomaNtoso .content > .p {
+    display: inline !important;
+}
+
+.akomaNtoso .part {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.akomaNtoso .part > .num {
+    font-size: 1.4em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.akomaNtoso .part > .heading {
+    display: inline;
+    font-size: 1.4em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.akomaNtoso .section {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.akomaNtoso .section > .num {
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.akomaNtoso .section > .heading {
+    display: inline;
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.akomaNtoso .subsection {
+    margin-top: 1em;
+}
+
+.akomaNtoso .subsection > .num {
+    padding-right: 3px;
+    font-weight: bold;
+}
+
+.akomaNtoso .chapter {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.akomaNtoso .chapter > .num {
+    font-size: 1.4em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.akomaNtoso .chapter > .heading {
+    font-size: 1.4em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.akomaNtoso .article {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.akomaNtoso .article > .num {
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.akomaNtoso .article > .heading {
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.akomaNtoso .p {
+    display: block !important;
+    margin-top: 1em;
+}
+
+.akomaNtoso .p:after {
+    content: "\A";
+    white-space: pre;
+}
+
+.akomaNtoso .paragraph:after {
+    content: "\A";
+    white-space: pre;
+}
+
+.akomaNtoso .point {
+    padding-left: 15px;
+}
+
+.akomaNtoso .subparagraph {
+    padding-left: 15px;
+}
+
+.akomaNtoso .subparagraph:after {
+    content: "\A";
+    white-space: pre;
+}
+
+.akomaNtoso .eol:after {
+    content: "\A";
+    white-space: pre;
+}
+
+.akomaNtoso .b {
+    font-weight: bold;
+}
+
+.akomaNtoso .i {
     font-style: italic;
 }
