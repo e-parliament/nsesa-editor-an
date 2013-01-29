@@ -1,6 +1,7 @@
 package org.nsesa.editor.gwt.an.client.handler.modify;
 
 import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
@@ -122,7 +123,9 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
             view.setAmendmentContent(amendmendContent);
         } else {
             view.setTitle(locator.getLocation(dialogContext.getAmendableWidget(), clientFactory.getClientContext().getDocumentIso(), false));
-            view.setAmendmentContent(dialogContext.getAmendableWidget().getInnerHTML());
+            final Element element = (Element) dialogContext.getAmendableWidget().getAmendableElement().cloneNode(false);
+            element.setInnerHTML(dialogContext.getAmendableWidget().getInnerHTML());
+            view.setAmendmentContent(DOM.toString(element));
         }
     }
 }

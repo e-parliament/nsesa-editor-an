@@ -1,5 +1,7 @@
 package org.nsesa.editor.gwt.an.client.handler.common.content;
 
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
@@ -27,7 +29,9 @@ public class AkomaNtoso20ContentPanelController extends ContentPanelController {
             final String originalContent = dialogContext.getAmendmentController().getOriginalContentFromModel();
             view.setOriginalText(originalContent);
         } else {
-            view.setOriginalText(dialogContext.getAmendableWidget().getInnerHTML());
+            final Element element = (Element) dialogContext.getAmendableWidget().getAmendableElement().cloneNode(false);
+            element.setInnerHTML(dialogContext.getAmendableWidget().getInnerHTML());
+            view.setOriginalText(DOM.toString(element));
         }
     }
 }
