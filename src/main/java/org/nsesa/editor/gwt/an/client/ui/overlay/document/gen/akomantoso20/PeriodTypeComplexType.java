@@ -33,11 +33,31 @@ super(element);
 }
 
 // FIELDS ------------------
+private String wildcardContentAttr;
 private IDSimpleType idAttr;
 private NMTOKENSimpleType evolvingIdAttr;
-private String wildcardContentAttr;
 private AnyURISimpleType periodAttr;
 
+        public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+        }
+        //DSL Style get value
+        public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
+        }
+
+        public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        }
+        //DSL Style set value
+        public PeriodTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
         public IDSimpleType getIdAttr() {
         if (idAttr == null) {
                 idAttr = new IDSimpleType();
@@ -78,26 +98,6 @@ private AnyURISimpleType periodAttr;
         //DSL Style set value
         public PeriodTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-        }
-        public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-        }
-        //DSL Style get value
-        public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
-        }
-
-        public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        }
-        //DSL Style set value
-        public PeriodTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
         }
         public AnyURISimpleType getPeriodAttr() {
@@ -144,9 +144,9 @@ final LinkedHashMap
 <String, String> attrs = new LinkedHashMap
 <String, String>();
 attrs.putAll(super.getAttributes());
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
 return attrs;
 }

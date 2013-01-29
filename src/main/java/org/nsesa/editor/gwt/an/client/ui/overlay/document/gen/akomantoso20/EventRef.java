@@ -3,8 +3,8 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AnyOtherTypeComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.EventTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.YesNoTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -41,8 +41,8 @@ super(element);
 // FIELDS ------------------
 private EventTypeSimpleType typeAttr;
 private YesNoTypeSimpleType originatingExpressionAttr;
-private DateSimpleType dateAttr;
 private AnyURISimpleType sourceAttr;
+private DateSimpleType dateAttr;
 
         public EventTypeSimpleType getTypeAttr() {
         if (typeAttr == null) {
@@ -84,27 +84,6 @@ private AnyURISimpleType sourceAttr;
         setOriginatingExpressionAttr(originatingExpressionAttr);
         return this;
         }
-        public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-                dateAttr = new DateSimpleType();
-                dateAttr.setValue(getElement().getAttribute("date"));
-        }
-
-        return dateAttr;
-        }
-        //DSL Style get value
-        public DateSimpleType dateAttr() {
-        return  getDateAttr();
-        }
-
-        public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-        }
-        //DSL Style set value
-        public EventRef dateAttr(final DateSimpleType dateAttr) {
-        setDateAttr(dateAttr);
-        return this;
-        }
         public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
                 sourceAttr = new AnyURISimpleType();
@@ -124,6 +103,27 @@ private AnyURISimpleType sourceAttr;
         //DSL Style set value
         public EventRef sourceAttr(final AnyURISimpleType sourceAttr) {
         setSourceAttr(sourceAttr);
+        return this;
+        }
+        public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+                dateAttr = new DateSimpleType();
+                dateAttr.setValue(getElement().getAttribute("date"));
+        }
+
+        return dateAttr;
+        }
+        //DSL Style get value
+        public DateSimpleType dateAttr() {
+        return  getDateAttr();
+        }
+
+        public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+        }
+        //DSL Style set value
+        public EventRef dateAttr(final DateSimpleType dateAttr) {
+        setDateAttr(dateAttr);
         return this;
         }
 /**
@@ -151,8 +151,8 @@ final LinkedHashMap
 attrs.putAll(super.getAttributes());
         attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
         attrs.put("originatingExpression", getOriginatingExpressionAttr() != null ? getOriginatingExpressionAttr().value() : null);
-        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
 return attrs;
 }
 }

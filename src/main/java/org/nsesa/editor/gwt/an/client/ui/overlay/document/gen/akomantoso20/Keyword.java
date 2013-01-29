@@ -38,9 +38,9 @@ super(element);
 
 // FIELDS ------------------
 private AnyURISimpleType dictionaryAttr;
+private StringSimpleType valueAttr;
 private StringSimpleType showAsAttr;
 private StringSimpleType shortFormAttr;
-private StringSimpleType valueAttr;
 
         public AnyURISimpleType getDictionaryAttr() {
         if (dictionaryAttr == null) {
@@ -61,6 +61,27 @@ private StringSimpleType valueAttr;
         //DSL Style set value
         public Keyword dictionaryAttr(final AnyURISimpleType dictionaryAttr) {
         setDictionaryAttr(dictionaryAttr);
+        return this;
+        }
+        public StringSimpleType getValueAttr() {
+        if (valueAttr == null) {
+                valueAttr = new StringSimpleType();
+                valueAttr.setValue(getElement().getAttribute("value"));
+        }
+
+        return valueAttr;
+        }
+        //DSL Style get value
+        public StringSimpleType valueAttr() {
+        return  getValueAttr();
+        }
+
+        public void setValueAttr(final StringSimpleType valueAttr) {
+        this.valueAttr = valueAttr;
+        }
+        //DSL Style set value
+        public Keyword valueAttr(final StringSimpleType valueAttr) {
+        setValueAttr(valueAttr);
         return this;
         }
         public StringSimpleType getShowAsAttr() {
@@ -105,27 +126,6 @@ private StringSimpleType valueAttr;
         setShortFormAttr(shortFormAttr);
         return this;
         }
-        public StringSimpleType getValueAttr() {
-        if (valueAttr == null) {
-                valueAttr = new StringSimpleType();
-                valueAttr.setValue(getElement().getAttribute("value"));
-        }
-
-        return valueAttr;
-        }
-        //DSL Style get value
-        public StringSimpleType valueAttr() {
-        return  getValueAttr();
-        }
-
-        public void setValueAttr(final StringSimpleType valueAttr) {
-        this.valueAttr = valueAttr;
-        }
-        //DSL Style set value
-        public Keyword valueAttr(final StringSimpleType valueAttr) {
-        setValueAttr(valueAttr);
-        return this;
-        }
 /**
 * Returns possible children as a list of <tt>String</tt>s.
 */
@@ -150,9 +150,9 @@ final LinkedHashMap
 <String, String>();
 attrs.putAll(super.getAttributes());
         attrs.put("dictionary", getDictionaryAttr() != null ? getDictionaryAttr().getValue() : null);
+        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
-        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
 return attrs;
 }
 }

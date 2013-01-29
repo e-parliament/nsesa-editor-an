@@ -36,7 +36,7 @@ public class ${overlayClass.name?cap_first} extends DefaultOverlayLocalizableRes
             throw new IllegalArgumentException("Null widget passed.");
         }
         <#list overlayClasses as cl>
-        else if ("${packageNameGenerator.getPackageName(overlayClass)}.${cl.className}".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("${packageNameGenerator.getPackageName(cl)}.${cl.className}".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.description${cl.className?cap_first}();
         }
         </#list>

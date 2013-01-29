@@ -4,7 +4,7 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultLocator;
 
 /**
- * Date: 06/07/12 17:24
+ * Date: 06/07/12 17:24                                                                              `
  *
  * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$

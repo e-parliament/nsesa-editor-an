@@ -1,9 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,14 +34,56 @@ super(element);
 }
 
 // FIELDS ------------------
+private AnyURISimpleType srcAttr;
+private StringSimpleType altAttr;
 private IDSimpleType idAttr;
 private NMTOKENSimpleType evolvingIdAttr;
 private String wildcardContentAttr;
 private StringSimpleType showAsAttr;
 private StringSimpleType shortFormAttr;
-private AnyURISimpleType srcAttr;
-private StringSimpleType altAttr;
 
+        public AnyURISimpleType getSrcAttr() {
+        if (srcAttr == null) {
+                srcAttr = new AnyURISimpleType();
+                srcAttr.setValue(getElement().getAttribute("src"));
+        }
+
+        return srcAttr;
+        }
+        //DSL Style get value
+        public AnyURISimpleType srcAttr() {
+        return  getSrcAttr();
+        }
+
+        public void setSrcAttr(final AnyURISimpleType srcAttr) {
+        this.srcAttr = srcAttr;
+        }
+        //DSL Style set value
+        public SrcTypeComplexType srcAttr(final AnyURISimpleType srcAttr) {
+        setSrcAttr(srcAttr);
+        return this;
+        }
+        public StringSimpleType getAltAttr() {
+        if (altAttr == null) {
+                altAttr = new StringSimpleType();
+                altAttr.setValue(getElement().getAttribute("alt"));
+        }
+
+        return altAttr;
+        }
+        //DSL Style get value
+        public StringSimpleType altAttr() {
+        return  getAltAttr();
+        }
+
+        public void setAltAttr(final StringSimpleType altAttr) {
+        this.altAttr = altAttr;
+        }
+        //DSL Style set value
+        public SrcTypeComplexType altAttr(final StringSimpleType altAttr) {
+        setAltAttr(altAttr);
+        return this;
+        }
         public IDSimpleType getIdAttr() {
         if (idAttr == null) {
                 idAttr = new IDSimpleType();
@@ -146,48 +188,6 @@ private StringSimpleType altAttr;
         setShortFormAttr(shortFormAttr);
         return this;
         }
-        public AnyURISimpleType getSrcAttr() {
-        if (srcAttr == null) {
-                srcAttr = new AnyURISimpleType();
-                srcAttr.setValue(getElement().getAttribute("src"));
-        }
-
-        return srcAttr;
-        }
-        //DSL Style get value
-        public AnyURISimpleType srcAttr() {
-        return  getSrcAttr();
-        }
-
-        public void setSrcAttr(final AnyURISimpleType srcAttr) {
-        this.srcAttr = srcAttr;
-        }
-        //DSL Style set value
-        public SrcTypeComplexType srcAttr(final AnyURISimpleType srcAttr) {
-        setSrcAttr(srcAttr);
-        return this;
-        }
-        public StringSimpleType getAltAttr() {
-        if (altAttr == null) {
-                altAttr = new StringSimpleType();
-                altAttr.setValue(getElement().getAttribute("alt"));
-        }
-
-        return altAttr;
-        }
-        //DSL Style get value
-        public StringSimpleType altAttr() {
-        return  getAltAttr();
-        }
-
-        public void setAltAttr(final StringSimpleType altAttr) {
-        this.altAttr = altAttr;
-        }
-        //DSL Style set value
-        public SrcTypeComplexType altAttr(final StringSimpleType altAttr) {
-        setAltAttr(altAttr);
-        return this;
-        }
 /**
 * Returns possible children as a list of <tt>String</tt>s.
 */
@@ -211,13 +211,13 @@ final LinkedHashMap
 <String, String> attrs = new LinkedHashMap
 <String, String>();
 attrs.putAll(super.getAttributes());
+        attrs.put("src", getSrcAttr() != null ? getSrcAttr().getValue() : null);
+        attrs.put("alt", getAltAttr() != null ? getAltAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
-        attrs.put("src", getSrcAttr() != null ? getSrcAttr().getValue() : null);
-        attrs.put("alt", getAltAttr() != null ? getAltAttr().getValue() : null);
 return attrs;
 }
 }

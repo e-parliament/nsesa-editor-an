@@ -1,9 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,55 +34,13 @@ super(element);
 }
 
 // FIELDS ------------------
-private IDSimpleType idAttr;
-private NMTOKENSimpleType evolvingIdAttr;
 private AnyURISimpleType hrefAttr;
 private StringSimpleType showAsAttr;
 private StringSimpleType shortFormAttr;
 private String wildcardContentAttr;
+private IDSimpleType idAttr;
+private NMTOKENSimpleType evolvingIdAttr;
 
-        public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-                idAttr = new IDSimpleType();
-                idAttr.setValue(getElement().getAttribute("id"));
-        }
-
-        return idAttr;
-        }
-        //DSL Style get value
-        public IDSimpleType idAttr() {
-        return  getIdAttr();
-        }
-
-        public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        }
-        //DSL Style set value
-        public ReferenceTypeComplexType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-        }
-        public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-                evolvingIdAttr = new NMTOKENSimpleType();
-                evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-        }
-        //DSL Style get value
-        public NMTOKENSimpleType evolvingIdAttr() {
-        return  getEvolvingIdAttr();
-        }
-
-        public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        }
-        //DSL Style set value
-        public ReferenceTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-        }
         public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
                 hrefAttr = new AnyURISimpleType();
@@ -166,6 +124,48 @@ private String wildcardContentAttr;
         setWildcardContentAttr(wildcardContentAttr);
         return this;
         }
+        public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+                idAttr = new IDSimpleType();
+                idAttr.setValue(getElement().getAttribute("id"));
+        }
+
+        return idAttr;
+        }
+        //DSL Style get value
+        public IDSimpleType idAttr() {
+        return  getIdAttr();
+        }
+
+        public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        }
+        //DSL Style set value
+        public ReferenceTypeComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+        }
+        public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+                evolvingIdAttr = new NMTOKENSimpleType();
+                evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+        }
+        //DSL Style get value
+        public NMTOKENSimpleType evolvingIdAttr() {
+        return  getEvolvingIdAttr();
+        }
+
+        public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        }
+        //DSL Style set value
+        public ReferenceTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+        }
 /**
 * Returns possible children as a list of <tt>String</tt>s.
 */
@@ -189,12 +189,12 @@ final LinkedHashMap
 <String, String> attrs = new LinkedHashMap
 <String, String>();
 attrs.putAll(super.getAttributes());
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
 return attrs;
 }
 }

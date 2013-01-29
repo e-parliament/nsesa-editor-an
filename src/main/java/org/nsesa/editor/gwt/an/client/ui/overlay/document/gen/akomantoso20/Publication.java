@@ -1,8 +1,8 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MetaoptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
@@ -38,13 +38,34 @@ super(element);
 }
 
 // FIELDS ------------------
+private StringSimpleType numberAttr;
 private AnyURISimpleType refersToAttr;
 private StringSimpleType nameAttr;
 private DateSimpleType dateAttr;
-private StringSimpleType numberAttr;
 private StringSimpleType showAsAttr;
 private StringSimpleType shortFormAttr;
 
+        public StringSimpleType getNumberAttr() {
+        if (numberAttr == null) {
+                numberAttr = new StringSimpleType();
+                numberAttr.setValue(getElement().getAttribute("number"));
+        }
+
+        return numberAttr;
+        }
+        //DSL Style get value
+        public StringSimpleType numberAttr() {
+        return  getNumberAttr();
+        }
+
+        public void setNumberAttr(final StringSimpleType numberAttr) {
+        this.numberAttr = numberAttr;
+        }
+        //DSL Style set value
+        public Publication numberAttr(final StringSimpleType numberAttr) {
+        setNumberAttr(numberAttr);
+        return this;
+        }
         public AnyURISimpleType getRefersToAttr() {
         if (refersToAttr == null) {
                 refersToAttr = new AnyURISimpleType();
@@ -106,27 +127,6 @@ private StringSimpleType shortFormAttr;
         //DSL Style set value
         public Publication dateAttr(final DateSimpleType dateAttr) {
         setDateAttr(dateAttr);
-        return this;
-        }
-        public StringSimpleType getNumberAttr() {
-        if (numberAttr == null) {
-                numberAttr = new StringSimpleType();
-                numberAttr.setValue(getElement().getAttribute("number"));
-        }
-
-        return numberAttr;
-        }
-        //DSL Style get value
-        public StringSimpleType numberAttr() {
-        return  getNumberAttr();
-        }
-
-        public void setNumberAttr(final StringSimpleType numberAttr) {
-        this.numberAttr = numberAttr;
-        }
-        //DSL Style set value
-        public Publication numberAttr(final StringSimpleType numberAttr) {
-        setNumberAttr(numberAttr);
         return this;
         }
         public StringSimpleType getShowAsAttr() {
@@ -194,10 +194,10 @@ final LinkedHashMap
 <String, String> attrs = new LinkedHashMap
 <String, String>();
 attrs.putAll(super.getAttributes());
+        attrs.put("number", getNumberAttr() != null ? getNumberAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
-        attrs.put("number", getNumberAttr() != null ? getNumberAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
 return attrs;

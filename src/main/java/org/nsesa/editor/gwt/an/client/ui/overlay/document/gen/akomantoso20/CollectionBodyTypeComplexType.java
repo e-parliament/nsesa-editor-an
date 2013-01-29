@@ -13,11 +13,11 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Amend
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Judgement;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Doc;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -48,16 +48,16 @@ super(element);
 }
 
 // FIELDS ------------------
+private AnyURISimpleType refersToAttr;
 private AnyURISimpleType alternativeToAttr;
+private StatusTypeSimpleType statusAttr;
+private String wildcardContentAttr;
+private LanguageSimpleType langAttr;
 private IDSimpleType idAttr;
 private NMTOKENSimpleType evolvingIdAttr;
-private LanguageSimpleType langAttr;
 private StringSimpleType classAttr;
 private StringSimpleType styleAttr;
 private StringSimpleType titleAttr;
-private AnyURISimpleType refersToAttr;
-private StatusTypeSimpleType statusAttr;
-private String wildcardContentAttr;
 private AnyURISimpleType periodAttr;
 
             public java.util.List<ComponentRef> getComponentRefs() {
@@ -288,6 +288,27 @@ private AnyURISimpleType periodAttr;
                 return docElem;
             }
 
+        public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+                refersToAttr = new AnyURISimpleType();
+                refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+        }
+        //DSL Style get value
+        public AnyURISimpleType refersToAttr() {
+        return  getRefersToAttr();
+        }
+
+        public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        }
+        //DSL Style set value
+        public CollectionBodyTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+        }
         public AnyURISimpleType getAlternativeToAttr() {
         if (alternativeToAttr == null) {
                 alternativeToAttr = new AnyURISimpleType();
@@ -307,6 +328,67 @@ private AnyURISimpleType periodAttr;
         //DSL Style set value
         public CollectionBodyTypeComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
+        return this;
+        }
+        public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+                statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        }
+
+        return statusAttr;
+        }
+        //DSL Style get value
+        public StatusTypeSimpleType statusAttr() {
+        return  getStatusAttr();
+        }
+
+        public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        }
+        //DSL Style set value
+        public CollectionBodyTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+        }
+        public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+        }
+        //DSL Style get value
+        public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
+        }
+
+        public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        }
+        //DSL Style set value
+        public CollectionBodyTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
+        public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+                langAttr = new LanguageSimpleType();
+                langAttr.setValue(getElement().getAttribute("lang"));
+        }
+
+        return langAttr;
+        }
+        //DSL Style get value
+        public LanguageSimpleType langAttr() {
+        return  getLangAttr();
+        }
+
+        public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+        }
+        //DSL Style set value
+        public CollectionBodyTypeComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
         }
         public IDSimpleType getIdAttr() {
@@ -349,27 +431,6 @@ private AnyURISimpleType periodAttr;
         //DSL Style set value
         public CollectionBodyTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-        }
-        public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-                langAttr = new LanguageSimpleType();
-                langAttr.setValue(getElement().getAttribute("lang"));
-        }
-
-        return langAttr;
-        }
-        //DSL Style get value
-        public LanguageSimpleType langAttr() {
-        return  getLangAttr();
-        }
-
-        public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-        }
-        //DSL Style set value
-        public CollectionBodyTypeComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
         return this;
         }
         public StringSimpleType getClassAttr() {
@@ -435,67 +496,6 @@ private AnyURISimpleType periodAttr;
         setTitleAttr(titleAttr);
         return this;
         }
-        public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-                refersToAttr = new AnyURISimpleType();
-                refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-        }
-        //DSL Style get value
-        public AnyURISimpleType refersToAttr() {
-        return  getRefersToAttr();
-        }
-
-        public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        }
-        //DSL Style set value
-        public CollectionBodyTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-        }
-        public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-                statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-        }
-        //DSL Style get value
-        public StatusTypeSimpleType statusAttr() {
-        return  getStatusAttr();
-        }
-
-        public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        }
-        //DSL Style set value
-        public CollectionBodyTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-        }
-        public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-        }
-        //DSL Style get value
-        public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
-        }
-
-        public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        }
-        //DSL Style set value
-        public CollectionBodyTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-        }
         public AnyURISimpleType getPeriodAttr() {
         if (periodAttr == null) {
                 periodAttr = new AnyURISimpleType();
@@ -540,16 +540,16 @@ final LinkedHashMap
 <String, String> attrs = new LinkedHashMap
 <String, String>();
 attrs.putAll(super.getAttributes());
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
 return attrs;
 }

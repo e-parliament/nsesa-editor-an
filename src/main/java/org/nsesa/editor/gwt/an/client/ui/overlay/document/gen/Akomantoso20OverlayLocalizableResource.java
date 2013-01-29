@@ -883,859 +883,859 @@ public class Akomantoso20OverlayLocalizableResource extends DefaultOverlayLocali
         if (widget == null) {
             throw new IllegalArgumentException("Null widget passed.");
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.container".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.container".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionContainer();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.judgement".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.judgement".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionJudgement();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.ul".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ul".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionUl();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.ol".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ol".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionOl();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.parliamentary".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.parliamentary".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionParliamentary();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomaNtoso".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.akomaNtoso".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAkomaNtoso();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.amendment".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.amendment".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAmendment();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.quorumVerification".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.quorumVerification".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionQuorumVerification();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.voting".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.voting".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionVoting();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.recount".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.recount".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionRecount();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRalias".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRalias".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRalias();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRthis".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRthis".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRthis();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRname".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRname".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRname();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRuri".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRuri".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRuri();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRsubtype".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRsubtype".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRsubtype();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRcountry".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRcountry".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRcountry();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRformat".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRformat".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRformat();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRnumber".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRnumber".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRnumber();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRlanguage".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRlanguage".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRlanguage();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.timeInterval".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.timeInterval".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTimeInterval();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRdate".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRdate".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRdate();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRauthor".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRauthor".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRauthor();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.keyword".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.keyword".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionKeyword();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.publication".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.publication".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPublication();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRtranslation".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRtranslation".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRtranslation();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.header".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.header".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionHeader();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.content".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.content".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionContent();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.intro".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.intro".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionIntro();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.amendmentJustification".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.amendmentJustification".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAmendmentJustification();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.td".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.td".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTd();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.th".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.th".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTh();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.amendmentReference".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.amendmentReference".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAmendmentReference();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.amendmentContent".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.amendmentContent".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAmendmentContent();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.longTitle".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.longTitle".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionLongTitle();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.wrap".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.wrap".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionWrap();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.amendmentHeading".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.amendmentHeading".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAmendmentHeading();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.other".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.other".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionOther();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.formula".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.formula".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFormula();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.bill".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.bill".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionBill();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.act".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.act".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAct();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.judgementBody".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.judgementBody".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionJudgementBody();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.rref".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.rref".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionRref();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.ref".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ref".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionRef();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.eol".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.eol".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionEol();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.eop".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.eop".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionEop();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.noteRef".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.noteRef".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionNoteRef();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.br".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.br".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionBr();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.img".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.img".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionImg();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.amendmentBody".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.amendmentBody".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAmendmentBody();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.preamble".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.preamble".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPreamble();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.judicial".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.judicial".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionJudicial();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.mod".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.mod".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionMod();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.mmod".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.mmod".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionMmod();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.rmod".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.rmod".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionRmod();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.efficacy".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.efficacy".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionEfficacy();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.force".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.force".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionForce();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.application".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.application".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionApplication();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.duration".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.duration".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDuration();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.references".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.references".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionReferences();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.collectionBody".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.collectionBody".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionCollectionBody();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.preface".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.preface".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPreface();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.quorum".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.quorum".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionQuorum();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.count".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.count".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionCount();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.debate".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.debate".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDebate();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.textualMod".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.textualMod".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTextualMod();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.scopeMod".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.scopeMod".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionScopeMod();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.legalSystemMod".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.legalSystemMod".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionLegalSystemMod();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.meaningMod".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.meaningMod".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionMeaningMod();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.efficacyMod".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.efficacyMod".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionEfficacyMod();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.forceMod".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.forceMod".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionForceMod();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.supports".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.supports".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSupports();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.contrasts".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.contrasts".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionContrasts();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.restricts".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.restricts".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionRestricts();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.putsInQuestion".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.putsInQuestion".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPutsInQuestion();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.applies".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.applies".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionApplies();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.distinguishes".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.distinguishes".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDistinguishes();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.isAnalogTo".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.isAnalogTo".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionIsAnalogTo();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.dissentsFrom".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.dissentsFrom".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDissentsFrom();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.overrules".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.overrules".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionOverrules();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.derogates".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.derogates".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDerogates();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.extends".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.extends".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionExtends();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.coverPage".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.coverPage".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionCoverPage();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.conclusions".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.conclusions".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionConclusions();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.componentRef".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.componentRef".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionComponentRef();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.body".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.body".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionBody();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRExpression".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRExpression".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRExpression();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRItem".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRItem".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRItem();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRManifestation".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRManifestation".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRManifestation();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.FRBRWork".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRWork".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFRBRWork();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.activeModifications".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.activeModifications".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionActiveModifications();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.passiveModifications".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.passiveModifications".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPassiveModifications();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.TLCEvent".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCEvent".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTLCEvent();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.TLCLocation".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCLocation".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTLCLocation();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.passiveRef".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.passiveRef".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPassiveRef();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.activeRef".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.activeRef".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionActiveRef();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.original".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.original".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionOriginal();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.TLCConcept".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCConcept".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTLCConcept();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.jurisprudence".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.jurisprudence".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionJurisprudence();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.attachmentOf".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.attachmentOf".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAttachmentOf();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.TLCObject".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCObject".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTLCObject();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.TLCPerson".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCPerson".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTLCPerson();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.TLCReference".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCReference".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTLCReference();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.TLCRole".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCRole".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTLCRole();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.TLCProcess".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCProcess".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTLCProcess();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.hasAttachment".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.hasAttachment".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionHasAttachment();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.TLCOrganization".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCOrganization".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTLCOrganization();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.TLCTerm".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCTerm".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTLCTerm();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.fragmentBody".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.fragmentBody".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFragmentBody();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.summary".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.summary".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSummary();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.fillIn".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.fillIn".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFillIn();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.signature".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.signature".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSignature();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.vote".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.vote".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionVote();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.listIntroduction".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.listIntroduction".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionListIntroduction();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.docPurpose".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.docPurpose".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDocPurpose();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.date".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.date".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDate();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.quotedText".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.quotedText".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionQuotedText();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.inline".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.inline".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionInline();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.relatedDocument".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.relatedDocument".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionRelatedDocument();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.docIntroducer".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.docIntroducer".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDocIntroducer();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.b".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.b".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionB();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.a".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.a".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionA();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.i".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.i".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionI();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.num".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.num".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionNum();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.u".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.u".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionU();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.p".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.p".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionP();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.docType".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.docType".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDocType();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.change".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.change".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionChange();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.opinion".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.opinion".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionOpinion();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.docStage".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.docStage".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDocStage();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.docCommittee".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.docCommittee".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDocCommittee();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.docNumber".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.docNumber".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDocNumber();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.extractText".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.extractText".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionExtractText();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.span".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.span".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSpan();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.sub".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.sub".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSub();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.sup".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.sup".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSup();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.docketNumber".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.docketNumber".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDocketNumber();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.mref".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.mref".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionMref();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.neutralCitation".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.neutralCitation".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionNeutralCitation();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.docStatus".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.docStatus".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDocStatus();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.legislature".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.legislature".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionLegislature();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.tocItem".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.tocItem".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTocItem();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.session".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.session".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSession();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.recordedTime".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.recordedTime".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionRecordedTime();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.scene".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.scene".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionScene();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.heading".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.heading".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionHeading();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.block".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.block".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionBlock();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.docJurisdiction".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.docJurisdiction".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDocJurisdiction();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.docProponent".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.docProponent".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDocProponent();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.omissis".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.omissis".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionOmissis();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.def".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.def".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDef();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.docTitle".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.docTitle".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDocTitle();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.del".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.del".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDel();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.affectedDocument".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.affectedDocument".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAffectedDocument();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.placeholder".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.placeholder".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPlaceholder();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.caption".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.caption".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionCaption();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.outcome".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.outcome".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionOutcome();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.shortTitle".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.shortTitle".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionShortTitle();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.remark".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.remark".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionRemark();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.narrative".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.narrative".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionNarrative();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.listConclusion".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.listConclusion".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionListConclusion();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.ins".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ins".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionIns();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.subheading".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.subheading".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSubheading();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.courtType".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.courtType".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionCourtType();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.from".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.from".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFrom();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.docDate".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.docDate".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDocDate();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.introduction".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.introduction".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionIntroduction();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.background".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.background".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionBackground();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.mainBody".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.mainBody".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionMainBody();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.motivation".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.motivation".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionMotivation();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.decision".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.decision".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDecision();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.answer".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.answer".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAnswer();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.speech".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.speech".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSpeech();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.question".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.question".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionQuestion();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.tome".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.tome".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTome();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.division".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.division".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDivision();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.part".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.part".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPart();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.subchapter".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.subchapter".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSubchapter();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.subdivision".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.subdivision".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSubdivision();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.subsection".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.subsection".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSubsection();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.transitional".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.transitional".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTransitional();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.chapter".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.chapter".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionChapter();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.clause".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.clause".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionClause();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.paragraph".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.paragraph".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionParagraph();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.subclause".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.subclause".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSubclause();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.sublist".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.sublist".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSublist();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.subparagraph".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.subparagraph".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSubparagraph();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.title".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.title".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTitle();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.point".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.point".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPoint();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.article".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.article".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionArticle();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.hcontainer".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.hcontainer".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionHcontainer();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.alinea".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.alinea".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAlinea();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.indent".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.indent".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionIndent();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.list".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.list".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionList();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.section".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.section".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSection();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.subpart".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.subpart".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSubpart();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.subtitle".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.subtitle".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSubtitle();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.book".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.book".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionBook();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.citation".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.citation".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionCitation();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.item".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.item".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionItem();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.tblock".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.tblock".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTblock();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.recital".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.recital".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionRecital();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.administrationOfOath".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.administrationOfOath".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAdministrationOfOath();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.papers".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.papers".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPapers();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.proceduralMotions".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.proceduralMotions".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionProceduralMotions();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.nationalInterest".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.nationalInterest".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionNationalInterest();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.noticesOfMotion".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.noticesOfMotion".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionNoticesOfMotion();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.adjournment".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.adjournment".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAdjournment();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.communication".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.communication".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionCommunication();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.oralStatements".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.oralStatements".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionOralStatements();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.questions".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.questions".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionQuestions();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.debateSection".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.debateSection".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDebateSection();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.personalStatements".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.personalStatements".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPersonalStatements();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.pointOfOrder".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.pointOfOrder".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPointOfOrder();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.declarationOfVote".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.declarationOfVote".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDeclarationOfVote();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.petitions".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.petitions".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPetitions();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.resolutions".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.resolutions".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionResolutions();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.rollCall".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.rollCall".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionRollCall();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.address".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.address".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAddress();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.writtenStatements".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.writtenStatements".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionWrittenStatements();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.prayers".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.prayers".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPrayers();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.ministerialStatements".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ministerialStatements".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionMinisterialStatements();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.domain".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.domain".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDomain();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.new".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.new".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionNew();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.condition".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.condition".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionCondition();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.otherAnalysis".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.otherAnalysis".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionOtherAnalysis();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.foreign".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.foreign".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionForeign();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.result".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.result".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionResult();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.eventRef".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.eventRef".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionEventRef();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.proprietary".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.proprietary".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionProprietary();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.old".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.old".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionOld();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.presentation".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.presentation".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPresentation();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.step".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.step".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionStep();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.preservation".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.preservation".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPreservation();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.debateBody".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.debateBody".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDebateBody();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.party".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.party".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionParty();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.event".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.event".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionEvent();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.role".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.role".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionRole();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.quantity".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.quantity".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionQuantity();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.entity".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.entity".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionEntity();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.organization".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.organization".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionOrganization();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.person".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.person".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPerson();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.judge".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.judge".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionJudge();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.process".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.process".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionProcess();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.location".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.location".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionLocation();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.lawyer".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.lawyer".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionLawyer();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.concept".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.concept".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionConcept();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.object".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.object".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionObject();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.term".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.term".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTerm();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.note".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.note".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionNote();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.div".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.div".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDiv();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.interstitial".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.interstitial".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionInterstitial();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.fragment".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.fragment".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionFragment();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.quotedStructure".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.quotedStructure".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionQuotedStructure();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.extractStructure".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.extractStructure".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionExtractStructure();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.popup".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.popup".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionPopup();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.authorialNote".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.authorialNote".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAuthorialNote();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.source".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.source".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionSource();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.destination".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.destination".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDestination();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.doc".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.doc".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDoc();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.debateReport".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.debateReport".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDebateReport();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.marker".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.marker".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionMarker();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.amendmentList".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.amendmentList".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAmendmentList();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.documentCollection".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.documentCollection".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionDocumentCollection();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.officialGazette".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.officialGazette".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionOfficialGazette();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.components".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.components".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionComponents();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.meta".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.meta".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionMeta();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.temporalData".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.temporalData".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTemporalData();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.notes".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.notes".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionNotes();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.tr".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.tr".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTr();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.component".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.component".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionComponent();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.workflow".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.workflow".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionWorkflow();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.toc".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.toc".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionToc();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.analysis".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.analysis".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAnalysis();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.citations".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.citations".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionCitations();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.recitals".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.recitals".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionRecitals();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.lifecycle".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.lifecycle".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionLifecycle();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.table".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.table".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTable();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.componentData".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.componentData".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionComponentData();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.classification".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.classification".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionClassification();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.blockList".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.blockList".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionBlockList();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.temporalGroup".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.temporalGroup".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionTemporalGroup();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.li".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.li".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionLi();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.componentInfo".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.componentInfo".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionComponentInfo();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.attachments".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.attachments".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionAttachments();
         }
-        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.identification".equalsIgnoreCase(widget.getClass().getName())) {
+        else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.identification".equalsIgnoreCase(widget.getClass().getName())) {
             return MESSAGES.descriptionIdentification();
         }
         else {
