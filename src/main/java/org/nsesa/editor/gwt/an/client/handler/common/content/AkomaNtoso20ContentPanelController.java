@@ -4,9 +4,13 @@ import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentControllerView;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentPanelController;
+
+import java.util.List;
 
 /**
  * Date: 23/11/12 11:02
@@ -26,8 +30,8 @@ public class AkomaNtoso20ContentPanelController extends ContentPanelController {
         super.setContext(dialogContext);
         if (dialogContext.getAmendmentController() != null) {
             // we're editing
-            final String originalContent = dialogContext.getAmendmentController().getOriginalContentFromModel();
-            view.setOriginalText(originalContent);
+            final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", dialogContext.getAmendmentController().asAmendableWidgetFromModel());
+            view.setOriginalText(quotedStructures.get(0).getAmendableElement().getFirstChildElement().getInnerHTML());
         } else {
             final Element element = (Element) dialogContext.getAmendableWidget().getAmendableElement().cloneNode(false);
             element.setInnerHTML(dialogContext.getAmendableWidget().getInnerHTML());

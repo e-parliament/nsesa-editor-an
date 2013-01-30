@@ -1,6 +1,7 @@
 package org.nsesa.editor.gwt.an.client.handler.delete;
 
 import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
@@ -80,10 +81,9 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
         final QuotedStructure quotedStructureOriginal = mod.addQuotedStructure(new QuotedStructure());
 
         final String originalText = contentPanelController.getView().getOriginalText();
-        final com.google.gwt.user.client.Element cloneOriginal = DOM.clone(amendableWidget.asWidget().getElement(), false);
-        cloneOriginal.setInnerHTML(originalText);
-
-        final AmendableWidget overlayedOriginal = overlayFactory.getAmendableWidget(cloneOriginal);
+        final Element span = DOM.createSpan();
+        span.setInnerHTML(originalText);
+        final AmendableWidget overlayedOriginal = overlayFactory.getAmendableWidget(span.getFirstChildElement());
         quotedStructureOriginal.addAmendableWidget(overlayedOriginal);
 
         // amendment content
