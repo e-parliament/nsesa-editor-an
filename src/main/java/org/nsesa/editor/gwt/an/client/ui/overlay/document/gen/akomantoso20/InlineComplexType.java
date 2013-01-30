@@ -1,91 +1,17 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Inline;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Marker;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Popup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Ref;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Mref;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Rref;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Mod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Mmod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Rmod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Remark;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.RecordedTime;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Vote;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Outcome;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Ins;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Del;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Omissis;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ExtractText;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ExtractStructure;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Placeholder;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FillIn;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.B;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.I;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.A;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.U;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Sub;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Sup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Span;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocTitle;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocNumber;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocProponent;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocDate;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Legislature;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Session;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ShortTitle;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocPurpose;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocCommittee;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocIntroducer;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocStage;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocStatus;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocJurisdiction;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocketNumber;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Date;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Person;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Organization;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Concept;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Object;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Event;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Location;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Process;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Role;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Term;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Quantity;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Def;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Entity;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.CourtType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.NeutralCitation;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Party;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Judge;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Lawyer;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Signature;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Opinion;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AffectedDocument;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.RelatedDocument;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Change;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.NoteRef;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Eol;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Eop;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Img;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AuthorialNote;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import com.google.gwt.user.client.DOM;
 
 /**
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -184,59 +110,18 @@ public class InlineComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private LanguageSimpleType langAttr;
-    private StatusTypeSimpleType statusAttr;
     private AnyURISimpleType alternativeToAttr;
-    private AnyURISimpleType refersToAttr;
-    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private LanguageSimpleType langAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
+    private AnyURISimpleType refersToAttr;
+    private StatusTypeSimpleType statusAttr;
+    private String wildcardContentAttr;
     private AnyURISimpleType periodAttr;
 
-    public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-            langAttr = new LanguageSimpleType();
-            langAttr.setValue(getElement().getAttribute("lang"));
-        }
-
-        return langAttr;
-     }
-     //DSL Style get value
-    public LanguageSimpleType langAttr() {
-        return  getLangAttr();
-    }
-
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-    }
-     //DSL Style set value
-    public InlineComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-     }
-     //DSL Style get value
-    public StatusTypeSimpleType statusAttr() {
-        return  getStatusAttr();
-    }
-
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-    }
-     //DSL Style set value
-    public InlineComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
     public AnyURISimpleType getAlternativeToAttr() {
         if (alternativeToAttr == null) {
             alternativeToAttr = new AnyURISimpleType();
@@ -256,47 +141,6 @@ public class InlineComplexType extends AmendableWidgetImpl  {
      //DSL Style set value
     public InlineComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-     }
-     //DSL Style get value
-    public AnyURISimpleType refersToAttr() {
-        return  getRefersToAttr();
-    }
-
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-    }
-     //DSL Style set value
-    public InlineComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-     }
-     //DSL Style get value
-    public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
-    }
-
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-    }
-     //DSL Style set value
-    public InlineComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
     public IDSimpleType getIdAttr() {
@@ -339,6 +183,27 @@ public class InlineComplexType extends AmendableWidgetImpl  {
      //DSL Style set value
     public InlineComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+    public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+            langAttr = new LanguageSimpleType();
+            langAttr.setValue(getElement().getAttribute("lang"));
+        }
+
+        return langAttr;
+     }
+     //DSL Style get value
+    public LanguageSimpleType langAttr() {
+        return  getLangAttr();
+    }
+
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+    }
+     //DSL Style set value
+    public InlineComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
     public StringSimpleType getClassAttr() {
@@ -402,6 +267,67 @@ public class InlineComplexType extends AmendableWidgetImpl  {
      //DSL Style set value
     public InlineComplexType titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+     }
+     //DSL Style get value
+    public AnyURISimpleType refersToAttr() {
+        return  getRefersToAttr();
+    }
+
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+     //DSL Style set value
+    public InlineComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        }
+
+        return statusAttr;
+     }
+     //DSL Style get value
+    public StatusTypeSimpleType statusAttr() {
+        return  getStatusAttr();
+    }
+
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+    }
+     //DSL Style set value
+    public InlineComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+     }
+     //DSL Style get value
+    public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
+    }
+
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+     //DSL Style set value
+    public InlineComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
     public java.util.List<Inline> getInlines() {
@@ -1826,15 +1752,10 @@ public class InlineComplexType extends AmendableWidgetImpl  {
     }
 
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"a","affectedDocument","authorialNote","b","change","concept","courtType","date","def","del","docCommittee","docDate","docIntroducer","docJurisdiction","docketNumber","docNumber","docProponent","docPurpose","docStage","docStatus","docTitle","docType","entity","eol","eop","event","extractStructure","extractText","fillIn","i","img","inline","ins","judge","lawyer","legislature","location","marker","mmod","mod","mref","neutralCitation","noteRef","object","omissis","opinion","organization","outcome","party","person","placeholder","popup","process","quantity","recordedTime","ref","relatedDocument","remark","rmod","role","rref","session","shortTitle","signature","span","sub","sup","term","u","vote"};
-    }
-
-    @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 
@@ -1850,16 +1771,16 @@ public class InlineComplexType extends AmendableWidgetImpl  {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }

@@ -68,15 +68,10 @@ public class Body extends BodyTypeComplexType  {
 // FIELDS ------------------
 
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"alinea","article","book","chapter","clause","componentRef","division","hcontainer","indent","list","paragraph","part","point","section","subchapter","subclause","sublist","subparagraph","subpart","subsection","subtitle","title","tome"};
-    }
-
-    @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 

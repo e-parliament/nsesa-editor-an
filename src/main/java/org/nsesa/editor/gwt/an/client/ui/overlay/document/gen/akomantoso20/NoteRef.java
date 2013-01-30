@@ -1,9 +1,9 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MarkeroptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PlacementTypeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,32 +46,11 @@ public class NoteRef extends MarkeroptComplexType  {
     }
 
 // FIELDS ------------------
-    private AnyURISimpleType hrefAttr;
     private StringSimpleType markerAttr;
     private PlacementTypeSimpleType placementAttr;
     private AnyURISimpleType placementBaseAttr;
+    private AnyURISimpleType hrefAttr;
 
-    public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-            hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(getElement().getAttribute("href"));
-        }
-
-        return hrefAttr;
-     }
-     //DSL Style get value
-    public AnyURISimpleType hrefAttr() {
-        return  getHrefAttr();
-    }
-
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-    }
-     //DSL Style set value
-    public NoteRef hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
     public StringSimpleType getMarkerAttr() {
         if (markerAttr == null) {
             markerAttr = new StringSimpleType();
@@ -134,16 +113,32 @@ public class NoteRef extends MarkeroptComplexType  {
         setPlacementBaseAttr(placementBaseAttr);
         return this;
     }
-    /**
-    * Returns possible children as a list of <tt>String</tt>s.
-    */
-    @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{};
+    public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(getElement().getAttribute("href"));
+        }
+
+        return hrefAttr;
+     }
+     //DSL Style get value
+    public AnyURISimpleType hrefAttr() {
+        return  getHrefAttr();
     }
 
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+    }
+     //DSL Style set value
+    public NoteRef hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+    /**
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
+    */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 
@@ -159,10 +154,10 @@ public class NoteRef extends MarkeroptComplexType  {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         attrs.put("marker", getMarkerAttr() != null ? getMarkerAttr().getValue() : null);
         attrs.put("placement", getPlacementAttr() != null ? getPlacementAttr().value() : null);
         attrs.put("placementBase", getPlacementBaseAttr() != null ? getPlacementBaseAttr().getValue() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         return attrs;
     }
 }

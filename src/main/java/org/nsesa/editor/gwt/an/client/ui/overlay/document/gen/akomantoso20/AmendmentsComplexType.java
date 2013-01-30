@@ -172,15 +172,10 @@ public class AmendmentsComplexType extends AmendableWidgetImpl  {
     }
 
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"efficacyMod","forceMod","legalSystemMod","meaningMod","scopeMod","textualMod"};
-    }
-
-    @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 

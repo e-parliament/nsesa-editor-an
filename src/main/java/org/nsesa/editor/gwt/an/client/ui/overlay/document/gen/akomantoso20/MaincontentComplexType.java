@@ -5,12 +5,12 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Hcont
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Foreign;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Block;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Container;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Clause;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Section;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Part;
@@ -152,16 +152,16 @@ public class MaincontentComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private LanguageSimpleType langAttr;
-    private StatusTypeSimpleType statusAttr;
     private AnyURISimpleType alternativeToAttr;
-    private AnyURISimpleType refersToAttr;
-    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private LanguageSimpleType langAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
+    private AnyURISimpleType refersToAttr;
+    private StatusTypeSimpleType statusAttr;
+    private String wildcardContentAttr;
     private AnyURISimpleType periodAttr;
 
     public java.util.List<ComponentRef> getComponentRefs() {
@@ -264,47 +264,6 @@ public class MaincontentComplexType extends AmendableWidgetImpl  {
         return containerElem;
     }
 
-    public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-            langAttr = new LanguageSimpleType();
-            langAttr.setValue(getElement().getAttribute("lang"));
-        }
-
-        return langAttr;
-     }
-     //DSL Style get value
-    public LanguageSimpleType langAttr() {
-        return  getLangAttr();
-    }
-
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-    }
-     //DSL Style set value
-    public MaincontentComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-     }
-     //DSL Style get value
-    public StatusTypeSimpleType statusAttr() {
-        return  getStatusAttr();
-    }
-
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-    }
-     //DSL Style set value
-    public MaincontentComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
     public AnyURISimpleType getAlternativeToAttr() {
         if (alternativeToAttr == null) {
             alternativeToAttr = new AnyURISimpleType();
@@ -324,47 +283,6 @@ public class MaincontentComplexType extends AmendableWidgetImpl  {
      //DSL Style set value
     public MaincontentComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-     }
-     //DSL Style get value
-    public AnyURISimpleType refersToAttr() {
-        return  getRefersToAttr();
-    }
-
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-    }
-     //DSL Style set value
-    public MaincontentComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-     }
-     //DSL Style get value
-    public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
-    }
-
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-    }
-     //DSL Style set value
-    public MaincontentComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
     public IDSimpleType getIdAttr() {
@@ -407,6 +325,27 @@ public class MaincontentComplexType extends AmendableWidgetImpl  {
      //DSL Style set value
     public MaincontentComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+    public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+            langAttr = new LanguageSimpleType();
+            langAttr.setValue(getElement().getAttribute("lang"));
+        }
+
+        return langAttr;
+     }
+     //DSL Style get value
+    public LanguageSimpleType langAttr() {
+        return  getLangAttr();
+    }
+
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+    }
+     //DSL Style set value
+    public MaincontentComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
     public StringSimpleType getClassAttr() {
@@ -470,6 +409,67 @@ public class MaincontentComplexType extends AmendableWidgetImpl  {
      //DSL Style set value
     public MaincontentComplexType titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+     }
+     //DSL Style get value
+    public AnyURISimpleType refersToAttr() {
+        return  getRefersToAttr();
+    }
+
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+     //DSL Style set value
+    public MaincontentComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        }
+
+        return statusAttr;
+     }
+     //DSL Style get value
+    public StatusTypeSimpleType statusAttr() {
+        return  getStatusAttr();
+    }
+
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+    }
+     //DSL Style set value
+    public MaincontentComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+     }
+     //DSL Style get value
+    public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
+    }
+
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+     //DSL Style set value
+    public MaincontentComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
     public java.util.List<Clause> getClauses() {
@@ -1474,15 +1474,10 @@ public class MaincontentComplexType extends AmendableWidgetImpl  {
         return this;
     }
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"address","adjournment","administrationOfOath","alinea","article","block","blockList","book","chapter","clause","communication","componentRef","container","debateSection","declarationOfVote","div","division","foreign","hcontainer","indent","list","ministerialStatements","nationalInterest","noticesOfMotion","ol","oralStatements","p","papers","paragraph","part","personalStatements","petitions","point","pointOfOrder","prayers","proceduralMotions","questions","resolutions","rollCall","section","subchapter","subclause","sublist","subparagraph","subpart","subsection","subtitle","table","tblock","title","toc","tome","ul","writtenStatements"};
-    }
-
-    @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 
@@ -1498,16 +1493,16 @@ public class MaincontentComplexType extends AmendableWidgetImpl  {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }

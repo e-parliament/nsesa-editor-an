@@ -65,15 +65,10 @@ public class DebateBody extends DebateBodyTypeComplexType  {
 // FIELDS ------------------
 
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"address","adjournment","administrationOfOath","communication","debateSection","declarationOfVote","ministerialStatements","nationalInterest","noticesOfMotion","oralStatements","papers","personalStatements","petitions","pointOfOrder","prayers","proceduralMotions","questions","resolutions","rollCall","writtenStatements"};
-    }
-
-    @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 

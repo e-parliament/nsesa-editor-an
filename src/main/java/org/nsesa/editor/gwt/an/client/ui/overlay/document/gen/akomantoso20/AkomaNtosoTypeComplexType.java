@@ -315,15 +315,10 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
         return docElem;
     }
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"act","amendment","amendmentList","bill","components","debate","debateReport","doc","documentCollection","judgement","officialGazette"};
-    }
-
-    @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 

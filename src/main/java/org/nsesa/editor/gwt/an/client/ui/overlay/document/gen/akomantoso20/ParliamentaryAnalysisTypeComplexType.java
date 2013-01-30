@@ -45,12 +45,12 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
+    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType outcomeAttr;
-    private AnyURISimpleType hrefAttr;
+    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private String wildcardContentAttr;
-    private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType hrefAttr;
 
     public java.util.List<Quorum> getQuorums() {
         java.util.List<Quorum> result = new ArrayList<Quorum>();
@@ -92,6 +92,27 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         return countElem;
     }
 
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+     }
+     //DSL Style get value
+    public AnyURISimpleType refersToAttr() {
+        return  getRefersToAttr();
+    }
+
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+     //DSL Style set value
+    public ParliamentaryAnalysisTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
     public AnyURISimpleType getOutcomeAttr() {
         if (outcomeAttr == null) {
             outcomeAttr = new AnyURISimpleType();
@@ -113,25 +134,24 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         setOutcomeAttr(outcomeAttr);
         return this;
     }
-    public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-            hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(getElement().getAttribute("href"));
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return hrefAttr;
+        return wildcardContentAttr;
      }
      //DSL Style get value
-    public AnyURISimpleType hrefAttr() {
-        return  getHrefAttr();
+    public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
     }
 
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
     }
      //DSL Style set value
-    public ParliamentaryAnalysisTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
+    public ParliamentaryAnalysisTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
     public IDSimpleType getIdAttr() {
@@ -176,57 +196,32 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+    public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(getElement().getAttribute("href"));
         }
 
-        return wildcardContentAttr;
+        return hrefAttr;
      }
      //DSL Style get value
-    public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
+    public AnyURISimpleType hrefAttr() {
+        return  getHrefAttr();
     }
 
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
     }
      //DSL Style set value
-    public ParliamentaryAnalysisTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-     }
-     //DSL Style get value
-    public AnyURISimpleType refersToAttr() {
-        return  getRefersToAttr();
-    }
-
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-    }
-     //DSL Style set value
-    public ParliamentaryAnalysisTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public ParliamentaryAnalysisTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
         return this;
     }
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"count","quorum"};
-    }
-
-    @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 
@@ -242,12 +237,12 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         return attrs;
     }
 }

@@ -1,8 +1,8 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AnyOtherTypeComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,11 +46,53 @@ public class Step extends AnyOtherTypeComplexType  {
     }
 
 // FIELDS ------------------
+    private DateSimpleType dateAttr;
+    private AnyURISimpleType asAttr;
     private AnyURISimpleType outcomeAttr;
     private AnyURISimpleType actorAttr;
-    private AnyURISimpleType asAttr;
-    private DateSimpleType dateAttr;
 
+    public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(getElement().getAttribute("date"));
+        }
+
+        return dateAttr;
+     }
+     //DSL Style get value
+    public DateSimpleType dateAttr() {
+        return  getDateAttr();
+    }
+
+    public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+    }
+     //DSL Style set value
+    public Step dateAttr(final DateSimpleType dateAttr) {
+        setDateAttr(dateAttr);
+        return this;
+    }
+    public AnyURISimpleType getAsAttr() {
+        if (asAttr == null) {
+            asAttr = new AnyURISimpleType();
+            asAttr.setValue(getElement().getAttribute("as"));
+        }
+
+        return asAttr;
+     }
+     //DSL Style get value
+    public AnyURISimpleType asAttr() {
+        return  getAsAttr();
+    }
+
+    public void setAsAttr(final AnyURISimpleType asAttr) {
+        this.asAttr = asAttr;
+    }
+     //DSL Style set value
+    public Step asAttr(final AnyURISimpleType asAttr) {
+        setAsAttr(asAttr);
+        return this;
+    }
     public AnyURISimpleType getOutcomeAttr() {
         if (outcomeAttr == null) {
             outcomeAttr = new AnyURISimpleType();
@@ -93,58 +135,11 @@ public class Step extends AnyOtherTypeComplexType  {
         setActorAttr(actorAttr);
         return this;
     }
-    public AnyURISimpleType getAsAttr() {
-        if (asAttr == null) {
-            asAttr = new AnyURISimpleType();
-            asAttr.setValue(getElement().getAttribute("as"));
-        }
-
-        return asAttr;
-     }
-     //DSL Style get value
-    public AnyURISimpleType asAttr() {
-        return  getAsAttr();
-    }
-
-    public void setAsAttr(final AnyURISimpleType asAttr) {
-        this.asAttr = asAttr;
-    }
-     //DSL Style set value
-    public Step asAttr(final AnyURISimpleType asAttr) {
-        setAsAttr(asAttr);
-        return this;
-    }
-    public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-            dateAttr = new DateSimpleType();
-            dateAttr.setValue(getElement().getAttribute("date"));
-        }
-
-        return dateAttr;
-     }
-     //DSL Style get value
-    public DateSimpleType dateAttr() {
-        return  getDateAttr();
-    }
-
-    public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-    }
-     //DSL Style set value
-    public Step dateAttr(final DateSimpleType dateAttr) {
-        setDateAttr(dateAttr);
-        return this;
-    }
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"*"};
-    }
-
-    @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 
@@ -160,10 +155,10 @@ public class Step extends AnyOtherTypeComplexType  {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
+        attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
         attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
         attrs.put("actor", getActorAttr() != null ? getActorAttr().getValue() : null);
-        attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
-        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         return attrs;
     }
 }

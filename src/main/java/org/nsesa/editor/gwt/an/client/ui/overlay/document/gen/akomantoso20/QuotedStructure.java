@@ -137,15 +137,10 @@ public class QuotedStructure extends PopupStructureComplexType  {
         return this;
     }
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"address","adjournment","administrationOfOath","alinea","answer","article","block","blockList","book","chapter","citation","clause","communication","componentRef","container","content","debateSection","declarationOfVote","div","division","foreign","hcontainer","heading","indent","intro","list","ministerialStatements","narrative","nationalInterest","noticesOfMotion","num","ol","oralStatements","other","p","papers","paragraph","part","personalStatements","petitions","point","pointOfOrder","prayers","proceduralMotions","question","questions","recital","resolutions","rollCall","scene","section","speech","subchapter","subclause","subheading","sublist","subparagraph","subpart","subsection","subtitle","summary","table","tblock","title","toc","tome","ul","wrap","writtenStatements"};
-    }
-
-    @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 

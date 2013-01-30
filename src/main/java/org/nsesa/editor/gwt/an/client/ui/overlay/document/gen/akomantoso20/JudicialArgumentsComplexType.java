@@ -307,15 +307,10 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     }
 
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"applies","contrasts","derogates","dissentsFrom","distinguishes","extends","isAnalogTo","overrules","putsInQuestion","restricts","result","supports"};
-    }
-
-    @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 

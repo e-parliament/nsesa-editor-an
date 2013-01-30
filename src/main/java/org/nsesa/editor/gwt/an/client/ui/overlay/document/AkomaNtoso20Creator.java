@@ -33,9 +33,9 @@ public class AkomaNtoso20Creator extends DefaultCreator {
     @Override
     public LinkedHashMap<String, AmendableWidget> getAllowedChildren(DocumentController documentController, AmendableWidget amendableWidget) {
         final LinkedHashMap<String, AmendableWidget> allowedChildren = new LinkedHashMap<String, AmendableWidget>();
-        final Map<AmendableWidget, Occurrence> allowedTypes = amendableWidget.getAllowedSubTypes();
+        final Map<AmendableWidget, Occurrence> allowedTypes = amendableWidget.getAllowedChildTypes();
         for (final Map.Entry<AmendableWidget, Occurrence> allowedType : allowedTypes.entrySet()) {
-            allowedChildren.put(allowedType.getKey().getType(), overlayFactory.getAmendableWidget(allowedType.getKey().getType()));
+            allowedChildren.put(allowedType.getKey().getType(), allowedType.getKey());
         }
         return allowedChildren;
     }

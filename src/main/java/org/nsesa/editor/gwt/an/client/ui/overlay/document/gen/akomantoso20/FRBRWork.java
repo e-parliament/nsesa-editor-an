@@ -152,15 +152,10 @@ public class FRBRWork extends CorePropertiesComplexType  {
         return FRBRnameElem;
     }
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"componentInfo","FRBRalias","FRBRauthor","FRBRcountry","FRBRdate","FRBRname","FRBRnumber","FRBRsubtype","FRBRthis","FRBRuri","preservation"};
-    }
-
-    @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 

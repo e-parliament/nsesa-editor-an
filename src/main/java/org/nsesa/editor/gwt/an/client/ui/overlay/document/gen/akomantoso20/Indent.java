@@ -74,15 +74,10 @@ public class Indent extends HierarchyComplexType  {
 // FIELDS ------------------
 
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"alinea","article","book","chapter","clause","componentRef","content","division","hcontainer","heading","indent","intro","list","num","paragraph","part","point","section","subchapter","subclause","subheading","sublist","subparagraph","subpart","subsection","subtitle","title","tome","wrap"};
-    }
-
-    @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 

@@ -99,15 +99,10 @@ public class Motivation extends MaincontentComplexType  {
 // FIELDS ------------------
 
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"address","adjournment","administrationOfOath","alinea","article","block","blockList","book","chapter","clause","communication","componentRef","container","debateSection","declarationOfVote","div","division","foreign","hcontainer","indent","list","ministerialStatements","nationalInterest","noticesOfMotion","ol","oralStatements","p","papers","paragraph","part","personalStatements","petitions","point","pointOfOrder","prayers","proceduralMotions","questions","resolutions","rollCall","section","subchapter","subclause","sublist","subparagraph","subpart","subsection","subtitle","table","tblock","title","toc","tome","ul","writtenStatements"};
-    }
-
-    @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 

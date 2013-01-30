@@ -87,15 +87,10 @@ public class RollCall extends AlthierarchyComplexType  {
 // FIELDS ------------------
 
     /**
-    * Returns possible children as a list of <tt>String</tt>s.
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public String[] getAllowedChildTypes() {
-        return new String[]{"address","adjournment","administrationOfOath","answer","block","blockList","communication","componentRef","container","debateSection","declarationOfVote","div","foreign","heading","ministerialStatements","narrative","nationalInterest","noticesOfMotion","num","ol","oralStatements","other","p","papers","personalStatements","petitions","pointOfOrder","prayers","proceduralMotions","question","questions","resolutions","rollCall","scene","speech","subheading","summary","table","tblock","toc","ul","writtenStatements"};
-    }
-
-    @Override
-    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 
