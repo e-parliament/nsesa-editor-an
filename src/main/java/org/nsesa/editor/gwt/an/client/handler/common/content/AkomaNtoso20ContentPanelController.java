@@ -1,7 +1,5 @@
 package org.nsesa.editor.gwt.an.client.handler.common.content;
 
-import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.Element;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
@@ -28,14 +26,16 @@ public class AkomaNtoso20ContentPanelController extends ContentPanelController {
     @Override
     public void setContext(DialogContext dialogContext) {
         super.setContext(dialogContext);
+
+        view.resetBodyClass();
+        view.addBodyClass(dialogContext.getAmendableWidget().getAmendableElement().getClassName());
+
         if (dialogContext.getAmendmentController() != null) {
             // we're editing
             final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", dialogContext.getAmendmentController().asAmendableWidgetFromModel());
             view.setOriginalText(quotedStructures.get(0).getAmendableElement().getFirstChildElement().getInnerHTML());
         } else {
-            final Element element = (Element) dialogContext.getAmendableWidget().getAmendableElement().cloneNode(false);
-            element.setInnerHTML(dialogContext.getAmendableWidget().getInnerHTML());
-            view.setOriginalText(DOM.toString(element));
+            view.setOriginalText(dialogContext.getAmendableWidget().getInnerHTML());
         }
     }
 }

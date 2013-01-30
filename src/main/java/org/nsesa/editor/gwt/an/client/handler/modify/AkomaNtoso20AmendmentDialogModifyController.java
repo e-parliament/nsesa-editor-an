@@ -116,6 +116,10 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
     @Override
     public void setContext(DialogContext dialogContext) {
         super.setContext(dialogContext);
+
+        view.resetBodyClass();
+        view.addBodyClass(dialogContext.getAmendableWidget().getAmendableElement().getClassName());
+
         if (dialogContext.getAmendmentController() != null) {
             // get the location from the amendable widget, if it is passed
             view.setTitle("Edit amendment");
