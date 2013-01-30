@@ -7,8 +7,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.editor.client.ui.document.DocumentController;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Date: 21/11/12 13:11
@@ -34,8 +33,15 @@ public class AkomaNtoso20Creator extends DefaultCreator {
     public LinkedHashMap<String, AmendableWidget> getAllowedChildren(DocumentController documentController, AmendableWidget amendableWidget) {
         final LinkedHashMap<String, AmendableWidget> allowedChildren = new LinkedHashMap<String, AmendableWidget>();
         final Map<AmendableWidget, Occurrence> allowedTypes = amendableWidget.getAllowedChildTypes();
-        for (final Map.Entry<AmendableWidget, Occurrence> allowedType : allowedTypes.entrySet()) {
-            allowedChildren.put(allowedType.getKey().getType(), allowedType.getKey());
+        List<Map.Entry<AmendableWidget, Occurrence>> list = new ArrayList<Map.Entry<AmendableWidget, Occurrence>>(allowedTypes.entrySet());
+        Collections.sort(list, new Comparator<Map.Entry<AmendableWidget, Occurrence>>() {
+            @Override
+            public int compare(Map.Entry<AmendableWidget, Occurrence> o1, Map.Entry<AmendableWidget, Occurrence> o2) {
+                return o1.getKey().getType().compareTo(o2.getKey().getType());
+            }
+        });
+        for (final Map.Entry<AmendableWidget, Occurrence> allowedType : list) {
+            allowedChildren.put(allowedType .getKey().getType(), allowedType.getKey());
         }
         return allowedChildren;
     }
