@@ -11,8 +11,13 @@ import org.nsesa.editor.gwt.core.client.ui.drafting.DraftingController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
+import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
+import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
+import org.nsesa.editor.gwt.dialog.client.ui.handler.common.AmendmentDialogAwareController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreateController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreateView;
+
+import java.util.ArrayList;
 
 /**
  * Date: 05/12/12 14:36
@@ -30,7 +35,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
                                                        final DraftingController draftingController,
                                                        final AmendmentInjectionPointFinder amendmentInjectionPointFinder
     ) {
-        super(clientFactory, view, locator, overlayFactory, draftingController, amendmentInjectionPointFinder);
+        super(clientFactory, view, locator, overlayFactory, draftingController, amendmentInjectionPointFinder, new ArrayList<AmendmentDialogAwareController>());
     }
 
     @Override
@@ -92,5 +97,22 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         StringSimpleType s = new StringSimpleType();
         s.setValue(text);
         return s;
+    }
+
+    @Override
+    public void setContext(DialogContext dialogContext) {
+        super.setContext(dialogContext);
+        view.resetBodyClass();
+        view.addBodyClass(dialogContext.getAmendableWidget().getAmendableElement().getClassName());
+
+        if (dialogContext.getAmendmentController() != null) {
+            // get the location from the amendable widget, if it is passed
+            view.setTitle("Edit amendment");
+            final java.util.List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", dialogContext.getAmendmentController().asAmendableWidgetFromModel());
+            view.setAmendmentContent(quotedStructures.get(1).getAmendableElement().getFirstChildElement().getInnerHTML());
+        } else {
+            view.setTitle(locator.getLocation(dialogContext.getAmendableWidget(), clientFactory.getClientContext().getDocumentIso(), false));
+            view.setAmendmentContent("");
+        }
     }
 }
