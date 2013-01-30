@@ -1,14 +1,11 @@
 .akomaNtoso .preface {
-    display: block !important;
+    display: block;
     text-align: center;
 }
 
 .akomaNtoso .docTitle {
-    font-size: 1.5em;
-    #margin-top: 15px;
-    #margin-bottom: 15px;
-    #display: block;
     font-weight: bold;
+    font-size: 1.5em;
 }
 
 .akomaNtoso .docNumber {
@@ -20,14 +17,18 @@
 }
 
 .akomaNtoso .item {
-    display: block !important;
+    display: block;
     padding-left: 15px;
     margin-top: 1em;
 }
 
+.akomaNtoso .num {
+    display: inline-block;
+    font-weight: bold;
+}
+
 .akomaNtoso .item > .num {
     padding-right: 3px;
-    font-weight: bold;
 }
 
 .akomaNtoso .item > .p {
@@ -35,8 +36,8 @@
 }
 
 .akomaNtoso .title {
-    font-size: 1.4em;
     display: block;
+    font-size: 1.4em;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -58,7 +59,6 @@
 }
 
 .akomaNtoso .heading > .content {
-    #display: block !important;
     margin-top: 1em;
 }
 
@@ -67,12 +67,11 @@
 }
 
 .akomaNtoso .part {
-    margin-top: 15px;
-    margin-bottom: 15px;
     display: block;
 }
 
 .akomaNtoso .part > .num {
+    font-weight: normal;
     font-size: 1.4em;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -87,11 +86,10 @@
 
 .akomaNtoso .section {
     display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 .akomaNtoso .section > .num {
+    font-weight: normal;
     font-size: 1.2em;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -110,22 +108,21 @@
 
 .akomaNtoso .subsection > .num {
     padding-right: 3px;
-    font-weight: bold;
 }
 
 .akomaNtoso .chapter {
     display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 .akomaNtoso .chapter > .num {
+    font-weight: normal;
     font-size: 1.4em;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
 .akomaNtoso .chapter > .heading {
+    display: inline;
     font-size: 1.4em;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -133,17 +130,17 @@
 
 .akomaNtoso .article {
     display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 .akomaNtoso .article > .num {
+    font-weight: normal;
     font-size: 1.2em;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
 .akomaNtoso .article > .heading {
+    display: inline;
     font-size: 1.2em;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -162,6 +159,10 @@
 .akomaNtoso .paragraph:after {
     content: "\A";
     white-space: pre;
+}
+
+.akomaNtoso .paragraph > .heading {
+    display: inline;
 }
 
 .akomaNtoso .point {
