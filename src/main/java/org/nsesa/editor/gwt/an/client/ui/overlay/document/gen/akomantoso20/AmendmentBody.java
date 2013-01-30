@@ -6,7 +6,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -14,52 +17,63 @@ import com.google.gwt.user.client.DOM;
 */
 
 public class AmendmentBody extends AmendmentBodyTypeComplexType  {
+    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+        {
+            put(new AmendmentHeading(), new Occurrence(0,-1));
+            put(new AmendmentContent(), new Occurrence(0,-1));
+            put(new AmendmentReference(), new Occurrence(0,-1));
+            put(new AmendmentJustification(), new Occurrence(0,-1));
+        }
+    };
+
 
 // STATIC create method
-public static Element create() {
-com.google.gwt.user.client.Element span = DOM.createSpan();
-span.setAttribute("type", "amendmentBody");
-span.setAttribute("ns", "http://www.akomantoso.org/2.0");
-span.setClassName("widget amendmentBody");
-return span;
-}
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "amendmentBody");
+        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setClassName("widget amendmentBody");
+        return span;
+    }
 
 // CONSTRUCTORS ------------------
-public AmendmentBody() {
-super(create());
-setType("amendmentBody");
-}
+    public AmendmentBody() {
+        super(create());
+        setType("amendmentBody");
+    }
 
-public AmendmentBody(Element element) {
-super(element);
-}
+    public AmendmentBody(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
 
-/**
-* Returns possible children as a list of <tt>String</tt>s.
-*/
-@Override
-public String[] getAllowedChildTypes() {
-return new String[]{"amendmentContent","amendmentHeading","amendmentJustification","amendmentReference"};
-}
+    /**
+    * Returns possible children as a list of <tt>String</tt>s.
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        return new String[]{"amendmentContent","amendmentHeading","amendmentJustification","amendmentReference"};
+    }
+
+    @Override
+    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+        return ALLOWED_SUB_TYPES;
+    }
 
 /**
-* Returns the namespace URI of this amendable widget.
-*/
-@Override
-public String getNamespaceURI() {
-return "http://www.akomantoso.org/2.0";
-}
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
 
-@Override
-public LinkedHashMap
-<String, String> getAttributes() {
-final LinkedHashMap
-<String, String> attrs = new LinkedHashMap
-<String, String>();
-attrs.putAll(super.getAttributes());
-return attrs;
-}
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
+        attrs.putAll(super.getAttributes());
+        return attrs;
+    }
 }
 

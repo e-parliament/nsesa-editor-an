@@ -4,6 +4,8 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NCNameSi
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -12,20 +14,21 @@ import com.google.gwt.user.client.DOM;
 
 public class IDREFSimpleType extends NCNameSimpleType  {
 
+
 // STATIC create method
-public static Element create() {
-com.google.gwt.user.client.Element span = DOM.createSpan();
-span.setAttribute("type", "IDREFSimpleType");
-span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
-span.setClassName("widget IDREFSimpleType");
-return span;
-}
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "IDREFSimpleType");
+        span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
+        span.setClassName("widget IDREFSimpleType");
+        return span;
+    }
 
 // CONSTRUCTORS ------------------
 
-public IDREFSimpleType() {
-super();
-}
+    public IDREFSimpleType() {
+        super();
+    }
 
 // FIELDS ------------------
 }

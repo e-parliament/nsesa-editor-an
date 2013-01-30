@@ -4,6 +4,8 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IntegerS
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -12,20 +14,21 @@ import com.google.gwt.user.client.DOM;
 
 public class NonPositiveIntegerSimpleType extends IntegerSimpleType  {
 
+
 // STATIC create method
-public static Element create() {
-com.google.gwt.user.client.Element span = DOM.createSpan();
-span.setAttribute("type", "nonPositiveIntegerSimpleType");
-span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
-span.setClassName("widget nonPositiveIntegerSimpleType");
-return span;
-}
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "nonPositiveIntegerSimpleType");
+        span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
+        span.setClassName("widget nonPositiveIntegerSimpleType");
+        return span;
+    }
 
 // CONSTRUCTORS ------------------
 
-public NonPositiveIntegerSimpleType() {
-super();
-}
+    public NonPositiveIntegerSimpleType() {
+        super();
+    }
 
 // FIELDS ------------------
 }

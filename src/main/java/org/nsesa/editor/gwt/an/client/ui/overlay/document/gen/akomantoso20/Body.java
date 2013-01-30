@@ -6,7 +6,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -14,52 +17,82 @@ import com.google.gwt.user.client.DOM;
 */
 
 public class Body extends BodyTypeComplexType  {
+    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+        {
+            put(new ComponentRef(), new Occurrence(1,1));
+            put(new Hcontainer(), new Occurrence(0,-1));
+            put(new Clause(), new Occurrence(0,-1));
+            put(new Section(), new Occurrence(0,-1));
+            put(new Part(), new Occurrence(0,-1));
+            put(new Paragraph(), new Occurrence(0,-1));
+            put(new Chapter(), new Occurrence(0,-1));
+            put(new Title(), new Occurrence(0,-1));
+            put(new Article(), new Occurrence(0,-1));
+            put(new Book(), new Occurrence(0,-1));
+            put(new Tome(), new Occurrence(0,-1));
+            put(new Division(), new Occurrence(0,-1));
+            put(new List(), new Occurrence(0,-1));
+            put(new Point(), new Occurrence(0,-1));
+            put(new Indent(), new Occurrence(0,-1));
+            put(new Alinea(), new Occurrence(0,-1));
+            put(new Subsection(), new Occurrence(0,-1));
+            put(new Subpart(), new Occurrence(0,-1));
+            put(new Subparagraph(), new Occurrence(0,-1));
+            put(new Subchapter(), new Occurrence(0,-1));
+            put(new Subtitle(), new Occurrence(0,-1));
+            put(new Subclause(), new Occurrence(0,-1));
+            put(new Sublist(), new Occurrence(0,-1));
+        }
+    };
+
 
 // STATIC create method
-public static Element create() {
-com.google.gwt.user.client.Element span = DOM.createSpan();
-span.setAttribute("type", "body");
-span.setAttribute("ns", "http://www.akomantoso.org/2.0");
-span.setClassName("widget body");
-return span;
-}
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "body");
+        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setClassName("widget body");
+        return span;
+    }
 
 // CONSTRUCTORS ------------------
-public Body() {
-super(create());
-setType("body");
-}
+    public Body() {
+        super(create());
+        setType("body");
+    }
 
-public Body(Element element) {
-super(element);
-}
+    public Body(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
 
-/**
-* Returns possible children as a list of <tt>String</tt>s.
-*/
-@Override
-public String[] getAllowedChildTypes() {
-return new String[]{"alinea","article","book","chapter","clause","componentRef","division","hcontainer","indent","list","paragraph","part","point","section","subchapter","subclause","sublist","subparagraph","subpart","subsection","subtitle","title","tome"};
-}
+    /**
+    * Returns possible children as a list of <tt>String</tt>s.
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        return new String[]{"alinea","article","book","chapter","clause","componentRef","division","hcontainer","indent","list","paragraph","part","point","section","subchapter","subclause","sublist","subparagraph","subpart","subsection","subtitle","title","tome"};
+    }
+
+    @Override
+    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+        return ALLOWED_SUB_TYPES;
+    }
 
 /**
-* Returns the namespace URI of this amendable widget.
-*/
-@Override
-public String getNamespaceURI() {
-return "http://www.akomantoso.org/2.0";
-}
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
 
-@Override
-public LinkedHashMap
-<String, String> getAttributes() {
-final LinkedHashMap
-<String, String> attrs = new LinkedHashMap
-<String, String>();
-attrs.putAll(super.getAttributes());
-return attrs;
-}
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
+        attrs.putAll(super.getAttributes());
+        return attrs;
+    }
 }
 

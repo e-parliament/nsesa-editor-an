@@ -6,7 +6,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -14,71 +17,80 @@ import com.google.gwt.user.client.DOM;
 */
 
 public class ComponentInfo extends AmendableWidgetImpl  {
+    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+        {
+            put(new ComponentData(), new Occurrence(1,1));
+        }
+    };
+
 
 // STATIC create method
-public static Element create() {
-com.google.gwt.user.client.Element span = DOM.createSpan();
-span.setAttribute("type", "componentInfo");
-span.setAttribute("ns", "http://www.akomantoso.org/2.0");
-span.setClassName("widget componentInfo");
-return span;
-}
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "componentInfo");
+        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setClassName("widget componentInfo");
+        return span;
+    }
 
 // CONSTRUCTORS ------------------
-public ComponentInfo() {
-super(create());
-setType("componentInfo");
-}
+    public ComponentInfo() {
+        super(create());
+        setType("componentInfo");
+    }
 
-public ComponentInfo(Element element) {
-super(element);
-}
+    public ComponentInfo(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
 
-            public java.util.List<ComponentData> getComponentDatas() {
-                java.util.List<ComponentData> result = new ArrayList<ComponentData>();
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+    public java.util.List<ComponentData> getComponentDatas() {
+        java.util.List<ComponentData> result = new ArrayList<ComponentData>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("ComponentData".equalsIgnoreCase(widget.getType())) {
-            result.add((ComponentData)widget);
+                result.add((ComponentData)widget);
             }
-            }
-            return java.util.Collections.unmodifiableList(result);
-            }
-            //DSL Style get value
-            public java.util.List<ComponentData> getComponentDataList() {
-            return  getComponentDatas();
-            }
-            //DSL Style set value
-            public ComponentData addComponentData(ComponentData componentDataElem) {
-                this.addAmendableWidget(componentDataElem);
-                return componentDataElem;
-            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+     //DSL Style get value
+    public java.util.List<ComponentData> getComponentDataList() {
+        return  getComponentDatas();
+    }
+     //DSL Style set value
+    public ComponentData addComponentData(ComponentData componentDataElem) {
+        this.addAmendableWidget(componentDataElem);
+        return componentDataElem;
+    }
+
+    /**
+    * Returns possible children as a list of <tt>String</tt>s.
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        return new String[]{"componentData"};
+    }
+
+    @Override
+    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+        return ALLOWED_SUB_TYPES;
+    }
 
 /**
-* Returns possible children as a list of <tt>String</tt>s.
-*/
-@Override
-public String[] getAllowedChildTypes() {
-return new String[]{"componentData"};
-}
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
 
-/**
-* Returns the namespace URI of this amendable widget.
-*/
-@Override
-public String getNamespaceURI() {
-return "http://www.akomantoso.org/2.0";
-}
-
-@Override
-public LinkedHashMap
-<String, String> getAttributes() {
-final LinkedHashMap
-<String, String> attrs = new LinkedHashMap
-<String, String>();
-attrs.putAll(super.getAttributes());
-return attrs;
-}
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
+        attrs.putAll(super.getAttributes());
+        return attrs;
+    }
 }
 

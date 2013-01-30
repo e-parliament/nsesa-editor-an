@@ -4,6 +4,8 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DecimalS
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -12,20 +14,21 @@ import com.google.gwt.user.client.DOM;
 
 public class IntegerSimpleType extends DecimalSimpleType  {
 
+
 // STATIC create method
-public static Element create() {
-com.google.gwt.user.client.Element span = DOM.createSpan();
-span.setAttribute("type", "integerSimpleType");
-span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
-span.setClassName("widget integerSimpleType");
-return span;
-}
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "integerSimpleType");
+        span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
+        span.setClassName("widget integerSimpleType");
+        return span;
+    }
 
 // CONSTRUCTORS ------------------
 
-public IntegerSimpleType() {
-super();
-}
+    public IntegerSimpleType() {
+        super();
+    }
 
 // FIELDS ------------------
 }

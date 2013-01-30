@@ -9,7 +9,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -17,120 +20,136 @@ import com.google.gwt.user.client.DOM;
 */
 
 public class TextualMod extends ModificationTypeComplexType  {
+    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+        {
+            put(new Old(), new Occurrence(0,1));
+            put(new New(), new Occurrence(0,1));
+            put(new Source(), new Occurrence(1,-1));
+            put(new Destination(), new Occurrence(1,-1));
+            put(new Force(), new Occurrence(0,1));
+            put(new Efficacy(), new Occurrence(0,1));
+            put(new Application(), new Occurrence(0,1));
+            put(new Duration(), new Occurrence(0,1));
+            put(new Condition(), new Occurrence(0,1));
+        }
+    };
+
 
 // STATIC create method
-public static Element create() {
-com.google.gwt.user.client.Element span = DOM.createSpan();
-span.setAttribute("type", "textualMod");
-span.setAttribute("ns", "http://www.akomantoso.org/2.0");
-span.setClassName("widget textualMod");
-return span;
-}
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "textualMod");
+        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setClassName("widget textualMod");
+        return span;
+    }
 
 // CONSTRUCTORS ------------------
-public TextualMod() {
-super(create());
-setType("textualMod");
-}
+    public TextualMod() {
+        super(create());
+        setType("textualMod");
+    }
 
-public TextualMod(Element element) {
-super(element);
-}
+    public TextualMod(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private TextualModsSimpleType typeAttr;
+    private TextualModsSimpleType typeAttr;
 
-        public TextualModsSimpleType getTypeAttr() {
+    public TextualModsSimpleType getTypeAttr() {
         if (typeAttr == null) {
-                typeAttr = TextualModsSimpleType.fromString(getElement().getAttribute("type"));
+            typeAttr = TextualModsSimpleType.fromString(getElement().getAttribute("type"));
         }
 
         return typeAttr;
-        }
-        //DSL Style get value
-        public TextualModsSimpleType typeAttr() {
+     }
+     //DSL Style get value
+    public TextualModsSimpleType typeAttr() {
         return  getTypeAttr();
-        }
+    }
 
-        public void setTypeAttr(final TextualModsSimpleType typeAttr) {
+    public void setTypeAttr(final TextualModsSimpleType typeAttr) {
         this.typeAttr = typeAttr;
-        }
-        //DSL Style set value
-        public TextualMod typeAttr(final TextualModsSimpleType typeAttr) {
+    }
+     //DSL Style set value
+    public TextualMod typeAttr(final TextualModsSimpleType typeAttr) {
         setTypeAttr(typeAttr);
         return this;
-        }
-            public Old getOld() {
-                Old result = null;
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+    }
+    public Old getOld() {
+        Old result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Old".equalsIgnoreCase(widget.getType())) {
-            result = (Old)widget;
-            break;
+                result = (Old)widget;
+                break;
             }
-            }
-            return result;
-            }
-            //DSL Style get value already exists
+         }
+         return result;
+    }
+     //DSL Style get value already exists
 
-            //DSL Style set value
-            public Old setOld(Old oldElem) {
-                    Old result = getOld();
-                // remove the child of the same type if exist
-                if (result != null) {
-                this.removeAmendableWidget(result);
-                }
-                this.addAmendableWidget(oldElem);
+     //DSL Style set value
+    public Old setOld(Old oldElem) {
+        Old result = getOld();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(oldElem);
 
-                return oldElem;
-            }
-            public New getNew() {
-                New result = null;
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+        return oldElem;
+    }
+    public New getNew() {
+        New result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("New".equalsIgnoreCase(widget.getType())) {
-            result = (New)widget;
-            break;
+                result = (New)widget;
+                break;
             }
-            }
-            return result;
-            }
-            //DSL Style get value already exists
+         }
+         return result;
+    }
+     //DSL Style get value already exists
 
-            //DSL Style set value
-            public New setNew(New newElem) {
-                    New result = getNew();
-                // remove the child of the same type if exist
-                if (result != null) {
-                this.removeAmendableWidget(result);
-                }
-                this.addAmendableWidget(newElem);
+     //DSL Style set value
+    public New setNew(New newElem) {
+        New result = getNew();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(newElem);
 
-                return newElem;
-            }
+        return newElem;
+    }
+    /**
+    * Returns possible children as a list of <tt>String</tt>s.
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        return new String[]{"application","condition","destination","duration","efficacy","force","new","old","source"};
+    }
+
+    @Override
+    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+        return ALLOWED_SUB_TYPES;
+    }
+
 /**
-* Returns possible children as a list of <tt>String</tt>s.
-*/
-@Override
-public String[] getAllowedChildTypes() {
-return new String[]{"application","condition","destination","duration","efficacy","force","new","old","source"};
-}
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
 
-/**
-* Returns the namespace URI of this amendable widget.
-*/
-@Override
-public String getNamespaceURI() {
-return "http://www.akomantoso.org/2.0";
-}
-
-@Override
-public LinkedHashMap
-<String, String> getAttributes() {
-final LinkedHashMap
-<String, String> attrs = new LinkedHashMap
-<String, String>();
-attrs.putAll(super.getAttributes());
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
+        attrs.putAll(super.getAttributes());
         attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
-return attrs;
-}
+        return attrs;
+    }
 }
 

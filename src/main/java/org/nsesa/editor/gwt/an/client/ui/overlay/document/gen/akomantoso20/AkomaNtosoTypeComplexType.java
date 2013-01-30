@@ -16,7 +16,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -24,301 +27,319 @@ import com.google.gwt.user.client.DOM;
 */
 
 public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
+    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+        {
+            put(new Components(), new Occurrence(0,1));
+            put(new AmendmentList(), new Occurrence(0,-1));
+            put(new OfficialGazette(), new Occurrence(0,-1));
+            put(new DocumentCollection(), new Occurrence(0,-1));
+            put(new Act(), new Occurrence(0,-1));
+            put(new Bill(), new Occurrence(0,-1));
+            put(new DebateReport(), new Occurrence(0,-1));
+            put(new Debate(), new Occurrence(0,-1));
+            put(new Amendment(), new Occurrence(0,-1));
+            put(new Judgement(), new Occurrence(0,-1));
+            put(new Doc(), new Occurrence(0,-1));
+        }
+    };
+
 
 // STATIC create method
-public static Element create() {
-com.google.gwt.user.client.Element span = DOM.createSpan();
-span.setAttribute("type", "akomaNtosoTypeComplexType");
-span.setAttribute("ns", "http://www.akomantoso.org/2.0");
-span.setClassName("widget akomaNtosoTypeComplexType");
-return span;
-}
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "akomaNtosoTypeComplexType");
+        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setClassName("widget akomaNtosoTypeComplexType");
+        return span;
+    }
 
 // CONSTRUCTORS ------------------
 
-public AkomaNtosoTypeComplexType(Element element) {
-super(element);
-}
+    public AkomaNtosoTypeComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
 
-            public Components getComponents() {
-                Components result = null;
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+    public Components getComponents() {
+        Components result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Components".equalsIgnoreCase(widget.getType())) {
-            result = (Components)widget;
-            break;
+                result = (Components)widget;
+                break;
             }
-            }
-            return result;
-            }
-            //DSL Style get value already exists
+         }
+         return result;
+    }
+     //DSL Style get value already exists
 
-            //DSL Style set value
-            public Components setComponents(Components componentsElem) {
-                    Components result = getComponents();
-                // remove the child of the same type if exist
-                if (result != null) {
-                this.removeAmendableWidget(result);
-                }
-                this.addAmendableWidget(componentsElem);
+     //DSL Style set value
+    public Components setComponents(Components componentsElem) {
+        Components result = getComponents();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(componentsElem);
 
-                return componentsElem;
-            }
-            public AmendmentList getAmendmentList() {
-                AmendmentList result = null;
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+        return componentsElem;
+    }
+    public AmendmentList getAmendmentList() {
+        AmendmentList result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("AmendmentList".equalsIgnoreCase(widget.getType())) {
-            result = (AmendmentList)widget;
-            break;
+                result = (AmendmentList)widget;
+                break;
             }
-            }
-            return result;
-            }
-            //DSL Style get value already exists
+         }
+         return result;
+    }
+     //DSL Style get value already exists
 
-            //DSL Style set value
-            public AmendmentList setAmendmentList(AmendmentList amendmentListElem) {
-                    AmendmentList result = getAmendmentList();
-                // remove the child of the same type if exist
-                if (result != null) {
-                this.removeAmendableWidget(result);
-                }
-                this.addAmendableWidget(amendmentListElem);
+     //DSL Style set value
+    public AmendmentList setAmendmentList(AmendmentList amendmentListElem) {
+        AmendmentList result = getAmendmentList();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(amendmentListElem);
 
-                return amendmentListElem;
-            }
-            public OfficialGazette getOfficialGazette() {
-                OfficialGazette result = null;
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+        return amendmentListElem;
+    }
+    public OfficialGazette getOfficialGazette() {
+        OfficialGazette result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("OfficialGazette".equalsIgnoreCase(widget.getType())) {
-            result = (OfficialGazette)widget;
-            break;
+                result = (OfficialGazette)widget;
+                break;
             }
-            }
-            return result;
-            }
-            //DSL Style get value already exists
+         }
+         return result;
+    }
+     //DSL Style get value already exists
 
-            //DSL Style set value
-            public OfficialGazette setOfficialGazette(OfficialGazette officialGazetteElem) {
-                    OfficialGazette result = getOfficialGazette();
-                // remove the child of the same type if exist
-                if (result != null) {
-                this.removeAmendableWidget(result);
-                }
-                this.addAmendableWidget(officialGazetteElem);
+     //DSL Style set value
+    public OfficialGazette setOfficialGazette(OfficialGazette officialGazetteElem) {
+        OfficialGazette result = getOfficialGazette();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(officialGazetteElem);
 
-                return officialGazetteElem;
-            }
-            public DocumentCollection getDocumentCollection() {
-                DocumentCollection result = null;
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+        return officialGazetteElem;
+    }
+    public DocumentCollection getDocumentCollection() {
+        DocumentCollection result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("DocumentCollection".equalsIgnoreCase(widget.getType())) {
-            result = (DocumentCollection)widget;
-            break;
+                result = (DocumentCollection)widget;
+                break;
             }
-            }
-            return result;
-            }
-            //DSL Style get value already exists
+         }
+         return result;
+    }
+     //DSL Style get value already exists
 
-            //DSL Style set value
-            public DocumentCollection setDocumentCollection(DocumentCollection documentCollectionElem) {
-                    DocumentCollection result = getDocumentCollection();
-                // remove the child of the same type if exist
-                if (result != null) {
-                this.removeAmendableWidget(result);
-                }
-                this.addAmendableWidget(documentCollectionElem);
+     //DSL Style set value
+    public DocumentCollection setDocumentCollection(DocumentCollection documentCollectionElem) {
+        DocumentCollection result = getDocumentCollection();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(documentCollectionElem);
 
-                return documentCollectionElem;
-            }
-            public Act getAct() {
-                Act result = null;
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+        return documentCollectionElem;
+    }
+    public Act getAct() {
+        Act result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Act".equalsIgnoreCase(widget.getType())) {
-            result = (Act)widget;
-            break;
+                result = (Act)widget;
+                break;
             }
-            }
-            return result;
-            }
-            //DSL Style get value already exists
+         }
+         return result;
+    }
+     //DSL Style get value already exists
 
-            //DSL Style set value
-            public Act setAct(Act actElem) {
-                    Act result = getAct();
-                // remove the child of the same type if exist
-                if (result != null) {
-                this.removeAmendableWidget(result);
-                }
-                this.addAmendableWidget(actElem);
+     //DSL Style set value
+    public Act setAct(Act actElem) {
+        Act result = getAct();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(actElem);
 
-                return actElem;
-            }
-            public Bill getBill() {
-                Bill result = null;
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+        return actElem;
+    }
+    public Bill getBill() {
+        Bill result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Bill".equalsIgnoreCase(widget.getType())) {
-            result = (Bill)widget;
-            break;
+                result = (Bill)widget;
+                break;
             }
-            }
-            return result;
-            }
-            //DSL Style get value already exists
+         }
+         return result;
+    }
+     //DSL Style get value already exists
 
-            //DSL Style set value
-            public Bill setBill(Bill billElem) {
-                    Bill result = getBill();
-                // remove the child of the same type if exist
-                if (result != null) {
-                this.removeAmendableWidget(result);
-                }
-                this.addAmendableWidget(billElem);
+     //DSL Style set value
+    public Bill setBill(Bill billElem) {
+        Bill result = getBill();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(billElem);
 
-                return billElem;
-            }
-            public DebateReport getDebateReport() {
-                DebateReport result = null;
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+        return billElem;
+    }
+    public DebateReport getDebateReport() {
+        DebateReport result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("DebateReport".equalsIgnoreCase(widget.getType())) {
-            result = (DebateReport)widget;
-            break;
+                result = (DebateReport)widget;
+                break;
             }
-            }
-            return result;
-            }
-            //DSL Style get value already exists
+         }
+         return result;
+    }
+     //DSL Style get value already exists
 
-            //DSL Style set value
-            public DebateReport setDebateReport(DebateReport debateReportElem) {
-                    DebateReport result = getDebateReport();
-                // remove the child of the same type if exist
-                if (result != null) {
-                this.removeAmendableWidget(result);
-                }
-                this.addAmendableWidget(debateReportElem);
+     //DSL Style set value
+    public DebateReport setDebateReport(DebateReport debateReportElem) {
+        DebateReport result = getDebateReport();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(debateReportElem);
 
-                return debateReportElem;
-            }
-            public Debate getDebate() {
-                Debate result = null;
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+        return debateReportElem;
+    }
+    public Debate getDebate() {
+        Debate result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Debate".equalsIgnoreCase(widget.getType())) {
-            result = (Debate)widget;
-            break;
+                result = (Debate)widget;
+                break;
             }
-            }
-            return result;
-            }
-            //DSL Style get value already exists
+         }
+         return result;
+    }
+     //DSL Style get value already exists
 
-            //DSL Style set value
-            public Debate setDebate(Debate debateElem) {
-                    Debate result = getDebate();
-                // remove the child of the same type if exist
-                if (result != null) {
-                this.removeAmendableWidget(result);
-                }
-                this.addAmendableWidget(debateElem);
+     //DSL Style set value
+    public Debate setDebate(Debate debateElem) {
+        Debate result = getDebate();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(debateElem);
 
-                return debateElem;
-            }
-            public Amendment getAmendment() {
-                Amendment result = null;
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+        return debateElem;
+    }
+    public Amendment getAmendment() {
+        Amendment result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Amendment".equalsIgnoreCase(widget.getType())) {
-            result = (Amendment)widget;
-            break;
+                result = (Amendment)widget;
+                break;
             }
-            }
-            return result;
-            }
-            //DSL Style get value already exists
+         }
+         return result;
+    }
+     //DSL Style get value already exists
 
-            //DSL Style set value
-            public Amendment setAmendment(Amendment amendmentElem) {
-                    Amendment result = getAmendment();
-                // remove the child of the same type if exist
-                if (result != null) {
-                this.removeAmendableWidget(result);
-                }
-                this.addAmendableWidget(amendmentElem);
+     //DSL Style set value
+    public Amendment setAmendment(Amendment amendmentElem) {
+        Amendment result = getAmendment();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(amendmentElem);
 
-                return amendmentElem;
-            }
-            public Judgement getJudgement() {
-                Judgement result = null;
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+        return amendmentElem;
+    }
+    public Judgement getJudgement() {
+        Judgement result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Judgement".equalsIgnoreCase(widget.getType())) {
-            result = (Judgement)widget;
-            break;
+                result = (Judgement)widget;
+                break;
             }
-            }
-            return result;
-            }
-            //DSL Style get value already exists
+         }
+         return result;
+    }
+     //DSL Style get value already exists
 
-            //DSL Style set value
-            public Judgement setJudgement(Judgement judgementElem) {
-                    Judgement result = getJudgement();
-                // remove the child of the same type if exist
-                if (result != null) {
-                this.removeAmendableWidget(result);
-                }
-                this.addAmendableWidget(judgementElem);
+     //DSL Style set value
+    public Judgement setJudgement(Judgement judgementElem) {
+        Judgement result = getJudgement();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(judgementElem);
 
-                return judgementElem;
-            }
-            public Doc getDoc() {
-                Doc result = null;
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+        return judgementElem;
+    }
+    public Doc getDoc() {
+        Doc result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Doc".equalsIgnoreCase(widget.getType())) {
-            result = (Doc)widget;
-            break;
+                result = (Doc)widget;
+                break;
             }
-            }
-            return result;
-            }
-            //DSL Style get value already exists
+         }
+         return result;
+    }
+     //DSL Style get value already exists
 
-            //DSL Style set value
-            public Doc setDoc(Doc docElem) {
-                    Doc result = getDoc();
-                // remove the child of the same type if exist
-                if (result != null) {
-                this.removeAmendableWidget(result);
-                }
-                this.addAmendableWidget(docElem);
+     //DSL Style set value
+    public Doc setDoc(Doc docElem) {
+        Doc result = getDoc();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(docElem);
 
-                return docElem;
-            }
+        return docElem;
+    }
+    /**
+    * Returns possible children as a list of <tt>String</tt>s.
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        return new String[]{"act","amendment","amendmentList","bill","components","debate","debateReport","doc","documentCollection","judgement","officialGazette"};
+    }
+
+    @Override
+    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+        return ALLOWED_SUB_TYPES;
+    }
+
 /**
-* Returns possible children as a list of <tt>String</tt>s.
-*/
-@Override
-public String[] getAllowedChildTypes() {
-return new String[]{"act","amendment","amendmentList","bill","components","debate","debateReport","doc","documentCollection","judgement","officialGazette"};
-}
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
 
-/**
-* Returns the namespace URI of this amendable widget.
-*/
-@Override
-public String getNamespaceURI() {
-return "http://www.akomantoso.org/2.0";
-}
-
-@Override
-public LinkedHashMap
-<String, String> getAttributes() {
-final LinkedHashMap
-<String, String> attrs = new LinkedHashMap
-<String, String>();
-attrs.putAll(super.getAttributes());
-return attrs;
-}
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
+        attrs.putAll(super.getAttributes());
+        return attrs;
+    }
 }
 

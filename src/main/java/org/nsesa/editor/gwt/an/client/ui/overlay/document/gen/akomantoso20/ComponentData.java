@@ -1,16 +1,19 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ComponentData;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -18,231 +21,240 @@ import com.google.gwt.user.client.DOM;
 */
 
 public class ComponentData extends AmendableWidgetImpl  {
+    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+        {
+            put(new ComponentData(), new Occurrence(1,1));
+        }
+    };
+
 
 // STATIC create method
-public static Element create() {
-com.google.gwt.user.client.Element span = DOM.createSpan();
-span.setAttribute("type", "componentData");
-span.setAttribute("ns", "http://www.akomantoso.org/2.0");
-span.setClassName("widget componentData");
-return span;
-}
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "componentData");
+        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setClassName("widget componentData");
+        return span;
+    }
 
 // CONSTRUCTORS ------------------
-public ComponentData() {
-super(create());
-setType("componentData");
-}
+    public ComponentData() {
+        super(create());
+        setType("componentData");
+    }
 
-public ComponentData(Element element) {
-super(element);
-}
+    public ComponentData(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private IDSimpleType idAttr;
-private NMTOKENSimpleType evolvingIdAttr;
-private AnyURISimpleType hrefAttr;
-private String wildcardContentAttr;
-private StringSimpleType showAsAttr;
-private StringSimpleType shortFormAttr;
-private StringSimpleType nameAttr;
+    private StringSimpleType showAsAttr;
+    private StringSimpleType shortFormAttr;
+    private AnyURISimpleType hrefAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private StringSimpleType nameAttr;
+    private String wildcardContentAttr;
 
-            public java.util.List<ComponentData> getComponentDatas() {
-                java.util.List<ComponentData> result = new ArrayList<ComponentData>();
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+    public java.util.List<ComponentData> getComponentDatas() {
+        java.util.List<ComponentData> result = new ArrayList<ComponentData>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("ComponentData".equalsIgnoreCase(widget.getType())) {
-            result.add((ComponentData)widget);
+                result.add((ComponentData)widget);
             }
-            }
-            return java.util.Collections.unmodifiableList(result);
-            }
-            //DSL Style get value
-            public java.util.List<ComponentData> getComponentDataList() {
-            return  getComponentDatas();
-            }
-            //DSL Style set value
-            public ComponentData addComponentData(ComponentData componentDataElem) {
-                this.addAmendableWidget(componentDataElem);
-                return componentDataElem;
-            }
-
-        public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-                idAttr = new IDSimpleType();
-                idAttr.setValue(getElement().getAttribute("id"));
         }
+        return java.util.Collections.unmodifiableList(result);
+    }
 
-        return idAttr;
-        }
-        //DSL Style get value
-        public IDSimpleType idAttr() {
-        return  getIdAttr();
+     //DSL Style get value
+    public java.util.List<ComponentData> getComponentDataList() {
+        return  getComponentDatas();
+    }
+     //DSL Style set value
+    public ComponentData addComponentData(ComponentData componentDataElem) {
+        this.addAmendableWidget(componentDataElem);
+        return componentDataElem;
+    }
+
+    public StringSimpleType getShowAsAttr() {
+        if (showAsAttr == null) {
+            showAsAttr = new StringSimpleType();
+            showAsAttr.setValue(getElement().getAttribute("showAs"));
         }
 
-        public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        }
-        //DSL Style set value
-        public ComponentData idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
+        return showAsAttr;
+     }
+     //DSL Style get value
+    public StringSimpleType showAsAttr() {
+        return  getShowAsAttr();
+    }
+
+    public void setShowAsAttr(final StringSimpleType showAsAttr) {
+        this.showAsAttr = showAsAttr;
+    }
+     //DSL Style set value
+    public ComponentData showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
         return this;
-        }
-        public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-                evolvingIdAttr = new NMTOKENSimpleType();
-                evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-        }
-        //DSL Style get value
-        public NMTOKENSimpleType evolvingIdAttr() {
-        return  getEvolvingIdAttr();
+    }
+    public StringSimpleType getShortFormAttr() {
+        if (shortFormAttr == null) {
+            shortFormAttr = new StringSimpleType();
+            shortFormAttr.setValue(getElement().getAttribute("shortForm"));
         }
 
-        public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        }
-        //DSL Style set value
-        public ComponentData evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+        return shortFormAttr;
+     }
+     //DSL Style get value
+    public StringSimpleType shortFormAttr() {
+        return  getShortFormAttr();
+    }
+
+    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
+        this.shortFormAttr = shortFormAttr;
+    }
+     //DSL Style set value
+    public ComponentData shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
         return this;
-        }
-        public AnyURISimpleType getHrefAttr() {
+    }
+    public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
-                hrefAttr = new AnyURISimpleType();
-                hrefAttr.setValue(getElement().getAttribute("href"));
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(getElement().getAttribute("href"));
         }
 
         return hrefAttr;
-        }
-        //DSL Style get value
-        public AnyURISimpleType hrefAttr() {
+     }
+     //DSL Style get value
+    public AnyURISimpleType hrefAttr() {
         return  getHrefAttr();
-        }
+    }
 
-        public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
         this.hrefAttr = hrefAttr;
-        }
-        //DSL Style set value
-        public ComponentData hrefAttr(final AnyURISimpleType hrefAttr) {
+    }
+     //DSL Style set value
+    public ComponentData hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
         return this;
+    }
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
         }
-        public String getWildcardContentAttr() {
+
+        return idAttr;
+     }
+     //DSL Style get value
+    public IDSimpleType idAttr() {
+        return  getIdAttr();
+    }
+
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+    }
+     //DSL Style set value
+    public ComponentData idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+     }
+     //DSL Style get value
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return  getEvolvingIdAttr();
+    }
+
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+    }
+     //DSL Style set value
+    public ComponentData evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+    public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+            nameAttr = new StringSimpleType();
+            nameAttr.setValue(getElement().getAttribute("name"));
+        }
+
+        return nameAttr;
+     }
+     //DSL Style get value
+    public StringSimpleType nameAttr() {
+        return  getNameAttr();
+    }
+
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+    }
+     //DSL Style set value
+    public ComponentData nameAttr(final StringSimpleType nameAttr) {
+        setNameAttr(nameAttr);
+        return this;
+    }
+    public String getWildcardContentAttr() {
         if (wildcardContentAttr == null) {
             //hmm nothing to do here
         }
 
         return wildcardContentAttr;
-        }
-        //DSL Style get value
-        public String wildcardContentAttr() {
+     }
+     //DSL Style get value
+    public String wildcardContentAttr() {
         return  getWildcardContentAttr();
-        }
+    }
 
-        public void setWildcardContentAttr(final String wildcardContentAttr) {
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
-        }
-        //DSL Style set value
-        public ComponentData wildcardContentAttr(final String wildcardContentAttr) {
+    }
+     //DSL Style set value
+    public ComponentData wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
-        }
-        public StringSimpleType getShowAsAttr() {
-        if (showAsAttr == null) {
-                showAsAttr = new StringSimpleType();
-                showAsAttr.setValue(getElement().getAttribute("showAs"));
-        }
+    }
+    /**
+    * Returns possible children as a list of <tt>String</tt>s.
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        return new String[]{"componentData"};
+    }
 
-        return showAsAttr;
-        }
-        //DSL Style get value
-        public StringSimpleType showAsAttr() {
-        return  getShowAsAttr();
-        }
-
-        public void setShowAsAttr(final StringSimpleType showAsAttr) {
-        this.showAsAttr = showAsAttr;
-        }
-        //DSL Style set value
-        public ComponentData showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-        }
-        public StringSimpleType getShortFormAttr() {
-        if (shortFormAttr == null) {
-                shortFormAttr = new StringSimpleType();
-                shortFormAttr.setValue(getElement().getAttribute("shortForm"));
-        }
-
-        return shortFormAttr;
-        }
-        //DSL Style get value
-        public StringSimpleType shortFormAttr() {
-        return  getShortFormAttr();
-        }
-
-        public void setShortFormAttr(final StringSimpleType shortFormAttr) {
-        this.shortFormAttr = shortFormAttr;
-        }
-        //DSL Style set value
-        public ComponentData shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
-        return this;
-        }
-        public StringSimpleType getNameAttr() {
-        if (nameAttr == null) {
-                nameAttr = new StringSimpleType();
-                nameAttr.setValue(getElement().getAttribute("name"));
-        }
-
-        return nameAttr;
-        }
-        //DSL Style get value
-        public StringSimpleType nameAttr() {
-        return  getNameAttr();
-        }
-
-        public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-        }
-        //DSL Style set value
-        public ComponentData nameAttr(final StringSimpleType nameAttr) {
-        setNameAttr(nameAttr);
-        return this;
-        }
-/**
-* Returns possible children as a list of <tt>String</tt>s.
-*/
-@Override
-public String[] getAllowedChildTypes() {
-return new String[]{"componentData"};
-}
+    @Override
+    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+        return ALLOWED_SUB_TYPES;
+    }
 
 /**
-* Returns the namespace URI of this amendable widget.
-*/
-@Override
-public String getNamespaceURI() {
-return "http://www.akomantoso.org/2.0";
-}
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
 
-@Override
-public LinkedHashMap
-<String, String> getAttributes() {
-final LinkedHashMap
-<String, String> attrs = new LinkedHashMap
-<String, String>();
-attrs.putAll(super.getAttributes());
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
+        attrs.putAll(super.getAttributes());
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
-return attrs;
-}
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        return attrs;
+    }
 }
 

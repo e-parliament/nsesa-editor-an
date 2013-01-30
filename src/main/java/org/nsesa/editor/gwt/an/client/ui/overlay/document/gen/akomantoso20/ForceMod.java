@@ -7,7 +7,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -15,74 +18,88 @@ import com.google.gwt.user.client.DOM;
 */
 
 public class ForceMod extends ModificationTypeComplexType  {
+    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+        {
+            put(new Source(), new Occurrence(1,-1));
+            put(new Destination(), new Occurrence(1,-1));
+            put(new Force(), new Occurrence(0,1));
+            put(new Efficacy(), new Occurrence(0,1));
+            put(new Application(), new Occurrence(0,1));
+            put(new Duration(), new Occurrence(0,1));
+            put(new Condition(), new Occurrence(0,1));
+        }
+    };
+
 
 // STATIC create method
-public static Element create() {
-com.google.gwt.user.client.Element span = DOM.createSpan();
-span.setAttribute("type", "forceMod");
-span.setAttribute("ns", "http://www.akomantoso.org/2.0");
-span.setClassName("widget forceMod");
-return span;
-}
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "forceMod");
+        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setClassName("widget forceMod");
+        return span;
+    }
 
 // CONSTRUCTORS ------------------
-public ForceMod() {
-super(create());
-setType("forceMod");
-}
+    public ForceMod() {
+        super(create());
+        setType("forceMod");
+    }
 
-public ForceMod(Element element) {
-super(element);
-}
+    public ForceMod(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private ForceModsSimpleType typeAttr;
+    private ForceModsSimpleType typeAttr;
 
-        public ForceModsSimpleType getTypeAttr() {
+    public ForceModsSimpleType getTypeAttr() {
         if (typeAttr == null) {
-                typeAttr = ForceModsSimpleType.fromString(getElement().getAttribute("type"));
+            typeAttr = ForceModsSimpleType.fromString(getElement().getAttribute("type"));
         }
 
         return typeAttr;
-        }
-        //DSL Style get value
-        public ForceModsSimpleType typeAttr() {
+     }
+     //DSL Style get value
+    public ForceModsSimpleType typeAttr() {
         return  getTypeAttr();
-        }
+    }
 
-        public void setTypeAttr(final ForceModsSimpleType typeAttr) {
+    public void setTypeAttr(final ForceModsSimpleType typeAttr) {
         this.typeAttr = typeAttr;
-        }
-        //DSL Style set value
-        public ForceMod typeAttr(final ForceModsSimpleType typeAttr) {
+    }
+     //DSL Style set value
+    public ForceMod typeAttr(final ForceModsSimpleType typeAttr) {
         setTypeAttr(typeAttr);
         return this;
-        }
-/**
-* Returns possible children as a list of <tt>String</tt>s.
-*/
-@Override
-public String[] getAllowedChildTypes() {
-return new String[]{"application","condition","destination","duration","efficacy","force","source"};
-}
+    }
+    /**
+    * Returns possible children as a list of <tt>String</tt>s.
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        return new String[]{"application","condition","destination","duration","efficacy","force","source"};
+    }
+
+    @Override
+    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+        return ALLOWED_SUB_TYPES;
+    }
 
 /**
-* Returns the namespace URI of this amendable widget.
-*/
-@Override
-public String getNamespaceURI() {
-return "http://www.akomantoso.org/2.0";
-}
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
 
-@Override
-public LinkedHashMap
-<String, String> getAttributes() {
-final LinkedHashMap
-<String, String> attrs = new LinkedHashMap
-<String, String>();
-attrs.putAll(super.getAttributes());
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
+        attrs.putAll(super.getAttributes());
         attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
-return attrs;
-}
+        return attrs;
+    }
 }
 

@@ -5,7 +5,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -13,66 +16,75 @@ import com.google.gwt.user.client.DOM;
 */
 
 public class AnyTypeComplexType extends AmendableWidgetImpl  {
+    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+        {
+            put(null, new Occurrence(0,-1));
+        }
+    };
+
 
 // STATIC create method
-public static Element create() {
-com.google.gwt.user.client.Element span = DOM.createSpan();
-span.setAttribute("type", "anyTypeComplexType");
-span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
-span.setClassName("widget anyTypeComplexType");
-return span;
-}
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "anyTypeComplexType");
+        span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
+        span.setClassName("widget anyTypeComplexType");
+        return span;
+    }
 
 // CONSTRUCTORS ------------------
 
-public AnyTypeComplexType(Element element) {
-super(element);
-}
+    public AnyTypeComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
 
-            public java.util.List<AmendableWidgetImpl> getWildcardContents() {
-                java.util.List<AmendableWidgetImpl> result = new ArrayList<AmendableWidgetImpl>();
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+    public java.util.List<AmendableWidgetImpl> getWildcardContents() {
+        java.util.List<AmendableWidgetImpl> result = new ArrayList<AmendableWidgetImpl>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("AmendableWidgetImpl".equalsIgnoreCase(widget.getType())) {
-            result.add((AmendableWidgetImpl)widget);
+                result.add((AmendableWidgetImpl)widget);
             }
-            }
-            return java.util.Collections.unmodifiableList(result);
-            }
-            //DSL Style get value
-            public java.util.List<AmendableWidgetImpl> getWildcardContentList() {
-            return  getWildcardContents();
-            }
-            //DSL Style set value
-            public String addWildcardContent(String wildcardContentElem) {
-                throw new RuntimeException("Adding wildcard content is not supported yet");
-            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+     //DSL Style get value
+    public java.util.List<AmendableWidgetImpl> getWildcardContentList() {
+        return  getWildcardContents();
+    }
+     //DSL Style set value
+    public String addWildcardContent(String wildcardContentElem) {
+        throw new RuntimeException("Adding wildcard content is not supported yet");
+    }
+
+    /**
+    * Returns possible children as a list of <tt>String</tt>s.
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        return new String[]{"*"};
+    }
+
+    @Override
+    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+        return ALLOWED_SUB_TYPES;
+    }
 
 /**
-* Returns possible children as a list of <tt>String</tt>s.
-*/
-@Override
-public String[] getAllowedChildTypes() {
-return new String[]{"*"};
-}
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.w3.org/2001/XMLSchema";
+    }
 
-/**
-* Returns the namespace URI of this amendable widget.
-*/
-@Override
-public String getNamespaceURI() {
-return "http://www.w3.org/2001/XMLSchema";
-}
-
-@Override
-public LinkedHashMap
-<String, String> getAttributes() {
-final LinkedHashMap
-<String, String> attrs = new LinkedHashMap
-<String, String>();
-attrs.putAll(super.getAttributes());
-return attrs;
-}
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
+        attrs.putAll(super.getAttributes());
+        return attrs;
+    }
 }
 

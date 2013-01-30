@@ -13,7 +13,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -21,282 +24,294 @@ import com.google.gwt.user.client.DOM;
 */
 
 public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
+    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+        {
+            put(new Source(), new Occurrence(1,-1));
+            put(new Destination(), new Occurrence(1,-1));
+            put(new Condition(), new Occurrence(0,1));
+        }
+    };
+
 
 // STATIC create method
-public static Element create() {
-com.google.gwt.user.client.Element span = DOM.createSpan();
-span.setAttribute("type", "judicialArgumentTypeComplexType");
-span.setAttribute("ns", "http://www.akomantoso.org/2.0");
-span.setClassName("widget judicialArgumentTypeComplexType");
-return span;
-}
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "judicialArgumentTypeComplexType");
+        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setClassName("widget judicialArgumentTypeComplexType");
+        return span;
+    }
 
 // CONSTRUCTORS ------------------
 
-public JudicialArgumentTypeComplexType(Element element) {
-super(element);
-}
+    public JudicialArgumentTypeComplexType(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
-private StatusTypeSimpleType statusAttr;
-private BooleanSimpleType exclusionAttr;
-private BooleanSimpleType incompleteAttr;
-private IDSimpleType idAttr;
-private NMTOKENSimpleType evolvingIdAttr;
-private AnyURISimpleType refersToAttr;
-private String wildcardContentAttr;
-private AnyURISimpleType periodAttr;
+    private StatusTypeSimpleType statusAttr;
+    private BooleanSimpleType exclusionAttr;
+    private BooleanSimpleType incompleteAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType refersToAttr;
+    private String wildcardContentAttr;
+    private AnyURISimpleType periodAttr;
 
-            public java.util.List<Source> getSources() {
-                java.util.List<Source> result = new ArrayList<Source>();
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+    public java.util.List<Source> getSources() {
+        java.util.List<Source> result = new ArrayList<Source>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Source".equalsIgnoreCase(widget.getType())) {
-            result.add((Source)widget);
+                result.add((Source)widget);
             }
-            }
-            return java.util.Collections.unmodifiableList(result);
-            }
-            //DSL Style get value
-            public java.util.List<Source> getSourceList() {
-            return  getSources();
-            }
-            //DSL Style set value
-            public Source addSource(Source sourceElem) {
-                this.addAmendableWidget(sourceElem);
-                return sourceElem;
-            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
 
-            public java.util.List<Destination> getDestinations() {
-                java.util.List<Destination> result = new ArrayList<Destination>();
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+     //DSL Style get value
+    public java.util.List<Source> getSourceList() {
+        return  getSources();
+    }
+     //DSL Style set value
+    public Source addSource(Source sourceElem) {
+        this.addAmendableWidget(sourceElem);
+        return sourceElem;
+    }
+
+    public java.util.List<Destination> getDestinations() {
+        java.util.List<Destination> result = new ArrayList<Destination>();
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Destination".equalsIgnoreCase(widget.getType())) {
-            result.add((Destination)widget);
+                result.add((Destination)widget);
             }
-            }
-            return java.util.Collections.unmodifiableList(result);
-            }
-            //DSL Style get value
-            public java.util.List<Destination> getDestinationList() {
-            return  getDestinations();
-            }
-            //DSL Style set value
-            public Destination addDestination(Destination destinationElem) {
-                this.addAmendableWidget(destinationElem);
-                return destinationElem;
-            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
 
-            public Condition getCondition() {
-                Condition result = null;
-            for (AmendableWidget widget : getChildAmendableWidgets()) {
+     //DSL Style get value
+    public java.util.List<Destination> getDestinationList() {
+        return  getDestinations();
+    }
+     //DSL Style set value
+    public Destination addDestination(Destination destinationElem) {
+        this.addAmendableWidget(destinationElem);
+        return destinationElem;
+    }
+
+    public Condition getCondition() {
+        Condition result = null;
+        for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Condition".equalsIgnoreCase(widget.getType())) {
-            result = (Condition)widget;
-            break;
+                result = (Condition)widget;
+                break;
             }
-            }
-            return result;
-            }
-            //DSL Style get value already exists
+         }
+         return result;
+    }
+     //DSL Style get value already exists
 
-            //DSL Style set value
-            public Condition setCondition(Condition conditionElem) {
-                    Condition result = getCondition();
-                // remove the child of the same type if exist
-                if (result != null) {
-                this.removeAmendableWidget(result);
-                }
-                this.addAmendableWidget(conditionElem);
+     //DSL Style set value
+    public Condition setCondition(Condition conditionElem) {
+        Condition result = getCondition();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeAmendableWidget(result);
+        }
+        this.addAmendableWidget(conditionElem);
 
-                return conditionElem;
-            }
-        public StatusTypeSimpleType getStatusAttr() {
+        return conditionElem;
+    }
+    public StatusTypeSimpleType getStatusAttr() {
         if (statusAttr == null) {
-                statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
         }
 
         return statusAttr;
-        }
-        //DSL Style get value
-        public StatusTypeSimpleType statusAttr() {
+     }
+     //DSL Style get value
+    public StatusTypeSimpleType statusAttr() {
         return  getStatusAttr();
-        }
+    }
 
-        public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
         this.statusAttr = statusAttr;
-        }
-        //DSL Style set value
-        public JudicialArgumentTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+    }
+     //DSL Style set value
+    public JudicialArgumentTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
         setStatusAttr(statusAttr);
         return this;
-        }
-        public BooleanSimpleType getExclusionAttr() {
+    }
+    public BooleanSimpleType getExclusionAttr() {
         if (exclusionAttr == null) {
-                exclusionAttr = new BooleanSimpleType();
-                exclusionAttr.setValue(getElement().getAttribute("exclusion"));
+            exclusionAttr = new BooleanSimpleType();
+            exclusionAttr.setValue(getElement().getAttribute("exclusion"));
         }
 
         return exclusionAttr;
-        }
-        //DSL Style get value
-        public BooleanSimpleType exclusionAttr() {
+     }
+     //DSL Style get value
+    public BooleanSimpleType exclusionAttr() {
         return  getExclusionAttr();
-        }
+    }
 
-        public void setExclusionAttr(final BooleanSimpleType exclusionAttr) {
+    public void setExclusionAttr(final BooleanSimpleType exclusionAttr) {
         this.exclusionAttr = exclusionAttr;
-        }
-        //DSL Style set value
-        public JudicialArgumentTypeComplexType exclusionAttr(final BooleanSimpleType exclusionAttr) {
+    }
+     //DSL Style set value
+    public JudicialArgumentTypeComplexType exclusionAttr(final BooleanSimpleType exclusionAttr) {
         setExclusionAttr(exclusionAttr);
         return this;
-        }
-        public BooleanSimpleType getIncompleteAttr() {
+    }
+    public BooleanSimpleType getIncompleteAttr() {
         if (incompleteAttr == null) {
-                incompleteAttr = new BooleanSimpleType();
-                incompleteAttr.setValue(getElement().getAttribute("incomplete"));
+            incompleteAttr = new BooleanSimpleType();
+            incompleteAttr.setValue(getElement().getAttribute("incomplete"));
         }
 
         return incompleteAttr;
-        }
-        //DSL Style get value
-        public BooleanSimpleType incompleteAttr() {
+     }
+     //DSL Style get value
+    public BooleanSimpleType incompleteAttr() {
         return  getIncompleteAttr();
-        }
+    }
 
-        public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
+    public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
         this.incompleteAttr = incompleteAttr;
-        }
-        //DSL Style set value
-        public JudicialArgumentTypeComplexType incompleteAttr(final BooleanSimpleType incompleteAttr) {
+    }
+     //DSL Style set value
+    public JudicialArgumentTypeComplexType incompleteAttr(final BooleanSimpleType incompleteAttr) {
         setIncompleteAttr(incompleteAttr);
         return this;
-        }
-        public IDSimpleType getIdAttr() {
+    }
+    public IDSimpleType getIdAttr() {
         if (idAttr == null) {
-                idAttr = new IDSimpleType();
-                idAttr.setValue(getElement().getAttribute("id"));
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
         }
 
         return idAttr;
-        }
-        //DSL Style get value
-        public IDSimpleType idAttr() {
+     }
+     //DSL Style get value
+    public IDSimpleType idAttr() {
         return  getIdAttr();
-        }
+    }
 
-        public void setIdAttr(final IDSimpleType idAttr) {
+    public void setIdAttr(final IDSimpleType idAttr) {
         this.idAttr = idAttr;
-        }
-        //DSL Style set value
-        public JudicialArgumentTypeComplexType idAttr(final IDSimpleType idAttr) {
+    }
+     //DSL Style set value
+    public JudicialArgumentTypeComplexType idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
-        }
-        public NMTOKENSimpleType getEvolvingIdAttr() {
+    }
+    public NMTOKENSimpleType getEvolvingIdAttr() {
         if (evolvingIdAttr == null) {
-                evolvingIdAttr = new NMTOKENSimpleType();
-                evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
         }
 
         return evolvingIdAttr;
-        }
-        //DSL Style get value
-        public NMTOKENSimpleType evolvingIdAttr() {
+     }
+     //DSL Style get value
+    public NMTOKENSimpleType evolvingIdAttr() {
         return  getEvolvingIdAttr();
-        }
+    }
 
-        public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
-        }
-        //DSL Style set value
-        public JudicialArgumentTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+    }
+     //DSL Style set value
+    public JudicialArgumentTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
-        }
-        public AnyURISimpleType getRefersToAttr() {
+    }
+    public AnyURISimpleType getRefersToAttr() {
         if (refersToAttr == null) {
-                refersToAttr = new AnyURISimpleType();
-                refersToAttr.setValue(getElement().getAttribute("refersTo"));
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
         }
 
         return refersToAttr;
-        }
-        //DSL Style get value
-        public AnyURISimpleType refersToAttr() {
+     }
+     //DSL Style get value
+    public AnyURISimpleType refersToAttr() {
         return  getRefersToAttr();
-        }
+    }
 
-        public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
         this.refersToAttr = refersToAttr;
-        }
-        //DSL Style set value
-        public JudicialArgumentTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+    }
+     //DSL Style set value
+    public JudicialArgumentTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
         return this;
-        }
-        public String getWildcardContentAttr() {
+    }
+    public String getWildcardContentAttr() {
         if (wildcardContentAttr == null) {
             //hmm nothing to do here
         }
 
         return wildcardContentAttr;
-        }
-        //DSL Style get value
-        public String wildcardContentAttr() {
+     }
+     //DSL Style get value
+    public String wildcardContentAttr() {
         return  getWildcardContentAttr();
-        }
+    }
 
-        public void setWildcardContentAttr(final String wildcardContentAttr) {
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
-        }
-        //DSL Style set value
-        public JudicialArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+    }
+     //DSL Style set value
+    public JudicialArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
-        }
-        public AnyURISimpleType getPeriodAttr() {
+    }
+    public AnyURISimpleType getPeriodAttr() {
         if (periodAttr == null) {
-                periodAttr = new AnyURISimpleType();
-                periodAttr.setValue(getElement().getAttribute("period"));
+            periodAttr = new AnyURISimpleType();
+            periodAttr.setValue(getElement().getAttribute("period"));
         }
 
         return periodAttr;
-        }
-        //DSL Style get value
-        public AnyURISimpleType periodAttr() {
+     }
+     //DSL Style get value
+    public AnyURISimpleType periodAttr() {
         return  getPeriodAttr();
-        }
+    }
 
-        public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
         this.periodAttr = periodAttr;
-        }
-        //DSL Style set value
-        public JudicialArgumentTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
+    }
+     //DSL Style set value
+    public JudicialArgumentTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
-        }
-/**
-* Returns possible children as a list of <tt>String</tt>s.
-*/
-@Override
-public String[] getAllowedChildTypes() {
-return new String[]{"condition","destination","source"};
-}
+    }
+    /**
+    * Returns possible children as a list of <tt>String</tt>s.
+    */
+    @Override
+    public String[] getAllowedChildTypes() {
+        return new String[]{"condition","destination","source"};
+    }
+
+    @Override
+    public Map<AmendableWidget, Occurrence> getAllowedSubTypes() {
+        return ALLOWED_SUB_TYPES;
+    }
 
 /**
-* Returns the namespace URI of this amendable widget.
-*/
-@Override
-public String getNamespaceURI() {
-return "http://www.akomantoso.org/2.0";
-}
+    * Returns the namespace URI of this amendable widget.
+    */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
 
-@Override
-public LinkedHashMap
-<String, String> getAttributes() {
-final LinkedHashMap
-<String, String> attrs = new LinkedHashMap
-<String, String>();
-attrs.putAll(super.getAttributes());
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
+        attrs.putAll(super.getAttributes());
         attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("exclusion", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
         attrs.put("incomplete", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
@@ -305,7 +320,7 @@ attrs.putAll(super.getAttributes());
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
-return attrs;
-}
+        return attrs;
+    }
 }
 
