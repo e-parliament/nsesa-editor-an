@@ -2,6 +2,7 @@ package org.nsesa.editor.gwt.an.client;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.an.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.diffing.DefaultDiffingManager;
@@ -33,8 +34,10 @@ public class AkomaNtoso20DiffingManager extends DefaultDiffingManager {
     public void diff(final DiffMethod method, final AmendmentController... amendmentControllers) {
         final ArrayList<DiffRequest> diffRequests = new ArrayList<DiffRequest>();
         for (final AmendmentController amendmentController : amendmentControllers) {
-            diffRequests.add(new DiffRequest(amendmentController.getOriginalContentFromModel(),
-                    amendmentController.getAmendmentContentFromModel()));
+            final String amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
+            final String originalContentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
+
+            diffRequests.add(new DiffRequest(originalContentFromModel, amendmentContentFromModel));
         }
 
         // request diffing from the backend service
@@ -49,8 +52,8 @@ public class AkomaNtoso20DiffingManager extends DefaultDiffingManager {
                 int index = 0;
                 for (final DiffResult complexDiffResult : result) {
                     final AmendmentController amendmentController = amendmentControllers[index];
-                    amendmentController.setOriginalContent(complexDiffResult.getOriginal());
-                    amendmentController.setAmendmentContent(complexDiffResult.getAmendment());
+                    AkomaNtoso20AmendmentControllerUtil.setOriginalContentOnViews(amendmentController, complexDiffResult.getOriginal());
+                    AkomaNtoso20AmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, complexDiffResult.getAmendment());
                     index++;
                 }
             }

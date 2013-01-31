@@ -8,8 +8,6 @@ import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentControllerView;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentPanelController;
 
-import java.util.List;
-
 /**
  * Date: 23/11/12 11:02
  *
@@ -32,7 +30,7 @@ public class AkomaNtoso20ContentPanelController extends ContentPanelController {
 
         if (dialogContext.getAmendmentController() != null) {
             // we're editing
-            final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", dialogContext.getAmendmentController().asAmendableWidgetFromModel());
+            final java.util.List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody()));
             view.setOriginalText(quotedStructures.get(0).getAmendableElement().getFirstChildElement().getInnerHTML());
         } else {
             view.setOriginalText(dialogContext.getAmendableWidget().getInnerHTML());

@@ -8,12 +8,15 @@ import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.AkomaNtoso20DocumentInjector;
+import org.nsesa.editor.gwt.an.client.mode.ConsolidationMode;
+import org.nsesa.editor.gwt.an.client.mode.DiffMode;
+import org.nsesa.editor.gwt.an.client.mode.InlineEditingMode;
+import org.nsesa.editor.gwt.an.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.amendment.AmendableWidgetWalker;
 import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
-import org.nsesa.editor.gwt.core.client.mode.ConsolidationMode;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
@@ -61,7 +64,7 @@ public class AkomaNtoso20DocumentController extends DocumentController {
                                     if (addSplitter) {
                                         sb.append(new HTML("<div style='width:100%;text-align:center;'><h2> -Or- </h2></div>"));
                                     }
-                                    sb.append(amendmentController.getAmendmentContent());
+                                    sb.append(AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromView(amendmentController));
                                     addSplitter = true;
                                 }
 
@@ -95,6 +98,10 @@ public class AkomaNtoso20DocumentController extends DocumentController {
                 return super.apply(state);
             }
         });
+
+        registerMode(InlineEditingMode.KEY, new InlineEditingMode(this, clientFactory));
+        registerMode(DiffMode.KEY, new DiffMode(this, clientFactory, serviceFactory));
+        registerMode(ConsolidationMode.KEY, new ConsolidationMode(this, clientFactory));
     }
 
     @Override
