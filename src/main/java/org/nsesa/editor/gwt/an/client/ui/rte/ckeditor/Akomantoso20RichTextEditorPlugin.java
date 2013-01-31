@@ -17,7 +17,7 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
     @Inject
     public Akomantoso20RichTextEditorPlugin(OverlayFactory overlayFactory, ClientFactory clientFactory) {
         //register here the available plugin
-        registerPlugin(new CKEditorEnterKeyPlugin(overlayFactory, "br"));
+        registerPlugin(new CKEditorDisableEnterKeyPlugin());
         registerPlugin(new CKEditorBasicStylesPlugin());
         registerPlugin(new CKEditorSelectionChangedPlugin(clientFactory));
         registerPlugin(new CKEditorDraftingInsertionPlugin(clientFactory));
