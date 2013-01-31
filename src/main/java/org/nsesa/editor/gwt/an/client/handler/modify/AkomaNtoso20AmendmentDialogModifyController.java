@@ -13,6 +13,7 @@ import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.author.AuthorPanelController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentPanelController;
+import org.nsesa.editor.gwt.dialog.client.ui.handler.common.meta.MetaPanelController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentDialogModifyController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentDialogModifyView;
 
@@ -30,6 +31,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
     private static final Logger LOG = Logger.getLogger(AkomaNtoso20AmendmentDialogModifyController.class.getName());
 
     final AuthorPanelController authorPanelController;
+    final MetaPanelController metaPanelController;
     final ContentPanelController contentPanelController;
 
     @Inject
@@ -39,11 +41,13 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
                                                        final OverlayFactory overlayFactory,
                                                        final DraftingController draftingController,
                                                        final AuthorPanelController authorPanelController,
-                                                       final ContentPanelController contentPanelController
+                                                       final ContentPanelController contentPanelController,
+                                                       final MetaPanelController metaPanelController
     ) {
-        super(clientFactory, view, locator, overlayFactory, draftingController, Arrays.asList(contentPanelController, authorPanelController));
+        super(clientFactory, view, locator, overlayFactory, draftingController, Arrays.asList(contentPanelController, authorPanelController, metaPanelController));
         this.authorPanelController = authorPanelController;
         this.contentPanelController = contentPanelController;
+        this.metaPanelController = metaPanelController;
     }
 
     @Override

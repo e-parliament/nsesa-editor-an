@@ -11,6 +11,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.author.AuthorPanelController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentPanelController;
+import org.nsesa.editor.gwt.dialog.client.ui.handler.common.meta.MetaPanelController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.delete.AmendmentDialogDeleteController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.delete.AmendmentDialogDeleteView;
 
@@ -28,6 +29,7 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
     private static final Logger LOG = Logger.getLogger(AkomaNtoso20AmendmentDialogDeleteController.class.getName());
 
     final AuthorPanelController authorPanelController;
+    final MetaPanelController metaPanelController;
     final ContentPanelController contentPanelController;
 
     @Inject
@@ -36,11 +38,13 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
                                                        final Locator locator,
                                                        final OverlayFactory overlayFactory,
                                                        final AuthorPanelController authorPanelController,
-                                                       final ContentPanelController contentPanelController
+                                                       final ContentPanelController contentPanelController,
+                                                       final MetaPanelController metaPanelController
     ) {
-        super(clientFactory, view, locator, overlayFactory, Arrays.asList(contentPanelController, authorPanelController));
+        super(clientFactory, view, locator, overlayFactory, Arrays.asList(contentPanelController, authorPanelController, metaPanelController));
         this.authorPanelController = authorPanelController;
         this.contentPanelController = contentPanelController;
+        this.metaPanelController = metaPanelController;
     }
 
     @Override
