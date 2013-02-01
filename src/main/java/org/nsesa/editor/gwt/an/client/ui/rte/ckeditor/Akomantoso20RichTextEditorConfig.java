@@ -17,7 +17,8 @@ public class Akomantoso20RichTextEditorConfig extends CKEditorConfig {
 
     public Akomantoso20RichTextEditorConfig() {
         super();
-        //configure the editor
+        setDraftingClassName("akomaNtoso-drafting");
+        //configure the editor configuration
         setContentCss(new String[]{
                 GWT.getModuleBaseURL() + "../" + "css/editor.css",
                 GWT.getModuleBaseURL() + "../" + "css/document.css",

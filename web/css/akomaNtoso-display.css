@@ -9,33 +9,33 @@
 * Amendments
 * --------------------------
 */
-.akomaNtoso .Amendments:before {
+.akomaNtoso-drafting .Amendments:before {
     content: "Amendments";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .Amendments {
+.akomaNtoso-drafting .Amendments {
     border:1px solid #fd2747;
 }
 
-.akomaNtoso .activeModifications:before {
+.akomaNtoso-drafting .activeModifications:before {
     content: "activeModifications";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .activeModifications {
+.akomaNtoso-drafting .activeModifications {
     border:1px solid #04cbae;
 }
 
-.akomaNtoso .passiveModifications:before {
+.akomaNtoso-drafting .passiveModifications:before {
     content: "passiveModifications";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .passiveModifications {
+.akomaNtoso-drafting .passiveModifications {
     border:1px solid #77e4cd;
 }
 
@@ -44,23 +44,23 @@
 * akomaNtosoType
 * --------------------------
 */
-.akomaNtoso .akomaNtosoType:before {
+.akomaNtoso-drafting .akomaNtosoType:before {
     content: "akomaNtosoType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .akomaNtosoType {
+.akomaNtoso-drafting .akomaNtosoType {
     border:1px solid #426956;
 }
 
-.akomaNtoso .akomaNtoso:before {
+.akomaNtoso-drafting .akomaNtoso:before {
     content: "akomaNtoso";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .akomaNtoso {
+.akomaNtoso-drafting .akomaNtoso-drafting{
     border:1px solid #cad9d3;
 }
 
@@ -69,23 +69,23 @@
 * amendmentBodyType
 * --------------------------
 */
-.akomaNtoso .amendmentBodyType:before {
+.akomaNtoso-drafting .amendmentBodyType:before {
     content: "amendmentBodyType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .amendmentBodyType {
+.akomaNtoso-drafting .amendmentBodyType {
     border:1px solid #48568b;
 }
 
-.akomaNtoso .amendmentBody:before {
+.akomaNtoso-drafting .amendmentBody:before {
     content: "amendmentBody";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .amendmentBody {
+.akomaNtoso-drafting .amendmentBody {
     border:1px solid #a0d286;
 }
 
@@ -94,33 +94,33 @@
 * amendmentStructure
 * --------------------------
 */
-.akomaNtoso .amendmentStructure:before {
+.akomaNtoso-drafting .amendmentStructure:before {
     content: "amendmentStructure";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .amendmentStructure {
+.akomaNtoso-drafting .amendmentStructure {
     border:1px solid #673967;
 }
 
-.akomaNtoso .amendment:before {
+.akomaNtoso-drafting .amendment:before {
     content: "amendment";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .amendment {
+.akomaNtoso-drafting .amendment {
     border:1px solid #9e8379;
 }
 
-.akomaNtoso .analysis:before {
+.akomaNtoso-drafting .analysis:before {
     content: "analysis";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .analysis {
+.akomaNtoso-drafting .analysis {
     border:1px solid #7c815e;
 }
 
@@ -129,133 +129,133 @@
 * anyOtherType
 * --------------------------
 */
-.akomaNtoso .anyOtherType:before {
+.akomaNtoso-drafting .anyOtherType:before {
     content: "anyOtherType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .anyOtherType {
+.akomaNtoso-drafting .anyOtherType {
     border:1px solid #e0b263;
 }
 
-.akomaNtoso .condition:before {
+.akomaNtoso-drafting .condition:before {
     content: "condition";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .condition {
+.akomaNtoso-drafting .condition {
     border:1px solid #d00217;
 }
 
-.akomaNtoso .domain:before {
+.akomaNtoso-drafting .domain:before {
     content: "domain";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .domain {
+.akomaNtoso-drafting .domain {
     border:1px solid #70cf59;
 }
 
-.akomaNtoso .eventRef:before {
+.akomaNtoso-drafting .eventRef:before {
     content: "eventRef";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .eventRef {
+.akomaNtoso-drafting .eventRef {
     border:1px solid #266bdf;
 }
 
-.akomaNtoso .foreign:before {
+.akomaNtoso-drafting .foreign:before {
     content: "foreign";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .foreign {
+.akomaNtoso-drafting .foreign {
     border:1px solid #df676b;
 }
 
-.akomaNtoso .new:before {
+.akomaNtoso-drafting .new:before {
     content: "new";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .new {
+.akomaNtoso-drafting .new {
     border:1px solid #8caea6;
 }
 
-.akomaNtoso .old:before {
+.akomaNtoso-drafting .old:before {
     content: "old";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .old {
+.akomaNtoso-drafting .old {
     border:1px solid #60580b;
 }
 
-.akomaNtoso .otherAnalysis:before {
+.akomaNtoso-drafting .otherAnalysis:before {
     content: "otherAnalysis";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .otherAnalysis {
+.akomaNtoso-drafting .otherAnalysis {
     border:1px solid #31705a;
 }
 
-.akomaNtoso .presentation:before {
+.akomaNtoso-drafting .presentation:before {
     content: "presentation";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .presentation {
+.akomaNtoso-drafting .presentation {
     border:1px solid #cd247c;
 }
 
-.akomaNtoso .preservation:before {
+.akomaNtoso-drafting .preservation:before {
     content: "preservation";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .preservation {
+.akomaNtoso-drafting .preservation {
     border:1px solid #6d4d3e;
 }
 
-.akomaNtoso .proprietary:before {
+.akomaNtoso-drafting .proprietary:before {
     content: "proprietary";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .proprietary {
+.akomaNtoso-drafting .proprietary {
     border:1px solid #fc4a19;
 }
 
-.akomaNtoso .result:before {
+.akomaNtoso-drafting .result:before {
     content: "result";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .result {
+.akomaNtoso-drafting .result {
     border:1px solid #873681;
 }
 
-.akomaNtoso .step:before {
+.akomaNtoso-drafting .step:before {
     content: "step";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .step {
+.akomaNtoso-drafting .step {
     border:1px solid #837d34;
 }
 
@@ -264,43 +264,43 @@
 * argumentType
 * --------------------------
 */
-.akomaNtoso .argumentType:before {
+.akomaNtoso-drafting .argumentType:before {
     content: "argumentType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .argumentType {
+.akomaNtoso-drafting .argumentType {
     border:1px solid #c0ac2d;
 }
 
-.akomaNtoso .destination:before {
+.akomaNtoso-drafting .destination:before {
     content: "destination";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .destination {
+.akomaNtoso-drafting .destination {
     border:1px solid #f74231;
 }
 
-.akomaNtoso .source:before {
+.akomaNtoso-drafting .source:before {
     content: "source";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .source {
+.akomaNtoso-drafting .source {
     border:1px solid #80cbdc;
 }
 
-.akomaNtoso .attachments:before {
+.akomaNtoso-drafting .attachments:before {
     content: "attachments";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .attachments {
+.akomaNtoso-drafting .attachments {
     border:1px solid #c008c8;
 }
 
@@ -309,13 +309,13 @@
 * basehierarchy
 * --------------------------
 */
-.akomaNtoso .basehierarchy:before {
+.akomaNtoso-drafting .basehierarchy:before {
     content: "basehierarchy";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .basehierarchy {
+.akomaNtoso-drafting .basehierarchy {
     border:1px solid #feeb68;
 }
 
@@ -324,213 +324,213 @@
 * althierarchy
 * --------------------------
 */
-.akomaNtoso .althierarchy:before {
+.akomaNtoso-drafting .althierarchy:before {
     content: "althierarchy";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .althierarchy {
+.akomaNtoso-drafting .althierarchy {
     border:1px solid #d0be52;
 }
 
-.akomaNtoso .address:before {
+.akomaNtoso-drafting .address:before {
     content: "address";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .address {
+.akomaNtoso-drafting .address {
     border:1px solid #564c96;
 }
 
-.akomaNtoso .adjournment:before {
+.akomaNtoso-drafting .adjournment:before {
     content: "adjournment";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .adjournment {
+.akomaNtoso-drafting .adjournment {
     border:1px solid #12f224;
 }
 
-.akomaNtoso .administrationOfOath:before {
+.akomaNtoso-drafting .administrationOfOath:before {
     content: "administrationOfOath";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .administrationOfOath {
+.akomaNtoso-drafting .administrationOfOath {
     border:1px solid #7b4fe5;
 }
 
-.akomaNtoso .communication:before {
+.akomaNtoso-drafting .communication:before {
     content: "communication";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .communication {
+.akomaNtoso-drafting .communication {
     border:1px solid #82961f;
 }
 
-.akomaNtoso .debateSection:before {
+.akomaNtoso-drafting .debateSection:before {
     content: "debateSection";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .debateSection {
+.akomaNtoso-drafting .debateSection {
     border:1px solid #3db3ec;
 }
 
-.akomaNtoso .declarationOfVote:before {
+.akomaNtoso-drafting .declarationOfVote:before {
     content: "declarationOfVote";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .declarationOfVote {
+.akomaNtoso-drafting .declarationOfVote {
     border:1px solid #a1ce36;
 }
 
-.akomaNtoso .ministerialStatements:before {
+.akomaNtoso-drafting .ministerialStatements:before {
     content: "ministerialStatements";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .ministerialStatements {
+.akomaNtoso-drafting .ministerialStatements {
     border:1px solid #273b97;
 }
 
-.akomaNtoso .nationalInterest:before {
+.akomaNtoso-drafting .nationalInterest:before {
     content: "nationalInterest";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .nationalInterest {
+.akomaNtoso-drafting .nationalInterest {
     border:1px solid #4be3af;
 }
 
-.akomaNtoso .noticesOfMotion:before {
+.akomaNtoso-drafting .noticesOfMotion:before {
     content: "noticesOfMotion";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .noticesOfMotion {
+.akomaNtoso-drafting .noticesOfMotion {
     border:1px solid #5fe456;
 }
 
-.akomaNtoso .oralStatements:before {
+.akomaNtoso-drafting .oralStatements:before {
     content: "oralStatements";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .oralStatements {
+.akomaNtoso-drafting .oralStatements {
     border:1px solid #c9f47d;
 }
 
-.akomaNtoso .papers:before {
+.akomaNtoso-drafting .papers:before {
     content: "papers";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .papers {
+.akomaNtoso-drafting .papers {
     border:1px solid #db385f;
 }
 
-.akomaNtoso .personalStatements:before {
+.akomaNtoso-drafting .personalStatements:before {
     content: "personalStatements";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .personalStatements {
+.akomaNtoso-drafting .personalStatements {
     border:1px solid #10315b;
 }
 
-.akomaNtoso .petitions:before {
+.akomaNtoso-drafting .petitions:before {
     content: "petitions";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .petitions {
+.akomaNtoso-drafting .petitions {
     border:1px solid #def659;
 }
 
-.akomaNtoso .pointOfOrder:before {
+.akomaNtoso-drafting .pointOfOrder:before {
     content: "pointOfOrder";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .pointOfOrder {
+.akomaNtoso-drafting .pointOfOrder {
     border:1px solid #8ee7a7;
 }
 
-.akomaNtoso .prayers:before {
+.akomaNtoso-drafting .prayers:before {
     content: "prayers";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .prayers {
+.akomaNtoso-drafting .prayers {
     border:1px solid #46c7cc;
 }
 
-.akomaNtoso .proceduralMotions:before {
+.akomaNtoso-drafting .proceduralMotions:before {
     content: "proceduralMotions";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .proceduralMotions {
+.akomaNtoso-drafting .proceduralMotions {
     border:1px solid #ce2410;
 }
 
-.akomaNtoso .questions:before {
+.akomaNtoso-drafting .questions:before {
     content: "questions";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .questions {
+.akomaNtoso-drafting .questions {
     border:1px solid #1cbddd;
 }
 
-.akomaNtoso .resolutions:before {
+.akomaNtoso-drafting .resolutions:before {
     content: "resolutions";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .resolutions {
+.akomaNtoso-drafting .resolutions {
     border:1px solid #e748d6;
 }
 
-.akomaNtoso .rollCall:before {
+.akomaNtoso-drafting .rollCall:before {
     content: "rollCall";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .rollCall {
+.akomaNtoso-drafting .rollCall {
     border:1px solid #be90a6;
 }
 
-.akomaNtoso .writtenStatements:before {
+.akomaNtoso-drafting .writtenStatements:before {
     content: "writtenStatements";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .writtenStatements {
+.akomaNtoso-drafting .writtenStatements {
     border:1px solid #1206c1;
 }
 
@@ -539,243 +539,243 @@
 * hierarchy
 * --------------------------
 */
-.akomaNtoso .hierarchy:before {
+.akomaNtoso-drafting .hierarchy:before {
     content: "hierarchy";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .hierarchy {
+.akomaNtoso-drafting .hierarchy {
     border:1px solid #2e4754;
 }
 
-.akomaNtoso .alinea:before {
+.akomaNtoso-drafting .alinea:before {
     content: "alinea";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .alinea {
+.akomaNtoso-drafting .alinea {
     border:1px solid #e24844;
 }
 
-.akomaNtoso .article:before {
+.akomaNtoso-drafting .article:before {
     content: "article";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .article {
+.akomaNtoso-drafting .article {
     border:1px solid #5b7981;
 }
 
-.akomaNtoso .book:before {
+.akomaNtoso-drafting .book:before {
     content: "book";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .book {
+.akomaNtoso-drafting .book {
     border:1px solid #3b8454;
 }
 
-.akomaNtoso .chapter:before {
+.akomaNtoso-drafting .chapter:before {
     content: "chapter";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .chapter {
+.akomaNtoso-drafting .chapter {
     border:1px solid #e02029;
 }
 
-.akomaNtoso .clause:before {
+.akomaNtoso-drafting .clause:before {
     content: "clause";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .clause {
+.akomaNtoso-drafting .clause {
     border:1px solid #5f4105;
 }
 
-.akomaNtoso .division:before {
+.akomaNtoso-drafting .division:before {
     content: "division";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .division {
+.akomaNtoso-drafting .division {
     border:1px solid #5d9a3f;
 }
 
-.akomaNtoso .hcontainer:before {
+.akomaNtoso-drafting .hcontainer:before {
     content: "hcontainer";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .hcontainer {
+.akomaNtoso-drafting .hcontainer {
     border:1px solid #550eeb;
 }
 
-.akomaNtoso .indent:before {
+.akomaNtoso-drafting .indent:before {
     content: "indent";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .indent {
+.akomaNtoso-drafting .indent {
     border:1px solid #0cc30b;
 }
 
-.akomaNtoso .list:before {
+.akomaNtoso-drafting .list:before {
     content: "list";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .list {
+.akomaNtoso-drafting .list {
     border:1px solid #3767ae;
 }
 
-.akomaNtoso .paragraph {
+.akomaNtoso-drafting .paragraph {
     background-color:#34cf86;
     color:#000000;
 }
 
-.akomaNtoso .part:before {
+.akomaNtoso-drafting .part:before {
     content: "part";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .part {
+.akomaNtoso-drafting .part {
     border:1px solid #6f4203;
 }
 
-.akomaNtoso .point:before {
+.akomaNtoso-drafting .point:before {
     content: "point";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .point {
+.akomaNtoso-drafting .point {
     border:1px solid #d0fb4e;
 }
 
-.akomaNtoso .section:before {
+.akomaNtoso-drafting .section:before {
     content: "section";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .section {
+.akomaNtoso-drafting .section {
     border:1px solid #a9ae0a;
 }
 
-.akomaNtoso .subchapter:before {
+.akomaNtoso-drafting .subchapter:before {
     content: "subchapter";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .subchapter {
+.akomaNtoso-drafting .subchapter {
     border:1px solid #25efc8;
 }
 
-.akomaNtoso .subclause:before {
+.akomaNtoso-drafting .subclause:before {
     content: "subclause";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .subclause {
+.akomaNtoso-drafting .subclause {
     border:1px solid #ba810d;
 }
 
-.akomaNtoso .subdivision:before {
+.akomaNtoso-drafting .subdivision:before {
     content: "subdivision";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .subdivision {
+.akomaNtoso-drafting .subdivision {
     border:1px solid #33c628;
 }
 
-.akomaNtoso .sublist:before {
+.akomaNtoso-drafting .sublist:before {
     content: "sublist";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .sublist {
+.akomaNtoso-drafting .sublist {
     border:1px solid #630a4f;
 }
 
-.akomaNtoso .subparagraph {
+.akomaNtoso-drafting .subparagraph {
     background-color:#fb1a92;
     color:#000000;
 }
 
-.akomaNtoso .subpart:before {
+.akomaNtoso-drafting .subpart:before {
     content: "subpart";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .subpart {
+.akomaNtoso-drafting .subpart {
     border:1px solid #c88296;
 }
 
-.akomaNtoso .subsection:before {
+.akomaNtoso-drafting .subsection:before {
     content: "subsection";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .subsection {
+.akomaNtoso-drafting .subsection {
     border:1px solid #6301b5;
 }
 
-.akomaNtoso .subtitle:before {
+.akomaNtoso-drafting .subtitle:before {
     content: "subtitle";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .subtitle {
+.akomaNtoso-drafting .subtitle {
     border:1px solid #6a75c0;
 }
 
-.akomaNtoso .title:before {
+.akomaNtoso-drafting .title:before {
     content: "title";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .title {
+.akomaNtoso-drafting .title {
     border:1px solid #f7dc5c;
 }
 
-.akomaNtoso .tome:before {
+.akomaNtoso-drafting .tome:before {
     content: "tome";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .tome {
+.akomaNtoso-drafting .tome {
     border:1px solid #d4fb08;
 }
 
-.akomaNtoso .transitional:before {
+.akomaNtoso-drafting .transitional:before {
     content: "transitional";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .transitional {
+.akomaNtoso-drafting .transitional {
     border:1px solid #29e4e4;
 }
 
@@ -784,53 +784,53 @@
 * itemType
 * --------------------------
 */
-.akomaNtoso .itemType:before {
+.akomaNtoso-drafting .itemType:before {
     content: "itemType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .itemType {
+.akomaNtoso-drafting .itemType {
     border:1px solid #9bdd78;
 }
 
-.akomaNtoso .citation:before {
+.akomaNtoso-drafting .citation:before {
     content: "citation";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .citation {
+.akomaNtoso-drafting .citation {
     border:1px solid #84bcb4;
 }
 
-.akomaNtoso .item:before {
+.akomaNtoso-drafting .item:before {
     content: "item";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .item {
+.akomaNtoso-drafting .item {
     border:1px solid #c38c14;
 }
 
-.akomaNtoso .recital:before {
+.akomaNtoso-drafting .recital:before {
     content: "recital";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .recital {
+.akomaNtoso-drafting .recital {
     border:1px solid #efa996;
 }
 
-.akomaNtoso .tblock:before {
+.akomaNtoso-drafting .tblock:before {
     content: "tblock";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .tblock {
+.akomaNtoso-drafting .tblock {
     border:1px solid #5d5aa6;
 }
 
@@ -839,43 +839,43 @@
 * speechType
 * --------------------------
 */
-.akomaNtoso .speechType:before {
+.akomaNtoso-drafting .speechType:before {
     content: "speechType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .speechType {
+.akomaNtoso-drafting .speechType {
     border:1px solid #d2c8fe;
 }
 
-.akomaNtoso .answer:before {
+.akomaNtoso-drafting .answer:before {
     content: "answer";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .answer {
+.akomaNtoso-drafting .answer {
     border:1px solid #817c90;
 }
 
-.akomaNtoso .question:before {
+.akomaNtoso-drafting .question:before {
     content: "question";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .question {
+.akomaNtoso-drafting .question {
     border:1px solid #35c7b2;
 }
 
-.akomaNtoso .speech:before {
+.akomaNtoso-drafting .speech:before {
     content: "speech";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .speech {
+.akomaNtoso-drafting .speech {
     border:1px solid #342dd0;
 }
 
@@ -884,43 +884,43 @@
 * basicopt
 * --------------------------
 */
-.akomaNtoso .basicopt:before {
+.akomaNtoso-drafting .basicopt:before {
     content: "basicopt";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .basicopt {
+.akomaNtoso-drafting .basicopt {
     border:1px solid #6abc2a;
 }
 
-.akomaNtoso .conclusions:before {
+.akomaNtoso-drafting .conclusions:before {
     content: "conclusions";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .conclusions {
+.akomaNtoso-drafting .conclusions {
     border:1px solid #b6991d;
 }
 
-.akomaNtoso .coverPage:before {
+.akomaNtoso-drafting .coverPage:before {
     content: "coverPage";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .coverPage {
+.akomaNtoso-drafting .coverPage {
     border:1px solid #1e9e4f;
 }
 
-.akomaNtoso .blockList:before {
+.akomaNtoso-drafting .blockList:before {
     content: "blockList";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .blockList {
+.akomaNtoso-drafting .blockList {
     border:1px solid #239752;
 }
 
@@ -929,143 +929,143 @@
 * blocksopt
 * --------------------------
 */
-.akomaNtoso .blocksopt:before {
+.akomaNtoso-drafting .blocksopt:before {
     content: "blocksopt";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .blocksopt {
+.akomaNtoso-drafting .blocksopt {
     border:1px solid #b2476c;
 }
 
-.akomaNtoso .amendmentContent:before {
+.akomaNtoso-drafting .amendmentContent:before {
     content: "amendmentContent";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .amendmentContent {
+.akomaNtoso-drafting .amendmentContent {
     border:1px solid #b9ae8c;
 }
 
-.akomaNtoso .amendmentHeading:before {
+.akomaNtoso-drafting .amendmentHeading:before {
     content: "amendmentHeading";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .amendmentHeading {
+.akomaNtoso-drafting .amendmentHeading {
     border:1px solid #ca062c;
 }
 
-.akomaNtoso .amendmentJustification:before {
+.akomaNtoso-drafting .amendmentJustification:before {
     content: "amendmentJustification";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .amendmentJustification {
+.akomaNtoso-drafting .amendmentJustification {
     border:1px solid #c6bc7b;
 }
 
-.akomaNtoso .amendmentReference:before {
+.akomaNtoso-drafting .amendmentReference:before {
     content: "amendmentReference";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .amendmentReference {
+.akomaNtoso-drafting .amendmentReference {
     border:1px solid #ee4a09;
 }
 
-.akomaNtoso .content:before {
+.akomaNtoso-drafting .content:before {
     content: "content";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .content {
+.akomaNtoso-drafting .content {
     border:1px solid #f933dd;
 }
 
-.akomaNtoso .formula:before {
+.akomaNtoso-drafting .formula:before {
     content: "formula";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .formula {
+.akomaNtoso-drafting .formula {
     border:1px solid #7c3fbd;
 }
 
-.akomaNtoso .header:before {
+.akomaNtoso-drafting .header:before {
     content: "header";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .header {
+.akomaNtoso-drafting .header {
     border:1px solid #966c17;
 }
 
-.akomaNtoso .intro:before {
+.akomaNtoso-drafting .intro:before {
     content: "intro";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .intro {
+.akomaNtoso-drafting .intro {
     border:1px solid #2c8761;
 }
 
-.akomaNtoso .longTitle:before {
+.akomaNtoso-drafting .longTitle:before {
     content: "longTitle";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .longTitle {
+.akomaNtoso-drafting .longTitle {
     border:1px solid #8bcd0c;
 }
 
-.akomaNtoso .other:before {
+.akomaNtoso-drafting .other:before {
     content: "other";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .other {
+.akomaNtoso-drafting .other {
     border:1px solid #c4e02a;
 }
 
-.akomaNtoso .td:before {
+.akomaNtoso-drafting .td:before {
     content: "td";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .td {
+.akomaNtoso-drafting .td {
     border:1px solid #6bd163;
 }
 
-.akomaNtoso .th:before {
+.akomaNtoso-drafting .th:before {
     content: "th";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .th {
+.akomaNtoso-drafting .th {
     border:1px solid #c77178;
 }
 
-.akomaNtoso .wrap:before {
+.akomaNtoso-drafting .wrap:before {
     content: "wrap";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .wrap {
+.akomaNtoso-drafting .wrap {
     border:1px solid #77e9cb;
 }
 
@@ -1074,43 +1074,43 @@
 * blocksreq
 * --------------------------
 */
-.akomaNtoso .blocksreq:before {
+.akomaNtoso-drafting .blocksreq:before {
     content: "blocksreq";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .blocksreq {
+.akomaNtoso-drafting .blocksreq {
     border:1px solid #9065db;
 }
 
-.akomaNtoso .div:before {
+.akomaNtoso-drafting .div:before {
     content: "div";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .div {
+.akomaNtoso-drafting .div {
     border:1px solid #2218e9;
 }
 
-.akomaNtoso .interstitial:before {
+.akomaNtoso-drafting .interstitial:before {
     content: "interstitial";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .interstitial {
+.akomaNtoso-drafting .interstitial {
     border:1px solid #d62b3c;
 }
 
-.akomaNtoso .note:before {
+.akomaNtoso-drafting .note:before {
     content: "note";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .note {
+.akomaNtoso-drafting .note {
     border:1px solid #32a3a5;
 }
 
@@ -1119,43 +1119,43 @@
 * bodyType
 * --------------------------
 */
-.akomaNtoso .bodyType:before {
+.akomaNtoso-drafting .bodyType:before {
     content: "bodyType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .bodyType {
+.akomaNtoso-drafting .bodyType {
     border:1px solid #f09c50;
 }
 
-.akomaNtoso .body:before {
+.akomaNtoso-drafting .body:before {
     content: "body";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .body {
+.akomaNtoso-drafting .body {
     border:1px solid #071555;
 }
 
-.akomaNtoso .citations:before {
+.akomaNtoso-drafting .citations:before {
     content: "citations";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .citations {
+.akomaNtoso-drafting .citations {
     border:1px solid #16aa12;
 }
 
-.akomaNtoso .classification:before {
+.akomaNtoso-drafting .classification:before {
     content: "classification";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .classification {
+.akomaNtoso-drafting .classification {
     border:1px solid #caf664;
 }
 
@@ -1164,23 +1164,23 @@
 * collectionBodyType
 * --------------------------
 */
-.akomaNtoso .collectionBodyType:before {
+.akomaNtoso-drafting .collectionBodyType:before {
     content: "collectionBodyType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .collectionBodyType {
+.akomaNtoso-drafting .collectionBodyType {
     border:1px solid #19f62d;
 }
 
-.akomaNtoso .collectionBody:before {
+.akomaNtoso-drafting .collectionBody:before {
     content: "collectionBody";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .collectionBody {
+.akomaNtoso-drafting .collectionBody {
     border:1px solid #14741a;
 }
 
@@ -1189,83 +1189,83 @@
 * collectionStructure
 * --------------------------
 */
-.akomaNtoso .collectionStructure:before {
+.akomaNtoso-drafting .collectionStructure:before {
     content: "collectionStructure";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .collectionStructure {
+.akomaNtoso-drafting .collectionStructure {
     border:1px solid #0b6300;
 }
 
-.akomaNtoso .amendmentList:before {
+.akomaNtoso-drafting .amendmentList:before {
     content: "amendmentList";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .amendmentList {
+.akomaNtoso-drafting .amendmentList {
     border:1px solid #351468;
 }
 
-.akomaNtoso .documentCollection:before {
+.akomaNtoso-drafting .documentCollection:before {
     content: "documentCollection";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .documentCollection {
+.akomaNtoso-drafting .documentCollection {
     border:1px solid #b2358e;
 }
 
-.akomaNtoso .officialGazette:before {
+.akomaNtoso-drafting .officialGazette:before {
     content: "officialGazette";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .officialGazette {
+.akomaNtoso-drafting .officialGazette {
     border:1px solid #3fd791;
 }
 
-.akomaNtoso .component:before {
+.akomaNtoso-drafting .component:before {
     content: "component";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .component {
+.akomaNtoso-drafting .component {
     border:1px solid #c5160b;
 }
 
-.akomaNtoso .componentData:before {
+.akomaNtoso-drafting .componentData:before {
     content: "componentData";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .componentData {
+.akomaNtoso-drafting .componentData {
     border:1px solid #9ffdbc;
 }
 
-.akomaNtoso .componentInfo:before {
+.akomaNtoso-drafting .componentInfo:before {
     content: "componentInfo";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .componentInfo {
+.akomaNtoso-drafting .componentInfo {
     border:1px solid #d4cd36;
 }
 
-.akomaNtoso .components:before {
+.akomaNtoso-drafting .components:before {
     content: "components";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .components {
+.akomaNtoso-drafting .components {
     border:1px solid #dd942b;
 }
 
@@ -1274,23 +1274,23 @@
 * containerType
 * --------------------------
 */
-.akomaNtoso .containerType:before {
+.akomaNtoso-drafting .containerType:before {
     content: "containerType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .containerType {
+.akomaNtoso-drafting .containerType {
     border:1px solid #937cfd;
 }
 
-.akomaNtoso .container:before {
+.akomaNtoso-drafting .container:before {
     content: "container";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .container {
+.akomaNtoso-drafting .container {
     border:1px solid #a271cd;
 }
 
@@ -1299,53 +1299,53 @@
 * coreProperties
 * --------------------------
 */
-.akomaNtoso .coreProperties:before {
+.akomaNtoso-drafting .coreProperties:before {
     content: "coreProperties";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .coreProperties {
+.akomaNtoso-drafting .coreProperties {
     border:1px solid #c53741;
 }
 
-.akomaNtoso .FRBRExpression:before {
+.akomaNtoso-drafting .FRBRExpression:before {
     content: "FRBRExpression";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRExpression {
+.akomaNtoso-drafting .FRBRExpression {
     border:1px solid #a98342;
 }
 
-.akomaNtoso .FRBRItem:before {
+.akomaNtoso-drafting .FRBRItem:before {
     content: "FRBRItem";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRItem {
+.akomaNtoso-drafting .FRBRItem {
     border:1px solid #3a5fc9;
 }
 
-.akomaNtoso .FRBRManifestation:before {
+.akomaNtoso-drafting .FRBRManifestation:before {
     content: "FRBRManifestation";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRManifestation {
+.akomaNtoso-drafting .FRBRManifestation {
     border:1px solid #fe2751;
 }
 
-.akomaNtoso .FRBRWork:before {
+.akomaNtoso-drafting .FRBRWork:before {
     content: "FRBRWork";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRWork {
+.akomaNtoso-drafting .FRBRWork {
     border:1px solid #785299;
 }
 
@@ -1354,33 +1354,33 @@
 * countType
 * --------------------------
 */
-.akomaNtoso .countType:before {
+.akomaNtoso-drafting .countType:before {
     content: "countType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .countType {
+.akomaNtoso-drafting .countType {
     border:1px solid #eeb234;
 }
 
-.akomaNtoso .count:before {
+.akomaNtoso-drafting .count:before {
     content: "count";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .count {
+.akomaNtoso-drafting .count {
     border:1px solid #5ba91b;
 }
 
-.akomaNtoso .quorum:before {
+.akomaNtoso-drafting .quorum:before {
     content: "quorum";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .quorum {
+.akomaNtoso-drafting .quorum {
     border:1px solid #cd498e;
 }
 
@@ -1389,23 +1389,23 @@
 * debateBodyType
 * --------------------------
 */
-.akomaNtoso .debateBodyType:before {
+.akomaNtoso-drafting .debateBodyType:before {
     content: "debateBodyType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .debateBodyType {
+.akomaNtoso-drafting .debateBodyType {
     border:1px solid #d63e87;
 }
 
-.akomaNtoso .debateBody:before {
+.akomaNtoso-drafting .debateBody:before {
     content: "debateBody";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .debateBody {
+.akomaNtoso-drafting .debateBody {
     border:1px solid #12f0bc;
 }
 
@@ -1414,23 +1414,23 @@
 * debateStructure
 * --------------------------
 */
-.akomaNtoso .debateStructure:before {
+.akomaNtoso-drafting .debateStructure:before {
     content: "debateStructure";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .debateStructure {
+.akomaNtoso-drafting .debateStructure {
     border:1px solid #1b1108;
 }
 
-.akomaNtoso .debate:before {
+.akomaNtoso-drafting .debate:before {
     content: "debate";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .debate {
+.akomaNtoso-drafting .debate {
     border:1px solid #a9ad4f;
 }
 
@@ -1439,23 +1439,23 @@
 * fragmentBodyType
 * --------------------------
 */
-.akomaNtoso .fragmentBodyType:before {
+.akomaNtoso-drafting .fragmentBodyType:before {
     content: "fragmentBodyType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .fragmentBodyType {
+.akomaNtoso-drafting .fragmentBodyType {
     border:1px solid #efce18;
 }
 
-.akomaNtoso .fragmentBody:before {
+.akomaNtoso-drafting .fragmentBody:before {
     content: "fragmentBody";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .fragmentBody {
+.akomaNtoso-drafting .fragmentBody {
     border:1px solid #99cb58;
 }
 
@@ -1464,23 +1464,23 @@
 * fragmentStructure
 * --------------------------
 */
-.akomaNtoso .fragmentStructure:before {
+.akomaNtoso-drafting .fragmentStructure:before {
     content: "fragmentStructure";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .fragmentStructure {
+.akomaNtoso-drafting .fragmentStructure {
     border:1px solid #e2a893;
 }
 
-.akomaNtoso .fragment:before {
+.akomaNtoso-drafting .fragment:before {
     content: "fragment";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .fragment {
+.akomaNtoso-drafting .fragment {
     border:1px solid #2023ae;
 }
 
@@ -1489,43 +1489,43 @@
 * hierarchicalStructure
 * --------------------------
 */
-.akomaNtoso .hierarchicalStructure:before {
+.akomaNtoso-drafting .hierarchicalStructure:before {
     content: "hierarchicalStructure";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .hierarchicalStructure {
+.akomaNtoso-drafting .hierarchicalStructure {
     border:1px solid #fa0867;
 }
 
-.akomaNtoso .act:before {
+.akomaNtoso-drafting .act:before {
     content: "act";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .act {
+.akomaNtoso-drafting .act {
     border:1px solid #70f296;
 }
 
-.akomaNtoso .bill:before {
+.akomaNtoso-drafting .bill:before {
     content: "bill";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .bill {
+.akomaNtoso-drafting .bill {
     border:1px solid #3b173d;
 }
 
-.akomaNtoso .identification:before {
+.akomaNtoso-drafting .identification:before {
     content: "identification";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .identification {
+.akomaNtoso-drafting .identification {
     border:1px solid #be2162;
 }
 
@@ -1534,297 +1534,297 @@
 * inline
 * --------------------------
 */
-.akomaNtoso .inline {
+.akomaNtoso-drafting .inline {
     background-color:#bbd72c;
     color:#000000;
 }
 
-.akomaNtoso .a {
+.akomaNtoso-drafting .a {
     background-color:#bc187a;
     color:#FFFFFF;
 }
 
-.akomaNtoso .affectedDocument {
+.akomaNtoso-drafting .affectedDocument {
     background-color:#6a5762;
     color:#FFFFFF;
 }
 
-.akomaNtoso .b {
+.akomaNtoso-drafting .b {
     background-color:#f600c9;
     color:#000000;
 }
 
-.akomaNtoso .block:before {
+.akomaNtoso-drafting .block:before {
     content: "block";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .block {
+.akomaNtoso-drafting .block {
     border:1px solid #50087b;
 }
 
-.akomaNtoso .caption {
+.akomaNtoso-drafting .caption {
     background-color:#044fa0;
     color:#FFFFFF;
 }
 
-.akomaNtoso .change {
+.akomaNtoso-drafting .change {
     background-color:#d22989;
     color:#FFFFFF;
 }
 
-.akomaNtoso .courtType {
+.akomaNtoso-drafting .courtType {
     background-color:#4d54e2;
     color:#FFFFFF;
 }
 
-.akomaNtoso .date {
+.akomaNtoso-drafting .date {
     background-color:#a7e584;
     color:#000000;
 }
 
-.akomaNtoso .def {
+.akomaNtoso-drafting .def {
     background-color:#83a58c;
     color:#000000;
 }
 
-.akomaNtoso .del {
+.akomaNtoso-drafting .del {
     background-color:#b1b557;
     color:#000000;
 }
 
-.akomaNtoso .docCommittee {
+.akomaNtoso-drafting .docCommittee {
     background-color:#c4755d;
     color:#000000;
 }
 
-.akomaNtoso .docDate {
+.akomaNtoso-drafting .docDate {
     background-color:#7ba1cd;
     color:#000000;
 }
 
-.akomaNtoso .docIntroducer {
+.akomaNtoso-drafting .docIntroducer {
     background-color:#b68503;
     color:#000000;
 }
 
-.akomaNtoso .docJurisdiction {
+.akomaNtoso-drafting .docJurisdiction {
     background-color:#585a0d;
     color:#FFFFFF;
 }
 
-.akomaNtoso .docNumber {
+.akomaNtoso-drafting .docNumber {
     background-color:#c65c22;
     color:#FFFFFF;
 }
 
-.akomaNtoso .docProponent {
+.akomaNtoso-drafting .docProponent {
     background-color:#aab5ae;
     color:#000000;
 }
 
-.akomaNtoso .docPurpose {
+.akomaNtoso-drafting .docPurpose {
     background-color:#5b4fa1;
     color:#FFFFFF;
 }
 
-.akomaNtoso .docStage {
+.akomaNtoso-drafting .docStage {
     background-color:#807104;
     color:#FFFFFF;
 }
 
-.akomaNtoso .docStatus {
+.akomaNtoso-drafting .docStatus {
     background-color:#cc3296;
     color:#FFFFFF;
 }
 
-.akomaNtoso .docTitle {
+.akomaNtoso-drafting .docTitle {
     background-color:#ab19a1;
     color:#FFFFFF;
 }
 
-.akomaNtoso .docType {
+.akomaNtoso-drafting .docType {
     background-color:#bbba26;
     color:#000000;
 }
 
-.akomaNtoso .docketNumber {
+.akomaNtoso-drafting .docketNumber {
     background-color:#223fe8;
     color:#FFFFFF;
 }
 
-.akomaNtoso .extractText {
+.akomaNtoso-drafting .extractText {
     background-color:#847220;
     color:#FFFFFF;
 }
 
-.akomaNtoso .fillIn {
+.akomaNtoso-drafting .fillIn {
     background-color:#f4bcda;
     color:#000000;
 }
 
-.akomaNtoso .from {
+.akomaNtoso-drafting .from {
     background-color:#4ff5a3;
     color:#000000;
 }
 
-.akomaNtoso .heading {
+.akomaNtoso-drafting .heading {
     background-color:#b3fa15;
     color:#000000;
 }
 
-.akomaNtoso .i {
+.akomaNtoso-drafting .i {
     background-color:#75d6a5;
     color:#000000;
 }
 
-.akomaNtoso .inline {
+.akomaNtoso-drafting .inline {
     background-color:#bbd72c;
     color:#000000;
 }
 
-.akomaNtoso .ins {
+.akomaNtoso-drafting .ins {
     background-color:#772ef0;
     color:#FFFFFF;
 }
 
-.akomaNtoso .legislature {
+.akomaNtoso-drafting .legislature {
     background-color:#9d190c;
     color:#FFFFFF;
 }
 
-.akomaNtoso .listConclusion {
+.akomaNtoso-drafting .listConclusion {
     background-color:#8ca6a6;
     color:#000000;
 }
 
-.akomaNtoso .listIntroduction {
+.akomaNtoso-drafting .listIntroduction {
     background-color:#5b1d94;
     color:#FFFFFF;
 }
 
-.akomaNtoso .mref {
+.akomaNtoso-drafting .mref {
     background-color:#43e84c;
     color:#000000;
 }
 
-.akomaNtoso .narrative {
+.akomaNtoso-drafting .narrative {
     background-color:#36a0ae;
     color:#000000;
 }
 
-.akomaNtoso .neutralCitation {
+.akomaNtoso-drafting .neutralCitation {
     background-color:#ad972c;
     color:#000000;
 }
 
-.akomaNtoso .num {
+.akomaNtoso-drafting .num {
     background-color:#1e839e;
     color:#FFFFFF;
 }
 
-.akomaNtoso .omissis {
+.akomaNtoso-drafting .omissis {
     background-color:#df6c64;
     color:#000000;
 }
 
-.akomaNtoso .opinion {
+.akomaNtoso-drafting .opinion {
     background-color:#5d63c9;
     color:#FFFFFF;
 }
 
-.akomaNtoso .outcome {
+.akomaNtoso-drafting .outcome {
     background-color:#793427;
     color:#FFFFFF;
 }
 
-.akomaNtoso .p {
+.akomaNtoso-drafting .p {
     background-color:#b391bd;
     color:#000000;
 }
 
-.akomaNtoso .placeholder {
+.akomaNtoso-drafting .placeholder {
     background-color:#a384d5;
     color:#000000;
 }
 
-.akomaNtoso .quotedText {
+.akomaNtoso-drafting .quotedText {
     background-color:#23ecaf;
     color:#000000;
 }
 
-.akomaNtoso .recordedTime {
+.akomaNtoso-drafting .recordedTime {
     background-color:#488e18;
     color:#FFFFFF;
 }
 
-.akomaNtoso .relatedDocument {
+.akomaNtoso-drafting .relatedDocument {
     background-color:#309516;
     color:#FFFFFF;
 }
 
-.akomaNtoso .remark {
+.akomaNtoso-drafting .remark {
     background-color:#cc93f7;
     color:#000000;
 }
 
-.akomaNtoso .scene {
+.akomaNtoso-drafting .scene {
     background-color:#ba6148;
     color:#FFFFFF;
 }
 
-.akomaNtoso .session {
+.akomaNtoso-drafting .session {
     background-color:#ab13b5;
     color:#FFFFFF;
 }
 
-.akomaNtoso .shortTitle {
+.akomaNtoso-drafting .shortTitle {
     background-color:#5c5c74;
     color:#FFFFFF;
 }
 
-.akomaNtoso .signature {
+.akomaNtoso-drafting .signature {
     background-color:#ad2507;
     color:#FFFFFF;
 }
 
-.akomaNtoso .span {
+.akomaNtoso-drafting .span {
     background-color:#894a59;
     color:#FFFFFF;
 }
 
-.akomaNtoso .sub {
+.akomaNtoso-drafting .sub {
     background-color:#bf39b2;
     color:#FFFFFF;
 }
 
-.akomaNtoso .subheading {
+.akomaNtoso-drafting .subheading {
     background-color:#802804;
     color:#FFFFFF;
 }
 
-.akomaNtoso .summary {
+.akomaNtoso-drafting .summary {
     background-color:#59b2bc;
     color:#000000;
 }
 
-.akomaNtoso .sup {
+.akomaNtoso-drafting .sup {
     background-color:#a60829;
     color:#FFFFFF;
 }
 
-.akomaNtoso .tocItem {
+.akomaNtoso-drafting .tocItem {
     background-color:#eb4e86;
     color:#000000;
 }
 
-.akomaNtoso .u {
+.akomaNtoso-drafting .u {
     background-color:#a639b8;
     color:#FFFFFF;
 }
 
-.akomaNtoso .vote {
+.akomaNtoso-drafting .vote {
     background-color:#99986e;
     color:#000000;
 }
@@ -1834,33 +1834,33 @@
 * inlinereq
 * --------------------------
 */
-.akomaNtoso .inlinereq:before {
+.akomaNtoso-drafting .inlinereq:before {
     content: "inlinereq";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .inlinereq {
+.akomaNtoso-drafting .inlinereq {
     border:1px solid #c26dd0;
 }
 
-.akomaNtoso .ref:before {
+.akomaNtoso-drafting .ref:before {
     content: "ref";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .ref {
+.akomaNtoso-drafting .ref {
     border:1px solid #8309d3;
 }
 
-.akomaNtoso .rref:before {
+.akomaNtoso-drafting .rref:before {
     content: "rref";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .rref {
+.akomaNtoso-drafting .rref {
     border:1px solid #22f9f3;
 }
 
@@ -1869,153 +1869,153 @@
 * inlinereqreq
 * --------------------------
 */
-.akomaNtoso .inlinereqreq:before {
+.akomaNtoso-drafting .inlinereqreq:before {
     content: "inlinereqreq";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .inlinereqreq {
+.akomaNtoso-drafting .inlinereqreq {
     border:1px solid #94efe9;
 }
 
-.akomaNtoso .concept:before {
+.akomaNtoso-drafting .concept:before {
     content: "concept";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .concept {
+.akomaNtoso-drafting .concept {
     border:1px solid #f198ce;
 }
 
-.akomaNtoso .entity:before {
+.akomaNtoso-drafting .entity:before {
     content: "entity";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .entity {
+.akomaNtoso-drafting .entity {
     border:1px solid #f2fbbe;
 }
 
-.akomaNtoso .event:before {
+.akomaNtoso-drafting .event:before {
     content: "event";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .event {
+.akomaNtoso-drafting .event {
     border:1px solid #49fb4d;
 }
 
-.akomaNtoso .judge:before {
+.akomaNtoso-drafting .judge:before {
     content: "judge";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .judge {
+.akomaNtoso-drafting .judge {
     border:1px solid #5d020a;
 }
 
-.akomaNtoso .lawyer:before {
+.akomaNtoso-drafting .lawyer:before {
     content: "lawyer";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .lawyer {
+.akomaNtoso-drafting .lawyer {
     border:1px solid #10f04d;
 }
 
-.akomaNtoso .location:before {
+.akomaNtoso-drafting .location:before {
     content: "location";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .location {
+.akomaNtoso-drafting .location {
     border:1px solid #bc83b7;
 }
 
-.akomaNtoso .object:before {
+.akomaNtoso-drafting .object:before {
     content: "object";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .object {
+.akomaNtoso-drafting .object {
     border:1px solid #7846f9;
 }
 
-.akomaNtoso .organization:before {
+.akomaNtoso-drafting .organization:before {
     content: "organization";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .organization {
+.akomaNtoso-drafting .organization {
     border:1px solid #9ff2bd;
 }
 
-.akomaNtoso .party:before {
+.akomaNtoso-drafting .party:before {
     content: "party";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .party {
+.akomaNtoso-drafting .party {
     border:1px solid #7f158a;
 }
 
-.akomaNtoso .person:before {
+.akomaNtoso-drafting .person:before {
     content: "person";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .person {
+.akomaNtoso-drafting .person {
     border:1px solid #18a8cb;
 }
 
-.akomaNtoso .process:before {
+.akomaNtoso-drafting .process:before {
     content: "process";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .process {
+.akomaNtoso-drafting .process {
     border:1px solid #daa89a;
 }
 
-.akomaNtoso .quantity:before {
+.akomaNtoso-drafting .quantity:before {
     content: "quantity";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .quantity {
+.akomaNtoso-drafting .quantity {
     border:1px solid #bbbdaa;
 }
 
-.akomaNtoso .role:before {
+.akomaNtoso-drafting .role:before {
     content: "role";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .role {
+.akomaNtoso-drafting .role {
     border:1px solid #b0b44a;
 }
 
-.akomaNtoso .term:before {
+.akomaNtoso-drafting .term:before {
     content: "term";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .term {
+.akomaNtoso-drafting .term {
     border:1px solid #2d3815;
 }
 
@@ -2024,23 +2024,23 @@
 * judgementBodyType
 * --------------------------
 */
-.akomaNtoso .judgementBodyType:before {
+.akomaNtoso-drafting .judgementBodyType:before {
     content: "judgementBodyType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .judgementBodyType {
+.akomaNtoso-drafting .judgementBodyType {
     border:1px solid #441af2;
 }
 
-.akomaNtoso .judgementBody:before {
+.akomaNtoso-drafting .judgementBody:before {
     content: "judgementBody";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .judgementBody {
+.akomaNtoso-drafting .judgementBody {
     border:1px solid #308257;
 }
 
@@ -2049,23 +2049,23 @@
 * judgementStructure
 * --------------------------
 */
-.akomaNtoso .judgementStructure:before {
+.akomaNtoso-drafting .judgementStructure:before {
     content: "judgementStructure";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .judgementStructure {
+.akomaNtoso-drafting .judgementStructure {
     border:1px solid #4cd874;
 }
 
-.akomaNtoso .judgement:before {
+.akomaNtoso-drafting .judgement:before {
     content: "judgement";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .judgement {
+.akomaNtoso-drafting .judgement {
     border:1px solid #2b1e09;
 }
 
@@ -2074,123 +2074,123 @@
 * judicialArgumentType
 * --------------------------
 */
-.akomaNtoso .judicialArgumentType:before {
+.akomaNtoso-drafting .judicialArgumentType:before {
     content: "judicialArgumentType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .judicialArgumentType {
+.akomaNtoso-drafting .judicialArgumentType {
     border:1px solid #56f07c;
 }
 
-.akomaNtoso .applies:before {
+.akomaNtoso-drafting .applies:before {
     content: "applies";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .applies {
+.akomaNtoso-drafting .applies {
     border:1px solid #86590a;
 }
 
-.akomaNtoso .contrasts:before {
+.akomaNtoso-drafting .contrasts:before {
     content: "contrasts";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .contrasts {
+.akomaNtoso-drafting .contrasts {
     border:1px solid #499f7f;
 }
 
-.akomaNtoso .derogates:before {
+.akomaNtoso-drafting .derogates:before {
     content: "derogates";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .derogates {
+.akomaNtoso-drafting .derogates {
     border:1px solid #d3c54a;
 }
 
-.akomaNtoso .dissentsFrom:before {
+.akomaNtoso-drafting .dissentsFrom:before {
     content: "dissentsFrom";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .dissentsFrom {
+.akomaNtoso-drafting .dissentsFrom {
     border:1px solid #f41e2d;
 }
 
-.akomaNtoso .distinguishes:before {
+.akomaNtoso-drafting .distinguishes:before {
     content: "distinguishes";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .distinguishes {
+.akomaNtoso-drafting .distinguishes {
     border:1px solid #4a4aa6;
 }
 
-.akomaNtoso .extends:before {
+.akomaNtoso-drafting .extends:before {
     content: "extends";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .extends {
+.akomaNtoso-drafting .extends {
     border:1px solid #1485d2;
 }
 
-.akomaNtoso .isAnalogTo:before {
+.akomaNtoso-drafting .isAnalogTo:before {
     content: "isAnalogTo";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .isAnalogTo {
+.akomaNtoso-drafting .isAnalogTo {
     border:1px solid #12066b;
 }
 
-.akomaNtoso .overrules:before {
+.akomaNtoso-drafting .overrules:before {
     content: "overrules";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .overrules {
+.akomaNtoso-drafting .overrules {
     border:1px solid #fa8dc5;
 }
 
-.akomaNtoso .putsInQuestion:before {
+.akomaNtoso-drafting .putsInQuestion:before {
     content: "putsInQuestion";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .putsInQuestion {
+.akomaNtoso-drafting .putsInQuestion {
     border:1px solid #e6f3ba;
 }
 
-.akomaNtoso .restricts:before {
+.akomaNtoso-drafting .restricts:before {
     content: "restricts";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .restricts {
+.akomaNtoso-drafting .restricts {
     border:1px solid #fe1f0c;
 }
 
-.akomaNtoso .supports:before {
+.akomaNtoso-drafting .supports:before {
     content: "supports";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .supports {
+.akomaNtoso-drafting .supports {
     border:1px solid #d71920;
 }
 
@@ -2199,43 +2199,43 @@
 * judicialArguments
 * --------------------------
 */
-.akomaNtoso .judicialArguments:before {
+.akomaNtoso-drafting .judicialArguments:before {
     content: "judicialArguments";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .judicialArguments {
+.akomaNtoso-drafting .judicialArguments {
     border:1px solid #5bd62e;
 }
 
-.akomaNtoso .judicial:before {
+.akomaNtoso-drafting .judicial:before {
     content: "judicial";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .judicial {
+.akomaNtoso-drafting .judicial {
     border:1px solid #e818f3;
 }
 
-.akomaNtoso .li:before {
+.akomaNtoso-drafting .li:before {
     content: "li";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .li {
+.akomaNtoso-drafting .li {
     border:1px solid #ac17c1;
 }
 
-.akomaNtoso .lifecycle:before {
+.akomaNtoso-drafting .lifecycle:before {
     content: "lifecycle";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .lifecycle {
+.akomaNtoso-drafting .lifecycle {
     border:1px solid #00f50d;
 }
 
@@ -2244,33 +2244,33 @@
 * listItems
 * --------------------------
 */
-.akomaNtoso .listItems:before {
+.akomaNtoso-drafting .listItems:before {
     content: "listItems";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .listItems {
+.akomaNtoso-drafting .listItems {
     border:1px solid #2384e7;
 }
 
-.akomaNtoso .ol:before {
+.akomaNtoso-drafting .ol:before {
     content: "ol";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .ol {
+.akomaNtoso-drafting .ol {
     border:1px solid #36aadc;
 }
 
-.akomaNtoso .ul:before {
+.akomaNtoso-drafting .ul:before {
     content: "ul";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .ul {
+.akomaNtoso-drafting .ul {
     border:1px solid #f084d3;
 }
 
@@ -2279,63 +2279,63 @@
 * maincontent
 * --------------------------
 */
-.akomaNtoso .maincontent:before {
+.akomaNtoso-drafting .maincontent:before {
     content: "maincontent";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .maincontent {
+.akomaNtoso-drafting .maincontent {
     border:1px solid #9d1860;
 }
 
-.akomaNtoso .background:before {
+.akomaNtoso-drafting .background:before {
     content: "background";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .background {
+.akomaNtoso-drafting .background {
     border:1px solid #bc8186;
 }
 
-.akomaNtoso .decision:before {
+.akomaNtoso-drafting .decision:before {
     content: "decision";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .decision {
+.akomaNtoso-drafting .decision {
     border:1px solid #c2b815;
 }
 
-.akomaNtoso .introduction:before {
+.akomaNtoso-drafting .introduction:before {
     content: "introduction";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .introduction {
+.akomaNtoso-drafting .introduction {
     border:1px solid #891690;
 }
 
-.akomaNtoso .mainBody:before {
+.akomaNtoso-drafting .mainBody:before {
     content: "mainBody";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .mainBody {
+.akomaNtoso-drafting .mainBody {
     border:1px solid #fd1abc;
 }
 
-.akomaNtoso .motivation:before {
+.akomaNtoso-drafting .motivation:before {
     content: "motivation";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .motivation {
+.akomaNtoso-drafting .motivation {
     border:1px solid #27771c;
 }
 
@@ -2344,23 +2344,23 @@
 * markeropt
 * --------------------------
 */
-.akomaNtoso .markeropt:before {
+.akomaNtoso-drafting .markeropt:before {
     content: "markeropt";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .markeropt {
+.akomaNtoso-drafting .markeropt {
     border:1px solid #d5b723;
 }
 
-.akomaNtoso .br:before {
+.akomaNtoso-drafting .br:before {
     content: "br";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .br {
+.akomaNtoso-drafting .br {
     border:1px solid #3f15da;
 }
 
@@ -2369,53 +2369,53 @@
 * eolType
 * --------------------------
 */
-.akomaNtoso .eolType:before {
+.akomaNtoso-drafting .eolType:before {
     content: "eolType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .eolType {
+.akomaNtoso-drafting .eolType {
     border:1px solid #314b27;
 }
 
-.akomaNtoso .eol:before {
+.akomaNtoso-drafting .eol:before {
     content: "eol";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .eol {
+.akomaNtoso-drafting .eol {
     border:1px solid #8e0cb8;
 }
 
-.akomaNtoso .eop:before {
+.akomaNtoso-drafting .eop:before {
     content: "eop";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .eop {
+.akomaNtoso-drafting .eop {
     border:1px solid #eaabce;
 }
 
-.akomaNtoso .img:before {
+.akomaNtoso-drafting .img:before {
     content: "img";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .img {
+.akomaNtoso-drafting .img {
     border:1px solid #145be7;
 }
 
-.akomaNtoso .noteRef:before {
+.akomaNtoso-drafting .noteRef:before {
     content: "noteRef";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .noteRef {
+.akomaNtoso-drafting .noteRef {
     border:1px solid #571d75;
 }
 
@@ -2424,33 +2424,33 @@
 * markerreq
 * --------------------------
 */
-.akomaNtoso .markerreq:before {
+.akomaNtoso-drafting .markerreq:before {
     content: "markerreq";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .markerreq {
+.akomaNtoso-drafting .markerreq {
     border:1px solid #17e387;
 }
 
-.akomaNtoso .marker:before {
+.akomaNtoso-drafting .marker:before {
     content: "marker";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .marker {
+.akomaNtoso-drafting .marker {
     border:1px solid #33a672;
 }
 
-.akomaNtoso .meta:before {
+.akomaNtoso-drafting .meta:before {
     content: "meta";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .meta {
+.akomaNtoso-drafting .meta {
     border:1px solid #398d17;
 }
 
@@ -2459,83 +2459,83 @@
 * metaopt
 * --------------------------
 */
-.akomaNtoso .metaopt:before {
+.akomaNtoso-drafting .metaopt:before {
     content: "metaopt";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .metaopt {
+.akomaNtoso-drafting .metaopt {
     border:1px solid #25992f;
 }
 
-.akomaNtoso .FRBRauthor:before {
+.akomaNtoso-drafting .FRBRauthor:before {
     content: "FRBRauthor";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRauthor {
+.akomaNtoso-drafting .FRBRauthor {
     border:1px solid #a9c09a;
 }
 
-.akomaNtoso .FRBRdate:before {
+.akomaNtoso-drafting .FRBRdate:before {
     content: "FRBRdate";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRdate {
+.akomaNtoso-drafting .FRBRdate {
     border:1px solid #051c76;
 }
 
-.akomaNtoso .FRBRlanguage:before {
+.akomaNtoso-drafting .FRBRlanguage:before {
     content: "FRBRlanguage";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRlanguage {
+.akomaNtoso-drafting .FRBRlanguage {
     border:1px solid #4a98d5;
 }
 
-.akomaNtoso .FRBRtranslation:before {
+.akomaNtoso-drafting .FRBRtranslation:before {
     content: "FRBRtranslation";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRtranslation {
+.akomaNtoso-drafting .FRBRtranslation {
     border:1px solid #9488d9;
 }
 
-.akomaNtoso .keyword:before {
+.akomaNtoso-drafting .keyword:before {
     content: "keyword";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .keyword {
+.akomaNtoso-drafting .keyword {
     border:1px solid #d3582f;
 }
 
-.akomaNtoso .publication:before {
+.akomaNtoso-drafting .publication:before {
     content: "publication";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .publication {
+.akomaNtoso-drafting .publication {
     border:1px solid #19ba2a;
 }
 
-.akomaNtoso .timeInterval:before {
+.akomaNtoso-drafting .timeInterval:before {
     content: "timeInterval";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .timeInterval {
+.akomaNtoso-drafting .timeInterval {
     border:1px solid #b4c2dd;
 }
 
@@ -2544,103 +2544,103 @@
 * valueType
 * --------------------------
 */
-.akomaNtoso .valueType:before {
+.akomaNtoso-drafting .valueType:before {
     content: "valueType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .valueType {
+.akomaNtoso-drafting .valueType {
     border:1px solid #57be6f;
 }
 
-.akomaNtoso .FRBRalias:before {
+.akomaNtoso-drafting .FRBRalias:before {
     content: "FRBRalias";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRalias {
+.akomaNtoso-drafting .FRBRalias {
     border:1px solid #034900;
 }
 
-.akomaNtoso .FRBRcountry:before {
+.akomaNtoso-drafting .FRBRcountry:before {
     content: "FRBRcountry";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRcountry {
+.akomaNtoso-drafting .FRBRcountry {
     border:1px solid #2cda47;
 }
 
-.akomaNtoso .FRBRformat:before {
+.akomaNtoso-drafting .FRBRformat:before {
     content: "FRBRformat";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRformat {
+.akomaNtoso-drafting .FRBRformat {
     border:1px solid #4cc337;
 }
 
-.akomaNtoso .FRBRname:before {
+.akomaNtoso-drafting .FRBRname:before {
     content: "FRBRname";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRname {
+.akomaNtoso-drafting .FRBRname {
     border:1px solid #8b5a62;
 }
 
-.akomaNtoso .FRBRnumber:before {
+.akomaNtoso-drafting .FRBRnumber:before {
     content: "FRBRnumber";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRnumber {
+.akomaNtoso-drafting .FRBRnumber {
     border:1px solid #4de3a5;
 }
 
-.akomaNtoso .FRBRsubtype:before {
+.akomaNtoso-drafting .FRBRsubtype:before {
     content: "FRBRsubtype";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRsubtype {
+.akomaNtoso-drafting .FRBRsubtype {
     border:1px solid #f1c13e;
 }
 
-.akomaNtoso .FRBRthis:before {
+.akomaNtoso-drafting .FRBRthis:before {
     content: "FRBRthis";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRthis {
+.akomaNtoso-drafting .FRBRthis {
     border:1px solid #3fb43c;
 }
 
-.akomaNtoso .FRBRuri:before {
+.akomaNtoso-drafting .FRBRuri:before {
     content: "FRBRuri";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .FRBRuri {
+.akomaNtoso-drafting .FRBRuri {
     border:1px solid #ec6326;
 }
 
-.akomaNtoso .metareq:before {
+.akomaNtoso-drafting .metareq:before {
     content: "metareq";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .metareq {
+.akomaNtoso-drafting .metareq {
     border:1px solid #c0c2a4;
 }
 
@@ -2649,43 +2649,43 @@
 * modType
 * --------------------------
 */
-.akomaNtoso .modType:before {
+.akomaNtoso-drafting .modType:before {
     content: "modType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .modType {
+.akomaNtoso-drafting .modType {
     border:1px solid #8e7263;
 }
 
-.akomaNtoso .mmod:before {
+.akomaNtoso-drafting .mmod:before {
     content: "mmod";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .mmod {
+.akomaNtoso-drafting .mmod {
     border:1px solid #3e2ad2;
 }
 
-.akomaNtoso .mod:before {
+.akomaNtoso-drafting .mod:before {
     content: "mod";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .mod {
+.akomaNtoso-drafting .mod {
     border:1px solid #8357df;
 }
 
-.akomaNtoso .rmod:before {
+.akomaNtoso-drafting .rmod:before {
     content: "rmod";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .rmod {
+.akomaNtoso-drafting .rmod {
     border:1px solid #1d3c77;
 }
 
@@ -2694,83 +2694,83 @@
 * modificationType
 * --------------------------
 */
-.akomaNtoso .modificationType:before {
+.akomaNtoso-drafting .modificationType:before {
     content: "modificationType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .modificationType {
+.akomaNtoso-drafting .modificationType {
     border:1px solid #35c7f9;
 }
 
-.akomaNtoso .efficacyMod:before {
+.akomaNtoso-drafting .efficacyMod:before {
     content: "efficacyMod";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .efficacyMod {
+.akomaNtoso-drafting .efficacyMod {
     border:1px solid #dcce8d;
 }
 
-.akomaNtoso .forceMod:before {
+.akomaNtoso-drafting .forceMod:before {
     content: "forceMod";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .forceMod {
+.akomaNtoso-drafting .forceMod {
     border:1px solid #5d2829;
 }
 
-.akomaNtoso .legalSystemMod:before {
+.akomaNtoso-drafting .legalSystemMod:before {
     content: "legalSystemMod";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .legalSystemMod {
+.akomaNtoso-drafting .legalSystemMod {
     border:1px solid #6c3408;
 }
 
-.akomaNtoso .meaningMod:before {
+.akomaNtoso-drafting .meaningMod:before {
     content: "meaningMod";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .meaningMod {
+.akomaNtoso-drafting .meaningMod {
     border:1px solid #ed08dc;
 }
 
-.akomaNtoso .scopeMod:before {
+.akomaNtoso-drafting .scopeMod:before {
     content: "scopeMod";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .scopeMod {
+.akomaNtoso-drafting .scopeMod {
     border:1px solid #b03c42;
 }
 
-.akomaNtoso .textualMod:before {
+.akomaNtoso-drafting .textualMod:before {
     content: "textualMod";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .textualMod {
+.akomaNtoso-drafting .textualMod {
     border:1px solid #910184;
 }
 
-.akomaNtoso .notes:before {
+.akomaNtoso-drafting .notes:before {
     content: "notes";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .notes {
+.akomaNtoso-drafting .notes {
     border:1px solid #f08c16;
 }
 
@@ -2779,33 +2779,33 @@
 * openStructure
 * --------------------------
 */
-.akomaNtoso .openStructure:before {
+.akomaNtoso-drafting .openStructure:before {
     content: "openStructure";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .openStructure {
+.akomaNtoso-drafting .openStructure {
     border:1px solid #ecc931;
 }
 
-.akomaNtoso .debateReport:before {
+.akomaNtoso-drafting .debateReport:before {
     content: "debateReport";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .debateReport {
+.akomaNtoso-drafting .debateReport {
     border:1px solid #e85a49;
 }
 
-.akomaNtoso .doc:before {
+.akomaNtoso-drafting .doc:before {
     content: "doc";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .doc {
+.akomaNtoso-drafting .doc {
     border:1px solid #965ba6;
 }
 
@@ -2814,23 +2814,23 @@
 * parliamentaryAnalysis
 * --------------------------
 */
-.akomaNtoso .parliamentaryAnalysis:before {
+.akomaNtoso-drafting .parliamentaryAnalysis:before {
     content: "parliamentaryAnalysis";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .parliamentaryAnalysis {
+.akomaNtoso-drafting .parliamentaryAnalysis {
     border:1px solid #92b84d;
 }
 
-.akomaNtoso .parliamentary:before {
+.akomaNtoso-drafting .parliamentary:before {
     content: "parliamentary";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .parliamentary {
+.akomaNtoso-drafting .parliamentary {
     border:1px solid #5eac34;
 }
 
@@ -2839,43 +2839,43 @@
 * parliamentaryAnalysisType
 * --------------------------
 */
-.akomaNtoso .parliamentaryAnalysisType:before {
+.akomaNtoso-drafting .parliamentaryAnalysisType:before {
     content: "parliamentaryAnalysisType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .parliamentaryAnalysisType {
+.akomaNtoso-drafting .parliamentaryAnalysisType {
     border:1px solid #e838fd;
 }
 
-.akomaNtoso .quorumVerification:before {
+.akomaNtoso-drafting .quorumVerification:before {
     content: "quorumVerification";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .quorumVerification {
+.akomaNtoso-drafting .quorumVerification {
     border:1px solid #cdde11;
 }
 
-.akomaNtoso .recount:before {
+.akomaNtoso-drafting .recount:before {
     content: "recount";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .recount {
+.akomaNtoso-drafting .recount {
     border:1px solid #a927f7;
 }
 
-.akomaNtoso .voting:before {
+.akomaNtoso-drafting .voting:before {
     content: "voting";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .voting {
+.akomaNtoso-drafting .voting {
     border:1px solid #be9b5f;
 }
 
@@ -2884,53 +2884,53 @@
 * periodType
 * --------------------------
 */
-.akomaNtoso .periodType:before {
+.akomaNtoso-drafting .periodType:before {
     content: "periodType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .periodType {
+.akomaNtoso-drafting .periodType {
     border:1px solid #60e4e8;
 }
 
-.akomaNtoso .application:before {
+.akomaNtoso-drafting .application:before {
     content: "application";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .application {
+.akomaNtoso-drafting .application {
     border:1px solid #a8b58d;
 }
 
-.akomaNtoso .duration:before {
+.akomaNtoso-drafting .duration:before {
     content: "duration";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .duration {
+.akomaNtoso-drafting .duration {
     border:1px solid #31b50a;
 }
 
-.akomaNtoso .efficacy:before {
+.akomaNtoso-drafting .efficacy:before {
     content: "efficacy";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .efficacy {
+.akomaNtoso-drafting .efficacy {
     border:1px solid #148316;
 }
 
-.akomaNtoso .force:before {
+.akomaNtoso-drafting .force:before {
     content: "force";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .force {
+.akomaNtoso-drafting .force {
     border:1px solid #c68918;
 }
 
@@ -2939,53 +2939,53 @@
 * popupStructure
 * --------------------------
 */
-.akomaNtoso .popupStructure:before {
+.akomaNtoso-drafting .popupStructure:before {
     content: "popupStructure";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .popupStructure {
+.akomaNtoso-drafting .popupStructure {
     border:1px solid #471bc0;
 }
 
-.akomaNtoso .authorialNote:before {
+.akomaNtoso-drafting .authorialNote:before {
     content: "authorialNote";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .authorialNote {
+.akomaNtoso-drafting .authorialNote {
     border:1px solid #f7130b;
 }
 
-.akomaNtoso .extractStructure:before {
+.akomaNtoso-drafting .extractStructure:before {
     content: "extractStructure";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .extractStructure {
+.akomaNtoso-drafting .extractStructure {
     border:1px solid #d55c57;
 }
 
-.akomaNtoso .popup:before {
+.akomaNtoso-drafting .popup:before {
     content: "popup";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .popup {
+.akomaNtoso-drafting .popup {
     border:1px solid #cfbbf7;
 }
 
-.akomaNtoso .quotedStructure:before {
+.akomaNtoso-drafting .quotedStructure:before {
     content: "quotedStructure";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .quotedStructure {
+.akomaNtoso-drafting .quotedStructure {
     border:1px solid #3317f8;
 }
 
@@ -2994,23 +2994,23 @@
 * preambleopt
 * --------------------------
 */
-.akomaNtoso .preambleopt:before {
+.akomaNtoso-drafting .preambleopt:before {
     content: "preambleopt";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .preambleopt {
+.akomaNtoso-drafting .preambleopt {
     border:1px solid #c630c8;
 }
 
-.akomaNtoso .preamble:before {
+.akomaNtoso-drafting .preamble:before {
     content: "preamble";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .preamble {
+.akomaNtoso-drafting .preamble {
     border:1px solid #9d2dbe;
 }
 
@@ -3019,33 +3019,33 @@
 * prefaceopt
 * --------------------------
 */
-.akomaNtoso .prefaceopt:before {
+.akomaNtoso-drafting .prefaceopt:before {
     content: "prefaceopt";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .prefaceopt {
+.akomaNtoso-drafting .prefaceopt {
     border:1px solid #c3e359;
 }
 
-.akomaNtoso .preface:before {
+.akomaNtoso-drafting .preface:before {
     content: "preface";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .preface {
+.akomaNtoso-drafting .preface {
     border:1px solid #fdc7fe;
 }
 
-.akomaNtoso .recitals:before {
+.akomaNtoso-drafting .recitals:before {
     content: "recitals";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .recitals {
+.akomaNtoso-drafting .recitals {
     border:1px solid #17700a;
 }
 
@@ -3054,23 +3054,23 @@
 * refItems
 * --------------------------
 */
-.akomaNtoso .refItems:before {
+.akomaNtoso-drafting .refItems:before {
     content: "refItems";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .refItems {
+.akomaNtoso-drafting .refItems {
     border:1px solid #5799bd;
 }
 
-.akomaNtoso .references:before {
+.akomaNtoso-drafting .references:before {
     content: "references";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .references {
+.akomaNtoso-drafting .references {
     border:1px solid #e4cd2a;
 }
 
@@ -3079,173 +3079,173 @@
 * referenceType
 * --------------------------
 */
-.akomaNtoso .referenceType:before {
+.akomaNtoso-drafting .referenceType:before {
     content: "referenceType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .referenceType {
+.akomaNtoso-drafting .referenceType {
     border:1px solid #6bf6f5;
 }
 
-.akomaNtoso .TLCConcept:before {
+.akomaNtoso-drafting .TLCConcept:before {
     content: "TLCConcept";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .TLCConcept {
+.akomaNtoso-drafting .TLCConcept {
     border:1px solid #f7a691;
 }
 
-.akomaNtoso .TLCEvent:before {
+.akomaNtoso-drafting .TLCEvent:before {
     content: "TLCEvent";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .TLCEvent {
+.akomaNtoso-drafting .TLCEvent {
     border:1px solid #4dec2e;
 }
 
-.akomaNtoso .TLCLocation:before {
+.akomaNtoso-drafting .TLCLocation:before {
     content: "TLCLocation";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .TLCLocation {
+.akomaNtoso-drafting .TLCLocation {
     border:1px solid #1e0bb2;
 }
 
-.akomaNtoso .TLCObject:before {
+.akomaNtoso-drafting .TLCObject:before {
     content: "TLCObject";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .TLCObject {
+.akomaNtoso-drafting .TLCObject {
     border:1px solid #71f89b;
 }
 
-.akomaNtoso .TLCOrganization:before {
+.akomaNtoso-drafting .TLCOrganization:before {
     content: "TLCOrganization";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .TLCOrganization {
+.akomaNtoso-drafting .TLCOrganization {
     border:1px solid #67dca4;
 }
 
-.akomaNtoso .TLCPerson:before {
+.akomaNtoso-drafting .TLCPerson:before {
     content: "TLCPerson";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .TLCPerson {
+.akomaNtoso-drafting .TLCPerson {
     border:1px solid #f95abb;
 }
 
-.akomaNtoso .TLCProcess:before {
+.akomaNtoso-drafting .TLCProcess:before {
     content: "TLCProcess";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .TLCProcess {
+.akomaNtoso-drafting .TLCProcess {
     border:1px solid #86a219;
 }
 
-.akomaNtoso .TLCReference:before {
+.akomaNtoso-drafting .TLCReference:before {
     content: "TLCReference";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .TLCReference {
+.akomaNtoso-drafting .TLCReference {
     border:1px solid #a4008a;
 }
 
-.akomaNtoso .TLCRole:before {
+.akomaNtoso-drafting .TLCRole:before {
     content: "TLCRole";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .TLCRole {
+.akomaNtoso-drafting .TLCRole {
     border:1px solid #38d083;
 }
 
-.akomaNtoso .TLCTerm:before {
+.akomaNtoso-drafting .TLCTerm:before {
     content: "TLCTerm";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .TLCTerm {
+.akomaNtoso-drafting .TLCTerm {
     border:1px solid #339cc7;
 }
 
-.akomaNtoso .activeRef:before {
+.akomaNtoso-drafting .activeRef:before {
     content: "activeRef";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .activeRef {
+.akomaNtoso-drafting .activeRef {
     border:1px solid #c035ae;
 }
 
-.akomaNtoso .attachmentOf:before {
+.akomaNtoso-drafting .attachmentOf:before {
     content: "attachmentOf";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .attachmentOf {
+.akomaNtoso-drafting .attachmentOf {
     border:1px solid #0ca98e;
 }
 
-.akomaNtoso .hasAttachment:before {
+.akomaNtoso-drafting .hasAttachment:before {
     content: "hasAttachment";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .hasAttachment {
+.akomaNtoso-drafting .hasAttachment {
     border:1px solid #19422e;
 }
 
-.akomaNtoso .jurisprudence:before {
+.akomaNtoso-drafting .jurisprudence:before {
     content: "jurisprudence";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .jurisprudence {
+.akomaNtoso-drafting .jurisprudence {
     border:1px solid #20ec51;
 }
 
-.akomaNtoso .original:before {
+.akomaNtoso-drafting .original:before {
     content: "original";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .original {
+.akomaNtoso-drafting .original {
     border:1px solid #e05593;
 }
 
-.akomaNtoso .passiveRef:before {
+.akomaNtoso-drafting .passiveRef:before {
     content: "passiveRef";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .passiveRef {
+.akomaNtoso-drafting .passiveRef {
     border:1px solid #4f6226;
 }
 
@@ -3254,83 +3254,83 @@
 * srcType
 * --------------------------
 */
-.akomaNtoso .srcType:before {
+.akomaNtoso-drafting .srcType:before {
     content: "srcType";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .srcType {
+.akomaNtoso-drafting .srcType {
     border:1px solid #0d89d7;
 }
 
-.akomaNtoso .componentRef:before {
+.akomaNtoso-drafting .componentRef:before {
     content: "componentRef";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .componentRef {
+.akomaNtoso-drafting .componentRef {
     border:1px solid #9e088b;
 }
 
-.akomaNtoso .table:before {
+.akomaNtoso-drafting .table:before {
     content: "table";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .table {
+.akomaNtoso-drafting .table {
     border:1px solid #c2241c;
 }
 
-.akomaNtoso .temporalData:before {
+.akomaNtoso-drafting .temporalData:before {
     content: "temporalData";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .temporalData {
+.akomaNtoso-drafting .temporalData {
     border:1px solid #90c795;
 }
 
-.akomaNtoso .temporalGroup:before {
+.akomaNtoso-drafting .temporalGroup:before {
     content: "temporalGroup";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .temporalGroup {
+.akomaNtoso-drafting .temporalGroup {
     border:1px solid #3a911a;
 }
 
-.akomaNtoso .toc:before {
+.akomaNtoso-drafting .toc:before {
     content: "toc";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .toc {
+.akomaNtoso-drafting .toc {
     border:1px solid #d9e3cc;
 }
 
-.akomaNtoso .tr:before {
+.akomaNtoso-drafting .tr:before {
     content: "tr";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .tr {
+.akomaNtoso-drafting .tr {
     border:1px solid #529f59;
 }
 
-.akomaNtoso .workflow:before {
+.akomaNtoso-drafting .workflow:before {
     content: "workflow";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .workflow {
+.akomaNtoso-drafting .workflow {
     border:1px solid #2b223f;
 }
 

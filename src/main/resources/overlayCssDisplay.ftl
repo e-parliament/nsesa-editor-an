@@ -47,7 +47,7 @@
 </#macro>
 
 <#macro displayInline overlayStyle overlayClass>
-.akomaNtoso .${overlayStyle.name} {
+.akomaNtoso-drafting .${overlayStyle.name} {
     background-color:<#if overlayStyle.values["background-color"]??>${overlayStyle.values["background-color"]};<#else>#${colorGenerator.getColor(overlayStyle.name)};</#if>
     color:<#if overlayStyle.values["color"]??>${overlayStyle.values["color"]};<#elseif overlayStyle.values["background-color"]??>#${colorGenerator.matchTextColor(overlayStyle.values["background-color"])};<#else>#${colorGenerator.getTextColor(overlayStyle.name)};</#if>
 }
@@ -55,13 +55,13 @@
 </#macro>
 
 <#macro displayBlock overlayStyle overlayClass>
-.akomaNtoso .${overlayStyle.name}:before {
+.akomaNtoso-drafting .${overlayStyle.name}:before {
     content: "${overlayStyle.name}";
     display:block;
     text-align:right;
     color: #000000;
 }
-.akomaNtoso .${overlayStyle.name} {
+.akomaNtoso-drafting .${overlayStyle.name} {
     border:<#if overlayStyle.values["border"]??>${overlayStyle.values["border"]};<#else>1px solid #${colorGenerator.getColor(overlayStyle.name)};</#if>
 }
 

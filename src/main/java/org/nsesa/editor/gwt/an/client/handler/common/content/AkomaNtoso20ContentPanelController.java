@@ -21,6 +21,7 @@ public class AkomaNtoso20ContentPanelController extends ContentPanelController {
         super(clientFactory, view);
     }
 
+
     @Override
     public void setContext(DialogContext dialogContext) {
         super.setContext(dialogContext);
