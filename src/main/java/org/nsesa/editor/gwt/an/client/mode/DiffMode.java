@@ -6,6 +6,7 @@ import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.amendment.AmendableWidgetWalker;
 import org.nsesa.editor.gwt.core.client.event.CriticalErrorEvent;
+import org.nsesa.editor.gwt.core.client.event.NotificationEvent;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.mode.DocumentMode;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
@@ -42,6 +43,7 @@ public class DiffMode implements DocumentMode<ActiveState> {
     public boolean apply(ActiveState state) {
         // TODO: actually change the diffing for the amendments ...
         if (state.isActive()) {
+            clientFactory.getEventBus().fireEvent(new NotificationEvent("Diffing is now active."));
             documentController.getSourceFileController().walk(new AmendableWidgetWalker.AmendableVisitor() {
                 @Override
                 public boolean visit(AmendableWidget visited) {
@@ -70,6 +72,7 @@ public class DiffMode implements DocumentMode<ActiveState> {
                 }
             });
         } else {
+            clientFactory.getEventBus().fireEvent(new NotificationEvent("Diffing is now inactive."));
             documentController.getSourceFileController().walk(new AmendableWidgetWalker.AmendableVisitor() {
                 @Override
                 public boolean visit(AmendableWidget visited) {
