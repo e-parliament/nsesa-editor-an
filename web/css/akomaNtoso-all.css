@@ -654,20 +654,23 @@
 }
 
 .akomaNtoso .sub {
-    vertical-align:sub;
-    font-size:xx-small;
-    display:inline;
+    vertical-align: sub;
+    font-size: xx-small;
+    display: inline;
 }
+
 .akomaNtoso .subheading {
-    display:inline;
+    display: inline;
 }
+
 .akomaNtoso .summary {
-    display:inline;
+    display: inline;
 }
+
 .akomaNtoso .sup {
-    vertical-align:super;
-    font-size:xx-small;
-    display:inline;
+    vertical-align: super;
+    font-size: xx-small;
+    display: inline;
 }
 
 .akomaNtoso .tocItem {
@@ -728,8 +731,9 @@
 * --------------------------
 */
 .akomaNtoso .br {
-    display:block;
+    display: block;
 }
+
 /*
 * --------------------------
 * eolType

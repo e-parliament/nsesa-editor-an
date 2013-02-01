@@ -23,8 +23,15 @@
 }
 
 .akomaNtoso .num {
-    display: inline-block;
-    font-weight: bold;
+    display: inline !important;
+}
+
+.akomaNtoso .num + .paragraph {
+    display: inline !important;
+}
+
+.akomaNtoso .num + .p {
+    display: inline !important;
 }
 
 .akomaNtoso .item > .num {

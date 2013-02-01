@@ -9,301 +9,31 @@
 * Amendments
 * --------------------------
 */
-.akomaNtoso-drafting .Amendments:before {
-    content: "Amendments";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .Amendments {
-    border:1px solid #fd2747;
-}
-
-.akomaNtoso-drafting .activeModifications:before {
-    content: "activeModifications";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .activeModifications {
-    border:1px solid #04cbae;
-}
-
-.akomaNtoso-drafting .passiveModifications:before {
-    content: "passiveModifications";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .passiveModifications {
-    border:1px solid #77e4cd;
-}
-
 /*
 * --------------------------
 * akomaNtosoType
 * --------------------------
 */
-.akomaNtoso-drafting .akomaNtosoType:before {
-    content: "akomaNtosoType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .akomaNtosoType {
-    border:1px solid #426956;
-}
-
-.akomaNtoso-drafting .akomaNtoso:before {
-    content: "akomaNtoso";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .akomaNtoso-drafting{
-    border:1px solid #cad9d3;
-}
-
 /*
 * --------------------------
 * amendmentBodyType
 * --------------------------
 */
-.akomaNtoso-drafting .amendmentBodyType:before {
-    content: "amendmentBodyType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .amendmentBodyType {
-    border:1px solid #48568b;
-}
-
-.akomaNtoso-drafting .amendmentBody:before {
-    content: "amendmentBody";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .amendmentBody {
-    border:1px solid #a0d286;
-}
-
 /*
 * --------------------------
 * amendmentStructure
 * --------------------------
 */
-.akomaNtoso-drafting .amendmentStructure:before {
-    content: "amendmentStructure";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .amendmentStructure {
-    border:1px solid #673967;
-}
-
-.akomaNtoso-drafting .amendment:before {
-    content: "amendment";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .amendment {
-    border:1px solid #9e8379;
-}
-
-.akomaNtoso-drafting .analysis:before {
-    content: "analysis";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .analysis {
-    border:1px solid #7c815e;
-}
-
 /*
 * --------------------------
 * anyOtherType
 * --------------------------
 */
-.akomaNtoso-drafting .anyOtherType:before {
-    content: "anyOtherType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .anyOtherType {
-    border:1px solid #e0b263;
-}
-
-.akomaNtoso-drafting .condition:before {
-    content: "condition";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .condition {
-    border:1px solid #d00217;
-}
-
-.akomaNtoso-drafting .domain:before {
-    content: "domain";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .domain {
-    border:1px solid #70cf59;
-}
-
-.akomaNtoso-drafting .eventRef:before {
-    content: "eventRef";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .eventRef {
-    border:1px solid #266bdf;
-}
-
-.akomaNtoso-drafting .foreign:before {
-    content: "foreign";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .foreign {
-    border:1px solid #df676b;
-}
-
-.akomaNtoso-drafting .new:before {
-    content: "new";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .new {
-    border:1px solid #8caea6;
-}
-
-.akomaNtoso-drafting .old:before {
-    content: "old";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .old {
-    border:1px solid #60580b;
-}
-
-.akomaNtoso-drafting .otherAnalysis:before {
-    content: "otherAnalysis";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .otherAnalysis {
-    border:1px solid #31705a;
-}
-
-.akomaNtoso-drafting .presentation:before {
-    content: "presentation";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .presentation {
-    border:1px solid #cd247c;
-}
-
-.akomaNtoso-drafting .preservation:before {
-    content: "preservation";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .preservation {
-    border:1px solid #6d4d3e;
-}
-
-.akomaNtoso-drafting .proprietary:before {
-    content: "proprietary";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .proprietary {
-    border:1px solid #fc4a19;
-}
-
-.akomaNtoso-drafting .result:before {
-    content: "result";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .result {
-    border:1px solid #873681;
-}
-
-.akomaNtoso-drafting .step:before {
-    content: "step";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .step {
-    border:1px solid #837d34;
-}
-
 /*
 * --------------------------
 * argumentType
 * --------------------------
 */
-.akomaNtoso-drafting .argumentType:before {
-    content: "argumentType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .argumentType {
-    border:1px solid #c0ac2d;
-}
-
-.akomaNtoso-drafting .destination:before {
-    content: "destination";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .destination {
-    border:1px solid #f74231;
-}
-
-.akomaNtoso-drafting .source:before {
-    content: "source";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .source {
-    border:1px solid #80cbdc;
-}
-
-.akomaNtoso-drafting .attachments:before {
-    content: "attachments";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .attachments {
-    border:1px solid #c008c8;
-}
-
 /*
 * --------------------------
 * basehierarchy
@@ -311,12 +41,13 @@
 */
 .akomaNtoso-drafting .basehierarchy:before {
     content: "basehierarchy";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .basehierarchy {
-    border:1px solid #feeb68;
+    border: 1px solid #feeb68;
 }
 
 /*
@@ -326,212 +57,233 @@
 */
 .akomaNtoso-drafting .althierarchy:before {
     content: "althierarchy";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .althierarchy {
-    border:1px solid #d0be52;
+    border: 1px solid #d0be52;
 }
 
 .akomaNtoso-drafting .address:before {
     content: "address";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .address {
-    border:1px solid #564c96;
+    border: 1px solid #564c96;
 }
 
 .akomaNtoso-drafting .adjournment:before {
     content: "adjournment";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .adjournment {
-    border:1px solid #12f224;
+    border: 1px solid #12f224;
 }
 
 .akomaNtoso-drafting .administrationOfOath:before {
     content: "administrationOfOath";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .administrationOfOath {
-    border:1px solid #7b4fe5;
+    border: 1px solid #7b4fe5;
 }
 
 .akomaNtoso-drafting .communication:before {
     content: "communication";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .communication {
-    border:1px solid #82961f;
+    border: 1px solid #82961f;
 }
 
 .akomaNtoso-drafting .debateSection:before {
     content: "debateSection";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .debateSection {
-    border:1px solid #3db3ec;
+    border: 1px solid #3db3ec;
 }
 
 .akomaNtoso-drafting .declarationOfVote:before {
     content: "declarationOfVote";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .declarationOfVote {
-    border:1px solid #a1ce36;
+    border: 1px solid #a1ce36;
 }
 
 .akomaNtoso-drafting .ministerialStatements:before {
     content: "ministerialStatements";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .ministerialStatements {
-    border:1px solid #273b97;
+    border: 1px solid #273b97;
 }
 
 .akomaNtoso-drafting .nationalInterest:before {
     content: "nationalInterest";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .nationalInterest {
-    border:1px solid #4be3af;
+    border: 1px solid #4be3af;
 }
 
 .akomaNtoso-drafting .noticesOfMotion:before {
     content: "noticesOfMotion";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .noticesOfMotion {
-    border:1px solid #5fe456;
+    border: 1px solid #5fe456;
 }
 
 .akomaNtoso-drafting .oralStatements:before {
     content: "oralStatements";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .oralStatements {
-    border:1px solid #c9f47d;
+    border: 1px solid #c9f47d;
 }
 
 .akomaNtoso-drafting .papers:before {
     content: "papers";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .papers {
-    border:1px solid #db385f;
+    border: 1px solid #db385f;
 }
 
 .akomaNtoso-drafting .personalStatements:before {
     content: "personalStatements";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .personalStatements {
-    border:1px solid #10315b;
+    border: 1px solid #10315b;
 }
 
 .akomaNtoso-drafting .petitions:before {
     content: "petitions";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .petitions {
-    border:1px solid #def659;
+    border: 1px solid #def659;
 }
 
 .akomaNtoso-drafting .pointOfOrder:before {
     content: "pointOfOrder";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .pointOfOrder {
-    border:1px solid #8ee7a7;
+    border: 1px solid #8ee7a7;
 }
 
 .akomaNtoso-drafting .prayers:before {
     content: "prayers";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .prayers {
-    border:1px solid #46c7cc;
+    border: 1px solid #46c7cc;
 }
 
 .akomaNtoso-drafting .proceduralMotions:before {
     content: "proceduralMotions";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .proceduralMotions {
-    border:1px solid #ce2410;
+    border: 1px solid #ce2410;
 }
 
 .akomaNtoso-drafting .questions:before {
     content: "questions";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .questions {
-    border:1px solid #1cbddd;
+    border: 1px solid #1cbddd;
 }
 
 .akomaNtoso-drafting .resolutions:before {
     content: "resolutions";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .resolutions {
-    border:1px solid #e748d6;
+    border: 1px solid #e748d6;
 }
 
 .akomaNtoso-drafting .rollCall:before {
     content: "rollCall";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .rollCall {
-    border:1px solid #be90a6;
+    border: 1px solid #be90a6;
 }
 
 .akomaNtoso-drafting .writtenStatements:before {
     content: "writtenStatements";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .writtenStatements {
-    border:1px solid #1206c1;
+    border: 1px solid #1206c1;
 }
 
 /*
@@ -541,242 +293,265 @@
 */
 .akomaNtoso-drafting .hierarchy:before {
     content: "hierarchy";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .hierarchy {
-    border:1px solid #2e4754;
+    border: 1px solid #2e4754;
 }
 
 .akomaNtoso-drafting .alinea:before {
     content: "alinea";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .alinea {
-    border:1px solid #e24844;
+    border: 1px solid #e24844;
 }
 
 .akomaNtoso-drafting .article:before {
     content: "article";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .article {
-    border:1px solid #5b7981;
+    border: 1px solid #5b7981;
 }
 
 .akomaNtoso-drafting .book:before {
     content: "book";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .book {
-    border:1px solid #3b8454;
+    border: 1px solid #3b8454;
 }
 
 .akomaNtoso-drafting .chapter:before {
     content: "chapter";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .chapter {
-    border:1px solid #e02029;
+    border: 1px solid #e02029;
 }
 
 .akomaNtoso-drafting .clause:before {
     content: "clause";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .clause {
-    border:1px solid #5f4105;
+    border: 1px solid #5f4105;
 }
 
 .akomaNtoso-drafting .division:before {
     content: "division";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .division {
-    border:1px solid #5d9a3f;
+    border: 1px solid #5d9a3f;
 }
 
 .akomaNtoso-drafting .hcontainer:before {
     content: "hcontainer";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .hcontainer {
-    border:1px solid #550eeb;
+    border: 1px solid #550eeb;
 }
 
 .akomaNtoso-drafting .indent:before {
     content: "indent";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .indent {
-    border:1px solid #0cc30b;
+    border: 1px solid #0cc30b;
 }
 
 .akomaNtoso-drafting .list:before {
     content: "list";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .list {
-    border:1px solid #3767ae;
+    border: 1px solid #3767ae;
 }
 
 .akomaNtoso-drafting .paragraph {
-    background-color:#34cf86;
-    color:#000000;
+    background-color: #34cf86;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .part:before {
     content: "part";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .part {
-    border:1px solid #6f4203;
+    border: 1px solid #6f4203;
 }
 
 .akomaNtoso-drafting .point:before {
     content: "point";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .point {
-    border:1px solid #d0fb4e;
+    border: 1px solid #d0fb4e;
 }
 
 .akomaNtoso-drafting .section:before {
     content: "section";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .section {
-    border:1px solid #a9ae0a;
+    border: 1px solid #a9ae0a;
 }
 
 .akomaNtoso-drafting .subchapter:before {
     content: "subchapter";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .subchapter {
-    border:1px solid #25efc8;
+    border: 1px solid #25efc8;
 }
 
 .akomaNtoso-drafting .subclause:before {
     content: "subclause";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .subclause {
-    border:1px solid #ba810d;
+    border: 1px solid #ba810d;
 }
 
 .akomaNtoso-drafting .subdivision:before {
     content: "subdivision";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .subdivision {
-    border:1px solid #33c628;
+    border: 1px solid #33c628;
 }
 
 .akomaNtoso-drafting .sublist:before {
     content: "sublist";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .sublist {
-    border:1px solid #630a4f;
+    border: 1px solid #630a4f;
 }
 
 .akomaNtoso-drafting .subparagraph {
-    background-color:#fb1a92;
-    color:#000000;
+    background-color: #fb1a92;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .subpart:before {
     content: "subpart";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .subpart {
-    border:1px solid #c88296;
+    border: 1px solid #c88296;
 }
 
 .akomaNtoso-drafting .subsection:before {
     content: "subsection";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .subsection {
-    border:1px solid #6301b5;
+    border: 1px solid #6301b5;
 }
 
 .akomaNtoso-drafting .subtitle:before {
     content: "subtitle";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .subtitle {
-    border:1px solid #6a75c0;
+    border: 1px solid #6a75c0;
 }
 
 .akomaNtoso-drafting .title:before {
     content: "title";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .title {
-    border:1px solid #f7dc5c;
+    border: 1px solid #f7dc5c;
 }
 
 .akomaNtoso-drafting .tome:before {
     content: "tome";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .tome {
-    border:1px solid #d4fb08;
+    border: 1px solid #d4fb08;
 }
 
 .akomaNtoso-drafting .transitional:before {
     content: "transitional";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .transitional {
-    border:1px solid #29e4e4;
+    border: 1px solid #29e4e4;
 }
 
 /*
@@ -786,52 +561,57 @@
 */
 .akomaNtoso-drafting .itemType:before {
     content: "itemType";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .itemType {
-    border:1px solid #9bdd78;
+    border: 1px solid #9bdd78;
 }
 
 .akomaNtoso-drafting .citation:before {
     content: "citation";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .citation {
-    border:1px solid #84bcb4;
+    border: 1px solid #84bcb4;
 }
 
 .akomaNtoso-drafting .item:before {
     content: "item";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .item {
-    border:1px solid #c38c14;
+    border: 1px solid #c38c14;
 }
 
 .akomaNtoso-drafting .recital:before {
     content: "recital";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .recital {
-    border:1px solid #efa996;
+    border: 1px solid #efa996;
 }
 
 .akomaNtoso-drafting .tblock:before {
     content: "tblock";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .tblock {
-    border:1px solid #5d5aa6;
+    border: 1px solid #5d5aa6;
 }
 
 /*
@@ -841,42 +621,46 @@
 */
 .akomaNtoso-drafting .speechType:before {
     content: "speechType";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .speechType {
-    border:1px solid #d2c8fe;
+    border: 1px solid #d2c8fe;
 }
 
 .akomaNtoso-drafting .answer:before {
     content: "answer";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .answer {
-    border:1px solid #817c90;
+    border: 1px solid #817c90;
 }
 
 .akomaNtoso-drafting .question:before {
     content: "question";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .question {
-    border:1px solid #35c7b2;
+    border: 1px solid #35c7b2;
 }
 
 .akomaNtoso-drafting .speech:before {
     content: "speech";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .speech {
-    border:1px solid #342dd0;
+    border: 1px solid #342dd0;
 }
 
 /*
@@ -884,189 +668,20 @@
 * basicopt
 * --------------------------
 */
-.akomaNtoso-drafting .basicopt:before {
-    content: "basicopt";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .basicopt {
-    border:1px solid #6abc2a;
-}
-
-.akomaNtoso-drafting .conclusions:before {
-    content: "conclusions";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .conclusions {
-    border:1px solid #b6991d;
-}
-
-.akomaNtoso-drafting .coverPage:before {
-    content: "coverPage";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .coverPage {
-    border:1px solid #1e9e4f;
-}
-
-.akomaNtoso-drafting .blockList:before {
-    content: "blockList";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .blockList {
-    border:1px solid #239752;
-}
-
 /*
 * --------------------------
 * blocksopt
 * --------------------------
 */
-.akomaNtoso-drafting .blocksopt:before {
-    content: "blocksopt";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .blocksopt {
-    border:1px solid #b2476c;
-}
-
-.akomaNtoso-drafting .amendmentContent:before {
-    content: "amendmentContent";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .amendmentContent {
-    border:1px solid #b9ae8c;
-}
-
-.akomaNtoso-drafting .amendmentHeading:before {
-    content: "amendmentHeading";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .amendmentHeading {
-    border:1px solid #ca062c;
-}
-
-.akomaNtoso-drafting .amendmentJustification:before {
-    content: "amendmentJustification";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .amendmentJustification {
-    border:1px solid #c6bc7b;
-}
-
-.akomaNtoso-drafting .amendmentReference:before {
-    content: "amendmentReference";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .amendmentReference {
-    border:1px solid #ee4a09;
-}
-
 .akomaNtoso-drafting .content:before {
     content: "content";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .content {
-    border:1px solid #f933dd;
-}
-
-.akomaNtoso-drafting .formula:before {
-    content: "formula";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .formula {
-    border:1px solid #7c3fbd;
-}
-
-.akomaNtoso-drafting .header:before {
-    content: "header";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .header {
-    border:1px solid #966c17;
-}
-
-.akomaNtoso-drafting .intro:before {
-    content: "intro";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .intro {
-    border:1px solid #2c8761;
-}
-
-.akomaNtoso-drafting .longTitle:before {
-    content: "longTitle";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .longTitle {
-    border:1px solid #8bcd0c;
-}
-
-.akomaNtoso-drafting .other:before {
-    content: "other";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .other {
-    border:1px solid #c4e02a;
-}
-
-.akomaNtoso-drafting .td:before {
-    content: "td";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .td {
-    border:1px solid #6bd163;
-}
-
-.akomaNtoso-drafting .th:before {
-    content: "th";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .th {
-    border:1px solid #c77178;
-}
-
-.akomaNtoso-drafting .wrap:before {
-    content: "wrap";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .wrap {
-    border:1px solid #77e9cb;
+    border: 1px solid #f933dd;
 }
 
 /*
@@ -1076,42 +691,46 @@
 */
 .akomaNtoso-drafting .blocksreq:before {
     content: "blocksreq";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .blocksreq {
-    border:1px solid #9065db;
+    border: 1px solid #9065db;
 }
 
 .akomaNtoso-drafting .div:before {
     content: "div";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .div {
-    border:1px solid #2218e9;
+    border: 1px solid #2218e9;
 }
 
 .akomaNtoso-drafting .interstitial:before {
     content: "interstitial";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .interstitial {
-    border:1px solid #d62b3c;
+    border: 1px solid #d62b3c;
 }
 
 .akomaNtoso-drafting .note:before {
     content: "note";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .note {
-    border:1px solid #32a3a5;
+    border: 1px solid #32a3a5;
 }
 
 /*
@@ -1119,179 +738,30 @@
 * bodyType
 * --------------------------
 */
-.akomaNtoso-drafting .bodyType:before {
-    content: "bodyType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .bodyType {
-    border:1px solid #f09c50;
-}
-
-.akomaNtoso-drafting .body:before {
-    content: "body";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .body {
-    border:1px solid #071555;
-}
-
-.akomaNtoso-drafting .citations:before {
-    content: "citations";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .citations {
-    border:1px solid #16aa12;
-}
-
-.akomaNtoso-drafting .classification:before {
-    content: "classification";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .classification {
-    border:1px solid #caf664;
-}
-
 /*
 * --------------------------
 * collectionBodyType
 * --------------------------
 */
-.akomaNtoso-drafting .collectionBodyType:before {
-    content: "collectionBodyType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .collectionBodyType {
-    border:1px solid #19f62d;
-}
-
-.akomaNtoso-drafting .collectionBody:before {
-    content: "collectionBody";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .collectionBody {
-    border:1px solid #14741a;
-}
-
 /*
 * --------------------------
 * collectionStructure
 * --------------------------
 */
-.akomaNtoso-drafting .collectionStructure:before {
-    content: "collectionStructure";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .collectionStructure {
-    border:1px solid #0b6300;
-}
-
-.akomaNtoso-drafting .amendmentList:before {
-    content: "amendmentList";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .amendmentList {
-    border:1px solid #351468;
-}
-
-.akomaNtoso-drafting .documentCollection:before {
-    content: "documentCollection";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .documentCollection {
-    border:1px solid #b2358e;
-}
-
-.akomaNtoso-drafting .officialGazette:before {
-    content: "officialGazette";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .officialGazette {
-    border:1px solid #3fd791;
-}
-
-.akomaNtoso-drafting .component:before {
-    content: "component";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .component {
-    border:1px solid #c5160b;
-}
-
-.akomaNtoso-drafting .componentData:before {
-    content: "componentData";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .componentData {
-    border:1px solid #9ffdbc;
-}
-
-.akomaNtoso-drafting .componentInfo:before {
-    content: "componentInfo";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .componentInfo {
-    border:1px solid #d4cd36;
-}
-
-.akomaNtoso-drafting .components:before {
-    content: "components";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .components {
-    border:1px solid #dd942b;
-}
-
 /*
 * --------------------------
 * containerType
 * --------------------------
 */
-.akomaNtoso-drafting .containerType:before {
-    content: "containerType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .containerType {
-    border:1px solid #937cfd;
-}
-
 .akomaNtoso-drafting .container:before {
     content: "container";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .container {
-    border:1px solid #a271cd;
+    border: 1px solid #a271cd;
 }
 
 /*
@@ -1299,534 +769,335 @@
 * coreProperties
 * --------------------------
 */
-.akomaNtoso-drafting .coreProperties:before {
-    content: "coreProperties";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .coreProperties {
-    border:1px solid #c53741;
-}
-
-.akomaNtoso-drafting .FRBRExpression:before {
-    content: "FRBRExpression";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRExpression {
-    border:1px solid #a98342;
-}
-
-.akomaNtoso-drafting .FRBRItem:before {
-    content: "FRBRItem";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRItem {
-    border:1px solid #3a5fc9;
-}
-
-.akomaNtoso-drafting .FRBRManifestation:before {
-    content: "FRBRManifestation";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRManifestation {
-    border:1px solid #fe2751;
-}
-
-.akomaNtoso-drafting .FRBRWork:before {
-    content: "FRBRWork";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRWork {
-    border:1px solid #785299;
-}
-
 /*
 * --------------------------
 * countType
 * --------------------------
 */
-.akomaNtoso-drafting .countType:before {
-    content: "countType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .countType {
-    border:1px solid #eeb234;
-}
-
-.akomaNtoso-drafting .count:before {
-    content: "count";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .count {
-    border:1px solid #5ba91b;
-}
-
-.akomaNtoso-drafting .quorum:before {
-    content: "quorum";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .quorum {
-    border:1px solid #cd498e;
-}
-
 /*
 * --------------------------
 * debateBodyType
 * --------------------------
 */
-.akomaNtoso-drafting .debateBodyType:before {
-    content: "debateBodyType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .debateBodyType {
-    border:1px solid #d63e87;
-}
-
-.akomaNtoso-drafting .debateBody:before {
-    content: "debateBody";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .debateBody {
-    border:1px solid #12f0bc;
-}
-
 /*
 * --------------------------
 * debateStructure
 * --------------------------
 */
-.akomaNtoso-drafting .debateStructure:before {
-    content: "debateStructure";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .debateStructure {
-    border:1px solid #1b1108;
-}
-
-.akomaNtoso-drafting .debate:before {
-    content: "debate";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .debate {
-    border:1px solid #a9ad4f;
-}
-
 /*
 * --------------------------
 * fragmentBodyType
 * --------------------------
 */
-.akomaNtoso-drafting .fragmentBodyType:before {
-    content: "fragmentBodyType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .fragmentBodyType {
-    border:1px solid #efce18;
-}
-
-.akomaNtoso-drafting .fragmentBody:before {
-    content: "fragmentBody";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .fragmentBody {
-    border:1px solid #99cb58;
-}
-
 /*
 * --------------------------
 * fragmentStructure
 * --------------------------
 */
-.akomaNtoso-drafting .fragmentStructure:before {
-    content: "fragmentStructure";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .fragmentStructure {
-    border:1px solid #e2a893;
-}
-
-.akomaNtoso-drafting .fragment:before {
-    content: "fragment";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .fragment {
-    border:1px solid #2023ae;
-}
-
 /*
 * --------------------------
 * hierarchicalStructure
 * --------------------------
 */
-.akomaNtoso-drafting .hierarchicalStructure:before {
-    content: "hierarchicalStructure";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .hierarchicalStructure {
-    border:1px solid #fa0867;
-}
-
-.akomaNtoso-drafting .act:before {
-    content: "act";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .act {
-    border:1px solid #70f296;
-}
-
-.akomaNtoso-drafting .bill:before {
-    content: "bill";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .bill {
-    border:1px solid #3b173d;
-}
-
-.akomaNtoso-drafting .identification:before {
-    content: "identification";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .identification {
-    border:1px solid #be2162;
-}
-
 /*
 * --------------------------
 * inline
 * --------------------------
 */
 .akomaNtoso-drafting .inline {
-    background-color:#bbd72c;
-    color:#000000;
+    background-color: #bbd72c;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .a {
-    background-color:#bc187a;
-    color:#FFFFFF;
+    background-color: #bc187a;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .affectedDocument {
-    background-color:#6a5762;
-    color:#FFFFFF;
+    background-color: #6a5762;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .b {
-    background-color:#f600c9;
-    color:#000000;
+    background-color: #f600c9;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .block:before {
     content: "block";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .block {
-    border:1px solid #50087b;
+    border: 1px solid #50087b;
 }
 
 .akomaNtoso-drafting .caption {
-    background-color:#044fa0;
-    color:#FFFFFF;
+    background-color: #044fa0;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .change {
-    background-color:#d22989;
-    color:#FFFFFF;
+    background-color: #d22989;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .courtType {
-    background-color:#4d54e2;
-    color:#FFFFFF;
+    background-color: #4d54e2;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .date {
-    background-color:#a7e584;
-    color:#000000;
+    background-color: #a7e584;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .def {
-    background-color:#83a58c;
-    color:#000000;
+    background-color: #83a58c;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .del {
-    background-color:#b1b557;
-    color:#000000;
+    background-color: #b1b557;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .docCommittee {
-    background-color:#c4755d;
-    color:#000000;
+    background-color: #c4755d;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .docDate {
-    background-color:#7ba1cd;
-    color:#000000;
+    background-color: #7ba1cd;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .docIntroducer {
-    background-color:#b68503;
-    color:#000000;
+    background-color: #b68503;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .docJurisdiction {
-    background-color:#585a0d;
-    color:#FFFFFF;
+    background-color: #585a0d;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .docNumber {
-    background-color:#c65c22;
-    color:#FFFFFF;
+    background-color: #c65c22;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .docProponent {
-    background-color:#aab5ae;
-    color:#000000;
+    background-color: #aab5ae;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .docPurpose {
-    background-color:#5b4fa1;
-    color:#FFFFFF;
+    background-color: #5b4fa1;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .docStage {
-    background-color:#807104;
-    color:#FFFFFF;
+    background-color: #807104;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .docStatus {
-    background-color:#cc3296;
-    color:#FFFFFF;
+    background-color: #cc3296;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .docTitle {
-    background-color:#ab19a1;
-    color:#FFFFFF;
+    background-color: #ab19a1;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .docType {
-    background-color:#bbba26;
-    color:#000000;
+    background-color: #bbba26;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .docketNumber {
-    background-color:#223fe8;
-    color:#FFFFFF;
+    background-color: #223fe8;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .extractText {
-    background-color:#847220;
-    color:#FFFFFF;
+    background-color: #847220;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .fillIn {
-    background-color:#f4bcda;
-    color:#000000;
+    background-color: #f4bcda;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .from {
-    background-color:#4ff5a3;
-    color:#000000;
+    background-color: #4ff5a3;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .heading {
-    background-color:#b3fa15;
-    color:#000000;
+    background-color: #b3fa15;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .i {
-    background-color:#75d6a5;
-    color:#000000;
+    background-color: #75d6a5;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .inline {
-    background-color:#bbd72c;
-    color:#000000;
+    background-color: #bbd72c;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .ins {
-    background-color:#772ef0;
-    color:#FFFFFF;
+    background-color: #772ef0;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .legislature {
-    background-color:#9d190c;
-    color:#FFFFFF;
+    background-color: #9d190c;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .listConclusion {
-    background-color:#8ca6a6;
-    color:#000000;
+    background-color: #8ca6a6;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .listIntroduction {
-    background-color:#5b1d94;
-    color:#FFFFFF;
+    background-color: #5b1d94;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .mref {
-    background-color:#43e84c;
-    color:#000000;
+    background-color: #43e84c;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .narrative {
-    background-color:#36a0ae;
-    color:#000000;
+    background-color: #36a0ae;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .neutralCitation {
-    background-color:#ad972c;
-    color:#000000;
+    background-color: #ad972c;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .num {
-    background-color:#1e839e;
-    color:#FFFFFF;
+    background-color: #1e839e;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .omissis {
-    background-color:#df6c64;
-    color:#000000;
+    background-color: #df6c64;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .opinion {
-    background-color:#5d63c9;
-    color:#FFFFFF;
+    background-color: #5d63c9;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .outcome {
-    background-color:#793427;
-    color:#FFFFFF;
+    background-color: #793427;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .p {
-    background-color:#b391bd;
-    color:#000000;
+    background-color: #b391bd;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .placeholder {
-    background-color:#a384d5;
-    color:#000000;
+    background-color: #a384d5;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .quotedText {
-    background-color:#23ecaf;
-    color:#000000;
+    background-color: #23ecaf;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .recordedTime {
-    background-color:#488e18;
-    color:#FFFFFF;
+    background-color: #488e18;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .relatedDocument {
-    background-color:#309516;
-    color:#FFFFFF;
+    background-color: #309516;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .remark {
-    background-color:#cc93f7;
-    color:#000000;
+    background-color: #cc93f7;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .scene {
-    background-color:#ba6148;
-    color:#FFFFFF;
+    background-color: #ba6148;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .session {
-    background-color:#ab13b5;
-    color:#FFFFFF;
+    background-color: #ab13b5;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .shortTitle {
-    background-color:#5c5c74;
-    color:#FFFFFF;
+    background-color: #5c5c74;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .signature {
-    background-color:#ad2507;
-    color:#FFFFFF;
+    background-color: #ad2507;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .span {
-    background-color:#894a59;
-    color:#FFFFFF;
+    background-color: #894a59;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .sub {
-    background-color:#bf39b2;
-    color:#FFFFFF;
+    background-color: #bf39b2;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .subheading {
-    background-color:#802804;
-    color:#FFFFFF;
+    background-color: #802804;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .summary {
-    background-color:#59b2bc;
-    color:#000000;
+    background-color: #59b2bc;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .sup {
-    background-color:#a60829;
-    color:#FFFFFF;
+    background-color: #a60829;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .tocItem {
-    background-color:#eb4e86;
-    color:#000000;
+    background-color: #eb4e86;
+    color: #000000;
 }
 
 .akomaNtoso-drafting .u {
-    background-color:#a639b8;
-    color:#FFFFFF;
+    background-color: #a639b8;
+    color: #FFFFFF;
 }
 
 .akomaNtoso-drafting .vote {
-    background-color:#99986e;
-    color:#000000;
+    background-color: #99986e;
+    color: #000000;
 }
 
 /*
@@ -1834,534 +1105,55 @@
 * inlinereq
 * --------------------------
 */
-.akomaNtoso-drafting .inlinereq:before {
-    content: "inlinereq";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .inlinereq {
-    border:1px solid #c26dd0;
-}
-
-.akomaNtoso-drafting .ref:before {
-    content: "ref";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .ref {
-    border:1px solid #8309d3;
-}
-
-.akomaNtoso-drafting .rref:before {
-    content: "rref";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .rref {
-    border:1px solid #22f9f3;
-}
-
 /*
 * --------------------------
 * inlinereqreq
 * --------------------------
 */
-.akomaNtoso-drafting .inlinereqreq:before {
-    content: "inlinereqreq";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .inlinereqreq {
-    border:1px solid #94efe9;
-}
-
-.akomaNtoso-drafting .concept:before {
-    content: "concept";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .concept {
-    border:1px solid #f198ce;
-}
-
-.akomaNtoso-drafting .entity:before {
-    content: "entity";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .entity {
-    border:1px solid #f2fbbe;
-}
-
-.akomaNtoso-drafting .event:before {
-    content: "event";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .event {
-    border:1px solid #49fb4d;
-}
-
-.akomaNtoso-drafting .judge:before {
-    content: "judge";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .judge {
-    border:1px solid #5d020a;
-}
-
-.akomaNtoso-drafting .lawyer:before {
-    content: "lawyer";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .lawyer {
-    border:1px solid #10f04d;
-}
-
-.akomaNtoso-drafting .location:before {
-    content: "location";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .location {
-    border:1px solid #bc83b7;
-}
-
-.akomaNtoso-drafting .object:before {
-    content: "object";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .object {
-    border:1px solid #7846f9;
-}
-
-.akomaNtoso-drafting .organization:before {
-    content: "organization";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .organization {
-    border:1px solid #9ff2bd;
-}
-
-.akomaNtoso-drafting .party:before {
-    content: "party";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .party {
-    border:1px solid #7f158a;
-}
-
-.akomaNtoso-drafting .person:before {
-    content: "person";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .person {
-    border:1px solid #18a8cb;
-}
-
-.akomaNtoso-drafting .process:before {
-    content: "process";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .process {
-    border:1px solid #daa89a;
-}
-
-.akomaNtoso-drafting .quantity:before {
-    content: "quantity";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .quantity {
-    border:1px solid #bbbdaa;
-}
-
-.akomaNtoso-drafting .role:before {
-    content: "role";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .role {
-    border:1px solid #b0b44a;
-}
-
-.akomaNtoso-drafting .term:before {
-    content: "term";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .term {
-    border:1px solid #2d3815;
-}
-
 /*
 * --------------------------
 * judgementBodyType
 * --------------------------
 */
-.akomaNtoso-drafting .judgementBodyType:before {
-    content: "judgementBodyType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .judgementBodyType {
-    border:1px solid #441af2;
-}
-
-.akomaNtoso-drafting .judgementBody:before {
-    content: "judgementBody";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .judgementBody {
-    border:1px solid #308257;
-}
-
 /*
 * --------------------------
 * judgementStructure
 * --------------------------
 */
-.akomaNtoso-drafting .judgementStructure:before {
-    content: "judgementStructure";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .judgementStructure {
-    border:1px solid #4cd874;
-}
-
-.akomaNtoso-drafting .judgement:before {
-    content: "judgement";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .judgement {
-    border:1px solid #2b1e09;
-}
-
 /*
 * --------------------------
 * judicialArgumentType
 * --------------------------
 */
-.akomaNtoso-drafting .judicialArgumentType:before {
-    content: "judicialArgumentType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .judicialArgumentType {
-    border:1px solid #56f07c;
-}
-
-.akomaNtoso-drafting .applies:before {
-    content: "applies";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .applies {
-    border:1px solid #86590a;
-}
-
-.akomaNtoso-drafting .contrasts:before {
-    content: "contrasts";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .contrasts {
-    border:1px solid #499f7f;
-}
-
-.akomaNtoso-drafting .derogates:before {
-    content: "derogates";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .derogates {
-    border:1px solid #d3c54a;
-}
-
-.akomaNtoso-drafting .dissentsFrom:before {
-    content: "dissentsFrom";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .dissentsFrom {
-    border:1px solid #f41e2d;
-}
-
-.akomaNtoso-drafting .distinguishes:before {
-    content: "distinguishes";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .distinguishes {
-    border:1px solid #4a4aa6;
-}
-
-.akomaNtoso-drafting .extends:before {
-    content: "extends";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .extends {
-    border:1px solid #1485d2;
-}
-
-.akomaNtoso-drafting .isAnalogTo:before {
-    content: "isAnalogTo";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .isAnalogTo {
-    border:1px solid #12066b;
-}
-
-.akomaNtoso-drafting .overrules:before {
-    content: "overrules";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .overrules {
-    border:1px solid #fa8dc5;
-}
-
-.akomaNtoso-drafting .putsInQuestion:before {
-    content: "putsInQuestion";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .putsInQuestion {
-    border:1px solid #e6f3ba;
-}
-
-.akomaNtoso-drafting .restricts:before {
-    content: "restricts";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .restricts {
-    border:1px solid #fe1f0c;
-}
-
-.akomaNtoso-drafting .supports:before {
-    content: "supports";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .supports {
-    border:1px solid #d71920;
-}
-
 /*
 * --------------------------
 * judicialArguments
 * --------------------------
 */
-.akomaNtoso-drafting .judicialArguments:before {
-    content: "judicialArguments";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .judicialArguments {
-    border:1px solid #5bd62e;
-}
-
-.akomaNtoso-drafting .judicial:before {
-    content: "judicial";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .judicial {
-    border:1px solid #e818f3;
-}
-
-.akomaNtoso-drafting .li:before {
-    content: "li";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .li {
-    border:1px solid #ac17c1;
-}
-
-.akomaNtoso-drafting .lifecycle:before {
-    content: "lifecycle";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .lifecycle {
-    border:1px solid #00f50d;
-}
-
 /*
 * --------------------------
 * listItems
 * --------------------------
 */
-.akomaNtoso-drafting .listItems:before {
-    content: "listItems";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .listItems {
-    border:1px solid #2384e7;
-}
-
-.akomaNtoso-drafting .ol:before {
-    content: "ol";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .ol {
-    border:1px solid #36aadc;
-}
-
-.akomaNtoso-drafting .ul:before {
-    content: "ul";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .ul {
-    border:1px solid #f084d3;
-}
-
 /*
 * --------------------------
 * maincontent
 * --------------------------
 */
-.akomaNtoso-drafting .maincontent:before {
-    content: "maincontent";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .maincontent {
-    border:1px solid #9d1860;
-}
-
-.akomaNtoso-drafting .background:before {
-    content: "background";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .background {
-    border:1px solid #bc8186;
-}
-
-.akomaNtoso-drafting .decision:before {
-    content: "decision";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .decision {
-    border:1px solid #c2b815;
-}
-
-.akomaNtoso-drafting .introduction:before {
-    content: "introduction";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .introduction {
-    border:1px solid #891690;
-}
-
-.akomaNtoso-drafting .mainBody:before {
-    content: "mainBody";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .mainBody {
-    border:1px solid #fd1abc;
-}
-
-.akomaNtoso-drafting .motivation:before {
-    content: "motivation";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .motivation {
-    border:1px solid #27771c;
-}
-
 /*
 * --------------------------
 * markeropt
 * --------------------------
 */
-.akomaNtoso-drafting .markeropt:before {
-    content: "markeropt";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .markeropt {
-    border:1px solid #d5b723;
-}
-
 .akomaNtoso-drafting .br:before {
     content: "br";
-    display:block;
-    text-align:right;
+    display: block;
+    text-align: right;
     color: #000000;
 }
+
 .akomaNtoso-drafting .br {
-    border:1px solid #3f15da;
+    border: 1px solid #3f15da;
 }
 
 /*
@@ -2369,969 +1161,79 @@
 * eolType
 * --------------------------
 */
-.akomaNtoso-drafting .eolType:before {
-    content: "eolType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .eolType {
-    border:1px solid #314b27;
-}
-
-.akomaNtoso-drafting .eol:before {
-    content: "eol";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .eol {
-    border:1px solid #8e0cb8;
-}
-
-.akomaNtoso-drafting .eop:before {
-    content: "eop";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .eop {
-    border:1px solid #eaabce;
-}
-
-.akomaNtoso-drafting .img:before {
-    content: "img";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .img {
-    border:1px solid #145be7;
-}
-
-.akomaNtoso-drafting .noteRef:before {
-    content: "noteRef";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .noteRef {
-    border:1px solid #571d75;
-}
-
 /*
 * --------------------------
 * markerreq
 * --------------------------
 */
-.akomaNtoso-drafting .markerreq:before {
-    content: "markerreq";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .markerreq {
-    border:1px solid #17e387;
-}
-
-.akomaNtoso-drafting .marker:before {
-    content: "marker";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .marker {
-    border:1px solid #33a672;
-}
-
-.akomaNtoso-drafting .meta:before {
-    content: "meta";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .meta {
-    border:1px solid #398d17;
-}
-
 /*
 * --------------------------
 * metaopt
 * --------------------------
 */
-.akomaNtoso-drafting .metaopt:before {
-    content: "metaopt";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .metaopt {
-    border:1px solid #25992f;
-}
-
-.akomaNtoso-drafting .FRBRauthor:before {
-    content: "FRBRauthor";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRauthor {
-    border:1px solid #a9c09a;
-}
-
-.akomaNtoso-drafting .FRBRdate:before {
-    content: "FRBRdate";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRdate {
-    border:1px solid #051c76;
-}
-
-.akomaNtoso-drafting .FRBRlanguage:before {
-    content: "FRBRlanguage";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRlanguage {
-    border:1px solid #4a98d5;
-}
-
-.akomaNtoso-drafting .FRBRtranslation:before {
-    content: "FRBRtranslation";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRtranslation {
-    border:1px solid #9488d9;
-}
-
-.akomaNtoso-drafting .keyword:before {
-    content: "keyword";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .keyword {
-    border:1px solid #d3582f;
-}
-
-.akomaNtoso-drafting .publication:before {
-    content: "publication";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .publication {
-    border:1px solid #19ba2a;
-}
-
-.akomaNtoso-drafting .timeInterval:before {
-    content: "timeInterval";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .timeInterval {
-    border:1px solid #b4c2dd;
-}
-
 /*
 * --------------------------
 * valueType
 * --------------------------
 */
-.akomaNtoso-drafting .valueType:before {
-    content: "valueType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .valueType {
-    border:1px solid #57be6f;
-}
-
-.akomaNtoso-drafting .FRBRalias:before {
-    content: "FRBRalias";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRalias {
-    border:1px solid #034900;
-}
-
-.akomaNtoso-drafting .FRBRcountry:before {
-    content: "FRBRcountry";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRcountry {
-    border:1px solid #2cda47;
-}
-
-.akomaNtoso-drafting .FRBRformat:before {
-    content: "FRBRformat";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRformat {
-    border:1px solid #4cc337;
-}
-
-.akomaNtoso-drafting .FRBRname:before {
-    content: "FRBRname";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRname {
-    border:1px solid #8b5a62;
-}
-
-.akomaNtoso-drafting .FRBRnumber:before {
-    content: "FRBRnumber";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRnumber {
-    border:1px solid #4de3a5;
-}
-
-.akomaNtoso-drafting .FRBRsubtype:before {
-    content: "FRBRsubtype";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRsubtype {
-    border:1px solid #f1c13e;
-}
-
-.akomaNtoso-drafting .FRBRthis:before {
-    content: "FRBRthis";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRthis {
-    border:1px solid #3fb43c;
-}
-
-.akomaNtoso-drafting .FRBRuri:before {
-    content: "FRBRuri";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .FRBRuri {
-    border:1px solid #ec6326;
-}
-
-.akomaNtoso-drafting .metareq:before {
-    content: "metareq";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .metareq {
-    border:1px solid #c0c2a4;
-}
-
 /*
 * --------------------------
 * modType
 * --------------------------
 */
-.akomaNtoso-drafting .modType:before {
-    content: "modType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .modType {
-    border:1px solid #8e7263;
-}
-
-.akomaNtoso-drafting .mmod:before {
-    content: "mmod";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .mmod {
-    border:1px solid #3e2ad2;
-}
-
-.akomaNtoso-drafting .mod:before {
-    content: "mod";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .mod {
-    border:1px solid #8357df;
-}
-
-.akomaNtoso-drafting .rmod:before {
-    content: "rmod";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .rmod {
-    border:1px solid #1d3c77;
-}
-
 /*
 * --------------------------
 * modificationType
 * --------------------------
 */
-.akomaNtoso-drafting .modificationType:before {
-    content: "modificationType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .modificationType {
-    border:1px solid #35c7f9;
-}
-
-.akomaNtoso-drafting .efficacyMod:before {
-    content: "efficacyMod";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .efficacyMod {
-    border:1px solid #dcce8d;
-}
-
-.akomaNtoso-drafting .forceMod:before {
-    content: "forceMod";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .forceMod {
-    border:1px solid #5d2829;
-}
-
-.akomaNtoso-drafting .legalSystemMod:before {
-    content: "legalSystemMod";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .legalSystemMod {
-    border:1px solid #6c3408;
-}
-
-.akomaNtoso-drafting .meaningMod:before {
-    content: "meaningMod";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .meaningMod {
-    border:1px solid #ed08dc;
-}
-
-.akomaNtoso-drafting .scopeMod:before {
-    content: "scopeMod";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .scopeMod {
-    border:1px solid #b03c42;
-}
-
-.akomaNtoso-drafting .textualMod:before {
-    content: "textualMod";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .textualMod {
-    border:1px solid #910184;
-}
-
-.akomaNtoso-drafting .notes:before {
-    content: "notes";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .notes {
-    border:1px solid #f08c16;
-}
-
 /*
 * --------------------------
 * openStructure
 * --------------------------
 */
-.akomaNtoso-drafting .openStructure:before {
-    content: "openStructure";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .openStructure {
-    border:1px solid #ecc931;
-}
-
-.akomaNtoso-drafting .debateReport:before {
-    content: "debateReport";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .debateReport {
-    border:1px solid #e85a49;
-}
-
-.akomaNtoso-drafting .doc:before {
-    content: "doc";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .doc {
-    border:1px solid #965ba6;
-}
-
 /*
 * --------------------------
 * parliamentaryAnalysis
 * --------------------------
 */
-.akomaNtoso-drafting .parliamentaryAnalysis:before {
-    content: "parliamentaryAnalysis";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .parliamentaryAnalysis {
-    border:1px solid #92b84d;
-}
-
-.akomaNtoso-drafting .parliamentary:before {
-    content: "parliamentary";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .parliamentary {
-    border:1px solid #5eac34;
-}
-
 /*
 * --------------------------
 * parliamentaryAnalysisType
 * --------------------------
 */
-.akomaNtoso-drafting .parliamentaryAnalysisType:before {
-    content: "parliamentaryAnalysisType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .parliamentaryAnalysisType {
-    border:1px solid #e838fd;
-}
-
-.akomaNtoso-drafting .quorumVerification:before {
-    content: "quorumVerification";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .quorumVerification {
-    border:1px solid #cdde11;
-}
-
-.akomaNtoso-drafting .recount:before {
-    content: "recount";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .recount {
-    border:1px solid #a927f7;
-}
-
-.akomaNtoso-drafting .voting:before {
-    content: "voting";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .voting {
-    border:1px solid #be9b5f;
-}
-
 /*
 * --------------------------
 * periodType
 * --------------------------
 */
-.akomaNtoso-drafting .periodType:before {
-    content: "periodType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .periodType {
-    border:1px solid #60e4e8;
-}
-
-.akomaNtoso-drafting .application:before {
-    content: "application";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .application {
-    border:1px solid #a8b58d;
-}
-
-.akomaNtoso-drafting .duration:before {
-    content: "duration";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .duration {
-    border:1px solid #31b50a;
-}
-
-.akomaNtoso-drafting .efficacy:before {
-    content: "efficacy";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .efficacy {
-    border:1px solid #148316;
-}
-
-.akomaNtoso-drafting .force:before {
-    content: "force";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .force {
-    border:1px solid #c68918;
-}
-
 /*
 * --------------------------
 * popupStructure
 * --------------------------
 */
-.akomaNtoso-drafting .popupStructure:before {
-    content: "popupStructure";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .popupStructure {
-    border:1px solid #471bc0;
-}
-
-.akomaNtoso-drafting .authorialNote:before {
-    content: "authorialNote";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .authorialNote {
-    border:1px solid #f7130b;
-}
-
-.akomaNtoso-drafting .extractStructure:before {
-    content: "extractStructure";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .extractStructure {
-    border:1px solid #d55c57;
-}
-
-.akomaNtoso-drafting .popup:before {
-    content: "popup";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .popup {
-    border:1px solid #cfbbf7;
-}
-
-.akomaNtoso-drafting .quotedStructure:before {
-    content: "quotedStructure";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .quotedStructure {
-    border:1px solid #3317f8;
-}
-
 /*
 * --------------------------
 * preambleopt
 * --------------------------
 */
-.akomaNtoso-drafting .preambleopt:before {
-    content: "preambleopt";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .preambleopt {
-    border:1px solid #c630c8;
-}
-
-.akomaNtoso-drafting .preamble:before {
-    content: "preamble";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .preamble {
-    border:1px solid #9d2dbe;
-}
-
 /*
 * --------------------------
 * prefaceopt
 * --------------------------
 */
-.akomaNtoso-drafting .prefaceopt:before {
-    content: "prefaceopt";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .prefaceopt {
-    border:1px solid #c3e359;
-}
-
-.akomaNtoso-drafting .preface:before {
-    content: "preface";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .preface {
-    border:1px solid #fdc7fe;
-}
-
-.akomaNtoso-drafting .recitals:before {
-    content: "recitals";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .recitals {
-    border:1px solid #17700a;
-}
-
 /*
 * --------------------------
 * refItems
 * --------------------------
 */
-.akomaNtoso-drafting .refItems:before {
-    content: "refItems";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .refItems {
-    border:1px solid #5799bd;
-}
-
-.akomaNtoso-drafting .references:before {
-    content: "references";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .references {
-    border:1px solid #e4cd2a;
-}
-
 /*
 * --------------------------
 * referenceType
 * --------------------------
 */
-.akomaNtoso-drafting .referenceType:before {
-    content: "referenceType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .referenceType {
-    border:1px solid #6bf6f5;
-}
-
-.akomaNtoso-drafting .TLCConcept:before {
-    content: "TLCConcept";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .TLCConcept {
-    border:1px solid #f7a691;
-}
-
-.akomaNtoso-drafting .TLCEvent:before {
-    content: "TLCEvent";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .TLCEvent {
-    border:1px solid #4dec2e;
-}
-
-.akomaNtoso-drafting .TLCLocation:before {
-    content: "TLCLocation";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .TLCLocation {
-    border:1px solid #1e0bb2;
-}
-
-.akomaNtoso-drafting .TLCObject:before {
-    content: "TLCObject";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .TLCObject {
-    border:1px solid #71f89b;
-}
-
-.akomaNtoso-drafting .TLCOrganization:before {
-    content: "TLCOrganization";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .TLCOrganization {
-    border:1px solid #67dca4;
-}
-
-.akomaNtoso-drafting .TLCPerson:before {
-    content: "TLCPerson";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .TLCPerson {
-    border:1px solid #f95abb;
-}
-
-.akomaNtoso-drafting .TLCProcess:before {
-    content: "TLCProcess";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .TLCProcess {
-    border:1px solid #86a219;
-}
-
-.akomaNtoso-drafting .TLCReference:before {
-    content: "TLCReference";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .TLCReference {
-    border:1px solid #a4008a;
-}
-
-.akomaNtoso-drafting .TLCRole:before {
-    content: "TLCRole";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .TLCRole {
-    border:1px solid #38d083;
-}
-
-.akomaNtoso-drafting .TLCTerm:before {
-    content: "TLCTerm";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .TLCTerm {
-    border:1px solid #339cc7;
-}
-
-.akomaNtoso-drafting .activeRef:before {
-    content: "activeRef";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .activeRef {
-    border:1px solid #c035ae;
-}
-
-.akomaNtoso-drafting .attachmentOf:before {
-    content: "attachmentOf";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .attachmentOf {
-    border:1px solid #0ca98e;
-}
-
-.akomaNtoso-drafting .hasAttachment:before {
-    content: "hasAttachment";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .hasAttachment {
-    border:1px solid #19422e;
-}
-
-.akomaNtoso-drafting .jurisprudence:before {
-    content: "jurisprudence";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .jurisprudence {
-    border:1px solid #20ec51;
-}
-
-.akomaNtoso-drafting .original:before {
-    content: "original";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .original {
-    border:1px solid #e05593;
-}
-
-.akomaNtoso-drafting .passiveRef:before {
-    content: "passiveRef";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .passiveRef {
-    border:1px solid #4f6226;
-}
-
 /*
 * --------------------------
 * srcType
 * --------------------------
 */
-.akomaNtoso-drafting .srcType:before {
-    content: "srcType";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .srcType {
-    border:1px solid #0d89d7;
-}
 
-.akomaNtoso-drafting .componentRef:before {
-    content: "componentRef";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .componentRef {
-    border:1px solid #9e088b;
-}
-
-.akomaNtoso-drafting .table:before {
-    content: "table";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .table {
-    border:1px solid #c2241c;
-}
-
-.akomaNtoso-drafting .temporalData:before {
-    content: "temporalData";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .temporalData {
-    border:1px solid #90c795;
-}
-
-.akomaNtoso-drafting .temporalGroup:before {
-    content: "temporalGroup";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .temporalGroup {
-    border:1px solid #3a911a;
-}
-
-.akomaNtoso-drafting .toc:before {
-    content: "toc";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .toc {
-    border:1px solid #d9e3cc;
-}
-
-.akomaNtoso-drafting .tr:before {
-    content: "tr";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .tr {
-    border:1px solid #529f59;
-}
-
-.akomaNtoso-drafting .workflow:before {
-    content: "workflow";
-    display:block;
-    text-align:right;
-    color: #000000;
-}
-.akomaNtoso-drafting .workflow {
-    border:1px solid #2b223f;
-}
-
-  

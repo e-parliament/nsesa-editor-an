@@ -10,1939 +10,980 @@
 * Amendments
 * --------------------------
 */
-.drafting-Amendments {
-    display:block;
-    background-color:#fd2747;
-    color:#000000;
-}
-.drafting-activeModifications {
-    display:block;
-    background-color:#04cbae;
-    color:#000000;
-}
-.drafting-passiveModifications {
-    display:block;
-    background-color:#77e4cd;
-    color:#000000;
-}
 /*
 * --------------------------
 * akomaNtosoType
 * --------------------------
 */
-.drafting-akomaNtosoType {
-    display:block;
-    background-color:#426956;
-    color:#FFFFFF;
-}
-.drafting-akomaNtoso {
-    display:block;
-    background-color:#cad9d3;
-    color:#000000;
-}
 /*
 * --------------------------
 * amendmentBodyType
 * --------------------------
 */
-.drafting-amendmentBodyType {
-    display:block;
-    background-color:#48568b;
-    color:#FFFFFF;
-}
-.drafting-amendmentBody {
-    display:block;
-    background-color:#a0d286;
-    color:#000000;
-}
 /*
 * --------------------------
 * amendmentStructure
 * --------------------------
 */
-.drafting-amendmentStructure {
-    display:block;
-    background-color:#673967;
-    color:#FFFFFF;
-}
-.drafting-amendment {
-    display:block;
-    background-color:#9e8379;
-    color:#000000;
-}
-.drafting-analysis {
-    display:block;
-    background-color:#7c815e;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * anyOtherType
 * --------------------------
 */
-.drafting-anyOtherType {
-    display:block;
-    background-color:#e0b263;
-    color:#000000;
-}
-.drafting-condition {
-    display:block;
-    background-color:#d00217;
-    color:#FFFFFF;
-}
-.drafting-domain {
-    display:block;
-    background-color:#70cf59;
-    color:#000000;
-}
-.drafting-eventRef {
-    display:block;
-    background-color:#266bdf;
-    color:#FFFFFF;
-}
-.drafting-foreign {
-    display:block;
-    background-color:#df676b;
-    color:#000000;
-}
-.drafting-new {
-    display:block;
-    background-color:#8caea6;
-    color:#000000;
-}
-.drafting-old {
-    display:block;
-    background-color:#60580b;
-    color:#FFFFFF;
-}
-.drafting-otherAnalysis {
-    display:block;
-    background-color:#31705a;
-    color:#FFFFFF;
-}
-.drafting-presentation {
-    display:block;
-    background-color:#cd247c;
-    color:#FFFFFF;
-}
-.drafting-preservation {
-    display:block;
-    background-color:#6d4d3e;
-    color:#FFFFFF;
-}
-.drafting-proprietary {
-    display:block;
-    background-color:#fc4a19;
-    color:#000000;
-}
-.drafting-result {
-    display:block;
-    background-color:#873681;
-    color:#FFFFFF;
-}
-.drafting-step {
-    display:block;
-    background-color:#837d34;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * argumentType
 * --------------------------
 */
-.drafting-argumentType {
-    display:block;
-    background-color:#c0ac2d;
-    color:#000000;
-}
-.drafting-destination {
-    display:block;
-    background-color:#f74231;
-    color:#000000;
-}
-.drafting-source {
-    display:block;
-    background-color:#80cbdc;
-    color:#000000;
-}
-.drafting-attachments {
-    display:block;
-    background-color:#c008c8;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * basehierarchy
 * --------------------------
 */
 .drafting-basehierarchy {
-    display:block;
-    background-color:#feeb68;
-    color:#000000;
+    display: block;
+    background-color: #feeb68;
+    color: #000000;
 }
+
 /*
 * --------------------------
 * althierarchy
 * --------------------------
 */
 .drafting-althierarchy {
-    display:block;
-    background-color:#d0be52;
-    color:#000000;
+    display: block;
+    background-color: #d0be52;
+    color: #000000;
 }
+
 .drafting-address {
-    display:block;
-    background-color:#564c96;
-    color:#FFFFFF;
+    display: block;
+    background-color: #564c96;
+    color: #FFFFFF;
 }
+
 .drafting-adjournment {
-    display:block;
-    background-color:#12f224;
-    color:#000000;
+    display: block;
+    background-color: #12f224;
+    color: #000000;
 }
+
 .drafting-administrationOfOath {
-    display:block;
-    background-color:#7b4fe5;
-    color:#FFFFFF;
+    display: block;
+    background-color: #7b4fe5;
+    color: #FFFFFF;
 }
+
 .drafting-communication {
-    display:block;
-    background-color:#82961f;
-    color:#000000;
+    display: block;
+    background-color: #82961f;
+    color: #000000;
 }
+
 .drafting-debateSection {
-    display:block;
-    background-color:#3db3ec;
-    color:#000000;
+    display: block;
+    background-color: #3db3ec;
+    color: #000000;
 }
+
 .drafting-declarationOfVote {
-    display:block;
-    background-color:#a1ce36;
-    color:#000000;
+    display: block;
+    background-color: #a1ce36;
+    color: #000000;
 }
+
 .drafting-ministerialStatements {
-    display:block;
-    background-color:#273b97;
-    color:#FFFFFF;
+    display: block;
+    background-color: #273b97;
+    color: #FFFFFF;
 }
+
 .drafting-nationalInterest {
-    display:block;
-    background-color:#4be3af;
-    color:#000000;
+    display: block;
+    background-color: #4be3af;
+    color: #000000;
 }
+
 .drafting-noticesOfMotion {
-    display:block;
-    background-color:#5fe456;
-    color:#000000;
+    display: block;
+    background-color: #5fe456;
+    color: #000000;
 }
+
 .drafting-oralStatements {
-    display:block;
-    background-color:#c9f47d;
-    color:#000000;
+    display: block;
+    background-color: #c9f47d;
+    color: #000000;
 }
+
 .drafting-papers {
-    display:block;
-    background-color:#db385f;
-    color:#FFFFFF;
+    display: block;
+    background-color: #db385f;
+    color: #FFFFFF;
 }
+
 .drafting-personalStatements {
-    display:block;
-    background-color:#10315b;
-    color:#FFFFFF;
+    display: block;
+    background-color: #10315b;
+    color: #FFFFFF;
 }
+
 .drafting-petitions {
-    display:block;
-    background-color:#def659;
-    color:#000000;
+    display: block;
+    background-color: #def659;
+    color: #000000;
 }
+
 .drafting-pointOfOrder {
-    display:block;
-    background-color:#8ee7a7;
-    color:#000000;
+    display: block;
+    background-color: #8ee7a7;
+    color: #000000;
 }
+
 .drafting-prayers {
-    display:block;
-    background-color:#46c7cc;
-    color:#000000;
+    display: block;
+    background-color: #46c7cc;
+    color: #000000;
 }
+
 .drafting-proceduralMotions {
-    display:block;
-    background-color:#ce2410;
-    color:#FFFFFF;
+    display: block;
+    background-color: #ce2410;
+    color: #FFFFFF;
 }
+
 .drafting-questions {
-    display:block;
-    background-color:#1cbddd;
-    color:#000000;
+    display: block;
+    background-color: #1cbddd;
+    color: #000000;
 }
+
 .drafting-resolutions {
-    display:block;
-    background-color:#e748d6;
-    color:#000000;
+    display: block;
+    background-color: #e748d6;
+    color: #000000;
 }
+
 .drafting-rollCall {
-    display:block;
-    background-color:#be90a6;
-    color:#000000;
+    display: block;
+    background-color: #be90a6;
+    color: #000000;
 }
+
 .drafting-writtenStatements {
-    display:block;
-    background-color:#1206c1;
-    color:#FFFFFF;
+    display: block;
+    background-color: #1206c1;
+    color: #FFFFFF;
 }
+
 /*
 * --------------------------
 * hierarchy
 * --------------------------
 */
 .drafting-hierarchy {
-    display:block;
-    background-color:#2e4754;
-    color:#FFFFFF;
+    display: block;
+    background-color: #2e4754;
+    color: #FFFFFF;
 }
+
 .drafting-alinea {
-    display:block;
-    background-color:#e24844;
-    color:#FFFFFF;
+    display: block;
+    background-color: #e24844;
+    color: #FFFFFF;
 }
+
 .drafting-article {
-    display:block;
-    background-color:#5b7981;
-    color:#FFFFFF;
+    display: block;
+    background-color: #5b7981;
+    color: #FFFFFF;
 }
+
 .drafting-book {
-    display:block;
-    background-color:#3b8454;
-    color:#FFFFFF;
+    display: block;
+    background-color: #3b8454;
+    color: #FFFFFF;
 }
+
 .drafting-chapter {
-    display:block;
-    background-color:#e02029;
-    color:#FFFFFF;
+    display: block;
+    background-color: #e02029;
+    color: #FFFFFF;
 }
+
 .drafting-clause {
-    display:block;
-    background-color:#5f4105;
-    color:#FFFFFF;
+    display: block;
+    background-color: #5f4105;
+    color: #FFFFFF;
 }
+
 .drafting-division {
-    display:block;
-    background-color:#5d9a3f;
-    color:#000000;
+    display: block;
+    background-color: #5d9a3f;
+    color: #000000;
 }
+
 .drafting-hcontainer {
-    display:block;
-    background-color:#550eeb;
-    color:#FFFFFF;
+    display: block;
+    background-color: #550eeb;
+    color: #FFFFFF;
 }
+
 .drafting-indent {
-    display:block;
-    background-color:#0cc30b;
-    color:#000000;
+    display: block;
+    background-color: #0cc30b;
+    color: #000000;
 }
+
 .drafting-list {
-    display:block;
-    background-color:#3767ae;
-    color:#FFFFFF;
+    display: block;
+    background-color: #3767ae;
+    color: #FFFFFF;
 }
+
 .drafting-paragraph {
-    display:block;
-    background-color:#34cf86;
-    color:#000000;
+    display: block;
+    background-color: #34cf86;
+    color: #000000;
 }
+
 .drafting-part {
-    display:block;
-    background-color:#6f4203;
-    color:#FFFFFF;
+    display: block;
+    background-color: #6f4203;
+    color: #FFFFFF;
 }
+
 .drafting-point {
-    display:block;
-    background-color:#d0fb4e;
-    color:#000000;
+    display: block;
+    background-color: #d0fb4e;
+    color: #000000;
 }
+
 .drafting-section {
-    display:block;
-    background-color:#a9ae0a;
-    color:#000000;
+    display: block;
+    background-color: #a9ae0a;
+    color: #000000;
 }
+
 .drafting-subchapter {
-    display:block;
-    background-color:#25efc8;
-    color:#000000;
+    display: block;
+    background-color: #25efc8;
+    color: #000000;
 }
+
 .drafting-subclause {
-    display:block;
-    background-color:#ba810d;
-    color:#000000;
+    display: block;
+    background-color: #ba810d;
+    color: #000000;
 }
+
 .drafting-subdivision {
-    display:block;
-    background-color:#33c628;
-    color:#000000;
+    display: block;
+    background-color: #33c628;
+    color: #000000;
 }
+
 .drafting-sublist {
-    display:block;
-    background-color:#630a4f;
-    color:#FFFFFF;
+    display: block;
+    background-color: #630a4f;
+    color: #FFFFFF;
 }
+
 .drafting-subparagraph {
-    display:block;
-    background-color:#fb1a92;
-    color:#000000;
+    display: block;
+    background-color: #fb1a92;
+    color: #000000;
 }
+
 .drafting-subpart {
-    display:block;
-    background-color:#c88296;
-    color:#000000;
+    display: block;
+    background-color: #c88296;
+    color: #000000;
 }
+
 .drafting-subsection {
-    display:block;
-    background-color:#6301b5;
-    color:#FFFFFF;
+    display: block;
+    background-color: #6301b5;
+    color: #FFFFFF;
 }
+
 .drafting-subtitle {
-    display:block;
-    background-color:#6a75c0;
-    color:#FFFFFF;
+    display: block;
+    background-color: #6a75c0;
+    color: #FFFFFF;
 }
+
 .drafting-title {
-    display:block;
-    background-color:#f7dc5c;
-    color:#000000;
+    display: block;
+    background-color: #f7dc5c;
+    color: #000000;
 }
+
 .drafting-tome {
-    display:block;
-    background-color:#d4fb08;
-    color:#000000;
+    display: block;
+    background-color: #d4fb08;
+    color: #000000;
 }
+
 .drafting-transitional {
-    display:block;
-    background-color:#29e4e4;
-    color:#000000;
+    display: block;
+    background-color: #29e4e4;
+    color: #000000;
 }
+
 /*
 * --------------------------
 * itemType
 * --------------------------
 */
 .drafting-itemType {
-    display:block;
-    background-color:#9bdd78;
-    color:#000000;
+    display: block;
+    background-color: #9bdd78;
+    color: #000000;
 }
+
 .drafting-citation {
-    display:block;
-    background-color:#84bcb4;
-    color:#000000;
+    display: block;
+    background-color: #84bcb4;
+    color: #000000;
 }
+
 .drafting-item {
-    display:block;
-    background-color:#c38c14;
-    color:#000000;
+    display: block;
+    background-color: #c38c14;
+    color: #000000;
 }
+
 .drafting-recital {
-    display:block;
-    background-color:#efa996;
-    color:#000000;
+    display: block;
+    background-color: #efa996;
+    color: #000000;
 }
+
 .drafting-tblock {
-    display:block;
-    background-color:#5d5aa6;
-    color:#FFFFFF;
+    display: block;
+    background-color: #5d5aa6;
+    color: #FFFFFF;
 }
+
 /*
 * --------------------------
 * speechType
 * --------------------------
 */
 .drafting-speechType {
-    display:block;
-    background-color:#d2c8fe;
-    color:#000000;
+    display: block;
+    background-color: #d2c8fe;
+    color: #000000;
 }
+
 .drafting-answer {
-    display:block;
-    background-color:#817c90;
-    color:#FFFFFF;
+    display: block;
+    background-color: #817c90;
+    color: #FFFFFF;
 }
+
 .drafting-question {
-    display:block;
-    background-color:#35c7b2;
-    color:#000000;
+    display: block;
+    background-color: #35c7b2;
+    color: #000000;
 }
+
 .drafting-speech {
-    display:block;
-    background-color:#342dd0;
-    color:#FFFFFF;
+    display: block;
+    background-color: #342dd0;
+    color: #FFFFFF;
 }
+
 /*
 * --------------------------
 * basicopt
 * --------------------------
 */
-.drafting-basicopt {
-    display:block;
-    background-color:#6abc2a;
-    color:#000000;
-}
-.drafting-conclusions {
-    display:block;
-    background-color:#b6991d;
-    color:#000000;
-}
-.drafting-coverPage {
-    display:block;
-    background-color:#1e9e4f;
-    color:#000000;
-}
-.drafting-blockList {
-    display:block;
-    background-color:#239752;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * blocksopt
 * --------------------------
 */
-.drafting-blocksopt {
-    display:block;
-    background-color:#b2476c;
-    color:#FFFFFF;
-}
-.drafting-amendmentContent {
-    display:block;
-    background-color:#b9ae8c;
-    color:#000000;
-}
-.drafting-amendmentHeading {
-    display:block;
-    background-color:#ca062c;
-    color:#FFFFFF;
-}
-.drafting-amendmentJustification {
-    display:block;
-    background-color:#c6bc7b;
-    color:#000000;
-}
-.drafting-amendmentReference {
-    display:block;
-    background-color:#ee4a09;
-    color:#000000;
-}
 .drafting-content {
-    display:block;
-    background-color:#f933dd;
-    color:#000000;
+    display: block;
+    background-color: #f933dd;
+    color: #000000;
 }
-.drafting-formula {
-    display:block;
-    background-color:#7c3fbd;
-    color:#FFFFFF;
-}
-.drafting-header {
-    display:block;
-    background-color:#966c17;
-    color:#FFFFFF;
-}
-.drafting-intro {
-    display:block;
-    background-color:#2c8761;
-    color:#FFFFFF;
-}
-.drafting-longTitle {
-    display:block;
-    background-color:#8bcd0c;
-    color:#000000;
-}
-.drafting-other {
-    display:block;
-    background-color:#c4e02a;
-    color:#000000;
-}
-.drafting-td {
-    display:block;
-    background-color:#6bd163;
-    color:#000000;
-}
-.drafting-th {
-    display:block;
-    background-color:#c77178;
-    color:#000000;
-}
-.drafting-wrap {
-    display:block;
-    background-color:#77e9cb;
-    color:#000000;
-}
+
 /*
 * --------------------------
 * blocksreq
 * --------------------------
 */
 .drafting-blocksreq {
-    display:block;
-    background-color:#9065db;
-    color:#FFFFFF;
+    display: block;
+    background-color: #9065db;
+    color: #FFFFFF;
 }
+
 .drafting-div {
-    display:block;
-    background-color:#2218e9;
-    color:#FFFFFF;
+    display: block;
+    background-color: #2218e9;
+    color: #FFFFFF;
 }
+
 .drafting-interstitial {
-    display:block;
-    background-color:#d62b3c;
-    color:#FFFFFF;
+    display: block;
+    background-color: #d62b3c;
+    color: #FFFFFF;
 }
+
 .drafting-note {
-    display:block;
-    background-color:#32a3a5;
-    color:#000000;
+    display: block;
+    background-color: #32a3a5;
+    color: #000000;
 }
+
 /*
 * --------------------------
 * bodyType
 * --------------------------
 */
-.drafting-bodyType {
-    display:block;
-    background-color:#f09c50;
-    color:#000000;
-}
-.drafting-body {
-    display:block;
-    background-color:#071555;
-    color:#FFFFFF;
-}
-.drafting-citations {
-    display:block;
-    background-color:#16aa12;
-    color:#000000;
-}
-.drafting-classification {
-    display:block;
-    background-color:#caf664;
-    color:#000000;
-}
 /*
 * --------------------------
 * collectionBodyType
 * --------------------------
 */
-.drafting-collectionBodyType {
-    display:block;
-    background-color:#19f62d;
-    color:#000000;
-}
-.drafting-collectionBody {
-    display:block;
-    background-color:#14741a;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * collectionStructure
 * --------------------------
 */
-.drafting-collectionStructure {
-    display:block;
-    background-color:#0b6300;
-    color:#FFFFFF;
-}
-.drafting-amendmentList {
-    display:block;
-    background-color:#351468;
-    color:#FFFFFF;
-}
-.drafting-documentCollection {
-    display:block;
-    background-color:#b2358e;
-    color:#FFFFFF;
-}
-.drafting-officialGazette {
-    display:block;
-    background-color:#3fd791;
-    color:#000000;
-}
-.drafting-component {
-    display:block;
-    background-color:#c5160b;
-    color:#FFFFFF;
-}
-.drafting-componentData {
-    display:block;
-    background-color:#9ffdbc;
-    color:#000000;
-}
-.drafting-componentInfo {
-    display:block;
-    background-color:#d4cd36;
-    color:#000000;
-}
-.drafting-components {
-    display:block;
-    background-color:#dd942b;
-    color:#000000;
-}
 /*
 * --------------------------
 * containerType
 * --------------------------
 */
-.drafting-containerType {
-    display:block;
-    background-color:#937cfd;
-    color:#000000;
-}
 .drafting-container {
-    display:block;
-    background-color:#a271cd;
-    color:#000000;
+    display: block;
+    background-color: #a271cd;
+    color: #000000;
 }
+
 /*
 * --------------------------
 * coreProperties
 * --------------------------
 */
-.drafting-coreProperties {
-    display:block;
-    background-color:#c53741;
-    color:#FFFFFF;
-}
-.drafting-FRBRExpression {
-    display:block;
-    background-color:#a98342;
-    color:#000000;
-}
-.drafting-FRBRItem {
-    display:block;
-    background-color:#3a5fc9;
-    color:#FFFFFF;
-}
-.drafting-FRBRManifestation {
-    display:block;
-    background-color:#fe2751;
-    color:#000000;
-}
-.drafting-FRBRWork {
-    display:block;
-    background-color:#785299;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * countType
 * --------------------------
 */
-.drafting-countType {
-    display:block;
-    background-color:#eeb234;
-    color:#000000;
-}
-.drafting-count {
-    display:block;
-    background-color:#5ba91b;
-    color:#000000;
-}
-.drafting-quorum {
-    display:block;
-    background-color:#cd498e;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * debateBodyType
 * --------------------------
 */
-.drafting-debateBodyType {
-    display:block;
-    background-color:#d63e87;
-    color:#FFFFFF;
-}
-.drafting-debateBody {
-    display:block;
-    background-color:#12f0bc;
-    color:#000000;
-}
 /*
 * --------------------------
 * debateStructure
 * --------------------------
 */
-.drafting-debateStructure {
-    display:block;
-    background-color:#1b1108;
-    color:#FFFFFF;
-}
-.drafting-debate {
-    display:block;
-    background-color:#a9ad4f;
-    color:#000000;
-}
 /*
 * --------------------------
 * fragmentBodyType
 * --------------------------
 */
-.drafting-fragmentBodyType {
-    display:block;
-    background-color:#efce18;
-    color:#000000;
-}
-.drafting-fragmentBody {
-    display:block;
-    background-color:#99cb58;
-    color:#000000;
-}
 /*
 * --------------------------
 * fragmentStructure
 * --------------------------
 */
-.drafting-fragmentStructure {
-    display:block;
-    background-color:#e2a893;
-    color:#000000;
-}
-.drafting-fragment {
-    display:block;
-    background-color:#2023ae;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * hierarchicalStructure
 * --------------------------
 */
-.drafting-hierarchicalStructure {
-    display:block;
-    background-color:#fa0867;
-    color:#FFFFFF;
-}
-.drafting-act {
-    display:block;
-    background-color:#70f296;
-    color:#000000;
-}
-.drafting-bill {
-    display:block;
-    background-color:#3b173d;
-    color:#FFFFFF;
-}
-.drafting-identification {
-    display:block;
-    background-color:#be2162;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * inline
 * --------------------------
 */
 .drafting-inline {
-    display:block;
-    background-color:#bbd72c;
-    color:#000000;
+    display: block;
+    background-color: #bbd72c;
+    color: #000000;
 }
+
 .drafting-a {
-    display:block;
-    background-color:#bc187a;
-    color:#FFFFFF;
+    display: block;
+    background-color: #bc187a;
+    color: #FFFFFF;
 }
+
 .drafting-affectedDocument {
-    display:block;
-    background-color:#6a5762;
-    color:#FFFFFF;
+    display: block;
+    background-color: #6a5762;
+    color: #FFFFFF;
 }
+
 .drafting-b {
-    display:block;
-    background-color:#f600c9;
-    color:#000000;
+    display: block;
+    background-color: #f600c9;
+    color: #000000;
 }
+
 .drafting-block {
-    display:block;
-    background-color:#50087b;
-    color:#FFFFFF;
+    display: block;
+    background-color: #50087b;
+    color: #FFFFFF;
 }
+
 .drafting-caption {
-    display:block;
-    background-color:#044fa0;
-    color:#FFFFFF;
+    display: block;
+    background-color: #044fa0;
+    color: #FFFFFF;
 }
+
 .drafting-change {
-    display:block;
-    background-color:#d22989;
-    color:#FFFFFF;
+    display: block;
+    background-color: #d22989;
+    color: #FFFFFF;
 }
+
 .drafting-courtType {
-    display:block;
-    background-color:#4d54e2;
-    color:#FFFFFF;
+    display: block;
+    background-color: #4d54e2;
+    color: #FFFFFF;
 }
+
 .drafting-date {
-    display:block;
-    background-color:#a7e584;
-    color:#000000;
+    display: block;
+    background-color: #a7e584;
+    color: #000000;
 }
+
 .drafting-def {
-    display:block;
-    background-color:#83a58c;
-    color:#000000;
+    display: block;
+    background-color: #83a58c;
+    color: #000000;
 }
+
 .drafting-del {
-    display:block;
-    background-color:#b1b557;
-    color:#000000;
+    display: block;
+    background-color: #b1b557;
+    color: #000000;
 }
+
 .drafting-docCommittee {
-    display:block;
-    background-color:#c4755d;
-    color:#000000;
+    display: block;
+    background-color: #c4755d;
+    color: #000000;
 }
+
 .drafting-docDate {
-    display:block;
-    background-color:#7ba1cd;
-    color:#000000;
+    display: block;
+    background-color: #7ba1cd;
+    color: #000000;
 }
+
 .drafting-docIntroducer {
-    display:block;
-    background-color:#b68503;
-    color:#000000;
+    display: block;
+    background-color: #b68503;
+    color: #000000;
 }
+
 .drafting-docJurisdiction {
-    display:block;
-    background-color:#585a0d;
-    color:#FFFFFF;
+    display: block;
+    background-color: #585a0d;
+    color: #FFFFFF;
 }
+
 .drafting-docNumber {
-    display:block;
-    background-color:#c65c22;
-    color:#FFFFFF;
+    display: block;
+    background-color: #c65c22;
+    color: #FFFFFF;
 }
+
 .drafting-docProponent {
-    display:block;
-    background-color:#aab5ae;
-    color:#000000;
+    display: block;
+    background-color: #aab5ae;
+    color: #000000;
 }
+
 .drafting-docPurpose {
-    display:block;
-    background-color:#5b4fa1;
-    color:#FFFFFF;
+    display: block;
+    background-color: #5b4fa1;
+    color: #FFFFFF;
 }
+
 .drafting-docStage {
-    display:block;
-    background-color:#807104;
-    color:#FFFFFF;
+    display: block;
+    background-color: #807104;
+    color: #FFFFFF;
 }
+
 .drafting-docStatus {
-    display:block;
-    background-color:#cc3296;
-    color:#FFFFFF;
+    display: block;
+    background-color: #cc3296;
+    color: #FFFFFF;
 }
+
 .drafting-docTitle {
-    display:block;
-    background-color:#ab19a1;
-    color:#FFFFFF;
+    display: block;
+    background-color: #ab19a1;
+    color: #FFFFFF;
 }
+
 .drafting-docType {
-    display:block;
-    background-color:#bbba26;
-    color:#000000;
+    display: block;
+    background-color: #bbba26;
+    color: #000000;
 }
+
 .drafting-docketNumber {
-    display:block;
-    background-color:#223fe8;
-    color:#FFFFFF;
+    display: block;
+    background-color: #223fe8;
+    color: #FFFFFF;
 }
+
 .drafting-extractText {
-    display:block;
-    background-color:#847220;
-    color:#FFFFFF;
+    display: block;
+    background-color: #847220;
+    color: #FFFFFF;
 }
+
 .drafting-fillIn {
-    display:block;
-    background-color:#f4bcda;
-    color:#000000;
+    display: block;
+    background-color: #f4bcda;
+    color: #000000;
 }
+
 .drafting-from {
-    display:block;
-    background-color:#4ff5a3;
-    color:#000000;
+    display: block;
+    background-color: #4ff5a3;
+    color: #000000;
 }
+
 .drafting-heading {
-    display:block;
-    background-color:#b3fa15;
-    color:#000000;
+    display: block;
+    background-color: #b3fa15;
+    color: #000000;
 }
+
 .drafting-i {
-    display:block;
-    background-color:#75d6a5;
-    color:#000000;
+    display: block;
+    background-color: #75d6a5;
+    color: #000000;
 }
+
 .drafting-inline {
-    display:block;
-    background-color:#bbd72c;
-    color:#000000;
+    display: block;
+    background-color: #bbd72c;
+    color: #000000;
 }
+
 .drafting-ins {
-    display:block;
-    background-color:#772ef0;
-    color:#FFFFFF;
+    display: block;
+    background-color: #772ef0;
+    color: #FFFFFF;
 }
+
 .drafting-legislature {
-    display:block;
-    background-color:#9d190c;
-    color:#FFFFFF;
+    display: block;
+    background-color: #9d190c;
+    color: #FFFFFF;
 }
+
 .drafting-listConclusion {
-    display:block;
-    background-color:#8ca6a6;
-    color:#000000;
+    display: block;
+    background-color: #8ca6a6;
+    color: #000000;
 }
+
 .drafting-listIntroduction {
-    display:block;
-    background-color:#5b1d94;
-    color:#FFFFFF;
+    display: block;
+    background-color: #5b1d94;
+    color: #FFFFFF;
 }
+
 .drafting-mref {
-    display:block;
-    background-color:#43e84c;
-    color:#000000;
+    display: block;
+    background-color: #43e84c;
+    color: #000000;
 }
+
 .drafting-narrative {
-    display:block;
-    background-color:#36a0ae;
-    color:#000000;
+    display: block;
+    background-color: #36a0ae;
+    color: #000000;
 }
+
 .drafting-neutralCitation {
-    display:block;
-    background-color:#ad972c;
-    color:#000000;
+    display: block;
+    background-color: #ad972c;
+    color: #000000;
 }
+
 .drafting-num {
-    display:block;
-    background-color:#1e839e;
-    color:#FFFFFF;
+    display: block;
+    background-color: #1e839e;
+    color: #FFFFFF;
 }
+
 .drafting-omissis {
-    display:block;
-    background-color:#df6c64;
-    color:#000000;
+    display: block;
+    background-color: #df6c64;
+    color: #000000;
 }
+
 .drafting-opinion {
-    display:block;
-    background-color:#5d63c9;
-    color:#FFFFFF;
+    display: block;
+    background-color: #5d63c9;
+    color: #FFFFFF;
 }
+
 .drafting-outcome {
-    display:block;
-    background-color:#793427;
-    color:#FFFFFF;
+    display: block;
+    background-color: #793427;
+    color: #FFFFFF;
 }
+
 .drafting-p {
-    display:block;
-    background-color:#b391bd;
-    color:#000000;
+    display: block;
+    background-color: #b391bd;
+    color: #000000;
 }
+
 .drafting-placeholder {
-    display:block;
-    background-color:#a384d5;
-    color:#000000;
+    display: block;
+    background-color: #a384d5;
+    color: #000000;
 }
+
 .drafting-quotedText {
-    display:block;
-    background-color:#23ecaf;
-    color:#000000;
+    display: block;
+    background-color: #23ecaf;
+    color: #000000;
 }
+
 .drafting-recordedTime {
-    display:block;
-    background-color:#488e18;
-    color:#FFFFFF;
+    display: block;
+    background-color: #488e18;
+    color: #FFFFFF;
 }
+
 .drafting-relatedDocument {
-    display:block;
-    background-color:#309516;
-    color:#FFFFFF;
+    display: block;
+    background-color: #309516;
+    color: #FFFFFF;
 }
+
 .drafting-remark {
-    display:block;
-    background-color:#cc93f7;
-    color:#000000;
+    display: block;
+    background-color: #cc93f7;
+    color: #000000;
 }
+
 .drafting-scene {
-    display:block;
-    background-color:#ba6148;
-    color:#FFFFFF;
+    display: block;
+    background-color: #ba6148;
+    color: #FFFFFF;
 }
+
 .drafting-session {
-    display:block;
-    background-color:#ab13b5;
-    color:#FFFFFF;
+    display: block;
+    background-color: #ab13b5;
+    color: #FFFFFF;
 }
+
 .drafting-shortTitle {
-    display:block;
-    background-color:#5c5c74;
-    color:#FFFFFF;
+    display: block;
+    background-color: #5c5c74;
+    color: #FFFFFF;
 }
+
 .drafting-signature {
-    display:block;
-    background-color:#ad2507;
-    color:#FFFFFF;
+    display: block;
+    background-color: #ad2507;
+    color: #FFFFFF;
 }
+
 .drafting-span {
-    display:block;
-    background-color:#894a59;
-    color:#FFFFFF;
+    display: block;
+    background-color: #894a59;
+    color: #FFFFFF;
 }
+
 .drafting-sub {
-    display:block;
-    background-color:#bf39b2;
-    color:#FFFFFF;
+    display: block;
+    background-color: #bf39b2;
+    color: #FFFFFF;
 }
+
 .drafting-subheading {
-    display:block;
-    background-color:#802804;
-    color:#FFFFFF;
+    display: block;
+    background-color: #802804;
+    color: #FFFFFF;
 }
+
 .drafting-summary {
-    display:block;
-    background-color:#59b2bc;
-    color:#000000;
+    display: block;
+    background-color: #59b2bc;
+    color: #000000;
 }
+
 .drafting-sup {
-    display:block;
-    background-color:#a60829;
-    color:#FFFFFF;
+    display: block;
+    background-color: #a60829;
+    color: #FFFFFF;
 }
+
 .drafting-tocItem {
-    display:block;
-    background-color:#eb4e86;
-    color:#000000;
+    display: block;
+    background-color: #eb4e86;
+    color: #000000;
 }
+
 .drafting-u {
-    display:block;
-    background-color:#a639b8;
-    color:#FFFFFF;
+    display: block;
+    background-color: #a639b8;
+    color: #FFFFFF;
 }
+
 .drafting-vote {
-    display:block;
-    background-color:#99986e;
-    color:#000000;
+    display: block;
+    background-color: #99986e;
+    color: #000000;
 }
+
 /*
 * --------------------------
 * inlinereq
 * --------------------------
 */
-.drafting-inlinereq {
-    display:block;
-    background-color:#c26dd0;
-    color:#000000;
-}
-.drafting-ref {
-    display:block;
-    background-color:#8309d3;
-    color:#FFFFFF;
-}
-.drafting-rref {
-    display:block;
-    background-color:#22f9f3;
-    color:#000000;
-}
 /*
 * --------------------------
 * inlinereqreq
 * --------------------------
 */
-.drafting-inlinereqreq {
-    display:block;
-    background-color:#94efe9;
-    color:#000000;
-}
-.drafting-concept {
-    display:block;
-    background-color:#f198ce;
-    color:#000000;
-}
-.drafting-entity {
-    display:block;
-    background-color:#f2fbbe;
-    color:#000000;
-}
-.drafting-event {
-    display:block;
-    background-color:#49fb4d;
-    color:#000000;
-}
-.drafting-judge {
-    display:block;
-    background-color:#5d020a;
-    color:#FFFFFF;
-}
-.drafting-lawyer {
-    display:block;
-    background-color:#10f04d;
-    color:#000000;
-}
-.drafting-location {
-    display:block;
-    background-color:#bc83b7;
-    color:#000000;
-}
-.drafting-object {
-    display:block;
-    background-color:#7846f9;
-    color:#FFFFFF;
-}
-.drafting-organization {
-    display:block;
-    background-color:#9ff2bd;
-    color:#000000;
-}
-.drafting-party {
-    display:block;
-    background-color:#7f158a;
-    color:#FFFFFF;
-}
-.drafting-person {
-    display:block;
-    background-color:#18a8cb;
-    color:#000000;
-}
-.drafting-process {
-    display:block;
-    background-color:#daa89a;
-    color:#000000;
-}
-.drafting-quantity {
-    display:block;
-    background-color:#bbbdaa;
-    color:#000000;
-}
-.drafting-role {
-    display:block;
-    background-color:#b0b44a;
-    color:#000000;
-}
-.drafting-term {
-    display:block;
-    background-color:#2d3815;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * judgementBodyType
 * --------------------------
 */
-.drafting-judgementBodyType {
-    display:block;
-    background-color:#441af2;
-    color:#FFFFFF;
-}
-.drafting-judgementBody {
-    display:block;
-    background-color:#308257;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * judgementStructure
 * --------------------------
 */
-.drafting-judgementStructure {
-    display:block;
-    background-color:#4cd874;
-    color:#000000;
-}
-.drafting-judgement {
-    display:block;
-    background-color:#2b1e09;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * judicialArgumentType
 * --------------------------
 */
-.drafting-judicialArgumentType {
-    display:block;
-    background-color:#56f07c;
-    color:#000000;
-}
-.drafting-applies {
-    display:block;
-    background-color:#86590a;
-    color:#FFFFFF;
-}
-.drafting-contrasts {
-    display:block;
-    background-color:#499f7f;
-    color:#000000;
-}
-.drafting-derogates {
-    display:block;
-    background-color:#d3c54a;
-    color:#000000;
-}
-.drafting-dissentsFrom {
-    display:block;
-    background-color:#f41e2d;
-    color:#FFFFFF;
-}
-.drafting-distinguishes {
-    display:block;
-    background-color:#4a4aa6;
-    color:#FFFFFF;
-}
-.drafting-extends {
-    display:block;
-    background-color:#1485d2;
-    color:#FFFFFF;
-}
-.drafting-isAnalogTo {
-    display:block;
-    background-color:#12066b;
-    color:#FFFFFF;
-}
-.drafting-overrules {
-    display:block;
-    background-color:#fa8dc5;
-    color:#000000;
-}
-.drafting-putsInQuestion {
-    display:block;
-    background-color:#e6f3ba;
-    color:#000000;
-}
-.drafting-restricts {
-    display:block;
-    background-color:#fe1f0c;
-    color:#FFFFFF;
-}
-.drafting-supports {
-    display:block;
-    background-color:#d71920;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * judicialArguments
 * --------------------------
 */
-.drafting-judicialArguments {
-    display:block;
-    background-color:#5bd62e;
-    color:#000000;
-}
-.drafting-judicial {
-    display:block;
-    background-color:#e818f3;
-    color:#000000;
-}
-.drafting-li {
-    display:block;
-    background-color:#ac17c1;
-    color:#FFFFFF;
-}
-.drafting-lifecycle {
-    display:block;
-    background-color:#00f50d;
-    color:#000000;
-}
 /*
 * --------------------------
 * listItems
 * --------------------------
 */
-.drafting-listItems {
-    display:block;
-    background-color:#2384e7;
-    color:#FFFFFF;
-}
-.drafting-ol {
-    display:block;
-    background-color:#36aadc;
-    color:#000000;
-}
-.drafting-ul {
-    display:block;
-    background-color:#f084d3;
-    color:#000000;
-}
 /*
 * --------------------------
 * maincontent
 * --------------------------
 */
-.drafting-maincontent {
-    display:block;
-    background-color:#9d1860;
-    color:#FFFFFF;
-}
-.drafting-background {
-    display:block;
-    background-color:#bc8186;
-    color:#000000;
-}
-.drafting-decision {
-    display:block;
-    background-color:#c2b815;
-    color:#000000;
-}
-.drafting-introduction {
-    display:block;
-    background-color:#891690;
-    color:#FFFFFF;
-}
-.drafting-mainBody {
-    display:block;
-    background-color:#fd1abc;
-    color:#000000;
-}
-.drafting-motivation {
-    display:block;
-    background-color:#27771c;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * markeropt
 * --------------------------
 */
-.drafting-markeropt {
-    display:block;
-    background-color:#d5b723;
-    color:#000000;
-}
 .drafting-br {
-    display:block;
-    background-color:#3f15da;
-    color:#FFFFFF;
+    display: block;
+    background-color: #3f15da;
+    color: #FFFFFF;
 }
+
 /*
 * --------------------------
 * eolType
 * --------------------------
 */
-.drafting-eolType {
-    display:block;
-    background-color:#314b27;
-    color:#FFFFFF;
-}
-.drafting-eol {
-    display:block;
-    background-color:#8e0cb8;
-    color:#FFFFFF;
-}
-.drafting-eop {
-    display:block;
-    background-color:#eaabce;
-    color:#000000;
-}
-.drafting-img {
-    display:block;
-    background-color:#145be7;
-    color:#FFFFFF;
-}
-.drafting-noteRef {
-    display:block;
-    background-color:#571d75;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * markerreq
 * --------------------------
 */
-.drafting-markerreq {
-    display:block;
-    background-color:#17e387;
-    color:#000000;
-}
-.drafting-marker {
-    display:block;
-    background-color:#33a672;
-    color:#000000;
-}
-.drafting-meta {
-    display:block;
-    background-color:#398d17;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * metaopt
 * --------------------------
 */
-.drafting-metaopt {
-    display:block;
-    background-color:#25992f;
-    color:#000000;
-}
-.drafting-FRBRauthor {
-    display:block;
-    background-color:#a9c09a;
-    color:#000000;
-}
-.drafting-FRBRdate {
-    display:block;
-    background-color:#051c76;
-    color:#FFFFFF;
-}
-.drafting-FRBRlanguage {
-    display:block;
-    background-color:#4a98d5;
-    color:#000000;
-}
-.drafting-FRBRtranslation {
-    display:block;
-    background-color:#9488d9;
-    color:#000000;
-}
-.drafting-keyword {
-    display:block;
-    background-color:#d3582f;
-    color:#FFFFFF;
-}
-.drafting-publication {
-    display:block;
-    background-color:#19ba2a;
-    color:#000000;
-}
-.drafting-timeInterval {
-    display:block;
-    background-color:#b4c2dd;
-    color:#000000;
-}
 /*
 * --------------------------
 * valueType
 * --------------------------
 */
-.drafting-valueType {
-    display:block;
-    background-color:#57be6f;
-    color:#000000;
-}
-.drafting-FRBRalias {
-    display:block;
-    background-color:#034900;
-    color:#FFFFFF;
-}
-.drafting-FRBRcountry {
-    display:block;
-    background-color:#2cda47;
-    color:#000000;
-}
-.drafting-FRBRformat {
-    display:block;
-    background-color:#4cc337;
-    color:#000000;
-}
-.drafting-FRBRname {
-    display:block;
-    background-color:#8b5a62;
-    color:#FFFFFF;
-}
-.drafting-FRBRnumber {
-    display:block;
-    background-color:#4de3a5;
-    color:#000000;
-}
-.drafting-FRBRsubtype {
-    display:block;
-    background-color:#f1c13e;
-    color:#000000;
-}
-.drafting-FRBRthis {
-    display:block;
-    background-color:#3fb43c;
-    color:#000000;
-}
-.drafting-FRBRuri {
-    display:block;
-    background-color:#ec6326;
-    color:#000000;
-}
-.drafting-metareq {
-    display:block;
-    background-color:#c0c2a4;
-    color:#000000;
-}
 /*
 * --------------------------
 * modType
 * --------------------------
 */
-.drafting-modType {
-    display:block;
-    background-color:#8e7263;
-    color:#FFFFFF;
-}
-.drafting-mmod {
-    display:block;
-    background-color:#3e2ad2;
-    color:#FFFFFF;
-}
-.drafting-mod {
-    display:block;
-    background-color:#8357df;
-    color:#FFFFFF;
-}
-.drafting-rmod {
-    display:block;
-    background-color:#1d3c77;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * modificationType
 * --------------------------
 */
-.drafting-modificationType {
-    display:block;
-    background-color:#35c7f9;
-    color:#000000;
-}
-.drafting-efficacyMod {
-    display:block;
-    background-color:#dcce8d;
-    color:#000000;
-}
-.drafting-forceMod {
-    display:block;
-    background-color:#5d2829;
-    color:#FFFFFF;
-}
-.drafting-legalSystemMod {
-    display:block;
-    background-color:#6c3408;
-    color:#FFFFFF;
-}
-.drafting-meaningMod {
-    display:block;
-    background-color:#ed08dc;
-    color:#000000;
-}
-.drafting-scopeMod {
-    display:block;
-    background-color:#b03c42;
-    color:#FFFFFF;
-}
-.drafting-textualMod {
-    display:block;
-    background-color:#910184;
-    color:#FFFFFF;
-}
-.drafting-notes {
-    display:block;
-    background-color:#f08c16;
-    color:#000000;
-}
 /*
 * --------------------------
 * openStructure
 * --------------------------
 */
-.drafting-openStructure {
-    display:block;
-    background-color:#ecc931;
-    color:#000000;
-}
-.drafting-debateReport {
-    display:block;
-    background-color:#e85a49;
-    color:#000000;
-}
-.drafting-doc {
-    display:block;
-    background-color:#965ba6;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * parliamentaryAnalysis
 * --------------------------
 */
-.drafting-parliamentaryAnalysis {
-    display:block;
-    background-color:#92b84d;
-    color:#000000;
-}
-.drafting-parliamentary {
-    display:block;
-    background-color:#5eac34;
-    color:#000000;
-}
 /*
 * --------------------------
 * parliamentaryAnalysisType
 * --------------------------
 */
-.drafting-parliamentaryAnalysisType {
-    display:block;
-    background-color:#e838fd;
-    color:#000000;
-}
-.drafting-quorumVerification {
-    display:block;
-    background-color:#cdde11;
-    color:#000000;
-}
-.drafting-recount {
-    display:block;
-    background-color:#a927f7;
-    color:#FFFFFF;
-}
-.drafting-voting {
-    display:block;
-    background-color:#be9b5f;
-    color:#000000;
-}
 /*
 * --------------------------
 * periodType
 * --------------------------
 */
-.drafting-periodType {
-    display:block;
-    background-color:#60e4e8;
-    color:#000000;
-}
-.drafting-application {
-    display:block;
-    background-color:#a8b58d;
-    color:#000000;
-}
-.drafting-duration {
-    display:block;
-    background-color:#31b50a;
-    color:#000000;
-}
-.drafting-efficacy {
-    display:block;
-    background-color:#148316;
-    color:#FFFFFF;
-}
-.drafting-force {
-    display:block;
-    background-color:#c68918;
-    color:#000000;
-}
 /*
 * --------------------------
 * popupStructure
 * --------------------------
 */
-.drafting-popupStructure {
-    display:block;
-    background-color:#471bc0;
-    color:#FFFFFF;
-}
-.drafting-authorialNote {
-    display:block;
-    background-color:#f7130b;
-    color:#FFFFFF;
-}
-.drafting-extractStructure {
-    display:block;
-    background-color:#d55c57;
-    color:#000000;
-}
-.drafting-popup {
-    display:block;
-    background-color:#cfbbf7;
-    color:#000000;
-}
-.drafting-quotedStructure {
-    display:block;
-    background-color:#3317f8;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * preambleopt
 * --------------------------
 */
-.drafting-preambleopt {
-    display:block;
-    background-color:#c630c8;
-    color:#FFFFFF;
-}
-.drafting-preamble {
-    display:block;
-    background-color:#9d2dbe;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * prefaceopt
 * --------------------------
 */
-.drafting-prefaceopt {
-    display:block;
-    background-color:#c3e359;
-    color:#000000;
-}
-.drafting-preface {
-    display:block;
-    background-color:#fdc7fe;
-    color:#000000;
-}
-.drafting-recitals {
-    display:block;
-    background-color:#17700a;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * refItems
 * --------------------------
 */
-.drafting-refItems {
-    display:block;
-    background-color:#5799bd;
-    color:#000000;
-}
-.drafting-references {
-    display:block;
-    background-color:#e4cd2a;
-    color:#000000;
-}
 /*
 * --------------------------
 * referenceType
 * --------------------------
 */
-.drafting-referenceType {
-    display:block;
-    background-color:#6bf6f5;
-    color:#000000;
-}
-.drafting-TLCConcept {
-    display:block;
-    background-color:#f7a691;
-    color:#000000;
-}
-.drafting-TLCEvent {
-    display:block;
-    background-color:#4dec2e;
-    color:#000000;
-}
-.drafting-TLCLocation {
-    display:block;
-    background-color:#1e0bb2;
-    color:#FFFFFF;
-}
-.drafting-TLCObject {
-    display:block;
-    background-color:#71f89b;
-    color:#000000;
-}
-.drafting-TLCOrganization {
-    display:block;
-    background-color:#67dca4;
-    color:#000000;
-}
-.drafting-TLCPerson {
-    display:block;
-    background-color:#f95abb;
-    color:#000000;
-}
-.drafting-TLCProcess {
-    display:block;
-    background-color:#86a219;
-    color:#000000;
-}
-.drafting-TLCReference {
-    display:block;
-    background-color:#a4008a;
-    color:#FFFFFF;
-}
-.drafting-TLCRole {
-    display:block;
-    background-color:#38d083;
-    color:#000000;
-}
-.drafting-TLCTerm {
-    display:block;
-    background-color:#339cc7;
-    color:#000000;
-}
-.drafting-activeRef {
-    display:block;
-    background-color:#c035ae;
-    color:#FFFFFF;
-}
-.drafting-attachmentOf {
-    display:block;
-    background-color:#0ca98e;
-    color:#000000;
-}
-.drafting-hasAttachment {
-    display:block;
-    background-color:#19422e;
-    color:#FFFFFF;
-}
-.drafting-jurisprudence {
-    display:block;
-    background-color:#20ec51;
-    color:#000000;
-}
-.drafting-original {
-    display:block;
-    background-color:#e05593;
-    color:#000000;
-}
-.drafting-passiveRef {
-    display:block;
-    background-color:#4f6226;
-    color:#FFFFFF;
-}
 /*
 * --------------------------
 * srcType
 * --------------------------
 */
-.drafting-srcType {
-    display:block;
-    background-color:#0d89d7;
-    color:#FFFFFF;
-}
-.drafting-componentRef {
-    display:block;
-    background-color:#9e088b;
-    color:#FFFFFF;
-}
-.drafting-table {
-    display:block;
-    background-color:#c2241c;
-    color:#FFFFFF;
-}
-.drafting-temporalData {
-    display:block;
-    background-color:#90c795;
-    color:#000000;
-}
-.drafting-temporalGroup {
-    display:block;
-    background-color:#3a911a;
-    color:#FFFFFF;
-}
-.drafting-toc {
-    display:block;
-    background-color:#d9e3cc;
-    color:#000000;
-}
-.drafting-tr {
-    display:block;
-    background-color:#529f59;
-    color:#000000;
-}
-.drafting-workflow {
-    display:block;
-    background-color:#2b223f;
-    color:#FFFFFF;
-}
-  
+
