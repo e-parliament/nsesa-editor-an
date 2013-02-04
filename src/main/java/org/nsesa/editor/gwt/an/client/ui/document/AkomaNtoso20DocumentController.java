@@ -25,7 +25,6 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.editor.client.event.document.DocumentScrollToEvent;
 import org.nsesa.editor.gwt.editor.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.editor.client.ui.document.DocumentInjector;
-import org.nsesa.editor.gwt.inline.client.ui.inline.InlineEditorController;
 
 import java.util.logging.Logger;
 
@@ -45,9 +44,8 @@ public class AkomaNtoso20DocumentController extends DocumentController {
                                           final OverlayFactory overlayFactory,
                                           final DiffingManager diffingManager,
                                           final Locator locator,
-                                          final Creator creator,
-                                          final InlineEditorController inlineEditorController) {
-        super(clientFactory, serviceFactory, overlayFactory, diffingManager, locator, creator, inlineEditorController);
+                                          final Creator creator) {
+        super(clientFactory, serviceFactory, overlayFactory, diffingManager, locator, creator);
         registerMode(ConsolidationMode.KEY, new ConsolidationMode(this, clientFactory) {
             @Override
             public boolean apply(final ActiveState state) {
