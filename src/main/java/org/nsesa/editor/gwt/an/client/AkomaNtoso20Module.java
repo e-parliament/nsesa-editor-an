@@ -21,6 +21,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayLocalizableResource;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
+import org.nsesa.editor.gwt.dialog.client.ui.dialog.AmendmentDialogModule;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentPanelController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreateController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.delete.AmendmentDialogDeleteController;
@@ -30,10 +31,7 @@ import org.nsesa.editor.gwt.dialog.client.ui.rte.RichTextEditorPlugin;
 import org.nsesa.editor.gwt.editor.client.activity.EditorActivityMapper;
 import org.nsesa.editor.gwt.editor.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.editor.client.ui.main.EditorModule;
-
-//import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.Akomantoso20OverlayLocalizableResource;
-
-//import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.Akomantoso20OverlayLocalizableResource;
+import org.nsesa.editor.gwt.inline.client.ui.inline.InlineEditorModule;
 
 /**
  * Date: 15/10/12 21:23
@@ -44,9 +42,12 @@ import org.nsesa.editor.gwt.editor.client.ui.main.EditorModule;
 public class AkomaNtoso20Module extends AbstractGinModule {
     @Override
     protected void configure() {
+        install(new InlineEditorModule());
+        install(new AmendmentDialogModule());
+        install(new EditorModule());
+
         bind(RichTextEditorPlugin.class).to(Akomantoso20RichTextEditorPlugin.class);
         bind(RichTextEditorConfig.class).to(Akomantoso20RichTextEditorConfig.class);
-        install(new EditorModule());
         // bind the mapper
         bind(ActivityMapper.class).to(EditorActivityMapper.class).in(Singleton.class);
         bind(OverlayFactory.class).to(Akomantoso20OverlayFactory.class).in(Singleton.class);

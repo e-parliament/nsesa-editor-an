@@ -2,6 +2,7 @@ package org.nsesa.editor.gwt.an.client;
 
 import com.google.gwt.inject.client.GinModules;
 import com.google.gwt.inject.client.Ginjector;
+import org.nsesa.editor.gwt.dialog.client.ui.dialog.AmendmentDialogController;
 import org.nsesa.editor.gwt.editor.client.Injector;
 
 /**
@@ -12,4 +13,5 @@ import org.nsesa.editor.gwt.editor.client.Injector;
  */
 @GinModules({AkomaNtoso20Module.class})
 public interface AkomaNtoso20Injector extends Injector, Ginjector {
+    AmendmentDialogController getAmendmentDialogController();
 }
