@@ -17,7 +17,6 @@ import org.nsesa.editor.gwt.dialog.client.ui.handler.common.meta.MetaPanelContro
 import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentDialogModifyController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentDialogModifyView;
 
-import java.util.Arrays;
 import java.util.logging.Logger;
 
 /**
@@ -44,10 +43,12 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
                                                        final ContentPanelController contentPanelController,
                                                        final MetaPanelController metaPanelController
     ) {
-        super(clientFactory, view, locator, overlayFactory, draftingController, Arrays.asList(contentPanelController, authorPanelController, metaPanelController));
+        super(clientFactory, view, locator, overlayFactory, draftingController);
         this.authorPanelController = authorPanelController;
         this.contentPanelController = contentPanelController;
         this.metaPanelController = metaPanelController;
+
+        addChildControllers(contentPanelController, authorPanelController, metaPanelController);
     }
 
     @Override
