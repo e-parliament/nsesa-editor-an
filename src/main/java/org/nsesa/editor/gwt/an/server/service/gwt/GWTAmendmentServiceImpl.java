@@ -18,7 +18,6 @@ import org.springframework.core.io.Resource;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import javax.annotation.Nullable;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.nio.charset.Charset;
@@ -145,9 +144,8 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     @Override
     public Boolean[] canSaveAmendmentContainers(ClientContext clientContext, ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, StaleResourceException {
         return Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, Boolean>() {
-            @Nullable
             @Override
-            public Boolean apply(@Nullable AmendmentContainerDTO input) {
+            public Boolean apply(AmendmentContainerDTO input) {
                 return true;
             }
         }).toArray(new Boolean[amendmentContainers.size()]);
@@ -168,9 +166,9 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     @Override
     public Boolean[] canDeleteAmendmentContainers(ClientContext clientContext, ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
         return Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, Boolean>() {
-            @Nullable
+
             @Override
-            public Boolean apply(@Nullable AmendmentContainerDTO input) {
+            public Boolean apply(AmendmentContainerDTO input) {
                 return true;
             }
         }).toArray(new Boolean[amendmentContainers.size()]);
@@ -191,9 +189,9 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     @Override
     public Boolean[] canTableAmendmentContainers(ClientContext clientContext, ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
         return Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, Boolean>() {
-            @Nullable
+
             @Override
-            public Boolean apply(@Nullable AmendmentContainerDTO input) {
+            public Boolean apply(AmendmentContainerDTO input) {
                 return true;
             }
         }).toArray(new Boolean[amendmentContainers.size()]);
@@ -214,9 +212,9 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     @Override
     public Boolean[] canWithdrawAmendmentContainers(ClientContext clientContext, ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
         return Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, Boolean>() {
-            @Nullable
+
             @Override
-            public Boolean apply(@Nullable AmendmentContainerDTO input) {
+            public Boolean apply(AmendmentContainerDTO input) {
                 return true;
             }
         }).toArray(new Boolean[amendmentContainers.size()]);
@@ -237,9 +235,9 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     @Override
     public Boolean[] canRegisterAmendmentContainers(ClientContext clientContext, ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
         return Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, Boolean>() {
-            @Nullable
+
             @Override
-            public Boolean apply(@Nullable AmendmentContainerDTO input) {
+            public Boolean apply(AmendmentContainerDTO input) {
                 return true;
             }
         }).toArray(new Boolean[amendmentContainers.size()]);
@@ -260,9 +258,9 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     @Override
     public Boolean[] canReturnAmendmentContainers(ClientContext clientContext, ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
         return Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, Boolean>() {
-            @Nullable
+
             @Override
-            public Boolean apply(@Nullable AmendmentContainerDTO input) {
+            public Boolean apply(AmendmentContainerDTO input) {
                 return true;
             }
         }).toArray(new Boolean[amendmentContainers.size()]);
