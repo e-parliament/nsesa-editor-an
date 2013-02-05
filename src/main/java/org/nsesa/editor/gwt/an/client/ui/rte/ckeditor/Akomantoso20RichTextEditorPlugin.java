@@ -3,7 +3,7 @@ package org.nsesa.editor.gwt.an.client.ui.rte.ckeditor;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
-import org.nsesa.editor.gwt.dialog.client.ui.rte.ckeditor.*;
+import org.nsesa.editor.gwt.core.client.ui.rte.ckeditor.*;
 
 
 /**

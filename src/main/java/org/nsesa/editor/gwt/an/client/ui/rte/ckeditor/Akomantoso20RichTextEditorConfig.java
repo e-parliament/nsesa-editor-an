@@ -1,8 +1,8 @@
 package org.nsesa.editor.gwt.an.client.ui.rte.ckeditor;
 
 import com.google.gwt.core.client.GWT;
-import org.nsesa.editor.gwt.dialog.client.ui.rte.ckeditor.CKEditorConfig;
-import org.nsesa.editor.gwt.dialog.client.ui.rte.ckeditor.CKEditorToolbar;
+import org.nsesa.editor.gwt.core.client.ui.rte.ckeditor.CKEditorConfig;
+import org.nsesa.editor.gwt.core.client.ui.rte.ckeditor.CKEditorToolbar;
 
 /**
  * The default configuration for Akomantoso20 editor
