@@ -1,9 +1,9 @@
 package org.nsesa.editor.gwt.an.client.handler.delete;
 
+import com.google.gwt.i18n.shared.DateTimeFormat;
 import com.google.gwt.user.client.DOM;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
@@ -17,6 +17,8 @@ import org.nsesa.editor.gwt.dialog.client.ui.handler.delete.AmendmentDialogDelet
 
 import java.util.Arrays;
 import java.util.logging.Logger;
+
+import static org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20XMLUtil.*;
 
 /**
  * Date: 23/11/12 10:14
@@ -49,10 +51,47 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
 
     @Override
     public void handleSave() {
+        final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
+
         AmendableWidget amendableWidget = dialogContext.getAmendableWidget();
 
         final AkomaNtoso akomaNtoso = new AkomaNtoso();
         final Amendment root = akomaNtoso.setAmendment(new Amendment());
+
+        // meta
+        final Identification identification = new Identification();
+        final String formattedDate = DateTimeFormat.getFormat(DateTimeFormat.PredefinedFormat.ISO_8601).format(new java.util.Date());
+        identification.setFRBRWork(new FRBRWork() {
+            {
+                setFRBRthis((FRBRthis) new FRBRthis().valueAttr(s("TODO")));
+                addFRBRuri((FRBRuri) new FRBRuri().valueAttr(s("TODO")));
+                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
+                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
+                setFRBRcountry((FRBRcountry) new FRBRcountry().valueAttr(s("TODO")));
+            }
+        });
+
+        identification.setFRBRExpression(new FRBRExpression() {
+            {
+                setFRBRthis((FRBRthis) new FRBRthis().valueAttr(s("TODO")));
+                addFRBRuri((FRBRuri) new FRBRuri().valueAttr(s("TODO")));
+                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
+                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
+                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
+                addFRBRlanguage(new FRBRlanguage().languageAttr(l(languageIso)));
+            }
+        });
+
+        identification.setFRBRManifestation(new FRBRManifestation() {
+            {
+                setFRBRthis((FRBRthis) new FRBRthis().valueAttr(s("TODO")));
+                addFRBRuri((FRBRuri) new FRBRuri().valueAttr(s("TODO")));
+                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
+                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
+            }
+        });
+
+        root.setMeta(new Meta()).setIdentification(identification);
 
         // preface
         root.setPreface(new Preface())
@@ -62,7 +101,6 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
         // amendment body
         final AmendmentBody amendmentBody = root.setAmendmentBody(new AmendmentBody());
 
-        final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
         amendmentBody
                 .addAmendmentHeading(new AmendmentHeading())
                 .addBlock(new Block()).html(locator.getLocation(amendableWidget, null, languageIso, true));
@@ -104,12 +142,6 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
 
     private <T extends AmendableWidget> T a(final String tag) {
         return (T) overlayFactory.getAmendableWidget(tag);
-    }
-
-    private StringSimpleType s(final String text) {
-        StringSimpleType s = new StringSimpleType();
-        s.setValue(text);
-        return s;
     }
 
     @Override

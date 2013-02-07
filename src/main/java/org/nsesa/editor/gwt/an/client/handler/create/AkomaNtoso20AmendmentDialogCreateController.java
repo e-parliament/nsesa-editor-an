@@ -1,5 +1,6 @@
 package org.nsesa.editor.gwt.an.client.handler.create;
 
+import com.google.gwt.i18n.shared.DateTimeFormat;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
 import com.google.inject.Inject;
@@ -18,6 +19,8 @@ import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreat
 import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreateView;
 
 import java.util.ArrayList;
+
+import static org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20XMLUtil.*;
 
 /**
  * Date: 05/12/12 14:36
@@ -41,11 +44,48 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
     @Override
     public void handleSave() {
 
+        final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
+
         final AmendableWidget parentAmendableWidget = dialogContext.getParentAmendableWidget();
         final AmendableWidget amendableWidget = dialogContext.getAmendableWidget();
 
         final AkomaNtoso akomaNtoso = new AkomaNtoso();
         final Amendment root = akomaNtoso.setAmendment(new Amendment());
+
+        // meta
+        final Identification identification = new Identification();
+        final String formattedDate = DateTimeFormat.getFormat(DateTimeFormat.PredefinedFormat.ISO_8601).format(new java.util.Date());
+        identification.setFRBRWork(new FRBRWork() {
+            {
+                setFRBRthis((FRBRthis) new FRBRthis().valueAttr(s("TODO")));
+                addFRBRuri((FRBRuri) new FRBRuri().valueAttr(s("TODO")));
+                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
+                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
+                setFRBRcountry((FRBRcountry) new FRBRcountry().valueAttr(s("TODO")));
+            }
+        });
+
+        identification.setFRBRExpression(new FRBRExpression() {
+            {
+                setFRBRthis((FRBRthis) new FRBRthis().valueAttr(s("TODO")));
+                addFRBRuri((FRBRuri) new FRBRuri().valueAttr(s("TODO")));
+                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
+                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
+                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
+                addFRBRlanguage(new FRBRlanguage().languageAttr(l(languageIso)));
+            }
+        });
+
+        identification.setFRBRManifestation(new FRBRManifestation() {
+            {
+                setFRBRthis((FRBRthis) new FRBRthis().valueAttr(s("TODO")));
+                addFRBRuri((FRBRuri) new FRBRuri().valueAttr(s("TODO")));
+                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
+                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
+            }
+        });
+
+        root.setMeta(new Meta()).setIdentification(identification);
 
         // preface
         root.setPreface(new Preface())
@@ -55,7 +95,6 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         // amendment body
         final AmendmentBody amendmentBody = root.setAmendmentBody(new AmendmentBody());
 
-        final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
         amendmentBody
                 .addAmendmentHeading(new AmendmentHeading())
                 .addBlock(new Block()).html(locator.getLocation(parentAmendableWidget, amendableWidget, languageIso, true));
