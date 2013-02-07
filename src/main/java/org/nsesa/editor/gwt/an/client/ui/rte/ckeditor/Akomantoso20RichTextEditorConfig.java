@@ -30,6 +30,7 @@ public class Akomantoso20RichTextEditorConfig extends CKEditorConfig {
                 GWT.getModuleBaseURL() + "../" + "css/ckeditor.css"})
                 .setBodyClass("akomaNtoso")
                 .setRemovePlugins("elementspath")
+                .setZIndex(30000)
                 .setExtraPlugins("nsesa")
                 .setToolbarLocation("bottom")
                 .setResize_enabled(false)
