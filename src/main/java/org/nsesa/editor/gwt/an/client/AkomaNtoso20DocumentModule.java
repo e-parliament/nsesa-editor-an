@@ -2,8 +2,10 @@ package org.nsesa.editor.gwt.an.client;
 
 import com.google.gwt.inject.client.AbstractGinModule;
 import org.nsesa.editor.gwt.an.client.ui.amendment.AkomaNtoso20AmendmentController;
+import org.nsesa.editor.gwt.an.client.ui.amendment.action.AkomaNtoso20AmendmentActionPanelController;
 import org.nsesa.editor.gwt.an.client.ui.document.AkomaNtoso20SourceFileHeaderController;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
+import org.nsesa.editor.gwt.core.client.ui.amendment.action.AmendmentActionPanelController;
 import org.nsesa.editor.gwt.editor.client.ui.document.sourcefile.header.SourceFileHeaderController;
 
 /**
@@ -17,5 +19,6 @@ public class AkomaNtoso20DocumentModule extends AbstractGinModule {
     protected void configure() {
         bind(AmendmentController.class).to(AkomaNtoso20AmendmentController.class);
         bind(SourceFileHeaderController.class).to(AkomaNtoso20SourceFileHeaderController.class);
+        bind(AmendmentActionPanelController.class).to(AkomaNtoso20AmendmentActionPanelController.class);
     }
 }
