@@ -57,9 +57,20 @@
 <#macro displayBlock overlayStyle overlayClass>
 .akomaNtoso-drafting .${overlayStyle.name}:before {
     content: "${overlayStyle.name}";
+    border: 1px solid #000000;
+    background-color: #${colorGenerator.getColor(overlayStyle.name)};
     display:block;
-    text-align:right;
-    color: #000000;
+    text-align:center;
+    font-family: Sans-Serif;
+    font-size: 10pt;
+    left: 80%;
+    color: #${colorGenerator.getTextColor(overlayStyle.name)};
+    width: 90px;
+    border-radius: 3px;
+    margin: 0px;
+    padding: 1px;
+    position: relative;
+
 }
 .akomaNtoso-drafting .${overlayStyle.name} {
     border:<#if overlayStyle.values["border"]??>${overlayStyle.values["border"]};<#else>1px solid #${colorGenerator.getColor(overlayStyle.name)};</#if>
