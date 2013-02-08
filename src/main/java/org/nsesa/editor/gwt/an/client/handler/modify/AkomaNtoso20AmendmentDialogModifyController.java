@@ -5,6 +5,7 @@ import com.google.gwt.user.client.DOM;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
+import org.nsesa.editor.gwt.core.client.amendment.AmendableWidgetWalker;
 import org.nsesa.editor.gwt.core.client.ui.drafting.DraftingController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
@@ -138,12 +139,29 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         final com.google.gwt.user.client.Element clone = DOM.clone(amendableWidget.asWidget().getElement(), false);
         clone.setInnerHTML(amendmentText);
         final AmendableWidget overlayed = overlayFactory.getAmendableWidget(clone);
+        modifyIdsIfNeeded(overlayed);
         quotedStructureAmendment.addAmendableWidget(overlayed);
 
         akomaNtoso.addAmendableWidget(root);
         dialogContext.getAmendment().setRoot(akomaNtoso);
 
         super.handleSave();
+    }
+
+    public void modifyIdsIfNeeded(final AmendableWidget root) {
+        // we only need to modify the ids if we're a new amendment (not editing an existing one)
+        if (dialogContext.getAmendmentController() == null) {
+            // now we need to make sure that the new structure has new ids assigned
+            root.walk(new AmendableWidgetWalker.AmendableVisitor() {
+                @Override
+                public boolean visit(AmendableWidget visited) {
+                    if (visited.getAmendableElement().getId() != null && !"".equals(visited.getAmendableElement().getId().trim())) {
+                        visited.getAmendableElement().setId(visited.getAmendableElement().getId() + "-mod");
+                    }
+                    return true;
+                }
+            });
+        }
     }
 
     private <T extends AmendableWidget> T a(final String tag) {
