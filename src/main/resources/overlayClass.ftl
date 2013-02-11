@@ -168,6 +168,17 @@ public class ${overlayClass.className?cap_first} <#if overlayClass.parent?? && (
             </#if>
         </#if>
     </#list>
+    //Override all attributes methods to be conformant with DSL approach
+    <#if overlayClass.parent.complex || overlayClass.parent.element || overlayClass.parent.simple>
+        <#list overlayClass.parent.allAttributesProperties as parentProp>
+    //DSL Style set value
+    public ${overlayClass.className?cap_first} <@propertyName property = parentProp/>(final <@propertyClassName property=parentProp/> <@propertyName property = parentProp/>) {
+        set<@propertyNameCap property = parentProp/>(<@propertyName property = parentProp/>);
+        return this;
+    }
+    </#list>
+    </#if>
+
     /**
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
@@ -275,3 +286,10 @@ ${propName}
 </#compress></#macro>
 
 <#macro plural propertyName><#compress><#if propertyName?ends_with("y")>${propertyName?substring(0, propertyName?length - 1)}ies<#elseif propertyName?ends_with("s")>${propertyName}es<#else>${propertyName}s</#if></#compress></#macro>
+
+<#macro generateField property>
+    private <@propertyClassName property=property/> <#if property.collection><@pl property=property/> = new ArrayList
+        <<#if property.wildCard && !property.attribute>AmendableWidgetImpl>
+        ();<#elseif property.wildCard && property.attribute> String>()<#else>${property.className?cap_first}
+        >();</#if><#else><@propertyName property = property/>;</#if>
+</#macro>

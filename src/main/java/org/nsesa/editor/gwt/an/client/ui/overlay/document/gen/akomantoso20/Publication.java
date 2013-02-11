@@ -1,9 +1,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MetaoptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,97 +48,13 @@ public class Publication extends MetaoptComplexType  {
     }
 
 // FIELDS ------------------
-    private AnyURISimpleType refersToAttr;
-    private StringSimpleType numberAttr;
-    private StringSimpleType nameAttr;
-    private DateSimpleType dateAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
+    private StringSimpleType numberAttr;
+    private DateSimpleType dateAttr;
+    private AnyURISimpleType refersToAttr;
+    private StringSimpleType nameAttr;
 
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-     }
-     //DSL Style get value
-    public AnyURISimpleType refersToAttr() {
-        return  getRefersToAttr();
-    }
-
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-    }
-     //DSL Style set value
-    public Publication refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-    public StringSimpleType getNumberAttr() {
-        if (numberAttr == null) {
-            numberAttr = new StringSimpleType();
-            numberAttr.setValue(getElement().getAttribute("number"));
-        }
-
-        return numberAttr;
-     }
-     //DSL Style get value
-    public StringSimpleType numberAttr() {
-        return  getNumberAttr();
-    }
-
-    public void setNumberAttr(final StringSimpleType numberAttr) {
-        this.numberAttr = numberAttr;
-    }
-     //DSL Style set value
-    public Publication numberAttr(final StringSimpleType numberAttr) {
-        setNumberAttr(numberAttr);
-        return this;
-    }
-    public StringSimpleType getNameAttr() {
-        if (nameAttr == null) {
-            nameAttr = new StringSimpleType();
-            nameAttr.setValue(getElement().getAttribute("name"));
-        }
-
-        return nameAttr;
-     }
-     //DSL Style get value
-    public StringSimpleType nameAttr() {
-        return  getNameAttr();
-    }
-
-    public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-    }
-     //DSL Style set value
-    public Publication nameAttr(final StringSimpleType nameAttr) {
-        setNameAttr(nameAttr);
-        return this;
-    }
-    public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-            dateAttr = new DateSimpleType();
-            dateAttr.setValue(getElement().getAttribute("date"));
-        }
-
-        return dateAttr;
-     }
-     //DSL Style get value
-    public DateSimpleType dateAttr() {
-        return  getDateAttr();
-    }
-
-    public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-    }
-     //DSL Style set value
-    public Publication dateAttr(final DateSimpleType dateAttr) {
-        setDateAttr(dateAttr);
-        return this;
-    }
     public StringSimpleType getShowAsAttr() {
         if (showAsAttr == null) {
             showAsAttr = new StringSimpleType();
@@ -179,6 +97,107 @@ public class Publication extends MetaoptComplexType  {
         setShortFormAttr(shortFormAttr);
         return this;
     }
+    public StringSimpleType getNumberAttr() {
+        if (numberAttr == null) {
+            numberAttr = new StringSimpleType();
+            numberAttr.setValue(getElement().getAttribute("number"));
+        }
+
+        return numberAttr;
+     }
+     //DSL Style get value
+    public StringSimpleType numberAttr() {
+        return  getNumberAttr();
+    }
+
+    public void setNumberAttr(final StringSimpleType numberAttr) {
+        this.numberAttr = numberAttr;
+    }
+     //DSL Style set value
+    public Publication numberAttr(final StringSimpleType numberAttr) {
+        setNumberAttr(numberAttr);
+        return this;
+    }
+    public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(getElement().getAttribute("date"));
+        }
+
+        return dateAttr;
+     }
+     //DSL Style get value
+    public DateSimpleType dateAttr() {
+        return  getDateAttr();
+    }
+
+    public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+    }
+     //DSL Style set value
+    public Publication dateAttr(final DateSimpleType dateAttr) {
+        setDateAttr(dateAttr);
+        return this;
+    }
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+     }
+     //DSL Style get value
+    public AnyURISimpleType refersToAttr() {
+        return  getRefersToAttr();
+    }
+
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+    }
+     //DSL Style set value
+    public Publication refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+    public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+            nameAttr = new StringSimpleType();
+            nameAttr.setValue(getElement().getAttribute("name"));
+        }
+
+        return nameAttr;
+     }
+     //DSL Style get value
+    public StringSimpleType nameAttr() {
+        return  getNameAttr();
+    }
+
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+    }
+     //DSL Style set value
+    public Publication nameAttr(final StringSimpleType nameAttr) {
+        setNameAttr(nameAttr);
+        return this;
+    }
+    //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public Publication wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Publication idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Publication evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
     /**
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
@@ -199,12 +218,12 @@ public class Publication extends MetaoptComplexType  {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("number", getNumberAttr() != null ? getNumberAttr().getValue() : null);
-        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
-        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("number", getNumberAttr() != null ? getNumberAttr().getValue() : null);
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         return attrs;
     }
 }

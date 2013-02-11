@@ -1,6 +1,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DebateStructureComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.VersionTypeSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -49,6 +50,13 @@ public class Debate extends DebateStructureComplexType  {
     }
 
 // FIELDS ------------------
+
+    //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public Debate containsAttr(final VersionTypeSimpleType containsAttr) {
+        setContainsAttr(containsAttr);
+        return this;
+    }
 
     /**
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.

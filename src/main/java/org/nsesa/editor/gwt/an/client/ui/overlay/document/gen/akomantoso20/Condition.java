@@ -2,6 +2,9 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AnyOtherTypeComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -68,6 +71,28 @@ public class Condition extends AnyOtherTypeComplexType  {
         setFrozenAttr(frozenAttr);
         return this;
     }
+    //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public Condition hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Condition idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Condition evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Condition wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
     /**
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */

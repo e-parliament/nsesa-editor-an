@@ -1,8 +1,8 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ComponentData;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
@@ -48,13 +48,13 @@ public class ComponentData extends AmendableWidgetImpl  {
     }
 
 // FIELDS ------------------
-    private String wildcardContentAttr;
-    private StringSimpleType nameAttr;
     private AnyURISimpleType hrefAttr;
+    private StringSimpleType nameAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private String wildcardContentAttr;
 
     public java.util.List<ComponentData> getComponentDatas() {
         java.util.List<ComponentData> result = new ArrayList<ComponentData>();
@@ -76,24 +76,25 @@ public class ComponentData extends AmendableWidgetImpl  {
         return componentDataElem;
     }
 
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+    public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(getElement().getAttribute("href"));
         }
 
-        return wildcardContentAttr;
+        return hrefAttr;
      }
      //DSL Style get value
-    public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
+    public AnyURISimpleType hrefAttr() {
+        return  getHrefAttr();
     }
 
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
     }
      //DSL Style set value
-    public ComponentData wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public ComponentData hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
         return this;
     }
     public StringSimpleType getNameAttr() {
@@ -115,27 +116,6 @@ public class ComponentData extends AmendableWidgetImpl  {
      //DSL Style set value
     public ComponentData nameAttr(final StringSimpleType nameAttr) {
         setNameAttr(nameAttr);
-        return this;
-    }
-    public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-            hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(getElement().getAttribute("href"));
-        }
-
-        return hrefAttr;
-     }
-     //DSL Style get value
-    public AnyURISimpleType hrefAttr() {
-        return  getHrefAttr();
-    }
-
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-    }
-     //DSL Style set value
-    public ComponentData hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
         return this;
     }
     public StringSimpleType getShowAsAttr() {
@@ -222,6 +202,28 @@ public class ComponentData extends AmendableWidgetImpl  {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+     }
+     //DSL Style get value
+    public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
+    }
+
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+     //DSL Style set value
+    public ComponentData wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+    //Override all attributes methods to be conformant with DSL approach
+
     /**
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
@@ -242,13 +244,13 @@ public class ComponentData extends AmendableWidgetImpl  {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }
 }

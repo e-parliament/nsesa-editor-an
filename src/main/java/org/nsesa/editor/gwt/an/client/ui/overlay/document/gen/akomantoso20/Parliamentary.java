@@ -47,6 +47,8 @@ public class Parliamentary extends ParliamentaryAnalysisComplexType  {
 
 // FIELDS ------------------
 
+    //Override all attributes methods to be conformant with DSL approach
+
     /**
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */

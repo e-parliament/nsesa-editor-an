@@ -46,11 +46,11 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
 
 // FIELDS ------------------
     private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType hrefAttr;
     private AnyURISimpleType outcomeAttr;
     private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType hrefAttr;
 
     public java.util.List<Quorum> getQuorums() {
         java.util.List<Quorum> result = new ArrayList<Quorum>();
@@ -111,6 +111,27 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
      //DSL Style set value
     public ParliamentaryAnalysisTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
+        return this;
+    }
+    public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(getElement().getAttribute("href"));
+        }
+
+        return hrefAttr;
+     }
+     //DSL Style get value
+    public AnyURISimpleType hrefAttr() {
+        return  getHrefAttr();
+    }
+
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+    }
+     //DSL Style set value
+    public ParliamentaryAnalysisTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
         return this;
     }
     public AnyURISimpleType getOutcomeAttr() {
@@ -196,27 +217,8 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
-    public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-            hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(getElement().getAttribute("href"));
-        }
+    //Override all attributes methods to be conformant with DSL approach
 
-        return hrefAttr;
-     }
-     //DSL Style get value
-    public AnyURISimpleType hrefAttr() {
-        return  getHrefAttr();
-    }
-
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-    }
-     //DSL Style set value
-    public ParliamentaryAnalysisTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
     /**
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
@@ -238,11 +240,11 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         return attrs;
     }
 }

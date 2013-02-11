@@ -1,6 +1,13 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.SpeechTypeComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateTimeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -56,6 +63,88 @@ public class Question extends SpeechTypeComplexType  {
     }
 
 // FIELDS ------------------
+
+    //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public Question byAttr(final AnyURISimpleType byAttr) {
+        setByAttr(byAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question asAttr(final AnyURISimpleType asAttr) {
+        setAsAttr(asAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question startTimeAttr(final DateTimeSimpleType startTimeAttr) {
+        setStartTimeAttr(startTimeAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question endTimeAttr(final DateTimeSimpleType endTimeAttr) {
+        setEndTimeAttr(endTimeAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question toAttr(final AnyURISimpleType toAttr) {
+        setToAttr(toAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Question periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
 
     /**
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.

@@ -1,6 +1,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FragmentStructureComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -45,6 +46,13 @@ public class Fragment extends FragmentStructureComplexType  {
     }
 
 // FIELDS ------------------
+
+    //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public Fragment includedInAttr(final AnyURISimpleType includedInAttr) {
+        setIncludedInAttr(includedInAttr);
+        return this;
+    }
 
     /**
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.

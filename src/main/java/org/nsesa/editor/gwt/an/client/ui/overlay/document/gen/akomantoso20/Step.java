@@ -1,8 +1,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AnyOtherTypeComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,11 +48,32 @@ public class Step extends AnyOtherTypeComplexType  {
     }
 
 // FIELDS ------------------
+    private AnyURISimpleType actorAttr;
     private DateSimpleType dateAttr;
     private AnyURISimpleType asAttr;
     private AnyURISimpleType outcomeAttr;
-    private AnyURISimpleType actorAttr;
 
+    public AnyURISimpleType getActorAttr() {
+        if (actorAttr == null) {
+            actorAttr = new AnyURISimpleType();
+            actorAttr.setValue(getElement().getAttribute("actor"));
+        }
+
+        return actorAttr;
+     }
+     //DSL Style get value
+    public AnyURISimpleType actorAttr() {
+        return  getActorAttr();
+    }
+
+    public void setActorAttr(final AnyURISimpleType actorAttr) {
+        this.actorAttr = actorAttr;
+    }
+     //DSL Style set value
+    public Step actorAttr(final AnyURISimpleType actorAttr) {
+        setActorAttr(actorAttr);
+        return this;
+    }
     public DateSimpleType getDateAttr() {
         if (dateAttr == null) {
             dateAttr = new DateSimpleType();
@@ -114,27 +137,28 @@ public class Step extends AnyOtherTypeComplexType  {
         setOutcomeAttr(outcomeAttr);
         return this;
     }
-    public AnyURISimpleType getActorAttr() {
-        if (actorAttr == null) {
-            actorAttr = new AnyURISimpleType();
-            actorAttr.setValue(getElement().getAttribute("actor"));
-        }
-
-        return actorAttr;
-     }
-     //DSL Style get value
-    public AnyURISimpleType actorAttr() {
-        return  getActorAttr();
-    }
-
-    public void setActorAttr(final AnyURISimpleType actorAttr) {
-        this.actorAttr = actorAttr;
-    }
-     //DSL Style set value
-    public Step actorAttr(final AnyURISimpleType actorAttr) {
-        setActorAttr(actorAttr);
+    //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public Step hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
         return this;
     }
+    //DSL Style set value
+    public Step idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Step evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Step wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
     /**
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
@@ -155,10 +179,10 @@ public class Step extends AnyOtherTypeComplexType  {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("actor", getActorAttr() != null ? getActorAttr().getValue() : null);
         attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
         attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
-        attrs.put("actor", getActorAttr() != null ? getActorAttr().getValue() : null);
         return attrs;
     }
 }

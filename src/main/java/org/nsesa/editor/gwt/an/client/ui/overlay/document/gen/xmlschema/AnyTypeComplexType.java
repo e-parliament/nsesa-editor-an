@@ -59,6 +59,8 @@ public class AnyTypeComplexType extends AmendableWidgetImpl  {
         throw new RuntimeException("Adding wildcard content is not supported yet");
     }
 
+    //Override all attributes methods to be conformant with DSL approach
+
     /**
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */

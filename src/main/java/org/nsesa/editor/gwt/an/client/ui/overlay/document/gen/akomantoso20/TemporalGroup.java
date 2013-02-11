@@ -132,6 +132,8 @@ public class TemporalGroup extends AmendableWidgetImpl  {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
+    //Override all attributes methods to be conformant with DSL approach
+
     /**
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */

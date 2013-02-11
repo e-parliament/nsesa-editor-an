@@ -57,18 +57,18 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         final String formattedDate = DateTimeFormat.getFormat(DateTimeFormat.PredefinedFormat.ISO_8601).format(new java.util.Date());
         identification.setFRBRWork(new FRBRWork() {
             {
-                setFRBRthis((FRBRthis) new FRBRthis().valueAttr(s("TODO")));
-                addFRBRuri((FRBRuri) new FRBRuri().valueAttr(s("TODO")));
+                setFRBRthis(new FRBRthis().valueAttr(s("TODO")));
+                addFRBRuri( new FRBRuri().valueAttr(s("TODO")));
                 addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
                 addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
-                setFRBRcountry((FRBRcountry) new FRBRcountry().valueAttr(s("TODO")));
+                setFRBRcountry(new FRBRcountry().valueAttr(s("TODO")));
             }
         });
 
         identification.setFRBRExpression(new FRBRExpression() {
             {
-                setFRBRthis((FRBRthis) new FRBRthis().valueAttr(s("TODO")));
-                addFRBRuri((FRBRuri) new FRBRuri().valueAttr(s("TODO")));
+                setFRBRthis( new FRBRthis().valueAttr(s("TODO")));
+                addFRBRuri(new FRBRuri().valueAttr(s("TODO")));
                 addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
                 addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
                 addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
@@ -78,8 +78,8 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
         identification.setFRBRManifestation(new FRBRManifestation() {
             {
-                setFRBRthis((FRBRthis) new FRBRthis().valueAttr(s("TODO")));
-                addFRBRuri((FRBRuri) new FRBRuri().valueAttr(s("TODO")));
+                setFRBRthis(new FRBRthis().valueAttr(s("TODO")));
+                addFRBRuri(new FRBRuri().valueAttr(s("TODO")));
                 addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
                 addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
             }

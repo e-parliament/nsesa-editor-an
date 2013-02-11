@@ -50,6 +50,8 @@ public class ActiveModifications extends AmendmentsComplexType  {
 
 // FIELDS ------------------
 
+    //Override all attributes methods to be conformant with DSL approach
+
     /**
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
