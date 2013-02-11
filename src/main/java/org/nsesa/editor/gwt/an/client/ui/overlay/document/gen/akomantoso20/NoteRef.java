@@ -1,36 +1,41 @@
+/**
+ * Copyright 2013 European Parliament
+ *
+ * Licensed under the EUPL, Version 1.1 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+ * You may not use this work except in compliance with the Licence.
+ * You may obtain a copy of the Licence at:
+ *
+ * http://joinup.ec.europa.eu/software/page/eupl
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the Licence for the specific language governing permissions and limitations under the Licence.
+ */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MarkeroptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PlacementTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class NoteRef extends MarkeroptComplexType  {
+public class NoteRef extends MarkeroptComplexType {
     private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
         {
         }
     };
 
 
-// STATIC create method
+    // STATIC create method
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "noteRef");
@@ -39,7 +44,7 @@ public class NoteRef extends MarkeroptComplexType  {
         return span;
     }
 
-// CONSTRUCTORS ------------------
+    // CONSTRUCTORS ------------------
     public NoteRef() {
         super(create());
         setType("noteRef");
@@ -49,7 +54,7 @@ public class NoteRef extends MarkeroptComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private StringSimpleType markerAttr;
     private PlacementTypeSimpleType placementAttr;
     private AnyURISimpleType placementBaseAttr;
@@ -62,40 +67,46 @@ public class NoteRef extends MarkeroptComplexType  {
         }
 
         return markerAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public StringSimpleType markerAttr() {
-        return  getMarkerAttr();
+        return getMarkerAttr();
     }
 
     public void setMarkerAttr(final StringSimpleType markerAttr) {
         this.markerAttr = markerAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public NoteRef markerAttr(final StringSimpleType markerAttr) {
         setMarkerAttr(markerAttr);
         return this;
     }
+
     public PlacementTypeSimpleType getPlacementAttr() {
         if (placementAttr == null) {
             placementAttr = PlacementTypeSimpleType.fromString(getElement().getAttribute("placement"));
         }
 
         return placementAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public PlacementTypeSimpleType placementAttr() {
-        return  getPlacementAttr();
+        return getPlacementAttr();
     }
 
     public void setPlacementAttr(final PlacementTypeSimpleType placementAttr) {
         this.placementAttr = placementAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public NoteRef placementAttr(final PlacementTypeSimpleType placementAttr) {
         setPlacementAttr(placementAttr);
         return this;
     }
+
     public AnyURISimpleType getPlacementBaseAttr() {
         if (placementBaseAttr == null) {
             placementBaseAttr = new AnyURISimpleType();
@@ -103,20 +114,23 @@ public class NoteRef extends MarkeroptComplexType  {
         }
 
         return placementBaseAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType placementBaseAttr() {
-        return  getPlacementBaseAttr();
+        return getPlacementBaseAttr();
     }
 
     public void setPlacementBaseAttr(final AnyURISimpleType placementBaseAttr) {
         this.placementBaseAttr = placementBaseAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public NoteRef placementBaseAttr(final AnyURISimpleType placementBaseAttr) {
         setPlacementBaseAttr(placementBaseAttr);
         return this;
     }
+
     public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
             hrefAttr = new AnyURISimpleType();
@@ -124,71 +138,84 @@ public class NoteRef extends MarkeroptComplexType  {
         }
 
         return hrefAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType hrefAttr() {
-        return  getHrefAttr();
+        return getHrefAttr();
     }
 
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {
         this.hrefAttr = hrefAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public NoteRef hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
         return this;
     }
+
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
     public NoteRef refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
         return this;
     }
+
     //DSL Style set value
     public NoteRef idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
+
     //DSL Style set value
     public NoteRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
+
     //DSL Style set value
     public NoteRef wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
+
     //DSL Style set value
     public NoteRef classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
         return this;
     }
+
     //DSL Style set value
     public NoteRef styleAttr(final StringSimpleType styleAttr) {
         setStyleAttr(styleAttr);
         return this;
     }
+
     //DSL Style set value
     public NoteRef titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
         return this;
     }
+
     //DSL Style set value
     public NoteRef langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
         return this;
     }
+
     //DSL Style set value
     public NoteRef alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
         return this;
     }
+
     //DSL Style set value
     public NoteRef statusAttr(final StatusTypeSimpleType statusAttr) {
         setStatusAttr(statusAttr);
         return this;
     }
+
     //DSL Style set value
     public NoteRef periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
@@ -196,16 +223,16 @@ public class NoteRef extends MarkeroptComplexType  {
     }
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

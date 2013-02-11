@@ -1,41 +1,46 @@
+/**
+ * Copyright 2013 European Parliament
+ *
+ * Licensed under the EUPL, Version 1.1 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+ * You may not use this work except in compliance with the Licence.
+ * You may obtain a copy of the Licence at:
+ *
+ * http://joinup.ec.europa.eu/software/page/eupl
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the Licence for the specific language governing permissions and limitations under the Licence.
+ */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.VersionTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Meta;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.CoverPage;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Header;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.JudgementBody;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Conclusions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Attachments;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class JudgementStructureComplexType extends AmendableWidgetImpl  {
+public class JudgementStructureComplexType extends AmendableWidgetImpl {
     private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
         {
-            put(new Meta(), new Occurrence(1,1));
-            put(new CoverPage(), new Occurrence(0,1));
-            put(new Header(), new Occurrence(1,1));
-            put(new JudgementBody(), new Occurrence(1,1));
-            put(new Conclusions(), new Occurrence(0,1));
-            put(new Attachments(), new Occurrence(0,1));
+            put(new Meta(), new Occurrence(1, 1));
+            put(new CoverPage(), new Occurrence(0, 1));
+            put(new Header(), new Occurrence(1, 1));
+            put(new JudgementBody(), new Occurrence(1, 1));
+            put(new Conclusions(), new Occurrence(0, 1));
+            put(new Attachments(), new Occurrence(0, 1));
         }
     };
 
 
-// STATIC create method
+    // STATIC create method
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "judgementStructureComplexType");
@@ -50,7 +55,7 @@ public class JudgementStructureComplexType extends AmendableWidgetImpl  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private VersionTypeSimpleType containsAttr;
 
     public VersionTypeSimpleType getContainsAttr() {
@@ -59,33 +64,36 @@ public class JudgementStructureComplexType extends AmendableWidgetImpl  {
         }
 
         return containsAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public VersionTypeSimpleType containsAttr() {
-        return  getContainsAttr();
+        return getContainsAttr();
     }
 
     public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
         this.containsAttr = containsAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public JudgementStructureComplexType containsAttr(final VersionTypeSimpleType containsAttr) {
         setContainsAttr(containsAttr);
         return this;
     }
+
     public Meta getMeta() {
         Meta result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Meta".equalsIgnoreCase(widget.getType())) {
-                result = (Meta)widget;
+                result = (Meta) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public Meta setMeta(Meta metaElem) {
         Meta result = getMeta();
         // remove the child of the same type if exist
@@ -96,19 +104,20 @@ public class JudgementStructureComplexType extends AmendableWidgetImpl  {
 
         return metaElem;
     }
+
     public CoverPage getCoverPage() {
         CoverPage result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("CoverPage".equalsIgnoreCase(widget.getType())) {
-                result = (CoverPage)widget;
+                result = (CoverPage) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public CoverPage setCoverPage(CoverPage coverPageElem) {
         CoverPage result = getCoverPage();
         // remove the child of the same type if exist
@@ -119,19 +128,20 @@ public class JudgementStructureComplexType extends AmendableWidgetImpl  {
 
         return coverPageElem;
     }
+
     public Header getHeader() {
         Header result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Header".equalsIgnoreCase(widget.getType())) {
-                result = (Header)widget;
+                result = (Header) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public Header setHeader(Header headerElem) {
         Header result = getHeader();
         // remove the child of the same type if exist
@@ -142,19 +152,20 @@ public class JudgementStructureComplexType extends AmendableWidgetImpl  {
 
         return headerElem;
     }
+
     public JudgementBody getJudgementBody() {
         JudgementBody result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("JudgementBody".equalsIgnoreCase(widget.getType())) {
-                result = (JudgementBody)widget;
+                result = (JudgementBody) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public JudgementBody setJudgementBody(JudgementBody judgementBodyElem) {
         JudgementBody result = getJudgementBody();
         // remove the child of the same type if exist
@@ -165,19 +176,20 @@ public class JudgementStructureComplexType extends AmendableWidgetImpl  {
 
         return judgementBodyElem;
     }
+
     public Conclusions getConclusions() {
         Conclusions result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Conclusions".equalsIgnoreCase(widget.getType())) {
-                result = (Conclusions)widget;
+                result = (Conclusions) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public Conclusions setConclusions(Conclusions conclusionsElem) {
         Conclusions result = getConclusions();
         // remove the child of the same type if exist
@@ -188,19 +200,20 @@ public class JudgementStructureComplexType extends AmendableWidgetImpl  {
 
         return conclusionsElem;
     }
+
     public Attachments getAttachments() {
         Attachments result = null;
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Attachments".equalsIgnoreCase(widget.getType())) {
-                result = (Attachments)widget;
+                result = (Attachments) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public Attachments setAttachments(Attachments attachmentsElem) {
         Attachments result = getAttachments();
         // remove the child of the same type if exist
@@ -214,16 +227,16 @@ public class JudgementStructureComplexType extends AmendableWidgetImpl  {
     //Override all attributes methods to be conformant with DSL approach
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

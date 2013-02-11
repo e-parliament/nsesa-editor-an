@@ -1,35 +1,46 @@
+/**
+ * Copyright 2013 European Parliament
+ *
+ * Licensed under the EUPL, Version 1.1 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+ * You may not use this work except in compliance with the Licence.
+ * You may obtain a copy of the Licence at:
+ *
+ * http://joinup.ec.europa.eu/software/page/eupl
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the Licence for the specific language governing permissions and limitations under the Licence.
+ */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Quorum;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Count;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
+public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl {
     private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
         {
-            put(new Quorum(), new Occurrence(1,1));
-            put(new Count(), new Occurrence(1,1));
+            put(new Quorum(), new Occurrence(1, 1));
+            put(new Count(), new Occurrence(1, 1));
         }
     };
 
 
-// STATIC create method
+    // STATIC create method
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "parliamentaryAnalysisTypeComplexType");
@@ -44,7 +55,7 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private AnyURISimpleType refersToAttr;
     private AnyURISimpleType hrefAttr;
     private AnyURISimpleType outcomeAttr;
@@ -56,17 +67,18 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Quorum> result = new ArrayList<Quorum>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Quorum".equalsIgnoreCase(widget.getType())) {
-                result.add((Quorum)widget);
+                result.add((Quorum) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Quorum> getQuorumList() {
-        return  getQuorums();
+        return getQuorums();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Quorum addQuorum(Quorum quorumElem) {
         this.addAmendableWidget(quorumElem);
         return quorumElem;
@@ -76,17 +88,18 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Count> result = new ArrayList<Count>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Count".equalsIgnoreCase(widget.getType())) {
-                result.add((Count)widget);
+                result.add((Count) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Count> getCountList() {
-        return  getCounts();
+        return getCounts();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Count addCount(Count countElem) {
         this.addAmendableWidget(countElem);
         return countElem;
@@ -99,20 +112,23 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         }
 
         return refersToAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType refersToAttr() {
-        return  getRefersToAttr();
+        return getRefersToAttr();
     }
 
     public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
         this.refersToAttr = refersToAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public ParliamentaryAnalysisTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
         return this;
     }
+
     public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
             hrefAttr = new AnyURISimpleType();
@@ -120,20 +136,23 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         }
 
         return hrefAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType hrefAttr() {
-        return  getHrefAttr();
+        return getHrefAttr();
     }
 
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {
         this.hrefAttr = hrefAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public ParliamentaryAnalysisTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
         return this;
     }
+
     public AnyURISimpleType getOutcomeAttr() {
         if (outcomeAttr == null) {
             outcomeAttr = new AnyURISimpleType();
@@ -141,40 +160,46 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         }
 
         return outcomeAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType outcomeAttr() {
-        return  getOutcomeAttr();
+        return getOutcomeAttr();
     }
 
     public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
         this.outcomeAttr = outcomeAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public ParliamentaryAnalysisTypeComplexType outcomeAttr(final AnyURISimpleType outcomeAttr) {
         setOutcomeAttr(outcomeAttr);
         return this;
     }
+
     public String getWildcardContentAttr() {
         if (wildcardContentAttr == null) {
             //hmm nothing to do here
         }
 
         return wildcardContentAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
+        return getWildcardContentAttr();
     }
 
     public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public ParliamentaryAnalysisTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
+
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
             idAttr = new IDSimpleType();
@@ -182,20 +207,23 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         }
 
         return idAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public IDSimpleType idAttr() {
-        return  getIdAttr();
+        return getIdAttr();
     }
 
     public void setIdAttr(final IDSimpleType idAttr) {
         this.idAttr = idAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public ParliamentaryAnalysisTypeComplexType idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
+
     public NMTOKENSimpleType getEvolvingIdAttr() {
         if (evolvingIdAttr == null) {
             evolvingIdAttr = new NMTOKENSimpleType();
@@ -203,16 +231,18 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
         }
 
         return evolvingIdAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public NMTOKENSimpleType evolvingIdAttr() {
-        return  getEvolvingIdAttr();
+        return getEvolvingIdAttr();
     }
 
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public ParliamentaryAnalysisTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
@@ -220,16 +250,16 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
     //Override all attributes methods to be conformant with DSL approach
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

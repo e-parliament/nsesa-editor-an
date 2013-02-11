@@ -1,80 +1,66 @@
+/**
+ * Copyright 2013 European Parliament
+ *
+ * Licensed under the EUPL, Version 1.1 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+ * You may not use this work except in compliance with the Licence.
+ * You may obtain a copy of the Licence at:
+ *
+ * http://joinup.ec.europa.eu/software/page/eupl
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the Licence for the specific language governing permissions and limitations under the Licence.
+ */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ComponentRef;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Hcontainer;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Clause;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Section;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Part;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Paragraph;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Chapter;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Title;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Article;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Book;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Tome;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Division;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.List;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Point;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Indent;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Alinea;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subsection;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subpart;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subparagraph;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subchapter;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subtitle;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subclause;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Sublist;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class BodyTypeComplexType extends AmendableWidgetImpl  {
+public class BodyTypeComplexType extends AmendableWidgetImpl {
     private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
         {
-            put(new ComponentRef(), new Occurrence(1,1));
-            put(new Hcontainer(), new Occurrence(0,-1));
-            put(new Clause(), new Occurrence(0,-1));
-            put(new Section(), new Occurrence(0,-1));
-            put(new Part(), new Occurrence(0,-1));
-            put(new Paragraph(), new Occurrence(0,-1));
-            put(new Chapter(), new Occurrence(0,-1));
-            put(new Title(), new Occurrence(0,-1));
-            put(new Article(), new Occurrence(0,-1));
-            put(new Book(), new Occurrence(0,-1));
-            put(new Tome(), new Occurrence(0,-1));
-            put(new Division(), new Occurrence(0,-1));
-            put(new List(), new Occurrence(0,-1));
-            put(new Point(), new Occurrence(0,-1));
-            put(new Indent(), new Occurrence(0,-1));
-            put(new Alinea(), new Occurrence(0,-1));
-            put(new Subsection(), new Occurrence(0,-1));
-            put(new Subpart(), new Occurrence(0,-1));
-            put(new Subparagraph(), new Occurrence(0,-1));
-            put(new Subchapter(), new Occurrence(0,-1));
-            put(new Subtitle(), new Occurrence(0,-1));
-            put(new Subclause(), new Occurrence(0,-1));
-            put(new Sublist(), new Occurrence(0,-1));
+            put(new ComponentRef(), new Occurrence(1, 1));
+            put(new Hcontainer(), new Occurrence(0, -1));
+            put(new Clause(), new Occurrence(0, -1));
+            put(new Section(), new Occurrence(0, -1));
+            put(new Part(), new Occurrence(0, -1));
+            put(new Paragraph(), new Occurrence(0, -1));
+            put(new Chapter(), new Occurrence(0, -1));
+            put(new Title(), new Occurrence(0, -1));
+            put(new Article(), new Occurrence(0, -1));
+            put(new Book(), new Occurrence(0, -1));
+            put(new Tome(), new Occurrence(0, -1));
+            put(new Division(), new Occurrence(0, -1));
+            put(new List(), new Occurrence(0, -1));
+            put(new Point(), new Occurrence(0, -1));
+            put(new Indent(), new Occurrence(0, -1));
+            put(new Alinea(), new Occurrence(0, -1));
+            put(new Subsection(), new Occurrence(0, -1));
+            put(new Subpart(), new Occurrence(0, -1));
+            put(new Subparagraph(), new Occurrence(0, -1));
+            put(new Subchapter(), new Occurrence(0, -1));
+            put(new Subtitle(), new Occurrence(0, -1));
+            put(new Subclause(), new Occurrence(0, -1));
+            put(new Sublist(), new Occurrence(0, -1));
         }
     };
 
 
-// STATIC create method
+    // STATIC create method
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "bodyTypeComplexType");
@@ -89,7 +75,7 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private AnyURISimpleType refersToAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
@@ -106,17 +92,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<ComponentRef> result = new ArrayList<ComponentRef>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("ComponentRef".equalsIgnoreCase(widget.getType())) {
-                result.add((ComponentRef)widget);
+                result.add((ComponentRef) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<ComponentRef> getComponentRefList() {
-        return  getComponentRefs();
+        return getComponentRefs();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public ComponentRef addComponentRef(ComponentRef componentRefElem) {
         this.addAmendableWidget(componentRefElem);
         return componentRefElem;
@@ -126,17 +113,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Hcontainer> result = new ArrayList<Hcontainer>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Hcontainer".equalsIgnoreCase(widget.getType())) {
-                result.add((Hcontainer)widget);
+                result.add((Hcontainer) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Hcontainer> getHcontainerList() {
-        return  getHcontainers();
+        return getHcontainers();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Hcontainer addHcontainer(Hcontainer hcontainerElem) {
         this.addAmendableWidget(hcontainerElem);
         return hcontainerElem;
@@ -149,20 +137,23 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         }
 
         return refersToAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType refersToAttr() {
-        return  getRefersToAttr();
+        return getRefersToAttr();
     }
 
     public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
         this.refersToAttr = refersToAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public BodyTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
         return this;
     }
+
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
             idAttr = new IDSimpleType();
@@ -170,20 +161,23 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         }
 
         return idAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public IDSimpleType idAttr() {
-        return  getIdAttr();
+        return getIdAttr();
     }
 
     public void setIdAttr(final IDSimpleType idAttr) {
         this.idAttr = idAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public BodyTypeComplexType idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
+
     public NMTOKENSimpleType getEvolvingIdAttr() {
         if (evolvingIdAttr == null) {
             evolvingIdAttr = new NMTOKENSimpleType();
@@ -191,40 +185,46 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         }
 
         return evolvingIdAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public NMTOKENSimpleType evolvingIdAttr() {
-        return  getEvolvingIdAttr();
+        return getEvolvingIdAttr();
     }
 
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public BodyTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
+
     public String getWildcardContentAttr() {
         if (wildcardContentAttr == null) {
             //hmm nothing to do here
         }
 
         return wildcardContentAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
+        return getWildcardContentAttr();
     }
 
     public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public BodyTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
+
     public StringSimpleType getClassAttr() {
         if (classAttr == null) {
             classAttr = new StringSimpleType();
@@ -232,20 +232,23 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         }
 
         return classAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public StringSimpleType classAttr() {
-        return  getClassAttr();
+        return getClassAttr();
     }
 
     public void setClassAttr(final StringSimpleType classAttr) {
         this.classAttr = classAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public BodyTypeComplexType classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
         return this;
     }
+
     public StringSimpleType getStyleAttr() {
         if (styleAttr == null) {
             styleAttr = new StringSimpleType();
@@ -253,20 +256,23 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         }
 
         return styleAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public StringSimpleType styleAttr() {
-        return  getStyleAttr();
+        return getStyleAttr();
     }
 
     public void setStyleAttr(final StringSimpleType styleAttr) {
         this.styleAttr = styleAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public BodyTypeComplexType styleAttr(final StringSimpleType styleAttr) {
         setStyleAttr(styleAttr);
         return this;
     }
+
     public StringSimpleType getTitleAttr() {
         if (titleAttr == null) {
             titleAttr = new StringSimpleType();
@@ -274,20 +280,23 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         }
 
         return titleAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public StringSimpleType titleAttr() {
-        return  getTitleAttr();
+        return getTitleAttr();
     }
 
     public void setTitleAttr(final StringSimpleType titleAttr) {
         this.titleAttr = titleAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public BodyTypeComplexType titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
         return this;
     }
+
     public LanguageSimpleType getLangAttr() {
         if (langAttr == null) {
             langAttr = new LanguageSimpleType();
@@ -295,20 +304,23 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         }
 
         return langAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public LanguageSimpleType langAttr() {
-        return  getLangAttr();
+        return getLangAttr();
     }
 
     public void setLangAttr(final LanguageSimpleType langAttr) {
         this.langAttr = langAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public BodyTypeComplexType langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
         return this;
     }
+
     public AnyURISimpleType getAlternativeToAttr() {
         if (alternativeToAttr == null) {
             alternativeToAttr = new AnyURISimpleType();
@@ -316,55 +328,62 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         }
 
         return alternativeToAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType alternativeToAttr() {
-        return  getAlternativeToAttr();
+        return getAlternativeToAttr();
     }
 
     public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         this.alternativeToAttr = alternativeToAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public BodyTypeComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
         return this;
     }
+
     public StatusTypeSimpleType getStatusAttr() {
         if (statusAttr == null) {
             statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
         }
 
         return statusAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public StatusTypeSimpleType statusAttr() {
-        return  getStatusAttr();
+        return getStatusAttr();
     }
 
     public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
         this.statusAttr = statusAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public BodyTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
         setStatusAttr(statusAttr);
         return this;
     }
+
     public java.util.List<Clause> getClauses() {
         java.util.List<Clause> result = new ArrayList<Clause>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Clause".equalsIgnoreCase(widget.getType())) {
-                result.add((Clause)widget);
+                result.add((Clause) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Clause> getClauseList() {
-        return  getClauses();
+        return getClauses();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Clause addClause(Clause clauseElem) {
         this.addAmendableWidget(clauseElem);
         return clauseElem;
@@ -374,17 +393,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Section> result = new ArrayList<Section>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Section".equalsIgnoreCase(widget.getType())) {
-                result.add((Section)widget);
+                result.add((Section) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Section> getSectionList() {
-        return  getSections();
+        return getSections();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Section addSection(Section sectionElem) {
         this.addAmendableWidget(sectionElem);
         return sectionElem;
@@ -394,17 +414,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Part> result = new ArrayList<Part>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Part".equalsIgnoreCase(widget.getType())) {
-                result.add((Part)widget);
+                result.add((Part) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Part> getPartList() {
-        return  getParts();
+        return getParts();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Part addPart(Part partElem) {
         this.addAmendableWidget(partElem);
         return partElem;
@@ -414,17 +435,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Paragraph> result = new ArrayList<Paragraph>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Paragraph".equalsIgnoreCase(widget.getType())) {
-                result.add((Paragraph)widget);
+                result.add((Paragraph) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Paragraph> getParagraphList() {
-        return  getParagraphs();
+        return getParagraphs();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Paragraph addParagraph(Paragraph paragraphElem) {
         this.addAmendableWidget(paragraphElem);
         return paragraphElem;
@@ -434,17 +456,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Chapter> result = new ArrayList<Chapter>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Chapter".equalsIgnoreCase(widget.getType())) {
-                result.add((Chapter)widget);
+                result.add((Chapter) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Chapter> getChapterList() {
-        return  getChapters();
+        return getChapters();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Chapter addChapter(Chapter chapterElem) {
         this.addAmendableWidget(chapterElem);
         return chapterElem;
@@ -454,17 +477,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Title> result = new ArrayList<Title>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Title".equalsIgnoreCase(widget.getType())) {
-                result.add((Title)widget);
+                result.add((Title) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Title> getTitle_List() {
-        return  getTitle_s();
+        return getTitle_s();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Title addTitle_(Title title_Elem) {
         this.addAmendableWidget(title_Elem);
         return title_Elem;
@@ -474,17 +498,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Article> result = new ArrayList<Article>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Article".equalsIgnoreCase(widget.getType())) {
-                result.add((Article)widget);
+                result.add((Article) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Article> getArticleList() {
-        return  getArticles();
+        return getArticles();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Article addArticle(Article articleElem) {
         this.addAmendableWidget(articleElem);
         return articleElem;
@@ -494,17 +519,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Book> result = new ArrayList<Book>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Book".equalsIgnoreCase(widget.getType())) {
-                result.add((Book)widget);
+                result.add((Book) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Book> getBookList() {
-        return  getBooks();
+        return getBooks();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Book addBook(Book bookElem) {
         this.addAmendableWidget(bookElem);
         return bookElem;
@@ -514,17 +540,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Tome> result = new ArrayList<Tome>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Tome".equalsIgnoreCase(widget.getType())) {
-                result.add((Tome)widget);
+                result.add((Tome) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Tome> getTomeList() {
-        return  getTomes();
+        return getTomes();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Tome addTome(Tome tomeElem) {
         this.addAmendableWidget(tomeElem);
         return tomeElem;
@@ -534,17 +561,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Division> result = new ArrayList<Division>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Division".equalsIgnoreCase(widget.getType())) {
-                result.add((Division)widget);
+                result.add((Division) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Division> getDivisionList() {
-        return  getDivisions();
+        return getDivisions();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Division addDivision(Division divisionElem) {
         this.addAmendableWidget(divisionElem);
         return divisionElem;
@@ -554,17 +582,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<List> result = new ArrayList<List>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("List".equalsIgnoreCase(widget.getType())) {
-                result.add((List)widget);
+                result.add((List) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<List> getListList() {
-        return  getLists();
+        return getLists();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public List addList(List listElem) {
         this.addAmendableWidget(listElem);
         return listElem;
@@ -574,17 +603,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Point> result = new ArrayList<Point>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Point".equalsIgnoreCase(widget.getType())) {
-                result.add((Point)widget);
+                result.add((Point) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Point> getPointList() {
-        return  getPoints();
+        return getPoints();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Point addPoint(Point pointElem) {
         this.addAmendableWidget(pointElem);
         return pointElem;
@@ -594,17 +624,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Indent> result = new ArrayList<Indent>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Indent".equalsIgnoreCase(widget.getType())) {
-                result.add((Indent)widget);
+                result.add((Indent) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Indent> getIndentList() {
-        return  getIndents();
+        return getIndents();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Indent addIndent(Indent indentElem) {
         this.addAmendableWidget(indentElem);
         return indentElem;
@@ -614,17 +645,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Alinea> result = new ArrayList<Alinea>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Alinea".equalsIgnoreCase(widget.getType())) {
-                result.add((Alinea)widget);
+                result.add((Alinea) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Alinea> getAlineaList() {
-        return  getAlineas();
+        return getAlineas();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Alinea addAlinea(Alinea alineaElem) {
         this.addAmendableWidget(alineaElem);
         return alineaElem;
@@ -634,17 +666,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Subsection> result = new ArrayList<Subsection>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Subsection".equalsIgnoreCase(widget.getType())) {
-                result.add((Subsection)widget);
+                result.add((Subsection) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Subsection> getSubsectionList() {
-        return  getSubsections();
+        return getSubsections();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Subsection addSubsection(Subsection subsectionElem) {
         this.addAmendableWidget(subsectionElem);
         return subsectionElem;
@@ -654,17 +687,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Subpart> result = new ArrayList<Subpart>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Subpart".equalsIgnoreCase(widget.getType())) {
-                result.add((Subpart)widget);
+                result.add((Subpart) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Subpart> getSubpartList() {
-        return  getSubparts();
+        return getSubparts();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Subpart addSubpart(Subpart subpartElem) {
         this.addAmendableWidget(subpartElem);
         return subpartElem;
@@ -674,17 +708,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Subparagraph> result = new ArrayList<Subparagraph>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Subparagraph".equalsIgnoreCase(widget.getType())) {
-                result.add((Subparagraph)widget);
+                result.add((Subparagraph) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Subparagraph> getSubparagraphList() {
-        return  getSubparagraphs();
+        return getSubparagraphs();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Subparagraph addSubparagraph(Subparagraph subparagraphElem) {
         this.addAmendableWidget(subparagraphElem);
         return subparagraphElem;
@@ -694,17 +729,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Subchapter> result = new ArrayList<Subchapter>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Subchapter".equalsIgnoreCase(widget.getType())) {
-                result.add((Subchapter)widget);
+                result.add((Subchapter) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Subchapter> getSubchapterList() {
-        return  getSubchapters();
+        return getSubchapters();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Subchapter addSubchapter(Subchapter subchapterElem) {
         this.addAmendableWidget(subchapterElem);
         return subchapterElem;
@@ -714,17 +750,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Subtitle> result = new ArrayList<Subtitle>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Subtitle".equalsIgnoreCase(widget.getType())) {
-                result.add((Subtitle)widget);
+                result.add((Subtitle) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Subtitle> getSubtitleList() {
-        return  getSubtitles();
+        return getSubtitles();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Subtitle addSubtitle(Subtitle subtitleElem) {
         this.addAmendableWidget(subtitleElem);
         return subtitleElem;
@@ -734,17 +771,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Subclause> result = new ArrayList<Subclause>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Subclause".equalsIgnoreCase(widget.getType())) {
-                result.add((Subclause)widget);
+                result.add((Subclause) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Subclause> getSubclauseList() {
-        return  getSubclauses();
+        return getSubclauses();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Subclause addSubclause(Subclause subclauseElem) {
         this.addAmendableWidget(subclauseElem);
         return subclauseElem;
@@ -754,17 +792,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         java.util.List<Sublist> result = new ArrayList<Sublist>();
         for (AmendableWidget widget : getChildAmendableWidgets()) {
             if ("Sublist".equalsIgnoreCase(widget.getType())) {
-                result.add((Sublist)widget);
+                result.add((Sublist) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<Sublist> getSublistList() {
-        return  getSublists();
+        return getSublists();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Sublist addSublist(Sublist sublistElem) {
         this.addAmendableWidget(sublistElem);
         return sublistElem;
@@ -777,16 +816,18 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
         }
 
         return periodAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType periodAttr() {
-        return  getPeriodAttr();
+        return getPeriodAttr();
     }
 
     public void setPeriodAttr(final AnyURISimpleType periodAttr) {
         this.periodAttr = periodAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public BodyTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -794,16 +835,16 @@ public class BodyTypeComplexType extends AmendableWidgetImpl  {
     //Override all attributes methods to be conformant with DSL approach
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

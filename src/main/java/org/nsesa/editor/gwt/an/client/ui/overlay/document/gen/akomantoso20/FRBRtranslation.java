@@ -1,34 +1,42 @@
+/**
+ * Copyright 2013 European Parliament
+ *
+ * Licensed under the EUPL, Version 1.1 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+ * You may not use this work except in compliance with the Licence.
+ * You may obtain a copy of the Licence at:
+ *
+ * http://joinup.ec.europa.eu/software/page/eupl
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the Licence for the specific language governing permissions and limitations under the Licence.
+ */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MetaoptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.YesNoTypeSimpleType;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class FRBRtranslation extends MetaoptComplexType  {
+public class FRBRtranslation extends MetaoptComplexType {
     private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
         {
         }
     };
 
 
-// STATIC create method
+    // STATIC create method
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "FRBRtranslation");
@@ -37,7 +45,7 @@ public class FRBRtranslation extends MetaoptComplexType  {
         return span;
     }
 
-// CONSTRUCTORS ------------------
+    // CONSTRUCTORS ------------------
     public FRBRtranslation() {
         super(create());
         setType("FRBRtranslation");
@@ -47,7 +55,7 @@ public class FRBRtranslation extends MetaoptComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private LanguageSimpleType fromLanguageAttr;
     private YesNoTypeSimpleType authoritativeAttr;
     private LanguageSimpleType pivotAttr;
@@ -61,40 +69,46 @@ public class FRBRtranslation extends MetaoptComplexType  {
         }
 
         return fromLanguageAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public LanguageSimpleType fromLanguageAttr() {
-        return  getFromLanguageAttr();
+        return getFromLanguageAttr();
     }
 
     public void setFromLanguageAttr(final LanguageSimpleType fromLanguageAttr) {
         this.fromLanguageAttr = fromLanguageAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public FRBRtranslation fromLanguageAttr(final LanguageSimpleType fromLanguageAttr) {
         setFromLanguageAttr(fromLanguageAttr);
         return this;
     }
+
     public YesNoTypeSimpleType getAuthoritativeAttr() {
         if (authoritativeAttr == null) {
             authoritativeAttr = YesNoTypeSimpleType.fromString(getElement().getAttribute("authoritative"));
         }
 
         return authoritativeAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public YesNoTypeSimpleType authoritativeAttr() {
-        return  getAuthoritativeAttr();
+        return getAuthoritativeAttr();
     }
 
     public void setAuthoritativeAttr(final YesNoTypeSimpleType authoritativeAttr) {
         this.authoritativeAttr = authoritativeAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public FRBRtranslation authoritativeAttr(final YesNoTypeSimpleType authoritativeAttr) {
         setAuthoritativeAttr(authoritativeAttr);
         return this;
     }
+
     public LanguageSimpleType getPivotAttr() {
         if (pivotAttr == null) {
             pivotAttr = new LanguageSimpleType();
@@ -102,20 +116,23 @@ public class FRBRtranslation extends MetaoptComplexType  {
         }
 
         return pivotAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public LanguageSimpleType pivotAttr() {
-        return  getPivotAttr();
+        return getPivotAttr();
     }
 
     public void setPivotAttr(final LanguageSimpleType pivotAttr) {
         this.pivotAttr = pivotAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public FRBRtranslation pivotAttr(final LanguageSimpleType pivotAttr) {
         setPivotAttr(pivotAttr);
         return this;
     }
+
     public AnyURISimpleType getByAttr() {
         if (byAttr == null) {
             byAttr = new AnyURISimpleType();
@@ -123,20 +140,23 @@ public class FRBRtranslation extends MetaoptComplexType  {
         }
 
         return byAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType byAttr() {
-        return  getByAttr();
+        return getByAttr();
     }
 
     public void setByAttr(final AnyURISimpleType byAttr) {
         this.byAttr = byAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public FRBRtranslation byAttr(final AnyURISimpleType byAttr) {
         setByAttr(byAttr);
         return this;
     }
+
     public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
             hrefAttr = new AnyURISimpleType();
@@ -144,31 +164,36 @@ public class FRBRtranslation extends MetaoptComplexType  {
         }
 
         return hrefAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType hrefAttr() {
-        return  getHrefAttr();
+        return getHrefAttr();
     }
 
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {
         this.hrefAttr = hrefAttr;
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public FRBRtranslation hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
         return this;
     }
+
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
     public FRBRtranslation wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
+
     //DSL Style set value
     public FRBRtranslation idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
+
     //DSL Style set value
     public FRBRtranslation evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
@@ -176,16 +201,16 @@ public class FRBRtranslation extends MetaoptComplexType  {
     }
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
         return ALLOWED_SUB_TYPES;
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

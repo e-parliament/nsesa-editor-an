@@ -310,6 +310,7 @@
                     <excludes>
                         <exclude>web/js/**</exclude>
                         <exclude>target/**</exclude>
+                        <exclude>src/main/resources/examples/**</exclude>
                         <exclude>.gitignore</exclude>
                         <exclude>**/*.css</exclude>
                         <exclude>**/README.md</exclude>
