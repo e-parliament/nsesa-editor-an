@@ -25,10 +25,24 @@
         </layout>
     </appender>
 
+    <!-- There are known issues with the default log4j rolling file appender - replace it with the one from extras -->
+    <appender name="nsesa.log" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="../logs/nsesa.log"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{ISO8601} %p [%t] %c{2}: %m%n"/>
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="WARN"/>
+            <param name="LevelMax" value="FATAL"/>
+        </filter>
+    </appender>
+
     <!-- Note: This root logger will be inherited by all loggers unless you use additivity="false". -->
     <root>
         <level value="DEBUG"/>
         <appender-ref ref="terminal"/>
+        <appender-ref ref="nsesa.log"/>
     </root>
 
 </log4j:configuration>
