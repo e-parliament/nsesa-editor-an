@@ -312,6 +312,8 @@
                         <exclude>target/**</exclude>
                         <exclude>src/main/resources/examples/**</exclude>
                         <exclude>.gitignore</exclude>
+                        <!-- automatic header would turn on quirksmode in IE -->
+                        <exclude>web/editor.html</exclude>
                         <exclude>**/*.css</exclude>
                         <exclude>**/README.md</exclude>
                         <exclude>**/GitMessages.properties</exclude>
