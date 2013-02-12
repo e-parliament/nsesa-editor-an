@@ -1,40 +1,30 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PosTypeSimpleType;
+import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
-
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
 import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import com.google.gwt.user.client.DOM;
 
 /**
- * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
- */
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+*/
 
-public class ArgumentTypeComplexType extends AmendableWidgetImpl {
+public class ArgumentTypeComplexType extends AmendableWidgetImpl  {
     private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
         {
         }
     };
+
 
 
     // STATIC create method
@@ -52,13 +42,13 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl {
         super(element);
     }
 
-    // FIELDS ------------------
+// FIELDS ------------------
     private AnyURISimpleType upToAttr;
-    private PosTypeSimpleType posAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private String wildcardContentAttr;
     private AnyURISimpleType hrefAttr;
+    private PosTypeSimpleType posAttr;
+    private String wildcardContentAttr;
 
     public AnyURISimpleType getUpToAttr() {
         if (upToAttr == null) {
@@ -67,46 +57,20 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl {
         }
 
         return upToAttr;
-    }
-
-    //DSL Style get value
+     }
+     //DSL Style get value
     public AnyURISimpleType upToAttr() {
-        return getUpToAttr();
+        return  getUpToAttr();
     }
 
     public void setUpToAttr(final AnyURISimpleType upToAttr) {
         this.upToAttr = upToAttr;
     }
-
-    //DSL Style set value
+     //DSL Style set value
     public ArgumentTypeComplexType upToAttr(final AnyURISimpleType upToAttr) {
         setUpToAttr(upToAttr);
         return this;
     }
-
-    public PosTypeSimpleType getPosAttr() {
-        if (posAttr == null) {
-            posAttr = PosTypeSimpleType.fromString(getElement().getAttribute("pos"));
-        }
-
-        return posAttr;
-    }
-
-    //DSL Style get value
-    public PosTypeSimpleType posAttr() {
-        return getPosAttr();
-    }
-
-    public void setPosAttr(final PosTypeSimpleType posAttr) {
-        this.posAttr = posAttr;
-    }
-
-    //DSL Style set value
-    public ArgumentTypeComplexType posAttr(final PosTypeSimpleType posAttr) {
-        setPosAttr(posAttr);
-        return this;
-    }
-
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
             idAttr = new IDSimpleType();
@@ -114,23 +78,20 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl {
         }
 
         return idAttr;
-    }
-
-    //DSL Style get value
+     }
+     //DSL Style get value
     public IDSimpleType idAttr() {
-        return getIdAttr();
+        return  getIdAttr();
     }
 
     public void setIdAttr(final IDSimpleType idAttr) {
         this.idAttr = idAttr;
     }
-
-    //DSL Style set value
+     //DSL Style set value
     public ArgumentTypeComplexType idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
-
     public NMTOKENSimpleType getEvolvingIdAttr() {
         if (evolvingIdAttr == null) {
             evolvingIdAttr = new NMTOKENSimpleType();
@@ -138,46 +99,20 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl {
         }
 
         return evolvingIdAttr;
-    }
-
-    //DSL Style get value
+     }
+     //DSL Style get value
     public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
+        return  getEvolvingIdAttr();
     }
 
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
     }
-
-    //DSL Style set value
+     //DSL Style set value
     public ArgumentTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
-
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    //DSL Style get value
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-    }
-
-    //DSL Style set value
-    public ArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
     public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
             hrefAttr = new AnyURISimpleType();
@@ -185,35 +120,73 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl {
         }
 
         return hrefAttr;
-    }
-
-    //DSL Style get value
+     }
+     //DSL Style get value
     public AnyURISimpleType hrefAttr() {
-        return getHrefAttr();
+        return  getHrefAttr();
     }
 
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {
         this.hrefAttr = hrefAttr;
     }
-
-    //DSL Style set value
+     //DSL Style set value
     public ArgumentTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
+        return this;
+    }
+    public PosTypeSimpleType getPosAttr() {
+        if (posAttr == null) {
+            posAttr = PosTypeSimpleType.fromString(getElement().getAttribute("pos"));
+        }
+
+        return posAttr;
+     }
+     //DSL Style get value
+    public PosTypeSimpleType posAttr() {
+        return  getPosAttr();
+    }
+
+    public void setPosAttr(final PosTypeSimpleType posAttr) {
+        this.posAttr = posAttr;
+    }
+     //DSL Style set value
+    public ArgumentTypeComplexType posAttr(final PosTypeSimpleType posAttr) {
+        setPosAttr(posAttr);
+        return this;
+    }
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+     }
+     //DSL Style get value
+    public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
+    }
+
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+    }
+     //DSL Style set value
+    public ArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
     //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-     */
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
+    */
     @Override
     public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
-        return ALLOWED_SUB_TYPES;
+        return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-    /**
-     * Returns the namespace URI of this amendable widget.
-     */
+/**
+    * Returns the namespace URI of this amendable widget.
+    */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";
@@ -224,11 +197,11 @@ public class ArgumentTypeComplexType extends AmendableWidgetImpl {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         attrs.put("upTo", getUpToAttr() != null ? getUpToAttr().getValue() : null);
-        attrs.put("pos", getPosAttr() != null ? getPosAttr().value() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("pos", getPosAttr() != null ? getPosAttr().value() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }
 }

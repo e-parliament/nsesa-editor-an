@@ -1,108 +1,103 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.InlinereqComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
+import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
-
 import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import com.google.gwt.user.client.DOM;
 
 /**
- * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
- */
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+*/
 
-public class Rref extends InlinereqComplexType {
+public class Rref extends InlinereqComplexType  {
     private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
         {
-            put(new Inline(), new Occurrence(0, -1));
-            put(new Marker(), new Occurrence(0, -1));
-            put(new Popup(), new Occurrence(0, -1));
-            put(new Ref(), new Occurrence(0, -1));
-            put(new Mref(), new Occurrence(0, -1));
-            put(new Rref(), new Occurrence(0, -1));
-            put(new Mod(), new Occurrence(0, -1));
-            put(new Mmod(), new Occurrence(0, -1));
-            put(new Rmod(), new Occurrence(0, -1));
-            put(new Remark(), new Occurrence(0, -1));
-            put(new RecordedTime(), new Occurrence(0, -1));
-            put(new Vote(), new Occurrence(0, -1));
-            put(new Outcome(), new Occurrence(0, -1));
-            put(new Ins(), new Occurrence(0, -1));
-            put(new Del(), new Occurrence(0, -1));
-            put(new Omissis(), new Occurrence(0, -1));
-            put(new ExtractText(), new Occurrence(0, -1));
-            put(new ExtractStructure(), new Occurrence(0, -1));
-            put(new Placeholder(), new Occurrence(0, -1));
-            put(new FillIn(), new Occurrence(0, -1));
-            put(new B(), new Occurrence(0, -1));
-            put(new I(), new Occurrence(0, -1));
-            put(new A(), new Occurrence(0, -1));
-            put(new U(), new Occurrence(0, -1));
-            put(new Sub(), new Occurrence(0, -1));
-            put(new Sup(), new Occurrence(0, -1));
-            put(new Span(), new Occurrence(0, -1));
-            put(new DocType(), new Occurrence(0, -1));
-            put(new DocTitle(), new Occurrence(0, -1));
-            put(new DocNumber(), new Occurrence(0, -1));
-            put(new DocProponent(), new Occurrence(0, -1));
-            put(new DocDate(), new Occurrence(0, -1));
-            put(new Legislature(), new Occurrence(0, -1));
-            put(new Session(), new Occurrence(0, -1));
-            put(new ShortTitle(), new Occurrence(0, -1));
-            put(new DocPurpose(), new Occurrence(0, -1));
-            put(new DocCommittee(), new Occurrence(0, -1));
-            put(new DocIntroducer(), new Occurrence(0, -1));
-            put(new DocStage(), new Occurrence(0, -1));
-            put(new DocStatus(), new Occurrence(0, -1));
-            put(new DocJurisdiction(), new Occurrence(0, -1));
-            put(new DocketNumber(), new Occurrence(0, -1));
-            put(new Date(), new Occurrence(0, -1));
-            put(new Person(), new Occurrence(0, -1));
-            put(new Organization(), new Occurrence(0, -1));
-            put(new Concept(), new Occurrence(0, -1));
-            put(new Object(), new Occurrence(0, -1));
-            put(new Event(), new Occurrence(0, -1));
-            put(new Location(), new Occurrence(0, -1));
-            put(new Process(), new Occurrence(0, -1));
-            put(new Role(), new Occurrence(0, -1));
-            put(new Term(), new Occurrence(0, -1));
-            put(new Quantity(), new Occurrence(0, -1));
-            put(new Def(), new Occurrence(0, -1));
-            put(new Entity(), new Occurrence(0, -1));
-            put(new CourtType(), new Occurrence(0, -1));
-            put(new NeutralCitation(), new Occurrence(0, -1));
-            put(new Party(), new Occurrence(0, -1));
-            put(new Judge(), new Occurrence(0, -1));
-            put(new Lawyer(), new Occurrence(0, -1));
-            put(new Signature(), new Occurrence(0, -1));
-            put(new Opinion(), new Occurrence(0, -1));
-            put(new AffectedDocument(), new Occurrence(0, -1));
-            put(new RelatedDocument(), new Occurrence(0, -1));
-            put(new Change(), new Occurrence(0, -1));
-            put(new NoteRef(), new Occurrence(0, -1));
-            put(new Eol(), new Occurrence(0, -1));
-            put(new Eop(), new Occurrence(0, -1));
-            put(new Img(), new Occurrence(0, -1));
-            put(new AuthorialNote(), new Occurrence(0, -1));
+            put(new Inline(), new Occurrence(0,-1));
+            put(new Marker(), new Occurrence(0,-1));
+            put(new Popup(), new Occurrence(0,-1));
+            put(new Ref(), new Occurrence(0,-1));
+            put(new Mref(), new Occurrence(0,-1));
+            put(new Rref(), new Occurrence(0,-1));
+            put(new Mod(), new Occurrence(0,-1));
+            put(new Mmod(), new Occurrence(0,-1));
+            put(new Rmod(), new Occurrence(0,-1));
+            put(new Remark(), new Occurrence(0,-1));
+            put(new RecordedTime(), new Occurrence(0,-1));
+            put(new Vote(), new Occurrence(0,-1));
+            put(new Outcome(), new Occurrence(0,-1));
+            put(new Ins(), new Occurrence(0,-1));
+            put(new Del(), new Occurrence(0,-1));
+            put(new Omissis(), new Occurrence(0,-1));
+            put(new ExtractText(), new Occurrence(0,-1));
+            put(new ExtractStructure(), new Occurrence(0,-1));
+            put(new Placeholder(), new Occurrence(0,-1));
+            put(new FillIn(), new Occurrence(0,-1));
+            put(new B(), new Occurrence(0,-1));
+            put(new I(), new Occurrence(0,-1));
+            put(new A(), new Occurrence(0,-1));
+            put(new U(), new Occurrence(0,-1));
+            put(new Sub(), new Occurrence(0,-1));
+            put(new Sup(), new Occurrence(0,-1));
+            put(new Span(), new Occurrence(0,-1));
+            put(new DocType(), new Occurrence(0,-1));
+            put(new DocTitle(), new Occurrence(0,-1));
+            put(new DocNumber(), new Occurrence(0,-1));
+            put(new DocProponent(), new Occurrence(0,-1));
+            put(new DocDate(), new Occurrence(0,-1));
+            put(new Legislature(), new Occurrence(0,-1));
+            put(new Session(), new Occurrence(0,-1));
+            put(new ShortTitle(), new Occurrence(0,-1));
+            put(new DocPurpose(), new Occurrence(0,-1));
+            put(new DocCommittee(), new Occurrence(0,-1));
+            put(new DocIntroducer(), new Occurrence(0,-1));
+            put(new DocStage(), new Occurrence(0,-1));
+            put(new DocStatus(), new Occurrence(0,-1));
+            put(new DocJurisdiction(), new Occurrence(0,-1));
+            put(new DocketNumber(), new Occurrence(0,-1));
+            put(new Date(), new Occurrence(0,-1));
+            put(new Person(), new Occurrence(0,-1));
+            put(new Organization(), new Occurrence(0,-1));
+            put(new Concept(), new Occurrence(0,-1));
+            put(new Object(), new Occurrence(0,-1));
+            put(new Event(), new Occurrence(0,-1));
+            put(new Location(), new Occurrence(0,-1));
+            put(new Process(), new Occurrence(0,-1));
+            put(new Role(), new Occurrence(0,-1));
+            put(new Term(), new Occurrence(0,-1));
+            put(new Quantity(), new Occurrence(0,-1));
+            put(new Def(), new Occurrence(0,-1));
+            put(new Entity(), new Occurrence(0,-1));
+            put(new CourtType(), new Occurrence(0,-1));
+            put(new NeutralCitation(), new Occurrence(0,-1));
+            put(new Party(), new Occurrence(0,-1));
+            put(new Judge(), new Occurrence(0,-1));
+            put(new Lawyer(), new Occurrence(0,-1));
+            put(new Signature(), new Occurrence(0,-1));
+            put(new Opinion(), new Occurrence(0,-1));
+            put(new AffectedDocument(), new Occurrence(0,-1));
+            put(new RelatedDocument(), new Occurrence(0,-1));
+            put(new Change(), new Occurrence(0,-1));
+            put(new NoteRef(), new Occurrence(0,-1));
+            put(new Eol(), new Occurrence(0,-1));
+            put(new Eop(), new Occurrence(0,-1));
+            put(new Img(), new Occurrence(0,-1));
+            put(new AuthorialNote(), new Occurrence(0,-1));
         }
     };
+
 
 
     // STATIC create method
@@ -114,7 +109,7 @@ public class Rref extends InlinereqComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
     public Rref() {
         super(create());
         setType("rref");
@@ -124,7 +119,7 @@ public class Rref extends InlinereqComplexType {
         super(element);
     }
 
-    // FIELDS ------------------
+// FIELDS ------------------
     private AnyURISimpleType fromAttr;
     private AnyURISimpleType upToAttr;
 
@@ -135,23 +130,20 @@ public class Rref extends InlinereqComplexType {
         }
 
         return fromAttr;
-    }
-
-    //DSL Style get value
+     }
+     //DSL Style get value
     public AnyURISimpleType fromAttr() {
-        return getFromAttr();
+        return  getFromAttr();
     }
 
     public void setFromAttr(final AnyURISimpleType fromAttr) {
         this.fromAttr = fromAttr;
     }
-
-    //DSL Style set value
+     //DSL Style set value
     public Rref fromAttr(final AnyURISimpleType fromAttr) {
         setFromAttr(fromAttr);
         return this;
     }
-
     public AnyURISimpleType getUpToAttr() {
         if (upToAttr == null) {
             upToAttr = new AnyURISimpleType();
@@ -159,84 +151,71 @@ public class Rref extends InlinereqComplexType {
         }
 
         return upToAttr;
-    }
-
-    //DSL Style get value
+     }
+     //DSL Style get value
     public AnyURISimpleType upToAttr() {
-        return getUpToAttr();
+        return  getUpToAttr();
     }
 
     public void setUpToAttr(final AnyURISimpleType upToAttr) {
         this.upToAttr = upToAttr;
     }
-
-    //DSL Style set value
+     //DSL Style set value
     public Rref upToAttr(final AnyURISimpleType upToAttr) {
         setUpToAttr(upToAttr);
         return this;
     }
-
     //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public Rref wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Rref alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
     //DSL Style set value
     public Rref refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
         return this;
     }
-
-    //DSL Style set value
-    public Rref langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
     //DSL Style set value
     public Rref idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
-
     //DSL Style set value
     public Rref evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
-
-    //DSL Style set value
-    public Rref statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
     //DSL Style set value
     public Rref classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
         return this;
     }
-
     //DSL Style set value
     public Rref styleAttr(final StringSimpleType styleAttr) {
         setStyleAttr(styleAttr);
         return this;
     }
-
     //DSL Style set value
     public Rref titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
         return this;
     }
-
+    //DSL Style set value
+    public Rref statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Rref wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Rref alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+    //DSL Style set value
+    public Rref langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
     //DSL Style set value
     public Rref periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
@@ -244,16 +223,16 @@ public class Rref extends InlinereqComplexType {
     }
 
     /**
-     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-     */
+    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
+    */
     @Override
     public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
-        return ALLOWED_SUB_TYPES;
+        return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-    /**
-     * Returns the namespace URI of this amendable widget.
-     */
+/**
+    * Returns the namespace URI of this amendable widget.
+    */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";
