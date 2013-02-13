@@ -383,7 +383,8 @@
                     <stopKey>Nsesa</stopKey>
                     <stopPort>9812</stopPort>
                 </configuration>
-                <executions>
+                <!-- currently disabled - it causes problems if a tomcat is already running on the same port ... -->
+                <!-- <executions>
                     <execution>
                         <id>start-jetty</id>
                         <phase>pre-integration-test</phase>
@@ -402,7 +403,7 @@
                             <goal>stop</goal>
                         </goals>
                     </execution>
-                </executions>
+                </executions> -->
             </plugin>
         </plugins>
     </build>
