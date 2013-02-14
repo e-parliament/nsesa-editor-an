@@ -38,13 +38,13 @@ public class AkomaNtoso20Creator extends DefaultCreator {
     }
 
     @Override
-    public LinkedHashMap<String, AmendableWidget> getAllowedSiblings(DocumentController documentController, AmendableWidget amendableWidget) {
+    public LinkedHashMap<AmendableWidget, Occurrence> getAllowedSiblings(DocumentController documentController, AmendableWidget amendableWidget) {
         return getAllowedChildren(documentController, amendableWidget.getParentAmendableWidget());
     }
 
     @Override
-    public LinkedHashMap<String, AmendableWidget> getAllowedChildren(DocumentController documentController, AmendableWidget amendableWidget) {
-        final LinkedHashMap<String, AmendableWidget> allowedChildren = new LinkedHashMap<String, AmendableWidget>();
+    public LinkedHashMap<AmendableWidget, Occurrence> getAllowedChildren(DocumentController documentController, AmendableWidget amendableWidget) {
+        final LinkedHashMap<AmendableWidget, Occurrence> allowedChildren = new LinkedHashMap<AmendableWidget, Occurrence>();
         final Map<AmendableWidget, Occurrence> allowedTypes = amendableWidget.getAllowedChildTypes();
         List<Map.Entry<AmendableWidget, Occurrence>> list = new ArrayList<Map.Entry<AmendableWidget, Occurrence>>(allowedTypes.entrySet());
         Collections.sort(list, new Comparator<Map.Entry<AmendableWidget, Occurrence>>() {
@@ -54,7 +54,7 @@ public class AkomaNtoso20Creator extends DefaultCreator {
             }
         });
         for (final Map.Entry<AmendableWidget, Occurrence> allowedType : list) {
-            allowedChildren.put(allowedType.getKey().getType(), allowedType.getKey());
+            allowedChildren.put(allowedType.getKey(), allowedType.getValue());
         }
         return allowedChildren;
     }
