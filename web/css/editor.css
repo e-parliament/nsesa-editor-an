@@ -71,6 +71,13 @@ span.logo {
     top: 6px;
 }
 
+.navbar .availableLanguages {
+    position: relative;
+    float: right;
+    right: 9px;
+    top: 1px;
+}
+
 .gwt-DecoratedPopupPanel {
     z-index: 100;
 }
