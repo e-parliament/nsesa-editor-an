@@ -13,20 +13,16 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ListIntroduction;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Item;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ListConclusion;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -37,8 +33,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class BlockList extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class BlockList extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new ListIntroduction(), new Occurrence(0,1));
             put(new Item(), new Occurrence(1,-1));
@@ -82,7 +78,7 @@ public class BlockList extends AmendableWidgetImpl  {
 
     public ListIntroduction getListIntroduction() {
         ListIntroduction result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ListIntroduction".equalsIgnoreCase(widget.getType())) {
                 result = (ListIntroduction)widget;
                 break;
@@ -97,15 +93,15 @@ public class BlockList extends AmendableWidgetImpl  {
         ListIntroduction result = getListIntroduction();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(listIntroductionElem);
+        this.addOverlayWidget(listIntroductionElem);
 
         return listIntroductionElem;
     }
     public java.util.List<Item> getItems() {
         java.util.List<Item> result = new ArrayList<Item>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Item".equalsIgnoreCase(widget.getType())) {
                 result.add((Item)widget);
             }
@@ -119,13 +115,13 @@ public class BlockList extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Item addItem(Item itemElem) {
-        this.addAmendableWidget(itemElem);
+        this.addOverlayWidget(itemElem);
         return itemElem;
     }
 
     public ListConclusion getListConclusion() {
         ListConclusion result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ListConclusion".equalsIgnoreCase(widget.getType())) {
                 result = (ListConclusion)widget;
                 break;
@@ -140,9 +136,9 @@ public class BlockList extends AmendableWidgetImpl  {
         ListConclusion result = getListConclusion();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(listConclusionElem);
+        this.addOverlayWidget(listConclusionElem);
 
         return listConclusionElem;
     }
@@ -381,7 +377,7 @@ public class BlockList extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

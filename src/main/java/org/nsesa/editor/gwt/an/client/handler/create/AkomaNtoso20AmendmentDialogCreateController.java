@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.core.client.ui.drafting.DraftingController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
@@ -59,8 +59,8 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
         final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
 
-        final AmendableWidget parentAmendableWidget = dialogContext.getParentAmendableWidget();
-        final AmendableWidget amendableWidget = dialogContext.getAmendableWidget();
+        final OverlayWidget parentOverlayWidget = dialogContext.getParentOverlayWidget();
+        final OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
 
         final AkomaNtoso akomaNtoso = new AkomaNtoso();
         final Amendment root = akomaNtoso.setAmendment(new Amendment());
@@ -110,7 +110,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
         amendmentBody
                 .addAmendmentHeading(new AmendmentHeading())
-                .addBlock(new Block()).html(locator.getLocation(parentAmendableWidget, amendableWidget, languageIso, true));
+                .addBlock(new Block()).html(locator.getLocation(parentOverlayWidget, overlayWidget, languageIso, true));
 
         // amendment content
         final AmendmentContent amendmentContent = amendmentBody
@@ -130,18 +130,18 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
         // amendment content
         final QuotedStructure quotedStructureAmendment = mod.addQuotedStructure(new QuotedStructure());
-        final Element clone = DOM.clone(amendableWidget.asWidget().getElement(), false);
+        final Element clone = DOM.clone(overlayWidget.asWidget().getElement(), false);
         clone.setInnerHTML(view.getAmendmentContent());
-        final AmendableWidget overlayed = overlayFactory.getAmendableWidget(clone);
-        quotedStructureAmendment.addAmendableWidget(overlayed);
+        final OverlayWidget overlayed = overlayFactory.getAmendableWidget(clone);
+        quotedStructureAmendment.addOverlayWidget(overlayed);
 
-        akomaNtoso.addAmendableWidget(root);
+        akomaNtoso.addOverlayWidget(root);
         dialogContext.getAmendment().setRoot(akomaNtoso);
 
         super.handleSave();
     }
 
-    private <T extends AmendableWidget> T a(final String tag) {
+    private <T extends OverlayWidget> T a(final String tag) {
         return (T) overlayFactory.getAmendableWidget(tag);
     }
 
@@ -155,15 +155,15 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
     public void setContext(DialogContext dialogContext) {
         super.setContext(dialogContext);
         view.resetBodyClass();
-        view.addBodyClass(dialogContext.getAmendableWidget().getAmendableElement().getClassName());
+        view.addBodyClass(dialogContext.getOverlayWidget().getOverlayElement().getClassName());
 
         if (dialogContext.getAmendmentController() != null) {
             // get the location from the amendable widget, if it is passed
             view.setTitle("Edit amendment");
-            final java.util.List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody()));
-            view.setAmendmentContent(quotedStructures.get(1).getAmendableElement().getFirstChildElement().getInnerHTML());
+            final java.util.List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody()));
+            view.setAmendmentContent(quotedStructures.get(1).getOverlayElement().getFirstChildElement().getInnerHTML());
         } else {
-            view.setTitle(locator.getLocation(dialogContext.getAmendableWidget(), clientFactory.getClientContext().getDocumentIso(), false));
+            view.setTitle(locator.getLocation(dialogContext.getOverlayWidget(), clientFactory.getClientContext().getDocumentIso(), false));
             view.setAmendmentContent("");
         }
     }

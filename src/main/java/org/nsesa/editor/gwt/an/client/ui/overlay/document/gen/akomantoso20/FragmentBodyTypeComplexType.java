@@ -13,61 +13,14 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Hcontainer;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Container;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Clause;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Section;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Part;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Paragraph;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Chapter;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Title;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Article;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Book;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Tome;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Division;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.List;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Point;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Indent;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Alinea;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subsection;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subpart;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subparagraph;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subchapter;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subtitle;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subclause;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Sublist;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AdministrationOfOath;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.RollCall;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Prayers;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.OralStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.WrittenStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PersonalStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MinisterialStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Resolutions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.NationalInterest;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DeclarationOfVote;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Communication;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Petitions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Papers;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.NoticesOfMotion;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Questions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Address;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ProceduralMotions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PointOfOrder;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Adjournment;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DebateSection;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Div;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -78,8 +31,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class FragmentBodyTypeComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Hcontainer(), new Occurrence(0,-1));
             put(new Container(), new Occurrence(0,-1));
@@ -160,7 +113,7 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
 
     public Hcontainer getHcontainer() {
         Hcontainer result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Hcontainer".equalsIgnoreCase(widget.getType())) {
                 result = (Hcontainer)widget;
                 break;
@@ -175,15 +128,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Hcontainer result = getHcontainer();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(hcontainerElem);
+        this.addOverlayWidget(hcontainerElem);
 
         return hcontainerElem;
     }
     public Container getContainer() {
         Container result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Container".equalsIgnoreCase(widget.getType())) {
                 result = (Container)widget;
                 break;
@@ -198,9 +151,9 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Container result = getContainer();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(containerElem);
+        this.addOverlayWidget(containerElem);
 
         return containerElem;
     }
@@ -414,7 +367,7 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
     }
     public Clause getClause() {
         Clause result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Clause".equalsIgnoreCase(widget.getType())) {
                 result = (Clause)widget;
                 break;
@@ -429,15 +382,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Clause result = getClause();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(clauseElem);
+        this.addOverlayWidget(clauseElem);
 
         return clauseElem;
     }
     public Section getSection() {
         Section result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Section".equalsIgnoreCase(widget.getType())) {
                 result = (Section)widget;
                 break;
@@ -452,15 +405,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Section result = getSection();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(sectionElem);
+        this.addOverlayWidget(sectionElem);
 
         return sectionElem;
     }
     public Part getPart() {
         Part result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Part".equalsIgnoreCase(widget.getType())) {
                 result = (Part)widget;
                 break;
@@ -475,15 +428,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Part result = getPart();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(partElem);
+        this.addOverlayWidget(partElem);
 
         return partElem;
     }
     public Paragraph getParagraph() {
         Paragraph result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Paragraph".equalsIgnoreCase(widget.getType())) {
                 result = (Paragraph)widget;
                 break;
@@ -498,15 +451,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Paragraph result = getParagraph();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(paragraphElem);
+        this.addOverlayWidget(paragraphElem);
 
         return paragraphElem;
     }
     public Chapter getChapter() {
         Chapter result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Chapter".equalsIgnoreCase(widget.getType())) {
                 result = (Chapter)widget;
                 break;
@@ -521,15 +474,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Chapter result = getChapter();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(chapterElem);
+        this.addOverlayWidget(chapterElem);
 
         return chapterElem;
     }
     public Title getTitle_() {
         Title result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Title".equalsIgnoreCase(widget.getType())) {
                 result = (Title)widget;
                 break;
@@ -544,15 +497,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Title result = getTitle_();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(title_Elem);
+        this.addOverlayWidget(title_Elem);
 
         return title_Elem;
     }
     public Article getArticle() {
         Article result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Article".equalsIgnoreCase(widget.getType())) {
                 result = (Article)widget;
                 break;
@@ -567,15 +520,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Article result = getArticle();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(articleElem);
+        this.addOverlayWidget(articleElem);
 
         return articleElem;
     }
     public Book getBook() {
         Book result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Book".equalsIgnoreCase(widget.getType())) {
                 result = (Book)widget;
                 break;
@@ -590,15 +543,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Book result = getBook();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(bookElem);
+        this.addOverlayWidget(bookElem);
 
         return bookElem;
     }
     public Tome getTome() {
         Tome result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Tome".equalsIgnoreCase(widget.getType())) {
                 result = (Tome)widget;
                 break;
@@ -613,15 +566,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Tome result = getTome();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(tomeElem);
+        this.addOverlayWidget(tomeElem);
 
         return tomeElem;
     }
     public Division getDivision() {
         Division result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Division".equalsIgnoreCase(widget.getType())) {
                 result = (Division)widget;
                 break;
@@ -636,15 +589,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Division result = getDivision();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(divisionElem);
+        this.addOverlayWidget(divisionElem);
 
         return divisionElem;
     }
     public List getList() {
         List result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("List".equalsIgnoreCase(widget.getType())) {
                 result = (List)widget;
                 break;
@@ -659,15 +612,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         List result = getList();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(listElem);
+        this.addOverlayWidget(listElem);
 
         return listElem;
     }
     public Point getPoint() {
         Point result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Point".equalsIgnoreCase(widget.getType())) {
                 result = (Point)widget;
                 break;
@@ -682,15 +635,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Point result = getPoint();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(pointElem);
+        this.addOverlayWidget(pointElem);
 
         return pointElem;
     }
     public Indent getIndent() {
         Indent result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Indent".equalsIgnoreCase(widget.getType())) {
                 result = (Indent)widget;
                 break;
@@ -705,15 +658,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Indent result = getIndent();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(indentElem);
+        this.addOverlayWidget(indentElem);
 
         return indentElem;
     }
     public Alinea getAlinea() {
         Alinea result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Alinea".equalsIgnoreCase(widget.getType())) {
                 result = (Alinea)widget;
                 break;
@@ -728,15 +681,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Alinea result = getAlinea();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(alineaElem);
+        this.addOverlayWidget(alineaElem);
 
         return alineaElem;
     }
     public Subsection getSubsection() {
         Subsection result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subsection".equalsIgnoreCase(widget.getType())) {
                 result = (Subsection)widget;
                 break;
@@ -751,15 +704,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Subsection result = getSubsection();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(subsectionElem);
+        this.addOverlayWidget(subsectionElem);
 
         return subsectionElem;
     }
     public Subpart getSubpart() {
         Subpart result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subpart".equalsIgnoreCase(widget.getType())) {
                 result = (Subpart)widget;
                 break;
@@ -774,15 +727,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Subpart result = getSubpart();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(subpartElem);
+        this.addOverlayWidget(subpartElem);
 
         return subpartElem;
     }
     public Subparagraph getSubparagraph() {
         Subparagraph result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subparagraph".equalsIgnoreCase(widget.getType())) {
                 result = (Subparagraph)widget;
                 break;
@@ -797,15 +750,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Subparagraph result = getSubparagraph();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(subparagraphElem);
+        this.addOverlayWidget(subparagraphElem);
 
         return subparagraphElem;
     }
     public Subchapter getSubchapter() {
         Subchapter result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subchapter".equalsIgnoreCase(widget.getType())) {
                 result = (Subchapter)widget;
                 break;
@@ -820,15 +773,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Subchapter result = getSubchapter();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(subchapterElem);
+        this.addOverlayWidget(subchapterElem);
 
         return subchapterElem;
     }
     public Subtitle getSubtitle() {
         Subtitle result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subtitle".equalsIgnoreCase(widget.getType())) {
                 result = (Subtitle)widget;
                 break;
@@ -843,15 +796,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Subtitle result = getSubtitle();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(subtitleElem);
+        this.addOverlayWidget(subtitleElem);
 
         return subtitleElem;
     }
     public Subclause getSubclause() {
         Subclause result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subclause".equalsIgnoreCase(widget.getType())) {
                 result = (Subclause)widget;
                 break;
@@ -866,15 +819,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Subclause result = getSubclause();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(subclauseElem);
+        this.addOverlayWidget(subclauseElem);
 
         return subclauseElem;
     }
     public Sublist getSublist() {
         Sublist result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Sublist".equalsIgnoreCase(widget.getType())) {
                 result = (Sublist)widget;
                 break;
@@ -889,15 +842,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Sublist result = getSublist();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(sublistElem);
+        this.addOverlayWidget(sublistElem);
 
         return sublistElem;
     }
     public AdministrationOfOath getAdministrationOfOath() {
         AdministrationOfOath result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("AdministrationOfOath".equalsIgnoreCase(widget.getType())) {
                 result = (AdministrationOfOath)widget;
                 break;
@@ -912,15 +865,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         AdministrationOfOath result = getAdministrationOfOath();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(administrationOfOathElem);
+        this.addOverlayWidget(administrationOfOathElem);
 
         return administrationOfOathElem;
     }
     public RollCall getRollCall() {
         RollCall result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("RollCall".equalsIgnoreCase(widget.getType())) {
                 result = (RollCall)widget;
                 break;
@@ -935,15 +888,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         RollCall result = getRollCall();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(rollCallElem);
+        this.addOverlayWidget(rollCallElem);
 
         return rollCallElem;
     }
     public Prayers getPrayers() {
         Prayers result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Prayers".equalsIgnoreCase(widget.getType())) {
                 result = (Prayers)widget;
                 break;
@@ -958,15 +911,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Prayers result = getPrayers();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(prayersElem);
+        this.addOverlayWidget(prayersElem);
 
         return prayersElem;
     }
     public OralStatements getOralStatements() {
         OralStatements result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("OralStatements".equalsIgnoreCase(widget.getType())) {
                 result = (OralStatements)widget;
                 break;
@@ -981,15 +934,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         OralStatements result = getOralStatements();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(oralStatementsElem);
+        this.addOverlayWidget(oralStatementsElem);
 
         return oralStatementsElem;
     }
     public WrittenStatements getWrittenStatements() {
         WrittenStatements result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("WrittenStatements".equalsIgnoreCase(widget.getType())) {
                 result = (WrittenStatements)widget;
                 break;
@@ -1004,15 +957,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         WrittenStatements result = getWrittenStatements();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(writtenStatementsElem);
+        this.addOverlayWidget(writtenStatementsElem);
 
         return writtenStatementsElem;
     }
     public PersonalStatements getPersonalStatements() {
         PersonalStatements result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("PersonalStatements".equalsIgnoreCase(widget.getType())) {
                 result = (PersonalStatements)widget;
                 break;
@@ -1027,15 +980,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         PersonalStatements result = getPersonalStatements();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(personalStatementsElem);
+        this.addOverlayWidget(personalStatementsElem);
 
         return personalStatementsElem;
     }
     public MinisterialStatements getMinisterialStatements() {
         MinisterialStatements result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("MinisterialStatements".equalsIgnoreCase(widget.getType())) {
                 result = (MinisterialStatements)widget;
                 break;
@@ -1050,15 +1003,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         MinisterialStatements result = getMinisterialStatements();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(ministerialStatementsElem);
+        this.addOverlayWidget(ministerialStatementsElem);
 
         return ministerialStatementsElem;
     }
     public Resolutions getResolutions() {
         Resolutions result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Resolutions".equalsIgnoreCase(widget.getType())) {
                 result = (Resolutions)widget;
                 break;
@@ -1073,15 +1026,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Resolutions result = getResolutions();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(resolutionsElem);
+        this.addOverlayWidget(resolutionsElem);
 
         return resolutionsElem;
     }
     public NationalInterest getNationalInterest() {
         NationalInterest result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("NationalInterest".equalsIgnoreCase(widget.getType())) {
                 result = (NationalInterest)widget;
                 break;
@@ -1096,15 +1049,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         NationalInterest result = getNationalInterest();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(nationalInterestElem);
+        this.addOverlayWidget(nationalInterestElem);
 
         return nationalInterestElem;
     }
     public DeclarationOfVote getDeclarationOfVote() {
         DeclarationOfVote result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DeclarationOfVote".equalsIgnoreCase(widget.getType())) {
                 result = (DeclarationOfVote)widget;
                 break;
@@ -1119,15 +1072,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         DeclarationOfVote result = getDeclarationOfVote();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(declarationOfVoteElem);
+        this.addOverlayWidget(declarationOfVoteElem);
 
         return declarationOfVoteElem;
     }
     public Communication getCommunication() {
         Communication result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Communication".equalsIgnoreCase(widget.getType())) {
                 result = (Communication)widget;
                 break;
@@ -1142,15 +1095,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Communication result = getCommunication();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(communicationElem);
+        this.addOverlayWidget(communicationElem);
 
         return communicationElem;
     }
     public Petitions getPetitions() {
         Petitions result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Petitions".equalsIgnoreCase(widget.getType())) {
                 result = (Petitions)widget;
                 break;
@@ -1165,15 +1118,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Petitions result = getPetitions();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(petitionsElem);
+        this.addOverlayWidget(petitionsElem);
 
         return petitionsElem;
     }
     public Papers getPapers() {
         Papers result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Papers".equalsIgnoreCase(widget.getType())) {
                 result = (Papers)widget;
                 break;
@@ -1188,15 +1141,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Papers result = getPapers();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(papersElem);
+        this.addOverlayWidget(papersElem);
 
         return papersElem;
     }
     public NoticesOfMotion getNoticesOfMotion() {
         NoticesOfMotion result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("NoticesOfMotion".equalsIgnoreCase(widget.getType())) {
                 result = (NoticesOfMotion)widget;
                 break;
@@ -1211,15 +1164,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         NoticesOfMotion result = getNoticesOfMotion();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(noticesOfMotionElem);
+        this.addOverlayWidget(noticesOfMotionElem);
 
         return noticesOfMotionElem;
     }
     public Questions getQuestions() {
         Questions result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Questions".equalsIgnoreCase(widget.getType())) {
                 result = (Questions)widget;
                 break;
@@ -1234,15 +1187,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Questions result = getQuestions();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(questionsElem);
+        this.addOverlayWidget(questionsElem);
 
         return questionsElem;
     }
     public Address getAddress() {
         Address result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Address".equalsIgnoreCase(widget.getType())) {
                 result = (Address)widget;
                 break;
@@ -1257,15 +1210,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Address result = getAddress();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(addressElem);
+        this.addOverlayWidget(addressElem);
 
         return addressElem;
     }
     public ProceduralMotions getProceduralMotions() {
         ProceduralMotions result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ProceduralMotions".equalsIgnoreCase(widget.getType())) {
                 result = (ProceduralMotions)widget;
                 break;
@@ -1280,15 +1233,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         ProceduralMotions result = getProceduralMotions();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(proceduralMotionsElem);
+        this.addOverlayWidget(proceduralMotionsElem);
 
         return proceduralMotionsElem;
     }
     public PointOfOrder getPointOfOrder() {
         PointOfOrder result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("PointOfOrder".equalsIgnoreCase(widget.getType())) {
                 result = (PointOfOrder)widget;
                 break;
@@ -1303,15 +1256,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         PointOfOrder result = getPointOfOrder();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(pointOfOrderElem);
+        this.addOverlayWidget(pointOfOrderElem);
 
         return pointOfOrderElem;
     }
     public Adjournment getAdjournment() {
         Adjournment result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Adjournment".equalsIgnoreCase(widget.getType())) {
                 result = (Adjournment)widget;
                 break;
@@ -1326,15 +1279,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Adjournment result = getAdjournment();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(adjournmentElem);
+        this.addOverlayWidget(adjournmentElem);
 
         return adjournmentElem;
     }
     public DebateSection getDebateSection() {
         DebateSection result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DebateSection".equalsIgnoreCase(widget.getType())) {
                 result = (DebateSection)widget;
                 break;
@@ -1349,15 +1302,15 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         DebateSection result = getDebateSection();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(debateSectionElem);
+        this.addOverlayWidget(debateSectionElem);
 
         return debateSectionElem;
     }
     public Div getDiv() {
         Div result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Div".equalsIgnoreCase(widget.getType())) {
                 result = (Div)widget;
                 break;
@@ -1372,9 +1325,9 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
         Div result = getDiv();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(divElem);
+        this.addOverlayWidget(divElem);
 
         return divElem;
     }
@@ -1405,7 +1358,7 @@ public class FragmentBodyTypeComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

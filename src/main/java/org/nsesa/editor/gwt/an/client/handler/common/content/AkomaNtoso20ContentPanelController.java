@@ -15,7 +15,7 @@ package org.nsesa.editor.gwt.an.client.handler.common.content;
 
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentControllerView;
@@ -40,14 +40,14 @@ public class AkomaNtoso20ContentPanelController extends ContentPanelController {
         super.setContext(dialogContext);
 
         view.resetBodyClass();
-        view.addBodyClass(dialogContext.getAmendableWidget().getAmendableElement().getClassName());
+        view.addBodyClass(dialogContext.getOverlayWidget().getOverlayElement().getClassName());
 
         if (dialogContext.getAmendmentController() != null) {
             // we're editing
-            final java.util.List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody()));
-            view.setOriginalText(quotedStructures.get(0).getAmendableElement().getFirstChildElement().getInnerHTML());
+            final java.util.List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody()));
+            view.setOriginalText(quotedStructures.get(0).getOverlayElement().getFirstChildElement().getInnerHTML());
         } else {
-            view.setOriginalText(dialogContext.getAmendableWidget().getInnerHTML());
+            view.setOriginalText(dialogContext.getOverlayWidget().getInnerHTML());
         }
     }
 }

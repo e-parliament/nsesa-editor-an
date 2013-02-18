@@ -14,19 +14,16 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IntegerSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Caption;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Tr;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -37,8 +34,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class Table extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class Table extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Caption(), new Occurrence(0,1));
             put(new Tr(), new Occurrence(1,-1));
@@ -169,7 +166,7 @@ public class Table extends AmendableWidgetImpl  {
     }
     public Caption getCaption() {
         Caption result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Caption".equalsIgnoreCase(widget.getType())) {
                 result = (Caption)widget;
                 break;
@@ -184,15 +181,15 @@ public class Table extends AmendableWidgetImpl  {
         Caption result = getCaption();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(captionElem);
+        this.addOverlayWidget(captionElem);
 
         return captionElem;
     }
     public java.util.List<Tr> getTrs() {
         java.util.List<Tr> result = new ArrayList<Tr>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Tr".equalsIgnoreCase(widget.getType())) {
                 result.add((Tr)widget);
             }
@@ -206,7 +203,7 @@ public class Table extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Tr addTr(Tr trElem) {
-        this.addAmendableWidget(trElem);
+        this.addOverlayWidget(trElem);
         return trElem;
     }
 
@@ -445,7 +442,7 @@ public class Table extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

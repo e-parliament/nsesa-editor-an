@@ -13,17 +13,11 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TextualMod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MeaningMod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ScopeMod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ForceMod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.EfficacyMod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.LegalSystemMod;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -34,8 +28,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class AmendmentsComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class AmendmentsComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new TextualMod(), new Occurrence(1,1));
             put(new MeaningMod(), new Occurrence(1,1));
@@ -67,7 +61,7 @@ public class AmendmentsComplexType extends AmendableWidgetImpl  {
 
     public java.util.List<TextualMod> getTextualMods() {
         java.util.List<TextualMod> result = new ArrayList<TextualMod>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("TextualMod".equalsIgnoreCase(widget.getType())) {
                 result.add((TextualMod)widget);
             }
@@ -81,13 +75,13 @@ public class AmendmentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public TextualMod addTextualMod(TextualMod textualModElem) {
-        this.addAmendableWidget(textualModElem);
+        this.addOverlayWidget(textualModElem);
         return textualModElem;
     }
 
     public java.util.List<MeaningMod> getMeaningMods() {
         java.util.List<MeaningMod> result = new ArrayList<MeaningMod>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("MeaningMod".equalsIgnoreCase(widget.getType())) {
                 result.add((MeaningMod)widget);
             }
@@ -101,13 +95,13 @@ public class AmendmentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public MeaningMod addMeaningMod(MeaningMod meaningModElem) {
-        this.addAmendableWidget(meaningModElem);
+        this.addOverlayWidget(meaningModElem);
         return meaningModElem;
     }
 
     public java.util.List<ScopeMod> getScopeMods() {
         java.util.List<ScopeMod> result = new ArrayList<ScopeMod>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ScopeMod".equalsIgnoreCase(widget.getType())) {
                 result.add((ScopeMod)widget);
             }
@@ -121,13 +115,13 @@ public class AmendmentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public ScopeMod addScopeMod(ScopeMod scopeModElem) {
-        this.addAmendableWidget(scopeModElem);
+        this.addOverlayWidget(scopeModElem);
         return scopeModElem;
     }
 
     public java.util.List<ForceMod> getForceMods() {
         java.util.List<ForceMod> result = new ArrayList<ForceMod>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ForceMod".equalsIgnoreCase(widget.getType())) {
                 result.add((ForceMod)widget);
             }
@@ -141,13 +135,13 @@ public class AmendmentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public ForceMod addForceMod(ForceMod forceModElem) {
-        this.addAmendableWidget(forceModElem);
+        this.addOverlayWidget(forceModElem);
         return forceModElem;
     }
 
     public java.util.List<EfficacyMod> getEfficacyMods() {
         java.util.List<EfficacyMod> result = new ArrayList<EfficacyMod>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("EfficacyMod".equalsIgnoreCase(widget.getType())) {
                 result.add((EfficacyMod)widget);
             }
@@ -161,13 +155,13 @@ public class AmendmentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public EfficacyMod addEfficacyMod(EfficacyMod efficacyModElem) {
-        this.addAmendableWidget(efficacyModElem);
+        this.addOverlayWidget(efficacyModElem);
         return efficacyModElem;
     }
 
     public java.util.List<LegalSystemMod> getLegalSystemMods() {
         java.util.List<LegalSystemMod> result = new ArrayList<LegalSystemMod>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("LegalSystemMod".equalsIgnoreCase(widget.getType())) {
                 result.add((LegalSystemMod)widget);
             }
@@ -181,7 +175,7 @@ public class AmendmentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public LegalSystemMod addLegalSystemMod(LegalSystemMod legalSystemModElem) {
-        this.addAmendableWidget(legalSystemModElem);
+        this.addOverlayWidget(legalSystemModElem);
         return legalSystemModElem;
     }
 
@@ -191,7 +185,7 @@ public class AmendmentsComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

@@ -13,23 +13,11 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Result;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Supports;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.IsAnalogTo;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Applies;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Extends;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Restricts;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Derogates;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Contrasts;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Overrules;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DissentsFrom;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PutsInQuestion;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Distinguishes;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -40,8 +28,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Result(), new Occurrence(1,1));
             put(new Supports(), new Occurrence(1,1));
@@ -79,7 +67,7 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
 
     public Result getResult() {
         Result result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Result".equalsIgnoreCase(widget.getType())) {
                 result = (Result)widget;
                 break;
@@ -94,15 +82,15 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
         Result result = getResult();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(resultElem);
+        this.addOverlayWidget(resultElem);
 
         return resultElem;
     }
     public java.util.List<Supports> getSupportses() {
         java.util.List<Supports> result = new ArrayList<Supports>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Supports".equalsIgnoreCase(widget.getType())) {
                 result.add((Supports)widget);
             }
@@ -116,13 +104,13 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Supports addSupports(Supports supportsElem) {
-        this.addAmendableWidget(supportsElem);
+        this.addOverlayWidget(supportsElem);
         return supportsElem;
     }
 
     public java.util.List<IsAnalogTo> getIsAnalogTos() {
         java.util.List<IsAnalogTo> result = new ArrayList<IsAnalogTo>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("IsAnalogTo".equalsIgnoreCase(widget.getType())) {
                 result.add((IsAnalogTo)widget);
             }
@@ -136,13 +124,13 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public IsAnalogTo addIsAnalogTo(IsAnalogTo isAnalogToElem) {
-        this.addAmendableWidget(isAnalogToElem);
+        this.addOverlayWidget(isAnalogToElem);
         return isAnalogToElem;
     }
 
     public java.util.List<Applies> getApplieses() {
         java.util.List<Applies> result = new ArrayList<Applies>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Applies".equalsIgnoreCase(widget.getType())) {
                 result.add((Applies)widget);
             }
@@ -156,13 +144,13 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Applies addApplies(Applies appliesElem) {
-        this.addAmendableWidget(appliesElem);
+        this.addOverlayWidget(appliesElem);
         return appliesElem;
     }
 
     public java.util.List<Extends> getExtend_s() {
         java.util.List<Extends> result = new ArrayList<Extends>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Extends".equalsIgnoreCase(widget.getType())) {
                 result.add((Extends)widget);
             }
@@ -176,13 +164,13 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Extends addExtend_(Extends extend_Elem) {
-        this.addAmendableWidget(extend_Elem);
+        this.addOverlayWidget(extend_Elem);
         return extend_Elem;
     }
 
     public java.util.List<Restricts> getRestrictses() {
         java.util.List<Restricts> result = new ArrayList<Restricts>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Restricts".equalsIgnoreCase(widget.getType())) {
                 result.add((Restricts)widget);
             }
@@ -196,13 +184,13 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Restricts addRestricts(Restricts restrictsElem) {
-        this.addAmendableWidget(restrictsElem);
+        this.addOverlayWidget(restrictsElem);
         return restrictsElem;
     }
 
     public java.util.List<Derogates> getDerogateses() {
         java.util.List<Derogates> result = new ArrayList<Derogates>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Derogates".equalsIgnoreCase(widget.getType())) {
                 result.add((Derogates)widget);
             }
@@ -216,13 +204,13 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Derogates addDerogates(Derogates derogatesElem) {
-        this.addAmendableWidget(derogatesElem);
+        this.addOverlayWidget(derogatesElem);
         return derogatesElem;
     }
 
     public java.util.List<Contrasts> getContrastses() {
         java.util.List<Contrasts> result = new ArrayList<Contrasts>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Contrasts".equalsIgnoreCase(widget.getType())) {
                 result.add((Contrasts)widget);
             }
@@ -236,13 +224,13 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Contrasts addContrasts(Contrasts contrastsElem) {
-        this.addAmendableWidget(contrastsElem);
+        this.addOverlayWidget(contrastsElem);
         return contrastsElem;
     }
 
     public java.util.List<Overrules> getOverruleses() {
         java.util.List<Overrules> result = new ArrayList<Overrules>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Overrules".equalsIgnoreCase(widget.getType())) {
                 result.add((Overrules)widget);
             }
@@ -256,13 +244,13 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Overrules addOverrules(Overrules overrulesElem) {
-        this.addAmendableWidget(overrulesElem);
+        this.addOverlayWidget(overrulesElem);
         return overrulesElem;
     }
 
     public java.util.List<DissentsFrom> getDissentsFroms() {
         java.util.List<DissentsFrom> result = new ArrayList<DissentsFrom>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DissentsFrom".equalsIgnoreCase(widget.getType())) {
                 result.add((DissentsFrom)widget);
             }
@@ -276,13 +264,13 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DissentsFrom addDissentsFrom(DissentsFrom dissentsFromElem) {
-        this.addAmendableWidget(dissentsFromElem);
+        this.addOverlayWidget(dissentsFromElem);
         return dissentsFromElem;
     }
 
     public java.util.List<PutsInQuestion> getPutsInQuestions() {
         java.util.List<PutsInQuestion> result = new ArrayList<PutsInQuestion>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("PutsInQuestion".equalsIgnoreCase(widget.getType())) {
                 result.add((PutsInQuestion)widget);
             }
@@ -296,13 +284,13 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public PutsInQuestion addPutsInQuestion(PutsInQuestion putsInQuestionElem) {
-        this.addAmendableWidget(putsInQuestionElem);
+        this.addOverlayWidget(putsInQuestionElem);
         return putsInQuestionElem;
     }
 
     public java.util.List<Distinguishes> getDistinguisheses() {
         java.util.List<Distinguishes> result = new ArrayList<Distinguishes>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Distinguishes".equalsIgnoreCase(widget.getType())) {
                 result.add((Distinguishes)widget);
             }
@@ -316,7 +304,7 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Distinguishes addDistinguishes(Distinguishes distinguishesElem) {
-        this.addAmendableWidget(distinguishesElem);
+        this.addOverlayWidget(distinguishesElem);
         return distinguishesElem;
     }
 
@@ -326,7 +314,7 @@ public class JudicialArgumentsComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

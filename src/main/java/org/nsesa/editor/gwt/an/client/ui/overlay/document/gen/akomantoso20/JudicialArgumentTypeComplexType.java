@@ -13,19 +13,15 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Source;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Destination;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Condition;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -36,8 +32,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Source(), new Occurrence(1,-1));
             put(new Destination(), new Occurrence(1,-1));
@@ -74,7 +70,7 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
 
     public java.util.List<Source> getSources() {
         java.util.List<Source> result = new ArrayList<Source>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Source".equalsIgnoreCase(widget.getType())) {
                 result.add((Source)widget);
             }
@@ -88,13 +84,13 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Source addSource(Source sourceElem) {
-        this.addAmendableWidget(sourceElem);
+        this.addOverlayWidget(sourceElem);
         return sourceElem;
     }
 
     public java.util.List<Destination> getDestinations() {
         java.util.List<Destination> result = new ArrayList<Destination>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Destination".equalsIgnoreCase(widget.getType())) {
                 result.add((Destination)widget);
             }
@@ -108,13 +104,13 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Destination addDestination(Destination destinationElem) {
-        this.addAmendableWidget(destinationElem);
+        this.addOverlayWidget(destinationElem);
         return destinationElem;
     }
 
     public Condition getCondition() {
         Condition result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Condition".equalsIgnoreCase(widget.getType())) {
                 result = (Condition)widget;
                 break;
@@ -129,9 +125,9 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
         Condition result = getCondition();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(conditionElem);
+        this.addOverlayWidget(conditionElem);
 
         return conditionElem;
     }
@@ -307,7 +303,7 @@ public class JudicialArgumentTypeComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

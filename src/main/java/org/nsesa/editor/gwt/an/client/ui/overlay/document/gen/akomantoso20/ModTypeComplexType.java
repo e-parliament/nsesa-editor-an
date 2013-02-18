@@ -13,89 +13,16 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.QuotedText;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.QuotedStructure;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Inline;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Marker;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Popup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Ref;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Mref;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Rref;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Mod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Mmod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Rmod;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Remark;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.RecordedTime;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Vote;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Outcome;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Ins;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Del;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Omissis;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ExtractText;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ExtractStructure;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Placeholder;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FillIn;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.B;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.I;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.A;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.U;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Sub;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Sup;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Span;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocTitle;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocNumber;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocProponent;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocDate;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Legislature;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Session;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ShortTitle;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocPurpose;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocCommittee;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocIntroducer;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocStage;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocStatus;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocJurisdiction;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocketNumber;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Date;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Person;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Organization;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Concept;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Object;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Event;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Location;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Process;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Role;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Term;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Quantity;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Def;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Entity;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.CourtType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.NeutralCitation;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Party;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Judge;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Lawyer;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Signature;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Opinion;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AffectedDocument;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.RelatedDocument;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Change;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.NoteRef;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Eol;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Eop;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Img;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AuthorialNote;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -106,8 +33,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class ModTypeComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class ModTypeComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new QuotedText(), new Occurrence(1,1));
             put(new QuotedStructure(), new Occurrence(1,1));
@@ -216,7 +143,7 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
 
     public java.util.List<QuotedText> getQuotedTexts() {
         java.util.List<QuotedText> result = new ArrayList<QuotedText>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("QuotedText".equalsIgnoreCase(widget.getType())) {
                 result.add((QuotedText)widget);
             }
@@ -230,13 +157,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public QuotedText addQuotedText(QuotedText quotedTextElem) {
-        this.addAmendableWidget(quotedTextElem);
+        this.addOverlayWidget(quotedTextElem);
         return quotedTextElem;
     }
 
     public java.util.List<QuotedStructure> getQuotedStructures() {
         java.util.List<QuotedStructure> result = new ArrayList<QuotedStructure>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("QuotedStructure".equalsIgnoreCase(widget.getType())) {
                 result.add((QuotedStructure)widget);
             }
@@ -250,7 +177,7 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public QuotedStructure addQuotedStructure(QuotedStructure quotedStructureElem) {
-        this.addAmendableWidget(quotedStructureElem);
+        this.addOverlayWidget(quotedStructureElem);
         return quotedStructureElem;
     }
 
@@ -464,7 +391,7 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
     public java.util.List<Inline> getInlines() {
         java.util.List<Inline> result = new ArrayList<Inline>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Inline".equalsIgnoreCase(widget.getType())) {
                 result.add((Inline)widget);
             }
@@ -478,13 +405,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Inline addInline(Inline inlineElem) {
-        this.addAmendableWidget(inlineElem);
+        this.addOverlayWidget(inlineElem);
         return inlineElem;
     }
 
     public java.util.List<Marker> getMarkers() {
         java.util.List<Marker> result = new ArrayList<Marker>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Marker".equalsIgnoreCase(widget.getType())) {
                 result.add((Marker)widget);
             }
@@ -498,13 +425,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Marker addMarker(Marker markerElem) {
-        this.addAmendableWidget(markerElem);
+        this.addOverlayWidget(markerElem);
         return markerElem;
     }
 
     public java.util.List<Popup> getPopups() {
         java.util.List<Popup> result = new ArrayList<Popup>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Popup".equalsIgnoreCase(widget.getType())) {
                 result.add((Popup)widget);
             }
@@ -518,7 +445,7 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Popup addPopup(Popup popupElem) {
-        this.addAmendableWidget(popupElem);
+        this.addOverlayWidget(popupElem);
         return popupElem;
     }
 
@@ -545,7 +472,7 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
     public java.util.List<Ref> getRefs() {
         java.util.List<Ref> result = new ArrayList<Ref>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Ref".equalsIgnoreCase(widget.getType())) {
                 result.add((Ref)widget);
             }
@@ -559,13 +486,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Ref addRef(Ref refElem) {
-        this.addAmendableWidget(refElem);
+        this.addOverlayWidget(refElem);
         return refElem;
     }
 
     public java.util.List<Mref> getMrefs() {
         java.util.List<Mref> result = new ArrayList<Mref>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Mref".equalsIgnoreCase(widget.getType())) {
                 result.add((Mref)widget);
             }
@@ -579,13 +506,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Mref addMref(Mref mrefElem) {
-        this.addAmendableWidget(mrefElem);
+        this.addOverlayWidget(mrefElem);
         return mrefElem;
     }
 
     public java.util.List<Rref> getRrefs() {
         java.util.List<Rref> result = new ArrayList<Rref>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Rref".equalsIgnoreCase(widget.getType())) {
                 result.add((Rref)widget);
             }
@@ -599,13 +526,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Rref addRref(Rref rrefElem) {
-        this.addAmendableWidget(rrefElem);
+        this.addOverlayWidget(rrefElem);
         return rrefElem;
     }
 
     public java.util.List<Mod> getMods() {
         java.util.List<Mod> result = new ArrayList<Mod>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Mod".equalsIgnoreCase(widget.getType())) {
                 result.add((Mod)widget);
             }
@@ -619,13 +546,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Mod addMod(Mod modElem) {
-        this.addAmendableWidget(modElem);
+        this.addOverlayWidget(modElem);
         return modElem;
     }
 
     public java.util.List<Mmod> getMmods() {
         java.util.List<Mmod> result = new ArrayList<Mmod>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Mmod".equalsIgnoreCase(widget.getType())) {
                 result.add((Mmod)widget);
             }
@@ -639,13 +566,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Mmod addMmod(Mmod mmodElem) {
-        this.addAmendableWidget(mmodElem);
+        this.addOverlayWidget(mmodElem);
         return mmodElem;
     }
 
     public java.util.List<Rmod> getRmods() {
         java.util.List<Rmod> result = new ArrayList<Rmod>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Rmod".equalsIgnoreCase(widget.getType())) {
                 result.add((Rmod)widget);
             }
@@ -659,13 +586,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Rmod addRmod(Rmod rmodElem) {
-        this.addAmendableWidget(rmodElem);
+        this.addOverlayWidget(rmodElem);
         return rmodElem;
     }
 
     public java.util.List<Remark> getRemarks() {
         java.util.List<Remark> result = new ArrayList<Remark>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Remark".equalsIgnoreCase(widget.getType())) {
                 result.add((Remark)widget);
             }
@@ -679,13 +606,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Remark addRemark(Remark remarkElem) {
-        this.addAmendableWidget(remarkElem);
+        this.addOverlayWidget(remarkElem);
         return remarkElem;
     }
 
     public java.util.List<RecordedTime> getRecordedTimes() {
         java.util.List<RecordedTime> result = new ArrayList<RecordedTime>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("RecordedTime".equalsIgnoreCase(widget.getType())) {
                 result.add((RecordedTime)widget);
             }
@@ -699,13 +626,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public RecordedTime addRecordedTime(RecordedTime recordedTimeElem) {
-        this.addAmendableWidget(recordedTimeElem);
+        this.addOverlayWidget(recordedTimeElem);
         return recordedTimeElem;
     }
 
     public java.util.List<Vote> getVotes() {
         java.util.List<Vote> result = new ArrayList<Vote>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Vote".equalsIgnoreCase(widget.getType())) {
                 result.add((Vote)widget);
             }
@@ -719,13 +646,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Vote addVote(Vote voteElem) {
-        this.addAmendableWidget(voteElem);
+        this.addOverlayWidget(voteElem);
         return voteElem;
     }
 
     public java.util.List<Outcome> getOutcomes() {
         java.util.List<Outcome> result = new ArrayList<Outcome>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Outcome".equalsIgnoreCase(widget.getType())) {
                 result.add((Outcome)widget);
             }
@@ -739,13 +666,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Outcome addOutcome(Outcome outcomeElem) {
-        this.addAmendableWidget(outcomeElem);
+        this.addOverlayWidget(outcomeElem);
         return outcomeElem;
     }
 
     public java.util.List<Ins> getInses() {
         java.util.List<Ins> result = new ArrayList<Ins>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Ins".equalsIgnoreCase(widget.getType())) {
                 result.add((Ins)widget);
             }
@@ -759,13 +686,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Ins addIns(Ins insElem) {
-        this.addAmendableWidget(insElem);
+        this.addOverlayWidget(insElem);
         return insElem;
     }
 
     public java.util.List<Del> getDels() {
         java.util.List<Del> result = new ArrayList<Del>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Del".equalsIgnoreCase(widget.getType())) {
                 result.add((Del)widget);
             }
@@ -779,13 +706,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Del addDel(Del delElem) {
-        this.addAmendableWidget(delElem);
+        this.addOverlayWidget(delElem);
         return delElem;
     }
 
     public java.util.List<Omissis> getOmissises() {
         java.util.List<Omissis> result = new ArrayList<Omissis>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Omissis".equalsIgnoreCase(widget.getType())) {
                 result.add((Omissis)widget);
             }
@@ -799,13 +726,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Omissis addOmissis(Omissis omissisElem) {
-        this.addAmendableWidget(omissisElem);
+        this.addOverlayWidget(omissisElem);
         return omissisElem;
     }
 
     public java.util.List<ExtractText> getExtractTexts() {
         java.util.List<ExtractText> result = new ArrayList<ExtractText>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ExtractText".equalsIgnoreCase(widget.getType())) {
                 result.add((ExtractText)widget);
             }
@@ -819,13 +746,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public ExtractText addExtractText(ExtractText extractTextElem) {
-        this.addAmendableWidget(extractTextElem);
+        this.addOverlayWidget(extractTextElem);
         return extractTextElem;
     }
 
     public java.util.List<ExtractStructure> getExtractStructures() {
         java.util.List<ExtractStructure> result = new ArrayList<ExtractStructure>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ExtractStructure".equalsIgnoreCase(widget.getType())) {
                 result.add((ExtractStructure)widget);
             }
@@ -839,13 +766,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public ExtractStructure addExtractStructure(ExtractStructure extractStructureElem) {
-        this.addAmendableWidget(extractStructureElem);
+        this.addOverlayWidget(extractStructureElem);
         return extractStructureElem;
     }
 
     public java.util.List<Placeholder> getPlaceholders() {
         java.util.List<Placeholder> result = new ArrayList<Placeholder>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Placeholder".equalsIgnoreCase(widget.getType())) {
                 result.add((Placeholder)widget);
             }
@@ -859,13 +786,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Placeholder addPlaceholder(Placeholder placeholderElem) {
-        this.addAmendableWidget(placeholderElem);
+        this.addOverlayWidget(placeholderElem);
         return placeholderElem;
     }
 
     public java.util.List<FillIn> getFillIns() {
         java.util.List<FillIn> result = new ArrayList<FillIn>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("FillIn".equalsIgnoreCase(widget.getType())) {
                 result.add((FillIn)widget);
             }
@@ -879,13 +806,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public FillIn addFillIn(FillIn fillInElem) {
-        this.addAmendableWidget(fillInElem);
+        this.addOverlayWidget(fillInElem);
         return fillInElem;
     }
 
     public java.util.List<B> getBs() {
         java.util.List<B> result = new ArrayList<B>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("B".equalsIgnoreCase(widget.getType())) {
                 result.add((B)widget);
             }
@@ -899,13 +826,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public B addB(B bElem) {
-        this.addAmendableWidget(bElem);
+        this.addOverlayWidget(bElem);
         return bElem;
     }
 
     public java.util.List<I> getIs() {
         java.util.List<I> result = new ArrayList<I>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("I".equalsIgnoreCase(widget.getType())) {
                 result.add((I)widget);
             }
@@ -919,13 +846,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public I addI(I iElem) {
-        this.addAmendableWidget(iElem);
+        this.addOverlayWidget(iElem);
         return iElem;
     }
 
     public java.util.List<A> getAs() {
         java.util.List<A> result = new ArrayList<A>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("A".equalsIgnoreCase(widget.getType())) {
                 result.add((A)widget);
             }
@@ -939,13 +866,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public A addA(A aElem) {
-        this.addAmendableWidget(aElem);
+        this.addOverlayWidget(aElem);
         return aElem;
     }
 
     public java.util.List<U> getUs() {
         java.util.List<U> result = new ArrayList<U>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("U".equalsIgnoreCase(widget.getType())) {
                 result.add((U)widget);
             }
@@ -959,13 +886,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public U addU(U uElem) {
-        this.addAmendableWidget(uElem);
+        this.addOverlayWidget(uElem);
         return uElem;
     }
 
     public java.util.List<Sub> getSubs() {
         java.util.List<Sub> result = new ArrayList<Sub>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Sub".equalsIgnoreCase(widget.getType())) {
                 result.add((Sub)widget);
             }
@@ -979,13 +906,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Sub addSub(Sub subElem) {
-        this.addAmendableWidget(subElem);
+        this.addOverlayWidget(subElem);
         return subElem;
     }
 
     public java.util.List<Sup> getSups() {
         java.util.List<Sup> result = new ArrayList<Sup>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Sup".equalsIgnoreCase(widget.getType())) {
                 result.add((Sup)widget);
             }
@@ -999,13 +926,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Sup addSup(Sup supElem) {
-        this.addAmendableWidget(supElem);
+        this.addOverlayWidget(supElem);
         return supElem;
     }
 
     public java.util.List<Span> getSpans() {
         java.util.List<Span> result = new ArrayList<Span>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Span".equalsIgnoreCase(widget.getType())) {
                 result.add((Span)widget);
             }
@@ -1019,13 +946,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Span addSpan(Span spanElem) {
-        this.addAmendableWidget(spanElem);
+        this.addOverlayWidget(spanElem);
         return spanElem;
     }
 
     public java.util.List<DocType> getDocTypes() {
         java.util.List<DocType> result = new ArrayList<DocType>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DocType".equalsIgnoreCase(widget.getType())) {
                 result.add((DocType)widget);
             }
@@ -1039,13 +966,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DocType addDocType(DocType docTypeElem) {
-        this.addAmendableWidget(docTypeElem);
+        this.addOverlayWidget(docTypeElem);
         return docTypeElem;
     }
 
     public java.util.List<DocTitle> getDocTitles() {
         java.util.List<DocTitle> result = new ArrayList<DocTitle>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DocTitle".equalsIgnoreCase(widget.getType())) {
                 result.add((DocTitle)widget);
             }
@@ -1059,13 +986,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DocTitle addDocTitle(DocTitle docTitleElem) {
-        this.addAmendableWidget(docTitleElem);
+        this.addOverlayWidget(docTitleElem);
         return docTitleElem;
     }
 
     public java.util.List<DocNumber> getDocNumbers() {
         java.util.List<DocNumber> result = new ArrayList<DocNumber>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DocNumber".equalsIgnoreCase(widget.getType())) {
                 result.add((DocNumber)widget);
             }
@@ -1079,13 +1006,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DocNumber addDocNumber(DocNumber docNumberElem) {
-        this.addAmendableWidget(docNumberElem);
+        this.addOverlayWidget(docNumberElem);
         return docNumberElem;
     }
 
     public java.util.List<DocProponent> getDocProponents() {
         java.util.List<DocProponent> result = new ArrayList<DocProponent>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DocProponent".equalsIgnoreCase(widget.getType())) {
                 result.add((DocProponent)widget);
             }
@@ -1099,13 +1026,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DocProponent addDocProponent(DocProponent docProponentElem) {
-        this.addAmendableWidget(docProponentElem);
+        this.addOverlayWidget(docProponentElem);
         return docProponentElem;
     }
 
     public java.util.List<DocDate> getDocDates() {
         java.util.List<DocDate> result = new ArrayList<DocDate>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DocDate".equalsIgnoreCase(widget.getType())) {
                 result.add((DocDate)widget);
             }
@@ -1119,13 +1046,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DocDate addDocDate(DocDate docDateElem) {
-        this.addAmendableWidget(docDateElem);
+        this.addOverlayWidget(docDateElem);
         return docDateElem;
     }
 
     public java.util.List<Legislature> getLegislatures() {
         java.util.List<Legislature> result = new ArrayList<Legislature>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Legislature".equalsIgnoreCase(widget.getType())) {
                 result.add((Legislature)widget);
             }
@@ -1139,13 +1066,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Legislature addLegislature(Legislature legislatureElem) {
-        this.addAmendableWidget(legislatureElem);
+        this.addOverlayWidget(legislatureElem);
         return legislatureElem;
     }
 
     public java.util.List<Session> getSessions() {
         java.util.List<Session> result = new ArrayList<Session>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Session".equalsIgnoreCase(widget.getType())) {
                 result.add((Session)widget);
             }
@@ -1159,13 +1086,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Session addSession(Session sessionElem) {
-        this.addAmendableWidget(sessionElem);
+        this.addOverlayWidget(sessionElem);
         return sessionElem;
     }
 
     public java.util.List<ShortTitle> getShortTitles() {
         java.util.List<ShortTitle> result = new ArrayList<ShortTitle>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ShortTitle".equalsIgnoreCase(widget.getType())) {
                 result.add((ShortTitle)widget);
             }
@@ -1179,13 +1106,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public ShortTitle addShortTitle(ShortTitle shortTitleElem) {
-        this.addAmendableWidget(shortTitleElem);
+        this.addOverlayWidget(shortTitleElem);
         return shortTitleElem;
     }
 
     public java.util.List<DocPurpose> getDocPurposes() {
         java.util.List<DocPurpose> result = new ArrayList<DocPurpose>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DocPurpose".equalsIgnoreCase(widget.getType())) {
                 result.add((DocPurpose)widget);
             }
@@ -1199,13 +1126,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DocPurpose addDocPurpose(DocPurpose docPurposeElem) {
-        this.addAmendableWidget(docPurposeElem);
+        this.addOverlayWidget(docPurposeElem);
         return docPurposeElem;
     }
 
     public java.util.List<DocCommittee> getDocCommittees() {
         java.util.List<DocCommittee> result = new ArrayList<DocCommittee>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DocCommittee".equalsIgnoreCase(widget.getType())) {
                 result.add((DocCommittee)widget);
             }
@@ -1219,13 +1146,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DocCommittee addDocCommittee(DocCommittee docCommitteeElem) {
-        this.addAmendableWidget(docCommitteeElem);
+        this.addOverlayWidget(docCommitteeElem);
         return docCommitteeElem;
     }
 
     public java.util.List<DocIntroducer> getDocIntroducers() {
         java.util.List<DocIntroducer> result = new ArrayList<DocIntroducer>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DocIntroducer".equalsIgnoreCase(widget.getType())) {
                 result.add((DocIntroducer)widget);
             }
@@ -1239,13 +1166,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DocIntroducer addDocIntroducer(DocIntroducer docIntroducerElem) {
-        this.addAmendableWidget(docIntroducerElem);
+        this.addOverlayWidget(docIntroducerElem);
         return docIntroducerElem;
     }
 
     public java.util.List<DocStage> getDocStages() {
         java.util.List<DocStage> result = new ArrayList<DocStage>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DocStage".equalsIgnoreCase(widget.getType())) {
                 result.add((DocStage)widget);
             }
@@ -1259,13 +1186,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DocStage addDocStage(DocStage docStageElem) {
-        this.addAmendableWidget(docStageElem);
+        this.addOverlayWidget(docStageElem);
         return docStageElem;
     }
 
     public java.util.List<DocStatus> getDocStatuses() {
         java.util.List<DocStatus> result = new ArrayList<DocStatus>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DocStatus".equalsIgnoreCase(widget.getType())) {
                 result.add((DocStatus)widget);
             }
@@ -1279,13 +1206,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DocStatus addDocStatus(DocStatus docStatusElem) {
-        this.addAmendableWidget(docStatusElem);
+        this.addOverlayWidget(docStatusElem);
         return docStatusElem;
     }
 
     public java.util.List<DocJurisdiction> getDocJurisdictions() {
         java.util.List<DocJurisdiction> result = new ArrayList<DocJurisdiction>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DocJurisdiction".equalsIgnoreCase(widget.getType())) {
                 result.add((DocJurisdiction)widget);
             }
@@ -1299,13 +1226,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DocJurisdiction addDocJurisdiction(DocJurisdiction docJurisdictionElem) {
-        this.addAmendableWidget(docJurisdictionElem);
+        this.addOverlayWidget(docJurisdictionElem);
         return docJurisdictionElem;
     }
 
     public java.util.List<DocketNumber> getDocketNumbers() {
         java.util.List<DocketNumber> result = new ArrayList<DocketNumber>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DocketNumber".equalsIgnoreCase(widget.getType())) {
                 result.add((DocketNumber)widget);
             }
@@ -1319,13 +1246,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DocketNumber addDocketNumber(DocketNumber docketNumberElem) {
-        this.addAmendableWidget(docketNumberElem);
+        this.addOverlayWidget(docketNumberElem);
         return docketNumberElem;
     }
 
     public java.util.List<Date> getDates() {
         java.util.List<Date> result = new ArrayList<Date>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Date".equalsIgnoreCase(widget.getType())) {
                 result.add((Date)widget);
             }
@@ -1339,13 +1266,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Date addDate(Date dateElem) {
-        this.addAmendableWidget(dateElem);
+        this.addOverlayWidget(dateElem);
         return dateElem;
     }
 
     public java.util.List<Person> getPersons() {
         java.util.List<Person> result = new ArrayList<Person>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Person".equalsIgnoreCase(widget.getType())) {
                 result.add((Person)widget);
             }
@@ -1359,13 +1286,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Person addPerson(Person personElem) {
-        this.addAmendableWidget(personElem);
+        this.addOverlayWidget(personElem);
         return personElem;
     }
 
     public java.util.List<Organization> getOrganizations() {
         java.util.List<Organization> result = new ArrayList<Organization>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Organization".equalsIgnoreCase(widget.getType())) {
                 result.add((Organization)widget);
             }
@@ -1379,13 +1306,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Organization addOrganization(Organization organizationElem) {
-        this.addAmendableWidget(organizationElem);
+        this.addOverlayWidget(organizationElem);
         return organizationElem;
     }
 
     public java.util.List<Concept> getConcepts() {
         java.util.List<Concept> result = new ArrayList<Concept>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Concept".equalsIgnoreCase(widget.getType())) {
                 result.add((Concept)widget);
             }
@@ -1399,13 +1326,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Concept addConcept(Concept conceptElem) {
-        this.addAmendableWidget(conceptElem);
+        this.addOverlayWidget(conceptElem);
         return conceptElem;
     }
 
     public java.util.List<Object> getObjects() {
         java.util.List<Object> result = new ArrayList<Object>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Object".equalsIgnoreCase(widget.getType())) {
                 result.add((Object)widget);
             }
@@ -1419,13 +1346,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Object addObject(Object objectElem) {
-        this.addAmendableWidget(objectElem);
+        this.addOverlayWidget(objectElem);
         return objectElem;
     }
 
     public java.util.List<Event> getEvents() {
         java.util.List<Event> result = new ArrayList<Event>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Event".equalsIgnoreCase(widget.getType())) {
                 result.add((Event)widget);
             }
@@ -1439,13 +1366,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Event addEvent(Event eventElem) {
-        this.addAmendableWidget(eventElem);
+        this.addOverlayWidget(eventElem);
         return eventElem;
     }
 
     public java.util.List<Location> getLocations() {
         java.util.List<Location> result = new ArrayList<Location>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Location".equalsIgnoreCase(widget.getType())) {
                 result.add((Location)widget);
             }
@@ -1459,13 +1386,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Location addLocation(Location locationElem) {
-        this.addAmendableWidget(locationElem);
+        this.addOverlayWidget(locationElem);
         return locationElem;
     }
 
     public java.util.List<Process> getProcesses() {
         java.util.List<Process> result = new ArrayList<Process>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Process".equalsIgnoreCase(widget.getType())) {
                 result.add((Process)widget);
             }
@@ -1479,13 +1406,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Process addProcess(Process processElem) {
-        this.addAmendableWidget(processElem);
+        this.addOverlayWidget(processElem);
         return processElem;
     }
 
     public java.util.List<Role> getRoles() {
         java.util.List<Role> result = new ArrayList<Role>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Role".equalsIgnoreCase(widget.getType())) {
                 result.add((Role)widget);
             }
@@ -1499,13 +1426,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Role addRole(Role roleElem) {
-        this.addAmendableWidget(roleElem);
+        this.addOverlayWidget(roleElem);
         return roleElem;
     }
 
     public java.util.List<Term> getTerms() {
         java.util.List<Term> result = new ArrayList<Term>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Term".equalsIgnoreCase(widget.getType())) {
                 result.add((Term)widget);
             }
@@ -1519,13 +1446,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Term addTerm(Term termElem) {
-        this.addAmendableWidget(termElem);
+        this.addOverlayWidget(termElem);
         return termElem;
     }
 
     public java.util.List<Quantity> getQuantities() {
         java.util.List<Quantity> result = new ArrayList<Quantity>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Quantity".equalsIgnoreCase(widget.getType())) {
                 result.add((Quantity)widget);
             }
@@ -1539,13 +1466,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Quantity addQuantity(Quantity quantityElem) {
-        this.addAmendableWidget(quantityElem);
+        this.addOverlayWidget(quantityElem);
         return quantityElem;
     }
 
     public java.util.List<Def> getDefs() {
         java.util.List<Def> result = new ArrayList<Def>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Def".equalsIgnoreCase(widget.getType())) {
                 result.add((Def)widget);
             }
@@ -1559,13 +1486,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Def addDef(Def defElem) {
-        this.addAmendableWidget(defElem);
+        this.addOverlayWidget(defElem);
         return defElem;
     }
 
     public java.util.List<Entity> getEntities() {
         java.util.List<Entity> result = new ArrayList<Entity>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Entity".equalsIgnoreCase(widget.getType())) {
                 result.add((Entity)widget);
             }
@@ -1579,13 +1506,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Entity addEntity(Entity entityElem) {
-        this.addAmendableWidget(entityElem);
+        this.addOverlayWidget(entityElem);
         return entityElem;
     }
 
     public java.util.List<CourtType> getCourtTypes() {
         java.util.List<CourtType> result = new ArrayList<CourtType>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("CourtType".equalsIgnoreCase(widget.getType())) {
                 result.add((CourtType)widget);
             }
@@ -1599,13 +1526,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public CourtType addCourtType(CourtType courtTypeElem) {
-        this.addAmendableWidget(courtTypeElem);
+        this.addOverlayWidget(courtTypeElem);
         return courtTypeElem;
     }
 
     public java.util.List<NeutralCitation> getNeutralCitations() {
         java.util.List<NeutralCitation> result = new ArrayList<NeutralCitation>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("NeutralCitation".equalsIgnoreCase(widget.getType())) {
                 result.add((NeutralCitation)widget);
             }
@@ -1619,13 +1546,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public NeutralCitation addNeutralCitation(NeutralCitation neutralCitationElem) {
-        this.addAmendableWidget(neutralCitationElem);
+        this.addOverlayWidget(neutralCitationElem);
         return neutralCitationElem;
     }
 
     public java.util.List<Party> getParties() {
         java.util.List<Party> result = new ArrayList<Party>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Party".equalsIgnoreCase(widget.getType())) {
                 result.add((Party)widget);
             }
@@ -1639,13 +1566,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Party addParty(Party partyElem) {
-        this.addAmendableWidget(partyElem);
+        this.addOverlayWidget(partyElem);
         return partyElem;
     }
 
     public java.util.List<Judge> getJudges() {
         java.util.List<Judge> result = new ArrayList<Judge>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Judge".equalsIgnoreCase(widget.getType())) {
                 result.add((Judge)widget);
             }
@@ -1659,13 +1586,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Judge addJudge(Judge judgeElem) {
-        this.addAmendableWidget(judgeElem);
+        this.addOverlayWidget(judgeElem);
         return judgeElem;
     }
 
     public java.util.List<Lawyer> getLawyers() {
         java.util.List<Lawyer> result = new ArrayList<Lawyer>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Lawyer".equalsIgnoreCase(widget.getType())) {
                 result.add((Lawyer)widget);
             }
@@ -1679,13 +1606,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Lawyer addLawyer(Lawyer lawyerElem) {
-        this.addAmendableWidget(lawyerElem);
+        this.addOverlayWidget(lawyerElem);
         return lawyerElem;
     }
 
     public java.util.List<Signature> getSignatures() {
         java.util.List<Signature> result = new ArrayList<Signature>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Signature".equalsIgnoreCase(widget.getType())) {
                 result.add((Signature)widget);
             }
@@ -1699,13 +1626,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Signature addSignature(Signature signatureElem) {
-        this.addAmendableWidget(signatureElem);
+        this.addOverlayWidget(signatureElem);
         return signatureElem;
     }
 
     public java.util.List<Opinion> getOpinions() {
         java.util.List<Opinion> result = new ArrayList<Opinion>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Opinion".equalsIgnoreCase(widget.getType())) {
                 result.add((Opinion)widget);
             }
@@ -1719,13 +1646,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Opinion addOpinion(Opinion opinionElem) {
-        this.addAmendableWidget(opinionElem);
+        this.addOverlayWidget(opinionElem);
         return opinionElem;
     }
 
     public java.util.List<AffectedDocument> getAffectedDocuments() {
         java.util.List<AffectedDocument> result = new ArrayList<AffectedDocument>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("AffectedDocument".equalsIgnoreCase(widget.getType())) {
                 result.add((AffectedDocument)widget);
             }
@@ -1739,13 +1666,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public AffectedDocument addAffectedDocument(AffectedDocument affectedDocumentElem) {
-        this.addAmendableWidget(affectedDocumentElem);
+        this.addOverlayWidget(affectedDocumentElem);
         return affectedDocumentElem;
     }
 
     public java.util.List<RelatedDocument> getRelatedDocuments() {
         java.util.List<RelatedDocument> result = new ArrayList<RelatedDocument>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("RelatedDocument".equalsIgnoreCase(widget.getType())) {
                 result.add((RelatedDocument)widget);
             }
@@ -1759,13 +1686,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public RelatedDocument addRelatedDocument(RelatedDocument relatedDocumentElem) {
-        this.addAmendableWidget(relatedDocumentElem);
+        this.addOverlayWidget(relatedDocumentElem);
         return relatedDocumentElem;
     }
 
     public java.util.List<Change> getChanges() {
         java.util.List<Change> result = new ArrayList<Change>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Change".equalsIgnoreCase(widget.getType())) {
                 result.add((Change)widget);
             }
@@ -1779,13 +1706,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Change addChange(Change changeElem) {
-        this.addAmendableWidget(changeElem);
+        this.addOverlayWidget(changeElem);
         return changeElem;
     }
 
     public java.util.List<NoteRef> getNoteRefs() {
         java.util.List<NoteRef> result = new ArrayList<NoteRef>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("NoteRef".equalsIgnoreCase(widget.getType())) {
                 result.add((NoteRef)widget);
             }
@@ -1799,13 +1726,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public NoteRef addNoteRef(NoteRef noteRefElem) {
-        this.addAmendableWidget(noteRefElem);
+        this.addOverlayWidget(noteRefElem);
         return noteRefElem;
     }
 
     public java.util.List<Eol> getEols() {
         java.util.List<Eol> result = new ArrayList<Eol>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Eol".equalsIgnoreCase(widget.getType())) {
                 result.add((Eol)widget);
             }
@@ -1819,13 +1746,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Eol addEol(Eol eolElem) {
-        this.addAmendableWidget(eolElem);
+        this.addOverlayWidget(eolElem);
         return eolElem;
     }
 
     public java.util.List<Eop> getEops() {
         java.util.List<Eop> result = new ArrayList<Eop>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Eop".equalsIgnoreCase(widget.getType())) {
                 result.add((Eop)widget);
             }
@@ -1839,13 +1766,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Eop addEop(Eop eopElem) {
-        this.addAmendableWidget(eopElem);
+        this.addOverlayWidget(eopElem);
         return eopElem;
     }
 
     public java.util.List<Img> getImgs() {
         java.util.List<Img> result = new ArrayList<Img>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Img".equalsIgnoreCase(widget.getType())) {
                 result.add((Img)widget);
             }
@@ -1859,13 +1786,13 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Img addImg(Img imgElem) {
-        this.addAmendableWidget(imgElem);
+        this.addOverlayWidget(imgElem);
         return imgElem;
     }
 
     public java.util.List<AuthorialNote> getAuthorialNotes() {
         java.util.List<AuthorialNote> result = new ArrayList<AuthorialNote>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("AuthorialNote".equalsIgnoreCase(widget.getType())) {
                 result.add((AuthorialNote)widget);
             }
@@ -1879,7 +1806,7 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public AuthorialNote addAuthorialNote(AuthorialNote authorialNoteElem) {
-        this.addAmendableWidget(authorialNoteElem);
+        this.addOverlayWidget(authorialNoteElem);
         return authorialNoteElem;
     }
 
@@ -1889,7 +1816,7 @@ public class ModTypeComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

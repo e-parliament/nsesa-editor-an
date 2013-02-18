@@ -13,14 +13,10 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.CorePropertiesComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRlanguage;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRtranslation;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -32,7 +28,7 @@ import com.google.gwt.user.client.DOM;
 */
 
 public class FRBRExpression extends CorePropertiesComplexType  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new FRBRlanguage(), new Occurrence(0,-1));
             put(new FRBRtranslation(), new Occurrence(0,-1));
@@ -71,7 +67,7 @@ public class FRBRExpression extends CorePropertiesComplexType  {
 
     public java.util.List<FRBRlanguage> getFRBRlanguages() {
         java.util.List<FRBRlanguage> result = new ArrayList<FRBRlanguage>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("FRBRlanguage".equalsIgnoreCase(widget.getType())) {
                 result.add((FRBRlanguage)widget);
             }
@@ -85,13 +81,13 @@ public class FRBRExpression extends CorePropertiesComplexType  {
     }
      //DSL Style set value
     public FRBRlanguage addFRBRlanguage(FRBRlanguage FRBRlanguageElem) {
-        this.addAmendableWidget(FRBRlanguageElem);
+        this.addOverlayWidget(FRBRlanguageElem);
         return FRBRlanguageElem;
     }
 
     public java.util.List<FRBRtranslation> getFRBRtranslations() {
         java.util.List<FRBRtranslation> result = new ArrayList<FRBRtranslation>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("FRBRtranslation".equalsIgnoreCase(widget.getType())) {
                 result.add((FRBRtranslation)widget);
             }
@@ -105,7 +101,7 @@ public class FRBRExpression extends CorePropertiesComplexType  {
     }
      //DSL Style set value
     public FRBRtranslation addFRBRtranslation(FRBRtranslation FRBRtranslationElem) {
-        this.addAmendableWidget(FRBRtranslationElem);
+        this.addOverlayWidget(FRBRtranslationElem);
         return FRBRtranslationElem;
     }
 
@@ -115,7 +111,7 @@ public class FRBRExpression extends CorePropertiesComplexType  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

@@ -17,8 +17,8 @@ import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 
 import java.util.ArrayList;
@@ -30,8 +30,8 @@ import java.util.Map;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class Recitals extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class Recitals extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Intro(), new Occurrence(0,1));
             put(new Recital(), new Occurrence(1,-1));
@@ -74,7 +74,7 @@ public class Recitals extends AmendableWidgetImpl  {
 
     public Intro getIntro() {
         Intro result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Intro".equalsIgnoreCase(widget.getType())) {
                 result = (Intro)widget;
                 break;
@@ -89,15 +89,15 @@ public class Recitals extends AmendableWidgetImpl  {
         Intro result = getIntro();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(introElem);
+        this.addOverlayWidget(introElem);
 
         return introElem;
     }
     public java.util.List<Recital> getRecitals() {
         java.util.List<Recital> result = new ArrayList<Recital>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Recital".equalsIgnoreCase(widget.getType())) {
                 result.add((Recital)widget);
             }
@@ -111,7 +111,7 @@ public class Recitals extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Recital addRecital(Recital recitalElem) {
-        this.addAmendableWidget(recitalElem);
+        this.addOverlayWidget(recitalElem);
         return recitalElem;
     }
 
@@ -350,7 +350,7 @@ public class Recitals extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

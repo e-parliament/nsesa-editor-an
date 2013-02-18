@@ -14,27 +14,11 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Original;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PassiveRef;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ActiveRef;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Jurisprudence;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.HasAttachment;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AttachmentOf;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCPerson;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCOrganization;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCConcept;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCObject;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCEvent;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCLocation;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCProcess;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCRole;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCTerm;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TLCReference;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -45,8 +29,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class RefItemsComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class RefItemsComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Original(), new Occurrence(0,-1));
             put(new PassiveRef(), new Occurrence(0,-1));
@@ -110,7 +94,7 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
     public java.util.List<Original> getOriginals() {
         java.util.List<Original> result = new ArrayList<Original>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Original".equalsIgnoreCase(widget.getType())) {
                 result.add((Original)widget);
             }
@@ -124,13 +108,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Original addOriginal(Original originalElem) {
-        this.addAmendableWidget(originalElem);
+        this.addOverlayWidget(originalElem);
         return originalElem;
     }
 
     public java.util.List<PassiveRef> getPassiveRefs() {
         java.util.List<PassiveRef> result = new ArrayList<PassiveRef>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("PassiveRef".equalsIgnoreCase(widget.getType())) {
                 result.add((PassiveRef)widget);
             }
@@ -144,13 +128,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public PassiveRef addPassiveRef(PassiveRef passiveRefElem) {
-        this.addAmendableWidget(passiveRefElem);
+        this.addOverlayWidget(passiveRefElem);
         return passiveRefElem;
     }
 
     public java.util.List<ActiveRef> getActiveRefs() {
         java.util.List<ActiveRef> result = new ArrayList<ActiveRef>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ActiveRef".equalsIgnoreCase(widget.getType())) {
                 result.add((ActiveRef)widget);
             }
@@ -164,13 +148,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public ActiveRef addActiveRef(ActiveRef activeRefElem) {
-        this.addAmendableWidget(activeRefElem);
+        this.addOverlayWidget(activeRefElem);
         return activeRefElem;
     }
 
     public java.util.List<Jurisprudence> getJurisprudences() {
         java.util.List<Jurisprudence> result = new ArrayList<Jurisprudence>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Jurisprudence".equalsIgnoreCase(widget.getType())) {
                 result.add((Jurisprudence)widget);
             }
@@ -184,13 +168,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Jurisprudence addJurisprudence(Jurisprudence jurisprudenceElem) {
-        this.addAmendableWidget(jurisprudenceElem);
+        this.addOverlayWidget(jurisprudenceElem);
         return jurisprudenceElem;
     }
 
     public java.util.List<HasAttachment> getHasAttachments() {
         java.util.List<HasAttachment> result = new ArrayList<HasAttachment>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("HasAttachment".equalsIgnoreCase(widget.getType())) {
                 result.add((HasAttachment)widget);
             }
@@ -204,13 +188,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public HasAttachment addHasAttachment(HasAttachment hasAttachmentElem) {
-        this.addAmendableWidget(hasAttachmentElem);
+        this.addOverlayWidget(hasAttachmentElem);
         return hasAttachmentElem;
     }
 
     public java.util.List<AttachmentOf> getAttachmentOfs() {
         java.util.List<AttachmentOf> result = new ArrayList<AttachmentOf>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("AttachmentOf".equalsIgnoreCase(widget.getType())) {
                 result.add((AttachmentOf)widget);
             }
@@ -224,13 +208,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public AttachmentOf addAttachmentOf(AttachmentOf attachmentOfElem) {
-        this.addAmendableWidget(attachmentOfElem);
+        this.addOverlayWidget(attachmentOfElem);
         return attachmentOfElem;
     }
 
     public java.util.List<TLCPerson> getTLCPersons() {
         java.util.List<TLCPerson> result = new ArrayList<TLCPerson>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("TLCPerson".equalsIgnoreCase(widget.getType())) {
                 result.add((TLCPerson)widget);
             }
@@ -244,13 +228,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public TLCPerson addTLCPerson(TLCPerson TLCPersonElem) {
-        this.addAmendableWidget(TLCPersonElem);
+        this.addOverlayWidget(TLCPersonElem);
         return TLCPersonElem;
     }
 
     public java.util.List<TLCOrganization> getTLCOrganizations() {
         java.util.List<TLCOrganization> result = new ArrayList<TLCOrganization>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("TLCOrganization".equalsIgnoreCase(widget.getType())) {
                 result.add((TLCOrganization)widget);
             }
@@ -264,13 +248,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public TLCOrganization addTLCOrganization(TLCOrganization TLCOrganizationElem) {
-        this.addAmendableWidget(TLCOrganizationElem);
+        this.addOverlayWidget(TLCOrganizationElem);
         return TLCOrganizationElem;
     }
 
     public java.util.List<TLCConcept> getTLCConcepts() {
         java.util.List<TLCConcept> result = new ArrayList<TLCConcept>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("TLCConcept".equalsIgnoreCase(widget.getType())) {
                 result.add((TLCConcept)widget);
             }
@@ -284,13 +268,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public TLCConcept addTLCConcept(TLCConcept TLCConceptElem) {
-        this.addAmendableWidget(TLCConceptElem);
+        this.addOverlayWidget(TLCConceptElem);
         return TLCConceptElem;
     }
 
     public java.util.List<TLCObject> getTLCObjects() {
         java.util.List<TLCObject> result = new ArrayList<TLCObject>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("TLCObject".equalsIgnoreCase(widget.getType())) {
                 result.add((TLCObject)widget);
             }
@@ -304,13 +288,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public TLCObject addTLCObject(TLCObject TLCObjectElem) {
-        this.addAmendableWidget(TLCObjectElem);
+        this.addOverlayWidget(TLCObjectElem);
         return TLCObjectElem;
     }
 
     public java.util.List<TLCEvent> getTLCEvents() {
         java.util.List<TLCEvent> result = new ArrayList<TLCEvent>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("TLCEvent".equalsIgnoreCase(widget.getType())) {
                 result.add((TLCEvent)widget);
             }
@@ -324,13 +308,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public TLCEvent addTLCEvent(TLCEvent TLCEventElem) {
-        this.addAmendableWidget(TLCEventElem);
+        this.addOverlayWidget(TLCEventElem);
         return TLCEventElem;
     }
 
     public java.util.List<TLCLocation> getTLCLocations() {
         java.util.List<TLCLocation> result = new ArrayList<TLCLocation>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("TLCLocation".equalsIgnoreCase(widget.getType())) {
                 result.add((TLCLocation)widget);
             }
@@ -344,13 +328,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public TLCLocation addTLCLocation(TLCLocation TLCLocationElem) {
-        this.addAmendableWidget(TLCLocationElem);
+        this.addOverlayWidget(TLCLocationElem);
         return TLCLocationElem;
     }
 
     public java.util.List<TLCProcess> getTLCProcesses() {
         java.util.List<TLCProcess> result = new ArrayList<TLCProcess>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("TLCProcess".equalsIgnoreCase(widget.getType())) {
                 result.add((TLCProcess)widget);
             }
@@ -364,13 +348,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public TLCProcess addTLCProcess(TLCProcess TLCProcessElem) {
-        this.addAmendableWidget(TLCProcessElem);
+        this.addOverlayWidget(TLCProcessElem);
         return TLCProcessElem;
     }
 
     public java.util.List<TLCRole> getTLCRoles() {
         java.util.List<TLCRole> result = new ArrayList<TLCRole>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("TLCRole".equalsIgnoreCase(widget.getType())) {
                 result.add((TLCRole)widget);
             }
@@ -384,13 +368,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public TLCRole addTLCRole(TLCRole TLCRoleElem) {
-        this.addAmendableWidget(TLCRoleElem);
+        this.addOverlayWidget(TLCRoleElem);
         return TLCRoleElem;
     }
 
     public java.util.List<TLCTerm> getTLCTerms() {
         java.util.List<TLCTerm> result = new ArrayList<TLCTerm>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("TLCTerm".equalsIgnoreCase(widget.getType())) {
                 result.add((TLCTerm)widget);
             }
@@ -404,13 +388,13 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public TLCTerm addTLCTerm(TLCTerm TLCTermElem) {
-        this.addAmendableWidget(TLCTermElem);
+        this.addOverlayWidget(TLCTermElem);
         return TLCTermElem;
     }
 
     public java.util.List<TLCReference> getTLCReferences() {
         java.util.List<TLCReference> result = new ArrayList<TLCReference>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("TLCReference".equalsIgnoreCase(widget.getType())) {
                 result.add((TLCReference)widget);
             }
@@ -424,7 +408,7 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public TLCReference addTLCReference(TLCReference TLCReferenceElem) {
-        this.addAmendableWidget(TLCReferenceElem);
+        this.addOverlayWidget(TLCReferenceElem);
         return TLCReferenceElem;
     }
 
@@ -434,7 +418,7 @@ public class RefItemsComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

@@ -15,7 +15,7 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document;
 
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultCreator;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.editor.client.ui.document.DocumentController;
@@ -38,22 +38,22 @@ public class AkomaNtoso20Creator extends DefaultCreator {
     }
 
     @Override
-    public LinkedHashMap<AmendableWidget, Occurrence> getAllowedSiblings(DocumentController documentController, AmendableWidget amendableWidget) {
-        return getAllowedChildren(documentController, amendableWidget.getParentAmendableWidget());
+    public LinkedHashMap<OverlayWidget, Occurrence> getAllowedSiblings(DocumentController documentController, OverlayWidget overlayWidget) {
+        return getAllowedChildren(documentController, overlayWidget.getParentOverlayWidget());
     }
 
     @Override
-    public LinkedHashMap<AmendableWidget, Occurrence> getAllowedChildren(DocumentController documentController, AmendableWidget amendableWidget) {
-        final LinkedHashMap<AmendableWidget, Occurrence> allowedChildren = new LinkedHashMap<AmendableWidget, Occurrence>();
-        final Map<AmendableWidget, Occurrence> allowedTypes = amendableWidget.getAllowedChildTypes();
-        List<Map.Entry<AmendableWidget, Occurrence>> list = new ArrayList<Map.Entry<AmendableWidget, Occurrence>>(allowedTypes.entrySet());
-        Collections.sort(list, new Comparator<Map.Entry<AmendableWidget, Occurrence>>() {
+    public LinkedHashMap<OverlayWidget, Occurrence> getAllowedChildren(DocumentController documentController, OverlayWidget overlayWidget) {
+        final LinkedHashMap<OverlayWidget, Occurrence> allowedChildren = new LinkedHashMap<OverlayWidget, Occurrence>();
+        final Map<OverlayWidget, Occurrence> allowedTypes = overlayWidget.getAllowedChildTypes();
+        List<Map.Entry<OverlayWidget, Occurrence>> list = new ArrayList<Map.Entry<OverlayWidget, Occurrence>>(allowedTypes.entrySet());
+        Collections.sort(list, new Comparator<Map.Entry<OverlayWidget, Occurrence>>() {
             @Override
-            public int compare(Map.Entry<AmendableWidget, Occurrence> o1, Map.Entry<AmendableWidget, Occurrence> o2) {
+            public int compare(Map.Entry<OverlayWidget, Occurrence> o1, Map.Entry<OverlayWidget, Occurrence> o2) {
                 return o1.getKey().getType().compareTo(o2.getKey().getType());
             }
         });
-        for (final Map.Entry<AmendableWidget, Occurrence> allowedType : list) {
+        for (final Map.Entry<OverlayWidget, Occurrence> allowedType : list) {
             allowedChildren.put(allowedType.getKey(), allowedType.getValue());
         }
         return allowedChildren;

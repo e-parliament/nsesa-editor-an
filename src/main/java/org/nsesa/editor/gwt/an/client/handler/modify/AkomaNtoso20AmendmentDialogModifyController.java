@@ -18,10 +18,10 @@ import com.google.gwt.user.client.DOM;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
-import org.nsesa.editor.gwt.core.client.amendment.AmendableWidgetWalker;
+import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.ui.drafting.DraftingController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
@@ -70,7 +70,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
 
     @Override
     public void handleSave() {
-        AmendableWidget amendableWidget = dialogContext.getAmendableWidget();
+        OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
 
         final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
 
@@ -122,7 +122,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
 
         amendmentBody
                 .addAmendmentHeading(new AmendmentHeading())
-                .addBlock(new Block()).html(locator.getLocation(amendableWidget, null, languageIso, true));
+                .addBlock(new Block()).html(locator.getLocation(overlayWidget, null, languageIso, true));
 
         // amendment content
         final AmendmentContent amendmentContent = amendmentBody
@@ -141,35 +141,35 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         final QuotedStructure quotedStructureOriginal = mod.addQuotedStructure(new QuotedStructure());
 
         final String originalText = contentPanelController.getView().getOriginalText();
-        final com.google.gwt.user.client.Element cloneOriginal = DOM.clone(amendableWidget.asWidget().getElement(), false);
+        final com.google.gwt.user.client.Element cloneOriginal = DOM.clone(overlayWidget.asWidget().getElement(), false);
         cloneOriginal.setInnerHTML(originalText);
-        final AmendableWidget overlayedOriginal = overlayFactory.getAmendableWidget(cloneOriginal);
-        quotedStructureOriginal.addAmendableWidget(overlayedOriginal);
+        final OverlayWidget overlayedOriginal = overlayFactory.getAmendableWidget(cloneOriginal);
+        quotedStructureOriginal.addOverlayWidget(overlayedOriginal);
 
         // amendment content
         final QuotedStructure quotedStructureAmendment = mod.addQuotedStructure(new QuotedStructure());
         final String amendmentText = view.getAmendmentContent();
-        final com.google.gwt.user.client.Element clone = DOM.clone(amendableWidget.asWidget().getElement(), false);
+        final com.google.gwt.user.client.Element clone = DOM.clone(overlayWidget.asWidget().getElement(), false);
         clone.setInnerHTML(amendmentText);
-        final AmendableWidget overlayed = overlayFactory.getAmendableWidget(clone);
+        final OverlayWidget overlayed = overlayFactory.getAmendableWidget(clone);
         modifyIdsIfNeeded(overlayed);
-        quotedStructureAmendment.addAmendableWidget(overlayed);
+        quotedStructureAmendment.addOverlayWidget(overlayed);
 
-        akomaNtoso.addAmendableWidget(root);
+        akomaNtoso.addOverlayWidget(root);
         dialogContext.getAmendment().setRoot(akomaNtoso);
 
         super.handleSave();
     }
 
-    public void modifyIdsIfNeeded(final AmendableWidget root) {
+    public void modifyIdsIfNeeded(final OverlayWidget root) {
         // we only need to modify the ids if we're a new amendment (not editing an existing one)
         if (dialogContext.getAmendmentController() == null) {
             // now we need to make sure that the new structure has new ids assigned
-            root.walk(new AmendableWidgetWalker.AmendableVisitor() {
+            root.walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
                 @Override
-                public boolean visit(AmendableWidget visited) {
-                    if (visited.getAmendableElement().getId() != null && !"".equals(visited.getAmendableElement().getId().trim())) {
-                        visited.getAmendableElement().setId(visited.getAmendableElement().getId() + "-mod");
+                public boolean visit(OverlayWidget visited) {
+                    if (visited.getOverlayElement().getId() != null && !"".equals(visited.getOverlayElement().getId().trim())) {
+                        visited.getOverlayElement().setId(visited.getOverlayElement().getId() + "-mod");
                     }
                     return true;
                 }
@@ -177,7 +177,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         }
     }
 
-    private <T extends AmendableWidget> T a(final String tag) {
+    private <T extends OverlayWidget> T a(final String tag) {
         return (T) overlayFactory.getAmendableWidget(tag);
     }
 
@@ -186,16 +186,16 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         super.setContext(dialogContext);
 
         view.resetBodyClass();
-        view.addBodyClass(dialogContext.getAmendableWidget().getAmendableElement().getClassName());
+        view.addBodyClass(dialogContext.getOverlayWidget().getOverlayElement().getClassName());
 
         if (dialogContext.getAmendmentController() != null) {
             // get the location from the amendable widget, if it is passed
             view.setTitle("Edit amendment");
-            final java.util.List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody()));
-            view.setAmendmentContent(quotedStructures.get(1).getAmendableElement().getFirstChildElement().getInnerHTML());
+            final java.util.List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody()));
+            view.setAmendmentContent(quotedStructures.get(1).getOverlayElement().getFirstChildElement().getInnerHTML());
         } else {
-            view.setTitle(locator.getLocation(dialogContext.getAmendableWidget(), clientFactory.getClientContext().getDocumentIso(), false));
-            view.setAmendmentContent(dialogContext.getAmendableWidget().getInnerHTML());
+            view.setTitle(locator.getLocation(dialogContext.getOverlayWidget(), clientFactory.getClientContext().getDocumentIso(), false));
+            view.setAmendmentContent(dialogContext.getOverlayWidget().getInnerHTML());
         }
     }
 }

@@ -13,16 +13,14 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Quorum;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Count;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -33,8 +31,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class ParliamentaryAnalysisTypeComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Quorum(), new Occurrence(1,1));
             put(new Count(), new Occurrence(1,1));
@@ -68,7 +66,7 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
 
     public java.util.List<Quorum> getQuorums() {
         java.util.List<Quorum> result = new ArrayList<Quorum>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Quorum".equalsIgnoreCase(widget.getType())) {
                 result.add((Quorum)widget);
             }
@@ -82,13 +80,13 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Quorum addQuorum(Quorum quorumElem) {
-        this.addAmendableWidget(quorumElem);
+        this.addOverlayWidget(quorumElem);
         return quorumElem;
     }
 
     public java.util.List<Count> getCounts() {
         java.util.List<Count> result = new ArrayList<Count>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Count".equalsIgnoreCase(widget.getType())) {
                 result.add((Count)widget);
             }
@@ -102,7 +100,7 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Count addCount(Count countElem) {
-        this.addAmendableWidget(countElem);
+        this.addOverlayWidget(countElem);
         return countElem;
     }
 
@@ -237,7 +235,7 @@ public class ParliamentaryAnalysisTypeComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

@@ -13,18 +13,11 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRthis;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRuri;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRalias;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRdate;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRauthor;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ComponentInfo;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Preservation;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -35,8 +28,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class CorePropertiesComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class CorePropertiesComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new FRBRthis(), new Occurrence(1,1));
             put(new FRBRuri(), new Occurrence(1,-1));
@@ -69,7 +62,7 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
 
     public FRBRthis getFRBRthis() {
         FRBRthis result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("FRBRthis".equalsIgnoreCase(widget.getType())) {
                 result = (FRBRthis)widget;
                 break;
@@ -84,15 +77,15 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
         FRBRthis result = getFRBRthis();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(FRBRthisElem);
+        this.addOverlayWidget(FRBRthisElem);
 
         return FRBRthisElem;
     }
     public java.util.List<FRBRuri> getFRBRuris() {
         java.util.List<FRBRuri> result = new ArrayList<FRBRuri>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("FRBRuri".equalsIgnoreCase(widget.getType())) {
                 result.add((FRBRuri)widget);
             }
@@ -106,13 +99,13 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public FRBRuri addFRBRuri(FRBRuri FRBRuriElem) {
-        this.addAmendableWidget(FRBRuriElem);
+        this.addOverlayWidget(FRBRuriElem);
         return FRBRuriElem;
     }
 
     public java.util.List<FRBRalias> getFRBRaliases() {
         java.util.List<FRBRalias> result = new ArrayList<FRBRalias>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("FRBRalias".equalsIgnoreCase(widget.getType())) {
                 result.add((FRBRalias)widget);
             }
@@ -126,13 +119,13 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public FRBRalias addFRBRalias(FRBRalias FRBRaliasElem) {
-        this.addAmendableWidget(FRBRaliasElem);
+        this.addOverlayWidget(FRBRaliasElem);
         return FRBRaliasElem;
     }
 
     public java.util.List<FRBRdate> getFRBRdates() {
         java.util.List<FRBRdate> result = new ArrayList<FRBRdate>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("FRBRdate".equalsIgnoreCase(widget.getType())) {
                 result.add((FRBRdate)widget);
             }
@@ -146,13 +139,13 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public FRBRdate addFRBRdate(FRBRdate FRBRdateElem) {
-        this.addAmendableWidget(FRBRdateElem);
+        this.addOverlayWidget(FRBRdateElem);
         return FRBRdateElem;
     }
 
     public java.util.List<FRBRauthor> getFRBRauthors() {
         java.util.List<FRBRauthor> result = new ArrayList<FRBRauthor>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("FRBRauthor".equalsIgnoreCase(widget.getType())) {
                 result.add((FRBRauthor)widget);
             }
@@ -166,13 +159,13 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public FRBRauthor addFRBRauthor(FRBRauthor FRBRauthorElem) {
-        this.addAmendableWidget(FRBRauthorElem);
+        this.addOverlayWidget(FRBRauthorElem);
         return FRBRauthorElem;
     }
 
     public ComponentInfo getComponentInfo() {
         ComponentInfo result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ComponentInfo".equalsIgnoreCase(widget.getType())) {
                 result = (ComponentInfo)widget;
                 break;
@@ -187,15 +180,15 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
         ComponentInfo result = getComponentInfo();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(componentInfoElem);
+        this.addOverlayWidget(componentInfoElem);
 
         return componentInfoElem;
     }
     public Preservation getPreservation() {
         Preservation result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Preservation".equalsIgnoreCase(widget.getType())) {
                 result = (Preservation)widget;
                 break;
@@ -210,9 +203,9 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
         Preservation result = getPreservation();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(preservationElem);
+        this.addOverlayWidget(preservationElem);
 
         return preservationElem;
     }
@@ -222,7 +215,7 @@ public class CorePropertiesComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

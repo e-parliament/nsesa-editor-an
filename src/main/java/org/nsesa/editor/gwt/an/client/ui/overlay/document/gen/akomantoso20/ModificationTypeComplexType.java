@@ -13,23 +13,15 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Source;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Destination;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Force;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Efficacy;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Application;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Duration;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Condition;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -40,8 +32,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class ModificationTypeComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class ModificationTypeComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Source(), new Occurrence(1,-1));
             put(new Destination(), new Occurrence(1,-1));
@@ -82,7 +74,7 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
 
     public java.util.List<Source> getSources() {
         java.util.List<Source> result = new ArrayList<Source>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Source".equalsIgnoreCase(widget.getType())) {
                 result.add((Source)widget);
             }
@@ -96,13 +88,13 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Source addSource(Source sourceElem) {
-        this.addAmendableWidget(sourceElem);
+        this.addOverlayWidget(sourceElem);
         return sourceElem;
     }
 
     public java.util.List<Destination> getDestinations() {
         java.util.List<Destination> result = new ArrayList<Destination>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Destination".equalsIgnoreCase(widget.getType())) {
                 result.add((Destination)widget);
             }
@@ -116,13 +108,13 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Destination addDestination(Destination destinationElem) {
-        this.addAmendableWidget(destinationElem);
+        this.addOverlayWidget(destinationElem);
         return destinationElem;
     }
 
     public Force getForce() {
         Force result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Force".equalsIgnoreCase(widget.getType())) {
                 result = (Force)widget;
                 break;
@@ -137,15 +129,15 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
         Force result = getForce();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(forceElem);
+        this.addOverlayWidget(forceElem);
 
         return forceElem;
     }
     public Efficacy getEfficacy() {
         Efficacy result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Efficacy".equalsIgnoreCase(widget.getType())) {
                 result = (Efficacy)widget;
                 break;
@@ -160,15 +152,15 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
         Efficacy result = getEfficacy();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(efficacyElem);
+        this.addOverlayWidget(efficacyElem);
 
         return efficacyElem;
     }
     public Application getApplication() {
         Application result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Application".equalsIgnoreCase(widget.getType())) {
                 result = (Application)widget;
                 break;
@@ -183,15 +175,15 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
         Application result = getApplication();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(applicationElem);
+        this.addOverlayWidget(applicationElem);
 
         return applicationElem;
     }
     public Duration getDuration() {
         Duration result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Duration".equalsIgnoreCase(widget.getType())) {
                 result = (Duration)widget;
                 break;
@@ -206,15 +198,15 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
         Duration result = getDuration();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(durationElem);
+        this.addOverlayWidget(durationElem);
 
         return durationElem;
     }
     public Condition getCondition() {
         Condition result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Condition".equalsIgnoreCase(widget.getType())) {
                 result = (Condition)widget;
                 break;
@@ -229,9 +221,9 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
         Condition result = getCondition();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(conditionElem);
+        this.addOverlayWidget(conditionElem);
 
         return conditionElem;
     }
@@ -407,7 +399,7 @@ public class ModificationTypeComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

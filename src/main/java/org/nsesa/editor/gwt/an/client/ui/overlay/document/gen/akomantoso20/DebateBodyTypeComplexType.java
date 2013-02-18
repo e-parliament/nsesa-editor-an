@@ -13,37 +13,16 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AdministrationOfOath;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.RollCall;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Prayers;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.OralStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.WrittenStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PersonalStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MinisterialStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Resolutions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.NationalInterest;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DeclarationOfVote;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Communication;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Petitions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Papers;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.NoticesOfMotion;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Questions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Address;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ProceduralMotions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PointOfOrder;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Adjournment;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DebateSection;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -54,8 +33,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class DebateBodyTypeComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new AdministrationOfOath(), new Occurrence(0,-1));
             put(new RollCall(), new Occurrence(0,-1));
@@ -112,7 +91,7 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
 
     public java.util.List<AdministrationOfOath> getAdministrationOfOaths() {
         java.util.List<AdministrationOfOath> result = new ArrayList<AdministrationOfOath>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("AdministrationOfOath".equalsIgnoreCase(widget.getType())) {
                 result.add((AdministrationOfOath)widget);
             }
@@ -126,13 +105,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public AdministrationOfOath addAdministrationOfOath(AdministrationOfOath administrationOfOathElem) {
-        this.addAmendableWidget(administrationOfOathElem);
+        this.addOverlayWidget(administrationOfOathElem);
         return administrationOfOathElem;
     }
 
     public java.util.List<RollCall> getRollCalls() {
         java.util.List<RollCall> result = new ArrayList<RollCall>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("RollCall".equalsIgnoreCase(widget.getType())) {
                 result.add((RollCall)widget);
             }
@@ -146,13 +125,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public RollCall addRollCall(RollCall rollCallElem) {
-        this.addAmendableWidget(rollCallElem);
+        this.addOverlayWidget(rollCallElem);
         return rollCallElem;
     }
 
     public java.util.List<Prayers> getPrayerses() {
         java.util.List<Prayers> result = new ArrayList<Prayers>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Prayers".equalsIgnoreCase(widget.getType())) {
                 result.add((Prayers)widget);
             }
@@ -166,13 +145,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Prayers addPrayers(Prayers prayersElem) {
-        this.addAmendableWidget(prayersElem);
+        this.addOverlayWidget(prayersElem);
         return prayersElem;
     }
 
     public java.util.List<OralStatements> getOralStatementses() {
         java.util.List<OralStatements> result = new ArrayList<OralStatements>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("OralStatements".equalsIgnoreCase(widget.getType())) {
                 result.add((OralStatements)widget);
             }
@@ -186,13 +165,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public OralStatements addOralStatements(OralStatements oralStatementsElem) {
-        this.addAmendableWidget(oralStatementsElem);
+        this.addOverlayWidget(oralStatementsElem);
         return oralStatementsElem;
     }
 
     public java.util.List<WrittenStatements> getWrittenStatementses() {
         java.util.List<WrittenStatements> result = new ArrayList<WrittenStatements>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("WrittenStatements".equalsIgnoreCase(widget.getType())) {
                 result.add((WrittenStatements)widget);
             }
@@ -206,13 +185,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public WrittenStatements addWrittenStatements(WrittenStatements writtenStatementsElem) {
-        this.addAmendableWidget(writtenStatementsElem);
+        this.addOverlayWidget(writtenStatementsElem);
         return writtenStatementsElem;
     }
 
     public java.util.List<PersonalStatements> getPersonalStatementses() {
         java.util.List<PersonalStatements> result = new ArrayList<PersonalStatements>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("PersonalStatements".equalsIgnoreCase(widget.getType())) {
                 result.add((PersonalStatements)widget);
             }
@@ -226,13 +205,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public PersonalStatements addPersonalStatements(PersonalStatements personalStatementsElem) {
-        this.addAmendableWidget(personalStatementsElem);
+        this.addOverlayWidget(personalStatementsElem);
         return personalStatementsElem;
     }
 
     public java.util.List<MinisterialStatements> getMinisterialStatementses() {
         java.util.List<MinisterialStatements> result = new ArrayList<MinisterialStatements>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("MinisterialStatements".equalsIgnoreCase(widget.getType())) {
                 result.add((MinisterialStatements)widget);
             }
@@ -246,13 +225,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public MinisterialStatements addMinisterialStatements(MinisterialStatements ministerialStatementsElem) {
-        this.addAmendableWidget(ministerialStatementsElem);
+        this.addOverlayWidget(ministerialStatementsElem);
         return ministerialStatementsElem;
     }
 
     public java.util.List<Resolutions> getResolutionses() {
         java.util.List<Resolutions> result = new ArrayList<Resolutions>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Resolutions".equalsIgnoreCase(widget.getType())) {
                 result.add((Resolutions)widget);
             }
@@ -266,13 +245,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Resolutions addResolutions(Resolutions resolutionsElem) {
-        this.addAmendableWidget(resolutionsElem);
+        this.addOverlayWidget(resolutionsElem);
         return resolutionsElem;
     }
 
     public java.util.List<NationalInterest> getNationalInterests() {
         java.util.List<NationalInterest> result = new ArrayList<NationalInterest>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("NationalInterest".equalsIgnoreCase(widget.getType())) {
                 result.add((NationalInterest)widget);
             }
@@ -286,13 +265,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public NationalInterest addNationalInterest(NationalInterest nationalInterestElem) {
-        this.addAmendableWidget(nationalInterestElem);
+        this.addOverlayWidget(nationalInterestElem);
         return nationalInterestElem;
     }
 
     public java.util.List<DeclarationOfVote> getDeclarationOfVotes() {
         java.util.List<DeclarationOfVote> result = new ArrayList<DeclarationOfVote>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DeclarationOfVote".equalsIgnoreCase(widget.getType())) {
                 result.add((DeclarationOfVote)widget);
             }
@@ -306,13 +285,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DeclarationOfVote addDeclarationOfVote(DeclarationOfVote declarationOfVoteElem) {
-        this.addAmendableWidget(declarationOfVoteElem);
+        this.addOverlayWidget(declarationOfVoteElem);
         return declarationOfVoteElem;
     }
 
     public java.util.List<Communication> getCommunications() {
         java.util.List<Communication> result = new ArrayList<Communication>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Communication".equalsIgnoreCase(widget.getType())) {
                 result.add((Communication)widget);
             }
@@ -326,13 +305,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Communication addCommunication(Communication communicationElem) {
-        this.addAmendableWidget(communicationElem);
+        this.addOverlayWidget(communicationElem);
         return communicationElem;
     }
 
     public java.util.List<Petitions> getPetitionses() {
         java.util.List<Petitions> result = new ArrayList<Petitions>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Petitions".equalsIgnoreCase(widget.getType())) {
                 result.add((Petitions)widget);
             }
@@ -346,13 +325,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Petitions addPetitions(Petitions petitionsElem) {
-        this.addAmendableWidget(petitionsElem);
+        this.addOverlayWidget(petitionsElem);
         return petitionsElem;
     }
 
     public java.util.List<Papers> getPaperses() {
         java.util.List<Papers> result = new ArrayList<Papers>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Papers".equalsIgnoreCase(widget.getType())) {
                 result.add((Papers)widget);
             }
@@ -366,13 +345,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Papers addPapers(Papers papersElem) {
-        this.addAmendableWidget(papersElem);
+        this.addOverlayWidget(papersElem);
         return papersElem;
     }
 
     public java.util.List<NoticesOfMotion> getNoticesOfMotions() {
         java.util.List<NoticesOfMotion> result = new ArrayList<NoticesOfMotion>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("NoticesOfMotion".equalsIgnoreCase(widget.getType())) {
                 result.add((NoticesOfMotion)widget);
             }
@@ -386,13 +365,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public NoticesOfMotion addNoticesOfMotion(NoticesOfMotion noticesOfMotionElem) {
-        this.addAmendableWidget(noticesOfMotionElem);
+        this.addOverlayWidget(noticesOfMotionElem);
         return noticesOfMotionElem;
     }
 
     public java.util.List<Questions> getQuestionses() {
         java.util.List<Questions> result = new ArrayList<Questions>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Questions".equalsIgnoreCase(widget.getType())) {
                 result.add((Questions)widget);
             }
@@ -406,13 +385,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Questions addQuestions(Questions questionsElem) {
-        this.addAmendableWidget(questionsElem);
+        this.addOverlayWidget(questionsElem);
         return questionsElem;
     }
 
     public java.util.List<Address> getAddresses() {
         java.util.List<Address> result = new ArrayList<Address>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Address".equalsIgnoreCase(widget.getType())) {
                 result.add((Address)widget);
             }
@@ -426,13 +405,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Address addAddress(Address addressElem) {
-        this.addAmendableWidget(addressElem);
+        this.addOverlayWidget(addressElem);
         return addressElem;
     }
 
     public java.util.List<ProceduralMotions> getProceduralMotionses() {
         java.util.List<ProceduralMotions> result = new ArrayList<ProceduralMotions>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ProceduralMotions".equalsIgnoreCase(widget.getType())) {
                 result.add((ProceduralMotions)widget);
             }
@@ -446,13 +425,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public ProceduralMotions addProceduralMotions(ProceduralMotions proceduralMotionsElem) {
-        this.addAmendableWidget(proceduralMotionsElem);
+        this.addOverlayWidget(proceduralMotionsElem);
         return proceduralMotionsElem;
     }
 
     public java.util.List<PointOfOrder> getPointOfOrders() {
         java.util.List<PointOfOrder> result = new ArrayList<PointOfOrder>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("PointOfOrder".equalsIgnoreCase(widget.getType())) {
                 result.add((PointOfOrder)widget);
             }
@@ -466,13 +445,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public PointOfOrder addPointOfOrder(PointOfOrder pointOfOrderElem) {
-        this.addAmendableWidget(pointOfOrderElem);
+        this.addOverlayWidget(pointOfOrderElem);
         return pointOfOrderElem;
     }
 
     public java.util.List<Adjournment> getAdjournments() {
         java.util.List<Adjournment> result = new ArrayList<Adjournment>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Adjournment".equalsIgnoreCase(widget.getType())) {
                 result.add((Adjournment)widget);
             }
@@ -486,13 +465,13 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Adjournment addAdjournment(Adjournment adjournmentElem) {
-        this.addAmendableWidget(adjournmentElem);
+        this.addOverlayWidget(adjournmentElem);
         return adjournmentElem;
     }
 
     public java.util.List<DebateSection> getDebateSections() {
         java.util.List<DebateSection> result = new ArrayList<DebateSection>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DebateSection".equalsIgnoreCase(widget.getType())) {
                 result.add((DebateSection)widget);
             }
@@ -506,7 +485,7 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DebateSection addDebateSection(DebateSection debateSectionElem) {
-        this.addAmendableWidget(debateSectionElem);
+        this.addOverlayWidget(debateSectionElem);
         return debateSectionElem;
     }
 
@@ -745,7 +724,7 @@ public class DebateBodyTypeComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

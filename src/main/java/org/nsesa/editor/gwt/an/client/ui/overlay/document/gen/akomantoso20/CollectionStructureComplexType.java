@@ -13,18 +13,9 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.VersionTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Meta;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.CoverPage;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Preface;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.CollectionBody;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Conclusions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Attachments;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -35,8 +26,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class CollectionStructureComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class CollectionStructureComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Meta(), new Occurrence(1,1));
             put(new CoverPage(), new Occurrence(0,1));
@@ -89,7 +80,7 @@ public class CollectionStructureComplexType extends AmendableWidgetImpl  {
     }
     public Meta getMeta() {
         Meta result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Meta".equalsIgnoreCase(widget.getType())) {
                 result = (Meta)widget;
                 break;
@@ -104,15 +95,15 @@ public class CollectionStructureComplexType extends AmendableWidgetImpl  {
         Meta result = getMeta();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(metaElem);
+        this.addOverlayWidget(metaElem);
 
         return metaElem;
     }
     public CoverPage getCoverPage() {
         CoverPage result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("CoverPage".equalsIgnoreCase(widget.getType())) {
                 result = (CoverPage)widget;
                 break;
@@ -127,15 +118,15 @@ public class CollectionStructureComplexType extends AmendableWidgetImpl  {
         CoverPage result = getCoverPage();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(coverPageElem);
+        this.addOverlayWidget(coverPageElem);
 
         return coverPageElem;
     }
     public Preface getPreface() {
         Preface result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Preface".equalsIgnoreCase(widget.getType())) {
                 result = (Preface)widget;
                 break;
@@ -150,15 +141,15 @@ public class CollectionStructureComplexType extends AmendableWidgetImpl  {
         Preface result = getPreface();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(prefaceElem);
+        this.addOverlayWidget(prefaceElem);
 
         return prefaceElem;
     }
     public CollectionBody getCollectionBody() {
         CollectionBody result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("CollectionBody".equalsIgnoreCase(widget.getType())) {
                 result = (CollectionBody)widget;
                 break;
@@ -173,15 +164,15 @@ public class CollectionStructureComplexType extends AmendableWidgetImpl  {
         CollectionBody result = getCollectionBody();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(collectionBodyElem);
+        this.addOverlayWidget(collectionBodyElem);
 
         return collectionBodyElem;
     }
     public Conclusions getConclusions() {
         Conclusions result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Conclusions".equalsIgnoreCase(widget.getType())) {
                 result = (Conclusions)widget;
                 break;
@@ -196,15 +187,15 @@ public class CollectionStructureComplexType extends AmendableWidgetImpl  {
         Conclusions result = getConclusions();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(conclusionsElem);
+        this.addOverlayWidget(conclusionsElem);
 
         return conclusionsElem;
     }
     public Attachments getAttachments() {
         Attachments result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Attachments".equalsIgnoreCase(widget.getType())) {
                 result = (Attachments)widget;
                 break;
@@ -219,9 +210,9 @@ public class CollectionStructureComplexType extends AmendableWidgetImpl  {
         Attachments result = getAttachments();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(attachmentsElem);
+        this.addOverlayWidget(attachmentsElem);
 
         return attachmentsElem;
     }
@@ -231,7 +222,7 @@ public class CollectionStructureComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

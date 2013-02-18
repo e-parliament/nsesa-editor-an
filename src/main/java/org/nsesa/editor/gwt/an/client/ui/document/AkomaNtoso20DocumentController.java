@@ -27,13 +27,13 @@ import org.nsesa.editor.gwt.an.client.mode.InlineEditingMode;
 import org.nsesa.editor.gwt.an.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
-import org.nsesa.editor.gwt.core.client.amendment.AmendableWidgetWalker;
+import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.editor.client.event.document.DocumentScrollToEvent;
 import org.nsesa.editor.gwt.editor.client.ui.document.DocumentController;
@@ -62,10 +62,10 @@ public class AkomaNtoso20DocumentController extends DocumentController {
         registerMode(ConsolidationMode.KEY, new ConsolidationMode(this, clientFactory) {
             @Override
             public boolean apply(final ActiveState state) {
-                final AmendableWidget topVisibleAmenableWidget = getSourceFileController().getTopVisibleAmenableWidget();
-                getSourceFileController().walk(new AmendableWidgetWalker.AmendableVisitor() {
+                final OverlayWidget topVisibleAmenableWidget = getSourceFileController().getTopVisibleAmenableWidget();
+                getSourceFileController().walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
                     @Override
-                    public boolean visit(final AmendableWidget visited) {
+                    public boolean visit(final OverlayWidget visited) {
                         if (visited.isAmended()) {
                             if (state.isActive()) {
                                 // build up a new panel
@@ -82,13 +82,13 @@ public class AkomaNtoso20DocumentController extends DocumentController {
                                 final com.google.gwt.dom.client.Element amendmentsHolder = DOM.createSpan();
                                 amendmentsHolder.setInnerHTML(sb.toString());
                                 amendmentsHolder.setClassName(amendmentsHolder.getClassName() + " amendments consolidationCopy");
-                                DOM.insertBefore(visited.getParentAmendableWidget().asWidget().getElement(), (Element) amendmentsHolder, visited.asWidget().getElement());
+                                DOM.insertBefore(visited.getParentOverlayWidget().asWidget().getElement(), (Element) amendmentsHolder, visited.asWidget().getElement());
                                 amendmentsHolder.getStyle().setColor("green");
                                 visited.asWidget().setVisible(false);
                             } else {
                                 // restore from the first amendment
                                 visited.asWidget().setVisible(true);
-                                final NodeList<Node> childNodes = visited.getParentAmendableWidget().asWidget().getElement().getChildNodes();
+                                final NodeList<Node> childNodes = visited.getParentOverlayWidget().asWidget().getElement().getChildNodes();
                                 for (int i = 0; i < childNodes.getLength(); i++) {
                                     Node node = childNodes.getItem(i);
                                     if (Node.ELEMENT_NODE == node.getNodeType()) {

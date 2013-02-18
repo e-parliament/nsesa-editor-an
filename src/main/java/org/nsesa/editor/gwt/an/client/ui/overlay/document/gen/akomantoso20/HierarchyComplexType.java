@@ -13,44 +13,15 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Intro;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ComponentRef;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Wrap;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Content;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Hcontainer;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Clause;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Section;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Part;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Paragraph;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Chapter;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Title;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Article;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Book;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Tome;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Division;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.List;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Point;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Indent;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Alinea;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subsection;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subpart;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subparagraph;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subchapter;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subtitle;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subclause;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Sublist;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -62,7 +33,7 @@ import com.google.gwt.user.client.DOM;
 */
 
 public class HierarchyComplexType extends BasehierarchyComplexType  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Intro(), new Occurrence(0,1));
             put(new ComponentRef(), new Occurrence(1,1));
@@ -128,7 +99,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
 
     public Intro getIntro() {
         Intro result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Intro".equalsIgnoreCase(widget.getType())) {
                 result = (Intro)widget;
                 break;
@@ -143,15 +114,15 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
         Intro result = getIntro();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(introElem);
+        this.addOverlayWidget(introElem);
 
         return introElem;
     }
     public java.util.List<ComponentRef> getComponentRefs() {
         java.util.List<ComponentRef> result = new ArrayList<ComponentRef>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ComponentRef".equalsIgnoreCase(widget.getType())) {
                 result.add((ComponentRef)widget);
             }
@@ -165,13 +136,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public ComponentRef addComponentRef(ComponentRef componentRefElem) {
-        this.addAmendableWidget(componentRefElem);
+        this.addOverlayWidget(componentRefElem);
         return componentRefElem;
     }
 
     public Wrap getWrap() {
         Wrap result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Wrap".equalsIgnoreCase(widget.getType())) {
                 result = (Wrap)widget;
                 break;
@@ -186,15 +157,15 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
         Wrap result = getWrap();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(wrapElem);
+        this.addOverlayWidget(wrapElem);
 
         return wrapElem;
     }
     public Content getContent_() {
         Content result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Content".equalsIgnoreCase(widget.getType())) {
                 result = (Content)widget;
                 break;
@@ -209,15 +180,15 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
         Content result = getContent_();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(content_Elem);
+        this.addOverlayWidget(content_Elem);
 
         return content_Elem;
     }
     public java.util.List<Hcontainer> getHcontainers() {
         java.util.List<Hcontainer> result = new ArrayList<Hcontainer>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Hcontainer".equalsIgnoreCase(widget.getType())) {
                 result.add((Hcontainer)widget);
             }
@@ -231,7 +202,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Hcontainer addHcontainer(Hcontainer hcontainerElem) {
-        this.addAmendableWidget(hcontainerElem);
+        this.addOverlayWidget(hcontainerElem);
         return hcontainerElem;
     }
 
@@ -445,7 +416,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
     public java.util.List<Clause> getClauses() {
         java.util.List<Clause> result = new ArrayList<Clause>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Clause".equalsIgnoreCase(widget.getType())) {
                 result.add((Clause)widget);
             }
@@ -459,13 +430,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Clause addClause(Clause clauseElem) {
-        this.addAmendableWidget(clauseElem);
+        this.addOverlayWidget(clauseElem);
         return clauseElem;
     }
 
     public java.util.List<Section> getSections() {
         java.util.List<Section> result = new ArrayList<Section>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Section".equalsIgnoreCase(widget.getType())) {
                 result.add((Section)widget);
             }
@@ -479,13 +450,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Section addSection(Section sectionElem) {
-        this.addAmendableWidget(sectionElem);
+        this.addOverlayWidget(sectionElem);
         return sectionElem;
     }
 
     public java.util.List<Part> getParts() {
         java.util.List<Part> result = new ArrayList<Part>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Part".equalsIgnoreCase(widget.getType())) {
                 result.add((Part)widget);
             }
@@ -499,13 +470,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Part addPart(Part partElem) {
-        this.addAmendableWidget(partElem);
+        this.addOverlayWidget(partElem);
         return partElem;
     }
 
     public java.util.List<Paragraph> getParagraphs() {
         java.util.List<Paragraph> result = new ArrayList<Paragraph>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Paragraph".equalsIgnoreCase(widget.getType())) {
                 result.add((Paragraph)widget);
             }
@@ -519,13 +490,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Paragraph addParagraph(Paragraph paragraphElem) {
-        this.addAmendableWidget(paragraphElem);
+        this.addOverlayWidget(paragraphElem);
         return paragraphElem;
     }
 
     public java.util.List<Chapter> getChapters() {
         java.util.List<Chapter> result = new ArrayList<Chapter>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Chapter".equalsIgnoreCase(widget.getType())) {
                 result.add((Chapter)widget);
             }
@@ -539,13 +510,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Chapter addChapter(Chapter chapterElem) {
-        this.addAmendableWidget(chapterElem);
+        this.addOverlayWidget(chapterElem);
         return chapterElem;
     }
 
     public java.util.List<Title> getTitle_s() {
         java.util.List<Title> result = new ArrayList<Title>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Title".equalsIgnoreCase(widget.getType())) {
                 result.add((Title)widget);
             }
@@ -559,13 +530,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Title addTitle_(Title title_Elem) {
-        this.addAmendableWidget(title_Elem);
+        this.addOverlayWidget(title_Elem);
         return title_Elem;
     }
 
     public java.util.List<Article> getArticles() {
         java.util.List<Article> result = new ArrayList<Article>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Article".equalsIgnoreCase(widget.getType())) {
                 result.add((Article)widget);
             }
@@ -579,13 +550,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Article addArticle(Article articleElem) {
-        this.addAmendableWidget(articleElem);
+        this.addOverlayWidget(articleElem);
         return articleElem;
     }
 
     public java.util.List<Book> getBooks() {
         java.util.List<Book> result = new ArrayList<Book>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Book".equalsIgnoreCase(widget.getType())) {
                 result.add((Book)widget);
             }
@@ -599,13 +570,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Book addBook(Book bookElem) {
-        this.addAmendableWidget(bookElem);
+        this.addOverlayWidget(bookElem);
         return bookElem;
     }
 
     public java.util.List<Tome> getTomes() {
         java.util.List<Tome> result = new ArrayList<Tome>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Tome".equalsIgnoreCase(widget.getType())) {
                 result.add((Tome)widget);
             }
@@ -619,13 +590,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Tome addTome(Tome tomeElem) {
-        this.addAmendableWidget(tomeElem);
+        this.addOverlayWidget(tomeElem);
         return tomeElem;
     }
 
     public java.util.List<Division> getDivisions() {
         java.util.List<Division> result = new ArrayList<Division>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Division".equalsIgnoreCase(widget.getType())) {
                 result.add((Division)widget);
             }
@@ -639,13 +610,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Division addDivision(Division divisionElem) {
-        this.addAmendableWidget(divisionElem);
+        this.addOverlayWidget(divisionElem);
         return divisionElem;
     }
 
     public java.util.List<List> getLists() {
         java.util.List<List> result = new ArrayList<List>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("List".equalsIgnoreCase(widget.getType())) {
                 result.add((List)widget);
             }
@@ -659,13 +630,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public List addList(List listElem) {
-        this.addAmendableWidget(listElem);
+        this.addOverlayWidget(listElem);
         return listElem;
     }
 
     public java.util.List<Point> getPoints() {
         java.util.List<Point> result = new ArrayList<Point>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Point".equalsIgnoreCase(widget.getType())) {
                 result.add((Point)widget);
             }
@@ -679,13 +650,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Point addPoint(Point pointElem) {
-        this.addAmendableWidget(pointElem);
+        this.addOverlayWidget(pointElem);
         return pointElem;
     }
 
     public java.util.List<Indent> getIndents() {
         java.util.List<Indent> result = new ArrayList<Indent>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Indent".equalsIgnoreCase(widget.getType())) {
                 result.add((Indent)widget);
             }
@@ -699,13 +670,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Indent addIndent(Indent indentElem) {
-        this.addAmendableWidget(indentElem);
+        this.addOverlayWidget(indentElem);
         return indentElem;
     }
 
     public java.util.List<Alinea> getAlineas() {
         java.util.List<Alinea> result = new ArrayList<Alinea>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Alinea".equalsIgnoreCase(widget.getType())) {
                 result.add((Alinea)widget);
             }
@@ -719,13 +690,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Alinea addAlinea(Alinea alineaElem) {
-        this.addAmendableWidget(alineaElem);
+        this.addOverlayWidget(alineaElem);
         return alineaElem;
     }
 
     public java.util.List<Subsection> getSubsections() {
         java.util.List<Subsection> result = new ArrayList<Subsection>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subsection".equalsIgnoreCase(widget.getType())) {
                 result.add((Subsection)widget);
             }
@@ -739,13 +710,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Subsection addSubsection(Subsection subsectionElem) {
-        this.addAmendableWidget(subsectionElem);
+        this.addOverlayWidget(subsectionElem);
         return subsectionElem;
     }
 
     public java.util.List<Subpart> getSubparts() {
         java.util.List<Subpart> result = new ArrayList<Subpart>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subpart".equalsIgnoreCase(widget.getType())) {
                 result.add((Subpart)widget);
             }
@@ -759,13 +730,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Subpart addSubpart(Subpart subpartElem) {
-        this.addAmendableWidget(subpartElem);
+        this.addOverlayWidget(subpartElem);
         return subpartElem;
     }
 
     public java.util.List<Subparagraph> getSubparagraphs() {
         java.util.List<Subparagraph> result = new ArrayList<Subparagraph>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subparagraph".equalsIgnoreCase(widget.getType())) {
                 result.add((Subparagraph)widget);
             }
@@ -779,13 +750,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Subparagraph addSubparagraph(Subparagraph subparagraphElem) {
-        this.addAmendableWidget(subparagraphElem);
+        this.addOverlayWidget(subparagraphElem);
         return subparagraphElem;
     }
 
     public java.util.List<Subchapter> getSubchapters() {
         java.util.List<Subchapter> result = new ArrayList<Subchapter>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subchapter".equalsIgnoreCase(widget.getType())) {
                 result.add((Subchapter)widget);
             }
@@ -799,13 +770,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Subchapter addSubchapter(Subchapter subchapterElem) {
-        this.addAmendableWidget(subchapterElem);
+        this.addOverlayWidget(subchapterElem);
         return subchapterElem;
     }
 
     public java.util.List<Subtitle> getSubtitles() {
         java.util.List<Subtitle> result = new ArrayList<Subtitle>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subtitle".equalsIgnoreCase(widget.getType())) {
                 result.add((Subtitle)widget);
             }
@@ -819,13 +790,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Subtitle addSubtitle(Subtitle subtitleElem) {
-        this.addAmendableWidget(subtitleElem);
+        this.addOverlayWidget(subtitleElem);
         return subtitleElem;
     }
 
     public java.util.List<Subclause> getSubclauses() {
         java.util.List<Subclause> result = new ArrayList<Subclause>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subclause".equalsIgnoreCase(widget.getType())) {
                 result.add((Subclause)widget);
             }
@@ -839,13 +810,13 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Subclause addSubclause(Subclause subclauseElem) {
-        this.addAmendableWidget(subclauseElem);
+        this.addOverlayWidget(subclauseElem);
         return subclauseElem;
     }
 
     public java.util.List<Sublist> getSublists() {
         java.util.List<Sublist> result = new ArrayList<Sublist>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Sublist".equalsIgnoreCase(widget.getType())) {
                 result.add((Sublist)widget);
             }
@@ -859,7 +830,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     }
      //DSL Style set value
     public Sublist addSublist(Sublist sublistElem) {
-        this.addAmendableWidget(sublistElem);
+        this.addOverlayWidget(sublistElem);
         return sublistElem;
     }
 
@@ -890,7 +861,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

@@ -18,9 +18,9 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimple
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -31,8 +31,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class AnyOtherTypeComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class AnyOtherTypeComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(null, new Occurrence(0,-1));
         }
@@ -61,18 +61,18 @@ public class AnyOtherTypeComplexType extends AmendableWidgetImpl  {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
 
-    public java.util.List<AmendableWidgetImpl> getWildcardContents() {
-        java.util.List<AmendableWidgetImpl> result = new ArrayList<AmendableWidgetImpl>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+    public java.util.List<OverlayWidgetImpl> getWildcardContents() {
+        java.util.List<OverlayWidgetImpl> result = new ArrayList<OverlayWidgetImpl>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("AmendableWidgetImpl".equalsIgnoreCase(widget.getType())) {
-                result.add((AmendableWidgetImpl)widget);
+                result.add((OverlayWidgetImpl)widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
      //DSL Style get value
-    public java.util.List<AmendableWidgetImpl> getWildcardContentList() {
+    public java.util.List<OverlayWidgetImpl> getWildcardContentList() {
         return  getWildcardContents();
     }
      //DSL Style set value
@@ -169,7 +169,7 @@ public class AnyOtherTypeComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

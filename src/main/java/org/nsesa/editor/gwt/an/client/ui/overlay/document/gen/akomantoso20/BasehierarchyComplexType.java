@@ -13,14 +13,9 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Num;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Heading;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subheading;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -31,8 +26,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class BasehierarchyComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class BasehierarchyComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Num(), new Occurrence(0,1));
             put(new Heading(), new Occurrence(0,1));
@@ -61,7 +56,7 @@ public class BasehierarchyComplexType extends AmendableWidgetImpl  {
 
     public Num getNum() {
         Num result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Num".equalsIgnoreCase(widget.getType())) {
                 result = (Num)widget;
                 break;
@@ -76,15 +71,15 @@ public class BasehierarchyComplexType extends AmendableWidgetImpl  {
         Num result = getNum();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(numElem);
+        this.addOverlayWidget(numElem);
 
         return numElem;
     }
     public Heading getHeading() {
         Heading result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Heading".equalsIgnoreCase(widget.getType())) {
                 result = (Heading)widget;
                 break;
@@ -99,15 +94,15 @@ public class BasehierarchyComplexType extends AmendableWidgetImpl  {
         Heading result = getHeading();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(headingElem);
+        this.addOverlayWidget(headingElem);
 
         return headingElem;
     }
     public Subheading getSubheading() {
         Subheading result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subheading".equalsIgnoreCase(widget.getType())) {
                 result = (Subheading)widget;
                 break;
@@ -122,9 +117,9 @@ public class BasehierarchyComplexType extends AmendableWidgetImpl  {
         Subheading result = getSubheading();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(subheadingElem);
+        this.addOverlayWidget(subheadingElem);
 
         return subheadingElem;
     }
@@ -134,7 +129,7 @@ public class BasehierarchyComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

@@ -13,14 +13,11 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.QuorumVerification;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Voting;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Recount;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -31,8 +28,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class ParliamentaryAnalysisComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class ParliamentaryAnalysisComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new QuorumVerification(), new Occurrence(1,1));
             put(new Voting(), new Occurrence(1,1));
@@ -61,7 +58,7 @@ public class ParliamentaryAnalysisComplexType extends AmendableWidgetImpl  {
 
     public java.util.List<QuorumVerification> getQuorumVerifications() {
         java.util.List<QuorumVerification> result = new ArrayList<QuorumVerification>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("QuorumVerification".equalsIgnoreCase(widget.getType())) {
                 result.add((QuorumVerification)widget);
             }
@@ -75,13 +72,13 @@ public class ParliamentaryAnalysisComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public QuorumVerification addQuorumVerification(QuorumVerification quorumVerificationElem) {
-        this.addAmendableWidget(quorumVerificationElem);
+        this.addOverlayWidget(quorumVerificationElem);
         return quorumVerificationElem;
     }
 
     public java.util.List<Voting> getVotings() {
         java.util.List<Voting> result = new ArrayList<Voting>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Voting".equalsIgnoreCase(widget.getType())) {
                 result.add((Voting)widget);
             }
@@ -95,13 +92,13 @@ public class ParliamentaryAnalysisComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Voting addVoting(Voting votingElem) {
-        this.addAmendableWidget(votingElem);
+        this.addOverlayWidget(votingElem);
         return votingElem;
     }
 
     public java.util.List<Recount> getRecounts() {
         java.util.List<Recount> result = new ArrayList<Recount>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Recount".equalsIgnoreCase(widget.getType())) {
                 result.add((Recount)widget);
             }
@@ -115,7 +112,7 @@ public class ParliamentaryAnalysisComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Recount addRecount(Recount recountElem) {
-        this.addAmendableWidget(recountElem);
+        this.addOverlayWidget(recountElem);
         return recountElem;
     }
 
@@ -125,7 +122,7 @@ public class ParliamentaryAnalysisComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

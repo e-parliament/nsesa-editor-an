@@ -13,86 +13,16 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Intro;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Wrap;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Heading;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subheading;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Content;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Num;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Recital;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Citation;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ComponentRef;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Hcontainer;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Foreign;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Block;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Container;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Speech;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Question;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Answer;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Other;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Scene;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Narrative;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Summary;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Clause;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Section;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Part;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Paragraph;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Chapter;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Title;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Article;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Book;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Tome;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Division;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.List;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Point;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Indent;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Alinea;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subsection;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subpart;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subparagraph;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subchapter;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subtitle;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subclause;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Sublist;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.BlockList;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Toc;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Tblock;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Ul;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Ol;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Table;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.P;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AdministrationOfOath;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.RollCall;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Prayers;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.OralStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.WrittenStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PersonalStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MinisterialStatements;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Resolutions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.NationalInterest;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DeclarationOfVote;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Communication;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Petitions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Papers;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.NoticesOfMotion;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Questions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Address;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ProceduralMotions;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PointOfOrder;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Adjournment;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DebateSection;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Div;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -103,8 +33,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class PopupStructureComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class PopupStructureComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Intro(), new Occurrence(1,1));
             put(new Wrap(), new Occurrence(1,1));
@@ -210,7 +140,7 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
 
     public java.util.List<Intro> getIntros() {
         java.util.List<Intro> result = new ArrayList<Intro>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Intro".equalsIgnoreCase(widget.getType())) {
                 result.add((Intro)widget);
             }
@@ -224,13 +154,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Intro addIntro(Intro introElem) {
-        this.addAmendableWidget(introElem);
+        this.addOverlayWidget(introElem);
         return introElem;
     }
 
     public java.util.List<Wrap> getWraps() {
         java.util.List<Wrap> result = new ArrayList<Wrap>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Wrap".equalsIgnoreCase(widget.getType())) {
                 result.add((Wrap)widget);
             }
@@ -244,13 +174,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Wrap addWrap(Wrap wrapElem) {
-        this.addAmendableWidget(wrapElem);
+        this.addOverlayWidget(wrapElem);
         return wrapElem;
     }
 
     public java.util.List<Heading> getHeadings() {
         java.util.List<Heading> result = new ArrayList<Heading>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Heading".equalsIgnoreCase(widget.getType())) {
                 result.add((Heading)widget);
             }
@@ -264,13 +194,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Heading addHeading(Heading headingElem) {
-        this.addAmendableWidget(headingElem);
+        this.addOverlayWidget(headingElem);
         return headingElem;
     }
 
     public java.util.List<Subheading> getSubheadings() {
         java.util.List<Subheading> result = new ArrayList<Subheading>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subheading".equalsIgnoreCase(widget.getType())) {
                 result.add((Subheading)widget);
             }
@@ -284,13 +214,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Subheading addSubheading(Subheading subheadingElem) {
-        this.addAmendableWidget(subheadingElem);
+        this.addOverlayWidget(subheadingElem);
         return subheadingElem;
     }
 
     public java.util.List<Content> getContent_s() {
         java.util.List<Content> result = new ArrayList<Content>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Content".equalsIgnoreCase(widget.getType())) {
                 result.add((Content)widget);
             }
@@ -304,13 +234,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Content addContent_(Content content_Elem) {
-        this.addAmendableWidget(content_Elem);
+        this.addOverlayWidget(content_Elem);
         return content_Elem;
     }
 
     public java.util.List<Num> getNums() {
         java.util.List<Num> result = new ArrayList<Num>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Num".equalsIgnoreCase(widget.getType())) {
                 result.add((Num)widget);
             }
@@ -324,13 +254,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Num addNum(Num numElem) {
-        this.addAmendableWidget(numElem);
+        this.addOverlayWidget(numElem);
         return numElem;
     }
 
     public java.util.List<Recital> getRecitals() {
         java.util.List<Recital> result = new ArrayList<Recital>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Recital".equalsIgnoreCase(widget.getType())) {
                 result.add((Recital)widget);
             }
@@ -344,13 +274,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Recital addRecital(Recital recitalElem) {
-        this.addAmendableWidget(recitalElem);
+        this.addOverlayWidget(recitalElem);
         return recitalElem;
     }
 
     public java.util.List<Citation> getCitations() {
         java.util.List<Citation> result = new ArrayList<Citation>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Citation".equalsIgnoreCase(widget.getType())) {
                 result.add((Citation)widget);
             }
@@ -364,13 +294,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Citation addCitation(Citation citationElem) {
-        this.addAmendableWidget(citationElem);
+        this.addOverlayWidget(citationElem);
         return citationElem;
     }
 
     public java.util.List<ComponentRef> getComponentRefs() {
         java.util.List<ComponentRef> result = new ArrayList<ComponentRef>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ComponentRef".equalsIgnoreCase(widget.getType())) {
                 result.add((ComponentRef)widget);
             }
@@ -384,13 +314,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public ComponentRef addComponentRef(ComponentRef componentRefElem) {
-        this.addAmendableWidget(componentRefElem);
+        this.addOverlayWidget(componentRefElem);
         return componentRefElem;
     }
 
     public java.util.List<Hcontainer> getHcontainers() {
         java.util.List<Hcontainer> result = new ArrayList<Hcontainer>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Hcontainer".equalsIgnoreCase(widget.getType())) {
                 result.add((Hcontainer)widget);
             }
@@ -404,13 +334,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Hcontainer addHcontainer(Hcontainer hcontainerElem) {
-        this.addAmendableWidget(hcontainerElem);
+        this.addOverlayWidget(hcontainerElem);
         return hcontainerElem;
     }
 
     public java.util.List<Foreign> getForeigns() {
         java.util.List<Foreign> result = new ArrayList<Foreign>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Foreign".equalsIgnoreCase(widget.getType())) {
                 result.add((Foreign)widget);
             }
@@ -424,13 +354,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Foreign addForeign(Foreign foreignElem) {
-        this.addAmendableWidget(foreignElem);
+        this.addOverlayWidget(foreignElem);
         return foreignElem;
     }
 
     public java.util.List<Block> getBlocks() {
         java.util.List<Block> result = new ArrayList<Block>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Block".equalsIgnoreCase(widget.getType())) {
                 result.add((Block)widget);
             }
@@ -444,13 +374,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Block addBlock(Block blockElem) {
-        this.addAmendableWidget(blockElem);
+        this.addOverlayWidget(blockElem);
         return blockElem;
     }
 
     public java.util.List<Container> getContainers() {
         java.util.List<Container> result = new ArrayList<Container>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Container".equalsIgnoreCase(widget.getType())) {
                 result.add((Container)widget);
             }
@@ -464,13 +394,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Container addContainer(Container containerElem) {
-        this.addAmendableWidget(containerElem);
+        this.addOverlayWidget(containerElem);
         return containerElem;
     }
 
     public java.util.List<Speech> getSpeechs() {
         java.util.List<Speech> result = new ArrayList<Speech>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Speech".equalsIgnoreCase(widget.getType())) {
                 result.add((Speech)widget);
             }
@@ -484,13 +414,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Speech addSpeech(Speech speechElem) {
-        this.addAmendableWidget(speechElem);
+        this.addOverlayWidget(speechElem);
         return speechElem;
     }
 
     public java.util.List<Question> getQuestions() {
         java.util.List<Question> result = new ArrayList<Question>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Question".equalsIgnoreCase(widget.getType())) {
                 result.add((Question)widget);
             }
@@ -504,13 +434,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Question addQuestion(Question questionElem) {
-        this.addAmendableWidget(questionElem);
+        this.addOverlayWidget(questionElem);
         return questionElem;
     }
 
     public java.util.List<Answer> getAnswers() {
         java.util.List<Answer> result = new ArrayList<Answer>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Answer".equalsIgnoreCase(widget.getType())) {
                 result.add((Answer)widget);
             }
@@ -524,13 +454,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Answer addAnswer(Answer answerElem) {
-        this.addAmendableWidget(answerElem);
+        this.addOverlayWidget(answerElem);
         return answerElem;
     }
 
     public java.util.List<Other> getOthers() {
         java.util.List<Other> result = new ArrayList<Other>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Other".equalsIgnoreCase(widget.getType())) {
                 result.add((Other)widget);
             }
@@ -544,13 +474,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Other addOther(Other otherElem) {
-        this.addAmendableWidget(otherElem);
+        this.addOverlayWidget(otherElem);
         return otherElem;
     }
 
     public java.util.List<Scene> getScenes() {
         java.util.List<Scene> result = new ArrayList<Scene>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Scene".equalsIgnoreCase(widget.getType())) {
                 result.add((Scene)widget);
             }
@@ -564,13 +494,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Scene addScene(Scene sceneElem) {
-        this.addAmendableWidget(sceneElem);
+        this.addOverlayWidget(sceneElem);
         return sceneElem;
     }
 
     public java.util.List<Narrative> getNarratives() {
         java.util.List<Narrative> result = new ArrayList<Narrative>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Narrative".equalsIgnoreCase(widget.getType())) {
                 result.add((Narrative)widget);
             }
@@ -584,13 +514,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Narrative addNarrative(Narrative narrativeElem) {
-        this.addAmendableWidget(narrativeElem);
+        this.addOverlayWidget(narrativeElem);
         return narrativeElem;
     }
 
     public java.util.List<Summary> getSummaries() {
         java.util.List<Summary> result = new ArrayList<Summary>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Summary".equalsIgnoreCase(widget.getType())) {
                 result.add((Summary)widget);
             }
@@ -604,7 +534,7 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Summary addSummary(Summary summaryElem) {
-        this.addAmendableWidget(summaryElem);
+        this.addOverlayWidget(summaryElem);
         return summaryElem;
     }
 
@@ -818,7 +748,7 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
     public java.util.List<Clause> getClauses() {
         java.util.List<Clause> result = new ArrayList<Clause>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Clause".equalsIgnoreCase(widget.getType())) {
                 result.add((Clause)widget);
             }
@@ -832,13 +762,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Clause addClause(Clause clauseElem) {
-        this.addAmendableWidget(clauseElem);
+        this.addOverlayWidget(clauseElem);
         return clauseElem;
     }
 
     public java.util.List<Section> getSections() {
         java.util.List<Section> result = new ArrayList<Section>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Section".equalsIgnoreCase(widget.getType())) {
                 result.add((Section)widget);
             }
@@ -852,13 +782,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Section addSection(Section sectionElem) {
-        this.addAmendableWidget(sectionElem);
+        this.addOverlayWidget(sectionElem);
         return sectionElem;
     }
 
     public java.util.List<Part> getParts() {
         java.util.List<Part> result = new ArrayList<Part>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Part".equalsIgnoreCase(widget.getType())) {
                 result.add((Part)widget);
             }
@@ -872,13 +802,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Part addPart(Part partElem) {
-        this.addAmendableWidget(partElem);
+        this.addOverlayWidget(partElem);
         return partElem;
     }
 
     public java.util.List<Paragraph> getParagraphs() {
         java.util.List<Paragraph> result = new ArrayList<Paragraph>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Paragraph".equalsIgnoreCase(widget.getType())) {
                 result.add((Paragraph)widget);
             }
@@ -892,13 +822,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Paragraph addParagraph(Paragraph paragraphElem) {
-        this.addAmendableWidget(paragraphElem);
+        this.addOverlayWidget(paragraphElem);
         return paragraphElem;
     }
 
     public java.util.List<Chapter> getChapters() {
         java.util.List<Chapter> result = new ArrayList<Chapter>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Chapter".equalsIgnoreCase(widget.getType())) {
                 result.add((Chapter)widget);
             }
@@ -912,13 +842,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Chapter addChapter(Chapter chapterElem) {
-        this.addAmendableWidget(chapterElem);
+        this.addOverlayWidget(chapterElem);
         return chapterElem;
     }
 
     public java.util.List<Title> getTitle_s() {
         java.util.List<Title> result = new ArrayList<Title>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Title".equalsIgnoreCase(widget.getType())) {
                 result.add((Title)widget);
             }
@@ -932,13 +862,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Title addTitle_(Title title_Elem) {
-        this.addAmendableWidget(title_Elem);
+        this.addOverlayWidget(title_Elem);
         return title_Elem;
     }
 
     public java.util.List<Article> getArticles() {
         java.util.List<Article> result = new ArrayList<Article>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Article".equalsIgnoreCase(widget.getType())) {
                 result.add((Article)widget);
             }
@@ -952,13 +882,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Article addArticle(Article articleElem) {
-        this.addAmendableWidget(articleElem);
+        this.addOverlayWidget(articleElem);
         return articleElem;
     }
 
     public java.util.List<Book> getBooks() {
         java.util.List<Book> result = new ArrayList<Book>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Book".equalsIgnoreCase(widget.getType())) {
                 result.add((Book)widget);
             }
@@ -972,13 +902,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Book addBook(Book bookElem) {
-        this.addAmendableWidget(bookElem);
+        this.addOverlayWidget(bookElem);
         return bookElem;
     }
 
     public java.util.List<Tome> getTomes() {
         java.util.List<Tome> result = new ArrayList<Tome>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Tome".equalsIgnoreCase(widget.getType())) {
                 result.add((Tome)widget);
             }
@@ -992,13 +922,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Tome addTome(Tome tomeElem) {
-        this.addAmendableWidget(tomeElem);
+        this.addOverlayWidget(tomeElem);
         return tomeElem;
     }
 
     public java.util.List<Division> getDivisions() {
         java.util.List<Division> result = new ArrayList<Division>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Division".equalsIgnoreCase(widget.getType())) {
                 result.add((Division)widget);
             }
@@ -1012,13 +942,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Division addDivision(Division divisionElem) {
-        this.addAmendableWidget(divisionElem);
+        this.addOverlayWidget(divisionElem);
         return divisionElem;
     }
 
     public java.util.List<List> getLists() {
         java.util.List<List> result = new ArrayList<List>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("List".equalsIgnoreCase(widget.getType())) {
                 result.add((List)widget);
             }
@@ -1032,13 +962,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public List addList(List listElem) {
-        this.addAmendableWidget(listElem);
+        this.addOverlayWidget(listElem);
         return listElem;
     }
 
     public java.util.List<Point> getPoints() {
         java.util.List<Point> result = new ArrayList<Point>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Point".equalsIgnoreCase(widget.getType())) {
                 result.add((Point)widget);
             }
@@ -1052,13 +982,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Point addPoint(Point pointElem) {
-        this.addAmendableWidget(pointElem);
+        this.addOverlayWidget(pointElem);
         return pointElem;
     }
 
     public java.util.List<Indent> getIndents() {
         java.util.List<Indent> result = new ArrayList<Indent>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Indent".equalsIgnoreCase(widget.getType())) {
                 result.add((Indent)widget);
             }
@@ -1072,13 +1002,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Indent addIndent(Indent indentElem) {
-        this.addAmendableWidget(indentElem);
+        this.addOverlayWidget(indentElem);
         return indentElem;
     }
 
     public java.util.List<Alinea> getAlineas() {
         java.util.List<Alinea> result = new ArrayList<Alinea>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Alinea".equalsIgnoreCase(widget.getType())) {
                 result.add((Alinea)widget);
             }
@@ -1092,13 +1022,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Alinea addAlinea(Alinea alineaElem) {
-        this.addAmendableWidget(alineaElem);
+        this.addOverlayWidget(alineaElem);
         return alineaElem;
     }
 
     public java.util.List<Subsection> getSubsections() {
         java.util.List<Subsection> result = new ArrayList<Subsection>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subsection".equalsIgnoreCase(widget.getType())) {
                 result.add((Subsection)widget);
             }
@@ -1112,13 +1042,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Subsection addSubsection(Subsection subsectionElem) {
-        this.addAmendableWidget(subsectionElem);
+        this.addOverlayWidget(subsectionElem);
         return subsectionElem;
     }
 
     public java.util.List<Subpart> getSubparts() {
         java.util.List<Subpart> result = new ArrayList<Subpart>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subpart".equalsIgnoreCase(widget.getType())) {
                 result.add((Subpart)widget);
             }
@@ -1132,13 +1062,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Subpart addSubpart(Subpart subpartElem) {
-        this.addAmendableWidget(subpartElem);
+        this.addOverlayWidget(subpartElem);
         return subpartElem;
     }
 
     public java.util.List<Subparagraph> getSubparagraphs() {
         java.util.List<Subparagraph> result = new ArrayList<Subparagraph>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subparagraph".equalsIgnoreCase(widget.getType())) {
                 result.add((Subparagraph)widget);
             }
@@ -1152,13 +1082,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Subparagraph addSubparagraph(Subparagraph subparagraphElem) {
-        this.addAmendableWidget(subparagraphElem);
+        this.addOverlayWidget(subparagraphElem);
         return subparagraphElem;
     }
 
     public java.util.List<Subchapter> getSubchapters() {
         java.util.List<Subchapter> result = new ArrayList<Subchapter>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subchapter".equalsIgnoreCase(widget.getType())) {
                 result.add((Subchapter)widget);
             }
@@ -1172,13 +1102,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Subchapter addSubchapter(Subchapter subchapterElem) {
-        this.addAmendableWidget(subchapterElem);
+        this.addOverlayWidget(subchapterElem);
         return subchapterElem;
     }
 
     public java.util.List<Subtitle> getSubtitles() {
         java.util.List<Subtitle> result = new ArrayList<Subtitle>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subtitle".equalsIgnoreCase(widget.getType())) {
                 result.add((Subtitle)widget);
             }
@@ -1192,13 +1122,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Subtitle addSubtitle(Subtitle subtitleElem) {
-        this.addAmendableWidget(subtitleElem);
+        this.addOverlayWidget(subtitleElem);
         return subtitleElem;
     }
 
     public java.util.List<Subclause> getSubclauses() {
         java.util.List<Subclause> result = new ArrayList<Subclause>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subclause".equalsIgnoreCase(widget.getType())) {
                 result.add((Subclause)widget);
             }
@@ -1212,13 +1142,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Subclause addSubclause(Subclause subclauseElem) {
-        this.addAmendableWidget(subclauseElem);
+        this.addOverlayWidget(subclauseElem);
         return subclauseElem;
     }
 
     public java.util.List<Sublist> getSublists() {
         java.util.List<Sublist> result = new ArrayList<Sublist>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Sublist".equalsIgnoreCase(widget.getType())) {
                 result.add((Sublist)widget);
             }
@@ -1232,13 +1162,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Sublist addSublist(Sublist sublistElem) {
-        this.addAmendableWidget(sublistElem);
+        this.addOverlayWidget(sublistElem);
         return sublistElem;
     }
 
     public java.util.List<BlockList> getBlockLists() {
         java.util.List<BlockList> result = new ArrayList<BlockList>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("BlockList".equalsIgnoreCase(widget.getType())) {
                 result.add((BlockList)widget);
             }
@@ -1252,13 +1182,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public BlockList addBlockList(BlockList blockListElem) {
-        this.addAmendableWidget(blockListElem);
+        this.addOverlayWidget(blockListElem);
         return blockListElem;
     }
 
     public java.util.List<Toc> getTocs() {
         java.util.List<Toc> result = new ArrayList<Toc>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Toc".equalsIgnoreCase(widget.getType())) {
                 result.add((Toc)widget);
             }
@@ -1272,13 +1202,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Toc addToc(Toc tocElem) {
-        this.addAmendableWidget(tocElem);
+        this.addOverlayWidget(tocElem);
         return tocElem;
     }
 
     public java.util.List<Tblock> getTblocks() {
         java.util.List<Tblock> result = new ArrayList<Tblock>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Tblock".equalsIgnoreCase(widget.getType())) {
                 result.add((Tblock)widget);
             }
@@ -1292,13 +1222,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Tblock addTblock(Tblock tblockElem) {
-        this.addAmendableWidget(tblockElem);
+        this.addOverlayWidget(tblockElem);
         return tblockElem;
     }
 
     public java.util.List<Ul> getUls() {
         java.util.List<Ul> result = new ArrayList<Ul>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Ul".equalsIgnoreCase(widget.getType())) {
                 result.add((Ul)widget);
             }
@@ -1312,13 +1242,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Ul addUl(Ul ulElem) {
-        this.addAmendableWidget(ulElem);
+        this.addOverlayWidget(ulElem);
         return ulElem;
     }
 
     public java.util.List<Ol> getOls() {
         java.util.List<Ol> result = new ArrayList<Ol>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Ol".equalsIgnoreCase(widget.getType())) {
                 result.add((Ol)widget);
             }
@@ -1332,13 +1262,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Ol addOl(Ol olElem) {
-        this.addAmendableWidget(olElem);
+        this.addOverlayWidget(olElem);
         return olElem;
     }
 
     public java.util.List<Table> getTables() {
         java.util.List<Table> result = new ArrayList<Table>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Table".equalsIgnoreCase(widget.getType())) {
                 result.add((Table)widget);
             }
@@ -1352,13 +1282,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Table addTable(Table tableElem) {
-        this.addAmendableWidget(tableElem);
+        this.addOverlayWidget(tableElem);
         return tableElem;
     }
 
     public java.util.List<P> getPs() {
         java.util.List<P> result = new ArrayList<P>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("P".equalsIgnoreCase(widget.getType())) {
                 result.add((P)widget);
             }
@@ -1372,13 +1302,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public P addP(P pElem) {
-        this.addAmendableWidget(pElem);
+        this.addOverlayWidget(pElem);
         return pElem;
     }
 
     public java.util.List<AdministrationOfOath> getAdministrationOfOaths() {
         java.util.List<AdministrationOfOath> result = new ArrayList<AdministrationOfOath>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("AdministrationOfOath".equalsIgnoreCase(widget.getType())) {
                 result.add((AdministrationOfOath)widget);
             }
@@ -1392,13 +1322,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public AdministrationOfOath addAdministrationOfOath(AdministrationOfOath administrationOfOathElem) {
-        this.addAmendableWidget(administrationOfOathElem);
+        this.addOverlayWidget(administrationOfOathElem);
         return administrationOfOathElem;
     }
 
     public java.util.List<RollCall> getRollCalls() {
         java.util.List<RollCall> result = new ArrayList<RollCall>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("RollCall".equalsIgnoreCase(widget.getType())) {
                 result.add((RollCall)widget);
             }
@@ -1412,13 +1342,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public RollCall addRollCall(RollCall rollCallElem) {
-        this.addAmendableWidget(rollCallElem);
+        this.addOverlayWidget(rollCallElem);
         return rollCallElem;
     }
 
     public java.util.List<Prayers> getPrayerses() {
         java.util.List<Prayers> result = new ArrayList<Prayers>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Prayers".equalsIgnoreCase(widget.getType())) {
                 result.add((Prayers)widget);
             }
@@ -1432,13 +1362,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Prayers addPrayers(Prayers prayersElem) {
-        this.addAmendableWidget(prayersElem);
+        this.addOverlayWidget(prayersElem);
         return prayersElem;
     }
 
     public java.util.List<OralStatements> getOralStatementses() {
         java.util.List<OralStatements> result = new ArrayList<OralStatements>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("OralStatements".equalsIgnoreCase(widget.getType())) {
                 result.add((OralStatements)widget);
             }
@@ -1452,13 +1382,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public OralStatements addOralStatements(OralStatements oralStatementsElem) {
-        this.addAmendableWidget(oralStatementsElem);
+        this.addOverlayWidget(oralStatementsElem);
         return oralStatementsElem;
     }
 
     public java.util.List<WrittenStatements> getWrittenStatementses() {
         java.util.List<WrittenStatements> result = new ArrayList<WrittenStatements>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("WrittenStatements".equalsIgnoreCase(widget.getType())) {
                 result.add((WrittenStatements)widget);
             }
@@ -1472,13 +1402,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public WrittenStatements addWrittenStatements(WrittenStatements writtenStatementsElem) {
-        this.addAmendableWidget(writtenStatementsElem);
+        this.addOverlayWidget(writtenStatementsElem);
         return writtenStatementsElem;
     }
 
     public java.util.List<PersonalStatements> getPersonalStatementses() {
         java.util.List<PersonalStatements> result = new ArrayList<PersonalStatements>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("PersonalStatements".equalsIgnoreCase(widget.getType())) {
                 result.add((PersonalStatements)widget);
             }
@@ -1492,13 +1422,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public PersonalStatements addPersonalStatements(PersonalStatements personalStatementsElem) {
-        this.addAmendableWidget(personalStatementsElem);
+        this.addOverlayWidget(personalStatementsElem);
         return personalStatementsElem;
     }
 
     public java.util.List<MinisterialStatements> getMinisterialStatementses() {
         java.util.List<MinisterialStatements> result = new ArrayList<MinisterialStatements>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("MinisterialStatements".equalsIgnoreCase(widget.getType())) {
                 result.add((MinisterialStatements)widget);
             }
@@ -1512,13 +1442,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public MinisterialStatements addMinisterialStatements(MinisterialStatements ministerialStatementsElem) {
-        this.addAmendableWidget(ministerialStatementsElem);
+        this.addOverlayWidget(ministerialStatementsElem);
         return ministerialStatementsElem;
     }
 
     public java.util.List<Resolutions> getResolutionses() {
         java.util.List<Resolutions> result = new ArrayList<Resolutions>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Resolutions".equalsIgnoreCase(widget.getType())) {
                 result.add((Resolutions)widget);
             }
@@ -1532,13 +1462,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Resolutions addResolutions(Resolutions resolutionsElem) {
-        this.addAmendableWidget(resolutionsElem);
+        this.addOverlayWidget(resolutionsElem);
         return resolutionsElem;
     }
 
     public java.util.List<NationalInterest> getNationalInterests() {
         java.util.List<NationalInterest> result = new ArrayList<NationalInterest>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("NationalInterest".equalsIgnoreCase(widget.getType())) {
                 result.add((NationalInterest)widget);
             }
@@ -1552,13 +1482,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public NationalInterest addNationalInterest(NationalInterest nationalInterestElem) {
-        this.addAmendableWidget(nationalInterestElem);
+        this.addOverlayWidget(nationalInterestElem);
         return nationalInterestElem;
     }
 
     public java.util.List<DeclarationOfVote> getDeclarationOfVotes() {
         java.util.List<DeclarationOfVote> result = new ArrayList<DeclarationOfVote>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DeclarationOfVote".equalsIgnoreCase(widget.getType())) {
                 result.add((DeclarationOfVote)widget);
             }
@@ -1572,13 +1502,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DeclarationOfVote addDeclarationOfVote(DeclarationOfVote declarationOfVoteElem) {
-        this.addAmendableWidget(declarationOfVoteElem);
+        this.addOverlayWidget(declarationOfVoteElem);
         return declarationOfVoteElem;
     }
 
     public java.util.List<Communication> getCommunications() {
         java.util.List<Communication> result = new ArrayList<Communication>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Communication".equalsIgnoreCase(widget.getType())) {
                 result.add((Communication)widget);
             }
@@ -1592,13 +1522,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Communication addCommunication(Communication communicationElem) {
-        this.addAmendableWidget(communicationElem);
+        this.addOverlayWidget(communicationElem);
         return communicationElem;
     }
 
     public java.util.List<Petitions> getPetitionses() {
         java.util.List<Petitions> result = new ArrayList<Petitions>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Petitions".equalsIgnoreCase(widget.getType())) {
                 result.add((Petitions)widget);
             }
@@ -1612,13 +1542,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Petitions addPetitions(Petitions petitionsElem) {
-        this.addAmendableWidget(petitionsElem);
+        this.addOverlayWidget(petitionsElem);
         return petitionsElem;
     }
 
     public java.util.List<Papers> getPaperses() {
         java.util.List<Papers> result = new ArrayList<Papers>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Papers".equalsIgnoreCase(widget.getType())) {
                 result.add((Papers)widget);
             }
@@ -1632,13 +1562,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Papers addPapers(Papers papersElem) {
-        this.addAmendableWidget(papersElem);
+        this.addOverlayWidget(papersElem);
         return papersElem;
     }
 
     public java.util.List<NoticesOfMotion> getNoticesOfMotions() {
         java.util.List<NoticesOfMotion> result = new ArrayList<NoticesOfMotion>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("NoticesOfMotion".equalsIgnoreCase(widget.getType())) {
                 result.add((NoticesOfMotion)widget);
             }
@@ -1652,13 +1582,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public NoticesOfMotion addNoticesOfMotion(NoticesOfMotion noticesOfMotionElem) {
-        this.addAmendableWidget(noticesOfMotionElem);
+        this.addOverlayWidget(noticesOfMotionElem);
         return noticesOfMotionElem;
     }
 
     public java.util.List<Questions> getQuestionses() {
         java.util.List<Questions> result = new ArrayList<Questions>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Questions".equalsIgnoreCase(widget.getType())) {
                 result.add((Questions)widget);
             }
@@ -1672,13 +1602,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Questions addQuestions(Questions questionsElem) {
-        this.addAmendableWidget(questionsElem);
+        this.addOverlayWidget(questionsElem);
         return questionsElem;
     }
 
     public java.util.List<Address> getAddresses() {
         java.util.List<Address> result = new ArrayList<Address>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Address".equalsIgnoreCase(widget.getType())) {
                 result.add((Address)widget);
             }
@@ -1692,13 +1622,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Address addAddress(Address addressElem) {
-        this.addAmendableWidget(addressElem);
+        this.addOverlayWidget(addressElem);
         return addressElem;
     }
 
     public java.util.List<ProceduralMotions> getProceduralMotionses() {
         java.util.List<ProceduralMotions> result = new ArrayList<ProceduralMotions>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ProceduralMotions".equalsIgnoreCase(widget.getType())) {
                 result.add((ProceduralMotions)widget);
             }
@@ -1712,13 +1642,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public ProceduralMotions addProceduralMotions(ProceduralMotions proceduralMotionsElem) {
-        this.addAmendableWidget(proceduralMotionsElem);
+        this.addOverlayWidget(proceduralMotionsElem);
         return proceduralMotionsElem;
     }
 
     public java.util.List<PointOfOrder> getPointOfOrders() {
         java.util.List<PointOfOrder> result = new ArrayList<PointOfOrder>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("PointOfOrder".equalsIgnoreCase(widget.getType())) {
                 result.add((PointOfOrder)widget);
             }
@@ -1732,13 +1662,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public PointOfOrder addPointOfOrder(PointOfOrder pointOfOrderElem) {
-        this.addAmendableWidget(pointOfOrderElem);
+        this.addOverlayWidget(pointOfOrderElem);
         return pointOfOrderElem;
     }
 
     public java.util.List<Adjournment> getAdjournments() {
         java.util.List<Adjournment> result = new ArrayList<Adjournment>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Adjournment".equalsIgnoreCase(widget.getType())) {
                 result.add((Adjournment)widget);
             }
@@ -1752,13 +1682,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Adjournment addAdjournment(Adjournment adjournmentElem) {
-        this.addAmendableWidget(adjournmentElem);
+        this.addOverlayWidget(adjournmentElem);
         return adjournmentElem;
     }
 
     public java.util.List<DebateSection> getDebateSections() {
         java.util.List<DebateSection> result = new ArrayList<DebateSection>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DebateSection".equalsIgnoreCase(widget.getType())) {
                 result.add((DebateSection)widget);
             }
@@ -1772,13 +1702,13 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public DebateSection addDebateSection(DebateSection debateSectionElem) {
-        this.addAmendableWidget(debateSectionElem);
+        this.addOverlayWidget(debateSectionElem);
         return debateSectionElem;
     }
 
     public java.util.List<Div> getDivs() {
         java.util.List<Div> result = new ArrayList<Div>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Div".equalsIgnoreCase(widget.getType())) {
                 result.add((Div)widget);
             }
@@ -1792,7 +1722,7 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Div addDiv(Div divElem) {
-        this.addAmendableWidget(divElem);
+        this.addOverlayWidget(divElem);
         return divElem;
     }
 
@@ -1823,7 +1753,7 @@ public class PopupStructureComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

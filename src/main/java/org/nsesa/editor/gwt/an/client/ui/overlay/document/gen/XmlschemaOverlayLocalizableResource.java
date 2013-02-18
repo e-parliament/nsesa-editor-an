@@ -14,7 +14,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen;
 
 import com.google.gwt.core.client.GWT;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayLocalizableResource;
 
 /**
@@ -24,7 +24,7 @@ public class XmlschemaOverlayLocalizableResource extends DefaultOverlayLocalizab
     private static XmlschemaOverlayMessages MESSAGES = GWT.create(XmlschemaOverlayMessages.class);
 
     @Override
-    public String getName(final AmendableWidget widget) {
+    public String getName(final OverlayWidget widget) {
         if (widget == null) {
             throw new IllegalArgumentException("Null widget passed.");
         } else {
@@ -33,7 +33,7 @@ public class XmlschemaOverlayLocalizableResource extends DefaultOverlayLocalizab
     }
 
     @Override
-    public String getDescription(final AmendableWidget widget) {
+    public String getDescription(final OverlayWidget widget) {
         if (widget == null) {
             throw new IllegalArgumentException("Null widget passed.");
         } else {

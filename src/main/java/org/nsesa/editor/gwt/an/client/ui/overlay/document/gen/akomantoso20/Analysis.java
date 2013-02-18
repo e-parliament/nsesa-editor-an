@@ -13,17 +13,12 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ActiveModifications;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PassiveModifications;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Judicial;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Parliamentary;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.OtherAnalysis;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -34,8 +29,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class Analysis extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class Analysis extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new ActiveModifications(), new Occurrence(0,1));
             put(new PassiveModifications(), new Occurrence(0,1));
@@ -71,7 +66,7 @@ public class Analysis extends AmendableWidgetImpl  {
 
     public ActiveModifications getActiveModifications() {
         ActiveModifications result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ActiveModifications".equalsIgnoreCase(widget.getType())) {
                 result = (ActiveModifications)widget;
                 break;
@@ -86,15 +81,15 @@ public class Analysis extends AmendableWidgetImpl  {
         ActiveModifications result = getActiveModifications();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(activeModificationsElem);
+        this.addOverlayWidget(activeModificationsElem);
 
         return activeModificationsElem;
     }
     public PassiveModifications getPassiveModifications() {
         PassiveModifications result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("PassiveModifications".equalsIgnoreCase(widget.getType())) {
                 result = (PassiveModifications)widget;
                 break;
@@ -109,15 +104,15 @@ public class Analysis extends AmendableWidgetImpl  {
         PassiveModifications result = getPassiveModifications();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(passiveModificationsElem);
+        this.addOverlayWidget(passiveModificationsElem);
 
         return passiveModificationsElem;
     }
     public Judicial getJudicial() {
         Judicial result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Judicial".equalsIgnoreCase(widget.getType())) {
                 result = (Judicial)widget;
                 break;
@@ -132,15 +127,15 @@ public class Analysis extends AmendableWidgetImpl  {
         Judicial result = getJudicial();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(judicialElem);
+        this.addOverlayWidget(judicialElem);
 
         return judicialElem;
     }
     public Parliamentary getParliamentary() {
         Parliamentary result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Parliamentary".equalsIgnoreCase(widget.getType())) {
                 result = (Parliamentary)widget;
                 break;
@@ -155,15 +150,15 @@ public class Analysis extends AmendableWidgetImpl  {
         Parliamentary result = getParliamentary();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(parliamentaryElem);
+        this.addOverlayWidget(parliamentaryElem);
 
         return parliamentaryElem;
     }
     public java.util.List<OtherAnalysis> getOtherAnalysises() {
         java.util.List<OtherAnalysis> result = new ArrayList<OtherAnalysis>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("OtherAnalysis".equalsIgnoreCase(widget.getType())) {
                 result.add((OtherAnalysis)widget);
             }
@@ -177,7 +172,7 @@ public class Analysis extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public OtherAnalysis addOtherAnalysis(OtherAnalysis otherAnalysisElem) {
-        this.addAmendableWidget(otherAnalysisElem);
+        this.addOverlayWidget(otherAnalysisElem);
         return otherAnalysisElem;
     }
 
@@ -208,7 +203,7 @@ public class Analysis extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

@@ -20,12 +20,12 @@ import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.HTML;
 import org.nsesa.editor.gwt.an.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
-import org.nsesa.editor.gwt.core.client.amendment.AmendableWidgetWalker;
+import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.event.NotificationEvent;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.mode.DocumentMode;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.editor.client.ui.document.DocumentController;
 
 /**
@@ -52,14 +52,14 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
     public boolean apply(ActiveState state) {
         if (state.isActive()) {
             clientFactory.getEventBus().fireEvent(new NotificationEvent("Consolidation view is now active."));
-            documentController.getSourceFileController().walk(new AmendableWidgetWalker.AmendableVisitor() {
+            documentController.getSourceFileController().walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
                 @Override
-                public boolean visit(AmendableWidget visited) {
+                public boolean visit(OverlayWidget visited) {
                     if (visited.isAmended()) {
 
                         final com.google.gwt.user.client.Element div = DOM.createDiv();
                         div.addClassName("temporaryForConsolidation");
-                        visited.getParentAmendableWidget().getAmendableElement().insertBefore(div, visited.getAmendableElement());
+                        visited.getParentOverlayWidget().getOverlayElement().insertBefore(div, visited.getOverlayElement());
                         int i = 1;
                         for (final AmendmentController amendmentController : visited.getAmendmentControllers()) {
                             final String amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
@@ -81,11 +81,11 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
             });
         } else {
             clientFactory.getEventBus().fireEvent(new NotificationEvent("Consolidation view is now inactive."));
-            documentController.getSourceFileController().walk(new AmendableWidgetWalker.AmendableVisitor() {
+            documentController.getSourceFileController().walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
                 @Override
-                public boolean visit(AmendableWidget visited) {
+                public boolean visit(OverlayWidget visited) {
                     if (visited.isAmended()) {
-                        final NodeList<Node> childNodes = visited.getParentAmendableWidget().getAmendableElement().getChildNodes();
+                        final NodeList<Node> childNodes = visited.getParentOverlayWidget().getOverlayElement().getChildNodes();
                         for (int i = 0; i < childNodes.getLength(); i++) {
                             Node node = childNodes.getItem(i);
                             if (Node.ELEMENT_NODE == node.getNodeType()) {

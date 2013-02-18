@@ -13,28 +13,16 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Foreign;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Block;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Formula;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Container;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.BlockList;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Toc;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Tblock;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Ul;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Ol;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Table;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.P;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -45,8 +33,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class BasicoptComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class BasicoptComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Foreign(), new Occurrence(0,-1));
             put(new Block(), new Occurrence(0,-1));
@@ -94,7 +82,7 @@ public class BasicoptComplexType extends AmendableWidgetImpl  {
 
     public java.util.List<Foreign> getForeigns() {
         java.util.List<Foreign> result = new ArrayList<Foreign>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Foreign".equalsIgnoreCase(widget.getType())) {
                 result.add((Foreign)widget);
             }
@@ -108,13 +96,13 @@ public class BasicoptComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Foreign addForeign(Foreign foreignElem) {
-        this.addAmendableWidget(foreignElem);
+        this.addOverlayWidget(foreignElem);
         return foreignElem;
     }
 
     public java.util.List<Block> getBlocks() {
         java.util.List<Block> result = new ArrayList<Block>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Block".equalsIgnoreCase(widget.getType())) {
                 result.add((Block)widget);
             }
@@ -128,13 +116,13 @@ public class BasicoptComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Block addBlock(Block blockElem) {
-        this.addAmendableWidget(blockElem);
+        this.addOverlayWidget(blockElem);
         return blockElem;
     }
 
     public java.util.List<Formula> getFormulas() {
         java.util.List<Formula> result = new ArrayList<Formula>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Formula".equalsIgnoreCase(widget.getType())) {
                 result.add((Formula)widget);
             }
@@ -148,13 +136,13 @@ public class BasicoptComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Formula addFormula(Formula formulaElem) {
-        this.addAmendableWidget(formulaElem);
+        this.addOverlayWidget(formulaElem);
         return formulaElem;
     }
 
     public java.util.List<Container> getContainers() {
         java.util.List<Container> result = new ArrayList<Container>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Container".equalsIgnoreCase(widget.getType())) {
                 result.add((Container)widget);
             }
@@ -168,7 +156,7 @@ public class BasicoptComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Container addContainer(Container containerElem) {
-        this.addAmendableWidget(containerElem);
+        this.addOverlayWidget(containerElem);
         return containerElem;
     }
 
@@ -382,7 +370,7 @@ public class BasicoptComplexType extends AmendableWidgetImpl  {
     }
     public java.util.List<BlockList> getBlockLists() {
         java.util.List<BlockList> result = new ArrayList<BlockList>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("BlockList".equalsIgnoreCase(widget.getType())) {
                 result.add((BlockList)widget);
             }
@@ -396,13 +384,13 @@ public class BasicoptComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public BlockList addBlockList(BlockList blockListElem) {
-        this.addAmendableWidget(blockListElem);
+        this.addOverlayWidget(blockListElem);
         return blockListElem;
     }
 
     public java.util.List<Toc> getTocs() {
         java.util.List<Toc> result = new ArrayList<Toc>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Toc".equalsIgnoreCase(widget.getType())) {
                 result.add((Toc)widget);
             }
@@ -416,13 +404,13 @@ public class BasicoptComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Toc addToc(Toc tocElem) {
-        this.addAmendableWidget(tocElem);
+        this.addOverlayWidget(tocElem);
         return tocElem;
     }
 
     public java.util.List<Tblock> getTblocks() {
         java.util.List<Tblock> result = new ArrayList<Tblock>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Tblock".equalsIgnoreCase(widget.getType())) {
                 result.add((Tblock)widget);
             }
@@ -436,13 +424,13 @@ public class BasicoptComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Tblock addTblock(Tblock tblockElem) {
-        this.addAmendableWidget(tblockElem);
+        this.addOverlayWidget(tblockElem);
         return tblockElem;
     }
 
     public java.util.List<Ul> getUls() {
         java.util.List<Ul> result = new ArrayList<Ul>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Ul".equalsIgnoreCase(widget.getType())) {
                 result.add((Ul)widget);
             }
@@ -456,13 +444,13 @@ public class BasicoptComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Ul addUl(Ul ulElem) {
-        this.addAmendableWidget(ulElem);
+        this.addOverlayWidget(ulElem);
         return ulElem;
     }
 
     public java.util.List<Ol> getOls() {
         java.util.List<Ol> result = new ArrayList<Ol>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Ol".equalsIgnoreCase(widget.getType())) {
                 result.add((Ol)widget);
             }
@@ -476,13 +464,13 @@ public class BasicoptComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Ol addOl(Ol olElem) {
-        this.addAmendableWidget(olElem);
+        this.addOverlayWidget(olElem);
         return olElem;
     }
 
     public java.util.List<Table> getTables() {
         java.util.List<Table> result = new ArrayList<Table>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Table".equalsIgnoreCase(widget.getType())) {
                 result.add((Table)widget);
             }
@@ -496,13 +484,13 @@ public class BasicoptComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public Table addTable(Table tableElem) {
-        this.addAmendableWidget(tableElem);
+        this.addOverlayWidget(tableElem);
         return tableElem;
     }
 
     public java.util.List<P> getPs() {
         java.util.List<P> result = new ArrayList<P>();
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("P".equalsIgnoreCase(widget.getType())) {
                 result.add((P)widget);
             }
@@ -516,7 +504,7 @@ public class BasicoptComplexType extends AmendableWidgetImpl  {
     }
      //DSL Style set value
     public P addP(P pElem) {
-        this.addAmendableWidget(pElem);
+        this.addOverlayWidget(pElem);
         return pElem;
     }
 
@@ -547,7 +535,7 @@ public class BasicoptComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

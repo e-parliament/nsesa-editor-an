@@ -14,7 +14,7 @@
 package org.nsesa.editor.gwt.an.client.ui.amendment;
 
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 
 import java.util.List;
@@ -39,9 +39,9 @@ public class AkomaNtoso20AmendmentControllerUtil {
         return getOriginalContent(amendmentController.asAmendableWidget(amendmentController.getModel().getBody()));
     }
 
-    private static String getOriginalContent(final AmendableWidget amendableWidget) {
-        if (amendableWidget == null) throw new NullPointerException("No Amendable Widget passed!");
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", amendableWidget);
+    private static String getOriginalContent(final OverlayWidget overlayWidget) {
+        if (overlayWidget == null) throw new NullPointerException("No Amendable Widget passed!");
+        final List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlayWidget);
         return quotedStructures.get(0).getInnerHTML();
     }
 
@@ -54,9 +54,9 @@ public class AkomaNtoso20AmendmentControllerUtil {
         setOriginalContent(amendmentController.asAmendableWidget(amendmentController.getView().getBody()), originalContent);
     }
 
-    private static void setOriginalContent(final AmendableWidget amendableWidget, final String originalContent) {
-        if (amendableWidget == null) throw new NullPointerException("No Amendable Widget passed!");
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", amendableWidget);
+    private static void setOriginalContent(final OverlayWidget overlayWidget, final String originalContent) {
+        if (overlayWidget == null) throw new NullPointerException("No Amendable Widget passed!");
+        final List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlayWidget);
         quotedStructures.get(0).setInnerHTML(originalContent);
     }
 
@@ -69,10 +69,10 @@ public class AkomaNtoso20AmendmentControllerUtil {
         setOriginalNum(amendmentController.asAmendableWidget(amendmentController.getView().getBody()), originalContent);
     }
 
-    private static void setOriginalNum(final AmendableWidget amendableWidget, final String num) {
-        if (amendableWidget == null) throw new NullPointerException("No Amendable Widget passed!");
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", amendableWidget);
-        final List<AmendableWidget> nums = OverlayUtil.find("num", quotedStructures.get(1));
+    private static void setOriginalNum(final OverlayWidget overlayWidget, final String num) {
+        if (overlayWidget == null) throw new NullPointerException("No Amendable Widget passed!");
+        final List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlayWidget);
+        final List<OverlayWidget> nums = OverlayUtil.find("num", quotedStructures.get(1));
         if (nums.size() > 0) nums.get(0).setInnerHTML(num);
     }
 
@@ -88,9 +88,9 @@ public class AkomaNtoso20AmendmentControllerUtil {
         return getOriginalNum(amendmentController.asAmendableWidget(amendmentController.getModel().getBody()));
     }
 
-    private static String getOriginalNum(final AmendableWidget amendableWidget) {
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", amendableWidget);
-        final List<AmendableWidget> nums = OverlayUtil.find("num", quotedStructures.get(0));
+    private static String getOriginalNum(final OverlayWidget overlayWidget) {
+        final List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlayWidget);
+        final List<OverlayWidget> nums = OverlayUtil.find("num", quotedStructures.get(0));
         return (nums.size() > 0) ? nums.get(0).getInnerHTML() : null;
     }
 
@@ -107,9 +107,9 @@ public class AkomaNtoso20AmendmentControllerUtil {
         return getAmendmentContent(amendmentController.asAmendableWidget(amendmentController.getModel().getBody()));
     }
 
-    private static String getAmendmentContent(final AmendableWidget amendableWidget) {
-        if (amendableWidget == null) throw new NullPointerException("No Amendable Widget passed!");
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", amendableWidget);
+    private static String getAmendmentContent(final OverlayWidget overlayWidget) {
+        if (overlayWidget == null) throw new NullPointerException("No Amendable Widget passed!");
+        final List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlayWidget);
         return quotedStructures.get(1).getInnerHTML();
     }
 
@@ -122,9 +122,9 @@ public class AkomaNtoso20AmendmentControllerUtil {
         setAmendmentContent(amendmentController.asAmendableWidget(amendmentController.getView().getBody()), originalContent);
     }
 
-    private static void setAmendmentContent(final AmendableWidget amendableWidget, final String originalContent) {
-        if (amendableWidget == null) throw new NullPointerException("No Amendable Widget passed!");
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", amendableWidget);
+    private static void setAmendmentContent(final OverlayWidget overlayWidget, final String originalContent) {
+        if (overlayWidget == null) throw new NullPointerException("No Amendable Widget passed!");
+        final List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlayWidget);
         quotedStructures.get(1).setInnerHTML(originalContent);
     }
 
@@ -137,10 +137,10 @@ public class AkomaNtoso20AmendmentControllerUtil {
         setAmendmentNum(amendmentController.asAmendableWidget(amendmentController.getView().getBody()), originalContent);
     }
 
-    private static void setAmendmentNum(final AmendableWidget amendableWidget, final String num) {
-        if (amendableWidget == null) throw new NullPointerException("No Amendable Widget passed!");
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", amendableWidget);
-        final List<AmendableWidget> nums = OverlayUtil.find("num", quotedStructures.get(1));
+    private static void setAmendmentNum(final OverlayWidget overlayWidget, final String num) {
+        if (overlayWidget == null) throw new NullPointerException("No Amendable Widget passed!");
+        final List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlayWidget);
+        final List<OverlayWidget> nums = OverlayUtil.find("num", quotedStructures.get(1));
         if (nums.size() > 0) nums.get(0).setInnerHTML(num);
     }
 
@@ -157,10 +157,10 @@ public class AkomaNtoso20AmendmentControllerUtil {
         return getAmendmentNum(amendmentController.asAmendableWidget(amendmentController.getModel().getBody()));
     }
 
-    private static String getAmendmentNum(final AmendableWidget amendableWidget) {
-        if (amendableWidget == null) throw new NullPointerException("No Amendable Widget passed!");
-        final List<AmendableWidget> quotedStructures = OverlayUtil.find("quotedStructure", amendableWidget);
-        final List<AmendableWidget> nums = OverlayUtil.find("num", quotedStructures.get(1));
+    private static String getAmendmentNum(final OverlayWidget overlayWidget) {
+        if (overlayWidget == null) throw new NullPointerException("No Amendable Widget passed!");
+        final List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", overlayWidget);
+        final List<OverlayWidget> nums = OverlayUtil.find("num", quotedStructures.get(1));
         return (nums.size() > 0) ? nums.get(0).getInnerHTML() : null;
     }
 }

@@ -17,13 +17,13 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import org.nsesa.editor.gwt.an.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
-import org.nsesa.editor.gwt.core.client.amendment.AmendableWidgetWalker;
+import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.event.CriticalErrorEvent;
 import org.nsesa.editor.gwt.core.client.event.NotificationEvent;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.mode.DocumentMode;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.shared.DiffRequest;
 import org.nsesa.editor.gwt.core.shared.DiffResult;
 import org.nsesa.editor.gwt.editor.client.ui.document.DocumentController;
@@ -57,9 +57,9 @@ public class DiffMode implements DocumentMode<ActiveState> {
         // TODO: actually change the diffing for the amendments ...
         if (state.isActive()) {
             clientFactory.getEventBus().fireEvent(new NotificationEvent("Diffing is now active."));
-            documentController.getSourceFileController().walk(new AmendableWidgetWalker.AmendableVisitor() {
+            documentController.getSourceFileController().walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
                 @Override
-                public boolean visit(AmendableWidget visited) {
+                public boolean visit(OverlayWidget visited) {
                     if (visited.isAmended()) {
                         for (final AmendmentController amendmentController : visited.getAmendmentControllers()) {
                             ArrayList<DiffRequest> diffRequests = new ArrayList<DiffRequest>();
@@ -86,9 +86,9 @@ public class DiffMode implements DocumentMode<ActiveState> {
             });
         } else {
             clientFactory.getEventBus().fireEvent(new NotificationEvent("Diffing is now inactive."));
-            documentController.getSourceFileController().walk(new AmendableWidgetWalker.AmendableVisitor() {
+            documentController.getSourceFileController().walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
                 @Override
-                public boolean visit(AmendableWidget visited) {
+                public boolean visit(OverlayWidget visited) {
                     if (visited.isAmended()) {
                         for (final AmendmentController amendmentController : visited.getAmendmentControllers()) {
                             AkomaNtoso20AmendmentControllerUtil.setOriginalContentOnViews(amendmentController, AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController));

@@ -14,7 +14,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen;
 
 import com.google.gwt.core.client.GWT;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayLocalizableResource;
 
 /**
@@ -24,7 +24,7 @@ public class Akomantoso20OverlayLocalizableResource extends DefaultOverlayLocali
     private static Akomantoso20OverlayMessages MESSAGES = GWT.create(Akomantoso20OverlayMessages.class);
 
     @Override
-    public String getName(final AmendableWidget widget) {
+    public String getName(final OverlayWidget widget) {
         if (widget == null) {
             throw new IllegalArgumentException("Null widget passed.");
         } else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.container".equalsIgnoreCase(widget.getClass().getName())) {
@@ -603,7 +603,7 @@ public class Akomantoso20OverlayLocalizableResource extends DefaultOverlayLocali
     }
 
     @Override
-    public String getDescription(final AmendableWidget widget) {
+    public String getDescription(final OverlayWidget widget) {
         if (widget == null) {
             throw new IllegalArgumentException("Null widget passed.");
         } else if ("org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.container".equalsIgnoreCase(widget.getClass().getName())) {

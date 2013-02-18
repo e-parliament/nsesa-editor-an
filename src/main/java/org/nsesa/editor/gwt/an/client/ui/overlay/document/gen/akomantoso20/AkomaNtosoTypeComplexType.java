@@ -13,22 +13,9 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Components;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AmendmentList;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.OfficialGazette;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocumentCollection;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Act;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Bill;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DebateReport;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Debate;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Amendment;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Judgement;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Doc;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -39,8 +26,8 @@ import com.google.gwt.user.client.DOM;
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
-public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+public class AkomaNtosoTypeComplexType extends OverlayWidgetImpl {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Components(), new Occurrence(0,1));
             put(new AmendmentList(), new Occurrence(0,-1));
@@ -77,7 +64,7 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
 
     public Components getComponents() {
         Components result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Components".equalsIgnoreCase(widget.getType())) {
                 result = (Components)widget;
                 break;
@@ -92,15 +79,15 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
         Components result = getComponents();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(componentsElem);
+        this.addOverlayWidget(componentsElem);
 
         return componentsElem;
     }
     public AmendmentList getAmendmentList() {
         AmendmentList result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("AmendmentList".equalsIgnoreCase(widget.getType())) {
                 result = (AmendmentList)widget;
                 break;
@@ -115,15 +102,15 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
         AmendmentList result = getAmendmentList();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(amendmentListElem);
+        this.addOverlayWidget(amendmentListElem);
 
         return amendmentListElem;
     }
     public OfficialGazette getOfficialGazette() {
         OfficialGazette result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("OfficialGazette".equalsIgnoreCase(widget.getType())) {
                 result = (OfficialGazette)widget;
                 break;
@@ -138,15 +125,15 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
         OfficialGazette result = getOfficialGazette();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(officialGazetteElem);
+        this.addOverlayWidget(officialGazetteElem);
 
         return officialGazetteElem;
     }
     public DocumentCollection getDocumentCollection() {
         DocumentCollection result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DocumentCollection".equalsIgnoreCase(widget.getType())) {
                 result = (DocumentCollection)widget;
                 break;
@@ -161,15 +148,15 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
         DocumentCollection result = getDocumentCollection();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(documentCollectionElem);
+        this.addOverlayWidget(documentCollectionElem);
 
         return documentCollectionElem;
     }
     public Act getAct() {
         Act result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Act".equalsIgnoreCase(widget.getType())) {
                 result = (Act)widget;
                 break;
@@ -184,15 +171,15 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
         Act result = getAct();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(actElem);
+        this.addOverlayWidget(actElem);
 
         return actElem;
     }
     public Bill getBill() {
         Bill result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Bill".equalsIgnoreCase(widget.getType())) {
                 result = (Bill)widget;
                 break;
@@ -207,15 +194,15 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
         Bill result = getBill();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(billElem);
+        this.addOverlayWidget(billElem);
 
         return billElem;
     }
     public DebateReport getDebateReport() {
         DebateReport result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("DebateReport".equalsIgnoreCase(widget.getType())) {
                 result = (DebateReport)widget;
                 break;
@@ -230,15 +217,15 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
         DebateReport result = getDebateReport();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(debateReportElem);
+        this.addOverlayWidget(debateReportElem);
 
         return debateReportElem;
     }
     public Debate getDebate() {
         Debate result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Debate".equalsIgnoreCase(widget.getType())) {
                 result = (Debate)widget;
                 break;
@@ -253,15 +240,15 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
         Debate result = getDebate();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(debateElem);
+        this.addOverlayWidget(debateElem);
 
         return debateElem;
     }
     public Amendment getAmendment() {
         Amendment result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Amendment".equalsIgnoreCase(widget.getType())) {
                 result = (Amendment)widget;
                 break;
@@ -276,15 +263,15 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
         Amendment result = getAmendment();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(amendmentElem);
+        this.addOverlayWidget(amendmentElem);
 
         return amendmentElem;
     }
     public Judgement getJudgement() {
         Judgement result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Judgement".equalsIgnoreCase(widget.getType())) {
                 result = (Judgement)widget;
                 break;
@@ -299,15 +286,15 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
         Judgement result = getJudgement();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(judgementElem);
+        this.addOverlayWidget(judgementElem);
 
         return judgementElem;
     }
     public Doc getDoc() {
         Doc result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Doc".equalsIgnoreCase(widget.getType())) {
                 result = (Doc)widget;
                 break;
@@ -322,9 +309,9 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
         Doc result = getDoc();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(docElem);
+        this.addOverlayWidget(docElem);
 
         return docElem;
     }
@@ -334,7 +321,7 @@ public class AkomaNtosoTypeComplexType extends AmendableWidgetImpl  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

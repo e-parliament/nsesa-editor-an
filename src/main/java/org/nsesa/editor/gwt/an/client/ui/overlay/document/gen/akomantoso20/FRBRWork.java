@@ -13,16 +13,8 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.CorePropertiesComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRcountry;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRsubtype;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRnumber;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.FRBRname;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import java.util.LinkedHashMap;
@@ -34,7 +26,7 @@ import com.google.gwt.user.client.DOM;
 */
 
 public class FRBRWork extends CorePropertiesComplexType  {
-    private static Map<AmendableWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<AmendableWidget, Occurrence>() {
+    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new FRBRcountry(), new Occurrence(0,-1));
             put(new FRBRsubtype(), new Occurrence(0,-1));
@@ -75,7 +67,7 @@ public class FRBRWork extends CorePropertiesComplexType  {
 
     public FRBRcountry getFRBRcountry() {
         FRBRcountry result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("FRBRcountry".equalsIgnoreCase(widget.getType())) {
                 result = (FRBRcountry)widget;
                 break;
@@ -90,15 +82,15 @@ public class FRBRWork extends CorePropertiesComplexType  {
         FRBRcountry result = getFRBRcountry();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(FRBRcountryElem);
+        this.addOverlayWidget(FRBRcountryElem);
 
         return FRBRcountryElem;
     }
     public FRBRsubtype getFRBRsubtype() {
         FRBRsubtype result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("FRBRsubtype".equalsIgnoreCase(widget.getType())) {
                 result = (FRBRsubtype)widget;
                 break;
@@ -113,15 +105,15 @@ public class FRBRWork extends CorePropertiesComplexType  {
         FRBRsubtype result = getFRBRsubtype();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(FRBRsubtypeElem);
+        this.addOverlayWidget(FRBRsubtypeElem);
 
         return FRBRsubtypeElem;
     }
     public FRBRnumber getFRBRnumber() {
         FRBRnumber result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("FRBRnumber".equalsIgnoreCase(widget.getType())) {
                 result = (FRBRnumber)widget;
                 break;
@@ -136,15 +128,15 @@ public class FRBRWork extends CorePropertiesComplexType  {
         FRBRnumber result = getFRBRnumber();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(FRBRnumberElem);
+        this.addOverlayWidget(FRBRnumberElem);
 
         return FRBRnumberElem;
     }
     public FRBRname getFRBRname() {
         FRBRname result = null;
-        for (AmendableWidget widget : getChildAmendableWidgets()) {
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("FRBRname".equalsIgnoreCase(widget.getType())) {
                 result = (FRBRname)widget;
                 break;
@@ -159,9 +151,9 @@ public class FRBRWork extends CorePropertiesComplexType  {
         FRBRname result = getFRBRname();
         // remove the child of the same type if exist
         if (result != null) {
-            this.removeAmendableWidget(result);
+            this.removeOverlayWidget(result);
         }
-        this.addAmendableWidget(FRBRnameElem);
+        this.addOverlayWidget(FRBRnameElem);
 
         return FRBRnameElem;
     }
@@ -171,7 +163,7 @@ public class FRBRWork extends CorePropertiesComplexType  {
     * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
     */
     @Override
-    public Map<AmendableWidget, Occurrence> getAllowedChildTypes() {
+    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 

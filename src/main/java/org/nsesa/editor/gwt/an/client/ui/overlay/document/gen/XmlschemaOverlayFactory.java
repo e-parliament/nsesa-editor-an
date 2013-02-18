@@ -16,7 +16,7 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen;
 import com.google.gwt.dom.client.Element;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.AmendableWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
 
@@ -42,7 +42,7 @@ public class XmlschemaOverlayFactory extends DefaultOverlayFactory {
     }
 
     @Override
-    public AmendableWidget toAmendableWidget(final Element element) {
+    public OverlayWidget toAmendableWidget(final Element element) {
         final String nodeName = overlayStrategy.getType(element);
         final String namespaceURI = overlayStrategy.getNamespaceURI(element);
 
