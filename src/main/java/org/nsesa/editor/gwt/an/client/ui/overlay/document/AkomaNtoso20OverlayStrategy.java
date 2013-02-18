@@ -13,7 +13,11 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document;
 
+import com.google.gwt.dom.client.Element;
+import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayStrategy;
+
+import java.util.Arrays;
 
 /**
  * Date: 03/07/12 22:54
@@ -23,6 +27,18 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayStrate
  */
 public class AkomaNtoso20OverlayStrategy extends DefaultOverlayStrategy {
 
+    @Inject
     public AkomaNtoso20OverlayStrategy() {
+    }
+
+    @Override
+    public Boolean isAmendable(Element element) {
+        // don't allow references to be amendable by themselves
+        final String type = element.getAttribute("type") != null ? element.getAttribute("type").toLowerCase() : null;
+        if (type != null && !Arrays.asList("noteRef", "passiveRef", "eventRef", "componentRef", "activeRef", "mRef", "ref")
+                .contains(type)) {
+            return super.isAmendable(element);
+        }
+        return false;
     }
 }
