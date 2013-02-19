@@ -156,7 +156,7 @@ public class Remark extends InlineComplexType {
 
     public void setTypeAttr(final RemarkTypeSimpleType typeAttr) {
         this.typeAttr = typeAttr;
-        getElement().setAttribute("type", typeAttr.getValue());
+        getElement().setAttribute("type", typeAttr.value());
     }
 
     //DSL Style set value

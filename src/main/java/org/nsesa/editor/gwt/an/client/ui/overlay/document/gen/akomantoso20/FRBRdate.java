@@ -121,12 +121,6 @@ public class FRBRdate extends MetaoptComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public FRBRdate wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public FRBRdate idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -135,6 +129,12 @@ public class FRBRdate extends MetaoptComplexType {
     //DSL Style set value
     public FRBRdate evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public FRBRdate wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

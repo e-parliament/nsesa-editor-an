@@ -14,10 +14,10 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.SrcTypeComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 
 import java.util.ArrayList;
@@ -69,18 +69,6 @@ public class ComponentRef extends SrcTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public ComponentRef srcAttr(final AnyURISimpleType srcAttr) {
-        setSrcAttr(srcAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ComponentRef altAttr(final StringSimpleType altAttr) {
-        setAltAttr(altAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public ComponentRef showAsAttr(final StringSimpleType showAsAttr) {
         setShowAsAttr(showAsAttr);
         return this;
@@ -93,12 +81,6 @@ public class ComponentRef extends SrcTypeComplexType {
     }
 
     //DSL Style set value
-    public ComponentRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public ComponentRef idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -107,6 +89,24 @@ public class ComponentRef extends SrcTypeComplexType {
     //DSL Style set value
     public ComponentRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ComponentRef srcAttr(final AnyURISimpleType srcAttr) {
+        setSrcAttr(srcAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ComponentRef altAttr(final StringSimpleType altAttr) {
+        setAltAttr(altAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ComponentRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

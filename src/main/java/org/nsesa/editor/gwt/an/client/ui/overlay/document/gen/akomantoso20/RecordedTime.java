@@ -158,7 +158,7 @@ public class RecordedTime extends InlineComplexType {
 
     public void setTypeAttr(final TimeTypeSimpleType typeAttr) {
         this.typeAttr = typeAttr;
-        getElement().setAttribute("type", typeAttr.getValue());
+        getElement().setAttribute("type", typeAttr.value());
     }
 
     //DSL Style set value

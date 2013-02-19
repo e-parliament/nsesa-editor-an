@@ -70,8 +70,14 @@ public class Voting extends ParliamentaryAnalysisTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Voting refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Voting hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Voting outcomeAttr(final AnyURISimpleType outcomeAttr) {
+        setOutcomeAttr(outcomeAttr);
         return this;
     }
 
@@ -88,20 +94,14 @@ public class Voting extends ParliamentaryAnalysisTypeComplexType {
     }
 
     //DSL Style set value
+    public Voting refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Voting wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Voting outcomeAttr(final AnyURISimpleType outcomeAttr) {
-        setOutcomeAttr(outcomeAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Voting hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
         return this;
     }
 

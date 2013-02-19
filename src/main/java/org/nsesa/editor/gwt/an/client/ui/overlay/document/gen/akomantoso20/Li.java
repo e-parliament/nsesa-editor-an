@@ -428,7 +428,7 @@ public class Li extends OverlayWidgetImpl {
 
     public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
         this.statusAttr = statusAttr;
-        getElement().setAttribute("status", statusAttr.getValue());
+        getElement().setAttribute("status", statusAttr.value());
     }
 
     //DSL Style set value

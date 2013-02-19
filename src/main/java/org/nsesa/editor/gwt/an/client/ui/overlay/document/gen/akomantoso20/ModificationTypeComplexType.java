@@ -20,11 +20,11 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Effic
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Application;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Duration;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Condition;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import com.google.gwt.dom.client.Element;
 
 import java.util.ArrayList;
@@ -76,13 +76,13 @@ public class ModificationTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private String wildcardContentAttr;
-    private AnyURISimpleType refersToAttr;
-    private StatusTypeSimpleType statusAttr;
-    private BooleanSimpleType exclusionAttr;
-    private BooleanSimpleType incompleteAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private BooleanSimpleType exclusionAttr;
+    private BooleanSimpleType incompleteAttr;
+    private AnyURISimpleType refersToAttr;
+    private String wildcardContentAttr;
+    private StatusTypeSimpleType statusAttr;
     private AnyURISimpleType periodAttr;
 
     public java.util.List<Source> getSources() {
@@ -247,76 +247,53 @@ public class ModificationTypeComplexType extends OverlayWidgetImpl {
         return conditionElem;
     }
 
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
         }
 
-        return wildcardContentAttr;
+        return idAttr;
     }
 
     //DSL Style get value
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
+    public IDSimpleType idAttr() {
+        return getIdAttr();
     }
 
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
     }
 
     //DSL Style set value
-    public ModificationTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public ModificationTypeComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
         }
 
-        return refersToAttr;
+        return evolvingIdAttr;
     }
 
     //DSL Style get value
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
     }
 
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
-    }
-
-    //DSL Style set value
-    public ModificationTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-    }
-
-    //DSL Style get value
-    public StatusTypeSimpleType statusAttr() {
-        return getStatusAttr();
-    }
-
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status", statusAttr.value());
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
     }
 
     //DSL Style set value
-    public ModificationTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public ModificationTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -370,53 +347,76 @@ public class ModificationTypeComplexType extends OverlayWidgetImpl {
         return this;
     }
 
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
         }
 
-        return idAttr;
+        return refersToAttr;
     }
 
     //DSL Style get value
-    public IDSimpleType idAttr() {
-        return getIdAttr();
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
     }
 
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
     }
 
     //DSL Style set value
-    public ModificationTypeComplexType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
+    public ModificationTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return evolvingIdAttr;
+        return wildcardContentAttr;
     }
 
     //DSL Style get value
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
     }
 
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
     }
 
     //DSL Style set value
-    public ModificationTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public ModificationTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        }
+
+        return statusAttr;
+    }
+
+    //DSL Style get value
+    public StatusTypeSimpleType statusAttr() {
+        return getStatusAttr();
+    }
+
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status", statusAttr.value());
+    }
+
+    //DSL Style set value
+    public ModificationTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -466,13 +466,13 @@ public class ModificationTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("exclusion", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
-        attrs.put("incomplete", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("exclusion", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
+        attrs.put("incomplete", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }

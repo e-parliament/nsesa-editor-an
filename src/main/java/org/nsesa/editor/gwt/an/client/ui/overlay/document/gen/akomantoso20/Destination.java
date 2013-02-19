@@ -75,6 +75,18 @@ public class Destination extends ArgumentTypeComplexType {
     }
 
     //DSL Style set value
+    public Destination hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Destination wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Destination posAttr(final PosTypeSimpleType posAttr) {
         setPosAttr(posAttr);
         return this;
@@ -89,18 +101,6 @@ public class Destination extends ArgumentTypeComplexType {
     //DSL Style set value
     public Destination evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Destination hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Destination wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

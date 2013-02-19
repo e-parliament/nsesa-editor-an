@@ -95,12 +95,6 @@ public class OtherAnalysis extends AnyOtherTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public OtherAnalysis hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public OtherAnalysis wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
@@ -115,6 +109,12 @@ public class OtherAnalysis extends AnyOtherTypeComplexType {
     //DSL Style set value
     public OtherAnalysis evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public OtherAnalysis hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
         return this;
     }
 

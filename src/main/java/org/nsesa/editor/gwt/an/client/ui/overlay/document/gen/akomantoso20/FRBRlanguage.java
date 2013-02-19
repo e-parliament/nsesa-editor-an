@@ -94,12 +94,6 @@ public class FRBRlanguage extends MetaoptComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public FRBRlanguage wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public FRBRlanguage idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -108,6 +102,12 @@ public class FRBRlanguage extends MetaoptComplexType {
     //DSL Style set value
     public FRBRlanguage evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public FRBRlanguage wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

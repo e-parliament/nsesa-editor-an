@@ -84,7 +84,7 @@ public class Result extends AnyOtherTypeComplexType {
 
     public void setTypeAttr(final ResultTypeSimpleType typeAttr) {
         this.typeAttr = typeAttr;
-        getElement().setAttribute("type", typeAttr.getValue());
+        getElement().setAttribute("type", typeAttr.value());
     }
 
     //DSL Style set value

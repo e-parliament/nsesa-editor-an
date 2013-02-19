@@ -14,8 +14,8 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AnyOtherTypeComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
@@ -67,35 +67,10 @@ public class Step extends AnyOtherTypeComplexType {
     }
 
     // FIELDS ------------------
-    private DateSimpleType dateAttr;
     private AnyURISimpleType actorAttr;
     private AnyURISimpleType asAttr;
+    private DateSimpleType dateAttr;
     private AnyURISimpleType outcomeAttr;
-
-    public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-            dateAttr = new DateSimpleType();
-            dateAttr.setValue(getElement().getAttribute("date"));
-        }
-
-        return dateAttr;
-    }
-
-    //DSL Style get value
-    public DateSimpleType dateAttr() {
-        return getDateAttr();
-    }
-
-    public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-        getElement().setAttribute("date", dateAttr.getValue());
-    }
-
-    //DSL Style set value
-    public Step dateAttr(final DateSimpleType dateAttr) {
-        setDateAttr(dateAttr);
-        return this;
-    }
 
     public AnyURISimpleType getActorAttr() {
         if (actorAttr == null) {
@@ -147,6 +122,31 @@ public class Step extends AnyOtherTypeComplexType {
         return this;
     }
 
+    public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(getElement().getAttribute("date"));
+        }
+
+        return dateAttr;
+    }
+
+    //DSL Style get value
+    public DateSimpleType dateAttr() {
+        return getDateAttr();
+    }
+
+    public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+        getElement().setAttribute("date", dateAttr.getValue());
+    }
+
+    //DSL Style set value
+    public Step dateAttr(final DateSimpleType dateAttr) {
+        setDateAttr(dateAttr);
+        return this;
+    }
+
     public AnyURISimpleType getOutcomeAttr() {
         if (outcomeAttr == null) {
             outcomeAttr = new AnyURISimpleType();
@@ -174,12 +174,6 @@ public class Step extends AnyOtherTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Step hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Step wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
@@ -194,6 +188,12 @@ public class Step extends AnyOtherTypeComplexType {
     //DSL Style set value
     public Step evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Step hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
         return this;
     }
 
@@ -217,9 +217,9 @@ public class Step extends AnyOtherTypeComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("actor", getActorAttr() != null ? getActorAttr().getValue() : null);
         attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
         return attrs;
     }

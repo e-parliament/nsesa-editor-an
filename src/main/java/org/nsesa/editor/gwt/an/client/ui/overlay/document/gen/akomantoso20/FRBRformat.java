@@ -74,12 +74,6 @@ public class FRBRformat extends ValueTypeComplexType {
     }
 
     //DSL Style set value
-    public FRBRformat wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public FRBRformat idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -88,6 +82,12 @@ public class FRBRformat extends ValueTypeComplexType {
     //DSL Style set value
     public FRBRformat evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public FRBRformat wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

@@ -91,7 +91,7 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
 
     public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
         this.containsAttr = containsAttr;
-        getElement().setAttribute("contains", containsAttr.getValue());
+        getElement().setAttribute("contains", containsAttr.value());
     }
 
     //DSL Style set value

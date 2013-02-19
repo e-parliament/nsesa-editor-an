@@ -75,6 +75,18 @@ public class Source extends ArgumentTypeComplexType {
     }
 
     //DSL Style set value
+    public Source hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Source wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Source posAttr(final PosTypeSimpleType posAttr) {
         setPosAttr(posAttr);
         return this;
@@ -89,18 +101,6 @@ public class Source extends ArgumentTypeComplexType {
     //DSL Style set value
     public Source evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Source hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Source wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

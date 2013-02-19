@@ -120,12 +120,6 @@ public class FRBRauthor extends MetaoptComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public FRBRauthor wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public FRBRauthor idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -134,6 +128,12 @@ public class FRBRauthor extends MetaoptComplexType {
     //DSL Style set value
     public FRBRauthor evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public FRBRauthor wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
