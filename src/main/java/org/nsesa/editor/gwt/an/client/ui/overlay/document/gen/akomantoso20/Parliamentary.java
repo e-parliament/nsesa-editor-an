@@ -13,27 +13,36 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ParliamentaryAnalysisComplexType;
 import com.google.gwt.dom.client.Element;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+
 import java.util.HashMap;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class Parliamentary extends ParliamentaryAnalysisComplexType  {
+public class Parliamentary extends ParliamentaryAnalysisComplexType {
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
-            put(new QuorumVerification(), new Occurrence(1,1));
-            put(new Voting(), new Occurrence(1,1));
-            put(new Recount(), new Occurrence(1,1));
+            put(new QuorumVerification(), new Occurrence(1, 1));
+            put(new Voting(), new Occurrence(1, 1));
+            put(new Recount(), new Occurrence(1, 1));
         }
     };
-
 
 
     // STATIC create method
@@ -45,7 +54,7 @@ public class Parliamentary extends ParliamentaryAnalysisComplexType  {
         return span;
     }
 
-// CONSTRUCTORS ------------------
+    // CONSTRUCTORS ------------------
     public Parliamentary() {
         super(create());
         setType("parliamentary");
@@ -57,19 +66,19 @@ public class Parliamentary extends ParliamentaryAnalysisComplexType  {
 
 // FIELDS ------------------
 
-    //Override all attributes methods to be conformant with DSL approach
+//Override all attributes methods to be conformant with DSL approach
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

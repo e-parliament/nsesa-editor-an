@@ -13,33 +13,43 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ActiveModifications;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.PassiveModifications;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Judicial;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Parliamentary;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.OtherAnalysis;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+
 import java.util.HashMap;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
 public class Analysis extends OverlayWidgetImpl {
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
-            put(new ActiveModifications(), new Occurrence(0,1));
-            put(new PassiveModifications(), new Occurrence(0,1));
-            put(new Judicial(), new Occurrence(0,1));
-            put(new Parliamentary(), new Occurrence(0,1));
-            put(new OtherAnalysis(), new Occurrence(0,-1));
+            put(new ActiveModifications(), new Occurrence(0, 1));
+            put(new PassiveModifications(), new Occurrence(0, 1));
+            put(new Judicial(), new Occurrence(0, 1));
+            put(new Parliamentary(), new Occurrence(0, 1));
+            put(new OtherAnalysis(), new Occurrence(0, -1));
         }
     };
-
 
 
     // STATIC create method
@@ -51,7 +61,7 @@ public class Analysis extends OverlayWidgetImpl {
         return span;
     }
 
-// CONSTRUCTORS ------------------
+    // CONSTRUCTORS ------------------
     public Analysis() {
         super(create());
         setType("analysis");
@@ -61,22 +71,22 @@ public class Analysis extends OverlayWidgetImpl {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
 
     public ActiveModifications getActiveModifications() {
         ActiveModifications result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ActiveModifications".equalsIgnoreCase(widget.getType())) {
-                result = (ActiveModifications)widget;
+                result = (ActiveModifications) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public ActiveModifications setActiveModifications(ActiveModifications activeModificationsElem) {
         ActiveModifications result = getActiveModifications();
         // remove the child of the same type if exist
@@ -87,19 +97,20 @@ public class Analysis extends OverlayWidgetImpl {
 
         return activeModificationsElem;
     }
+
     public PassiveModifications getPassiveModifications() {
         PassiveModifications result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("PassiveModifications".equalsIgnoreCase(widget.getType())) {
-                result = (PassiveModifications)widget;
+                result = (PassiveModifications) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public PassiveModifications setPassiveModifications(PassiveModifications passiveModificationsElem) {
         PassiveModifications result = getPassiveModifications();
         // remove the child of the same type if exist
@@ -110,19 +121,20 @@ public class Analysis extends OverlayWidgetImpl {
 
         return passiveModificationsElem;
     }
+
     public Judicial getJudicial() {
         Judicial result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Judicial".equalsIgnoreCase(widget.getType())) {
-                result = (Judicial)widget;
+                result = (Judicial) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public Judicial setJudicial(Judicial judicialElem) {
         Judicial result = getJudicial();
         // remove the child of the same type if exist
@@ -133,19 +145,20 @@ public class Analysis extends OverlayWidgetImpl {
 
         return judicialElem;
     }
+
     public Parliamentary getParliamentary() {
         Parliamentary result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Parliamentary".equalsIgnoreCase(widget.getType())) {
-                result = (Parliamentary)widget;
+                result = (Parliamentary) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public Parliamentary setParliamentary(Parliamentary parliamentaryElem) {
         Parliamentary result = getParliamentary();
         // remove the child of the same type if exist
@@ -156,21 +169,23 @@ public class Analysis extends OverlayWidgetImpl {
 
         return parliamentaryElem;
     }
+
     public java.util.List<OtherAnalysis> getOtherAnalysises() {
         java.util.List<OtherAnalysis> result = new ArrayList<OtherAnalysis>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("OtherAnalysis".equalsIgnoreCase(widget.getType())) {
-                result.add((OtherAnalysis)widget);
+                result.add((OtherAnalysis) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<OtherAnalysis> getOtherAnalysisList() {
-        return  getOtherAnalysises();
+        return getOtherAnalysises();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public OtherAnalysis addOtherAnalysis(OtherAnalysis otherAnalysisElem) {
         this.addOverlayWidget(otherAnalysisElem);
         return otherAnalysisElem;
@@ -183,33 +198,36 @@ public class Analysis extends OverlayWidgetImpl {
         }
 
         return sourceAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType sourceAttr() {
-        return  getSourceAttr();
+        return getSourceAttr();
     }
 
     public void setSourceAttr(final AnyURISimpleType sourceAttr) {
         this.sourceAttr = sourceAttr;
+        getElement().setAttribute("source", sourceAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Analysis sourceAttr(final AnyURISimpleType sourceAttr) {
         setSourceAttr(sourceAttr);
         return this;
     }
-    //Override all attributes methods to be conformant with DSL approach
+//Override all attributes methods to be conformant with DSL approach
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

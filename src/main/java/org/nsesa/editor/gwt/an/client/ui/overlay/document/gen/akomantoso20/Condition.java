@@ -13,29 +13,38 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AnyOtherTypeComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+
 import java.util.HashMap;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class Condition extends AnyOtherTypeComplexType  {
+public class Condition extends AnyOtherTypeComplexType {
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
-            put(null, new Occurrence(0,-1));
+            put(null, new Occurrence(0, -1));
         }
     };
-
 
 
     // STATIC create method
@@ -47,7 +56,7 @@ public class Condition extends AnyOtherTypeComplexType  {
         return span;
     }
 
-// CONSTRUCTORS ------------------
+    // CONSTRUCTORS ------------------
     public Condition() {
         super(create());
         setType("condition");
@@ -57,7 +66,7 @@ public class Condition extends AnyOtherTypeComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private BooleanSimpleType frozenAttr;
 
     public BooleanSimpleType getFrozenAttr() {
@@ -67,36 +76,43 @@ public class Condition extends AnyOtherTypeComplexType  {
         }
 
         return frozenAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public BooleanSimpleType frozenAttr() {
-        return  getFrozenAttr();
+        return getFrozenAttr();
     }
 
     public void setFrozenAttr(final BooleanSimpleType frozenAttr) {
         this.frozenAttr = frozenAttr;
+        getElement().setAttribute("frozen", frozenAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public Condition frozenAttr(final BooleanSimpleType frozenAttr) {
         setFrozenAttr(frozenAttr);
         return this;
     }
+
     //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public Condition wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
     //DSL Style set value
     public Condition hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
         return this;
     }
+
+    //DSL Style set value
+    public Condition wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
     //DSL Style set value
     public Condition idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
+
     //DSL Style set value
     public Condition evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
@@ -104,16 +120,16 @@ public class Condition extends AnyOtherTypeComplexType  {
     }
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

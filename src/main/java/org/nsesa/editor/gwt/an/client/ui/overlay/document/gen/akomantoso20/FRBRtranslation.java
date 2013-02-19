@@ -13,27 +13,38 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MetaoptComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.LanguageSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.YesNoTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+
 import java.util.HashMap;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class FRBRtranslation extends MetaoptComplexType  {
+public class FRBRtranslation extends MetaoptComplexType {
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
         }
     };
-
 
 
     // STATIC create method
@@ -45,7 +56,7 @@ public class FRBRtranslation extends MetaoptComplexType  {
         return span;
     }
 
-// CONSTRUCTORS ------------------
+    // CONSTRUCTORS ------------------
     public FRBRtranslation() {
         super(create());
         setType("FRBRtranslation");
@@ -55,7 +66,7 @@ public class FRBRtranslation extends MetaoptComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private LanguageSimpleType fromLanguageAttr;
     private YesNoTypeSimpleType authoritativeAttr;
     private LanguageSimpleType pivotAttr;
@@ -69,40 +80,48 @@ public class FRBRtranslation extends MetaoptComplexType  {
         }
 
         return fromLanguageAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public LanguageSimpleType fromLanguageAttr() {
-        return  getFromLanguageAttr();
+        return getFromLanguageAttr();
     }
 
     public void setFromLanguageAttr(final LanguageSimpleType fromLanguageAttr) {
         this.fromLanguageAttr = fromLanguageAttr;
+        getElement().setAttribute("fromLanguage", fromLanguageAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public FRBRtranslation fromLanguageAttr(final LanguageSimpleType fromLanguageAttr) {
         setFromLanguageAttr(fromLanguageAttr);
         return this;
     }
+
     public YesNoTypeSimpleType getAuthoritativeAttr() {
         if (authoritativeAttr == null) {
             authoritativeAttr = YesNoTypeSimpleType.fromString(getElement().getAttribute("authoritative"));
         }
 
         return authoritativeAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public YesNoTypeSimpleType authoritativeAttr() {
-        return  getAuthoritativeAttr();
+        return getAuthoritativeAttr();
     }
 
     public void setAuthoritativeAttr(final YesNoTypeSimpleType authoritativeAttr) {
         this.authoritativeAttr = authoritativeAttr;
+        getElement().setAttribute("authoritative", authoritativeAttr.value());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public FRBRtranslation authoritativeAttr(final YesNoTypeSimpleType authoritativeAttr) {
         setAuthoritativeAttr(authoritativeAttr);
         return this;
     }
+
     public LanguageSimpleType getPivotAttr() {
         if (pivotAttr == null) {
             pivotAttr = new LanguageSimpleType();
@@ -110,20 +129,24 @@ public class FRBRtranslation extends MetaoptComplexType  {
         }
 
         return pivotAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public LanguageSimpleType pivotAttr() {
-        return  getPivotAttr();
+        return getPivotAttr();
     }
 
     public void setPivotAttr(final LanguageSimpleType pivotAttr) {
         this.pivotAttr = pivotAttr;
+        getElement().setAttribute("pivot", pivotAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public FRBRtranslation pivotAttr(final LanguageSimpleType pivotAttr) {
         setPivotAttr(pivotAttr);
         return this;
     }
+
     public AnyURISimpleType getByAttr() {
         if (byAttr == null) {
             byAttr = new AnyURISimpleType();
@@ -131,20 +154,24 @@ public class FRBRtranslation extends MetaoptComplexType  {
         }
 
         return byAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType byAttr() {
-        return  getByAttr();
+        return getByAttr();
     }
 
     public void setByAttr(final AnyURISimpleType byAttr) {
         this.byAttr = byAttr;
+        getElement().setAttribute("by", byAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public FRBRtranslation byAttr(final AnyURISimpleType byAttr) {
         setByAttr(byAttr);
         return this;
     }
+
     public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
             hrefAttr = new AnyURISimpleType();
@@ -152,48 +179,54 @@ public class FRBRtranslation extends MetaoptComplexType  {
         }
 
         return hrefAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType hrefAttr() {
-        return  getHrefAttr();
+        return getHrefAttr();
     }
 
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {
         this.hrefAttr = hrefAttr;
+        getElement().setAttribute("href", hrefAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public FRBRtranslation hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
         return this;
     }
+
     //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public FRBRtranslation idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-    //DSL Style set value
-    public FRBRtranslation evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
     //DSL Style set value
     public FRBRtranslation wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
+    //DSL Style set value
+    public FRBRtranslation idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public FRBRtranslation evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

@@ -13,28 +13,38 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Num;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Heading;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Subheading;
 import com.google.gwt.dom.client.Element;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+
 import java.util.HashMap;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
 public class BasehierarchyComplexType extends OverlayWidgetImpl {
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
-            put(new Num(), new Occurrence(0,1));
-            put(new Heading(), new Occurrence(0,1));
-            put(new Subheading(), new Occurrence(0,1));
+            put(new Num(), new Occurrence(0, 1));
+            put(new Heading(), new Occurrence(0, 1));
+            put(new Subheading(), new Occurrence(0, 1));
         }
     };
-
 
 
     // STATIC create method
@@ -58,15 +68,15 @@ public class BasehierarchyComplexType extends OverlayWidgetImpl {
         Num result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Num".equalsIgnoreCase(widget.getType())) {
-                result = (Num)widget;
+                result = (Num) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public Num setNum(Num numElem) {
         Num result = getNum();
         // remove the child of the same type if exist
@@ -77,19 +87,20 @@ public class BasehierarchyComplexType extends OverlayWidgetImpl {
 
         return numElem;
     }
+
     public Heading getHeading() {
         Heading result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Heading".equalsIgnoreCase(widget.getType())) {
-                result = (Heading)widget;
+                result = (Heading) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public Heading setHeading(Heading headingElem) {
         Heading result = getHeading();
         // remove the child of the same type if exist
@@ -100,19 +111,20 @@ public class BasehierarchyComplexType extends OverlayWidgetImpl {
 
         return headingElem;
     }
+
     public Subheading getSubheading() {
         Subheading result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Subheading".equalsIgnoreCase(widget.getType())) {
-                result = (Subheading)widget;
+                result = (Subheading) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public Subheading setSubheading(Subheading subheadingElem) {
         Subheading result = getSubheading();
         // remove the child of the same type if exist
@@ -123,19 +135,19 @@ public class BasehierarchyComplexType extends OverlayWidgetImpl {
 
         return subheadingElem;
     }
-    //Override all attributes methods to be conformant with DSL approach
+//Override all attributes methods to be conformant with DSL approach
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

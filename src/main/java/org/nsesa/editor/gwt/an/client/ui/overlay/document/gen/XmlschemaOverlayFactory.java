@@ -13,14 +13,16 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen;
 
-import com.google.gwt.dom.client.Element;
 import com.google.inject.Inject;
-import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
+import org.nsesa.editor.gwt.core.client.ClientFactory;
+import com.google.gwt.dom.client.Element;
 
 import java.util.logging.Logger;
+import java.util.Map;
 
 /**
  * Note: this file is generated. Rather than changing this file, correct the template called <tt>overlayFactory.ftl</tt>.

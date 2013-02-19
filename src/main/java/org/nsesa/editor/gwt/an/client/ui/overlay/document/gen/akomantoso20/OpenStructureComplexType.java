@@ -13,33 +13,48 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.VersionTypeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Meta;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.CoverPage;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Preface;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Preamble;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MainBody;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Conclusions;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Attachments;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+
 import java.util.HashMap;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
 public class OpenStructureComplexType extends OverlayWidgetImpl {
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
-            put(new Meta(), new Occurrence(1,1));
-            put(new CoverPage(), new Occurrence(0,1));
-            put(new Preface(), new Occurrence(0,1));
-            put(new Preamble(), new Occurrence(0,1));
-            put(new MainBody(), new Occurrence(1,1));
-            put(new Conclusions(), new Occurrence(0,1));
-            put(new Attachments(), new Occurrence(0,1));
+            put(new Meta(), new Occurrence(1, 1));
+            put(new CoverPage(), new Occurrence(0, 1));
+            put(new Preface(), new Occurrence(0, 1));
+            put(new Preamble(), new Occurrence(0, 1));
+            put(new MainBody(), new Occurrence(1, 1));
+            put(new Conclusions(), new Occurrence(0, 1));
+            put(new Attachments(), new Occurrence(0, 1));
         }
     };
-
 
 
     // STATIC create method
@@ -57,7 +72,7 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private VersionTypeSimpleType containsAttr;
     private StringSimpleType nameAttr;
 
@@ -67,33 +82,37 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         }
 
         return containsAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public VersionTypeSimpleType containsAttr() {
-        return  getContainsAttr();
+        return getContainsAttr();
     }
 
     public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
         this.containsAttr = containsAttr;
+        getElement().setAttribute("contains", containsAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public OpenStructureComplexType containsAttr(final VersionTypeSimpleType containsAttr) {
         setContainsAttr(containsAttr);
         return this;
     }
+
     public Meta getMeta() {
         Meta result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Meta".equalsIgnoreCase(widget.getType())) {
-                result = (Meta)widget;
+                result = (Meta) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public Meta setMeta(Meta metaElem) {
         Meta result = getMeta();
         // remove the child of the same type if exist
@@ -104,19 +123,20 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
 
         return metaElem;
     }
+
     public CoverPage getCoverPage() {
         CoverPage result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("CoverPage".equalsIgnoreCase(widget.getType())) {
-                result = (CoverPage)widget;
+                result = (CoverPage) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public CoverPage setCoverPage(CoverPage coverPageElem) {
         CoverPage result = getCoverPage();
         // remove the child of the same type if exist
@@ -127,19 +147,20 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
 
         return coverPageElem;
     }
+
     public Preface getPreface() {
         Preface result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Preface".equalsIgnoreCase(widget.getType())) {
-                result = (Preface)widget;
+                result = (Preface) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public Preface setPreface(Preface prefaceElem) {
         Preface result = getPreface();
         // remove the child of the same type if exist
@@ -150,19 +171,20 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
 
         return prefaceElem;
     }
+
     public Preamble getPreamble() {
         Preamble result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Preamble".equalsIgnoreCase(widget.getType())) {
-                result = (Preamble)widget;
+                result = (Preamble) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public Preamble setPreamble(Preamble preambleElem) {
         Preamble result = getPreamble();
         // remove the child of the same type if exist
@@ -173,19 +195,20 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
 
         return preambleElem;
     }
+
     public MainBody getMainBody() {
         MainBody result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("MainBody".equalsIgnoreCase(widget.getType())) {
-                result = (MainBody)widget;
+                result = (MainBody) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public MainBody setMainBody(MainBody mainBodyElem) {
         MainBody result = getMainBody();
         // remove the child of the same type if exist
@@ -196,19 +219,20 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
 
         return mainBodyElem;
     }
+
     public Conclusions getConclusions() {
         Conclusions result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Conclusions".equalsIgnoreCase(widget.getType())) {
-                result = (Conclusions)widget;
+                result = (Conclusions) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public Conclusions setConclusions(Conclusions conclusionsElem) {
         Conclusions result = getConclusions();
         // remove the child of the same type if exist
@@ -219,19 +243,20 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
 
         return conclusionsElem;
     }
+
     public Attachments getAttachments() {
         Attachments result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("Attachments".equalsIgnoreCase(widget.getType())) {
-                result = (Attachments)widget;
+                result = (Attachments) widget;
                 break;
             }
-         }
-         return result;
+        }
+        return result;
     }
-     //DSL Style get value already exists
+    //DSL Style get value already exists
 
-     //DSL Style set value
+    //DSL Style set value
     public Attachments setAttachments(Attachments attachmentsElem) {
         Attachments result = getAttachments();
         // remove the child of the same type if exist
@@ -242,6 +267,7 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
 
         return attachmentsElem;
     }
+
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();
@@ -249,33 +275,36 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         }
 
         return nameAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public StringSimpleType nameAttr() {
-        return  getNameAttr();
+        return getNameAttr();
     }
 
     public void setNameAttr(final StringSimpleType nameAttr) {
         this.nameAttr = nameAttr;
+        getElement().setAttribute("name", nameAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public OpenStructureComplexType nameAttr(final StringSimpleType nameAttr) {
         setNameAttr(nameAttr);
         return this;
     }
-    //Override all attributes methods to be conformant with DSL approach
+//Override all attributes methods to be conformant with DSL approach
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

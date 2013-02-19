@@ -13,38 +13,48 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.BlocksoptComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import com.google.gwt.dom.client.Element;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+
 import java.util.HashMap;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class AmendmentReference extends BlocksoptComplexType  {
+public class AmendmentReference extends BlocksoptComplexType {
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
-            put(new Foreign(), new Occurrence(0,-1));
-            put(new Block(), new Occurrence(0,-1));
-            put(new BlockList(), new Occurrence(0,-1));
-            put(new Toc(), new Occurrence(0,-1));
-            put(new Tblock(), new Occurrence(0,-1));
-            put(new Ul(), new Occurrence(0,-1));
-            put(new Ol(), new Occurrence(0,-1));
-            put(new Table(), new Occurrence(0,-1));
-            put(new P(), new Occurrence(0,-1));
+            put(new Foreign(), new Occurrence(0, -1));
+            put(new Block(), new Occurrence(0, -1));
+            put(new BlockList(), new Occurrence(0, -1));
+            put(new Toc(), new Occurrence(0, -1));
+            put(new Tblock(), new Occurrence(0, -1));
+            put(new Ul(), new Occurrence(0, -1));
+            put(new Ol(), new Occurrence(0, -1));
+            put(new Table(), new Occurrence(0, -1));
+            put(new P(), new Occurrence(0, -1));
         }
     };
-
 
 
     // STATIC create method
@@ -56,7 +66,7 @@ public class AmendmentReference extends BlocksoptComplexType  {
         return span;
     }
 
-// CONSTRUCTORS ------------------
+    // CONSTRUCTORS ------------------
     public AmendmentReference() {
         super(create());
         setType("amendmentReference");
@@ -70,55 +80,65 @@ public class AmendmentReference extends BlocksoptComplexType  {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public AmendmentReference classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-    }
-    //DSL Style set value
-    public AmendmentReference styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-    }
-    //DSL Style set value
-    public AmendmentReference titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
-        return this;
-    }
-    //DSL Style set value
-    public AmendmentReference wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-    //DSL Style set value
-    public AmendmentReference alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-    //DSL Style set value
     public AmendmentReference refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
         return this;
     }
-    //DSL Style set value
-    public AmendmentReference statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-    //DSL Style set value
-    public AmendmentReference langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
+
     //DSL Style set value
     public AmendmentReference idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
+
     //DSL Style set value
     public AmendmentReference evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
+
+    //DSL Style set value
+    public AmendmentReference langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public AmendmentReference alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public AmendmentReference classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public AmendmentReference styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public AmendmentReference titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public AmendmentReference statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public AmendmentReference wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
     //DSL Style set value
     public AmendmentReference periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
@@ -126,16 +146,16 @@ public class AmendmentReference extends BlocksoptComplexType  {
     }
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

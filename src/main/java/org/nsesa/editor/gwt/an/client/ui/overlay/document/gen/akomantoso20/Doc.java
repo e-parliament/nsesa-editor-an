@@ -13,32 +13,42 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.OpenStructureComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.VersionTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+
 import java.util.HashMap;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class Doc extends OpenStructureComplexType  {
+public class Doc extends OpenStructureComplexType {
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
-            put(new Meta(), new Occurrence(1,1));
-            put(new CoverPage(), new Occurrence(0,1));
-            put(new Preface(), new Occurrence(0,1));
-            put(new Preamble(), new Occurrence(0,1));
-            put(new MainBody(), new Occurrence(1,1));
-            put(new Conclusions(), new Occurrence(0,1));
-            put(new Attachments(), new Occurrence(0,1));
+            put(new Meta(), new Occurrence(1, 1));
+            put(new CoverPage(), new Occurrence(0, 1));
+            put(new Preface(), new Occurrence(0, 1));
+            put(new Preamble(), new Occurrence(0, 1));
+            put(new MainBody(), new Occurrence(1, 1));
+            put(new Conclusions(), new Occurrence(0, 1));
+            put(new Attachments(), new Occurrence(0, 1));
         }
     };
-
 
 
     // STATIC create method
@@ -50,7 +60,7 @@ public class Doc extends OpenStructureComplexType  {
         return span;
     }
 
-// CONSTRUCTORS ------------------
+    // CONSTRUCTORS ------------------
     public Doc() {
         super(create());
         setType("doc");
@@ -68,6 +78,7 @@ public class Doc extends OpenStructureComplexType  {
         setContainsAttr(containsAttr);
         return this;
     }
+
     //DSL Style set value
     public Doc nameAttr(final StringSimpleType nameAttr) {
         setNameAttr(nameAttr);
@@ -75,16 +86,16 @@ public class Doc extends OpenStructureComplexType  {
     }
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

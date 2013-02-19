@@ -13,31 +13,41 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.HierarchicalStructureComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.VersionTypeSimpleType;
 import com.google.gwt.dom.client.Element;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+
 import java.util.HashMap;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class Bill extends HierarchicalStructureComplexType  {
+public class Bill extends HierarchicalStructureComplexType {
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
-            put(new Meta(), new Occurrence(1,1));
-            put(new CoverPage(), new Occurrence(0,1));
-            put(new Preface(), new Occurrence(0,1));
-            put(new Preamble(), new Occurrence(0,1));
-            put(new Body(), new Occurrence(1,1));
-            put(new Conclusions(), new Occurrence(0,1));
-            put(new Attachments(), new Occurrence(0,1));
+            put(new Meta(), new Occurrence(1, 1));
+            put(new CoverPage(), new Occurrence(0, 1));
+            put(new Preface(), new Occurrence(0, 1));
+            put(new Preamble(), new Occurrence(0, 1));
+            put(new Body(), new Occurrence(1, 1));
+            put(new Conclusions(), new Occurrence(0, 1));
+            put(new Attachments(), new Occurrence(0, 1));
         }
     };
-
 
 
     // STATIC create method
@@ -49,7 +59,7 @@ public class Bill extends HierarchicalStructureComplexType  {
         return span;
     }
 
-// CONSTRUCTORS ------------------
+    // CONSTRUCTORS ------------------
     public Bill() {
         super(create());
         setType("bill");
@@ -69,16 +79,16 @@ public class Bill extends HierarchicalStructureComplexType  {
     }
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

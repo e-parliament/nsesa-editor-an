@@ -13,26 +13,36 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MetaoptComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+
 import java.util.HashMap;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class FRBRlanguage extends MetaoptComplexType  {
+public class FRBRlanguage extends MetaoptComplexType {
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
         }
     };
-
 
 
     // STATIC create method
@@ -44,7 +54,7 @@ public class FRBRlanguage extends MetaoptComplexType  {
         return span;
     }
 
-// CONSTRUCTORS ------------------
+    // CONSTRUCTORS ------------------
     public FRBRlanguage() {
         super(create());
         setType("FRBRlanguage");
@@ -54,7 +64,7 @@ public class FRBRlanguage extends MetaoptComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private LanguageSimpleType languageAttr;
 
     public LanguageSimpleType getLanguageAttr() {
@@ -64,48 +74,54 @@ public class FRBRlanguage extends MetaoptComplexType  {
         }
 
         return languageAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public LanguageSimpleType languageAttr() {
-        return  getLanguageAttr();
+        return getLanguageAttr();
     }
 
     public void setLanguageAttr(final LanguageSimpleType languageAttr) {
         this.languageAttr = languageAttr;
+        getElement().setAttribute("language", languageAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public FRBRlanguage languageAttr(final LanguageSimpleType languageAttr) {
         setLanguageAttr(languageAttr);
         return this;
     }
+
     //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public FRBRlanguage idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-    //DSL Style set value
-    public FRBRlanguage evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
     //DSL Style set value
     public FRBRlanguage wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
+    //DSL Style set value
+    public FRBRlanguage idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public FRBRlanguage evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

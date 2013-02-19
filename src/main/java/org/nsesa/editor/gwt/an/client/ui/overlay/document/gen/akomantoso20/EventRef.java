@@ -13,29 +13,40 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AnyOtherTypeComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.EventTypeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.YesNoTypeSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+
 import java.util.HashMap;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class EventRef extends AnyOtherTypeComplexType  {
+public class EventRef extends AnyOtherTypeComplexType {
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
-            put(null, new Occurrence(0,-1));
+            put(null, new Occurrence(0, -1));
         }
     };
-
 
 
     // STATIC create method
@@ -47,7 +58,7 @@ public class EventRef extends AnyOtherTypeComplexType  {
         return span;
     }
 
-// CONSTRUCTORS ------------------
+    // CONSTRUCTORS ------------------
     public EventRef() {
         super(create());
         setType("eventRef");
@@ -57,11 +68,11 @@ public class EventRef extends AnyOtherTypeComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private EventTypeSimpleType typeAttr;
     private YesNoTypeSimpleType originatingExpressionAttr;
-    private AnyURISimpleType sourceAttr;
     private DateSimpleType dateAttr;
+    private AnyURISimpleType sourceAttr;
 
     public EventTypeSimpleType getTypeAttr() {
         if (typeAttr == null) {
@@ -69,61 +80,48 @@ public class EventRef extends AnyOtherTypeComplexType  {
         }
 
         return typeAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public EventTypeSimpleType typeAttr() {
-        return  getTypeAttr();
+        return getTypeAttr();
     }
 
     public void setTypeAttr(final EventTypeSimpleType typeAttr) {
         this.typeAttr = typeAttr;
+        getElement().setAttribute("type", typeAttr.value());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public EventRef typeAttr(final EventTypeSimpleType typeAttr) {
         setTypeAttr(typeAttr);
         return this;
     }
+
     public YesNoTypeSimpleType getOriginatingExpressionAttr() {
         if (originatingExpressionAttr == null) {
             originatingExpressionAttr = YesNoTypeSimpleType.fromString(getElement().getAttribute("originatingExpression"));
         }
 
         return originatingExpressionAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public YesNoTypeSimpleType originatingExpressionAttr() {
-        return  getOriginatingExpressionAttr();
+        return getOriginatingExpressionAttr();
     }
 
     public void setOriginatingExpressionAttr(final YesNoTypeSimpleType originatingExpressionAttr) {
         this.originatingExpressionAttr = originatingExpressionAttr;
+        getElement().setAttribute("originatingExpression", originatingExpressionAttr.value());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public EventRef originatingExpressionAttr(final YesNoTypeSimpleType originatingExpressionAttr) {
         setOriginatingExpressionAttr(originatingExpressionAttr);
         return this;
     }
-    public AnyURISimpleType getSourceAttr() {
-        if (sourceAttr == null) {
-            sourceAttr = new AnyURISimpleType();
-            sourceAttr.setValue(getElement().getAttribute("source"));
-        }
 
-        return sourceAttr;
-     }
-     //DSL Style get value
-    public AnyURISimpleType sourceAttr() {
-        return  getSourceAttr();
-    }
-
-    public void setSourceAttr(final AnyURISimpleType sourceAttr) {
-        this.sourceAttr = sourceAttr;
-    }
-     //DSL Style set value
-    public EventRef sourceAttr(final AnyURISimpleType sourceAttr) {
-        setSourceAttr(sourceAttr);
-        return this;
-    }
     public DateSimpleType getDateAttr() {
         if (dateAttr == null) {
             dateAttr = new DateSimpleType();
@@ -131,36 +129,68 @@ public class EventRef extends AnyOtherTypeComplexType  {
         }
 
         return dateAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public DateSimpleType dateAttr() {
-        return  getDateAttr();
+        return getDateAttr();
     }
 
     public void setDateAttr(final DateSimpleType dateAttr) {
         this.dateAttr = dateAttr;
+        getElement().setAttribute("date", dateAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public EventRef dateAttr(final DateSimpleType dateAttr) {
         setDateAttr(dateAttr);
         return this;
     }
-    //Override all attributes methods to be conformant with DSL approach
+
+    public AnyURISimpleType getSourceAttr() {
+        if (sourceAttr == null) {
+            sourceAttr = new AnyURISimpleType();
+            sourceAttr.setValue(getElement().getAttribute("source"));
+        }
+
+        return sourceAttr;
+    }
+
+    //DSL Style get value
+    public AnyURISimpleType sourceAttr() {
+        return getSourceAttr();
+    }
+
+    public void setSourceAttr(final AnyURISimpleType sourceAttr) {
+        this.sourceAttr = sourceAttr;
+        getElement().setAttribute("source", sourceAttr.getValue());
+    }
+
     //DSL Style set value
-    public EventRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public EventRef sourceAttr(final AnyURISimpleType sourceAttr) {
+        setSourceAttr(sourceAttr);
         return this;
     }
+
+    //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
     public EventRef hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
         return this;
     }
+
+    //DSL Style set value
+    public EventRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
     //DSL Style set value
     public EventRef idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
+
     //DSL Style set value
     public EventRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
@@ -168,16 +198,16 @@ public class EventRef extends AnyOtherTypeComplexType  {
     }
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";
@@ -189,8 +219,8 @@ public class EventRef extends AnyOtherTypeComplexType  {
         attrs.putAll(super.getAttributes());
         attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
         attrs.put("originatingExpression", getOriginatingExpressionAttr() != null ? getOriginatingExpressionAttr().value() : null);
-        attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
         attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
+        attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
         return attrs;
     }
 }

@@ -16,24 +16,31 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+
 import java.util.HashMap;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
 public class MetareqComplexType extends OverlayWidgetImpl {
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
         }
     };
-
 
 
     // STATIC create method
@@ -51,7 +58,7 @@ public class MetareqComplexType extends OverlayWidgetImpl {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
@@ -62,20 +69,24 @@ public class MetareqComplexType extends OverlayWidgetImpl {
         }
 
         return wildcardContentAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
+        return getWildcardContentAttr();
     }
 
     public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public MetareqComplexType wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
+
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
             idAttr = new IDSimpleType();
@@ -83,20 +94,24 @@ public class MetareqComplexType extends OverlayWidgetImpl {
         }
 
         return idAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public IDSimpleType idAttr() {
-        return  getIdAttr();
+        return getIdAttr();
     }
 
     public void setIdAttr(final IDSimpleType idAttr) {
         this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public MetareqComplexType idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
+
     public NMTOKENSimpleType getEvolvingIdAttr() {
         if (evolvingIdAttr == null) {
             evolvingIdAttr = new NMTOKENSimpleType();
@@ -104,33 +119,36 @@ public class MetareqComplexType extends OverlayWidgetImpl {
         }
 
         return evolvingIdAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public NMTOKENSimpleType evolvingIdAttr() {
-        return  getEvolvingIdAttr();
+        return getEvolvingIdAttr();
     }
 
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public MetareqComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
-    //Override all attributes methods to be conformant with DSL approach
+//Override all attributes methods to be conformant with DSL approach
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

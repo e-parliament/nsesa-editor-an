@@ -13,28 +13,37 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MetaoptComplexType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DurationSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+
 import java.util.HashMap;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class TimeInterval extends MetaoptComplexType  {
+public class TimeInterval extends MetaoptComplexType {
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
         }
     };
-
 
 
     // STATIC create method
@@ -46,7 +55,7 @@ public class TimeInterval extends MetaoptComplexType  {
         return span;
     }
 
-// CONSTRUCTORS ------------------
+    // CONSTRUCTORS ------------------
     public TimeInterval() {
         super(create());
         setType("timeInterval");
@@ -56,7 +65,7 @@ public class TimeInterval extends MetaoptComplexType  {
         super(element);
     }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private AnyURISimpleType startAttr;
     private AnyURISimpleType endAttr;
     private DurationSimpleType durationAttr;
@@ -69,20 +78,24 @@ public class TimeInterval extends MetaoptComplexType  {
         }
 
         return startAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType startAttr() {
-        return  getStartAttr();
+        return getStartAttr();
     }
 
     public void setStartAttr(final AnyURISimpleType startAttr) {
         this.startAttr = startAttr;
+        getElement().setAttribute("start", startAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public TimeInterval startAttr(final AnyURISimpleType startAttr) {
         setStartAttr(startAttr);
         return this;
     }
+
     public AnyURISimpleType getEndAttr() {
         if (endAttr == null) {
             endAttr = new AnyURISimpleType();
@@ -90,20 +103,24 @@ public class TimeInterval extends MetaoptComplexType  {
         }
 
         return endAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType endAttr() {
-        return  getEndAttr();
+        return getEndAttr();
     }
 
     public void setEndAttr(final AnyURISimpleType endAttr) {
         this.endAttr = endAttr;
+        getElement().setAttribute("end", endAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public TimeInterval endAttr(final AnyURISimpleType endAttr) {
         setEndAttr(endAttr);
         return this;
     }
+
     public DurationSimpleType getDurationAttr() {
         if (durationAttr == null) {
             durationAttr = new DurationSimpleType();
@@ -111,20 +128,24 @@ public class TimeInterval extends MetaoptComplexType  {
         }
 
         return durationAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public DurationSimpleType durationAttr() {
-        return  getDurationAttr();
+        return getDurationAttr();
     }
 
     public void setDurationAttr(final DurationSimpleType durationAttr) {
         this.durationAttr = durationAttr;
+        getElement().setAttribute("duration", durationAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public TimeInterval durationAttr(final DurationSimpleType durationAttr) {
         setDurationAttr(durationAttr);
         return this;
     }
+
     public AnyURISimpleType getRefersToAttr() {
         if (refersToAttr == null) {
             refersToAttr = new AnyURISimpleType();
@@ -132,48 +153,54 @@ public class TimeInterval extends MetaoptComplexType  {
         }
 
         return refersToAttr;
-     }
-     //DSL Style get value
+    }
+
+    //DSL Style get value
     public AnyURISimpleType refersToAttr() {
-        return  getRefersToAttr();
+        return getRefersToAttr();
     }
 
     public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
         this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public TimeInterval refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
         return this;
     }
+
     //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public TimeInterval idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-    //DSL Style set value
-    public TimeInterval evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
     //DSL Style set value
     public TimeInterval wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
+    //DSL Style set value
+    public TimeInterval idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public TimeInterval evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";

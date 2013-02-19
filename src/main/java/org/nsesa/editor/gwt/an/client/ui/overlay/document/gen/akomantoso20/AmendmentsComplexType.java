@@ -13,33 +13,44 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.TextualMod;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MeaningMod;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ScopeMod;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.ForceMod;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.EfficacyMod;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.LegalSystemMod;
 import com.google.gwt.dom.client.Element;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+
 import java.util.HashMap;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 import com.google.gwt.user.client.DOM;
 
 /**
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
 public class AmendmentsComplexType extends OverlayWidgetImpl {
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
-            put(new TextualMod(), new Occurrence(1,1));
-            put(new MeaningMod(), new Occurrence(1,1));
-            put(new ScopeMod(), new Occurrence(1,1));
-            put(new ForceMod(), new Occurrence(1,1));
-            put(new EfficacyMod(), new Occurrence(1,1));
-            put(new LegalSystemMod(), new Occurrence(1,1));
+            put(new TextualMod(), new Occurrence(1, 1));
+            put(new MeaningMod(), new Occurrence(1, 1));
+            put(new ScopeMod(), new Occurrence(1, 1));
+            put(new ForceMod(), new Occurrence(1, 1));
+            put(new EfficacyMod(), new Occurrence(1, 1));
+            put(new LegalSystemMod(), new Occurrence(1, 1));
         }
     };
-
 
 
     // STATIC create method
@@ -63,17 +74,18 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
         java.util.List<TextualMod> result = new ArrayList<TextualMod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("TextualMod".equalsIgnoreCase(widget.getType())) {
-                result.add((TextualMod)widget);
+                result.add((TextualMod) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<TextualMod> getTextualModList() {
-        return  getTextualMods();
+        return getTextualMods();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public TextualMod addTextualMod(TextualMod textualModElem) {
         this.addOverlayWidget(textualModElem);
         return textualModElem;
@@ -83,17 +95,18 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
         java.util.List<MeaningMod> result = new ArrayList<MeaningMod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("MeaningMod".equalsIgnoreCase(widget.getType())) {
-                result.add((MeaningMod)widget);
+                result.add((MeaningMod) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<MeaningMod> getMeaningModList() {
-        return  getMeaningMods();
+        return getMeaningMods();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public MeaningMod addMeaningMod(MeaningMod meaningModElem) {
         this.addOverlayWidget(meaningModElem);
         return meaningModElem;
@@ -103,17 +116,18 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
         java.util.List<ScopeMod> result = new ArrayList<ScopeMod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ScopeMod".equalsIgnoreCase(widget.getType())) {
-                result.add((ScopeMod)widget);
+                result.add((ScopeMod) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<ScopeMod> getScopeModList() {
-        return  getScopeMods();
+        return getScopeMods();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public ScopeMod addScopeMod(ScopeMod scopeModElem) {
         this.addOverlayWidget(scopeModElem);
         return scopeModElem;
@@ -123,17 +137,18 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
         java.util.List<ForceMod> result = new ArrayList<ForceMod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("ForceMod".equalsIgnoreCase(widget.getType())) {
-                result.add((ForceMod)widget);
+                result.add((ForceMod) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<ForceMod> getForceModList() {
-        return  getForceMods();
+        return getForceMods();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public ForceMod addForceMod(ForceMod forceModElem) {
         this.addOverlayWidget(forceModElem);
         return forceModElem;
@@ -143,17 +158,18 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
         java.util.List<EfficacyMod> result = new ArrayList<EfficacyMod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("EfficacyMod".equalsIgnoreCase(widget.getType())) {
-                result.add((EfficacyMod)widget);
+                result.add((EfficacyMod) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<EfficacyMod> getEfficacyModList() {
-        return  getEfficacyMods();
+        return getEfficacyMods();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public EfficacyMod addEfficacyMod(EfficacyMod efficacyModElem) {
         this.addOverlayWidget(efficacyModElem);
         return efficacyModElem;
@@ -163,35 +179,36 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
         java.util.List<LegalSystemMod> result = new ArrayList<LegalSystemMod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
             if ("LegalSystemMod".equalsIgnoreCase(widget.getType())) {
-                result.add((LegalSystemMod)widget);
+                result.add((LegalSystemMod) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
-     //DSL Style get value
+    //DSL Style get value
     public java.util.List<LegalSystemMod> getLegalSystemModList() {
-        return  getLegalSystemMods();
+        return getLegalSystemMods();
     }
-     //DSL Style set value
+
+    //DSL Style set value
     public LegalSystemMod addLegalSystemMod(LegalSystemMod legalSystemModElem) {
         this.addOverlayWidget(legalSystemModElem);
         return legalSystemModElem;
     }
 
-    //Override all attributes methods to be conformant with DSL approach
+//Override all attributes methods to be conformant with DSL approach
 
     /**
-    * Returns possible children as a map of <tt>AmendableWidget, Occurrence</tt>s.
-    */
+     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
+     */
     @Override
     public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
         return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
     }
 
-/**
-    * Returns the namespace URI of this amendable widget.
-    */
+    /**
+     * Returns the namespace URI of this amendable widget.
+     */
     @Override
     public String getNamespaceURI() {
         return "http://www.akomantoso.org/2.0";
