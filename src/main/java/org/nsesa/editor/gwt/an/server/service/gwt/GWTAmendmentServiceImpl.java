@@ -23,6 +23,7 @@ import org.nsesa.editor.gwt.core.client.service.gwt.GWTAmendmentService;
 import org.nsesa.editor.gwt.core.shared.AmendableWidgetReference;
 import org.nsesa.editor.gwt.core.shared.AmendmentContainerDTO;
 import org.nsesa.editor.gwt.core.shared.ClientContext;
+import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.editor.gwt.core.shared.exception.ResourceNotFoundException;
 import org.nsesa.editor.gwt.core.shared.exception.StaleResourceException;
 import org.slf4j.Logger;
@@ -277,6 +278,21 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
                 return true;
             }
         }).toArray(new Boolean[amendmentContainers.size()]);
+    }
+
+    @Override
+    public ArrayList<PersonDTO> getAvailableAuthors(ClientContext clientContext, String query) {
+        // TODO: this should do an ascii search for potential authors
+        return new ArrayList<PersonDTO>(Arrays.asList(createPerson("1", "mep1", "MEP", "Mep1"), createPerson("2", "mep2", "MEP", "Mep2")));
+    }
+
+    private PersonDTO createPerson(String id, String username, String name, String lastName) {
+        final PersonDTO person = new PersonDTO();
+        person.setLastName(lastName);
+        person.setName(name);
+        person.setUsername(username);
+        person.setId(id);
+        return person;
     }
 
     // SPRING SETTERS -------------------------------------------

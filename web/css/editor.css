@@ -81,3 +81,7 @@ span.logo {
 .gwt-DecoratedPopupPanel {
     z-index: 100;
 }
+
+.gwt-SuggestBoxPopup {
+    z-index: 101;
+}
