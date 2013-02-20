@@ -16,6 +16,9 @@ package org.nsesa.editor.gwt.an.server.service.gwt;
 import org.joda.time.DateTime;
 import org.nsesa.editor.gwt.core.client.service.gwt.GWTService;
 import org.nsesa.editor.gwt.core.shared.ClientContext;
+import org.nsesa.editor.gwt.core.shared.PersonDTO;
+
+import java.util.UUID;
 
 /**
  * Date: 24/06/12 19:57
@@ -26,8 +29,14 @@ import org.nsesa.editor.gwt.core.shared.ClientContext;
 public class GWTServiceImpl extends SpringRemoteServiceServlet implements GWTService {
     @Override
     public ClientContext authenticate(final ClientContext clientContext) {
-        clientContext.setPrincipal("user-" + new DateTime().getMillis());
-        clientContext.setRoles(new String[]{"USER", "ADMIN"});
+        final PersonDTO person = new PersonDTO();
+        person.setId(UUID.randomUUID().toString());
+        person.setUsername("guest-" + new DateTime().getMillis());
+        person.setName("Guest");
+        person.setLastName("x");
+
+        clientContext.setLoggedInPerson(person);
+        clientContext.setRoles(new String[]{"GUEST"});
         clientContext.setDocumentIDs(clientContext.getParameter(ClientContext.DOCUMENT_ID));
         return clientContext;
     }

@@ -115,7 +115,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         // preface
         root.setPreface(new Preface())
                 .addContainer(new Container())
-                .addP(new P()).html(clientFactory.getClientContext().getPrincipal());
+                .addP(new P()).html(clientFactory.getClientContext().getLoggedInPerson().getUsername());
 
         // amendment body
         final AmendmentBody amendmentBody = root.setAmendmentBody(new AmendmentBody());
