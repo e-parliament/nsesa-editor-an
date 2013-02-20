@@ -36,6 +36,7 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
         registerPlugin(new CKEditorDraftingInsertionPlugin(clientFactory));
         registerPlugin(new CKEditorDraftingModificationPlugin(clientFactory));
         registerPlugin(new CKEditorDraftingToolPlugin(clientFactory));
+        registerPlugin(new CKEditorDraftingAttributesPlugin(clientFactory));
         registerPlugin(new CKEditorRemoveFormatPlugin(clientFactory));
     }
 }
