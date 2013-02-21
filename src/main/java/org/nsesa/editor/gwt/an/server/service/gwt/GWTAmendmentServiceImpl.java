@@ -281,7 +281,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     }
 
     @Override
-    public ArrayList<PersonDTO> getAvailableAuthors(ClientContext clientContext, String query) {
+    public ArrayList<PersonDTO> getAvailableAuthors(ClientContext clientContext, String query, int limit) {
         // TODO: this should do an ascii search for potential authors
         return new ArrayList<PersonDTO>(Arrays.asList(createPerson("1", "mep1", "MEP", "Mep1"), createPerson("2", "mep2", "MEP", "Mep2")));
     }
