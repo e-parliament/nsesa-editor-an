@@ -13,28 +13,15 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MetaoptComplexType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.*;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 
 import java.util.HashMap;
-
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import com.google.gwt.user.client.DOM;
 
 /**
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -67,12 +54,37 @@ public class Publication extends MetaoptComplexType {
     }
 
     // FIELDS ------------------
+    private StringSimpleType numberAttr;
     private AnyURISimpleType refersToAttr;
     private DateSimpleType dateAttr;
-    private StringSimpleType nameAttr;
-    private StringSimpleType numberAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
+    private StringSimpleType nameAttr;
+
+    public StringSimpleType getNumberAttr() {
+        if (numberAttr == null) {
+            numberAttr = new StringSimpleType();
+            numberAttr.setValue(getElement().getAttribute("number"));
+        }
+
+        return numberAttr;
+    }
+
+    //DSL Style get value
+    public StringSimpleType numberAttr() {
+        return getNumberAttr();
+    }
+
+    public void setNumberAttr(final StringSimpleType numberAttr) {
+        this.numberAttr = numberAttr;
+        getElement().setAttribute("number", numberAttr.getValue());
+    }
+
+    //DSL Style set value
+    public Publication numberAttr(final StringSimpleType numberAttr) {
+        setNumberAttr(numberAttr);
+        return this;
+    }
 
     public AnyURISimpleType getRefersToAttr() {
         if (refersToAttr == null) {
@@ -121,56 +133,6 @@ public class Publication extends MetaoptComplexType {
     //DSL Style set value
     public Publication dateAttr(final DateSimpleType dateAttr) {
         setDateAttr(dateAttr);
-        return this;
-    }
-
-    public StringSimpleType getNameAttr() {
-        if (nameAttr == null) {
-            nameAttr = new StringSimpleType();
-            nameAttr.setValue(getElement().getAttribute("name"));
-        }
-
-        return nameAttr;
-    }
-
-    //DSL Style get value
-    public StringSimpleType nameAttr() {
-        return getNameAttr();
-    }
-
-    public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-        getElement().setAttribute("name", nameAttr.getValue());
-    }
-
-    //DSL Style set value
-    public Publication nameAttr(final StringSimpleType nameAttr) {
-        setNameAttr(nameAttr);
-        return this;
-    }
-
-    public StringSimpleType getNumberAttr() {
-        if (numberAttr == null) {
-            numberAttr = new StringSimpleType();
-            numberAttr.setValue(getElement().getAttribute("number"));
-        }
-
-        return numberAttr;
-    }
-
-    //DSL Style get value
-    public StringSimpleType numberAttr() {
-        return getNumberAttr();
-    }
-
-    public void setNumberAttr(final StringSimpleType numberAttr) {
-        this.numberAttr = numberAttr;
-        getElement().setAttribute("number", numberAttr.getValue());
-    }
-
-    //DSL Style set value
-    public Publication numberAttr(final StringSimpleType numberAttr) {
-        setNumberAttr(numberAttr);
         return this;
     }
 
@@ -224,7 +186,38 @@ public class Publication extends MetaoptComplexType {
         return this;
     }
 
+    public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+            nameAttr = new StringSimpleType();
+            nameAttr.setValue(getElement().getAttribute("name"));
+        }
+
+        return nameAttr;
+    }
+
+    //DSL Style get value
+    public StringSimpleType nameAttr() {
+        return getNameAttr();
+    }
+
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+        getElement().setAttribute("name", nameAttr.getValue());
+    }
+
+    //DSL Style set value
+    public Publication nameAttr(final StringSimpleType nameAttr) {
+        setNameAttr(nameAttr);
+        return this;
+    }
+
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public Publication wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
     //DSL Style set value
     public Publication idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -234,12 +227,6 @@ public class Publication extends MetaoptComplexType {
     //DSL Style set value
     public Publication evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Publication wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -263,12 +250,12 @@ public class Publication extends MetaoptComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("number", getNumberAttr() != null ? getNumberAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
-        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
-        attrs.put("number", getNumberAttr() != null ? getNumberAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         return attrs;
     }
 }

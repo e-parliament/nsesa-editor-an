@@ -13,27 +13,18 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.MetaoptComplexType;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import com.google.gwt.dom.client.Element;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 
 import java.util.HashMap;
-
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import com.google.gwt.user.client.DOM;
 
 /**
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -66,33 +57,8 @@ public class FRBRdate extends MetaoptComplexType {
     }
 
     // FIELDS ------------------
-    private DateSimpleType dateAttr;
     private StringSimpleType nameAttr;
-
-    public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-            dateAttr = new DateSimpleType();
-            dateAttr.setValue(getElement().getAttribute("date"));
-        }
-
-        return dateAttr;
-    }
-
-    //DSL Style get value
-    public DateSimpleType dateAttr() {
-        return getDateAttr();
-    }
-
-    public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-        getElement().setAttribute("date", dateAttr.getValue());
-    }
-
-    //DSL Style set value
-    public FRBRdate dateAttr(final DateSimpleType dateAttr) {
-        setDateAttr(dateAttr);
-        return this;
-    }
+    private DateSimpleType dateAttr;
 
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
@@ -119,7 +85,38 @@ public class FRBRdate extends MetaoptComplexType {
         return this;
     }
 
+    public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(getElement().getAttribute("date"));
+        }
+
+        return dateAttr;
+    }
+
+    //DSL Style get value
+    public DateSimpleType dateAttr() {
+        return getDateAttr();
+    }
+
+    public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+        getElement().setAttribute("date", dateAttr.getValue());
+    }
+
+    //DSL Style set value
+    public FRBRdate dateAttr(final DateSimpleType dateAttr) {
+        setDateAttr(dateAttr);
+        return this;
+    }
+
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public FRBRdate wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
     //DSL Style set value
     public FRBRdate idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -129,12 +126,6 @@ public class FRBRdate extends MetaoptComplexType {
     //DSL Style set value
     public FRBRdate evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public FRBRdate wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -158,8 +149,8 @@ public class FRBRdate extends MetaoptComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         return attrs;
     }
 }

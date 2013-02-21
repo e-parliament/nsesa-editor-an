@@ -13,26 +13,20 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import com.google.gwt.dom.client.Element;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-
 import java.util.HashMap;
-
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import com.google.gwt.user.client.DOM;
 
 /**
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -62,12 +56,12 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private StringSimpleType valueAttr;
-    private String wildcardContentAttr;
-    private AnyURISimpleType refersToAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private StringSimpleType valueAttr;
+    private String wildcardContentAttr;
     private AnyURISimpleType hrefAttr;
+    private AnyURISimpleType refersToAttr;
 
     public java.util.List<OverlayWidgetImpl> getWildcardContents() {
         java.util.List<OverlayWidgetImpl> result = new ArrayList<OverlayWidgetImpl>();
@@ -87,80 +81,6 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
     //DSL Style set value
     public String addWildcardContent(String wildcardContentElem) {
         throw new RuntimeException("Adding wildcard content is not supported yet");
-    }
-
-    public StringSimpleType getValueAttr() {
-        if (valueAttr == null) {
-            valueAttr = new StringSimpleType();
-            valueAttr.setValue(getElement().getAttribute("value"));
-        }
-
-        return valueAttr;
-    }
-
-    //DSL Style get value
-    public StringSimpleType valueAttr() {
-        return getValueAttr();
-    }
-
-    public void setValueAttr(final StringSimpleType valueAttr) {
-        this.valueAttr = valueAttr;
-        getElement().setAttribute("value", valueAttr.getValue());
-    }
-
-    //DSL Style set value
-    public CountTypeComplexType valueAttr(final StringSimpleType valueAttr) {
-        setValueAttr(valueAttr);
-        return this;
-    }
-
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    //DSL Style get value
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    //DSL Style set value
-    public CountTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-    }
-
-    //DSL Style get value
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
-    }
-
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
-    }
-
-    //DSL Style set value
-    public CountTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
     }
 
     public IDSimpleType getIdAttr() {
@@ -213,6 +133,55 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
         return this;
     }
 
+    public StringSimpleType getValueAttr() {
+        if (valueAttr == null) {
+            valueAttr = new StringSimpleType();
+            valueAttr.setValue(getElement().getAttribute("value"));
+        }
+
+        return valueAttr;
+    }
+
+    //DSL Style get value
+    public StringSimpleType valueAttr() {
+        return getValueAttr();
+    }
+
+    public void setValueAttr(final StringSimpleType valueAttr) {
+        this.valueAttr = valueAttr;
+        getElement().setAttribute("value", valueAttr.getValue());
+    }
+
+    //DSL Style set value
+    public CountTypeComplexType valueAttr(final StringSimpleType valueAttr) {
+        setValueAttr(valueAttr);
+        return this;
+    }
+
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    //DSL Style get value
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    //DSL Style set value
+    public CountTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
     public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
             hrefAttr = new AnyURISimpleType();
@@ -237,6 +206,31 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
         setHrefAttr(hrefAttr);
         return this;
     }
+
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    //DSL Style get value
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    //DSL Style set value
+    public CountTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
@@ -259,12 +253,12 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         return attrs;
     }
 }

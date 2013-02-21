@@ -13,27 +13,18 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AnyOtherTypeComplexType;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import com.google.gwt.dom.client.Element;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 
 import java.util.HashMap;
-
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import com.google.gwt.user.client.DOM;
 
 /**
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -67,33 +58,33 @@ public class Step extends AnyOtherTypeComplexType {
     }
 
     // FIELDS ------------------
-    private AnyURISimpleType actorAttr;
+    private AnyURISimpleType outcomeAttr;
     private AnyURISimpleType asAttr;
     private DateSimpleType dateAttr;
-    private AnyURISimpleType outcomeAttr;
+    private AnyURISimpleType actorAttr;
 
-    public AnyURISimpleType getActorAttr() {
-        if (actorAttr == null) {
-            actorAttr = new AnyURISimpleType();
-            actorAttr.setValue(getElement().getAttribute("actor"));
+    public AnyURISimpleType getOutcomeAttr() {
+        if (outcomeAttr == null) {
+            outcomeAttr = new AnyURISimpleType();
+            outcomeAttr.setValue(getElement().getAttribute("outcome"));
         }
 
-        return actorAttr;
+        return outcomeAttr;
     }
 
     //DSL Style get value
-    public AnyURISimpleType actorAttr() {
-        return getActorAttr();
+    public AnyURISimpleType outcomeAttr() {
+        return getOutcomeAttr();
     }
 
-    public void setActorAttr(final AnyURISimpleType actorAttr) {
-        this.actorAttr = actorAttr;
-        getElement().setAttribute("actor", actorAttr.getValue());
+    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
+        this.outcomeAttr = outcomeAttr;
+        getElement().setAttribute("outcome", outcomeAttr.getValue());
     }
 
     //DSL Style set value
-    public Step actorAttr(final AnyURISimpleType actorAttr) {
-        setActorAttr(actorAttr);
+    public Step outcomeAttr(final AnyURISimpleType outcomeAttr) {
+        setOutcomeAttr(outcomeAttr);
         return this;
     }
 
@@ -147,32 +138,38 @@ public class Step extends AnyOtherTypeComplexType {
         return this;
     }
 
-    public AnyURISimpleType getOutcomeAttr() {
-        if (outcomeAttr == null) {
-            outcomeAttr = new AnyURISimpleType();
-            outcomeAttr.setValue(getElement().getAttribute("outcome"));
+    public AnyURISimpleType getActorAttr() {
+        if (actorAttr == null) {
+            actorAttr = new AnyURISimpleType();
+            actorAttr.setValue(getElement().getAttribute("actor"));
         }
 
-        return outcomeAttr;
+        return actorAttr;
     }
 
     //DSL Style get value
-    public AnyURISimpleType outcomeAttr() {
-        return getOutcomeAttr();
+    public AnyURISimpleType actorAttr() {
+        return getActorAttr();
     }
 
-    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
-        this.outcomeAttr = outcomeAttr;
-        getElement().setAttribute("outcome", outcomeAttr.getValue());
+    public void setActorAttr(final AnyURISimpleType actorAttr) {
+        this.actorAttr = actorAttr;
+        getElement().setAttribute("actor", actorAttr.getValue());
     }
 
     //DSL Style set value
-    public Step outcomeAttr(final AnyURISimpleType outcomeAttr) {
-        setOutcomeAttr(outcomeAttr);
+    public Step actorAttr(final AnyURISimpleType actorAttr) {
+        setActorAttr(actorAttr);
         return this;
     }
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public Step hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
     //DSL Style set value
     public Step wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
@@ -188,12 +185,6 @@ public class Step extends AnyOtherTypeComplexType {
     //DSL Style set value
     public Step evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Step hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
         return this;
     }
 
@@ -217,10 +208,10 @@ public class Step extends AnyOtherTypeComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("actor", getActorAttr() != null ? getActorAttr().getValue() : null);
+        attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
         attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
         attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
-        attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
+        attrs.put("actor", getActorAttr() != null ? getActorAttr().getValue() : null);
         return attrs;
     }
 }

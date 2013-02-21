@@ -13,14 +13,9 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen;
 
-import com.google.inject.Inject;
 import com.google.gwt.core.client.GWT;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayLocalizableResource;
-import com.google.gwt.i18n.client.Messages;
-
-import java.util.logging.Logger;
-import java.util.Map;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 
 /**
  * Note: this file is generated. Rather than changing this file, correct the template called <tt>overlayLocalizableResource.ftl</tt>.

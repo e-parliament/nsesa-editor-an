@@ -13,14 +13,7 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NonPositiveIntegerSimpleType;
 import com.google.gwt.dom.client.Element;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -43,6 +36,11 @@ public class NegativeIntegerSimpleType extends NonPositiveIntegerSimpleType {
 
     public NegativeIntegerSimpleType() {
         super();
+    }
+
+    public NegativeIntegerSimpleType(String value) {
+        super();
+        this.value = value;
     }
 
 // FIELDS ------------------

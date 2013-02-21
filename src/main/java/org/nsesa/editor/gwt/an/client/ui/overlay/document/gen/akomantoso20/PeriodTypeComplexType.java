@@ -13,25 +13,18 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import com.google.gwt.dom.client.Element;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 
 import java.util.HashMap;
-
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import com.google.gwt.user.client.DOM;
 
 /**
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
@@ -60,10 +53,35 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
+    private AnyURISimpleType periodAttr;
     private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType periodAttr;
+
+    public AnyURISimpleType getPeriodAttr() {
+        if (periodAttr == null) {
+            periodAttr = new AnyURISimpleType();
+            periodAttr.setValue(getElement().getAttribute("period"));
+        }
+
+        return periodAttr;
+    }
+
+    //DSL Style get value
+    public AnyURISimpleType periodAttr() {
+        return getPeriodAttr();
+    }
+
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
+        getElement().setAttribute("period", periodAttr.getValue());
+    }
+
+    //DSL Style set value
+    public PeriodTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
 
     public String getWildcardContentAttr() {
         if (wildcardContentAttr == null) {
@@ -138,31 +156,6 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
-
-    public AnyURISimpleType getPeriodAttr() {
-        if (periodAttr == null) {
-            periodAttr = new AnyURISimpleType();
-            periodAttr.setValue(getElement().getAttribute("period"));
-        }
-
-        return periodAttr;
-    }
-
-    //DSL Style get value
-    public AnyURISimpleType periodAttr() {
-        return getPeriodAttr();
-    }
-
-    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-        this.periodAttr = periodAttr;
-        getElement().setAttribute("period", periodAttr.getValue());
-    }
-
-    //DSL Style set value
-    public PeriodTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
-        return this;
-    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
@@ -185,10 +178,10 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
 }

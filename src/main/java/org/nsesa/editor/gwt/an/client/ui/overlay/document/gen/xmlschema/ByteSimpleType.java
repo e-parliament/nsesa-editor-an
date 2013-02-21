@@ -13,14 +13,7 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.ShortSimpleType;
 import com.google.gwt.dom.client.Element;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -43,6 +36,11 @@ public class ByteSimpleType extends ShortSimpleType {
 
     public ByteSimpleType() {
         super();
+    }
+
+    public ByteSimpleType(String value) {
+        super();
+        this.value = value;
     }
 
 // FIELDS ------------------

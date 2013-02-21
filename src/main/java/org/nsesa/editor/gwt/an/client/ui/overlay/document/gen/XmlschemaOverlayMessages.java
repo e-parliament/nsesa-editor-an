@@ -11,7 +11,6 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the Licence for the specific language governing permissions and limitations under the Licence.
  */
-
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen;
 
 import com.google.gwt.i18n.client.Messages;

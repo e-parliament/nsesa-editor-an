@@ -13,33 +13,15 @@
  */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Components;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.AmendmentList;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.OfficialGazette;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DocumentCollection;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Act;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Bill;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.DebateReport;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Debate;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Amendment;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Judgement;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Doc;
 import com.google.gwt.dom.client.Element;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 
 import java.util.HashMap;
-
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import com.google.gwt.user.client.DOM;
 
 /**
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.

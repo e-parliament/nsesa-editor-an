@@ -14,12 +14,6 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema;
 
 import com.google.gwt.dom.client.Element;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 import com.google.gwt.user.client.DOM;
 
 /**
@@ -44,8 +38,13 @@ public class AnySimpleTypeSimpleType {
         super();
     }
 
+    public AnySimpleTypeSimpleType(String value) {
+        super();
+        this.value = value;
+    }
+
     // FIELDS ------------------
-    private String value;
+    protected String value;
 
     public String getValue() {
         return value;
