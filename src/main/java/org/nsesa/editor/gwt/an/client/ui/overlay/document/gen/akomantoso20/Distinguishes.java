@@ -63,6 +63,18 @@ public class Distinguishes extends JudicialArgumentTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public Distinguishes wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Distinguishes refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Distinguishes idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -93,18 +105,6 @@ public class Distinguishes extends JudicialArgumentTypeComplexType {
     }
 
     //DSL Style set value
-    public Distinguishes wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Distinguishes refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Distinguishes periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -131,6 +131,13 @@ public class Distinguishes extends JudicialArgumentTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Distinguishes html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

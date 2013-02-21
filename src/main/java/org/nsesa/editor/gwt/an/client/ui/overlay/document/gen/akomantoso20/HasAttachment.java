@@ -86,6 +86,24 @@ public class HasAttachment extends ReferenceTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public HasAttachment showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public HasAttachment shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public HasAttachment wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public HasAttachment idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -100,24 +118,6 @@ public class HasAttachment extends ReferenceTypeComplexType {
     //DSL Style set value
     public HasAttachment hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public HasAttachment wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public HasAttachment showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public HasAttachment shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -143,6 +143,13 @@ public class HasAttachment extends ReferenceTypeComplexType {
         attrs.putAll(super.getAttributes());
         attrs.put("type", getTypeAttr() != null ? getTypeAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public HasAttachment html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

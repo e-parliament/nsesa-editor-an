@@ -154,8 +154,14 @@ public class Judge extends InlinereqreqComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Judge alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public Judge langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Judge statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -168,12 +174,6 @@ public class Judge extends InlinereqreqComplexType {
     //DSL Style set value
     public Judge evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Judge refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -202,14 +202,14 @@ public class Judge extends InlinereqreqComplexType {
     }
 
     //DSL Style set value
-    public Judge statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Judge alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
     //DSL Style set value
-    public Judge langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
+    public Judge refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -241,6 +241,13 @@ public class Judge extends InlinereqreqComplexType {
         attrs.putAll(super.getAttributes());
         attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Judge html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

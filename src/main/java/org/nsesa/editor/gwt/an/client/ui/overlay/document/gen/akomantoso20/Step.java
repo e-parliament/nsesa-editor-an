@@ -58,60 +58,10 @@ public class Step extends AnyOtherTypeComplexType {
     }
 
     // FIELDS ------------------
-    private AnyURISimpleType outcomeAttr;
-    private AnyURISimpleType asAttr;
     private DateSimpleType dateAttr;
+    private AnyURISimpleType outcomeAttr;
     private AnyURISimpleType actorAttr;
-
-    public AnyURISimpleType getOutcomeAttr() {
-        if (outcomeAttr == null) {
-            outcomeAttr = new AnyURISimpleType();
-            outcomeAttr.setValue(getElement().getAttribute("outcome"));
-        }
-
-        return outcomeAttr;
-    }
-
-    //DSL Style get value
-    public AnyURISimpleType outcomeAttr() {
-        return getOutcomeAttr();
-    }
-
-    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
-        this.outcomeAttr = outcomeAttr;
-        getElement().setAttribute("outcome", outcomeAttr.getValue());
-    }
-
-    //DSL Style set value
-    public Step outcomeAttr(final AnyURISimpleType outcomeAttr) {
-        setOutcomeAttr(outcomeAttr);
-        return this;
-    }
-
-    public AnyURISimpleType getAsAttr() {
-        if (asAttr == null) {
-            asAttr = new AnyURISimpleType();
-            asAttr.setValue(getElement().getAttribute("as"));
-        }
-
-        return asAttr;
-    }
-
-    //DSL Style get value
-    public AnyURISimpleType asAttr() {
-        return getAsAttr();
-    }
-
-    public void setAsAttr(final AnyURISimpleType asAttr) {
-        this.asAttr = asAttr;
-        getElement().setAttribute("as", asAttr.getValue());
-    }
-
-    //DSL Style set value
-    public Step asAttr(final AnyURISimpleType asAttr) {
-        setAsAttr(asAttr);
-        return this;
-    }
+    private AnyURISimpleType asAttr;
 
     public DateSimpleType getDateAttr() {
         if (dateAttr == null) {
@@ -135,6 +85,31 @@ public class Step extends AnyOtherTypeComplexType {
     //DSL Style set value
     public Step dateAttr(final DateSimpleType dateAttr) {
         setDateAttr(dateAttr);
+        return this;
+    }
+
+    public AnyURISimpleType getOutcomeAttr() {
+        if (outcomeAttr == null) {
+            outcomeAttr = new AnyURISimpleType();
+            outcomeAttr.setValue(getElement().getAttribute("outcome"));
+        }
+
+        return outcomeAttr;
+    }
+
+    //DSL Style get value
+    public AnyURISimpleType outcomeAttr() {
+        return getOutcomeAttr();
+    }
+
+    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
+        this.outcomeAttr = outcomeAttr;
+        getElement().setAttribute("outcome", outcomeAttr.getValue());
+    }
+
+    //DSL Style set value
+    public Step outcomeAttr(final AnyURISimpleType outcomeAttr) {
+        setOutcomeAttr(outcomeAttr);
         return this;
     }
 
@@ -163,16 +138,35 @@ public class Step extends AnyOtherTypeComplexType {
         return this;
     }
 
+    public AnyURISimpleType getAsAttr() {
+        if (asAttr == null) {
+            asAttr = new AnyURISimpleType();
+            asAttr.setValue(getElement().getAttribute("as"));
+        }
+
+        return asAttr;
+    }
+
+    //DSL Style get value
+    public AnyURISimpleType asAttr() {
+        return getAsAttr();
+    }
+
+    public void setAsAttr(final AnyURISimpleType asAttr) {
+        this.asAttr = asAttr;
+        getElement().setAttribute("as", asAttr.getValue());
+    }
+
+    //DSL Style set value
+    public Step asAttr(final AnyURISimpleType asAttr) {
+        setAsAttr(asAttr);
+        return this;
+    }
+
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
     public Step hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Step wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -185,6 +179,12 @@ public class Step extends AnyOtherTypeComplexType {
     //DSL Style set value
     public Step evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Step wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -208,11 +208,18 @@ public class Step extends AnyOtherTypeComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
-        attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
         attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
+        attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
         attrs.put("actor", getActorAttr() != null ? getActorAttr().getValue() : null);
+        attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Step html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

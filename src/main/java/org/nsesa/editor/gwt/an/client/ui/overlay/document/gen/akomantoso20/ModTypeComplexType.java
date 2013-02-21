@@ -125,16 +125,16 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType alternativeToAttr;
-    private StatusTypeSimpleType statusAttr;
-    private String wildcardContentAttr;
-    private LanguageSimpleType langAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private LanguageSimpleType langAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
+    private AnyURISimpleType refersToAttr;
+    private StatusTypeSimpleType statusAttr;
+    private String wildcardContentAttr;
     private AnyURISimpleType periodAttr;
 
     public java.util.List<QuotedText> getQuotedTexts() {
@@ -179,31 +179,6 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return quotedStructureElem;
     }
 
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-    }
-
-    //DSL Style get value
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
-    }
-
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
-    }
-
-    //DSL Style set value
-    public ModTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
     public AnyURISimpleType getAlternativeToAttr() {
         if (alternativeToAttr == null) {
             alternativeToAttr = new AnyURISimpleType();
@@ -226,79 +201,6 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
     //DSL Style set value
     public ModTypeComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-    }
-
-    //DSL Style get value
-    public StatusTypeSimpleType statusAttr() {
-        return getStatusAttr();
-    }
-
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status", statusAttr.value());
-    }
-
-    //DSL Style set value
-    public ModTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    //DSL Style get value
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    //DSL Style set value
-    public ModTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-            langAttr = new LanguageSimpleType();
-            langAttr.setValue(getElement().getAttribute("lang"));
-        }
-
-        return langAttr;
-    }
-
-    //DSL Style get value
-    public LanguageSimpleType langAttr() {
-        return getLangAttr();
-    }
-
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-        getElement().setAttribute("lang", langAttr.getValue());
-    }
-
-    //DSL Style set value
-    public ModTypeComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
         return this;
     }
 
@@ -349,6 +251,31 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
     //DSL Style set value
     public ModTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+            langAttr = new LanguageSimpleType();
+            langAttr.setValue(getElement().getAttribute("lang"));
+        }
+
+        return langAttr;
+    }
+
+    //DSL Style get value
+    public LanguageSimpleType langAttr() {
+        return getLangAttr();
+    }
+
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+        getElement().setAttribute("lang", langAttr.getValue());
+    }
+
+    //DSL Style set value
+    public ModTypeComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
@@ -424,6 +351,79 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
     //DSL Style set value
     public ModTypeComplexType titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    //DSL Style get value
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    //DSL Style set value
+    public ModTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        }
+
+        return statusAttr;
+    }
+
+    //DSL Style get value
+    public StatusTypeSimpleType statusAttr() {
+        return getStatusAttr();
+    }
+
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status", statusAttr.value());
+    }
+
+    //DSL Style set value
+    public ModTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    //DSL Style get value
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    //DSL Style set value
+    public ModTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -1944,18 +1944,25 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public ModTypeComplexType html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

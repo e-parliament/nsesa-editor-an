@@ -180,32 +180,8 @@ public class Rref extends InlinereqComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Rref refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Rref alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Rref statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Rref wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Rref langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
         return this;
     }
 
@@ -218,6 +194,12 @@ public class Rref extends InlinereqComplexType {
     //DSL Style set value
     public Rref evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Rref langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
@@ -236,6 +218,24 @@ public class Rref extends InlinereqComplexType {
     //DSL Style set value
     public Rref titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Rref refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Rref statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Rref wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -268,6 +268,13 @@ public class Rref extends InlinereqComplexType {
         attrs.put("from", getFromAttr() != null ? getFromAttr().getValue() : null);
         attrs.put("upTo", getUpToAttr() != null ? getUpToAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Rref html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

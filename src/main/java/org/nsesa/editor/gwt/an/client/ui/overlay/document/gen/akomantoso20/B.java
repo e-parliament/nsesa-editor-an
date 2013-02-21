@@ -128,12 +128,6 @@ public class B extends InlineComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public B refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public B idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -146,8 +140,26 @@ public class B extends InlineComplexType {
     }
 
     //DSL Style set value
+    public B statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public B refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public B langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public B wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -172,18 +184,6 @@ public class B extends InlineComplexType {
     //DSL Style set value
     public B titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public B statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public B wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -214,6 +214,13 @@ public class B extends InlineComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public B html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

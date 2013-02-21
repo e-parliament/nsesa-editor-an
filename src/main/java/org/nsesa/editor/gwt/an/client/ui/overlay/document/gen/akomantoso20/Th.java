@@ -119,12 +119,6 @@ public class Th extends BlocksoptComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Th refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Th idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -137,8 +131,26 @@ public class Th extends BlocksoptComplexType {
     }
 
     //DSL Style set value
+    public Th statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Th refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Th langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Th wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -163,18 +175,6 @@ public class Th extends BlocksoptComplexType {
     //DSL Style set value
     public Th titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Th statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Th wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -207,6 +207,13 @@ public class Th extends BlocksoptComplexType {
         attrs.put("rowspan", getRowspanAttr() != null ? getRowspanAttr().getValue() : null);
         attrs.put("colspan", getColspanAttr() != null ? getColspanAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Th html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

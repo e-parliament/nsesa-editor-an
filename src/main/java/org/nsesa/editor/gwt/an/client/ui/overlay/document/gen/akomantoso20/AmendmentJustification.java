@@ -67,12 +67,6 @@ public class AmendmentJustification extends BlocksoptComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public AmendmentJustification refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public AmendmentJustification idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -85,8 +79,26 @@ public class AmendmentJustification extends BlocksoptComplexType {
     }
 
     //DSL Style set value
+    public AmendmentJustification statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public AmendmentJustification refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public AmendmentJustification langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public AmendmentJustification wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -111,18 +123,6 @@ public class AmendmentJustification extends BlocksoptComplexType {
     //DSL Style set value
     public AmendmentJustification titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public AmendmentJustification statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public AmendmentJustification wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -153,6 +153,13 @@ public class AmendmentJustification extends BlocksoptComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public AmendmentJustification html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

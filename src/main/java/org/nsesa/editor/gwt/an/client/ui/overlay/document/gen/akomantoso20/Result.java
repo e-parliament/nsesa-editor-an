@@ -91,12 +91,6 @@ public class Result extends AnyOtherTypeComplexType {
     }
 
     //DSL Style set value
-    public Result wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Result idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -105,6 +99,12 @@ public class Result extends AnyOtherTypeComplexType {
     //DSL Style set value
     public Result evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Result wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -130,6 +130,13 @@ public class Result extends AnyOtherTypeComplexType {
         attrs.putAll(super.getAttributes());
         attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Result html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

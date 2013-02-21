@@ -128,8 +128,14 @@ public class Organization extends InlinereqreqComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Organization alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public Organization langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Organization statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -142,12 +148,6 @@ public class Organization extends InlinereqreqComplexType {
     //DSL Style set value
     public Organization evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Organization refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -176,14 +176,14 @@ public class Organization extends InlinereqreqComplexType {
     }
 
     //DSL Style set value
-    public Organization statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Organization alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
     //DSL Style set value
-    public Organization langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
+    public Organization refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -214,6 +214,13 @@ public class Organization extends InlinereqreqComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Organization html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

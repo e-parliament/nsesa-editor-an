@@ -60,13 +60,13 @@ public class ComponentData extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private String wildcardContentAttr;
-    private StringSimpleType showAsAttr;
-    private StringSimpleType shortFormAttr;
+    private StringSimpleType nameAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private StringSimpleType nameAttr;
     private AnyURISimpleType hrefAttr;
+    private StringSimpleType showAsAttr;
+    private StringSimpleType shortFormAttr;
+    private String wildcardContentAttr;
 
     public java.util.List<ComponentData> getComponentDatas() {
         java.util.List<ComponentData> result = new ArrayList<ComponentData>();
@@ -89,77 +89,28 @@ public class ComponentData extends OverlayWidgetImpl {
         return componentDataElem;
     }
 
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+    public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+            nameAttr = new StringSimpleType();
+            nameAttr.setValue(getElement().getAttribute("name"));
         }
 
-        return wildcardContentAttr;
+        return nameAttr;
     }
 
     //DSL Style get value
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
+    public StringSimpleType nameAttr() {
+        return getNameAttr();
     }
 
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    //DSL Style set value
-    public ComponentData wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    public StringSimpleType getShowAsAttr() {
-        if (showAsAttr == null) {
-            showAsAttr = new StringSimpleType();
-            showAsAttr.setValue(getElement().getAttribute("showAs"));
-        }
-
-        return showAsAttr;
-    }
-
-    //DSL Style get value
-    public StringSimpleType showAsAttr() {
-        return getShowAsAttr();
-    }
-
-    public void setShowAsAttr(final StringSimpleType showAsAttr) {
-        this.showAsAttr = showAsAttr;
-        getElement().setAttribute("showAs", showAsAttr.getValue());
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+        getElement().setAttribute("name", nameAttr.getValue());
     }
 
     //DSL Style set value
-    public ComponentData showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    public StringSimpleType getShortFormAttr() {
-        if (shortFormAttr == null) {
-            shortFormAttr = new StringSimpleType();
-            shortFormAttr.setValue(getElement().getAttribute("shortForm"));
-        }
-
-        return shortFormAttr;
-    }
-
-    //DSL Style get value
-    public StringSimpleType shortFormAttr() {
-        return getShortFormAttr();
-    }
-
-    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
-        this.shortFormAttr = shortFormAttr;
-        getElement().setAttribute("shortForm", shortFormAttr.getValue());
-    }
-
-    //DSL Style set value
-    public ComponentData shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
+    public ComponentData nameAttr(final StringSimpleType nameAttr) {
+        setNameAttr(nameAttr);
         return this;
     }
 
@@ -213,31 +164,6 @@ public class ComponentData extends OverlayWidgetImpl {
         return this;
     }
 
-    public StringSimpleType getNameAttr() {
-        if (nameAttr == null) {
-            nameAttr = new StringSimpleType();
-            nameAttr.setValue(getElement().getAttribute("name"));
-        }
-
-        return nameAttr;
-    }
-
-    //DSL Style get value
-    public StringSimpleType nameAttr() {
-        return getNameAttr();
-    }
-
-    public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-        getElement().setAttribute("name", nameAttr.getValue());
-    }
-
-    //DSL Style set value
-    public ComponentData nameAttr(final StringSimpleType nameAttr) {
-        setNameAttr(nameAttr);
-        return this;
-    }
-
     public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
             hrefAttr = new AnyURISimpleType();
@@ -262,6 +188,80 @@ public class ComponentData extends OverlayWidgetImpl {
         setHrefAttr(hrefAttr);
         return this;
     }
+
+    public StringSimpleType getShowAsAttr() {
+        if (showAsAttr == null) {
+            showAsAttr = new StringSimpleType();
+            showAsAttr.setValue(getElement().getAttribute("showAs"));
+        }
+
+        return showAsAttr;
+    }
+
+    //DSL Style get value
+    public StringSimpleType showAsAttr() {
+        return getShowAsAttr();
+    }
+
+    public void setShowAsAttr(final StringSimpleType showAsAttr) {
+        this.showAsAttr = showAsAttr;
+        getElement().setAttribute("showAs", showAsAttr.getValue());
+    }
+
+    //DSL Style set value
+    public ComponentData showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    public StringSimpleType getShortFormAttr() {
+        if (shortFormAttr == null) {
+            shortFormAttr = new StringSimpleType();
+            shortFormAttr.setValue(getElement().getAttribute("shortForm"));
+        }
+
+        return shortFormAttr;
+    }
+
+    //DSL Style get value
+    public StringSimpleType shortFormAttr() {
+        return getShortFormAttr();
+    }
+
+    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
+        this.shortFormAttr = shortFormAttr;
+        getElement().setAttribute("shortForm", shortFormAttr.getValue());
+    }
+
+    //DSL Style set value
+    public ComponentData shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    //DSL Style get value
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    //DSL Style set value
+    public ComponentData wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
@@ -284,14 +284,21 @@ public class ComponentData extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
-        attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
+        attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public ComponentData html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

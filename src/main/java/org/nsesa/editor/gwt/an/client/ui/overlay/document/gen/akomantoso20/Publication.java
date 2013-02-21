@@ -55,11 +55,11 @@ public class Publication extends MetaoptComplexType {
 
     // FIELDS ------------------
     private StringSimpleType numberAttr;
+    private StringSimpleType nameAttr;
     private AnyURISimpleType refersToAttr;
     private DateSimpleType dateAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
-    private StringSimpleType nameAttr;
 
     public StringSimpleType getNumberAttr() {
         if (numberAttr == null) {
@@ -83,6 +83,31 @@ public class Publication extends MetaoptComplexType {
     //DSL Style set value
     public Publication numberAttr(final StringSimpleType numberAttr) {
         setNumberAttr(numberAttr);
+        return this;
+    }
+
+    public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+            nameAttr = new StringSimpleType();
+            nameAttr.setValue(getElement().getAttribute("name"));
+        }
+
+        return nameAttr;
+    }
+
+    //DSL Style get value
+    public StringSimpleType nameAttr() {
+        return getNameAttr();
+    }
+
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+        getElement().setAttribute("name", nameAttr.getValue());
+    }
+
+    //DSL Style set value
+    public Publication nameAttr(final StringSimpleType nameAttr) {
+        setNameAttr(nameAttr);
         return this;
     }
 
@@ -186,38 +211,7 @@ public class Publication extends MetaoptComplexType {
         return this;
     }
 
-    public StringSimpleType getNameAttr() {
-        if (nameAttr == null) {
-            nameAttr = new StringSimpleType();
-            nameAttr.setValue(getElement().getAttribute("name"));
-        }
-
-        return nameAttr;
-    }
-
-    //DSL Style get value
-    public StringSimpleType nameAttr() {
-        return getNameAttr();
-    }
-
-    public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-        getElement().setAttribute("name", nameAttr.getValue());
-    }
-
-    //DSL Style set value
-    public Publication nameAttr(final StringSimpleType nameAttr) {
-        setNameAttr(nameAttr);
-        return this;
-    }
-
     //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public Publication wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
     //DSL Style set value
     public Publication idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -227,6 +221,12 @@ public class Publication extends MetaoptComplexType {
     //DSL Style set value
     public Publication evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Publication wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -251,12 +251,19 @@ public class Publication extends MetaoptComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         attrs.put("number", getNumberAttr() != null ? getNumberAttr().getValue() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
-        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Publication html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

@@ -60,8 +60,8 @@ public class EventRef extends AnyOtherTypeComplexType {
     // FIELDS ------------------
     private EventTypeSimpleType typeAttr;
     private YesNoTypeSimpleType originatingExpressionAttr;
-    private DateSimpleType dateAttr;
     private AnyURISimpleType sourceAttr;
+    private DateSimpleType dateAttr;
 
     public EventTypeSimpleType getTypeAttr() {
         if (typeAttr == null) {
@@ -111,31 +111,6 @@ public class EventRef extends AnyOtherTypeComplexType {
         return this;
     }
 
-    public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-            dateAttr = new DateSimpleType();
-            dateAttr.setValue(getElement().getAttribute("date"));
-        }
-
-        return dateAttr;
-    }
-
-    //DSL Style get value
-    public DateSimpleType dateAttr() {
-        return getDateAttr();
-    }
-
-    public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-        getElement().setAttribute("date", dateAttr.getValue());
-    }
-
-    //DSL Style set value
-    public EventRef dateAttr(final DateSimpleType dateAttr) {
-        setDateAttr(dateAttr);
-        return this;
-    }
-
     public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
             sourceAttr = new AnyURISimpleType();
@@ -161,16 +136,35 @@ public class EventRef extends AnyOtherTypeComplexType {
         return this;
     }
 
+    public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(getElement().getAttribute("date"));
+        }
+
+        return dateAttr;
+    }
+
+    //DSL Style get value
+    public DateSimpleType dateAttr() {
+        return getDateAttr();
+    }
+
+    public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+        getElement().setAttribute("date", dateAttr.getValue());
+    }
+
+    //DSL Style set value
+    public EventRef dateAttr(final DateSimpleType dateAttr) {
+        setDateAttr(dateAttr);
+        return this;
+    }
+
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
     public EventRef hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public EventRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -183,6 +177,12 @@ public class EventRef extends AnyOtherTypeComplexType {
     //DSL Style set value
     public EventRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public EventRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -208,9 +208,16 @@ public class EventRef extends AnyOtherTypeComplexType {
         attrs.putAll(super.getAttributes());
         attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
         attrs.put("originatingExpression", getOriginatingExpressionAttr() != null ? getOriginatingExpressionAttr().value() : null);
-        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public EventRef html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

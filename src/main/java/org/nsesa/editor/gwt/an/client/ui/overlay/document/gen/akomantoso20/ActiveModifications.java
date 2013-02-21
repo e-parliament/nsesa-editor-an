@@ -84,5 +84,12 @@ public class ActiveModifications extends AmendmentsComplexType {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public ActiveModifications html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

@@ -66,12 +66,6 @@ public class New extends AnyOtherTypeComplexType {
     }
 
     //DSL Style set value
-    public New wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public New idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -80,6 +74,12 @@ public class New extends AnyOtherTypeComplexType {
     //DSL Style set value
     public New evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public New wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -104,6 +104,13 @@ public class New extends AnyOtherTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public New html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

@@ -206,5 +206,12 @@ public class Identification extends OverlayWidgetImpl {
         attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public Identification html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

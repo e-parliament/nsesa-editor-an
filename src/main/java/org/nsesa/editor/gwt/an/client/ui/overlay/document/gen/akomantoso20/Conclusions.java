@@ -69,12 +69,6 @@ public class Conclusions extends BasicoptComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Conclusions refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Conclusions idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -87,8 +81,26 @@ public class Conclusions extends BasicoptComplexType {
     }
 
     //DSL Style set value
+    public Conclusions statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Conclusions refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Conclusions langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Conclusions wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -113,18 +125,6 @@ public class Conclusions extends BasicoptComplexType {
     //DSL Style set value
     public Conclusions titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Conclusions statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Conclusions wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -155,6 +155,13 @@ public class Conclusions extends BasicoptComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Conclusions html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

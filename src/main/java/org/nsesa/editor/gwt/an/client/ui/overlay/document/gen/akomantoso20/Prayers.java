@@ -100,32 +100,8 @@ public class Prayers extends AlthierarchyComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Prayers refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Prayers alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Prayers statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Prayers wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Prayers langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
         return this;
     }
 
@@ -138,6 +114,12 @@ public class Prayers extends AlthierarchyComplexType {
     //DSL Style set value
     public Prayers evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Prayers langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
@@ -156,6 +138,24 @@ public class Prayers extends AlthierarchyComplexType {
     //DSL Style set value
     public Prayers titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Prayers refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Prayers statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Prayers wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -186,6 +186,13 @@ public class Prayers extends AlthierarchyComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Prayers html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

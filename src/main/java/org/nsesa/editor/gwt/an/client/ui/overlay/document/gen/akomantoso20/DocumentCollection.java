@@ -117,5 +117,12 @@ public class DocumentCollection extends CollectionStructureComplexType {
         attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public DocumentCollection html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

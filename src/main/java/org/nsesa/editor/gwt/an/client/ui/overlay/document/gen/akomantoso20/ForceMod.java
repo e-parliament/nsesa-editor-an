@@ -92,24 +92,6 @@ public class ForceMod extends ModificationTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public ForceMod wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ForceMod refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ForceMod statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public ForceMod exclusionAttr(final BooleanSimpleType exclusionAttr) {
         setExclusionAttr(exclusionAttr);
         return this;
@@ -130,6 +112,24 @@ public class ForceMod extends ModificationTypeComplexType {
     //DSL Style set value
     public ForceMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ForceMod statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ForceMod wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ForceMod refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -161,6 +161,13 @@ public class ForceMod extends ModificationTypeComplexType {
         attrs.putAll(super.getAttributes());
         attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public ForceMod html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

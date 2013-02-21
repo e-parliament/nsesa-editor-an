@@ -188,12 +188,6 @@ public class FRBRtranslation extends MetaoptComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public FRBRtranslation wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public FRBRtranslation idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -202,6 +196,12 @@ public class FRBRtranslation extends MetaoptComplexType {
     //DSL Style set value
     public FRBRtranslation evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public FRBRtranslation wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -231,6 +231,13 @@ public class FRBRtranslation extends MetaoptComplexType {
         attrs.put("by", getByAttr() != null ? getByAttr().getValue() : null);
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public FRBRtranslation html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

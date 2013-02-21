@@ -275,5 +275,12 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         attrs.put("contains", getContainsAttr() != null ? getContainsAttr().value() : null);
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public HierarchicalStructureComplexType html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

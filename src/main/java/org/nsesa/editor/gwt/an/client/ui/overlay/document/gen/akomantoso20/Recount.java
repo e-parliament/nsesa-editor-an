@@ -61,8 +61,14 @@ public class Recount extends ParliamentaryAnalysisTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Recount refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Recount outcomeAttr(final AnyURISimpleType outcomeAttr) {
+        setOutcomeAttr(outcomeAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Recount wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -79,14 +85,8 @@ public class Recount extends ParliamentaryAnalysisTypeComplexType {
     }
 
     //DSL Style set value
-    public Recount wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Recount outcomeAttr(final AnyURISimpleType outcomeAttr) {
-        setOutcomeAttr(outcomeAttr);
+    public Recount refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -117,6 +117,13 @@ public class Recount extends ParliamentaryAnalysisTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Recount html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

@@ -70,32 +70,8 @@ public class Tblock extends ItemTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Tblock refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Tblock alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Tblock statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Tblock wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Tblock langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
         return this;
     }
 
@@ -108,6 +84,12 @@ public class Tblock extends ItemTypeComplexType {
     //DSL Style set value
     public Tblock evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Tblock langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
@@ -126,6 +108,24 @@ public class Tblock extends ItemTypeComplexType {
     //DSL Style set value
     public Tblock titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Tblock refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Tblock statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Tblock wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -156,6 +156,13 @@ public class Tblock extends ItemTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Tblock html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

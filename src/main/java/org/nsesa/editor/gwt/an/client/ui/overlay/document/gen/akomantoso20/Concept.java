@@ -128,8 +128,14 @@ public class Concept extends InlinereqreqComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Concept alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public Concept langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Concept statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -142,12 +148,6 @@ public class Concept extends InlinereqreqComplexType {
     //DSL Style set value
     public Concept evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Concept refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -176,14 +176,14 @@ public class Concept extends InlinereqreqComplexType {
     }
 
     //DSL Style set value
-    public Concept statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Concept alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
     //DSL Style set value
-    public Concept langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
+    public Concept refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -214,6 +214,13 @@ public class Concept extends InlinereqreqComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Concept html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

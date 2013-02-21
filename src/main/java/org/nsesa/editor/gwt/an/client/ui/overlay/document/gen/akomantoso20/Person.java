@@ -154,8 +154,14 @@ public class Person extends InlinereqreqComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Person alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public Person langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Person statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -168,12 +174,6 @@ public class Person extends InlinereqreqComplexType {
     //DSL Style set value
     public Person evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Person refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -202,14 +202,14 @@ public class Person extends InlinereqreqComplexType {
     }
 
     //DSL Style set value
-    public Person statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Person alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
     //DSL Style set value
-    public Person langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
+    public Person refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -241,6 +241,13 @@ public class Person extends InlinereqreqComplexType {
         attrs.putAll(super.getAttributes());
         attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Person html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

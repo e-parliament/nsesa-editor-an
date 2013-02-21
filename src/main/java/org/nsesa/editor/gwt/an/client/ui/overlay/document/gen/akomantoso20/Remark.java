@@ -153,12 +153,6 @@ public class Remark extends InlineComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Remark refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Remark idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -171,8 +165,26 @@ public class Remark extends InlineComplexType {
     }
 
     //DSL Style set value
+    public Remark statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Remark refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Remark langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Remark wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -197,18 +209,6 @@ public class Remark extends InlineComplexType {
     //DSL Style set value
     public Remark titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Remark statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Remark wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -240,6 +240,13 @@ public class Remark extends InlineComplexType {
         attrs.putAll(super.getAttributes());
         attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Remark html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

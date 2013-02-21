@@ -100,5 +100,12 @@ public class References extends RefItemsComplexType {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public References html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

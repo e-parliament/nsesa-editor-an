@@ -63,6 +63,18 @@ public class Extends extends JudicialArgumentTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public Extends wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Extends refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Extends idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -93,18 +105,6 @@ public class Extends extends JudicialArgumentTypeComplexType {
     }
 
     //DSL Style set value
-    public Extends wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Extends refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Extends periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -131,6 +131,13 @@ public class Extends extends JudicialArgumentTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Extends html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

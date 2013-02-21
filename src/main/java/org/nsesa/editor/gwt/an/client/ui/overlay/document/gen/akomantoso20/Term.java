@@ -128,8 +128,14 @@ public class Term extends InlinereqreqComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Term alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public Term langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Term statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -142,12 +148,6 @@ public class Term extends InlinereqreqComplexType {
     //DSL Style set value
     public Term evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Term refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -176,14 +176,14 @@ public class Term extends InlinereqreqComplexType {
     }
 
     //DSL Style set value
-    public Term statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Term alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
     //DSL Style set value
-    public Term langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
+    public Term refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -214,6 +214,13 @@ public class Term extends InlinereqreqComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Term html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

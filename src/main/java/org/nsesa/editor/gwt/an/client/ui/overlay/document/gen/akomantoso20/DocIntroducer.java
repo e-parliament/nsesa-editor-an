@@ -128,12 +128,6 @@ public class DocIntroducer extends InlineComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public DocIntroducer refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public DocIntroducer idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -146,8 +140,26 @@ public class DocIntroducer extends InlineComplexType {
     }
 
     //DSL Style set value
+    public DocIntroducer statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public DocIntroducer refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public DocIntroducer langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public DocIntroducer wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -172,18 +184,6 @@ public class DocIntroducer extends InlineComplexType {
     //DSL Style set value
     public DocIntroducer titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public DocIntroducer statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public DocIntroducer wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -214,6 +214,13 @@ public class DocIntroducer extends InlineComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public DocIntroducer html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

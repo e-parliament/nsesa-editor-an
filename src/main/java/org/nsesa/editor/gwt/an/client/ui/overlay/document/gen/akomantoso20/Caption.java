@@ -128,12 +128,6 @@ public class Caption extends InlineComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Caption refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Caption idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -146,8 +140,26 @@ public class Caption extends InlineComplexType {
     }
 
     //DSL Style set value
+    public Caption statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Caption refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Caption langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Caption wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -172,18 +184,6 @@ public class Caption extends InlineComplexType {
     //DSL Style set value
     public Caption titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Caption statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Caption wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -214,6 +214,13 @@ public class Caption extends InlineComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Caption html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

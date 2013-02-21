@@ -54,9 +54,9 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
 
     // FIELDS ------------------
     private AnyURISimpleType periodAttr;
-    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private String wildcardContentAttr;
 
     public AnyURISimpleType getPeriodAttr() {
         if (periodAttr == null) {
@@ -80,30 +80,6 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
     //DSL Style set value
     public PeriodTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
-        return this;
-    }
-
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    //DSL Style get value
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    //DSL Style set value
-    public PeriodTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -156,6 +132,30 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
+
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    //DSL Style get value
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    //DSL Style set value
+    public PeriodTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
@@ -179,10 +179,17 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public PeriodTypeComplexType html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

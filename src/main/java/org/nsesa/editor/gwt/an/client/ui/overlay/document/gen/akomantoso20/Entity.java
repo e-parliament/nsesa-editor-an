@@ -154,8 +154,14 @@ public class Entity extends InlinereqreqComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Entity alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public Entity langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Entity statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -168,12 +174,6 @@ public class Entity extends InlinereqreqComplexType {
     //DSL Style set value
     public Entity evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Entity refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -202,14 +202,14 @@ public class Entity extends InlinereqreqComplexType {
     }
 
     //DSL Style set value
-    public Entity statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Entity alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
     //DSL Style set value
-    public Entity langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
+    public Entity refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -241,6 +241,13 @@ public class Entity extends InlinereqreqComplexType {
         attrs.putAll(super.getAttributes());
         attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Entity html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

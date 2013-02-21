@@ -60,6 +60,24 @@ public class TLCRole extends ReferenceTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public TLCRole showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public TLCRole shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public TLCRole wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public TLCRole idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -74,24 +92,6 @@ public class TLCRole extends ReferenceTypeComplexType {
     //DSL Style set value
     public TLCRole hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TLCRole wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TLCRole showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TLCRole shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -116,6 +116,13 @@ public class TLCRole extends ReferenceTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public TLCRole html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

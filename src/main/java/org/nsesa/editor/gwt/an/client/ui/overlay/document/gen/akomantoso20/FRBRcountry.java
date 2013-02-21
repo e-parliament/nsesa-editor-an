@@ -65,12 +65,6 @@ public class FRBRcountry extends ValueTypeComplexType {
     }
 
     //DSL Style set value
-    public FRBRcountry wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public FRBRcountry idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -79,6 +73,12 @@ public class FRBRcountry extends ValueTypeComplexType {
     //DSL Style set value
     public FRBRcountry evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public FRBRcountry wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -103,6 +103,13 @@ public class FRBRcountry extends ValueTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public FRBRcountry html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

@@ -89,5 +89,12 @@ public class AmendmentList extends CollectionStructureComplexType {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public AmendmentList html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

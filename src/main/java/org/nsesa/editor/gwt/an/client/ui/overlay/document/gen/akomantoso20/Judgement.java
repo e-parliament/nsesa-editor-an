@@ -89,5 +89,12 @@ public class Judgement extends JudgementStructureComplexType {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public Judgement html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

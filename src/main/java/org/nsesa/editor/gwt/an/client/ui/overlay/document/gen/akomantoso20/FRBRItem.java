@@ -85,5 +85,12 @@ public class FRBRItem extends CorePropertiesComplexType {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public FRBRItem html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

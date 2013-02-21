@@ -61,8 +61,14 @@ public class QuorumVerification extends ParliamentaryAnalysisTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public QuorumVerification refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public QuorumVerification outcomeAttr(final AnyURISimpleType outcomeAttr) {
+        setOutcomeAttr(outcomeAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public QuorumVerification wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -79,14 +85,8 @@ public class QuorumVerification extends ParliamentaryAnalysisTypeComplexType {
     }
 
     //DSL Style set value
-    public QuorumVerification wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public QuorumVerification outcomeAttr(final AnyURISimpleType outcomeAttr) {
-        setOutcomeAttr(outcomeAttr);
+    public QuorumVerification refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -117,6 +117,13 @@ public class QuorumVerification extends ParliamentaryAnalysisTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public QuorumVerification html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

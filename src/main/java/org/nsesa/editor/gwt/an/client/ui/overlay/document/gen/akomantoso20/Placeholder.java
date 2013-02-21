@@ -154,12 +154,6 @@ public class Placeholder extends InlineComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Placeholder refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Placeholder idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -172,8 +166,26 @@ public class Placeholder extends InlineComplexType {
     }
 
     //DSL Style set value
+    public Placeholder statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Placeholder refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Placeholder langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Placeholder wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -198,18 +210,6 @@ public class Placeholder extends InlineComplexType {
     //DSL Style set value
     public Placeholder titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Placeholder statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Placeholder wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -241,6 +241,13 @@ public class Placeholder extends InlineComplexType {
         attrs.putAll(super.getAttributes());
         attrs.put("originalText", getOriginalTextAttr() != null ? getOriginalTextAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Placeholder html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

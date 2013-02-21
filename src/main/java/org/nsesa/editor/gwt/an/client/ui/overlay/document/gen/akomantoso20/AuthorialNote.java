@@ -204,32 +204,8 @@ public class AuthorialNote extends PopupStructureComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public AuthorialNote refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public AuthorialNote alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public AuthorialNote statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public AuthorialNote wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public AuthorialNote langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
         return this;
     }
 
@@ -242,6 +218,12 @@ public class AuthorialNote extends PopupStructureComplexType {
     //DSL Style set value
     public AuthorialNote evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public AuthorialNote langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
@@ -260,6 +242,24 @@ public class AuthorialNote extends PopupStructureComplexType {
     //DSL Style set value
     public AuthorialNote titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public AuthorialNote refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public AuthorialNote statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public AuthorialNote wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -293,6 +293,13 @@ public class AuthorialNote extends PopupStructureComplexType {
         attrs.put("placement", getPlacementAttr() != null ? getPlacementAttr().value() : null);
         attrs.put("placementBase", getPlacementBaseAttr() != null ? getPlacementBaseAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public AuthorialNote html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

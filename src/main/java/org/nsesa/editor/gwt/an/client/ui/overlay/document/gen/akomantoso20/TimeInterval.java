@@ -164,12 +164,6 @@ public class TimeInterval extends MetaoptComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public TimeInterval wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public TimeInterval idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -178,6 +172,12 @@ public class TimeInterval extends MetaoptComplexType {
     //DSL Style set value
     public TimeInterval evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public TimeInterval wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -206,6 +206,13 @@ public class TimeInterval extends MetaoptComplexType {
         attrs.put("duration", getDurationAttr() != null ? getDurationAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public TimeInterval html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

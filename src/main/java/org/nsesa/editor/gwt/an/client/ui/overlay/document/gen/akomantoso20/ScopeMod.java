@@ -117,24 +117,6 @@ public class ScopeMod extends ModificationTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public ScopeMod wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ScopeMod refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ScopeMod statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public ScopeMod exclusionAttr(final BooleanSimpleType exclusionAttr) {
         setExclusionAttr(exclusionAttr);
         return this;
@@ -155,6 +137,24 @@ public class ScopeMod extends ModificationTypeComplexType {
     //DSL Style set value
     public ScopeMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ScopeMod statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ScopeMod wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ScopeMod refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -186,6 +186,13 @@ public class ScopeMod extends ModificationTypeComplexType {
         attrs.putAll(super.getAttributes());
         attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public ScopeMod html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

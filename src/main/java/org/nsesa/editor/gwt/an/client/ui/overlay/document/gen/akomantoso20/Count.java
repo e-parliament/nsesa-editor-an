@@ -61,24 +61,6 @@ public class Count extends CountTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Count idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Count evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Count valueAttr(final StringSimpleType valueAttr) {
-        setValueAttr(valueAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Count wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
@@ -91,8 +73,26 @@ public class Count extends CountTypeComplexType {
     }
 
     //DSL Style set value
+    public Count idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Count evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Count refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Count valueAttr(final StringSimpleType valueAttr) {
+        setValueAttr(valueAttr);
         return this;
     }
 
@@ -117,6 +117,13 @@ public class Count extends CountTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Count html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

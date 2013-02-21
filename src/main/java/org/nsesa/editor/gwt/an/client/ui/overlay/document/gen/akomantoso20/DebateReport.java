@@ -97,5 +97,12 @@ public class DebateReport extends OpenStructureComplexType {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public DebateReport html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

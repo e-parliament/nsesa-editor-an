@@ -55,35 +55,10 @@ public class NoteRef extends MarkeroptComplexType {
     }
 
     // FIELDS ------------------
-    private AnyURISimpleType hrefAttr;
     private StringSimpleType markerAttr;
     private PlacementTypeSimpleType placementAttr;
     private AnyURISimpleType placementBaseAttr;
-
-    public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-            hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(getElement().getAttribute("href"));
-        }
-
-        return hrefAttr;
-    }
-
-    //DSL Style get value
-    public AnyURISimpleType hrefAttr() {
-        return getHrefAttr();
-    }
-
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-        getElement().setAttribute("href", hrefAttr.getValue());
-    }
-
-    //DSL Style set value
-    public NoteRef hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
+    private AnyURISimpleType hrefAttr;
 
     public StringSimpleType getMarkerAttr() {
         if (markerAttr == null) {
@@ -159,13 +134,32 @@ public class NoteRef extends MarkeroptComplexType {
         return this;
     }
 
-    //Override all attributes methods to be conformant with DSL approach
+    public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(getElement().getAttribute("href"));
+        }
+
+        return hrefAttr;
+    }
+
+    //DSL Style get value
+    public AnyURISimpleType hrefAttr() {
+        return getHrefAttr();
+    }
+
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+        getElement().setAttribute("href", hrefAttr.getValue());
+    }
+
     //DSL Style set value
-    public NoteRef refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public NoteRef hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
         return this;
     }
 
+    //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
     public NoteRef idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -179,8 +173,26 @@ public class NoteRef extends MarkeroptComplexType {
     }
 
     //DSL Style set value
+    public NoteRef statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public NoteRef refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public NoteRef langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public NoteRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -205,18 +217,6 @@ public class NoteRef extends MarkeroptComplexType {
     //DSL Style set value
     public NoteRef titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public NoteRef statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public NoteRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -246,11 +246,18 @@ public class NoteRef extends MarkeroptComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         attrs.put("marker", getMarkerAttr() != null ? getMarkerAttr().getValue() : null);
         attrs.put("placement", getPlacementAttr() != null ? getPlacementAttr().value() : null);
         attrs.put("placementBase", getPlacementBaseAttr() != null ? getPlacementBaseAttr().getValue() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public NoteRef html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

@@ -250,5 +250,12 @@ public class CollectionStructureComplexType extends OverlayWidgetImpl {
         attrs.put("contains", getContainsAttr() != null ? getContainsAttr().value() : null);
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public CollectionStructureComplexType html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

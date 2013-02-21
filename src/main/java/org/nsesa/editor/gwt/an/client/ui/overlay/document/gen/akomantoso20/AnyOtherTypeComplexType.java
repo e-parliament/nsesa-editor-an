@@ -56,9 +56,9 @@ public class AnyOtherTypeComplexType extends OverlayWidgetImpl {
 
     // FIELDS ------------------
     private AnyURISimpleType hrefAttr;
-    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private String wildcardContentAttr;
 
     public java.util.List<OverlayWidgetImpl> getWildcardContents() {
         java.util.List<OverlayWidgetImpl> result = new ArrayList<OverlayWidgetImpl>();
@@ -102,30 +102,6 @@ public class AnyOtherTypeComplexType extends OverlayWidgetImpl {
     //DSL Style set value
     public AnyOtherTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    //DSL Style get value
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    //DSL Style set value
-    public AnyOtherTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -178,6 +154,30 @@ public class AnyOtherTypeComplexType extends OverlayWidgetImpl {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
+
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    //DSL Style get value
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    //DSL Style set value
+    public AnyOtherTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
@@ -201,10 +201,17 @@ public class AnyOtherTypeComplexType extends OverlayWidgetImpl {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public AnyOtherTypeComplexType html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

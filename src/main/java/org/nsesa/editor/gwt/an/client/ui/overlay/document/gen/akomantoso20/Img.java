@@ -162,12 +162,6 @@ public class Img extends MarkeroptComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Img refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Img idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -180,8 +174,26 @@ public class Img extends MarkeroptComplexType {
     }
 
     //DSL Style set value
+    public Img statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Img refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Img langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Img wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -206,18 +218,6 @@ public class Img extends MarkeroptComplexType {
     //DSL Style set value
     public Img titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Img statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Img wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -252,6 +252,13 @@ public class Img extends MarkeroptComplexType {
         attrs.put("src", getSrcAttr() != null ? getSrcAttr().getValue() : null);
         attrs.put("alt", getAltAttr() != null ? getAltAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Img html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

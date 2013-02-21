@@ -456,5 +456,12 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public RefItemsComplexType html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

@@ -86,5 +86,12 @@ public class Fragment extends FragmentStructureComplexType {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public Fragment html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

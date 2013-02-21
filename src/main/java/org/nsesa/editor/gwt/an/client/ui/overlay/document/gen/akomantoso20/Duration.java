@@ -65,12 +65,6 @@ public class Duration extends PeriodTypeComplexType {
     }
 
     //DSL Style set value
-    public Duration wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Duration idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -79,6 +73,12 @@ public class Duration extends PeriodTypeComplexType {
     //DSL Style set value
     public Duration evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Duration wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -103,6 +103,13 @@ public class Duration extends PeriodTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Duration html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

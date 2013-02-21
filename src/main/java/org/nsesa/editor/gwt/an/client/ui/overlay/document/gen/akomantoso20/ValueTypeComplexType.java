@@ -81,12 +81,6 @@ public class ValueTypeComplexType extends MetaoptComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public ValueTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public ValueTypeComplexType idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -95,6 +89,12 @@ public class ValueTypeComplexType extends MetaoptComplexType {
     //DSL Style set value
     public ValueTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ValueTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -120,6 +120,13 @@ public class ValueTypeComplexType extends MetaoptComplexType {
         attrs.putAll(super.getAttributes());
         attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public ValueTypeComplexType html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

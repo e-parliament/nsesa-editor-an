@@ -89,5 +89,12 @@ public class AkomaNtoso extends AkomaNtosoTypeComplexType {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public AkomaNtoso html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

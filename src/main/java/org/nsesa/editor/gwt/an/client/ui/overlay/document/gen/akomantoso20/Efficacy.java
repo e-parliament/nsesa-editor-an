@@ -65,12 +65,6 @@ public class Efficacy extends PeriodTypeComplexType {
     }
 
     //DSL Style set value
-    public Efficacy wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Efficacy idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -79,6 +73,12 @@ public class Efficacy extends PeriodTypeComplexType {
     //DSL Style set value
     public Efficacy evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Efficacy wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -103,6 +103,13 @@ public class Efficacy extends PeriodTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Efficacy html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

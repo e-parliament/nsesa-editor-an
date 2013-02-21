@@ -60,6 +60,24 @@ public class ActiveRef extends ReferenceTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public ActiveRef showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ActiveRef shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ActiveRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public ActiveRef idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -74,24 +92,6 @@ public class ActiveRef extends ReferenceTypeComplexType {
     //DSL Style set value
     public ActiveRef hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ActiveRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ActiveRef showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ActiveRef shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -116,6 +116,13 @@ public class ActiveRef extends ReferenceTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public ActiveRef html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

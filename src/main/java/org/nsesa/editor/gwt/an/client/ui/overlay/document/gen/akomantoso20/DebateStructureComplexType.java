@@ -250,5 +250,12 @@ public class DebateStructureComplexType extends OverlayWidgetImpl {
         attrs.put("contains", getContainsAttr() != null ? getContainsAttr().value() : null);
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public DebateStructureComplexType html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

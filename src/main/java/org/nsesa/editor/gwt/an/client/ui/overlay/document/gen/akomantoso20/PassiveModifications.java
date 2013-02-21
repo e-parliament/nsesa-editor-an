@@ -84,5 +84,12 @@ public class PassiveModifications extends AmendmentsComplexType {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public PassiveModifications html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

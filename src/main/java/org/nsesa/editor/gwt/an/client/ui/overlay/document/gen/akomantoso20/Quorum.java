@@ -61,24 +61,6 @@ public class Quorum extends CountTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Quorum idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Quorum evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Quorum valueAttr(final StringSimpleType valueAttr) {
-        setValueAttr(valueAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Quorum wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
@@ -91,8 +73,26 @@ public class Quorum extends CountTypeComplexType {
     }
 
     //DSL Style set value
+    public Quorum idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Quorum evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Quorum refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Quorum valueAttr(final StringSimpleType valueAttr) {
+        setValueAttr(valueAttr);
         return this;
     }
 
@@ -117,6 +117,13 @@ public class Quorum extends CountTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Quorum html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

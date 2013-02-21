@@ -58,9 +58,9 @@ public class Keyword extends MetaoptComplexType {
 
     // FIELDS ------------------
     private AnyURISimpleType dictionaryAttr;
-    private StringSimpleType valueAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
+    private StringSimpleType valueAttr;
 
     public AnyURISimpleType getDictionaryAttr() {
         if (dictionaryAttr == null) {
@@ -84,31 +84,6 @@ public class Keyword extends MetaoptComplexType {
     //DSL Style set value
     public Keyword dictionaryAttr(final AnyURISimpleType dictionaryAttr) {
         setDictionaryAttr(dictionaryAttr);
-        return this;
-    }
-
-    public StringSimpleType getValueAttr() {
-        if (valueAttr == null) {
-            valueAttr = new StringSimpleType();
-            valueAttr.setValue(getElement().getAttribute("value"));
-        }
-
-        return valueAttr;
-    }
-
-    //DSL Style get value
-    public StringSimpleType valueAttr() {
-        return getValueAttr();
-    }
-
-    public void setValueAttr(final StringSimpleType valueAttr) {
-        this.valueAttr = valueAttr;
-        getElement().setAttribute("value", valueAttr.getValue());
-    }
-
-    //DSL Style set value
-    public Keyword valueAttr(final StringSimpleType valueAttr) {
-        setValueAttr(valueAttr);
         return this;
     }
 
@@ -162,13 +137,32 @@ public class Keyword extends MetaoptComplexType {
         return this;
     }
 
-    //Override all attributes methods to be conformant with DSL approach
+    public StringSimpleType getValueAttr() {
+        if (valueAttr == null) {
+            valueAttr = new StringSimpleType();
+            valueAttr.setValue(getElement().getAttribute("value"));
+        }
+
+        return valueAttr;
+    }
+
+    //DSL Style get value
+    public StringSimpleType valueAttr() {
+        return getValueAttr();
+    }
+
+    public void setValueAttr(final StringSimpleType valueAttr) {
+        this.valueAttr = valueAttr;
+        getElement().setAttribute("value", valueAttr.getValue());
+    }
+
     //DSL Style set value
-    public Keyword wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Keyword valueAttr(final StringSimpleType valueAttr) {
+        setValueAttr(valueAttr);
         return this;
     }
 
+    //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
     public Keyword idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -178,6 +172,12 @@ public class Keyword extends MetaoptComplexType {
     //DSL Style set value
     public Keyword evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Keyword wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -202,10 +202,17 @@ public class Keyword extends MetaoptComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         attrs.put("dictionary", getDictionaryAttr() != null ? getDictionaryAttr().getValue() : null);
-        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Keyword html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

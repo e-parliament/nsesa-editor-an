@@ -102,5 +102,12 @@ public class ComponentInfo extends OverlayWidgetImpl {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public ComponentInfo html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

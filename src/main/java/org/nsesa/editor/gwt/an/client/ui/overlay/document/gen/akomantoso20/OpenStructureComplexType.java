@@ -303,5 +303,12 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public OpenStructureComplexType html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

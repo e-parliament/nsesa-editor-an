@@ -66,12 +66,6 @@ public class Preservation extends AnyOtherTypeComplexType {
     }
 
     //DSL Style set value
-    public Preservation wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Preservation idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -80,6 +74,12 @@ public class Preservation extends AnyOtherTypeComplexType {
     //DSL Style set value
     public Preservation evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Preservation wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -104,6 +104,13 @@ public class Preservation extends AnyOtherTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Preservation html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

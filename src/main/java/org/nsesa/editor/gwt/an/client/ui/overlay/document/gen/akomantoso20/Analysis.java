@@ -229,5 +229,12 @@ public class Analysis extends OverlayWidgetImpl {
         attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public Analysis html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

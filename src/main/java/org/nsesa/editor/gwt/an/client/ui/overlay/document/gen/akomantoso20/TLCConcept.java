@@ -60,6 +60,24 @@ public class TLCConcept extends ReferenceTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public TLCConcept showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public TLCConcept shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public TLCConcept wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public TLCConcept idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -74,24 +92,6 @@ public class TLCConcept extends ReferenceTypeComplexType {
     //DSL Style set value
     public TLCConcept hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TLCConcept wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TLCConcept showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TLCConcept shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -116,6 +116,13 @@ public class TLCConcept extends ReferenceTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public TLCConcept html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

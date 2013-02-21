@@ -65,12 +65,6 @@ public class Application extends PeriodTypeComplexType {
     }
 
     //DSL Style set value
-    public Application wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Application idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -79,6 +73,12 @@ public class Application extends PeriodTypeComplexType {
     //DSL Style set value
     public Application evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Application wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -103,6 +103,13 @@ public class Application extends PeriodTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Application html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

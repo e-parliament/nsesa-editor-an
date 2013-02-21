@@ -206,8 +206,14 @@ public class Lawyer extends InlinereqreqComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Lawyer alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public Lawyer langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Lawyer statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -220,12 +226,6 @@ public class Lawyer extends InlinereqreqComplexType {
     //DSL Style set value
     public Lawyer evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Lawyer refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -254,14 +254,14 @@ public class Lawyer extends InlinereqreqComplexType {
     }
 
     //DSL Style set value
-    public Lawyer statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Lawyer alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
     //DSL Style set value
-    public Lawyer langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
+    public Lawyer refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -295,6 +295,13 @@ public class Lawyer extends InlinereqreqComplexType {
         attrs.put("empoweredBy", getEmpoweredByAttr() != null ? getEmpoweredByAttr().getValue() : null);
         attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Lawyer html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

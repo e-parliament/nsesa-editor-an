@@ -65,8 +65,14 @@ public class Destination extends ArgumentTypeComplexType {
     }
 
     //DSL Style set value
-    public Destination posAttr(final PosTypeSimpleType posAttr) {
-        setPosAttr(posAttr);
+    public Destination hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Destination wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -83,14 +89,8 @@ public class Destination extends ArgumentTypeComplexType {
     }
 
     //DSL Style set value
-    public Destination hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Destination wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Destination posAttr(final PosTypeSimpleType posAttr) {
+        setPosAttr(posAttr);
         return this;
     }
 
@@ -115,6 +115,13 @@ public class Destination extends ArgumentTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Destination html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

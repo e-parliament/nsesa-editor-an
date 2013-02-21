@@ -92,12 +92,6 @@ public class Proprietary extends AnyOtherTypeComplexType {
     }
 
     //DSL Style set value
-    public Proprietary wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Proprietary idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -106,6 +100,12 @@ public class Proprietary extends AnyOtherTypeComplexType {
     //DSL Style set value
     public Proprietary evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Proprietary wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -131,6 +131,13 @@ public class Proprietary extends AnyOtherTypeComplexType {
         attrs.putAll(super.getAttributes());
         attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public Proprietary html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

@@ -149,5 +149,12 @@ public class BasehierarchyComplexType extends OverlayWidgetImpl {
         attrs.putAll(super.getAttributes());
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public BasehierarchyComplexType html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

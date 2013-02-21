@@ -60,6 +60,18 @@ public class ComponentRef extends SrcTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public ComponentRef idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ComponentRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public ComponentRef srcAttr(final AnyURISimpleType srcAttr) {
         setSrcAttr(srcAttr);
         return this;
@@ -89,18 +101,6 @@ public class ComponentRef extends SrcTypeComplexType {
         return this;
     }
 
-    //DSL Style set value
-    public ComponentRef idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ComponentRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
     /**
      * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
      */
@@ -122,6 +122,13 @@ public class ComponentRef extends SrcTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public ComponentRef html(String s) {
+        super.html(s);
+        return this;
     }
 }
 

@@ -129,5 +129,12 @@ public class Classification extends OverlayWidgetImpl {
         attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
         return attrs;
     }
+
+    //DSL Style for html method
+    @Override
+    public Classification html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

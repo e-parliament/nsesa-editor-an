@@ -86,6 +86,24 @@ public class TLCReference extends ReferenceTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public TLCReference showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public TLCReference shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public TLCReference wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public TLCReference idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -100,24 +118,6 @@ public class TLCReference extends ReferenceTypeComplexType {
     //DSL Style set value
     public TLCReference hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TLCReference wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TLCReference showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TLCReference shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -143,6 +143,13 @@ public class TLCReference extends ReferenceTypeComplexType {
         attrs.putAll(super.getAttributes());
         attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         return attrs;
+    }
+
+    //DSL Style for html method
+    @Override
+    public TLCReference html(String s) {
+        super.html(s);
+        return this;
     }
 }
 
