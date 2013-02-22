@@ -8,6 +8,7 @@
     <artifactId>editor-an</artifactId>
     <packaging>war</packaging>
     <name>Akoma Ntoso Amendment Editor</name>
+    <url>https://bitbucket.org/pluppens/nsesa-editor-an</url>
     <version>0.0.1</version>
 
     <organization>
