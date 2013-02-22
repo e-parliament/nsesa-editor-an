@@ -18,6 +18,8 @@ import org.nsesa.editor.gwt.core.client.service.gwt.GWTService;
 import org.nsesa.editor.gwt.core.shared.ClientContext;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 /**
@@ -27,6 +29,15 @@ import java.util.UUID;
  * @version $Id$
  */
 public class GWTServiceImpl extends SpringRemoteServiceServlet implements GWTService {
+
+    Map<String, PersonDTO> personDB = new HashMap<String, PersonDTO>(){
+        {
+            put("1", new PersonDTO("1", "mep1", "mep1", "MEP"));
+            put("2", new PersonDTO("2", "mep2", "mep2", "MEP"));
+            put("3", new PersonDTO("3", "mep3", "mep3", "MEP"));
+        }
+    };
+
     @Override
     public ClientContext authenticate(final ClientContext clientContext) {
         final PersonDTO person = new PersonDTO();
@@ -39,5 +50,10 @@ public class GWTServiceImpl extends SpringRemoteServiceServlet implements GWTSer
         clientContext.setRoles(new String[]{"GUEST"});
         clientContext.setDocumentIDs(clientContext.getParameter(ClientContext.DOCUMENT_ID));
         return clientContext;
+    }
+
+    @Override
+    public PersonDTO getPerson(ClientContext clientContext, String id) {
+        return personDB.get(id);
     }
 }

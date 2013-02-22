@@ -16,22 +16,28 @@ package org.nsesa.editor.gwt.an.client.handler.create;
 import com.google.gwt.i18n.shared.DateTimeFormat;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
+import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.core.client.ui.drafting.DraftingController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
+import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
-import org.nsesa.editor.gwt.dialog.client.ui.handler.common.AmendmentDialogAwareController;
+import org.nsesa.editor.gwt.dialog.client.ui.handler.common.author.AuthorPanelController;
+import org.nsesa.editor.gwt.dialog.client.ui.handler.common.meta.MetaPanelController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreateController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreateView;
 
-import java.util.ArrayList;
+import java.util.logging.Logger;
 
 import static org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20XMLUtil.*;
 
@@ -43,15 +49,30 @@ import static org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20XML
  */
 public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialogCreateController {
 
+    private static final Logger LOG = Logger.getLogger(AkomaNtoso20AmendmentDialogCreateController.class.getName());
+
+    final AuthorPanelController authorPanelController;
+    final MetaPanelController metaPanelController;
+    final ServiceFactory serviceFactory;
+
+
     @Inject
     public AkomaNtoso20AmendmentDialogCreateController(final ClientFactory clientFactory,
+                                                       final ServiceFactory serviceFactory,
                                                        final AmendmentDialogCreateView view,
                                                        final Locator locator,
                                                        final OverlayFactory overlayFactory,
                                                        final DraftingController draftingController,
-                                                       final AmendmentInjectionPointFinder amendmentInjectionPointFinder
+                                                       final AmendmentInjectionPointFinder amendmentInjectionPointFinder,
+                                                       final AuthorPanelController authorPanelController,
+                                                       final MetaPanelController metaPanelController
     ) {
-        super(clientFactory, view, locator, overlayFactory, draftingController, amendmentInjectionPointFinder, new ArrayList<AmendmentDialogAwareController>());
+        super(clientFactory, view, locator, overlayFactory, draftingController, amendmentInjectionPointFinder);
+        this.serviceFactory = serviceFactory;
+        this.authorPanelController = authorPanelController;
+        this.metaPanelController = metaPanelController;
+
+        addChildControllers(authorPanelController, metaPanelController);
     }
 
     @Override
@@ -98,12 +119,36 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
             }
         });
 
-        root.setMeta(new Meta()).setIdentification(identification);
+        final Meta meta = new Meta();
+        root.setMeta(meta).setIdentification(identification);
 
-        // preface
+        References references = new References();
+
+        for (final PersonDTO authorial : authorPanelController.getSelectedPersons()) {
+            final IDSimpleType idSimpleType = new IDSimpleType();
+            idSimpleType.setValue("person-" + authorial.getId());
+
+            final StringSimpleType stringSimpleType = new StringSimpleType();
+            stringSimpleType.setValue(authorial.getDisplayName());
+
+            final AnyURISimpleType anyURISimpleType = new AnyURISimpleType();
+            anyURISimpleType.setValue("urn:lex:eu:parliament:codict:person:" + authorial.getId());
+
+            references.addTLCPerson(new TLCPerson().idAttr(idSimpleType).showAsAttr(stringSimpleType).hrefAttr(anyURISimpleType));
+        }
+
+        meta.addReferences(references);
+
+        // preface;
+        final P p = new P();
+        for (final PersonDTO authorial : authorPanelController.getSelectedPersons()) {
+            final DocProponent docProponent = new DocProponent().refersToAttr(u("#person-" + authorial.getId()));
+            docProponent.html(authorial.getDisplayName());
+            p.addDocProponent(docProponent);
+        }
         root.setPreface(new Preface())
-                .addContainer(new Container())
-                .addP(new P()).html(clientFactory.getClientContext().getLoggedInPerson().getUsername());
+                .addContainer(new Container().nameAttr(s("authors")))
+                .addP(p);
 
         // amendment body
         final AmendmentBody amendmentBody = root.setAmendmentBody(new AmendmentBody());
@@ -135,6 +180,19 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         final OverlayWidget overlayed = overlayFactory.getAmendableWidget(clone);
         quotedStructureAmendment.addOverlayWidget(overlayed);
 
+        // amendment notes
+        mod.addAuthorialNote(new AuthorialNote()).html(metaPanelController.getNotes());
+
+        // amendment justification
+        final String justification = metaPanelController.getJustification();
+
+        if (justification != null && !"".equalsIgnoreCase(justification.trim())) {
+            final AmendmentJustification amendmentJustification = new AmendmentJustification();
+            amendmentJustification.addBlock(new Block()).nameAttr(s("justificationHeading")).html("Justification");
+            amendmentJustification.addP(new P()).html(justification);
+            amendmentBody.addAmendmentJustification(amendmentJustification);
+        }
+
         akomaNtoso.addOverlayWidget(root);
         dialogContext.getAmendment().setRoot(akomaNtoso);
 
@@ -157,14 +215,71 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         view.resetBodyClass();
         view.addBodyClass(dialogContext.getOverlayWidget().getOverlayElement().getClassName());
 
+        view.setAmendmentContent("");
+
+        // clear author panel
+        authorPanelController.clear();
+
+        // clear meta panel
+        metaPanelController.setJustification("");
+        metaPanelController.setNotes("");
+
         if (dialogContext.getAmendmentController() != null) {
             // get the location from the amendable widget, if it is passed
             view.setTitle("Edit amendment");
-            final java.util.List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody()));
+
+            // set the amendment content
+            final OverlayWidget amendmentBodyOverlayWidget = dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody());
+
+            final java.util.List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", amendmentBodyOverlayWidget);
             view.setAmendmentContent(quotedStructures.get(1).getOverlayElement().getFirstChildElement().getInnerHTML());
+
+
+            // set the author(s)
+            final Preface preface = OverlayUtil.findSingle("preface", amendmentBodyOverlayWidget, new Preface());
+
+            final Container container = preface.getContainers().get(0);
+            if (container != null && "authors".equals(container.nameAttr().getValue())) {
+                java.util.List<OverlayWidget> docProponents = OverlayUtil.find("docProponent", container);
+                for (final OverlayWidget docProponent : docProponents) {
+                    if (docProponent instanceof DocProponent) {
+                        final DocProponent proponent = (DocProponent) docProponent;
+                        final String refersToID = proponent.refersToAttr().getValue();
+
+                        final TLCPerson tlcPerson = OverlayUtil.xpathSingle(refersToID, amendmentBodyOverlayWidget, new TLCPerson());
+                        final String id = tlcPerson.hrefAttr().getValue().substring(tlcPerson.hrefAttr().getValue().lastIndexOf(":") + 1);
+                        serviceFactory.getGwtService().getPerson(clientFactory.getClientContext(), id, new AsyncCallback<PersonDTO>() {
+                            @Override
+                            public void onFailure(Throwable caught) {
+                                LOG.warning("Could not retrieve person: " + caught);
+                            }
+
+                            @Override
+                            public void onSuccess(PersonDTO result) {
+                                authorPanelController.addPerson(result);
+                            }
+                        });
+                    }
+                }
+            }
+
+            // set the meta (justification, notes, ...)
+            final AmendmentJustification amendmentJustification = OverlayUtil.findSingle("amendmentJustification", amendmentBodyOverlayWidget, new AmendmentJustification());
+            if (amendmentJustification != null) {
+                final String justification = amendmentJustification.getPs().get(0).getInnerHTML().trim();
+                metaPanelController.setJustification(justification);
+            }
+            final Mod mod = OverlayUtil.findSingle("mod", amendmentBodyOverlayWidget, new Mod());
+            if (mod != null) {
+                final java.util.List<AuthorialNote> authorialNotes = mod.getAuthorialNotes();
+                if (authorialNotes != null && !authorialNotes.isEmpty()) {
+                    metaPanelController.setNotes(authorialNotes.get(0).html().trim());
+                }
+            }
+
         } else {
             view.setTitle(locator.getLocation(dialogContext.getOverlayWidget(), clientFactory.getClientContext().getDocumentIso(), false));
-            view.setAmendmentContent("");
+
         }
     }
 }
