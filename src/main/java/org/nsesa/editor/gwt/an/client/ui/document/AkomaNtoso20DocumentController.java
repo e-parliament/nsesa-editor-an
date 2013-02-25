@@ -35,9 +35,9 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
-import org.nsesa.editor.gwt.editor.client.event.document.DocumentScrollToEvent;
-import org.nsesa.editor.gwt.editor.client.ui.document.DocumentController;
-import org.nsesa.editor.gwt.editor.client.ui.document.DocumentInjector;
+import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEvent;
+import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
+import org.nsesa.editor.gwt.core.client.ui.document.DocumentInjector;
 
 import java.util.logging.Logger;
 

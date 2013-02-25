@@ -17,7 +17,7 @@ import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.event.NotificationEvent;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.mode.DocumentMode;
-import org.nsesa.editor.gwt.editor.client.ui.document.DocumentController;
+import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.inline.client.event.DetachInlineEditorEvent;
 
 /**

@@ -26,7 +26,7 @@ import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.mode.DocumentMode;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import org.nsesa.editor.gwt.editor.client.ui.document.DocumentController;
+import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 
 /**
  * Date: 26/11/12 14:11

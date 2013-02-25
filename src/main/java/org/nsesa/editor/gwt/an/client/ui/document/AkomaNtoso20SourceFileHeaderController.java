@@ -23,10 +23,10 @@ import org.nsesa.editor.gwt.an.client.mode.DiffMode;
 import org.nsesa.editor.gwt.an.client.mode.InlineEditingMode;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.util.Scope;
-import org.nsesa.editor.gwt.editor.client.event.document.DocumentModeChangeEvent;
-import org.nsesa.editor.gwt.editor.client.ui.document.DocumentEventBus;
-import org.nsesa.editor.gwt.editor.client.ui.document.sourcefile.header.SourceFileHeaderController;
-import org.nsesa.editor.gwt.editor.client.ui.document.sourcefile.header.SourceFileHeaderView;
+import org.nsesa.editor.gwt.core.client.event.document.DocumentModeChangeEvent;
+import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
+import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.header.SourceFileHeaderController;
+import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.header.SourceFileHeaderView;
 
 import static org.nsesa.editor.gwt.core.client.util.Scope.ScopeValue.DOCUMENT;
 
