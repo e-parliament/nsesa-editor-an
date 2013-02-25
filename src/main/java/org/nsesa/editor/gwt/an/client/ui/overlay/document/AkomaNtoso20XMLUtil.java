@@ -16,6 +16,7 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 
 /**
@@ -25,6 +26,12 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSi
  * @version $Id$
  */
 public class AkomaNtoso20XMLUtil {
+
+    public static IDSimpleType id(final String text) {
+        final IDSimpleType s = new IDSimpleType();
+        s.setValue(text);
+        return s;
+    }
 
     public static StringSimpleType s(final String text) {
         final StringSimpleType s = new StringSimpleType();

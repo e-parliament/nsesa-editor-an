@@ -26,13 +26,19 @@ import org.nsesa.editor.gwt.core.shared.ClientContext;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.editor.gwt.core.shared.exception.ResourceNotFoundException;
 import org.nsesa.editor.gwt.core.shared.exception.StaleResourceException;
+import org.nsesa.editor.gwt.core.shared.exception.ValidationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
+import org.xml.sax.*;
 
+import javax.xml.XMLConstants;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.SchemaFactory;
 import java.io.*;
 import java.nio.charset.Charset;
 import java.util.*;
@@ -98,6 +104,60 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
     }
 
+    private void validate(final String content) throws ValidationException {
+        LOG.debug("====================== AN VALIDATION ======================");
+        System.setProperty("javax.xml.validation.SchemaFactory:" + XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI, "org.apache.xerces.jaxp.validation.XMLSchemaFactory");
+
+        List<Source> schemas = new ArrayList<Source>();
+        schemas.add(new StreamSource(Thread.currentThread().getContextClassLoader().getResourceAsStream("xml.xsd")));
+        schemas.add(new StreamSource(Thread.currentThread().getContextClassLoader().getResourceAsStream("akomantoso20.xsd")));
+        try {
+            SAXParserFactory factory = SAXParserFactory.newInstance();
+//            factory.setValidating(true);
+            factory.setNamespaceAware(true);
+
+            SchemaFactory schemaFactory =
+                    SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI);
+
+            factory.setSchema(schemaFactory.newSchema(schemas.toArray(new Source[schemas.size()])));
+
+            SAXParser parser = factory.newSAXParser();
+
+            XMLReader reader = parser.getXMLReader();
+
+            final LoggingErrorHandler loggingErrorHandler = new LoggingErrorHandler();
+            reader.setErrorHandler(loggingErrorHandler);
+            reader.parse(new InputSource(new ByteArrayInputStream(content.trim().getBytes("UTF-8"))));
+
+        } catch (ParserConfigurationException e) {
+            throw new ValidationException("Problem parsing XML - configuration error: " + e.getMessage(), e);
+        } catch (IOException e) {
+            throw new ValidationException("Problem parsing XML - I/O error: " + e.getMessage(), e);
+        } catch (SAXException e) {
+            throw new ValidationException("Problem parsing XML - SAX error: " + e.getMessage(), e);
+        } finally {
+            LOG.debug("==================== END OF VALIDATION ====================");
+        }
+
+    }
+
+    public static class LoggingErrorHandler implements ErrorHandler {
+        @Override
+        public void warning(SAXParseException e) throws SAXException {
+            LOG.warn("SAX warning: " + e);
+        }
+
+        @Override
+        public void error(SAXParseException e) throws SAXException {
+            LOG.warn("SAX error: " + e);
+        }
+
+        @Override
+        public void fatalError(SAXParseException e) throws SAXException {
+            LOG.warn("SAX fatal: " + e);
+        }
+    }
+
     private String toHTML(byte[] bytes) {
         try {
             final InputSource inputSource = new InputSource(new ByteArrayInputStream(bytes));
@@ -128,7 +188,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     }
 
     @Override
-    public AmendmentContainerDTO[] saveAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, StaleResourceException {
+    public AmendmentContainerDTO[] saveAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, StaleResourceException, ValidationException {
         List<AmendmentContainerDTO> amendmentContainerDTOs = new ArrayList<AmendmentContainerDTO>();
         for (AmendmentContainerDTO data : amendmentContainers) {
             try {
@@ -141,6 +201,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
                 if (!amendmentDirectoryFile.canWrite()) {
                     throw new RuntimeException("No permission to write to '" + amendmentDirectoryFile.getAbsolutePath() + "'");
                 }
+                validate(data.getBody());
                 Files.write(data.getBody(), new File(amendmentDirectoryFile, data.getSourceReference().getPath() + "-" + data.getId() + "-am.xml"), Charset.forName("UTF-8"));
             } catch (IOException e) {
                 LOG.error("Could not write file.", e);

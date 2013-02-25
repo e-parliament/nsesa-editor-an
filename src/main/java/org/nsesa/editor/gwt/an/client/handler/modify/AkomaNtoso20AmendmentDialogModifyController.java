@@ -28,6 +28,7 @@ import org.nsesa.editor.gwt.core.client.ui.drafting.DraftingController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.util.Counter;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
@@ -81,7 +82,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
     @Override
     public void handleSave() {
         OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
-
+        final Counter idGenerator = new Counter();
         final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
 
         final AkomaNtoso akomaNtoso = new AkomaNtoso();
@@ -89,12 +90,13 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
 
         // meta
         final Identification identification = new Identification();
-        final String formattedDate = DateTimeFormat.getFormat(DateTimeFormat.PredefinedFormat.ISO_8601).format(new Date());
+//        final String formattedDate = DateTimeFormat.getFormat(DateTimeFormat.PredefinedFormat.ISO_8601).format(new Date());
+        final String formattedDate = DateTimeFormat.getFormat("yyyy-MM-dd").format(new Date());
         identification.setFRBRWork(new FRBRWork() {
             {
                 setFRBRthis(new FRBRthis().valueAttr(s("TODO")));
                 addFRBRuri(new FRBRuri().valueAttr(s("TODO")));
-                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
+                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)).nameAttr(s("instantiation")));
                 addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
                 setFRBRcountry(new FRBRcountry().valueAttr(s("TODO")));
             }
@@ -104,7 +106,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
             {
                 setFRBRthis(new FRBRthis().valueAttr(s("TODO")));
                 addFRBRuri(new FRBRuri().valueAttr(s("TODO")));
-                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
+                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)).nameAttr(s("instantiation")));
                 addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
                 addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
                 addFRBRlanguage(new FRBRlanguage().languageAttr(l(languageIso)));
@@ -115,16 +117,18 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
             {
                 setFRBRthis(new FRBRthis().valueAttr(s("TODO")));
                 addFRBRuri(new FRBRuri().valueAttr(s("TODO")));
-                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
+                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)).nameAttr(s("instantiation")));
                 addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
             }
         });
 
         final Meta meta = new Meta();
         root.setMeta(meta);
-        meta.setIdentification(identification);
+        meta.setIdentification(identification).sourceAttr(u("http://at4am.org/"));
 
         References references = new References();
+
+        references.addTLCOrganization(new TLCOrganization().idAttr(id("ep-parliament")).showAsAttr(s("European Parliament")).hrefAttr(u("http://www.europarl.europa.eu")));
 
         for (final PersonDTO authorial : authorPanelController.getSelectedPersons()) {
             final IDSimpleType idSimpleType = new IDSimpleType();
@@ -139,7 +143,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
             references.addTLCPerson(new TLCPerson().idAttr(idSimpleType).showAsAttr(stringSimpleType).hrefAttr(anyURISimpleType));
         }
 
-        meta.addReferences(references);
+        meta.addReferences(references).sourceAttr(u("http://at4am.org/"));
 
 
         // preface;
@@ -150,7 +154,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
             p.addDocProponent(docProponent);
         }
         root.setPreface(new Preface())
-                .addContainer(new Container().nameAttr(s("authors")))
+                .addContainer(new Container().idAttr(id("container-" + idGenerator.incrementAndGet())).nameAttr(s("authors")))
                 .addP(p);
 
         // amendment body
@@ -158,7 +162,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
 
         amendmentBody
                 .addAmendmentHeading(new AmendmentHeading())
-                .addBlock(new Block()).html(locator.getLocation(overlayWidget, null, languageIso, true));
+                .addBlock(new Block()).nameAttr(s("heading")).html(locator.getLocation(overlayWidget, null, languageIso, true));
 
         // amendment content
         final AmendmentContent amendmentContent = amendmentBody
@@ -171,10 +175,10 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
 
         final Mod mod = amendmentContent
                 .addBlock(new Block()).nameAttr(s("changeBlock"))
-                .addMod(new Mod());
+                .addMod(new Mod()).idAttr(id("mod-" + idGenerator.incrementAndGet()));
 
         // original content
-        final QuotedStructure quotedStructureOriginal = mod.addQuotedStructure(new QuotedStructure());
+        final QuotedStructure quotedStructureOriginal = mod.addQuotedStructure(new QuotedStructure()).idAttr(id("quotedStructure-" + idGenerator.incrementAndGet()));
 
         final String originalText = contentPanelController.getView().getOriginalText();
         final com.google.gwt.user.client.Element cloneOriginal = DOM.clone(overlayWidget.asWidget().getElement(), false);
@@ -183,7 +187,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         quotedStructureOriginal.addOverlayWidget(overlayedOriginal);
 
         // amendment content
-        final QuotedStructure quotedStructureAmendment = mod.addQuotedStructure(new QuotedStructure());
+        final QuotedStructure quotedStructureAmendment = mod.addQuotedStructure(new QuotedStructure()).idAttr(id("quotedStructure-" + idGenerator.incrementAndGet()));
         final String amendmentText = view.getAmendmentContent();
         final com.google.gwt.user.client.Element clone = DOM.clone(overlayWidget.asWidget().getElement(), false);
         clone.setInnerHTML(amendmentText);
@@ -192,7 +196,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         quotedStructureAmendment.addOverlayWidget(overlayed);
 
         // amendment notes
-        mod.addAuthorialNote(new AuthorialNote()).html(metaPanelController.getNotes());
+        mod.addAuthorialNote(new AuthorialNote()).idAttr(id("note-" + idGenerator.incrementAndGet())).addP(new P()).html(metaPanelController.getNotes());
 
         // amendment justification
         final String justification = metaPanelController.getJustification();
