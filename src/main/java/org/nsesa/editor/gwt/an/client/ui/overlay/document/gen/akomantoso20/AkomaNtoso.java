@@ -59,6 +59,7 @@ public class AkomaNtoso extends AkomaNtosoTypeComplexType {
         setType("akomaNtoso");
     }
 
+
     public AkomaNtoso(Element element) {
         super(element);
     }

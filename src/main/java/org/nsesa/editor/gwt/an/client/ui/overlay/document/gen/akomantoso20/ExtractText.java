@@ -120,6 +120,7 @@ public class ExtractText extends InlineComplexType {
         setType("extractText");
     }
 
+
     public ExtractText(Element element) {
         super(element);
     }
@@ -127,6 +128,12 @@ public class ExtractText extends InlineComplexType {
 // FIELDS ------------------
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public ExtractText refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
     //DSL Style set value
     public ExtractText idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -140,26 +147,8 @@ public class ExtractText extends InlineComplexType {
     }
 
     //DSL Style set value
-    public ExtractText statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ExtractText refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public ExtractText langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ExtractText wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -184,6 +173,18 @@ public class ExtractText extends InlineComplexType {
     //DSL Style set value
     public ExtractText titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ExtractText statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public ExtractText wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

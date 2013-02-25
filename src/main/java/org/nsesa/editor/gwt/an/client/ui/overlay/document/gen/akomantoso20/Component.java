@@ -61,6 +61,13 @@ public class Component extends OverlayWidgetImpl {
         setType("component");
     }
 
+    //Constructor with the required attributes
+    public Component(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public Component(Element element) {
         super(element);
     }

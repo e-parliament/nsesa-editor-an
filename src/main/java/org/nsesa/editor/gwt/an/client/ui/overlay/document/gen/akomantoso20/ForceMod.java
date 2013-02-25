@@ -59,6 +59,14 @@ public class ForceMod extends ModificationTypeComplexType {
         setType("forceMod");
     }
 
+    //Constructor with the required attributes
+    public ForceMod(ForceModsSimpleType typeAttr, IDSimpleType idAttr) {
+        this();
+        setTypeAttr(typeAttr);
+        setIdAttr(idAttr);
+    }
+
+
     public ForceMod(Element element) {
         super(element);
     }

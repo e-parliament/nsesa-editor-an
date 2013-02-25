@@ -52,6 +52,13 @@ public class Notes extends OverlayWidgetImpl {
         setType("notes");
     }
 
+    //Constructor with the required attributes
+    public Notes(AnyURISimpleType sourceAttr) {
+        this();
+        setSourceAttr(sourceAttr);
+    }
+
+
     public Notes(Element element) {
         super(element);
     }

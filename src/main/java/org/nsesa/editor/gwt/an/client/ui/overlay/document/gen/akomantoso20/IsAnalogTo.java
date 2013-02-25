@@ -55,6 +55,13 @@ public class IsAnalogTo extends JudicialArgumentTypeComplexType {
         setType("isAnalogTo");
     }
 
+    //Constructor with the required attributes
+    public IsAnalogTo(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public IsAnalogTo(Element element) {
         super(element);
     }

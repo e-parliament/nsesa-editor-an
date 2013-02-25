@@ -54,6 +54,7 @@ public class Judgement extends JudgementStructureComplexType {
         setType("judgement");
     }
 
+
     public Judgement(Element element) {
         super(element);
     }

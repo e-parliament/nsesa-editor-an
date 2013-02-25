@@ -52,6 +52,15 @@ public class TLCEvent extends ReferenceTypeComplexType {
         setType("TLCEvent");
     }
 
+    //Constructor with the required attributes
+    public TLCEvent(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public TLCEvent(Element element) {
         super(element);
     }

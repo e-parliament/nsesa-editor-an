@@ -54,6 +54,13 @@ public class Identification extends OverlayWidgetImpl {
         setType("identification");
     }
 
+    //Constructor with the required attributes
+    public Identification(AnyURISimpleType sourceAttr) {
+        this();
+        setSourceAttr(sourceAttr);
+    }
+
+
     public Identification(Element element) {
         super(element);
     }

@@ -52,6 +52,7 @@ public class New extends AnyOtherTypeComplexType {
         setType("new");
     }
 
+
     public New(Element element) {
         super(element);
     }

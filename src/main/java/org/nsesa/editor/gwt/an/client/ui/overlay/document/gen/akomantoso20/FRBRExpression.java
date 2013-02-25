@@ -58,6 +58,7 @@ public class FRBRExpression extends CorePropertiesComplexType {
         setType("FRBRExpression");
     }
 
+
     public FRBRExpression(Element element) {
         super(element);
     }

@@ -51,6 +51,13 @@ public class FRBRcountry extends ValueTypeComplexType {
         setType("FRBRcountry");
     }
 
+    //Constructor with the required attributes
+    public FRBRcountry(StringSimpleType valueAttr) {
+        this();
+        setValueAttr(valueAttr);
+    }
+
+
     public FRBRcountry(Element element) {
         super(element);
     }

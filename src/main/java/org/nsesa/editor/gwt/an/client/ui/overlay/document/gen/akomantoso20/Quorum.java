@@ -53,6 +53,14 @@ public class Quorum extends CountTypeComplexType {
         setType("quorum");
     }
 
+    //Constructor with the required attributes
+    public Quorum(IDSimpleType idAttr, StringSimpleType valueAttr) {
+        this();
+        setIdAttr(idAttr);
+        setValueAttr(valueAttr);
+    }
+
+
     public Quorum(Element element) {
         super(element);
     }

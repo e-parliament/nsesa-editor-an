@@ -55,6 +55,13 @@ public class DissentsFrom extends JudicialArgumentTypeComplexType {
         setType("dissentsFrom");
     }
 
+    //Constructor with the required attributes
+    public DissentsFrom(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public DissentsFrom(Element element) {
         super(element);
     }

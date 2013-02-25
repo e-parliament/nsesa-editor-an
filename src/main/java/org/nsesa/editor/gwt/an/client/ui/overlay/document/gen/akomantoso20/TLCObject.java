@@ -52,6 +52,15 @@ public class TLCObject extends ReferenceTypeComplexType {
         setType("TLCObject");
     }
 
+    //Constructor with the required attributes
+    public TLCObject(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public TLCObject(Element element) {
         super(element);
     }

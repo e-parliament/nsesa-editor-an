@@ -55,6 +55,7 @@ public class FRBRItem extends CorePropertiesComplexType {
         setType("FRBRItem");
     }
 
+
     public FRBRItem(Element element) {
         super(element);
     }

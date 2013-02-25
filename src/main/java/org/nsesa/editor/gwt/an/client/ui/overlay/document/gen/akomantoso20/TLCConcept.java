@@ -52,6 +52,15 @@ public class TLCConcept extends ReferenceTypeComplexType {
         setType("TLCConcept");
     }
 
+    //Constructor with the required attributes
+    public TLCConcept(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public TLCConcept(Element element) {
         super(element);
     }

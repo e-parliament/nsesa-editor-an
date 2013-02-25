@@ -73,6 +73,7 @@ public class Body extends BodyTypeComplexType {
         setType("body");
     }
 
+
     public Body(Element element) {
         super(element);
     }
@@ -80,6 +81,12 @@ public class Body extends BodyTypeComplexType {
 // FIELDS ------------------
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public Body refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
     //DSL Style set value
     public Body idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -93,26 +100,8 @@ public class Body extends BodyTypeComplexType {
     }
 
     //DSL Style set value
-    public Body statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Body refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Body langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Body wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -137,6 +126,18 @@ public class Body extends BodyTypeComplexType {
     //DSL Style set value
     public Body titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Body statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Body wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

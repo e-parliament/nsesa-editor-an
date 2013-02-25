@@ -52,6 +52,15 @@ public class TLCPerson extends ReferenceTypeComplexType {
         setType("TLCPerson");
     }
 
+    //Constructor with the required attributes
+    public TLCPerson(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public TLCPerson(Element element) {
         super(element);
     }

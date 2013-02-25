@@ -52,6 +52,15 @@ public class Jurisprudence extends ReferenceTypeComplexType {
         setType("jurisprudence");
     }
 
+    //Constructor with the required attributes
+    public Jurisprudence(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public Jurisprudence(Element element) {
         super(element);
     }

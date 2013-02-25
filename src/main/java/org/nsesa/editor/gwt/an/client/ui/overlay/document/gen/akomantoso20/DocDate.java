@@ -120,6 +120,13 @@ public class DocDate extends InlineComplexType {
         setType("docDate");
     }
 
+    //Constructor with the required attributes
+    public DocDate(DateSimpleType dateAttr) {
+        this();
+        setDateAttr(dateAttr);
+    }
+
+
     public DocDate(Element element) {
         super(element);
     }
@@ -154,6 +161,12 @@ public class DocDate extends InlineComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public DocDate refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public DocDate idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -166,26 +179,8 @@ public class DocDate extends InlineComplexType {
     }
 
     //DSL Style set value
-    public DocDate statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public DocDate refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public DocDate langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public DocDate wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -210,6 +205,18 @@ public class DocDate extends InlineComplexType {
     //DSL Style set value
     public DocDate titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public DocDate statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public DocDate wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

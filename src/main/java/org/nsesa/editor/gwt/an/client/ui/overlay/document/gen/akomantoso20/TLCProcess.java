@@ -52,6 +52,15 @@ public class TLCProcess extends ReferenceTypeComplexType {
         setType("TLCProcess");
     }
 
+    //Constructor with the required attributes
+    public TLCProcess(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public TLCProcess(Element element) {
         super(element);
     }

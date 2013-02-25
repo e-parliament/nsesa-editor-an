@@ -104,6 +104,7 @@ public class MainBody extends MaincontentComplexType {
         setType("mainBody");
     }
 
+
     public MainBody(Element element) {
         super(element);
     }
@@ -111,6 +112,12 @@ public class MainBody extends MaincontentComplexType {
 // FIELDS ------------------
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public MainBody refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
     //DSL Style set value
     public MainBody idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -124,26 +131,8 @@ public class MainBody extends MaincontentComplexType {
     }
 
     //DSL Style set value
-    public MainBody statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public MainBody refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public MainBody langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public MainBody wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -168,6 +157,18 @@ public class MainBody extends MaincontentComplexType {
     //DSL Style set value
     public MainBody titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public MainBody statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public MainBody wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

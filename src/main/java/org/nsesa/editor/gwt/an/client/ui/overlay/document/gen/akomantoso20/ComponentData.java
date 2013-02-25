@@ -55,6 +55,16 @@ public class ComponentData extends OverlayWidgetImpl {
         setType("componentData");
     }
 
+    //Constructor with the required attributes
+    public ComponentData(StringSimpleType nameAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr, StringSimpleType showAsAttr) {
+        this();
+        setNameAttr(nameAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+        setShowAsAttr(showAsAttr);
+    }
+
+
     public ComponentData(Element element) {
         super(element);
     }

@@ -51,6 +51,7 @@ public class Parliamentary extends ParliamentaryAnalysisComplexType {
         setType("parliamentary");
     }
 
+
     public Parliamentary(Element element) {
         super(element);
     }

@@ -55,6 +55,13 @@ public class Contrasts extends JudicialArgumentTypeComplexType {
         setType("contrasts");
     }
 
+    //Constructor with the required attributes
+    public Contrasts(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public Contrasts(Element element) {
         super(element);
     }

@@ -120,6 +120,14 @@ public class TocItem extends InlineComplexType {
         setType("tocItem");
     }
 
+    //Constructor with the required attributes
+    public TocItem(IntegerSimpleType levelAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setLevelAttr(levelAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public TocItem(Element element) {
         super(element);
     }
@@ -180,6 +188,12 @@ public class TocItem extends InlineComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public TocItem refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public TocItem idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -192,26 +206,8 @@ public class TocItem extends InlineComplexType {
     }
 
     //DSL Style set value
-    public TocItem statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TocItem refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public TocItem langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TocItem wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -236,6 +232,18 @@ public class TocItem extends InlineComplexType {
     //DSL Style set value
     public TocItem titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public TocItem statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public TocItem wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

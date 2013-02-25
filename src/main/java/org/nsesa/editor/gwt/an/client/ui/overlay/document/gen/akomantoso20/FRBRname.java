@@ -51,6 +51,13 @@ public class FRBRname extends ValueTypeComplexType {
         setType("FRBRname");
     }
 
+    //Constructor with the required attributes
+    public FRBRname(StringSimpleType valueAttr) {
+        this();
+        setValueAttr(valueAttr);
+    }
+
+
     public FRBRname(Element element) {
         super(element);
     }

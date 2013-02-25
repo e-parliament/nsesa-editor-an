@@ -52,6 +52,13 @@ public class Presentation extends AnyOtherTypeComplexType {
         setType("presentation");
     }
 
+    //Constructor with the required attributes
+    public Presentation(AnyURISimpleType sourceAttr) {
+        this();
+        setSourceAttr(sourceAttr);
+    }
+
+
     public Presentation(Element element) {
         super(element);
     }

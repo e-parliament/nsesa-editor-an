@@ -55,6 +55,13 @@ public class Applies extends JudicialArgumentTypeComplexType {
         setType("applies");
     }
 
+    //Constructor with the required attributes
+    public Applies(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public Applies(Element element) {
         super(element);
     }

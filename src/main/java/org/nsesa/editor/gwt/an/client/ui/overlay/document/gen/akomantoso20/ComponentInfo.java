@@ -51,6 +51,7 @@ public class ComponentInfo extends OverlayWidgetImpl {
         setType("componentInfo");
     }
 
+
     public ComponentInfo(Element element) {
         super(element);
     }

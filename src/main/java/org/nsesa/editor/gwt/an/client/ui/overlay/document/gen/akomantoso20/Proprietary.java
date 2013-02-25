@@ -52,6 +52,13 @@ public class Proprietary extends AnyOtherTypeComplexType {
         setType("proprietary");
     }
 
+    //Constructor with the required attributes
+    public Proprietary(AnyURISimpleType sourceAttr) {
+        this();
+        setSourceAttr(sourceAttr);
+    }
+
+
     public Proprietary(Element element) {
         super(element);
     }

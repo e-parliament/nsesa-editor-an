@@ -120,6 +120,14 @@ public class Process extends InlinereqreqComplexType {
         setType("process");
     }
 
+    //Constructor with the required attributes
+    public Process(IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
+        this();
+        setIdAttr(idAttr);
+        setRefersToAttr(refersToAttr);
+    }
+
+
     public Process(Element element) {
         super(element);
     }
@@ -128,14 +136,8 @@ public class Process extends InlinereqreqComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Process langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Process statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Process alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
@@ -148,6 +150,12 @@ public class Process extends InlinereqreqComplexType {
     //DSL Style set value
     public Process evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Process refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -176,14 +184,14 @@ public class Process extends InlinereqreqComplexType {
     }
 
     //DSL Style set value
-    public Process alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public Process statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
     //DSL Style set value
-    public Process refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Process langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 

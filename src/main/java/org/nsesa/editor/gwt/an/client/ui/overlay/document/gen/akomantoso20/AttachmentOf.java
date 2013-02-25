@@ -52,6 +52,15 @@ public class AttachmentOf extends ReferenceTypeComplexType {
         setType("attachmentOf");
     }
 
+    //Constructor with the required attributes
+    public AttachmentOf(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public AttachmentOf(Element element) {
         super(element);
     }

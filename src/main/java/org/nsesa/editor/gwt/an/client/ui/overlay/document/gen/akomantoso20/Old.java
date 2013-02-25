@@ -52,6 +52,7 @@ public class Old extends AnyOtherTypeComplexType {
         setType("old");
     }
 
+
     public Old(Element element) {
         super(element);
     }

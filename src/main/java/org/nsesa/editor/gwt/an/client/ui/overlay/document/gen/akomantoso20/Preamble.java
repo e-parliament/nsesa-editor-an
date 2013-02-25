@@ -63,6 +63,7 @@ public class Preamble extends PreambleoptComplexType {
         setType("preamble");
     }
 
+
     public Preamble(Element element) {
         super(element);
     }
@@ -70,6 +71,12 @@ public class Preamble extends PreambleoptComplexType {
 // FIELDS ------------------
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public Preamble refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
     //DSL Style set value
     public Preamble idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -83,26 +90,8 @@ public class Preamble extends PreambleoptComplexType {
     }
 
     //DSL Style set value
-    public Preamble statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Preamble refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Preamble langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Preamble wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -127,6 +116,18 @@ public class Preamble extends PreambleoptComplexType {
     //DSL Style set value
     public Preamble titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Preamble statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Preamble wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

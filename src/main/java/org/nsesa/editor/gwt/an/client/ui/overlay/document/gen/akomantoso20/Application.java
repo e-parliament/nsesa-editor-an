@@ -51,6 +51,7 @@ public class Application extends PeriodTypeComplexType {
         setType("application");
     }
 
+
     public Application(Element element) {
         super(element);
     }

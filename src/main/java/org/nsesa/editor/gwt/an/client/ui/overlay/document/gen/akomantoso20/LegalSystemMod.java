@@ -59,6 +59,14 @@ public class LegalSystemMod extends ModificationTypeComplexType {
         setType("legalSystemMod");
     }
 
+    //Constructor with the required attributes
+    public LegalSystemMod(LegalSystemModsSimpleType typeAttr, IDSimpleType idAttr) {
+        this();
+        setTypeAttr(typeAttr);
+        setIdAttr(idAttr);
+    }
+
+
     public LegalSystemMod(Element element) {
         super(element);
     }

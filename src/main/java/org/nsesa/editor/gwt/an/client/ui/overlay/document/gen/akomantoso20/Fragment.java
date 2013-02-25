@@ -51,6 +51,13 @@ public class Fragment extends FragmentStructureComplexType {
         setType("fragment");
     }
 
+    //Constructor with the required attributes
+    public Fragment(AnyURISimpleType includedInAttr) {
+        this();
+        setIncludedInAttr(includedInAttr);
+    }
+
+
     public Fragment(Element element) {
         super(element);
     }

@@ -53,6 +53,14 @@ public class Count extends CountTypeComplexType {
         setType("count");
     }
 
+    //Constructor with the required attributes
+    public Count(IDSimpleType idAttr, StringSimpleType valueAttr) {
+        this();
+        setIdAttr(idAttr);
+        setValueAttr(valueAttr);
+    }
+
+
     public Count(Element element) {
         super(element);
     }

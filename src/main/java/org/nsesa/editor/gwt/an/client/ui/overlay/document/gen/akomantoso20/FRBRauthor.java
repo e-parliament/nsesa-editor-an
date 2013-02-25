@@ -51,6 +51,13 @@ public class FRBRauthor extends MetaoptComplexType {
         setType("FRBRauthor");
     }
 
+    //Constructor with the required attributes
+    public FRBRauthor(AnyURISimpleType hrefAttr) {
+        this();
+        setHrefAttr(hrefAttr);
+    }
+
+
     public FRBRauthor(Element element) {
         super(element);
     }

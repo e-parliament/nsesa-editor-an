@@ -55,6 +55,13 @@ public class Overrules extends JudicialArgumentTypeComplexType {
         setType("overrules");
     }
 
+    //Constructor with the required attributes
+    public Overrules(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public Overrules(Element element) {
         super(element);
     }

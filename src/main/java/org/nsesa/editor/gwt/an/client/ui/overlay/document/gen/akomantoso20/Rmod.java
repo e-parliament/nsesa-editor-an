@@ -122,6 +122,15 @@ public class Rmod extends ModTypeComplexType {
         setType("rmod");
     }
 
+    //Constructor with the required attributes
+    public Rmod(AnyURISimpleType fromAttr, AnyURISimpleType upToAttr, IDSimpleType idAttr) {
+        this();
+        setFromAttr(fromAttr);
+        setUpToAttr(upToAttr);
+        setIdAttr(idAttr);
+    }
+
+
     public Rmod(Element element) {
         super(element);
     }
@@ -182,8 +191,32 @@ public class Rmod extends ModTypeComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public Rmod refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Rmod alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Rmod statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Rmod wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Rmod langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
@@ -196,12 +229,6 @@ public class Rmod extends ModTypeComplexType {
     //DSL Style set value
     public Rmod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Rmod langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
         return this;
     }
 
@@ -220,24 +247,6 @@ public class Rmod extends ModTypeComplexType {
     //DSL Style set value
     public Rmod titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Rmod refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Rmod statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Rmod wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

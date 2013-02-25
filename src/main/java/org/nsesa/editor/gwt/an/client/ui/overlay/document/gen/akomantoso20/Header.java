@@ -59,6 +59,7 @@ public class Header extends BlocksoptComplexType {
         setType("header");
     }
 
+
     public Header(Element element) {
         super(element);
     }
@@ -66,6 +67,12 @@ public class Header extends BlocksoptComplexType {
 // FIELDS ------------------
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public Header refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
     //DSL Style set value
     public Header idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -79,26 +86,8 @@ public class Header extends BlocksoptComplexType {
     }
 
     //DSL Style set value
-    public Header statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Header refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Header langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Header wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -123,6 +112,18 @@ public class Header extends BlocksoptComplexType {
     //DSL Style set value
     public Header titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Header statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Header wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

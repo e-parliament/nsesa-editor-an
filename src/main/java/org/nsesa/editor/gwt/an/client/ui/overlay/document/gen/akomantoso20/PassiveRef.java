@@ -52,6 +52,15 @@ public class PassiveRef extends ReferenceTypeComplexType {
         setType("passiveRef");
     }
 
+    //Constructor with the required attributes
+    public PassiveRef(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public PassiveRef(Element element) {
         super(element);
     }

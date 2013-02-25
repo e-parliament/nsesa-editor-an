@@ -120,6 +120,7 @@ public class DocPurpose extends InlineComplexType {
         setType("docPurpose");
     }
 
+
     public DocPurpose(Element element) {
         super(element);
     }
@@ -127,6 +128,12 @@ public class DocPurpose extends InlineComplexType {
 // FIELDS ------------------
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public DocPurpose refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
     //DSL Style set value
     public DocPurpose idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -140,26 +147,8 @@ public class DocPurpose extends InlineComplexType {
     }
 
     //DSL Style set value
-    public DocPurpose statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public DocPurpose refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public DocPurpose langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public DocPurpose wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -184,6 +173,18 @@ public class DocPurpose extends InlineComplexType {
     //DSL Style set value
     public DocPurpose titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public DocPurpose statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public DocPurpose wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

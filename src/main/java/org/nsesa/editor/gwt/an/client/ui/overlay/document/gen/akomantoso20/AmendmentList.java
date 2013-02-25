@@ -54,6 +54,7 @@ public class AmendmentList extends CollectionStructureComplexType {
         setType("amendmentList");
     }
 
+
     public AmendmentList(Element element) {
         super(element);
     }

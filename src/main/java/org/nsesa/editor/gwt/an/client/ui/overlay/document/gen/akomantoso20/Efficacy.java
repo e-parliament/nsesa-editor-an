@@ -51,6 +51,7 @@ public class Efficacy extends PeriodTypeComplexType {
         setType("efficacy");
     }
 
+
     public Efficacy(Element element) {
         super(element);
     }

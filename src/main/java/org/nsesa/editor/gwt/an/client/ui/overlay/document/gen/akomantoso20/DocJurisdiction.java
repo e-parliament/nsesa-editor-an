@@ -120,6 +120,7 @@ public class DocJurisdiction extends InlineComplexType {
         setType("docJurisdiction");
     }
 
+
     public DocJurisdiction(Element element) {
         super(element);
     }
@@ -127,6 +128,12 @@ public class DocJurisdiction extends InlineComplexType {
 // FIELDS ------------------
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public DocJurisdiction refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
     //DSL Style set value
     public DocJurisdiction idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -140,26 +147,8 @@ public class DocJurisdiction extends InlineComplexType {
     }
 
     //DSL Style set value
-    public DocJurisdiction statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public DocJurisdiction refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public DocJurisdiction langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public DocJurisdiction wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -184,6 +173,18 @@ public class DocJurisdiction extends InlineComplexType {
     //DSL Style set value
     public DocJurisdiction titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public DocJurisdiction statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public DocJurisdiction wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

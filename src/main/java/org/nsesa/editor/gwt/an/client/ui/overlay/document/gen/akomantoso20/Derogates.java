@@ -55,6 +55,13 @@ public class Derogates extends JudicialArgumentTypeComplexType {
         setType("derogates");
     }
 
+    //Constructor with the required attributes
+    public Derogates(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public Derogates(Element element) {
         super(element);
     }

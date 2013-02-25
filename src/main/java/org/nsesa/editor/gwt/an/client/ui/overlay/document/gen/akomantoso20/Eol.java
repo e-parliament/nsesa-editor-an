@@ -50,6 +50,7 @@ public class Eol extends EolTypeComplexType {
         setType("eol");
     }
 
+
     public Eol(Element element) {
         super(element);
     }
@@ -60,6 +61,12 @@ public class Eol extends EolTypeComplexType {
     //DSL Style set value
     public Eol breakatAttr(final IntegerSimpleType breakatAttr) {
         setBreakatAttr(breakatAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Eol refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -76,26 +83,8 @@ public class Eol extends EolTypeComplexType {
     }
 
     //DSL Style set value
-    public Eol statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Eol refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Eol langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Eol wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -120,6 +109,18 @@ public class Eol extends EolTypeComplexType {
     //DSL Style set value
     public Eol titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Eol statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Eol wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

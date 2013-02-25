@@ -51,6 +51,13 @@ public class FRBRsubtype extends ValueTypeComplexType {
         setType("FRBRsubtype");
     }
 
+    //Constructor with the required attributes
+    public FRBRsubtype(StringSimpleType valueAttr) {
+        this();
+        setValueAttr(valueAttr);
+    }
+
+
     public FRBRsubtype(Element element) {
         super(element);
     }

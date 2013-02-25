@@ -50,6 +50,13 @@ public class NoteRef extends MarkeroptComplexType {
         setType("noteRef");
     }
 
+    //Constructor with the required attributes
+    public NoteRef(AnyURISimpleType hrefAttr) {
+        this();
+        setHrefAttr(hrefAttr);
+    }
+
+
     public NoteRef(Element element) {
         super(element);
     }
@@ -161,6 +168,12 @@ public class NoteRef extends MarkeroptComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public NoteRef refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public NoteRef idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -173,26 +186,8 @@ public class NoteRef extends MarkeroptComplexType {
     }
 
     //DSL Style set value
-    public NoteRef statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public NoteRef refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public NoteRef langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public NoteRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -217,6 +212,18 @@ public class NoteRef extends MarkeroptComplexType {
     //DSL Style set value
     public NoteRef titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public NoteRef statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public NoteRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

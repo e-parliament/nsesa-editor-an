@@ -15,9 +15,9 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document;
 
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultCreator;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.editor.client.ui.document.DocumentController;
 
 import java.util.*;

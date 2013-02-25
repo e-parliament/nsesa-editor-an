@@ -80,6 +80,12 @@ public class EolTypeComplexType extends MarkeroptComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public EolTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public EolTypeComplexType idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -92,26 +98,8 @@ public class EolTypeComplexType extends MarkeroptComplexType {
     }
 
     //DSL Style set value
-    public EolTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public EolTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public EolTypeComplexType langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public EolTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -136,6 +124,18 @@ public class EolTypeComplexType extends MarkeroptComplexType {
     //DSL Style set value
     public EolTypeComplexType titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public EolTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public EolTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

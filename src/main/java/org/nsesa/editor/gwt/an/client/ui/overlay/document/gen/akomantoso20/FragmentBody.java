@@ -94,6 +94,7 @@ public class FragmentBody extends FragmentBodyTypeComplexType {
         setType("fragmentBody");
     }
 
+
     public FragmentBody(Element element) {
         super(element);
     }
@@ -101,6 +102,12 @@ public class FragmentBody extends FragmentBodyTypeComplexType {
 // FIELDS ------------------
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public FragmentBody refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
     //DSL Style set value
     public FragmentBody idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -114,26 +121,8 @@ public class FragmentBody extends FragmentBodyTypeComplexType {
     }
 
     //DSL Style set value
-    public FragmentBody statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public FragmentBody refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public FragmentBody langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public FragmentBody wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -158,6 +147,18 @@ public class FragmentBody extends FragmentBodyTypeComplexType {
     //DSL Style set value
     public FragmentBody titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public FragmentBody statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public FragmentBody wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

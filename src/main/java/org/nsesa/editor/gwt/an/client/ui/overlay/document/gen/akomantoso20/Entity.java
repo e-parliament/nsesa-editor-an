@@ -120,6 +120,15 @@ public class Entity extends InlinereqreqComplexType {
         setType("entity");
     }
 
+    //Constructor with the required attributes
+    public Entity(StringSimpleType nameAttr, IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
+        this();
+        setNameAttr(nameAttr);
+        setIdAttr(idAttr);
+        setRefersToAttr(refersToAttr);
+    }
+
+
     public Entity(Element element) {
         super(element);
     }
@@ -154,14 +163,8 @@ public class Entity extends InlinereqreqComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Entity langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Entity statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Entity alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
@@ -174,6 +177,12 @@ public class Entity extends InlinereqreqComplexType {
     //DSL Style set value
     public Entity evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Entity refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -202,14 +211,14 @@ public class Entity extends InlinereqreqComplexType {
     }
 
     //DSL Style set value
-    public Entity alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public Entity statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
     //DSL Style set value
-    public Entity refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Entity langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 

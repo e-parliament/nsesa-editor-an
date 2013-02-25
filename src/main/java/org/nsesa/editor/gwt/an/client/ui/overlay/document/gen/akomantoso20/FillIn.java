@@ -120,6 +120,7 @@ public class FillIn extends InlineComplexType {
         setType("fillIn");
     }
 
+
     public FillIn(Element element) {
         super(element);
     }
@@ -154,6 +155,12 @@ public class FillIn extends InlineComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public FillIn refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public FillIn idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -166,26 +173,8 @@ public class FillIn extends InlineComplexType {
     }
 
     //DSL Style set value
-    public FillIn statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public FillIn refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public FillIn langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public FillIn wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -210,6 +199,18 @@ public class FillIn extends InlineComplexType {
     //DSL Style set value
     public FillIn titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public FillIn statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public FillIn wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

@@ -52,6 +52,15 @@ public class TLCRole extends ReferenceTypeComplexType {
         setType("TLCRole");
     }
 
+    //Constructor with the required attributes
+    public TLCRole(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public TLCRole(Element element) {
         super(element);
     }

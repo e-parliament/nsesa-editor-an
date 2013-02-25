@@ -51,6 +51,13 @@ public class Source extends ArgumentTypeComplexType {
         setType("source");
     }
 
+    //Constructor with the required attributes
+    public Source(AnyURISimpleType hrefAttr) {
+        this();
+        setHrefAttr(hrefAttr);
+    }
+
+
     public Source(Element element) {
         super(element);
     }

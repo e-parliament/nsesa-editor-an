@@ -52,6 +52,14 @@ public class ComponentRef extends SrcTypeComplexType {
         setType("componentRef");
     }
 
+    //Constructor with the required attributes
+    public ComponentRef(AnyURISimpleType srcAttr, StringSimpleType showAsAttr) {
+        this();
+        setSrcAttr(srcAttr);
+        setShowAsAttr(showAsAttr);
+    }
+
+
     public ComponentRef(Element element) {
         super(element);
     }

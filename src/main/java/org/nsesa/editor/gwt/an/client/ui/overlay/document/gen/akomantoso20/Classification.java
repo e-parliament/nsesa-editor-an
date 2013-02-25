@@ -52,6 +52,13 @@ public class Classification extends OverlayWidgetImpl {
         setType("classification");
     }
 
+    //Constructor with the required attributes
+    public Classification(AnyURISimpleType sourceAttr) {
+        this();
+        setSourceAttr(sourceAttr);
+    }
+
+
     public Classification(Element element) {
         super(element);
     }

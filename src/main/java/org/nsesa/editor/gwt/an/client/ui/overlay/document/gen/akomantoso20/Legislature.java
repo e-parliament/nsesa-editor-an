@@ -120,6 +120,7 @@ public class Legislature extends InlineComplexType {
         setType("legislature");
     }
 
+
     public Legislature(Element element) {
         super(element);
     }
@@ -154,6 +155,12 @@ public class Legislature extends InlineComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public Legislature refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Legislature idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -166,26 +173,8 @@ public class Legislature extends InlineComplexType {
     }
 
     //DSL Style set value
-    public Legislature statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Legislature refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Legislature langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Legislature wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -210,6 +199,18 @@ public class Legislature extends InlineComplexType {
     //DSL Style set value
     public Legislature titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Legislature statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Legislature wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

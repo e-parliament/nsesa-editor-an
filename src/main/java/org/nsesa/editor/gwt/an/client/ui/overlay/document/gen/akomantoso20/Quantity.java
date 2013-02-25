@@ -120,6 +120,14 @@ public class Quantity extends InlinereqreqComplexType {
         setType("quantity");
     }
 
+    //Constructor with the required attributes
+    public Quantity(IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
+        this();
+        setIdAttr(idAttr);
+        setRefersToAttr(refersToAttr);
+    }
+
+
     public Quantity(Element element) {
         super(element);
     }
@@ -154,14 +162,8 @@ public class Quantity extends InlinereqreqComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Quantity langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Quantity statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Quantity alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
@@ -174,6 +176,12 @@ public class Quantity extends InlinereqreqComplexType {
     //DSL Style set value
     public Quantity evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Quantity refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -202,14 +210,14 @@ public class Quantity extends InlinereqreqComplexType {
     }
 
     //DSL Style set value
-    public Quantity alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public Quantity statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
     //DSL Style set value
-    public Quantity refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Quantity langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 

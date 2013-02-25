@@ -120,6 +120,7 @@ public class DocIntroducer extends InlineComplexType {
         setType("docIntroducer");
     }
 
+
     public DocIntroducer(Element element) {
         super(element);
     }
@@ -127,6 +128,12 @@ public class DocIntroducer extends InlineComplexType {
 // FIELDS ------------------
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public DocIntroducer refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
     //DSL Style set value
     public DocIntroducer idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -140,26 +147,8 @@ public class DocIntroducer extends InlineComplexType {
     }
 
     //DSL Style set value
-    public DocIntroducer statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public DocIntroducer refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public DocIntroducer langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public DocIntroducer wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -184,6 +173,18 @@ public class DocIntroducer extends InlineComplexType {
     //DSL Style set value
     public DocIntroducer titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public DocIntroducer statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public DocIntroducer wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

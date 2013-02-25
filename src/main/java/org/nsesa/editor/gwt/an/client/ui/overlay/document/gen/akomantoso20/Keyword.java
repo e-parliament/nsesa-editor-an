@@ -52,6 +52,15 @@ public class Keyword extends MetaoptComplexType {
         setType("keyword");
     }
 
+    //Constructor with the required attributes
+    public Keyword(AnyURISimpleType dictionaryAttr, StringSimpleType showAsAttr, StringSimpleType valueAttr) {
+        this();
+        setDictionaryAttr(dictionaryAttr);
+        setShowAsAttr(showAsAttr);
+        setValueAttr(valueAttr);
+    }
+
+
     public Keyword(Element element) {
         super(element);
     }

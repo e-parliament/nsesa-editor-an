@@ -52,6 +52,15 @@ public class TLCTerm extends ReferenceTypeComplexType {
         setType("TLCTerm");
     }
 
+    //Constructor with the required attributes
+    public TLCTerm(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public TLCTerm(Element element) {
         super(element);
     }

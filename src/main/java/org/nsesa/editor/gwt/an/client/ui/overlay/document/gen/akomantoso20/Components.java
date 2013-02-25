@@ -51,6 +51,7 @@ public class Components extends OverlayWidgetImpl {
         setType("components");
     }
 
+
     public Components(Element element) {
         super(element);
     }

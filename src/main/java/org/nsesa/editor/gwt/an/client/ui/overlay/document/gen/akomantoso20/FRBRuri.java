@@ -51,6 +51,13 @@ public class FRBRuri extends ValueTypeComplexType {
         setType("FRBRuri");
     }
 
+    //Constructor with the required attributes
+    public FRBRuri(StringSimpleType valueAttr) {
+        this();
+        setValueAttr(valueAttr);
+    }
+
+
     public FRBRuri(Element element) {
         super(element);
     }

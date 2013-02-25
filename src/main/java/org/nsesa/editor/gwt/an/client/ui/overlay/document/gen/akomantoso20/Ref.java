@@ -120,6 +120,14 @@ public class Ref extends InlinereqComplexType {
         setType("ref");
     }
 
+    //Constructor with the required attributes
+    public Ref(AnyURISimpleType hrefAttr, IDSimpleType idAttr) {
+        this();
+        setHrefAttr(hrefAttr);
+        setIdAttr(idAttr);
+    }
+
+
     public Ref(Element element) {
         super(element);
     }
@@ -154,8 +162,32 @@ public class Ref extends InlinereqComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public Ref refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Ref alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Ref statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Ref wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Ref langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
@@ -168,12 +200,6 @@ public class Ref extends InlinereqComplexType {
     //DSL Style set value
     public Ref evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Ref langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
         return this;
     }
 
@@ -192,24 +218,6 @@ public class Ref extends InlinereqComplexType {
     //DSL Style set value
     public Ref titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Ref refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Ref statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Ref wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

@@ -54,6 +54,7 @@ public class PassiveModifications extends AmendmentsComplexType {
         setType("passiveModifications");
     }
 
+
     public PassiveModifications(Element element) {
         super(element);
     }

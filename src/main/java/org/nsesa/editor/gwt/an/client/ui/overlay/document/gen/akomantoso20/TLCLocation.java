@@ -52,6 +52,15 @@ public class TLCLocation extends ReferenceTypeComplexType {
         setType("TLCLocation");
     }
 
+    //Constructor with the required attributes
+    public TLCLocation(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public TLCLocation(Element element) {
         super(element);
     }

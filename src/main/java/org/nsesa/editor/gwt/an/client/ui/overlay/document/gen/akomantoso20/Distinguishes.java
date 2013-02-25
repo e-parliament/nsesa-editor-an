@@ -55,6 +55,13 @@ public class Distinguishes extends JudicialArgumentTypeComplexType {
         setType("distinguishes");
     }
 
+    //Constructor with the required attributes
+    public Distinguishes(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public Distinguishes(Element element) {
         super(element);
     }

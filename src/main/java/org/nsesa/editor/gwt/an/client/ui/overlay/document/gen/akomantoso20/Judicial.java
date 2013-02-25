@@ -60,6 +60,7 @@ public class Judicial extends JudicialArgumentsComplexType {
         setType("judicial");
     }
 
+
     public Judicial(Element element) {
         super(element);
     }
