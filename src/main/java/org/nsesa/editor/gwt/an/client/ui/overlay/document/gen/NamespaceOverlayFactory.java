@@ -32,8 +32,8 @@ public class NamespaceOverlayFactory extends DefaultOverlayFactory {
     private final String namespace = "http://www.w3.org/XML/1998/namespace";
 
     @Inject
-    public NamespaceOverlayFactory(final OverlayStrategy overlayStrategy, final ClientFactory clientFactory) {
-        super(overlayStrategy, clientFactory);
+    public NamespaceOverlayFactory(final OverlayStrategy overlayStrategy) {
+        super(overlayStrategy);
     }
 
     @Override

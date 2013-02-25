@@ -18,7 +18,6 @@ import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Object;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.Process;
-import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
@@ -35,8 +34,8 @@ public class Akomantoso20OverlayFactory extends DefaultOverlayFactory {
     private final String namespace = "http://www.akomantoso.org/2.0";
 
     @Inject
-    public Akomantoso20OverlayFactory(final OverlayStrategy overlayStrategy, final ClientFactory clientFactory) {
-        super(overlayStrategy, clientFactory);
+    public Akomantoso20OverlayFactory(final OverlayStrategy overlayStrategy) {
+        super(overlayStrategy);
     }
 
     @Override

@@ -32,8 +32,8 @@ public class XmlschemaOverlayFactory extends DefaultOverlayFactory {
     private final String namespace = "http://www.w3.org/2001/XMLSchema";
 
     @Inject
-    public XmlschemaOverlayFactory(final OverlayStrategy overlayStrategy, final ClientFactory clientFactory) {
-        super(overlayStrategy, clientFactory);
+    public XmlschemaOverlayFactory(final OverlayStrategy overlayStrategy) {
+        super(overlayStrategy);
     }
 
     @Override

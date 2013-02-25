@@ -37,14 +37,16 @@ import java.util.ArrayList;
 public class AkomaNtoso20DiffingManager extends DefaultDiffingManager {
 
     @Inject
-    public AkomaNtoso20DiffingManager(final ServiceFactory serviceFactory,
-                                      final ClientFactory clientFactory,
-                                      final DocumentEventBus documentEventBus) {
-        super(serviceFactory, clientFactory, documentEventBus);
+    public AkomaNtoso20DiffingManager(final DocumentEventBus documentEventBus) {
+        super(documentEventBus);
     }
 
     @Override
     public void diff(final DiffMethod method, final AmendmentController... amendmentControllers) {
+
+        final ServiceFactory serviceFactory = documentController.getServiceFactory();
+        final ClientFactory clientFactory = documentController.getClientFactory();
+
         final ArrayList<DiffRequest> diffRequests = new ArrayList<DiffRequest>();
         for (final AmendmentController amendmentController : amendmentControllers) {
             final String amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);

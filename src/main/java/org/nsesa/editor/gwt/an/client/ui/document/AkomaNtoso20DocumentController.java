@@ -55,10 +55,9 @@ public class AkomaNtoso20DocumentController extends DocumentController {
     public AkomaNtoso20DocumentController(final ClientFactory clientFactory,
                                           final ServiceFactory serviceFactory,
                                           final OverlayFactory overlayFactory,
-                                          final DiffingManager diffingManager,
                                           final Locator locator,
                                           final Creator creator) {
-        super(clientFactory, serviceFactory, overlayFactory, diffingManager, locator, creator);
+        super(clientFactory, serviceFactory, overlayFactory, locator, creator);
         registerMode(ConsolidationMode.KEY, new ConsolidationMode(this, clientFactory) {
             @Override
             public boolean apply(final ActiveState state) {
