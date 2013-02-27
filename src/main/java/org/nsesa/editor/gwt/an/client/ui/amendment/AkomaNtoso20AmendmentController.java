@@ -14,7 +14,6 @@
 package org.nsesa.editor.gwt.an.client.ui.amendment;
 
 import com.google.inject.Inject;
-import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentView;
 import org.nsesa.editor.gwt.core.client.ui.amendment.DefaultAmendmentController;
 
@@ -27,8 +26,8 @@ import org.nsesa.editor.gwt.core.client.ui.amendment.DefaultAmendmentController;
 public class AkomaNtoso20AmendmentController extends DefaultAmendmentController {
 
     @Inject
-    public AkomaNtoso20AmendmentController(ClientFactory clientFactory, AmendmentView amendmentView, AmendmentView amendmentExtendedView) {
-        super(clientFactory, amendmentView, amendmentExtendedView);
+    public AkomaNtoso20AmendmentController(AmendmentView amendmentView, AmendmentView amendmentExtendedView) {
+        super(amendmentView, amendmentExtendedView);
     }
 
 }

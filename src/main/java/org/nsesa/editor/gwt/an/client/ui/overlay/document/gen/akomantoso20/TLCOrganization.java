@@ -52,6 +52,15 @@ public class TLCOrganization extends ReferenceTypeComplexType {
         setType("TLCOrganization");
     }
 
+    //Constructor with the required attributes
+    public TLCOrganization(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public TLCOrganization(Element element) {
         super(element);
     }

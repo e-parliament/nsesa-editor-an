@@ -56,6 +56,13 @@ public class Analysis extends OverlayWidgetImpl {
         setType("analysis");
     }
 
+    //Constructor with the required attributes
+    public Analysis(AnyURISimpleType sourceAttr) {
+        this();
+        setSourceAttr(sourceAttr);
+    }
+
+
     public Analysis(Element element) {
         super(element);
     }

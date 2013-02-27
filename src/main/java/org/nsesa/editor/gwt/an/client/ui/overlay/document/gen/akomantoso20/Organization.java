@@ -120,6 +120,14 @@ public class Organization extends InlinereqreqComplexType {
         setType("organization");
     }
 
+    //Constructor with the required attributes
+    public Organization(IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
+        this();
+        setIdAttr(idAttr);
+        setRefersToAttr(refersToAttr);
+    }
+
+
     public Organization(Element element) {
         super(element);
     }
@@ -128,14 +136,8 @@ public class Organization extends InlinereqreqComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Organization langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Organization statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Organization alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
@@ -148,6 +150,12 @@ public class Organization extends InlinereqreqComplexType {
     //DSL Style set value
     public Organization evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Organization refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -176,14 +184,14 @@ public class Organization extends InlinereqreqComplexType {
     }
 
     //DSL Style set value
-    public Organization alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public Organization statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
     //DSL Style set value
-    public Organization refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Organization langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 

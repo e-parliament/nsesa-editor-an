@@ -51,6 +51,13 @@ public class Destination extends ArgumentTypeComplexType {
         setType("destination");
     }
 
+    //Constructor with the required attributes
+    public Destination(AnyURISimpleType hrefAttr) {
+        this();
+        setHrefAttr(hrefAttr);
+    }
+
+
     public Destination(Element element) {
         super(element);
     }

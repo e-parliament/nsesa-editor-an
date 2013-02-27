@@ -53,6 +53,13 @@ public class Voting extends ParliamentaryAnalysisTypeComplexType {
         setType("voting");
     }
 
+    //Constructor with the required attributes
+    public Voting(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public Voting(Element element) {
         super(element);
     }

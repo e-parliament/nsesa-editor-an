@@ -61,6 +61,7 @@ public class Conclusions extends BasicoptComplexType {
         setType("conclusions");
     }
 
+
     public Conclusions(Element element) {
         super(element);
     }
@@ -68,6 +69,12 @@ public class Conclusions extends BasicoptComplexType {
 // FIELDS ------------------
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public Conclusions refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
     //DSL Style set value
     public Conclusions idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -81,26 +88,8 @@ public class Conclusions extends BasicoptComplexType {
     }
 
     //DSL Style set value
-    public Conclusions statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Conclusions refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Conclusions langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Conclusions wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -125,6 +114,18 @@ public class Conclusions extends BasicoptComplexType {
     //DSL Style set value
     public Conclusions titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Conclusions statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Conclusions wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

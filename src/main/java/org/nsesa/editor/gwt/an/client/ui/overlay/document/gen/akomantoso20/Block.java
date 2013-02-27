@@ -120,6 +120,13 @@ public class Block extends InlineComplexType {
         setType("block");
     }
 
+    //Constructor with the required attributes
+    public Block(StringSimpleType nameAttr) {
+        this();
+        setNameAttr(nameAttr);
+    }
+
+
     public Block(Element element) {
         super(element);
     }
@@ -154,6 +161,12 @@ public class Block extends InlineComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public Block refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Block idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -166,26 +179,8 @@ public class Block extends InlineComplexType {
     }
 
     //DSL Style set value
-    public Block statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Block refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Block langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Block wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -210,6 +205,18 @@ public class Block extends InlineComplexType {
     //DSL Style set value
     public Block titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Block statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Block wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

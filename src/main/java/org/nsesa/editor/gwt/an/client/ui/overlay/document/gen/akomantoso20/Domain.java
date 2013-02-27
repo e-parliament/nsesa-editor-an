@@ -52,6 +52,7 @@ public class Domain extends AnyOtherTypeComplexType {
         setType("domain");
     }
 
+
     public Domain(Element element) {
         super(element);
     }

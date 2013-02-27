@@ -60,6 +60,14 @@ public class MeaningMod extends ModificationTypeComplexType {
         setType("meaningMod");
     }
 
+    //Constructor with the required attributes
+    public MeaningMod(MeaningModsSimpleType typeAttr, IDSimpleType idAttr) {
+        this();
+        setTypeAttr(typeAttr);
+        setIdAttr(idAttr);
+    }
+
+
     public MeaningMod(Element element) {
         super(element);
     }

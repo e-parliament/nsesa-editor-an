@@ -120,6 +120,14 @@ public class Event extends InlinereqreqComplexType {
         setType("event");
     }
 
+    //Constructor with the required attributes
+    public Event(IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
+        this();
+        setIdAttr(idAttr);
+        setRefersToAttr(refersToAttr);
+    }
+
+
     public Event(Element element) {
         super(element);
     }
@@ -128,14 +136,8 @@ public class Event extends InlinereqreqComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
-    public Event langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Event statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Event alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
@@ -148,6 +150,12 @@ public class Event extends InlinereqreqComplexType {
     //DSL Style set value
     public Event evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Event refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -176,14 +184,14 @@ public class Event extends InlinereqreqComplexType {
     }
 
     //DSL Style set value
-    public Event alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public Event statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
     //DSL Style set value
-    public Event refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Event langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 

@@ -54,6 +54,7 @@ public class OfficialGazette extends CollectionStructureComplexType {
         setType("officialGazette");
     }
 
+
     public OfficialGazette(Element element) {
         super(element);
     }

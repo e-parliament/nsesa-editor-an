@@ -63,6 +63,13 @@ public class Speech extends SpeechTypeComplexType {
         setType("speech");
     }
 
+    //Constructor with the required attributes
+    public Speech(AnyURISimpleType byAttr) {
+        this();
+        setByAttr(byAttr);
+    }
+
+
     public Speech(Element element) {
         super(element);
     }
@@ -101,6 +108,12 @@ public class Speech extends SpeechTypeComplexType {
     }
 
     //DSL Style set value
+    public Speech refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Speech idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -113,26 +126,8 @@ public class Speech extends SpeechTypeComplexType {
     }
 
     //DSL Style set value
-    public Speech statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Speech refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Speech langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Speech wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -157,6 +152,18 @@ public class Speech extends SpeechTypeComplexType {
     //DSL Style set value
     public Speech titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Speech statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Speech wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

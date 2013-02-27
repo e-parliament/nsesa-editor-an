@@ -52,6 +52,13 @@ public class TemporalData extends OverlayWidgetImpl {
         setType("temporalData");
     }
 
+    //Constructor with the required attributes
+    public TemporalData(AnyURISimpleType sourceAttr) {
+        this();
+        setSourceAttr(sourceAttr);
+    }
+
+
     public TemporalData(Element element) {
         super(element);
     }

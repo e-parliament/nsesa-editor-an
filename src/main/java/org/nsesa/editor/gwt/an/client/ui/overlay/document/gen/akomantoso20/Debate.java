@@ -54,6 +54,7 @@ public class Debate extends DebateStructureComplexType {
         setType("debate");
     }
 
+
     public Debate(Element element) {
         super(element);
     }

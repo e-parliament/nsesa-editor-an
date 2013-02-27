@@ -52,6 +52,7 @@ public class Foreign extends AnyOtherTypeComplexType {
         setType("foreign");
     }
 
+
     public Foreign(Element element) {
         super(element);
     }

@@ -52,6 +52,16 @@ public class TLCReference extends ReferenceTypeComplexType {
         setType("TLCReference");
     }
 
+    //Constructor with the required attributes
+    public TLCReference(StringSimpleType nameAttr, StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setNameAttr(nameAttr);
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public TLCReference(Element element) {
         super(element);
     }

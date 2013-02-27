@@ -52,6 +52,15 @@ public class Original extends ReferenceTypeComplexType {
         setType("original");
     }
 
+    //Constructor with the required attributes
+    public Original(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public Original(Element element) {
         super(element);
     }

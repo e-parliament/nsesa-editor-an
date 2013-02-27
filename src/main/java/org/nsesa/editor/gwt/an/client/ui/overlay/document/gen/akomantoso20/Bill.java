@@ -55,6 +55,7 @@ public class Bill extends HierarchicalStructureComplexType {
         setType("bill");
     }
 
+
     public Bill(Element element) {
         super(element);
     }

@@ -60,7 +60,7 @@ public class AnOverlayGeneratorTest {
     }
 
     @Test
-    public void testOccurence() throws SAXException {
+    public void testOccurrence() throws SAXException {
         //find hierarchicalStructureComplex types
         List<OverlayClass> stack = new ArrayList<OverlayClass>(rootClass.getChildren());
         OverlayClass hierarchicalStructureClass = null;
@@ -90,5 +90,4 @@ public class AnOverlayGeneratorTest {
         }
 
     }
-
 }

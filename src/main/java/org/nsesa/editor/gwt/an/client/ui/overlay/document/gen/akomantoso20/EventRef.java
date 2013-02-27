@@ -53,6 +53,14 @@ public class EventRef extends AnyOtherTypeComplexType {
         setType("eventRef");
     }
 
+    //Constructor with the required attributes
+    public EventRef(AnyURISimpleType sourceAttr, DateSimpleType dateAttr) {
+        this();
+        setSourceAttr(sourceAttr);
+        setDateAttr(dateAttr);
+    }
+
+
     public EventRef(Element element) {
         super(element);
     }

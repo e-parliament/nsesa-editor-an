@@ -59,6 +59,14 @@ public class EfficacyMod extends ModificationTypeComplexType {
         setType("efficacyMod");
     }
 
+    //Constructor with the required attributes
+    public EfficacyMod(EfficacyModsSimpleType typeAttr, IDSimpleType idAttr) {
+        this();
+        setTypeAttr(typeAttr);
+        setIdAttr(idAttr);
+    }
+
+
     public EfficacyMod(Element element) {
         super(element);
     }

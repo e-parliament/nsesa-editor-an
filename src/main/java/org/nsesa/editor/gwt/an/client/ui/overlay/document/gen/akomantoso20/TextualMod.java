@@ -61,6 +61,14 @@ public class TextualMod extends ModificationTypeComplexType {
         setType("textualMod");
     }
 
+    //Constructor with the required attributes
+    public TextualMod(TextualModsSimpleType typeAttr, IDSimpleType idAttr) {
+        this();
+        setTypeAttr(typeAttr);
+        setIdAttr(idAttr);
+    }
+
+
     public TextualMod(Element element) {
         super(element);
     }

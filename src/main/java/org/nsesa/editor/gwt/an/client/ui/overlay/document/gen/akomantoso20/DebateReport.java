@@ -56,6 +56,13 @@ public class DebateReport extends OpenStructureComplexType {
         setType("debateReport");
     }
 
+    //Constructor with the required attributes
+    public DebateReport(StringSimpleType nameAttr) {
+        this();
+        setNameAttr(nameAttr);
+    }
+
+
     public DebateReport(Element element) {
         super(element);
     }

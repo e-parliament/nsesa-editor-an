@@ -52,6 +52,13 @@ public class Workflow extends OverlayWidgetImpl {
         setType("workflow");
     }
 
+    //Constructor with the required attributes
+    public Workflow(AnyURISimpleType sourceAttr) {
+        this();
+        setSourceAttr(sourceAttr);
+    }
+
+
     public Workflow(Element element) {
         super(element);
     }

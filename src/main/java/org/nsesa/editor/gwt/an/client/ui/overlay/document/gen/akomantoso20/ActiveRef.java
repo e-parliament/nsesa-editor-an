@@ -52,6 +52,15 @@ public class ActiveRef extends ReferenceTypeComplexType {
         setType("activeRef");
     }
 
+    //Constructor with the required attributes
+    public ActiveRef(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public ActiveRef(Element element) {
         super(element);
     }

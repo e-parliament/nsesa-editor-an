@@ -51,6 +51,15 @@ public class FRBRtranslation extends MetaoptComplexType {
         setType("FRBRtranslation");
     }
 
+    //Constructor with the required attributes
+    public FRBRtranslation(LanguageSimpleType fromLanguageAttr, AnyURISimpleType byAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setFromLanguageAttr(fromLanguageAttr);
+        setByAttr(byAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public FRBRtranslation(Element element) {
         super(element);
     }

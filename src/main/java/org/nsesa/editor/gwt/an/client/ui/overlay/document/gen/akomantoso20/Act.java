@@ -55,6 +55,7 @@ public class Act extends HierarchicalStructureComplexType {
         setType("act");
     }
 
+
     public Act(Element element) {
         super(element);
     }

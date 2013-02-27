@@ -65,6 +65,13 @@ public class References extends RefItemsComplexType {
         setType("references");
     }
 
+    //Constructor with the required attributes
+    public References(AnyURISimpleType sourceAttr) {
+        this();
+        setSourceAttr(sourceAttr);
+    }
+
+
     public References(Element element) {
         super(element);
     }

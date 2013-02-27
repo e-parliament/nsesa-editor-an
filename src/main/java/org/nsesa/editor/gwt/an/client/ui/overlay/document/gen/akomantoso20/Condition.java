@@ -53,6 +53,7 @@ public class Condition extends AnyOtherTypeComplexType {
         setType("condition");
     }
 
+
     public Condition(Element element) {
         super(element);
     }

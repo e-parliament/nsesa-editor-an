@@ -50,6 +50,13 @@ public class FRBRlanguage extends MetaoptComplexType {
         setType("FRBRlanguage");
     }
 
+    //Constructor with the required attributes
+    public FRBRlanguage(LanguageSimpleType languageAttr) {
+        this();
+        setLanguageAttr(languageAttr);
+    }
+
+
     public FRBRlanguage(Element element) {
         super(element);
     }

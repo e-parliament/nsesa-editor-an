@@ -60,6 +60,14 @@ public class ScopeMod extends ModificationTypeComplexType {
         setType("scopeMod");
     }
 
+    //Constructor with the required attributes
+    public ScopeMod(ScopeModsSimpleType typeAttr, IDSimpleType idAttr) {
+        this();
+        setTypeAttr(typeAttr);
+        setIdAttr(idAttr);
+    }
+
+
     public ScopeMod(Element element) {
         super(element);
     }

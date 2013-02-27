@@ -59,6 +59,7 @@ public class FRBRWork extends CorePropertiesComplexType {
         setType("FRBRWork");
     }
 
+
     public FRBRWork(Element element) {
         super(element);
     }

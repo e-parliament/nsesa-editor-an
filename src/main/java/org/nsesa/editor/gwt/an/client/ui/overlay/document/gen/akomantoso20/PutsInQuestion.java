@@ -55,6 +55,13 @@ public class PutsInQuestion extends JudicialArgumentTypeComplexType {
         setType("putsInQuestion");
     }
 
+    //Constructor with the required attributes
+    public PutsInQuestion(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public PutsInQuestion(Element element) {
         super(element);
     }

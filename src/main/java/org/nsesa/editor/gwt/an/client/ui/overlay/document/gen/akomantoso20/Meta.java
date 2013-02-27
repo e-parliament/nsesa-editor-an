@@ -61,6 +61,7 @@ public class Meta extends OverlayWidgetImpl {
         setType("meta");
     }
 
+
     public Meta(Element element) {
         super(element);
     }

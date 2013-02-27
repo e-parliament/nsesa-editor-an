@@ -55,6 +55,13 @@ public class Extends extends JudicialArgumentTypeComplexType {
         setType("extends");
     }
 
+    //Constructor with the required attributes
+    public Extends(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public Extends(Element element) {
         super(element);
     }

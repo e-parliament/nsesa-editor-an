@@ -53,6 +53,13 @@ public class TemporalGroup extends OverlayWidgetImpl {
         setType("temporalGroup");
     }
 
+    //Constructor with the required attributes
+    public TemporalGroup(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public TemporalGroup(Element element) {
         super(element);
     }

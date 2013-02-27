@@ -70,6 +70,7 @@ public class DebateBody extends DebateBodyTypeComplexType {
         setType("debateBody");
     }
 
+
     public DebateBody(Element element) {
         super(element);
     }
@@ -77,6 +78,12 @@ public class DebateBody extends DebateBodyTypeComplexType {
 // FIELDS ------------------
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public DebateBody refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
     //DSL Style set value
     public DebateBody idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -90,26 +97,8 @@ public class DebateBody extends DebateBodyTypeComplexType {
     }
 
     //DSL Style set value
-    public DebateBody statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public DebateBody refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public DebateBody langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public DebateBody wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -134,6 +123,18 @@ public class DebateBody extends DebateBodyTypeComplexType {
     //DSL Style set value
     public DebateBody titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public DebateBody statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public DebateBody wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

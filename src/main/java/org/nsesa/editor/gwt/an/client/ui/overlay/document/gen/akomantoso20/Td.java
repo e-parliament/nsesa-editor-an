@@ -59,6 +59,7 @@ public class Td extends BlocksoptComplexType {
         setType("td");
     }
 
+
     public Td(Element element) {
         super(element);
     }
@@ -119,6 +120,12 @@ public class Td extends BlocksoptComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public Td refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Td idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -131,26 +138,8 @@ public class Td extends BlocksoptComplexType {
     }
 
     //DSL Style set value
-    public Td statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Td refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Td langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Td wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -175,6 +164,18 @@ public class Td extends BlocksoptComplexType {
     //DSL Style set value
     public Td titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Td statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Td wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

@@ -53,6 +53,13 @@ public class QuorumVerification extends ParliamentaryAnalysisTypeComplexType {
         setType("quorumVerification");
     }
 
+    //Constructor with the required attributes
+    public QuorumVerification(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public QuorumVerification(Element element) {
         super(element);
     }

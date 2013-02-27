@@ -51,6 +51,7 @@ public class Toc extends OverlayWidgetImpl {
         setType("toc");
     }
 
+
     public Toc(Element element) {
         super(element);
     }

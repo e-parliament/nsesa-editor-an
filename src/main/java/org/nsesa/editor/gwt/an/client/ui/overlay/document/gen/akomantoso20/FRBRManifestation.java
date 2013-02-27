@@ -56,6 +56,7 @@ public class FRBRManifestation extends CorePropertiesComplexType {
         setType("FRBRManifestation");
     }
 
+
     public FRBRManifestation(Element element) {
         super(element);
     }

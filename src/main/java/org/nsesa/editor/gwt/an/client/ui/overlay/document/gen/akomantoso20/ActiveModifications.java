@@ -54,6 +54,7 @@ public class ActiveModifications extends AmendmentsComplexType {
         setType("activeModifications");
     }
 
+
     public ActiveModifications(Element element) {
         super(element);
     }

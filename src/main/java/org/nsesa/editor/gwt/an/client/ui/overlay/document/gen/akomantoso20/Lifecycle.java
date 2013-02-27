@@ -52,6 +52,13 @@ public class Lifecycle extends OverlayWidgetImpl {
         setType("lifecycle");
     }
 
+    //Constructor with the required attributes
+    public Lifecycle(AnyURISimpleType sourceAttr) {
+        this();
+        setSourceAttr(sourceAttr);
+    }
+
+
     public Lifecycle(Element element) {
         super(element);
     }

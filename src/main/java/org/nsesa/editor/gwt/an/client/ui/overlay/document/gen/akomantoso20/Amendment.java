@@ -54,6 +54,7 @@ public class Amendment extends AmendmentStructureComplexType {
         setType("amendment");
     }
 
+
     public Amendment(Element element) {
         super(element);
     }

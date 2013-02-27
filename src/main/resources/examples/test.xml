@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<akomaNtoso xmlns="http://www.akomantoso.org/2.0">
+    <amendment>
+        <meta>
+            <identification source="http://at4am.org/">
+                <FRBRWork>
+                    <FRBRthis value="TODO"></FRBRthis>
+                    <FRBRuri value="TODO"></FRBRuri>
+                    <FRBRdate date="2013-02-22" name="instantiation"></FRBRdate>
+                    <FRBRauthor href="#refTodo"></FRBRauthor>
+                    <FRBRcountry value="TODO"></FRBRcountry>
+                </FRBRWork>
+                <FRBRExpression>
+                    <FRBRthis value="TODO"></FRBRthis>
+                    <FRBRuri value="TODO"></FRBRuri>
+                    <FRBRdate date="2013-02-22" name="instantiation"></FRBRdate>
+                    <FRBRauthor href="#refTodo"></FRBRauthor>
+                    <FRBRauthor href="#refTodo"></FRBRauthor>
+                    <FRBRlanguage language="EN"></FRBRlanguage>
+                </FRBRExpression>
+                <FRBRManifestation>
+                    <FRBRthis value="TODO"></FRBRthis>
+                    <FRBRuri value="TODO"></FRBRuri>
+                    <FRBRdate date="2013-02-22" name="instantiation"></FRBRdate>
+                    <FRBRauthor href="#refTodo"></FRBRauthor>
+                </FRBRManifestation>
+            </identification>
+            <references source="http://at4am.org/">
+                <TLCOrganization showAs="European Parliament" id="ep-parliament"
+                                 href="http://www.europarl.europa.eu"></TLCOrganization>
+            </references>
+        </meta>
+        <preface>
+            <container name="authors" id="container-1">
+                <p></p>
+            </container>
+        </preface>
+        <amendmentBody>
+            <amendmentHeading>
+                <block name="heading">recital 11</block>
+            </amendmentHeading>
+            <amendmentContent>
+                <block name="versionTitle">Text proposed by ...</block>
+                <block name="versionTitle">Amendment</block>
+                <block name="changeBlock">
+                    <mod id="mod-2">
+                        <quotedStructure id="quotedStructure-3">
+                            <recital id="rec11">
+                                <num>(11)</num>
+                                <p>Air carriers already collect and process PNR data from their passengers for their own
+                                    commercial purposes. This Directive should not impose any obligation on air carriers
+                                    to collect or retain any additional data from passengers or to impose any obligation
+                                    on passengers to provide any data in addition to that already being provided to air
+                                    carriers.
+                                </p>
+                            </recital>
+                        </quotedStructure>
+                        <quotedStructure id="quotedStructure-4">
+                            <recital id="rec11-mod">
+                                <num>(11)</num>
+                                <p>Air carriers already collect and process PNR data from their passengers for their own
+                                    commercial purposes. This Directive should not impose any obligation on air carriers
+                                    to collect or retain any additional data from passengers or to impose any obligation
+                                    on passengers to provide any data in addition to that already being provided to air
+                                    carriers.
+                                </p>
+                            </recital>
+                        </quotedStructure>
+                        <authorialNote id="note-5">
+                            <p></p>
+                        </authorialNote>
+                    </mod>
+                </block>
+            </amendmentContent>
+        </amendmentBody>
+    </amendment>
+</akomaNtoso>

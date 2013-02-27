@@ -19,7 +19,7 @@ import org.nsesa.editor.gwt.an.client.ui.amendment.action.AkomaNtoso20AmendmentA
 import org.nsesa.editor.gwt.an.client.ui.document.AkomaNtoso20SourceFileHeaderController;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.core.client.ui.amendment.action.AmendmentActionPanelController;
-import org.nsesa.editor.gwt.editor.client.ui.document.sourcefile.header.SourceFileHeaderController;
+import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.header.SourceFileHeaderController;
 
 /**
  * Date: 15/10/12 21:23

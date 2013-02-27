@@ -120,6 +120,7 @@ public class Opinion extends InlineComplexType {
         setType("opinion");
     }
 
+
     public Opinion(Element element) {
         super(element);
     }
@@ -153,6 +154,12 @@ public class Opinion extends InlineComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public Opinion refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public Opinion idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -165,26 +172,8 @@ public class Opinion extends InlineComplexType {
     }
 
     //DSL Style set value
-    public Opinion statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Opinion refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Opinion langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Opinion wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -209,6 +198,18 @@ public class Opinion extends InlineComplexType {
     //DSL Style set value
     public Opinion titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Opinion statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Opinion wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

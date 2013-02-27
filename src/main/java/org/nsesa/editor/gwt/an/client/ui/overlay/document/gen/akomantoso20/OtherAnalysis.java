@@ -52,6 +52,13 @@ public class OtherAnalysis extends AnyOtherTypeComplexType {
         setType("otherAnalysis");
     }
 
+    //Constructor with the required attributes
+    public OtherAnalysis(AnyURISimpleType sourceAttr) {
+        this();
+        setSourceAttr(sourceAttr);
+    }
+
+
     public OtherAnalysis(Element element) {
         super(element);
     }

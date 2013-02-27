@@ -120,6 +120,13 @@ public class RelatedDocument extends InlineComplexType {
         setType("relatedDocument");
     }
 
+    //Constructor with the required attributes
+    public RelatedDocument(AnyURISimpleType hrefAttr) {
+        this();
+        setHrefAttr(hrefAttr);
+    }
+
+
     public RelatedDocument(Element element) {
         super(element);
     }
@@ -154,6 +161,12 @@ public class RelatedDocument extends InlineComplexType {
 
     //Override all attributes methods to be conformant with DSL approach
     //DSL Style set value
+    public RelatedDocument refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    //DSL Style set value
     public RelatedDocument idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
@@ -166,26 +179,8 @@ public class RelatedDocument extends InlineComplexType {
     }
 
     //DSL Style set value
-    public RelatedDocument statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public RelatedDocument refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public RelatedDocument langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public RelatedDocument wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -210,6 +205,18 @@ public class RelatedDocument extends InlineComplexType {
     //DSL Style set value
     public RelatedDocument titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public RelatedDocument statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public RelatedDocument wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

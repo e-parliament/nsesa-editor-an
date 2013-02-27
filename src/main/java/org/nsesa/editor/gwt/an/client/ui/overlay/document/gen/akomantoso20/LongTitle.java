@@ -59,6 +59,7 @@ public class LongTitle extends BlocksoptComplexType {
         setType("longTitle");
     }
 
+
     public LongTitle(Element element) {
         super(element);
     }
@@ -66,6 +67,12 @@ public class LongTitle extends BlocksoptComplexType {
 // FIELDS ------------------
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public LongTitle refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
     //DSL Style set value
     public LongTitle idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -79,26 +86,8 @@ public class LongTitle extends BlocksoptComplexType {
     }
 
     //DSL Style set value
-    public LongTitle statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public LongTitle refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public LongTitle langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public LongTitle wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -123,6 +112,18 @@ public class LongTitle extends BlocksoptComplexType {
     //DSL Style set value
     public LongTitle titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public LongTitle statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public LongTitle wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

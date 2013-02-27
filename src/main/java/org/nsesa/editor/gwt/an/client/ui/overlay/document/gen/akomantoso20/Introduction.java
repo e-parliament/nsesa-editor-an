@@ -104,6 +104,7 @@ public class Introduction extends MaincontentComplexType {
         setType("introduction");
     }
 
+
     public Introduction(Element element) {
         super(element);
     }
@@ -111,6 +112,12 @@ public class Introduction extends MaincontentComplexType {
 // FIELDS ------------------
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public Introduction refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
     //DSL Style set value
     public Introduction idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -124,26 +131,8 @@ public class Introduction extends MaincontentComplexType {
     }
 
     //DSL Style set value
-    public Introduction statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Introduction refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public Introduction langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Introduction wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -168,6 +157,18 @@ public class Introduction extends MaincontentComplexType {
     //DSL Style set value
     public Introduction titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Introduction statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public Introduction wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

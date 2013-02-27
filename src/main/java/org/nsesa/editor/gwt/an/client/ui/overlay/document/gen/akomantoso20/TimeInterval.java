@@ -52,6 +52,13 @@ public class TimeInterval extends MetaoptComplexType {
         setType("timeInterval");
     }
 
+    //Constructor with the required attributes
+    public TimeInterval(AnyURISimpleType refersToAttr) {
+        this();
+        setRefersToAttr(refersToAttr);
+    }
+
+
     public TimeInterval(Element element) {
         super(element);
     }

@@ -53,6 +53,13 @@ public class Step extends AnyOtherTypeComplexType {
         setType("step");
     }
 
+    //Constructor with the required attributes
+    public Step(DateSimpleType dateAttr) {
+        this();
+        setDateAttr(dateAttr);
+    }
+
+
     public Step(Element element) {
         super(element);
     }

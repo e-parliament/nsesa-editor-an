@@ -56,6 +56,13 @@ public class Doc extends OpenStructureComplexType {
         setType("doc");
     }
 
+    //Constructor with the required attributes
+    public Doc(StringSimpleType nameAttr) {
+        this();
+        setNameAttr(nameAttr);
+    }
+
+
     public Doc(Element element) {
         super(element);
     }

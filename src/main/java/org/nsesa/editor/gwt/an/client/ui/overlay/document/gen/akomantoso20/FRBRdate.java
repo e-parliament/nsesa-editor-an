@@ -52,6 +52,14 @@ public class FRBRdate extends MetaoptComplexType {
         setType("FRBRdate");
     }
 
+    //Constructor with the required attributes
+    public FRBRdate(DateSimpleType dateAttr, StringSimpleType nameAttr) {
+        this();
+        setDateAttr(dateAttr);
+        setNameAttr(nameAttr);
+    }
+
+
     public FRBRdate(Element element) {
         super(element);
     }

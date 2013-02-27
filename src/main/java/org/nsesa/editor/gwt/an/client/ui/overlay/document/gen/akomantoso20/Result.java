@@ -52,6 +52,13 @@ public class Result extends AnyOtherTypeComplexType {
         setType("result");
     }
 
+    //Constructor with the required attributes
+    public Result(ResultTypeSimpleType typeAttr) {
+        this();
+        setTypeAttr(typeAttr);
+    }
+
+
     public Result(Element element) {
         super(element);
     }

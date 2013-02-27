@@ -51,6 +51,13 @@ public class FRBRalias extends ValueTypeComplexType {
         setType("FRBRalias");
     }
 
+    //Constructor with the required attributes
+    public FRBRalias(StringSimpleType valueAttr) {
+        this();
+        setValueAttr(valueAttr);
+    }
+
+
     public FRBRalias(Element element) {
         super(element);
     }

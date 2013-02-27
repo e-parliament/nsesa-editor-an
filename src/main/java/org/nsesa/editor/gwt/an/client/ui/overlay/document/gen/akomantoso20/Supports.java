@@ -55,6 +55,13 @@ public class Supports extends JudicialArgumentTypeComplexType {
         setType("supports");
     }
 
+    //Constructor with the required attributes
+    public Supports(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public Supports(Element element) {
         super(element);
     }

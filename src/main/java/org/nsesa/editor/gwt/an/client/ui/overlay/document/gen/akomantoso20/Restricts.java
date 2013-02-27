@@ -55,6 +55,13 @@ public class Restricts extends JudicialArgumentTypeComplexType {
         setType("restricts");
     }
 
+    //Constructor with the required attributes
+    public Restricts(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public Restricts(Element element) {
         super(element);
     }

@@ -55,6 +55,13 @@ public class DocumentCollection extends CollectionStructureComplexType {
         setType("documentCollection");
     }
 
+    //Constructor with the required attributes
+    public DocumentCollection(StringSimpleType nameAttr) {
+        this();
+        setNameAttr(nameAttr);
+    }
+
+
     public DocumentCollection(Element element) {
         super(element);
     }

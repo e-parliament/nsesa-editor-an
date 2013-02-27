@@ -51,6 +51,7 @@ public class Duration extends PeriodTypeComplexType {
         setType("duration");
     }
 
+
     public Duration(Element element) {
         super(element);
     }

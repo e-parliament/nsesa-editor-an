@@ -52,6 +52,15 @@ public class HasAttachment extends ReferenceTypeComplexType {
         setType("hasAttachment");
     }
 
+    //Constructor with the required attributes
+    public HasAttachment(StringSimpleType showAsAttr, IDSimpleType idAttr, AnyURISimpleType hrefAttr) {
+        this();
+        setShowAsAttr(showAsAttr);
+        setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+    }
+
+
     public HasAttachment(Element element) {
         super(element);
     }

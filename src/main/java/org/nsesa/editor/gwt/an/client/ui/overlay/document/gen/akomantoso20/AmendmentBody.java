@@ -54,6 +54,7 @@ public class AmendmentBody extends AmendmentBodyTypeComplexType {
         setType("amendmentBody");
     }
 
+
     public AmendmentBody(Element element) {
         super(element);
     }
@@ -61,6 +62,12 @@ public class AmendmentBody extends AmendmentBodyTypeComplexType {
 // FIELDS ------------------
 
     //Override all attributes methods to be conformant with DSL approach
+    //DSL Style set value
+    public AmendmentBody refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
     //DSL Style set value
     public AmendmentBody idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
@@ -74,26 +81,8 @@ public class AmendmentBody extends AmendmentBodyTypeComplexType {
     }
 
     //DSL Style set value
-    public AmendmentBody statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public AmendmentBody refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
     public AmendmentBody langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public AmendmentBody wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -118,6 +107,18 @@ public class AmendmentBody extends AmendmentBodyTypeComplexType {
     //DSL Style set value
     public AmendmentBody titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public AmendmentBody statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    //DSL Style set value
+    public AmendmentBody wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

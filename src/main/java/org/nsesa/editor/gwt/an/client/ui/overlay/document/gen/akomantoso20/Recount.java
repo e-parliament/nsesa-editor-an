@@ -53,6 +53,13 @@ public class Recount extends ParliamentaryAnalysisTypeComplexType {
         setType("recount");
     }
 
+    //Constructor with the required attributes
+    public Recount(IDSimpleType idAttr) {
+        this();
+        setIdAttr(idAttr);
+    }
+
+
     public Recount(Element element) {
         super(element);
     }
