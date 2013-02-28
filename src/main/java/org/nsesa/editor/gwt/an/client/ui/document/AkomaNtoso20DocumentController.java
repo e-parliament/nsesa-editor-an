@@ -28,7 +28,6 @@ import org.nsesa.editor.gwt.an.client.ui.amendment.AkomaNtoso20AmendmentControll
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
-import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
@@ -61,7 +60,7 @@ public class AkomaNtoso20DocumentController extends DocumentController {
         registerMode(ConsolidationMode.KEY, new ConsolidationMode(this, clientFactory) {
             @Override
             public boolean apply(final ActiveState state) {
-                final OverlayWidget topVisibleAmenableWidget = getSourceFileController().getTopVisibleAmenableWidget();
+                final OverlayWidget topVisibleAmenableWidget = getSourceFileController().getTopVisibleOverlayWidget();
                 getSourceFileController().walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
                     @Override
                     public boolean visit(final OverlayWidget visited) {

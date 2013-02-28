@@ -300,7 +300,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
 
 
         } else {
-            view.setTitle(locator.getLocation(dialogContext.getOverlayWidget(), clientFactory.getClientContext().getDocumentIso(), false));
+            view.setTitle(locator.getLocation(dialogContext.getOverlayWidget(), clientFactory.getClientContext().getDocumentTranslationLanguageCode(), false));
             view.setAmendmentContent(dialogContext.getOverlayWidget().getInnerHTML());
         }
     }

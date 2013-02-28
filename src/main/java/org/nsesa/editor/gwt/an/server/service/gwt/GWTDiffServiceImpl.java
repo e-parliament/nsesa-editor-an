@@ -20,6 +20,7 @@ import org.nsesa.diff.diffUtils.service.model.ThreeWayDiffContext;
 import org.nsesa.editor.gwt.core.client.service.gwt.GWTDiffService;
 import org.nsesa.editor.gwt.core.shared.DiffRequest;
 import org.nsesa.editor.gwt.core.shared.DiffResult;
+import org.nsesa.editor.gwt.core.shared.DiffStyle;
 
 import java.util.ArrayList;
 
@@ -57,7 +58,7 @@ public class GWTDiffServiceImpl extends SpringRemoteServiceServlet implements GW
             final ComplexDiffResult complexDiffResult = diffService.complexDiff(
                     diffRequest.getOriginal(),
                     // if the EP style is selected, we use a slight different input
-                    "epStyle".equalsIgnoreCase(diffRequest.getDiffStyle()) ? diffRequest.getAmendment() : diffRequest.getOriginal(),
+                    DiffStyle.EP == diffRequest.getDiffStyle() ? diffRequest.getAmendment() : diffRequest.getOriginal(),
                     diffRequest.getAmendment(),
                     diffContext);
 
