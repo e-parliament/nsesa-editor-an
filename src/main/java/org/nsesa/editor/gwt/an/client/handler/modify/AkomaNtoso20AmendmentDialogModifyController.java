@@ -47,7 +47,7 @@ import static org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20XML
 /**
  * Date: 23/11/12 10:14
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialogModifyController {

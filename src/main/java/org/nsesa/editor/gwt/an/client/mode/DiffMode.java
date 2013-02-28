@@ -33,7 +33,7 @@ import java.util.ArrayList;
 /**
  * Date: 26/11/12 14:11
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class DiffMode implements DocumentMode<ActiveState> {

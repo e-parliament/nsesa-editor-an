@@ -22,7 +22,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Date: 13/02/13 10:31
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class SeleniumIT {

@@ -31,7 +31,7 @@ import java.util.ArrayList;
 /**
  * Date: 07/01/13 17:21
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class AkomaNtoso20DiffingManager extends DefaultDiffingManager {

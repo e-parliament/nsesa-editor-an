@@ -43,7 +43,7 @@ import java.util.logging.Logger;
 /**
  * Date: 10/01/13 11:23
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class AkomaNtoso20DocumentController extends DocumentController {
