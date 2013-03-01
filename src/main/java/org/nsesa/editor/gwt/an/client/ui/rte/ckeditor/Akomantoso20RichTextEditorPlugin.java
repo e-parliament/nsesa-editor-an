@@ -21,12 +21,17 @@ import org.nsesa.editor.gwt.core.client.ui.rte.ckeditor.*;
 
 /**
  * A simple plugin to register all the plugins used by Akomantoso 20 editor.
- * User: groza
- * Date: 11/01/13
- * Time: 12:13
+ * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
+ * Date: 11/01/13 12:13
  */
 public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
 
+    /**
+     * Create <code>Akomantoso20RichTextEditorPlugin</Akomantoso20RichTextEditorPlugin> object and
+     * wrap all the available plugins
+     * @param overlayFactory
+     * @param clientFactory
+     */
     @Inject
     public Akomantoso20RichTextEditorPlugin(OverlayFactory overlayFactory, ClientFactory clientFactory) {
         //register here the available plugin

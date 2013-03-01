@@ -20,16 +20,22 @@ import org.nsesa.editor.gwt.core.client.ui.rte.ckeditor.CKEditorToolbar;
 import java.util.Arrays;
 
 /**
- * The default configuration for Akomantoso20 editor
- * User: groza
- * Date: 14/01/13
- * Time: 14:47
+ * An akomantoso specific editor configuration
+ *
+ * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
+ * Date: 11/01/13 11:44
  */
 public class Akomantoso20RichTextEditorConfig extends CKEditorConfig {
+    /**
+     * keep empty span tags when editing
+     */
     static {
         keepEmptyTag("span");
     }
 
+    /**
+     * Create a <code>Akomantoso20RichTextEditorConfig</code> with predefined settings
+     */
     public Akomantoso20RichTextEditorConfig() {
         super();
         setDraftingClassName("akomaNtoso-drafting");
@@ -54,6 +60,10 @@ public class Akomantoso20RichTextEditorConfig extends CKEditorConfig {
                 .setForcePasteAsPlainText(true);
     }
 
+    /**
+     * Set the editor config as read only, remove nsesa extra plugin and set up an empty toolbar
+     * @param readOnly
+     */
     public void setReadOnly(boolean readOnly) {
         this.readOnly(readOnly)
                 .setStartupFocus(!readOnly)
