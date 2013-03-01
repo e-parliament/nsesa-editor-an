@@ -49,7 +49,7 @@ import org.nsesa.editor.gwt.inline.client.ui.inline.InlineEditorModule;
 /**
  * Date: 15/10/12 21:23
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class AkomaNtoso20Module extends AbstractGinModule {

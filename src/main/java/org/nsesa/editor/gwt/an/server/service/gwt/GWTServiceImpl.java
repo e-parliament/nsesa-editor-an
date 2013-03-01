@@ -25,7 +25,7 @@ import java.util.UUID;
 /**
  * Date: 24/06/12 19:57
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class GWTServiceImpl extends SpringRemoteServiceServlet implements GWTService {

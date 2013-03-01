@@ -26,7 +26,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.Transformer;
 /**
  * Date: 06/02/13 16:19
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionPanelController {

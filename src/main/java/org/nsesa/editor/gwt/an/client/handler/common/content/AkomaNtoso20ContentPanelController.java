@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentPanel
 /**
  * Date: 23/11/12 11:02
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class AkomaNtoso20ContentPanelController extends ContentPanelController {

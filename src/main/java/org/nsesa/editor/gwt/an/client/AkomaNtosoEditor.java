@@ -20,7 +20,7 @@ import org.nsesa.editor.gwt.editor.client.Editor;
 /**
  * Date: 15/10/12 21:20
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class AkomaNtosoEditor extends Editor {

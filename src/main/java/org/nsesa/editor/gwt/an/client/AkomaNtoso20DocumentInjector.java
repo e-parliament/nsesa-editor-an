@@ -20,7 +20,7 @@ import org.nsesa.editor.gwt.core.client.ui.document.DocumentInjector;
 /**
  * Date: 15/10/12 21:24
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 @GinModules({AkomaNtoso20DocumentModule.class})

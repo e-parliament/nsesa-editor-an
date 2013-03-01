@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSi
 /**
  * Date: 07/02/13 16:12
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class AkomaNtoso20XMLUtil {
