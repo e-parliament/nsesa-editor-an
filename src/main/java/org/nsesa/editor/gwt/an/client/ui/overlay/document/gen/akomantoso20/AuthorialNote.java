@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the element authorialNote is a popup element containing an authorial (non-editorial) note in the main flow of the text.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class AuthorialNote extends PopupStructureComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Intro(), new Occurrence(1, 1));
@@ -104,7 +108,9 @@ public class AuthorialNote extends PopupStructureComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "authorialNote");
@@ -113,19 +119,28 @@ public class AuthorialNote extends PopupStructureComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>AuthorialNote</code> object and set up its type
+     */
     public AuthorialNote() {
         super(create());
         setType("authorialNote");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public AuthorialNote(IDSimpleType idAttr) {
         this();
         setIdAttr(idAttr);
     }
 
 
+    /**
+     * Create a <code>AuthorialNote</code> object with the given DOM element
+     */
     public AuthorialNote(Element element) {
         super(element);
     }
@@ -135,6 +150,11 @@ public class AuthorialNote extends PopupStructureComplexType {
     private PlacementTypeSimpleType placementAttr;
     private AnyURISimpleType placementBaseAttr;
 
+    /**
+     * Return <code>markerAttr</code> property
+     *
+     * @return markerAttr
+     */
     public StringSimpleType getMarkerAttr() {
         if (markerAttr == null) {
             markerAttr = new StringSimpleType();
@@ -144,22 +164,41 @@ public class AuthorialNote extends PopupStructureComplexType {
         return markerAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>markerAttr</code> property in DSL way
+     *
+     * @return markerAttr
+     */
     public StringSimpleType markerAttr() {
         return getMarkerAttr();
     }
 
+    /**
+     * Set <code>markerAttr</code> property
+     *
+     * @param markerAttr the new value
+     */
     public void setMarkerAttr(final StringSimpleType markerAttr) {
         this.markerAttr = markerAttr;
         getElement().setAttribute("marker", markerAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>markerAttr</code> property in DSL way
+     *
+     * @param markerAttr the new value
+     * @return <code>AuthorialNote</code> instance
+     */
     public AuthorialNote markerAttr(final StringSimpleType markerAttr) {
         setMarkerAttr(markerAttr);
         return this;
     }
 
+    /**
+     * Return <code>placementAttr</code> property
+     *
+     * @return placementAttr
+     */
     public PlacementTypeSimpleType getPlacementAttr() {
         if (placementAttr == null) {
             placementAttr = PlacementTypeSimpleType.fromString(getElement().getAttribute("placement"));
@@ -168,22 +207,41 @@ public class AuthorialNote extends PopupStructureComplexType {
         return placementAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>placementAttr</code> property in DSL way
+     *
+     * @return placementAttr
+     */
     public PlacementTypeSimpleType placementAttr() {
         return getPlacementAttr();
     }
 
+    /**
+     * Set <code>placementAttr</code> property
+     *
+     * @param placementAttr the new value
+     */
     public void setPlacementAttr(final PlacementTypeSimpleType placementAttr) {
         this.placementAttr = placementAttr;
         getElement().setAttribute("placement", placementAttr.value());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>placementAttr</code> property in DSL way
+     *
+     * @param placementAttr the new value
+     * @return <code>AuthorialNote</code> instance
+     */
     public AuthorialNote placementAttr(final PlacementTypeSimpleType placementAttr) {
         setPlacementAttr(placementAttr);
         return this;
     }
 
+    /**
+     * Return <code>placementBaseAttr</code> property
+     *
+     * @return placementBaseAttr
+     */
     public AnyURISimpleType getPlacementBaseAttr() {
         if (placementBaseAttr == null) {
             placementBaseAttr = new AnyURISimpleType();
@@ -193,84 +251,153 @@ public class AuthorialNote extends PopupStructureComplexType {
         return placementBaseAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>placementBaseAttr</code> property in DSL way
+     *
+     * @return placementBaseAttr
+     */
     public AnyURISimpleType placementBaseAttr() {
         return getPlacementBaseAttr();
     }
 
+    /**
+     * Set <code>placementBaseAttr</code> property
+     *
+     * @param placementBaseAttr the new value
+     */
     public void setPlacementBaseAttr(final AnyURISimpleType placementBaseAttr) {
         this.placementBaseAttr = placementBaseAttr;
         getElement().setAttribute("placementBase", placementBaseAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>placementBaseAttr</code> property in DSL way
+     *
+     * @param placementBaseAttr the new value
+     * @return <code>AuthorialNote</code> instance
+     */
     public AuthorialNote placementBaseAttr(final AnyURISimpleType placementBaseAttr) {
         setPlacementBaseAttr(placementBaseAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public AuthorialNote refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> AuthorialNote</code> instance
+     */
     public AuthorialNote alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
-    //DSL Style set value
-    public AuthorialNote statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> AuthorialNote</code> instance
+     */
     public AuthorialNote wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
-    //DSL Style set value
-    public AuthorialNote langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public AuthorialNote idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public AuthorialNote evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> AuthorialNote</code> instance
+     */
     public AuthorialNote classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr new value
+     * @return <code> AuthorialNote</code> instance
+     */
     public AuthorialNote styleAttr(final StringSimpleType styleAttr) {
         setStyleAttr(styleAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr new value
+     * @return <code> AuthorialNote</code> instance
+     */
     public AuthorialNote titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> AuthorialNote</code> instance
+     */
+    public AuthorialNote refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> AuthorialNote</code> instance
+     */
+    public AuthorialNote statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> AuthorialNote</code> instance
+     */
+    public AuthorialNote langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> AuthorialNote</code> instance
+     */
+    public AuthorialNote idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> AuthorialNote</code> instance
+     */
+    public AuthorialNote evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> AuthorialNote</code> instance
+     */
     public AuthorialNote periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -286,6 +413,8 @@ public class AuthorialNote extends PopupStructureComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -302,7 +431,9 @@ public class AuthorialNote extends PopupStructureComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public AuthorialNote html(String s) {
         super.html(s);

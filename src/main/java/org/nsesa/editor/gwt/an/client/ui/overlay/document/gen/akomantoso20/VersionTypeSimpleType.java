@@ -14,7 +14,7 @@
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
 /**
- * This file is generated.
+ * This is the list of allowed values for the contains attribute* This file is generated. Rather than changing this file, correct the template called <tt>overlayEnum.ftl</tt>.
  */
 public enum VersionTypeSimpleType {
 
@@ -25,14 +25,28 @@ public enum VersionTypeSimpleType {
     MULTIPLEVERSIONS("multipleVersions");
     private final String value;
 
+    /**
+     * Create an instance of VersionTypeSimpleType class with the given String
+     */
     VersionTypeSimpleType(String v) {
         value = v;
     }
 
+    /**
+     * Return the value of the instance
+     *
+     * @return value as String
+     */
     public String value() {
         return value;
     }
 
+    /**
+     * Return an Enum based on the given input text or null if it does not fit
+     *
+     * @param text the String representation of the enum
+     * @return VersionTypeSimpleType or <code>null</code>
+     */
     public static VersionTypeSimpleType fromString(String text) {
         if (text == null) return null;
         for (VersionTypeSimpleType en : VersionTypeSimpleType.values()) {

@@ -23,10 +23,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The element FRBRManifestation is the metadata container of identifying properties related to the Manifestation level according to the FRBR hierarchy
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class FRBRManifestation extends CorePropertiesComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new FRBRformat(), new Occurrence(0, -1));
@@ -41,7 +45,9 @@ public class FRBRManifestation extends CorePropertiesComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "FRBRManifestation");
@@ -50,19 +56,31 @@ public class FRBRManifestation extends CorePropertiesComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>FRBRManifestation</code> object and set up its type
+     */
     public FRBRManifestation() {
         super(create());
         setType("FRBRManifestation");
     }
 
 
+    /**
+     * Create a <code>FRBRManifestation</code> object with the given DOM element
+     */
     public FRBRManifestation(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
+    /**
+     * Add <code>FRBRformat</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public FRBRformat getFRBRformat() {
         FRBRformat result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -73,9 +91,13 @@ public class FRBRManifestation extends CorePropertiesComplexType {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>FRBRformatElem</code> property in DSL way
+     *
+     * @param FRBRformatElem new value
+     * @return <code>FRBRformat</code> instance
+     */
     public FRBRformat setFRBRformat(FRBRformat FRBRformatElem) {
         FRBRformat result = getFRBRformat();
         // remove the child of the same type if exist
@@ -98,6 +120,8 @@ public class FRBRManifestation extends CorePropertiesComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -111,7 +135,9 @@ public class FRBRManifestation extends CorePropertiesComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public FRBRManifestation html(String s) {
         super.html(s);

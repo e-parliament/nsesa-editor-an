@@ -26,10 +26,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * Generated class
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Notes extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Note(), new Occurrence(1, 1));
@@ -37,7 +41,9 @@ public class Notes extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "notes");
@@ -46,19 +52,28 @@ public class Notes extends OverlayWidgetImpl {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Notes</code> object and set up its type
+     */
     public Notes() {
         super(create());
         setType("notes");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public Notes(AnyURISimpleType sourceAttr) {
         this();
         setSourceAttr(sourceAttr);
     }
 
 
+    /**
+     * Create a <code>Notes</code> object with the given DOM element
+     */
     public Notes(Element element) {
         super(element);
     }
@@ -66,6 +81,11 @@ public class Notes extends OverlayWidgetImpl {
     // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
 
+    /**
+     * Return <code>java.util.List<Note></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Note> getNotes() {
         java.util.List<Note> result = new ArrayList<Note>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -76,17 +96,30 @@ public class Notes extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Note></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Note> getNoteList() {
         return getNotes();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Note></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Note addNote(Note noteElem) {
         this.addOverlayWidget(noteElem);
         return noteElem;
     }
 
+    /**
+     * Return <code>sourceAttr</code> property
+     *
+     * @return sourceAttr
+     */
     public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
             sourceAttr = new AnyURISimpleType();
@@ -96,17 +129,31 @@ public class Notes extends OverlayWidgetImpl {
         return sourceAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>sourceAttr</code> property in DSL way
+     *
+     * @return sourceAttr
+     */
     public AnyURISimpleType sourceAttr() {
         return getSourceAttr();
     }
 
+    /**
+     * Set <code>sourceAttr</code> property
+     *
+     * @param sourceAttr the new value
+     */
     public void setSourceAttr(final AnyURISimpleType sourceAttr) {
         this.sourceAttr = sourceAttr;
         getElement().setAttribute("source", sourceAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>sourceAttr</code> property in DSL way
+     *
+     * @param sourceAttr the new value
+     * @return <code>Notes</code> instance
+     */
     public Notes sourceAttr(final AnyURISimpleType sourceAttr) {
         setSourceAttr(sourceAttr);
         return this;
@@ -123,6 +170,8 @@ public class Notes extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -137,7 +186,9 @@ public class Notes extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Notes html(String s) {
         super.html(s);

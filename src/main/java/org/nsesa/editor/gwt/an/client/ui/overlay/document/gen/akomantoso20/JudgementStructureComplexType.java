@@ -24,10 +24,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the type judgementStructure specifies the overall content model of the document types that describe judgements
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class JudgementStructureComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Meta(), new Occurrence(1, 1));
@@ -40,7 +44,9 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "judgementStructureComplexType");
@@ -51,6 +57,9 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>JudgementStructureComplexType</code> object with the given DOM element
+     */
     public JudgementStructureComplexType(Element element) {
         super(element);
     }
@@ -58,6 +67,11 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
     // FIELDS ------------------
     private VersionTypeSimpleType containsAttr;
 
+    /**
+     * Return <code>containsAttr</code> property
+     *
+     * @return containsAttr
+     */
     public VersionTypeSimpleType getContainsAttr() {
         if (containsAttr == null) {
             containsAttr = VersionTypeSimpleType.fromString(getElement().getAttribute("contains"));
@@ -66,22 +80,41 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
         return containsAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>containsAttr</code> property in DSL way
+     *
+     * @return containsAttr
+     */
     public VersionTypeSimpleType containsAttr() {
         return getContainsAttr();
     }
 
+    /**
+     * Set <code>containsAttr</code> property
+     *
+     * @param containsAttr the new value
+     */
     public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
         this.containsAttr = containsAttr;
         getElement().setAttribute("contains", containsAttr.value());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>containsAttr</code> property in DSL way
+     *
+     * @param containsAttr the new value
+     * @return <code>JudgementStructureComplexType</code> instance
+     */
     public JudgementStructureComplexType containsAttr(final VersionTypeSimpleType containsAttr) {
         setContainsAttr(containsAttr);
         return this;
     }
 
+    /**
+     * Add <code>Meta</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Meta getMeta() {
         Meta result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -92,9 +125,13 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>metaElem</code> property in DSL way
+     *
+     * @param metaElem new value
+     * @return <code>Meta</code> instance
+     */
     public Meta setMeta(Meta metaElem) {
         Meta result = getMeta();
         // remove the child of the same type if exist
@@ -106,6 +143,11 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
         return metaElem;
     }
 
+    /**
+     * Add <code>CoverPage</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public CoverPage getCoverPage() {
         CoverPage result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -116,9 +158,13 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>coverPageElem</code> property in DSL way
+     *
+     * @param coverPageElem new value
+     * @return <code>CoverPage</code> instance
+     */
     public CoverPage setCoverPage(CoverPage coverPageElem) {
         CoverPage result = getCoverPage();
         // remove the child of the same type if exist
@@ -130,6 +176,11 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
         return coverPageElem;
     }
 
+    /**
+     * Add <code>Header</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Header getHeader() {
         Header result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -140,9 +191,13 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>headerElem</code> property in DSL way
+     *
+     * @param headerElem new value
+     * @return <code>Header</code> instance
+     */
     public Header setHeader(Header headerElem) {
         Header result = getHeader();
         // remove the child of the same type if exist
@@ -154,6 +209,11 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
         return headerElem;
     }
 
+    /**
+     * Add <code>JudgementBody</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public JudgementBody getJudgementBody() {
         JudgementBody result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -164,9 +224,13 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>judgementBodyElem</code> property in DSL way
+     *
+     * @param judgementBodyElem new value
+     * @return <code>JudgementBody</code> instance
+     */
     public JudgementBody setJudgementBody(JudgementBody judgementBodyElem) {
         JudgementBody result = getJudgementBody();
         // remove the child of the same type if exist
@@ -178,6 +242,11 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
         return judgementBodyElem;
     }
 
+    /**
+     * Add <code>Conclusions</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Conclusions getConclusions() {
         Conclusions result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -188,9 +257,13 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>conclusionsElem</code> property in DSL way
+     *
+     * @param conclusionsElem new value
+     * @return <code>Conclusions</code> instance
+     */
     public Conclusions setConclusions(Conclusions conclusionsElem) {
         Conclusions result = getConclusions();
         // remove the child of the same type if exist
@@ -202,6 +275,11 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
         return conclusionsElem;
     }
 
+    /**
+     * Add <code>Attachments</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Attachments getAttachments() {
         Attachments result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -212,9 +290,13 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>attachmentsElem</code> property in DSL way
+     *
+     * @param attachmentsElem new value
+     * @return <code>Attachments</code> instance
+     */
     public Attachments setAttachments(Attachments attachmentsElem) {
         Attachments result = getAttachments();
         // remove the child of the same type if exist
@@ -237,6 +319,8 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -251,7 +335,9 @@ public class JudgementStructureComplexType extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public JudgementStructureComplexType html(String s) {
         super.html(s);

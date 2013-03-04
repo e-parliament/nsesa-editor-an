@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the element placeholder is an inline element containing the text of a computable expression (e.g., ''30 days after the publication of this act'') that can be replaced editorially with an actual value
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Placeholder extends InlineComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Inline(), new Occurrence(0, -1));
@@ -105,7 +109,9 @@ public class Placeholder extends InlineComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "placeholder");
@@ -114,13 +120,20 @@ public class Placeholder extends InlineComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Placeholder</code> object and set up its type
+     */
     public Placeholder() {
         super(create());
         setType("placeholder");
     }
 
 
+    /**
+     * Create a <code>Placeholder</code> object with the given DOM element
+     */
     public Placeholder(Element element) {
         super(element);
     }
@@ -128,6 +141,11 @@ public class Placeholder extends InlineComplexType {
     // FIELDS ------------------
     private StringSimpleType originalTextAttr;
 
+    /**
+     * Return <code>originalTextAttr</code> property
+     *
+     * @return originalTextAttr
+     */
     public StringSimpleType getOriginalTextAttr() {
         if (originalTextAttr == null) {
             originalTextAttr = new StringSimpleType();
@@ -137,84 +155,153 @@ public class Placeholder extends InlineComplexType {
         return originalTextAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>originalTextAttr</code> property in DSL way
+     *
+     * @return originalTextAttr
+     */
     public StringSimpleType originalTextAttr() {
         return getOriginalTextAttr();
     }
 
+    /**
+     * Set <code>originalTextAttr</code> property
+     *
+     * @param originalTextAttr the new value
+     */
     public void setOriginalTextAttr(final StringSimpleType originalTextAttr) {
         this.originalTextAttr = originalTextAttr;
         getElement().setAttribute("originalText", originalTextAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>originalTextAttr</code> property in DSL way
+     *
+     * @param originalTextAttr the new value
+     * @return <code>Placeholder</code> instance
+     */
     public Placeholder originalTextAttr(final StringSimpleType originalTextAttr) {
         setOriginalTextAttr(originalTextAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public Placeholder refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Placeholder idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Placeholder evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Placeholder langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Placeholder alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Placeholder classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Placeholder styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Placeholder titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Placeholder statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Placeholder</code> instance
+     */
     public Placeholder wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Placeholder</code> instance
+     */
+    public Placeholder classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr new value
+     * @return <code> Placeholder</code> instance
+     */
+    public Placeholder styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr new value
+     * @return <code> Placeholder</code> instance
+     */
+    public Placeholder titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Placeholder</code> instance
+     */
+    public Placeholder refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Placeholder</code> instance
+     */
+    public Placeholder idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Placeholder</code> instance
+     */
+    public Placeholder evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> Placeholder</code> instance
+     */
+    public Placeholder langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> Placeholder</code> instance
+     */
+    public Placeholder alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> Placeholder</code> instance
+     */
+    public Placeholder statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Placeholder</code> instance
+     */
     public Placeholder periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -230,6 +317,8 @@ public class Placeholder extends InlineComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -244,7 +333,9 @@ public class Placeholder extends InlineComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Placeholder html(String s) {
         super.html(s);

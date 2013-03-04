@@ -27,10 +27,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The element eventInfo is a metadata element specifying facts about an event that had an effect on the document. For each event, a date, a type and a document that generated the event must be referenced.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class EventRef extends AnyOtherTypeComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(null, new Occurrence(0, -1));
@@ -38,7 +42,9 @@ public class EventRef extends AnyOtherTypeComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "eventRef");
@@ -47,13 +53,19 @@ public class EventRef extends AnyOtherTypeComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>EventRef</code> object and set up its type
+     */
     public EventRef() {
         super(create());
         setType("eventRef");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public EventRef(AnyURISimpleType sourceAttr, DateSimpleType dateAttr) {
         this();
         setSourceAttr(sourceAttr);
@@ -61,6 +73,9 @@ public class EventRef extends AnyOtherTypeComplexType {
     }
 
 
+    /**
+     * Create a <code>EventRef</code> object with the given DOM element
+     */
     public EventRef(Element element) {
         super(element);
     }
@@ -71,6 +86,11 @@ public class EventRef extends AnyOtherTypeComplexType {
     private AnyURISimpleType sourceAttr;
     private DateSimpleType dateAttr;
 
+    /**
+     * Return <code>typeAttr</code> property
+     *
+     * @return typeAttr
+     */
     public EventTypeSimpleType getTypeAttr() {
         if (typeAttr == null) {
             typeAttr = EventTypeSimpleType.fromString(getElement().getAttribute("type"));
@@ -79,22 +99,41 @@ public class EventRef extends AnyOtherTypeComplexType {
         return typeAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>typeAttr</code> property in DSL way
+     *
+     * @return typeAttr
+     */
     public EventTypeSimpleType typeAttr() {
         return getTypeAttr();
     }
 
+    /**
+     * Set <code>typeAttr</code> property
+     *
+     * @param typeAttr the new value
+     */
     public void setTypeAttr(final EventTypeSimpleType typeAttr) {
         this.typeAttr = typeAttr;
         getElement().setAttribute("type", typeAttr.value());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>typeAttr</code> property in DSL way
+     *
+     * @param typeAttr the new value
+     * @return <code>EventRef</code> instance
+     */
     public EventRef typeAttr(final EventTypeSimpleType typeAttr) {
         setTypeAttr(typeAttr);
         return this;
     }
 
+    /**
+     * Return <code>originatingExpressionAttr</code> property
+     *
+     * @return originatingExpressionAttr
+     */
     public YesNoTypeSimpleType getOriginatingExpressionAttr() {
         if (originatingExpressionAttr == null) {
             originatingExpressionAttr = YesNoTypeSimpleType.fromString(getElement().getAttribute("originatingExpression"));
@@ -103,22 +142,41 @@ public class EventRef extends AnyOtherTypeComplexType {
         return originatingExpressionAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>originatingExpressionAttr</code> property in DSL way
+     *
+     * @return originatingExpressionAttr
+     */
     public YesNoTypeSimpleType originatingExpressionAttr() {
         return getOriginatingExpressionAttr();
     }
 
+    /**
+     * Set <code>originatingExpressionAttr</code> property
+     *
+     * @param originatingExpressionAttr the new value
+     */
     public void setOriginatingExpressionAttr(final YesNoTypeSimpleType originatingExpressionAttr) {
         this.originatingExpressionAttr = originatingExpressionAttr;
         getElement().setAttribute("originatingExpression", originatingExpressionAttr.value());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>originatingExpressionAttr</code> property in DSL way
+     *
+     * @param originatingExpressionAttr the new value
+     * @return <code>EventRef</code> instance
+     */
     public EventRef originatingExpressionAttr(final YesNoTypeSimpleType originatingExpressionAttr) {
         setOriginatingExpressionAttr(originatingExpressionAttr);
         return this;
     }
 
+    /**
+     * Return <code>sourceAttr</code> property
+     *
+     * @return sourceAttr
+     */
     public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
             sourceAttr = new AnyURISimpleType();
@@ -128,22 +186,41 @@ public class EventRef extends AnyOtherTypeComplexType {
         return sourceAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>sourceAttr</code> property in DSL way
+     *
+     * @return sourceAttr
+     */
     public AnyURISimpleType sourceAttr() {
         return getSourceAttr();
     }
 
+    /**
+     * Set <code>sourceAttr</code> property
+     *
+     * @param sourceAttr the new value
+     */
     public void setSourceAttr(final AnyURISimpleType sourceAttr) {
         this.sourceAttr = sourceAttr;
         getElement().setAttribute("source", sourceAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>sourceAttr</code> property in DSL way
+     *
+     * @param sourceAttr the new value
+     * @return <code>EventRef</code> instance
+     */
     public EventRef sourceAttr(final AnyURISimpleType sourceAttr) {
         setSourceAttr(sourceAttr);
         return this;
     }
 
+    /**
+     * Return <code>dateAttr</code> property
+     *
+     * @return dateAttr
+     */
     public DateSimpleType getDateAttr() {
         if (dateAttr == null) {
             dateAttr = new DateSimpleType();
@@ -153,42 +230,76 @@ public class EventRef extends AnyOtherTypeComplexType {
         return dateAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>dateAttr</code> property in DSL way
+     *
+     * @return dateAttr
+     */
     public DateSimpleType dateAttr() {
         return getDateAttr();
     }
 
+    /**
+     * Set <code>dateAttr</code> property
+     *
+     * @param dateAttr the new value
+     */
     public void setDateAttr(final DateSimpleType dateAttr) {
         this.dateAttr = dateAttr;
         getElement().setAttribute("date", dateAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>dateAttr</code> property in DSL way
+     *
+     * @param dateAttr the new value
+     * @return <code>EventRef</code> instance
+     */
     public EventRef dateAttr(final DateSimpleType dateAttr) {
         setDateAttr(dateAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public EventRef hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> EventRef</code> instance
+     */
     public EventRef idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> EventRef</code> instance
+     */
     public EventRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> EventRef</code> instance
+     */
+    public EventRef hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> EventRef</code> instance
+     */
     public EventRef wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
@@ -204,6 +315,8 @@ public class EventRef extends AnyOtherTypeComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -221,7 +334,9 @@ public class EventRef extends AnyOtherTypeComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public EventRef html(String s) {
         super.html(s);

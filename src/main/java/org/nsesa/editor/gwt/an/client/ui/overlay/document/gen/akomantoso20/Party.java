@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the element party is an inline element within judgements to identify where the document defines one of the parties
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Party extends InlinereqreqComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Inline(), new Occurrence(0, -1));
@@ -105,7 +109,9 @@ public class Party extends InlinereqreqComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "party");
@@ -114,13 +120,19 @@ public class Party extends InlinereqreqComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Party</code> object and set up its type
+     */
     public Party() {
         super(create());
         setType("party");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public Party(IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
         this();
         setIdAttr(idAttr);
@@ -128,6 +140,9 @@ public class Party extends InlinereqreqComplexType {
     }
 
 
+    /**
+     * Create a <code>Party</code> object with the given DOM element
+     */
     public Party(Element element) {
         super(element);
     }
@@ -135,6 +150,11 @@ public class Party extends InlinereqreqComplexType {
     // FIELDS ------------------
     private AnyURISimpleType asAttr;
 
+    /**
+     * Return <code>asAttr</code> property
+     *
+     * @return asAttr
+     */
     public AnyURISimpleType getAsAttr() {
         if (asAttr == null) {
             asAttr = new AnyURISimpleType();
@@ -144,84 +164,153 @@ public class Party extends InlinereqreqComplexType {
         return asAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>asAttr</code> property in DSL way
+     *
+     * @return asAttr
+     */
     public AnyURISimpleType asAttr() {
         return getAsAttr();
     }
 
+    /**
+     * Set <code>asAttr</code> property
+     *
+     * @param asAttr the new value
+     */
     public void setAsAttr(final AnyURISimpleType asAttr) {
         this.asAttr = asAttr;
         getElement().setAttribute("as", asAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>asAttr</code> property in DSL way
+     *
+     * @param asAttr the new value
+     * @return <code>Party</code> instance
+     */
     public Party asAttr(final AnyURISimpleType asAttr) {
         setAsAttr(asAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public Party alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Party</code> instance
+     */
     public Party idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Party</code> instance
+     */
     public Party evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Party</code> instance
+     */
     public Party refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
         return this;
     }
 
-    //DSL Style set value
-    public Party wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Party classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Party styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Party titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Party statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> Party</code> instance
+     */
     public Party langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> Party</code> instance
+     */
+    public Party statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Party</code> instance
+     */
+    public Party wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> Party</code> instance
+     */
+    public Party alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Party</code> instance
+     */
+    public Party classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr new value
+     * @return <code> Party</code> instance
+     */
+    public Party styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr new value
+     * @return <code> Party</code> instance
+     */
+    public Party titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Party</code> instance
+     */
     public Party periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -237,6 +326,8 @@ public class Party extends InlinereqreqComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -251,7 +342,9 @@ public class Party extends InlinereqreqComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Party html(String s) {
         super.html(s);

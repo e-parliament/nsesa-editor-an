@@ -23,10 +23,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The element parliamentary is a metadata container of the analysis of the events of a debate.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Parliamentary extends ParliamentaryAnalysisComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new QuorumVerification(), new Occurrence(1, 1));
@@ -36,7 +40,9 @@ public class Parliamentary extends ParliamentaryAnalysisComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "parliamentary");
@@ -45,13 +51,20 @@ public class Parliamentary extends ParliamentaryAnalysisComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Parliamentary</code> object and set up its type
+     */
     public Parliamentary() {
         super(create());
         setType("parliamentary");
     }
 
 
+    /**
+     * Create a <code>Parliamentary</code> object with the given DOM element
+     */
     public Parliamentary(Element element) {
         super(element);
     }
@@ -70,6 +83,8 @@ public class Parliamentary extends ParliamentaryAnalysisComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -83,7 +98,9 @@ public class Parliamentary extends ParliamentaryAnalysisComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Parliamentary html(String s) {
         super.html(s);

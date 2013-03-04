@@ -27,10 +27,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the complex type modType specifies the content that is allowed within mod, mmod and rmod elements, i.e. it adds quotedText and quotedStructure to the normal list of inline elements
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class ModTypeComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new QuotedText(), new Occurrence(1, 1));
@@ -109,7 +113,9 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "modTypeComplexType");
@@ -120,23 +126,31 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>ModTypeComplexType</code> object with the given DOM element
+     */
     public ModTypeComplexType(Element element) {
         super(element);
     }
 
     // FIELDS ------------------
-    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType alternativeToAttr;
-    private StatusTypeSimpleType statusAttr;
     private String wildcardContentAttr;
-    private LanguageSimpleType langAttr;
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
+    private AnyURISimpleType refersToAttr;
+    private StatusTypeSimpleType statusAttr;
+    private LanguageSimpleType langAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType periodAttr;
 
+    /**
+     * Return <code>java.util.List<QuotedText></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<QuotedText> getQuotedTexts() {
         java.util.List<QuotedText> result = new ArrayList<QuotedText>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -147,17 +161,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<QuotedText></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<QuotedText> getQuotedTextList() {
         return getQuotedTexts();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<QuotedText></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public QuotedText addQuotedText(QuotedText quotedTextElem) {
         this.addOverlayWidget(quotedTextElem);
         return quotedTextElem;
     }
 
+    /**
+     * Return <code>java.util.List<QuotedStructure></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<QuotedStructure> getQuotedStructures() {
         java.util.List<QuotedStructure> result = new ArrayList<QuotedStructure>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -168,42 +195,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<QuotedStructure></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<QuotedStructure> getQuotedStructureList() {
         return getQuotedStructures();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<QuotedStructure></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public QuotedStructure addQuotedStructure(QuotedStructure quotedStructureElem) {
         this.addOverlayWidget(quotedStructureElem);
         return quotedStructureElem;
     }
 
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-    }
-
-    //DSL Style get value
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
-    }
-
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
-    }
-
-    //DSL Style set value
-    public ModTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
+    /**
+     * Return <code>alternativeToAttr</code> property
+     *
+     * @return alternativeToAttr
+     */
     public AnyURISimpleType getAlternativeToAttr() {
         if (alternativeToAttr == null) {
             alternativeToAttr = new AnyURISimpleType();
@@ -213,46 +228,41 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return alternativeToAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>alternativeToAttr</code> property in DSL way
+     *
+     * @return alternativeToAttr
+     */
     public AnyURISimpleType alternativeToAttr() {
         return getAlternativeToAttr();
     }
 
+    /**
+     * Set <code>alternativeToAttr</code> property
+     *
+     * @param alternativeToAttr the new value
+     */
     public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         this.alternativeToAttr = alternativeToAttr;
         getElement().setAttribute("alternativeTo", alternativeToAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr the new value
+     * @return <code>ModTypeComplexType</code> instance
+     */
     public ModTypeComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-    }
-
-    //DSL Style get value
-    public StatusTypeSimpleType statusAttr() {
-        return getStatusAttr();
-    }
-
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status", statusAttr.value());
-    }
-
-    //DSL Style set value
-    public ModTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
+    /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
     public String getWildcardContentAttr() {
         if (wildcardContentAttr == null) {
             //hmm nothing to do here
@@ -261,97 +271,41 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return wildcardContentAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
     public String wildcardContentAttr() {
         return getWildcardContentAttr();
     }
 
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
     public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
         getElement().setAttribute("wildcardContent", wildcardContentAttr);
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>ModTypeComplexType</code> instance
+     */
     public ModTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
-    public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-            langAttr = new LanguageSimpleType();
-            langAttr.setValue(getElement().getAttribute("lang"));
-        }
-
-        return langAttr;
-    }
-
-    //DSL Style get value
-    public LanguageSimpleType langAttr() {
-        return getLangAttr();
-    }
-
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-        getElement().setAttribute("lang", langAttr.getValue());
-    }
-
-    //DSL Style set value
-    public ModTypeComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
-        }
-
-        return idAttr;
-    }
-
-    //DSL Style get value
-    public IDSimpleType idAttr() {
-        return getIdAttr();
-    }
-
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
-    }
-
-    //DSL Style set value
-    public ModTypeComplexType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-    }
-
-    //DSL Style get value
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
-    }
-
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
-    }
-
-    //DSL Style set value
-    public ModTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
+    /**
+     * Return <code>classAttr</code> property
+     *
+     * @return classAttr
+     */
     public StringSimpleType getClassAttr() {
         if (classAttr == null) {
             classAttr = new StringSimpleType();
@@ -361,22 +315,41 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return classAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>classAttr</code> property in DSL way
+     *
+     * @return classAttr
+     */
     public StringSimpleType classAttr() {
         return getClassAttr();
     }
 
+    /**
+     * Set <code>classAttr</code> property
+     *
+     * @param classAttr the new value
+     */
     public void setClassAttr(final StringSimpleType classAttr) {
         this.classAttr = classAttr;
         getElement().setAttribute("class", classAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr the new value
+     * @return <code>ModTypeComplexType</code> instance
+     */
     public ModTypeComplexType classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
         return this;
     }
 
+    /**
+     * Return <code>styleAttr</code> property
+     *
+     * @return styleAttr
+     */
     public StringSimpleType getStyleAttr() {
         if (styleAttr == null) {
             styleAttr = new StringSimpleType();
@@ -386,22 +359,41 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return styleAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>styleAttr</code> property in DSL way
+     *
+     * @return styleAttr
+     */
     public StringSimpleType styleAttr() {
         return getStyleAttr();
     }
 
+    /**
+     * Set <code>styleAttr</code> property
+     *
+     * @param styleAttr the new value
+     */
     public void setStyleAttr(final StringSimpleType styleAttr) {
         this.styleAttr = styleAttr;
         getElement().setAttribute("style", styleAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr the new value
+     * @return <code>ModTypeComplexType</code> instance
+     */
     public ModTypeComplexType styleAttr(final StringSimpleType styleAttr) {
         setStyleAttr(styleAttr);
         return this;
     }
 
+    /**
+     * Return <code>titleAttr</code> property
+     *
+     * @return titleAttr
+     */
     public StringSimpleType getTitleAttr() {
         if (titleAttr == null) {
             titleAttr = new StringSimpleType();
@@ -411,22 +403,260 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return titleAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>titleAttr</code> property in DSL way
+     *
+     * @return titleAttr
+     */
     public StringSimpleType titleAttr() {
         return getTitleAttr();
     }
 
+    /**
+     * Set <code>titleAttr</code> property
+     *
+     * @param titleAttr the new value
+     */
     public void setTitleAttr(final StringSimpleType titleAttr) {
         this.titleAttr = titleAttr;
         getElement().setAttribute("title", titleAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr the new value
+     * @return <code>ModTypeComplexType</code> instance
+     */
     public ModTypeComplexType titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
         return this;
     }
 
+    /**
+     * Return <code>refersToAttr</code> property
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property in DSL way
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property
+     *
+     * @param refersToAttr the new value
+     */
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr the new value
+     * @return <code>ModTypeComplexType</code> instance
+     */
+    public ModTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>statusAttr</code> property
+     *
+     * @return statusAttr
+     */
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        }
+
+        return statusAttr;
+    }
+
+    /**
+     * Return <code>statusAttr</code> property in DSL way
+     *
+     * @return statusAttr
+     */
+    public StatusTypeSimpleType statusAttr() {
+        return getStatusAttr();
+    }
+
+    /**
+     * Set <code>statusAttr</code> property
+     *
+     * @param statusAttr the new value
+     */
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status", statusAttr.value());
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr the new value
+     * @return <code>ModTypeComplexType</code> instance
+     */
+    public ModTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>langAttr</code> property
+     *
+     * @return langAttr
+     */
+    public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+            langAttr = new LanguageSimpleType();
+            langAttr.setValue(getElement().getAttribute("lang"));
+        }
+
+        return langAttr;
+    }
+
+    /**
+     * Return <code>langAttr</code> property in DSL way
+     *
+     * @return langAttr
+     */
+    public LanguageSimpleType langAttr() {
+        return getLangAttr();
+    }
+
+    /**
+     * Set <code>langAttr</code> property
+     *
+     * @param langAttr the new value
+     */
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+        getElement().setAttribute("lang", langAttr.getValue());
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr the new value
+     * @return <code>ModTypeComplexType</code> instance
+     */
+    public ModTypeComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>idAttr</code> property
+     *
+     * @return idAttr
+     */
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
+        }
+
+        return idAttr;
+    }
+
+    /**
+     * Return <code>idAttr</code> property in DSL way
+     *
+     * @return idAttr
+     */
+    public IDSimpleType idAttr() {
+        return getIdAttr();
+    }
+
+    /**
+     * Set <code>idAttr</code> property
+     *
+     * @param idAttr the new value
+     */
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr the new value
+     * @return <code>ModTypeComplexType</code> instance
+     */
+    public ModTypeComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property
+     *
+     * @param evolvingIdAttr the new value
+     */
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr the new value
+     * @return <code>ModTypeComplexType</code> instance
+     */
+    public ModTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>java.util.List<Inline></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Inline> getInlines() {
         java.util.List<Inline> result = new ArrayList<Inline>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -437,17 +667,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Inline></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Inline> getInlineList() {
         return getInlines();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Inline></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Inline addInline(Inline inlineElem) {
         this.addOverlayWidget(inlineElem);
         return inlineElem;
     }
 
+    /**
+     * Return <code>java.util.List<Marker></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Marker> getMarkers() {
         java.util.List<Marker> result = new ArrayList<Marker>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -458,17 +701,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Marker></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Marker> getMarkerList() {
         return getMarkers();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Marker></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Marker addMarker(Marker markerElem) {
         this.addOverlayWidget(markerElem);
         return markerElem;
     }
 
+    /**
+     * Return <code>java.util.List<Popup></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Popup> getPopups() {
         java.util.List<Popup> result = new ArrayList<Popup>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -479,17 +735,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Popup></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Popup> getPopupList() {
         return getPopups();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Popup></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Popup addPopup(Popup popupElem) {
         this.addOverlayWidget(popupElem);
         return popupElem;
     }
 
+    /**
+     * Return <code>periodAttr</code> property
+     *
+     * @return periodAttr
+     */
     public AnyURISimpleType getPeriodAttr() {
         if (periodAttr == null) {
             periodAttr = new AnyURISimpleType();
@@ -499,22 +768,41 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return periodAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>periodAttr</code> property in DSL way
+     *
+     * @return periodAttr
+     */
     public AnyURISimpleType periodAttr() {
         return getPeriodAttr();
     }
 
+    /**
+     * Set <code>periodAttr</code> property
+     *
+     * @param periodAttr the new value
+     */
     public void setPeriodAttr(final AnyURISimpleType periodAttr) {
         this.periodAttr = periodAttr;
         getElement().setAttribute("period", periodAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr the new value
+     * @return <code>ModTypeComplexType</code> instance
+     */
     public ModTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
     }
 
+    /**
+     * Return <code>java.util.List<Ref></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Ref> getRefs() {
         java.util.List<Ref> result = new ArrayList<Ref>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -525,17 +813,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Ref></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Ref> getRefList() {
         return getRefs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Ref></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Ref addRef(Ref refElem) {
         this.addOverlayWidget(refElem);
         return refElem;
     }
 
+    /**
+     * Return <code>java.util.List<Mref></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Mref> getMrefs() {
         java.util.List<Mref> result = new ArrayList<Mref>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -546,17 +847,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Mref></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Mref> getMrefList() {
         return getMrefs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Mref></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Mref addMref(Mref mrefElem) {
         this.addOverlayWidget(mrefElem);
         return mrefElem;
     }
 
+    /**
+     * Return <code>java.util.List<Rref></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Rref> getRrefs() {
         java.util.List<Rref> result = new ArrayList<Rref>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -567,17 +881,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Rref></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Rref> getRrefList() {
         return getRrefs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Rref></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Rref addRref(Rref rrefElem) {
         this.addOverlayWidget(rrefElem);
         return rrefElem;
     }
 
+    /**
+     * Return <code>java.util.List<Mod></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Mod> getMods() {
         java.util.List<Mod> result = new ArrayList<Mod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -588,17 +915,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Mod></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Mod> getModList() {
         return getMods();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Mod></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Mod addMod(Mod modElem) {
         this.addOverlayWidget(modElem);
         return modElem;
     }
 
+    /**
+     * Return <code>java.util.List<Mmod></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Mmod> getMmods() {
         java.util.List<Mmod> result = new ArrayList<Mmod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -609,17 +949,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Mmod></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Mmod> getMmodList() {
         return getMmods();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Mmod></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Mmod addMmod(Mmod mmodElem) {
         this.addOverlayWidget(mmodElem);
         return mmodElem;
     }
 
+    /**
+     * Return <code>java.util.List<Rmod></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Rmod> getRmods() {
         java.util.List<Rmod> result = new ArrayList<Rmod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -630,17 +983,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Rmod></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Rmod> getRmodList() {
         return getRmods();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Rmod></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Rmod addRmod(Rmod rmodElem) {
         this.addOverlayWidget(rmodElem);
         return rmodElem;
     }
 
+    /**
+     * Return <code>java.util.List<Remark></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Remark> getRemarks() {
         java.util.List<Remark> result = new ArrayList<Remark>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -651,17 +1017,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Remark></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Remark> getRemarkList() {
         return getRemarks();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Remark></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Remark addRemark(Remark remarkElem) {
         this.addOverlayWidget(remarkElem);
         return remarkElem;
     }
 
+    /**
+     * Return <code>java.util.List<RecordedTime></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<RecordedTime> getRecordedTimes() {
         java.util.List<RecordedTime> result = new ArrayList<RecordedTime>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -672,17 +1051,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<RecordedTime></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<RecordedTime> getRecordedTimeList() {
         return getRecordedTimes();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<RecordedTime></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public RecordedTime addRecordedTime(RecordedTime recordedTimeElem) {
         this.addOverlayWidget(recordedTimeElem);
         return recordedTimeElem;
     }
 
+    /**
+     * Return <code>java.util.List<Vote></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Vote> getVotes() {
         java.util.List<Vote> result = new ArrayList<Vote>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -693,17 +1085,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Vote></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Vote> getVoteList() {
         return getVotes();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Vote></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Vote addVote(Vote voteElem) {
         this.addOverlayWidget(voteElem);
         return voteElem;
     }
 
+    /**
+     * Return <code>java.util.List<Outcome></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Outcome> getOutcomes() {
         java.util.List<Outcome> result = new ArrayList<Outcome>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -714,17 +1119,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Outcome></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Outcome> getOutcomeList() {
         return getOutcomes();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Outcome></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Outcome addOutcome(Outcome outcomeElem) {
         this.addOverlayWidget(outcomeElem);
         return outcomeElem;
     }
 
+    /**
+     * Return <code>java.util.List<Ins></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Ins> getInses() {
         java.util.List<Ins> result = new ArrayList<Ins>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -735,17 +1153,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Ins></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Ins> getInsList() {
         return getInses();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Ins></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Ins addIns(Ins insElem) {
         this.addOverlayWidget(insElem);
         return insElem;
     }
 
+    /**
+     * Return <code>java.util.List<Del></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Del> getDels() {
         java.util.List<Del> result = new ArrayList<Del>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -756,17 +1187,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Del></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Del> getDelList() {
         return getDels();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Del></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Del addDel(Del delElem) {
         this.addOverlayWidget(delElem);
         return delElem;
     }
 
+    /**
+     * Return <code>java.util.List<Omissis></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Omissis> getOmissises() {
         java.util.List<Omissis> result = new ArrayList<Omissis>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -777,17 +1221,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Omissis></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Omissis> getOmissisList() {
         return getOmissises();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Omissis></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Omissis addOmissis(Omissis omissisElem) {
         this.addOverlayWidget(omissisElem);
         return omissisElem;
     }
 
+    /**
+     * Return <code>java.util.List<ExtractText></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ExtractText> getExtractTexts() {
         java.util.List<ExtractText> result = new ArrayList<ExtractText>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -798,17 +1255,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<ExtractText></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ExtractText> getExtractTextList() {
         return getExtractTexts();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<ExtractText></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public ExtractText addExtractText(ExtractText extractTextElem) {
         this.addOverlayWidget(extractTextElem);
         return extractTextElem;
     }
 
+    /**
+     * Return <code>java.util.List<ExtractStructure></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ExtractStructure> getExtractStructures() {
         java.util.List<ExtractStructure> result = new ArrayList<ExtractStructure>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -819,17 +1289,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<ExtractStructure></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ExtractStructure> getExtractStructureList() {
         return getExtractStructures();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<ExtractStructure></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public ExtractStructure addExtractStructure(ExtractStructure extractStructureElem) {
         this.addOverlayWidget(extractStructureElem);
         return extractStructureElem;
     }
 
+    /**
+     * Return <code>java.util.List<Placeholder></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Placeholder> getPlaceholders() {
         java.util.List<Placeholder> result = new ArrayList<Placeholder>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -840,17 +1323,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Placeholder></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Placeholder> getPlaceholderList() {
         return getPlaceholders();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Placeholder></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Placeholder addPlaceholder(Placeholder placeholderElem) {
         this.addOverlayWidget(placeholderElem);
         return placeholderElem;
     }
 
+    /**
+     * Return <code>java.util.List<FillIn></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<FillIn> getFillIns() {
         java.util.List<FillIn> result = new ArrayList<FillIn>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -861,17 +1357,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<FillIn></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<FillIn> getFillInList() {
         return getFillIns();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<FillIn></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public FillIn addFillIn(FillIn fillInElem) {
         this.addOverlayWidget(fillInElem);
         return fillInElem;
     }
 
+    /**
+     * Return <code>java.util.List<B></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<B> getBs() {
         java.util.List<B> result = new ArrayList<B>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -882,17 +1391,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<B></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<B> getBList() {
         return getBs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<B></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public B addB(B bElem) {
         this.addOverlayWidget(bElem);
         return bElem;
     }
 
+    /**
+     * Return <code>java.util.List<I></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<I> getIs() {
         java.util.List<I> result = new ArrayList<I>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -903,17 +1425,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<I></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<I> getIList() {
         return getIs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<I></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public I addI(I iElem) {
         this.addOverlayWidget(iElem);
         return iElem;
     }
 
+    /**
+     * Return <code>java.util.List<A></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<A> getAs() {
         java.util.List<A> result = new ArrayList<A>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -924,17 +1459,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<A></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<A> getAList() {
         return getAs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<A></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public A addA(A aElem) {
         this.addOverlayWidget(aElem);
         return aElem;
     }
 
+    /**
+     * Return <code>java.util.List<U></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<U> getUs() {
         java.util.List<U> result = new ArrayList<U>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -945,17 +1493,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<U></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<U> getUList() {
         return getUs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<U></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public U addU(U uElem) {
         this.addOverlayWidget(uElem);
         return uElem;
     }
 
+    /**
+     * Return <code>java.util.List<Sub></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Sub> getSubs() {
         java.util.List<Sub> result = new ArrayList<Sub>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -966,17 +1527,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Sub></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Sub> getSubList() {
         return getSubs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Sub></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Sub addSub(Sub subElem) {
         this.addOverlayWidget(subElem);
         return subElem;
     }
 
+    /**
+     * Return <code>java.util.List<Sup></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Sup> getSups() {
         java.util.List<Sup> result = new ArrayList<Sup>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -987,17 +1561,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Sup></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Sup> getSupList() {
         return getSups();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Sup></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Sup addSup(Sup supElem) {
         this.addOverlayWidget(supElem);
         return supElem;
     }
 
+    /**
+     * Return <code>java.util.List<Span></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Span> getSpans() {
         java.util.List<Span> result = new ArrayList<Span>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1008,17 +1595,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Span></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Span> getSpanList() {
         return getSpans();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Span></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Span addSpan(Span spanElem) {
         this.addOverlayWidget(spanElem);
         return spanElem;
     }
 
+    /**
+     * Return <code>java.util.List<DocType></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocType> getDocTypes() {
         java.util.List<DocType> result = new ArrayList<DocType>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1029,17 +1629,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<DocType></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocType> getDocTypeList() {
         return getDocTypes();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<DocType></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DocType addDocType(DocType docTypeElem) {
         this.addOverlayWidget(docTypeElem);
         return docTypeElem;
     }
 
+    /**
+     * Return <code>java.util.List<DocTitle></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocTitle> getDocTitles() {
         java.util.List<DocTitle> result = new ArrayList<DocTitle>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1050,17 +1663,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<DocTitle></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocTitle> getDocTitleList() {
         return getDocTitles();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<DocTitle></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DocTitle addDocTitle(DocTitle docTitleElem) {
         this.addOverlayWidget(docTitleElem);
         return docTitleElem;
     }
 
+    /**
+     * Return <code>java.util.List<DocNumber></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocNumber> getDocNumbers() {
         java.util.List<DocNumber> result = new ArrayList<DocNumber>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1071,17 +1697,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<DocNumber></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocNumber> getDocNumberList() {
         return getDocNumbers();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<DocNumber></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DocNumber addDocNumber(DocNumber docNumberElem) {
         this.addOverlayWidget(docNumberElem);
         return docNumberElem;
     }
 
+    /**
+     * Return <code>java.util.List<DocProponent></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocProponent> getDocProponents() {
         java.util.List<DocProponent> result = new ArrayList<DocProponent>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1092,17 +1731,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<DocProponent></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocProponent> getDocProponentList() {
         return getDocProponents();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<DocProponent></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DocProponent addDocProponent(DocProponent docProponentElem) {
         this.addOverlayWidget(docProponentElem);
         return docProponentElem;
     }
 
+    /**
+     * Return <code>java.util.List<DocDate></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocDate> getDocDates() {
         java.util.List<DocDate> result = new ArrayList<DocDate>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1113,17 +1765,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<DocDate></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocDate> getDocDateList() {
         return getDocDates();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<DocDate></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DocDate addDocDate(DocDate docDateElem) {
         this.addOverlayWidget(docDateElem);
         return docDateElem;
     }
 
+    /**
+     * Return <code>java.util.List<Legislature></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Legislature> getLegislatures() {
         java.util.List<Legislature> result = new ArrayList<Legislature>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1134,17 +1799,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Legislature></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Legislature> getLegislatureList() {
         return getLegislatures();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Legislature></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Legislature addLegislature(Legislature legislatureElem) {
         this.addOverlayWidget(legislatureElem);
         return legislatureElem;
     }
 
+    /**
+     * Return <code>java.util.List<Session></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Session> getSessions() {
         java.util.List<Session> result = new ArrayList<Session>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1155,17 +1833,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Session></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Session> getSessionList() {
         return getSessions();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Session></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Session addSession(Session sessionElem) {
         this.addOverlayWidget(sessionElem);
         return sessionElem;
     }
 
+    /**
+     * Return <code>java.util.List<ShortTitle></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ShortTitle> getShortTitles() {
         java.util.List<ShortTitle> result = new ArrayList<ShortTitle>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1176,17 +1867,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<ShortTitle></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ShortTitle> getShortTitleList() {
         return getShortTitles();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<ShortTitle></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public ShortTitle addShortTitle(ShortTitle shortTitleElem) {
         this.addOverlayWidget(shortTitleElem);
         return shortTitleElem;
     }
 
+    /**
+     * Return <code>java.util.List<DocPurpose></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocPurpose> getDocPurposes() {
         java.util.List<DocPurpose> result = new ArrayList<DocPurpose>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1197,17 +1901,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<DocPurpose></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocPurpose> getDocPurposeList() {
         return getDocPurposes();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<DocPurpose></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DocPurpose addDocPurpose(DocPurpose docPurposeElem) {
         this.addOverlayWidget(docPurposeElem);
         return docPurposeElem;
     }
 
+    /**
+     * Return <code>java.util.List<DocCommittee></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocCommittee> getDocCommittees() {
         java.util.List<DocCommittee> result = new ArrayList<DocCommittee>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1218,17 +1935,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<DocCommittee></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocCommittee> getDocCommitteeList() {
         return getDocCommittees();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<DocCommittee></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DocCommittee addDocCommittee(DocCommittee docCommitteeElem) {
         this.addOverlayWidget(docCommitteeElem);
         return docCommitteeElem;
     }
 
+    /**
+     * Return <code>java.util.List<DocIntroducer></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocIntroducer> getDocIntroducers() {
         java.util.List<DocIntroducer> result = new ArrayList<DocIntroducer>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1239,17 +1969,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<DocIntroducer></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocIntroducer> getDocIntroducerList() {
         return getDocIntroducers();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<DocIntroducer></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DocIntroducer addDocIntroducer(DocIntroducer docIntroducerElem) {
         this.addOverlayWidget(docIntroducerElem);
         return docIntroducerElem;
     }
 
+    /**
+     * Return <code>java.util.List<DocStage></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocStage> getDocStages() {
         java.util.List<DocStage> result = new ArrayList<DocStage>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1260,17 +2003,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<DocStage></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocStage> getDocStageList() {
         return getDocStages();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<DocStage></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DocStage addDocStage(DocStage docStageElem) {
         this.addOverlayWidget(docStageElem);
         return docStageElem;
     }
 
+    /**
+     * Return <code>java.util.List<DocStatus></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocStatus> getDocStatuses() {
         java.util.List<DocStatus> result = new ArrayList<DocStatus>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1281,17 +2037,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<DocStatus></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocStatus> getDocStatusList() {
         return getDocStatuses();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<DocStatus></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DocStatus addDocStatus(DocStatus docStatusElem) {
         this.addOverlayWidget(docStatusElem);
         return docStatusElem;
     }
 
+    /**
+     * Return <code>java.util.List<DocJurisdiction></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocJurisdiction> getDocJurisdictions() {
         java.util.List<DocJurisdiction> result = new ArrayList<DocJurisdiction>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1302,17 +2071,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<DocJurisdiction></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocJurisdiction> getDocJurisdictionList() {
         return getDocJurisdictions();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<DocJurisdiction></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DocJurisdiction addDocJurisdiction(DocJurisdiction docJurisdictionElem) {
         this.addOverlayWidget(docJurisdictionElem);
         return docJurisdictionElem;
     }
 
+    /**
+     * Return <code>java.util.List<DocketNumber></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocketNumber> getDocketNumbers() {
         java.util.List<DocketNumber> result = new ArrayList<DocketNumber>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1323,17 +2105,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<DocketNumber></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DocketNumber> getDocketNumberList() {
         return getDocketNumbers();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<DocketNumber></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DocketNumber addDocketNumber(DocketNumber docketNumberElem) {
         this.addOverlayWidget(docketNumberElem);
         return docketNumberElem;
     }
 
+    /**
+     * Return <code>java.util.List<Date></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Date> getDates() {
         java.util.List<Date> result = new ArrayList<Date>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1344,17 +2139,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Date></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Date> getDateList() {
         return getDates();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Date></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Date addDate(Date dateElem) {
         this.addOverlayWidget(dateElem);
         return dateElem;
     }
 
+    /**
+     * Return <code>java.util.List<Person></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Person> getPersons() {
         java.util.List<Person> result = new ArrayList<Person>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1365,17 +2173,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Person></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Person> getPersonList() {
         return getPersons();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Person></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Person addPerson(Person personElem) {
         this.addOverlayWidget(personElem);
         return personElem;
     }
 
+    /**
+     * Return <code>java.util.List<Organization></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Organization> getOrganizations() {
         java.util.List<Organization> result = new ArrayList<Organization>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1386,17 +2207,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Organization></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Organization> getOrganizationList() {
         return getOrganizations();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Organization></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Organization addOrganization(Organization organizationElem) {
         this.addOverlayWidget(organizationElem);
         return organizationElem;
     }
 
+    /**
+     * Return <code>java.util.List<Concept></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Concept> getConcepts() {
         java.util.List<Concept> result = new ArrayList<Concept>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1407,17 +2241,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Concept></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Concept> getConceptList() {
         return getConcepts();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Concept></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Concept addConcept(Concept conceptElem) {
         this.addOverlayWidget(conceptElem);
         return conceptElem;
     }
 
+    /**
+     * Return <code>java.util.List<Object></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Object> getObjects() {
         java.util.List<Object> result = new ArrayList<Object>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1428,17 +2275,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Object></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Object> getObjectList() {
         return getObjects();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Object></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Object addObject(Object objectElem) {
         this.addOverlayWidget(objectElem);
         return objectElem;
     }
 
+    /**
+     * Return <code>java.util.List<Event></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Event> getEvents() {
         java.util.List<Event> result = new ArrayList<Event>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1449,17 +2309,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Event></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Event> getEventList() {
         return getEvents();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Event></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Event addEvent(Event eventElem) {
         this.addOverlayWidget(eventElem);
         return eventElem;
     }
 
+    /**
+     * Return <code>java.util.List<Location></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Location> getLocations() {
         java.util.List<Location> result = new ArrayList<Location>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1470,17 +2343,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Location></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Location> getLocationList() {
         return getLocations();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Location></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Location addLocation(Location locationElem) {
         this.addOverlayWidget(locationElem);
         return locationElem;
     }
 
+    /**
+     * Return <code>java.util.List<Process></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Process> getProcesses() {
         java.util.List<Process> result = new ArrayList<Process>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1491,17 +2377,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Process></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Process> getProcessList() {
         return getProcesses();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Process></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Process addProcess(Process processElem) {
         this.addOverlayWidget(processElem);
         return processElem;
     }
 
+    /**
+     * Return <code>java.util.List<Role></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Role> getRoles() {
         java.util.List<Role> result = new ArrayList<Role>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1512,17 +2411,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Role></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Role> getRoleList() {
         return getRoles();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Role></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Role addRole(Role roleElem) {
         this.addOverlayWidget(roleElem);
         return roleElem;
     }
 
+    /**
+     * Return <code>java.util.List<Term></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Term> getTerms() {
         java.util.List<Term> result = new ArrayList<Term>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1533,17 +2445,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Term></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Term> getTermList() {
         return getTerms();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Term></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Term addTerm(Term termElem) {
         this.addOverlayWidget(termElem);
         return termElem;
     }
 
+    /**
+     * Return <code>java.util.List<Quantity></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Quantity> getQuantities() {
         java.util.List<Quantity> result = new ArrayList<Quantity>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1554,17 +2479,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Quantity></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Quantity> getQuantityList() {
         return getQuantities();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Quantity></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Quantity addQuantity(Quantity quantityElem) {
         this.addOverlayWidget(quantityElem);
         return quantityElem;
     }
 
+    /**
+     * Return <code>java.util.List<Def></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Def> getDefs() {
         java.util.List<Def> result = new ArrayList<Def>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1575,17 +2513,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Def></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Def> getDefList() {
         return getDefs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Def></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Def addDef(Def defElem) {
         this.addOverlayWidget(defElem);
         return defElem;
     }
 
+    /**
+     * Return <code>java.util.List<Entity></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Entity> getEntities() {
         java.util.List<Entity> result = new ArrayList<Entity>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1596,17 +2547,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Entity></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Entity> getEntityList() {
         return getEntities();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Entity></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Entity addEntity(Entity entityElem) {
         this.addOverlayWidget(entityElem);
         return entityElem;
     }
 
+    /**
+     * Return <code>java.util.List<CourtType></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<CourtType> getCourtTypes() {
         java.util.List<CourtType> result = new ArrayList<CourtType>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1617,17 +2581,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<CourtType></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<CourtType> getCourtTypeList() {
         return getCourtTypes();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<CourtType></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public CourtType addCourtType(CourtType courtTypeElem) {
         this.addOverlayWidget(courtTypeElem);
         return courtTypeElem;
     }
 
+    /**
+     * Return <code>java.util.List<NeutralCitation></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<NeutralCitation> getNeutralCitations() {
         java.util.List<NeutralCitation> result = new ArrayList<NeutralCitation>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1638,17 +2615,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<NeutralCitation></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<NeutralCitation> getNeutralCitationList() {
         return getNeutralCitations();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<NeutralCitation></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public NeutralCitation addNeutralCitation(NeutralCitation neutralCitationElem) {
         this.addOverlayWidget(neutralCitationElem);
         return neutralCitationElem;
     }
 
+    /**
+     * Return <code>java.util.List<Party></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Party> getParties() {
         java.util.List<Party> result = new ArrayList<Party>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1659,17 +2649,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Party></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Party> getPartyList() {
         return getParties();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Party></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Party addParty(Party partyElem) {
         this.addOverlayWidget(partyElem);
         return partyElem;
     }
 
+    /**
+     * Return <code>java.util.List<Judge></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Judge> getJudges() {
         java.util.List<Judge> result = new ArrayList<Judge>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1680,17 +2683,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Judge></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Judge> getJudgeList() {
         return getJudges();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Judge></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Judge addJudge(Judge judgeElem) {
         this.addOverlayWidget(judgeElem);
         return judgeElem;
     }
 
+    /**
+     * Return <code>java.util.List<Lawyer></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Lawyer> getLawyers() {
         java.util.List<Lawyer> result = new ArrayList<Lawyer>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1701,17 +2717,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Lawyer></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Lawyer> getLawyerList() {
         return getLawyers();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Lawyer></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Lawyer addLawyer(Lawyer lawyerElem) {
         this.addOverlayWidget(lawyerElem);
         return lawyerElem;
     }
 
+    /**
+     * Return <code>java.util.List<Signature></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Signature> getSignatures() {
         java.util.List<Signature> result = new ArrayList<Signature>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1722,17 +2751,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Signature></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Signature> getSignatureList() {
         return getSignatures();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Signature></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Signature addSignature(Signature signatureElem) {
         this.addOverlayWidget(signatureElem);
         return signatureElem;
     }
 
+    /**
+     * Return <code>java.util.List<Opinion></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Opinion> getOpinions() {
         java.util.List<Opinion> result = new ArrayList<Opinion>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1743,17 +2785,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Opinion></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Opinion> getOpinionList() {
         return getOpinions();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Opinion></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Opinion addOpinion(Opinion opinionElem) {
         this.addOverlayWidget(opinionElem);
         return opinionElem;
     }
 
+    /**
+     * Return <code>java.util.List<AffectedDocument></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<AffectedDocument> getAffectedDocuments() {
         java.util.List<AffectedDocument> result = new ArrayList<AffectedDocument>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1764,17 +2819,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<AffectedDocument></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<AffectedDocument> getAffectedDocumentList() {
         return getAffectedDocuments();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<AffectedDocument></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public AffectedDocument addAffectedDocument(AffectedDocument affectedDocumentElem) {
         this.addOverlayWidget(affectedDocumentElem);
         return affectedDocumentElem;
     }
 
+    /**
+     * Return <code>java.util.List<RelatedDocument></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<RelatedDocument> getRelatedDocuments() {
         java.util.List<RelatedDocument> result = new ArrayList<RelatedDocument>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1785,17 +2853,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<RelatedDocument></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<RelatedDocument> getRelatedDocumentList() {
         return getRelatedDocuments();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<RelatedDocument></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public RelatedDocument addRelatedDocument(RelatedDocument relatedDocumentElem) {
         this.addOverlayWidget(relatedDocumentElem);
         return relatedDocumentElem;
     }
 
+    /**
+     * Return <code>java.util.List<Change></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Change> getChanges() {
         java.util.List<Change> result = new ArrayList<Change>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1806,17 +2887,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Change></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Change> getChangeList() {
         return getChanges();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Change></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Change addChange(Change changeElem) {
         this.addOverlayWidget(changeElem);
         return changeElem;
     }
 
+    /**
+     * Return <code>java.util.List<NoteRef></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<NoteRef> getNoteRefs() {
         java.util.List<NoteRef> result = new ArrayList<NoteRef>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1827,17 +2921,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<NoteRef></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<NoteRef> getNoteRefList() {
         return getNoteRefs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<NoteRef></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public NoteRef addNoteRef(NoteRef noteRefElem) {
         this.addOverlayWidget(noteRefElem);
         return noteRefElem;
     }
 
+    /**
+     * Return <code>java.util.List<Eol></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Eol> getEols() {
         java.util.List<Eol> result = new ArrayList<Eol>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1848,17 +2955,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Eol></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Eol> getEolList() {
         return getEols();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Eol></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Eol addEol(Eol eolElem) {
         this.addOverlayWidget(eolElem);
         return eolElem;
     }
 
+    /**
+     * Return <code>java.util.List<Eop></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Eop> getEops() {
         java.util.List<Eop> result = new ArrayList<Eop>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1869,17 +2989,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Eop></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Eop> getEopList() {
         return getEops();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Eop></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Eop addEop(Eop eopElem) {
         this.addOverlayWidget(eopElem);
         return eopElem;
     }
 
+    /**
+     * Return <code>java.util.List<Img></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Img> getImgs() {
         java.util.List<Img> result = new ArrayList<Img>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1890,17 +3023,30 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Img></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Img> getImgList() {
         return getImgs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Img></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Img addImg(Img imgElem) {
         this.addOverlayWidget(imgElem);
         return imgElem;
     }
 
+    /**
+     * Return <code>java.util.List<AuthorialNote></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<AuthorialNote> getAuthorialNotes() {
         java.util.List<AuthorialNote> result = new ArrayList<AuthorialNote>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -1911,12 +3057,20 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<AuthorialNote></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<AuthorialNote> getAuthorialNoteList() {
         return getAuthorialNotes();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<AuthorialNote></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public AuthorialNote addAuthorialNote(AuthorialNote authorialNoteElem) {
         this.addOverlayWidget(authorialNoteElem);
         return authorialNoteElem;
@@ -1934,6 +3088,8 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -1944,21 +3100,23 @@ public class ModTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public ModTypeComplexType html(String s) {
         super.html(s);

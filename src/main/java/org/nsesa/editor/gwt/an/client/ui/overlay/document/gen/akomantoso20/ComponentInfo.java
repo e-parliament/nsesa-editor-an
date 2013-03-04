@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * Generated class
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class ComponentInfo extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new ComponentData(), new Occurrence(1, 1));
@@ -36,7 +40,9 @@ public class ComponentInfo extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "componentInfo");
@@ -45,19 +51,31 @@ public class ComponentInfo extends OverlayWidgetImpl {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>ComponentInfo</code> object and set up its type
+     */
     public ComponentInfo() {
         super(create());
         setType("componentInfo");
     }
 
 
+    /**
+     * Create a <code>ComponentInfo</code> object with the given DOM element
+     */
     public ComponentInfo(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
+    /**
+     * Return <code>java.util.List<ComponentData></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ComponentData> getComponentDatas() {
         java.util.List<ComponentData> result = new ArrayList<ComponentData>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -68,12 +86,20 @@ public class ComponentInfo extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<ComponentData></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ComponentData> getComponentDataList() {
         return getComponentDatas();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<ComponentData></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public ComponentData addComponentData(ComponentData componentDataElem) {
         this.addOverlayWidget(componentDataElem);
         return componentDataElem;
@@ -91,6 +117,8 @@ public class ComponentInfo extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -104,7 +132,9 @@ public class ComponentInfo extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public ComponentInfo html(String s) {
         super.html(s);

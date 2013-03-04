@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The complex type judicialArguments is a list of all the judicial analysis elements that can be used on the analysis of a judgement
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Result(), new Occurrence(1, 1));
@@ -47,7 +51,9 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "judicialArgumentsComplexType");
@@ -58,12 +64,20 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>JudicialArgumentsComplexType</code> object with the given DOM element
+     */
     public JudicialArgumentsComplexType(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
+    /**
+     * Add <code>Result</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Result getResult() {
         Result result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -74,9 +88,13 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>resultElem</code> property in DSL way
+     *
+     * @param resultElem new value
+     * @return <code>Result</code> instance
+     */
     public Result setResult(Result resultElem) {
         Result result = getResult();
         // remove the child of the same type if exist
@@ -88,6 +106,11 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
         return resultElem;
     }
 
+    /**
+     * Return <code>java.util.List<Supports></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Supports> getSupportses() {
         java.util.List<Supports> result = new ArrayList<Supports>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -98,17 +121,30 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Supports></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Supports> getSupportsList() {
         return getSupportses();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Supports></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Supports addSupports(Supports supportsElem) {
         this.addOverlayWidget(supportsElem);
         return supportsElem;
     }
 
+    /**
+     * Return <code>java.util.List<IsAnalogTo></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<IsAnalogTo> getIsAnalogTos() {
         java.util.List<IsAnalogTo> result = new ArrayList<IsAnalogTo>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -119,17 +155,30 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<IsAnalogTo></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<IsAnalogTo> getIsAnalogToList() {
         return getIsAnalogTos();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<IsAnalogTo></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public IsAnalogTo addIsAnalogTo(IsAnalogTo isAnalogToElem) {
         this.addOverlayWidget(isAnalogToElem);
         return isAnalogToElem;
     }
 
+    /**
+     * Return <code>java.util.List<Applies></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Applies> getApplieses() {
         java.util.List<Applies> result = new ArrayList<Applies>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -140,17 +189,30 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Applies></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Applies> getAppliesList() {
         return getApplieses();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Applies></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Applies addApplies(Applies appliesElem) {
         this.addOverlayWidget(appliesElem);
         return appliesElem;
     }
 
+    /**
+     * Return <code>java.util.List<Extends></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Extends> getExtend_s() {
         java.util.List<Extends> result = new ArrayList<Extends>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -161,17 +223,30 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Extends></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Extends> getExtend_List() {
         return getExtend_s();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Extends></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Extends addExtend_(Extends extend_Elem) {
         this.addOverlayWidget(extend_Elem);
         return extend_Elem;
     }
 
+    /**
+     * Return <code>java.util.List<Restricts></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Restricts> getRestrictses() {
         java.util.List<Restricts> result = new ArrayList<Restricts>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -182,17 +257,30 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Restricts></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Restricts> getRestrictsList() {
         return getRestrictses();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Restricts></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Restricts addRestricts(Restricts restrictsElem) {
         this.addOverlayWidget(restrictsElem);
         return restrictsElem;
     }
 
+    /**
+     * Return <code>java.util.List<Derogates></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Derogates> getDerogateses() {
         java.util.List<Derogates> result = new ArrayList<Derogates>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -203,17 +291,30 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Derogates></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Derogates> getDerogatesList() {
         return getDerogateses();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Derogates></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Derogates addDerogates(Derogates derogatesElem) {
         this.addOverlayWidget(derogatesElem);
         return derogatesElem;
     }
 
+    /**
+     * Return <code>java.util.List<Contrasts></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Contrasts> getContrastses() {
         java.util.List<Contrasts> result = new ArrayList<Contrasts>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -224,17 +325,30 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Contrasts></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Contrasts> getContrastsList() {
         return getContrastses();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Contrasts></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Contrasts addContrasts(Contrasts contrastsElem) {
         this.addOverlayWidget(contrastsElem);
         return contrastsElem;
     }
 
+    /**
+     * Return <code>java.util.List<Overrules></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Overrules> getOverruleses() {
         java.util.List<Overrules> result = new ArrayList<Overrules>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -245,17 +359,30 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Overrules></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Overrules> getOverrulesList() {
         return getOverruleses();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Overrules></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Overrules addOverrules(Overrules overrulesElem) {
         this.addOverlayWidget(overrulesElem);
         return overrulesElem;
     }
 
+    /**
+     * Return <code>java.util.List<DissentsFrom></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DissentsFrom> getDissentsFroms() {
         java.util.List<DissentsFrom> result = new ArrayList<DissentsFrom>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -266,17 +393,30 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<DissentsFrom></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<DissentsFrom> getDissentsFromList() {
         return getDissentsFroms();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<DissentsFrom></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DissentsFrom addDissentsFrom(DissentsFrom dissentsFromElem) {
         this.addOverlayWidget(dissentsFromElem);
         return dissentsFromElem;
     }
 
+    /**
+     * Return <code>java.util.List<PutsInQuestion></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<PutsInQuestion> getPutsInQuestions() {
         java.util.List<PutsInQuestion> result = new ArrayList<PutsInQuestion>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -287,17 +427,30 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<PutsInQuestion></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<PutsInQuestion> getPutsInQuestionList() {
         return getPutsInQuestions();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<PutsInQuestion></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public PutsInQuestion addPutsInQuestion(PutsInQuestion putsInQuestionElem) {
         this.addOverlayWidget(putsInQuestionElem);
         return putsInQuestionElem;
     }
 
+    /**
+     * Return <code>java.util.List<Distinguishes></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Distinguishes> getDistinguisheses() {
         java.util.List<Distinguishes> result = new ArrayList<Distinguishes>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -308,12 +461,20 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Distinguishes></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Distinguishes> getDistinguishesList() {
         return getDistinguisheses();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Distinguishes></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Distinguishes addDistinguishes(Distinguishes distinguishesElem) {
         this.addOverlayWidget(distinguishesElem);
         return distinguishesElem;
@@ -331,6 +492,8 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -344,7 +507,9 @@ public class JudicialArgumentsComplexType extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public JudicialArgumentsComplexType html(String s) {
         super.html(s);

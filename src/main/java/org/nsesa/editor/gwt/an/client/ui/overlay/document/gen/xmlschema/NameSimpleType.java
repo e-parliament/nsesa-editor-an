@@ -17,13 +17,16 @@ import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.DOM;
 
 /**
+ * Generated class
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class NameSimpleType extends TokenSimpleType {
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "NameSimpleType");
@@ -34,10 +37,16 @@ public class NameSimpleType extends TokenSimpleType {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create an empty <code>NameSimpleType</code> object
+     */
     public NameSimpleType() {
         super();
     }
 
+    /**
+     * Create a <code>NameSimpleType</code> object with teh given input data
+     */
     public NameSimpleType(String value) {
         super();
         this.value = value;

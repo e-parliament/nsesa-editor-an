@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the element rref is an inline element containing a range of references between the URI specified in the href attribute and the one specified in the upTo attribute.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Rref extends InlinereqComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Inline(), new Occurrence(0, -1));
@@ -105,7 +109,9 @@ public class Rref extends InlinereqComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "rref");
@@ -114,13 +120,19 @@ public class Rref extends InlinereqComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Rref</code> object and set up its type
+     */
     public Rref() {
         super(create());
         setType("rref");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public Rref(AnyURISimpleType fromAttr, AnyURISimpleType upToAttr, IDSimpleType idAttr) {
         this();
         setFromAttr(fromAttr);
@@ -129,6 +141,9 @@ public class Rref extends InlinereqComplexType {
     }
 
 
+    /**
+     * Create a <code>Rref</code> object with the given DOM element
+     */
     public Rref(Element element) {
         super(element);
     }
@@ -137,6 +152,11 @@ public class Rref extends InlinereqComplexType {
     private AnyURISimpleType fromAttr;
     private AnyURISimpleType upToAttr;
 
+    /**
+     * Return <code>fromAttr</code> property
+     *
+     * @return fromAttr
+     */
     public AnyURISimpleType getFromAttr() {
         if (fromAttr == null) {
             fromAttr = new AnyURISimpleType();
@@ -146,22 +166,41 @@ public class Rref extends InlinereqComplexType {
         return fromAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>fromAttr</code> property in DSL way
+     *
+     * @return fromAttr
+     */
     public AnyURISimpleType fromAttr() {
         return getFromAttr();
     }
 
+    /**
+     * Set <code>fromAttr</code> property
+     *
+     * @param fromAttr the new value
+     */
     public void setFromAttr(final AnyURISimpleType fromAttr) {
         this.fromAttr = fromAttr;
         getElement().setAttribute("from", fromAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>fromAttr</code> property in DSL way
+     *
+     * @param fromAttr the new value
+     * @return <code>Rref</code> instance
+     */
     public Rref fromAttr(final AnyURISimpleType fromAttr) {
         setFromAttr(fromAttr);
         return this;
     }
 
+    /**
+     * Return <code>upToAttr</code> property
+     *
+     * @return upToAttr
+     */
     public AnyURISimpleType getUpToAttr() {
         if (upToAttr == null) {
             upToAttr = new AnyURISimpleType();
@@ -171,84 +210,153 @@ public class Rref extends InlinereqComplexType {
         return upToAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>upToAttr</code> property in DSL way
+     *
+     * @return upToAttr
+     */
     public AnyURISimpleType upToAttr() {
         return getUpToAttr();
     }
 
+    /**
+     * Set <code>upToAttr</code> property
+     *
+     * @param upToAttr the new value
+     */
     public void setUpToAttr(final AnyURISimpleType upToAttr) {
         this.upToAttr = upToAttr;
         getElement().setAttribute("upTo", upToAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>upToAttr</code> property in DSL way
+     *
+     * @param upToAttr the new value
+     * @return <code>Rref</code> instance
+     */
     public Rref upToAttr(final AnyURISimpleType upToAttr) {
         setUpToAttr(upToAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public Rref refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> Rref</code> instance
+     */
     public Rref alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
-    //DSL Style set value
-    public Rref statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Rref</code> instance
+     */
     public Rref wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
-    //DSL Style set value
-    public Rref langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Rref idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Rref evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Rref</code> instance
+     */
     public Rref classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr new value
+     * @return <code> Rref</code> instance
+     */
     public Rref styleAttr(final StringSimpleType styleAttr) {
         setStyleAttr(styleAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr new value
+     * @return <code> Rref</code> instance
+     */
     public Rref titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Rref</code> instance
+     */
+    public Rref refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> Rref</code> instance
+     */
+    public Rref statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> Rref</code> instance
+     */
+    public Rref langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Rref</code> instance
+     */
+    public Rref idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Rref</code> instance
+     */
+    public Rref evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Rref</code> instance
+     */
     public Rref periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -264,6 +372,8 @@ public class Rref extends InlinereqComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -279,7 +389,9 @@ public class Rref extends InlinereqComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Rref html(String s) {
         super.html(s);

@@ -26,10 +26,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The element proprietary is a metadata container of any additional metadata property that does not belong to the Akoma Ntoso properties. Anything can be placed in this element.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Proprietary extends AnyOtherTypeComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(null, new Occurrence(0, -1));
@@ -37,7 +41,9 @@ public class Proprietary extends AnyOtherTypeComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "proprietary");
@@ -46,19 +52,28 @@ public class Proprietary extends AnyOtherTypeComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Proprietary</code> object and set up its type
+     */
     public Proprietary() {
         super(create());
         setType("proprietary");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public Proprietary(AnyURISimpleType sourceAttr) {
         this();
         setSourceAttr(sourceAttr);
     }
 
 
+    /**
+     * Create a <code>Proprietary</code> object with the given DOM element
+     */
     public Proprietary(Element element) {
         super(element);
     }
@@ -66,6 +81,11 @@ public class Proprietary extends AnyOtherTypeComplexType {
     // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
 
+    /**
+     * Return <code>sourceAttr</code> property
+     *
+     * @return sourceAttr
+     */
     public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
             sourceAttr = new AnyURISimpleType();
@@ -75,42 +95,76 @@ public class Proprietary extends AnyOtherTypeComplexType {
         return sourceAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>sourceAttr</code> property in DSL way
+     *
+     * @return sourceAttr
+     */
     public AnyURISimpleType sourceAttr() {
         return getSourceAttr();
     }
 
+    /**
+     * Set <code>sourceAttr</code> property
+     *
+     * @param sourceAttr the new value
+     */
     public void setSourceAttr(final AnyURISimpleType sourceAttr) {
         this.sourceAttr = sourceAttr;
         getElement().setAttribute("source", sourceAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>sourceAttr</code> property in DSL way
+     *
+     * @param sourceAttr the new value
+     * @return <code>Proprietary</code> instance
+     */
     public Proprietary sourceAttr(final AnyURISimpleType sourceAttr) {
         setSourceAttr(sourceAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public Proprietary hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Proprietary</code> instance
+     */
     public Proprietary idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Proprietary</code> instance
+     */
     public Proprietary evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> Proprietary</code> instance
+     */
+    public Proprietary hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Proprietary</code> instance
+     */
     public Proprietary wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
@@ -126,6 +180,8 @@ public class Proprietary extends AnyOtherTypeComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -140,7 +196,9 @@ public class Proprietary extends AnyOtherTypeComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Proprietary html(String s) {
         super.html(s);

@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the type openStructure specifies the overall content model of all the document types that do not have a specific and peculiar structure
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class OpenStructureComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Meta(), new Occurrence(1, 1));
@@ -42,7 +46,9 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "openStructureComplexType");
@@ -53,6 +59,9 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>OpenStructureComplexType</code> object with the given DOM element
+     */
     public OpenStructureComplexType(Element element) {
         super(element);
     }
@@ -61,6 +70,11 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
     private VersionTypeSimpleType containsAttr;
     private StringSimpleType nameAttr;
 
+    /**
+     * Return <code>containsAttr</code> property
+     *
+     * @return containsAttr
+     */
     public VersionTypeSimpleType getContainsAttr() {
         if (containsAttr == null) {
             containsAttr = VersionTypeSimpleType.fromString(getElement().getAttribute("contains"));
@@ -69,22 +83,41 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         return containsAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>containsAttr</code> property in DSL way
+     *
+     * @return containsAttr
+     */
     public VersionTypeSimpleType containsAttr() {
         return getContainsAttr();
     }
 
+    /**
+     * Set <code>containsAttr</code> property
+     *
+     * @param containsAttr the new value
+     */
     public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
         this.containsAttr = containsAttr;
         getElement().setAttribute("contains", containsAttr.value());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>containsAttr</code> property in DSL way
+     *
+     * @param containsAttr the new value
+     * @return <code>OpenStructureComplexType</code> instance
+     */
     public OpenStructureComplexType containsAttr(final VersionTypeSimpleType containsAttr) {
         setContainsAttr(containsAttr);
         return this;
     }
 
+    /**
+     * Add <code>Meta</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Meta getMeta() {
         Meta result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -95,9 +128,13 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>metaElem</code> property in DSL way
+     *
+     * @param metaElem new value
+     * @return <code>Meta</code> instance
+     */
     public Meta setMeta(Meta metaElem) {
         Meta result = getMeta();
         // remove the child of the same type if exist
@@ -109,6 +146,11 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         return metaElem;
     }
 
+    /**
+     * Add <code>CoverPage</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public CoverPage getCoverPage() {
         CoverPage result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -119,9 +161,13 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>coverPageElem</code> property in DSL way
+     *
+     * @param coverPageElem new value
+     * @return <code>CoverPage</code> instance
+     */
     public CoverPage setCoverPage(CoverPage coverPageElem) {
         CoverPage result = getCoverPage();
         // remove the child of the same type if exist
@@ -133,6 +179,11 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         return coverPageElem;
     }
 
+    /**
+     * Add <code>Preface</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Preface getPreface() {
         Preface result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -143,9 +194,13 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>prefaceElem</code> property in DSL way
+     *
+     * @param prefaceElem new value
+     * @return <code>Preface</code> instance
+     */
     public Preface setPreface(Preface prefaceElem) {
         Preface result = getPreface();
         // remove the child of the same type if exist
@@ -157,6 +212,11 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         return prefaceElem;
     }
 
+    /**
+     * Add <code>Preamble</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Preamble getPreamble() {
         Preamble result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -167,9 +227,13 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>preambleElem</code> property in DSL way
+     *
+     * @param preambleElem new value
+     * @return <code>Preamble</code> instance
+     */
     public Preamble setPreamble(Preamble preambleElem) {
         Preamble result = getPreamble();
         // remove the child of the same type if exist
@@ -181,6 +245,11 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         return preambleElem;
     }
 
+    /**
+     * Add <code>MainBody</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public MainBody getMainBody() {
         MainBody result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -191,9 +260,13 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>mainBodyElem</code> property in DSL way
+     *
+     * @param mainBodyElem new value
+     * @return <code>MainBody</code> instance
+     */
     public MainBody setMainBody(MainBody mainBodyElem) {
         MainBody result = getMainBody();
         // remove the child of the same type if exist
@@ -205,6 +278,11 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         return mainBodyElem;
     }
 
+    /**
+     * Add <code>Conclusions</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Conclusions getConclusions() {
         Conclusions result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -215,9 +293,13 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>conclusionsElem</code> property in DSL way
+     *
+     * @param conclusionsElem new value
+     * @return <code>Conclusions</code> instance
+     */
     public Conclusions setConclusions(Conclusions conclusionsElem) {
         Conclusions result = getConclusions();
         // remove the child of the same type if exist
@@ -229,6 +311,11 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         return conclusionsElem;
     }
 
+    /**
+     * Add <code>Attachments</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Attachments getAttachments() {
         Attachments result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -239,9 +326,13 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>attachmentsElem</code> property in DSL way
+     *
+     * @param attachmentsElem new value
+     * @return <code>Attachments</code> instance
+     */
     public Attachments setAttachments(Attachments attachmentsElem) {
         Attachments result = getAttachments();
         // remove the child of the same type if exist
@@ -253,6 +344,11 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         return attachmentsElem;
     }
 
+    /**
+     * Return <code>nameAttr</code> property
+     *
+     * @return nameAttr
+     */
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();
@@ -262,17 +358,31 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         return nameAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>nameAttr</code> property in DSL way
+     *
+     * @return nameAttr
+     */
     public StringSimpleType nameAttr() {
         return getNameAttr();
     }
 
+    /**
+     * Set <code>nameAttr</code> property
+     *
+     * @param nameAttr the new value
+     */
     public void setNameAttr(final StringSimpleType nameAttr) {
         this.nameAttr = nameAttr;
         getElement().setAttribute("name", nameAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>nameAttr</code> property in DSL way
+     *
+     * @param nameAttr the new value
+     * @return <code>OpenStructureComplexType</code> instance
+     */
     public OpenStructureComplexType nameAttr(final StringSimpleType nameAttr) {
         setNameAttr(nameAttr);
         return this;
@@ -289,6 +399,8 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -304,7 +416,9 @@ public class OpenStructureComplexType extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public OpenStructureComplexType html(String s) {
         super.html(s);

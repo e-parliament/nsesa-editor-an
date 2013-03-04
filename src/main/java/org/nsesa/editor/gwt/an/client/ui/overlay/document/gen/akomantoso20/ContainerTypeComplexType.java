@@ -27,10 +27,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the complex type containerType is the content model for the generic element for a container. It can be placed in a container instead of any of the other containers. The attribute name is required and gives a name to the element.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class ContainerTypeComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Container(), new Occurrence(1, 1));
@@ -47,7 +51,9 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "containerTypeComplexType");
@@ -58,24 +64,32 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>ContainerTypeComplexType</code> object with the given DOM element
+     */
     public ContainerTypeComplexType(Element element) {
         super(element);
     }
 
     // FIELDS ------------------
     private StringSimpleType nameAttr;
-    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType alternativeToAttr;
-    private StatusTypeSimpleType statusAttr;
     private String wildcardContentAttr;
-    private LanguageSimpleType langAttr;
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
+    private AnyURISimpleType refersToAttr;
+    private StatusTypeSimpleType statusAttr;
+    private LanguageSimpleType langAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType periodAttr;
 
+    /**
+     * Return <code>java.util.List<Container></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Container> getContainers() {
         java.util.List<Container> result = new ArrayList<Container>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -86,17 +100,30 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Container></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Container> getContainerList() {
         return getContainers();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Container></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Container addContainer(Container containerElem) {
         this.addOverlayWidget(containerElem);
         return containerElem;
     }
 
+    /**
+     * Return <code>nameAttr</code> property
+     *
+     * @return nameAttr
+     */
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();
@@ -106,22 +133,41 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return nameAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>nameAttr</code> property in DSL way
+     *
+     * @return nameAttr
+     */
     public StringSimpleType nameAttr() {
         return getNameAttr();
     }
 
+    /**
+     * Set <code>nameAttr</code> property
+     *
+     * @param nameAttr the new value
+     */
     public void setNameAttr(final StringSimpleType nameAttr) {
         this.nameAttr = nameAttr;
         getElement().setAttribute("name", nameAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>nameAttr</code> property in DSL way
+     *
+     * @param nameAttr the new value
+     * @return <code>ContainerTypeComplexType</code> instance
+     */
     public ContainerTypeComplexType nameAttr(final StringSimpleType nameAttr) {
         setNameAttr(nameAttr);
         return this;
     }
 
+    /**
+     * Return <code>java.util.List<Foreign></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Foreign> getForeigns() {
         java.util.List<Foreign> result = new ArrayList<Foreign>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -132,17 +178,30 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Foreign></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Foreign> getForeignList() {
         return getForeigns();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Foreign></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Foreign addForeign(Foreign foreignElem) {
         this.addOverlayWidget(foreignElem);
         return foreignElem;
     }
 
+    /**
+     * Return <code>java.util.List<Block></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Block> getBlocks() {
         java.util.List<Block> result = new ArrayList<Block>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -153,42 +212,30 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Block></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Block> getBlockList() {
         return getBlocks();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Block></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Block addBlock(Block blockElem) {
         this.addOverlayWidget(blockElem);
         return blockElem;
     }
 
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-    }
-
-    //DSL Style get value
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
-    }
-
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
-    }
-
-    //DSL Style set value
-    public ContainerTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
+    /**
+     * Return <code>alternativeToAttr</code> property
+     *
+     * @return alternativeToAttr
+     */
     public AnyURISimpleType getAlternativeToAttr() {
         if (alternativeToAttr == null) {
             alternativeToAttr = new AnyURISimpleType();
@@ -198,46 +245,41 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return alternativeToAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>alternativeToAttr</code> property in DSL way
+     *
+     * @return alternativeToAttr
+     */
     public AnyURISimpleType alternativeToAttr() {
         return getAlternativeToAttr();
     }
 
+    /**
+     * Set <code>alternativeToAttr</code> property
+     *
+     * @param alternativeToAttr the new value
+     */
     public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         this.alternativeToAttr = alternativeToAttr;
         getElement().setAttribute("alternativeTo", alternativeToAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr the new value
+     * @return <code>ContainerTypeComplexType</code> instance
+     */
     public ContainerTypeComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-    }
-
-    //DSL Style get value
-    public StatusTypeSimpleType statusAttr() {
-        return getStatusAttr();
-    }
-
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status", statusAttr.value());
-    }
-
-    //DSL Style set value
-    public ContainerTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
+    /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
     public String getWildcardContentAttr() {
         if (wildcardContentAttr == null) {
             //hmm nothing to do here
@@ -246,97 +288,41 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return wildcardContentAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
     public String wildcardContentAttr() {
         return getWildcardContentAttr();
     }
 
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
     public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
         getElement().setAttribute("wildcardContent", wildcardContentAttr);
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>ContainerTypeComplexType</code> instance
+     */
     public ContainerTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
-    public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-            langAttr = new LanguageSimpleType();
-            langAttr.setValue(getElement().getAttribute("lang"));
-        }
-
-        return langAttr;
-    }
-
-    //DSL Style get value
-    public LanguageSimpleType langAttr() {
-        return getLangAttr();
-    }
-
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-        getElement().setAttribute("lang", langAttr.getValue());
-    }
-
-    //DSL Style set value
-    public ContainerTypeComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
-        }
-
-        return idAttr;
-    }
-
-    //DSL Style get value
-    public IDSimpleType idAttr() {
-        return getIdAttr();
-    }
-
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
-    }
-
-    //DSL Style set value
-    public ContainerTypeComplexType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-    }
-
-    //DSL Style get value
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
-    }
-
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
-    }
-
-    //DSL Style set value
-    public ContainerTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
+    /**
+     * Return <code>classAttr</code> property
+     *
+     * @return classAttr
+     */
     public StringSimpleType getClassAttr() {
         if (classAttr == null) {
             classAttr = new StringSimpleType();
@@ -346,22 +332,41 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return classAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>classAttr</code> property in DSL way
+     *
+     * @return classAttr
+     */
     public StringSimpleType classAttr() {
         return getClassAttr();
     }
 
+    /**
+     * Set <code>classAttr</code> property
+     *
+     * @param classAttr the new value
+     */
     public void setClassAttr(final StringSimpleType classAttr) {
         this.classAttr = classAttr;
         getElement().setAttribute("class", classAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr the new value
+     * @return <code>ContainerTypeComplexType</code> instance
+     */
     public ContainerTypeComplexType classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
         return this;
     }
 
+    /**
+     * Return <code>styleAttr</code> property
+     *
+     * @return styleAttr
+     */
     public StringSimpleType getStyleAttr() {
         if (styleAttr == null) {
             styleAttr = new StringSimpleType();
@@ -371,22 +376,41 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return styleAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>styleAttr</code> property in DSL way
+     *
+     * @return styleAttr
+     */
     public StringSimpleType styleAttr() {
         return getStyleAttr();
     }
 
+    /**
+     * Set <code>styleAttr</code> property
+     *
+     * @param styleAttr the new value
+     */
     public void setStyleAttr(final StringSimpleType styleAttr) {
         this.styleAttr = styleAttr;
         getElement().setAttribute("style", styleAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr the new value
+     * @return <code>ContainerTypeComplexType</code> instance
+     */
     public ContainerTypeComplexType styleAttr(final StringSimpleType styleAttr) {
         setStyleAttr(styleAttr);
         return this;
     }
 
+    /**
+     * Return <code>titleAttr</code> property
+     *
+     * @return titleAttr
+     */
     public StringSimpleType getTitleAttr() {
         if (titleAttr == null) {
             titleAttr = new StringSimpleType();
@@ -396,22 +420,260 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return titleAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>titleAttr</code> property in DSL way
+     *
+     * @return titleAttr
+     */
     public StringSimpleType titleAttr() {
         return getTitleAttr();
     }
 
+    /**
+     * Set <code>titleAttr</code> property
+     *
+     * @param titleAttr the new value
+     */
     public void setTitleAttr(final StringSimpleType titleAttr) {
         this.titleAttr = titleAttr;
         getElement().setAttribute("title", titleAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr the new value
+     * @return <code>ContainerTypeComplexType</code> instance
+     */
     public ContainerTypeComplexType titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
         return this;
     }
 
+    /**
+     * Return <code>refersToAttr</code> property
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property in DSL way
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property
+     *
+     * @param refersToAttr the new value
+     */
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr the new value
+     * @return <code>ContainerTypeComplexType</code> instance
+     */
+    public ContainerTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>statusAttr</code> property
+     *
+     * @return statusAttr
+     */
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        }
+
+        return statusAttr;
+    }
+
+    /**
+     * Return <code>statusAttr</code> property in DSL way
+     *
+     * @return statusAttr
+     */
+    public StatusTypeSimpleType statusAttr() {
+        return getStatusAttr();
+    }
+
+    /**
+     * Set <code>statusAttr</code> property
+     *
+     * @param statusAttr the new value
+     */
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status", statusAttr.value());
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr the new value
+     * @return <code>ContainerTypeComplexType</code> instance
+     */
+    public ContainerTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>langAttr</code> property
+     *
+     * @return langAttr
+     */
+    public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+            langAttr = new LanguageSimpleType();
+            langAttr.setValue(getElement().getAttribute("lang"));
+        }
+
+        return langAttr;
+    }
+
+    /**
+     * Return <code>langAttr</code> property in DSL way
+     *
+     * @return langAttr
+     */
+    public LanguageSimpleType langAttr() {
+        return getLangAttr();
+    }
+
+    /**
+     * Set <code>langAttr</code> property
+     *
+     * @param langAttr the new value
+     */
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+        getElement().setAttribute("lang", langAttr.getValue());
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr the new value
+     * @return <code>ContainerTypeComplexType</code> instance
+     */
+    public ContainerTypeComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>idAttr</code> property
+     *
+     * @return idAttr
+     */
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
+        }
+
+        return idAttr;
+    }
+
+    /**
+     * Return <code>idAttr</code> property in DSL way
+     *
+     * @return idAttr
+     */
+    public IDSimpleType idAttr() {
+        return getIdAttr();
+    }
+
+    /**
+     * Set <code>idAttr</code> property
+     *
+     * @param idAttr the new value
+     */
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr the new value
+     * @return <code>ContainerTypeComplexType</code> instance
+     */
+    public ContainerTypeComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property
+     *
+     * @param evolvingIdAttr the new value
+     */
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr the new value
+     * @return <code>ContainerTypeComplexType</code> instance
+     */
+    public ContainerTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>java.util.List<BlockList></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<BlockList> getBlockLists() {
         java.util.List<BlockList> result = new ArrayList<BlockList>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -422,17 +684,30 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<BlockList></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<BlockList> getBlockListList() {
         return getBlockLists();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<BlockList></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public BlockList addBlockList(BlockList blockListElem) {
         this.addOverlayWidget(blockListElem);
         return blockListElem;
     }
 
+    /**
+     * Return <code>java.util.List<Toc></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Toc> getTocs() {
         java.util.List<Toc> result = new ArrayList<Toc>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -443,17 +718,30 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Toc></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Toc> getTocList() {
         return getTocs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Toc></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Toc addToc(Toc tocElem) {
         this.addOverlayWidget(tocElem);
         return tocElem;
     }
 
+    /**
+     * Return <code>java.util.List<Tblock></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Tblock> getTblocks() {
         java.util.List<Tblock> result = new ArrayList<Tblock>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -464,17 +752,30 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Tblock></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Tblock> getTblockList() {
         return getTblocks();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Tblock></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Tblock addTblock(Tblock tblockElem) {
         this.addOverlayWidget(tblockElem);
         return tblockElem;
     }
 
+    /**
+     * Return <code>java.util.List<Ul></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Ul> getUls() {
         java.util.List<Ul> result = new ArrayList<Ul>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -485,17 +786,30 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Ul></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Ul> getUlList() {
         return getUls();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Ul></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Ul addUl(Ul ulElem) {
         this.addOverlayWidget(ulElem);
         return ulElem;
     }
 
+    /**
+     * Return <code>java.util.List<Ol></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Ol> getOls() {
         java.util.List<Ol> result = new ArrayList<Ol>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -506,17 +820,30 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Ol></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Ol> getOlList() {
         return getOls();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Ol></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Ol addOl(Ol olElem) {
         this.addOverlayWidget(olElem);
         return olElem;
     }
 
+    /**
+     * Return <code>java.util.List<Table></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Table> getTables() {
         java.util.List<Table> result = new ArrayList<Table>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -527,17 +854,30 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Table></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Table> getTableList() {
         return getTables();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Table></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Table addTable(Table tableElem) {
         this.addOverlayWidget(tableElem);
         return tableElem;
     }
 
+    /**
+     * Return <code>java.util.List<P></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<P> getPs() {
         java.util.List<P> result = new ArrayList<P>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -548,17 +888,30 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<P></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<P> getPList() {
         return getPs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<P></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public P addP(P pElem) {
         this.addOverlayWidget(pElem);
         return pElem;
     }
 
+    /**
+     * Return <code>periodAttr</code> property
+     *
+     * @return periodAttr
+     */
     public AnyURISimpleType getPeriodAttr() {
         if (periodAttr == null) {
             periodAttr = new AnyURISimpleType();
@@ -568,17 +921,31 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         return periodAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>periodAttr</code> property in DSL way
+     *
+     * @return periodAttr
+     */
     public AnyURISimpleType periodAttr() {
         return getPeriodAttr();
     }
 
+    /**
+     * Set <code>periodAttr</code> property
+     *
+     * @param periodAttr the new value
+     */
     public void setPeriodAttr(final AnyURISimpleType periodAttr) {
         this.periodAttr = periodAttr;
         getElement().setAttribute("period", periodAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr the new value
+     * @return <code>ContainerTypeComplexType</code> instance
+     */
     public ContainerTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -595,6 +962,8 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -606,21 +975,23 @@ public class ContainerTypeComplexType extends OverlayWidgetImpl {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public ContainerTypeComplexType html(String s) {
         super.html(s);

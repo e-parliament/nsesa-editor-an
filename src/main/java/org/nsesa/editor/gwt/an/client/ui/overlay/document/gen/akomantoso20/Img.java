@@ -25,17 +25,23 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The element img is an HTML element and is used in Akoma Ntoso as in HTML, for including an image. It is a marker.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Img extends MarkeroptComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
         }
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "img");
@@ -44,19 +50,28 @@ public class Img extends MarkeroptComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Img</code> object and set up its type
+     */
     public Img() {
         super(create());
         setType("img");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public Img(AnyURISimpleType srcAttr) {
         this();
         setSrcAttr(srcAttr);
     }
 
 
+    /**
+     * Create a <code>Img</code> object with the given DOM element
+     */
     public Img(Element element) {
         super(element);
     }
@@ -67,6 +82,11 @@ public class Img extends MarkeroptComplexType {
     private AnyURISimpleType srcAttr;
     private StringSimpleType altAttr;
 
+    /**
+     * Return <code>widthAttr</code> property
+     *
+     * @return widthAttr
+     */
     public IntegerSimpleType getWidthAttr() {
         if (widthAttr == null) {
             widthAttr = new IntegerSimpleType();
@@ -76,22 +96,41 @@ public class Img extends MarkeroptComplexType {
         return widthAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>widthAttr</code> property in DSL way
+     *
+     * @return widthAttr
+     */
     public IntegerSimpleType widthAttr() {
         return getWidthAttr();
     }
 
+    /**
+     * Set <code>widthAttr</code> property
+     *
+     * @param widthAttr the new value
+     */
     public void setWidthAttr(final IntegerSimpleType widthAttr) {
         this.widthAttr = widthAttr;
         getElement().setAttribute("width", widthAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>widthAttr</code> property in DSL way
+     *
+     * @param widthAttr the new value
+     * @return <code>Img</code> instance
+     */
     public Img widthAttr(final IntegerSimpleType widthAttr) {
         setWidthAttr(widthAttr);
         return this;
     }
 
+    /**
+     * Return <code>heightAttr</code> property
+     *
+     * @return heightAttr
+     */
     public IntegerSimpleType getHeightAttr() {
         if (heightAttr == null) {
             heightAttr = new IntegerSimpleType();
@@ -101,22 +140,41 @@ public class Img extends MarkeroptComplexType {
         return heightAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>heightAttr</code> property in DSL way
+     *
+     * @return heightAttr
+     */
     public IntegerSimpleType heightAttr() {
         return getHeightAttr();
     }
 
+    /**
+     * Set <code>heightAttr</code> property
+     *
+     * @param heightAttr the new value
+     */
     public void setHeightAttr(final IntegerSimpleType heightAttr) {
         this.heightAttr = heightAttr;
         getElement().setAttribute("height", heightAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>heightAttr</code> property in DSL way
+     *
+     * @param heightAttr the new value
+     * @return <code>Img</code> instance
+     */
     public Img heightAttr(final IntegerSimpleType heightAttr) {
         setHeightAttr(heightAttr);
         return this;
     }
 
+    /**
+     * Return <code>srcAttr</code> property
+     *
+     * @return srcAttr
+     */
     public AnyURISimpleType getSrcAttr() {
         if (srcAttr == null) {
             srcAttr = new AnyURISimpleType();
@@ -126,22 +184,41 @@ public class Img extends MarkeroptComplexType {
         return srcAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>srcAttr</code> property in DSL way
+     *
+     * @return srcAttr
+     */
     public AnyURISimpleType srcAttr() {
         return getSrcAttr();
     }
 
+    /**
+     * Set <code>srcAttr</code> property
+     *
+     * @param srcAttr the new value
+     */
     public void setSrcAttr(final AnyURISimpleType srcAttr) {
         this.srcAttr = srcAttr;
         getElement().setAttribute("src", srcAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>srcAttr</code> property in DSL way
+     *
+     * @param srcAttr the new value
+     * @return <code>Img</code> instance
+     */
     public Img srcAttr(final AnyURISimpleType srcAttr) {
         setSrcAttr(srcAttr);
         return this;
     }
 
+    /**
+     * Return <code>altAttr</code> property
+     *
+     * @return altAttr
+     */
     public StringSimpleType getAltAttr() {
         if (altAttr == null) {
             altAttr = new StringSimpleType();
@@ -151,84 +228,153 @@ public class Img extends MarkeroptComplexType {
         return altAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>altAttr</code> property in DSL way
+     *
+     * @return altAttr
+     */
     public StringSimpleType altAttr() {
         return getAltAttr();
     }
 
+    /**
+     * Set <code>altAttr</code> property
+     *
+     * @param altAttr the new value
+     */
     public void setAltAttr(final StringSimpleType altAttr) {
         this.altAttr = altAttr;
         getElement().setAttribute("alt", altAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>altAttr</code> property in DSL way
+     *
+     * @param altAttr the new value
+     * @return <code>Img</code> instance
+     */
     public Img altAttr(final StringSimpleType altAttr) {
         setAltAttr(altAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public Img refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Img idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Img evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Img langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Img alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Img classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Img styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Img titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Img statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Img</code> instance
+     */
     public Img wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Img</code> instance
+     */
+    public Img classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr new value
+     * @return <code> Img</code> instance
+     */
+    public Img styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr new value
+     * @return <code> Img</code> instance
+     */
+    public Img titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Img</code> instance
+     */
+    public Img refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Img</code> instance
+     */
+    public Img idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Img</code> instance
+     */
+    public Img evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> Img</code> instance
+     */
+    public Img langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> Img</code> instance
+     */
+    public Img alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> Img</code> instance
+     */
+    public Img statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Img</code> instance
+     */
     public Img periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -244,6 +390,8 @@ public class Img extends MarkeroptComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -261,7 +409,9 @@ public class Img extends MarkeroptComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Img html(String s) {
         super.html(s);

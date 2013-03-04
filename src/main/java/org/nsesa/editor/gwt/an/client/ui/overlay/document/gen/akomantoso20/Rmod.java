@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the element rmod is an inline element containing the specification of a range of modifications on another document
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Rmod extends ModTypeComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new QuotedText(), new Occurrence(1, 1));
@@ -107,7 +111,9 @@ public class Rmod extends ModTypeComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "rmod");
@@ -116,13 +122,19 @@ public class Rmod extends ModTypeComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Rmod</code> object and set up its type
+     */
     public Rmod() {
         super(create());
         setType("rmod");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public Rmod(AnyURISimpleType fromAttr, AnyURISimpleType upToAttr, IDSimpleType idAttr) {
         this();
         setFromAttr(fromAttr);
@@ -131,6 +143,9 @@ public class Rmod extends ModTypeComplexType {
     }
 
 
+    /**
+     * Create a <code>Rmod</code> object with the given DOM element
+     */
     public Rmod(Element element) {
         super(element);
     }
@@ -139,6 +154,11 @@ public class Rmod extends ModTypeComplexType {
     private AnyURISimpleType fromAttr;
     private AnyURISimpleType upToAttr;
 
+    /**
+     * Return <code>fromAttr</code> property
+     *
+     * @return fromAttr
+     */
     public AnyURISimpleType getFromAttr() {
         if (fromAttr == null) {
             fromAttr = new AnyURISimpleType();
@@ -148,22 +168,41 @@ public class Rmod extends ModTypeComplexType {
         return fromAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>fromAttr</code> property in DSL way
+     *
+     * @return fromAttr
+     */
     public AnyURISimpleType fromAttr() {
         return getFromAttr();
     }
 
+    /**
+     * Set <code>fromAttr</code> property
+     *
+     * @param fromAttr the new value
+     */
     public void setFromAttr(final AnyURISimpleType fromAttr) {
         this.fromAttr = fromAttr;
         getElement().setAttribute("from", fromAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>fromAttr</code> property in DSL way
+     *
+     * @param fromAttr the new value
+     * @return <code>Rmod</code> instance
+     */
     public Rmod fromAttr(final AnyURISimpleType fromAttr) {
         setFromAttr(fromAttr);
         return this;
     }
 
+    /**
+     * Return <code>upToAttr</code> property
+     *
+     * @return upToAttr
+     */
     public AnyURISimpleType getUpToAttr() {
         if (upToAttr == null) {
             upToAttr = new AnyURISimpleType();
@@ -173,84 +212,153 @@ public class Rmod extends ModTypeComplexType {
         return upToAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>upToAttr</code> property in DSL way
+     *
+     * @return upToAttr
+     */
     public AnyURISimpleType upToAttr() {
         return getUpToAttr();
     }
 
+    /**
+     * Set <code>upToAttr</code> property
+     *
+     * @param upToAttr the new value
+     */
     public void setUpToAttr(final AnyURISimpleType upToAttr) {
         this.upToAttr = upToAttr;
         getElement().setAttribute("upTo", upToAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>upToAttr</code> property in DSL way
+     *
+     * @param upToAttr the new value
+     * @return <code>Rmod</code> instance
+     */
     public Rmod upToAttr(final AnyURISimpleType upToAttr) {
         setUpToAttr(upToAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public Rmod refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> Rmod</code> instance
+     */
     public Rmod alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
-    //DSL Style set value
-    public Rmod statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Rmod</code> instance
+     */
     public Rmod wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
-    //DSL Style set value
-    public Rmod langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Rmod idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Rmod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Rmod</code> instance
+     */
     public Rmod classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr new value
+     * @return <code> Rmod</code> instance
+     */
     public Rmod styleAttr(final StringSimpleType styleAttr) {
         setStyleAttr(styleAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr new value
+     * @return <code> Rmod</code> instance
+     */
     public Rmod titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Rmod</code> instance
+     */
+    public Rmod refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> Rmod</code> instance
+     */
+    public Rmod statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> Rmod</code> instance
+     */
+    public Rmod langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Rmod</code> instance
+     */
+    public Rmod idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Rmod</code> instance
+     */
+    public Rmod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Rmod</code> instance
+     */
     public Rmod periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -266,6 +374,8 @@ public class Rmod extends ModTypeComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -281,7 +391,9 @@ public class Rmod extends ModTypeComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Rmod html(String s) {
         super.html(s);

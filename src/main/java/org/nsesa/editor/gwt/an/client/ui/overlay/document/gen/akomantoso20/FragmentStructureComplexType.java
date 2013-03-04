@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the type fragmentStructure specifies the overall content model of the document type that is a fragment of another document
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class FragmentStructureComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Meta(), new Occurrence(1, 1));
@@ -37,7 +41,9 @@ public class FragmentStructureComplexType extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "fragmentStructureComplexType");
@@ -48,6 +54,9 @@ public class FragmentStructureComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>FragmentStructureComplexType</code> object with the given DOM element
+     */
     public FragmentStructureComplexType(Element element) {
         super(element);
     }
@@ -55,6 +64,11 @@ public class FragmentStructureComplexType extends OverlayWidgetImpl {
     // FIELDS ------------------
     private AnyURISimpleType includedInAttr;
 
+    /**
+     * Return <code>includedInAttr</code> property
+     *
+     * @return includedInAttr
+     */
     public AnyURISimpleType getIncludedInAttr() {
         if (includedInAttr == null) {
             includedInAttr = new AnyURISimpleType();
@@ -64,22 +78,41 @@ public class FragmentStructureComplexType extends OverlayWidgetImpl {
         return includedInAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>includedInAttr</code> property in DSL way
+     *
+     * @return includedInAttr
+     */
     public AnyURISimpleType includedInAttr() {
         return getIncludedInAttr();
     }
 
+    /**
+     * Set <code>includedInAttr</code> property
+     *
+     * @param includedInAttr the new value
+     */
     public void setIncludedInAttr(final AnyURISimpleType includedInAttr) {
         this.includedInAttr = includedInAttr;
         getElement().setAttribute("includedIn", includedInAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>includedInAttr</code> property in DSL way
+     *
+     * @param includedInAttr the new value
+     * @return <code>FragmentStructureComplexType</code> instance
+     */
     public FragmentStructureComplexType includedInAttr(final AnyURISimpleType includedInAttr) {
         setIncludedInAttr(includedInAttr);
         return this;
     }
 
+    /**
+     * Add <code>Meta</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Meta getMeta() {
         Meta result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -90,9 +123,13 @@ public class FragmentStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>metaElem</code> property in DSL way
+     *
+     * @param metaElem new value
+     * @return <code>Meta</code> instance
+     */
     public Meta setMeta(Meta metaElem) {
         Meta result = getMeta();
         // remove the child of the same type if exist
@@ -104,6 +141,11 @@ public class FragmentStructureComplexType extends OverlayWidgetImpl {
         return metaElem;
     }
 
+    /**
+     * Add <code>FragmentBody</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public FragmentBody getFragmentBody() {
         FragmentBody result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -114,9 +156,13 @@ public class FragmentStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>fragmentBodyElem</code> property in DSL way
+     *
+     * @param fragmentBodyElem new value
+     * @return <code>FragmentBody</code> instance
+     */
     public FragmentBody setFragmentBody(FragmentBody fragmentBodyElem) {
         FragmentBody result = getFragmentBody();
         // remove the child of the same type if exist
@@ -139,6 +185,8 @@ public class FragmentStructureComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -153,7 +201,9 @@ public class FragmentStructureComplexType extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public FragmentStructureComplexType html(String s) {
         super.html(s);

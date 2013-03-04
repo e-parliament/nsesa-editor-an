@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The complexType coreProperties lists the identifying properties available at any of the FRBR hierarchy levels.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class CorePropertiesComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new FRBRthis(), new Occurrence(1, 1));
@@ -42,7 +46,9 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "corePropertiesComplexType");
@@ -53,12 +59,20 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>CorePropertiesComplexType</code> object with the given DOM element
+     */
     public CorePropertiesComplexType(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
+    /**
+     * Add <code>FRBRthis</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public FRBRthis getFRBRthis() {
         FRBRthis result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -69,9 +83,13 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>FRBRthisElem</code> property in DSL way
+     *
+     * @param FRBRthisElem new value
+     * @return <code>FRBRthis</code> instance
+     */
     public FRBRthis setFRBRthis(FRBRthis FRBRthisElem) {
         FRBRthis result = getFRBRthis();
         // remove the child of the same type if exist
@@ -83,6 +101,11 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
         return FRBRthisElem;
     }
 
+    /**
+     * Return <code>java.util.List<FRBRuri></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<FRBRuri> getFRBRuris() {
         java.util.List<FRBRuri> result = new ArrayList<FRBRuri>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -93,17 +116,30 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<FRBRuri></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<FRBRuri> getFRBRuriList() {
         return getFRBRuris();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<FRBRuri></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public FRBRuri addFRBRuri(FRBRuri FRBRuriElem) {
         this.addOverlayWidget(FRBRuriElem);
         return FRBRuriElem;
     }
 
+    /**
+     * Return <code>java.util.List<FRBRalias></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<FRBRalias> getFRBRaliases() {
         java.util.List<FRBRalias> result = new ArrayList<FRBRalias>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -114,17 +150,30 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<FRBRalias></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<FRBRalias> getFRBRaliasList() {
         return getFRBRaliases();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<FRBRalias></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public FRBRalias addFRBRalias(FRBRalias FRBRaliasElem) {
         this.addOverlayWidget(FRBRaliasElem);
         return FRBRaliasElem;
     }
 
+    /**
+     * Return <code>java.util.List<FRBRdate></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<FRBRdate> getFRBRdates() {
         java.util.List<FRBRdate> result = new ArrayList<FRBRdate>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -135,17 +184,30 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<FRBRdate></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<FRBRdate> getFRBRdateList() {
         return getFRBRdates();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<FRBRdate></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public FRBRdate addFRBRdate(FRBRdate FRBRdateElem) {
         this.addOverlayWidget(FRBRdateElem);
         return FRBRdateElem;
     }
 
+    /**
+     * Return <code>java.util.List<FRBRauthor></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<FRBRauthor> getFRBRauthors() {
         java.util.List<FRBRauthor> result = new ArrayList<FRBRauthor>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -156,17 +218,30 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<FRBRauthor></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<FRBRauthor> getFRBRauthorList() {
         return getFRBRauthors();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<FRBRauthor></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public FRBRauthor addFRBRauthor(FRBRauthor FRBRauthorElem) {
         this.addOverlayWidget(FRBRauthorElem);
         return FRBRauthorElem;
     }
 
+    /**
+     * Add <code>ComponentInfo</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public ComponentInfo getComponentInfo() {
         ComponentInfo result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -177,9 +252,13 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>componentInfoElem</code> property in DSL way
+     *
+     * @param componentInfoElem new value
+     * @return <code>ComponentInfo</code> instance
+     */
     public ComponentInfo setComponentInfo(ComponentInfo componentInfoElem) {
         ComponentInfo result = getComponentInfo();
         // remove the child of the same type if exist
@@ -191,6 +270,11 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
         return componentInfoElem;
     }
 
+    /**
+     * Add <code>Preservation</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Preservation getPreservation() {
         Preservation result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -201,9 +285,13 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>preservationElem</code> property in DSL way
+     *
+     * @param preservationElem new value
+     * @return <code>Preservation</code> instance
+     */
     public Preservation setPreservation(Preservation preservationElem) {
         Preservation result = getPreservation();
         // remove the child of the same type if exist
@@ -226,6 +314,8 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -239,7 +329,9 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public CorePropertiesComplexType html(String s) {
         super.html(s);

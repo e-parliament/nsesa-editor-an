@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the element tocItem is a component of the table of content and contains header information about sections or parts of the rest of the document
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class TocItem extends InlineComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Inline(), new Occurrence(0, -1));
@@ -105,7 +109,9 @@ public class TocItem extends InlineComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "tocItem");
@@ -114,13 +120,19 @@ public class TocItem extends InlineComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>TocItem</code> object and set up its type
+     */
     public TocItem() {
         super(create());
         setType("tocItem");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public TocItem(IntegerSimpleType levelAttr, AnyURISimpleType hrefAttr) {
         this();
         setLevelAttr(levelAttr);
@@ -128,6 +140,9 @@ public class TocItem extends InlineComplexType {
     }
 
 
+    /**
+     * Create a <code>TocItem</code> object with the given DOM element
+     */
     public TocItem(Element element) {
         super(element);
     }
@@ -136,6 +151,11 @@ public class TocItem extends InlineComplexType {
     private IntegerSimpleType levelAttr;
     private AnyURISimpleType hrefAttr;
 
+    /**
+     * Return <code>levelAttr</code> property
+     *
+     * @return levelAttr
+     */
     public IntegerSimpleType getLevelAttr() {
         if (levelAttr == null) {
             levelAttr = new IntegerSimpleType();
@@ -145,22 +165,41 @@ public class TocItem extends InlineComplexType {
         return levelAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>levelAttr</code> property in DSL way
+     *
+     * @return levelAttr
+     */
     public IntegerSimpleType levelAttr() {
         return getLevelAttr();
     }
 
+    /**
+     * Set <code>levelAttr</code> property
+     *
+     * @param levelAttr the new value
+     */
     public void setLevelAttr(final IntegerSimpleType levelAttr) {
         this.levelAttr = levelAttr;
         getElement().setAttribute("level", levelAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>levelAttr</code> property in DSL way
+     *
+     * @param levelAttr the new value
+     * @return <code>TocItem</code> instance
+     */
     public TocItem levelAttr(final IntegerSimpleType levelAttr) {
         setLevelAttr(levelAttr);
         return this;
     }
 
+    /**
+     * Return <code>hrefAttr</code> property
+     *
+     * @return hrefAttr
+     */
     public AnyURISimpleType getHrefAttr() {
         if (hrefAttr == null) {
             hrefAttr = new AnyURISimpleType();
@@ -170,84 +209,153 @@ public class TocItem extends InlineComplexType {
         return hrefAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>hrefAttr</code> property in DSL way
+     *
+     * @return hrefAttr
+     */
     public AnyURISimpleType hrefAttr() {
         return getHrefAttr();
     }
 
+    /**
+     * Set <code>hrefAttr</code> property
+     *
+     * @param hrefAttr the new value
+     */
     public void setHrefAttr(final AnyURISimpleType hrefAttr) {
         this.hrefAttr = hrefAttr;
         getElement().setAttribute("href", hrefAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr the new value
+     * @return <code>TocItem</code> instance
+     */
     public TocItem hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public TocItem refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TocItem idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TocItem evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TocItem langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TocItem alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TocItem classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TocItem styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TocItem titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public TocItem statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> TocItem</code> instance
+     */
     public TocItem wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> TocItem</code> instance
+     */
+    public TocItem classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr new value
+     * @return <code> TocItem</code> instance
+     */
+    public TocItem styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr new value
+     * @return <code> TocItem</code> instance
+     */
+    public TocItem titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> TocItem</code> instance
+     */
+    public TocItem refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> TocItem</code> instance
+     */
+    public TocItem idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> TocItem</code> instance
+     */
+    public TocItem evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> TocItem</code> instance
+     */
+    public TocItem langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> TocItem</code> instance
+     */
+    public TocItem alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> TocItem</code> instance
+     */
+    public TocItem statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> TocItem</code> instance
+     */
     public TocItem periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -263,6 +371,8 @@ public class TocItem extends InlineComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -278,7 +388,9 @@ public class TocItem extends InlineComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public TocItem html(String s) {
         super.html(s);

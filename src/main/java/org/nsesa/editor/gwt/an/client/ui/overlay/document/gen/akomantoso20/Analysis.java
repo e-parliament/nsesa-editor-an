@@ -26,10 +26,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * Generated class
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Analysis extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new ActiveModifications(), new Occurrence(0, 1));
@@ -41,7 +45,9 @@ public class Analysis extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "analysis");
@@ -50,19 +56,28 @@ public class Analysis extends OverlayWidgetImpl {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Analysis</code> object and set up its type
+     */
     public Analysis() {
         super(create());
         setType("analysis");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public Analysis(AnyURISimpleType sourceAttr) {
         this();
         setSourceAttr(sourceAttr);
     }
 
 
+    /**
+     * Create a <code>Analysis</code> object with the given DOM element
+     */
     public Analysis(Element element) {
         super(element);
     }
@@ -70,6 +85,11 @@ public class Analysis extends OverlayWidgetImpl {
     // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
 
+    /**
+     * Add <code>ActiveModifications</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public ActiveModifications getActiveModifications() {
         ActiveModifications result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -80,9 +100,13 @@ public class Analysis extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>activeModificationsElem</code> property in DSL way
+     *
+     * @param activeModificationsElem new value
+     * @return <code>ActiveModifications</code> instance
+     */
     public ActiveModifications setActiveModifications(ActiveModifications activeModificationsElem) {
         ActiveModifications result = getActiveModifications();
         // remove the child of the same type if exist
@@ -94,6 +118,11 @@ public class Analysis extends OverlayWidgetImpl {
         return activeModificationsElem;
     }
 
+    /**
+     * Add <code>PassiveModifications</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public PassiveModifications getPassiveModifications() {
         PassiveModifications result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -104,9 +133,13 @@ public class Analysis extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>passiveModificationsElem</code> property in DSL way
+     *
+     * @param passiveModificationsElem new value
+     * @return <code>PassiveModifications</code> instance
+     */
     public PassiveModifications setPassiveModifications(PassiveModifications passiveModificationsElem) {
         PassiveModifications result = getPassiveModifications();
         // remove the child of the same type if exist
@@ -118,6 +151,11 @@ public class Analysis extends OverlayWidgetImpl {
         return passiveModificationsElem;
     }
 
+    /**
+     * Add <code>Judicial</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Judicial getJudicial() {
         Judicial result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -128,9 +166,13 @@ public class Analysis extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>judicialElem</code> property in DSL way
+     *
+     * @param judicialElem new value
+     * @return <code>Judicial</code> instance
+     */
     public Judicial setJudicial(Judicial judicialElem) {
         Judicial result = getJudicial();
         // remove the child of the same type if exist
@@ -142,6 +184,11 @@ public class Analysis extends OverlayWidgetImpl {
         return judicialElem;
     }
 
+    /**
+     * Add <code>Parliamentary</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Parliamentary getParliamentary() {
         Parliamentary result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -152,9 +199,13 @@ public class Analysis extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>parliamentaryElem</code> property in DSL way
+     *
+     * @param parliamentaryElem new value
+     * @return <code>Parliamentary</code> instance
+     */
     public Parliamentary setParliamentary(Parliamentary parliamentaryElem) {
         Parliamentary result = getParliamentary();
         // remove the child of the same type if exist
@@ -166,6 +217,11 @@ public class Analysis extends OverlayWidgetImpl {
         return parliamentaryElem;
     }
 
+    /**
+     * Return <code>java.util.List<OtherAnalysis></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<OtherAnalysis> getOtherAnalysises() {
         java.util.List<OtherAnalysis> result = new ArrayList<OtherAnalysis>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -176,17 +232,30 @@ public class Analysis extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<OtherAnalysis></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<OtherAnalysis> getOtherAnalysisList() {
         return getOtherAnalysises();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<OtherAnalysis></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public OtherAnalysis addOtherAnalysis(OtherAnalysis otherAnalysisElem) {
         this.addOverlayWidget(otherAnalysisElem);
         return otherAnalysisElem;
     }
 
+    /**
+     * Return <code>sourceAttr</code> property
+     *
+     * @return sourceAttr
+     */
     public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
             sourceAttr = new AnyURISimpleType();
@@ -196,17 +265,31 @@ public class Analysis extends OverlayWidgetImpl {
         return sourceAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>sourceAttr</code> property in DSL way
+     *
+     * @return sourceAttr
+     */
     public AnyURISimpleType sourceAttr() {
         return getSourceAttr();
     }
 
+    /**
+     * Set <code>sourceAttr</code> property
+     *
+     * @param sourceAttr the new value
+     */
     public void setSourceAttr(final AnyURISimpleType sourceAttr) {
         this.sourceAttr = sourceAttr;
         getElement().setAttribute("source", sourceAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>sourceAttr</code> property in DSL way
+     *
+     * @param sourceAttr the new value
+     * @return <code>Analysis</code> instance
+     */
     public Analysis sourceAttr(final AnyURISimpleType sourceAttr) {
         setSourceAttr(sourceAttr);
         return this;
@@ -223,6 +306,8 @@ public class Analysis extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -237,7 +322,9 @@ public class Analysis extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Analysis html(String s) {
         super.html(s);

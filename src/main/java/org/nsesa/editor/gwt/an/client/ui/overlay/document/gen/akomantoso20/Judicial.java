@@ -23,10 +23,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The element judicial is a metadata container of the analysis of the judicial arguments of a judgement.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Judicial extends JudicialArgumentsComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Result(), new Occurrence(1, 1));
@@ -45,7 +49,9 @@ public class Judicial extends JudicialArgumentsComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "judicial");
@@ -54,13 +60,20 @@ public class Judicial extends JudicialArgumentsComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Judicial</code> object and set up its type
+     */
     public Judicial() {
         super(create());
         setType("judicial");
     }
 
 
+    /**
+     * Create a <code>Judicial</code> object with the given DOM element
+     */
     public Judicial(Element element) {
         super(element);
     }
@@ -79,6 +92,8 @@ public class Judicial extends JudicialArgumentsComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -92,7 +107,9 @@ public class Judicial extends JudicialArgumentsComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Judicial html(String s) {
         super.html(s);

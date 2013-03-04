@@ -17,13 +17,16 @@ import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.DOM;
 
 /**
+ * Generated class
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Base64BinarySimpleType extends AnySimpleTypeSimpleType {
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "base64BinarySimpleType");
@@ -34,10 +37,16 @@ public class Base64BinarySimpleType extends AnySimpleTypeSimpleType {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create an empty <code>Base64BinarySimpleType</code> object
+     */
     public Base64BinarySimpleType() {
         super();
     }
 
+    /**
+     * Create a <code>Base64BinarySimpleType</code> object with teh given input data
+     */
     public Base64BinarySimpleType(String value) {
         super();
         this.value = value;
