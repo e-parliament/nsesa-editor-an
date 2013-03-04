@@ -52,7 +52,7 @@ public class Akomantoso20OverlayFactory extends DefaultOverlayFactory {
      * @return the namespace as String
      */
     @Override
-    public String getNamespace() {
+    public String getNamespaceURI() {
         return namespace;
     }
 

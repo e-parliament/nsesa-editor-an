@@ -49,7 +49,7 @@ public class NamespaceOverlayFactory extends DefaultOverlayFactory {
      * @return the namespace as String
      */
     @Override
-    public String getNamespace() {
+    public String getNamespaceURI() {
         return namespace;
     }
 
