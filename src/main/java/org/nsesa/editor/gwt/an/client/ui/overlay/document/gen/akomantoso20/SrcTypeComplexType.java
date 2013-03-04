@@ -28,17 +28,23 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the complex type srcType defines the empty content model and the list of attributes for manifestation-level references to external resources
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class SrcTypeComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
         }
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "srcTypeComplexType");
@@ -49,69 +55,27 @@ public class SrcTypeComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>SrcTypeComplexType</code> object with the given DOM element
+     */
     public SrcTypeComplexType(Element element) {
         super(element);
     }
 
     // FIELDS ------------------
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType srcAttr;
     private StringSimpleType altAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
     private String wildcardContentAttr;
 
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
-        }
-
-        return idAttr;
-    }
-
-    //DSL Style get value
-    public IDSimpleType idAttr() {
-        return getIdAttr();
-    }
-
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
-    }
-
-    //DSL Style set value
-    public SrcTypeComplexType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-    }
-
-    //DSL Style get value
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
-    }
-
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
-    }
-
-    //DSL Style set value
-    public SrcTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
+    /**
+     * Return <code>srcAttr</code> property
+     *
+     * @return srcAttr
+     */
     public AnyURISimpleType getSrcAttr() {
         if (srcAttr == null) {
             srcAttr = new AnyURISimpleType();
@@ -121,22 +85,41 @@ public class SrcTypeComplexType extends OverlayWidgetImpl {
         return srcAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>srcAttr</code> property in DSL way
+     *
+     * @return srcAttr
+     */
     public AnyURISimpleType srcAttr() {
         return getSrcAttr();
     }
 
+    /**
+     * Set <code>srcAttr</code> property
+     *
+     * @param srcAttr the new value
+     */
     public void setSrcAttr(final AnyURISimpleType srcAttr) {
         this.srcAttr = srcAttr;
         getElement().setAttribute("src", srcAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>srcAttr</code> property in DSL way
+     *
+     * @param srcAttr the new value
+     * @return <code>SrcTypeComplexType</code> instance
+     */
     public SrcTypeComplexType srcAttr(final AnyURISimpleType srcAttr) {
         setSrcAttr(srcAttr);
         return this;
     }
 
+    /**
+     * Return <code>altAttr</code> property
+     *
+     * @return altAttr
+     */
     public StringSimpleType getAltAttr() {
         if (altAttr == null) {
             altAttr = new StringSimpleType();
@@ -146,22 +129,129 @@ public class SrcTypeComplexType extends OverlayWidgetImpl {
         return altAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>altAttr</code> property in DSL way
+     *
+     * @return altAttr
+     */
     public StringSimpleType altAttr() {
         return getAltAttr();
     }
 
+    /**
+     * Set <code>altAttr</code> property
+     *
+     * @param altAttr the new value
+     */
     public void setAltAttr(final StringSimpleType altAttr) {
         this.altAttr = altAttr;
         getElement().setAttribute("alt", altAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>altAttr</code> property in DSL way
+     *
+     * @param altAttr the new value
+     * @return <code>SrcTypeComplexType</code> instance
+     */
     public SrcTypeComplexType altAttr(final StringSimpleType altAttr) {
         setAltAttr(altAttr);
         return this;
     }
 
+    /**
+     * Return <code>idAttr</code> property
+     *
+     * @return idAttr
+     */
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
+        }
+
+        return idAttr;
+    }
+
+    /**
+     * Return <code>idAttr</code> property in DSL way
+     *
+     * @return idAttr
+     */
+    public IDSimpleType idAttr() {
+        return getIdAttr();
+    }
+
+    /**
+     * Set <code>idAttr</code> property
+     *
+     * @param idAttr the new value
+     */
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr the new value
+     * @return <code>SrcTypeComplexType</code> instance
+     */
+    public SrcTypeComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property
+     *
+     * @param evolvingIdAttr the new value
+     */
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr the new value
+     * @return <code>SrcTypeComplexType</code> instance
+     */
+    public SrcTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>showAsAttr</code> property
+     *
+     * @return showAsAttr
+     */
     public StringSimpleType getShowAsAttr() {
         if (showAsAttr == null) {
             showAsAttr = new StringSimpleType();
@@ -171,22 +261,41 @@ public class SrcTypeComplexType extends OverlayWidgetImpl {
         return showAsAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>showAsAttr</code> property in DSL way
+     *
+     * @return showAsAttr
+     */
     public StringSimpleType showAsAttr() {
         return getShowAsAttr();
     }
 
+    /**
+     * Set <code>showAsAttr</code> property
+     *
+     * @param showAsAttr the new value
+     */
     public void setShowAsAttr(final StringSimpleType showAsAttr) {
         this.showAsAttr = showAsAttr;
         getElement().setAttribute("showAs", showAsAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>showAsAttr</code> property in DSL way
+     *
+     * @param showAsAttr the new value
+     * @return <code>SrcTypeComplexType</code> instance
+     */
     public SrcTypeComplexType showAsAttr(final StringSimpleType showAsAttr) {
         setShowAsAttr(showAsAttr);
         return this;
     }
 
+    /**
+     * Return <code>shortFormAttr</code> property
+     *
+     * @return shortFormAttr
+     */
     public StringSimpleType getShortFormAttr() {
         if (shortFormAttr == null) {
             shortFormAttr = new StringSimpleType();
@@ -196,22 +305,41 @@ public class SrcTypeComplexType extends OverlayWidgetImpl {
         return shortFormAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>shortFormAttr</code> property in DSL way
+     *
+     * @return shortFormAttr
+     */
     public StringSimpleType shortFormAttr() {
         return getShortFormAttr();
     }
 
+    /**
+     * Set <code>shortFormAttr</code> property
+     *
+     * @param shortFormAttr the new value
+     */
     public void setShortFormAttr(final StringSimpleType shortFormAttr) {
         this.shortFormAttr = shortFormAttr;
         getElement().setAttribute("shortForm", shortFormAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>shortFormAttr</code> property in DSL way
+     *
+     * @param shortFormAttr the new value
+     * @return <code>SrcTypeComplexType</code> instance
+     */
     public SrcTypeComplexType shortFormAttr(final StringSimpleType shortFormAttr) {
         setShortFormAttr(shortFormAttr);
         return this;
     }
 
+    /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
     public String getWildcardContentAttr() {
         if (wildcardContentAttr == null) {
             //hmm nothing to do here
@@ -220,17 +348,31 @@ public class SrcTypeComplexType extends OverlayWidgetImpl {
         return wildcardContentAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
     public String wildcardContentAttr() {
         return getWildcardContentAttr();
     }
 
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
     public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
         getElement().setAttribute("wildcardContent", wildcardContentAttr);
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>SrcTypeComplexType</code> instance
+     */
     public SrcTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
@@ -247,6 +389,8 @@ public class SrcTypeComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -257,17 +401,19 @@ public class SrcTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("src", getSrcAttr() != null ? getSrcAttr().getValue() : null);
         attrs.put("alt", getAltAttr() != null ? getAltAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public SrcTypeComplexType html(String s) {
         super.html(s);

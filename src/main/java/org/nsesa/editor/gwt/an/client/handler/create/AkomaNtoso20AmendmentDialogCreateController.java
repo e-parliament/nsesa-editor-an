@@ -199,10 +199,6 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         super.handleSave();
     }
 
-    private <T extends OverlayWidget> T a(final String tag) {
-        return (T) overlayFactory.getAmendableWidget(tag);
-    }
-
     private StringSimpleType s(final String text) {
         StringSimpleType s = new StringSimpleType();
         s.setValue(text);

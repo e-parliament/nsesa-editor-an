@@ -26,10 +26,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the element foreign is a generic container for elements not belonging to the Akoma Ntoso (e.g., mathematical formulas). It is an inline element and thus can be placed in a block.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Foreign extends AnyOtherTypeComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(null, new Occurrence(0, -1));
@@ -37,7 +41,9 @@ public class Foreign extends AnyOtherTypeComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "foreign");
@@ -46,39 +52,67 @@ public class Foreign extends AnyOtherTypeComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Foreign</code> object and set up its type
+     */
     public Foreign() {
         super(create());
         setType("foreign");
     }
 
 
+    /**
+     * Create a <code>Foreign</code> object with the given DOM element
+     */
     public Foreign(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public Foreign hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
+//Override all attributes methods to be conformant with DSL approach
 
-    //DSL Style set value
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Foreign</code> instance
+     */
     public Foreign idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Foreign</code> instance
+     */
     public Foreign evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> Foreign</code> instance
+     */
+    public Foreign hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Foreign</code> instance
+     */
     public Foreign wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
@@ -94,6 +128,8 @@ public class Foreign extends AnyOtherTypeComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -107,7 +143,9 @@ public class Foreign extends AnyOtherTypeComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Foreign html(String s) {
         super.html(s);

@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The complex type Amendments is a list of all the amendment elements that can be used on a document analysis
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class AmendmentsComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new TextualMod(), new Occurrence(1, 1));
@@ -41,7 +45,9 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "AmendmentsComplexType");
@@ -52,12 +58,20 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>AmendmentsComplexType</code> object with the given DOM element
+     */
     public AmendmentsComplexType(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
+    /**
+     * Return <code>java.util.List<TextualMod></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TextualMod> getTextualMods() {
         java.util.List<TextualMod> result = new ArrayList<TextualMod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -68,17 +82,30 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<TextualMod></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TextualMod> getTextualModList() {
         return getTextualMods();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<TextualMod></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public TextualMod addTextualMod(TextualMod textualModElem) {
         this.addOverlayWidget(textualModElem);
         return textualModElem;
     }
 
+    /**
+     * Return <code>java.util.List<MeaningMod></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<MeaningMod> getMeaningMods() {
         java.util.List<MeaningMod> result = new ArrayList<MeaningMod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -89,17 +116,30 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<MeaningMod></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<MeaningMod> getMeaningModList() {
         return getMeaningMods();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<MeaningMod></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public MeaningMod addMeaningMod(MeaningMod meaningModElem) {
         this.addOverlayWidget(meaningModElem);
         return meaningModElem;
     }
 
+    /**
+     * Return <code>java.util.List<ScopeMod></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ScopeMod> getScopeMods() {
         java.util.List<ScopeMod> result = new ArrayList<ScopeMod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -110,17 +150,30 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<ScopeMod></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ScopeMod> getScopeModList() {
         return getScopeMods();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<ScopeMod></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public ScopeMod addScopeMod(ScopeMod scopeModElem) {
         this.addOverlayWidget(scopeModElem);
         return scopeModElem;
     }
 
+    /**
+     * Return <code>java.util.List<ForceMod></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ForceMod> getForceMods() {
         java.util.List<ForceMod> result = new ArrayList<ForceMod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -131,17 +184,30 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<ForceMod></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ForceMod> getForceModList() {
         return getForceMods();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<ForceMod></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public ForceMod addForceMod(ForceMod forceModElem) {
         this.addOverlayWidget(forceModElem);
         return forceModElem;
     }
 
+    /**
+     * Return <code>java.util.List<EfficacyMod></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<EfficacyMod> getEfficacyMods() {
         java.util.List<EfficacyMod> result = new ArrayList<EfficacyMod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -152,17 +218,30 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<EfficacyMod></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<EfficacyMod> getEfficacyModList() {
         return getEfficacyMods();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<EfficacyMod></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public EfficacyMod addEfficacyMod(EfficacyMod efficacyModElem) {
         this.addOverlayWidget(efficacyModElem);
         return efficacyModElem;
     }
 
+    /**
+     * Return <code>java.util.List<LegalSystemMod></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<LegalSystemMod> getLegalSystemMods() {
         java.util.List<LegalSystemMod> result = new ArrayList<LegalSystemMod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -173,12 +252,20 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<LegalSystemMod></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<LegalSystemMod> getLegalSystemModList() {
         return getLegalSystemMods();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<LegalSystemMod></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public LegalSystemMod addLegalSystemMod(LegalSystemMod legalSystemModElem) {
         this.addOverlayWidget(legalSystemModElem);
         return legalSystemModElem;
@@ -196,6 +283,8 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -209,7 +298,9 @@ public class AmendmentsComplexType extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public AmendmentsComplexType html(String s) {
         super.html(s);

@@ -25,17 +25,23 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The element FRBRlanguage is the metadata property containing a RFC4646 (three-letter code) of the main human language used in the content of this expression
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class FRBRlanguage extends MetaoptComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
         }
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "FRBRlanguage");
@@ -44,19 +50,28 @@ public class FRBRlanguage extends MetaoptComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>FRBRlanguage</code> object and set up its type
+     */
     public FRBRlanguage() {
         super(create());
         setType("FRBRlanguage");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public FRBRlanguage(LanguageSimpleType languageAttr) {
         this();
         setLanguageAttr(languageAttr);
     }
 
 
+    /**
+     * Create a <code>FRBRlanguage</code> object with the given DOM element
+     */
     public FRBRlanguage(Element element) {
         super(element);
     }
@@ -64,6 +79,11 @@ public class FRBRlanguage extends MetaoptComplexType {
     // FIELDS ------------------
     private LanguageSimpleType languageAttr;
 
+    /**
+     * Return <code>languageAttr</code> property
+     *
+     * @return languageAttr
+     */
     public LanguageSimpleType getLanguageAttr() {
         if (languageAttr == null) {
             languageAttr = new LanguageSimpleType();
@@ -73,36 +93,65 @@ public class FRBRlanguage extends MetaoptComplexType {
         return languageAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>languageAttr</code> property in DSL way
+     *
+     * @return languageAttr
+     */
     public LanguageSimpleType languageAttr() {
         return getLanguageAttr();
     }
 
+    /**
+     * Set <code>languageAttr</code> property
+     *
+     * @param languageAttr the new value
+     */
     public void setLanguageAttr(final LanguageSimpleType languageAttr) {
         this.languageAttr = languageAttr;
         getElement().setAttribute("language", languageAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>languageAttr</code> property in DSL way
+     *
+     * @param languageAttr the new value
+     * @return <code>FRBRlanguage</code> instance
+     */
     public FRBRlanguage languageAttr(final LanguageSimpleType languageAttr) {
         setLanguageAttr(languageAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> FRBRlanguage</code> instance
+     */
     public FRBRlanguage idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> FRBRlanguage</code> instance
+     */
     public FRBRlanguage evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> FRBRlanguage</code> instance
+     */
     public FRBRlanguage wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
@@ -118,6 +167,8 @@ public class FRBRlanguage extends MetaoptComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -132,7 +183,9 @@ public class FRBRlanguage extends MetaoptComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public FRBRlanguage html(String s) {
         super.html(s);

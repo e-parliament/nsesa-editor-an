@@ -27,10 +27,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The element quorum is a metadata container containing the value of a quorum in a vote or a quorum verification.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Quorum extends CountTypeComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(null, new Occurrence(0, -1));
@@ -38,7 +42,9 @@ public class Quorum extends CountTypeComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "quorum");
@@ -47,60 +53,100 @@ public class Quorum extends CountTypeComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Quorum</code> object and set up its type
+     */
     public Quorum() {
         super(create());
         setType("quorum");
     }
 
-    //Constructor with the required attributes
-    public Quorum(IDSimpleType idAttr, StringSimpleType valueAttr) {
+    /**
+     * Constructor with required attributes
+     */
+    public Quorum(StringSimpleType valueAttr, IDSimpleType idAttr) {
         this();
-        setIdAttr(idAttr);
         setValueAttr(valueAttr);
+        setIdAttr(idAttr);
     }
 
 
+    /**
+     * Create a <code>Quorum</code> object with the given DOM element
+     */
     public Quorum(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public Quorum wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+//Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>valueAttr</code> property in DSL way
+     *
+     * @param valueAttr new value
+     * @return <code> Quorum</code> instance
+     */
+    public Quorum valueAttr(final StringSimpleType valueAttr) {
+        setValueAttr(valueAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> Quorum</code> instance
+     */
     public Quorum hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Quorum</code> instance
+     */
     public Quorum idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Quorum</code> instance
+     */
     public Quorum evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
-    //DSL Style set value
-    public Quorum refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Quorum</code> instance
+     */
+    public Quorum wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
-    //DSL Style set value
-    public Quorum valueAttr(final StringSimpleType valueAttr) {
-        setValueAttr(valueAttr);
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Quorum</code> instance
+     */
+    public Quorum refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -114,6 +160,8 @@ public class Quorum extends CountTypeComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -127,7 +175,9 @@ public class Quorum extends CountTypeComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Quorum html(String s) {
         super.html(s);

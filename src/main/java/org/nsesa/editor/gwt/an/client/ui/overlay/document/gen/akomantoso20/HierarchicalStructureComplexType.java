@@ -24,10 +24,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the type hierarchicalStructure specifies the overall content model of the document types that are hierarchical in nature, especially acts and bills
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Meta(), new Occurrence(1, 1));
@@ -41,7 +45,9 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "hierarchicalStructureComplexType");
@@ -52,6 +58,9 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>HierarchicalStructureComplexType</code> object with the given DOM element
+     */
     public HierarchicalStructureComplexType(Element element) {
         super(element);
     }
@@ -59,6 +68,11 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
     // FIELDS ------------------
     private VersionTypeSimpleType containsAttr;
 
+    /**
+     * Return <code>containsAttr</code> property
+     *
+     * @return containsAttr
+     */
     public VersionTypeSimpleType getContainsAttr() {
         if (containsAttr == null) {
             containsAttr = VersionTypeSimpleType.fromString(getElement().getAttribute("contains"));
@@ -67,22 +81,41 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         return containsAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>containsAttr</code> property in DSL way
+     *
+     * @return containsAttr
+     */
     public VersionTypeSimpleType containsAttr() {
         return getContainsAttr();
     }
 
+    /**
+     * Set <code>containsAttr</code> property
+     *
+     * @param containsAttr the new value
+     */
     public void setContainsAttr(final VersionTypeSimpleType containsAttr) {
         this.containsAttr = containsAttr;
         getElement().setAttribute("contains", containsAttr.value());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>containsAttr</code> property in DSL way
+     *
+     * @param containsAttr the new value
+     * @return <code>HierarchicalStructureComplexType</code> instance
+     */
     public HierarchicalStructureComplexType containsAttr(final VersionTypeSimpleType containsAttr) {
         setContainsAttr(containsAttr);
         return this;
     }
 
+    /**
+     * Add <code>Meta</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Meta getMeta() {
         Meta result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -93,9 +126,13 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>metaElem</code> property in DSL way
+     *
+     * @param metaElem new value
+     * @return <code>Meta</code> instance
+     */
     public Meta setMeta(Meta metaElem) {
         Meta result = getMeta();
         // remove the child of the same type if exist
@@ -107,6 +144,11 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         return metaElem;
     }
 
+    /**
+     * Add <code>CoverPage</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public CoverPage getCoverPage() {
         CoverPage result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -117,9 +159,13 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>coverPageElem</code> property in DSL way
+     *
+     * @param coverPageElem new value
+     * @return <code>CoverPage</code> instance
+     */
     public CoverPage setCoverPage(CoverPage coverPageElem) {
         CoverPage result = getCoverPage();
         // remove the child of the same type if exist
@@ -131,6 +177,11 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         return coverPageElem;
     }
 
+    /**
+     * Add <code>Preface</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Preface getPreface() {
         Preface result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -141,9 +192,13 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>prefaceElem</code> property in DSL way
+     *
+     * @param prefaceElem new value
+     * @return <code>Preface</code> instance
+     */
     public Preface setPreface(Preface prefaceElem) {
         Preface result = getPreface();
         // remove the child of the same type if exist
@@ -155,6 +210,11 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         return prefaceElem;
     }
 
+    /**
+     * Add <code>Preamble</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Preamble getPreamble() {
         Preamble result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -165,9 +225,13 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>preambleElem</code> property in DSL way
+     *
+     * @param preambleElem new value
+     * @return <code>Preamble</code> instance
+     */
     public Preamble setPreamble(Preamble preambleElem) {
         Preamble result = getPreamble();
         // remove the child of the same type if exist
@@ -179,6 +243,11 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         return preambleElem;
     }
 
+    /**
+     * Add <code>Body</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Body getBody() {
         Body result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -189,9 +258,13 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>bodyElem</code> property in DSL way
+     *
+     * @param bodyElem new value
+     * @return <code>Body</code> instance
+     */
     public Body setBody(Body bodyElem) {
         Body result = getBody();
         // remove the child of the same type if exist
@@ -203,6 +276,11 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         return bodyElem;
     }
 
+    /**
+     * Add <code>Conclusions</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Conclusions getConclusions() {
         Conclusions result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -213,9 +291,13 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>conclusionsElem</code> property in DSL way
+     *
+     * @param conclusionsElem new value
+     * @return <code>Conclusions</code> instance
+     */
     public Conclusions setConclusions(Conclusions conclusionsElem) {
         Conclusions result = getConclusions();
         // remove the child of the same type if exist
@@ -227,6 +309,11 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         return conclusionsElem;
     }
 
+    /**
+     * Add <code>Attachments</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Attachments getAttachments() {
         Attachments result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -237,9 +324,13 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>attachmentsElem</code> property in DSL way
+     *
+     * @param attachmentsElem new value
+     * @return <code>Attachments</code> instance
+     */
     public Attachments setAttachments(Attachments attachmentsElem) {
         Attachments result = getAttachments();
         // remove the child of the same type if exist
@@ -262,6 +353,8 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -276,7 +369,9 @@ public class HierarchicalStructureComplexType extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public HierarchicalStructureComplexType html(String s) {
         super.html(s);

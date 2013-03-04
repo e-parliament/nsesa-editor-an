@@ -27,10 +27,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the type bodyType specifies a content model of the main hierarchy of a hierarchical document (e.g, an act or a bill)
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class BodyTypeComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new ComponentRef(), new Occurrence(1, 1));
@@ -60,7 +64,9 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "bodyTypeComplexType");
@@ -71,23 +77,31 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>BodyTypeComplexType</code> object with the given DOM element
+     */
     public BodyTypeComplexType(Element element) {
         super(element);
     }
 
     // FIELDS ------------------
+    private String wildcardContentAttr;
+    private StringSimpleType classAttr;
+    private StringSimpleType styleAttr;
+    private StringSimpleType titleAttr;
     private AnyURISimpleType refersToAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private LanguageSimpleType langAttr;
     private AnyURISimpleType alternativeToAttr;
-    private StringSimpleType classAttr;
-    private StringSimpleType styleAttr;
-    private StringSimpleType titleAttr;
     private StatusTypeSimpleType statusAttr;
-    private String wildcardContentAttr;
     private AnyURISimpleType periodAttr;
 
+    /**
+     * Return <code>java.util.List<ComponentRef></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ComponentRef> getComponentRefs() {
         java.util.List<ComponentRef> result = new ArrayList<ComponentRef>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -98,17 +112,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<ComponentRef></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ComponentRef> getComponentRefList() {
         return getComponentRefs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<ComponentRef></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public ComponentRef addComponentRef(ComponentRef componentRefElem) {
         this.addOverlayWidget(componentRefElem);
         return componentRefElem;
     }
 
+    /**
+     * Return <code>java.util.List<Hcontainer></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Hcontainer> getHcontainers() {
         java.util.List<Hcontainer> result = new ArrayList<Hcontainer>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -119,142 +146,73 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Hcontainer></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Hcontainer> getHcontainerList() {
         return getHcontainers();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Hcontainer></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Hcontainer addHcontainer(Hcontainer hcontainerElem) {
         this.addOverlayWidget(hcontainerElem);
         return hcontainerElem;
     }
 
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+    /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return refersToAttr;
+        return wildcardContentAttr;
     }
 
-    //DSL Style get value
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
     }
 
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
     }
 
-    //DSL Style set value
-    public BodyTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>BodyTypeComplexType</code> instance
+     */
+    public BodyTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
-        }
-
-        return idAttr;
-    }
-
-    //DSL Style get value
-    public IDSimpleType idAttr() {
-        return getIdAttr();
-    }
-
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
-    }
-
-    //DSL Style set value
-    public BodyTypeComplexType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-    }
-
-    //DSL Style get value
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
-    }
-
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
-    }
-
-    //DSL Style set value
-    public BodyTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-            langAttr = new LanguageSimpleType();
-            langAttr.setValue(getElement().getAttribute("lang"));
-        }
-
-        return langAttr;
-    }
-
-    //DSL Style get value
-    public LanguageSimpleType langAttr() {
-        return getLangAttr();
-    }
-
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-        getElement().setAttribute("lang", langAttr.getValue());
-    }
-
-    //DSL Style set value
-    public BodyTypeComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    public AnyURISimpleType getAlternativeToAttr() {
-        if (alternativeToAttr == null) {
-            alternativeToAttr = new AnyURISimpleType();
-            alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
-        }
-
-        return alternativeToAttr;
-    }
-
-    //DSL Style get value
-    public AnyURISimpleType alternativeToAttr() {
-        return getAlternativeToAttr();
-    }
-
-    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
-        getElement().setAttribute("alternativeTo", alternativeToAttr.getValue());
-    }
-
-    //DSL Style set value
-    public BodyTypeComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
+    /**
+     * Return <code>classAttr</code> property
+     *
+     * @return classAttr
+     */
     public StringSimpleType getClassAttr() {
         if (classAttr == null) {
             classAttr = new StringSimpleType();
@@ -264,22 +222,41 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return classAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>classAttr</code> property in DSL way
+     *
+     * @return classAttr
+     */
     public StringSimpleType classAttr() {
         return getClassAttr();
     }
 
+    /**
+     * Set <code>classAttr</code> property
+     *
+     * @param classAttr the new value
+     */
     public void setClassAttr(final StringSimpleType classAttr) {
         this.classAttr = classAttr;
         getElement().setAttribute("class", classAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr the new value
+     * @return <code>BodyTypeComplexType</code> instance
+     */
     public BodyTypeComplexType classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
         return this;
     }
 
+    /**
+     * Return <code>styleAttr</code> property
+     *
+     * @return styleAttr
+     */
     public StringSimpleType getStyleAttr() {
         if (styleAttr == null) {
             styleAttr = new StringSimpleType();
@@ -289,22 +266,41 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return styleAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>styleAttr</code> property in DSL way
+     *
+     * @return styleAttr
+     */
     public StringSimpleType styleAttr() {
         return getStyleAttr();
     }
 
+    /**
+     * Set <code>styleAttr</code> property
+     *
+     * @param styleAttr the new value
+     */
     public void setStyleAttr(final StringSimpleType styleAttr) {
         this.styleAttr = styleAttr;
         getElement().setAttribute("style", styleAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr the new value
+     * @return <code>BodyTypeComplexType</code> instance
+     */
     public BodyTypeComplexType styleAttr(final StringSimpleType styleAttr) {
         setStyleAttr(styleAttr);
         return this;
     }
 
+    /**
+     * Return <code>titleAttr</code> property
+     *
+     * @return titleAttr
+     */
     public StringSimpleType getTitleAttr() {
         if (titleAttr == null) {
             titleAttr = new StringSimpleType();
@@ -314,22 +310,261 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return titleAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>titleAttr</code> property in DSL way
+     *
+     * @return titleAttr
+     */
     public StringSimpleType titleAttr() {
         return getTitleAttr();
     }
 
+    /**
+     * Set <code>titleAttr</code> property
+     *
+     * @param titleAttr the new value
+     */
     public void setTitleAttr(final StringSimpleType titleAttr) {
         this.titleAttr = titleAttr;
         getElement().setAttribute("title", titleAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr the new value
+     * @return <code>BodyTypeComplexType</code> instance
+     */
     public BodyTypeComplexType titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
         return this;
     }
 
+    /**
+     * Return <code>refersToAttr</code> property
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property in DSL way
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property
+     *
+     * @param refersToAttr the new value
+     */
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr the new value
+     * @return <code>BodyTypeComplexType</code> instance
+     */
+    public BodyTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>idAttr</code> property
+     *
+     * @return idAttr
+     */
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
+        }
+
+        return idAttr;
+    }
+
+    /**
+     * Return <code>idAttr</code> property in DSL way
+     *
+     * @return idAttr
+     */
+    public IDSimpleType idAttr() {
+        return getIdAttr();
+    }
+
+    /**
+     * Set <code>idAttr</code> property
+     *
+     * @param idAttr the new value
+     */
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr the new value
+     * @return <code>BodyTypeComplexType</code> instance
+     */
+    public BodyTypeComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property
+     *
+     * @param evolvingIdAttr the new value
+     */
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr the new value
+     * @return <code>BodyTypeComplexType</code> instance
+     */
+    public BodyTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>langAttr</code> property
+     *
+     * @return langAttr
+     */
+    public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+            langAttr = new LanguageSimpleType();
+            langAttr.setValue(getElement().getAttribute("lang"));
+        }
+
+        return langAttr;
+    }
+
+    /**
+     * Return <code>langAttr</code> property in DSL way
+     *
+     * @return langAttr
+     */
+    public LanguageSimpleType langAttr() {
+        return getLangAttr();
+    }
+
+    /**
+     * Set <code>langAttr</code> property
+     *
+     * @param langAttr the new value
+     */
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+        getElement().setAttribute("lang", langAttr.getValue());
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr the new value
+     * @return <code>BodyTypeComplexType</code> instance
+     */
+    public BodyTypeComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>alternativeToAttr</code> property
+     *
+     * @return alternativeToAttr
+     */
+    public AnyURISimpleType getAlternativeToAttr() {
+        if (alternativeToAttr == null) {
+            alternativeToAttr = new AnyURISimpleType();
+            alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
+        }
+
+        return alternativeToAttr;
+    }
+
+    /**
+     * Return <code>alternativeToAttr</code> property in DSL way
+     *
+     * @return alternativeToAttr
+     */
+    public AnyURISimpleType alternativeToAttr() {
+        return getAlternativeToAttr();
+    }
+
+    /**
+     * Set <code>alternativeToAttr</code> property
+     *
+     * @param alternativeToAttr the new value
+     */
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+        getElement().setAttribute("alternativeTo", alternativeToAttr.getValue());
+    }
+
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr the new value
+     * @return <code>BodyTypeComplexType</code> instance
+     */
+    public BodyTypeComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>statusAttr</code> property
+     *
+     * @return statusAttr
+     */
     public StatusTypeSimpleType getStatusAttr() {
         if (statusAttr == null) {
             statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
@@ -338,46 +573,41 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return statusAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>statusAttr</code> property in DSL way
+     *
+     * @return statusAttr
+     */
     public StatusTypeSimpleType statusAttr() {
         return getStatusAttr();
     }
 
+    /**
+     * Set <code>statusAttr</code> property
+     *
+     * @param statusAttr the new value
+     */
     public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
         this.statusAttr = statusAttr;
         getElement().setAttribute("status", statusAttr.value());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr the new value
+     * @return <code>BodyTypeComplexType</code> instance
+     */
     public BodyTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
         setStatusAttr(statusAttr);
         return this;
     }
 
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    //DSL Style get value
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    //DSL Style set value
-    public BodyTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
+    /**
+     * Return <code>java.util.List<Clause></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Clause> getClauses() {
         java.util.List<Clause> result = new ArrayList<Clause>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -388,17 +618,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Clause></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Clause> getClauseList() {
         return getClauses();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Clause></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Clause addClause(Clause clauseElem) {
         this.addOverlayWidget(clauseElem);
         return clauseElem;
     }
 
+    /**
+     * Return <code>java.util.List<Section></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Section> getSections() {
         java.util.List<Section> result = new ArrayList<Section>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -409,17 +652,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Section></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Section> getSectionList() {
         return getSections();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Section></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Section addSection(Section sectionElem) {
         this.addOverlayWidget(sectionElem);
         return sectionElem;
     }
 
+    /**
+     * Return <code>java.util.List<Part></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Part> getParts() {
         java.util.List<Part> result = new ArrayList<Part>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -430,17 +686,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Part></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Part> getPartList() {
         return getParts();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Part></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Part addPart(Part partElem) {
         this.addOverlayWidget(partElem);
         return partElem;
     }
 
+    /**
+     * Return <code>java.util.List<Paragraph></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Paragraph> getParagraphs() {
         java.util.List<Paragraph> result = new ArrayList<Paragraph>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -451,17 +720,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Paragraph></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Paragraph> getParagraphList() {
         return getParagraphs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Paragraph></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Paragraph addParagraph(Paragraph paragraphElem) {
         this.addOverlayWidget(paragraphElem);
         return paragraphElem;
     }
 
+    /**
+     * Return <code>java.util.List<Chapter></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Chapter> getChapters() {
         java.util.List<Chapter> result = new ArrayList<Chapter>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -472,17 +754,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Chapter></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Chapter> getChapterList() {
         return getChapters();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Chapter></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Chapter addChapter(Chapter chapterElem) {
         this.addOverlayWidget(chapterElem);
         return chapterElem;
     }
 
+    /**
+     * Return <code>java.util.List<Title></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Title> getTitle_s() {
         java.util.List<Title> result = new ArrayList<Title>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -493,17 +788,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Title></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Title> getTitle_List() {
         return getTitle_s();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Title></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Title addTitle_(Title title_Elem) {
         this.addOverlayWidget(title_Elem);
         return title_Elem;
     }
 
+    /**
+     * Return <code>java.util.List<Article></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Article> getArticles() {
         java.util.List<Article> result = new ArrayList<Article>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -514,17 +822,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Article></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Article> getArticleList() {
         return getArticles();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Article></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Article addArticle(Article articleElem) {
         this.addOverlayWidget(articleElem);
         return articleElem;
     }
 
+    /**
+     * Return <code>java.util.List<Book></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Book> getBooks() {
         java.util.List<Book> result = new ArrayList<Book>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -535,17 +856,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Book></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Book> getBookList() {
         return getBooks();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Book></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Book addBook(Book bookElem) {
         this.addOverlayWidget(bookElem);
         return bookElem;
     }
 
+    /**
+     * Return <code>java.util.List<Tome></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Tome> getTomes() {
         java.util.List<Tome> result = new ArrayList<Tome>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -556,17 +890,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Tome></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Tome> getTomeList() {
         return getTomes();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Tome></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Tome addTome(Tome tomeElem) {
         this.addOverlayWidget(tomeElem);
         return tomeElem;
     }
 
+    /**
+     * Return <code>java.util.List<Division></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Division> getDivisions() {
         java.util.List<Division> result = new ArrayList<Division>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -577,17 +924,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Division></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Division> getDivisionList() {
         return getDivisions();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Division></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Division addDivision(Division divisionElem) {
         this.addOverlayWidget(divisionElem);
         return divisionElem;
     }
 
+    /**
+     * Return <code>java.util.List<List></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<List> getLists() {
         java.util.List<List> result = new ArrayList<List>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -598,17 +958,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<List></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<List> getListList() {
         return getLists();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<List></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public List addList(List listElem) {
         this.addOverlayWidget(listElem);
         return listElem;
     }
 
+    /**
+     * Return <code>java.util.List<Point></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Point> getPoints() {
         java.util.List<Point> result = new ArrayList<Point>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -619,17 +992,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Point></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Point> getPointList() {
         return getPoints();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Point></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Point addPoint(Point pointElem) {
         this.addOverlayWidget(pointElem);
         return pointElem;
     }
 
+    /**
+     * Return <code>java.util.List<Indent></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Indent> getIndents() {
         java.util.List<Indent> result = new ArrayList<Indent>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -640,17 +1026,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Indent></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Indent> getIndentList() {
         return getIndents();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Indent></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Indent addIndent(Indent indentElem) {
         this.addOverlayWidget(indentElem);
         return indentElem;
     }
 
+    /**
+     * Return <code>java.util.List<Alinea></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Alinea> getAlineas() {
         java.util.List<Alinea> result = new ArrayList<Alinea>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -661,17 +1060,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Alinea></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Alinea> getAlineaList() {
         return getAlineas();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Alinea></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Alinea addAlinea(Alinea alineaElem) {
         this.addOverlayWidget(alineaElem);
         return alineaElem;
     }
 
+    /**
+     * Return <code>java.util.List<Subsection></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Subsection> getSubsections() {
         java.util.List<Subsection> result = new ArrayList<Subsection>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -682,17 +1094,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Subsection></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Subsection> getSubsectionList() {
         return getSubsections();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Subsection></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Subsection addSubsection(Subsection subsectionElem) {
         this.addOverlayWidget(subsectionElem);
         return subsectionElem;
     }
 
+    /**
+     * Return <code>java.util.List<Subpart></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Subpart> getSubparts() {
         java.util.List<Subpart> result = new ArrayList<Subpart>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -703,17 +1128,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Subpart></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Subpart> getSubpartList() {
         return getSubparts();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Subpart></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Subpart addSubpart(Subpart subpartElem) {
         this.addOverlayWidget(subpartElem);
         return subpartElem;
     }
 
+    /**
+     * Return <code>java.util.List<Subparagraph></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Subparagraph> getSubparagraphs() {
         java.util.List<Subparagraph> result = new ArrayList<Subparagraph>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -724,17 +1162,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Subparagraph></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Subparagraph> getSubparagraphList() {
         return getSubparagraphs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Subparagraph></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Subparagraph addSubparagraph(Subparagraph subparagraphElem) {
         this.addOverlayWidget(subparagraphElem);
         return subparagraphElem;
     }
 
+    /**
+     * Return <code>java.util.List<Subchapter></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Subchapter> getSubchapters() {
         java.util.List<Subchapter> result = new ArrayList<Subchapter>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -745,17 +1196,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Subchapter></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Subchapter> getSubchapterList() {
         return getSubchapters();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Subchapter></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Subchapter addSubchapter(Subchapter subchapterElem) {
         this.addOverlayWidget(subchapterElem);
         return subchapterElem;
     }
 
+    /**
+     * Return <code>java.util.List<Subtitle></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Subtitle> getSubtitles() {
         java.util.List<Subtitle> result = new ArrayList<Subtitle>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -766,17 +1230,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Subtitle></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Subtitle> getSubtitleList() {
         return getSubtitles();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Subtitle></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Subtitle addSubtitle(Subtitle subtitleElem) {
         this.addOverlayWidget(subtitleElem);
         return subtitleElem;
     }
 
+    /**
+     * Return <code>java.util.List<Subclause></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Subclause> getSubclauses() {
         java.util.List<Subclause> result = new ArrayList<Subclause>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -787,17 +1264,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Subclause></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Subclause> getSubclauseList() {
         return getSubclauses();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Subclause></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Subclause addSubclause(Subclause subclauseElem) {
         this.addOverlayWidget(subclauseElem);
         return subclauseElem;
     }
 
+    /**
+     * Return <code>java.util.List<Sublist></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Sublist> getSublists() {
         java.util.List<Sublist> result = new ArrayList<Sublist>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -808,17 +1298,30 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Sublist></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Sublist> getSublistList() {
         return getSublists();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Sublist></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Sublist addSublist(Sublist sublistElem) {
         this.addOverlayWidget(sublistElem);
         return sublistElem;
     }
 
+    /**
+     * Return <code>periodAttr</code> property
+     *
+     * @return periodAttr
+     */
     public AnyURISimpleType getPeriodAttr() {
         if (periodAttr == null) {
             periodAttr = new AnyURISimpleType();
@@ -828,17 +1331,31 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
         return periodAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>periodAttr</code> property in DSL way
+     *
+     * @return periodAttr
+     */
     public AnyURISimpleType periodAttr() {
         return getPeriodAttr();
     }
 
+    /**
+     * Set <code>periodAttr</code> property
+     *
+     * @param periodAttr the new value
+     */
     public void setPeriodAttr(final AnyURISimpleType periodAttr) {
         this.periodAttr = periodAttr;
         getElement().setAttribute("period", periodAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr the new value
+     * @return <code>BodyTypeComplexType</code> instance
+     */
     public BodyTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -855,6 +1372,8 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -865,21 +1384,23 @@ public class BodyTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
+        attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
+        attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
         attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
-        attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
-        attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
-        attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
         attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public BodyTypeComplexType html(String s) {
         super.html(s);

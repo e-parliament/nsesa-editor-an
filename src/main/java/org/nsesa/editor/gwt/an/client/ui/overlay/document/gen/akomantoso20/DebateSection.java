@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * this element is a generic structural container for all other parts of a debates that are not explicitly supported with a named element
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class DebateSection extends AlthierarchyComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new ComponentRef(), new Occurrence(1, 1));
@@ -77,7 +81,9 @@ public class DebateSection extends AlthierarchyComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "debateSection");
@@ -86,13 +92,19 @@ public class DebateSection extends AlthierarchyComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>DebateSection</code> object and set up its type
+     */
     public DebateSection() {
         super(create());
         setType("debateSection");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public DebateSection(StringSimpleType nameAttr, IDSimpleType idAttr) {
         this();
         setNameAttr(nameAttr);
@@ -100,6 +112,9 @@ public class DebateSection extends AlthierarchyComplexType {
     }
 
 
+    /**
+     * Create a <code>DebateSection</code> object with the given DOM element
+     */
     public DebateSection(Element element) {
         super(element);
     }
@@ -107,6 +122,11 @@ public class DebateSection extends AlthierarchyComplexType {
     // FIELDS ------------------
     private StringSimpleType nameAttr;
 
+    /**
+     * Return <code>nameAttr</code> property
+     *
+     * @return nameAttr
+     */
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();
@@ -116,84 +136,153 @@ public class DebateSection extends AlthierarchyComplexType {
         return nameAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>nameAttr</code> property in DSL way
+     *
+     * @return nameAttr
+     */
     public StringSimpleType nameAttr() {
         return getNameAttr();
     }
 
+    /**
+     * Set <code>nameAttr</code> property
+     *
+     * @param nameAttr the new value
+     */
     public void setNameAttr(final StringSimpleType nameAttr) {
         this.nameAttr = nameAttr;
         getElement().setAttribute("name", nameAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>nameAttr</code> property in DSL way
+     *
+     * @param nameAttr the new value
+     * @return <code>DebateSection</code> instance
+     */
     public DebateSection nameAttr(final StringSimpleType nameAttr) {
         setNameAttr(nameAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public DebateSection refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> DebateSection</code> instance
+     */
     public DebateSection alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
-    //DSL Style set value
-    public DebateSection statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> DebateSection</code> instance
+     */
     public DebateSection wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
-    //DSL Style set value
-    public DebateSection langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public DebateSection idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public DebateSection evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> DebateSection</code> instance
+     */
     public DebateSection classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr new value
+     * @return <code> DebateSection</code> instance
+     */
     public DebateSection styleAttr(final StringSimpleType styleAttr) {
         setStyleAttr(styleAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr new value
+     * @return <code> DebateSection</code> instance
+     */
     public DebateSection titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> DebateSection</code> instance
+     */
+    public DebateSection refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> DebateSection</code> instance
+     */
+    public DebateSection statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> DebateSection</code> instance
+     */
+    public DebateSection langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> DebateSection</code> instance
+     */
+    public DebateSection idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> DebateSection</code> instance
+     */
+    public DebateSection evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> DebateSection</code> instance
+     */
     public DebateSection periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -209,6 +298,8 @@ public class DebateSection extends AlthierarchyComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -223,7 +314,9 @@ public class DebateSection extends AlthierarchyComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public DebateSection html(String s) {
         super.html(s);

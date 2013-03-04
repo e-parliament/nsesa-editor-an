@@ -26,10 +26,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The complex type refItems is a list of types of references used in the references section.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class RefItemsComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Original(), new Occurrence(0, -1));
@@ -52,7 +56,9 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "refItemsComplexType");
@@ -63,6 +69,9 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>RefItemsComplexType</code> object with the given DOM element
+     */
     public RefItemsComplexType(Element element) {
         super(element);
     }
@@ -70,6 +79,11 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
     // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
 
+    /**
+     * Return <code>sourceAttr</code> property
+     *
+     * @return sourceAttr
+     */
     public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
             sourceAttr = new AnyURISimpleType();
@@ -79,22 +93,41 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return sourceAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>sourceAttr</code> property in DSL way
+     *
+     * @return sourceAttr
+     */
     public AnyURISimpleType sourceAttr() {
         return getSourceAttr();
     }
 
+    /**
+     * Set <code>sourceAttr</code> property
+     *
+     * @param sourceAttr the new value
+     */
     public void setSourceAttr(final AnyURISimpleType sourceAttr) {
         this.sourceAttr = sourceAttr;
         getElement().setAttribute("source", sourceAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>sourceAttr</code> property in DSL way
+     *
+     * @param sourceAttr the new value
+     * @return <code>RefItemsComplexType</code> instance
+     */
     public RefItemsComplexType sourceAttr(final AnyURISimpleType sourceAttr) {
         setSourceAttr(sourceAttr);
         return this;
     }
 
+    /**
+     * Return <code>java.util.List<Original></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Original> getOriginals() {
         java.util.List<Original> result = new ArrayList<Original>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -105,17 +138,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Original></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Original> getOriginalList() {
         return getOriginals();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Original></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Original addOriginal(Original originalElem) {
         this.addOverlayWidget(originalElem);
         return originalElem;
     }
 
+    /**
+     * Return <code>java.util.List<PassiveRef></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<PassiveRef> getPassiveRefs() {
         java.util.List<PassiveRef> result = new ArrayList<PassiveRef>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -126,17 +172,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<PassiveRef></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<PassiveRef> getPassiveRefList() {
         return getPassiveRefs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<PassiveRef></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public PassiveRef addPassiveRef(PassiveRef passiveRefElem) {
         this.addOverlayWidget(passiveRefElem);
         return passiveRefElem;
     }
 
+    /**
+     * Return <code>java.util.List<ActiveRef></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ActiveRef> getActiveRefs() {
         java.util.List<ActiveRef> result = new ArrayList<ActiveRef>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -147,17 +206,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<ActiveRef></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<ActiveRef> getActiveRefList() {
         return getActiveRefs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<ActiveRef></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public ActiveRef addActiveRef(ActiveRef activeRefElem) {
         this.addOverlayWidget(activeRefElem);
         return activeRefElem;
     }
 
+    /**
+     * Return <code>java.util.List<Jurisprudence></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Jurisprudence> getJurisprudences() {
         java.util.List<Jurisprudence> result = new ArrayList<Jurisprudence>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -168,17 +240,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Jurisprudence></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Jurisprudence> getJurisprudenceList() {
         return getJurisprudences();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Jurisprudence></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Jurisprudence addJurisprudence(Jurisprudence jurisprudenceElem) {
         this.addOverlayWidget(jurisprudenceElem);
         return jurisprudenceElem;
     }
 
+    /**
+     * Return <code>java.util.List<HasAttachment></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<HasAttachment> getHasAttachments() {
         java.util.List<HasAttachment> result = new ArrayList<HasAttachment>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -189,17 +274,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<HasAttachment></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<HasAttachment> getHasAttachmentList() {
         return getHasAttachments();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<HasAttachment></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public HasAttachment addHasAttachment(HasAttachment hasAttachmentElem) {
         this.addOverlayWidget(hasAttachmentElem);
         return hasAttachmentElem;
     }
 
+    /**
+     * Return <code>java.util.List<AttachmentOf></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<AttachmentOf> getAttachmentOfs() {
         java.util.List<AttachmentOf> result = new ArrayList<AttachmentOf>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -210,17 +308,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<AttachmentOf></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<AttachmentOf> getAttachmentOfList() {
         return getAttachmentOfs();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<AttachmentOf></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public AttachmentOf addAttachmentOf(AttachmentOf attachmentOfElem) {
         this.addOverlayWidget(attachmentOfElem);
         return attachmentOfElem;
     }
 
+    /**
+     * Return <code>java.util.List<TLCPerson></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCPerson> getTLCPersons() {
         java.util.List<TLCPerson> result = new ArrayList<TLCPerson>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -231,17 +342,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<TLCPerson></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCPerson> getTLCPersonList() {
         return getTLCPersons();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<TLCPerson></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public TLCPerson addTLCPerson(TLCPerson TLCPersonElem) {
         this.addOverlayWidget(TLCPersonElem);
         return TLCPersonElem;
     }
 
+    /**
+     * Return <code>java.util.List<TLCOrganization></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCOrganization> getTLCOrganizations() {
         java.util.List<TLCOrganization> result = new ArrayList<TLCOrganization>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -252,17 +376,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<TLCOrganization></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCOrganization> getTLCOrganizationList() {
         return getTLCOrganizations();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<TLCOrganization></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public TLCOrganization addTLCOrganization(TLCOrganization TLCOrganizationElem) {
         this.addOverlayWidget(TLCOrganizationElem);
         return TLCOrganizationElem;
     }
 
+    /**
+     * Return <code>java.util.List<TLCConcept></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCConcept> getTLCConcepts() {
         java.util.List<TLCConcept> result = new ArrayList<TLCConcept>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -273,17 +410,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<TLCConcept></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCConcept> getTLCConceptList() {
         return getTLCConcepts();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<TLCConcept></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public TLCConcept addTLCConcept(TLCConcept TLCConceptElem) {
         this.addOverlayWidget(TLCConceptElem);
         return TLCConceptElem;
     }
 
+    /**
+     * Return <code>java.util.List<TLCObject></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCObject> getTLCObjects() {
         java.util.List<TLCObject> result = new ArrayList<TLCObject>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -294,17 +444,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<TLCObject></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCObject> getTLCObjectList() {
         return getTLCObjects();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<TLCObject></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public TLCObject addTLCObject(TLCObject TLCObjectElem) {
         this.addOverlayWidget(TLCObjectElem);
         return TLCObjectElem;
     }
 
+    /**
+     * Return <code>java.util.List<TLCEvent></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCEvent> getTLCEvents() {
         java.util.List<TLCEvent> result = new ArrayList<TLCEvent>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -315,17 +478,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<TLCEvent></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCEvent> getTLCEventList() {
         return getTLCEvents();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<TLCEvent></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public TLCEvent addTLCEvent(TLCEvent TLCEventElem) {
         this.addOverlayWidget(TLCEventElem);
         return TLCEventElem;
     }
 
+    /**
+     * Return <code>java.util.List<TLCLocation></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCLocation> getTLCLocations() {
         java.util.List<TLCLocation> result = new ArrayList<TLCLocation>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -336,17 +512,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<TLCLocation></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCLocation> getTLCLocationList() {
         return getTLCLocations();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<TLCLocation></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public TLCLocation addTLCLocation(TLCLocation TLCLocationElem) {
         this.addOverlayWidget(TLCLocationElem);
         return TLCLocationElem;
     }
 
+    /**
+     * Return <code>java.util.List<TLCProcess></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCProcess> getTLCProcesses() {
         java.util.List<TLCProcess> result = new ArrayList<TLCProcess>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -357,17 +546,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<TLCProcess></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCProcess> getTLCProcessList() {
         return getTLCProcesses();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<TLCProcess></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public TLCProcess addTLCProcess(TLCProcess TLCProcessElem) {
         this.addOverlayWidget(TLCProcessElem);
         return TLCProcessElem;
     }
 
+    /**
+     * Return <code>java.util.List<TLCRole></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCRole> getTLCRoles() {
         java.util.List<TLCRole> result = new ArrayList<TLCRole>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -378,17 +580,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<TLCRole></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCRole> getTLCRoleList() {
         return getTLCRoles();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<TLCRole></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public TLCRole addTLCRole(TLCRole TLCRoleElem) {
         this.addOverlayWidget(TLCRoleElem);
         return TLCRoleElem;
     }
 
+    /**
+     * Return <code>java.util.List<TLCTerm></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCTerm> getTLCTerms() {
         java.util.List<TLCTerm> result = new ArrayList<TLCTerm>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -399,17 +614,30 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<TLCTerm></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCTerm> getTLCTermList() {
         return getTLCTerms();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<TLCTerm></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public TLCTerm addTLCTerm(TLCTerm TLCTermElem) {
         this.addOverlayWidget(TLCTermElem);
         return TLCTermElem;
     }
 
+    /**
+     * Return <code>java.util.List<TLCReference></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCReference> getTLCReferences() {
         java.util.List<TLCReference> result = new ArrayList<TLCReference>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -420,12 +648,20 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<TLCReference></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TLCReference> getTLCReferenceList() {
         return getTLCReferences();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<TLCReference></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public TLCReference addTLCReference(TLCReference TLCReferenceElem) {
         this.addOverlayWidget(TLCReferenceElem);
         return TLCReferenceElem;
@@ -443,6 +679,8 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -457,7 +695,9 @@ public class RefItemsComplexType extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public RefItemsComplexType html(String s) {
         super.html(s);

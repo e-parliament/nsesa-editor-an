@@ -24,10 +24,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * Element documentCollection is used for describing the structure and content of a collection of other documents chosen and combined for any reason whatsoever
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class DocumentCollection extends CollectionStructureComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Meta(), new Occurrence(1, 1));
@@ -40,7 +44,9 @@ public class DocumentCollection extends CollectionStructureComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "documentCollection");
@@ -49,19 +55,28 @@ public class DocumentCollection extends CollectionStructureComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>DocumentCollection</code> object and set up its type
+     */
     public DocumentCollection() {
         super(create());
         setType("documentCollection");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public DocumentCollection(StringSimpleType nameAttr) {
         this();
         setNameAttr(nameAttr);
     }
 
 
+    /**
+     * Create a <code>DocumentCollection</code> object with the given DOM element
+     */
     public DocumentCollection(Element element) {
         super(element);
     }
@@ -69,6 +84,11 @@ public class DocumentCollection extends CollectionStructureComplexType {
     // FIELDS ------------------
     private StringSimpleType nameAttr;
 
+    /**
+     * Return <code>nameAttr</code> property
+     *
+     * @return nameAttr
+     */
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();
@@ -78,24 +98,43 @@ public class DocumentCollection extends CollectionStructureComplexType {
         return nameAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>nameAttr</code> property in DSL way
+     *
+     * @return nameAttr
+     */
     public StringSimpleType nameAttr() {
         return getNameAttr();
     }
 
+    /**
+     * Set <code>nameAttr</code> property
+     *
+     * @param nameAttr the new value
+     */
     public void setNameAttr(final StringSimpleType nameAttr) {
         this.nameAttr = nameAttr;
         getElement().setAttribute("name", nameAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>nameAttr</code> property in DSL way
+     *
+     * @param nameAttr the new value
+     * @return <code>DocumentCollection</code> instance
+     */
     public DocumentCollection nameAttr(final StringSimpleType nameAttr) {
         setNameAttr(nameAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
+    /**
+     * Set <code>containsAttr</code> property in DSL way
+     *
+     * @param containsAttr new value
+     * @return <code> DocumentCollection</code> instance
+     */
     public DocumentCollection containsAttr(final VersionTypeSimpleType containsAttr) {
         setContainsAttr(containsAttr);
         return this;
@@ -111,6 +150,8 @@ public class DocumentCollection extends CollectionStructureComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -125,7 +166,9 @@ public class DocumentCollection extends CollectionStructureComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public DocumentCollection html(String s) {
         super.html(s);

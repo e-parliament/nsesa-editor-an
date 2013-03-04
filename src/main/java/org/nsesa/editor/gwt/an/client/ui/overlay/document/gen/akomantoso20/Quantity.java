@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The element quantity is an inline element to identify a text fragment introducing or referring to a quantity. This could be a dimensionless number, or a number referring to a length, weight, duration, etc. or even a sum of money. The attribute normalized contains the value normalized in a number, if appropriate.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Quantity extends InlinereqreqComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Inline(), new Occurrence(0, -1));
@@ -105,7 +109,9 @@ public class Quantity extends InlinereqreqComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "quantity");
@@ -114,13 +120,19 @@ public class Quantity extends InlinereqreqComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Quantity</code> object and set up its type
+     */
     public Quantity() {
         super(create());
         setType("quantity");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public Quantity(IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
         this();
         setIdAttr(idAttr);
@@ -128,6 +140,9 @@ public class Quantity extends InlinereqreqComplexType {
     }
 
 
+    /**
+     * Create a <code>Quantity</code> object with the given DOM element
+     */
     public Quantity(Element element) {
         super(element);
     }
@@ -135,6 +150,11 @@ public class Quantity extends InlinereqreqComplexType {
     // FIELDS ------------------
     private StringSimpleType normalizedAttr;
 
+    /**
+     * Return <code>normalizedAttr</code> property
+     *
+     * @return normalizedAttr
+     */
     public StringSimpleType getNormalizedAttr() {
         if (normalizedAttr == null) {
             normalizedAttr = new StringSimpleType();
@@ -144,84 +164,153 @@ public class Quantity extends InlinereqreqComplexType {
         return normalizedAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>normalizedAttr</code> property in DSL way
+     *
+     * @return normalizedAttr
+     */
     public StringSimpleType normalizedAttr() {
         return getNormalizedAttr();
     }
 
+    /**
+     * Set <code>normalizedAttr</code> property
+     *
+     * @param normalizedAttr the new value
+     */
     public void setNormalizedAttr(final StringSimpleType normalizedAttr) {
         this.normalizedAttr = normalizedAttr;
         getElement().setAttribute("normalized", normalizedAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>normalizedAttr</code> property in DSL way
+     *
+     * @param normalizedAttr the new value
+     * @return <code>Quantity</code> instance
+     */
     public Quantity normalizedAttr(final StringSimpleType normalizedAttr) {
         setNormalizedAttr(normalizedAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public Quantity alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Quantity</code> instance
+     */
     public Quantity idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Quantity</code> instance
+     */
     public Quantity evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Quantity</code> instance
+     */
     public Quantity refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
         return this;
     }
 
-    //DSL Style set value
-    public Quantity wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Quantity classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Quantity styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Quantity titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Quantity statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> Quantity</code> instance
+     */
     public Quantity langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> Quantity</code> instance
+     */
+    public Quantity statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Quantity</code> instance
+     */
+    public Quantity wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> Quantity</code> instance
+     */
+    public Quantity alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Quantity</code> instance
+     */
+    public Quantity classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr new value
+     * @return <code> Quantity</code> instance
+     */
+    public Quantity styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr new value
+     * @return <code> Quantity</code> instance
+     */
+    public Quantity titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Quantity</code> instance
+     */
     public Quantity periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -237,6 +326,8 @@ public class Quantity extends InlinereqreqComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -251,7 +342,9 @@ public class Quantity extends InlinereqreqComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Quantity html(String s) {
         super.html(s);

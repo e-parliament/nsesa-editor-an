@@ -30,6 +30,9 @@ import java.util.Map;
  */
 
 public class TemporalData extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new TemporalGroup(), new Occurrence(1, 1));
@@ -37,7 +40,9 @@ public class TemporalData extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "temporalData");
@@ -46,19 +51,28 @@ public class TemporalData extends OverlayWidgetImpl {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>TemporalData</code> object and set up its type
+     */
     public TemporalData() {
         super(create());
         setType("temporalData");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public TemporalData(AnyURISimpleType sourceAttr) {
         this();
         setSourceAttr(sourceAttr);
     }
 
 
+    /**
+     * Create a <code>TemporalData</code> object with the given DOM element
+     */
     public TemporalData(Element element) {
         super(element);
     }
@@ -66,6 +80,11 @@ public class TemporalData extends OverlayWidgetImpl {
     // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
 
+    /**
+     * Return <code>java.util.List<TemporalGroup></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TemporalGroup> getTemporalGroups() {
         java.util.List<TemporalGroup> result = new ArrayList<TemporalGroup>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -76,17 +95,30 @@ public class TemporalData extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<TemporalGroup></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<TemporalGroup> getTemporalGroupList() {
         return getTemporalGroups();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<TemporalGroup></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public TemporalGroup addTemporalGroup(TemporalGroup temporalGroupElem) {
         this.addOverlayWidget(temporalGroupElem);
         return temporalGroupElem;
     }
 
+    /**
+     * Return <code>sourceAttr</code> property
+     *
+     * @return sourceAttr
+     */
     public AnyURISimpleType getSourceAttr() {
         if (sourceAttr == null) {
             sourceAttr = new AnyURISimpleType();
@@ -96,17 +128,31 @@ public class TemporalData extends OverlayWidgetImpl {
         return sourceAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>sourceAttr</code> property in DSL way
+     *
+     * @return sourceAttr
+     */
     public AnyURISimpleType sourceAttr() {
         return getSourceAttr();
     }
 
+    /**
+     * Set <code>sourceAttr</code> property
+     *
+     * @param sourceAttr the new value
+     */
     public void setSourceAttr(final AnyURISimpleType sourceAttr) {
         this.sourceAttr = sourceAttr;
         getElement().setAttribute("source", sourceAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>sourceAttr</code> property in DSL way
+     *
+     * @param sourceAttr the new value
+     * @return <code>TemporalData</code> instance
+     */
     public TemporalData sourceAttr(final AnyURISimpleType sourceAttr) {
         setSourceAttr(sourceAttr);
         return this;
@@ -123,6 +169,8 @@ public class TemporalData extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -137,7 +185,9 @@ public class TemporalData extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public TemporalData html(String s) {
         super.html(s);

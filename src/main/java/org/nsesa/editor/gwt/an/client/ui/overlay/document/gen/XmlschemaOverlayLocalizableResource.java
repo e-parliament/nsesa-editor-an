@@ -18,6 +18,8 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayLocali
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 
 /**
+ * An implementation of <code>OverlayLocalizableResource</code> interface by getting the localizable information
+ * from GWT properties files.
  * Note: this file is generated. Rather than changing this file, correct the template called <tt>overlayLocalizableResource.ftl</tt>.
  */
 public class XmlschemaOverlayLocalizableResource extends DefaultOverlayLocalizableResource {

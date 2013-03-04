@@ -27,10 +27,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The element scopeMod is a metadata element specifying an (active or passive) modification in scope for the document.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class ScopeMod extends ModificationTypeComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Domain(), new Occurrence(0, 1));
@@ -45,7 +49,9 @@ public class ScopeMod extends ModificationTypeComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "scopeMod");
@@ -54,13 +60,19 @@ public class ScopeMod extends ModificationTypeComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>ScopeMod</code> object and set up its type
+     */
     public ScopeMod() {
         super(create());
         setType("scopeMod");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public ScopeMod(ScopeModsSimpleType typeAttr, IDSimpleType idAttr) {
         this();
         setTypeAttr(typeAttr);
@@ -68,6 +80,9 @@ public class ScopeMod extends ModificationTypeComplexType {
     }
 
 
+    /**
+     * Create a <code>ScopeMod</code> object with the given DOM element
+     */
     public ScopeMod(Element element) {
         super(element);
     }
@@ -75,6 +90,11 @@ public class ScopeMod extends ModificationTypeComplexType {
     // FIELDS ------------------
     private ScopeModsSimpleType typeAttr;
 
+    /**
+     * Return <code>typeAttr</code> property
+     *
+     * @return typeAttr
+     */
     public ScopeModsSimpleType getTypeAttr() {
         if (typeAttr == null) {
             typeAttr = ScopeModsSimpleType.fromString(getElement().getAttribute("type"));
@@ -83,22 +103,41 @@ public class ScopeMod extends ModificationTypeComplexType {
         return typeAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>typeAttr</code> property in DSL way
+     *
+     * @return typeAttr
+     */
     public ScopeModsSimpleType typeAttr() {
         return getTypeAttr();
     }
 
+    /**
+     * Set <code>typeAttr</code> property
+     *
+     * @param typeAttr the new value
+     */
     public void setTypeAttr(final ScopeModsSimpleType typeAttr) {
         this.typeAttr = typeAttr;
         getElement().setAttribute("type", typeAttr.value());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>typeAttr</code> property in DSL way
+     *
+     * @param typeAttr the new value
+     * @return <code>ScopeMod</code> instance
+     */
     public ScopeMod typeAttr(final ScopeModsSimpleType typeAttr) {
         setTypeAttr(typeAttr);
         return this;
     }
 
+    /**
+     * Add <code>Domain</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Domain getDomain() {
         Domain result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -109,9 +148,13 @@ public class ScopeMod extends ModificationTypeComplexType {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>domainElem</code> property in DSL way
+     *
+     * @param domainElem new value
+     * @return <code>Domain</code> instance
+     */
     public Domain setDomain(Domain domainElem) {
         Domain result = getDomain();
         // remove the child of the same type if exist
@@ -122,51 +165,91 @@ public class ScopeMod extends ModificationTypeComplexType {
 
         return domainElem;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public ScopeMod exclusionAttr(final BooleanSimpleType exclusionAttr) {
-        setExclusionAttr(exclusionAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ScopeMod incompleteAttr(final BooleanSimpleType incompleteAttr) {
-        setIncompleteAttr(incompleteAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ScopeMod idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ScopeMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ScopeMod statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public ScopeMod wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> ScopeMod</code> instance
+     */
     public ScopeMod refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> ScopeMod</code> instance
+     */
+    public ScopeMod wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> ScopeMod</code> instance
+     */
+    public ScopeMod idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> ScopeMod</code> instance
+     */
+    public ScopeMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>exclusionAttr</code> property in DSL way
+     *
+     * @param exclusionAttr new value
+     * @return <code> ScopeMod</code> instance
+     */
+    public ScopeMod exclusionAttr(final BooleanSimpleType exclusionAttr) {
+        setExclusionAttr(exclusionAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>incompleteAttr</code> property in DSL way
+     *
+     * @param incompleteAttr new value
+     * @return <code> ScopeMod</code> instance
+     */
+    public ScopeMod incompleteAttr(final BooleanSimpleType incompleteAttr) {
+        setIncompleteAttr(incompleteAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> ScopeMod</code> instance
+     */
+    public ScopeMod statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> ScopeMod</code> instance
+     */
     public ScopeMod periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -182,6 +265,8 @@ public class ScopeMod extends ModificationTypeComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -196,7 +281,9 @@ public class ScopeMod extends ModificationTypeComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public ScopeMod html(String s) {
         super.html(s);

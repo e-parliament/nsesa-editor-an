@@ -24,10 +24,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * Element debateReport is used for describing the structure and content of a report
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class DebateReport extends OpenStructureComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Meta(), new Occurrence(1, 1));
@@ -41,7 +45,9 @@ public class DebateReport extends OpenStructureComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "debateReport");
@@ -50,33 +56,53 @@ public class DebateReport extends OpenStructureComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>DebateReport</code> object and set up its type
+     */
     public DebateReport() {
         super(create());
         setType("debateReport");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public DebateReport(StringSimpleType nameAttr) {
         this();
         setNameAttr(nameAttr);
     }
 
 
+    /**
+     * Create a <code>DebateReport</code> object with the given DOM element
+     */
     public DebateReport(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
+//Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>containsAttr</code> property in DSL way
+     *
+     * @param containsAttr new value
+     * @return <code> DebateReport</code> instance
+     */
     public DebateReport containsAttr(final VersionTypeSimpleType containsAttr) {
         setContainsAttr(containsAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>nameAttr</code> property in DSL way
+     *
+     * @param nameAttr new value
+     * @return <code> DebateReport</code> instance
+     */
     public DebateReport nameAttr(final StringSimpleType nameAttr) {
         setNameAttr(nameAttr);
         return this;
@@ -92,6 +118,8 @@ public class DebateReport extends OpenStructureComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -105,7 +133,9 @@ public class DebateReport extends OpenStructureComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public DebateReport html(String s) {
         super.html(s);

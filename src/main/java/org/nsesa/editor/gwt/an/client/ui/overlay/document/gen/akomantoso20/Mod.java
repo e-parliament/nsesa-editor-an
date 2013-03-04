@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * the element mod is an inline element containing the specification of a modification on another document
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Mod extends ModTypeComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new QuotedText(), new Occurrence(1, 1));
@@ -107,7 +111,9 @@ public class Mod extends ModTypeComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "mod");
@@ -116,87 +122,152 @@ public class Mod extends ModTypeComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Mod</code> object and set up its type
+     */
     public Mod() {
         super(create());
         setType("mod");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public Mod(IDSimpleType idAttr) {
         this();
         setIdAttr(idAttr);
     }
 
 
+    /**
+     * Create a <code>Mod</code> object with the given DOM element
+     */
     public Mod(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public Mod refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
+//Override all attributes methods to be conformant with DSL approach
 
-    //DSL Style set value
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> Mod</code> instance
+     */
     public Mod alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
-    //DSL Style set value
-    public Mod statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Mod</code> instance
+     */
     public Mod wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
-    //DSL Style set value
-    public Mod langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Mod idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public Mod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Mod</code> instance
+     */
     public Mod classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr new value
+     * @return <code> Mod</code> instance
+     */
     public Mod styleAttr(final StringSimpleType styleAttr) {
         setStyleAttr(styleAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr new value
+     * @return <code> Mod</code> instance
+     */
     public Mod titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Mod</code> instance
+     */
+    public Mod refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> Mod</code> instance
+     */
+    public Mod statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> Mod</code> instance
+     */
+    public Mod langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Mod</code> instance
+     */
+    public Mod idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Mod</code> instance
+     */
+    public Mod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Mod</code> instance
+     */
     public Mod periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -212,6 +283,8 @@ public class Mod extends ModTypeComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -225,7 +298,9 @@ public class Mod extends ModTypeComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Mod html(String s) {
         super.html(s);

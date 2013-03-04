@@ -26,17 +26,23 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The element FRBRcountry is the metadata property containing a ISO 3166-1 Alpha-2 code for the country or jurisdiction to be used in the work-level URI of this document
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class FRBRcountry extends ValueTypeComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
         }
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "FRBRcountry");
@@ -45,45 +51,75 @@ public class FRBRcountry extends ValueTypeComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>FRBRcountry</code> object and set up its type
+     */
     public FRBRcountry() {
         super(create());
         setType("FRBRcountry");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public FRBRcountry(StringSimpleType valueAttr) {
         this();
         setValueAttr(valueAttr);
     }
 
 
+    /**
+     * Create a <code>FRBRcountry</code> object with the given DOM element
+     */
     public FRBRcountry(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
+//Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>valueAttr</code> property in DSL way
+     *
+     * @param valueAttr new value
+     * @return <code> FRBRcountry</code> instance
+     */
     public FRBRcountry valueAttr(final StringSimpleType valueAttr) {
         setValueAttr(valueAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> FRBRcountry</code> instance
+     */
     public FRBRcountry idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> FRBRcountry</code> instance
+     */
     public FRBRcountry evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> FRBRcountry</code> instance
+     */
     public FRBRcountry wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
@@ -99,6 +135,8 @@ public class FRBRcountry extends ValueTypeComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -112,7 +150,9 @@ public class FRBRcountry extends ValueTypeComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public FRBRcountry html(String s) {
         super.html(s);

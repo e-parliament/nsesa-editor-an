@@ -30,6 +30,9 @@ import java.util.Map;
  */
 
 public class Component extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new AmendmentList(), new Occurrence(0, -1));
@@ -46,7 +49,9 @@ public class Component extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "component");
@@ -55,19 +60,28 @@ public class Component extends OverlayWidgetImpl {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Component</code> object and set up its type
+     */
     public Component() {
         super(create());
         setType("component");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public Component(IDSimpleType idAttr) {
         this();
         setIdAttr(idAttr);
     }
 
 
+    /**
+     * Create a <code>Component</code> object with the given DOM element
+     */
     public Component(Element element) {
         super(element);
     }
@@ -77,6 +91,11 @@ public class Component extends OverlayWidgetImpl {
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
 
+    /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
     public String getWildcardContentAttr() {
         if (wildcardContentAttr == null) {
             //hmm nothing to do here
@@ -85,22 +104,41 @@ public class Component extends OverlayWidgetImpl {
         return wildcardContentAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
     public String wildcardContentAttr() {
         return getWildcardContentAttr();
     }
 
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
     public void setWildcardContentAttr(final String wildcardContentAttr) {
         this.wildcardContentAttr = wildcardContentAttr;
         getElement().setAttribute("wildcardContent", wildcardContentAttr);
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>Component</code> instance
+     */
     public Component wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
+    /**
+     * Return <code>idAttr</code> property
+     *
+     * @return idAttr
+     */
     public IDSimpleType getIdAttr() {
         if (idAttr == null) {
             idAttr = new IDSimpleType();
@@ -110,22 +148,41 @@ public class Component extends OverlayWidgetImpl {
         return idAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>idAttr</code> property in DSL way
+     *
+     * @return idAttr
+     */
     public IDSimpleType idAttr() {
         return getIdAttr();
     }
 
+    /**
+     * Set <code>idAttr</code> property
+     *
+     * @param idAttr the new value
+     */
     public void setIdAttr(final IDSimpleType idAttr) {
         this.idAttr = idAttr;
         getElement().setAttribute("id", idAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr the new value
+     * @return <code>Component</code> instance
+     */
     public Component idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
 
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
     public NMTOKENSimpleType getEvolvingIdAttr() {
         if (evolvingIdAttr == null) {
             evolvingIdAttr = new NMTOKENSimpleType();
@@ -135,22 +192,41 @@ public class Component extends OverlayWidgetImpl {
         return evolvingIdAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @return evolvingIdAttr
+     */
     public NMTOKENSimpleType evolvingIdAttr() {
         return getEvolvingIdAttr();
     }
 
+    /**
+     * Set <code>evolvingIdAttr</code> property
+     *
+     * @param evolvingIdAttr the new value
+     */
     public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         this.evolvingIdAttr = evolvingIdAttr;
         getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr the new value
+     * @return <code>Component</code> instance
+     */
     public Component evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
+    /**
+     * Add <code>AmendmentList</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public AmendmentList getAmendmentList() {
         AmendmentList result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -161,9 +237,13 @@ public class Component extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>amendmentListElem</code> property in DSL way
+     *
+     * @param amendmentListElem new value
+     * @return <code>AmendmentList</code> instance
+     */
     public AmendmentList setAmendmentList(AmendmentList amendmentListElem) {
         AmendmentList result = getAmendmentList();
         // remove the child of the same type if exist
@@ -175,6 +255,11 @@ public class Component extends OverlayWidgetImpl {
         return amendmentListElem;
     }
 
+    /**
+     * Add <code>OfficialGazette</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public OfficialGazette getOfficialGazette() {
         OfficialGazette result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -185,9 +270,13 @@ public class Component extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>officialGazetteElem</code> property in DSL way
+     *
+     * @param officialGazetteElem new value
+     * @return <code>OfficialGazette</code> instance
+     */
     public OfficialGazette setOfficialGazette(OfficialGazette officialGazetteElem) {
         OfficialGazette result = getOfficialGazette();
         // remove the child of the same type if exist
@@ -199,6 +288,11 @@ public class Component extends OverlayWidgetImpl {
         return officialGazetteElem;
     }
 
+    /**
+     * Add <code>DocumentCollection</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DocumentCollection getDocumentCollection() {
         DocumentCollection result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -209,9 +303,13 @@ public class Component extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>documentCollectionElem</code> property in DSL way
+     *
+     * @param documentCollectionElem new value
+     * @return <code>DocumentCollection</code> instance
+     */
     public DocumentCollection setDocumentCollection(DocumentCollection documentCollectionElem) {
         DocumentCollection result = getDocumentCollection();
         // remove the child of the same type if exist
@@ -223,6 +321,11 @@ public class Component extends OverlayWidgetImpl {
         return documentCollectionElem;
     }
 
+    /**
+     * Add <code>Act</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Act getAct() {
         Act result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -233,9 +336,13 @@ public class Component extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>actElem</code> property in DSL way
+     *
+     * @param actElem new value
+     * @return <code>Act</code> instance
+     */
     public Act setAct(Act actElem) {
         Act result = getAct();
         // remove the child of the same type if exist
@@ -247,6 +354,11 @@ public class Component extends OverlayWidgetImpl {
         return actElem;
     }
 
+    /**
+     * Add <code>Bill</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Bill getBill() {
         Bill result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -257,9 +369,13 @@ public class Component extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>billElem</code> property in DSL way
+     *
+     * @param billElem new value
+     * @return <code>Bill</code> instance
+     */
     public Bill setBill(Bill billElem) {
         Bill result = getBill();
         // remove the child of the same type if exist
@@ -271,6 +387,11 @@ public class Component extends OverlayWidgetImpl {
         return billElem;
     }
 
+    /**
+     * Add <code>DebateReport</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public DebateReport getDebateReport() {
         DebateReport result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -281,9 +402,13 @@ public class Component extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>debateReportElem</code> property in DSL way
+     *
+     * @param debateReportElem new value
+     * @return <code>DebateReport</code> instance
+     */
     public DebateReport setDebateReport(DebateReport debateReportElem) {
         DebateReport result = getDebateReport();
         // remove the child of the same type if exist
@@ -295,6 +420,11 @@ public class Component extends OverlayWidgetImpl {
         return debateReportElem;
     }
 
+    /**
+     * Add <code>Debate</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Debate getDebate() {
         Debate result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -305,9 +435,13 @@ public class Component extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>debateElem</code> property in DSL way
+     *
+     * @param debateElem new value
+     * @return <code>Debate</code> instance
+     */
     public Debate setDebate(Debate debateElem) {
         Debate result = getDebate();
         // remove the child of the same type if exist
@@ -319,6 +453,11 @@ public class Component extends OverlayWidgetImpl {
         return debateElem;
     }
 
+    /**
+     * Add <code>Amendment</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Amendment getAmendment() {
         Amendment result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -329,9 +468,13 @@ public class Component extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>amendmentElem</code> property in DSL way
+     *
+     * @param amendmentElem new value
+     * @return <code>Amendment</code> instance
+     */
     public Amendment setAmendment(Amendment amendmentElem) {
         Amendment result = getAmendment();
         // remove the child of the same type if exist
@@ -343,6 +486,11 @@ public class Component extends OverlayWidgetImpl {
         return amendmentElem;
     }
 
+    /**
+     * Add <code>Judgement</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Judgement getJudgement() {
         Judgement result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -353,9 +501,13 @@ public class Component extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>judgementElem</code> property in DSL way
+     *
+     * @param judgementElem new value
+     * @return <code>Judgement</code> instance
+     */
     public Judgement setJudgement(Judgement judgementElem) {
         Judgement result = getJudgement();
         // remove the child of the same type if exist
@@ -367,6 +519,11 @@ public class Component extends OverlayWidgetImpl {
         return judgementElem;
     }
 
+    /**
+     * Add <code>Doc</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Doc getDoc() {
         Doc result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -377,9 +534,13 @@ public class Component extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>docElem</code> property in DSL way
+     *
+     * @param docElem new value
+     * @return <code>Doc</code> instance
+     */
     public Doc setDoc(Doc docElem) {
         Doc result = getDoc();
         // remove the child of the same type if exist
@@ -402,6 +563,8 @@ public class Component extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -418,7 +581,9 @@ public class Component extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Component html(String s) {
         super.html(s);

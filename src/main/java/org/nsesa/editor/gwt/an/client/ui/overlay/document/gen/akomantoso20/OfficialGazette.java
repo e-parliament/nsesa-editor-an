@@ -23,10 +23,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * Element officialGazette is used for describing the structure and content of an issue of an official gazette
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class OfficialGazette extends CollectionStructureComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Meta(), new Occurrence(1, 1));
@@ -39,7 +43,9 @@ public class OfficialGazette extends CollectionStructureComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "officialGazette");
@@ -48,21 +54,34 @@ public class OfficialGazette extends CollectionStructureComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>OfficialGazette</code> object and set up its type
+     */
     public OfficialGazette() {
         super(create());
         setType("officialGazette");
     }
 
 
+    /**
+     * Create a <code>OfficialGazette</code> object with the given DOM element
+     */
     public OfficialGazette(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
+//Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>containsAttr</code> property in DSL way
+     *
+     * @param containsAttr new value
+     * @return <code> OfficialGazette</code> instance
+     */
     public OfficialGazette containsAttr(final VersionTypeSimpleType containsAttr) {
         setContainsAttr(containsAttr);
         return this;
@@ -78,6 +97,8 @@ public class OfficialGazette extends CollectionStructureComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -91,7 +112,9 @@ public class OfficialGazette extends CollectionStructureComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public OfficialGazette html(String s) {
         super.html(s);

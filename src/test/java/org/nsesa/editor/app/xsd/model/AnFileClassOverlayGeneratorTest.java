@@ -26,11 +26,9 @@ import java.util.Map;
 import static junit.framework.Assert.assertTrue;
 
 /**
- * A test class for file class generator.
- * User: groza
- * Date: 15/11/12
- * Time: 11:02
- * To change this template use File | Settings | File Templates.
+ * A test class for <code>FileClassOverlayGenerator</code>.
+ * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
+ * Date: 15/11/12 11:02
  */
 public class AnFileClassOverlayGeneratorTest {
 

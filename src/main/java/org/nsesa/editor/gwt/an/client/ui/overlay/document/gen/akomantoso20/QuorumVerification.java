@@ -26,10 +26,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The element quorumVerification is a metadata container containing information about an event of quorum verification happened within a debate.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class QuorumVerification extends ParliamentaryAnalysisTypeComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Quorum(), new Occurrence(1, 1));
@@ -38,7 +42,9 @@ public class QuorumVerification extends ParliamentaryAnalysisTypeComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "quorumVerification");
@@ -47,59 +53,99 @@ public class QuorumVerification extends ParliamentaryAnalysisTypeComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>QuorumVerification</code> object and set up its type
+     */
     public QuorumVerification() {
         super(create());
         setType("quorumVerification");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public QuorumVerification(IDSimpleType idAttr) {
         this();
         setIdAttr(idAttr);
     }
 
 
+    /**
+     * Create a <code>QuorumVerification</code> object with the given DOM element
+     */
     public QuorumVerification(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
-    public QuorumVerification outcomeAttr(final AnyURISimpleType outcomeAttr) {
-        setOutcomeAttr(outcomeAttr);
-        return this;
-    }
+//Override all attributes methods to be conformant with DSL approach
 
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> QuorumVerification</code> instance
+     */
     public QuorumVerification wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
-    //DSL Style set value
-    public QuorumVerification idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    //DSL Style set value
-    public QuorumVerification evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    //DSL Style set value
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> QuorumVerification</code> instance
+     */
     public QuorumVerification refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>outcomeAttr</code> property in DSL way
+     *
+     * @param outcomeAttr new value
+     * @return <code> QuorumVerification</code> instance
+     */
+    public QuorumVerification outcomeAttr(final AnyURISimpleType outcomeAttr) {
+        setOutcomeAttr(outcomeAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> QuorumVerification</code> instance
+     */
     public QuorumVerification hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> QuorumVerification</code> instance
+     */
+    public QuorumVerification idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> QuorumVerification</code> instance
+     */
+    public QuorumVerification evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -113,6 +159,8 @@ public class QuorumVerification extends ParliamentaryAnalysisTypeComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -126,7 +174,9 @@ public class QuorumVerification extends ParliamentaryAnalysisTypeComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public QuorumVerification html(String s) {
         super.html(s);

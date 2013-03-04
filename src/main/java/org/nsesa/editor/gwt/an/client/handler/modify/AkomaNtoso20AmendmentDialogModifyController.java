@@ -230,10 +230,6 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         }
     }
 
-    private <T extends OverlayWidget> T a(final String tag) {
-        return (T) overlayFactory.getAmendableWidget(tag);
-    }
-
     @Override
     public void setContext(DialogContext dialogContext) {
         super.setContext(dialogContext);

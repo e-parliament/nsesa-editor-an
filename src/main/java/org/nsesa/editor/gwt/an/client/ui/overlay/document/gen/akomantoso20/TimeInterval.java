@@ -27,17 +27,23 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * Generated class
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class TimeInterval extends MetaoptComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
         }
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "timeInterval");
@@ -46,19 +52,28 @@ public class TimeInterval extends MetaoptComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>TimeInterval</code> object and set up its type
+     */
     public TimeInterval() {
         super(create());
         setType("timeInterval");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public TimeInterval(AnyURISimpleType refersToAttr) {
         this();
         setRefersToAttr(refersToAttr);
     }
 
 
+    /**
+     * Create a <code>TimeInterval</code> object with the given DOM element
+     */
     public TimeInterval(Element element) {
         super(element);
     }
@@ -69,6 +84,11 @@ public class TimeInterval extends MetaoptComplexType {
     private DurationSimpleType durationAttr;
     private AnyURISimpleType refersToAttr;
 
+    /**
+     * Return <code>startAttr</code> property
+     *
+     * @return startAttr
+     */
     public AnyURISimpleType getStartAttr() {
         if (startAttr == null) {
             startAttr = new AnyURISimpleType();
@@ -78,22 +98,41 @@ public class TimeInterval extends MetaoptComplexType {
         return startAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>startAttr</code> property in DSL way
+     *
+     * @return startAttr
+     */
     public AnyURISimpleType startAttr() {
         return getStartAttr();
     }
 
+    /**
+     * Set <code>startAttr</code> property
+     *
+     * @param startAttr the new value
+     */
     public void setStartAttr(final AnyURISimpleType startAttr) {
         this.startAttr = startAttr;
         getElement().setAttribute("start", startAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>startAttr</code> property in DSL way
+     *
+     * @param startAttr the new value
+     * @return <code>TimeInterval</code> instance
+     */
     public TimeInterval startAttr(final AnyURISimpleType startAttr) {
         setStartAttr(startAttr);
         return this;
     }
 
+    /**
+     * Return <code>endAttr</code> property
+     *
+     * @return endAttr
+     */
     public AnyURISimpleType getEndAttr() {
         if (endAttr == null) {
             endAttr = new AnyURISimpleType();
@@ -103,22 +142,41 @@ public class TimeInterval extends MetaoptComplexType {
         return endAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>endAttr</code> property in DSL way
+     *
+     * @return endAttr
+     */
     public AnyURISimpleType endAttr() {
         return getEndAttr();
     }
 
+    /**
+     * Set <code>endAttr</code> property
+     *
+     * @param endAttr the new value
+     */
     public void setEndAttr(final AnyURISimpleType endAttr) {
         this.endAttr = endAttr;
         getElement().setAttribute("end", endAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>endAttr</code> property in DSL way
+     *
+     * @param endAttr the new value
+     * @return <code>TimeInterval</code> instance
+     */
     public TimeInterval endAttr(final AnyURISimpleType endAttr) {
         setEndAttr(endAttr);
         return this;
     }
 
+    /**
+     * Return <code>durationAttr</code> property
+     *
+     * @return durationAttr
+     */
     public DurationSimpleType getDurationAttr() {
         if (durationAttr == null) {
             durationAttr = new DurationSimpleType();
@@ -128,22 +186,41 @@ public class TimeInterval extends MetaoptComplexType {
         return durationAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>durationAttr</code> property in DSL way
+     *
+     * @return durationAttr
+     */
     public DurationSimpleType durationAttr() {
         return getDurationAttr();
     }
 
+    /**
+     * Set <code>durationAttr</code> property
+     *
+     * @param durationAttr the new value
+     */
     public void setDurationAttr(final DurationSimpleType durationAttr) {
         this.durationAttr = durationAttr;
         getElement().setAttribute("duration", durationAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>durationAttr</code> property in DSL way
+     *
+     * @param durationAttr the new value
+     * @return <code>TimeInterval</code> instance
+     */
     public TimeInterval durationAttr(final DurationSimpleType durationAttr) {
         setDurationAttr(durationAttr);
         return this;
     }
 
+    /**
+     * Return <code>refersToAttr</code> property
+     *
+     * @return refersToAttr
+     */
     public AnyURISimpleType getRefersToAttr() {
         if (refersToAttr == null) {
             refersToAttr = new AnyURISimpleType();
@@ -153,36 +230,65 @@ public class TimeInterval extends MetaoptComplexType {
         return refersToAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>refersToAttr</code> property in DSL way
+     *
+     * @return refersToAttr
+     */
     public AnyURISimpleType refersToAttr() {
         return getRefersToAttr();
     }
 
+    /**
+     * Set <code>refersToAttr</code> property
+     *
+     * @param refersToAttr the new value
+     */
     public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
         this.refersToAttr = refersToAttr;
         getElement().setAttribute("refersTo", refersToAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr the new value
+     * @return <code>TimeInterval</code> instance
+     */
     public TimeInterval refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> TimeInterval</code> instance
+     */
     public TimeInterval idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> TimeInterval</code> instance
+     */
     public TimeInterval evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> TimeInterval</code> instance
+     */
     public TimeInterval wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
@@ -198,6 +304,8 @@ public class TimeInterval extends MetaoptComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -215,7 +323,9 @@ public class TimeInterval extends MetaoptComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public TimeInterval html(String s) {
         super.html(s);

@@ -27,17 +27,23 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The element FRBRdate is the metadata property containing a relevant date of the document in the respective level of the FRBR hierarchy. Attribute name specifies which actual date is contained here.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class FRBRdate extends MetaoptComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
         }
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "FRBRdate");
@@ -46,53 +52,42 @@ public class FRBRdate extends MetaoptComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>FRBRdate</code> object and set up its type
+     */
     public FRBRdate() {
         super(create());
         setType("FRBRdate");
     }
 
-    //Constructor with the required attributes
-    public FRBRdate(DateSimpleType dateAttr, StringSimpleType nameAttr) {
+    /**
+     * Constructor with required attributes
+     */
+    public FRBRdate(StringSimpleType nameAttr, DateSimpleType dateAttr) {
         this();
-        setDateAttr(dateAttr);
         setNameAttr(nameAttr);
+        setDateAttr(dateAttr);
     }
 
 
+    /**
+     * Create a <code>FRBRdate</code> object with the given DOM element
+     */
     public FRBRdate(Element element) {
         super(element);
     }
 
     // FIELDS ------------------
-    private DateSimpleType dateAttr;
     private StringSimpleType nameAttr;
+    private DateSimpleType dateAttr;
 
-    public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-            dateAttr = new DateSimpleType();
-            dateAttr.setValue(getElement().getAttribute("date"));
-        }
-
-        return dateAttr;
-    }
-
-    //DSL Style get value
-    public DateSimpleType dateAttr() {
-        return getDateAttr();
-    }
-
-    public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-        getElement().setAttribute("date", dateAttr.getValue());
-    }
-
-    //DSL Style set value
-    public FRBRdate dateAttr(final DateSimpleType dateAttr) {
-        setDateAttr(dateAttr);
-        return this;
-    }
-
+    /**
+     * Return <code>nameAttr</code> property
+     *
+     * @return nameAttr
+     */
     public StringSimpleType getNameAttr() {
         if (nameAttr == null) {
             nameAttr = new StringSimpleType();
@@ -102,36 +97,109 @@ public class FRBRdate extends MetaoptComplexType {
         return nameAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>nameAttr</code> property in DSL way
+     *
+     * @return nameAttr
+     */
     public StringSimpleType nameAttr() {
         return getNameAttr();
     }
 
+    /**
+     * Set <code>nameAttr</code> property
+     *
+     * @param nameAttr the new value
+     */
     public void setNameAttr(final StringSimpleType nameAttr) {
         this.nameAttr = nameAttr;
         getElement().setAttribute("name", nameAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>nameAttr</code> property in DSL way
+     *
+     * @param nameAttr the new value
+     * @return <code>FRBRdate</code> instance
+     */
     public FRBRdate nameAttr(final StringSimpleType nameAttr) {
         setNameAttr(nameAttr);
         return this;
     }
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
+    /**
+     * Return <code>dateAttr</code> property
+     *
+     * @return dateAttr
+     */
+    public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(getElement().getAttribute("date"));
+        }
+
+        return dateAttr;
+    }
+
+    /**
+     * Return <code>dateAttr</code> property in DSL way
+     *
+     * @return dateAttr
+     */
+    public DateSimpleType dateAttr() {
+        return getDateAttr();
+    }
+
+    /**
+     * Set <code>dateAttr</code> property
+     *
+     * @param dateAttr the new value
+     */
+    public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+        getElement().setAttribute("date", dateAttr.getValue());
+    }
+
+    /**
+     * Set <code>dateAttr</code> property in DSL way
+     *
+     * @param dateAttr the new value
+     * @return <code>FRBRdate</code> instance
+     */
+    public FRBRdate dateAttr(final DateSimpleType dateAttr) {
+        setDateAttr(dateAttr);
+        return this;
+    }
+//Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> FRBRdate</code> instance
+     */
     public FRBRdate idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> FRBRdate</code> instance
+     */
     public FRBRdate evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> FRBRdate</code> instance
+     */
     public FRBRdate wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
@@ -147,6 +215,8 @@ public class FRBRdate extends MetaoptComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -157,12 +227,14 @@ public class FRBRdate extends MetaoptComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public FRBRdate html(String s) {
         super.html(s);

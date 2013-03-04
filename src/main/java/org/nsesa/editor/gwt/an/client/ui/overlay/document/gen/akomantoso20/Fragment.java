@@ -24,10 +24,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * Element fragment is used for describing the structure and content of an issue of an official gazette
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class Fragment extends FragmentStructureComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Meta(), new Occurrence(1, 1));
@@ -36,7 +40,9 @@ public class Fragment extends FragmentStructureComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "fragment");
@@ -45,27 +51,42 @@ public class Fragment extends FragmentStructureComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>Fragment</code> object and set up its type
+     */
     public Fragment() {
         super(create());
         setType("fragment");
     }
 
-    //Constructor with the required attributes
+    /**
+     * Constructor with required attributes
+     */
     public Fragment(AnyURISimpleType includedInAttr) {
         this();
         setIncludedInAttr(includedInAttr);
     }
 
 
+    /**
+     * Create a <code>Fragment</code> object with the given DOM element
+     */
     public Fragment(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
-    //Override all attributes methods to be conformant with DSL approach
-    //DSL Style set value
+//Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>includedInAttr</code> property in DSL way
+     *
+     * @param includedInAttr new value
+     * @return <code> Fragment</code> instance
+     */
     public Fragment includedInAttr(final AnyURISimpleType includedInAttr) {
         setIncludedInAttr(includedInAttr);
         return this;
@@ -81,6 +102,8 @@ public class Fragment extends FragmentStructureComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -94,7 +117,9 @@ public class Fragment extends FragmentStructureComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public Fragment html(String s) {
         super.html(s);

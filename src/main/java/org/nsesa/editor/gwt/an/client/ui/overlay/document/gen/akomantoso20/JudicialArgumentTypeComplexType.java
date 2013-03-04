@@ -29,10 +29,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The complex type judicialArgumentType lists all the properties associated to judicial elements.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Source(), new Occurrence(1, -1));
@@ -42,7 +46,9 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "judicialArgumentTypeComplexType");
@@ -53,20 +59,28 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>JudicialArgumentTypeComplexType</code> object with the given DOM element
+     */
     public JudicialArgumentTypeComplexType(Element element) {
         super(element);
     }
 
     // FIELDS ------------------
-    private String wildcardContentAttr;
-    private AnyURISimpleType refersToAttr;
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
-    private StatusTypeSimpleType statusAttr;
     private BooleanSimpleType exclusionAttr;
     private BooleanSimpleType incompleteAttr;
+    private String wildcardContentAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType refersToAttr;
+    private StatusTypeSimpleType statusAttr;
     private AnyURISimpleType periodAttr;
 
+    /**
+     * Return <code>java.util.List<Source></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Source> getSources() {
         java.util.List<Source> result = new ArrayList<Source>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -77,17 +91,30 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Source></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Source> getSourceList() {
         return getSources();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Source></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Source addSource(Source sourceElem) {
         this.addOverlayWidget(sourceElem);
         return sourceElem;
     }
 
+    /**
+     * Return <code>java.util.List<Destination></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Destination> getDestinations() {
         java.util.List<Destination> result = new ArrayList<Destination>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -98,17 +125,30 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Destination></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Destination> getDestinationList() {
         return getDestinations();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Destination></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Destination addDestination(Destination destinationElem) {
         this.addOverlayWidget(destinationElem);
         return destinationElem;
     }
 
+    /**
+     * Add <code>Condition</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Condition getCondition() {
         Condition result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -119,9 +159,13 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>conditionElem</code> property in DSL way
+     *
+     * @param conditionElem new value
+     * @return <code>Condition</code> instance
+     */
     public Condition setCondition(Condition conditionElem) {
         Condition result = getCondition();
         // remove the child of the same type if exist
@@ -133,129 +177,11 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
         return conditionElem;
     }
 
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    //DSL Style get value
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    //DSL Style set value
-    public JudicialArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-    }
-
-    //DSL Style get value
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
-    }
-
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
-    }
-
-    //DSL Style set value
-    public JudicialArgumentTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
-        }
-
-        return idAttr;
-    }
-
-    //DSL Style get value
-    public IDSimpleType idAttr() {
-        return getIdAttr();
-    }
-
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
-    }
-
-    //DSL Style set value
-    public JudicialArgumentTypeComplexType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-    }
-
-    //DSL Style get value
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
-    }
-
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
-    }
-
-    //DSL Style set value
-    public JudicialArgumentTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-    }
-
-    //DSL Style get value
-    public StatusTypeSimpleType statusAttr() {
-        return getStatusAttr();
-    }
-
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status", statusAttr.value());
-    }
-
-    //DSL Style set value
-    public JudicialArgumentTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
+    /**
+     * Return <code>exclusionAttr</code> property
+     *
+     * @return exclusionAttr
+     */
     public BooleanSimpleType getExclusionAttr() {
         if (exclusionAttr == null) {
             exclusionAttr = new BooleanSimpleType();
@@ -265,22 +191,41 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
         return exclusionAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>exclusionAttr</code> property in DSL way
+     *
+     * @return exclusionAttr
+     */
     public BooleanSimpleType exclusionAttr() {
         return getExclusionAttr();
     }
 
+    /**
+     * Set <code>exclusionAttr</code> property
+     *
+     * @param exclusionAttr the new value
+     */
     public void setExclusionAttr(final BooleanSimpleType exclusionAttr) {
         this.exclusionAttr = exclusionAttr;
         getElement().setAttribute("exclusion", exclusionAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>exclusionAttr</code> property in DSL way
+     *
+     * @param exclusionAttr the new value
+     * @return <code>JudicialArgumentTypeComplexType</code> instance
+     */
     public JudicialArgumentTypeComplexType exclusionAttr(final BooleanSimpleType exclusionAttr) {
         setExclusionAttr(exclusionAttr);
         return this;
     }
 
+    /**
+     * Return <code>incompleteAttr</code> property
+     *
+     * @return incompleteAttr
+     */
     public BooleanSimpleType getIncompleteAttr() {
         if (incompleteAttr == null) {
             incompleteAttr = new BooleanSimpleType();
@@ -290,22 +235,259 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
         return incompleteAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>incompleteAttr</code> property in DSL way
+     *
+     * @return incompleteAttr
+     */
     public BooleanSimpleType incompleteAttr() {
         return getIncompleteAttr();
     }
 
+    /**
+     * Set <code>incompleteAttr</code> property
+     *
+     * @param incompleteAttr the new value
+     */
     public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
         this.incompleteAttr = incompleteAttr;
         getElement().setAttribute("incomplete", incompleteAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>incompleteAttr</code> property in DSL way
+     *
+     * @param incompleteAttr the new value
+     * @return <code>JudicialArgumentTypeComplexType</code> instance
+     */
     public JudicialArgumentTypeComplexType incompleteAttr(final BooleanSimpleType incompleteAttr) {
         setIncompleteAttr(incompleteAttr);
         return this;
     }
 
+    /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>JudicialArgumentTypeComplexType</code> instance
+     */
+    public JudicialArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>idAttr</code> property
+     *
+     * @return idAttr
+     */
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
+        }
+
+        return idAttr;
+    }
+
+    /**
+     * Return <code>idAttr</code> property in DSL way
+     *
+     * @return idAttr
+     */
+    public IDSimpleType idAttr() {
+        return getIdAttr();
+    }
+
+    /**
+     * Set <code>idAttr</code> property
+     *
+     * @param idAttr the new value
+     */
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr the new value
+     * @return <code>JudicialArgumentTypeComplexType</code> instance
+     */
+    public JudicialArgumentTypeComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property
+     *
+     * @param evolvingIdAttr the new value
+     */
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr the new value
+     * @return <code>JudicialArgumentTypeComplexType</code> instance
+     */
+    public JudicialArgumentTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property in DSL way
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property
+     *
+     * @param refersToAttr the new value
+     */
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr the new value
+     * @return <code>JudicialArgumentTypeComplexType</code> instance
+     */
+    public JudicialArgumentTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>statusAttr</code> property
+     *
+     * @return statusAttr
+     */
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        }
+
+        return statusAttr;
+    }
+
+    /**
+     * Return <code>statusAttr</code> property in DSL way
+     *
+     * @return statusAttr
+     */
+    public StatusTypeSimpleType statusAttr() {
+        return getStatusAttr();
+    }
+
+    /**
+     * Set <code>statusAttr</code> property
+     *
+     * @param statusAttr the new value
+     */
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status", statusAttr.value());
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr the new value
+     * @return <code>JudicialArgumentTypeComplexType</code> instance
+     */
+    public JudicialArgumentTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>periodAttr</code> property
+     *
+     * @return periodAttr
+     */
     public AnyURISimpleType getPeriodAttr() {
         if (periodAttr == null) {
             periodAttr = new AnyURISimpleType();
@@ -315,17 +497,31 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
         return periodAttr;
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>periodAttr</code> property in DSL way
+     *
+     * @return periodAttr
+     */
     public AnyURISimpleType periodAttr() {
         return getPeriodAttr();
     }
 
+    /**
+     * Set <code>periodAttr</code> property
+     *
+     * @param periodAttr the new value
+     */
     public void setPeriodAttr(final AnyURISimpleType periodAttr) {
         this.periodAttr = periodAttr;
         getElement().setAttribute("period", periodAttr.getValue());
     }
 
-    //DSL Style set value
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr the new value
+     * @return <code>JudicialArgumentTypeComplexType</code> instance
+     */
     public JudicialArgumentTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
@@ -342,6 +538,8 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -352,18 +550,20 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("exclusion", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
         attrs.put("incomplete", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public JudicialArgumentTypeComplexType html(String s) {
         super.html(s);

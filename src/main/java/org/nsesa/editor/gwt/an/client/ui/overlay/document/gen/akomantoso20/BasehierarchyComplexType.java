@@ -24,10 +24,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The complex type basehierarchy is not used by any element, but is derived by other types to contain the basic structure of hierarchical elements
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class BasehierarchyComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new Num(), new Occurrence(0, 1));
@@ -37,7 +41,9 @@ public class BasehierarchyComplexType extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "basehierarchyComplexType");
@@ -48,12 +54,20 @@ public class BasehierarchyComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>BasehierarchyComplexType</code> object with the given DOM element
+     */
     public BasehierarchyComplexType(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
+    /**
+     * Add <code>Num</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Num getNum() {
         Num result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -64,9 +78,13 @@ public class BasehierarchyComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>numElem</code> property in DSL way
+     *
+     * @param numElem new value
+     * @return <code>Num</code> instance
+     */
     public Num setNum(Num numElem) {
         Num result = getNum();
         // remove the child of the same type if exist
@@ -78,6 +96,11 @@ public class BasehierarchyComplexType extends OverlayWidgetImpl {
         return numElem;
     }
 
+    /**
+     * Add <code>Heading</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Heading getHeading() {
         Heading result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -88,9 +111,13 @@ public class BasehierarchyComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>headingElem</code> property in DSL way
+     *
+     * @param headingElem new value
+     * @return <code>Heading</code> instance
+     */
     public Heading setHeading(Heading headingElem) {
         Heading result = getHeading();
         // remove the child of the same type if exist
@@ -102,6 +129,11 @@ public class BasehierarchyComplexType extends OverlayWidgetImpl {
         return headingElem;
     }
 
+    /**
+     * Add <code>Subheading</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Subheading getSubheading() {
         Subheading result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -112,9 +144,13 @@ public class BasehierarchyComplexType extends OverlayWidgetImpl {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>subheadingElem</code> property in DSL way
+     *
+     * @param subheadingElem new value
+     * @return <code>Subheading</code> instance
+     */
     public Subheading setSubheading(Subheading subheadingElem) {
         Subheading result = getSubheading();
         // remove the child of the same type if exist
@@ -137,6 +173,8 @@ public class BasehierarchyComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -150,7 +188,9 @@ public class BasehierarchyComplexType extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public BasehierarchyComplexType html(String s) {
         super.html(s);

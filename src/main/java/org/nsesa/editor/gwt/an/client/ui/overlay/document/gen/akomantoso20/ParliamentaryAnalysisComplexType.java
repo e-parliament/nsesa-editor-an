@@ -25,10 +25,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The complex type parliamentaryAnalysis is a list of all the parliamentary analysis elements that can be used on the analysis of a debate
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class ParliamentaryAnalysisComplexType extends OverlayWidgetImpl {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new QuorumVerification(), new Occurrence(1, 1));
@@ -38,7 +42,9 @@ public class ParliamentaryAnalysisComplexType extends OverlayWidgetImpl {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "parliamentaryAnalysisComplexType");
@@ -49,12 +55,20 @@ public class ParliamentaryAnalysisComplexType extends OverlayWidgetImpl {
 
 // CONSTRUCTORS ------------------
 
+    /**
+     * Create a <code>ParliamentaryAnalysisComplexType</code> object with the given DOM element
+     */
     public ParliamentaryAnalysisComplexType(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
+    /**
+     * Return <code>java.util.List<QuorumVerification></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<QuorumVerification> getQuorumVerifications() {
         java.util.List<QuorumVerification> result = new ArrayList<QuorumVerification>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -65,17 +79,30 @@ public class ParliamentaryAnalysisComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<QuorumVerification></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<QuorumVerification> getQuorumVerificationList() {
         return getQuorumVerifications();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<QuorumVerification></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public QuorumVerification addQuorumVerification(QuorumVerification quorumVerificationElem) {
         this.addOverlayWidget(quorumVerificationElem);
         return quorumVerificationElem;
     }
 
+    /**
+     * Return <code>java.util.List<Voting></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Voting> getVotings() {
         java.util.List<Voting> result = new ArrayList<Voting>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -86,17 +113,30 @@ public class ParliamentaryAnalysisComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Voting></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Voting> getVotingList() {
         return getVotings();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Voting></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Voting addVoting(Voting votingElem) {
         this.addOverlayWidget(votingElem);
         return votingElem;
     }
 
+    /**
+     * Return <code>java.util.List<Recount></code> property
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Recount> getRecounts() {
         java.util.List<Recount> result = new ArrayList<Recount>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -107,12 +147,20 @@ public class ParliamentaryAnalysisComplexType extends OverlayWidgetImpl {
         return java.util.Collections.unmodifiableList(result);
     }
 
-    //DSL Style get value
+    /**
+     * Return <code>java.util.List<Recount></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
     public java.util.List<Recount> getRecountList() {
         return getRecounts();
     }
 
-    //DSL Style set value
+    /**
+     * Add <code>java.util.List<Recount></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public Recount addRecount(Recount recountElem) {
         this.addOverlayWidget(recountElem);
         return recountElem;
@@ -130,6 +178,8 @@ public class ParliamentaryAnalysisComplexType extends OverlayWidgetImpl {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -143,7 +193,9 @@ public class ParliamentaryAnalysisComplexType extends OverlayWidgetImpl {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public ParliamentaryAnalysisComplexType html(String s) {
         super.html(s);

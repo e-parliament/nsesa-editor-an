@@ -23,10 +23,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
+ * The element FRBRWork is the metadata container of identifying properties related to the Work level according to the FRBR hierarchy
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
 public class FRBRWork extends CorePropertiesComplexType {
+    /**
+     * Stores a map of allowed sub types coming from xsd structure
+     */
     private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
         {
             put(new FRBRcountry(), new Occurrence(0, -1));
@@ -44,7 +48,9 @@ public class FRBRWork extends CorePropertiesComplexType {
     };
 
 
-    // STATIC create method
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
         span.setAttribute("type", "FRBRWork");
@@ -53,19 +59,31 @@ public class FRBRWork extends CorePropertiesComplexType {
         return span;
     }
 
-    // CONSTRUCTORS ------------------
+// CONSTRUCTORS ------------------
+
+    /**
+     * Create a <code>FRBRWork</code> object and set up its type
+     */
     public FRBRWork() {
         super(create());
         setType("FRBRWork");
     }
 
 
+    /**
+     * Create a <code>FRBRWork</code> object with the given DOM element
+     */
     public FRBRWork(Element element) {
         super(element);
     }
 
 // FIELDS ------------------
 
+    /**
+     * Add <code>FRBRcountry</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public FRBRcountry getFRBRcountry() {
         FRBRcountry result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -76,9 +94,13 @@ public class FRBRWork extends CorePropertiesComplexType {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>FRBRcountryElem</code> property in DSL way
+     *
+     * @param FRBRcountryElem new value
+     * @return <code>FRBRcountry</code> instance
+     */
     public FRBRcountry setFRBRcountry(FRBRcountry FRBRcountryElem) {
         FRBRcountry result = getFRBRcountry();
         // remove the child of the same type if exist
@@ -90,6 +112,11 @@ public class FRBRWork extends CorePropertiesComplexType {
         return FRBRcountryElem;
     }
 
+    /**
+     * Add <code>FRBRsubtype</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public FRBRsubtype getFRBRsubtype() {
         FRBRsubtype result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -100,9 +127,13 @@ public class FRBRWork extends CorePropertiesComplexType {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>FRBRsubtypeElem</code> property in DSL way
+     *
+     * @param FRBRsubtypeElem new value
+     * @return <code>FRBRsubtype</code> instance
+     */
     public FRBRsubtype setFRBRsubtype(FRBRsubtype FRBRsubtypeElem) {
         FRBRsubtype result = getFRBRsubtype();
         // remove the child of the same type if exist
@@ -114,6 +145,11 @@ public class FRBRWork extends CorePropertiesComplexType {
         return FRBRsubtypeElem;
     }
 
+    /**
+     * Add <code>FRBRnumber</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public FRBRnumber getFRBRnumber() {
         FRBRnumber result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -124,9 +160,13 @@ public class FRBRWork extends CorePropertiesComplexType {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>FRBRnumberElem</code> property in DSL way
+     *
+     * @param FRBRnumberElem new value
+     * @return <code>FRBRnumber</code> instance
+     */
     public FRBRnumber setFRBRnumber(FRBRnumber FRBRnumberElem) {
         FRBRnumber result = getFRBRnumber();
         // remove the child of the same type if exist
@@ -138,6 +178,11 @@ public class FRBRWork extends CorePropertiesComplexType {
         return FRBRnumberElem;
     }
 
+    /**
+     * Add <code>FRBRname</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
     public FRBRname getFRBRname() {
         FRBRname result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
@@ -148,9 +193,13 @@ public class FRBRWork extends CorePropertiesComplexType {
         }
         return result;
     }
-    //DSL Style get value already exists
 
-    //DSL Style set value
+    /**
+     * Set <code>FRBRnameElem</code> property in DSL way
+     *
+     * @param FRBRnameElem new value
+     * @return <code>FRBRname</code> instance
+     */
     public FRBRname setFRBRname(FRBRname FRBRnameElem) {
         FRBRname result = getFRBRname();
         // remove the child of the same type if exist
@@ -173,6 +222,8 @@ public class FRBRWork extends CorePropertiesComplexType {
 
     /**
      * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
      */
     @Override
     public String getNamespaceURI() {
@@ -186,7 +237,9 @@ public class FRBRWork extends CorePropertiesComplexType {
         return attrs;
     }
 
-    //DSL Style for html method
+    /**
+     * DSL Style for html method
+     */
     @Override
     public FRBRWork html(String s) {
         super.html(s);
