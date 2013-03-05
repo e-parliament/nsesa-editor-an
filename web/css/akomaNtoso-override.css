@@ -3,9 +3,69 @@
     text-align: center;
 }
 
+.akomaNtoso .coverPage {
+
+}
+
+.akomaNtoso .coverPage .p {
+    display: block;
+}
+
 .akomaNtoso .docTitle {
     font-weight: bold;
     font-size: 1.5em;
+}
+
+.akomaNtoso .chapter {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.akomaNtoso .chapter * {
+    text-align: left;
+}
+
+.akomaNtoso .chapter > .num {
+    font-size: 1.0em;
+    display: block;
+    text-align: center;
+}
+
+.akomaNtoso .chapter > .heading {
+    font-size: 1.5em;
+    display: block;
+    text-align: center;
+}
+
+.akomaNtoso .article {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.akomaNtoso .article * {
+    text-align: left;
+}
+
+.akomaNtoso .article > .num {
+    font-size: 1.0em;
+    text-align: center;
+    display: block;
+}
+
+.akomaNtoso .article > .heading {
+    font-size: 1.3em;
+    text-align: center;
+    display: block;
+}
+
+.akomaNtoso .list > .intro {
+    display: inline;
+}
+
+.akomaNtoso .list > .point {
+    margin-left: 2em;
 }
 
 .akomaNtoso .docNumber {
@@ -18,182 +78,21 @@
 
 .akomaNtoso .item {
     display: block;
-    padding-left: 15px;
-    margin-top: 1em;
 }
 
-.akomaNtoso .num {
-    display: inline !important;
-}
-
-.akomaNtoso .num + .paragraph {
-    display: inline !important;
-}
-
-.akomaNtoso .num + .p {
-    display: inline !important;
-}
-
-.akomaNtoso .item > .num {
-    padding-right: 3px;
-}
-
-.akomaNtoso .item > .p {
-    display: inline !important;
-}
-
-.akomaNtoso .title {
-    display: block;
-    font-size: 1.4em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.akomaNtoso .subtitle {
-    display: block;
-    font-size: 1.2em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.akomaNtoso .heading {
-    display: block;
-}
-
-.akomaNtoso .heading:after {
-    content: "\A";
-    white-space: pre;
-}
-
-.akomaNtoso .heading > .content {
-    margin-top: 1em;
-}
-
-.akomaNtoso .content > .p {
-    display: inline !important;
-}
-
-.akomaNtoso .part {
-    display: block;
-}
-
-.akomaNtoso .part > .num {
-    font-weight: normal;
-    font-size: 1.4em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.akomaNtoso .part > .heading {
-    display: inline;
-    font-size: 1.4em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.akomaNtoso .section {
-    display: block;
-}
-
-.akomaNtoso .section > .num {
-    font-weight: normal;
-    font-size: 1.2em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.akomaNtoso .section > .heading {
-    display: inline;
-    font-size: 1.2em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.akomaNtoso .subsection {
-    margin-top: 1em;
-}
-
-.akomaNtoso .subsection > .num {
-    padding-right: 3px;
-}
-
-.akomaNtoso .chapter {
-    display: block;
-}
-
-.akomaNtoso .chapter > .num {
-    font-weight: normal;
-    font-size: 1.4em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.akomaNtoso .chapter > .heading {
-    display: inline;
-    font-size: 1.4em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.akomaNtoso .article {
-    display: block;
-}
-
-.akomaNtoso .article > .num {
-    font-weight: normal;
-    font-size: 1.2em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.akomaNtoso .article > .heading {
-    display: inline;
-    font-size: 1.2em;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.akomaNtoso .p {
-    display: block !important;
-    margin-top: 1em;
-}
-
-.akomaNtoso .p:after {
-    content: "\A";
-    white-space: pre;
-}
-
-.akomaNtoso .paragraph:after {
-    content: "\A";
-    white-space: pre;
-}
-
-.akomaNtoso .paragraph > .heading {
+.akomaNtoso .num + span {
     display: inline;
 }
 
-.akomaNtoso .point {
-    padding-left: 15px;
+.akomaNtoso .authorialNote:before {
+    content: attr(marker) " [";
 }
 
-.akomaNtoso .subparagraph {
-    padding-left: 15px;
+.akomaNtoso .authorialNote:after {
+    content: "]";
 }
-
-.akomaNtoso .subparagraph:after {
-    content: "\A";
-    white-space: pre;
-}
-
-.akomaNtoso .eol:after {
-    content: "\A";
-    white-space: pre;
-}
-
-.akomaNtoso .b {
-    font-weight: bold;
-}
-
-.akomaNtoso .i {
-    font-style: italic;
+.akomaNtoso .authorialNote {
+    color:blue;
+    font-size: 70%;
+    vertical-align: text-top;
 }
