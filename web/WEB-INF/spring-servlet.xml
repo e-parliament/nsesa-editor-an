@@ -62,6 +62,8 @@
                 <entry key="5" value="classpath:examples/Debate_Bungeni_2010-12-07.xml"/>
                 <entry key="6" value="classpath:examples/constitution_final-Kenya.xml"/>
                 <entry key="7" value="classpath:examples/Bill_southAfrica_2006-12-23.xml"/>
+                <entry key="8" value="classpath:examples/COM_COM(2012)0744_EN.xml"/>
+                <entry key="9" value="classpath:examples/COM_COM(2012)0744_FR.xml"/>
             </map>
         </property>
         <property name="documentTemplate" value="classpath:document.ftl"/>
