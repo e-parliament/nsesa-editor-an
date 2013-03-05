@@ -15,6 +15,7 @@ package org.nsesa.editor.gwt.an.client.ui.overlay.document;
 
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultCreator;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Excluder;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
@@ -33,7 +34,8 @@ public class AkomaNtoso20Creator extends DefaultCreator {
     private final OverlayFactory overlayFactory;
 
     @Inject
-    public AkomaNtoso20Creator(OverlayFactory overlayFactory) {
+    public AkomaNtoso20Creator(OverlayFactory overlayFactory, Excluder excluder) {
+        super(excluder);
         this.overlayFactory = overlayFactory;
     }
 
@@ -54,7 +56,9 @@ public class AkomaNtoso20Creator extends DefaultCreator {
             }
         });
         for (final Map.Entry<OverlayWidget, Occurrence> allowedType : list) {
-            allowedChildren.put(allowedType.getKey(), allowedType.getValue());
+            if (!excluder.excludeChildCandidate(allowedType.getKey(), allowedType.getValue(), overlayWidget)) {
+                allowedChildren.put(allowedType.getKey(), allowedType.getValue());
+            }
         }
         return allowedChildren;
     }
