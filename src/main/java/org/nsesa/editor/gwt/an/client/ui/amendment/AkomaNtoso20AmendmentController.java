@@ -16,6 +16,7 @@ package org.nsesa.editor.gwt.an.client.ui.amendment;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentView;
 import org.nsesa.editor.gwt.core.client.ui.amendment.DefaultAmendmentController;
+import org.nsesa.editor.gwt.core.client.ui.amendment.action.AmendmentActionPanelController;
 
 /**
  * Date: 09/01/13 16:38
@@ -26,8 +27,8 @@ import org.nsesa.editor.gwt.core.client.ui.amendment.DefaultAmendmentController;
 public class AkomaNtoso20AmendmentController extends DefaultAmendmentController {
 
     @Inject
-    public AkomaNtoso20AmendmentController(AmendmentView amendmentView, AmendmentView amendmentExtendedView) {
-        super(amendmentView, amendmentExtendedView);
+    public AkomaNtoso20AmendmentController(AmendmentView amendmentView, AmendmentView amendmentExtendedView, AmendmentActionPanelController amendmentActionPanelController) {
+        super(amendmentView, amendmentExtendedView, amendmentActionPanelController);
     }
 
 }
