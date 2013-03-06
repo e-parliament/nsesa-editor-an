@@ -101,17 +101,20 @@
 .akomaNtoso .content > .p:after {
     content: "\A";
     white-space: pre;
+    margin-top: 1.5em;
 }
 
 .akomaNtoso .eol:after {
     content: "\A";
     white-space: pre;
+    margin-top: 1.5em;
 }
 
 .akomaNtoso .eop:after {
     content: "\A\A\A";
     white-space: pre;
     page-break-after: always;
+    margin-top: 1.5em;
 }
 
 .akomaNtoso .notes:before {
