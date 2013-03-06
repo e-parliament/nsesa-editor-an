@@ -21,6 +21,8 @@ import com.google.gwt.user.client.ui.*;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ui.amendment.action.AmendmentActionPanelController;
 import org.nsesa.editor.gwt.core.client.ui.amendment.action.AmendmentActionPanelView;
+import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
+import org.nsesa.editor.gwt.core.client.ui.i18n.CoreMessages;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Transformer;
 
 /**
@@ -33,29 +35,45 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
 
     private final Transformer transformer;
 
-    private final PopupPanel popupPanel = new DecoratedPopupPanel(true, false) {
+    private final PopupPanel popupPanel = new DecoratedPopupPanel(false, false) {
         {
             setGlassEnabled(true);
         }
     };
     private final FlowPanel mainPanel = new FlowPanel();
+    private final HorizontalPanel buttonPanel = new HorizontalPanel();
+    private final Button closeButton = new Button("Close");
     private final ScrollPanel scrollPanel = new ScrollPanel();
     private final HTML content = new HTML();
 
     @Inject
-    public AkomaNtoso20AmendmentActionPanelController(AmendmentActionPanelView amendmentActionPanelView, final Transformer transformer) {
-        super(amendmentActionPanelView);
+    public AkomaNtoso20AmendmentActionPanelController(AmendmentActionPanelView amendmentActionPanelView,
+                                                      final CoreMessages coreMessages,
+                                                      final DocumentEventBus documentEventBus,
+                                                      final Transformer transformer) {
+        super(amendmentActionPanelView, coreMessages, documentEventBus);
         this.transformer = transformer;
         this.popupPanel.setWidget(mainPanel);
 
         this.mainPanel.setHeight("600px");
         this.mainPanel.setWidth("800px");
         this.mainPanel.add(scrollPanel);
-        this.scrollPanel.setHeight("100%");
+        buttonPanel.setWidth("800px");
+        buttonPanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+        this.mainPanel.add(buttonPanel);
+        buttonPanel.add(closeButton);
+        this.scrollPanel.setHeight("570px");
         this.scrollPanel.setWidth("100%");
         this.scrollPanel.setWidget(content);
         this.content.setHeight("100%");
         this.content.setWidth("100%");
+
+        closeButton.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                popupPanel.hide();
+            }
+        });
 
         final Anchor xmlExport = new Anchor("Export to XML");
         xmlExport.addClickHandler(new ClickHandler() {
@@ -63,8 +81,12 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
             public void onClick(ClickEvent event) {
                 final String xmlSerialized = transformer.transform(amendmentController.asAmendableWidget(amendmentController.getModel().getBody()));
 
+                AkomaNtoso20AmendmentActionPanelController.this.hide();
+
                 final Element pre = DOM.createElement("pre");
                 pre.setInnerText(xmlSerialized);
+                //reset the content
+                content.getElement().setInnerHTML("");
                 content.getElement().appendChild(pre);
 
                 popupPanel.center();
