@@ -49,9 +49,8 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
     @Inject
     public AkomaNtoso20AmendmentActionPanelController(AmendmentActionPanelView amendmentActionPanelView,
                                                       final CoreMessages coreMessages,
-                                                      final DocumentEventBus documentEventBus,
                                                       final Transformer transformer) {
-        super(amendmentActionPanelView, coreMessages, documentEventBus);
+        super(amendmentActionPanelView, coreMessages);
         this.transformer = transformer;
         this.popupPanel.setWidget(mainPanel);
 

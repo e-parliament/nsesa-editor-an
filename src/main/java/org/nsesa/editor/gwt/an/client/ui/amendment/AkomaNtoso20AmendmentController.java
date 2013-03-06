@@ -27,8 +27,8 @@ import org.nsesa.editor.gwt.core.client.ui.amendment.action.AmendmentActionPanel
 public class AkomaNtoso20AmendmentController extends DefaultAmendmentController {
 
     @Inject
-    public AkomaNtoso20AmendmentController(AmendmentView amendmentView, AmendmentView amendmentExtendedView, AmendmentActionPanelController amendmentActionPanelController) {
-        super(amendmentView, amendmentExtendedView, amendmentActionPanelController);
+    public AkomaNtoso20AmendmentController(AmendmentView amendmentView, AmendmentView amendmentExtendedView) {
+        super(amendmentView, amendmentExtendedView);
     }
 
 }
