@@ -21,7 +21,7 @@ import org.nsesa.editor.gwt.an.client.handler.create.AkomaNtoso20AmendmentDialog
 import org.nsesa.editor.gwt.an.client.handler.delete.AkomaNtoso20AmendmentDialogDeleteController;
 import org.nsesa.editor.gwt.an.client.handler.modify.AkomaNtoso20AmendmentDialogModifyController;
 import org.nsesa.editor.gwt.an.client.ui.document.AkomaNtoso20DocumentController;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Creator;
+import org.nsesa.editor.gwt.an.client.ui.footer.AkomaNtoso20FooterViewImpl;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Locator;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20OverlayStrategy;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.Akomantoso20OverlayFactory;
@@ -29,7 +29,7 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.Akomantoso20Overla
 import org.nsesa.editor.gwt.an.client.ui.rte.ckeditor.Akomantoso20RichTextEditorConfig;
 import org.nsesa.editor.gwt.an.client.ui.rte.ckeditor.Akomantoso20RichTextEditorPlugin;
 import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
-import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
+import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayLocalizableResource;
@@ -42,7 +42,7 @@ import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreat
 import org.nsesa.editor.gwt.dialog.client.ui.handler.delete.AmendmentDialogDeleteController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentDialogModifyController;
 import org.nsesa.editor.gwt.editor.client.activity.EditorActivityMapper;
-import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
+import org.nsesa.editor.gwt.editor.client.ui.footer.FooterView;
 import org.nsesa.editor.gwt.editor.client.ui.main.EditorModule;
 import org.nsesa.editor.gwt.inline.client.ui.inline.InlineEditorModule;
 
@@ -67,12 +67,12 @@ public class AkomaNtoso20Module extends AbstractGinModule {
         bind(OverlayLocalizableResource.class).to(Akomantoso20OverlayLocalizableResource.class).in(Singleton.class);
         bind(OverlayStrategy.class).to(AkomaNtoso20OverlayStrategy.class).in(Singleton.class);
         bind(Locator.class).to(AkomaNtoso20Locator.class).in(Singleton.class);
-        bind(Creator.class).to(AkomaNtoso20Creator.class).in(Singleton.class);
         bind(DiffingManager.class).to(AkomaNtoso20DiffingManager.class).in(Singleton.class);
         bind(AmendmentDialogModifyController.class).to(AkomaNtoso20AmendmentDialogModifyController.class);
         bind(AmendmentDialogCreateController.class).to(AkomaNtoso20AmendmentDialogCreateController.class);
         bind(AmendmentDialogDeleteController.class).to(AkomaNtoso20AmendmentDialogDeleteController.class);
         bind(ContentPanelController.class).to(AkomaNtoso20ContentPanelController.class);
+        bind(FooterView.class).to(AkomaNtoso20FooterViewImpl.class);
 
         bind(DocumentController.class).to(AkomaNtoso20DocumentController.class);
     }
