@@ -344,7 +344,7 @@
             margin-top:1.5em;
         }
         .akomaNtoso .td {
-            display:block;
+            display:table-cell;
             margin-top:1.5em;
         }
         .akomaNtoso .th {
@@ -448,6 +448,9 @@
             display:inline;
         }
         .akomaNtoso .a {
+            cursor:pointer;
+            color:blue;
+            text-decoration:underline;
             display:inline;
         }
         .akomaNtoso .affectedDocument {
@@ -455,6 +458,7 @@
         }
         .akomaNtoso .b {
             display:inline;
+            font-weight:bold;
         }
         .akomaNtoso .block {
             margin:1.5em;
@@ -473,9 +477,15 @@
             display:inline;
         }
         .akomaNtoso .def {
+            border-bottom:1px solid #b68503;
+            background-color:yellow;
             display:inline;
         }
         .akomaNtoso .del {
+            color:red;
+            font-style:italic;
+            background-color:pink;
+            text-decoration:line-through;
             display:inline;
         }
         .akomaNtoso .docCommittee {
@@ -527,12 +537,17 @@
             display:inline;
         }
         .akomaNtoso .i {
+            font-style:italic;
             display:inline;
         }
         .akomaNtoso .inline {
             display:inline;
         }
         .akomaNtoso .ins {
+            color:blue;
+            font-style: italic;
+            background-color:lightblue;
+            text-decoration: underline;
             display:inline;
         }
         .akomaNtoso .legislature {
@@ -618,6 +633,7 @@
             display:inline;
         }
         .akomaNtoso .u {
+            text-decoration:underline;
             display:inline;
         }
         .akomaNtoso .vote {
@@ -836,4 +852,10 @@
     * srcType
     * --------------------------
     */
+        .akomaNtoso .table {
+            display:table;
+        }
+        .akomaNtoso .tr {
+            display:table-row;
+        }
 

@@ -91,8 +91,51 @@
 .akomaNtoso .authorialNote:after {
     content: "]";
 }
+
 .akomaNtoso .authorialNote {
-    color:blue;
+    color: blue;
     font-size: 70%;
     vertical-align: text-top;
+}
+
+.akomaNtoso .content > .p:after {
+    content: "\A";
+    white-space: pre;
+}
+
+.akomaNtoso .eol:after {
+    content: "\A";
+    white-space: pre;
+}
+
+.akomaNtoso .eop:after {
+    content: "\A\A\A";
+    white-space: pre;
+    page-break-after: always;
+}
+
+.akomaNtoso .notes:before {
+    content: "Notes";
+    border: 1px solid #000000;
+    background-color: blue;
+    display: block;
+    text-align: center;
+    font-family: Sans-Serif;
+    font-size: 10pt;
+    left: 90%;
+    color: #fff;
+    width: 90px;
+    border-radius: 3px;
+    margin: 0px;
+    padding: 1px;
+    position: relative;
+}
+
+.akomaNtoso .notes {
+    color: blue;
+    margin-left: 2em;
+}
+
+.akomaNtoso .table {
+    min-width: 90%;
 }
