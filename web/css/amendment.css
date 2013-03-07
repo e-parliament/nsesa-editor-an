@@ -53,7 +53,7 @@
     clear: both;
 }
 
-.amendmentHolder .mod .quotedStructure {
+.amendmentHolder .mod > .quotedStructure {
     width: 50%;
     display: table-cell;
     padding: 15px;

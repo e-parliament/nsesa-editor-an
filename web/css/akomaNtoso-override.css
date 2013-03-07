@@ -98,6 +98,23 @@
     vertical-align: text-top;
 }
 
+.akomaNtoso .mod > .authorialNote:before {
+    content: "(";
+}
+
+.akomaNtoso .mod > .authorialNote:after {
+    content: ")";
+}
+
+.amendmentHolder .mod > .authorialNote {
+    color: #000;
+    font-size: 100%;
+    font-style: italic;
+    display: block;
+    margin-left: 50%;
+    padding: 15px;
+}
+
 .akomaNtoso .content > .p:after {
     content: "\A";
     white-space: pre;
