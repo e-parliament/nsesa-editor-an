@@ -84,35 +84,22 @@
     display: inline;
 }
 
-.akomaNtoso .authorialNote:before {
-    content: attr(marker) " [";
-}
-
-.akomaNtoso .authorialNote:after {
-    content: "]";
-}
-
 .akomaNtoso .authorialNote {
     color: blue;
     font-size: 70%;
     vertical-align: text-top;
 }
 
-.akomaNtoso .mod > .authorialNote:before {
-    content: "(";
+.akomaNtoso .authorialNote[marker]:before {
+    content: attr(marker);
 }
 
-.akomaNtoso .mod > .authorialNote:after {
-    content: ")";
+.akomaNtoso .authorialNote > .p:not(:empty):before {
+    content: " [";
 }
 
-.amendmentHolder .mod > .authorialNote {
-    color: #000;
-    font-size: 100%;
-    font-style: italic;
-    display: block;
-    margin-left: 50%;
-    padding: 15px;
+.akomaNtoso .authorialNote > .p:not(:empty):after {
+    content: "]";
 }
 
 .akomaNtoso .content > .p:after {
