@@ -84,18 +84,22 @@
     display: inline;
 }
 
-.akomaNtoso .authorialNote:before {
-    content: attr(marker) " [";
-}
-
-.akomaNtoso .authorialNote:after {
-    content: "]";
-}
-
 .akomaNtoso .authorialNote {
     color: blue;
     font-size: 70%;
     vertical-align: text-top;
+}
+
+.akomaNtoso .authorialNote[marker]:before {
+    content: attr(marker);
+}
+
+.akomaNtoso .authorialNote > .p:not(:empty):before {
+    content: " [";
+}
+
+.akomaNtoso .authorialNote > .p:not(:empty):after {
+    content: "]";
 }
 
 .akomaNtoso .content > .p:after {

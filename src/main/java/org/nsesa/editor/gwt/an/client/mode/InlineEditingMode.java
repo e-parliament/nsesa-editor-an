@@ -47,7 +47,7 @@ public class InlineEditingMode implements DocumentMode<ActiveState> {
             clientFactory.getEventBus().fireEvent(new NotificationEvent("Inline editing mode is now active."));
         } else {
             clientFactory.getEventBus().fireEvent(new DetachInlineEditorEvent(documentController));
-            clientFactory.getEventBus().fireEvent(new NotificationEvent("Inline editing mode is now disabled."));
+            clientFactory.getEventBus().fireEvent(new NotificationEvent("Inline editing mode is now inactive."));
         }
         this.activeState = state;
         return true;
