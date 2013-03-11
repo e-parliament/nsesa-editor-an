@@ -25,7 +25,7 @@ import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
-import org.nsesa.editor.gwt.core.client.ui.drafting.DraftingController;
+import org.nsesa.editor.gwt.core.client.ui.visualstructure.VisualStructureController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
@@ -65,14 +65,14 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
                                                        final AmendmentDialogModifyView view,
                                                        final Locator locator,
                                                        final OverlayFactory overlayFactory,
-                                                       final DraftingController draftingController,
+                                                       final VisualStructureController visualStructureController,
                                                        final AuthorPanelController authorPanelController,
                                                        final ContentPanelController contentPanelController,
                                                        final MetaPanelController metaPanelController,
                                                        final ServiceFactory serviceFactory,
                                                        final AmendmentInjectionPointFinder amendmentInjectionPointFinder
     ) {
-        super(clientFactory, view, locator, overlayFactory, draftingController, amendmentInjectionPointFinder);
+        super(clientFactory, view, locator, overlayFactory, visualStructureController, amendmentInjectionPointFinder);
         this.authorPanelController = authorPanelController;
         this.contentPanelController = contentPanelController;
         this.metaPanelController = metaPanelController;
