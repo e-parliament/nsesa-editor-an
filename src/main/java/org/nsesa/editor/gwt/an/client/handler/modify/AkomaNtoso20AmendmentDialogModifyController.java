@@ -23,6 +23,7 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimple
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
+import org.nsesa.editor.gwt.core.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.ui.drafting.DraftingController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
@@ -68,9 +69,10 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
                                                        final AuthorPanelController authorPanelController,
                                                        final ContentPanelController contentPanelController,
                                                        final MetaPanelController metaPanelController,
-                                                       final ServiceFactory serviceFactory
+                                                       final ServiceFactory serviceFactory,
+                                                       final AmendmentInjectionPointFinder amendmentInjectionPointFinder
     ) {
-        super(clientFactory, view, locator, overlayFactory, draftingController);
+        super(clientFactory, view, locator, overlayFactory, draftingController, amendmentInjectionPointFinder);
         this.authorPanelController = authorPanelController;
         this.contentPanelController = contentPanelController;
         this.metaPanelController = metaPanelController;

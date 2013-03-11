@@ -23,6 +23,7 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimple
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
+import org.nsesa.editor.gwt.core.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
@@ -63,9 +64,10 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
                                                        final OverlayFactory overlayFactory,
                                                        final AuthorPanelController authorPanelController,
                                                        final ContentPanelController contentPanelController,
-                                                       final MetaPanelController metaPanelController
+                                                       final MetaPanelController metaPanelController,
+                                                       final AmendmentInjectionPointFinder amendmentInjectionPointFinder
     ) {
-        super(clientFactory, view, locator, overlayFactory);
+        super(clientFactory, view, locator, overlayFactory, amendmentInjectionPointFinder);
         this.serviceFactory = serviceFactory;
         this.authorPanelController = authorPanelController;
         this.contentPanelController = contentPanelController;
