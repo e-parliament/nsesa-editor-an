@@ -16,6 +16,11 @@
             {
                 CKEDITOR.nsesaInit(editor);
 
+            },
+            afterInit : function( editor )
+            {
+                CKEDITOR.nsesaAfterInit(editor);
+
             }
         });
 
