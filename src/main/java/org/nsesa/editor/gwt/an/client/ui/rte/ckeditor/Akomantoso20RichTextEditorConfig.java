@@ -46,8 +46,8 @@ public class Akomantoso20RichTextEditorConfig extends CKEditorConfig {
                 GWT.getModuleBaseURL() + "../" + "css/amendment.css",
                 GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-all.css",
                 GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-override.css",
-                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-display.css",
-                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-drafting.css",
+                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-visual.css",
+                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-visual-colors.css",
                 GWT.getModuleBaseURL() + "../" + "css/ckeditor.css"}))
                 .setBodyClass("akomaNtoso")
                 .setRemovePlugins("elementspath")

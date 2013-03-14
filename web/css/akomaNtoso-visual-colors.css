@@ -1,0 +1,4981 @@
+/*
+* --------------------------------------------------------------------------
+* Akoma Ntoso Visual Colors default stylesheet.
+* Note: this file is generated!
+* --------------------------------------------------------------------------
+*/
+
+/*
+* --------------------------
+* Amendments
+* --------------------------
+*/
+.drafting-Amendments:before {
+    background-color:#fd2747;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-Amendments {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-activeModifications:before {
+    background-color:#04cbae;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-activeModifications {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-passiveModifications:before {
+    background-color:#77e4cd;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-passiveModifications {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* akomaNtosoType
+* --------------------------
+*/
+.drafting-akomaNtosoType:before {
+    background-color:#426956;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-akomaNtosoType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-akomaNtoso:before {
+    background-color:#cad9d3;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-akomaNtoso {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* amendmentBodyType
+* --------------------------
+*/
+.drafting-amendmentBodyType:before {
+    background-color:#48568b;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-amendmentBodyType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-amendmentBody:before {
+    background-color:#a0d286;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-amendmentBody {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* amendmentStructure
+* --------------------------
+*/
+.drafting-amendmentStructure:before {
+    background-color:#673967;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-amendmentStructure {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-amendment:before {
+    background-color:#9e8379;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-amendment {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-analysis:before {
+    background-color:#7c815e;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-analysis {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* anyOtherType
+* --------------------------
+*/
+.drafting-anyOtherType:before {
+    background-color:#e0b263;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-anyOtherType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-condition:before {
+    background-color:#d00217;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-condition {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-domain:before {
+    background-color:#70cf59;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-domain {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-eventRef:before {
+    background-color:#266bdf;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-eventRef {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-foreign:before {
+    background-color:#df676b;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-foreign {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-new:before {
+    background-color:#8caea6;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-new {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-old:before {
+    background-color:#60580b;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-old {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-otherAnalysis:before {
+    background-color:#31705a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-otherAnalysis {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-presentation:before {
+    background-color:#cd247c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-presentation {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-preservation:before {
+    background-color:#6d4d3e;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-preservation {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-proprietary:before {
+    background-color:#fc4a19;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-proprietary {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-result:before {
+    background-color:#873681;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-result {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-step:before {
+    background-color:#837d34;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-step {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* argumentType
+* --------------------------
+*/
+.drafting-argumentType:before {
+    background-color:#c0ac2d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-argumentType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-destination:before {
+    background-color:#f74231;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-destination {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-source:before {
+    background-color:#80cbdc;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-source {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-attachments:before {
+    background-color:#c008c8;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-attachments {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* basehierarchy
+* --------------------------
+*/
+.drafting-basehierarchy:before {
+    background-color:#feeb68;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-basehierarchy {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* althierarchy
+* --------------------------
+*/
+.drafting-althierarchy:before {
+    background-color:#d0be52;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-althierarchy {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-address:before {
+    background-color:#564c96;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-address {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-adjournment:before {
+    background-color:#12f224;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-adjournment {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-administrationOfOath:before {
+    background-color:#7b4fe5;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-administrationOfOath {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-communication:before {
+    background-color:#82961f;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-communication {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-debateSection:before {
+    background-color:#3db3ec;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-debateSection {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-declarationOfVote:before {
+    background-color:#a1ce36;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-declarationOfVote {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-ministerialStatements:before {
+    background-color:#273b97;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-ministerialStatements {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-nationalInterest:before {
+    background-color:#4be3af;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-nationalInterest {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-noticesOfMotion:before {
+    background-color:#5fe456;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-noticesOfMotion {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-oralStatements:before {
+    background-color:#c9f47d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-oralStatements {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-papers:before {
+    background-color:#db385f;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-papers {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-personalStatements:before {
+    background-color:#10315b;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-personalStatements {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-petitions:before {
+    background-color:#def659;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-petitions {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-pointOfOrder:before {
+    background-color:#8ee7a7;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-pointOfOrder {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-prayers:before {
+    background-color:#46c7cc;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-prayers {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-proceduralMotions:before {
+    background-color:#ce2410;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-proceduralMotions {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-questions:before {
+    background-color:#1cbddd;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-questions {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-resolutions:before {
+    background-color:#e748d6;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-resolutions {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-rollCall:before {
+    background-color:#be90a6;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-rollCall {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-writtenStatements:before {
+    background-color:#1206c1;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-writtenStatements {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* hierarchy
+* --------------------------
+*/
+.drafting-hierarchy:before {
+    background-color:#2e4754;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-hierarchy {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-alinea:before {
+    background-color:#e24844;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-alinea {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-article:before {
+    background-color:#5b7981;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-article {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-book:before {
+    background-color:#3b8454;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-book {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-chapter:before {
+    background-color:#e02029;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-chapter {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-clause:before {
+    background-color:#5f4105;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-clause {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-division:before {
+    background-color:#5d9a3f;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-division {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-hcontainer:before {
+    background-color:#550eeb;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-hcontainer {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-indent:before {
+    background-color:#0cc30b;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-indent {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-list:before {
+    background-color:#3767ae;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-list {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-paragraph:before {
+    background-color:#34cf86;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-paragraph {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-part:before {
+    background-color:#6f4203;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-part {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-point:before {
+    background-color:#d0fb4e;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-point {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-section:before {
+    background-color:#a9ae0a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-section {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-subchapter:before {
+    background-color:#25efc8;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-subchapter {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-subclause:before {
+    background-color:#ba810d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-subclause {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-subdivision:before {
+    background-color:#33c628;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-subdivision {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-sublist:before {
+    background-color:#630a4f;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-sublist {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-subparagraph:before {
+    background-color:#fb1a92;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-subparagraph {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-subpart:before {
+    background-color:#c88296;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-subpart {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-subsection:before {
+    background-color:#6301b5;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-subsection {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-subtitle:before {
+    background-color:#6a75c0;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-subtitle {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-title:before {
+    background-color:#f7dc5c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-title {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-tome:before {
+    background-color:#d4fb08;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-tome {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-transitional:before {
+    background-color:#29e4e4;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-transitional {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* itemType
+* --------------------------
+*/
+.drafting-itemType:before {
+    background-color:#9bdd78;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-itemType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-citation:before {
+    background-color:#84bcb4;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-citation {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-item:before {
+    background-color:#c38c14;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-item {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-recital:before {
+    background-color:#efa996;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-recital {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-tblock:before {
+    background-color:#5d5aa6;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-tblock {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* speechType
+* --------------------------
+*/
+.drafting-speechType:before {
+    background-color:#d2c8fe;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-speechType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-answer:before {
+    background-color:#817c90;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-answer {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-question:before {
+    background-color:#35c7b2;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-question {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-speech:before {
+    background-color:#342dd0;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-speech {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* basicopt
+* --------------------------
+*/
+.drafting-basicopt:before {
+    background-color:#6abc2a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-basicopt {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-conclusions:before {
+    background-color:#b6991d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-conclusions {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-coverPage:before {
+    background-color:#1e9e4f;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-coverPage {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-blockList:before {
+    background-color:#239752;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-blockList {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* blocksopt
+* --------------------------
+*/
+.drafting-blocksopt:before {
+    background-color:#b2476c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-blocksopt {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-amendmentContent:before {
+    background-color:#b9ae8c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-amendmentContent {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-amendmentHeading:before {
+    background-color:#ca062c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-amendmentHeading {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-amendmentJustification:before {
+    background-color:#c6bc7b;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-amendmentJustification {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-amendmentReference:before {
+    background-color:#ee4a09;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-amendmentReference {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-content:before {
+    background-color:#f933dd;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-content {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-formula:before {
+    background-color:#7c3fbd;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-formula {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-header:before {
+    background-color:#966c17;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-header {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-intro:before {
+    background-color:#2c8761;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-intro {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-longTitle:before {
+    background-color:#8bcd0c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-longTitle {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-other:before {
+    background-color:#c4e02a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-other {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-td:before {
+    background-color:#6bd163;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-td {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-th:before {
+    background-color:#c77178;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-th {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-wrap:before {
+    background-color:#77e9cb;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-wrap {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* blocksreq
+* --------------------------
+*/
+.drafting-blocksreq:before {
+    background-color:#9065db;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-blocksreq {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-div:before {
+    background-color:#2218e9;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-div {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-interstitial:before {
+    background-color:#d62b3c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-interstitial {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-note:before {
+    background-color:#32a3a5;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-note {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* bodyType
+* --------------------------
+*/
+.drafting-bodyType:before {
+    background-color:#f09c50;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-bodyType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-body:before {
+    background-color:#071555;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-body {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-citations:before {
+    background-color:#16aa12;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-citations {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-classification:before {
+    background-color:#caf664;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-classification {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* collectionBodyType
+* --------------------------
+*/
+.drafting-collectionBodyType:before {
+    background-color:#19f62d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-collectionBodyType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-collectionBody:before {
+    background-color:#14741a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-collectionBody {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* collectionStructure
+* --------------------------
+*/
+.drafting-collectionStructure:before {
+    background-color:#0b6300;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-collectionStructure {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-amendmentList:before {
+    background-color:#351468;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-amendmentList {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-documentCollection:before {
+    background-color:#b2358e;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-documentCollection {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-officialGazette:before {
+    background-color:#3fd791;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-officialGazette {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-component:before {
+    background-color:#c5160b;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-component {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-componentData:before {
+    background-color:#9ffdbc;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-componentData {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-componentInfo:before {
+    background-color:#d4cd36;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-componentInfo {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-components:before {
+    background-color:#dd942b;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-components {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* containerType
+* --------------------------
+*/
+.drafting-containerType:before {
+    background-color:#937cfd;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-containerType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-container:before {
+    background-color:#a271cd;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-container {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* coreProperties
+* --------------------------
+*/
+.drafting-coreProperties:before {
+    background-color:#c53741;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-coreProperties {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRExpression:before {
+    background-color:#a98342;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRExpression {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRItem:before {
+    background-color:#3a5fc9;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRItem {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRManifestation:before {
+    background-color:#fe2751;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRManifestation {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRWork:before {
+    background-color:#785299;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRWork {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* countType
+* --------------------------
+*/
+.drafting-countType:before {
+    background-color:#eeb234;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-countType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-count:before {
+    background-color:#5ba91b;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-count {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-quorum:before {
+    background-color:#cd498e;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-quorum {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* debateBodyType
+* --------------------------
+*/
+.drafting-debateBodyType:before {
+    background-color:#d63e87;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-debateBodyType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-debateBody:before {
+    background-color:#12f0bc;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-debateBody {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* debateStructure
+* --------------------------
+*/
+.drafting-debateStructure:before {
+    background-color:#1b1108;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-debateStructure {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-debate:before {
+    background-color:#a9ad4f;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-debate {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* fragmentBodyType
+* --------------------------
+*/
+.drafting-fragmentBodyType:before {
+    background-color:#efce18;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-fragmentBodyType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-fragmentBody:before {
+    background-color:#99cb58;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-fragmentBody {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* fragmentStructure
+* --------------------------
+*/
+.drafting-fragmentStructure:before {
+    background-color:#e2a893;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-fragmentStructure {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-fragment:before {
+    background-color:#2023ae;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-fragment {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* hierarchicalStructure
+* --------------------------
+*/
+.drafting-hierarchicalStructure:before {
+    background-color:#fa0867;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-hierarchicalStructure {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-act:before {
+    background-color:#70f296;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-act {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-bill:before {
+    background-color:#3b173d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-bill {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-identification:before {
+    background-color:#be2162;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-identification {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* inline
+* --------------------------
+*/
+.drafting-inline:before {
+    background-color:#bbd72c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-inline {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-a:before {
+    background-color:#bc187a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-a {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-affectedDocument:before {
+    background-color:#6a5762;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-affectedDocument {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-b:before {
+    background-color:#f600c9;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-b {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-block:before {
+    background-color:#50087b;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-block {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-caption:before {
+    background-color:#044fa0;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-caption {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-change:before {
+    background-color:#d22989;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-change {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-courtType:before {
+    background-color:#4d54e2;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-courtType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-date:before {
+    background-color:#a7e584;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-date {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-def:before {
+    background-color:yellow;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-def {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-del:before {
+    background-color:pink;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-del {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-docCommittee:before {
+    background-color:#c4755d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-docCommittee {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-docDate:before {
+    background-color:#7ba1cd;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-docDate {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-docIntroducer:before {
+    background-color:#b68503;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-docIntroducer {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-docJurisdiction:before {
+    background-color:#585a0d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-docJurisdiction {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-docNumber:before {
+    background-color:#c65c22;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-docNumber {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-docProponent:before {
+    background-color:#aab5ae;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-docProponent {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-docPurpose:before {
+    background-color:#5b4fa1;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-docPurpose {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-docStage:before {
+    background-color:#807104;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-docStage {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-docStatus:before {
+    background-color:#cc3296;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-docStatus {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-docTitle:before {
+    background-color:#ab19a1;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-docTitle {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-docType:before {
+    background-color:#bbba26;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-docType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-docketNumber:before {
+    background-color:#223fe8;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-docketNumber {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-extractText:before {
+    background-color:#847220;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-extractText {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-fillIn:before {
+    background-color:#f4bcda;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-fillIn {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-from:before {
+    background-color:#4ff5a3;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-from {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-heading:before {
+    background-color:#b3fa15;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-heading {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-i:before {
+    background-color:#75d6a5;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-i {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-inline:before {
+    background-color:#bbd72c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-inline {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-ins:before {
+    background-color:lightblue;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-ins {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-legislature:before {
+    background-color:#9d190c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-legislature {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-listConclusion:before {
+    background-color:#8ca6a6;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-listConclusion {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-listIntroduction:before {
+    background-color:#5b1d94;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-listIntroduction {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-mref:before {
+    background-color:#43e84c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-mref {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-narrative:before {
+    background-color:#36a0ae;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-narrative {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-neutralCitation:before {
+    background-color:#ad972c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-neutralCitation {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-num:before {
+    background-color:#1e839e;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-num {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-omissis:before {
+    background-color:#df6c64;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-omissis {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-opinion:before {
+    background-color:#5d63c9;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-opinion {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-outcome:before {
+    background-color:#793427;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-outcome {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-p:before {
+    background-color:#b391bd;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-p {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-placeholder:before {
+    background-color:#a384d5;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-placeholder {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-quotedText:before {
+    background-color:#23ecaf;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-quotedText {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-recordedTime:before {
+    background-color:#488e18;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-recordedTime {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-relatedDocument:before {
+    background-color:#309516;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-relatedDocument {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-remark:before {
+    background-color:#cc93f7;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-remark {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-scene:before {
+    background-color:#ba6148;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-scene {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-session:before {
+    background-color:#ab13b5;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-session {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-shortTitle:before {
+    background-color:#5c5c74;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-shortTitle {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-signature:before {
+    background-color:#ad2507;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-signature {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-span:before {
+    background-color:#894a59;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-span {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-sub:before {
+    background-color:#bf39b2;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-sub {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-subheading:before {
+    background-color:#802804;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-subheading {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-summary:before {
+    background-color:#59b2bc;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-summary {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-sup:before {
+    background-color:#a60829;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-sup {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-tocItem:before {
+    background-color:#eb4e86;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-tocItem {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-u:before {
+    background-color:#a639b8;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-u {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-vote:before {
+    background-color:#99986e;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-vote {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* inlinereq
+* --------------------------
+*/
+.drafting-inlinereq:before {
+    background-color:#c26dd0;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-inlinereq {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-ref:before {
+    background-color:#8309d3;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-ref {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-rref:before {
+    background-color:#22f9f3;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-rref {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* inlinereqreq
+* --------------------------
+*/
+.drafting-inlinereqreq:before {
+    background-color:#94efe9;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-inlinereqreq {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-concept:before {
+    background-color:#f198ce;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-concept {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-entity:before {
+    background-color:#f2fbbe;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-entity {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-event:before {
+    background-color:#49fb4d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-event {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-judge:before {
+    background-color:#5d020a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-judge {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-lawyer:before {
+    background-color:#10f04d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-lawyer {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-location:before {
+    background-color:#bc83b7;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-location {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-object:before {
+    background-color:#7846f9;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-object {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-organization:before {
+    background-color:#9ff2bd;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-organization {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-party:before {
+    background-color:#7f158a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-party {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-person:before {
+    background-color:#18a8cb;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-person {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-process:before {
+    background-color:#daa89a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-process {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-quantity:before {
+    background-color:#bbbdaa;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-quantity {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-role:before {
+    background-color:#b0b44a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-role {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-term:before {
+    background-color:#2d3815;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-term {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* judgementBodyType
+* --------------------------
+*/
+.drafting-judgementBodyType:before {
+    background-color:#441af2;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-judgementBodyType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-judgementBody:before {
+    background-color:#308257;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-judgementBody {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* judgementStructure
+* --------------------------
+*/
+.drafting-judgementStructure:before {
+    background-color:#4cd874;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-judgementStructure {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-judgement:before {
+    background-color:#2b1e09;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-judgement {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* judicialArgumentType
+* --------------------------
+*/
+.drafting-judicialArgumentType:before {
+    background-color:#56f07c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-judicialArgumentType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-applies:before {
+    background-color:#86590a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-applies {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-contrasts:before {
+    background-color:#499f7f;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-contrasts {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-derogates:before {
+    background-color:#d3c54a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-derogates {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-dissentsFrom:before {
+    background-color:#f41e2d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-dissentsFrom {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-distinguishes:before {
+    background-color:#4a4aa6;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-distinguishes {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-extends:before {
+    background-color:#1485d2;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-extends {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-isAnalogTo:before {
+    background-color:#12066b;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-isAnalogTo {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-overrules:before {
+    background-color:#fa8dc5;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-overrules {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-putsInQuestion:before {
+    background-color:#e6f3ba;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-putsInQuestion {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-restricts:before {
+    background-color:#fe1f0c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-restricts {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-supports:before {
+    background-color:#d71920;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-supports {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* judicialArguments
+* --------------------------
+*/
+.drafting-judicialArguments:before {
+    background-color:#5bd62e;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-judicialArguments {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-judicial:before {
+    background-color:#e818f3;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-judicial {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-li:before {
+    background-color:#ac17c1;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-li {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-lifecycle:before {
+    background-color:#00f50d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-lifecycle {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* listItems
+* --------------------------
+*/
+.drafting-listItems:before {
+    background-color:#2384e7;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-listItems {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-ol:before {
+    background-color:#36aadc;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-ol {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-ul:before {
+    background-color:#f084d3;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-ul {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* maincontent
+* --------------------------
+*/
+.drafting-maincontent:before {
+    background-color:#9d1860;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-maincontent {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-background:before {
+    background-color:#bc8186;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-background {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-decision:before {
+    background-color:#c2b815;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-decision {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-introduction:before {
+    background-color:#891690;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-introduction {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-mainBody:before {
+    background-color:#fd1abc;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-mainBody {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-motivation:before {
+    background-color:#27771c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-motivation {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* markeropt
+* --------------------------
+*/
+.drafting-markeropt:before {
+    background-color:#d5b723;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-markeropt {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-br:before {
+    background-color:#3f15da;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-br {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* eolType
+* --------------------------
+*/
+.drafting-eolType:before {
+    background-color:#314b27;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-eolType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-eol:before {
+    background-color:#8e0cb8;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-eol {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-eop:before {
+    background-color:#eaabce;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-eop {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-img:before {
+    background-color:#145be7;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-img {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-noteRef:before {
+    background-color:#571d75;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-noteRef {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* markerreq
+* --------------------------
+*/
+.drafting-markerreq:before {
+    background-color:#17e387;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-markerreq {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-marker:before {
+    background-color:#33a672;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-marker {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-meta:before {
+    background-color:#398d17;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-meta {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* metaopt
+* --------------------------
+*/
+.drafting-metaopt:before {
+    background-color:#25992f;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-metaopt {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRauthor:before {
+    background-color:#a9c09a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRauthor {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRdate:before {
+    background-color:#051c76;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRdate {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRlanguage:before {
+    background-color:#4a98d5;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRlanguage {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRtranslation:before {
+    background-color:#9488d9;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRtranslation {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-keyword:before {
+    background-color:#d3582f;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-keyword {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-publication:before {
+    background-color:#19ba2a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-publication {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-timeInterval:before {
+    background-color:#b4c2dd;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-timeInterval {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* valueType
+* --------------------------
+*/
+.drafting-valueType:before {
+    background-color:#57be6f;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-valueType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRalias:before {
+    background-color:#034900;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRalias {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRcountry:before {
+    background-color:#2cda47;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRcountry {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRformat:before {
+    background-color:#4cc337;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRformat {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRname:before {
+    background-color:#8b5a62;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRname {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRnumber:before {
+    background-color:#4de3a5;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRnumber {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRsubtype:before {
+    background-color:#f1c13e;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRsubtype {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRthis:before {
+    background-color:#3fb43c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRthis {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-FRBRuri:before {
+    background-color:#ec6326;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-FRBRuri {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-metareq:before {
+    background-color:#c0c2a4;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-metareq {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* modType
+* --------------------------
+*/
+.drafting-modType:before {
+    background-color:#8e7263;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-modType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-mmod:before {
+    background-color:#3e2ad2;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-mmod {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-mod:before {
+    background-color:#8357df;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-mod {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-rmod:before {
+    background-color:#1d3c77;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-rmod {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* modificationType
+* --------------------------
+*/
+.drafting-modificationType:before {
+    background-color:#35c7f9;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-modificationType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-efficacyMod:before {
+    background-color:#dcce8d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-efficacyMod {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-forceMod:before {
+    background-color:#5d2829;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-forceMod {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-legalSystemMod:before {
+    background-color:#6c3408;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-legalSystemMod {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-meaningMod:before {
+    background-color:#ed08dc;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-meaningMod {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-scopeMod:before {
+    background-color:#b03c42;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-scopeMod {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-textualMod:before {
+    background-color:#910184;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-textualMod {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-notes:before {
+    background-color:#f08c16;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-notes {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* openStructure
+* --------------------------
+*/
+.drafting-openStructure:before {
+    background-color:#ecc931;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-openStructure {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-debateReport:before {
+    background-color:#e85a49;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-debateReport {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-doc:before {
+    background-color:#965ba6;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-doc {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* parliamentaryAnalysis
+* --------------------------
+*/
+.drafting-parliamentaryAnalysis:before {
+    background-color:#92b84d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-parliamentaryAnalysis {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-parliamentary:before {
+    background-color:#5eac34;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-parliamentary {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* parliamentaryAnalysisType
+* --------------------------
+*/
+.drafting-parliamentaryAnalysisType:before {
+    background-color:#e838fd;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-parliamentaryAnalysisType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-quorumVerification:before {
+    background-color:#cdde11;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-quorumVerification {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-recount:before {
+    background-color:#a927f7;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-recount {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-voting:before {
+    background-color:#be9b5f;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-voting {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* periodType
+* --------------------------
+*/
+.drafting-periodType:before {
+    background-color:#60e4e8;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-periodType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-application:before {
+    background-color:#a8b58d;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-application {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-duration:before {
+    background-color:#31b50a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-duration {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-efficacy:before {
+    background-color:#148316;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-efficacy {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-force:before {
+    background-color:#c68918;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-force {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* popupStructure
+* --------------------------
+*/
+.drafting-popupStructure:before {
+    background-color:#471bc0;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-popupStructure {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-authorialNote:before {
+    background-color:#f7130b;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-authorialNote {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-extractStructure:before {
+    background-color:#d55c57;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-extractStructure {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-popup:before {
+    background-color:#cfbbf7;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-popup {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-quotedStructure:before {
+    background-color:#3317f8;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-quotedStructure {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* preambleopt
+* --------------------------
+*/
+.drafting-preambleopt:before {
+    background-color:#c630c8;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-preambleopt {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-preamble:before {
+    background-color:#9d2dbe;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-preamble {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* prefaceopt
+* --------------------------
+*/
+.drafting-prefaceopt:before {
+    background-color:#c3e359;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-prefaceopt {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-preface:before {
+    background-color:#fdc7fe;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-preface {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-recitals:before {
+    background-color:#17700a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-recitals {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* refItems
+* --------------------------
+*/
+.drafting-refItems:before {
+    background-color:#5799bd;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-refItems {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-references:before {
+    background-color:#e4cd2a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-references {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* referenceType
+* --------------------------
+*/
+.drafting-referenceType:before {
+    background-color:#6bf6f5;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-referenceType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-TLCConcept:before {
+    background-color:#f7a691;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-TLCConcept {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-TLCEvent:before {
+    background-color:#4dec2e;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-TLCEvent {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-TLCLocation:before {
+    background-color:#1e0bb2;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-TLCLocation {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-TLCObject:before {
+    background-color:#71f89b;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-TLCObject {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-TLCOrganization:before {
+    background-color:#67dca4;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-TLCOrganization {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-TLCPerson:before {
+    background-color:#f95abb;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-TLCPerson {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-TLCProcess:before {
+    background-color:#86a219;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-TLCProcess {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-TLCReference:before {
+    background-color:#a4008a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-TLCReference {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-TLCRole:before {
+    background-color:#38d083;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-TLCRole {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-TLCTerm:before {
+    background-color:#339cc7;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-TLCTerm {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-activeRef:before {
+    background-color:#c035ae;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-activeRef {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-attachmentOf:before {
+    background-color:#0ca98e;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-attachmentOf {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-hasAttachment:before {
+    background-color:#19422e;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-hasAttachment {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-jurisprudence:before {
+    background-color:#20ec51;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-jurisprudence {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-original:before {
+    background-color:#e05593;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-original {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-passiveRef:before {
+    background-color:#4f6226;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-passiveRef {
+    display: block;
+    margin-top: 2px;
+}
+
+
+/*
+* --------------------------
+* srcType
+* --------------------------
+*/
+.drafting-srcType:before {
+    background-color:#0d89d7;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-srcType {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-componentRef:before {
+    background-color:#9e088b;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-componentRef {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-table:before {
+    background-color:#c2241c;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-table {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-temporalData:before {
+    background-color:#90c795;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-temporalData {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-temporalGroup:before {
+    background-color:#3a911a;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-temporalGroup {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-toc:before {
+    background-color:#d9e3cc;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-toc {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-tr:before {
+    background-color:#529f59;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-tr {
+    display: block;
+    margin-top: 2px;
+}
+
+
+.drafting-workflow:before {
+    background-color:#2b223f;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-right: 3px;
+}
+
+.drafting-workflow {
+    display: block;
+    margin-top: 2px;
+}
+
+
+  

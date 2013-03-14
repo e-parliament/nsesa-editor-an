@@ -120,6 +120,10 @@
     page-break-after: always;
     margin-top: 1.5em;
 }
+.akomaNtoso .br:after {
+    content: "\A";
+    white-space: pre;
+}
 
 .akomaNtoso .notes:before {
     content: "Notes";
