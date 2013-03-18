@@ -29,11 +29,9 @@
                 </#if><#t/>
             </#list><#t/>
         </#if><#t/>
-    </span>
+    </span><#lt/>
     </@compress>
 </#macro>
-<#list doc?children as child>
-    <#if child?node_type == 'element'>
-        <@element child/>
-    </#if>
-</#list>
+<@compress single_line=true>
+<#list doc?children as child><#if child?node_type == 'element'><@element child/></#if></#list>
+</@compress>

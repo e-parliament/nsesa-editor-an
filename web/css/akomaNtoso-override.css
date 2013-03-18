@@ -84,6 +84,10 @@
     display: inline;
 }
 
+.akomaNtoso .num:after {
+    content: " ";
+}
+
 .akomaNtoso .authorialNote {
     color: blue;
     font-size: 70%;
