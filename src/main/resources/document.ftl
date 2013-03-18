@@ -29,7 +29,7 @@
                 </#if><#t/>
             </#list><#t/>
         </#if><#t/>
-    </span><#t/>
+    </span>
     </@compress>
 </#macro>
 <#list doc?children as child>
