@@ -48,7 +48,7 @@
 }
 
 .amendmentHolder .mod {
-    display: block;
+    display: table;
     width: 100%;
     clear: both;
 }
