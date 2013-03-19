@@ -95,7 +95,7 @@
 }
 
 .akomaNtoso .authorialNote[marker]:before {
-    content: attr(marker);
+    content: " " attr(marker);
 }
 
 .akomaNtoso .authorialNote > .p:not(:empty):before {
@@ -153,4 +153,10 @@
 
 .akomaNtoso .table {
     min-width: 90%;
+}
+
+.akomaNtoso [href] {
+    text-decoration: underline;
+    color: blue;
+    font-style: italic;
 }
