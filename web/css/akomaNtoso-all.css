@@ -820,36 +820,15 @@
     * popupStructure
     * --------------------------
     */
-        .akomaNtoso .popupStructure {
-            padding-left:3em;
-            color:#333;
-            margin:1.5em;
-            display:block;
-            border-left:15px solid #ccc;
-        }
-        .akomaNtoso .authorialNote {
-            padding-left:3em;
-            color:#333;
-            margin:1.5em;
-            display:block;
-            border-left:15px solid #ccc;
-        }
         .akomaNtoso .extractStructure {
-            padding-left:3em;
-            color:#333;
-            margin:1.5em;
-            display:block;
-            border-left:15px solid #ccc;
-        }
-        .akomaNtoso .popup {
-            padding-left:3em;
+            padding-left:2.5em;
             color:#333;
             margin:1.5em;
             display:block;
             border-left:15px solid #ccc;
         }
         .akomaNtoso .quotedStructure {
-            padding-left:3em;
+            padding-left:2.5em;
             color:#333;
             margin:1.5em;
             display:block;
