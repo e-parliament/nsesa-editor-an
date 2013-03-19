@@ -27,6 +27,8 @@ import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.editor.gwt.core.shared.exception.ResourceNotFoundException;
 import org.nsesa.editor.gwt.core.shared.exception.StaleResourceException;
 import org.nsesa.editor.gwt.core.shared.exception.ValidationException;
+import org.nsesa.server.dto.AmendmentAction;
+import org.nsesa.server.service.api.AmendmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
@@ -53,6 +55,8 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
     private static final Logger LOG = LoggerFactory.getLogger(GWTAmendmentServiceImpl.class);
 
+    private AmendmentService amendmentService;
+
     private Map<String, Resource> documents;
     private Resource documentTemplate;
     private Resource amendmentDirectory;
@@ -66,7 +70,21 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     public AmendmentContainerDTO[] getAmendmentContainers(final ClientContext clientContext) throws UnsupportedOperationException {
 
         try {
-            final AmendmentContainerDTO amendment1 = new AmendmentContainerDTO();
+            List<AmendmentContainerDTO> amendmentContainerDTOs = new ArrayList<AmendmentContainerDTO>();
+            final String[] documentIDs = clientContext.getDocumentIDs();
+            for (String documentID : clientContext.getDocumentIDs()) {
+                List<AmendmentContainerDTO> temp = new ArrayList<AmendmentContainerDTO>();
+                final List<org.nsesa.server.dto.AmendmentContainerDTO> backend = amendmentService.getAmendmentContainersByDocumentAndPerson(documentID, clientContext.getLoggedInPerson().getId());
+                if (backend != null) {
+                    for (org.nsesa.server.dto.AmendmentContainerDTO b : backend) {
+                        AmendmentContainerDTO amendmentContainerDTO = fromBackend(b);
+                        amendmentContainerDTO.setBody(toHTML(b.getBody().getBytes("UTF-8")));
+                        amendmentContainerDTOs.add(amendmentContainerDTO);
+                    }
+                }
+            }
+
+            /*final AmendmentContainerDTO amendment1 = new AmendmentContainerDTO();
             amendment1.setId(UUID.randomUUID().toString());
             amendment1.setRevisionID(UUID.randomUUID().toString());
             final AmendableWidgetReference reference1 = new AmendableWidgetReference("rec1");
@@ -90,11 +108,37 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
             amendment3.setSourceReference(reference3);
             amendment3.setBody(getAmendmentDocument("amendment-3"));
 
-            return new AmendmentContainerDTO[]{amendment1, amendment2, amendment3};
+            return new AmendmentContainerDTO[]{amendment1, amendment2, amendment3};*/
+
+            return amendmentContainerDTOs.toArray(new AmendmentContainerDTO[amendmentContainerDTOs.size()]);
 
         } catch (IOException e) {
             throw new RuntimeException("Could not retrieve amendment content.", e);
         }
+    }
+
+    private AmendmentContainerDTO fromBackend(org.nsesa.server.dto.AmendmentContainerDTO b) {
+        AmendmentContainerDTO amendmentContainerDTO = new AmendmentContainerDTO();
+        amendmentContainerDTO.setAmendmentContainerStatus(b.getAmendmentContainerStatus());
+        amendmentContainerDTO.setDocumentID(b.getDocumentID());
+
+        final org.nsesa.server.dto.AmendableWidgetReference backend = b.getSourceReference();
+        final AmendableWidgetReference sourceReference = new AmendableWidgetReference();
+        sourceReference.setNamespaceURI(backend.getNamespaceURI());
+        sourceReference.setReferenceID(backend.getReferenceID());
+        sourceReference.setType(backend.getType());
+        sourceReference.setPath(backend.getPath());
+        sourceReference.setSibling(backend.isSibling());
+        sourceReference.setCreation(backend.isCreation());
+        sourceReference.setOffset(backend.getOffset());
+
+        amendmentContainerDTO.setSourceReference(sourceReference);
+        amendmentContainerDTO.setAmendmentAction(org.nsesa.editor.gwt.core.shared.AmendmentAction.valueOf(b.getAmendmentAction().toString()));
+        amendmentContainerDTO.setBody(b.getBody());
+        amendmentContainerDTO.setId(b.getAmendmentContainerID());
+        amendmentContainerDTO.setLanguageISO(b.getLanguageISO());
+        amendmentContainerDTO.setRevisionID(b.getRevisionID());
+        return amendmentContainerDTO;
     }
 
     private String getAmendmentDocument(String id) throws IOException {
@@ -191,18 +235,51 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     public AmendmentContainerDTO[] saveAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, StaleResourceException, ValidationException {
         List<AmendmentContainerDTO> amendmentContainerDTOs = new ArrayList<AmendmentContainerDTO>();
         for (AmendmentContainerDTO data : amendmentContainers) {
+
+            if (data.getDocumentID() == null)
+                throw new NullPointerException("No documentID set on amendment DTO -- aborting");
+
             try {
                 final File amendmentDirectoryFile = amendmentDirectory.getFile();
-                if (!amendmentDirectoryFile.exists()) {
+                /*if (!amendmentDirectoryFile.exists()) {
                     if (!amendmentDirectoryFile.mkdirs()) {
                         throw new RuntimeException("Could not create amendment export directory at '" + amendmentDirectoryFile.getAbsolutePath() + "'");
                     }
                 }
                 if (!amendmentDirectoryFile.canWrite()) {
                     throw new RuntimeException("No permission to write to '" + amendmentDirectoryFile.getAbsolutePath() + "'");
-                }
+                }*/
                 validate(data.getBody());
-                Files.write(data.getBody(), new File(amendmentDirectoryFile, data.getSourceReference().getPath() + "-" + data.getId() + "-am.xml"), Charset.forName("UTF-8"));
+                //Files.write(data.getBody(), new File(amendmentDirectoryFile, data.getSourceReference().getPath() + "-" + data.getId() + "-am.xml"), Charset.forName("UTF-8"));
+
+
+                // manually copy for now ...
+                org.nsesa.server.dto.AmendmentContainerDTO backendDTO = new org.nsesa.server.dto.AmendmentContainerDTO();
+                backendDTO.setPersonID(clientContext.getLoggedInPerson().getId());
+                backendDTO.setDocumentID(data.getDocumentID());
+                backendDTO.setRevisionID(data.getRevisionID());
+                backendDTO.setAmendmentContainerStatus(data.getAmendmentContainerStatus());
+                backendDTO.setLanguageISO(data.getLanguageISO());
+                backendDTO.setAmendmentAction(AmendmentAction.valueOf(data.getAmendmentAction().toString()));
+                backendDTO.setAmendmentContainerID(data.getId());
+                backendDTO.setBody(data.getBody());
+                final AmendableWidgetReference dto = data.getSourceReference();
+                final org.nsesa.server.dto.AmendableWidgetReference sourceReference = new org.nsesa.server.dto.AmendableWidgetReference(dto.getPath());
+                sourceReference.setNamespaceURI(dto.getNamespaceURI());
+                sourceReference.setReferenceID(dto.getReferenceID());
+                sourceReference.setType(dto.getType());
+                sourceReference.setPath(dto.getPath());
+                sourceReference.setSibling(dto.isSibling());
+                sourceReference.setCreation(dto.isCreation());
+                sourceReference.setOffset(dto.getOffset());
+
+                backendDTO.setSourceReference(sourceReference);
+
+
+                amendmentService.save(backendDTO);
+
+                LOG.info("Saved amendment to the dto under document " + data.getDocumentID());
+
             } catch (IOException e) {
                 LOG.error("Could not write file.", e);
             }
@@ -231,6 +308,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         final Collection<AmendmentContainerDTO> deleted = Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, AmendmentContainerDTO>() {
             @Override
             public AmendmentContainerDTO apply(AmendmentContainerDTO input) {
+                amendmentService.delete(input.getId());
                 input.setAmendmentContainerStatus("deleted");
                 return input;
             }
@@ -287,7 +365,6 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     @Override
     public Boolean[] canWithdrawAmendmentContainers(ClientContext clientContext, ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
         return Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, Boolean>() {
-
             @Override
             public Boolean apply(AmendmentContainerDTO input) {
                 return true;
@@ -310,7 +387,6 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     @Override
     public Boolean[] canRegisterAmendmentContainers(ClientContext clientContext, ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
         return Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, Boolean>() {
-
             @Override
             public Boolean apply(AmendmentContainerDTO input) {
                 return true;
@@ -333,7 +409,6 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     @Override
     public Boolean[] canReturnAmendmentContainers(ClientContext clientContext, ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
         return Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, Boolean>() {
-
             @Override
             public Boolean apply(AmendmentContainerDTO input) {
                 return true;
@@ -369,5 +444,9 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
     public void setAmendmentDirectory(Resource amendmentDirectory) {
         this.amendmentDirectory = amendmentDirectory;
+    }
+
+    public void setAmendmentService(AmendmentService amendmentService) {
+        this.amendmentService = amendmentService;
     }
 }

@@ -20,6 +20,7 @@ import freemarker.template.TemplateException;
 import org.nsesa.editor.gwt.core.client.service.gwt.GWTDocumentService;
 import org.nsesa.editor.gwt.core.shared.ClientContext;
 import org.nsesa.editor.gwt.core.shared.DocumentDTO;
+import org.nsesa.server.service.api.DocumentService;
 import org.springframework.core.io.Resource;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -41,6 +42,8 @@ import java.util.Map;
  */
 public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implements GWTDocumentService {
 
+    private DocumentService documentService;
+
     private Map<String, Resource> documents;
     private Resource documentTemplate;
 
@@ -51,13 +54,20 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
 
     @Override
     public DocumentDTO getDocument(final ClientContext clientContext, final String documentID) {
-        final DocumentDTO document = new DocumentDTO();
-        document.setDocumentID(documentID);
-        document.setAmendable(true);
-        document.setName("Document " + documentID);
-        document.setLanguageIso("EN");
-        document.setDeadline(new Date(new Date().getTime() + (60 * 60 * 1000)));
-        return document;
+        final org.nsesa.server.dto.DocumentDTO fromServices = documentService.getDocument(documentID);
+
+        if (fromServices != null) {
+            // manually copy for now
+            final DocumentDTO document = new DocumentDTO();
+            document.setDocumentID(fromServices.getDocumentID());
+            document.setAmendable(fromServices.isAmendable());
+            document.setName(fromServices.getName());
+            document.setLanguageIso(fromServices.getLanguageIso());
+            document.setDeadline(new Date(fromServices.getDeadline().getTime().getTime()));
+
+            return document;
+        }
+        return null;
     }
 
     @Override
@@ -111,7 +121,7 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
 
     @Override
     public String getDocumentContent(final ClientContext clientContext, final String documentID) {
-        final Resource documentResource = documents.get(documentID);
+        Resource documentResource = documents.get(documentID);
         final InputSource inputSource;
         if (documentResource != null) {
             /*
@@ -166,5 +176,9 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
 
     public void setDocumentTemplate(Resource documentTemplate) {
         this.documentTemplate = documentTemplate;
+    }
+
+    public void setDocumentService(DocumentService documentService) {
+        this.documentService = documentService;
     }
 }
