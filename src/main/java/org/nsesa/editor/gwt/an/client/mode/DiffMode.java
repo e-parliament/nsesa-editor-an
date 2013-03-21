@@ -36,9 +36,7 @@ import java.util.ArrayList;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class DiffMode implements DocumentMode<ActiveState> {
-
-    public static final String KEY = "diff";
+public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode {
 
     private final DocumentController documentController;
     private final ClientFactory clientFactory;

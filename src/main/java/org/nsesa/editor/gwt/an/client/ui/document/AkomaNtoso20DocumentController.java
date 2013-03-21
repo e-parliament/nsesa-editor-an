@@ -20,6 +20,7 @@ import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.inject.Inject;
+import com.google.web.bindery.event.shared.HandlerRegistration;
 import org.nsesa.editor.gwt.an.client.AkomaNtoso20DocumentInjector;
 import org.nsesa.editor.gwt.an.client.mode.ConsolidationMode;
 import org.nsesa.editor.gwt.an.client.mode.DiffMode;
@@ -28,15 +29,18 @@ import org.nsesa.editor.gwt.an.client.ui.amendment.AkomaNtoso20AmendmentControll
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
+import org.nsesa.editor.gwt.core.client.event.document.DocumentModeStateChangedEvent;
+import org.nsesa.editor.gwt.core.client.event.document.DocumentOverlayCompletedEvent;
+import org.nsesa.editor.gwt.core.client.event.document.DocumentOverlayCompletedEventHandler;
+import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEvent;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
-import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
-import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
-import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEvent;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentInjector;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 
 import java.util.logging.Logger;
 
@@ -49,6 +53,8 @@ import java.util.logging.Logger;
 public class AkomaNtoso20DocumentController extends DocumentController {
 
     private static final Logger LOG = Logger.getLogger(AkomaNtoso20DocumentController.class.getName());
+
+    private HandlerRegistration documentOverlayCompletedEventHandler;
 
     @Inject
     public AkomaNtoso20DocumentController(final ClientFactory clientFactory,
@@ -111,10 +117,27 @@ public class AkomaNtoso20DocumentController extends DocumentController {
         registerMode(InlineEditingMode.KEY, new InlineEditingMode(this, clientFactory));
         registerMode(DiffMode.KEY, new DiffMode(this, clientFactory, serviceFactory));
         registerMode(ConsolidationMode.KEY, new ConsolidationMode(this, clientFactory));
+
+        registerListeners();
+    }
+
+    private void registerListeners() {
+        documentOverlayCompletedEventHandler = documentEventBus.addHandler(DocumentOverlayCompletedEvent.TYPE, new DocumentOverlayCompletedEventHandler() {
+            @Override
+            public void onEvent(DocumentOverlayCompletedEvent event) {
+                applyState(DiffMode.KEY, new ActiveState(true));
+            }
+        });
     }
 
     @Override
     public DocumentInjector getInjector() {
         return GWT.create(AkomaNtoso20DocumentInjector.class);
+    }
+
+    @Override
+    public void removeListeners() {
+        super.removeListeners();
+        documentOverlayCompletedEventHandler.removeHandler();
     }
 }
