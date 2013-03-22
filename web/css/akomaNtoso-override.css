@@ -13,7 +13,22 @@
 
 .akomaNtoso .docTitle {
     font-weight: bold;
-    font-size: 1.5em;
+    line-height: 2.5em;
+}
+
+.akomaNtoso .docStage {
+    display: block;
+    font-size: 1.4em;
+}
+
+.akomaNtoso .docType {
+    display: block;
+    font-size: 1.4em;
+}
+
+.akomaNtoso .docPurpose {
+    display: block;
+    font-size: 1.2em;
 }
 
 .akomaNtoso .chapter {
@@ -104,6 +119,12 @@
 
 .akomaNtoso .authorialNote > .p:not(:empty):after {
     content: "]";
+}
+
+.akomaNtoso .preamble > .p:after {
+    content: "\A";
+    white-space: pre;
+    margin-top: 1.5em;
 }
 
 .akomaNtoso .content > .p:after {
