@@ -13,14 +13,10 @@
  */
 package org.nsesa.editor.gwt.an.client.handler.delete;
 
-import com.google.gwt.i18n.shared.DateTimeFormat;
-import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.an.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.amendment.AmendmentInjectionPointFinder;
@@ -37,8 +33,6 @@ import org.nsesa.editor.gwt.dialog.client.ui.handler.delete.AmendmentDialogDelet
 import org.nsesa.editor.gwt.dialog.client.ui.handler.delete.AmendmentDialogDeleteView;
 
 import java.util.logging.Logger;
-
-import static org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20XMLUtil.*;
 
 /**
  * Date: 23/11/12 10:14
@@ -78,129 +72,21 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
 
     @Override
     public void handleSave() {
+
+        final AkomaNtoso20AmendmentBuilder builder = new AkomaNtoso20AmendmentBuilder(overlayFactory);
+
+        final OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
         final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
-
-        OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
-
-        final AkomaNtoso akomaNtoso = new AkomaNtoso();
-        final Amendment root = akomaNtoso.setAmendment(new Amendment());
-
-        // meta
-        final Identification identification = new Identification();
-        final String formattedDate = DateTimeFormat.getFormat(DateTimeFormat.PredefinedFormat.ISO_8601).format(new java.util.Date());
-        identification.setFRBRWork(new FRBRWork() {
-            {
-                setFRBRthis(new FRBRthis().valueAttr(s("TODO")));
-                addFRBRuri(new FRBRuri().valueAttr(s("TODO")));
-                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
-                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
-                setFRBRcountry(new FRBRcountry().valueAttr(s("TODO")));
-            }
-        });
-
-        identification.setFRBRExpression(new FRBRExpression() {
-            {
-                setFRBRthis(new FRBRthis().valueAttr(s("TODO")));
-                addFRBRuri(new FRBRuri().valueAttr(s("TODO")));
-                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
-                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
-                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
-                addFRBRlanguage(new FRBRlanguage().languageAttr(l(languageIso)));
-            }
-        });
-
-        identification.setFRBRManifestation(new FRBRManifestation() {
-            {
-                setFRBRthis(new FRBRthis().valueAttr(s("TODO")));
-                addFRBRuri(new FRBRuri().valueAttr(s("TODO")));
-                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
-                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
-            }
-        });
-
-        final Meta meta = new Meta();
-
-        root.setMeta(meta).setIdentification(identification);
-
-        References references = new References();
-
-        for (final PersonDTO authorial : authorPanelController.getSelectedPersons()) {
-            final IDSimpleType idSimpleType = new IDSimpleType();
-            idSimpleType.setValue("person-" + authorial.getId());
-
-            final StringSimpleType stringSimpleType = new StringSimpleType();
-            stringSimpleType.setValue(authorial.getDisplayName());
-
-            final AnyURISimpleType anyURISimpleType = new AnyURISimpleType();
-            anyURISimpleType.setValue("urn:lex:eu:parliament:codict:person:" + authorial.getId());
-
-            references.addTLCPerson(new TLCPerson().idAttr(idSimpleType).showAsAttr(stringSimpleType).hrefAttr(anyURISimpleType));
-        }
-
-        meta.addReferences(references);
-
-        // preface;
-        final P p = new P();
-        for (final PersonDTO authorial : authorPanelController.getSelectedPersons()) {
-            final DocProponent docProponent = new DocProponent().refersToAttr(u("#person-" + authorial.getId()));
-            docProponent.html(authorial.getDisplayName());
-            p.addDocProponent(docProponent);
-        }
-        root.setPreface(new Preface())
-                .addContainer(new Container().nameAttr(s("authors")))
-                .addP(p);
-
-        // amendment body
-        final AmendmentBody amendmentBody = root.setAmendmentBody(new AmendmentBody());
-
-        amendmentBody
-                .addAmendmentHeading(new AmendmentHeading())
-                .addBlock(new Block()).html(locator.getLocation(overlayWidget, null, languageIso, true));
-
-        // amendment content
-        final AmendmentContent amendmentContent = amendmentBody
-                .addAmendmentContent(new AmendmentContent());
-
-        amendmentContent
-                .addBlock(new Block()).nameAttr(s("versionTitle")).html("Text proposed");
-        amendmentContent
-                .addBlock(new Block()).nameAttr(s("versionTitle")).html("Amendment");
-
-        final Mod mod = amendmentContent
-                .addBlock(new Block()).nameAttr(s("changeBlock"))
-                .addMod(new Mod());
-
-        // original content
-        final QuotedStructure quotedStructureOriginal = mod.addQuotedStructure(new QuotedStructure());
-
-        final String originalText = contentPanelController.getView().getOriginalText();
-        final com.google.gwt.user.client.Element cloneOriginal = DOM.clone(overlayWidget.asWidget().getElement(), false);
-        cloneOriginal.setInnerHTML(originalText);
-        final OverlayWidget overlayedOriginal = overlayFactory.getAmendableWidget(cloneOriginal);
-        quotedStructureOriginal.addOverlayWidget(overlayedOriginal);
-
-        // amendment content
-        final QuotedStructure quotedStructureAmendment = mod.addQuotedStructure(new QuotedStructure());
-        final com.google.gwt.user.client.Element clone = DOM.clone(overlayWidget.asWidget().getElement(), false);
-        clone.setInnerHTML("Deleted");
-        final OverlayWidget overlayed = overlayFactory.getAmendableWidget(clone);
-        quotedStructureAmendment.addOverlayWidget(overlayed);
-
-        // amendment notes
-        mod.addAuthorialNote(new AuthorialNote()).html(metaPanelController.getNotes());
-
-        // amendment justification
-        final String justification = metaPanelController.getJustification();
-
-        if (justification != null && !"".equalsIgnoreCase(justification.trim())) {
-            final AmendmentJustification amendmentJustification = new AmendmentJustification();
-            amendmentJustification.addBlock(new Block()).nameAttr(s("justificationHeading")).html("Justification");
-            amendmentJustification.addP(new P()).html(justification);
-            amendmentBody.addAmendmentJustification(amendmentJustification);
-        }
-
-        akomaNtoso.addOverlayWidget(root);
-        dialogContext.getAmendment().setRoot(akomaNtoso);
+        builder
+                .setOverlayWidget(overlayWidget)
+                .setLanguageIso(languageIso)
+                .setAuthors(authorPanelController.getSelectedPersons())
+                .setLocation(locator.getLocation(overlayWidget, null, languageIso, true))
+                .setOriginalText(contentPanelController.getView().getOriginalText())
+                .setAmendmentText("") // TODO: deleted or null?
+                .setJustification(metaPanelController.getJustification())
+                .setNotes(metaPanelController.getNotes());
+        dialogContext.getAmendment().setRoot(builder.build());
 
         super.handleSave();
     }

@@ -13,22 +13,18 @@
  */
 package org.nsesa.editor.gwt.an.client.handler.create;
 
-import com.google.gwt.i18n.shared.DateTimeFormat;
-import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.an.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.amendment.AmendmentInjectionPointFinder;
-import org.nsesa.editor.gwt.core.client.ui.visualstructure.VisualStructureController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.visualstructure.VisualStructureController;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
@@ -38,8 +34,6 @@ import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreat
 import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreateView;
 
 import java.util.logging.Logger;
-
-import static org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20XMLUtil.*;
 
 /**
  * Date: 05/12/12 14:36
@@ -78,131 +72,23 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
     @Override
     public void handleSave() {
 
-        final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
+        final AkomaNtoso20AmendmentBuilder builder = new AkomaNtoso20AmendmentBuilder(overlayFactory);
 
-        final OverlayWidget parentOverlayWidget = dialogContext.getParentOverlayWidget();
         final OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
+        final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
+        builder
+                .setOverlayWidget(overlayWidget)
+                .setLanguageIso(languageIso)
+                .setAuthors(authorPanelController.getSelectedPersons())
+                .setLocation(locator.getLocation(overlayWidget, null, languageIso, true))
+                .setOriginalText("") // TODO null?
+                .setAmendmentText(view.getAmendmentContent())
+                .setJustification(metaPanelController.getJustification())
+                .setNotes(metaPanelController.getNotes());
+        dialogContext.getAmendment().setRoot(builder.build());
 
-        final AkomaNtoso akomaNtoso = new AkomaNtoso();
-        final Amendment root = akomaNtoso.setAmendment(new Amendment());
-
-        // meta
-        final Identification identification = new Identification();
-        final String formattedDate = DateTimeFormat.getFormat(DateTimeFormat.PredefinedFormat.ISO_8601).format(new java.util.Date());
-        identification.setFRBRWork(new FRBRWork() {
-            {
-                setFRBRthis(new FRBRthis().valueAttr(s("TODO")));
-                addFRBRuri(new FRBRuri().valueAttr(s("TODO")));
-                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
-                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
-                setFRBRcountry(new FRBRcountry().valueAttr(s("TODO")));
-            }
-        });
-
-        identification.setFRBRExpression(new FRBRExpression() {
-            {
-                setFRBRthis(new FRBRthis().valueAttr(s("TODO")));
-                addFRBRuri(new FRBRuri().valueAttr(s("TODO")));
-                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
-                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
-                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
-                addFRBRlanguage(new FRBRlanguage().languageAttr(l(languageIso)));
-            }
-        });
-
-        identification.setFRBRManifestation(new FRBRManifestation() {
-            {
-                setFRBRthis(new FRBRthis().valueAttr(s("TODO")));
-                addFRBRuri(new FRBRuri().valueAttr(s("TODO")));
-                addFRBRdate(new FRBRdate().dateAttr(d(formattedDate)));
-                addFRBRauthor(new FRBRauthor().hrefAttr(u("#refTodo")));
-            }
-        });
-
-        final Meta meta = new Meta();
-        root.setMeta(meta).setIdentification(identification);
-
-        References references = new References();
-
-        for (final PersonDTO authorial : authorPanelController.getSelectedPersons()) {
-            final IDSimpleType idSimpleType = new IDSimpleType();
-            idSimpleType.setValue("person-" + authorial.getId());
-
-            final StringSimpleType stringSimpleType = new StringSimpleType();
-            stringSimpleType.setValue(authorial.getDisplayName());
-
-            final AnyURISimpleType anyURISimpleType = new AnyURISimpleType();
-            anyURISimpleType.setValue("urn:lex:eu:parliament:codict:person:" + authorial.getId());
-
-            references.addTLCPerson(new TLCPerson().idAttr(idSimpleType).showAsAttr(stringSimpleType).hrefAttr(anyURISimpleType));
-        }
-
-        meta.addReferences(references);
-
-        // preface;
-        final P p = new P();
-        for (final PersonDTO authorial : authorPanelController.getSelectedPersons()) {
-            final DocProponent docProponent = new DocProponent().refersToAttr(u("#person-" + authorial.getId()));
-            docProponent.html(authorial.getDisplayName());
-            p.addDocProponent(docProponent);
-        }
-        root.setPreface(new Preface())
-                .addContainer(new Container().nameAttr(s("authors")))
-                .addP(p);
-
-        // amendment body
-        final AmendmentBody amendmentBody = root.setAmendmentBody(new AmendmentBody());
-
-        amendmentBody
-                .addAmendmentHeading(new AmendmentHeading())
-                .addBlock(new Block()).html(locator.getLocation(parentOverlayWidget, overlayWidget, languageIso, true));
-
-        // amendment content
-        final AmendmentContent amendmentContent = amendmentBody
-                .addAmendmentContent(new AmendmentContent());
-
-        amendmentContent
-                .addBlock(new Block()).nameAttr(s("versionTitle")).html("Text proposed");
-        amendmentContent
-                .addBlock(new Block()).nameAttr(s("versionTitle")).html("Amendment");
-
-        final Mod mod = amendmentContent
-                .addBlock(new Block()).nameAttr(s("changeBlock"))
-                .addMod(new Mod());
-
-        // empty block
-        mod.addQuotedStructure(new QuotedStructure()).html("");
-
-        // amendment content
-        final QuotedStructure quotedStructureAmendment = mod.addQuotedStructure(new QuotedStructure());
-        final Element clone = DOM.clone(overlayWidget.asWidget().getElement(), false);
-        clone.setInnerHTML(view.getAmendmentContent());
-        final OverlayWidget overlayed = overlayFactory.getAmendableWidget(clone);
-        quotedStructureAmendment.addOverlayWidget(overlayed);
-
-        // amendment notes
-        mod.addAuthorialNote(new AuthorialNote()).html(metaPanelController.getNotes());
-
-        // amendment justification
-        final String justification = metaPanelController.getJustification();
-
-        if (justification != null && !"".equalsIgnoreCase(justification.trim())) {
-            final AmendmentJustification amendmentJustification = new AmendmentJustification();
-            amendmentJustification.addBlock(new Block()).nameAttr(s("justificationHeading")).html("Justification");
-            amendmentJustification.addP(new P()).html(justification);
-            amendmentBody.addAmendmentJustification(amendmentJustification);
-        }
-
-        akomaNtoso.addOverlayWidget(root);
-        dialogContext.getAmendment().setRoot(akomaNtoso);
 
         super.handleSave();
-    }
-
-    private StringSimpleType s(final String text) {
-        StringSimpleType s = new StringSimpleType();
-        s.setValue(text);
-        return s;
     }
 
     @Override
