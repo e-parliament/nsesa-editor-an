@@ -16,6 +16,7 @@ package org.nsesa.editor.gwt.an.client.ui.document;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Node;
 import com.google.gwt.dom.client.NodeList;
+import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.ui.HTML;
@@ -29,9 +30,12 @@ import org.nsesa.editor.gwt.an.client.ui.amendment.AkomaNtoso20AmendmentControll
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
+import org.nsesa.editor.gwt.core.client.event.KeyComboEvent;
+import org.nsesa.editor.gwt.core.client.event.KeyComboEventHandler;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentOverlayCompletedEvent;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentOverlayCompletedEventHandler;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEvent;
+import org.nsesa.editor.gwt.core.client.keyboard.KeyboardListener;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.core.client.ui.document.DefaultDocumentController;
@@ -53,15 +57,30 @@ public class AkomaNtoso20DocumentController extends DefaultDocumentController {
 
     private static final Logger LOG = Logger.getLogger(AkomaNtoso20DocumentController.class.getName());
 
+    private final KeyboardListener keyboardListener;
+
+    // --- key combos ---
+
+    final KeyboardListener.KeyCombo ctrlEnter = new KeyboardListener.KeyCombo(false, true, KeyCodes.KEY_ENTER);
+
     private HandlerRegistration documentOverlayCompletedEventHandler;
+    private HandlerRegistration keyComboHandlerRegistration;
 
     @Inject
     public AkomaNtoso20DocumentController(final ClientFactory clientFactory,
                                           final ServiceFactory serviceFactory,
                                           final OverlayFactory overlayFactory,
                                           final Locator locator,
-                                          final Creator creator) {
+                                          final Creator creator,
+                                          final KeyboardListener keyboardListener) {
         super(clientFactory, serviceFactory, overlayFactory, locator, creator);
+        this.keyboardListener = keyboardListener;
+    }
+
+    @Override
+    public void registerKeyCombos() {
+        super.registerKeyCombos();
+        keyboardListener.register(ctrlEnter);
     }
 
     @Override
@@ -131,6 +150,13 @@ public class AkomaNtoso20DocumentController extends DefaultDocumentController {
                 applyState(DiffMode.KEY, new ActiveState(true));
             }
         });
+
+        keyComboHandlerRegistration = clientFactory.getEventBus().addHandler(KeyComboEvent.TYPE, new KeyComboEventHandler() {
+            @Override
+            public void onEvent(KeyComboEvent event) {
+                LOG.info("Key combo " + event.getKeyCombo());
+            }
+        });
     }
 
     @Override
@@ -142,5 +168,6 @@ public class AkomaNtoso20DocumentController extends DefaultDocumentController {
     public void removeListeners() {
         super.removeListeners();
         documentOverlayCompletedEventHandler.removeHandler();
+        keyComboHandlerRegistration.removeHandler();
     }
 }
