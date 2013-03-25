@@ -29,13 +29,12 @@ import org.nsesa.editor.gwt.an.client.ui.amendment.AkomaNtoso20AmendmentControll
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
-import org.nsesa.editor.gwt.core.client.event.document.DocumentModeStateChangedEvent;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentOverlayCompletedEvent;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentOverlayCompletedEventHandler;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEvent;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
-import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
+import org.nsesa.editor.gwt.core.client.ui.document.DefaultDocumentController;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentInjector;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
@@ -50,7 +49,7 @@ import java.util.logging.Logger;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtoso20DocumentController extends DocumentController {
+public class AkomaNtoso20DocumentController extends DefaultDocumentController {
 
     private static final Logger LOG = Logger.getLogger(AkomaNtoso20DocumentController.class.getName());
 
@@ -63,6 +62,11 @@ public class AkomaNtoso20DocumentController extends DocumentController {
                                           final Locator locator,
                                           final Creator creator) {
         super(clientFactory, serviceFactory, overlayFactory, locator, creator);
+    }
+
+    @Override
+    public void registerModes() {
+        super.registerModes();
         registerMode(ConsolidationMode.KEY, new ConsolidationMode(this, clientFactory) {
             @Override
             public boolean apply(final ActiveState state) {
@@ -117,11 +121,10 @@ public class AkomaNtoso20DocumentController extends DocumentController {
         registerMode(InlineEditingMode.KEY, new InlineEditingMode(this, clientFactory));
         registerMode(DiffMode.KEY, new DiffMode(this, clientFactory, serviceFactory));
         registerMode(ConsolidationMode.KEY, new ConsolidationMode(this, clientFactory));
-
-        registerListeners();
     }
 
-    private void registerListeners() {
+    public void registerListeners() {
+        super.registerListeners();
         documentOverlayCompletedEventHandler = documentEventBus.addHandler(DocumentOverlayCompletedEvent.TYPE, new DocumentOverlayCompletedEventHandler() {
             @Override
             public void onEvent(DocumentOverlayCompletedEvent event) {
