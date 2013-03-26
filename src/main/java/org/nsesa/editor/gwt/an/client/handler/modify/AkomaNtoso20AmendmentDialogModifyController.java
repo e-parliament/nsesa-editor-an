@@ -110,8 +110,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         authorPanelController.clear();
 
         // clear meta panel
-        metaPanelController.setJustification("");
-        metaPanelController.setNotes("");
+        metaPanelController.clear();
 
         view.resetBodyClass();
         view.addBodyClass(dialogContext.getOverlayWidget().getOverlayElement().getClassName());

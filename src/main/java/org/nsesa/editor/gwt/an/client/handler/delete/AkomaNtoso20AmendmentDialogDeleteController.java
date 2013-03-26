@@ -98,8 +98,7 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
         authorPanelController.clear();
 
         // clear meta panel
-        metaPanelController.setJustification("");
-        metaPanelController.setNotes("");
+        metaPanelController.clear();
 
         if (dialogContext.getAmendmentController() != null) {
             // get the location from the amendable widget, if it is passed
