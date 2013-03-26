@@ -96,6 +96,11 @@ public class AkomaNtoso20AmendmentBuilder {
         return this;
     }
 
+    public AkomaNtoso20AmendmentBuilder setModifyIds(boolean modifyIds) {
+        this.modifyIds = modifyIds;
+        return this;
+    }
+
     public OverlayWidget build() {
         final Counter idGenerator = new Counter();
 

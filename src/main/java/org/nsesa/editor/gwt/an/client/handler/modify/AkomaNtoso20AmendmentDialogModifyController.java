@@ -96,6 +96,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
                 .setLocation(locator.getLocation(overlayWidget, null, languageIso, true))
                 .setOriginalText(contentPanelController.getView().getOriginalText())
                 .setAmendmentText(view.getAmendmentContent())
+                .setModifyIds(true)
                 .setJustification(metaPanelController.getJustification())
                 .setNotes(metaPanelController.getNotes());
         dialogContext.getAmendment().setRoot(builder.build());
