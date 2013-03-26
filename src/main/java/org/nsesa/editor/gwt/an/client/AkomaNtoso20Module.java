@@ -28,7 +28,6 @@ import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.Akomantoso20Overla
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.Akomantoso20OverlayLocalizableResource;
 import org.nsesa.editor.gwt.an.client.ui.rte.ckeditor.Akomantoso20RichTextEditorConfig;
 import org.nsesa.editor.gwt.an.client.ui.rte.ckeditor.Akomantoso20RichTextEditorPlugin;
-import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
@@ -36,6 +35,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayLocalizableRe
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditorConfig;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditorPlugin;
+import org.nsesa.editor.gwt.core.client.validation.Validator;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.AmendmentDialogModule;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentPanelController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreateController;
@@ -61,12 +61,15 @@ public class AkomaNtoso20Module extends AbstractGinModule {
 
         bind(RichTextEditorPlugin.class).to(Akomantoso20RichTextEditorPlugin.class);
         bind(RichTextEditorConfig.class).to(Akomantoso20RichTextEditorConfig.class);
+
         // bind the mapper
         bind(ActivityMapper.class).to(EditorActivityMapper.class).in(Singleton.class);
         bind(OverlayFactory.class).to(Akomantoso20OverlayFactory.class).in(Singleton.class);
         bind(OverlayLocalizableResource.class).to(Akomantoso20OverlayLocalizableResource.class).in(Singleton.class);
         bind(OverlayStrategy.class).to(AkomaNtoso20OverlayStrategy.class).in(Singleton.class);
         bind(Locator.class).to(AkomaNtoso20Locator.class).in(Singleton.class);
+
+        bind(Validator.class).to(Akomantoso20OverlayWidgetValidator.class).in(Singleton.class);
 
         bind(AmendmentDialogModifyController.class).to(AkomaNtoso20AmendmentDialogModifyController.class);
         bind(AmendmentDialogCreateController.class).to(AkomaNtoso20AmendmentDialogCreateController.class);

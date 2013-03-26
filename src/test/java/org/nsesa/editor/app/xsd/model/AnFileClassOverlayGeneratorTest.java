@@ -66,7 +66,7 @@ public class AnFileClassOverlayGeneratorTest {
         //public Entity(StringSimpleType nameAttr, IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
         if (entityClass != null) {
             foundClass = true;
-            List<OverlayProperty> list = entityClass.getAllAttributesProperties();
+            List<OverlayProperty> list = entityClass.getAllFlatAttributesProperties();
             Map<String, OverlayProperty> reqAttrs = new HashMap<String, OverlayProperty>();
             for(OverlayProperty prop : list) {
                 if (prop.isRequired()) {

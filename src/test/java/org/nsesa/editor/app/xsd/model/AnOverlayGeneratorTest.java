@@ -53,17 +53,23 @@ public class AnOverlayGeneratorTest {
 
     @Test
     public void testSchemaNumber() throws SAXException {
-        assertTrue(rootClass.getChildren().size() == 3);
+        int counter = 0;
+        for (OverlayClass overlayClass : rootClass.getChildren()) {
+            if (overlayClass instanceof OverlayClassGenerator.OverlaySchemaClass) {
+                counter++;
+            }
+        }
+        assertTrue(counter == 3);
 
     }
 
     @Test
     public void testOccurrence() throws SAXException {
         //find hierarchicalStructureComplex types
-        List<OverlayClass> stack = new ArrayList<OverlayClass>(rootClass.getChildren());
+        List<OverlayNode> stack = new ArrayList<OverlayNode>(rootClass.getChildren());
         OverlayClass hierarchicalStructureClass = null;
         while (stack.size() != 0) {
-            OverlayClass overlayClass = stack.remove(0);
+            OverlayClass overlayClass = stack.remove(0).asOverlayClass();
             if (overlayClass.getName().equalsIgnoreCase("hierarchicalStructure")) {
                 hierarchicalStructureClass = overlayClass;
                 break;
@@ -72,14 +78,18 @@ public class AnOverlayGeneratorTest {
         }
         boolean foundCoverPage = false;
         if (hierarchicalStructureClass != null) {
-            List<OverlayProperty> props = hierarchicalStructureClass.getAllNonAttributesProperties();
-            for (OverlayProperty prop : props) {
-                //for cover page min occurs is 0 and max occurs is 1
+            List<OverlayProperty> props = hierarchicalStructureClass.getProperties();
+            List<OverlayProperty> stackProp = new ArrayList<OverlayProperty>(props);
+            while(!stackProp.isEmpty()) {
+                OverlayProperty prop = stackProp.remove(0);
                 if (prop.getName().equals("coverPage")) {
                     foundCoverPage = true;
                     assertEquals("Min occurs for cover page is 0", 0, prop.getMinOccurs().intValue());
                     assertEquals("Max occurs for cover page is 1", 1, prop.getMaxOccurs().intValue());
                     break;
+                }
+                if (prop.getBaseClass() != null && prop.getBaseClass().getProperties() != null) {
+                    stackProp.addAll(prop.getBaseClass().getProperties());
                 }
             }
         }
