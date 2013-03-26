@@ -33,6 +33,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.util.Counter;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
+import org.nsesa.editor.gwt.core.client.validation.Validator;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.author.AuthorPanelController;
@@ -72,9 +73,10 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
                                                        final ContentPanelController contentPanelController,
                                                        final MetaPanelController metaPanelController,
                                                        final ServiceFactory serviceFactory,
-                                                       final AmendmentInjectionPointFinder amendmentInjectionPointFinder
+                                                       final AmendmentInjectionPointFinder amendmentInjectionPointFinder,
+                                                       final Validator<OverlayWidget> overlayWidgetValidator
     ) {
-        super(clientFactory, view, locator, overlayFactory, visualStructureController, amendmentInjectionPointFinder);
+        super(clientFactory, view, locator, overlayFactory, visualStructureController, amendmentInjectionPointFinder, overlayWidgetValidator);
         this.authorPanelController = authorPanelController;
         this.contentPanelController = contentPanelController;
         this.metaPanelController = metaPanelController;

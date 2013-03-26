@@ -1,30 +1,24 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import com.google.gwt.dom.client.Element;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 
 import java.util.HashMap;
+
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
+
+import com.google.gwt.user.client.DOM;
 
 /**
  * the complex type periodType defines the empty content model and the list of attributes for metadata elements in the analysis section using periods
@@ -32,13 +26,12 @@ import java.util.Map;
  */
 
 public class PeriodTypeComplexType extends OverlayWidgetImpl {
+
     /**
-     * Stores a map of allowed sub types coming from xsd structure
+     * Stores a structure indicator coming from xsd structure *
      */
-    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
-        {
-        }
-    };
+    private static StructureIndicator STRUCTURE_INDICATOR = new StructureIndicator.DefaultStructureIndicator(1, 1
+    );
 
 
     /**
@@ -62,10 +55,54 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
+    private AnyURISimpleType periodAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private String wildcardContentAttr;
-    private AnyURISimpleType periodAttr;
+
+    /**
+     * Return <code>periodAttr</code> property
+     *
+     * @return periodAttr
+     */
+    public AnyURISimpleType getPeriodAttr() {
+        if (periodAttr == null) {
+            periodAttr = new AnyURISimpleType();
+            periodAttr.setValue(getElement().getAttribute("period"));
+        }
+
+        return periodAttr;
+    }
+
+    /**
+     * Return <code>periodAttr</code> property in DSL way
+     *
+     * @return periodAttr
+     */
+    public AnyURISimpleType periodAttr() {
+        return getPeriodAttr();
+    }
+
+    /**
+     * Set <code>periodAttr</code> property
+     *
+     * @param periodAttr the new value
+     */
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
+        getElement().setAttribute("period", periodAttr.getValue());
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr the new value
+     * @return <code>PeriodTypeComplexType</code> instance
+     */
+    public PeriodTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
 
     /**
      * Return <code>idAttr</code> property
@@ -197,59 +234,7 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
-
-    /**
-     * Return <code>periodAttr</code> property
-     *
-     * @return periodAttr
-     */
-    public AnyURISimpleType getPeriodAttr() {
-        if (periodAttr == null) {
-            periodAttr = new AnyURISimpleType();
-            periodAttr.setValue(getElement().getAttribute("period"));
-        }
-
-        return periodAttr;
-    }
-
-    /**
-     * Return <code>periodAttr</code> property in DSL way
-     *
-     * @return periodAttr
-     */
-    public AnyURISimpleType periodAttr() {
-        return getPeriodAttr();
-    }
-
-    /**
-     * Set <code>periodAttr</code> property
-     *
-     * @param periodAttr the new value
-     */
-    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-        this.periodAttr = periodAttr;
-        getElement().setAttribute("period", periodAttr.getValue());
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr the new value
-     * @return <code>PeriodTypeComplexType</code> instance
-     */
-    public PeriodTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
-        return this;
-    }
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
-     */
-    @Override
-    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
-        return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
-    }
 
     /**
      * Returns the namespace URI of this amendable widget.
@@ -265,11 +250,16 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
+    }
+
+    @Override
+    public StructureIndicator getStructureIndicator() {
+        return STRUCTURE_INDICATOR;
     }
 
     /**

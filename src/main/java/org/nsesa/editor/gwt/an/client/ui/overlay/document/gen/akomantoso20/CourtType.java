@@ -1,300 +1,294 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.user.client.DOM;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.*;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.InlineComplexType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.Occurrence;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
+import com.google.gwt.dom.client.Element;
+import java.util.ArrayList;
+import java.util.Arrays;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-
 import java.util.HashMap;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import com.google.gwt.user.client.DOM;
 
 /**
- * the element courtType is an inline element within judgements to identify the string used by the document for the type of the court doing the judgement
- * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
- */
+* the element courtType is an inline element within judgements to identify the string used by the document for the type of the court doing the judgement
+* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+*/
 
-public class CourtType extends InlineComplexType {
-    /**
-     * Stores a map of allowed sub types coming from xsd structure
-     */
-    private static Map<OverlayWidget, Occurrence> ALLOWED_SUB_TYPES = new HashMap<OverlayWidget, Occurrence>() {
-        {
-            put(new Inline(), new Occurrence(0, -1));
-            put(new Marker(), new Occurrence(0, -1));
-            put(new Popup(), new Occurrence(0, -1));
-            put(new Ref(), new Occurrence(0, -1));
-            put(new Mref(), new Occurrence(0, -1));
-            put(new Rref(), new Occurrence(0, -1));
-            put(new Mod(), new Occurrence(0, -1));
-            put(new Mmod(), new Occurrence(0, -1));
-            put(new Rmod(), new Occurrence(0, -1));
-            put(new Remark(), new Occurrence(0, -1));
-            put(new RecordedTime(), new Occurrence(0, -1));
-            put(new Vote(), new Occurrence(0, -1));
-            put(new Outcome(), new Occurrence(0, -1));
-            put(new Ins(), new Occurrence(0, -1));
-            put(new Del(), new Occurrence(0, -1));
-            put(new Omissis(), new Occurrence(0, -1));
-            put(new ExtractText(), new Occurrence(0, -1));
-            put(new ExtractStructure(), new Occurrence(0, -1));
-            put(new Placeholder(), new Occurrence(0, -1));
-            put(new FillIn(), new Occurrence(0, -1));
-            put(new B(), new Occurrence(0, -1));
-            put(new I(), new Occurrence(0, -1));
-            put(new A(), new Occurrence(0, -1));
-            put(new U(), new Occurrence(0, -1));
-            put(new Sub(), new Occurrence(0, -1));
-            put(new Sup(), new Occurrence(0, -1));
-            put(new Span(), new Occurrence(0, -1));
-            put(new DocType(), new Occurrence(0, -1));
-            put(new DocTitle(), new Occurrence(0, -1));
-            put(new DocNumber(), new Occurrence(0, -1));
-            put(new DocProponent(), new Occurrence(0, -1));
-            put(new DocDate(), new Occurrence(0, -1));
-            put(new Legislature(), new Occurrence(0, -1));
-            put(new Session(), new Occurrence(0, -1));
-            put(new ShortTitle(), new Occurrence(0, -1));
-            put(new DocPurpose(), new Occurrence(0, -1));
-            put(new DocCommittee(), new Occurrence(0, -1));
-            put(new DocIntroducer(), new Occurrence(0, -1));
-            put(new DocStage(), new Occurrence(0, -1));
-            put(new DocStatus(), new Occurrence(0, -1));
-            put(new DocJurisdiction(), new Occurrence(0, -1));
-            put(new DocketNumber(), new Occurrence(0, -1));
-            put(new Date(), new Occurrence(0, -1));
-            put(new Person(), new Occurrence(0, -1));
-            put(new Organization(), new Occurrence(0, -1));
-            put(new Concept(), new Occurrence(0, -1));
-            put(new Object(), new Occurrence(0, -1));
-            put(new Event(), new Occurrence(0, -1));
-            put(new Location(), new Occurrence(0, -1));
-            put(new Process(), new Occurrence(0, -1));
-            put(new Role(), new Occurrence(0, -1));
-            put(new Term(), new Occurrence(0, -1));
-            put(new Quantity(), new Occurrence(0, -1));
-            put(new Def(), new Occurrence(0, -1));
-            put(new Entity(), new Occurrence(0, -1));
-            put(new CourtType(), new Occurrence(0, -1));
-            put(new NeutralCitation(), new Occurrence(0, -1));
-            put(new Party(), new Occurrence(0, -1));
-            put(new Judge(), new Occurrence(0, -1));
-            put(new Lawyer(), new Occurrence(0, -1));
-            put(new Signature(), new Occurrence(0, -1));
-            put(new Opinion(), new Occurrence(0, -1));
-            put(new AffectedDocument(), new Occurrence(0, -1));
-            put(new RelatedDocument(), new Occurrence(0, -1));
-            put(new Change(), new Occurrence(0, -1));
-            put(new NoteRef(), new Occurrence(0, -1));
-            put(new Eol(), new Occurrence(0, -1));
-            put(new Eop(), new Occurrence(0, -1));
-            put(new Img(), new Occurrence(0, -1));
-            put(new AuthorialNote(), new Occurrence(0, -1));
-        }
-    };
+public class CourtType extends InlineComplexType  {
+
+/** Stores a structure indicator coming from xsd structure **/
+private static StructureIndicator STRUCTURE_INDICATOR = new StructureIndicator.DefaultStructureIndicator(1,1
+        ,
+        new StructureIndicator.DefaultChoice(0,-1,        new StructureIndicator.DefaultGroup(1,1,        new StructureIndicator.DefaultChoice(1,1,        new StructureIndicator.DefaultGroup(1,1,        new StructureIndicator.DefaultChoice(1,1,        new StructureIndicator.DefaultGroup(1,1,        new StructureIndicator.DefaultChoice(1,1,        new StructureIndicator.DefaultElement(1,1,new Ref())
+,        new StructureIndicator.DefaultElement(1,1,new Mref())
+,        new StructureIndicator.DefaultElement(1,1,new Rref())
+,        new StructureIndicator.DefaultElement(1,1,new Mod())
+,        new StructureIndicator.DefaultElement(1,1,new Mmod())
+,        new StructureIndicator.DefaultElement(1,1,new Rmod())
+,        new StructureIndicator.DefaultElement(1,1,new Remark())
+,        new StructureIndicator.DefaultElement(1,1,new RecordedTime())
+,        new StructureIndicator.DefaultElement(1,1,new Vote())
+,        new StructureIndicator.DefaultElement(1,1,new Outcome())
+,        new StructureIndicator.DefaultElement(1,1,new Ins())
+,        new StructureIndicator.DefaultElement(1,1,new Del())
+,        new StructureIndicator.DefaultElement(1,1,new Omissis())
+,        new StructureIndicator.DefaultElement(1,1,new ExtractText())
+,        new StructureIndicator.DefaultElement(1,1,new ExtractStructure())
+,        new StructureIndicator.DefaultElement(1,1,new Placeholder())
+,        new StructureIndicator.DefaultElement(1,1,new FillIn())
+)
+)
+,        new StructureIndicator.DefaultGroup(1,1,        new StructureIndicator.DefaultChoice(1,1,        new StructureIndicator.DefaultElement(1,1,new B())
+,        new StructureIndicator.DefaultElement(1,1,new I())
+,        new StructureIndicator.DefaultElement(1,1,new A())
+,        new StructureIndicator.DefaultElement(1,1,new U())
+,        new StructureIndicator.DefaultElement(1,1,new Sub())
+,        new StructureIndicator.DefaultElement(1,1,new Sup())
+,        new StructureIndicator.DefaultElement(1,1,new Span())
+)
+)
+,        new StructureIndicator.DefaultGroup(1,1,        new StructureIndicator.DefaultChoice(1,1,        new StructureIndicator.DefaultElement(1,1,new DocType())
+,        new StructureIndicator.DefaultElement(1,1,new DocTitle())
+,        new StructureIndicator.DefaultElement(1,1,new DocNumber())
+,        new StructureIndicator.DefaultElement(1,1,new DocProponent())
+,        new StructureIndicator.DefaultElement(1,1,new DocDate())
+,        new StructureIndicator.DefaultElement(1,1,new Legislature())
+,        new StructureIndicator.DefaultElement(1,1,new Session())
+,        new StructureIndicator.DefaultElement(1,1,new ShortTitle())
+,        new StructureIndicator.DefaultElement(1,1,new DocPurpose())
+,        new StructureIndicator.DefaultElement(1,1,new DocCommittee())
+,        new StructureIndicator.DefaultElement(1,1,new DocIntroducer())
+,        new StructureIndicator.DefaultElement(1,1,new DocStage())
+,        new StructureIndicator.DefaultElement(1,1,new DocStatus())
+,        new StructureIndicator.DefaultElement(1,1,new DocJurisdiction())
+,        new StructureIndicator.DefaultElement(1,1,new DocketNumber())
+)
+)
+,        new StructureIndicator.DefaultGroup(1,1,        new StructureIndicator.DefaultChoice(1,1,        new StructureIndicator.DefaultElement(1,1,new Date())
+,        new StructureIndicator.DefaultElement(1,1,new Person())
+,        new StructureIndicator.DefaultElement(1,1,new Organization())
+,        new StructureIndicator.DefaultElement(1,1,new Concept())
+,        new StructureIndicator.DefaultElement(1,1,new Object())
+,        new StructureIndicator.DefaultElement(1,1,new Event())
+,        new StructureIndicator.DefaultElement(1,1,new Location())
+,        new StructureIndicator.DefaultElement(1,1,new Process())
+,        new StructureIndicator.DefaultElement(1,1,new Role())
+,        new StructureIndicator.DefaultElement(1,1,new Term())
+,        new StructureIndicator.DefaultElement(1,1,new Quantity())
+,        new StructureIndicator.DefaultElement(1,1,new Def())
+,        new StructureIndicator.DefaultElement(1,1,new Entity())
+)
+)
+,        new StructureIndicator.DefaultGroup(1,1,        new StructureIndicator.DefaultChoice(1,1,        new StructureIndicator.DefaultElement(1,1,new CourtType())
+,        new StructureIndicator.DefaultElement(1,1,new NeutralCitation())
+,        new StructureIndicator.DefaultElement(1,1,new Party())
+,        new StructureIndicator.DefaultElement(1,1,new Judge())
+,        new StructureIndicator.DefaultElement(1,1,new Lawyer())
+,        new StructureIndicator.DefaultElement(1,1,new Signature())
+,        new StructureIndicator.DefaultElement(1,1,new Opinion())
+)
+)
+,        new StructureIndicator.DefaultGroup(1,1,        new StructureIndicator.DefaultChoice(1,1,        new StructureIndicator.DefaultElement(1,1,new AffectedDocument())
+,        new StructureIndicator.DefaultElement(1,1,new RelatedDocument())
+,        new StructureIndicator.DefaultElement(1,1,new Change())
+)
+)
+,        new StructureIndicator.DefaultElement(1,1,new Inline())
+)
+)
+,        new StructureIndicator.DefaultGroup(1,1,        new StructureIndicator.DefaultChoice(1,1,        new StructureIndicator.DefaultGroup(1,1,        new StructureIndicator.DefaultChoice(1,1,        new StructureIndicator.DefaultElement(1,1,new NoteRef())
+,        new StructureIndicator.DefaultElement(1,1,new Eol())
+,        new StructureIndicator.DefaultElement(1,1,new Eop())
+)
+)
+,        new StructureIndicator.DefaultGroup(1,1,        new StructureIndicator.DefaultSequence(1,1,        new StructureIndicator.DefaultElement(1,1,new Img())
+)
+)
+,        new StructureIndicator.DefaultElement(1,1,new Marker())
+)
+)
+,        new StructureIndicator.DefaultGroup(1,1,        new StructureIndicator.DefaultChoice(1,1,        new StructureIndicator.DefaultGroup(1,1,        new StructureIndicator.DefaultSequence(1,1,        new StructureIndicator.DefaultElement(1,1,new AuthorialNote())
+)
+)
+,        new StructureIndicator.DefaultElement(1,1,new Popup())
+)
+)
+)
+)
+)
+        
+);
 
 
-    /**
-     * Create a browser DOM span element and set up "type", "ns" and css class attributes
-     */
-    public static Element create() {
-        com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "courtType");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
-        span.setClassName("widget courtType");
-        return span;
-    }
+/**
+* Create a browser DOM span element and set up "type", "ns" and css class attributes
+*/
+public static Element create() {
+com.google.gwt.user.client.Element span = DOM.createSpan();
+span.setAttribute("type", "courtType");
+span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+span.setClassName("widget courtType");
+return span;
+}
 
 // CONSTRUCTORS ------------------
+/**
+* Create a <code>CourtType</code> object and set up its type
+*/
+public CourtType() {
+super(create());
+setType("courtType");
+}
 
-    /**
-     * Create a <code>CourtType</code> object and set up its type
-     */
-    public CourtType() {
-        super(create());
-        setType("courtType");
-    }
 
 
-    /**
-     * Create a <code>CourtType</code> object with the given DOM element
-     */
-    public CourtType(Element element) {
-        super(element);
-    }
+/**
+* Create a <code>CourtType</code> object with the given DOM element
+*/
+public CourtType(Element element) {
+super(element);
+}
 
 // FIELDS ------------------
 
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> CourtType</code> instance
-     */
-    public CourtType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>classAttr</code> property in DSL way
-     *
-     * @param classAttr new value
-     * @return <code> CourtType</code> instance
-     */
-    public CourtType classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>styleAttr</code> property in DSL way
-     *
-     * @param styleAttr new value
-     * @return <code> CourtType</code> instance
-     */
-    public CourtType styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>titleAttr</code> property in DSL way
-     *
-     * @param titleAttr new value
-     * @return <code> CourtType</code> instance
-     */
-    public CourtType titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> CourtType</code> instance
-     */
-    public CourtType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> CourtType</code> instance
-     */
-    public CourtType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> CourtType</code> instance
-     */
-    public CourtType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> CourtType</code> instance
-     */
-    public CourtType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> CourtType</code> instance
-     */
-    public CourtType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        /**
+        * Set <code>alternativeToAttr</code> property in DSL way
+        * @param alternativeToAttr new value
+        * @return <code> CourtType</code> instance
+        */
+        public CourtType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
         return this;
-    }
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr new value
-     * @return <code> CourtType</code> instance
-     */
-    public CourtType statusAttr(final StatusTypeSimpleType statusAttr) {
+        }
+        /**
+        * Set <code>langAttr</code> property in DSL way
+        * @param langAttr new value
+        * @return <code> CourtType</code> instance
+        */
+        public CourtType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+        }
+        /**
+        * Set <code>classAttr</code> property in DSL way
+        * @param classAttr new value
+        * @return <code> CourtType</code> instance
+        */
+        public CourtType classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+        }
+        /**
+        * Set <code>styleAttr</code> property in DSL way
+        * @param styleAttr new value
+        * @return <code> CourtType</code> instance
+        */
+        public CourtType styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
+        return this;
+        }
+        /**
+        * Set <code>titleAttr</code> property in DSL way
+        * @param titleAttr new value
+        * @return <code> CourtType</code> instance
+        */
+        public CourtType titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
+        return this;
+        }
+        /**
+        * Set <code>statusAttr</code> property in DSL way
+        * @param statusAttr new value
+        * @return <code> CourtType</code> instance
+        */
+        public CourtType statusAttr(final StatusTypeSimpleType statusAttr) {
         setStatusAttr(statusAttr);
         return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> CourtType</code> instance
-     */
-    public CourtType periodAttr(final AnyURISimpleType periodAttr) {
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr new value
+        * @return <code> CourtType</code> instance
+        */
+        public CourtType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
+        /**
+        * Set <code>idAttr</code> property in DSL way
+        * @param idAttr new value
+        * @return <code> CourtType</code> instance
+        */
+        public CourtType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+        }
+        /**
+        * Set <code>evolvingIdAttr</code> property in DSL way
+        * @param evolvingIdAttr new value
+        * @return <code> CourtType</code> instance
+        */
+        public CourtType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+        }
+        /**
+        * Set <code>refersToAttr</code> property in DSL way
+        * @param refersToAttr new value
+        * @return <code> CourtType</code> instance
+        */
+        public CourtType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+        }
+        /**
+        * Set <code>periodAttr</code> property in DSL way
+        * @param periodAttr new value
+        * @return <code> CourtType</code> instance
+        */
+        public CourtType periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
         return this;
-    }
+        }
 
-    /**
-     * Returns possible children as a map of <tt>OverlayWidget, Occurrence</tt>s.
-     */
-    @Override
-    public Map<OverlayWidget, Occurrence> getAllowedChildTypes() {
-        return java.util.Collections.unmodifiableMap(ALLOWED_SUB_TYPES);
-    }
+/**
+* Returns the namespace URI of this amendable widget.
+* @return The namesapce as String
+*/
+@Override
+public String getNamespaceURI() {
+return "http://www.akomantoso.org/2.0";
+}
 
-    /**
-     * Returns the namespace URI of this amendable widget.
-     *
-     * @return The namesapce as String
-     */
-    @Override
-    public String getNamespaceURI() {
-        return "http://www.akomantoso.org/2.0";
-    }
+@Override
+public LinkedHashMap<String, String> getAttributes() {
+final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
+attrs.putAll(super.getAttributes());
+return attrs;
+}
 
-    @Override
-    public LinkedHashMap<String, String> getAttributes() {
-        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
-        attrs.putAll(super.getAttributes());
-        return attrs;
-    }
+@Override
+public StructureIndicator getStructureIndicator() {
+    return STRUCTURE_INDICATOR;
+}
 
-    /**
-     * DSL Style for html method
-     */
-    @Override
-    public CourtType html(String s) {
-        super.html(s);
-        return this;
-    }
+/**
+* DSL Style for html method
+*/
+@Override
+public CourtType html(String s) {
+    super.html(s);
+    return this;
+}
 }
 
