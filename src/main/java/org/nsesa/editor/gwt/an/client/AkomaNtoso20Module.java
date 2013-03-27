@@ -16,6 +16,7 @@ package org.nsesa.editor.gwt.an.client;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Singleton;
+import com.google.inject.name.Names;
 import org.nsesa.editor.gwt.an.client.handler.common.content.AkomaNtoso20ContentPanelController;
 import org.nsesa.editor.gwt.an.client.handler.create.AkomaNtoso20AmendmentDialogCreateController;
 import org.nsesa.editor.gwt.an.client.handler.delete.AkomaNtoso20AmendmentDialogDeleteController;
@@ -24,8 +25,10 @@ import org.nsesa.editor.gwt.an.client.ui.document.AkomaNtoso20DocumentController
 import org.nsesa.editor.gwt.an.client.ui.footer.AkomaNtoso20FooterViewImpl;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20Locator;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20OverlayStrategy;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.CompositeOverlayFactory;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.Akomantoso20OverlayFactory;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.Akomantoso20OverlayLocalizableResource;
+import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.Csd02OverlayFactory;
 import org.nsesa.editor.gwt.an.client.ui.rte.ckeditor.Akomantoso20RichTextEditorConfig;
 import org.nsesa.editor.gwt.an.client.ui.rte.ckeditor.Akomantoso20RichTextEditorPlugin;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
@@ -64,7 +67,11 @@ public class AkomaNtoso20Module extends AbstractGinModule {
 
         // bind the mapper
         bind(ActivityMapper.class).to(EditorActivityMapper.class).in(Singleton.class);
-        bind(OverlayFactory.class).to(Akomantoso20OverlayFactory.class).in(Singleton.class);
+
+        bind(OverlayFactory.class).to(CompositeOverlayFactory.class).in(Singleton.class);
+        bind(OverlayFactory.class).annotatedWith(Names.named("akomantoso20")).to(Akomantoso20OverlayFactory.class).in(Singleton.class);
+        bind(OverlayFactory.class).annotatedWith(Names.named("akomantoso30")).to(Csd02OverlayFactory.class).in(Singleton.class);
+
         bind(OverlayLocalizableResource.class).to(Akomantoso20OverlayLocalizableResource.class).in(Singleton.class);
         bind(OverlayStrategy.class).to(AkomaNtoso20OverlayStrategy.class).in(Singleton.class);
         bind(Locator.class).to(AkomaNtoso20Locator.class).in(Singleton.class);
