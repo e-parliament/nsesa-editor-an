@@ -36,15 +36,15 @@ public class Akomantoso20OverlayWidgetValidator implements Validator<OverlayWidg
     public Akomantoso20OverlayWidgetValidator() {
         this.validators = new ArrayList<Validator<OverlayWidget>>();
 //        addValidator(new OverlayWidgetValidator());
-        addValidator(new Validator<OverlayWidget>() {
-            private WellformedValidator wrapped = new WellformedValidator();
-            private Transformer transformer = new DefaultTransformer();
-
-            @Override
-            public ValidationResult validate(OverlayWidget toValidate) {
-                return wrapped.validate(transformer.transform(toValidate));
-            }
-        });
+//        addValidator(new Validator<OverlayWidget>() {
+//            private WellformedValidator wrapped = new WellformedValidator();
+//            private Transformer transformer = new DefaultTransformer();
+//
+//            @Override
+//            public ValidationResult validate(OverlayWidget toValidate) {
+//                return wrapped.validate(transformer.transform(toValidate));
+//            }
+//        });
     }
 
     /**
