@@ -16,6 +16,7 @@ package org.nsesa.editor.gwt.an.client;
 import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultTransformer;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Transformer;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.validation.OverlayWidgetValidator;
 import org.nsesa.editor.gwt.core.client.validation.ValidationResult;
 import org.nsesa.editor.gwt.core.client.validation.Validator;
 import org.nsesa.editor.gwt.core.client.validation.WellformedValidator;
@@ -35,16 +36,16 @@ public class Akomantoso20OverlayWidgetValidator implements Validator<OverlayWidg
 
     public Akomantoso20OverlayWidgetValidator() {
         this.validators = new ArrayList<Validator<OverlayWidget>>();
-//        addValidator(new OverlayWidgetValidator());
-//        addValidator(new Validator<OverlayWidget>() {
-//            private WellformedValidator wrapped = new WellformedValidator();
-//            private Transformer transformer = new DefaultTransformer();
-//
-//            @Override
-//            public ValidationResult validate(OverlayWidget toValidate) {
-//                return wrapped.validate(transformer.transform(toValidate));
-//            }
-//        });
+        addValidator(new OverlayWidgetValidator());
+        addValidator(new Validator<OverlayWidget>() {
+            private WellformedValidator wrapped = new WellformedValidator();
+            private Transformer transformer = new DefaultTransformer();
+
+            @Override
+            public ValidationResult validate(OverlayWidget toValidate) {
+                return wrapped.validate(transformer.transform(toValidate));
+            }
+        });
     }
 
     /**

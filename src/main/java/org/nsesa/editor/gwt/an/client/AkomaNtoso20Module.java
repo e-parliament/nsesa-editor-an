@@ -16,6 +16,7 @@ package org.nsesa.editor.gwt.an.client;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Singleton;
+import com.google.inject.TypeLiteral;
 import com.google.inject.name.Names;
 import org.nsesa.editor.gwt.an.client.handler.common.content.AkomaNtoso20ContentPanelController;
 import org.nsesa.editor.gwt.an.client.handler.create.AkomaNtoso20AmendmentDialogCreateController;
@@ -36,6 +37,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayLocalizableResource;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditorConfig;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditorPlugin;
 import org.nsesa.editor.gwt.core.client.validation.Validator;
@@ -76,7 +78,7 @@ public class AkomaNtoso20Module extends AbstractGinModule {
         bind(OverlayStrategy.class).to(AkomaNtoso20OverlayStrategy.class).in(Singleton.class);
         bind(Locator.class).to(AkomaNtoso20Locator.class).in(Singleton.class);
 
-        bind(Validator.class).to(Akomantoso20OverlayWidgetValidator.class).in(Singleton.class);
+        bind(new TypeLiteral<Validator<OverlayWidget>>(){}).to(Akomantoso20OverlayWidgetValidator.class);
 
         bind(AmendmentDialogModifyController.class).to(AkomaNtoso20AmendmentDialogModifyController.class);
         bind(AmendmentDialogCreateController.class).to(AkomaNtoso20AmendmentDialogCreateController.class);

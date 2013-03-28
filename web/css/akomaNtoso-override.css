@@ -181,3 +181,7 @@
     color: blue;
     font-style: italic;
 }
+
+.validation-error {
+    background-color: red;
+}

@@ -13,25 +13,17 @@
  */
 package org.nsesa.editor.gwt.an.client.handler.modify;
 
-import com.google.gwt.i18n.shared.DateTimeFormat;
-import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
 import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.akomantoso20.*;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.amendment.AmendmentInjectionPointFinder;
-import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
-import org.nsesa.editor.gwt.core.client.ui.overlay.TextUtils;
-import org.nsesa.editor.gwt.core.client.ui.visualstructure.VisualStructureController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import org.nsesa.editor.gwt.core.client.util.Counter;
+import org.nsesa.editor.gwt.core.client.ui.visualstructure.VisualStructureController;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.core.client.validation.Validator;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
@@ -42,11 +34,8 @@ import org.nsesa.editor.gwt.dialog.client.ui.handler.common.meta.MetaPanelContro
 import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentDialogModifyController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentDialogModifyView;
 
-import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
-
-import static org.nsesa.editor.gwt.an.client.ui.overlay.document.AkomaNtoso20XMLUtil.*;
 
 /**
  * Date: 23/11/12 10:14
@@ -101,7 +90,9 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
                 .setModifyIds(true)
                 .setJustification(metaPanelController.getJustification())
                 .setNotes(metaPanelController.getNotes());
-        dialogContext.getAmendment().setRoot(builder.build());
+        OverlayWidget root = builder.build();
+
+        dialogContext.getAmendment().setRoot(root);
         super.handleSave();
     }
 
