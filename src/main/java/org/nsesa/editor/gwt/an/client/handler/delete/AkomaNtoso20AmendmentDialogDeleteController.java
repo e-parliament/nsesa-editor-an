@@ -107,7 +107,7 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
             final OverlayWidget amendmentBodyOverlayWidget = dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody());
 
             // set the author(s)
-            final Preface preface = OverlayUtil.findSingle("preface", amendmentBodyOverlayWidget, new Preface());
+            final Preface preface = (Preface) OverlayUtil.findSingle("preface", amendmentBodyOverlayWidget);
 
             final Container container = preface.getContainers().get(0);
             if (container != null && "authors".equals(container.nameAttr().getValue())) {
@@ -117,7 +117,7 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
                         final DocProponent proponent = (DocProponent) docProponent;
                         final String refersToID = proponent.refersToAttr().getValue();
 
-                        final TLCPerson tlcPerson = OverlayUtil.xpathSingle(refersToID, amendmentBodyOverlayWidget, new TLCPerson());
+                        final TLCPerson tlcPerson = (TLCPerson) OverlayUtil.xpathSingle(refersToID, amendmentBodyOverlayWidget);
                         final String id = tlcPerson.hrefAttr().getValue().substring(tlcPerson.hrefAttr().getValue().lastIndexOf(":") + 1);
                         serviceFactory.getGwtService().getPerson(clientFactory.getClientContext(), id, new AsyncCallback<PersonDTO>() {
                             @Override
@@ -135,12 +135,12 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
             }
 
             // set the meta (justification, notes, ...)
-            final AmendmentJustification amendmentJustification = OverlayUtil.findSingle("amendmentJustification", amendmentBodyOverlayWidget, new AmendmentJustification());
+            final AmendmentJustification amendmentJustification = (AmendmentJustification) OverlayUtil.findSingle("amendmentJustification", amendmentBodyOverlayWidget);
             if (amendmentJustification != null) {
                 final String justification = amendmentJustification.getPs().get(0).getInnerHTML().trim();
                 metaPanelController.setJustification(justification);
             }
-            final Mod mod = OverlayUtil.findSingle("mod", amendmentBodyOverlayWidget, new Mod());
+            final Mod mod = (Mod) OverlayUtil.findSingle("mod", amendmentBodyOverlayWidget);
             if (mod != null) {
                 final java.util.List<AuthorialNote> authorialNotes = mod.getAuthorialNotes();
                 if (authorialNotes != null && !authorialNotes.isEmpty()) {
