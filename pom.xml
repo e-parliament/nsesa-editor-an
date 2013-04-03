@@ -317,6 +317,14 @@
                     <include>**/*.properties</include>
                 </includes>
             </resource>
+            <resource>
+                <directory>src/main/java/org/nsesa/editor/gwt/an</directory>
+                <includes>
+                    <include>**/*.java</include>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
 
         </resources>
         <plugins>
@@ -345,11 +353,12 @@
                 <version>${gwtplugin.version}</version>
                 <configuration>
                     <!--extraJvmArgs>-Xss2M -XX:MaxPermSize=512M -Xmx2048m -Xdebug </extraJvmArgs-->
-                    <extraJvmArgs>-Xss1M -XX:MaxPermSize=300M -Xms512M -Xmx512M</extraJvmArgs>
+                    <extraJvmArgs>-Xss2M -XX:MaxPermSize=300M -Xms512M -Xmx512M</extraJvmArgs>
                     <hostedWebapp>web</hostedWebapp>
                     <modules>
-                        <module>org.nsesa.editor.gwt.an.AkomaNtosoEditor</module>
+                        <module>org.nsesa.editor.gwt.an.amendments.AkomaNtosoEditor</module>
                     </modules>
+                    <strict>true</strict>
                     <runTarget>editor.html</runTarget>
                 </configuration>
                 <executions>
