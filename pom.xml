@@ -453,7 +453,7 @@
                     <skipPoms>true</skipPoms>
                     <generateGitPropertiesFile>true</generateGitPropertiesFile>
                     <generateGitPropertiesFilename>
-                        src/main/resources/org/nsesa/editor/gwt/an/client/ui/resources/GitMessages.properties
+                        src/main/resources/org/nsesa/editor/gwt/an/amendments/client/ui/resources/GitMessages.properties
                     </generateGitPropertiesFilename>
                     <failOnNoGitDirectory>false</failOnNoGitDirectory>
                     <gitDescribe>
