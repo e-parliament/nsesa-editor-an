@@ -182,6 +182,17 @@
     font-style: italic;
 }
 
+.validation-error:before {
+    position: relative;
+    top: -23px;
+    content: attr(error);
+    font-size: .75em;
+    padding: .15em .45em;
+    border-radius: 1em;
+    background: inherit;
+    background-size: 102% 90em;
+}
+
 .validation-error {
     background-color: red;
 }
