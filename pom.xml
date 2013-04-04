@@ -357,6 +357,7 @@
                     <hostedWebapp>web</hostedWebapp>
                     <modules>
                         <module>org.nsesa.editor.gwt.an.amendments.AkomaNtosoEditor</module>
+                        <module>org.nsesa.editor.gwt.an.drafting.DraftingEditor</module>
                     </modules>
                     <strict>true</strict>
                     <runTarget>editor.html</runTarget>

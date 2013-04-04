@@ -57,6 +57,11 @@ the web app class loader and the classes that it holds. -->
         <url-pattern>/AkomaNtosoEditor/gwtDiffService</url-pattern>
         <url-pattern>/AkomaNtosoEditor/gwtDocumentService</url-pattern>
         <url-pattern>/AkomaNtosoEditor/gwtAmendmentService</url-pattern>
+
+        <url-pattern>/DraftingEditor/remote_logging</url-pattern>
+        <url-pattern>/DraftingEditor/gwtService</url-pattern>
+        <url-pattern>/DraftingEditor/gwtDiffService</url-pattern>
+        <url-pattern>/DraftingEditor/gwtDocumentService</url-pattern>
     </servlet-mapping>
 
     <!-- session timeout (in minutes) -->
