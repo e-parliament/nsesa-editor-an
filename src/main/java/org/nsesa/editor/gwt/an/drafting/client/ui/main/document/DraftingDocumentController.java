@@ -227,6 +227,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
         if (injector instanceof DraftingDocumentInjector) {
             final DraftingDocumentInjector draftingDocumentInjector = (DraftingDocumentInjector) injector;
             this.outlineController = draftingDocumentInjector.getOutlineController();
+            this.outlineController.setDocumentController(this);
         }
     }
 
