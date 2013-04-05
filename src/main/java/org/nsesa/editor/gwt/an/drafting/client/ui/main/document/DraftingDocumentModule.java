@@ -19,6 +19,7 @@ import org.nsesa.editor.gwt.an.drafting.client.ui.rte.ckeditor.DraftingRichTextE
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentView;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileView;
+import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.ActionBarCreatePanelController;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditor;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.sourcefile.DraftingSourceFileController;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.sourcefile.DraftingSourceFileViewImpl;
@@ -36,5 +37,6 @@ public class DraftingDocumentModule extends AbstractGinModule {
         bind(RichTextEditor.class).toProvider(DraftingRichTextEditorProvider.class).in(Singleton.class);
         bind(SourceFileController.class).to(DraftingSourceFileController.class).in(Singleton.class);
         bind(SourceFileView.class).to(DraftingSourceFileViewImpl.class).in(Singleton.class);
+        bind(ActionBarCreatePanelController.class).in(Singleton.class);
     }
 }

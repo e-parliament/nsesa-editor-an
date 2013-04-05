@@ -84,6 +84,7 @@ public class DraftingController {
         documentController.setInjector(documentController.getInjector());
         documentController.registerListeners();
         documentController.registerModes();
+        documentController.registerKeyCombos();
         return documentController;
     }
 

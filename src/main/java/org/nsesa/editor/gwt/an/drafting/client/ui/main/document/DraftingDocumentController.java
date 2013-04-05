@@ -15,9 +15,18 @@ package org.nsesa.editor.gwt.an.drafting.client.ui.main.document;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.Scheduler;
+import com.google.gwt.dom.client.Node;
+import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.HandlerRegistration;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.HierarchyComplexType;
+import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEvent;
+import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEventHandler;
+import org.nsesa.editor.gwt.an.drafting.client.mode.StructureViewMode;
+import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.event.*;
@@ -25,18 +34,17 @@ import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEvent;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEventHandler;
 import org.nsesa.editor.gwt.core.client.event.widget.OverlayWidgetSelectEvent;
 import org.nsesa.editor.gwt.core.client.event.widget.OverlayWidgetSelectEventHandler;
+import org.nsesa.editor.gwt.core.client.keyboard.KeyboardListener;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.ui.document.DefaultDocumentController;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentInjector;
+import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.ActionBarCreatePanelController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetSelector;
 import org.nsesa.editor.gwt.core.shared.DocumentDTO;
-import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEvent;
-import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEventHandler;
-import org.nsesa.editor.gwt.an.drafting.client.mode.StructureViewMode;
-import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -53,6 +61,11 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
     private OutlineController outlineController;
 
+    // popup with available child controllers
+    private ActionBarCreatePanelController actionBarCreatePanelController;
+
+    private PopupPanel actionBarCreatePanelControllerPopup = new PopupPanel();
+
     // ------------- event handler registration -----------
     private HandlerRegistration documentToggleStructureEventHandler;
     private HandlerRegistration bootstrapEventHandlerRegistration;
@@ -63,6 +76,14 @@ public class DraftingDocumentController extends DefaultDocumentController {
     private HandlerRegistration overlayWidgetSelectEventHandlerRegistration;
     private HandlerRegistration resizeEventHandlerRegistration;
     private HandlerRegistration documentScrollToEventHandlerRegistration;
+    private HandlerRegistration keyComboHandlerRegistration;
+
+    // ----------------- keyboard shortcuts ---------------------
+    private KeyboardListener.KeyCombo ctrlEnter = new KeyboardListener.KeyCombo(false, true, KeyCodes.KEY_ENTER);
+    private KeyboardListener.KeyCombo escape = new KeyboardListener.KeyCombo(false, false, KeyCodes.KEY_ESCAPE);
+
+    private KeyboardListener.KeyCombo upArrow = new KeyboardListener.KeyCombo(false, false, KeyCodes.KEY_UP);
+    private KeyboardListener.KeyCombo downArrow = new KeyboardListener.KeyCombo(false, false, KeyCodes.KEY_DOWN);
 
     @Inject
     public DraftingDocumentController(final ClientFactory clientFactory,
@@ -71,6 +92,15 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                       final Locator locator,
                                       final Creator creator) {
         super(clientFactory, serviceFactory, overlayFactory, locator, creator);
+    }
+
+    @Override
+    public void registerKeyCombos() {
+        super.registerKeyCombos();
+        clientFactory.getKeyboardListener().register(ctrlEnter);
+        clientFactory.getKeyboardListener().register(escape);
+        clientFactory.getKeyboardListener().register(upArrow);
+        clientFactory.getKeyboardListener().register(downArrow);
     }
 
     @Override
@@ -98,7 +128,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
             }
         });
 
-        overlayWidgetSelectEventHandlerRegistration = clientFactory.getEventBus().addHandler(OverlayWidgetSelectEvent.TYPE, new OverlayWidgetSelectEventHandler() {
+        overlayWidgetSelectEventHandlerRegistration = documentEventBus.addHandler(OverlayWidgetSelectEvent.TYPE, new OverlayWidgetSelectEventHandler() {
             @Override
             public void onEvent(OverlayWidgetSelectEvent event) {
                 boolean alreadySelected = false;
@@ -111,6 +141,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                 sourceFileController.setActiveOverlayWidget(event.getOverlayWidget());
                 if (sourceFileController.getActiveOverlayWidget() != null) {
                     sourceFileController.getActiveOverlayWidget().asWidget().addStyleName(style.selected());
+                    actionBarCreatePanelController.setOverlayWidget(sourceFileController.getActiveOverlayWidget());
                 }
 
                 // inline editing is currently disabled
@@ -157,6 +188,53 @@ public class DraftingDocumentController extends DefaultDocumentController {
             @Override
             public void onEvent(DocumentToggleStructureEvent event) {
                 applyState(StructureViewMode.KEY, new ActiveState(event.isToggle()));
+            }
+        });
+
+        // listen for keyboard combos
+        keyComboHandlerRegistration = clientFactory.getEventBus().addHandler(KeyComboEvent.TYPE, new KeyComboEventHandler() {
+            @Override
+            public void onEvent(KeyComboEvent event) {
+
+                final OverlayWidgetSelector overlayWidgetSelector = new OverlayWidgetSelector() {
+                    @Override
+                    public boolean select(OverlayWidget toSelect) {
+                        return toSelect instanceof BasehierarchyComplexType;
+                    }
+                };
+
+                if (ctrlEnter.equals(event.getKeyCombo())) {
+                    actionBarCreatePanelControllerPopup.center();
+                    actionBarCreatePanelControllerPopup.show();
+                } else if (escape.equals(event.getKeyCombo())) {
+                    if (actionBarCreatePanelControllerPopup.isShowing()) {
+                        actionBarCreatePanelControllerPopup.hide();
+                    }
+                } else if (downArrow.equals(event.getKeyCombo())) {
+                    if (actionBarCreatePanelControllerPopup.isShowing()) {
+                        actionBarCreatePanelController.highlightNext();
+                    } else {
+                        final OverlayWidget activeOverlayWidget = sourceFileController.getActiveOverlayWidget();
+                        final OverlayWidget next = activeOverlayWidget != null ? activeOverlayWidget.next(overlayWidgetSelector) : sourceFileController.getOverlayWidgets().get(0);
+                        if (next != null) {
+                            documentEventBus.fireEvent(new OverlayWidgetSelectEvent(next, DraftingDocumentController.this));
+                            clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(next.asWidget(), DraftingDocumentController.this));
+                        }
+                    }
+                } else if (upArrow.equals(event.getKeyCombo())) {
+                    if (actionBarCreatePanelControllerPopup.isShowing()) {
+                        actionBarCreatePanelController.highlightPrevious();
+                    } else {
+                        final OverlayWidget activeOverlayWidget = sourceFileController.getActiveOverlayWidget();
+                        if (activeOverlayWidget != null) {
+                            final OverlayWidget previous = activeOverlayWidget.previous(overlayWidgetSelector);
+                            if (previous != null) {
+                                documentEventBus.fireEvent(new OverlayWidgetSelectEvent(previous, DraftingDocumentController.this));
+                                clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(previous.asWidget(), DraftingDocumentController.this));
+                            }
+                        }
+                    }
+                }
             }
         });
     }
@@ -214,6 +292,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
         documentScrollToEventHandlerRegistration.removeHandler();
         documentToggleStructureEventHandler.removeHandler();
         bootstrapEventHandlerRegistration.removeHandler();
+        keyComboHandlerRegistration.removeHandler();
     }
 
     public void setInjector(DocumentInjector injector) {
@@ -228,6 +307,10 @@ public class DraftingDocumentController extends DefaultDocumentController {
             final DraftingDocumentInjector draftingDocumentInjector = (DraftingDocumentInjector) injector;
             this.outlineController = draftingDocumentInjector.getOutlineController();
             this.outlineController.setDocumentController(this);
+            this.actionBarCreatePanelController = draftingDocumentInjector.getActionBarCreatePanelController();
+            this.actionBarCreatePanelController.setSourceFileController(sourceFileController);
+            this.actionBarCreatePanelControllerPopup.setWidget(actionBarCreatePanelController.getView());
+            this.style = draftingDocumentInjector.getDocumentViewCss();
         }
     }
 
