@@ -40,6 +40,7 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
 //        ckEditorEnterKeyPlugin.addRule(new CKEditorEnterKeyPlugin.DefaultRule(new P(), new Content()));
         registerPlugin(ckEditorEnterKeyPlugin);
         registerPlugin(new CKEditorBasicStylesPlugin());
+        registerPlugin(new CKEditorBubbleUpEventsPlugin());
         registerPlugin(new CKEditorSelectionChangedPlugin(clientFactory));
         registerPlugin(new CKEditorVisualStructureInsertionPlugin(clientFactory));
         registerPlugin(new CKEditorVisualStructureModificationPlugin(clientFactory));
