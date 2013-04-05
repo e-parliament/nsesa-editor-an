@@ -39,6 +39,7 @@ public class DraftingEditor extends Editor {
         draftingController = getInjector().getDraftingController();
         draftingController.registerListeners();
         draftingController.setInjector(getInjector());
+        clientFactory.getKeyboardListener().install();
         RootLayoutPanel.get().add(draftingController.getView());
     }
 
