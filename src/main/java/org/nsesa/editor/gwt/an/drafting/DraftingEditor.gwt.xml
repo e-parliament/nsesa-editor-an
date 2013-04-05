@@ -18,6 +18,7 @@
         "http://google-web-toolkit.googlecode.com/svn/tags/2.4.0/distro-source/core/src/gwt-module.dtd">
 <module rename-to="DraftingEditor">
     <inherits name="org.nsesa.editor.gwt.editor.Editor"/>
+    <inherits name="org.nsesa.editor.gwt.inline.Inline"/>
     <inherits name="org.nsesa.editor.gwt.an.common.AkomaNtoso"/>
 
     <set-property name="gwt.logging.logLevel" value="INFO"/>

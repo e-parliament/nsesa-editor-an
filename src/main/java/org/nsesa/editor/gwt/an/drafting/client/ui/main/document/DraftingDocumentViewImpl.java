@@ -68,14 +68,12 @@ public class DraftingDocumentViewImpl extends Composite implements DraftingDocum
     @Inject
     public DraftingDocumentViewImpl(final DocumentEventBus documentEventBus,
                                     final SourceFileController sourceFileController,
-                                    final OutlineController outlineController,
-                                    final RichTextEditor richTextEditor
+                                    final OutlineController outlineController
     ) {
 
         this.documentEventBus = documentEventBus;
         this.outlineView = outlineController.getView();
         this.sourceFileController = sourceFileController;
-        richTextEditor.asWidget().setVisible(false);
         this.sourceFileView = sourceFileController.getView();
 
         final Widget widget = uiBinder.createAndBindUi(this);

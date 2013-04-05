@@ -32,23 +32,33 @@ public class DraftingRichTextEditorConfig extends CKEditorConfig {
         setDraftingClassName("akomaNtoso-drafting");
         //configure the editor configuration
         setContentCss(Arrays.asList(new String[]{
-                        GWT.getModuleBaseURL() + "../" + "css/editor.css",
-                        GWT.getModuleBaseURL() + "../" + "css/document.css",
-                        GWT.getModuleBaseURL() + "../" + "css/amendment.css",
-                        GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-all.css",
-                        GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-override.css",
-                        GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-display.css",
-                        GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-drafting.css",
-                        GWT.getModuleBaseURL() + "../" + "css/ckeditor.css"}))
+                GWT.getModuleBaseURL() + "../" + "css/editor.css",
+                GWT.getModuleBaseURL() + "../" + "css/document.css",
+                GWT.getModuleBaseURL() + "../" + "css/amendment.css",
+                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-all.css",
+                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-override.css",
+                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-visual.css",
+                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-visual-colors.css",
+                GWT.getModuleBaseURL() + "../" + "css/ckeditor.css"}))
                 .setBodyClass("akomaNtoso")
                 .setRemovePlugins("elementspath")
-                        //.setExtraPlugins("nsesa")
+                .setZIndex(30000)
+                .setExtraPlugins(NSESA_PLUGIN_NAME)
                 .setToolbarLocation("bottom")
                 .setResize_enabled(false)
                 .setAutoParagraph(false)
                 .setFillEmptyBlocks(false)
                 .setForcePasteAsPlainText(true)
-                .setToolbar(CKEditorToolbar.DEFAULT_TOOLBAR);
+                .setReadOnly(false);
+    }
+
+    @Override
+    public void setReadOnly(boolean readOnly) {
+        this.readOnly(readOnly)
+                .setStartupFocus(!readOnly)
+                .setExtraPlugins(readOnly ? "" : NSESA_PLUGIN_NAME)
+                .setToolbar(readOnly ? CKEditorToolbar.EMPTY_TOOLBAR : CKEditorToolbar.DEFAULT_TOOLBAR);
+
     }
 
 }

@@ -34,7 +34,6 @@ public class DraftingDocumentModule extends AbstractGinModule {
     @Override
     protected void configure() {
         bind(DocumentView.class).to(DraftingDocumentViewImpl.class).in(Singleton.class);
-        bind(RichTextEditor.class).toProvider(DraftingRichTextEditorProvider.class).in(Singleton.class);
         bind(SourceFileController.class).to(DraftingSourceFileController.class).in(Singleton.class);
         bind(SourceFileView.class).to(DraftingSourceFileViewImpl.class).in(Singleton.class);
         bind(ActionBarCreatePanelController.class).in(Singleton.class);

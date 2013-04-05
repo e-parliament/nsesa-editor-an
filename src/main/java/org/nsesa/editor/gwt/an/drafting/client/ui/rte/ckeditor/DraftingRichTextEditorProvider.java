@@ -13,6 +13,7 @@
  */
 package org.nsesa.editor.gwt.an.drafting.client.ui.rte.ckeditor;
 
+import com.google.inject.Inject;
 import com.google.inject.Provider;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditor;
 import org.nsesa.editor.gwt.core.client.ui.rte.ckeditor.CKEditor;
@@ -25,9 +26,15 @@ import org.nsesa.editor.gwt.core.client.ui.rte.ckeditor.CKEditor;
  */
 public class DraftingRichTextEditorProvider implements Provider<RichTextEditor> {
 
+    @Inject
+    DraftingRichTextEditorConfig richTextEditorConfig;
+
+    @Inject
+    DraftingRichTextEditorPlugin richTextEditorPlugin;
+
     @Override
     public RichTextEditor get() {
-        DraftingRichTextEditorConfig config = new DraftingRichTextEditorConfig();
-        return new CKEditor(null, config, false);
+        final CKEditor ckEditor = new CKEditor(richTextEditorPlugin, richTextEditorConfig, true);
+        return ckEditor;
     }
 }
