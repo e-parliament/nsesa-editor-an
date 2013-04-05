@@ -13,7 +13,6 @@
  */
 package org.nsesa.editor.gwt.an.common.server.service.gwt;
 
-import com.google.common.io.Files;
 import freemarker.ext.dom.NodeModel;
 import freemarker.template.Configuration;
 import freemarker.template.TemplateException;
@@ -29,6 +28,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.StringWriter;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -44,7 +44,6 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
 
     private DocumentService documentService;
 
-    private Map<String, Resource> documents;
     private Resource documentTemplate;
 
     @Override
@@ -121,26 +120,12 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
 
     @Override
     public String getDocumentContent(final ClientContext clientContext, final String documentID) {
-        Resource documentResource = documents.get(documentID);
+        String content = documentService.getDocumentContent(documentID);
+
         final InputSource inputSource;
-        if (documentResource != null) {
-            /*
-
-            -- When requiring XML transformations --
-            */
-            try {
-                byte[] bytes = Files.toByteArray(documentResource.getFile());
-                inputSource = new InputSource(new ByteArrayInputStream(bytes));
-
-            } catch (IOException e) {
-                throw new RuntimeException("Could not read file.", e);
-            }
-
-//            try {
-//                return Files.toString(documentResource.getFile(), Charset.forName("UTF-8"));
-//            } catch (IOException e) {
-//                throw new RuntimeException("Could not read file resource.", e);
-//            }
+        if (content != null) {
+            byte[] bytes = content.getBytes(Charset.forName("UTF-8"));
+            inputSource = new InputSource(new ByteArrayInputStream(bytes));
         } else {
             inputSource = new InputSource(documentID);
         }
@@ -168,11 +153,6 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
     }
 
     // Spring setters ----------------------
-
-
-    public void setDocuments(final Map<String, Resource> documents) {
-        this.documents = documents;
-    }
 
     public void setDocumentTemplate(Resource documentTemplate) {
         this.documentTemplate = documentTemplate;
