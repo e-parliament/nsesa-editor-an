@@ -21,8 +21,8 @@ import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.NumberingType;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.core.client.ui.visualstructure.VisualStructureController;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.core.client.validation.Validator;
@@ -45,6 +45,8 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
     private static final Logger LOG = Logger.getLogger(AkomaNtoso20AmendmentDialogCreateController.class.getName());
 
+    private OverlaySnippetFactory overlaySnippetFactory;
+    private OverlaySnippetEvaluator overlaySnippetEvaluator;
     final AuthorPanelController authorPanelController;
     final MetaPanelController metaPanelController;
     final ServiceFactory serviceFactory;
@@ -58,12 +60,18 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
                                                        final OverlayFactory overlayFactory,
                                                        final VisualStructureController visualStructureController,
                                                        final AmendmentInjectionPointFinder amendmentInjectionPointFinder,
+                                                       final OverlaySnippetFactory overlaySnippetFactory,
+                                                       final OverlaySnippetEvaluator overlaySnippetEvaluator,
                                                        final Validator<OverlayWidget> overlayWidgetValidator,
                                                        final AuthorPanelController authorPanelController,
                                                        final MetaPanelController metaPanelController
     ) {
-        super(clientFactory, view, locator, overlayFactory, visualStructureController, amendmentInjectionPointFinder, overlayWidgetValidator);
+        super(clientFactory, view, locator, overlayFactory, visualStructureController,
+                amendmentInjectionPointFinder,overlayWidgetValidator);
         this.serviceFactory = serviceFactory;
+        this.overlaySnippetFactory = overlaySnippetFactory;
+        this.overlaySnippetEvaluator = overlaySnippetEvaluator;
+
         this.authorPanelController = authorPanelController;
         this.metaPanelController = metaPanelController;
 
@@ -93,12 +101,39 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
     }
 
     @Override
-    public void setContext(DialogContext dialogContext) {
+    public void setContext(final DialogContext dialogContext) {
         super.setContext(dialogContext);
-        view.resetBodyClass();
-        view.addBodyClass(dialogContext.getOverlayWidget().getOverlayElement().getClassName());
+        // set up the dialog context with the snippet values
+        final OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
 
-        view.setAmendmentContent("");
+        view.resetBodyClass();
+        view.addBodyClass(overlayWidget.getOverlayElement().getClassName());
+
+        OverlaySnippet overlaySnippet = overlaySnippetFactory.getSnippet(overlayWidget);
+        overlaySnippetEvaluator.addEvaluator(new OverlaySnippetEvaluator.Evaluator() {
+            @Override
+            public String getPlaceHolder() {
+                return "${widget.num}";
+            }
+
+            @Override
+            public String evaluate() {
+                if (overlayWidget.getNumberingType() == null) {
+                    // if there is a sibling of the same type, use that one
+                    OverlayWidget sibling = dialogContext.getParentOverlayWidget().getChildOverlayWidgets().get(dialogContext.getIndex() - 1);
+                    if (sibling != null) {
+                        overlayWidget.setNumberingType(sibling.getNumberingType());
+                    } else {
+                        // take the parent's numbering, but use a different one
+                        // TODO
+                        overlayWidget.setNumberingType(NumberingType.ROMANITO);
+                    }
+                }
+                String num = locator.getNum(overlayWidget, clientFactory.getClientContext().getDocumentTranslationLanguageCode());
+                return num == null ? "" : num;
+            }
+        });
+        view.setAmendmentContent(overlaySnippet != null ? overlaySnippet.getContent(overlaySnippetEvaluator) : "");
 
         // clear author panel
         authorPanelController.clear();
