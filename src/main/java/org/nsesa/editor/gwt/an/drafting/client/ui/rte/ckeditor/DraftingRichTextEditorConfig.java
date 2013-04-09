@@ -44,7 +44,7 @@ public class DraftingRichTextEditorConfig extends CKEditorConfig {
                 .setRemovePlugins("elementspath")
                 .setZIndex(30000)
                 .setExtraPlugins(NSESA_PLUGIN_NAME)
-                .setToolbarLocation("bottom")
+                .setToolbarLocation("top")
                 .setResize_enabled(false)
                 .setAutoParagraph(false)
                 .setFillEmptyBlocks(false)
