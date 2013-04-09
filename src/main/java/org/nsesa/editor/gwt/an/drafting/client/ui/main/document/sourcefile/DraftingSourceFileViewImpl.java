@@ -22,6 +22,8 @@ import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileView;
+import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.ActionBarController;
+import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.ActionBarView;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.content.ContentController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.content.ContentView;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.header.SourceFileHeaderController;
@@ -44,13 +46,17 @@ public class DraftingSourceFileViewImpl extends Composite implements SourceFileV
     ContentView contentView;
     @UiField(provided = true)
     SourceFileHeaderView sourceFileHeaderView;
+    @UiField(provided = true)
+    ActionBarView actionBarView;
 
     @Inject
     public DraftingSourceFileViewImpl(final DocumentEventBus documentEventBus,
                                       final ContentController contentController,
+                                      final ActionBarController actionBarController,
                                       final SourceFileHeaderController sourceFileHeaderController) {
 
         this.contentView = contentController.getView();
+        this.actionBarView = actionBarController.getView();
         this.sourceFileHeaderView = sourceFileHeaderController.getView();
 
         final Widget widget = uiBinder.createAndBindUi(this);

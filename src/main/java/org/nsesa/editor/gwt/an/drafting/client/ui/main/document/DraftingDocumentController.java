@@ -40,12 +40,14 @@ import org.nsesa.editor.gwt.core.client.keyboard.KeyboardListener;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.ui.document.DefaultDocumentController;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentInjector;
+import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.ActionBarController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.ActionBarCreatePanelController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetSelector;
+import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditor;
 import org.nsesa.editor.gwt.core.shared.DocumentDTO;
 import org.nsesa.editor.gwt.inline.client.event.AttachInlineEditorEvent;
 import org.nsesa.editor.gwt.inline.client.event.DetachInlineEditorEvent;
@@ -67,6 +69,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
     private OutlineController outlineController;
 
     private InlineEditorController inlineEditorController;
+
+    private ActionBarController actionBarController;
 
     // popup with available child controllers
     private ActionBarCreatePanelController actionBarCreatePanelController;
@@ -148,18 +152,21 @@ public class DraftingDocumentController extends DefaultDocumentController {
         overlayWidgetSelectEventHandlerRegistration = documentEventBus.addHandler(OverlayWidgetSelectEvent.TYPE, new OverlayWidgetSelectEventHandler() {
             @Override
             public void onEvent(OverlayWidgetSelectEvent event) {
-                boolean alreadySelected = false;
-                if (sourceFileController.getActiveOverlayWidget() == event.getOverlayWidget()) {
-                    alreadySelected = true;
-                }
+
                 if (sourceFileController.getActiveOverlayWidget() != null) {
                     sourceFileController.getActiveOverlayWidget().asWidget().removeStyleName(style.selected());
                 }
+
                 sourceFileController.setActiveOverlayWidget(event.getOverlayWidget());
+
                 if (sourceFileController.getActiveOverlayWidget() != null) {
                     sourceFileController.getActiveOverlayWidget().asWidget().addStyleName(style.selected());
+
                     actionBarCreatePanelController.setOverlayWidget(sourceFileController.getActiveOverlayWidget());
+
+                    actionBarController.attach(event.getOverlayWidget(), DraftingDocumentController.this);
                 }
+
             }
         });
 
@@ -218,8 +225,17 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
 
                     // ------------- CTRL + ENTER -------------
-                    actionBarCreatePanelControllerPopup.center();
-                    actionBarCreatePanelControllerPopup.show();
+                    if (!actionBarCreatePanelControllerPopup.isShowing()) {
+                        actionBarCreatePanelControllerPopup.center();
+                        actionBarCreatePanelControllerPopup.show();
+
+                        if (inlineEditorController.isShowing()) {
+                            final RichTextEditor.CaretPosition caretPosition = inlineEditorController.getRichTextEditor().getCaretPosition();
+                            if (caretPosition != null) {
+                                actionBarCreatePanelControllerPopup.setPopupPosition(caretPosition.getLeft(), caretPosition.getTop());
+                            }
+                        }
+                    }
 
                 } else if (escape.equals(event.getKeyCombo())) {
 
@@ -247,7 +263,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                         final OverlayWidget next = activeOverlayWidget != null ? activeOverlayWidget.next(overlayWidgetSelector) : sourceFileController.getOverlayWidgets().get(0);
                         if (next != null) {
                             documentEventBus.fireEvent(new OverlayWidgetSelectEvent(next, DraftingDocumentController.this));
-                            clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(next.asWidget(), DraftingDocumentController.this));
+                            clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(next.asWidget(), DraftingDocumentController.this, false));
                         }
                     }
 
@@ -265,7 +281,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                             final OverlayWidget previous = activeOverlayWidget.previous(overlayWidgetSelector);
                             if (previous != null) {
                                 documentEventBus.fireEvent(new OverlayWidgetSelectEvent(previous, DraftingDocumentController.this));
-                                clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(previous.asWidget(), DraftingDocumentController.this));
+                                clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(previous.asWidget(), DraftingDocumentController.this, false));
                             }
                         }
                     }
@@ -274,8 +290,20 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
 
                     // ------------- Single ENTER -------------
-                    if (sourceFileController.getActiveOverlayWidget() != null
+                    if (actionBarCreatePanelControllerPopup.isShowing()) {
+                        final OverlayWidget selectedSibling = actionBarCreatePanelController.getSelectedSibling();
+                        final OverlayWidget selectedChild = actionBarCreatePanelController.getSelectedChild();
+
+                        LOG.info("Selection " + selectedSibling + ", " + selectedChild);
+
+                        actionBarCreatePanelControllerPopup.hide();
+
+                        // TODO
+                    } else if (sourceFileController.getActiveOverlayWidget() != null
                             && (!inlineEditorController.isShowing() || !(inlineEditorController.getOverlayWidget().equals(sourceFileController.getActiveOverlayWidget())))) {
+                        // first scroll to the widget
+                        documentEventBus.fireEvent(new DocumentScrollToEvent(sourceFileController.getActiveOverlayWidget().asWidget(), DraftingDocumentController.this));
+                        // then attach the inline editor
                         clientFactory.getEventBus().fireEvent(new AttachInlineEditorEvent(sourceFileController.getActiveOverlayWidget(), DraftingDocumentController.this));
                     }
                 } else if (tab.equals(event.getKeyCombo())) {
@@ -383,6 +411,9 @@ public class DraftingDocumentController extends DefaultDocumentController {
             final DraftingDocumentInjector draftingDocumentInjector = (DraftingDocumentInjector) injector;
             this.outlineController = draftingDocumentInjector.getOutlineController();
             this.outlineController.setDocumentController(this);
+            this.actionBarController = draftingDocumentInjector.getActionBarController();
+            this.actionBarController.setSourceFileController(sourceFileController);
+
             this.actionBarCreatePanelController = draftingDocumentInjector.getActionBarCreatePanelController();
             this.actionBarCreatePanelController.setSourceFileController(sourceFileController);
             this.actionBarCreatePanelFocusPanel.setWidget(actionBarCreatePanelController.getView());
