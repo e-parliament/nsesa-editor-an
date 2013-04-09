@@ -16,10 +16,8 @@ package org.nsesa.editor.gwt.an.drafting.client.ui.main.document;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.event.dom.client.KeyCodes;
-import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.*;
-import com.google.gwt.user.client.ui.impl.FocusImpl;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
@@ -234,6 +232,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                     } else if (inlineEditorController.isShowing()) {
                         clientFactory.getEventBus().fireEvent(new DetachInlineEditorEvent(DraftingDocumentController.this));
                         inlineEditorController.getRichTextEditor().setFocus(false);
+                        restoreFocusOnViewPort();
                     }
                 } else if (downArrow.equals(event.getKeyCombo())) {
 
@@ -392,5 +391,17 @@ public class DraftingDocumentController extends DefaultDocumentController {
     @Override
     public DocumentInjector getInjector() {
         return GWT.create(DraftingDocumentInjector.class);
+    }
+
+
+    /**
+     * Force focus on the page since when we are using keyboards in the editor we are loosing the focus
+     * on the document
+     */
+    private void restoreFocusOnViewPort() {
+        TextBox dummyBox = new TextBox();
+        RootLayoutPanel.get().add(dummyBox);
+        dummyBox.setFocus(true);
+        dummyBox.removeFromParent();
     }
 }
