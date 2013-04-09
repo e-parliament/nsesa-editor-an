@@ -206,7 +206,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
         keyComboHandlerRegistration = clientFactory.getEventBus().addHandler(KeyComboEvent.TYPE, new KeyComboEventHandler() {
             @Override
             public void onEvent(KeyComboEvent event) {
-
+                event.getNativeEvent().preventDefault();
                 final OverlayWidgetSelector overlayWidgetSelector = new OverlayWidgetSelector() {
                     @Override
                     public boolean select(OverlayWidget toSelect) {
@@ -274,7 +274,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
 
                     // ------------- Single ENTER -------------
-                    if (sourceFileController.getActiveOverlayWidget() != null && (!inlineEditorController.isShowing() || !(inlineEditorController.getOverlayWidget().equals(sourceFileController.getActiveOverlayWidget())))) {
+                    if (sourceFileController.getActiveOverlayWidget() != null
+                            && (!inlineEditorController.isShowing() || !(inlineEditorController.getOverlayWidget().equals(sourceFileController.getActiveOverlayWidget())))) {
                         clientFactory.getEventBus().fireEvent(new AttachInlineEditorEvent(sourceFileController.getActiveOverlayWidget(), DraftingDocumentController.this));
                     }
                 } else if (tab.equals(event.getKeyCombo())) {
@@ -291,6 +292,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
                         inlineEditorController.getOverlayWidget().getOverlayElement().setInnerHTML(temp.getElement().getFirstChildElement().getInnerHTML());
                         // and finally destroy the instance
                         clientFactory.getEventBus().fireEvent(new DetachInlineEditorEvent(DraftingDocumentController.this));
+                        inlineEditorController.getRichTextEditor().setFocus(false);
+                        restoreFocusOnViewPort();
                     }
                 }
             }
