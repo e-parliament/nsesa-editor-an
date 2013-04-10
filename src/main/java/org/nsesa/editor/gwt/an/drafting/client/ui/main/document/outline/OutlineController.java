@@ -22,6 +22,7 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.HierarchyComplexType;
 import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
@@ -58,10 +59,11 @@ public class OutlineController {
         rootOverlayWidget.walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
             @Override
             public boolean visit(final OverlayWidget visited) {
-                if (visited instanceof HierarchyComplexType) {
+                if (visited instanceof BasehierarchyComplexType) {
                     String unformattedIndex = visited.getUnformattedIndex();
                     if (unformattedIndex == null) unformattedIndex = Integer.toString(visited.getTypeIndex() + 1);
-                    final HTML html = new HTML(TextUtils.capitalize(visited.getType()) + " " + unformattedIndex);
+                    final String repeat = TextUtils.repeat(visited.getParentOverlayWidgets().size() * 3, "&nbsp;");
+                    final HTML html = new HTML(repeat + TextUtils.capitalize(visited.getType()) + " " + unformattedIndex);
                     final FocusPanel w = new FocusPanel(html);
                     html.getElement().getStyle().setPadding(5, Style.Unit.PX);
                     outlinePanel.add(w);

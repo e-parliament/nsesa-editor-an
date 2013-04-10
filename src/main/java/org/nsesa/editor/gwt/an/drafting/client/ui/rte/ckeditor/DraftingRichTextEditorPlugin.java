@@ -15,6 +15,8 @@ package org.nsesa.editor.gwt.an.drafting.client.ui.rte.ckeditor;
 
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Br;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.InlineComplexType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.P;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.rte.ckeditor.*;
@@ -38,6 +40,7 @@ public class DraftingRichTextEditorPlugin extends CkEditorCompositePlugin {
         //register here the available plugin
         CKEditorEnterKeyPlugin ckEditorEnterKeyPlugin = new CKEditorEnterKeyPlugin(overlayFactory, new Br());
 //        ckEditorEnterKeyPlugin.addRule(new CKEditorEnterKeyPlugin.DefaultRule(new P(), new Content()));
+        ckEditorEnterKeyPlugin.addToBeSplitOnEnter(new P());
         registerPlugin(ckEditorEnterKeyPlugin);
         registerPlugin(new CKEditorBasicStylesPlugin());
         registerPlugin(new CKEditorBubbleUpEventsPlugin());

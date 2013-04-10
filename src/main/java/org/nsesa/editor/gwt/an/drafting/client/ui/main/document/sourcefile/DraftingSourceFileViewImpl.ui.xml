@@ -54,7 +54,7 @@
     </ui:style>
     <g:HTMLPanel styleName="document">
         <header:SourceFileHeaderView ui:field="sourceFileHeaderView" styleName="{res.sourceFileHeader}"/>
-        <actionbar:ActionBarView ui:field="actionBarView" styleName="{res.actionBarController}"/>
+        <actionbar:ActionBarView ui:field="actionBarView" styleName="{res.actionBarController}" visible="false"/>
         <g:HorizontalPanel styleName="{res.document}" ui:field="horizontalPanel">
             <g:HTMLPanel styleName="{res.contentHolder}" ui:field="contentHolder">
                 <content:ContentView ui:field="contentView" styleName="{res.content}"/>

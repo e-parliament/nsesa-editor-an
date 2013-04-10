@@ -138,7 +138,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
         documentScrollToEventHandlerRegistration = clientFactory.getEventBus().addHandler(DocumentScrollToEvent.TYPE, new DocumentScrollToEventHandler() {
             @Override
             public void onEvent(DocumentScrollToEvent event) {
-                sourceFileController.scrollTo(event.getTarget());
+                sourceFileController.scrollTo(event.getTarget(), event.getOffset());
             }
         });
 
@@ -167,6 +167,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                     actionBarCreatePanelController.setOverlayWidget(sourceFileController.getActiveOverlayWidget());
 
                     actionBarController.attach(event.getOverlayWidget(), DraftingDocumentController.this);
+                    actionBarController.setLocation(locator.getLocation(event.getOverlayWidget(), document.getLanguageIso(), true));
                 }
 
             }
@@ -228,14 +229,20 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
                     // ------------- CTRL + ENTER -------------
                     if (!actionBarCreatePanelControllerPopup.isShowing()) {
-                        actionBarCreatePanelControllerPopup.center();
-                        actionBarCreatePanelControllerPopup.show();
+                        final OverlayWidget activeOverlayWidget = sourceFileController.getActiveOverlayWidget();
+                        if (activeOverlayWidget != null) {
+                            actionBarCreatePanelController.setOverlayWidget(activeOverlayWidget);
 
-                        if (inlineEditorController.isShowing()) {
-                            final RichTextEditor.CaretPosition caretPosition = inlineEditorController.getRichTextEditor().getCaretPosition();
-                            if (caretPosition != null) {
-                                actionBarCreatePanelControllerPopup.setPopupPosition(caretPosition.getLeft(), caretPosition.getTop());
+                            if (inlineEditorController.isShowing()) {
+                                final RichTextEditor.CaretPosition caretPosition = inlineEditorController.getRichTextEditor().getCaretPosition();
+                                if (caretPosition != null) {
+                                    actionBarCreatePanelControllerPopup.setPopupPosition(caretPosition.getLeft(), caretPosition.getTop());
+                                }
+                            } else {
+                                actionBarCreatePanelControllerPopup.showRelativeTo(actionBarController.getView().getChildHandler());
                             }
+                            actionBarCreatePanelController.getView().asWidget().setVisible(true);
+                            actionBarCreatePanelControllerPopup.show();
                         }
                     }
 
@@ -265,7 +272,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                         final OverlayWidget next = activeOverlayWidget != null ? activeOverlayWidget.next(overlayWidgetSelector) : sourceFileController.getOverlayWidgets().get(0);
                         if (next != null) {
                             documentEventBus.fireEvent(new OverlayWidgetSelectEvent(next, DraftingDocumentController.this));
-                            clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(next.asWidget(), DraftingDocumentController.this, false));
+                            clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(next.asWidget(), DraftingDocumentController.this, false, 100));
                         }
                     }
 
@@ -283,7 +290,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                             final OverlayWidget previous = activeOverlayWidget.previous(overlayWidgetSelector);
                             if (previous != null) {
                                 documentEventBus.fireEvent(new OverlayWidgetSelectEvent(previous, DraftingDocumentController.this));
-                                clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(previous.asWidget(), DraftingDocumentController.this, false));
+                                clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(previous.asWidget(), DraftingDocumentController.this, false, 100));
                             }
                         }
                     }
@@ -301,12 +308,14 @@ public class DraftingDocumentController extends DefaultDocumentController {
                         actionBarCreatePanelControllerPopup.hide();
 
                         // TODO
-                    } else if (sourceFileController.getActiveOverlayWidget() != null
-                            && (!inlineEditorController.isShowing() || !(inlineEditorController.getOverlayWidget().equals(sourceFileController.getActiveOverlayWidget())))) {
-                        // first scroll to the widget
-                        documentEventBus.fireEvent(new DocumentScrollToEvent(sourceFileController.getActiveOverlayWidget().asWidget(), DraftingDocumentController.this));
-                        // then attach the inline editor
-                        clientFactory.getEventBus().fireEvent(new AttachInlineEditorEvent(sourceFileController.getActiveOverlayWidget(), DraftingDocumentController.this));
+                    } else if (sourceFileController.getActiveOverlayWidget() != null || !(inlineEditorController.getOverlayWidget().equals(sourceFileController.getActiveOverlayWidget()))) {
+
+                        if (!inlineEditorController.isShowing()) {
+                            // first scroll to the widget
+                            documentEventBus.fireEvent(new DocumentScrollToEvent(sourceFileController.getActiveOverlayWidget().asWidget(), DraftingDocumentController.this));
+                            // then attach the inline editor
+                            clientFactory.getEventBus().fireEvent(new AttachInlineEditorEvent(sourceFileController.getActiveOverlayWidget(), DraftingDocumentController.this));
+                        }
                     }
                 } else if (tab.equals(event.getKeyCombo())) {
 
