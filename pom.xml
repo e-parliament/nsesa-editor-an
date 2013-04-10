@@ -409,7 +409,7 @@
                 <version>1.9.0</version>
                 <configuration>
                     <header>src/main/resources/header.txt</header>
-                    <strictCheck>true</strictCheck>
+                    <strictCheck>false</strictCheck>
                     <encoding>UTF-8</encoding>
                     <excludes>
                         <exclude>web/js/**</exclude>
@@ -420,6 +420,7 @@
                         <exclude>.gitignore</exclude>
                         <!-- automatic header would turn on quirksmode in IE -->
                         <exclude>web/editor.html</exclude>
+                        <exclude>web/drafter.html</exclude>
                         <exclude>**/*.css</exclude>
                         <exclude>**/README.md</exclude>
                         <exclude>**/GitMessages.properties</exclude>
