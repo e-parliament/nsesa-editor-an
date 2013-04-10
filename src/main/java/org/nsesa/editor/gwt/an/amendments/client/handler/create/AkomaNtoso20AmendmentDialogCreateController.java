@@ -26,6 +26,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.core.client.ui.visualstructure.VisualStructureController;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.core.client.validation.Validator;
+import org.nsesa.editor.gwt.core.shared.OverlayWidgetOrigin;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.author.AuthorPanelController;
@@ -103,8 +104,9 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
     @Override
     public void setContext(final DialogContext dialogContext) {
         super.setContext(dialogContext);
-        // set up the dialog context with the snippet values
         final OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
+        //set the origin
+        overlayWidget.setOrigin(OverlayWidgetOrigin.AMENDMENT);
 
         view.resetBodyClass();
         view.addBodyClass(overlayWidget.getOverlayElement().getClassName());
@@ -129,7 +131,10 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
                         overlayWidget.setNumberingType(NumberingType.ROMANITO);
                     }
                 }
+                //add the overlay widget in the parent children collection to compute the num
+                dialogContext.getParentOverlayWidget().addOverlayWidget(overlayWidget, dialogContext.getIndex());
                 String num = locator.getNum(overlayWidget, clientFactory.getClientContext().getDocumentTranslationLanguageCode());
+                dialogContext.getParentOverlayWidget().removeOverlayWidget(overlayWidget);
                 return num == null ? "" : num;
             }
         });

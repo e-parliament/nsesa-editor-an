@@ -44,6 +44,7 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.ActionB
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.ActionBarCreatePanelController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Mover;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetSelector;
@@ -108,8 +109,9 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                       final OverlayFactory overlayFactory,
                                       final Locator locator,
                                       final Creator creator,
+                                      final Mover mover,
                                       final InlineEditorController inlineEditorController) {
-        super(clientFactory, serviceFactory, overlayFactory, locator, creator);
+        super(clientFactory, serviceFactory, overlayFactory, locator, creator, mover);
         this.inlineEditorController = inlineEditorController;
     }
 
