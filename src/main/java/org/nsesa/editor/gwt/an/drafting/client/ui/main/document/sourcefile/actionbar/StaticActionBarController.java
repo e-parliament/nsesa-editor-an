@@ -14,12 +14,14 @@
 package org.nsesa.editor.gwt.an.drafting.client.ui.main.document.sourcefile.actionbar;
 
 import com.google.gwt.dom.client.Style;
+import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.core.client.event.widget.OverlayWidgetDeleteEvent;
+import org.nsesa.editor.gwt.core.client.event.widget.OverlayWidgetModifyEvent;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.ActionBarController;
-import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.ActionBarView;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.ActionBarViewCss;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.ActionBarCreatePanelController;
 
@@ -33,7 +35,7 @@ public class StaticActionBarController extends ActionBarController {
 
     @Inject
     public StaticActionBarController(final DocumentEventBus documentEventBus,
-                                     final ActionBarView view,
+                                     final StaticActionBarViewImpl view,
                                      final ActionBarViewCss actionBarViewCss,
                                      final ActionBarCreatePanelController actionBarCreatePanelController) {
         super(documentEventBus, view, actionBarViewCss, actionBarCreatePanelController);
@@ -43,6 +45,23 @@ public class StaticActionBarController extends ActionBarController {
     protected void onScroll() {
         // doesn't do anything
     }
+
+    @Override
+    protected void onModifyClick(ClickEvent event) {
+        event.stopPropagation();
+        if (overlayWidget != null) {
+            documentEventBus.fireEvent(new OverlayWidgetModifyEvent(overlayWidget));
+        }
+    }
+
+    @Override
+    protected void onDeleteClick(ClickEvent event) {
+        event.stopPropagation();
+        if (overlayWidget != null) {
+            documentEventBus.fireEvent(new OverlayWidgetDeleteEvent(overlayWidget));
+        }
+    }
+
 
     @Override
     public void adaptPosition(Widget container) {

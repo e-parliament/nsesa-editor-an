@@ -34,8 +34,7 @@ import org.nsesa.editor.gwt.core.client.event.visualstructure.VisualStructureAtt
 import org.nsesa.editor.gwt.core.client.event.visualstructure.VisualStructureAttributesToggleEventHandler;
 import org.nsesa.editor.gwt.core.client.event.visualstructure.VisualStructureToggleEvent;
 import org.nsesa.editor.gwt.core.client.event.visualstructure.VisualStructureToggleEventHandler;
-import org.nsesa.editor.gwt.core.client.event.widget.OverlayWidgetSelectEvent;
-import org.nsesa.editor.gwt.core.client.event.widget.OverlayWidgetSelectEventHandler;
+import org.nsesa.editor.gwt.core.client.event.widget.*;
 import org.nsesa.editor.gwt.core.client.keyboard.KeyboardListener;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.ui.document.DefaultDocumentController;
@@ -80,6 +79,14 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
     private PopupPanel actionBarCreatePanelControllerPopup = new PopupPanel();
 
+    // ------------- selector ------------------------
+    private final OverlayWidgetSelector overlayWidgetSelector = new OverlayWidgetSelector() {
+        @Override
+        public boolean select(OverlayWidget toSelect) {
+            return toSelect instanceof BasehierarchyComplexType;
+        }
+    };
+
     // ------------- event handler registration -----------
     private HandlerRegistration documentToggleStructureEventHandler;
     private HandlerRegistration bootstrapEventHandlerRegistration;
@@ -102,6 +109,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
     private KeyboardListener.KeyCombo upArrow = new KeyboardListener.KeyCombo(false, false, KeyCodes.KEY_UP);
     private KeyboardListener.KeyCombo downArrow = new KeyboardListener.KeyCombo(false, false, KeyCodes.KEY_DOWN);
+    private HandlerRegistration overlayWidgetModifyHandlerRegistration;
+    private HandlerRegistration overlayWidgetDeleteHandlerRegistration;
 
     @Inject
     public DraftingDocumentController(final ClientFactory clientFactory,
@@ -212,17 +221,42 @@ public class DraftingDocumentController extends DefaultDocumentController {
             }
         });
 
+        overlayWidgetModifyHandlerRegistration = documentEventBus.addHandler(OverlayWidgetModifyEvent.TYPE, new OverlayWidgetModifyEventHandler() {
+            @Override
+            public void onEvent(OverlayWidgetModifyEvent event) {
+                documentEventBus.fireEvent(new OverlayWidgetSelectEvent(event.getOverlayWidget(), DraftingDocumentController.this));
+                clientFactory.getEventBus().fireEvent(new AttachInlineEditorEvent(event.getOverlayWidget(), DraftingDocumentController.this));
+            }
+        });
+
+        overlayWidgetDeleteHandlerRegistration = documentEventBus.addHandler(OverlayWidgetDeleteEvent.TYPE, new OverlayWidgetDeleteEventHandler() {
+            @Override
+            public void onEvent(OverlayWidgetDeleteEvent event) {
+                final OverlayWidget parentOverlayWidget = event.getOverlayWidget().getParentOverlayWidget();
+                if (parentOverlayWidget != null) {
+
+                    // find the target to make active after the deletion
+                    OverlayWidget target = event.getOverlayWidget().next(overlayWidgetSelector);
+                    if (target == null) target = event.getOverlayWidget().previous(overlayWidgetSelector);
+
+                    parentOverlayWidget.removeOverlayWidget(event.getOverlayWidget());
+                    event.getOverlayWidget().getOverlayElement().removeFromParent();
+
+                    if (target != null) {
+                        documentEventBus.fireEvent(new OverlayWidgetSelectEvent(target, DraftingDocumentController.this));
+                    }
+
+                    // redraw the outline
+                    outlineController.setRootOverlayWidget(parentOverlayWidget.getRoot());
+                }
+            }
+        });
+
         // listen for keyboard combos
         keyComboHandlerRegistration = clientFactory.getEventBus().addHandler(KeyComboEvent.TYPE, new KeyComboEventHandler() {
             @Override
             public void onEvent(KeyComboEvent event) {
                 event.getNativeEvent().preventDefault();
-                final OverlayWidgetSelector overlayWidgetSelector = new OverlayWidgetSelector() {
-                    @Override
-                    public boolean select(OverlayWidget toSelect) {
-                        return toSelect instanceof BasehierarchyComplexType;
-                    }
-                };
 
                 if (ctrlEnter.equals(event.getKeyCombo())) {
 
@@ -408,6 +442,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
         keyComboHandlerRegistration.removeHandler();
         draftingToggleEventHandlerRegistration.removeHandler();
         draftingAttributesToggleEventHandlerRegistration.removeHandler();
+        overlayWidgetDeleteHandlerRegistration.removeHandler();
+        overlayWidgetModifyHandlerRegistration.removeHandler();
     }
 
     public void setInjector(DocumentInjector injector) {
