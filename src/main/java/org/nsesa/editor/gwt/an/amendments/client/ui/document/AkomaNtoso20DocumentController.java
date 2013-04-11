@@ -62,7 +62,7 @@ public class AkomaNtoso20DocumentController extends DefaultDocumentController {
 
     // --- key combos ---
 
-    final KeyboardListener.KeyCombo ctrlEnter = new KeyboardListener.KeyCombo(false, true, KeyCodes.KEY_ENTER);
+    final KeyboardListener.KeyCombo ctrlEnter = new KeyboardListener.KeyCombo(false, false, true, KeyCodes.KEY_ENTER);
 
     private HandlerRegistration documentOverlayCompletedEventHandler;
     private HandlerRegistration keyComboHandlerRegistration;
