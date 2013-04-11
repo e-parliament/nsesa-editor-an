@@ -14,7 +14,6 @@
 package org.nsesa.editor.gwt.an.amendments.client.ui.rte.ckeditor;
 
 import com.google.inject.Inject;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Br;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.rte.ckeditor.*;
@@ -35,10 +34,8 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
      */
     @Inject
     public Akomantoso20RichTextEditorPlugin(OverlayFactory overlayFactory, ClientFactory clientFactory) {
-        //register here the available plugin
-        CKEditorEnterKeyPlugin ckEditorEnterKeyPlugin = new CKEditorEnterKeyPlugin(overlayFactory, new Br());
-//        ckEditorEnterKeyPlugin.addRule(new CKEditorEnterKeyPlugin.DefaultRule(new P(), new Content()));
-        registerPlugin(ckEditorEnterKeyPlugin);
+
+        registerPlugin(new CKEditorEnterKeyPlugin(overlayFactory));
         registerPlugin(new CKEditorBasicStylesPlugin());
         registerPlugin(new CKEditorBubbleUpEventsPlugin());
         registerPlugin(new CKEditorSelectionChangedPlugin(clientFactory));
