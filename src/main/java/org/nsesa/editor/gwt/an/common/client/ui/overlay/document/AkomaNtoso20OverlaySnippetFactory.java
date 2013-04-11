@@ -25,7 +25,6 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippet;
 public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFactory {
 
     public AkomaNtoso20OverlaySnippetFactory() {
-        super();
-        registerSnippet(new OverlaySnippet("recital", "<span class=\"widget num\" ns=\"http://www.akomantoso.org/2.0\" type=\"num\">${widget.num}</span> <span class=\"widget p\" ns=\"http://www.akomantoso.org/2.0\" type=\"p\">type me</p>"), new Recital());
+        registerSnippet(new OverlaySnippet("recital", "<span class=\"widget num\" ns=\"http://www.akomantoso.org/2.0\" type=\"num\">${widget.num}</span> <span class=\"widget p\" ns=\"http://www.akomantoso.org/2.0\" type=\"p\">&nbsp;</p>"), new Recital());
     }
 }
