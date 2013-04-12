@@ -66,7 +66,7 @@ public class StaticActionBarController extends ActionBarController {
     @Override
     public void adaptPosition(Widget container) {
 
-        if (overlayWidget != null) {
+        if (overlayWidget != null && overlayWidget.getParentOverlayWidget() != null) {
 
             if (getView().asWidget().getParent() != null) getView().asWidget().removeFromParent();
 
