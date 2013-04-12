@@ -15,15 +15,13 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document;
 
 import com.google.gwt.user.client.DOM;
 import com.google.inject.Inject;
-import com.google.inject.name.Named;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Num;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.P;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Recital;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlaySnippetFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippet;
 
 /**
  * Specialized factory for akomantoso snippets
+ *
  * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
  *         Date: 8/04/13 14:09
  */
@@ -33,14 +31,32 @@ public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFact
     public AkomaNtoso20OverlaySnippetFactory() {
 
         // example of a recital
-        final Num num = new Num();
+        Num num = new Num();
         num.html("${widget.num}");
 
-        final P p = new P();
+        P p = new P();
         // set an empty character - this acts as a caret anchor position.
         p.html("\u200b");
-        p.getClassAttr().getValue();
 
         registerSnippet(new Recital(), new OverlaySnippet("recital", DOM.toString(num.asWidget().getElement()) + DOM.toString(p.asWidget().getElement())));
+
+        registerSnippet(new Citation(), new OverlaySnippet("citation", DOM.toString(p.asWidget().getElement())));
+
+        I i = new I();
+        i.html("Article ${widget.num}");
+        num.html(DOM.toString(i.asWidget().getElement()));
+
+
+        p = new P();
+        // set an empty character - this acts as a caret anchor position.
+        p.html("\u200bType your content here ...​​\u200b");
+        Content content = new Content();
+        content.html(DOM.toString(p.asWidget().getElement()));
+        Paragraph paragraph = new Paragraph();
+        paragraph.html(DOM.toString(content.asWidget().getElement()));
+
+
+        registerSnippet(new Article(), new OverlaySnippet("article", DOM.toString(num.asWidget().getElement()) + DOM.toString(paragraph.asWidget().getElement())));
+
     }
 }
