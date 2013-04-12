@@ -13,6 +13,11 @@
  */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document;
 
+import com.google.gwt.user.client.DOM;
+import com.google.inject.Inject;
+import com.google.inject.name.Named;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Num;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.P;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Recital;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlaySnippetFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippet;
@@ -24,7 +29,18 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippet;
  */
 public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFactory {
 
+    @Inject
     public AkomaNtoso20OverlaySnippetFactory() {
-        registerSnippet(new OverlaySnippet("recital", "<span class=\"widget num\" ns=\"http://www.akomantoso.org/2.0\" type=\"num\">${widget.num}</span> <span class=\"widget p\" ns=\"http://www.akomantoso.org/2.0\" type=\"p\">&nbsp;</p>"), new Recital());
+
+        // example of a recital
+        final Num num = new Num();
+        num.html("${widget.num}");
+
+        final P p = new P();
+        // set an empty character - this acts as a caret anchor position.
+        p.html("\u200b");
+        p.getClassAttr().getValue();
+
+        registerSnippet(new Recital(), new OverlaySnippet("recital", DOM.toString(num.asWidget().getElement()) + DOM.toString(p.asWidget().getElement())));
     }
 }
