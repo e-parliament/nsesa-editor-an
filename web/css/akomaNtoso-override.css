@@ -2,6 +2,11 @@
     display: block;
 }
 
+.akomaNtoso .preface .docTitle {
+    display: block;
+    text-align: center;
+}
+
 .akomaNtoso .coverPage {
 
 }
@@ -28,6 +33,16 @@
 .akomaNtoso .docPurpose {
     display: block;
     font-size: 1.2em;
+}
+
+.akomaNtoso .body {
+    display: block;
+    margin-top: 20px;
+}
+
+.akomaNtoso .conclusions {
+    display: block;
+    margin-top: 20px;
 }
 
 .akomaNtoso .chapter {
@@ -68,10 +83,11 @@
     display: block;
 }
 
-.akomaNtoso .article > .heading {
+.akomaNtoso .article >  .heading {
     font-size: 1.3em;
     text-align: center;
     display: block;
+    width: 100%;
 }
 
 .akomaNtoso .list > .intro {
@@ -171,9 +187,27 @@
     color: #86590a;
 }
 
+.akomaNtoso .placeholder {
+    color: #333;
+    background-color: #888;
+}
+
 .akomaNtoso .notes {
     color: blue;
     margin-left: 2em;
+}
+
+/* Listings */
+.akomaNtoso .ul {
+    margin: 1.5em;
+}
+
+.akomaNtoso .ol {
+    margin: 1.5em;
+}
+
+.akomaNtoso .li {
+
 }
 
 .akomaNtoso .table {
@@ -199,4 +233,12 @@
 
 .validation-error {
     background-color: red;
+}
+
+.akomaNtoso .placeholder {
+    background-color: #fffacd;
+}
+
+.akomaNtoso .nsesa-inline {
+    background-color: #fffacd;
 }
