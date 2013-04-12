@@ -1,6 +1,5 @@
 .akomaNtoso .preface {
     display: block;
-    text-align: center;
 }
 
 .akomaNtoso .coverPage {
@@ -165,6 +164,11 @@
     margin: 0px;
     padding: 1px;
     position: relative;
+}
+
+.akomaNtoso .date {
+    /* TODO add calendar? */
+    color: #86590a;
 }
 
 .akomaNtoso .notes {

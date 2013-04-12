@@ -723,11 +723,21 @@
     * judicialArguments
     * --------------------------
     */
+        .akomaNtoso .li {
+            margin-left:1.5;
+            display:list-item;
+        }
     /*
     * --------------------------
     * listItems
     * --------------------------
     */
+        .akomaNtoso .ol {
+            display:block;
+        }
+        .akomaNtoso .ul {
+            display:block;
+        }
     /*
     * --------------------------
     * maincontent
