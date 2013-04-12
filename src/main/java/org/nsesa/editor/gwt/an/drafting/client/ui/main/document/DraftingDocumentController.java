@@ -20,7 +20,10 @@ import com.google.gwt.dom.client.Node;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.*;
+import com.google.gwt.user.client.ui.FocusPanel;
+import com.google.gwt.user.client.ui.PopupPanel;
+import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.TextBox;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
@@ -87,13 +90,12 @@ public class DraftingDocumentController extends DefaultDocumentController {
     private final OverlayWidgetSelector overlayWidgetSelector = new OverlayWidgetSelector() {
         @Override
         public boolean select(OverlayWidget toSelect) {
-            return toSelect instanceof BasehierarchyComplexType;
+            return toSelect instanceof BasehierarchyComplexType || toSelect.getOverlayElement().getClassName().contains("nsesa-inline");
         }
     };
 
     // ------------- event handler registration -----------
     private HandlerRegistration documentToggleStructureEventHandler;
-    private HandlerRegistration bootstrapEventHandlerRegistration;
     private HandlerRegistration switchTabEventHandlerRegistration;
     private HandlerRegistration notificationEventHandlerRegistration;
     private HandlerRegistration confirmationEventHandlerRegistration;
@@ -182,19 +184,34 @@ public class DraftingDocumentController extends DefaultDocumentController {
             @Override
             public void onEvent(OverlayWidgetSelectEvent event) {
 
-                if (sourceFileController.getActiveOverlayWidget() != null) {
-                    sourceFileController.getActiveOverlayWidget().asWidget().removeStyleName(style.selected());
+                final OverlayWidget previousActiveOverlayWidget = sourceFileController.getActiveOverlayWidget();
+                if (previousActiveOverlayWidget != null) {
+                    previousActiveOverlayWidget.asWidget().removeStyleName(style.selected());
                 }
 
-                sourceFileController.setActiveOverlayWidget(event.getOverlayWidget());
+                final OverlayWidget activeOverlayWidget = event.getOverlayWidget();
+                sourceFileController.setActiveOverlayWidget(activeOverlayWidget);
 
-                if (sourceFileController.getActiveOverlayWidget() != null) {
-                    sourceFileController.getActiveOverlayWidget().asWidget().addStyleName(style.selected());
+                if (activeOverlayWidget != null) {
+                    activeOverlayWidget.asWidget().addStyleName(style.selected());
 
-                    actionBarCreatePanelController.setOverlayWidget(sourceFileController.getActiveOverlayWidget());
+                    actionBarCreatePanelController.setOverlayWidget(activeOverlayWidget);
 
-                    actionBarController.attach(event.getOverlayWidget(), DraftingDocumentController.this);
-                    actionBarController.setLocation(locator.getLocation(event.getOverlayWidget(), document.getLanguageIso(), true));
+                    actionBarController.attach(activeOverlayWidget, DraftingDocumentController.this);
+                    actionBarController.setLocation(locator.getLocation(activeOverlayWidget, document.getLanguageIso(), true));
+
+                    // check if the sender has the nsesa-inline class element
+                    if (activeOverlayWidget.getOverlayElement().getClassName().contains("nsesa-inline")) {
+                        // if so, immediately add the inline editor (don't wait for a enter)
+//                        clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, 100));
+
+                        clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
+                            @Override
+                            public void execute() {
+                                handleOverlayWidgetModify(activeOverlayWidget);
+                            }
+                        });
+                    }
                 }
 
             }
@@ -523,9 +540,21 @@ public class DraftingDocumentController extends DefaultDocumentController {
     public void handleOverlayWidgetModify(final OverlayWidget overlayWidget) {
         if (!inlineEditorController.isShowing()) {
             // first scroll to the widget
-            documentEventBus.fireEvent(new DocumentScrollToEvent(overlayWidget.asWidget(), DraftingDocumentController.this));
-            // then attach the inline editor
-            clientFactory.getEventBus().fireEvent(new AttachInlineEditorEvent(overlayWidget, DraftingDocumentController.this));
+            clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
+                @Override
+                public void execute() {
+                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(overlayWidget.asWidget(), DraftingDocumentController.this));
+                    // then attach the inline editor
+                    clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
+                        @Override
+                        public void execute() {
+                            clientFactory.getEventBus().fireEvent(new AttachInlineEditorEvent(overlayWidget, DraftingDocumentController.this));
+                        }
+                    });
+                }
+            });
+
+
         }
     }
 
@@ -546,8 +575,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                 final OverlayWidget amendableWidget = overlayFactory.getAmendableWidget((Element) child);
                 if (amendableWidget != null) {
                     overlayWidget.addOverlayWidget(amendableWidget);
-                }
-                else {
+                } else {
                     LOG.warning("Could not get overlay for " + child);
                 }
             }
@@ -561,7 +589,14 @@ public class DraftingDocumentController extends DefaultDocumentController {
                 }
                 return true;
             }
-                        });
+        });
+
+        // remove the nsesa-inline class name if it's there
+        // so the next time we don't automatically attach the inline editor
+        final String className = overlayElement.getClassName();
+        if (className.contains("nsesa-inline")) {
+            overlayElement.setClassName(className.replace("nsesa-inline", ""));
+        }
 
         redrawOutline(overlayWidget.getRoot());
     }
@@ -595,6 +630,26 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                 }
                             }
                         });
+                        // find the first element that has the nsesa-inline class name, and select it
+                        clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
+                            @Override
+                            public void execute() {
+                                final List<OverlayWidget> overlayWidgets = sourceFileController.getOverlayWidgets();
+                                if (overlayWidgets != null && !overlayWidgets.isEmpty()) {
+                                    // only display the first one
+                                    overlayWidgets.get(0).walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
+                                        @Override
+                                        public boolean visit(OverlayWidget visited) {
+                                            if (visited.getOverlayElement().getClassName().contains("nsesa-select")) {
+                                                documentEventBus.fireEvent(new OverlayWidgetSelectEvent(visited, DraftingDocumentController.this));
+                                                return false;
+                                            }
+                                            return true;
+                                        }
+                                    });
+                                }
+                            }
+                        });
                     }
                 });
             }
@@ -622,12 +677,12 @@ public class DraftingDocumentController extends DefaultDocumentController {
         resizeEventHandlerRegistration.removeHandler();
         documentScrollToEventHandlerRegistration.removeHandler();
         documentToggleStructureEventHandler.removeHandler();
-        bootstrapEventHandlerRegistration.removeHandler();
         keyComboHandlerRegistration.removeHandler();
         draftingToggleEventHandlerRegistration.removeHandler();
         draftingAttributesToggleEventHandlerRegistration.removeHandler();
         overlayWidgetDeleteHandlerRegistration.removeHandler();
         overlayWidgetModifyHandlerRegistration.removeHandler();
+        overlayWidgetNewEventHandlerRegistration.removeHandler();
     }
 
     public void setInjector(DocumentInjector injector) {
