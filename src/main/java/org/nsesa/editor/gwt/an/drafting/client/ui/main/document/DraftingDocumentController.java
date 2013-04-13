@@ -364,6 +364,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                             }
                             actionBarCreatePanelController.getView().asWidget().setVisible(true);
                             actionBarCreatePanelControllerPopup.show();
+                            actionBarCreatePanelFocusPanel.setFocus(true);
                         }
                     }
 
