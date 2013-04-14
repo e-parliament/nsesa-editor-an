@@ -425,15 +425,33 @@ public class DraftingDocumentController extends DefaultDocumentController {
                         clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, 100));
 
                         final OverlayWidget selectedSibling = actionBarCreatePanelController.getSelectedSibling();
+
                         if (selectedSibling != null) {
                             LOG.info("Selected as sibling: " + selectedSibling);
+
+                            final com.google.gwt.user.client.Element clone = DOM.clone(selectedSibling.asWidget().getElement(), true);
+                            final OverlayWidget cloneSibling = overlayFactory.getAmendableWidget(clone);
+
+                            // number and format get given by the siblings
+                            // but they need to be explicitly set to null
+                            cloneSibling.setOverlayStrategy(null);
+                            cloneSibling.setFormat(null);
+                            cloneSibling.setNumberingType(null);
                             // get the correct index
-                            documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget.getParentOverlayWidget(), activeOverlayWidget, selectedSibling, activeOverlayWidget.getDomIndex() + 1));
+                            documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget.getParentOverlayWidget(), activeOverlayWidget, cloneSibling, activeOverlayWidget.getDomIndex() + 1));
                         }
+
                         final OverlayWidget selectedChild = actionBarCreatePanelController.getSelectedChild();
+
                         if (selectedChild != null) {
+
                             LOG.info("Selected as child: " + selectedChild);
-                            documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget, activeOverlayWidget, selectedChild, -1));
+                            final com.google.gwt.user.client.Element clone = DOM.clone(selectedChild.asWidget().getElement(), true);
+                            final OverlayWidget cloneChild = overlayFactory.getAmendableWidget(clone);
+                            cloneChild.setNumberingType(actionBarCreatePanelController.getSelectedChild().getNumberingType());
+                            cloneChild.setFormat(actionBarCreatePanelController.getSelectedChild().getFormat());
+
+                            documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget, activeOverlayWidget, cloneChild, -1));
                         }
 
                         // TODO
@@ -587,6 +605,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
                 // if the widget is amendable, register a listener for its events
                 if (visited != null && visited.isAmendable() != null && visited.isAmendable()) {
                     visited.setUIListener(sourceFileController);
+                } else {
+                    LOG.info(visited + " is NOT amendable.");
                 }
                 return true;
             }
