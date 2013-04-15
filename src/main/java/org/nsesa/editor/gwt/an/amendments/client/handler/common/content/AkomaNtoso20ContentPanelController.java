@@ -39,8 +39,7 @@ public class AkomaNtoso20ContentPanelController extends ContentPanelController {
     public void setContext(DialogContext dialogContext) {
         super.setContext(dialogContext);
 
-        view.resetBodyClass();
-        view.addBodyClass(dialogContext.getOverlayWidget().getOverlayElement().getClassName());
+        view.getRichTextEditor().setOverlayWidget(dialogContext.getOverlayWidget());
 
         if (dialogContext.getAmendmentController() != null) {
             // we're editing
