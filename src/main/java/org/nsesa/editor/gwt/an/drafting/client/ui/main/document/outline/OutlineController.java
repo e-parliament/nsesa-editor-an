@@ -62,7 +62,7 @@ public class OutlineController {
                 if (visited instanceof BasehierarchyComplexType) {
                     String unformattedIndex = visited.getUnformattedIndex();
                     if (unformattedIndex == null) unformattedIndex = Integer.toString(visited.getTypeIndex() + 1);
-                    final String repeat = TextUtils.repeat(visited.getParentOverlayWidgets().size() * 3, "&nbsp;");
+                    final String repeat = TextUtils.repeat(visited.getParentOverlayWidgets().size() * 2, "&nbsp;");
                     final HTML html = new HTML(repeat + TextUtils.capitalize(visited.getType()) + " " + unformattedIndex);
                     final FocusPanel w = new FocusPanel(html);
                     html.getElement().getStyle().setPadding(5, Style.Unit.PX);

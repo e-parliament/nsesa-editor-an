@@ -54,7 +54,7 @@
         </g:west>
         <g:center>
             <g:HTMLPanel>
-                <g:HTMLPanel styleName="{res.header}">
+                <g:HTMLPanel styleName="{res.header}" visible="false">
                     <g:HTML text="" styleName="{res.documentTitle} documentTitle" ui:field="documentTitle"/>
                 </g:HTMLPanel>
                 <sourcefile:SourceFileView ui:field="sourceFileView" styleName="{res.sourceFile}"/>
