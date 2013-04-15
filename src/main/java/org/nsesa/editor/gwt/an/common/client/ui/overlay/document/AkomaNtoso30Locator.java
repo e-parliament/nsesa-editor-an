@@ -14,7 +14,7 @@
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document;
 
 import com.google.inject.Inject;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.*;
 import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultLocator;
 
 /**
@@ -23,10 +23,10 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultLocator;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtoso20Locator extends DefaultLocator {
+public class AkomaNtoso30Locator extends DefaultLocator {
 
     @Inject
-    public AkomaNtoso20Locator() {
+    public AkomaNtoso30Locator() {
         hide(AkomaNtoso.class, Body.class, Preamble.class, Bill.class, Components.class, Component.class, Eol.class, P.class, B.class, I.class, Span.class, Recitals.class, Content.class/*, Num.class*/);
     }
 }
