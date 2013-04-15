@@ -1,171 +1,172 @@
-.akomaNtoso .preface {
+.preface[ns="http://www.akomantoso.org/2.0"] {
     display: block;
 }
 
-.akomaNtoso .preface .docTitle {
+.preface[ns="http://www.akomantoso.org/2.0"] .docTitle[ns="http://www.akomantoso.org/2.0"] {
     display: block;
     text-align: center;
 }
 
-.akomaNtoso .coverPage {
+.coverPage[ns="http://www.akomantoso.org/2.0"] {
 
 }
 
-.akomaNtoso .coverPage .p {
+.coverPage[ns="http://www.akomantoso.org/2.0"] .p[ns="http://www.akomantoso.org/2.0"] {
     display: block;
 }
 
-.akomaNtoso .docTitle {
+.docTitle[ns="http://www.akomantoso.org/2.0"] {
     font-weight: bold;
     line-height: 2.5em;
 }
 
-.akomaNtoso .docStage {
+.docStage[ns="http://www.akomantoso.org/2.0"] {
     display: block;
     font-size: 1.4em;
 }
 
-.akomaNtoso .docType {
+.docType[ns="http://www.akomantoso.org/2.0"] {
     display: block;
     font-size: 1.4em;
 }
 
-.akomaNtoso .docPurpose {
+.docPurpose[ns="http://www.akomantoso.org/2.0"] {
     display: block;
     font-size: 1.2em;
 }
 
-.akomaNtoso .body {
+.body[ns="http://www.akomantoso.org/2.0"] {
     display: block;
     margin-top: 20px;
 }
 
-.akomaNtoso .conclusions {
+.conclusions[ns="http://www.akomantoso.org/2.0"] {
     display: block;
     margin-top: 20px;
 }
 
-.akomaNtoso .chapter {
+.chapter[ns="http://www.akomantoso.org/2.0"] {
     display: block;
     width: 100%;
     text-align: center;
 }
 
-.akomaNtoso .chapter * {
+.chapter[ns="http://www.akomantoso.org/2.0"] *[ns="http://www.akomantoso.org/2.0"] {
     text-align: left;
 }
 
-.akomaNtoso .chapter > .num {
+.chapter[ns="http://www.akomantoso.org/2.0"] > .num[ns="http://www.akomantoso.org/2.0"] {
     font-size: 1.0em;
     display: block;
     text-align: center;
 }
 
-.akomaNtoso .chapter > .heading {
+.chapter[ns="http://www.akomantoso.org/2.0"] > .heading[ns="http://www.akomantoso.org/2.0"] {
     font-size: 1.5em;
     display: block;
     text-align: center;
 }
 
-.akomaNtoso .article {
+.article[ns="http://www.akomantoso.org/2.0"] {
     display: block;
     width: 100%;
     text-align: center;
 }
 
-.akomaNtoso .article * {
+.article[ns="http://www.akomantoso.org/2.0"] *[ns="http://www.akomantoso.org/2.0"] {
     text-align: left;
 }
 
-.akomaNtoso .article > .num {
+.article[ns="http://www.akomantoso.org/2.0"] > .num[ns="http://www.akomantoso.org/2.0"] {
     font-size: 1.0em;
     text-align: center;
     display: block;
 }
 
-.akomaNtoso .article >  .heading {
+.article[ns="http://www.akomantoso.org/2.0"] >  .heading[ns="http://www.akomantoso.org/2.0"] {
     font-size: 1.3em;
     text-align: center;
     display: block;
     width: 100%;
 }
 
-.akomaNtoso .list > .intro {
+.list[ns="http://www.akomantoso.org/2.0"] > .intro[ns="http://www.akomantoso.org/2.0"] {
     display: inline;
 }
 
-.akomaNtoso .list > .point {
+.list[ns="http://www.akomantoso.org/2.0"] > .point[ns="http://www.akomantoso.org/2.0"] {
     margin-left: 2em;
 }
 
-.akomaNtoso .docNumber {
+.docNumber[ns="http://www.akomantoso.org/2.0"] {
     font-weight: bold;
 }
 
-.akomaNtoso .docDate {
+.docDate[ns="http://www.akomantoso.org/2.0"] {
     font-weight: bold;
 }
 
-.akomaNtoso .item {
+.item[ns="http://www.akomantoso.org/2.0"] {
     display: block;
 }
 
-.akomaNtoso .num + span {
+.num[ns="http://www.akomantoso.org/2.0"] + span[ns="http://www.akomantoso.org/2.0"] {
     display: inline;
 }
 
-.akomaNtoso .num:after {
+.num[ns="http://www.akomantoso.org/2.0"]:after {
     content: " ";
 }
 
-.akomaNtoso .authorialNote {
+.authorialNote[ns="http://www.akomantoso.org/2.0"] {
     color: blue;
     font-size: 70%;
     vertical-align: text-top;
 }
 
-.akomaNtoso .authorialNote[marker]:before {
+.authorialNote[ns="http://www.akomantoso.org/2.0"][marker]:before {
     content: " " attr(marker);
 }
 
-.akomaNtoso .authorialNote > .p:not(:empty):before {
+.authorialNote[ns="http://www.akomantoso.org/2.0"] > .p[ns="http://www.akomantoso.org/2.0"]:not(:empty):before {
     content: " [";
 }
 
-.akomaNtoso .authorialNote > .p:not(:empty):after {
+.authorialNote[ns="http://www.akomantoso.org/2.0"] > .p[ns="http://www.akomantoso.org/2.0"]:not(:empty):after {
     content: "]";
 }
 
-.akomaNtoso .preamble > .p:after {
+.preamble[ns="http://www.akomantoso.org/2.0"] > .p[ns="http://www.akomantoso.org/2.0"]:after {
     content: "\A";
     white-space: pre;
     margin-top: 1.5em;
 }
 
-.akomaNtoso .content > .p:after {
+.content[ns="http://www.akomantoso.org/2.0"] > .p[ns="http://www.akomantoso.org/2.0"]:after {
     content: "\A";
     white-space: pre;
     margin-top: 1.5em;
 }
 
-.akomaNtoso .eol:after {
+.eol[ns="http://www.akomantoso.org/2.0"]:after {
     content: "\A";
     white-space: pre;
     margin-top: 1.5em;
 }
 
-.akomaNtoso .eop:after {
+.eop[ns="http://www.akomantoso.org/2.0"]:after {
     content: "\A\A\A";
     white-space: pre;
     page-break-after: always;
     margin-top: 1.5em;
 }
-.akomaNtoso .br:after {
+
+.br[ns="http://www.akomantoso.org/2.0"]:after {
     content: "\A";
     white-space: pre;
 }
 
-.akomaNtoso .notes:before {
+.notes[ns="http://www.akomantoso.org/2.0"]:before {
     content: "Notes";
     border: 1px solid #000000;
     background-color: blue;
@@ -182,45 +183,45 @@
     position: relative;
 }
 
-.akomaNtoso .date {
+.date[ns="http://www.akomantoso.org/2.0"] {
     /* TODO add calendar? */
     color: #86590a;
 }
 
-.akomaNtoso .placeholder {
+.placeholder[ns="http://www.akomantoso.org/2.0"] {
     color: #333;
     background-color: #888;
 }
 
-.akomaNtoso .notes {
+.notes[ns="http://www.akomantoso.org/2.0"] {
     color: blue;
     margin-left: 2em;
 }
 
 /* Listings */
-.akomaNtoso .ul {
+.ul[ns="http://www.akomantoso.org/2.0"] {
     margin: 1.5em;
 }
 
-.akomaNtoso .ol {
+.ol[ns="http://www.akomantoso.org/2.0"] {
     margin: 1.5em;
 }
 
-.akomaNtoso .li {
+.li[ns="http://www.akomantoso.org/2.0"] {
 
 }
 
-.akomaNtoso .table {
+.table[ns="http://www.akomantoso.org/2.0"] {
     min-width: 90%;
 }
 
-.akomaNtoso [href] {
+[ns="http://www.akomantoso.org/2.0"][href] {
     text-decoration: underline;
     color: blue;
     font-style: italic;
 }
 
-.validation-error:before {
+.validation-error[ns="http://www.akomantoso.org/2.0"]:before {
     position: relative;
     top: -23px;
     content: attr(error);
@@ -231,14 +232,14 @@
     background-size: 102% 90em;
 }
 
-.validation-error {
+.validation-error[ns="http://www.akomantoso.org/2.0"] {
     background-color: red;
 }
 
-.akomaNtoso .placeholder {
+.placeholder[ns="http://www.akomantoso.org/2.0"] {
     background-color: #fffacd;
 }
 
-.akomaNtoso .nsesa-inline {
+.nsesa-inline[ns="http://www.akomantoso.org/2.0"] {
     background-color: #fffacd;
 }
