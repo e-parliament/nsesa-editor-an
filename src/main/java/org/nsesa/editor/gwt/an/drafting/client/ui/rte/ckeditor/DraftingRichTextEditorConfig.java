@@ -39,6 +39,10 @@ public class DraftingRichTextEditorConfig extends CKEditorConfig {
                 GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-override.css",
                 GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-visual.css",
                 GWT.getModuleBaseURL() + "../" + "css/akomaNtoso-visual-colors.css",
+                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso30-all.css",
+                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso30-override.css",
+                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso30-visual.css",
+                GWT.getModuleBaseURL() + "../" + "css/akomaNtoso30-visual-colors.css",
                 GWT.getModuleBaseURL() + "../" + "css/ckeditor.css"}))
                 .setBodyClass("akomaNtoso")
                 .setRemovePlugins("elementspath")
