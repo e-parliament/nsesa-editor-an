@@ -4,13 +4,13 @@
 * amendment style.
 * --------------------------------------------------------------------------
 */
-.contentPanel[ns="http://www.akomantoso.org/2.0"] .amendmentHolder[ns="http://www.akomantoso.org/2.0"] {
+.contentPanel .amendmentHolder {
     position: relative;
     width: 120%;
     left: -12%;
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] {
+.amendmentHolder {
     background-color: #fafafa;
     border: 1px solid #ccc;
     padding: 15px;
@@ -21,20 +21,20 @@
     line-height: 1.1em;
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] .header[ns="http://www.akomantoso.org/2.0"] {
+.amendmentHolder .header {
     font-size: 1.3em;
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] .amendmentContent[ns="http://www.akomantoso.org/2.0"] {
+.amendmentHolder .amendmentContent {
     display: block;
     width: 100%;
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] .amendmentContent[ns="http://www.akomantoso.org/2.0"] .block[ns="http://www.akomantoso.org/2.0"] {
+.amendmentHolder .amendmentContent .block {
 
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] span[name="versionTitle"][ns="http://www.akomantoso.org/2.0"] {
+.amendmentHolder span[name="versionTitle"] {
     width: 50%;
     float: left;
     display: inline-block;
@@ -47,13 +47,13 @@
     padding-top: 15px;
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] .mod[ns="http://www.akomantoso.org/2.0"] {
+.amendmentHolder .mod {
     display: block;
     width: 100%;
     clear: both;
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] .mod[ns="http://www.akomantoso.org/2.0"] > .quotedStructure[ns="http://www.akomantoso.org/2.0"] {
+.amendmentHolder .mod > .quotedStructure {
     width: 50%;
     display: table-cell;
     padding: 15px;
@@ -64,7 +64,7 @@
 
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] .mod[ns="http://www.akomantoso.org/2.0"] > .authorialNote[ns="http://www.akomantoso.org/2.0"] {
+.amendmentHolder .mod > .authorialNote {
     color: #000;
     font-size: 100%;
     font-style: italic;
@@ -73,15 +73,15 @@
     padding: 15px;
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] .mod[ns="http://www.akomantoso.org/2.0"] > .authorialNote[ns="http://www.akomantoso.org/2.0"] > .p[ns="http://www.akomantoso.org/2.0"]:not(:empty):before {
+.amendmentHolder .mod > .authorialNote > .p:not(:empty):before {
     content: "(";
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] .mod[ns="http://www.akomantoso.org/2.0"] > .authorialNote[ns="http://www.akomantoso.org/2.0"] > .p[ns="http://www.akomantoso.org/2.0"]:not(:empty):after {
+.amendmentHolder .mod > .authorialNote > .p:not(:empty):after {
     content: ")";
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] span[name="comment"][ns="http://www.akomantoso.org/2.0"] {
+.amendmentHolder span[name="comment"] {
     display: block;
     text-align: right;
     font-style: italic;
@@ -89,24 +89,24 @@
     width: 100%;
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] .amendmentJustification[ns="http://www.akomantoso.org/2.0"] {
+.amendmentHolder .amendmentJustification {
     display: block;
     width: 100%;
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] .amendmentJustification[ns="http://www.akomantoso.org/2.0"] .block[ns="http://www.akomantoso.org/2.0"] {
+.amendmentHolder .amendmentJustification .block {
     display: block;
     width: 100%;
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] .amendmentJustification[ns="http://www.akomantoso.org/2.0"] span[name="justificationHeading"][ns="http://www.akomantoso.org/2.0"] {
+.amendmentHolder .amendmentJustification span[name="justificationHeading"] {
     display: block;
     font-style: italic;
     text-align: center;
     width: 100%;
 }
 
-.amendmentHolder[ns="http://www.akomantoso.org/2.0"] .amendmentContent[ns="http://www.akomantoso.org/2.0"] .change[ns="http://www.akomantoso.org/2.0"] {
+.amendmentHolder .amendmentContent .change {
     display: inline;
     font-weight: bold;
     font-style: italic;
