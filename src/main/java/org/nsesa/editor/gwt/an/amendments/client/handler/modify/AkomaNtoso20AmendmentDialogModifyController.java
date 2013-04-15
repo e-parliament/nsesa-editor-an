@@ -103,8 +103,8 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         // clear meta panel
         metaPanelController.clear();
 
-        view.resetBodyClass();
-        view.addBodyClass(dialogContext.getOverlayWidget().getOverlayElement().getClassName());
+        view.getRichTextEditor().resetBodyClass();
+        view.getRichTextEditor().setOverlayWidget(dialogContext.getOverlayWidget());
 
         if (dialogContext.getAmendmentController() != null) {
             // get the location from the amendable widget, if it is passed

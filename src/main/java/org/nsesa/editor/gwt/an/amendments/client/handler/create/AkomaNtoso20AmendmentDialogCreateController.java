@@ -108,8 +108,8 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         //set the origin
         overlayWidget.setOrigin(OverlayWidgetOrigin.AMENDMENT);
 
-        view.resetBodyClass();
-        view.addBodyClass(overlayWidget.getOverlayElement().getClassName());
+        view.getRichTextEditor().resetBodyClass();
+        view.getRichTextEditor().setOverlayWidget(overlayWidget);
 
         OverlaySnippet overlaySnippet = overlaySnippetFactory.getSnippet(overlayWidget);
         overlaySnippetEvaluator.addEvaluator(new OverlaySnippetEvaluator.Evaluator() {
