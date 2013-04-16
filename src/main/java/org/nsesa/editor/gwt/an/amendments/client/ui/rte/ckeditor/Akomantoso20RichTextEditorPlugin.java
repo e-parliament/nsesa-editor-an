@@ -14,8 +14,9 @@
 package org.nsesa.editor.gwt.an.amendments.client.ui.rte.ckeditor;
 
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.core.client.ui.rte.ckeditor.*;
 
 
@@ -33,9 +34,35 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
      * @param clientFactory
      */
     @Inject
-    public Akomantoso20RichTextEditorPlugin(OverlayFactory overlayFactory, ClientFactory clientFactory) {
+    public Akomantoso20RichTextEditorPlugin(final OverlayFactory overlayFactory,
+                                            final OverlaySnippetFactory snippetFactory,
+                                            final ClientFactory clientFactory) {
 
-        registerPlugin(new CKEditorEnterKeyPlugin(overlayFactory));
+        //register here the available plugin
+        registerPlugin(new CKEditorEnterKeyPlugin(overlayFactory,
+                new CKEditorEnterKeyPlugin.DefaultLineBreakProvider(overlayFactory),
+                CKEditorEnterKeyPlugin.SPLIT_ALWAYS_ENTER_RULE,
+                new CKEditorEnterKeyPlugin.ConversionEnterRule() {
+                    @Override
+                    public OverlayWidget convert(final OverlayWidget widget) {
+                        OverlayWidget result = null;
+                        OverlayWidget curr = widget;
+                        while (curr != null) {
+                            if (curr instanceof BasehierarchyComplexType) {
+                                result = overlayFactory.getAmendableWidget(curr.getNamespaceURI(), curr.getType());
+                                OverlaySnippet snippet = snippetFactory.getSnippet(curr);
+                                if (snippet != null) {
+                                    final String content = snippet.getContent(new DefaultOverlaySnippetEvaluator());
+                                    result.getOverlayElement().setInnerText(content);
+                                }
+                                break;
+                            }
+                            curr = widget.getParentOverlayWidget();
+                        }
+                        return result;
+                    };
+                }));
+
         registerPlugin(new CKEditorBasicStylesPlugin());
         registerPlugin(new CKEditorBubbleUpEventsPlugin());
         registerPlugin(new CKEditorSelectionChangedPlugin(clientFactory));
