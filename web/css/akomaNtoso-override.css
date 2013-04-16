@@ -47,7 +47,7 @@
 
 .chapter[ns="http://www.akomantoso.org/2.0"] {
     display: block;
-    width: 100%;
+    width: 98%;
 }
 
 
@@ -65,7 +65,7 @@
 
 .article[ns="http://www.akomantoso.org/2.0"] {
     display: block;
-    width: 100%;
+    width: 98%;
 }
 
 .article[ns="http://www.akomantoso.org/2.0"] *[ns="http://www.akomantoso.org/2.0"] {
