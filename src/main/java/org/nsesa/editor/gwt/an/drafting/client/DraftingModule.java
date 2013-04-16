@@ -24,7 +24,10 @@ import org.nsesa.editor.gwt.an.drafting.client.ui.rte.ckeditor.DraftingRichTextE
 import org.nsesa.editor.gwt.core.client.CoreModule;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentModule;
+import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultTransformer;
+import org.nsesa.editor.gwt.core.client.ui.overlay.HTMLTransformer;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Transformer;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.DraftingDocumentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippetFactory;
@@ -53,5 +56,8 @@ public class DraftingModule extends AbstractGinModule {
         bind(OverlaySnippetFactory.class).to(AkomaNtoso20OverlaySnippetFactory.class).in(Singleton.class);
         bind(DocumentController.class).to(DraftingDocumentController.class).in(Singleton.class);
         bind(RichTextEditor.class).annotatedWith(Names.named("inlineRichTextEditor")).toProvider(DraftingRichTextEditorProvider.class).in(Singleton.class);
+
+        bind(Transformer.class).annotatedWith(Names.named("html")).to(HTMLTransformer.class).in(Singleton.class);
+        bind(Transformer.class).annotatedWith(Names.named("xml")).to(DefaultTransformer.class).in(Singleton.class);
     }
 }

@@ -15,7 +15,9 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document;
 
 import com.google.gwt.user.client.DOM;
 import com.google.inject.Inject;
+import com.google.inject.name.Named;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Transformer;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlaySnippetFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippet;
 
@@ -27,36 +29,77 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippet;
  */
 public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFactory {
 
-    @Inject
-    public AkomaNtoso20OverlaySnippetFactory() {
+    private static final String MAGIC_MARKER = "\u200b";
 
-        // example of a recital
+    private final Transformer transformer;
+
+    @Inject
+    public AkomaNtoso20OverlaySnippetFactory(@Named("html") final Transformer transformer) {
+
+        this.transformer = transformer;
+
+        registerSnippet(new Citation(), new OverlaySnippet("citation", getCitationSnippet()));
+        registerSnippet(new Recital(), new OverlaySnippet("recital", getRecitalSnippet()));
+        registerSnippet(new Paragraph(), new OverlaySnippet("paragraph", getParagraphSnippet()));
+        registerSnippet(new Article(), new OverlaySnippet("article", getArticleSnippet()));
+
+    }
+
+    protected String getArticleSnippet() {
+        I i = new I();
+        i.html("Article ${widget.num}");
+
+        Num num = new Num();
+        num.addI(i);
+
+        P p = new P();
+        p.html(MAGIC_MARKER + "Type your content here ...​​" + MAGIC_MARKER);
+        Content content = new Content();
+        content.addP(p);
+
+        Paragraph paragraph = new Paragraph();
+        paragraph.setContent_(content);
+
+        return transformer.transform(num) + transformer.transform(paragraph);
+    }
+
+    protected String getParagraphSnippet() {
         Num num = new Num();
         num.html("${widget.num}");
 
         P p = new P();
         // set an empty character - this acts as a caret anchor position.
-        p.html("\u200b");
+        p.html(MAGIC_MARKER);
 
-        registerSnippet(new Recital(), new OverlaySnippet("recital", DOM.toString(num.asWidget().getElement()) + DOM.toString(p.asWidget().getElement())));
-
-        registerSnippet(new Citation(), new OverlaySnippet("citation", DOM.toString(p.asWidget().getElement())));
-
-        I i = new I();
-        i.html("Article ${widget.num}");
-        num.html(DOM.toString(i.asWidget().getElement()));
-
-
-        p = new P();
-        // set an empty character - this acts as a caret anchor position.
-        p.html("\u200bType your content here ...​​\u200b");
         Content content = new Content();
-        content.html(DOM.toString(p.asWidget().getElement()));
-        Paragraph paragraph = new Paragraph();
-        paragraph.html(DOM.toString(content.asWidget().getElement()));
+        content.addP(p);
 
+        return transformer.transform(num) + transformer.transform(content);
+    }
 
-        registerSnippet(new Article(), new OverlaySnippet("article", DOM.toString(num.asWidget().getElement()) + DOM.toString(paragraph.asWidget().getElement())));
+    protected String getRecitalSnippet() {
+        Num num = new Num();
+        num.html("${widget.num}");
 
+        P p = new P();
+        // set an empty character - this acts as a caret anchor position.
+        p.html(MAGIC_MARKER);
+
+        Content content = new Content();
+        content.addP(p);
+
+        return transformer.transform(num) + transformer.transform(content);
+    }
+
+    protected String getCitationSnippet() {
+
+        P p = new P();
+        // set an empty character - this acts as a caret anchor position.
+        p.html(MAGIC_MARKER);
+
+        Content content = new Content();
+        content.addP(p);
+
+        return transformer.transform(content);
     }
 }

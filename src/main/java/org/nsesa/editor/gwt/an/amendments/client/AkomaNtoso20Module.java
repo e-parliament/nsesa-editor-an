@@ -34,7 +34,10 @@ import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Akomantoso2
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Akomantoso20OverlayLocalizableResource;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Csd02OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
+import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultTransformer;
+import org.nsesa.editor.gwt.core.client.ui.overlay.HTMLTransformer;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Transformer;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditorConfig;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditorPlugin;
@@ -72,12 +75,16 @@ public class AkomaNtoso20Module extends AbstractGinModule {
         bind(OverlayFactory.class).annotatedWith(Names.named("akomantoso20")).to(Akomantoso20OverlayFactory.class).in(Singleton.class);
         bind(OverlayFactory.class).annotatedWith(Names.named("akomantoso30")).to(Csd02OverlayFactory.class).in(Singleton.class);
 
+        bind(Transformer.class).annotatedWith(Names.named("html")).to(HTMLTransformer.class).in(Singleton.class);
+        bind(Transformer.class).annotatedWith(Names.named("xml")).to(DefaultTransformer.class).in(Singleton.class);
+
         bind(OverlayLocalizableResource.class).to(Akomantoso20OverlayLocalizableResource.class).in(Singleton.class);
         bind(OverlayStrategy.class).to(AkomaNtoso20OverlayStrategy.class).in(Singleton.class);
         bind(Locator.class).to(CompositeLocator.class).in(Singleton.class);
         bind(OverlaySnippetFactory.class).to(AkomaNtoso20OverlaySnippetFactory.class).in(Singleton.class);
 
-        bind(new TypeLiteral<Validator<OverlayWidget>>(){}).to(Akomantoso20OverlayWidgetValidator.class);
+        bind(new TypeLiteral<Validator<OverlayWidget>>() {
+        }).to(Akomantoso20OverlayWidgetValidator.class);
 
         bind(AmendmentDialogModifyController.class).to(AkomaNtoso20AmendmentDialogModifyController.class);
         bind(AmendmentDialogCreateController.class).to(AkomaNtoso20AmendmentDialogCreateController.class);
