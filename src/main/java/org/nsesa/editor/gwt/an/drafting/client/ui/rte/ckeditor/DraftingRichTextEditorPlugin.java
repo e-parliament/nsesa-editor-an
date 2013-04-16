@@ -52,7 +52,7 @@ public class DraftingRichTextEditorPlugin extends CkEditorCompositePlugin {
                                 OverlaySnippet snippet = snippetFactory.getSnippet(curr);
                                 if (snippet != null) {
                                     final String content = snippet.getContent(new DefaultOverlaySnippetEvaluator());
-                                    result.getOverlayElement().setInnerText(content);
+                                    result.getOverlayElement().setInnerHTML(content);
                                 }
                                 break;
                             }
