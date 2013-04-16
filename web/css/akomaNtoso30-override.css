@@ -48,12 +48,8 @@
 .chapter[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: block;
     width: 100%;
-    text-align: center;
 }
 
-.chapter[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] *[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-    text-align: left;
-}
 
 .chapter[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     font-size: 1.0em;
@@ -70,7 +66,6 @@
 .article[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: block;
     width: 100%;
-    text-align: center;
 }
 
 .article[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] *[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
@@ -242,4 +237,12 @@
 
 .nsesa-inline[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     background-color: #fffacd;
+}
+
+.mainBody[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+}
+
+.subparagraph[ns="http://www.akomantoso.org/2.0"] {
+    margin-left: 1.5em;
 }
