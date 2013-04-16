@@ -57,7 +57,7 @@ public class AnFileClassOverlayGeneratorTest {
         OverlayClass entityClass = null;
         for (OverlayClass overlayClass : genClasses) {
             if (overlayClass.getName().equalsIgnoreCase("entity") &&
-                    overlayClass.getNameSpace().equals("http://www.akomantoso.org/2.0")) {
+                    overlayClass.getNamespaceURI().equals("http://www.akomantoso.org/2.0")) {
                 entityClass = overlayClass;
                 break;
             }
