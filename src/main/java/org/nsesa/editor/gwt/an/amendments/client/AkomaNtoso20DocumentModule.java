@@ -22,6 +22,7 @@ import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.core.client.ui.amendment.action.AmendmentActionPanelController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.header.SourceFileHeaderController;
+import org.nsesa.editor.gwt.core.client.undo.UndoManager;
 
 /**
  * Date: 15/10/12 21:23
@@ -36,5 +37,6 @@ public class AkomaNtoso20DocumentModule extends AbstractGinModule {
         bind(SourceFileHeaderController.class).to(AkomaNtoso20SourceFileHeaderController.class).in(Singleton.class);
         bind(AmendmentActionPanelController.class).to(AkomaNtoso20AmendmentActionPanelController.class).in(Singleton.class);
         bind(DiffingManager.class).to(AkomaNtoso20DiffingManager.class).in(Singleton.class);
+        bind(UndoManager.class).in(Singleton.class);
     }
 }

@@ -15,6 +15,7 @@ package org.nsesa.editor.gwt.an.drafting.client.ui.main.document;
 
 import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Singleton;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.CompositeLocator;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.sourcefile.DraftingSourceFileController;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.sourcefile.DraftingSourceFileViewImpl;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.sourcefile.actionbar.StaticActionBarController;
@@ -24,6 +25,8 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileControl
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileView;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.ActionBarController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.ActionBarView;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
+import org.nsesa.editor.gwt.core.client.undo.UndoManager;
 
 /**
  * Date: 15/10/12 21:23
@@ -39,5 +42,7 @@ public class DraftingDocumentModule extends AbstractGinModule {
         bind(SourceFileView.class).to(DraftingSourceFileViewImpl.class).in(Singleton.class);
         bind(ActionBarController.class).to(StaticActionBarController.class).in(Singleton.class);
         bind(ActionBarView.class).to(StaticActionBarViewImpl.class).in(Singleton.class);
+        bind(Locator.class).to(CompositeLocator.class).in(Singleton.class);
+        bind(UndoManager.class).in(Singleton.class);
     }
 }

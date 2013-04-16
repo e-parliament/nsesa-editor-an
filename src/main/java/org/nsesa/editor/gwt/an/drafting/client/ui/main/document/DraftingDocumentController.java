@@ -17,6 +17,8 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.Node;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Window;
@@ -37,10 +39,7 @@ import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.event.*;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEvent;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEventHandler;
-import org.nsesa.editor.gwt.core.client.event.visualstructure.VisualStructureAttributesToggleEvent;
-import org.nsesa.editor.gwt.core.client.event.visualstructure.VisualStructureAttributesToggleEventHandler;
-import org.nsesa.editor.gwt.core.client.event.visualstructure.VisualStructureToggleEvent;
-import org.nsesa.editor.gwt.core.client.event.visualstructure.VisualStructureToggleEventHandler;
+import org.nsesa.editor.gwt.core.client.event.visualstructure.*;
 import org.nsesa.editor.gwt.core.client.event.widget.*;
 import org.nsesa.editor.gwt.core.client.keyboard.KeyboardListener;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
@@ -124,6 +123,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
     private HandlerRegistration overlayWidgetModifyHandlerRegistration;
     private HandlerRegistration overlayWidgetDeleteHandlerRegistration;
     private HandlerRegistration overlayWidgetNewEventHandlerRegistration;
+    private com.google.gwt.event.shared.HandlerRegistration inlineEditorControllerSaveHandlerRegistration;
+    private com.google.gwt.event.shared.HandlerRegistration inlineEditorControllerCancelHandlerRegistration;
 
     @Inject
     public DraftingDocumentController(final ClientFactory clientFactory,
@@ -377,9 +378,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                         actionBarCreatePanelFocusPanel.setFocus(false);
                         inlineEditorController.getRichTextEditor().setFocus(true);
                     } else if (inlineEditorController.isShowing()) {
-                        clientFactory.getEventBus().fireEvent(new DetachInlineEditorEvent(DraftingDocumentController.this));
-                        inlineEditorController.getRichTextEditor().setFocus(false);
-                        restoreFocusOnViewPort();
+                        cancelModify();
                     }
                 } else if (downArrow.equals(event.getKeyCombo())) {
 
@@ -438,7 +437,13 @@ public class DraftingDocumentController extends DefaultDocumentController {
                             cloneSibling.setFormat(null);
                             cloneSibling.setNumberingType(null);
                             // get the correct index
-                            documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget.getParentOverlayWidget(), activeOverlayWidget, cloneSibling, activeOverlayWidget.getDomIndex() + 1));
+
+                            if (inlineEditorController.isShowing()) {
+                                clientFactory.getEventBus().fireEvent(new VisualStructureInsertionEvent(cloneSibling));
+                            } else {
+                                documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget.getParentOverlayWidget(), activeOverlayWidget, cloneSibling, activeOverlayWidget.getDomIndex() + 1));
+                            }
+
                         }
 
                         final OverlayWidget selectedChild = actionBarCreatePanelController.getSelectedChild();
@@ -451,7 +456,11 @@ public class DraftingDocumentController extends DefaultDocumentController {
                             cloneChild.setNumberingType(actionBarCreatePanelController.getSelectedChild().getNumberingType());
                             cloneChild.setFormat(actionBarCreatePanelController.getSelectedChild().getFormat());
 
-                            documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget, activeOverlayWidget, cloneChild, -1));
+                            if (inlineEditorController.isShowing()) {
+                                clientFactory.getEventBus().fireEvent(new VisualStructureInsertionEvent(cloneChild));
+                            } else {
+                                documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget, activeOverlayWidget, cloneChild, -1));
+                            }
                         }
 
                         // TODO
@@ -535,6 +544,24 @@ public class DraftingDocumentController extends DefaultDocumentController {
                 inlineEditorController.getRichTextEditor().toggleVisualStructureAttributes(event.isShown());
             }
         });
+
+        inlineEditorControllerSaveHandlerRegistration = inlineEditorController.getView().getSaveButton().addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                modifyOverlayWidget(sourceFileController.getActiveOverlayWidget(), inlineEditorController.getRichTextEditor().getHTML());
+                // and finally destroy the instance
+                clientFactory.getEventBus().fireEvent(new DetachInlineEditorEvent(DraftingDocumentController.this));
+                inlineEditorController.getRichTextEditor().setFocus(false);
+                restoreFocusOnViewPort();
+            }
+        });
+
+        inlineEditorControllerCancelHandlerRegistration = inlineEditorController.getView().getCancelAnchor().addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                cancelModify();
+            }
+        });
     }
 
     public void handleOverlayWidgetDelete(final OverlayWidget overlayWidget) {
@@ -575,6 +602,12 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
 
         }
+    }
+
+    public void cancelModify() {
+        clientFactory.getEventBus().fireEvent(new DetachInlineEditorEvent(DraftingDocumentController.this));
+        inlineEditorController.getRichTextEditor().setFocus(false);
+        restoreFocusOnViewPort();
     }
 
     public void modifyOverlayWidget(final OverlayWidget overlayWidget, final String innerHTML) {
@@ -618,6 +651,9 @@ public class DraftingDocumentController extends DefaultDocumentController {
         if (className.contains("nsesa-inline")) {
             overlayElement.setClassName(className.replace("nsesa-inline", ""));
         }
+
+        // highlight
+        sourceFileController.highlight(overlayWidget.asWidget(), "black", 1);
 
         redrawOutline(overlayWidget.getRoot());
     }
@@ -704,6 +740,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
         overlayWidgetDeleteHandlerRegistration.removeHandler();
         overlayWidgetModifyHandlerRegistration.removeHandler();
         overlayWidgetNewEventHandlerRegistration.removeHandler();
+        inlineEditorControllerSaveHandlerRegistration.removeHandler();
+        inlineEditorControllerCancelHandlerRegistration.removeHandler();
     }
 
     public void setInjector(DocumentInjector injector) {

@@ -18,11 +18,13 @@ import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Singleton;
 import com.google.inject.name.Names;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtoso20OverlaySnippetFactory;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.CompositeLocator;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Akomantoso20OverlayFactory;
 import org.nsesa.editor.gwt.an.drafting.client.ui.rte.ckeditor.DraftingRichTextEditorProvider;
 import org.nsesa.editor.gwt.core.client.CoreModule;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentModule;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.DraftingDocumentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippetFactory;
@@ -47,6 +49,7 @@ public class DraftingModule extends AbstractGinModule {
         // bind the mapper
         bind(ActivityMapper.class).to(EditorActivityMapper.class).in(Singleton.class);
         bind(OverlayFactory.class).to(Akomantoso20OverlayFactory.class);
+        bind(Locator.class).to(CompositeLocator.class).in(Singleton.class);
         bind(OverlaySnippetFactory.class).to(AkomaNtoso20OverlaySnippetFactory.class).in(Singleton.class);
         bind(DocumentController.class).to(DraftingDocumentController.class).in(Singleton.class);
         bind(RichTextEditor.class).annotatedWith(Names.named("inlineRichTextEditor")).toProvider(DraftingRichTextEditorProvider.class).in(Singleton.class);
