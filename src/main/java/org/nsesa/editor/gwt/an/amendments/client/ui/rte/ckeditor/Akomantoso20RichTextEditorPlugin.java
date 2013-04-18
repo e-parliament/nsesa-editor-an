@@ -31,6 +31,7 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
      * Create <code>Akomantoso20RichTextEditorPlugin</Akomantoso20RichTextEditorPlugin> object and
      * wrap all the available plugins
      * @param overlayFactory
+     * @param snippetFactory
      * @param clientFactory
      */
     @Inject
@@ -71,6 +72,6 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
         registerPlugin(new CKEditorVisualStructureToolPlugin(clientFactory));
         registerPlugin(new CKEditorVisualStructureAttributesPlugin(clientFactory));
         registerPlugin(new CKEditorRemoveFormatPlugin(clientFactory));
-        registerPlugin(new CKEditorCaretPositionSetupPlugin(overlayFactory));
+        registerPlugin(new CKEditorCaretPositionSetupPlugin(overlayFactory, snippetFactory.getCaretPositionClassName()));
     }
 }

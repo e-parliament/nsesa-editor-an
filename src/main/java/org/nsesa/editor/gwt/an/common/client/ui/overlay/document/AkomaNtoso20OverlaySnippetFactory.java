@@ -13,7 +13,6 @@
  */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document;
 
-import com.google.gwt.user.client.DOM;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
@@ -29,14 +28,15 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippet;
  */
 public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFactory {
 
-    private static final String MAGIC_MARKER = "\u200b";
-
     private final Transformer transformer;
+    private final String caretPositionClassName;
 
     @Inject
-    public AkomaNtoso20OverlaySnippetFactory(@Named("html") final Transformer transformer) {
+    public AkomaNtoso20OverlaySnippetFactory(@Named("html") final Transformer transformer,
+                                             @Named("caretPositionClassName") final String caretPositionClassName) {
 
         this.transformer = transformer;
+        this.caretPositionClassName = caretPositionClassName;
 
         registerSnippet(new Citation(), new OverlaySnippet("citation", getCitationSnippet()));
         registerSnippet(new Recital(), new OverlaySnippet("recital", getRecitalSnippet()));
@@ -53,7 +53,8 @@ public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFact
         num.addI(i);
 
         P p = new P();
-        p.html(MAGIC_MARKER + "Type your content here ...​​" + MAGIC_MARKER);
+        p.html("Type your content here ...​​");
+        p.getOverlayElement().addClassName(caretPositionClassName);
         Content content = new Content();
         content.addP(p);
 
@@ -69,8 +70,8 @@ public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFact
 
         P p = new P();
         // set an empty character - this acts as a caret anchor position.
-        p.html(MAGIC_MARKER);
-
+        p.html("Type your content here ...​​");
+        p.getOverlayElement().addClassName(caretPositionClassName);
         Content content = new Content();
         content.addP(p);
 
@@ -83,11 +84,14 @@ public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFact
 
         P p = new P();
         // set an empty character - this acts as a caret anchor position.
-        p.html(MAGIC_MARKER);
-
+        p.html("Type your content here...");
+        p.getOverlayElement().addClassName(caretPositionClassName);
         Content content = new Content();
         content.addP(p);
-
+//       P p2 = new P();
+////        set an empty character - this acts as a caret anchor position.
+//        p2.html(" opsolem" + caretPositionClassName);
+//        content.addP(p2);
         return transformer.transform(num) + transformer.transform(content);
     }
 
@@ -95,11 +99,17 @@ public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFact
 
         P p = new P();
         // set an empty character - this acts as a caret anchor position.
-        p.html(MAGIC_MARKER);
-
+        p.html("Type your content here ...​​");
+        p.getOverlayElement().addClassName(caretPositionClassName);
         Content content = new Content();
         content.addP(p);
 
         return transformer.transform(content);
     }
+
+    @Override
+    public String getCaretPositionClassName() {
+        return caretPositionClassName;
+    }
+
 }
