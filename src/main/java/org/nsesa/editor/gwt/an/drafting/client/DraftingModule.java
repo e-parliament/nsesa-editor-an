@@ -59,5 +59,7 @@ public class DraftingModule extends AbstractGinModule {
 
         bind(Transformer.class).annotatedWith(Names.named("html")).to(HTMLTransformer.class).in(Singleton.class);
         bind(Transformer.class).annotatedWith(Names.named("xml")).to(DefaultTransformer.class).in(Singleton.class);
+
+        bindConstant().annotatedWith(Names.named("caretPositionClassName")).to("caretPosition");
     }
 }
