@@ -65,6 +65,7 @@ public class AkomaNtoso20Module extends AbstractGinModule {
         install(new AmendmentDialogModule());
         install(new EditorModule());
 
+        bindConstant().annotatedWith(Names.named("caretPositionClassName")).to("caretPosition");
         bind(RichTextEditorPlugin.class).to(Akomantoso20RichTextEditorPlugin.class);
         bind(RichTextEditorConfig.class).to(Akomantoso20RichTextEditorConfig.class);
 
