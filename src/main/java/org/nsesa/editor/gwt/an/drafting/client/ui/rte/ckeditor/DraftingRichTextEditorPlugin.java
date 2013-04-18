@@ -70,6 +70,6 @@ public class DraftingRichTextEditorPlugin extends CkEditorCompositePlugin {
         registerPlugin(new CKEditorVisualStructureToolPlugin(clientFactory));
         registerPlugin(new CKEditorVisualStructureAttributesPlugin(clientFactory));
         registerPlugin(new CKEditorRemoveFormatPlugin(clientFactory));
-        registerPlugin(new CKEditorCaretPositionSetupPlugin(overlayFactory));
+        registerPlugin(new CKEditorCaretPositionSetupPlugin(overlayFactory, snippetFactory.getCaretPositionClassName()));
     }
 }
