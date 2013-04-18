@@ -33,15 +33,15 @@ import java.util.ArrayList;
 public class GWTDiffServiceImpl extends SpringRemoteServiceServlet implements GWTDiffService {
 
     // style for BI diffing
-    public static final String originalChangeTemplate = "<span class=\"highlight-diff\">{0}</span>";
+    public static final String originalChangeTemplate = "<span class=\"widget change highlight-diff\" type=\"change\" ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
 
     // style for complex diffing
-    public static final String originalComplexChangeTemplate = "<span class=\"highlight-red\">{0}</span>";
-    public static final String complexInsertTemplate = "<span class=\"highlight-ins\">{0}</span>";
-    public static final String complexDeleteTemplate = "<span class=\"highlight-del\">{0}</span>";
-    public static final String complexInsertNormalTemplate = "<span class=\"highlight-ins-normal\">{0}</span>";
-    public static final String complexDeleteNormalTemplate = "<span class=\"highlight-del-normal\">{0}</span>";
-    public static final String complexChangeTemplate = "<span class=\"highlight-change\">{0}</span>";
+    public static final String originalComplexChangeTemplate = "<span class=\"widget change highlight-red\" type=\"change\" ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
+    public static final String complexInsertTemplate = "<span class=\"widget change highlight-ins\" type=\"change\" ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
+    public static final String complexDeleteTemplate = "<span class=\"widget change highlight-del\" type=\"change\" ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
+    public static final String complexInsertNormalTemplate = "<span class=\"widget change highlight-ins-normal\" type=\"change\" ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
+    public static final String complexDeleteNormalTemplate = "<span class=\"widget change highlight-del-normal\" type=\"change\" ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
+    public static final String complexChangeTemplate = "<span class=\"widget change highlight-change\" type=\"change\" ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
 
     private DiffService diffService;
 
@@ -68,6 +68,26 @@ public class GWTDiffServiceImpl extends SpringRemoteServiceServlet implements GW
                     diffRequest.getDiffMethod()));
         }
         return results;
+    }
+
+    @Override
+    public DiffResult diff(DiffRequest diffRequest) {
+        final ThreeWayDiffContext diffContext = new ThreeWayDiffContext(originalChangeTemplate,
+                originalComplexChangeTemplate, complexInsertTemplate,
+                complexDeleteTemplate, complexChangeTemplate,
+                DiffMethod.valueOf(diffRequest.getDiffMethod().name()));
+
+        final ComplexDiffResult complexDiffResult = diffService.complexDiff(
+                diffRequest.getOriginal(),
+                // if the EP style is selected, we use a slight different input
+                DiffStyle.EP == diffRequest.getDiffStyle() ? diffRequest.getAmendment() : diffRequest.getOriginal(),
+                diffRequest.getAmendment(),
+                diffContext);
+
+        return new DiffResult(
+                complexDiffResult.getTrackChangesOriginal(),
+                complexDiffResult.getTrackChangesAmendment(),
+                diffRequest.getDiffMethod());
     }
 
     @Override
