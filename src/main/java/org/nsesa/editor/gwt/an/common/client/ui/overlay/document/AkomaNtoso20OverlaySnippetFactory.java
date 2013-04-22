@@ -86,13 +86,7 @@ public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFact
         // set an empty character - this acts as a caret anchor position.
         p.html("Type your content here...");
         p.getOverlayElement().addClassName(caretPositionClassName);
-        Content content = new Content();
-        content.addP(p);
-//       P p2 = new P();
-////        set an empty character - this acts as a caret anchor position.
-//        p2.html(" opsolem" + caretPositionClassName);
-//        content.addP(p2);
-        return transformer.transform(num) + transformer.transform(content);
+        return transformer.transform(num) + transformer.transform(p);
     }
 
     protected String getCitationSnippet() {
