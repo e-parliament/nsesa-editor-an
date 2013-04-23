@@ -71,26 +71,6 @@ public class GWTDiffServiceImpl extends SpringRemoteServiceServlet implements GW
     }
 
     @Override
-    public DiffResult diff(DiffRequest diffRequest) {
-        final ThreeWayDiffContext diffContext = new ThreeWayDiffContext(originalChangeTemplate,
-                originalComplexChangeTemplate, complexInsertTemplate,
-                complexDeleteTemplate, complexChangeTemplate,
-                DiffMethod.valueOf(diffRequest.getDiffMethod().name()));
-
-        final ComplexDiffResult complexDiffResult = diffService.complexDiff(
-                diffRequest.getOriginal(),
-                // if the EP style is selected, we use a slight different input
-                DiffStyle.EP == diffRequest.getDiffStyle() ? diffRequest.getAmendment() : diffRequest.getOriginal(),
-                diffRequest.getAmendment(),
-                diffContext);
-
-        return new DiffResult(
-                complexDiffResult.getTrackChangesOriginal(),
-                complexDiffResult.getTrackChangesAmendment(),
-                diffRequest.getDiffMethod());
-    }
-
-    @Override
     public String getVersion() {
         return "ep-diffing-0.1";
     }
