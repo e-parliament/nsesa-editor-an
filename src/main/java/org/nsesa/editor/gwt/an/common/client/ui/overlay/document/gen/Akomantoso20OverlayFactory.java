@@ -1202,7 +1202,7 @@ else if ("identification".equalsIgnoreCase(nodeName)) {
 return new Identification(element);
 }
 // nothing found
-LOG.warning("Could not find overlay element (nodename: " + nodeName + " in namespace URI '" + namespaceURI + "')");
+LOG.warning("Could not find overlay element (nodename: " + nodeName + " in namespace URI '" + namespaceURI + "') for element '" + element + "'");
 return null;
 }
 }
