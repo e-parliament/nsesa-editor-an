@@ -18,15 +18,16 @@ import com.google.gwt.dom.client.Node;
 import com.google.gwt.dom.client.NodeList;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.HTML;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
-import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.event.NotificationEvent;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.mode.DocumentMode;
-import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
+import org.nsesa.editor.gwt.core.client.ui.document.OverlayWidgetAware;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
 
 /**
  * Date: 26/11/12 14:11
@@ -61,18 +62,22 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
                         div.addClassName("temporaryForConsolidation");
                         visited.getParentOverlayWidget().getOverlayElement().insertBefore(div, visited.getOverlayElement());
                         int i = 1;
-                        for (final AmendmentController amendmentController : visited.getAmendmentControllers()) {
-                            final String amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
-                            final com.google.gwt.user.client.Element span = DOM.createSpan();
-                            span.setInnerHTML(amendmentContentFromModel);
-                            final Element childElement = span.getFirstChildElement();
-                            childElement.getStyle().setColor("blue");
-                            // insert a separator if there are more than 1 amendment controller or this element
-                            if (i > 1) {
-                                div.appendChild(new HTML("<br/><br/><div style='width:100%;text-align:center;'><h2>- OR -</h2></div>").getElement());
+                        for (final OverlayWidgetAware t : visited.getOverlayWidgetAwareList()) {
+
+                            if (t instanceof AmendmentController) {
+                                AmendmentController amendmentController = (AmendmentController) t;
+                                final String amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
+                                final com.google.gwt.user.client.Element span = DOM.createSpan();
+                                span.setInnerHTML(amendmentContentFromModel);
+                                final Element childElement = span.getFirstChildElement();
+                                childElement.getStyle().setColor("blue");
+                                // insert a separator if there are more than 1 amendment controller or this element
+                                if (i > 1) {
+                                    div.appendChild(new HTML("<br/><br/><div style='width:100%;text-align:center;'><h2>- OR -</h2></div>").getElement());
+                                }
+                                div.appendChild(childElement);
+                                visited.asWidget().setVisible(false);
                             }
-                            div.appendChild(childElement);
-                            visited.asWidget().setVisible(false);
                             i++;
                         }
                     }

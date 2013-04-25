@@ -14,18 +14,19 @@
 package org.nsesa.editor.gwt.an.amendments.client.mode;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
-import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.event.CriticalErrorEvent;
 import org.nsesa.editor.gwt.core.client.event.NotificationEvent;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
-import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
+import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
+import org.nsesa.editor.gwt.core.client.ui.document.OverlayWidgetAware;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.shared.DiffRequest;
 import org.nsesa.editor.gwt.core.shared.DiffResult;
-import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 
 import java.util.ArrayList;
 
@@ -58,24 +59,28 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
                 @Override
                 public boolean visit(OverlayWidget visited) {
                     if (visited.isAmended()) {
-                        for (final AmendmentController amendmentController : visited.getAmendmentControllers()) {
-                            ArrayList<DiffRequest> diffRequests = new ArrayList<DiffRequest>();
-                            final String amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
-                            final String originalContentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
-                            diffRequests.add(new DiffRequest(originalContentFromModel, amendmentContentFromModel));
-                            serviceFactory.getGwtDiffService().diff(diffRequests, new AsyncCallback<ArrayList<DiffResult>>() {
-                                @Override
-                                public void onFailure(Throwable caught) {
-                                    documentController.getDocumentEventBus().fireEvent(new CriticalErrorEvent("Could not perform diffing ...", caught));
-                                }
+                        for (final OverlayWidgetAware temp : visited.getOverlayWidgetAwareList()) {
+                            if (temp instanceof AmendmentController) {
+                                final AmendmentController amendmentController = (AmendmentController) temp;
 
-                                @Override
-                                public void onSuccess(ArrayList<DiffResult> result) {
-                                    AkomaNtoso20AmendmentControllerUtil.setOriginalContentOnViews(amendmentController, result.get(0).getOriginal());
-                                    AkomaNtoso20AmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, result.get(0).getAmendment());
+                                ArrayList<DiffRequest> diffRequests = new ArrayList<DiffRequest>();
+                                final String amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
+                                final String originalContentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
+                                diffRequests.add(new DiffRequest(originalContentFromModel, amendmentContentFromModel));
+                                serviceFactory.getGwtDiffService().diff(diffRequests, new AsyncCallback<ArrayList<DiffResult>>() {
+                                    @Override
+                                    public void onFailure(Throwable caught) {
+                                        documentController.getDocumentEventBus().fireEvent(new CriticalErrorEvent("Could not perform diffing ...", caught));
+                                    }
 
-                                }
-                            });
+                                    @Override
+                                    public void onSuccess(ArrayList<DiffResult> result) {
+                                        AkomaNtoso20AmendmentControllerUtil.setOriginalContentOnViews(amendmentController, result.get(0).getOriginal());
+                                        AkomaNtoso20AmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, result.get(0).getAmendment());
+
+                                    }
+                                });
+                            }
                         }
                     }
                     return true;
@@ -87,14 +92,19 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
                 @Override
                 public boolean visit(OverlayWidget visited) {
                     if (visited.isAmended()) {
-                        for (final AmendmentController amendmentController : visited.getAmendmentControllers()) {
-                            AkomaNtoso20AmendmentControllerUtil.setOriginalContentOnViews(amendmentController, AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController));
-                            AkomaNtoso20AmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController));
+                        for (final OverlayWidgetAware temp : visited.getOverlayWidgetAwareList()) {
+                            if (temp instanceof AmendmentController) {
+                                final AmendmentController amendmentController = (AmendmentController) temp;
+                                AkomaNtoso20AmendmentControllerUtil.setOriginalContentOnViews(amendmentController, AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController));
+                                AkomaNtoso20AmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController));
+                            }
                         }
                     }
                     return true;
                 }
-            });
+            }
+
+            );
         }
         this.activeState = state;
         return true;

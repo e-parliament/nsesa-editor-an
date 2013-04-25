@@ -22,6 +22,9 @@ import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.HandlerRegistration;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
+import org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentController;
+import org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentInjector;
 import org.nsesa.editor.gwt.an.amendments.client.AkomaNtoso20DocumentInjector;
 import org.nsesa.editor.gwt.an.amendments.client.mode.ConsolidationMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.DiffMode;
@@ -29,7 +32,6 @@ import org.nsesa.editor.gwt.an.amendments.client.mode.InlineEditingMode;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
-import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.event.KeyComboEvent;
 import org.nsesa.editor.gwt.core.client.event.KeyComboEventHandler;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentOverlayCompletedEvent;
@@ -37,14 +39,15 @@ import org.nsesa.editor.gwt.core.client.event.document.DocumentOverlayCompletedE
 import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEvent;
 import org.nsesa.editor.gwt.core.client.keyboard.KeyboardListener;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
-import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.core.client.ui.document.DefaultDocumentController;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentInjector;
+import org.nsesa.editor.gwt.core.client.ui.document.OverlayWidgetAware;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Mover;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
 
 import java.util.logging.Logger;
 
@@ -54,9 +57,9 @@ import java.util.logging.Logger;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtoso20DocumentController extends DefaultDocumentController {
+public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentController {
 
-    private static final Logger LOG = Logger.getLogger(AkomaNtoso20DocumentController.class.getName());
+    private static final Logger LOG = Logger.getLogger(AkomaNtoso20AmendmentDocumentController.class.getName());
 
     private final KeyboardListener keyboardListener;
 
@@ -68,13 +71,13 @@ public class AkomaNtoso20DocumentController extends DefaultDocumentController {
     private HandlerRegistration keyComboHandlerRegistration;
 
     @Inject
-    public AkomaNtoso20DocumentController(final ClientFactory clientFactory,
-                                          final ServiceFactory serviceFactory,
-                                          final OverlayFactory overlayFactory,
-                                          final Locator locator,
-                                          final Creator creator,
-                                          final Mover mover,
-                                          final KeyboardListener keyboardListener) {
+    public AkomaNtoso20AmendmentDocumentController(final ClientFactory clientFactory,
+                                                   final ServiceFactory serviceFactory,
+                                                   final OverlayFactory overlayFactory,
+                                                   final Locator locator,
+                                                   final Creator creator,
+                                                   final Mover mover,
+                                                   final KeyboardListener keyboardListener) {
         super(clientFactory, serviceFactory, overlayFactory, locator, creator, mover);
         this.keyboardListener = keyboardListener;
     }
@@ -100,12 +103,16 @@ public class AkomaNtoso20DocumentController extends DefaultDocumentController {
                                 // build up a new panel
                                 final StringBuilder sb = new StringBuilder();
                                 boolean addSplitter = false;
-                                for (final AmendmentController amendmentController : visited.getAmendmentControllers()) {
+                                for (final OverlayWidgetAware temp : visited.getOverlayWidgetAwareList()) {
                                     if (addSplitter) {
                                         sb.append(new HTML("<div style='width:100%;text-align:center;'><h2> -Or- </h2></div>"));
                                     }
-                                    sb.append(AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromView(amendmentController));
-                                    addSplitter = true;
+
+                                    if (temp instanceof AmendmentController) {
+                                        final AmendmentController amendmentController = (AmendmentController) temp;
+                                        sb.append(AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromView(amendmentController));
+                                        addSplitter = true;
+                                    }
                                 }
 
                                 final com.google.gwt.dom.client.Element amendmentsHolder = DOM.createSpan();
@@ -134,7 +141,7 @@ public class AkomaNtoso20DocumentController extends DefaultDocumentController {
                     }
                 });
                 if (topVisibleAmenableWidget != null)
-                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(topVisibleAmenableWidget.asWidget(), AkomaNtoso20DocumentController.this));
+                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(topVisibleAmenableWidget.asWidget(), AkomaNtoso20AmendmentDocumentController.this));
                 return super.apply(state);
             }
         });
@@ -162,7 +169,7 @@ public class AkomaNtoso20DocumentController extends DefaultDocumentController {
     }
 
     @Override
-    public DocumentInjector getInjector() {
+    public AmendmentDocumentInjector getInjector() {
         return GWT.create(AkomaNtoso20DocumentInjector.class);
     }
 

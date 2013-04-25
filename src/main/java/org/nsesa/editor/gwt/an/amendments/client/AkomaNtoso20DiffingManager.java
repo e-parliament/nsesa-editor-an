@@ -20,7 +20,7 @@ import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.diffing.DefaultDiffingManager;
 import org.nsesa.editor.gwt.core.client.event.CriticalErrorEvent;
-import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.core.shared.DiffMethod;
 import org.nsesa.editor.gwt.core.shared.DiffRequest;
 import org.nsesa.editor.gwt.core.shared.DiffResult;

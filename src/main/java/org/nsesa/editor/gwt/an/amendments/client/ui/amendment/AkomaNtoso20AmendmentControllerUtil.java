@@ -13,7 +13,7 @@
  */
 package org.nsesa.editor.gwt.an.amendments.client.ui.amendment;
 
-import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 

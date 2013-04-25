@@ -19,7 +19,7 @@ import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNto
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
-import org.nsesa.editor.gwt.core.client.amendment.AmendmentInjectionPointFinder;
+import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.NumberingType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
@@ -122,7 +122,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
             public String evaluate() {
                 if (overlayWidget.getNumberingType() == null) {
                     // if there is a sibling of the same type, use that one
-                    OverlayWidget sibling = dialogContext.getParentOverlayWidget().getChildOverlayWidgets().get(dialogContext.getIndex() - 1);
+                    OverlayWidget sibling = dialogContext.getParentOverlayWidget().getChildOverlayWidgets().get(dialogContext.getIndex());
                     if (sibling != null) {
                         overlayWidget.setNumberingType(sibling.getNumberingType());
                     } else {

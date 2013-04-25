@@ -20,7 +20,7 @@ import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso2
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.ui.overlay.TextUtils;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;

@@ -14,14 +14,21 @@
 package org.nsesa.editor.gwt.an.amendments.client;
 
 import com.google.gwt.inject.client.AbstractGinModule;
+import com.google.inject.Inject;
+import com.google.inject.Provides;
 import com.google.inject.Singleton;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.action.AmendmentActionPanelController;
+import org.nsesa.editor.gwt.amendment.client.ui.document.marker.AmendmentMarkerController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.action.AkomaNtoso20AmendmentActionPanelController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.document.AkomaNtoso20SourceFileHeaderController;
 import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
-import org.nsesa.editor.gwt.core.client.ui.amendment.AmendmentController;
-import org.nsesa.editor.gwt.core.client.ui.amendment.action.AmendmentActionPanelController;
+import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.header.SourceFileHeaderController;
+import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.marker.MarkerController;
+import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultSelector;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Selector;
 import org.nsesa.editor.gwt.core.client.undo.UndoManager;
 
 /**
@@ -36,7 +43,16 @@ public class AkomaNtoso20DocumentModule extends AbstractGinModule {
         bind(AmendmentController.class).to(AkomaNtoso20AmendmentController.class);
         bind(SourceFileHeaderController.class).to(AkomaNtoso20SourceFileHeaderController.class).in(Singleton.class);
         bind(AmendmentActionPanelController.class).to(AkomaNtoso20AmendmentActionPanelController.class).in(Singleton.class);
+        bind(MarkerController.class).to(AmendmentMarkerController.class).in(Singleton.class);
         bind(DiffingManager.class).to(AkomaNtoso20DiffingManager.class).in(Singleton.class);
         bind(UndoManager.class).in(Singleton.class);
+
+    }
+
+    @Singleton
+    @Provides
+    @Inject
+    Selector<AmendmentController> createSelector(DocumentEventBus documentEventBus) {
+        return new DefaultSelector<AmendmentController>(documentEventBus);
     }
 }

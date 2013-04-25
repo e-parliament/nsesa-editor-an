@@ -15,6 +15,7 @@ package org.nsesa.editor.gwt.an.amendments.client;
 
 import com.google.gwt.inject.client.GinModules;
 import com.google.gwt.inject.client.Ginjector;
+import org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentInjector;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentInjector;
 
 /**
@@ -24,5 +25,5 @@ import org.nsesa.editor.gwt.core.client.ui.document.DocumentInjector;
  * @version $Id$
  */
 @GinModules({AkomaNtoso20DocumentModule.class})
-public interface AkomaNtoso20DocumentInjector extends DocumentInjector, Ginjector {
+public interface AkomaNtoso20DocumentInjector extends AmendmentDocumentInjector, Ginjector {
 }

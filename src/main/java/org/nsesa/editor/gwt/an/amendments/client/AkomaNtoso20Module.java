@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNto
 import org.nsesa.editor.gwt.an.amendments.client.handler.create.AkomaNtoso20AmendmentDialogCreateController;
 import org.nsesa.editor.gwt.an.amendments.client.handler.delete.AkomaNtoso20AmendmentDialogDeleteController;
 import org.nsesa.editor.gwt.an.amendments.client.handler.modify.AkomaNtoso20AmendmentDialogModifyController;
-import org.nsesa.editor.gwt.an.amendments.client.ui.document.AkomaNtoso20DocumentController;
+import org.nsesa.editor.gwt.an.amendments.client.ui.document.AkomaNtoso20AmendmentDocumentController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.footer.AkomaNtoso20FooterViewImpl;
 import org.nsesa.editor.gwt.an.amendments.client.ui.rte.ckeditor.Akomantoso20RichTextEditorConfig;
 import org.nsesa.editor.gwt.an.amendments.client.ui.rte.ckeditor.Akomantoso20RichTextEditorPlugin;
@@ -93,6 +93,6 @@ public class AkomaNtoso20Module extends AbstractGinModule {
         bind(ContentPanelController.class).to(AkomaNtoso20ContentPanelController.class);
         bind(FooterView.class).to(AkomaNtoso20FooterViewImpl.class);
 
-        bind(DocumentController.class).to(AkomaNtoso20DocumentController.class);
+        bind(DocumentController.class).to(AkomaNtoso20AmendmentDocumentController.class);
     }
 }

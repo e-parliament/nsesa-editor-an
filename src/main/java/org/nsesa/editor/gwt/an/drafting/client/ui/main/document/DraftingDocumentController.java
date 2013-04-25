@@ -35,7 +35,7 @@ import org.nsesa.editor.gwt.an.drafting.client.mode.StructureViewMode;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
-import org.nsesa.editor.gwt.core.client.amendment.OverlayWidgetWalker;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.event.*;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEvent;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEventHandler;
@@ -277,8 +277,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
             public void onEvent(final OverlayWidgetNewEvent event) {
                 final OverlayWidget child = event.getChild();
                 // TODO does not work yet for create-child
-                event.getOverlayWidget().addOverlayWidget(child, event.getReference().getIndex() + 1, true);
-                DOM.insertChild(event.getOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getPosition());
+                event.getParentOverlayWidget().addOverlayWidget(child, event.getReference().getIndex() + 1, true);
+                DOM.insertChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getPosition());
                 if (!child.isAttached()) child.onAttach();
 
                 clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
@@ -324,7 +324,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                         }
                                     }
 
-                                    child.setParentOverlayWidget(event.getOverlayWidget());
+                                    child.setParentOverlayWidget(event.getParentOverlayWidget());
                                     //add the overlay widget in the parent children collection to compute the num
                                     String num = locator.getNum(child, document.getLanguageIso());
                                     return num == null ? "" : child.getFormat().format(num);
