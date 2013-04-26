@@ -19,12 +19,14 @@ import com.google.inject.Provides;
 import com.google.inject.Singleton;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.action.AmendmentActionPanelController;
+import org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentViewImpl;
 import org.nsesa.editor.gwt.amendment.client.ui.document.marker.AmendmentMarkerController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.action.AkomaNtoso20AmendmentActionPanelController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.document.AkomaNtoso20SourceFileHeaderController;
 import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
+import org.nsesa.editor.gwt.core.client.ui.document.DocumentView;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.header.SourceFileHeaderController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.marker.MarkerController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultSelector;
@@ -41,6 +43,7 @@ public class AkomaNtoso20DocumentModule extends AbstractGinModule {
     @Override
     protected void configure() {
         bind(AmendmentController.class).to(AkomaNtoso20AmendmentController.class);
+        bind(DocumentView.class).to(AmendmentDocumentViewImpl.class).in(Singleton.class);
         bind(SourceFileHeaderController.class).to(AkomaNtoso20SourceFileHeaderController.class).in(Singleton.class);
         bind(AmendmentActionPanelController.class).to(AkomaNtoso20AmendmentActionPanelController.class).in(Singleton.class);
         bind(MarkerController.class).to(AmendmentMarkerController.class).in(Singleton.class);
