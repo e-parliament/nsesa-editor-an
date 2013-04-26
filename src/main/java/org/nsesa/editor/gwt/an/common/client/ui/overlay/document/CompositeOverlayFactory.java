@@ -17,9 +17,15 @@ import com.google.gwt.dom.client.Element;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Akomantoso20OverlayFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Csd02OverlayFactory;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.QuotedStructure;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
+import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
+
+import java.util.List;
 
 /**
  * Date: 27/03/13 13:51
@@ -43,33 +49,65 @@ public class CompositeOverlayFactory extends DefaultOverlayFactory {
 
     @Override
     public OverlayWidget getAmendableWidget(String namespaceURI, String tag) {
+        OverlayWidget amendableWidget = null;
         if (akomantoso20OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
-            return akomantoso20OverlayFactory.getAmendableWidget(namespaceURI, tag);
+            amendableWidget = akomantoso20OverlayFactory.getAmendableWidget(namespaceURI, tag);
         } else if (csd02OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
-            return csd02OverlayFactory.getAmendableWidget(namespaceURI, tag);
+            amendableWidget = csd02OverlayFactory.getAmendableWidget(namespaceURI, tag);
         }
-        return super.getAmendableWidget(namespaceURI, tag);
+        if (amendableWidget == null)
+            amendableWidget = super.getAmendableWidget(namespaceURI, tag);
+        setAmendable(amendableWidget);
+        return amendableWidget;
     }
 
     @Override
     public OverlayWidget getAmendableWidget(Element element) {
+        OverlayWidget amendableWidget = null;
         final String namespaceURI = element.getAttribute("ns");
         if (akomantoso20OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
-            return akomantoso20OverlayFactory.getAmendableWidget(element);
+            amendableWidget = akomantoso20OverlayFactory.getAmendableWidget(element);
         } else if (csd02OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
-            return csd02OverlayFactory.getAmendableWidget(element);
+            amendableWidget = csd02OverlayFactory.getAmendableWidget(element);
         }
-        return super.getAmendableWidget(element);
+        if (amendableWidget == null)
+            amendableWidget = super.getAmendableWidget(element);
+        setAmendable(amendableWidget);
+        return amendableWidget;
     }
 
     @Override
     public OverlayWidget toAmendableWidget(Element element) {
+        OverlayWidget amendableWidget = null;
         final String namespaceURI = element.getAttribute("ns");
         if (akomantoso20OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
-            return akomantoso20OverlayFactory.toAmendableWidget(element);
+            amendableWidget = akomantoso20OverlayFactory.toAmendableWidget(element);
         } else if (csd02OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
-            return csd02OverlayFactory.toAmendableWidget(element);
+            amendableWidget = csd02OverlayFactory.toAmendableWidget(element);
         }
-        return super.toAmendableWidget(element);
+        if (amendableWidget == null)
+            amendableWidget = super.toAmendableWidget(element);
+        setAmendable(amendableWidget);
+        return amendableWidget;
     }
+
+    protected void setAmendable(final OverlayWidget overlayWidget) {
+        if (overlayWidget != null) {
+            final String namespaceURI20 = akomantoso20OverlayFactory.getNamespaceURI();
+            final String namespaceURI30 = csd02OverlayFactory.getNamespaceURI();
+
+            overlayWidget.walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
+                @Override
+                public boolean visit(OverlayWidget visited) {
+                    final boolean baseHierarchySubclass = (visited instanceof BasehierarchyComplexType ||
+                            visited instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType);
+                    // this prevents us from marking all children as
+                    if (!visited.hasParent(namespaceURI20, "quotedStructure") && !visited.hasParent(namespaceURI30, "quotedStructure"))
+                        visited.setAmendable(baseHierarchySubclass);
+                    return true;
+                }
+            });
+        }
+    }
+
 }
