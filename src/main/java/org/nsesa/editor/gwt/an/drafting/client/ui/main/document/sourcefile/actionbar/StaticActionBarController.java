@@ -15,7 +15,9 @@ package org.nsesa.editor.gwt.an.drafting.client.ui.main.document.sourcefile.acti
 
 import com.google.gwt.dom.client.Style;
 import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.event.widget.OverlayWidgetDeleteEvent;
@@ -39,29 +41,21 @@ public class StaticActionBarController extends ActionBarController {
                                      final ActionBarViewCss actionBarViewCss,
                                      final ActionBarCreatePanelController actionBarCreatePanelController) {
         super(documentEventBus, view, actionBarViewCss, actionBarCreatePanelController);
+/*
+        Anchor moveUpAnchor = new Anchor("Move up");
+        moveUpAnchor.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+
+            }
+        });
+        view.addWidget(moveUpAnchor);*/
     }
 
     @Override
     protected void onScroll() {
         // doesn't do anything
     }
-
-    @Override
-    protected void onModifyClick(ClickEvent event) {
-        event.stopPropagation();
-        if (overlayWidget != null) {
-            documentEventBus.fireEvent(new OverlayWidgetModifyEvent(overlayWidget));
-        }
-    }
-
-    @Override
-    protected void onDeleteClick(ClickEvent event) {
-        event.stopPropagation();
-        if (overlayWidget != null) {
-            documentEventBus.fireEvent(new OverlayWidgetDeleteEvent(overlayWidget));
-        }
-    }
-
 
     @Override
     public void adaptPosition(Widget container) {

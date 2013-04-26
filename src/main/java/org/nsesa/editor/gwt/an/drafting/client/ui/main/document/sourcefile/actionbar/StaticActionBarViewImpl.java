@@ -38,7 +38,7 @@ public class StaticActionBarViewImpl extends Composite implements ActionBarView 
     @UiField
     Anchor bundleAnchor;
     @UiField
-    Anchor childAnchor;
+    Anchor newAnchor;
     @UiField
     Anchor deleteAnchor;
     @UiField
@@ -47,11 +47,23 @@ public class StaticActionBarViewImpl extends Composite implements ActionBarView 
     Anchor translateAnchor;
     @UiField
     Label location;
+    @UiField
+    HTMLPanel actionPanel;
 
     @Inject
     public StaticActionBarViewImpl() {
         final Widget widget = uiBinder.createAndBindUi(this);
         initWidget(widget);
+    }
+
+    @Override
+    public void addWidget(IsWidget isWidget) {
+        actionPanel.add(isWidget);
+    }
+
+    @Override
+    public ComplexPanel getActionPanel() {
+        return actionPanel;
     }
 
     @Override
@@ -76,7 +88,7 @@ public class StaticActionBarViewImpl extends Composite implements ActionBarView 
 
     @Override
     public FocusWidget getChildHandler() {
-        return childAnchor;
+        return newAnchor;
     }
 
     @Override
