@@ -184,18 +184,10 @@ public class DraftingDocumentController extends DefaultDocumentController {
         overlayWidgetSelectEventHandlerRegistration = documentEventBus.addHandler(OverlayWidgetSelectEvent.TYPE, new OverlayWidgetSelectEventHandler() {
             @Override
             public void onEvent(OverlayWidgetSelectEvent event) {
-
-                final OverlayWidget previousActiveOverlayWidget = sourceFileController.getActiveOverlayWidget();
-                if (previousActiveOverlayWidget != null) {
-                    previousActiveOverlayWidget.asWidget().removeStyleName(style.selected());
-                }
-
                 final OverlayWidget activeOverlayWidget = event.getOverlayWidget();
                 sourceFileController.setActiveOverlayWidget(activeOverlayWidget);
 
                 if (activeOverlayWidget != null) {
-                    activeOverlayWidget.asWidget().addStyleName(style.selected());
-
                     actionBarCreatePanelController.setOverlayWidget(activeOverlayWidget);
 
                     actionBarController.attach(activeOverlayWidget, DraftingDocumentController.this);
@@ -752,6 +744,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
         this.sourceFileController = injector.getSourceFileController();
         this.sourceFileController.setDocumentController(this);
 
+        // TODO this is ugly ...
         if (injector instanceof DraftingDocumentInjector) {
             final DraftingDocumentInjector draftingDocumentInjector = (DraftingDocumentInjector) injector;
             this.outlineController = draftingDocumentInjector.getOutlineController();
@@ -763,7 +756,6 @@ public class DraftingDocumentController extends DefaultDocumentController {
             this.actionBarCreatePanelController.setSourceFileController(sourceFileController);
             this.actionBarCreatePanelFocusPanel.setWidget(actionBarCreatePanelController.getView());
             this.actionBarCreatePanelControllerPopup.setWidget(actionBarCreatePanelFocusPanel);
-            this.style = draftingDocumentInjector.getDocumentViewCss();
         }
     }
 
