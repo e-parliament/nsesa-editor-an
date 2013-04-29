@@ -21,6 +21,7 @@ import com.google.inject.Inject;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileView;
+import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileViewCss;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.ActionBarController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.content.ContentController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.header.SourceFileHeaderController;
@@ -44,8 +45,9 @@ public class DraftingSourceFileController extends SourceFileController {
                                         final SourceFileHeaderController sourceFileHeaderController,
                                         final SourceFileView sourceFileView,
                                         final ContentController contentController,
+                                        final SourceFileViewCss sourceFileViewCss,
                                         final ActionBarController actionBarController) {
-        super(documentEventBus, markerController, sourceFileHeaderController, sourceFileView, contentController, actionBarController);
+        super(documentEventBus, markerController, sourceFileHeaderController, sourceFileView, contentController, actionBarController, sourceFileViewCss);
         sourceFileHeaderController.getView().addWidget(structureToggleButton);
         structureToggleButton.addValueChangeHandler(new ValueChangeHandler<Boolean>() {
             @Override
