@@ -246,3 +246,23 @@
 .subparagraph[ns="http://www.akomantoso.org/2.0"] {
     margin-left: 1.5em;
 }
+
+.block[ns="http://www.akomantoso.org/2.0"][name="qstart"] {
+    margin: 0;
+    display: inline;
+}
+
+.block[ns="http://www.akomantoso.org/2.0"][name="qend"] {
+    margin: 0;
+    display: inline;
+}
+
+.block[ns="http://www.akomantoso.org/2.0"][name="qstart"] + span {
+    margin: 0;
+    display: inline;
+}
+
+span[ns="http://www.akomantoso.org/2.0"] + .block[ns="http://www.akomantoso.org/2.0"][name="qend"] {
+    margin: 0;
+    display: inline;
+}
