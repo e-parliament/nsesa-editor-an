@@ -25,7 +25,7 @@
                 <#if child?node_type == 'element'><#t/>
                     <@element el=child debug=debug/><#t/>
                 <#elseif child?node_type == "text"><#t/>
-                ${child?string?xml}<#t/>
+                ${child?string?xml}
                 </#if><#t/>
             </#list><#t/>
         </#if><#t/>
