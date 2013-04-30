@@ -15,7 +15,7 @@ package org.nsesa.editor.gwt.an.amendments.client.handler.modify;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
-import org.nsesa.editor.gwt.an.amendments.client.Akomantoso20OverlayWidgetValidator;
+import org.nsesa.editor.gwt.an.amendments.client.AmendmentOverlayWidgetValidator;
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
@@ -63,7 +63,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
                                                        final MetaPanelController metaPanelController,
                                                        final ServiceFactory serviceFactory,
                                                        final AmendmentInjectionPointFinder amendmentInjectionPointFinder,
-                                                       final Akomantoso20OverlayWidgetValidator validator
+                                                       final AmendmentOverlayWidgetValidator validator
     ) {
         super(clientFactory, view, locator, overlayFactory, visualStructureController, amendmentInjectionPointFinder, validator);
         this.authorPanelController = authorPanelController;

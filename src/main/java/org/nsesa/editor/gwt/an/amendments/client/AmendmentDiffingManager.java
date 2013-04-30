@@ -34,10 +34,10 @@ import java.util.ArrayList;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtoso20DiffingManager extends DefaultDiffingManager {
+public class AmendmentDiffingManager extends DefaultDiffingManager {
 
     @Inject
-    public AkomaNtoso20DiffingManager(final DocumentEventBus documentEventBus) {
+    public AmendmentDiffingManager(final DocumentEventBus documentEventBus) {
         super(documentEventBus);
     }
 

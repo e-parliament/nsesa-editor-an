@@ -30,11 +30,11 @@ import java.util.List;
  * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
  *         Date: 21/03/13 12:31
  */
-public class Akomantoso20OverlayWidgetValidator implements Validator<OverlayWidget> {
+public class AmendmentOverlayWidgetValidator implements Validator<OverlayWidget> {
 
     private List<Validator<OverlayWidget>> validators;
 
-    public Akomantoso20OverlayWidgetValidator() {
+    public AmendmentOverlayWidgetValidator() {
         this.validators = new ArrayList<Validator<OverlayWidget>>();
         addValidator(new OverlayWidgetValidator());
         addValidator(new Validator<OverlayWidget>() {

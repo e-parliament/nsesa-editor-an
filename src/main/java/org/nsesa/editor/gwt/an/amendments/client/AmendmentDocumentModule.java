@@ -39,7 +39,7 @@ import org.nsesa.editor.gwt.core.client.undo.UndoManager;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtoso20DocumentModule extends AbstractGinModule {
+public class AmendmentDocumentModule extends AbstractGinModule {
     @Override
     protected void configure() {
         bind(AmendmentController.class).to(AkomaNtoso20AmendmentController.class);
@@ -47,7 +47,7 @@ public class AkomaNtoso20DocumentModule extends AbstractGinModule {
         bind(SourceFileHeaderController.class).to(AkomaNtoso20SourceFileHeaderController.class).in(Singleton.class);
         bind(AmendmentActionPanelController.class).to(AkomaNtoso20AmendmentActionPanelController.class).in(Singleton.class);
         bind(MarkerController.class).to(AmendmentMarkerController.class).in(Singleton.class);
-        bind(DiffingManager.class).to(AkomaNtoso20DiffingManager.class).in(Singleton.class);
+        bind(DiffingManager.class).to(AmendmentDiffingManager.class).in(Singleton.class);
         bind(UndoManager.class).in(Singleton.class);
 
     }

@@ -25,7 +25,7 @@ import org.nsesa.editor.gwt.editor.client.Editor;
  */
 public class AkomaNtosoEditor extends Editor {
 
-    final AkomaNtoso20Injector injector = GWT.create(AkomaNtoso20Injector.class);
+    final AmendmentInjector injector = GWT.create(AmendmentInjector.class);
 
     private AmendmentDialogController amendmentDialogController;
 
@@ -35,7 +35,7 @@ public class AkomaNtosoEditor extends Editor {
         amendmentDialogController = injector.getAmendmentDialogController();
     }
 
-    public AkomaNtoso20Injector getInjector() {
+    public AmendmentInjector getInjector() {
         return injector;
     }
 }

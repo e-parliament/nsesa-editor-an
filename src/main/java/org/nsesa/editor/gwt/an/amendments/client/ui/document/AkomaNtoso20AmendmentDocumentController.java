@@ -24,8 +24,7 @@ import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentController;
-import org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentInjector;
-import org.nsesa.editor.gwt.an.amendments.client.AkomaNtoso20DocumentInjector;
+import org.nsesa.editor.gwt.an.amendments.client.MyAmendmentDocumentInjector;
 import org.nsesa.editor.gwt.an.amendments.client.mode.ConsolidationMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.DiffMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.InlineEditingMode;
@@ -39,8 +38,6 @@ import org.nsesa.editor.gwt.core.client.event.document.DocumentOverlayCompletedE
 import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEvent;
 import org.nsesa.editor.gwt.core.client.keyboard.KeyboardListener;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
-import org.nsesa.editor.gwt.core.client.ui.document.DefaultDocumentController;
-import org.nsesa.editor.gwt.core.client.ui.document.DocumentInjector;
 import org.nsesa.editor.gwt.core.client.ui.document.OverlayWidgetAware;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
@@ -169,8 +166,8 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
     }
 
     @Override
-    public AmendmentDocumentInjector getInjector() {
-        return GWT.create(AkomaNtoso20DocumentInjector.class);
+    public org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentInjector getInjector() {
+        return GWT.create(MyAmendmentDocumentInjector.class);
     }
 
     @Override
