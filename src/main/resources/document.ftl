@@ -24,12 +24,7 @@
             <#list el?children as child><#t/>
                 <#if child?node_type == 'element'><#t/>
                     <@element el=child debug=debug/><#t/>
-                <#elseif child?node_type == "text"><#t/>
-                ${child?string?xml}
-                </#if><#t/>
-            </#list><#t/>
-        </#if><#t/>
-    </span><#lt/>
+                <#elseif child?node_type == "text"><#t/>${child?string?xml}</#if></#list></#if></span><#lt/>
     </@compress>
 </#macro>
 <@compress single_line=true>
