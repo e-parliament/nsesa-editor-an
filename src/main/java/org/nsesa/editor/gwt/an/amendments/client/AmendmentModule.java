@@ -17,6 +17,7 @@ import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Singleton;
 import com.google.inject.TypeLiteral;
+import org.nsesa.editor.gwt.amendment.client.ui.document.amendments.AmendmentsPanelModule;
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20ContentPanelController;
 import org.nsesa.editor.gwt.an.amendments.client.handler.create.AkomaNtoso20AmendmentDialogCreateController;
 import org.nsesa.editor.gwt.an.amendments.client.handler.delete.AkomaNtoso20AmendmentDialogDeleteController;
@@ -26,11 +27,12 @@ import org.nsesa.editor.gwt.an.amendments.client.ui.footer.AkomaNtoso20FooterVie
 import org.nsesa.editor.gwt.an.amendments.client.ui.rte.ckeditor.Akomantoso20RichTextEditorConfig;
 import org.nsesa.editor.gwt.an.amendments.client.ui.rte.ckeditor.Akomantoso20RichTextEditorPlugin;
 import org.nsesa.editor.gwt.an.common.client.AkomaNtosoModule;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtoso20OverlaySnippetFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtoso20OverlayStrategy;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Akomantoso20OverlayLocalizableResource;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayLocalizableResource;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditorConfig;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditorPlugin;
 import org.nsesa.editor.gwt.core.client.validation.Validator;
@@ -56,6 +58,9 @@ public class AmendmentModule extends AbstractGinModule {
         install(new InlineEditorModule());
         install(new AmendmentDialogModule());
         install(new EditorModule());
+
+        install(new org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentModule());
+        install(new AmendmentsPanelModule());
         install(new AkomaNtosoModule());
 
         bind(RichTextEditorPlugin.class).to(Akomantoso20RichTextEditorPlugin.class);
