@@ -13,12 +13,16 @@
  */
 package org.nsesa.editor.gwt.an.common.server.service.gwt;
 
+import com.google.common.base.Function;
+import com.google.common.collect.Collections2;
 import freemarker.ext.dom.NodeModel;
 import freemarker.template.Configuration;
 import freemarker.template.TemplateException;
 import org.nsesa.editor.gwt.core.client.service.gwt.GWTDocumentService;
 import org.nsesa.editor.gwt.core.shared.ClientContext;
 import org.nsesa.editor.gwt.core.shared.DocumentDTO;
+import org.nsesa.server.dto.DocumentContentDTO;
+import org.nsesa.server.service.api.DocumentContentService;
 import org.nsesa.server.service.api.DocumentService;
 import org.springframework.core.io.Resource;
 import org.xml.sax.InputSource;
@@ -29,10 +33,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Date: 24/06/12 19:57
@@ -43,6 +44,7 @@ import java.util.Map;
 public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implements GWTDocumentService {
 
     private DocumentService documentService;
+    private DocumentContentService documentContentService;
 
     private Resource documentTemplate;
 
@@ -54,80 +56,48 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
     @Override
     public DocumentDTO getDocument(final ClientContext clientContext, final String documentID) {
         final org.nsesa.server.dto.DocumentDTO fromServices = documentService.getDocument(documentID);
-
-        if (fromServices != null) {
-            // manually copy for now
-            final DocumentDTO document = new DocumentDTO();
-            document.setDocumentID(fromServices.getDocumentID());
-            document.setAmendable(fromServices.isAmendable());
-            document.setName(fromServices.getName());
-            document.setLanguageIso(fromServices.getLanguageIso());
-            document.setDeadline(new Date(fromServices.getDeadline().getTime().getTime()));
-
-            return document;
-        }
-        return null;
+        return fromBackend(fromServices);
     }
 
     @Override
     public String getDocumentFragment(final ClientContext clientContext, final String documentID, final String elementID) {
-        return null;
+        return documentContentService.getDocumentFragment(documentID, elementID);
     }
 
     @Override
     public ArrayList<DocumentDTO> getAvailableTranslations(final ClientContext clientContext, final String documentID) {
-        ArrayList<DocumentDTO> translations = new ArrayList<DocumentDTO>();
-
-        final DocumentDTO documentDTO1 = new DocumentDTO();
-        documentDTO1.setLanguageIso("EN");
-        documentDTO1.setName("English");
-        documentDTO1.setDocumentID("1");
-        translations.add(documentDTO1);
-
-        final DocumentDTO documentDTO2 = new DocumentDTO();
-        documentDTO2.setLanguageIso("FR");
-        documentDTO2.setName("French");
-        documentDTO2.setDocumentID("2");
-        translations.add(documentDTO2);
-
-        final DocumentDTO documentDTO3 = new DocumentDTO();
-        documentDTO3.setLanguageIso("DE");
-        documentDTO3.setName("German");
-        documentDTO3.setDocumentID("3");
-        translations.add(documentDTO3);
-
-        return translations;
+        final List<org.nsesa.server.dto.DocumentDTO> availableTranslations = documentService.getAvailableTranslations(documentID);
+        final Collection<DocumentDTO> documentDTOs = Collections2.transform(availableTranslations, new Function<org.nsesa.server.dto.DocumentDTO, DocumentDTO>() {
+            @Override
+            public DocumentDTO apply(org.nsesa.server.dto.DocumentDTO input) {
+                return fromBackend(input);
+            }
+        });
+        return new ArrayList<DocumentDTO>(documentDTOs);
     }
 
     @Override
     public ArrayList<DocumentDTO> getRelatedDocuments(ClientContext clientContext, String documentID) {
-        ArrayList<DocumentDTO> related = new ArrayList<DocumentDTO>();
-
-        final DocumentDTO documentDTO1 = new DocumentDTO();
-        documentDTO1.setLanguageIso("EN");
-        documentDTO1.setName("Related 1");
-        documentDTO1.setDocumentID("4");
-        related.add(documentDTO1);
-
-        final DocumentDTO documentDTO2 = new DocumentDTO();
-        documentDTO2.setLanguageIso("EN");
-        documentDTO2.setName("Related 2");
-        documentDTO2.setDocumentID("5");
-        related.add(documentDTO2);
-
-        return related;
+        final List<org.nsesa.server.dto.DocumentDTO> relatedDocuments = documentService.getRelatedDocuments(documentID);
+        final Collection<DocumentDTO> documentDTOs = Collections2.transform(relatedDocuments, new Function<org.nsesa.server.dto.DocumentDTO, DocumentDTO>() {
+            @Override
+            public DocumentDTO apply(org.nsesa.server.dto.DocumentDTO input) {
+                return fromBackend(input);
+            }
+        });
+        return new ArrayList<DocumentDTO>(documentDTOs);
     }
 
     @Override
     public String getDocumentContent(final ClientContext clientContext, final String documentID) {
-        String content = documentService.getDocumentContent(documentID);
+        final DocumentContentDTO documentContent = documentContentService.getDocumentContent(documentID);
 
         final InputSource inputSource;
-        if (content != null) {
-            byte[] bytes = content.getBytes(Charset.forName("UTF-8"));
+        if (documentContent.getContent() != null) {
+            byte[] bytes = documentContent.getContent().getBytes(Charset.forName("UTF-8"));
             inputSource = new InputSource(new ByteArrayInputStream(bytes));
         } else {
-            inputSource = new InputSource(documentID);
+            throw new RuntimeException("Could not retrieve document content.");
         }
 
         try {
@@ -152,6 +122,27 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
         }
     }
 
+    @Override
+    public void saveDocumentContent(final ClientContext clientContext, final String documentID, final String content) {
+        DocumentContentDTO documentContentDTO = new DocumentContentDTO();
+        documentContentDTO.setDocumentID(documentID);
+        documentContentDTO.setContent(content);
+        documentContentService.saveDocumentContent(documentContentDTO);
+    }
+
+    // TODO replace with assemblers
+    private DocumentDTO fromBackend(org.nsesa.server.dto.DocumentDTO fromServices) {
+        if (fromServices == null) return null;
+
+        final DocumentDTO document = new DocumentDTO();
+        document.setDocumentID(fromServices.getDocumentID());
+        document.setAmendable(fromServices.isAmendable());
+        document.setName(fromServices.getName());
+        document.setLanguageIso(fromServices.getLanguageIso());
+        document.setDeadline(new Date(fromServices.getDeadline().getTime().getTime()));
+        return document;
+    }
+
     // Spring setters ----------------------
 
     public void setDocumentTemplate(Resource documentTemplate) {
@@ -160,5 +151,9 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
 
     public void setDocumentService(DocumentService documentService) {
         this.documentService = documentService;
+    }
+
+    public void setDocumentContentService(DocumentContentService documentContentService) {
+        this.documentContentService = documentContentService;
     }
 }

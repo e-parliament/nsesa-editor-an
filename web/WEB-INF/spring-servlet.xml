@@ -67,16 +67,7 @@
     </bean>
     <bean id="gwtAmendmentService" class="org.nsesa.editor.gwt.an.amendments.server.service.gwt.GWTAmendmentServiceImpl"
           autowire="byName">
-        <property name="documents">
-            <map>
-                <entry key="amendment-1" value="classpath:examples/AM-793034EN-AM1.xml"/>
-                <entry key="amendment-2" value="classpath:examples/AM-793034EN-AM2.xml"/>
-                <entry key="amendment-3" value="classpath:examples/AM-793034EN-AM3.xml"/>
-            </map>
-        </property>
         <property name="documentTemplate" value="classpath:document.ftl"/>
-        <property name="amendmentDirectory"
-                  value="${amendment.directory}"/>
     </bean>
 
     <bean id="gwtLogController" class="org.springframework.web.servlet.mvc.ServletWrappingController">

@@ -15,7 +15,6 @@ package org.nsesa.editor.gwt.an.amendments.server.service.gwt;
 
 import com.google.common.base.Function;
 import com.google.common.collect.Collections2;
-import com.google.common.io.Files;
 import freemarker.ext.dom.NodeModel;
 import freemarker.template.Configuration;
 import freemarker.template.TemplateException;
@@ -33,16 +32,14 @@ import org.nsesa.server.service.api.AmendmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
-import org.xml.sax.*;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
 
-import javax.xml.XMLConstants;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-import javax.xml.transform.Source;
-import javax.xml.transform.stream.StreamSource;
-import javax.xml.validation.SchemaFactory;
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.StringWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 /**
@@ -57,67 +54,37 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
     private AmendmentService amendmentService;
 
-    private Map<String, Resource> documents;
     private Resource documentTemplate;
-    private Resource amendmentDirectory;
 
     @Override
     public AmendmentContainerDTO getAmendmentContainer(final ClientContext clientContext, final String id) throws UnsupportedOperationException, ResourceNotFoundException {
-        return null;
+        return fromBackend(amendmentService.getAmendmentContainer(id));
     }
 
     @Override
     public AmendmentContainerDTO[] getAmendmentContainers(final ClientContext clientContext) throws UnsupportedOperationException {
-
         try {
-            List<AmendmentContainerDTO> amendmentContainerDTOs = new ArrayList<AmendmentContainerDTO>();
-            final String[] documentIDs = clientContext.getDocumentIDs();
-            for (String documentID : clientContext.getDocumentIDs()) {
-                List<AmendmentContainerDTO> temp = new ArrayList<AmendmentContainerDTO>();
+            final List<AmendmentContainerDTO> amendmentContainerDTOs = new ArrayList<AmendmentContainerDTO>();
+            for (final String documentID : clientContext.getDocumentIDs()) {
                 final List<org.nsesa.server.dto.AmendmentContainerDTO> backend = amendmentService.getAmendmentContainersByDocumentAndPerson(documentID, clientContext.getLoggedInPerson().getId());
                 if (backend != null) {
-                    for (org.nsesa.server.dto.AmendmentContainerDTO b : backend) {
+                    for (final org.nsesa.server.dto.AmendmentContainerDTO b : backend) {
                         AmendmentContainerDTO amendmentContainerDTO = fromBackend(b);
+                        // transform XML into HTML
                         amendmentContainerDTO.setBody(toHTML(b.getBody().getBytes("UTF-8")));
                         amendmentContainerDTOs.add(amendmentContainerDTO);
                     }
                 }
             }
-
-            /*final AmendmentContainerDTO amendment1 = new AmendmentContainerDTO();
-            amendment1.setId(UUID.randomUUID().toString());
-            amendment1.setRevisionID(UUID.randomUUID().toString());
-            final AmendableWidgetReference reference1 = new AmendableWidgetReference("rec1");
-            amendment1.setSourceReference(reference1);
-            amendment1.setBody(getAmendmentDocument("amendment-1"));
-
-            final AmendmentContainerDTO amendment2 = new AmendmentContainerDTO();
-            amendment2.setId(UUID.randomUUID().toString());
-            amendment2.setRevisionID(UUID.randomUUID().toString());
-            final AmendableWidgetReference reference2 = new AmendableWidgetReference("rec2");
-            final AmendableWidgetReference reference2a = new AmendableWidgetReference("rec3");
-            final AmendableWidgetReference reference2b = new AmendableWidgetReference("rec1");
-            amendment2.setTargetReferences(new ArrayList<AmendableWidgetReference>(Arrays.asList(reference2a, reference2b)));
-            amendment2.setSourceReference(reference2);
-            amendment2.setBody(getAmendmentDocument("amendment-2"));
-
-            final AmendmentContainerDTO amendment3 = new AmendmentContainerDTO();
-            amendment3.setId(UUID.randomUUID().toString());
-            amendment3.setRevisionID(UUID.randomUUID().toString());
-            final AmendableWidgetReference reference3 = new AmendableWidgetReference("art2-pnta");
-            amendment3.setSourceReference(reference3);
-            amendment3.setBody(getAmendmentDocument("amendment-3"));
-
-            return new AmendmentContainerDTO[]{amendment1, amendment2, amendment3};*/
-
             return amendmentContainerDTOs.toArray(new AmendmentContainerDTO[amendmentContainerDTOs.size()]);
-
         } catch (IOException e) {
             throw new RuntimeException("Could not retrieve amendment content.", e);
         }
     }
 
+    // TODO use assemblers
     private AmendmentContainerDTO fromBackend(org.nsesa.server.dto.AmendmentContainerDTO b) {
+        if (b == null) return null;
         AmendmentContainerDTO amendmentContainerDTO = new AmendmentContainerDTO();
         amendmentContainerDTO.setAmendmentContainerStatus(b.getAmendmentContainerStatus());
         amendmentContainerDTO.setDocumentID(b.getDocumentID());
@@ -139,67 +106,6 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         amendmentContainerDTO.setLanguageISO(b.getLanguageISO());
         amendmentContainerDTO.setRevisionID(b.getRevisionID());
         return amendmentContainerDTO;
-    }
-
-    private String getAmendmentDocument(String id) throws IOException {
-
-        byte[] bytes = Files.toByteArray(documents.get(id).getFile());
-        return toHTML(bytes);
-
-    }
-
-    private void validate(final String content) throws ValidationException {
-        LOG.debug("====================== AN VALIDATION ======================");
-        System.setProperty("javax.xml.validation.SchemaFactory:" + XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI, "org.apache.xerces.jaxp.validation.XMLSchemaFactory");
-
-        List<Source> schemas = new ArrayList<Source>();
-        schemas.add(new StreamSource(Thread.currentThread().getContextClassLoader().getResourceAsStream("xml.xsd")));
-        schemas.add(new StreamSource(Thread.currentThread().getContextClassLoader().getResourceAsStream("akomantoso20.xsd")));
-        try {
-            SAXParserFactory factory = SAXParserFactory.newInstance();
-//            factory.setValidating(true);
-            factory.setNamespaceAware(true);
-
-            SchemaFactory schemaFactory =
-                    SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_INSTANCE_NS_URI);
-
-            factory.setSchema(schemaFactory.newSchema(schemas.toArray(new Source[schemas.size()])));
-
-            SAXParser parser = factory.newSAXParser();
-
-            XMLReader reader = parser.getXMLReader();
-
-            final LoggingErrorHandler loggingErrorHandler = new LoggingErrorHandler();
-            reader.setErrorHandler(loggingErrorHandler);
-            reader.parse(new InputSource(new ByteArrayInputStream(content.trim().getBytes("UTF-8"))));
-
-        } catch (ParserConfigurationException e) {
-            throw new ValidationException("Problem parsing XML - configuration error: " + e.getMessage(), e);
-        } catch (IOException e) {
-            throw new ValidationException("Problem parsing XML - I/O error: " + e.getMessage(), e);
-        } catch (SAXException e) {
-            throw new ValidationException("Problem parsing XML - SAX error: " + e.getMessage(), e);
-        } finally {
-            LOG.debug("==================== END OF VALIDATION ====================");
-        }
-
-    }
-
-    public static class LoggingErrorHandler implements ErrorHandler {
-        @Override
-        public void warning(SAXParseException e) throws SAXException {
-            LOG.warn("SAX warning: " + e);
-        }
-
-        @Override
-        public void error(SAXParseException e) throws SAXException {
-            LOG.warn("SAX error: " + e);
-        }
-
-        @Override
-        public void fatalError(SAXParseException e) throws SAXException {
-            LOG.warn("SAX fatal: " + e);
-        }
     }
 
     private String toHTML(byte[] bytes) {
@@ -233,56 +139,38 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
     @Override
     public AmendmentContainerDTO[] saveAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, StaleResourceException, ValidationException {
-        List<AmendmentContainerDTO> amendmentContainerDTOs = new ArrayList<AmendmentContainerDTO>();
-        for (AmendmentContainerDTO data : amendmentContainers) {
+        final List<AmendmentContainerDTO> amendmentContainerDTOs = new ArrayList<AmendmentContainerDTO>();
+        for (final AmendmentContainerDTO data : amendmentContainers) {
 
             if (data.getDocumentID() == null)
                 throw new NullPointerException("No documentID set on amendment DTO -- aborting");
 
-            try {
-                final File amendmentDirectoryFile = amendmentDirectory.getFile();
-                /*if (!amendmentDirectoryFile.exists()) {
-                    if (!amendmentDirectoryFile.mkdirs()) {
-                        throw new RuntimeException("Could not create amendment export directory at '" + amendmentDirectoryFile.getAbsolutePath() + "'");
-                    }
-                }
-                if (!amendmentDirectoryFile.canWrite()) {
-                    throw new RuntimeException("No permission to write to '" + amendmentDirectoryFile.getAbsolutePath() + "'");
-                }*/
-                validate(data.getBody());
-                //Files.write(data.getBody(), new File(amendmentDirectoryFile, data.getSourceReference().getPath() + "-" + data.getId() + "-am.xml"), Charset.forName("UTF-8"));
+            // manually copy for now ...
+            final org.nsesa.server.dto.AmendmentContainerDTO backendDTO = new org.nsesa.server.dto.AmendmentContainerDTO();
+            backendDTO.setPersonID(clientContext.getLoggedInPerson().getId());
+            backendDTO.setDocumentID(data.getDocumentID());
+            backendDTO.setRevisionID(data.getRevisionID());
+            backendDTO.setAmendmentContainerStatus(data.getAmendmentContainerStatus());
+            backendDTO.setLanguageISO(data.getLanguageISO());
+            backendDTO.setAmendmentAction(AmendmentAction.valueOf(data.getAmendmentAction().toString()));
+            backendDTO.setAmendmentContainerID(data.getId());
+            backendDTO.setBody(data.getBody());
+            final AmendableWidgetReference dto = data.getSourceReference();
+            final org.nsesa.server.dto.AmendableWidgetReference sourceReference = new org.nsesa.server.dto.AmendableWidgetReference(dto.getPath());
+            sourceReference.setNamespaceURI(dto.getNamespaceURI());
+            sourceReference.setReferenceID(dto.getReferenceID());
+            sourceReference.setType(dto.getType());
+            sourceReference.setPath(dto.getPath());
+            sourceReference.setSibling(dto.isSibling());
+            sourceReference.setCreation(dto.isCreation());
+            sourceReference.setOffset(dto.getOffset());
+
+            backendDTO.setSourceReference(sourceReference);
 
 
-                // manually copy for now ...
-                org.nsesa.server.dto.AmendmentContainerDTO backendDTO = new org.nsesa.server.dto.AmendmentContainerDTO();
-                backendDTO.setPersonID(clientContext.getLoggedInPerson().getId());
-                backendDTO.setDocumentID(data.getDocumentID());
-                backendDTO.setRevisionID(data.getRevisionID());
-                backendDTO.setAmendmentContainerStatus(data.getAmendmentContainerStatus());
-                backendDTO.setLanguageISO(data.getLanguageISO());
-                backendDTO.setAmendmentAction(AmendmentAction.valueOf(data.getAmendmentAction().toString()));
-                backendDTO.setAmendmentContainerID(data.getId());
-                backendDTO.setBody(data.getBody());
-                final AmendableWidgetReference dto = data.getSourceReference();
-                final org.nsesa.server.dto.AmendableWidgetReference sourceReference = new org.nsesa.server.dto.AmendableWidgetReference(dto.getPath());
-                sourceReference.setNamespaceURI(dto.getNamespaceURI());
-                sourceReference.setReferenceID(dto.getReferenceID());
-                sourceReference.setType(dto.getType());
-                sourceReference.setPath(dto.getPath());
-                sourceReference.setSibling(dto.isSibling());
-                sourceReference.setCreation(dto.isCreation());
-                sourceReference.setOffset(dto.getOffset());
+            amendmentService.save(backendDTO);
 
-                backendDTO.setSourceReference(sourceReference);
-
-
-                amendmentService.save(backendDTO);
-
-                LOG.info("Saved amendment to the dto under document " + data.getDocumentID());
-
-            } catch (IOException e) {
-                LOG.error("Could not write file.", e);
-            }
+            LOG.info("Saved amendment to the dto under document " + data.getDocumentID());
             try {
                 data.setBody(toHTML(data.getBody().getBytes("UTF-8")));
             } catch (UnsupportedEncodingException e) {
@@ -433,17 +321,8 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
     // SPRING SETTERS -------------------------------------------
 
-
-    public void setDocuments(Map<String, Resource> documents) {
-        this.documents = documents;
-    }
-
     public void setDocumentTemplate(Resource documentTemplate) {
         this.documentTemplate = documentTemplate;
-    }
-
-    public void setAmendmentDirectory(Resource amendmentDirectory) {
-        this.amendmentDirectory = amendmentDirectory;
     }
 
     public void setAmendmentService(AmendmentService amendmentService) {

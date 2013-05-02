@@ -27,6 +27,16 @@
         <property name="serviceClass" value="org.nsesa.server.service.api.DocumentService"/>
         <property name="address" value="${services.url}/DocumentService"/>
     </bean>
+
+    <bean id="documentContentService" class="org.nsesa.server.service.api.DocumentContentService"
+          factory-bean="documentContentServiceClientFactory"
+          factory-method="create" autowire="byName"/>
+
+    <bean id="documentContentServiceClientFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+        <property name="serviceClass" value="org.nsesa.server.service.api.DocumentContentService"/>
+        <property name="address" value="${services.url}/DocumentContentService"/>
+    </bean>
+
     <bean id="amendmentService" class="org.nsesa.server.service.api.AmendmentService"
           factory-bean="amendmentServiceClientFactory"
           factory-method="create" autowire="byName"/>
@@ -35,6 +45,7 @@
         <property name="serviceClass" value="org.nsesa.server.service.api.AmendmentService"/>
         <property name="address" value="${services.url}/AmendmentService"/>
     </bean>
+
     <bean id="personService" class="org.nsesa.server.service.api.PersonService"
           factory-bean="personServiceClientFactory"
           factory-method="create" autowire="byName"/>
