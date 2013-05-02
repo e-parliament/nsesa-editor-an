@@ -116,7 +116,7 @@
                             <w:p w:rsidR="00416913" w:rsidRDefault="00416913">
                                 <w:r>
                                     <w:t>
-                                        ${amendment.akomaNtoso?xml}
+
                                     <@amend am=amendment/>
                                     </w:t>
                                 </w:r>
