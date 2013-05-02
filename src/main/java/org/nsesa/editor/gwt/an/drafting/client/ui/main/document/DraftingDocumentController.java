@@ -22,11 +22,13 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.FocusPanel;
 import com.google.gwt.user.client.ui.PopupPanel;
 import com.google.gwt.user.client.ui.RootLayoutPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.inject.Inject;
+import com.google.inject.name.Named;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEvent;
@@ -74,6 +76,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
     private final InlineEditorController inlineEditorController;
 
+    private final Transformer transformer;
+
     private OutlineController outlineController;
 
     private ActionBarController actionBarController;
@@ -113,6 +117,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
     private KeyboardListener.KeyCombo escape = new KeyboardListener.KeyCombo(false, false, false, KeyCodes.KEY_ESCAPE);
     private KeyboardListener.KeyCombo delete = new KeyboardListener.KeyCombo(false, false, false, KeyCodes.KEY_DELETE);
 
+    private KeyboardListener.KeyCombo ctrlS = new KeyboardListener.KeyCombo(false, false, true, 83); // 83 is 's' key
+
     private KeyboardListener.KeyCombo upArrow = new KeyboardListener.KeyCombo(false, false, false, KeyCodes.KEY_UP);
     private KeyboardListener.KeyCombo downArrow = new KeyboardListener.KeyCombo(false, false, false, KeyCodes.KEY_DOWN);
 
@@ -135,11 +141,13 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                       final Mover mover,
                                       final InlineEditorController inlineEditorController,
                                       final OverlaySnippetFactory overlaySnippetFactory,
-                                      final OverlaySnippetEvaluator overlaySnippetEvaluator) {
+                                      final OverlaySnippetEvaluator overlaySnippetEvaluator,
+                                      final @Named("xml") Transformer transformer) {
         super(clientFactory, serviceFactory, overlayFactory, locator, creator, mover);
         this.inlineEditorController = inlineEditorController;
         this.overlaySnippetFactory = overlaySnippetFactory;
         this.overlaySnippetEvaluator = overlaySnippetEvaluator;
+        this.transformer = transformer;
     }
 
     @Override
@@ -150,6 +158,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
         clientFactory.getKeyboardListener().register(tab);
         clientFactory.getKeyboardListener().register(escape);
         clientFactory.getKeyboardListener().register(delete);
+        clientFactory.getKeyboardListener().register(ctrlS);
         clientFactory.getKeyboardListener().register(upArrow);
         clientFactory.getKeyboardListener().register(downArrow);
         clientFactory.getKeyboardListener().register(altUpArrow);
@@ -372,6 +381,24 @@ public class DraftingDocumentController extends DefaultDocumentController {
                     } else if (inlineEditorController.isShowing()) {
                         cancelModify();
                     }
+                } else if (ctrlS.equals(event.getKeyCombo())) {
+
+
+                    // ------------- CTRL + s -------------
+                    final String content = transformer.transform(sourceFileController.getOverlayWidgets().get(0));
+                    serviceFactory.getGwtDocumentService().saveDocumentContent(clientFactory.getClientContext(), document.getDocumentID(), content, new AsyncCallback<Void>() {
+                        @Override
+                        public void onFailure(Throwable caught) {
+                            clientFactory.getEventBus().fireEvent(new CriticalErrorEvent("Could not save document.", caught));
+                        }
+
+                        @Override
+                        public void onSuccess(Void result) {
+                            // all fine!
+                            clientFactory.getEventBus().fireEvent(new NotificationEvent("Document successfully saved."));
+                        }
+                    });
+
                 } else if (downArrow.equals(event.getKeyCombo())) {
 
 
