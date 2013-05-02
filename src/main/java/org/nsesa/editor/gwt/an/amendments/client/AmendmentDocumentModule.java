@@ -17,10 +17,12 @@ import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Inject;
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
+import com.google.inject.TypeLiteral;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.action.AmendmentActionPanelController;
 import org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentViewImpl;
 import org.nsesa.editor.gwt.amendment.client.ui.document.marker.AmendmentMarkerController;
+import org.nsesa.editor.gwt.amendment.client.ui.pagination.AmendmentPaginationController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.action.AkomaNtoso20AmendmentActionPanelController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.document.AkomaNtoso20SourceFileHeaderController;
@@ -31,6 +33,7 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.header.SourceFile
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.marker.MarkerController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultSelector;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Selector;
+import org.nsesa.editor.gwt.core.client.ui.pagination.PaginationController;
 import org.nsesa.editor.gwt.core.client.undo.UndoManager;
 
 /**
@@ -47,8 +50,9 @@ public class AmendmentDocumentModule extends AbstractGinModule {
         bind(SourceFileHeaderController.class).to(AkomaNtoso20SourceFileHeaderController.class).in(Singleton.class);
         bind(AmendmentActionPanelController.class).to(AkomaNtoso20AmendmentActionPanelController.class).in(Singleton.class);
         bind(MarkerController.class).to(AmendmentMarkerController.class).in(Singleton.class);
-        bind(DiffingManager.class).to(AmendmentDiffingManager.class).in(Singleton.class);
         bind(UndoManager.class).in(Singleton.class);
+        bind(PaginationController.class).to(AmendmentPaginationController.class).in(Singleton.class);
+        bind(new TypeLiteral<DiffingManager<AmendmentController>>() {}).to(AmendmentDiffingManager.class).in(Singleton.class);
 
     }
 
