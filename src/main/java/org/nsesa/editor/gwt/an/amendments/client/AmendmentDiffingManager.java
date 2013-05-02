@@ -15,16 +15,17 @@ package org.nsesa.editor.gwt.an.amendments.client;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
-import org.nsesa.editor.gwt.core.client.diffing.DefaultDiffingManager;
+import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.event.CriticalErrorEvent;
-import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
+import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
+import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
 import org.nsesa.editor.gwt.core.shared.DiffMethod;
 import org.nsesa.editor.gwt.core.shared.DiffRequest;
 import org.nsesa.editor.gwt.core.shared.DiffResult;
-import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
 
 import java.util.ArrayList;
 
@@ -34,11 +35,21 @@ import java.util.ArrayList;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AmendmentDiffingManager extends DefaultDiffingManager {
+public class AmendmentDiffingManager implements DiffingManager<AmendmentController> {
+
+    /**
+     * Reference to the parent document controller.
+     */
+    protected DocumentController documentController;
+
+    /**
+     * Reference to the parent document event bus.
+     */
+    protected final DocumentEventBus documentEventBus;
 
     @Inject
     public AmendmentDiffingManager(final DocumentEventBus documentEventBus) {
-        super(documentEventBus);
+        this.documentEventBus = documentEventBus;
     }
 
     @Override
@@ -75,5 +86,8 @@ public class AmendmentDiffingManager extends DefaultDiffingManager {
         });
     }
 
-
+    @Override
+    public void setDocumentController(DocumentController documentController) {
+        this.documentController = documentController;
+    }
 }
