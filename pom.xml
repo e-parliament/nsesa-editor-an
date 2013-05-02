@@ -359,6 +359,7 @@
                         <module>org.nsesa.editor.gwt.an.amendments.AkomaNtosoEditor</module>
                         <module>org.nsesa.editor.gwt.an.drafting.DraftingEditor</module>
                     </modules>
+                    <compileReport>true</compileReport>
                     <strict>true</strict>
                     <runTarget>editor.html</runTarget>
                 </configuration>
@@ -509,6 +510,23 @@
             </plugin>
         </plugins>
     </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <version>${gwtplugin.version}</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>compile-report</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
 
     <!-- ***************************** Profiles ***************************** -->
     <profiles>
