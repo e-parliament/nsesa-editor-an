@@ -274,6 +274,13 @@
             <version>2.10.0</version>
         </dependency>
 
+        <!-- Flying saucer for pdf output-->
+        <dependency>
+            <groupId>org.xhtmlrenderer</groupId>
+            <artifactId>flying-saucer-pdf</artifactId>
+            <version>9.0.1</version>
+        </dependency>
+
         <!-- TEST ONLY DEPENDENCIES -->
         <dependency>
             <groupId>junit</groupId>

@@ -14,10 +14,20 @@
     See the Licence for the specific language governing permissions and limitations under the Licence.
 
 -->
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 3.0//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
 
-<beans>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+    <context:annotation-config/>
+    <context:component-scan base-package="org.nsesa.editor"/>
+    <mvc:annotation-driven/>
     <!-- Configure the properties via placeholders. We will first read the properties file on the classpath,
     which can be overridden via another properties file in the local home directory. -->
     <bean id="propertyConfigurer"
