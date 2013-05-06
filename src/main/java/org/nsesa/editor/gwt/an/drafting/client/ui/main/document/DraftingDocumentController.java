@@ -70,6 +70,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
     private static final Logger LOG = Logger.getLogger(DraftingDocumentController.class.getName());
 
+    public static final int SCROLL_TO_OFFSET = 100;
+
     private final OverlaySnippetFactory overlaySnippetFactory;
 
     private final OverlaySnippetEvaluator overlaySnippetEvaluator;
@@ -411,7 +413,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                         final OverlayWidget next = activeOverlayWidget != null ? activeOverlayWidget.next(overlayWidgetSelector) : sourceFileController.getOverlayWidgets().get(0);
                         if (next != null) {
                             documentEventBus.fireEvent(new OverlayWidgetSelectEvent(next, DraftingDocumentController.this));
-                            clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(next.asWidget(), DraftingDocumentController.this, false, 100));
+                            clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(next.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
                         }
                     }
 
@@ -428,7 +430,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                             final OverlayWidget previous = activeOverlayWidget.previous(overlayWidgetSelector);
                             if (previous != null) {
                                 documentEventBus.fireEvent(new OverlayWidgetSelectEvent(previous, DraftingDocumentController.this));
-                                clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(previous.asWidget(), DraftingDocumentController.this, false, 100));
+                                clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(previous.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
                             }
                         }
                     }
@@ -440,7 +442,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                     if (actionBarCreatePanelControllerPopup.isShowing()) {
 
                         actionBarCreatePanelControllerPopup.hide();
-                        clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, 100));
+                        clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
 
                         final OverlayWidget selectedSibling = actionBarCreatePanelController.getSelectedSibling();
 
