@@ -67,25 +67,31 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
     @Override
     public ArrayList<DocumentDTO> getAvailableTranslations(final ClientContext clientContext, final String documentID) {
         final List<org.nsesa.server.dto.DocumentDTO> availableTranslations = documentService.getAvailableTranslations(documentID);
-        final Collection<DocumentDTO> documentDTOs = Collections2.transform(availableTranslations, new Function<org.nsesa.server.dto.DocumentDTO, DocumentDTO>() {
-            @Override
-            public DocumentDTO apply(org.nsesa.server.dto.DocumentDTO input) {
-                return fromBackend(input);
-            }
-        });
-        return new ArrayList<DocumentDTO>(documentDTOs);
+        if (availableTranslations != null) {
+            final Collection<DocumentDTO> documentDTOs = Collections2.transform(availableTranslations, new Function<org.nsesa.server.dto.DocumentDTO, DocumentDTO>() {
+                @Override
+                public DocumentDTO apply(org.nsesa.server.dto.DocumentDTO input) {
+                    return fromBackend(input);
+                }
+            });
+            return new ArrayList<DocumentDTO>(documentDTOs);
+        }
+        return new ArrayList<DocumentDTO>();
     }
 
     @Override
     public ArrayList<DocumentDTO> getRelatedDocuments(ClientContext clientContext, String documentID) {
         final List<org.nsesa.server.dto.DocumentDTO> relatedDocuments = documentService.getRelatedDocuments(documentID);
-        final Collection<DocumentDTO> documentDTOs = Collections2.transform(relatedDocuments, new Function<org.nsesa.server.dto.DocumentDTO, DocumentDTO>() {
-            @Override
-            public DocumentDTO apply(org.nsesa.server.dto.DocumentDTO input) {
-                return fromBackend(input);
-            }
-        });
-        return new ArrayList<DocumentDTO>(documentDTOs);
+        if (relatedDocuments != null) {
+            final Collection<DocumentDTO> documentDTOs = Collections2.transform(relatedDocuments, new Function<org.nsesa.server.dto.DocumentDTO, DocumentDTO>() {
+                @Override
+                public DocumentDTO apply(org.nsesa.server.dto.DocumentDTO input) {
+                    return fromBackend(input);
+                }
+            });
+            return new ArrayList<DocumentDTO>(documentDTOs);
+        }
+        return null;
     }
 
     @Override
