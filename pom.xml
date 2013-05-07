@@ -9,7 +9,7 @@
     <packaging>war</packaging>
     <name>Akoma Ntoso Amendment Editor</name>
     <url>http://code.at4am.org/nsesa-editor-an</url>
-    <version>0.0.1</version>
+    <version>0.7</version>
 
     <organization>
         <url>http://www.europarl.europa.eu/</url>
@@ -54,7 +54,7 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <project.name.long>Nsesa Amendment Editor</project.name.long>
+        <project.name.long>Nsesa Akoma Ntoso Editor</project.name.long>
         <maven.build.timestamp.format>yyyyMMdd_HHmm</maven.build.timestamp.format>
         <build.timestamp>${maven.build.timestamp}</build.timestamp>
     </properties>
@@ -64,21 +64,21 @@
         <dependency>
             <groupId>org.nsesa</groupId>
             <artifactId>editor</artifactId>
-            <version>0.0.1</version>
+            <version>0.7</version>
         </dependency>
 
         <!-- server API -->
         <dependency>
             <groupId>org.nsesa</groupId>
             <artifactId>nsesa-server-api</artifactId>
-            <version>0.0.1</version>
+            <version>0.2</version>
         </dependency>
 
         <!-- Diffing -->
         <dependency>
             <groupId>org.nsesa</groupId>
             <artifactId>nsesa-diff</artifactId>
-            <version>0.0.1</version>
+            <version>0.2</version>
         </dependency>
 
         <!--Spring-->
