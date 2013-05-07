@@ -70,7 +70,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
     private static final Logger LOG = Logger.getLogger(DraftingDocumentController.class.getName());
 
-    public static final int SCROLL_TO_OFFSET = 100;
+    public static final int SCROLL_TO_OFFSET = 200;
 
     private final OverlaySnippetFactory overlaySnippetFactory;
 
