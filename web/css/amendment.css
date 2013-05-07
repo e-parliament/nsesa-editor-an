@@ -4,10 +4,14 @@
 * amendment style.
 * --------------------------------------------------------------------------
 */
+/* All amendments for a single overlay widget */
+.contentPanel .amendments {
+
+}
+
+/* Single amendment */
 .contentPanel .amendmentHolder {
-    position: relative;
-    width: 120%;
-    left: -12%;
+
 }
 
 .amendmentHolder {
@@ -17,8 +21,6 @@
     margin-bottom: 20px;
     margin-top: 10px;
     font-family: "Times New Roman", serif !important;
-    font-size: large;
-    line-height: 1.1em;
 }
 
 .amendmentHolder .header {
@@ -31,7 +33,8 @@
 }
 
 .amendmentHolder .amendmentContent .block {
-
+    margin: 0;
+    padding: 0;
 }
 
 .amendmentHolder span[name="versionTitle"] {
@@ -41,7 +44,8 @@
     font-size: 1.2em;
     font-style: italic;
     font-weight: bold;
-    text-align: center;
+    text-align: center !important;
+    vertical-align: text-top;
     margin: 0;
     padding-bottom: 5px;
     padding-top: 15px;
@@ -55,10 +59,10 @@
 
 .amendmentHolder .mod > .quotedStructure {
     width: 50%;
-    display: table-cell;
-    padding: 15px;
-
-    margin:1.5em;
+    display: inline-block;
+    vertical-align: text-top;
+    padding-left: 0;
+    margin:0;
     color:#000;
     border-left:0;
 
@@ -66,7 +70,6 @@
 
 .amendmentHolder .mod > .authorialNote {
     color: #000;
-    font-size: 100%;
     font-style: italic;
     display: block;
     margin-left: 50%;
@@ -85,7 +88,7 @@
     display: block;
     text-align: right;
     font-style: italic;
-    margin: 0px;
+    margin: 0;
     width: 100%;
 }
 

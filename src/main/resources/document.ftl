@@ -2,7 +2,7 @@
 
     Copyright 2013 European Parliament
 
-    Licensed under the EUPL, Version 1.1 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+    Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
     You may not use this work except in compliance with the Licence.
     You may obtain a copy of the Licence at:
 
@@ -16,7 +16,7 @@
 <#-- Freemarker template to handle XML transformations for IE -->
 <#macro element el debug=false>
 <@compress single_line=true>
-<span class="widget ${el?node_name}<#compress><#if el.@class[0]??> ${el.@class}</#if></#compress>"
+<span class="widget ${el?node_name} <#if el.@class[0]??> ${el.@class}</#if>"
         <#list el.@@ as attr><#if attr?node_name?lower_case != "xmlns">${attr?node_name}="${attr}" </#if></#list>
             type="${el?node_name}"
             ns="${el?node_namespace}"><#t/>
@@ -24,12 +24,7 @@
             <#list el?children as child><#t/>
                 <#if child?node_type == 'element'><#t/>
                     <@element el=child debug=debug/><#t/>
-                <#elseif child?node_type == "text"><#t/>
-                ${child?string?xml}<#t/>
-                </#if><#t/>
-            </#list><#t/>
-        </#if><#t/>
-    </span><#lt/>
+                <#elseif child?node_type == "text"><#t/>${child?string?xml}</#if></#list></#if></span><#lt/>
     </@compress>
 </#macro>
 <@compress single_line=true>

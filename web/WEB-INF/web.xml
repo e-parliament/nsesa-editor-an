@@ -3,7 +3,7 @@
 
     Copyright 2013 European Parliament
 
-    Licensed under the EUPL, Version 1.1 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+    Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
     You may not use this work except in compliance with the Licence.
     You may obtain a copy of the Licence at:
 
@@ -57,6 +57,14 @@ the web app class loader and the classes that it holds. -->
         <url-pattern>/AkomaNtosoEditor/gwtDiffService</url-pattern>
         <url-pattern>/AkomaNtosoEditor/gwtDocumentService</url-pattern>
         <url-pattern>/AkomaNtosoEditor/gwtAmendmentService</url-pattern>
+        <url-pattern>/AkomaNtosoEditor/download/*</url-pattern>
+
+        <url-pattern>/DraftingEditor/remote_logging</url-pattern>
+        <url-pattern>/DraftingEditor/gwtService</url-pattern>
+        <url-pattern>/DraftingEditor/gwtDiffService</url-pattern>
+        <url-pattern>/DraftingEditor/gwtDocumentService</url-pattern>
+        <url-pattern>/DraftingEditor/download/*</url-pattern>
+
     </servlet-mapping>
 
     <!-- session timeout (in minutes) -->

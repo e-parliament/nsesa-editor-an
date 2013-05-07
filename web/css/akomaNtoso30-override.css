@@ -1,0 +1,248 @@
+.preface[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+}
+
+.preface[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] .docTitle[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    text-align: center;
+}
+
+.coverPage[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+
+}
+
+.coverPage[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] .p[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+}
+
+.docTitle[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    font-weight: bold;
+    line-height: 2.5em;
+}
+
+.docStage[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    font-size: 1.4em;
+}
+
+.docType[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    font-size: 1.4em;
+}
+
+.docPurpose[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    font-size: 1.2em;
+}
+
+.body[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 20px;
+}
+
+.conclusions[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 20px;
+}
+
+.chapter[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    width: 98%;
+}
+
+
+.chapter[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    font-size: 1.0em;
+    display: block;
+    text-align: center;
+}
+
+.chapter[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .heading[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    font-size: 1.5em;
+    display: block;
+    text-align: center;
+}
+
+.article[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    width: 98%;
+}
+
+.article[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] *[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    text-align: left;
+}
+
+.article[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    font-size: 1.0em;
+    text-align: center;
+    display: block;
+}
+
+.article[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] >  .heading[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    font-size: 1.3em;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.list[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .intro[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.list[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .point[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    margin-left: 2em;
+}
+
+.docNumber[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    font-weight: bold;
+}
+
+.docDate[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    font-weight: bold;
+}
+
+.item[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+}
+
+.num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] + span[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
+    content: " ";
+}
+
+.authorialNote[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    color: blue;
+    font-size: 70%;
+    vertical-align: text-top;
+}
+
+.authorialNote[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"][marker]:before {
+    content: " " attr(marker);
+}
+
+.authorialNote[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:not(:empty):before {
+    content: " [";
+}
+
+.authorialNote[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:not(:empty):after {
+    content: "]";
+}
+
+.preamble[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
+    content: "\A";
+    white-space: pre;
+    margin-top: 1.5em;
+}
+
+.content[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
+    content: "\A";
+    white-space: pre;
+    margin-top: 1.5em;
+}
+
+.eol[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
+    content: "\A";
+    white-space: pre;
+    margin-top: 1.5em;
+}
+
+.eop[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
+    content: "\A\A\A";
+    white-space: pre;
+    page-break-after: always;
+    margin-top: 1.5em;
+}
+
+.br[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
+    content: "\A";
+    white-space: pre;
+}
+
+.notes[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:before {
+    content: "Notes";
+    border: 1px solid #000000;
+    background-color: blue;
+    display: block;
+    text-align: center;
+    font-family: Sans-Serif;
+    font-size: 10pt;
+    left: 90%;
+    color: #fff;
+    width: 90px;
+    border-radius: 3px;
+    margin: 0px;
+    padding: 1px;
+    position: relative;
+}
+
+.date[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    /* TODO add calendar? */
+    color: #86590a;
+}
+
+.placeholder[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    color: #333;
+    background-color: #888;
+}
+
+.notes[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    color: blue;
+    margin-left: 2em;
+}
+
+/* Listings */
+.ul[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    margin: 1.5em;
+}
+
+.ol[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    margin: 1.5em;
+}
+
+.li[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+
+}
+
+.table[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    min-width: 90%;
+}
+
+[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"][href] {
+    text-decoration: underline;
+    color: blue;
+    font-style: italic;
+}
+
+.validation-error[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:before {
+    position: relative;
+    top: -23px;
+    content: attr(error);
+    font-size: .75em;
+    padding: .15em .45em;
+    border-radius: 1em;
+    background: inherit;
+    background-size: 102% 90em;
+}
+
+.validation-error[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    background-color: red;
+}
+
+.placeholder[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    background-color: #fffacd;
+}
+
+.nsesa-inline[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    background-color: #fffacd;
+}
+
+.mainBody[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+}
+
+.subparagraph[ns="http://www.akomantoso.org/2.0"] {
+    margin-left: 1.5em;
+}
