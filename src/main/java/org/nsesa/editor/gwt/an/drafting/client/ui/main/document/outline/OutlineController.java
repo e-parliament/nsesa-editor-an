@@ -16,17 +16,15 @@ package org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline;
 import com.google.gwt.dom.client.Style;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.FocusPanel;
-import com.google.gwt.user.client.ui.HTML;
-import com.google.gwt.user.client.ui.VerticalPanel;
+import com.google.gwt.user.client.ui.*;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.HierarchyComplexType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.TextUtils;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
 
 import java.util.logging.Logger;
 
@@ -62,9 +60,28 @@ public class OutlineController {
                     String unformattedIndex = visited.getUnformattedIndex();
                     if (unformattedIndex == null) unformattedIndex = Integer.toString(visited.getTypeIndex() + 1);
                     final String repeat = TextUtils.repeat(visited.getParentOverlayWidgets().size() * 2, "&nbsp;");
-                    final HTML html = new HTML(repeat + TextUtils.capitalize(visited.getType()) + " " + unformattedIndex);
-                    final FocusPanel w = new FocusPanel(html);
-                    html.getElement().getStyle().setPadding(5, Style.Unit.PX);
+                    String heading = "";
+                    // see if there's a heading
+                    for (final OverlayWidget child : visited.getChildOverlayWidgets()) {
+                        if ("heading".equalsIgnoreCase(child.getType())) {
+                            heading = " <i>" + child.asWidget().getElement().getInnerText() + "</i>";
+                            break;
+                        }
+                    }
+
+                    final InlineHTML index = new InlineHTML(repeat + TextUtils.capitalize(visited.getType()) + " " + unformattedIndex);
+                    final InlineHTML description = new InlineHTML(heading);
+
+                    description.getElement().getStyle().setTextOverflow(Style.TextOverflow.ELLIPSIS);
+                    description.getElement().getStyle().setOverflow(Style.Overflow.HIDDEN);
+                    description.getElement().getStyle().setFontStyle(Style.FontStyle.ITALIC);
+//                    description.getElement().getStyle().setWhiteSpace(Style.WhiteSpace.NOWRAP);
+
+                    HTMLPanel both = new HTMLPanel("");
+                    both.add(index);
+                    both.add(description);
+                    final FocusPanel w = new FocusPanel(both);
+                    w.getElement().getStyle().setPadding(5, Style.Unit.PX);
                     outlinePanel.add(w);
 
                     w.addClickHandler(new ClickHandler() {
@@ -81,6 +98,8 @@ public class OutlineController {
                 return true;
             }
         });
+        outlinePanel.getElement().getStyle().setTableLayout(Style.TableLayout.FIXED);
+        outlinePanel.getElement().getStyle().setTextOverflow(Style.TextOverflow.ELLIPSIS);
         this.view.setOutlinePanel(outlinePanel);
     }
 

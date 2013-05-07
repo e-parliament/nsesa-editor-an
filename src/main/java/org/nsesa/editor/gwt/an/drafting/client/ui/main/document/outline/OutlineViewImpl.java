@@ -51,9 +51,12 @@ public class OutlineViewImpl extends Composite implements OutlineView, ProvidesR
     @UiField
     ScrollPanel scrollPanel;
 
+    private final DocumentEventBus documentEventBus;
+
 
     @Inject
     public OutlineViewImpl(final DocumentEventBus documentEventBus) {
+        this.documentEventBus = documentEventBus;
         final Widget widget = uiBinder.createAndBindUi(this);
         initWidget(widget);
     }

@@ -49,7 +49,7 @@
         }
     </ui:style>
     <g:DockLayoutPanel ui:field="mainPanel" styleName="{res.mainPanel}" unit="PX">
-        <g:west size="200">
+        <g:west size="250">
             <outline:OutlineView ui:field="outlineView" styleName="{res.outlineView}"/>
         </g:west>
         <g:center>
