@@ -360,7 +360,7 @@
                 <version>${gwtplugin.version}</version>
                 <configuration>
                     <!--extraJvmArgs>-Xss2M -XX:MaxPermSize=512M -Xmx2048m -Xdebug </extraJvmArgs-->
-                    <extraJvmArgs>-Xss2M -XX:MaxPermSize=300M -Xms512M -Xmx512M</extraJvmArgs>
+                    <extraJvmArgs>-Xss2M -XX:MaxPermSize=400M -Xms700M -Xmx700M</extraJvmArgs>
                     <hostedWebapp>web</hostedWebapp>
                     <modules>
                         <module>org.nsesa.editor.gwt.an.amendments.AkomaNtosoEditor</module>
