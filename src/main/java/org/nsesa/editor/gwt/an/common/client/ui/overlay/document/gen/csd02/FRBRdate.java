@@ -1,21 +1,8 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.MetaoptComplexType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import com.google.gwt.dom.client.Element;
@@ -64,10 +51,10 @@ setType("FRBRdate");
 /**
 * Constructor with required attributes
 */
-public FRBRdate(DateSimpleType dateAttr,StringSimpleType nameAttr) {
+public FRBRdate(StringSimpleType nameAttr,DateSimpleType dateAttr) {
 this();
-setDateAttr(dateAttr);
 setNameAttr(nameAttr);
+setDateAttr(dateAttr);
 }
 
 
@@ -79,45 +66,9 @@ super(element);
 }
 
 // FIELDS ------------------
-    private DateSimpleType dateAttr;
     private StringSimpleType nameAttr;
+    private DateSimpleType dateAttr;
 
-        /**
-        * Return <code>dateAttr</code> property
-        * @return dateAttr
-        */
-        public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-                dateAttr = new DateSimpleType();
-                dateAttr.setValue(getElement().getAttribute("date"));
-        }
-
-        return dateAttr;
-        }
-        /**
-        * Return <code>dateAttr</code> property in DSL way
-        * @return dateAttr
-        */
-        public DateSimpleType dateAttr() {
-        return  getDateAttr();
-        }
-        /**
-        * Set <code>dateAttr</code> property
-        * @param dateAttr the new value
-        */
-        public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-        getElement().setAttribute("date",dateAttr.getValue());
-        }
-        /**
-        * Set <code>dateAttr</code> property in DSL way
-        * @param dateAttr the new value
-        * @return <code>FRBRdate</code> instance
-        */
-        public FRBRdate dateAttr(final DateSimpleType dateAttr) {
-        setDateAttr(dateAttr);
-        return this;
-        }
         /**
         * Return <code>nameAttr</code> property
         * @return nameAttr
@@ -154,16 +105,43 @@ super(element);
         setNameAttr(nameAttr);
         return this;
         }
-//Override all attributes methods to be conformant with DSL approach
         /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr new value
-        * @return <code> FRBRdate</code> instance
+        * Return <code>dateAttr</code> property
+        * @return dateAttr
         */
-        public FRBRdate wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+        public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+                dateAttr = new DateSimpleType();
+                dateAttr.setValue(getElement().getAttribute("date"));
+        }
+
+        return dateAttr;
+        }
+        /**
+        * Return <code>dateAttr</code> property in DSL way
+        * @return dateAttr
+        */
+        public DateSimpleType dateAttr() {
+        return  getDateAttr();
+        }
+        /**
+        * Set <code>dateAttr</code> property
+        * @param dateAttr the new value
+        */
+        public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+        getElement().setAttribute("date",dateAttr.getValue());
+        }
+        /**
+        * Set <code>dateAttr</code> property in DSL way
+        * @param dateAttr the new value
+        * @return <code>FRBRdate</code> instance
+        */
+        public FRBRdate dateAttr(final DateSimpleType dateAttr) {
+        setDateAttr(dateAttr);
         return this;
         }
+//Override all attributes methods to be conformant with DSL approach
         /**
         * Set <code>idAttr</code> property in DSL way
         * @param idAttr new value
@@ -182,6 +160,15 @@ super(element);
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
         }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr new value
+        * @return <code> FRBRdate</code> instance
+        */
+        public FRBRdate wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
 
 /**
 * Returns the namespace URI of this amendable widget.
@@ -196,8 +183,8 @@ return "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02";
 public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
-        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
 return attrs;
 }
 

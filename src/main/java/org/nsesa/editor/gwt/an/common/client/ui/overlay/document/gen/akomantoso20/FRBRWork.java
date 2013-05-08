@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.CorePropertiesComplexType;
@@ -30,7 +17,7 @@ import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
-* The element FRBRWork is the metadata container of identifying properties related to the Work level according to the FRBR hierarchy
+* The element FRBRWork is the metadata container of identifying properties related to the Work<br/> level according to the FRBR hierarchy
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
@@ -97,13 +84,13 @@ super(element);
             */
             public FRBRcountry getFRBRcountry() {
                 FRBRcountry result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRcountry".equalsIgnoreCase(widget.getType())) {
-            result = (FRBRcountry)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRcountry".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (FRBRcountry)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>FRBRcountryElem</code> property in DSL way
@@ -114,7 +101,7 @@ super(element);
                     FRBRcountry result = getFRBRcountry();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(FRBRcountryElem);
 
@@ -126,13 +113,13 @@ super(element);
             */
             public FRBRsubtype getFRBRsubtype() {
                 FRBRsubtype result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRsubtype".equalsIgnoreCase(widget.getType())) {
-            result = (FRBRsubtype)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRsubtype".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (FRBRsubtype)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>FRBRsubtypeElem</code> property in DSL way
@@ -143,7 +130,7 @@ super(element);
                     FRBRsubtype result = getFRBRsubtype();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(FRBRsubtypeElem);
 
@@ -155,13 +142,13 @@ super(element);
             */
             public FRBRnumber getFRBRnumber() {
                 FRBRnumber result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRnumber".equalsIgnoreCase(widget.getType())) {
-            result = (FRBRnumber)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRnumber".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (FRBRnumber)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>FRBRnumberElem</code> property in DSL way
@@ -172,7 +159,7 @@ super(element);
                     FRBRnumber result = getFRBRnumber();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(FRBRnumberElem);
 
@@ -184,13 +171,13 @@ super(element);
             */
             public FRBRname getFRBRname() {
                 FRBRname result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRname".equalsIgnoreCase(widget.getType())) {
-            result = (FRBRname)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRname".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (FRBRname)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>FRBRnameElem</code> property in DSL way
@@ -201,7 +188,7 @@ super(element);
                     FRBRname result = getFRBRname();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(FRBRnameElem);
 

@@ -1,27 +1,14 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.ModificationTypeComplexType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.TextualModsSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Old;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.New;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,7 +21,7 @@ import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
-* The element textualMod is a metadata element specifying an (active or passive) textual modification for the document.
+* The element textualMod is a metadata element specifying an (active or passive) textual<br/> modification for the document.
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
@@ -141,13 +128,13 @@ super(element);
             */
             public Old getOld() {
                 Old result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Old".equalsIgnoreCase(widget.getType())) {
-            result = (Old)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Old".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Old)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>oldElem</code> property in DSL way
@@ -158,7 +145,7 @@ super(element);
                     Old result = getOld();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(oldElem);
 
@@ -170,13 +157,13 @@ super(element);
             */
             public New getNew() {
                 New result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("New".equalsIgnoreCase(widget.getType())) {
-            result = (New)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("New".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (New)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>newElem</code> property in DSL way
@@ -187,13 +174,40 @@ super(element);
                     New result = getNew();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(newElem);
 
                 return newElem;
             }
 //Override all attributes methods to be conformant with DSL approach
+        /**
+        * Set <code>statusAttr</code> property in DSL way
+        * @param statusAttr new value
+        * @return <code> TextualMod</code> instance
+        */
+        public TextualMod statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr new value
+        * @return <code> TextualMod</code> instance
+        */
+        public TextualMod wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
+        /**
+        * Set <code>refersToAttr</code> property in DSL way
+        * @param refersToAttr new value
+        * @return <code> TextualMod</code> instance
+        */
+        public TextualMod refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+        }
         /**
         * Set <code>idAttr</code> property in DSL way
         * @param idAttr new value
@@ -213,15 +227,6 @@ super(element);
         return this;
         }
         /**
-        * Set <code>refersToAttr</code> property in DSL way
-        * @param refersToAttr new value
-        * @return <code> TextualMod</code> instance
-        */
-        public TextualMod refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-        }
-        /**
         * Set <code>exclusionAttr</code> property in DSL way
         * @param exclusionAttr new value
         * @return <code> TextualMod</code> instance
@@ -237,24 +242,6 @@ super(element);
         */
         public TextualMod incompleteAttr(final BooleanSimpleType incompleteAttr) {
         setIncompleteAttr(incompleteAttr);
-        return this;
-        }
-        /**
-        * Set <code>statusAttr</code> property in DSL way
-        * @param statusAttr new value
-        * @return <code> TextualMod</code> instance
-        */
-        public TextualMod statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr new value
-        * @return <code> TextualMod</code> instance
-        */
-        public TextualMod wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
         }
         /**

@@ -1,29 +1,13 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Component;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import java.util.HashMap;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 
 /**
 * Generated class
@@ -78,12 +62,12 @@ super(element);
             */
             public java.util.List<Component> getComponents() {
                 java.util.List<Component> result = new ArrayList<Component>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Component".equalsIgnoreCase(widget.getType())) {
-            result.add((Component)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Component".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Component)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -91,7 +75,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Component> getComponentList() {
-            return  getComponents();
+                return  getComponents();
             }
             /**
             * Add <code>java.util.List<Component></code> property in the list of properties

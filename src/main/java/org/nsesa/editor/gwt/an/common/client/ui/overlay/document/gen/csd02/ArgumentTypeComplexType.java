@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
@@ -62,11 +49,11 @@ super(element);
 
 // FIELDS ------------------
     private AnyURISimpleType upToAttr;
-    private AnyURISimpleType hrefAttr;
-    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private String wildcardContentAttr;
     private PosTypeSimpleType posAttr;
+    private AnyURISimpleType hrefAttr;
 
         /**
         * Return <code>upToAttr</code> property
@@ -102,77 +89,6 @@ super(element);
         */
         public ArgumentTypeComplexType upToAttr(final AnyURISimpleType upToAttr) {
         setUpToAttr(upToAttr);
-        return this;
-        }
-        /**
-        * Return <code>hrefAttr</code> property
-        * @return hrefAttr
-        */
-        public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-                hrefAttr = new AnyURISimpleType();
-                hrefAttr.setValue(getElement().getAttribute("href"));
-        }
-
-        return hrefAttr;
-        }
-        /**
-        * Return <code>hrefAttr</code> property in DSL way
-        * @return hrefAttr
-        */
-        public AnyURISimpleType hrefAttr() {
-        return  getHrefAttr();
-        }
-        /**
-        * Set <code>hrefAttr</code> property
-        * @param hrefAttr the new value
-        */
-        public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-        getElement().setAttribute("href",hrefAttr.getValue());
-        }
-        /**
-        * Set <code>hrefAttr</code> property in DSL way
-        * @param hrefAttr the new value
-        * @return <code>ArgumentTypeComplexType</code> instance
-        */
-        public ArgumentTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-        }
-        /**
-        * Return <code>wildcardContentAttr</code> property
-        * @return wildcardContentAttr
-        */
-        public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-        }
-        /**
-        * Return <code>wildcardContentAttr</code> property in DSL way
-        * @return wildcardContentAttr
-        */
-        public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property
-        * @param wildcardContentAttr the new value
-        */
-        public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent",wildcardContentAttr);
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr the new value
-        * @return <code>ArgumentTypeComplexType</code> instance
-        */
-        public ArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
         }
         /**
@@ -248,6 +164,41 @@ super(element);
         return this;
         }
         /**
+        * Return <code>wildcardContentAttr</code> property
+        * @return wildcardContentAttr
+        */
+        public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+        }
+        /**
+        * Return <code>wildcardContentAttr</code> property in DSL way
+        * @return wildcardContentAttr
+        */
+        public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property
+        * @param wildcardContentAttr the new value
+        */
+        public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent",wildcardContentAttr);
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr the new value
+        * @return <code>ArgumentTypeComplexType</code> instance
+        */
+        public ArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
+        /**
         * Return <code>posAttr</code> property
         * @return posAttr
         */
@@ -282,6 +233,42 @@ super(element);
         setPosAttr(posAttr);
         return this;
         }
+        /**
+        * Return <code>hrefAttr</code> property
+        * @return hrefAttr
+        */
+        public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+                hrefAttr = new AnyURISimpleType();
+                hrefAttr.setValue(getElement().getAttribute("href"));
+        }
+
+        return hrefAttr;
+        }
+        /**
+        * Return <code>hrefAttr</code> property in DSL way
+        * @return hrefAttr
+        */
+        public AnyURISimpleType hrefAttr() {
+        return  getHrefAttr();
+        }
+        /**
+        * Set <code>hrefAttr</code> property
+        * @param hrefAttr the new value
+        */
+        public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+        getElement().setAttribute("href",hrefAttr.getValue());
+        }
+        /**
+        * Set <code>hrefAttr</code> property in DSL way
+        * @param hrefAttr the new value
+        * @return <code>ArgumentTypeComplexType</code> instance
+        */
+        public ArgumentTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+        }
 //Override all attributes methods to be conformant with DSL approach
 
 /**
@@ -298,11 +285,11 @@ public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
         attrs.put("upTo", getUpToAttr() != null ? getUpToAttr().getValue() : null);
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("pos", getPosAttr() != null ? getPosAttr().value() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
 return attrs;
 }
 

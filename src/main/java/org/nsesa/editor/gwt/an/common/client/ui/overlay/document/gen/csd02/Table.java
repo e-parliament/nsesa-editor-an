@@ -1,26 +1,13 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IntegerSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Caption;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Tr;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NCNameSimpleType;
 import com.google.gwt.dom.client.Element;
@@ -92,17 +79,17 @@ super(element);
     private IntegerSimpleType borderAttr;
     private IntegerSimpleType cellspacingAttr;
     private IntegerSimpleType cellpaddingAttr;
-    private StatusTypeSimpleType statusAttr;
-    private AnyURISimpleType refersToAttr;
-    private String wildcardContentAttr;
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType alternativeToAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType alternativeToAttr;
+    private StatusTypeSimpleType statusAttr;
     private LanguageSimpleType langAttr;
     private NCNameSimpleType spaceAttr;
+    private String wildcardContentAttr;
+    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
 
         /**
@@ -255,13 +242,13 @@ super(element);
             */
             public Caption getCaption() {
                 Caption result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Caption".equalsIgnoreCase(widget.getType())) {
-            result = (Caption)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Caption".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Caption)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>captionElem</code> property in DSL way
@@ -272,7 +259,7 @@ super(element);
                     Caption result = getCaption();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(captionElem);
 
@@ -284,12 +271,12 @@ super(element);
             */
             public java.util.List<Tr> getTrs() {
                 java.util.List<Tr> result = new ArrayList<Tr>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Tr".equalsIgnoreCase(widget.getType())) {
-            result.add((Tr)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Tr".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Tr)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -297,7 +284,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Tr> getTrList() {
-            return  getTrs();
+                return  getTrs();
             }
             /**
             * Add <code>java.util.List<Tr></code> property in the list of properties
@@ -309,109 +296,111 @@ super(element);
             }
 
         /**
-        * Return <code>statusAttr</code> property
-        * @return statusAttr
+        * Return <code>classAttr</code> property
+        * @return classAttr
         */
-        public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-                statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        public StringSimpleType getClassAttr() {
+        if (classAttr == null) {
+                classAttr = new StringSimpleType();
+                classAttr.setValue(getElement().getAttribute("class"));
         }
 
-        return statusAttr;
+        return classAttr;
         }
         /**
-        * Return <code>statusAttr</code> property in DSL way
-        * @return statusAttr
+        * Return <code>classAttr</code> property in DSL way
+        * @return classAttr
         */
-        public StatusTypeSimpleType statusAttr() {
-        return  getStatusAttr();
+        public StringSimpleType classAttr() {
+        return  getClassAttr();
         }
         /**
-        * Set <code>statusAttr</code> property
-        * @param statusAttr the new value
+        * Set <code>classAttr</code> property
+        * @param classAttr the new value
         */
-        public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status",statusAttr.value());
+        public void setClassAttr(final StringSimpleType classAttr) {
+        this.classAttr = classAttr;
+        getElement().setAttribute("class",classAttr.getValue());
         }
         /**
-        * Set <code>statusAttr</code> property in DSL way
-        * @param statusAttr the new value
+        * Set <code>classAttr</code> property in DSL way
+        * @param classAttr the new value
         * @return <code>Table</code> instance
         */
-        public Table statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+        public Table classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
         return this;
         }
         /**
-        * Return <code>refersToAttr</code> property
-        * @return refersToAttr
+        * Return <code>styleAttr</code> property
+        * @return styleAttr
         */
-        public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-                refersToAttr = new AnyURISimpleType();
-                refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        public StringSimpleType getStyleAttr() {
+        if (styleAttr == null) {
+                styleAttr = new StringSimpleType();
+                styleAttr.setValue(getElement().getAttribute("style"));
         }
 
-        return refersToAttr;
+        return styleAttr;
         }
         /**
-        * Return <code>refersToAttr</code> property in DSL way
-        * @return refersToAttr
+        * Return <code>styleAttr</code> property in DSL way
+        * @return styleAttr
         */
-        public AnyURISimpleType refersToAttr() {
-        return  getRefersToAttr();
+        public StringSimpleType styleAttr() {
+        return  getStyleAttr();
         }
         /**
-        * Set <code>refersToAttr</code> property
-        * @param refersToAttr the new value
+        * Set <code>styleAttr</code> property
+        * @param styleAttr the new value
         */
-        public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo",refersToAttr.getValue());
+        public void setStyleAttr(final StringSimpleType styleAttr) {
+        this.styleAttr = styleAttr;
+        getElement().setAttribute("style",styleAttr.getValue());
         }
         /**
-        * Set <code>refersToAttr</code> property in DSL way
-        * @param refersToAttr the new value
+        * Set <code>styleAttr</code> property in DSL way
+        * @param styleAttr the new value
         * @return <code>Table</code> instance
         */
-        public Table refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+        public Table styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
         return this;
         }
         /**
-        * Return <code>wildcardContentAttr</code> property
-        * @return wildcardContentAttr
+        * Return <code>titleAttr</code> property
+        * @return titleAttr
         */
-        public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+        public StringSimpleType getTitleAttr() {
+        if (titleAttr == null) {
+                titleAttr = new StringSimpleType();
+                titleAttr.setValue(getElement().getAttribute("title"));
         }
 
-        return wildcardContentAttr;
+        return titleAttr;
         }
         /**
-        * Return <code>wildcardContentAttr</code> property in DSL way
-        * @return wildcardContentAttr
+        * Return <code>titleAttr</code> property in DSL way
+        * @return titleAttr
         */
-        public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
+        public StringSimpleType titleAttr() {
+        return  getTitleAttr();
         }
         /**
-        * Set <code>wildcardContentAttr</code> property
-        * @param wildcardContentAttr the new value
+        * Set <code>titleAttr</code> property
+        * @param titleAttr the new value
         */
-        public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent",wildcardContentAttr);
+        public void setTitleAttr(final StringSimpleType titleAttr) {
+        this.titleAttr = titleAttr;
+        getElement().setAttribute("title",titleAttr.getValue());
         }
         /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr the new value
+        * Set <code>titleAttr</code> property in DSL way
+        * @param titleAttr the new value
         * @return <code>Table</code> instance
         */
-        public Table wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+        public Table titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
         return this;
         }
         /**
@@ -523,111 +512,38 @@ super(element);
         return this;
         }
         /**
-        * Return <code>classAttr</code> property
-        * @return classAttr
+        * Return <code>statusAttr</code> property
+        * @return statusAttr
         */
-        public StringSimpleType getClassAttr() {
-        if (classAttr == null) {
-                classAttr = new StringSimpleType();
-                classAttr.setValue(getElement().getAttribute("class"));
+        public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+                statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
         }
 
-        return classAttr;
+        return statusAttr;
         }
         /**
-        * Return <code>classAttr</code> property in DSL way
-        * @return classAttr
+        * Return <code>statusAttr</code> property in DSL way
+        * @return statusAttr
         */
-        public StringSimpleType classAttr() {
-        return  getClassAttr();
+        public StatusTypeSimpleType statusAttr() {
+        return  getStatusAttr();
         }
         /**
-        * Set <code>classAttr</code> property
-        * @param classAttr the new value
+        * Set <code>statusAttr</code> property
+        * @param statusAttr the new value
         */
-        public void setClassAttr(final StringSimpleType classAttr) {
-        this.classAttr = classAttr;
-        getElement().setAttribute("class",classAttr.getValue());
+        public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status",statusAttr.value());
         }
         /**
-        * Set <code>classAttr</code> property in DSL way
-        * @param classAttr the new value
+        * Set <code>statusAttr</code> property in DSL way
+        * @param statusAttr the new value
         * @return <code>Table</code> instance
         */
-        public Table classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-        }
-        /**
-        * Return <code>styleAttr</code> property
-        * @return styleAttr
-        */
-        public StringSimpleType getStyleAttr() {
-        if (styleAttr == null) {
-                styleAttr = new StringSimpleType();
-                styleAttr.setValue(getElement().getAttribute("style"));
-        }
-
-        return styleAttr;
-        }
-        /**
-        * Return <code>styleAttr</code> property in DSL way
-        * @return styleAttr
-        */
-        public StringSimpleType styleAttr() {
-        return  getStyleAttr();
-        }
-        /**
-        * Set <code>styleAttr</code> property
-        * @param styleAttr the new value
-        */
-        public void setStyleAttr(final StringSimpleType styleAttr) {
-        this.styleAttr = styleAttr;
-        getElement().setAttribute("style",styleAttr.getValue());
-        }
-        /**
-        * Set <code>styleAttr</code> property in DSL way
-        * @param styleAttr the new value
-        * @return <code>Table</code> instance
-        */
-        public Table styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-        }
-        /**
-        * Return <code>titleAttr</code> property
-        * @return titleAttr
-        */
-        public StringSimpleType getTitleAttr() {
-        if (titleAttr == null) {
-                titleAttr = new StringSimpleType();
-                titleAttr.setValue(getElement().getAttribute("title"));
-        }
-
-        return titleAttr;
-        }
-        /**
-        * Return <code>titleAttr</code> property in DSL way
-        * @return titleAttr
-        */
-        public StringSimpleType titleAttr() {
-        return  getTitleAttr();
-        }
-        /**
-        * Set <code>titleAttr</code> property
-        * @param titleAttr the new value
-        */
-        public void setTitleAttr(final StringSimpleType titleAttr) {
-        this.titleAttr = titleAttr;
-        getElement().setAttribute("title",titleAttr.getValue());
-        }
-        /**
-        * Set <code>titleAttr</code> property in DSL way
-        * @param titleAttr the new value
-        * @return <code>Table</code> instance
-        */
-        public Table titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
+        public Table statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
         }
         /**
@@ -703,6 +619,77 @@ super(element);
         return this;
         }
         /**
+        * Return <code>wildcardContentAttr</code> property
+        * @return wildcardContentAttr
+        */
+        public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+        }
+        /**
+        * Return <code>wildcardContentAttr</code> property in DSL way
+        * @return wildcardContentAttr
+        */
+        public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property
+        * @param wildcardContentAttr the new value
+        */
+        public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent",wildcardContentAttr);
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr the new value
+        * @return <code>Table</code> instance
+        */
+        public Table wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
+        /**
+        * Return <code>refersToAttr</code> property
+        * @return refersToAttr
+        */
+        public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+                refersToAttr = new AnyURISimpleType();
+                refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+        }
+        /**
+        * Return <code>refersToAttr</code> property in DSL way
+        * @return refersToAttr
+        */
+        public AnyURISimpleType refersToAttr() {
+        return  getRefersToAttr();
+        }
+        /**
+        * Set <code>refersToAttr</code> property
+        * @param refersToAttr the new value
+        */
+        public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo",refersToAttr.getValue());
+        }
+        /**
+        * Set <code>refersToAttr</code> property in DSL way
+        * @param refersToAttr the new value
+        * @return <code>Table</code> instance
+        */
+        public Table refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+        }
+        /**
         * Return <code>periodAttr</code> property
         * @return periodAttr
         */
@@ -757,17 +744,17 @@ attrs.putAll(super.getAttributes());
         attrs.put("border", getBorderAttr() != null ? getBorderAttr().getValue() : null);
         attrs.put("cellspacing", getCellspacingAttr() != null ? getCellspacingAttr().getValue() : null);
         attrs.put("cellpadding", getCellpaddingAttr() != null ? getCellpaddingAttr().getValue() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
         attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
 return attrs;
 }

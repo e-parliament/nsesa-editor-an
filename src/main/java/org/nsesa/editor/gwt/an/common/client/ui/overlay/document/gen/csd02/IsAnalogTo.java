@@ -1,34 +1,14 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.JudicialArgumentTypeComplexType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
+
 import java.util.LinkedHashMap;
-import java.util.Map;
-import com.google.gwt.user.client.DOM;
 
 /**
 * The element isAnalogTo is a metadata element specifying a reference to a source analog to the argument being described.
@@ -88,30 +68,12 @@ super(element);
 
 //Override all attributes methods to be conformant with DSL approach
         /**
-        * Set <code>statusAttr</code> property in DSL way
-        * @param statusAttr new value
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr new value
         * @return <code> IsAnalogTo</code> instance
         */
-        public IsAnalogTo statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-        }
-        /**
-        * Set <code>idAttr</code> property in DSL way
-        * @param idAttr new value
-        * @return <code> IsAnalogTo</code> instance
-        */
-        public IsAnalogTo idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-        }
-        /**
-        * Set <code>evolvingIdAttr</code> property in DSL way
-        * @param evolvingIdAttr new value
-        * @return <code> IsAnalogTo</code> instance
-        */
-        public IsAnalogTo evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+        public IsAnalogTo wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
         }
         /**
@@ -133,12 +95,12 @@ super(element);
         return this;
         }
         /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr new value
+        * Set <code>statusAttr</code> property in DSL way
+        * @param statusAttr new value
         * @return <code> IsAnalogTo</code> instance
         */
-        public IsAnalogTo wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+        public IsAnalogTo statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
         }
         /**
@@ -148,6 +110,24 @@ super(element);
         */
         public IsAnalogTo refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
+        return this;
+        }
+        /**
+        * Set <code>idAttr</code> property in DSL way
+        * @param idAttr new value
+        * @return <code> IsAnalogTo</code> instance
+        */
+        public IsAnalogTo idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+        }
+        /**
+        * Set <code>evolvingIdAttr</code> property in DSL way
+        * @param evolvingIdAttr new value
+        * @return <code> IsAnalogTo</code> instance
+        */
+        public IsAnalogTo evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
         }
         /**

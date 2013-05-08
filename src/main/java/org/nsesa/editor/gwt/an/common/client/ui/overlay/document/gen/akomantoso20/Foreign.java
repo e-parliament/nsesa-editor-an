@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.AnyOtherTypeComplexType;
@@ -29,7 +16,7 @@ import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
-* the element foreign is a generic container for elements not belonging to the Akoma Ntoso (e.g., mathematical formulas). It is an inline element and thus can be placed in a block.
+* the element foreign is a generic container for elements not belonging to the Akoma Ntoso (e.g.,<br/> mathematical formulas). It is an inline element and thus can be placed in a block.
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 

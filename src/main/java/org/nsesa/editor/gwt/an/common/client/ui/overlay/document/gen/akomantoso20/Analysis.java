@@ -1,34 +1,14 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.ActiveModifications;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.PassiveModifications;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Judicial;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Parliamentary;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.OtherAnalysis;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import java.util.HashMap;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 
 /**
 * Generated class
@@ -131,13 +111,13 @@ super(element);
             */
             public ActiveModifications getActiveModifications() {
                 ActiveModifications result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ActiveModifications".equalsIgnoreCase(widget.getType())) {
-            result = (ActiveModifications)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("ActiveModifications".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (ActiveModifications)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>activeModificationsElem</code> property in DSL way
@@ -148,7 +128,7 @@ super(element);
                     ActiveModifications result = getActiveModifications();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(activeModificationsElem);
 
@@ -160,13 +140,13 @@ super(element);
             */
             public PassiveModifications getPassiveModifications() {
                 PassiveModifications result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("PassiveModifications".equalsIgnoreCase(widget.getType())) {
-            result = (PassiveModifications)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("PassiveModifications".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (PassiveModifications)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>passiveModificationsElem</code> property in DSL way
@@ -177,7 +157,7 @@ super(element);
                     PassiveModifications result = getPassiveModifications();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(passiveModificationsElem);
 
@@ -189,13 +169,13 @@ super(element);
             */
             public Judicial getJudicial() {
                 Judicial result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Judicial".equalsIgnoreCase(widget.getType())) {
-            result = (Judicial)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Judicial".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Judicial)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>judicialElem</code> property in DSL way
@@ -206,7 +186,7 @@ super(element);
                     Judicial result = getJudicial();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(judicialElem);
 
@@ -218,13 +198,13 @@ super(element);
             */
             public Parliamentary getParliamentary() {
                 Parliamentary result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Parliamentary".equalsIgnoreCase(widget.getType())) {
-            result = (Parliamentary)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Parliamentary".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Parliamentary)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>parliamentaryElem</code> property in DSL way
@@ -235,7 +215,7 @@ super(element);
                     Parliamentary result = getParliamentary();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(parliamentaryElem);
 
@@ -247,12 +227,12 @@ super(element);
             */
             public java.util.List<OtherAnalysis> getOtherAnalysises() {
                 java.util.List<OtherAnalysis> result = new ArrayList<OtherAnalysis>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("OtherAnalysis".equalsIgnoreCase(widget.getType())) {
-            result.add((OtherAnalysis)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("OtherAnalysis".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((OtherAnalysis)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -260,7 +240,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<OtherAnalysis> getOtherAnalysisList() {
-            return  getOtherAnalysises();
+                return  getOtherAnalysises();
             }
             /**
             * Add <code>java.util.List<OtherAnalysis></code> property in the list of properties

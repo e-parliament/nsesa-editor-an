@@ -1,39 +1,15 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.InlineComplexType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import java.util.HashMap;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.*;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
+
+import java.util.LinkedHashMap;
 
 /**
-* the element docDate is an inline element within preface to identify the string used by the document for its own date(s). Documents with multiple dates may use multiple docDate elements.
+* the element docDate is an inline element within preface to identify the string used by the<br/> document for its own date(s). Documents with multiple dates may use multiple docDate elements.
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
@@ -220,12 +196,39 @@ super(element);
         }
 //Override all attributes methods to be conformant with DSL approach
         /**
+        * Set <code>idAttr</code> property in DSL way
+        * @param idAttr new value
+        * @return <code> DocDate</code> instance
+        */
+        public DocDate idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+        }
+        /**
+        * Set <code>evolvingIdAttr</code> property in DSL way
+        * @param evolvingIdAttr new value
+        * @return <code> DocDate</code> instance
+        */
+        public DocDate evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+        }
+        /**
         * Set <code>statusAttr</code> property in DSL way
         * @param statusAttr new value
         * @return <code> DocDate</code> instance
         */
         public DocDate statusAttr(final StatusTypeSimpleType statusAttr) {
         setStatusAttr(statusAttr);
+        return this;
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr new value
+        * @return <code> DocDate</code> instance
+        */
+        public DocDate wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
         }
         /**
@@ -265,30 +268,12 @@ super(element);
         return this;
         }
         /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr new value
+        * Set <code>langAttr</code> property in DSL way
+        * @param langAttr new value
         * @return <code> DocDate</code> instance
         */
-        public DocDate wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-        }
-        /**
-        * Set <code>idAttr</code> property in DSL way
-        * @param idAttr new value
-        * @return <code> DocDate</code> instance
-        */
-        public DocDate idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-        }
-        /**
-        * Set <code>evolvingIdAttr</code> property in DSL way
-        * @param evolvingIdAttr new value
-        * @return <code> DocDate</code> instance
-        */
-        public DocDate evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+        public DocDate langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
         }
         /**
@@ -298,15 +283,6 @@ super(element);
         */
         public DocDate refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
-        return this;
-        }
-        /**
-        * Set <code>langAttr</code> property in DSL way
-        * @param langAttr new value
-        * @return <code> DocDate</code> instance
-        */
-        public DocDate langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
         return this;
         }
         /**

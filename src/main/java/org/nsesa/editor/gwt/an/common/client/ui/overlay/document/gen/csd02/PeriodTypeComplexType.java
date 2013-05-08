@@ -1,21 +1,8 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,47 +47,11 @@ super(element);
 }
 
 // FIELDS ------------------
-    private AnyURISimpleType periodAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private String wildcardContentAttr;
+    private AnyURISimpleType periodAttr;
 
-        /**
-        * Return <code>periodAttr</code> property
-        * @return periodAttr
-        */
-        public AnyURISimpleType getPeriodAttr() {
-        if (periodAttr == null) {
-                periodAttr = new AnyURISimpleType();
-                periodAttr.setValue(getElement().getAttribute("period"));
-        }
-
-        return periodAttr;
-        }
-        /**
-        * Return <code>periodAttr</code> property in DSL way
-        * @return periodAttr
-        */
-        public AnyURISimpleType periodAttr() {
-        return  getPeriodAttr();
-        }
-        /**
-        * Set <code>periodAttr</code> property
-        * @param periodAttr the new value
-        */
-        public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-        this.periodAttr = periodAttr;
-        getElement().setAttribute("period",periodAttr.getValue());
-        }
-        /**
-        * Set <code>periodAttr</code> property in DSL way
-        * @param periodAttr the new value
-        * @return <code>PeriodTypeComplexType</code> instance
-        */
-        public PeriodTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
-        return this;
-        }
         /**
         * Return <code>idAttr</code> property
         * @return idAttr
@@ -208,6 +159,42 @@ super(element);
         setWildcardContentAttr(wildcardContentAttr);
         return this;
         }
+        /**
+        * Return <code>periodAttr</code> property
+        * @return periodAttr
+        */
+        public AnyURISimpleType getPeriodAttr() {
+        if (periodAttr == null) {
+                periodAttr = new AnyURISimpleType();
+                periodAttr.setValue(getElement().getAttribute("period"));
+        }
+
+        return periodAttr;
+        }
+        /**
+        * Return <code>periodAttr</code> property in DSL way
+        * @return periodAttr
+        */
+        public AnyURISimpleType periodAttr() {
+        return  getPeriodAttr();
+        }
+        /**
+        * Set <code>periodAttr</code> property
+        * @param periodAttr the new value
+        */
+        public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
+        getElement().setAttribute("period",periodAttr.getValue());
+        }
+        /**
+        * Set <code>periodAttr</code> property in DSL way
+        * @param periodAttr the new value
+        * @return <code>PeriodTypeComplexType</code> instance
+        */
+        public PeriodTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+        }
 //Override all attributes methods to be conformant with DSL approach
 
 /**
@@ -223,10 +210,10 @@ return "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02";
 public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
-        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
 return attrs;
 }
 

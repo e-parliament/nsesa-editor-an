@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Identification;
@@ -98,13 +85,13 @@ super(element);
             */
             public Identification getIdentification() {
                 Identification result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Identification".equalsIgnoreCase(widget.getType())) {
-            result = (Identification)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Identification".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Identification)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>identificationElem</code> property in DSL way
@@ -115,7 +102,7 @@ super(element);
                     Identification result = getIdentification();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(identificationElem);
 
@@ -127,13 +114,13 @@ super(element);
             */
             public Publication getPublication() {
                 Publication result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Publication".equalsIgnoreCase(widget.getType())) {
-            result = (Publication)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Publication".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Publication)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>publicationElem</code> property in DSL way
@@ -144,7 +131,7 @@ super(element);
                     Publication result = getPublication();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(publicationElem);
 
@@ -156,12 +143,12 @@ super(element);
             */
             public java.util.List<Classification> getClassifications() {
                 java.util.List<Classification> result = new ArrayList<Classification>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Classification".equalsIgnoreCase(widget.getType())) {
-            result.add((Classification)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Classification".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Classification)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -169,7 +156,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Classification> getClassificationList() {
-            return  getClassifications();
+                return  getClassifications();
             }
             /**
             * Add <code>java.util.List<Classification></code> property in the list of properties
@@ -186,12 +173,12 @@ super(element);
             */
             public java.util.List<Lifecycle> getLifecycles() {
                 java.util.List<Lifecycle> result = new ArrayList<Lifecycle>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Lifecycle".equalsIgnoreCase(widget.getType())) {
-            result.add((Lifecycle)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Lifecycle".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Lifecycle)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -199,7 +186,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Lifecycle> getLifecycleList() {
-            return  getLifecycles();
+                return  getLifecycles();
             }
             /**
             * Add <code>java.util.List<Lifecycle></code> property in the list of properties
@@ -216,12 +203,12 @@ super(element);
             */
             public java.util.List<Workflow> getWorkflows() {
                 java.util.List<Workflow> result = new ArrayList<Workflow>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Workflow".equalsIgnoreCase(widget.getType())) {
-            result.add((Workflow)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Workflow".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Workflow)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -229,7 +216,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Workflow> getWorkflowList() {
-            return  getWorkflows();
+                return  getWorkflows();
             }
             /**
             * Add <code>java.util.List<Workflow></code> property in the list of properties
@@ -246,12 +233,12 @@ super(element);
             */
             public java.util.List<Analysis> getAnalysises() {
                 java.util.List<Analysis> result = new ArrayList<Analysis>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Analysis".equalsIgnoreCase(widget.getType())) {
-            result.add((Analysis)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Analysis".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Analysis)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -259,7 +246,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Analysis> getAnalysisList() {
-            return  getAnalysises();
+                return  getAnalysises();
             }
             /**
             * Add <code>java.util.List<Analysis></code> property in the list of properties
@@ -276,12 +263,12 @@ super(element);
             */
             public java.util.List<TemporalData> getTemporalDatas() {
                 java.util.List<TemporalData> result = new ArrayList<TemporalData>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TemporalData".equalsIgnoreCase(widget.getType())) {
-            result.add((TemporalData)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("TemporalData".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((TemporalData)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -289,7 +276,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<TemporalData> getTemporalDataList() {
-            return  getTemporalDatas();
+                return  getTemporalDatas();
             }
             /**
             * Add <code>java.util.List<TemporalData></code> property in the list of properties
@@ -306,12 +293,12 @@ super(element);
             */
             public java.util.List<References> getReferenceses() {
                 java.util.List<References> result = new ArrayList<References>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("References".equalsIgnoreCase(widget.getType())) {
-            result.add((References)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("References".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((References)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -319,7 +306,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<References> getReferencesList() {
-            return  getReferenceses();
+                return  getReferenceses();
             }
             /**
             * Add <code>java.util.List<References></code> property in the list of properties
@@ -336,12 +323,12 @@ super(element);
             */
             public java.util.List<Notes> getNoteses() {
                 java.util.List<Notes> result = new ArrayList<Notes>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Notes".equalsIgnoreCase(widget.getType())) {
-            result.add((Notes)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Notes".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Notes)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -349,7 +336,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Notes> getNotesList() {
-            return  getNoteses();
+                return  getNoteses();
             }
             /**
             * Add <code>java.util.List<Notes></code> property in the list of properties
@@ -366,12 +353,12 @@ super(element);
             */
             public java.util.List<Proprietary> getProprietaries() {
                 java.util.List<Proprietary> result = new ArrayList<Proprietary>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Proprietary".equalsIgnoreCase(widget.getType())) {
-            result.add((Proprietary)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Proprietary".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Proprietary)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -379,7 +366,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Proprietary> getProprietaryList() {
-            return  getProprietaries();
+                return  getProprietaries();
             }
             /**
             * Add <code>java.util.List<Proprietary></code> property in the list of properties
@@ -396,12 +383,12 @@ super(element);
             */
             public java.util.List<Presentation> getPresentations() {
                 java.util.List<Presentation> result = new ArrayList<Presentation>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Presentation".equalsIgnoreCase(widget.getType())) {
-            result.add((Presentation)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Presentation".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Presentation)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -409,7 +396,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Presentation> getPresentationList() {
-            return  getPresentations();
+                return  getPresentations();
             }
             /**
             * Add <code>java.util.List<Presentation></code> property in the list of properties

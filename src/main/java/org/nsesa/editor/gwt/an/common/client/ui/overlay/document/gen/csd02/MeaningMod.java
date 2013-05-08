@@ -1,26 +1,13 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.ModificationTypeComplexType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.MeaningModsSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Domain;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -139,13 +126,13 @@ super(element);
             */
             public Domain getDomain() {
                 Domain result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Domain".equalsIgnoreCase(widget.getType())) {
-            result = (Domain)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Domain".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Domain)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>domainElem</code> property in DSL way
@@ -156,40 +143,13 @@ super(element);
                     Domain result = getDomain();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(domainElem);
 
                 return domainElem;
             }
 //Override all attributes methods to be conformant with DSL approach
-        /**
-        * Set <code>refersToAttr</code> property in DSL way
-        * @param refersToAttr new value
-        * @return <code> MeaningMod</code> instance
-        */
-        public MeaningMod refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-        }
-        /**
-        * Set <code>statusAttr</code> property in DSL way
-        * @param statusAttr new value
-        * @return <code> MeaningMod</code> instance
-        */
-        public MeaningMod statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr new value
-        * @return <code> MeaningMod</code> instance
-        */
-        public MeaningMod wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-        }
         /**
         * Set <code>exclusionAttr</code> property in DSL way
         * @param exclusionAttr new value
@@ -224,6 +184,33 @@ super(element);
         */
         public MeaningMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+        }
+        /**
+        * Set <code>refersToAttr</code> property in DSL way
+        * @param refersToAttr new value
+        * @return <code> MeaningMod</code> instance
+        */
+        public MeaningMod refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+        }
+        /**
+        * Set <code>statusAttr</code> property in DSL way
+        * @param statusAttr new value
+        * @return <code> MeaningMod</code> instance
+        */
+        public MeaningMod statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr new value
+        * @return <code> MeaningMod</code> instance
+        */
+        public MeaningMod wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
         }
         /**

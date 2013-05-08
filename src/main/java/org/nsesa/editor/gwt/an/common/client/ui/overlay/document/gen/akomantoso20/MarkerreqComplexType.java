@@ -1,24 +1,11 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,7 +18,7 @@ import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
-* the complex type markerreq defines the content model and attributes shared by all marker elements. Here the id attribute is required
+* the complex type markerreq defines the content model and attributes shared by all marker<br/> elements. Here the id attribute is required
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
@@ -63,18 +50,162 @@ super(element);
 }
 
 // FIELDS ------------------
+    private AnyURISimpleType alternativeToAttr;
+    private StringSimpleType classAttr;
+    private StringSimpleType styleAttr;
+    private StringSimpleType titleAttr;
     private AnyURISimpleType refersToAttr;
     private String wildcardContentAttr;
     private LanguageSimpleType langAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType alternativeToAttr;
     private StatusTypeSimpleType statusAttr;
-    private StringSimpleType classAttr;
-    private StringSimpleType styleAttr;
-    private StringSimpleType titleAttr;
     private AnyURISimpleType periodAttr;
 
+        /**
+        * Return <code>alternativeToAttr</code> property
+        * @return alternativeToAttr
+        */
+        public AnyURISimpleType getAlternativeToAttr() {
+        if (alternativeToAttr == null) {
+                alternativeToAttr = new AnyURISimpleType();
+                alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
+        }
+
+        return alternativeToAttr;
+        }
+        /**
+        * Return <code>alternativeToAttr</code> property in DSL way
+        * @return alternativeToAttr
+        */
+        public AnyURISimpleType alternativeToAttr() {
+        return  getAlternativeToAttr();
+        }
+        /**
+        * Set <code>alternativeToAttr</code> property
+        * @param alternativeToAttr the new value
+        */
+        public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+        getElement().setAttribute("alternativeTo",alternativeToAttr.getValue());
+        }
+        /**
+        * Set <code>alternativeToAttr</code> property in DSL way
+        * @param alternativeToAttr the new value
+        * @return <code>MarkerreqComplexType</code> instance
+        */
+        public MarkerreqComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+        }
+        /**
+        * Return <code>classAttr</code> property
+        * @return classAttr
+        */
+        public StringSimpleType getClassAttr() {
+        if (classAttr == null) {
+                classAttr = new StringSimpleType();
+                classAttr.setValue(getElement().getAttribute("class"));
+        }
+
+        return classAttr;
+        }
+        /**
+        * Return <code>classAttr</code> property in DSL way
+        * @return classAttr
+        */
+        public StringSimpleType classAttr() {
+        return  getClassAttr();
+        }
+        /**
+        * Set <code>classAttr</code> property
+        * @param classAttr the new value
+        */
+        public void setClassAttr(final StringSimpleType classAttr) {
+        this.classAttr = classAttr;
+        getElement().setAttribute("class",classAttr.getValue());
+        }
+        /**
+        * Set <code>classAttr</code> property in DSL way
+        * @param classAttr the new value
+        * @return <code>MarkerreqComplexType</code> instance
+        */
+        public MarkerreqComplexType classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+        }
+        /**
+        * Return <code>styleAttr</code> property
+        * @return styleAttr
+        */
+        public StringSimpleType getStyleAttr() {
+        if (styleAttr == null) {
+                styleAttr = new StringSimpleType();
+                styleAttr.setValue(getElement().getAttribute("style"));
+        }
+
+        return styleAttr;
+        }
+        /**
+        * Return <code>styleAttr</code> property in DSL way
+        * @return styleAttr
+        */
+        public StringSimpleType styleAttr() {
+        return  getStyleAttr();
+        }
+        /**
+        * Set <code>styleAttr</code> property
+        * @param styleAttr the new value
+        */
+        public void setStyleAttr(final StringSimpleType styleAttr) {
+        this.styleAttr = styleAttr;
+        getElement().setAttribute("style",styleAttr.getValue());
+        }
+        /**
+        * Set <code>styleAttr</code> property in DSL way
+        * @param styleAttr the new value
+        * @return <code>MarkerreqComplexType</code> instance
+        */
+        public MarkerreqComplexType styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
+        return this;
+        }
+        /**
+        * Return <code>titleAttr</code> property
+        * @return titleAttr
+        */
+        public StringSimpleType getTitleAttr() {
+        if (titleAttr == null) {
+                titleAttr = new StringSimpleType();
+                titleAttr.setValue(getElement().getAttribute("title"));
+        }
+
+        return titleAttr;
+        }
+        /**
+        * Return <code>titleAttr</code> property in DSL way
+        * @return titleAttr
+        */
+        public StringSimpleType titleAttr() {
+        return  getTitleAttr();
+        }
+        /**
+        * Set <code>titleAttr</code> property
+        * @param titleAttr the new value
+        */
+        public void setTitleAttr(final StringSimpleType titleAttr) {
+        this.titleAttr = titleAttr;
+        getElement().setAttribute("title",titleAttr.getValue());
+        }
+        /**
+        * Set <code>titleAttr</code> property in DSL way
+        * @param titleAttr the new value
+        * @return <code>MarkerreqComplexType</code> instance
+        */
+        public MarkerreqComplexType titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
+        return this;
+        }
         /**
         * Return <code>refersToAttr</code> property
         * @return refersToAttr
@@ -255,42 +386,6 @@ super(element);
         return this;
         }
         /**
-        * Return <code>alternativeToAttr</code> property
-        * @return alternativeToAttr
-        */
-        public AnyURISimpleType getAlternativeToAttr() {
-        if (alternativeToAttr == null) {
-                alternativeToAttr = new AnyURISimpleType();
-                alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
-        }
-
-        return alternativeToAttr;
-        }
-        /**
-        * Return <code>alternativeToAttr</code> property in DSL way
-        * @return alternativeToAttr
-        */
-        public AnyURISimpleType alternativeToAttr() {
-        return  getAlternativeToAttr();
-        }
-        /**
-        * Set <code>alternativeToAttr</code> property
-        * @param alternativeToAttr the new value
-        */
-        public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
-        getElement().setAttribute("alternativeTo",alternativeToAttr.getValue());
-        }
-        /**
-        * Set <code>alternativeToAttr</code> property in DSL way
-        * @param alternativeToAttr the new value
-        * @return <code>MarkerreqComplexType</code> instance
-        */
-        public MarkerreqComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-        }
-        /**
         * Return <code>statusAttr</code> property
         * @return statusAttr
         */
@@ -323,114 +418,6 @@ super(element);
         */
         public MarkerreqComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
         setStatusAttr(statusAttr);
-        return this;
-        }
-        /**
-        * Return <code>classAttr</code> property
-        * @return classAttr
-        */
-        public StringSimpleType getClassAttr() {
-        if (classAttr == null) {
-                classAttr = new StringSimpleType();
-                classAttr.setValue(getElement().getAttribute("class"));
-        }
-
-        return classAttr;
-        }
-        /**
-        * Return <code>classAttr</code> property in DSL way
-        * @return classAttr
-        */
-        public StringSimpleType classAttr() {
-        return  getClassAttr();
-        }
-        /**
-        * Set <code>classAttr</code> property
-        * @param classAttr the new value
-        */
-        public void setClassAttr(final StringSimpleType classAttr) {
-        this.classAttr = classAttr;
-        getElement().setAttribute("class",classAttr.getValue());
-        }
-        /**
-        * Set <code>classAttr</code> property in DSL way
-        * @param classAttr the new value
-        * @return <code>MarkerreqComplexType</code> instance
-        */
-        public MarkerreqComplexType classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-        }
-        /**
-        * Return <code>styleAttr</code> property
-        * @return styleAttr
-        */
-        public StringSimpleType getStyleAttr() {
-        if (styleAttr == null) {
-                styleAttr = new StringSimpleType();
-                styleAttr.setValue(getElement().getAttribute("style"));
-        }
-
-        return styleAttr;
-        }
-        /**
-        * Return <code>styleAttr</code> property in DSL way
-        * @return styleAttr
-        */
-        public StringSimpleType styleAttr() {
-        return  getStyleAttr();
-        }
-        /**
-        * Set <code>styleAttr</code> property
-        * @param styleAttr the new value
-        */
-        public void setStyleAttr(final StringSimpleType styleAttr) {
-        this.styleAttr = styleAttr;
-        getElement().setAttribute("style",styleAttr.getValue());
-        }
-        /**
-        * Set <code>styleAttr</code> property in DSL way
-        * @param styleAttr the new value
-        * @return <code>MarkerreqComplexType</code> instance
-        */
-        public MarkerreqComplexType styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-        }
-        /**
-        * Return <code>titleAttr</code> property
-        * @return titleAttr
-        */
-        public StringSimpleType getTitleAttr() {
-        if (titleAttr == null) {
-                titleAttr = new StringSimpleType();
-                titleAttr.setValue(getElement().getAttribute("title"));
-        }
-
-        return titleAttr;
-        }
-        /**
-        * Return <code>titleAttr</code> property in DSL way
-        * @return titleAttr
-        */
-        public StringSimpleType titleAttr() {
-        return  getTitleAttr();
-        }
-        /**
-        * Set <code>titleAttr</code> property
-        * @param titleAttr the new value
-        */
-        public void setTitleAttr(final StringSimpleType titleAttr) {
-        this.titleAttr = titleAttr;
-        getElement().setAttribute("title",titleAttr.getValue());
-        }
-        /**
-        * Set <code>titleAttr</code> property in DSL way
-        * @param titleAttr the new value
-        * @return <code>MarkerreqComplexType</code> instance
-        */
-        public MarkerreqComplexType titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
         return this;
         }
         /**
@@ -484,16 +471,16 @@ return "http://www.akomantoso.org/2.0";
 public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
+        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
+        attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
+        attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
+        attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
         attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
-        attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
-        attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
 return attrs;
 }

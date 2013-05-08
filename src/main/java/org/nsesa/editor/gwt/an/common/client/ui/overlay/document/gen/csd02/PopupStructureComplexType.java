@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Content;
@@ -27,11 +14,11 @@ import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Wrap;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Heading;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Subheading;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NCNameSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Foreign;
@@ -233,17 +220,17 @@ super(element);
 }
 
 // FIELDS ------------------
-    private StatusTypeSimpleType statusAttr;
-    private AnyURISimpleType refersToAttr;
-    private String wildcardContentAttr;
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType alternativeToAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType alternativeToAttr;
+    private StatusTypeSimpleType statusAttr;
     private LanguageSimpleType langAttr;
     private NCNameSimpleType spaceAttr;
+    private String wildcardContentAttr;
+    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
 
             /**
@@ -252,12 +239,12 @@ super(element);
             */
             public java.util.List<Content> getContent_s() {
                 java.util.List<Content> result = new ArrayList<Content>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Content".equalsIgnoreCase(widget.getType())) {
-            result.add((Content)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Content".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Content)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -265,7 +252,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Content> getContent_List() {
-            return  getContent_s();
+                return  getContent_s();
             }
             /**
             * Add <code>java.util.List<Content></code> property in the list of properties
@@ -282,12 +269,12 @@ super(element);
             */
             public java.util.List<Formula> getFormulas() {
                 java.util.List<Formula> result = new ArrayList<Formula>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Formula".equalsIgnoreCase(widget.getType())) {
-            result.add((Formula)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Formula".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Formula)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -295,7 +282,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Formula> getFormulaList() {
-            return  getFormulas();
+                return  getFormulas();
             }
             /**
             * Add <code>java.util.List<Formula></code> property in the list of properties
@@ -312,12 +299,12 @@ super(element);
             */
             public java.util.List<Recitals> getRecitalses() {
                 java.util.List<Recitals> result = new ArrayList<Recitals>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Recitals".equalsIgnoreCase(widget.getType())) {
-            result.add((Recitals)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Recitals".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Recitals)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -325,7 +312,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Recitals> getRecitalsList() {
-            return  getRecitalses();
+                return  getRecitalses();
             }
             /**
             * Add <code>java.util.List<Recitals></code> property in the list of properties
@@ -342,12 +329,12 @@ super(element);
             */
             public java.util.List<Citations> getCitationses() {
                 java.util.List<Citations> result = new ArrayList<Citations>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Citations".equalsIgnoreCase(widget.getType())) {
-            result.add((Citations)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Citations".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Citations)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -355,7 +342,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Citations> getCitationsList() {
-            return  getCitationses();
+                return  getCitationses();
             }
             /**
             * Add <code>java.util.List<Citations></code> property in the list of properties
@@ -372,12 +359,12 @@ super(element);
             */
             public java.util.List<LongTitle> getLongTitles() {
                 java.util.List<LongTitle> result = new ArrayList<LongTitle>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("LongTitle".equalsIgnoreCase(widget.getType())) {
-            result.add((LongTitle)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("LongTitle".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((LongTitle)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -385,7 +372,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<LongTitle> getLongTitleList() {
-            return  getLongTitles();
+                return  getLongTitles();
             }
             /**
             * Add <code>java.util.List<LongTitle></code> property in the list of properties
@@ -402,12 +389,12 @@ super(element);
             */
             public java.util.List<Recital> getRecitals() {
                 java.util.List<Recital> result = new ArrayList<Recital>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Recital".equalsIgnoreCase(widget.getType())) {
-            result.add((Recital)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Recital".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Recital)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -415,7 +402,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Recital> getRecitalList() {
-            return  getRecitals();
+                return  getRecitals();
             }
             /**
             * Add <code>java.util.List<Recital></code> property in the list of properties
@@ -432,12 +419,12 @@ super(element);
             */
             public java.util.List<Citation> getCitations() {
                 java.util.List<Citation> result = new ArrayList<Citation>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Citation".equalsIgnoreCase(widget.getType())) {
-            result.add((Citation)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Citation".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Citation)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -445,7 +432,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Citation> getCitationList() {
-            return  getCitations();
+                return  getCitations();
             }
             /**
             * Add <code>java.util.List<Citation></code> property in the list of properties
@@ -462,12 +449,12 @@ super(element);
             */
             public java.util.List<ComponentRef> getComponentRefs() {
                 java.util.List<ComponentRef> result = new ArrayList<ComponentRef>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ComponentRef".equalsIgnoreCase(widget.getType())) {
-            result.add((ComponentRef)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("ComponentRef".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((ComponentRef)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -475,7 +462,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<ComponentRef> getComponentRefList() {
-            return  getComponentRefs();
+                return  getComponentRefs();
             }
             /**
             * Add <code>java.util.List<ComponentRef></code> property in the list of properties
@@ -492,12 +479,12 @@ super(element);
             */
             public java.util.List<DocumentRef> getDocumentRefs() {
                 java.util.List<DocumentRef> result = new ArrayList<DocumentRef>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocumentRef".equalsIgnoreCase(widget.getType())) {
-            result.add((DocumentRef)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("DocumentRef".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((DocumentRef)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -505,7 +492,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<DocumentRef> getDocumentRefList() {
-            return  getDocumentRefs();
+                return  getDocumentRefs();
             }
             /**
             * Add <code>java.util.List<DocumentRef></code> property in the list of properties
@@ -522,12 +509,12 @@ super(element);
             */
             public java.util.List<Intro> getIntros() {
                 java.util.List<Intro> result = new ArrayList<Intro>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Intro".equalsIgnoreCase(widget.getType())) {
-            result.add((Intro)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Intro".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Intro)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -535,7 +522,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Intro> getIntroList() {
-            return  getIntros();
+                return  getIntros();
             }
             /**
             * Add <code>java.util.List<Intro></code> property in the list of properties
@@ -552,12 +539,12 @@ super(element);
             */
             public java.util.List<Wrap> getWraps() {
                 java.util.List<Wrap> result = new ArrayList<Wrap>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Wrap".equalsIgnoreCase(widget.getType())) {
-            result.add((Wrap)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Wrap".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Wrap)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -565,7 +552,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Wrap> getWrapList() {
-            return  getWraps();
+                return  getWraps();
             }
             /**
             * Add <code>java.util.List<Wrap></code> property in the list of properties
@@ -582,12 +569,12 @@ super(element);
             */
             public java.util.List<Heading> getHeadings() {
                 java.util.List<Heading> result = new ArrayList<Heading>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Heading".equalsIgnoreCase(widget.getType())) {
-            result.add((Heading)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Heading".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Heading)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -595,7 +582,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Heading> getHeadingList() {
-            return  getHeadings();
+                return  getHeadings();
             }
             /**
             * Add <code>java.util.List<Heading></code> property in the list of properties
@@ -612,12 +599,12 @@ super(element);
             */
             public java.util.List<Subheading> getSubheadings() {
                 java.util.List<Subheading> result = new ArrayList<Subheading>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subheading".equalsIgnoreCase(widget.getType())) {
-            result.add((Subheading)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Subheading".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Subheading)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -625,7 +612,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Subheading> getSubheadingList() {
-            return  getSubheadings();
+                return  getSubheadings();
             }
             /**
             * Add <code>java.util.List<Subheading></code> property in the list of properties
@@ -642,12 +629,12 @@ super(element);
             */
             public java.util.List<Num> getNums() {
                 java.util.List<Num> result = new ArrayList<Num>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Num".equalsIgnoreCase(widget.getType())) {
-            result.add((Num)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Num".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Num)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -655,7 +642,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Num> getNumList() {
-            return  getNums();
+                return  getNums();
             }
             /**
             * Add <code>java.util.List<Num></code> property in the list of properties
@@ -667,109 +654,111 @@ super(element);
             }
 
         /**
-        * Return <code>statusAttr</code> property
-        * @return statusAttr
+        * Return <code>classAttr</code> property
+        * @return classAttr
         */
-        public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-                statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        public StringSimpleType getClassAttr() {
+        if (classAttr == null) {
+                classAttr = new StringSimpleType();
+                classAttr.setValue(getElement().getAttribute("class"));
         }
 
-        return statusAttr;
+        return classAttr;
         }
         /**
-        * Return <code>statusAttr</code> property in DSL way
-        * @return statusAttr
+        * Return <code>classAttr</code> property in DSL way
+        * @return classAttr
         */
-        public StatusTypeSimpleType statusAttr() {
-        return  getStatusAttr();
+        public StringSimpleType classAttr() {
+        return  getClassAttr();
         }
         /**
-        * Set <code>statusAttr</code> property
-        * @param statusAttr the new value
+        * Set <code>classAttr</code> property
+        * @param classAttr the new value
         */
-        public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status",statusAttr.value());
+        public void setClassAttr(final StringSimpleType classAttr) {
+        this.classAttr = classAttr;
+        getElement().setAttribute("class",classAttr.getValue());
         }
         /**
-        * Set <code>statusAttr</code> property in DSL way
-        * @param statusAttr the new value
+        * Set <code>classAttr</code> property in DSL way
+        * @param classAttr the new value
         * @return <code>PopupStructureComplexType</code> instance
         */
-        public PopupStructureComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+        public PopupStructureComplexType classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
         return this;
         }
         /**
-        * Return <code>refersToAttr</code> property
-        * @return refersToAttr
+        * Return <code>styleAttr</code> property
+        * @return styleAttr
         */
-        public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-                refersToAttr = new AnyURISimpleType();
-                refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        public StringSimpleType getStyleAttr() {
+        if (styleAttr == null) {
+                styleAttr = new StringSimpleType();
+                styleAttr.setValue(getElement().getAttribute("style"));
         }
 
-        return refersToAttr;
+        return styleAttr;
         }
         /**
-        * Return <code>refersToAttr</code> property in DSL way
-        * @return refersToAttr
+        * Return <code>styleAttr</code> property in DSL way
+        * @return styleAttr
         */
-        public AnyURISimpleType refersToAttr() {
-        return  getRefersToAttr();
+        public StringSimpleType styleAttr() {
+        return  getStyleAttr();
         }
         /**
-        * Set <code>refersToAttr</code> property
-        * @param refersToAttr the new value
+        * Set <code>styleAttr</code> property
+        * @param styleAttr the new value
         */
-        public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo",refersToAttr.getValue());
+        public void setStyleAttr(final StringSimpleType styleAttr) {
+        this.styleAttr = styleAttr;
+        getElement().setAttribute("style",styleAttr.getValue());
         }
         /**
-        * Set <code>refersToAttr</code> property in DSL way
-        * @param refersToAttr the new value
+        * Set <code>styleAttr</code> property in DSL way
+        * @param styleAttr the new value
         * @return <code>PopupStructureComplexType</code> instance
         */
-        public PopupStructureComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+        public PopupStructureComplexType styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
         return this;
         }
         /**
-        * Return <code>wildcardContentAttr</code> property
-        * @return wildcardContentAttr
+        * Return <code>titleAttr</code> property
+        * @return titleAttr
         */
-        public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+        public StringSimpleType getTitleAttr() {
+        if (titleAttr == null) {
+                titleAttr = new StringSimpleType();
+                titleAttr.setValue(getElement().getAttribute("title"));
         }
 
-        return wildcardContentAttr;
+        return titleAttr;
         }
         /**
-        * Return <code>wildcardContentAttr</code> property in DSL way
-        * @return wildcardContentAttr
+        * Return <code>titleAttr</code> property in DSL way
+        * @return titleAttr
         */
-        public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
+        public StringSimpleType titleAttr() {
+        return  getTitleAttr();
         }
         /**
-        * Set <code>wildcardContentAttr</code> property
-        * @param wildcardContentAttr the new value
+        * Set <code>titleAttr</code> property
+        * @param titleAttr the new value
         */
-        public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent",wildcardContentAttr);
+        public void setTitleAttr(final StringSimpleType titleAttr) {
+        this.titleAttr = titleAttr;
+        getElement().setAttribute("title",titleAttr.getValue());
         }
         /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr the new value
+        * Set <code>titleAttr</code> property in DSL way
+        * @param titleAttr the new value
         * @return <code>PopupStructureComplexType</code> instance
         */
-        public PopupStructureComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+        public PopupStructureComplexType titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
         return this;
         }
         /**
@@ -881,111 +870,38 @@ super(element);
         return this;
         }
         /**
-        * Return <code>classAttr</code> property
-        * @return classAttr
+        * Return <code>statusAttr</code> property
+        * @return statusAttr
         */
-        public StringSimpleType getClassAttr() {
-        if (classAttr == null) {
-                classAttr = new StringSimpleType();
-                classAttr.setValue(getElement().getAttribute("class"));
+        public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+                statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
         }
 
-        return classAttr;
+        return statusAttr;
         }
         /**
-        * Return <code>classAttr</code> property in DSL way
-        * @return classAttr
+        * Return <code>statusAttr</code> property in DSL way
+        * @return statusAttr
         */
-        public StringSimpleType classAttr() {
-        return  getClassAttr();
+        public StatusTypeSimpleType statusAttr() {
+        return  getStatusAttr();
         }
         /**
-        * Set <code>classAttr</code> property
-        * @param classAttr the new value
+        * Set <code>statusAttr</code> property
+        * @param statusAttr the new value
         */
-        public void setClassAttr(final StringSimpleType classAttr) {
-        this.classAttr = classAttr;
-        getElement().setAttribute("class",classAttr.getValue());
+        public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status",statusAttr.value());
         }
         /**
-        * Set <code>classAttr</code> property in DSL way
-        * @param classAttr the new value
+        * Set <code>statusAttr</code> property in DSL way
+        * @param statusAttr the new value
         * @return <code>PopupStructureComplexType</code> instance
         */
-        public PopupStructureComplexType classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-        }
-        /**
-        * Return <code>styleAttr</code> property
-        * @return styleAttr
-        */
-        public StringSimpleType getStyleAttr() {
-        if (styleAttr == null) {
-                styleAttr = new StringSimpleType();
-                styleAttr.setValue(getElement().getAttribute("style"));
-        }
-
-        return styleAttr;
-        }
-        /**
-        * Return <code>styleAttr</code> property in DSL way
-        * @return styleAttr
-        */
-        public StringSimpleType styleAttr() {
-        return  getStyleAttr();
-        }
-        /**
-        * Set <code>styleAttr</code> property
-        * @param styleAttr the new value
-        */
-        public void setStyleAttr(final StringSimpleType styleAttr) {
-        this.styleAttr = styleAttr;
-        getElement().setAttribute("style",styleAttr.getValue());
-        }
-        /**
-        * Set <code>styleAttr</code> property in DSL way
-        * @param styleAttr the new value
-        * @return <code>PopupStructureComplexType</code> instance
-        */
-        public PopupStructureComplexType styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-        }
-        /**
-        * Return <code>titleAttr</code> property
-        * @return titleAttr
-        */
-        public StringSimpleType getTitleAttr() {
-        if (titleAttr == null) {
-                titleAttr = new StringSimpleType();
-                titleAttr.setValue(getElement().getAttribute("title"));
-        }
-
-        return titleAttr;
-        }
-        /**
-        * Return <code>titleAttr</code> property in DSL way
-        * @return titleAttr
-        */
-        public StringSimpleType titleAttr() {
-        return  getTitleAttr();
-        }
-        /**
-        * Set <code>titleAttr</code> property
-        * @param titleAttr the new value
-        */
-        public void setTitleAttr(final StringSimpleType titleAttr) {
-        this.titleAttr = titleAttr;
-        getElement().setAttribute("title",titleAttr.getValue());
-        }
-        /**
-        * Set <code>titleAttr</code> property in DSL way
-        * @param titleAttr the new value
-        * @return <code>PopupStructureComplexType</code> instance
-        */
-        public PopupStructureComplexType titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
+        public PopupStructureComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
         }
         /**
@@ -1061,6 +977,77 @@ super(element);
         return this;
         }
         /**
+        * Return <code>wildcardContentAttr</code> property
+        * @return wildcardContentAttr
+        */
+        public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+        }
+        /**
+        * Return <code>wildcardContentAttr</code> property in DSL way
+        * @return wildcardContentAttr
+        */
+        public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property
+        * @param wildcardContentAttr the new value
+        */
+        public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent",wildcardContentAttr);
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr the new value
+        * @return <code>PopupStructureComplexType</code> instance
+        */
+        public PopupStructureComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
+        /**
+        * Return <code>refersToAttr</code> property
+        * @return refersToAttr
+        */
+        public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+                refersToAttr = new AnyURISimpleType();
+                refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+        }
+        /**
+        * Return <code>refersToAttr</code> property in DSL way
+        * @return refersToAttr
+        */
+        public AnyURISimpleType refersToAttr() {
+        return  getRefersToAttr();
+        }
+        /**
+        * Set <code>refersToAttr</code> property
+        * @param refersToAttr the new value
+        */
+        public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo",refersToAttr.getValue());
+        }
+        /**
+        * Set <code>refersToAttr</code> property in DSL way
+        * @param refersToAttr the new value
+        * @return <code>PopupStructureComplexType</code> instance
+        */
+        public PopupStructureComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+        }
+        /**
         * Return <code>periodAttr</code> property
         * @return periodAttr
         */
@@ -1102,12 +1089,12 @@ super(element);
             */
             public java.util.List<Foreign> getForeigns() {
                 java.util.List<Foreign> result = new ArrayList<Foreign>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Foreign".equalsIgnoreCase(widget.getType())) {
-            result.add((Foreign)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Foreign".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Foreign)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1115,7 +1102,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Foreign> getForeignList() {
-            return  getForeigns();
+                return  getForeigns();
             }
             /**
             * Add <code>java.util.List<Foreign></code> property in the list of properties
@@ -1132,12 +1119,12 @@ super(element);
             */
             public java.util.List<Block> getBlocks() {
                 java.util.List<Block> result = new ArrayList<Block>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Block".equalsIgnoreCase(widget.getType())) {
-            result.add((Block)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Block".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Block)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1145,7 +1132,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Block> getBlockList() {
-            return  getBlocks();
+                return  getBlocks();
             }
             /**
             * Add <code>java.util.List<Block></code> property in the list of properties
@@ -1162,12 +1149,12 @@ super(element);
             */
             public java.util.List<Container> getContainers() {
                 java.util.List<Container> result = new ArrayList<Container>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Container".equalsIgnoreCase(widget.getType())) {
-            result.add((Container)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Container".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Container)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1175,7 +1162,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Container> getContainerList() {
-            return  getContainers();
+                return  getContainers();
             }
             /**
             * Add <code>java.util.List<Container></code> property in the list of properties
@@ -1192,12 +1179,12 @@ super(element);
             */
             public java.util.List<Hcontainer> getHcontainers() {
                 java.util.List<Hcontainer> result = new ArrayList<Hcontainer>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Hcontainer".equalsIgnoreCase(widget.getType())) {
-            result.add((Hcontainer)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Hcontainer".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Hcontainer)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1205,7 +1192,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Hcontainer> getHcontainerList() {
-            return  getHcontainers();
+                return  getHcontainers();
             }
             /**
             * Add <code>java.util.List<Hcontainer></code> property in the list of properties
@@ -1222,12 +1209,12 @@ super(element);
             */
             public java.util.List<SpeechGroup> getSpeechGroups() {
                 java.util.List<SpeechGroup> result = new ArrayList<SpeechGroup>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("SpeechGroup".equalsIgnoreCase(widget.getType())) {
-            result.add((SpeechGroup)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("SpeechGroup".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((SpeechGroup)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1235,7 +1222,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<SpeechGroup> getSpeechGroupList() {
-            return  getSpeechGroups();
+                return  getSpeechGroups();
             }
             /**
             * Add <code>java.util.List<SpeechGroup></code> property in the list of properties
@@ -1252,12 +1239,12 @@ super(element);
             */
             public java.util.List<Speech> getSpeechs() {
                 java.util.List<Speech> result = new ArrayList<Speech>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Speech".equalsIgnoreCase(widget.getType())) {
-            result.add((Speech)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Speech".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Speech)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1265,7 +1252,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Speech> getSpeechList() {
-            return  getSpeechs();
+                return  getSpeechs();
             }
             /**
             * Add <code>java.util.List<Speech></code> property in the list of properties
@@ -1282,12 +1269,12 @@ super(element);
             */
             public java.util.List<Question> getQuestions() {
                 java.util.List<Question> result = new ArrayList<Question>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Question".equalsIgnoreCase(widget.getType())) {
-            result.add((Question)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Question".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Question)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1295,7 +1282,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Question> getQuestionList() {
-            return  getQuestions();
+                return  getQuestions();
             }
             /**
             * Add <code>java.util.List<Question></code> property in the list of properties
@@ -1312,12 +1299,12 @@ super(element);
             */
             public java.util.List<Answer> getAnswers() {
                 java.util.List<Answer> result = new ArrayList<Answer>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Answer".equalsIgnoreCase(widget.getType())) {
-            result.add((Answer)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Answer".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Answer)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1325,7 +1312,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Answer> getAnswerList() {
-            return  getAnswers();
+                return  getAnswers();
             }
             /**
             * Add <code>java.util.List<Answer></code> property in the list of properties
@@ -1342,12 +1329,12 @@ super(element);
             */
             public java.util.List<Other> getOthers() {
                 java.util.List<Other> result = new ArrayList<Other>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Other".equalsIgnoreCase(widget.getType())) {
-            result.add((Other)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Other".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Other)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1355,7 +1342,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Other> getOtherList() {
-            return  getOthers();
+                return  getOthers();
             }
             /**
             * Add <code>java.util.List<Other></code> property in the list of properties
@@ -1372,12 +1359,12 @@ super(element);
             */
             public java.util.List<Scene> getScenes() {
                 java.util.List<Scene> result = new ArrayList<Scene>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Scene".equalsIgnoreCase(widget.getType())) {
-            result.add((Scene)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Scene".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Scene)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1385,7 +1372,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Scene> getSceneList() {
-            return  getScenes();
+                return  getScenes();
             }
             /**
             * Add <code>java.util.List<Scene></code> property in the list of properties
@@ -1402,12 +1389,12 @@ super(element);
             */
             public java.util.List<Narrative> getNarratives() {
                 java.util.List<Narrative> result = new ArrayList<Narrative>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Narrative".equalsIgnoreCase(widget.getType())) {
-            result.add((Narrative)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Narrative".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Narrative)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1415,7 +1402,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Narrative> getNarrativeList() {
-            return  getNarratives();
+                return  getNarratives();
             }
             /**
             * Add <code>java.util.List<Narrative></code> property in the list of properties
@@ -1432,12 +1419,12 @@ super(element);
             */
             public java.util.List<Summary> getSummaries() {
                 java.util.List<Summary> result = new ArrayList<Summary>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Summary".equalsIgnoreCase(widget.getType())) {
-            result.add((Summary)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Summary".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Summary)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1445,7 +1432,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Summary> getSummaryList() {
-            return  getSummaries();
+                return  getSummaries();
             }
             /**
             * Add <code>java.util.List<Summary></code> property in the list of properties
@@ -1462,12 +1449,12 @@ super(element);
             */
             public java.util.List<BlockList> getBlockLists() {
                 java.util.List<BlockList> result = new ArrayList<BlockList>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("BlockList".equalsIgnoreCase(widget.getType())) {
-            result.add((BlockList)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("BlockList".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((BlockList)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1475,7 +1462,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<BlockList> getBlockListList() {
-            return  getBlockLists();
+                return  getBlockLists();
             }
             /**
             * Add <code>java.util.List<BlockList></code> property in the list of properties
@@ -1492,12 +1479,12 @@ super(element);
             */
             public java.util.List<Tblock> getTblocks() {
                 java.util.List<Tblock> result = new ArrayList<Tblock>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Tblock".equalsIgnoreCase(widget.getType())) {
-            result.add((Tblock)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Tblock".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Tblock)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1505,7 +1492,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Tblock> getTblockList() {
-            return  getTblocks();
+                return  getTblocks();
             }
             /**
             * Add <code>java.util.List<Tblock></code> property in the list of properties
@@ -1522,12 +1509,12 @@ super(element);
             */
             public java.util.List<Ul> getUls() {
                 java.util.List<Ul> result = new ArrayList<Ul>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Ul".equalsIgnoreCase(widget.getType())) {
-            result.add((Ul)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Ul".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Ul)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1535,7 +1522,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Ul> getUlList() {
-            return  getUls();
+                return  getUls();
             }
             /**
             * Add <code>java.util.List<Ul></code> property in the list of properties
@@ -1552,12 +1539,12 @@ super(element);
             */
             public java.util.List<Ol> getOls() {
                 java.util.List<Ol> result = new ArrayList<Ol>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Ol".equalsIgnoreCase(widget.getType())) {
-            result.add((Ol)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Ol".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Ol)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1565,7 +1552,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Ol> getOlList() {
-            return  getOls();
+                return  getOls();
             }
             /**
             * Add <code>java.util.List<Ol></code> property in the list of properties
@@ -1582,12 +1569,12 @@ super(element);
             */
             public java.util.List<Table> getTables() {
                 java.util.List<Table> result = new ArrayList<Table>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Table".equalsIgnoreCase(widget.getType())) {
-            result.add((Table)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Table".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Table)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1595,7 +1582,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Table> getTableList() {
-            return  getTables();
+                return  getTables();
             }
             /**
             * Add <code>java.util.List<Table></code> property in the list of properties
@@ -1612,12 +1599,12 @@ super(element);
             */
             public java.util.List<P> getPs() {
                 java.util.List<P> result = new ArrayList<P>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("P".equalsIgnoreCase(widget.getType())) {
-            result.add((P)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("P".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((P)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1625,7 +1612,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<P> getPList() {
-            return  getPs();
+                return  getPs();
             }
             /**
             * Add <code>java.util.List<P></code> property in the list of properties
@@ -1642,12 +1629,12 @@ super(element);
             */
             public java.util.List<AdministrationOfOath> getAdministrationOfOaths() {
                 java.util.List<AdministrationOfOath> result = new ArrayList<AdministrationOfOath>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("AdministrationOfOath".equalsIgnoreCase(widget.getType())) {
-            result.add((AdministrationOfOath)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("AdministrationOfOath".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((AdministrationOfOath)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1655,7 +1642,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<AdministrationOfOath> getAdministrationOfOathList() {
-            return  getAdministrationOfOaths();
+                return  getAdministrationOfOaths();
             }
             /**
             * Add <code>java.util.List<AdministrationOfOath></code> property in the list of properties
@@ -1672,12 +1659,12 @@ super(element);
             */
             public java.util.List<RollCall> getRollCalls() {
                 java.util.List<RollCall> result = new ArrayList<RollCall>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("RollCall".equalsIgnoreCase(widget.getType())) {
-            result.add((RollCall)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("RollCall".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((RollCall)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1685,7 +1672,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<RollCall> getRollCallList() {
-            return  getRollCalls();
+                return  getRollCalls();
             }
             /**
             * Add <code>java.util.List<RollCall></code> property in the list of properties
@@ -1702,12 +1689,12 @@ super(element);
             */
             public java.util.List<Prayers> getPrayerses() {
                 java.util.List<Prayers> result = new ArrayList<Prayers>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Prayers".equalsIgnoreCase(widget.getType())) {
-            result.add((Prayers)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Prayers".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Prayers)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1715,7 +1702,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Prayers> getPrayersList() {
-            return  getPrayerses();
+                return  getPrayerses();
             }
             /**
             * Add <code>java.util.List<Prayers></code> property in the list of properties
@@ -1732,12 +1719,12 @@ super(element);
             */
             public java.util.List<OralStatements> getOralStatementses() {
                 java.util.List<OralStatements> result = new ArrayList<OralStatements>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("OralStatements".equalsIgnoreCase(widget.getType())) {
-            result.add((OralStatements)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("OralStatements".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((OralStatements)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1745,7 +1732,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<OralStatements> getOralStatementsList() {
-            return  getOralStatementses();
+                return  getOralStatementses();
             }
             /**
             * Add <code>java.util.List<OralStatements></code> property in the list of properties
@@ -1762,12 +1749,12 @@ super(element);
             */
             public java.util.List<WrittenStatements> getWrittenStatementses() {
                 java.util.List<WrittenStatements> result = new ArrayList<WrittenStatements>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("WrittenStatements".equalsIgnoreCase(widget.getType())) {
-            result.add((WrittenStatements)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("WrittenStatements".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((WrittenStatements)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1775,7 +1762,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<WrittenStatements> getWrittenStatementsList() {
-            return  getWrittenStatementses();
+                return  getWrittenStatementses();
             }
             /**
             * Add <code>java.util.List<WrittenStatements></code> property in the list of properties
@@ -1792,12 +1779,12 @@ super(element);
             */
             public java.util.List<PersonalStatements> getPersonalStatementses() {
                 java.util.List<PersonalStatements> result = new ArrayList<PersonalStatements>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("PersonalStatements".equalsIgnoreCase(widget.getType())) {
-            result.add((PersonalStatements)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("PersonalStatements".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((PersonalStatements)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1805,7 +1792,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<PersonalStatements> getPersonalStatementsList() {
-            return  getPersonalStatementses();
+                return  getPersonalStatementses();
             }
             /**
             * Add <code>java.util.List<PersonalStatements></code> property in the list of properties
@@ -1822,12 +1809,12 @@ super(element);
             */
             public java.util.List<MinisterialStatements> getMinisterialStatementses() {
                 java.util.List<MinisterialStatements> result = new ArrayList<MinisterialStatements>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("MinisterialStatements".equalsIgnoreCase(widget.getType())) {
-            result.add((MinisterialStatements)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("MinisterialStatements".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((MinisterialStatements)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1835,7 +1822,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<MinisterialStatements> getMinisterialStatementsList() {
-            return  getMinisterialStatementses();
+                return  getMinisterialStatementses();
             }
             /**
             * Add <code>java.util.List<MinisterialStatements></code> property in the list of properties
@@ -1852,12 +1839,12 @@ super(element);
             */
             public java.util.List<Resolutions> getResolutionses() {
                 java.util.List<Resolutions> result = new ArrayList<Resolutions>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Resolutions".equalsIgnoreCase(widget.getType())) {
-            result.add((Resolutions)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Resolutions".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Resolutions)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1865,7 +1852,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Resolutions> getResolutionsList() {
-            return  getResolutionses();
+                return  getResolutionses();
             }
             /**
             * Add <code>java.util.List<Resolutions></code> property in the list of properties
@@ -1882,12 +1869,12 @@ super(element);
             */
             public java.util.List<NationalInterest> getNationalInterests() {
                 java.util.List<NationalInterest> result = new ArrayList<NationalInterest>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("NationalInterest".equalsIgnoreCase(widget.getType())) {
-            result.add((NationalInterest)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("NationalInterest".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((NationalInterest)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1895,7 +1882,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<NationalInterest> getNationalInterestList() {
-            return  getNationalInterests();
+                return  getNationalInterests();
             }
             /**
             * Add <code>java.util.List<NationalInterest></code> property in the list of properties
@@ -1912,12 +1899,12 @@ super(element);
             */
             public java.util.List<DeclarationOfVote> getDeclarationOfVotes() {
                 java.util.List<DeclarationOfVote> result = new ArrayList<DeclarationOfVote>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DeclarationOfVote".equalsIgnoreCase(widget.getType())) {
-            result.add((DeclarationOfVote)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("DeclarationOfVote".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((DeclarationOfVote)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1925,7 +1912,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<DeclarationOfVote> getDeclarationOfVoteList() {
-            return  getDeclarationOfVotes();
+                return  getDeclarationOfVotes();
             }
             /**
             * Add <code>java.util.List<DeclarationOfVote></code> property in the list of properties
@@ -1942,12 +1929,12 @@ super(element);
             */
             public java.util.List<Communication> getCommunications() {
                 java.util.List<Communication> result = new ArrayList<Communication>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Communication".equalsIgnoreCase(widget.getType())) {
-            result.add((Communication)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Communication".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Communication)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1955,7 +1942,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Communication> getCommunicationList() {
-            return  getCommunications();
+                return  getCommunications();
             }
             /**
             * Add <code>java.util.List<Communication></code> property in the list of properties
@@ -1972,12 +1959,12 @@ super(element);
             */
             public java.util.List<Petitions> getPetitionses() {
                 java.util.List<Petitions> result = new ArrayList<Petitions>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Petitions".equalsIgnoreCase(widget.getType())) {
-            result.add((Petitions)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Petitions".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Petitions)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -1985,7 +1972,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Petitions> getPetitionsList() {
-            return  getPetitionses();
+                return  getPetitionses();
             }
             /**
             * Add <code>java.util.List<Petitions></code> property in the list of properties
@@ -2002,12 +1989,12 @@ super(element);
             */
             public java.util.List<Papers> getPaperses() {
                 java.util.List<Papers> result = new ArrayList<Papers>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Papers".equalsIgnoreCase(widget.getType())) {
-            result.add((Papers)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Papers".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Papers)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2015,7 +2002,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Papers> getPapersList() {
-            return  getPaperses();
+                return  getPaperses();
             }
             /**
             * Add <code>java.util.List<Papers></code> property in the list of properties
@@ -2032,12 +2019,12 @@ super(element);
             */
             public java.util.List<NoticesOfMotion> getNoticesOfMotions() {
                 java.util.List<NoticesOfMotion> result = new ArrayList<NoticesOfMotion>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("NoticesOfMotion".equalsIgnoreCase(widget.getType())) {
-            result.add((NoticesOfMotion)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("NoticesOfMotion".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((NoticesOfMotion)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2045,7 +2032,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<NoticesOfMotion> getNoticesOfMotionList() {
-            return  getNoticesOfMotions();
+                return  getNoticesOfMotions();
             }
             /**
             * Add <code>java.util.List<NoticesOfMotion></code> property in the list of properties
@@ -2062,12 +2049,12 @@ super(element);
             */
             public java.util.List<Questions> getQuestionses() {
                 java.util.List<Questions> result = new ArrayList<Questions>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Questions".equalsIgnoreCase(widget.getType())) {
-            result.add((Questions)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Questions".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Questions)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2075,7 +2062,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Questions> getQuestionsList() {
-            return  getQuestionses();
+                return  getQuestionses();
             }
             /**
             * Add <code>java.util.List<Questions></code> property in the list of properties
@@ -2092,12 +2079,12 @@ super(element);
             */
             public java.util.List<Address> getAddresses() {
                 java.util.List<Address> result = new ArrayList<Address>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Address".equalsIgnoreCase(widget.getType())) {
-            result.add((Address)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Address".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Address)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2105,7 +2092,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Address> getAddressList() {
-            return  getAddresses();
+                return  getAddresses();
             }
             /**
             * Add <code>java.util.List<Address></code> property in the list of properties
@@ -2122,12 +2109,12 @@ super(element);
             */
             public java.util.List<ProceduralMotions> getProceduralMotionses() {
                 java.util.List<ProceduralMotions> result = new ArrayList<ProceduralMotions>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ProceduralMotions".equalsIgnoreCase(widget.getType())) {
-            result.add((ProceduralMotions)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("ProceduralMotions".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((ProceduralMotions)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2135,7 +2122,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<ProceduralMotions> getProceduralMotionsList() {
-            return  getProceduralMotionses();
+                return  getProceduralMotionses();
             }
             /**
             * Add <code>java.util.List<ProceduralMotions></code> property in the list of properties
@@ -2152,12 +2139,12 @@ super(element);
             */
             public java.util.List<PointOfOrder> getPointOfOrders() {
                 java.util.List<PointOfOrder> result = new ArrayList<PointOfOrder>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("PointOfOrder".equalsIgnoreCase(widget.getType())) {
-            result.add((PointOfOrder)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("PointOfOrder".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((PointOfOrder)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2165,7 +2152,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<PointOfOrder> getPointOfOrderList() {
-            return  getPointOfOrders();
+                return  getPointOfOrders();
             }
             /**
             * Add <code>java.util.List<PointOfOrder></code> property in the list of properties
@@ -2182,12 +2169,12 @@ super(element);
             */
             public java.util.List<Adjournment> getAdjournments() {
                 java.util.List<Adjournment> result = new ArrayList<Adjournment>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Adjournment".equalsIgnoreCase(widget.getType())) {
-            result.add((Adjournment)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Adjournment".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Adjournment)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2195,7 +2182,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Adjournment> getAdjournmentList() {
-            return  getAdjournments();
+                return  getAdjournments();
             }
             /**
             * Add <code>java.util.List<Adjournment></code> property in the list of properties
@@ -2212,12 +2199,12 @@ super(element);
             */
             public java.util.List<DebateSection> getDebateSections() {
                 java.util.List<DebateSection> result = new ArrayList<DebateSection>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DebateSection".equalsIgnoreCase(widget.getType())) {
-            result.add((DebateSection)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("DebateSection".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((DebateSection)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2225,7 +2212,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<DebateSection> getDebateSectionList() {
-            return  getDebateSections();
+                return  getDebateSections();
             }
             /**
             * Add <code>java.util.List<DebateSection></code> property in the list of properties
@@ -2242,12 +2229,12 @@ super(element);
             */
             public java.util.List<Div> getDivs() {
                 java.util.List<Div> result = new ArrayList<Div>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Div".equalsIgnoreCase(widget.getType())) {
-            result.add((Div)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Div".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Div)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2255,7 +2242,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Div> getDivList() {
-            return  getDivs();
+                return  getDivs();
             }
             /**
             * Add <code>java.util.List<Div></code> property in the list of properties
@@ -2272,12 +2259,12 @@ super(element);
             */
             public java.util.List<Clause> getClauses() {
                 java.util.List<Clause> result = new ArrayList<Clause>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Clause".equalsIgnoreCase(widget.getType())) {
-            result.add((Clause)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Clause".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Clause)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2285,7 +2272,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Clause> getClauseList() {
-            return  getClauses();
+                return  getClauses();
             }
             /**
             * Add <code>java.util.List<Clause></code> property in the list of properties
@@ -2302,12 +2289,12 @@ super(element);
             */
             public java.util.List<Section> getSections() {
                 java.util.List<Section> result = new ArrayList<Section>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Section".equalsIgnoreCase(widget.getType())) {
-            result.add((Section)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Section".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Section)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2315,7 +2302,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Section> getSectionList() {
-            return  getSections();
+                return  getSections();
             }
             /**
             * Add <code>java.util.List<Section></code> property in the list of properties
@@ -2332,12 +2319,12 @@ super(element);
             */
             public java.util.List<Part> getParts() {
                 java.util.List<Part> result = new ArrayList<Part>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Part".equalsIgnoreCase(widget.getType())) {
-            result.add((Part)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Part".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Part)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2345,7 +2332,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Part> getPartList() {
-            return  getParts();
+                return  getParts();
             }
             /**
             * Add <code>java.util.List<Part></code> property in the list of properties
@@ -2362,12 +2349,12 @@ super(element);
             */
             public java.util.List<Paragraph> getParagraphs() {
                 java.util.List<Paragraph> result = new ArrayList<Paragraph>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Paragraph".equalsIgnoreCase(widget.getType())) {
-            result.add((Paragraph)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Paragraph".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Paragraph)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2375,7 +2362,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Paragraph> getParagraphList() {
-            return  getParagraphs();
+                return  getParagraphs();
             }
             /**
             * Add <code>java.util.List<Paragraph></code> property in the list of properties
@@ -2392,12 +2379,12 @@ super(element);
             */
             public java.util.List<Chapter> getChapters() {
                 java.util.List<Chapter> result = new ArrayList<Chapter>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Chapter".equalsIgnoreCase(widget.getType())) {
-            result.add((Chapter)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Chapter".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Chapter)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2405,7 +2392,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Chapter> getChapterList() {
-            return  getChapters();
+                return  getChapters();
             }
             /**
             * Add <code>java.util.List<Chapter></code> property in the list of properties
@@ -2422,12 +2409,12 @@ super(element);
             */
             public java.util.List<Title> getTitle_s() {
                 java.util.List<Title> result = new ArrayList<Title>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Title".equalsIgnoreCase(widget.getType())) {
-            result.add((Title)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Title".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Title)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2435,7 +2422,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Title> getTitle_List() {
-            return  getTitle_s();
+                return  getTitle_s();
             }
             /**
             * Add <code>java.util.List<Title></code> property in the list of properties
@@ -2452,12 +2439,12 @@ super(element);
             */
             public java.util.List<Article> getArticles() {
                 java.util.List<Article> result = new ArrayList<Article>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Article".equalsIgnoreCase(widget.getType())) {
-            result.add((Article)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Article".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Article)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2465,7 +2452,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Article> getArticleList() {
-            return  getArticles();
+                return  getArticles();
             }
             /**
             * Add <code>java.util.List<Article></code> property in the list of properties
@@ -2482,12 +2469,12 @@ super(element);
             */
             public java.util.List<Book> getBooks() {
                 java.util.List<Book> result = new ArrayList<Book>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Book".equalsIgnoreCase(widget.getType())) {
-            result.add((Book)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Book".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Book)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2495,7 +2482,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Book> getBookList() {
-            return  getBooks();
+                return  getBooks();
             }
             /**
             * Add <code>java.util.List<Book></code> property in the list of properties
@@ -2512,12 +2499,12 @@ super(element);
             */
             public java.util.List<Tome> getTomes() {
                 java.util.List<Tome> result = new ArrayList<Tome>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Tome".equalsIgnoreCase(widget.getType())) {
-            result.add((Tome)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Tome".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Tome)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2525,7 +2512,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Tome> getTomeList() {
-            return  getTomes();
+                return  getTomes();
             }
             /**
             * Add <code>java.util.List<Tome></code> property in the list of properties
@@ -2542,12 +2529,12 @@ super(element);
             */
             public java.util.List<Division> getDivisions() {
                 java.util.List<Division> result = new ArrayList<Division>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Division".equalsIgnoreCase(widget.getType())) {
-            result.add((Division)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Division".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Division)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2555,7 +2542,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Division> getDivisionList() {
-            return  getDivisions();
+                return  getDivisions();
             }
             /**
             * Add <code>java.util.List<Division></code> property in the list of properties
@@ -2572,12 +2559,12 @@ super(element);
             */
             public java.util.List<List> getLists() {
                 java.util.List<List> result = new ArrayList<List>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("List".equalsIgnoreCase(widget.getType())) {
-            result.add((List)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("List".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((List)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2585,7 +2572,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<List> getListList() {
-            return  getLists();
+                return  getLists();
             }
             /**
             * Add <code>java.util.List<List></code> property in the list of properties
@@ -2602,12 +2589,12 @@ super(element);
             */
             public java.util.List<Point> getPoints() {
                 java.util.List<Point> result = new ArrayList<Point>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Point".equalsIgnoreCase(widget.getType())) {
-            result.add((Point)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Point".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Point)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2615,7 +2602,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Point> getPointList() {
-            return  getPoints();
+                return  getPoints();
             }
             /**
             * Add <code>java.util.List<Point></code> property in the list of properties
@@ -2632,12 +2619,12 @@ super(element);
             */
             public java.util.List<Indent> getIndents() {
                 java.util.List<Indent> result = new ArrayList<Indent>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Indent".equalsIgnoreCase(widget.getType())) {
-            result.add((Indent)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Indent".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Indent)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2645,7 +2632,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Indent> getIndentList() {
-            return  getIndents();
+                return  getIndents();
             }
             /**
             * Add <code>java.util.List<Indent></code> property in the list of properties
@@ -2662,12 +2649,12 @@ super(element);
             */
             public java.util.List<Alinea> getAlineas() {
                 java.util.List<Alinea> result = new ArrayList<Alinea>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Alinea".equalsIgnoreCase(widget.getType())) {
-            result.add((Alinea)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Alinea".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Alinea)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2675,7 +2662,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Alinea> getAlineaList() {
-            return  getAlineas();
+                return  getAlineas();
             }
             /**
             * Add <code>java.util.List<Alinea></code> property in the list of properties
@@ -2692,12 +2679,12 @@ super(element);
             */
             public java.util.List<Subsection> getSubsections() {
                 java.util.List<Subsection> result = new ArrayList<Subsection>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subsection".equalsIgnoreCase(widget.getType())) {
-            result.add((Subsection)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Subsection".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Subsection)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2705,7 +2692,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Subsection> getSubsectionList() {
-            return  getSubsections();
+                return  getSubsections();
             }
             /**
             * Add <code>java.util.List<Subsection></code> property in the list of properties
@@ -2722,12 +2709,12 @@ super(element);
             */
             public java.util.List<Subpart> getSubparts() {
                 java.util.List<Subpart> result = new ArrayList<Subpart>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subpart".equalsIgnoreCase(widget.getType())) {
-            result.add((Subpart)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Subpart".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Subpart)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2735,7 +2722,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Subpart> getSubpartList() {
-            return  getSubparts();
+                return  getSubparts();
             }
             /**
             * Add <code>java.util.List<Subpart></code> property in the list of properties
@@ -2752,12 +2739,12 @@ super(element);
             */
             public java.util.List<Subparagraph> getSubparagraphs() {
                 java.util.List<Subparagraph> result = new ArrayList<Subparagraph>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subparagraph".equalsIgnoreCase(widget.getType())) {
-            result.add((Subparagraph)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Subparagraph".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Subparagraph)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2765,7 +2752,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Subparagraph> getSubparagraphList() {
-            return  getSubparagraphs();
+                return  getSubparagraphs();
             }
             /**
             * Add <code>java.util.List<Subparagraph></code> property in the list of properties
@@ -2782,12 +2769,12 @@ super(element);
             */
             public java.util.List<Subchapter> getSubchapters() {
                 java.util.List<Subchapter> result = new ArrayList<Subchapter>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subchapter".equalsIgnoreCase(widget.getType())) {
-            result.add((Subchapter)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Subchapter".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Subchapter)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2795,7 +2782,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Subchapter> getSubchapterList() {
-            return  getSubchapters();
+                return  getSubchapters();
             }
             /**
             * Add <code>java.util.List<Subchapter></code> property in the list of properties
@@ -2812,12 +2799,12 @@ super(element);
             */
             public java.util.List<Subtitle> getSubtitles() {
                 java.util.List<Subtitle> result = new ArrayList<Subtitle>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subtitle".equalsIgnoreCase(widget.getType())) {
-            result.add((Subtitle)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Subtitle".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Subtitle)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2825,7 +2812,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Subtitle> getSubtitleList() {
-            return  getSubtitles();
+                return  getSubtitles();
             }
             /**
             * Add <code>java.util.List<Subtitle></code> property in the list of properties
@@ -2842,12 +2829,12 @@ super(element);
             */
             public java.util.List<Subclause> getSubclauses() {
                 java.util.List<Subclause> result = new ArrayList<Subclause>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subclause".equalsIgnoreCase(widget.getType())) {
-            result.add((Subclause)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Subclause".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Subclause)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2855,7 +2842,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Subclause> getSubclauseList() {
-            return  getSubclauses();
+                return  getSubclauses();
             }
             /**
             * Add <code>java.util.List<Subclause></code> property in the list of properties
@@ -2872,12 +2859,12 @@ super(element);
             */
             public java.util.List<Sublist> getSublists() {
                 java.util.List<Sublist> result = new ArrayList<Sublist>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Sublist".equalsIgnoreCase(widget.getType())) {
-            result.add((Sublist)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Sublist".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Sublist)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -2885,7 +2872,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Sublist> getSublistList() {
-            return  getSublists();
+                return  getSublists();
             }
             /**
             * Add <code>java.util.List<Sublist></code> property in the list of properties
@@ -2911,17 +2898,17 @@ return "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02";
 public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
         attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
 return attrs;
 }

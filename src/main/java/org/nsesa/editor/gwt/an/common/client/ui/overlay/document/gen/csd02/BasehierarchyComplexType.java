@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num;
@@ -73,13 +60,13 @@ super(element);
             */
             public Num getNum() {
                 Num result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Num".equalsIgnoreCase(widget.getType())) {
-            result = (Num)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Num".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Num)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>numElem</code> property in DSL way
@@ -90,7 +77,7 @@ super(element);
                     Num result = getNum();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(numElem);
 
@@ -102,13 +89,13 @@ super(element);
             */
             public Heading getHeading() {
                 Heading result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Heading".equalsIgnoreCase(widget.getType())) {
-            result = (Heading)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Heading".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Heading)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>headingElem</code> property in DSL way
@@ -119,7 +106,7 @@ super(element);
                     Heading result = getHeading();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(headingElem);
 
@@ -131,13 +118,13 @@ super(element);
             */
             public Subheading getSubheading() {
                 Subheading result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subheading".equalsIgnoreCase(widget.getType())) {
-            result = (Subheading)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Subheading".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Subheading)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>subheadingElem</code> property in DSL way
@@ -148,7 +135,7 @@ super(element);
                     Subheading result = getSubheading();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(subheadingElem);
 

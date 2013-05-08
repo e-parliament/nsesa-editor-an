@@ -1,23 +1,10 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Hcontainer;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Container;
@@ -75,7 +62,7 @@ import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
-* the type fragmentBodyType specifies a content model of a container of a fragment of another document
+* the type fragmentBodyType specifies a content model of a container of a fragment of another<br/> document
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
@@ -164,18 +151,90 @@ super(element);
 }
 
 // FIELDS ------------------
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
     private StatusTypeSimpleType statusAttr;
+    private String wildcardContentAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
     private AnyURISimpleType alternativeToAttr;
-    private String wildcardContentAttr;
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType refersToAttr;
     private LanguageSimpleType langAttr;
+    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
 
+        /**
+        * Return <code>idAttr</code> property
+        * @return idAttr
+        */
+        public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+                idAttr = new IDSimpleType();
+                idAttr.setValue(getElement().getAttribute("id"));
+        }
+
+        return idAttr;
+        }
+        /**
+        * Return <code>idAttr</code> property in DSL way
+        * @return idAttr
+        */
+        public IDSimpleType idAttr() {
+        return  getIdAttr();
+        }
+        /**
+        * Set <code>idAttr</code> property
+        * @param idAttr the new value
+        */
+        public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id",idAttr.getValue());
+        }
+        /**
+        * Set <code>idAttr</code> property in DSL way
+        * @param idAttr the new value
+        * @return <code>FragmentBodyTypeComplexType</code> instance
+        */
+        public FragmentBodyTypeComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+        }
+        /**
+        * Return <code>evolvingIdAttr</code> property
+        * @return evolvingIdAttr
+        */
+        public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+                evolvingIdAttr = new NMTOKENSimpleType();
+                evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+        }
+        /**
+        * Return <code>evolvingIdAttr</code> property in DSL way
+        * @return evolvingIdAttr
+        */
+        public NMTOKENSimpleType evolvingIdAttr() {
+        return  getEvolvingIdAttr();
+        }
+        /**
+        * Set <code>evolvingIdAttr</code> property
+        * @param evolvingIdAttr the new value
+        */
+        public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId",evolvingIdAttr.getValue());
+        }
+        /**
+        * Set <code>evolvingIdAttr</code> property in DSL way
+        * @param evolvingIdAttr the new value
+        * @return <code>FragmentBodyTypeComplexType</code> instance
+        */
+        public FragmentBodyTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+        }
         /**
         * Return <code>statusAttr</code> property
         * @return statusAttr
@@ -209,6 +268,41 @@ super(element);
         */
         public FragmentBodyTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
         setStatusAttr(statusAttr);
+        return this;
+        }
+        /**
+        * Return <code>wildcardContentAttr</code> property
+        * @return wildcardContentAttr
+        */
+        public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+        }
+        /**
+        * Return <code>wildcardContentAttr</code> property in DSL way
+        * @return wildcardContentAttr
+        */
+        public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property
+        * @param wildcardContentAttr the new value
+        */
+        public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent",wildcardContentAttr);
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr the new value
+        * @return <code>FragmentBodyTypeComplexType</code> instance
+        */
+        public FragmentBodyTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
         }
         /**
@@ -356,110 +450,39 @@ super(element);
         return this;
         }
         /**
-        * Return <code>wildcardContentAttr</code> property
-        * @return wildcardContentAttr
+        * Return <code>langAttr</code> property
+        * @return langAttr
         */
-        public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+        public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+                langAttr = new LanguageSimpleType();
+                langAttr.setValue(getElement().getAttribute("lang"));
         }
 
-        return wildcardContentAttr;
+        return langAttr;
         }
         /**
-        * Return <code>wildcardContentAttr</code> property in DSL way
-        * @return wildcardContentAttr
+        * Return <code>langAttr</code> property in DSL way
+        * @return langAttr
         */
-        public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
+        public LanguageSimpleType langAttr() {
+        return  getLangAttr();
         }
         /**
-        * Set <code>wildcardContentAttr</code> property
-        * @param wildcardContentAttr the new value
+        * Set <code>langAttr</code> property
+        * @param langAttr the new value
         */
-        public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent",wildcardContentAttr);
+        public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+        getElement().setAttribute("lang",langAttr.getValue());
         }
         /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr the new value
+        * Set <code>langAttr</code> property in DSL way
+        * @param langAttr the new value
         * @return <code>FragmentBodyTypeComplexType</code> instance
         */
-        public FragmentBodyTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-        }
-        /**
-        * Return <code>idAttr</code> property
-        * @return idAttr
-        */
-        public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-                idAttr = new IDSimpleType();
-                idAttr.setValue(getElement().getAttribute("id"));
-        }
-
-        return idAttr;
-        }
-        /**
-        * Return <code>idAttr</code> property in DSL way
-        * @return idAttr
-        */
-        public IDSimpleType idAttr() {
-        return  getIdAttr();
-        }
-        /**
-        * Set <code>idAttr</code> property
-        * @param idAttr the new value
-        */
-        public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id",idAttr.getValue());
-        }
-        /**
-        * Set <code>idAttr</code> property in DSL way
-        * @param idAttr the new value
-        * @return <code>FragmentBodyTypeComplexType</code> instance
-        */
-        public FragmentBodyTypeComplexType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-        }
-        /**
-        * Return <code>evolvingIdAttr</code> property
-        * @return evolvingIdAttr
-        */
-        public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-                evolvingIdAttr = new NMTOKENSimpleType();
-                evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-        }
-        /**
-        * Return <code>evolvingIdAttr</code> property in DSL way
-        * @return evolvingIdAttr
-        */
-        public NMTOKENSimpleType evolvingIdAttr() {
-        return  getEvolvingIdAttr();
-        }
-        /**
-        * Set <code>evolvingIdAttr</code> property
-        * @param evolvingIdAttr the new value
-        */
-        public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId",evolvingIdAttr.getValue());
-        }
-        /**
-        * Set <code>evolvingIdAttr</code> property in DSL way
-        * @param evolvingIdAttr the new value
-        * @return <code>FragmentBodyTypeComplexType</code> instance
-        */
-        public FragmentBodyTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+        public FragmentBodyTypeComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
         }
         /**
@@ -496,42 +519,6 @@ super(element);
         */
         public FragmentBodyTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
-        return this;
-        }
-        /**
-        * Return <code>langAttr</code> property
-        * @return langAttr
-        */
-        public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-                langAttr = new LanguageSimpleType();
-                langAttr.setValue(getElement().getAttribute("lang"));
-        }
-
-        return langAttr;
-        }
-        /**
-        * Return <code>langAttr</code> property in DSL way
-        * @return langAttr
-        */
-        public LanguageSimpleType langAttr() {
-        return  getLangAttr();
-        }
-        /**
-        * Set <code>langAttr</code> property
-        * @param langAttr the new value
-        */
-        public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-        getElement().setAttribute("lang",langAttr.getValue());
-        }
-        /**
-        * Set <code>langAttr</code> property in DSL way
-        * @param langAttr the new value
-        * @return <code>FragmentBodyTypeComplexType</code> instance
-        */
-        public FragmentBodyTypeComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
         return this;
         }
         /**
@@ -576,13 +563,13 @@ super(element);
             */
             public Hcontainer getHcontainer() {
                 Hcontainer result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Hcontainer".equalsIgnoreCase(widget.getType())) {
-            result = (Hcontainer)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Hcontainer".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Hcontainer)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>hcontainerElem</code> property in DSL way
@@ -593,7 +580,7 @@ super(element);
                     Hcontainer result = getHcontainer();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(hcontainerElem);
 
@@ -605,13 +592,13 @@ super(element);
             */
             public Container getContainer() {
                 Container result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Container".equalsIgnoreCase(widget.getType())) {
-            result = (Container)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Container".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Container)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>containerElem</code> property in DSL way
@@ -622,7 +609,7 @@ super(element);
                     Container result = getContainer();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(containerElem);
 
@@ -634,13 +621,13 @@ super(element);
             */
             public Clause getClause() {
                 Clause result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Clause".equalsIgnoreCase(widget.getType())) {
-            result = (Clause)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Clause".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Clause)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>clauseElem</code> property in DSL way
@@ -651,7 +638,7 @@ super(element);
                     Clause result = getClause();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(clauseElem);
 
@@ -663,13 +650,13 @@ super(element);
             */
             public Section getSection() {
                 Section result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Section".equalsIgnoreCase(widget.getType())) {
-            result = (Section)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Section".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Section)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>sectionElem</code> property in DSL way
@@ -680,7 +667,7 @@ super(element);
                     Section result = getSection();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(sectionElem);
 
@@ -692,13 +679,13 @@ super(element);
             */
             public Part getPart() {
                 Part result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Part".equalsIgnoreCase(widget.getType())) {
-            result = (Part)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Part".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Part)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>partElem</code> property in DSL way
@@ -709,7 +696,7 @@ super(element);
                     Part result = getPart();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(partElem);
 
@@ -721,13 +708,13 @@ super(element);
             */
             public Paragraph getParagraph() {
                 Paragraph result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Paragraph".equalsIgnoreCase(widget.getType())) {
-            result = (Paragraph)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Paragraph".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Paragraph)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>paragraphElem</code> property in DSL way
@@ -738,7 +725,7 @@ super(element);
                     Paragraph result = getParagraph();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(paragraphElem);
 
@@ -750,13 +737,13 @@ super(element);
             */
             public Chapter getChapter() {
                 Chapter result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Chapter".equalsIgnoreCase(widget.getType())) {
-            result = (Chapter)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Chapter".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Chapter)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>chapterElem</code> property in DSL way
@@ -767,7 +754,7 @@ super(element);
                     Chapter result = getChapter();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(chapterElem);
 
@@ -779,13 +766,13 @@ super(element);
             */
             public Title getTitle_() {
                 Title result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Title".equalsIgnoreCase(widget.getType())) {
-            result = (Title)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Title".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Title)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>title_Elem</code> property in DSL way
@@ -796,7 +783,7 @@ super(element);
                     Title result = getTitle_();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(title_Elem);
 
@@ -808,13 +795,13 @@ super(element);
             */
             public Article getArticle() {
                 Article result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Article".equalsIgnoreCase(widget.getType())) {
-            result = (Article)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Article".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Article)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>articleElem</code> property in DSL way
@@ -825,7 +812,7 @@ super(element);
                     Article result = getArticle();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(articleElem);
 
@@ -837,13 +824,13 @@ super(element);
             */
             public Book getBook() {
                 Book result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Book".equalsIgnoreCase(widget.getType())) {
-            result = (Book)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Book".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Book)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>bookElem</code> property in DSL way
@@ -854,7 +841,7 @@ super(element);
                     Book result = getBook();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(bookElem);
 
@@ -866,13 +853,13 @@ super(element);
             */
             public Tome getTome() {
                 Tome result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Tome".equalsIgnoreCase(widget.getType())) {
-            result = (Tome)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Tome".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Tome)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>tomeElem</code> property in DSL way
@@ -883,7 +870,7 @@ super(element);
                     Tome result = getTome();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(tomeElem);
 
@@ -895,13 +882,13 @@ super(element);
             */
             public Division getDivision() {
                 Division result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Division".equalsIgnoreCase(widget.getType())) {
-            result = (Division)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Division".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Division)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>divisionElem</code> property in DSL way
@@ -912,7 +899,7 @@ super(element);
                     Division result = getDivision();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(divisionElem);
 
@@ -924,13 +911,13 @@ super(element);
             */
             public List getList() {
                 List result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("List".equalsIgnoreCase(widget.getType())) {
-            result = (List)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("List".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (List)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>listElem</code> property in DSL way
@@ -941,7 +928,7 @@ super(element);
                     List result = getList();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(listElem);
 
@@ -953,13 +940,13 @@ super(element);
             */
             public Point getPoint() {
                 Point result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Point".equalsIgnoreCase(widget.getType())) {
-            result = (Point)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Point".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Point)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>pointElem</code> property in DSL way
@@ -970,7 +957,7 @@ super(element);
                     Point result = getPoint();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(pointElem);
 
@@ -982,13 +969,13 @@ super(element);
             */
             public Indent getIndent() {
                 Indent result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Indent".equalsIgnoreCase(widget.getType())) {
-            result = (Indent)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Indent".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Indent)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>indentElem</code> property in DSL way
@@ -999,7 +986,7 @@ super(element);
                     Indent result = getIndent();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(indentElem);
 
@@ -1011,13 +998,13 @@ super(element);
             */
             public Alinea getAlinea() {
                 Alinea result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Alinea".equalsIgnoreCase(widget.getType())) {
-            result = (Alinea)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Alinea".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Alinea)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>alineaElem</code> property in DSL way
@@ -1028,7 +1015,7 @@ super(element);
                     Alinea result = getAlinea();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(alineaElem);
 
@@ -1040,13 +1027,13 @@ super(element);
             */
             public Subsection getSubsection() {
                 Subsection result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subsection".equalsIgnoreCase(widget.getType())) {
-            result = (Subsection)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Subsection".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Subsection)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>subsectionElem</code> property in DSL way
@@ -1057,7 +1044,7 @@ super(element);
                     Subsection result = getSubsection();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(subsectionElem);
 
@@ -1069,13 +1056,13 @@ super(element);
             */
             public Subpart getSubpart() {
                 Subpart result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subpart".equalsIgnoreCase(widget.getType())) {
-            result = (Subpart)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Subpart".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Subpart)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>subpartElem</code> property in DSL way
@@ -1086,7 +1073,7 @@ super(element);
                     Subpart result = getSubpart();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(subpartElem);
 
@@ -1098,13 +1085,13 @@ super(element);
             */
             public Subparagraph getSubparagraph() {
                 Subparagraph result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subparagraph".equalsIgnoreCase(widget.getType())) {
-            result = (Subparagraph)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Subparagraph".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Subparagraph)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>subparagraphElem</code> property in DSL way
@@ -1115,7 +1102,7 @@ super(element);
                     Subparagraph result = getSubparagraph();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(subparagraphElem);
 
@@ -1127,13 +1114,13 @@ super(element);
             */
             public Subchapter getSubchapter() {
                 Subchapter result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subchapter".equalsIgnoreCase(widget.getType())) {
-            result = (Subchapter)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Subchapter".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Subchapter)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>subchapterElem</code> property in DSL way
@@ -1144,7 +1131,7 @@ super(element);
                     Subchapter result = getSubchapter();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(subchapterElem);
 
@@ -1156,13 +1143,13 @@ super(element);
             */
             public Subtitle getSubtitle() {
                 Subtitle result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subtitle".equalsIgnoreCase(widget.getType())) {
-            result = (Subtitle)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Subtitle".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Subtitle)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>subtitleElem</code> property in DSL way
@@ -1173,7 +1160,7 @@ super(element);
                     Subtitle result = getSubtitle();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(subtitleElem);
 
@@ -1185,13 +1172,13 @@ super(element);
             */
             public Subclause getSubclause() {
                 Subclause result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subclause".equalsIgnoreCase(widget.getType())) {
-            result = (Subclause)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Subclause".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Subclause)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>subclauseElem</code> property in DSL way
@@ -1202,7 +1189,7 @@ super(element);
                     Subclause result = getSubclause();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(subclauseElem);
 
@@ -1214,13 +1201,13 @@ super(element);
             */
             public Sublist getSublist() {
                 Sublist result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Sublist".equalsIgnoreCase(widget.getType())) {
-            result = (Sublist)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Sublist".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Sublist)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>sublistElem</code> property in DSL way
@@ -1231,7 +1218,7 @@ super(element);
                     Sublist result = getSublist();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(sublistElem);
 
@@ -1243,13 +1230,13 @@ super(element);
             */
             public AdministrationOfOath getAdministrationOfOath() {
                 AdministrationOfOath result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("AdministrationOfOath".equalsIgnoreCase(widget.getType())) {
-            result = (AdministrationOfOath)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("AdministrationOfOath".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (AdministrationOfOath)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>administrationOfOathElem</code> property in DSL way
@@ -1260,7 +1247,7 @@ super(element);
                     AdministrationOfOath result = getAdministrationOfOath();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(administrationOfOathElem);
 
@@ -1272,13 +1259,13 @@ super(element);
             */
             public RollCall getRollCall() {
                 RollCall result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("RollCall".equalsIgnoreCase(widget.getType())) {
-            result = (RollCall)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("RollCall".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (RollCall)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>rollCallElem</code> property in DSL way
@@ -1289,7 +1276,7 @@ super(element);
                     RollCall result = getRollCall();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(rollCallElem);
 
@@ -1301,13 +1288,13 @@ super(element);
             */
             public Prayers getPrayers() {
                 Prayers result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Prayers".equalsIgnoreCase(widget.getType())) {
-            result = (Prayers)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Prayers".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Prayers)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>prayersElem</code> property in DSL way
@@ -1318,7 +1305,7 @@ super(element);
                     Prayers result = getPrayers();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(prayersElem);
 
@@ -1330,13 +1317,13 @@ super(element);
             */
             public OralStatements getOralStatements() {
                 OralStatements result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("OralStatements".equalsIgnoreCase(widget.getType())) {
-            result = (OralStatements)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("OralStatements".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (OralStatements)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>oralStatementsElem</code> property in DSL way
@@ -1347,7 +1334,7 @@ super(element);
                     OralStatements result = getOralStatements();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(oralStatementsElem);
 
@@ -1359,13 +1346,13 @@ super(element);
             */
             public WrittenStatements getWrittenStatements() {
                 WrittenStatements result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("WrittenStatements".equalsIgnoreCase(widget.getType())) {
-            result = (WrittenStatements)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("WrittenStatements".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (WrittenStatements)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>writtenStatementsElem</code> property in DSL way
@@ -1376,7 +1363,7 @@ super(element);
                     WrittenStatements result = getWrittenStatements();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(writtenStatementsElem);
 
@@ -1388,13 +1375,13 @@ super(element);
             */
             public PersonalStatements getPersonalStatements() {
                 PersonalStatements result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("PersonalStatements".equalsIgnoreCase(widget.getType())) {
-            result = (PersonalStatements)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("PersonalStatements".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (PersonalStatements)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>personalStatementsElem</code> property in DSL way
@@ -1405,7 +1392,7 @@ super(element);
                     PersonalStatements result = getPersonalStatements();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(personalStatementsElem);
 
@@ -1417,13 +1404,13 @@ super(element);
             */
             public MinisterialStatements getMinisterialStatements() {
                 MinisterialStatements result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("MinisterialStatements".equalsIgnoreCase(widget.getType())) {
-            result = (MinisterialStatements)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("MinisterialStatements".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (MinisterialStatements)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>ministerialStatementsElem</code> property in DSL way
@@ -1434,7 +1421,7 @@ super(element);
                     MinisterialStatements result = getMinisterialStatements();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(ministerialStatementsElem);
 
@@ -1446,13 +1433,13 @@ super(element);
             */
             public Resolutions getResolutions() {
                 Resolutions result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Resolutions".equalsIgnoreCase(widget.getType())) {
-            result = (Resolutions)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Resolutions".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Resolutions)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>resolutionsElem</code> property in DSL way
@@ -1463,7 +1450,7 @@ super(element);
                     Resolutions result = getResolutions();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(resolutionsElem);
 
@@ -1475,13 +1462,13 @@ super(element);
             */
             public NationalInterest getNationalInterest() {
                 NationalInterest result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("NationalInterest".equalsIgnoreCase(widget.getType())) {
-            result = (NationalInterest)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("NationalInterest".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (NationalInterest)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>nationalInterestElem</code> property in DSL way
@@ -1492,7 +1479,7 @@ super(element);
                     NationalInterest result = getNationalInterest();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(nationalInterestElem);
 
@@ -1504,13 +1491,13 @@ super(element);
             */
             public DeclarationOfVote getDeclarationOfVote() {
                 DeclarationOfVote result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DeclarationOfVote".equalsIgnoreCase(widget.getType())) {
-            result = (DeclarationOfVote)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("DeclarationOfVote".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (DeclarationOfVote)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>declarationOfVoteElem</code> property in DSL way
@@ -1521,7 +1508,7 @@ super(element);
                     DeclarationOfVote result = getDeclarationOfVote();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(declarationOfVoteElem);
 
@@ -1533,13 +1520,13 @@ super(element);
             */
             public Communication getCommunication() {
                 Communication result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Communication".equalsIgnoreCase(widget.getType())) {
-            result = (Communication)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Communication".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Communication)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>communicationElem</code> property in DSL way
@@ -1550,7 +1537,7 @@ super(element);
                     Communication result = getCommunication();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(communicationElem);
 
@@ -1562,13 +1549,13 @@ super(element);
             */
             public Petitions getPetitions() {
                 Petitions result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Petitions".equalsIgnoreCase(widget.getType())) {
-            result = (Petitions)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Petitions".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Petitions)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>petitionsElem</code> property in DSL way
@@ -1579,7 +1566,7 @@ super(element);
                     Petitions result = getPetitions();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(petitionsElem);
 
@@ -1591,13 +1578,13 @@ super(element);
             */
             public Papers getPapers() {
                 Papers result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Papers".equalsIgnoreCase(widget.getType())) {
-            result = (Papers)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Papers".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Papers)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>papersElem</code> property in DSL way
@@ -1608,7 +1595,7 @@ super(element);
                     Papers result = getPapers();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(papersElem);
 
@@ -1620,13 +1607,13 @@ super(element);
             */
             public NoticesOfMotion getNoticesOfMotion() {
                 NoticesOfMotion result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("NoticesOfMotion".equalsIgnoreCase(widget.getType())) {
-            result = (NoticesOfMotion)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("NoticesOfMotion".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (NoticesOfMotion)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>noticesOfMotionElem</code> property in DSL way
@@ -1637,7 +1624,7 @@ super(element);
                     NoticesOfMotion result = getNoticesOfMotion();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(noticesOfMotionElem);
 
@@ -1649,13 +1636,13 @@ super(element);
             */
             public Questions getQuestions() {
                 Questions result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Questions".equalsIgnoreCase(widget.getType())) {
-            result = (Questions)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Questions".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Questions)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>questionsElem</code> property in DSL way
@@ -1666,7 +1653,7 @@ super(element);
                     Questions result = getQuestions();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(questionsElem);
 
@@ -1678,13 +1665,13 @@ super(element);
             */
             public Address getAddress() {
                 Address result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Address".equalsIgnoreCase(widget.getType())) {
-            result = (Address)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Address".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Address)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>addressElem</code> property in DSL way
@@ -1695,7 +1682,7 @@ super(element);
                     Address result = getAddress();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(addressElem);
 
@@ -1707,13 +1694,13 @@ super(element);
             */
             public ProceduralMotions getProceduralMotions() {
                 ProceduralMotions result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ProceduralMotions".equalsIgnoreCase(widget.getType())) {
-            result = (ProceduralMotions)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("ProceduralMotions".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (ProceduralMotions)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>proceduralMotionsElem</code> property in DSL way
@@ -1724,7 +1711,7 @@ super(element);
                     ProceduralMotions result = getProceduralMotions();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(proceduralMotionsElem);
 
@@ -1736,13 +1723,13 @@ super(element);
             */
             public PointOfOrder getPointOfOrder() {
                 PointOfOrder result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("PointOfOrder".equalsIgnoreCase(widget.getType())) {
-            result = (PointOfOrder)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("PointOfOrder".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (PointOfOrder)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>pointOfOrderElem</code> property in DSL way
@@ -1753,7 +1740,7 @@ super(element);
                     PointOfOrder result = getPointOfOrder();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(pointOfOrderElem);
 
@@ -1765,13 +1752,13 @@ super(element);
             */
             public Adjournment getAdjournment() {
                 Adjournment result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Adjournment".equalsIgnoreCase(widget.getType())) {
-            result = (Adjournment)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Adjournment".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Adjournment)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>adjournmentElem</code> property in DSL way
@@ -1782,7 +1769,7 @@ super(element);
                     Adjournment result = getAdjournment();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(adjournmentElem);
 
@@ -1794,13 +1781,13 @@ super(element);
             */
             public DebateSection getDebateSection() {
                 DebateSection result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DebateSection".equalsIgnoreCase(widget.getType())) {
-            result = (DebateSection)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("DebateSection".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (DebateSection)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>debateSectionElem</code> property in DSL way
@@ -1811,7 +1798,7 @@ super(element);
                     DebateSection result = getDebateSection();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(debateSectionElem);
 
@@ -1823,13 +1810,13 @@ super(element);
             */
             public Div getDiv() {
                 Div result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Div".equalsIgnoreCase(widget.getType())) {
-            result = (Div)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Div".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Div)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>divElem</code> property in DSL way
@@ -1840,7 +1827,7 @@ super(element);
                     Div result = getDiv();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(divElem);
 
@@ -1861,16 +1848,16 @@ return "http://www.akomantoso.org/2.0";
 public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
         attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
 return attrs;
 }

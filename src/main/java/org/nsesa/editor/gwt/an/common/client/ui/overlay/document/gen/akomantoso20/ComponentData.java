@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
@@ -68,12 +55,12 @@ setType("componentData");
 /**
 * Constructor with required attributes
 */
-public ComponentData(AnyURISimpleType hrefAttr,StringSimpleType nameAttr,IDSimpleType idAttr,StringSimpleType showAsAttr) {
+public ComponentData(AnyURISimpleType hrefAttr,StringSimpleType showAsAttr,IDSimpleType idAttr,StringSimpleType nameAttr) {
 this();
 setHrefAttr(hrefAttr);
-setNameAttr(nameAttr);
-setIdAttr(idAttr);
 setShowAsAttr(showAsAttr);
+setIdAttr(idAttr);
+setNameAttr(nameAttr);
 }
 
 
@@ -85,49 +72,14 @@ super(element);
 }
 
 // FIELDS ------------------
-    private String wildcardContentAttr;
     private AnyURISimpleType hrefAttr;
-    private StringSimpleType nameAttr;
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private String wildcardContentAttr;
+    private StringSimpleType nameAttr;
 
-        /**
-        * Return <code>wildcardContentAttr</code> property
-        * @return wildcardContentAttr
-        */
-        public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-        }
-        /**
-        * Return <code>wildcardContentAttr</code> property in DSL way
-        * @return wildcardContentAttr
-        */
-        public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property
-        * @param wildcardContentAttr the new value
-        */
-        public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent",wildcardContentAttr);
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr the new value
-        * @return <code>ComponentData</code> instance
-        */
-        public ComponentData wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-        }
         /**
         * Return <code>hrefAttr</code> property
         * @return hrefAttr
@@ -165,39 +117,75 @@ super(element);
         return this;
         }
         /**
-        * Return <code>nameAttr</code> property
-        * @return nameAttr
+        * Return <code>showAsAttr</code> property
+        * @return showAsAttr
         */
-        public StringSimpleType getNameAttr() {
-        if (nameAttr == null) {
-                nameAttr = new StringSimpleType();
-                nameAttr.setValue(getElement().getAttribute("name"));
+        public StringSimpleType getShowAsAttr() {
+        if (showAsAttr == null) {
+                showAsAttr = new StringSimpleType();
+                showAsAttr.setValue(getElement().getAttribute("showAs"));
         }
 
-        return nameAttr;
+        return showAsAttr;
         }
         /**
-        * Return <code>nameAttr</code> property in DSL way
-        * @return nameAttr
+        * Return <code>showAsAttr</code> property in DSL way
+        * @return showAsAttr
         */
-        public StringSimpleType nameAttr() {
-        return  getNameAttr();
+        public StringSimpleType showAsAttr() {
+        return  getShowAsAttr();
         }
         /**
-        * Set <code>nameAttr</code> property
-        * @param nameAttr the new value
+        * Set <code>showAsAttr</code> property
+        * @param showAsAttr the new value
         */
-        public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-        getElement().setAttribute("name",nameAttr.getValue());
+        public void setShowAsAttr(final StringSimpleType showAsAttr) {
+        this.showAsAttr = showAsAttr;
+        getElement().setAttribute("showAs",showAsAttr.getValue());
         }
         /**
-        * Set <code>nameAttr</code> property in DSL way
-        * @param nameAttr the new value
+        * Set <code>showAsAttr</code> property in DSL way
+        * @param showAsAttr the new value
         * @return <code>ComponentData</code> instance
         */
-        public ComponentData nameAttr(final StringSimpleType nameAttr) {
-        setNameAttr(nameAttr);
+        public ComponentData showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+        }
+        /**
+        * Return <code>shortFormAttr</code> property
+        * @return shortFormAttr
+        */
+        public StringSimpleType getShortFormAttr() {
+        if (shortFormAttr == null) {
+                shortFormAttr = new StringSimpleType();
+                shortFormAttr.setValue(getElement().getAttribute("shortForm"));
+        }
+
+        return shortFormAttr;
+        }
+        /**
+        * Return <code>shortFormAttr</code> property in DSL way
+        * @return shortFormAttr
+        */
+        public StringSimpleType shortFormAttr() {
+        return  getShortFormAttr();
+        }
+        /**
+        * Set <code>shortFormAttr</code> property
+        * @param shortFormAttr the new value
+        */
+        public void setShortFormAttr(final StringSimpleType shortFormAttr) {
+        this.shortFormAttr = shortFormAttr;
+        getElement().setAttribute("shortForm",shortFormAttr.getValue());
+        }
+        /**
+        * Set <code>shortFormAttr</code> property in DSL way
+        * @param shortFormAttr the new value
+        * @return <code>ComponentData</code> instance
+        */
+        public ComponentData shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
         return this;
         }
         /**
@@ -273,75 +261,74 @@ super(element);
         return this;
         }
         /**
-        * Return <code>showAsAttr</code> property
-        * @return showAsAttr
+        * Return <code>wildcardContentAttr</code> property
+        * @return wildcardContentAttr
         */
-        public StringSimpleType getShowAsAttr() {
-        if (showAsAttr == null) {
-                showAsAttr = new StringSimpleType();
-                showAsAttr.setValue(getElement().getAttribute("showAs"));
+        public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return showAsAttr;
+        return wildcardContentAttr;
         }
         /**
-        * Return <code>showAsAttr</code> property in DSL way
-        * @return showAsAttr
+        * Return <code>wildcardContentAttr</code> property in DSL way
+        * @return wildcardContentAttr
         */
-        public StringSimpleType showAsAttr() {
-        return  getShowAsAttr();
+        public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
         }
         /**
-        * Set <code>showAsAttr</code> property
-        * @param showAsAttr the new value
+        * Set <code>wildcardContentAttr</code> property
+        * @param wildcardContentAttr the new value
         */
-        public void setShowAsAttr(final StringSimpleType showAsAttr) {
-        this.showAsAttr = showAsAttr;
-        getElement().setAttribute("showAs",showAsAttr.getValue());
+        public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent",wildcardContentAttr);
         }
         /**
-        * Set <code>showAsAttr</code> property in DSL way
-        * @param showAsAttr the new value
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr the new value
         * @return <code>ComponentData</code> instance
         */
-        public ComponentData showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
+        public ComponentData wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
         }
         /**
-        * Return <code>shortFormAttr</code> property
-        * @return shortFormAttr
+        * Return <code>nameAttr</code> property
+        * @return nameAttr
         */
-        public StringSimpleType getShortFormAttr() {
-        if (shortFormAttr == null) {
-                shortFormAttr = new StringSimpleType();
-                shortFormAttr.setValue(getElement().getAttribute("shortForm"));
+        public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+                nameAttr = new StringSimpleType();
+                nameAttr.setValue(getElement().getAttribute("name"));
         }
 
-        return shortFormAttr;
+        return nameAttr;
         }
         /**
-        * Return <code>shortFormAttr</code> property in DSL way
-        * @return shortFormAttr
+        * Return <code>nameAttr</code> property in DSL way
+        * @return nameAttr
         */
-        public StringSimpleType shortFormAttr() {
-        return  getShortFormAttr();
+        public StringSimpleType nameAttr() {
+        return  getNameAttr();
         }
         /**
-        * Set <code>shortFormAttr</code> property
-        * @param shortFormAttr the new value
+        * Set <code>nameAttr</code> property
+        * @param nameAttr the new value
         */
-        public void setShortFormAttr(final StringSimpleType shortFormAttr) {
-        this.shortFormAttr = shortFormAttr;
-        getElement().setAttribute("shortForm",shortFormAttr.getValue());
+        public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+        getElement().setAttribute("name",nameAttr.getValue());
         }
         /**
-        * Set <code>shortFormAttr</code> property in DSL way
-        * @param shortFormAttr the new value
+        * Set <code>nameAttr</code> property in DSL way
+        * @param nameAttr the new value
         * @return <code>ComponentData</code> instance
         */
-        public ComponentData shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
+        public ComponentData nameAttr(final StringSimpleType nameAttr) {
+        setNameAttr(nameAttr);
         return this;
         }
             /**
@@ -350,12 +337,12 @@ super(element);
             */
             public java.util.List<ComponentData> getComponentDatas() {
                 java.util.List<ComponentData> result = new ArrayList<ComponentData>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ComponentData".equalsIgnoreCase(widget.getType())) {
-            result.add((ComponentData)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("ComponentData".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((ComponentData)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -363,7 +350,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<ComponentData> getComponentDataList() {
-            return  getComponentDatas();
+                return  getComponentDatas();
             }
             /**
             * Add <code>java.util.List<ComponentData></code> property in the list of properties
@@ -389,13 +376,13 @@ return "http://www.akomantoso.org/2.0";
 public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
-        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
 return attrs;
 }
 

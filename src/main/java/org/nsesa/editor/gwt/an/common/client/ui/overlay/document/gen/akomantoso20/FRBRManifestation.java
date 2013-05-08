@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.CorePropertiesComplexType;
@@ -27,7 +14,7 @@ import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
-* The element FRBRManifestation is the metadata container of identifying properties related to the Manifestation level according to the FRBR hierarchy
+* The element FRBRManifestation is the metadata container of identifying properties related to<br/> the Manifestation level according to the FRBR hierarchy
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
@@ -91,13 +78,13 @@ super(element);
             */
             public FRBRformat getFRBRformat() {
                 FRBRformat result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRformat".equalsIgnoreCase(widget.getType())) {
-            result = (FRBRformat)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRformat".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (FRBRformat)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>FRBRformatElem</code> property in DSL way
@@ -108,7 +95,7 @@ super(element);
                     FRBRformat result = getFRBRformat();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(FRBRformatElem);
 

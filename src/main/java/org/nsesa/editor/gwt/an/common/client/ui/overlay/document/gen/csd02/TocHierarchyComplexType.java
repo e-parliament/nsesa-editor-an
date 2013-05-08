@@ -1,25 +1,12 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Intro;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Wrap;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NCNameSimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
@@ -83,17 +70,17 @@ super(element);
 }
 
 // FIELDS ------------------
-    private AnyURISimpleType alternativeToAttr;
+    private LanguageSimpleType langAttr;
+    private NCNameSimpleType spaceAttr;
+    private String wildcardContentAttr;
+    private AnyURISimpleType refersToAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
-    private String wildcardContentAttr;
-    private LanguageSimpleType langAttr;
-    private NCNameSimpleType spaceAttr;
     private StatusTypeSimpleType statusAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType alternativeToAttr;
     private AnyURISimpleType periodAttr;
 
             /**
@@ -102,13 +89,13 @@ super(element);
             */
             public Intro getIntro() {
                 Intro result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Intro".equalsIgnoreCase(widget.getType())) {
-            result = (Intro)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Intro".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Intro)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>introElem</code> property in DSL way
@@ -119,7 +106,7 @@ super(element);
                     Intro result = getIntro();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(introElem);
 
@@ -131,13 +118,13 @@ super(element);
             */
             public Wrap getWrap() {
                 Wrap result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Wrap".equalsIgnoreCase(widget.getType())) {
-            result = (Wrap)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Wrap".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Wrap)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>wrapElem</code> property in DSL way
@@ -148,46 +135,153 @@ super(element);
                     Wrap result = getWrap();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(wrapElem);
 
                 return wrapElem;
             }
         /**
-        * Return <code>alternativeToAttr</code> property
-        * @return alternativeToAttr
+        * Return <code>langAttr</code> property
+        * @return langAttr
         */
-        public AnyURISimpleType getAlternativeToAttr() {
-        if (alternativeToAttr == null) {
-                alternativeToAttr = new AnyURISimpleType();
-                alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
+        public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+                langAttr = new LanguageSimpleType();
+                langAttr.setValue(getElement().getAttribute("lang"));
         }
 
-        return alternativeToAttr;
+        return langAttr;
         }
         /**
-        * Return <code>alternativeToAttr</code> property in DSL way
-        * @return alternativeToAttr
+        * Return <code>langAttr</code> property in DSL way
+        * @return langAttr
         */
-        public AnyURISimpleType alternativeToAttr() {
-        return  getAlternativeToAttr();
+        public LanguageSimpleType langAttr() {
+        return  getLangAttr();
         }
         /**
-        * Set <code>alternativeToAttr</code> property
-        * @param alternativeToAttr the new value
+        * Set <code>langAttr</code> property
+        * @param langAttr the new value
         */
-        public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
-        getElement().setAttribute("alternativeTo",alternativeToAttr.getValue());
+        public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+        getElement().setAttribute("lang",langAttr.getValue());
         }
         /**
-        * Set <code>alternativeToAttr</code> property in DSL way
-        * @param alternativeToAttr the new value
+        * Set <code>langAttr</code> property in DSL way
+        * @param langAttr the new value
         * @return <code>TocHierarchyComplexType</code> instance
         */
-        public TocHierarchyComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+        public TocHierarchyComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+        }
+        /**
+        * Return <code>spaceAttr</code> property
+        * @return spaceAttr
+        */
+        public NCNameSimpleType getSpaceAttr() {
+        if (spaceAttr == null) {
+                spaceAttr = new NCNameSimpleType();
+                spaceAttr.setValue(getElement().getAttribute("space"));
+        }
+
+        return spaceAttr;
+        }
+        /**
+        * Return <code>spaceAttr</code> property in DSL way
+        * @return spaceAttr
+        */
+        public NCNameSimpleType spaceAttr() {
+        return  getSpaceAttr();
+        }
+        /**
+        * Set <code>spaceAttr</code> property
+        * @param spaceAttr the new value
+        */
+        public void setSpaceAttr(final NCNameSimpleType spaceAttr) {
+        this.spaceAttr = spaceAttr;
+        getElement().setAttribute("space",spaceAttr.getValue());
+        }
+        /**
+        * Set <code>spaceAttr</code> property in DSL way
+        * @param spaceAttr the new value
+        * @return <code>TocHierarchyComplexType</code> instance
+        */
+        public TocHierarchyComplexType spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+        }
+        /**
+        * Return <code>wildcardContentAttr</code> property
+        * @return wildcardContentAttr
+        */
+        public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+        }
+        /**
+        * Return <code>wildcardContentAttr</code> property in DSL way
+        * @return wildcardContentAttr
+        */
+        public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property
+        * @param wildcardContentAttr the new value
+        */
+        public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent",wildcardContentAttr);
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr the new value
+        * @return <code>TocHierarchyComplexType</code> instance
+        */
+        public TocHierarchyComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
+        /**
+        * Return <code>refersToAttr</code> property
+        * @return refersToAttr
+        */
+        public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+                refersToAttr = new AnyURISimpleType();
+                refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+        }
+        /**
+        * Return <code>refersToAttr</code> property in DSL way
+        * @return refersToAttr
+        */
+        public AnyURISimpleType refersToAttr() {
+        return  getRefersToAttr();
+        }
+        /**
+        * Set <code>refersToAttr</code> property
+        * @param refersToAttr the new value
+        */
+        public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo",refersToAttr.getValue());
+        }
+        /**
+        * Set <code>refersToAttr</code> property in DSL way
+        * @param refersToAttr the new value
+        * @return <code>TocHierarchyComplexType</code> instance
+        */
+        public TocHierarchyComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
         }
         /**
@@ -299,113 +393,6 @@ super(element);
         return this;
         }
         /**
-        * Return <code>wildcardContentAttr</code> property
-        * @return wildcardContentAttr
-        */
-        public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-        }
-        /**
-        * Return <code>wildcardContentAttr</code> property in DSL way
-        * @return wildcardContentAttr
-        */
-        public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property
-        * @param wildcardContentAttr the new value
-        */
-        public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent",wildcardContentAttr);
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr the new value
-        * @return <code>TocHierarchyComplexType</code> instance
-        */
-        public TocHierarchyComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-        }
-        /**
-        * Return <code>langAttr</code> property
-        * @return langAttr
-        */
-        public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-                langAttr = new LanguageSimpleType();
-                langAttr.setValue(getElement().getAttribute("lang"));
-        }
-
-        return langAttr;
-        }
-        /**
-        * Return <code>langAttr</code> property in DSL way
-        * @return langAttr
-        */
-        public LanguageSimpleType langAttr() {
-        return  getLangAttr();
-        }
-        /**
-        * Set <code>langAttr</code> property
-        * @param langAttr the new value
-        */
-        public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-        getElement().setAttribute("lang",langAttr.getValue());
-        }
-        /**
-        * Set <code>langAttr</code> property in DSL way
-        * @param langAttr the new value
-        * @return <code>TocHierarchyComplexType</code> instance
-        */
-        public TocHierarchyComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-        }
-        /**
-        * Return <code>spaceAttr</code> property
-        * @return spaceAttr
-        */
-        public NCNameSimpleType getSpaceAttr() {
-        if (spaceAttr == null) {
-                spaceAttr = new NCNameSimpleType();
-                spaceAttr.setValue(getElement().getAttribute("space"));
-        }
-
-        return spaceAttr;
-        }
-        /**
-        * Return <code>spaceAttr</code> property in DSL way
-        * @return spaceAttr
-        */
-        public NCNameSimpleType spaceAttr() {
-        return  getSpaceAttr();
-        }
-        /**
-        * Set <code>spaceAttr</code> property
-        * @param spaceAttr the new value
-        */
-        public void setSpaceAttr(final NCNameSimpleType spaceAttr) {
-        this.spaceAttr = spaceAttr;
-        getElement().setAttribute("space",spaceAttr.getValue());
-        }
-        /**
-        * Set <code>spaceAttr</code> property in DSL way
-        * @param spaceAttr the new value
-        * @return <code>TocHierarchyComplexType</code> instance
-        */
-        public TocHierarchyComplexType spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-        }
-        /**
         * Return <code>statusAttr</code> property
         * @return statusAttr
         */
@@ -513,39 +500,39 @@ super(element);
         return this;
         }
         /**
-        * Return <code>refersToAttr</code> property
-        * @return refersToAttr
+        * Return <code>alternativeToAttr</code> property
+        * @return alternativeToAttr
         */
-        public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-                refersToAttr = new AnyURISimpleType();
-                refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        public AnyURISimpleType getAlternativeToAttr() {
+        if (alternativeToAttr == null) {
+                alternativeToAttr = new AnyURISimpleType();
+                alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
         }
 
-        return refersToAttr;
+        return alternativeToAttr;
         }
         /**
-        * Return <code>refersToAttr</code> property in DSL way
-        * @return refersToAttr
+        * Return <code>alternativeToAttr</code> property in DSL way
+        * @return alternativeToAttr
         */
-        public AnyURISimpleType refersToAttr() {
-        return  getRefersToAttr();
+        public AnyURISimpleType alternativeToAttr() {
+        return  getAlternativeToAttr();
         }
         /**
-        * Set <code>refersToAttr</code> property
-        * @param refersToAttr the new value
+        * Set <code>alternativeToAttr</code> property
+        * @param alternativeToAttr the new value
         */
-        public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo",refersToAttr.getValue());
+        public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+        getElement().setAttribute("alternativeTo",alternativeToAttr.getValue());
         }
         /**
-        * Set <code>refersToAttr</code> property in DSL way
-        * @param refersToAttr the new value
+        * Set <code>alternativeToAttr</code> property in DSL way
+        * @param alternativeToAttr the new value
         * @return <code>TocHierarchyComplexType</code> instance
         */
-        public TocHierarchyComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+        public TocHierarchyComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
         }
             /**
@@ -554,12 +541,12 @@ super(element);
             */
             public java.util.List<ComponentRef> getComponentRefs() {
                 java.util.List<ComponentRef> result = new ArrayList<ComponentRef>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ComponentRef".equalsIgnoreCase(widget.getType())) {
-            result.add((ComponentRef)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("ComponentRef".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((ComponentRef)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -567,7 +554,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<ComponentRef> getComponentRefList() {
-            return  getComponentRefs();
+                return  getComponentRefs();
             }
             /**
             * Add <code>java.util.List<ComponentRef></code> property in the list of properties
@@ -584,12 +571,12 @@ super(element);
             */
             public java.util.List<TocItem> getTocItems() {
                 java.util.List<TocItem> result = new ArrayList<TocItem>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TocItem".equalsIgnoreCase(widget.getType())) {
-            result.add((TocItem)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("TocItem".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((TocItem)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -597,7 +584,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<TocItem> getTocItemList() {
-            return  getTocItems();
+                return  getTocItems();
             }
             /**
             * Add <code>java.util.List<TocItem></code> property in the list of properties
@@ -659,17 +646,17 @@ return "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02";
 public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
-        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
-        attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
         attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
 return attrs;
 }

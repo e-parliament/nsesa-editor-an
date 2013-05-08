@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
@@ -129,13 +116,13 @@ super(element);
             */
             public FRBRWork getFRBRWork() {
                 FRBRWork result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRWork".equalsIgnoreCase(widget.getType())) {
-            result = (FRBRWork)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRWork".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (FRBRWork)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>FRBRWorkElem</code> property in DSL way
@@ -146,7 +133,7 @@ super(element);
                     FRBRWork result = getFRBRWork();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(FRBRWorkElem);
 
@@ -158,13 +145,13 @@ super(element);
             */
             public FRBRExpression getFRBRExpression() {
                 FRBRExpression result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRExpression".equalsIgnoreCase(widget.getType())) {
-            result = (FRBRExpression)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRExpression".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (FRBRExpression)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>FRBRExpressionElem</code> property in DSL way
@@ -175,7 +162,7 @@ super(element);
                     FRBRExpression result = getFRBRExpression();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(FRBRExpressionElem);
 
@@ -187,13 +174,13 @@ super(element);
             */
             public FRBRManifestation getFRBRManifestation() {
                 FRBRManifestation result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRManifestation".equalsIgnoreCase(widget.getType())) {
-            result = (FRBRManifestation)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRManifestation".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (FRBRManifestation)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>FRBRManifestationElem</code> property in DSL way
@@ -204,7 +191,7 @@ super(element);
                     FRBRManifestation result = getFRBRManifestation();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(FRBRManifestationElem);
 
@@ -216,13 +203,13 @@ super(element);
             */
             public FRBRItem getFRBRItem() {
                 FRBRItem result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRItem".equalsIgnoreCase(widget.getType())) {
-            result = (FRBRItem)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRItem".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (FRBRItem)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>FRBRItemElem</code> property in DSL way
@@ -233,7 +220,7 @@ super(element);
                     FRBRItem result = getFRBRItem();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(FRBRItemElem);
 

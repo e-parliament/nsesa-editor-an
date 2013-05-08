@@ -1,24 +1,11 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.ListItemsComplexType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NCNameSimpleType;
 import com.google.gwt.dom.client.Element;
@@ -88,30 +75,30 @@ super(element);
 
 //Override all attributes methods to be conformant with DSL approach
         /**
-        * Set <code>statusAttr</code> property in DSL way
-        * @param statusAttr new value
+        * Set <code>classAttr</code> property in DSL way
+        * @param classAttr new value
         * @return <code> Ol</code> instance
         */
-        public Ol statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+        public Ol classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
         return this;
         }
         /**
-        * Set <code>refersToAttr</code> property in DSL way
-        * @param refersToAttr new value
+        * Set <code>styleAttr</code> property in DSL way
+        * @param styleAttr new value
         * @return <code> Ol</code> instance
         */
-        public Ol refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+        public Ol styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
         return this;
         }
         /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr new value
+        * Set <code>titleAttr</code> property in DSL way
+        * @param titleAttr new value
         * @return <code> Ol</code> instance
         */
-        public Ol wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+        public Ol titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
         return this;
         }
         /**
@@ -142,30 +129,12 @@ super(element);
         return this;
         }
         /**
-        * Set <code>classAttr</code> property in DSL way
-        * @param classAttr new value
+        * Set <code>statusAttr</code> property in DSL way
+        * @param statusAttr new value
         * @return <code> Ol</code> instance
         */
-        public Ol classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-        }
-        /**
-        * Set <code>styleAttr</code> property in DSL way
-        * @param styleAttr new value
-        * @return <code> Ol</code> instance
-        */
-        public Ol styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-        }
-        /**
-        * Set <code>titleAttr</code> property in DSL way
-        * @param titleAttr new value
-        * @return <code> Ol</code> instance
-        */
-        public Ol titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
+        public Ol statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
         }
         /**
@@ -184,6 +153,24 @@ super(element);
         */
         public Ol spaceAttr(final NCNameSimpleType spaceAttr) {
         setSpaceAttr(spaceAttr);
+        return this;
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr new value
+        * @return <code> Ol</code> instance
+        */
+        public Ol wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
+        /**
+        * Set <code>refersToAttr</code> property in DSL way
+        * @param refersToAttr new value
+        * @return <code> Ol</code> instance
+        */
+        public Ol refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
         }
         /**

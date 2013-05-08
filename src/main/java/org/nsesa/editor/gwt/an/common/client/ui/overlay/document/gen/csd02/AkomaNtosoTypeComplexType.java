@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Components;
@@ -94,13 +81,13 @@ super(element);
             */
             public Components getComponents() {
                 Components result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Components".equalsIgnoreCase(widget.getType())) {
-            result = (Components)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Components".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Components)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>componentsElem</code> property in DSL way
@@ -111,7 +98,7 @@ super(element);
                     Components result = getComponents();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(componentsElem);
 
@@ -123,13 +110,13 @@ super(element);
             */
             public AmendmentList getAmendmentList() {
                 AmendmentList result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("AmendmentList".equalsIgnoreCase(widget.getType())) {
-            result = (AmendmentList)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("AmendmentList".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (AmendmentList)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>amendmentListElem</code> property in DSL way
@@ -140,7 +127,7 @@ super(element);
                     AmendmentList result = getAmendmentList();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(amendmentListElem);
 
@@ -152,13 +139,13 @@ super(element);
             */
             public OfficialGazette getOfficialGazette() {
                 OfficialGazette result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("OfficialGazette".equalsIgnoreCase(widget.getType())) {
-            result = (OfficialGazette)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("OfficialGazette".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (OfficialGazette)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>officialGazetteElem</code> property in DSL way
@@ -169,7 +156,7 @@ super(element);
                     OfficialGazette result = getOfficialGazette();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(officialGazetteElem);
 
@@ -181,13 +168,13 @@ super(element);
             */
             public DocumentCollection getDocumentCollection() {
                 DocumentCollection result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocumentCollection".equalsIgnoreCase(widget.getType())) {
-            result = (DocumentCollection)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("DocumentCollection".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (DocumentCollection)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>documentCollectionElem</code> property in DSL way
@@ -198,7 +185,7 @@ super(element);
                     DocumentCollection result = getDocumentCollection();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(documentCollectionElem);
 
@@ -210,13 +197,13 @@ super(element);
             */
             public Act getAct() {
                 Act result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Act".equalsIgnoreCase(widget.getType())) {
-            result = (Act)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Act".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Act)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>actElem</code> property in DSL way
@@ -227,7 +214,7 @@ super(element);
                     Act result = getAct();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(actElem);
 
@@ -239,13 +226,13 @@ super(element);
             */
             public Bill getBill() {
                 Bill result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Bill".equalsIgnoreCase(widget.getType())) {
-            result = (Bill)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Bill".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Bill)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>billElem</code> property in DSL way
@@ -256,7 +243,7 @@ super(element);
                     Bill result = getBill();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(billElem);
 
@@ -268,13 +255,13 @@ super(element);
             */
             public DebateReport getDebateReport() {
                 DebateReport result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DebateReport".equalsIgnoreCase(widget.getType())) {
-            result = (DebateReport)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("DebateReport".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (DebateReport)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>debateReportElem</code> property in DSL way
@@ -285,7 +272,7 @@ super(element);
                     DebateReport result = getDebateReport();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(debateReportElem);
 
@@ -297,13 +284,13 @@ super(element);
             */
             public Debate getDebate() {
                 Debate result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Debate".equalsIgnoreCase(widget.getType())) {
-            result = (Debate)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Debate".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Debate)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>debateElem</code> property in DSL way
@@ -314,7 +301,7 @@ super(element);
                     Debate result = getDebate();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(debateElem);
 
@@ -326,13 +313,13 @@ super(element);
             */
             public Amendment getAmendment() {
                 Amendment result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Amendment".equalsIgnoreCase(widget.getType())) {
-            result = (Amendment)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Amendment".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Amendment)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>amendmentElem</code> property in DSL way
@@ -343,7 +330,7 @@ super(element);
                     Amendment result = getAmendment();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(amendmentElem);
 
@@ -355,13 +342,13 @@ super(element);
             */
             public Judgement getJudgement() {
                 Judgement result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Judgement".equalsIgnoreCase(widget.getType())) {
-            result = (Judgement)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Judgement".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Judgement)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>judgementElem</code> property in DSL way
@@ -372,7 +359,7 @@ super(element);
                     Judgement result = getJudgement();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(judgementElem);
 
@@ -384,13 +371,13 @@ super(element);
             */
             public Fragment getFragment() {
                 Fragment result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Fragment".equalsIgnoreCase(widget.getType())) {
-            result = (Fragment)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Fragment".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Fragment)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>fragmentElem</code> property in DSL way
@@ -401,7 +388,7 @@ super(element);
                     Fragment result = getFragment();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(fragmentElem);
 
@@ -413,13 +400,13 @@ super(element);
             */
             public Doc getDoc() {
                 Doc result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Doc".equalsIgnoreCase(widget.getType())) {
-            result = (Doc)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Doc".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Doc)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>docElem</code> property in DSL way
@@ -430,7 +417,7 @@ super(element);
                     Doc result = getDoc();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(docElem);
 

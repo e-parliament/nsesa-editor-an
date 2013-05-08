@@ -1,33 +1,14 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.SrcTypeComplexType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import java.util.HashMap;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
+
 import java.util.LinkedHashMap;
-import java.util.Map;
-import com.google.gwt.user.client.DOM;
 
 /**
 * the element componentRef is a reference to a separate manifestation-level resource that holds the content of the component of the document not physically placed at the position specified. Actual resources can either be external (e.g. in the package or even in a different position) or internal (within the components element)
@@ -64,10 +45,10 @@ setType("componentRef");
 /**
 * Constructor with required attributes
 */
-public ComponentRef(StringSimpleType showAsAttr,AnyURISimpleType srcAttr) {
+public ComponentRef(AnyURISimpleType srcAttr,StringSimpleType showAsAttr) {
 this();
-setShowAsAttr(showAsAttr);
 setSrcAttr(srcAttr);
+setShowAsAttr(showAsAttr);
 }
 
 
@@ -81,6 +62,33 @@ super(element);
 // FIELDS ------------------
 
 //Override all attributes methods to be conformant with DSL approach
+        /**
+        * Set <code>srcAttr</code> property in DSL way
+        * @param srcAttr new value
+        * @return <code> ComponentRef</code> instance
+        */
+        public ComponentRef srcAttr(final AnyURISimpleType srcAttr) {
+        setSrcAttr(srcAttr);
+        return this;
+        }
+        /**
+        * Set <code>altAttr</code> property in DSL way
+        * @param altAttr new value
+        * @return <code> ComponentRef</code> instance
+        */
+        public ComponentRef altAttr(final StringSimpleType altAttr) {
+        setAltAttr(altAttr);
+        return this;
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr new value
+        * @return <code> ComponentRef</code> instance
+        */
+        public ComponentRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
         /**
         * Set <code>showAsAttr</code> property in DSL way
         * @param showAsAttr new value
@@ -115,33 +123,6 @@ super(element);
         */
         public ComponentRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-        }
-        /**
-        * Set <code>srcAttr</code> property in DSL way
-        * @param srcAttr new value
-        * @return <code> ComponentRef</code> instance
-        */
-        public ComponentRef srcAttr(final AnyURISimpleType srcAttr) {
-        setSrcAttr(srcAttr);
-        return this;
-        }
-        /**
-        * Set <code>altAttr</code> property in DSL way
-        * @param altAttr new value
-        * @return <code> ComponentRef</code> instance
-        */
-        public ComponentRef altAttr(final StringSimpleType altAttr) {
-        setAltAttr(altAttr);
-        return this;
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr new value
-        * @return <code> ComponentRef</code> instance
-        */
-        public ComponentRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
         }
 

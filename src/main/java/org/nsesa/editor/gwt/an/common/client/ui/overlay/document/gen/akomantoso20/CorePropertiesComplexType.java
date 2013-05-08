@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.FRBRthis;
@@ -32,7 +19,7 @@ import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
-* The complexType coreProperties lists the identifying properties available at any of the FRBR hierarchy levels.
+* The complexType coreProperties lists the identifying properties available at any of the FRBR<br/> hierarchy levels.
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
@@ -81,13 +68,13 @@ super(element);
             */
             public FRBRthis getFRBRthis() {
                 FRBRthis result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRthis".equalsIgnoreCase(widget.getType())) {
-            result = (FRBRthis)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRthis".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (FRBRthis)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>FRBRthisElem</code> property in DSL way
@@ -98,7 +85,7 @@ super(element);
                     FRBRthis result = getFRBRthis();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(FRBRthisElem);
 
@@ -110,12 +97,12 @@ super(element);
             */
             public java.util.List<FRBRuri> getFRBRuris() {
                 java.util.List<FRBRuri> result = new ArrayList<FRBRuri>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRuri".equalsIgnoreCase(widget.getType())) {
-            result.add((FRBRuri)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRuri".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((FRBRuri)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -123,7 +110,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<FRBRuri> getFRBRuriList() {
-            return  getFRBRuris();
+                return  getFRBRuris();
             }
             /**
             * Add <code>java.util.List<FRBRuri></code> property in the list of properties
@@ -140,12 +127,12 @@ super(element);
             */
             public java.util.List<FRBRalias> getFRBRaliases() {
                 java.util.List<FRBRalias> result = new ArrayList<FRBRalias>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRalias".equalsIgnoreCase(widget.getType())) {
-            result.add((FRBRalias)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRalias".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((FRBRalias)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -153,7 +140,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<FRBRalias> getFRBRaliasList() {
-            return  getFRBRaliases();
+                return  getFRBRaliases();
             }
             /**
             * Add <code>java.util.List<FRBRalias></code> property in the list of properties
@@ -170,12 +157,12 @@ super(element);
             */
             public java.util.List<FRBRdate> getFRBRdates() {
                 java.util.List<FRBRdate> result = new ArrayList<FRBRdate>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRdate".equalsIgnoreCase(widget.getType())) {
-            result.add((FRBRdate)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRdate".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((FRBRdate)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -183,7 +170,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<FRBRdate> getFRBRdateList() {
-            return  getFRBRdates();
+                return  getFRBRdates();
             }
             /**
             * Add <code>java.util.List<FRBRdate></code> property in the list of properties
@@ -200,12 +187,12 @@ super(element);
             */
             public java.util.List<FRBRauthor> getFRBRauthors() {
                 java.util.List<FRBRauthor> result = new ArrayList<FRBRauthor>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRauthor".equalsIgnoreCase(widget.getType())) {
-            result.add((FRBRauthor)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRauthor".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((FRBRauthor)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -213,7 +200,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<FRBRauthor> getFRBRauthorList() {
-            return  getFRBRauthors();
+                return  getFRBRauthors();
             }
             /**
             * Add <code>java.util.List<FRBRauthor></code> property in the list of properties
@@ -230,13 +217,13 @@ super(element);
             */
             public ComponentInfo getComponentInfo() {
                 ComponentInfo result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ComponentInfo".equalsIgnoreCase(widget.getType())) {
-            result = (ComponentInfo)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("ComponentInfo".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (ComponentInfo)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>componentInfoElem</code> property in DSL way
@@ -247,7 +234,7 @@ super(element);
                     ComponentInfo result = getComponentInfo();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(componentInfoElem);
 
@@ -259,13 +246,13 @@ super(element);
             */
             public Preservation getPreservation() {
                 Preservation result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Preservation".equalsIgnoreCase(widget.getType())) {
-            result = (Preservation)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Preservation".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Preservation)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>preservationElem</code> property in DSL way
@@ -276,7 +263,7 @@ super(element);
                     Preservation result = getPreservation();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(preservationElem);
 

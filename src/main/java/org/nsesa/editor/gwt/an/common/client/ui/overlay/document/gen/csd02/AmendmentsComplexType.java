@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.TextualMod;
@@ -79,12 +66,12 @@ super(element);
             */
             public java.util.List<TextualMod> getTextualMods() {
                 java.util.List<TextualMod> result = new ArrayList<TextualMod>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TextualMod".equalsIgnoreCase(widget.getType())) {
-            result.add((TextualMod)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("TextualMod".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((TextualMod)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -92,7 +79,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<TextualMod> getTextualModList() {
-            return  getTextualMods();
+                return  getTextualMods();
             }
             /**
             * Add <code>java.util.List<TextualMod></code> property in the list of properties
@@ -109,12 +96,12 @@ super(element);
             */
             public java.util.List<MeaningMod> getMeaningMods() {
                 java.util.List<MeaningMod> result = new ArrayList<MeaningMod>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("MeaningMod".equalsIgnoreCase(widget.getType())) {
-            result.add((MeaningMod)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("MeaningMod".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((MeaningMod)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -122,7 +109,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<MeaningMod> getMeaningModList() {
-            return  getMeaningMods();
+                return  getMeaningMods();
             }
             /**
             * Add <code>java.util.List<MeaningMod></code> property in the list of properties
@@ -139,12 +126,12 @@ super(element);
             */
             public java.util.List<ScopeMod> getScopeMods() {
                 java.util.List<ScopeMod> result = new ArrayList<ScopeMod>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ScopeMod".equalsIgnoreCase(widget.getType())) {
-            result.add((ScopeMod)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("ScopeMod".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((ScopeMod)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -152,7 +139,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<ScopeMod> getScopeModList() {
-            return  getScopeMods();
+                return  getScopeMods();
             }
             /**
             * Add <code>java.util.List<ScopeMod></code> property in the list of properties
@@ -169,12 +156,12 @@ super(element);
             */
             public java.util.List<ForceMod> getForceMods() {
                 java.util.List<ForceMod> result = new ArrayList<ForceMod>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ForceMod".equalsIgnoreCase(widget.getType())) {
-            result.add((ForceMod)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("ForceMod".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((ForceMod)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -182,7 +169,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<ForceMod> getForceModList() {
-            return  getForceMods();
+                return  getForceMods();
             }
             /**
             * Add <code>java.util.List<ForceMod></code> property in the list of properties
@@ -199,12 +186,12 @@ super(element);
             */
             public java.util.List<EfficacyMod> getEfficacyMods() {
                 java.util.List<EfficacyMod> result = new ArrayList<EfficacyMod>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("EfficacyMod".equalsIgnoreCase(widget.getType())) {
-            result.add((EfficacyMod)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("EfficacyMod".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((EfficacyMod)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -212,7 +199,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<EfficacyMod> getEfficacyModList() {
-            return  getEfficacyMods();
+                return  getEfficacyMods();
             }
             /**
             * Add <code>java.util.List<EfficacyMod></code> property in the list of properties
@@ -229,12 +216,12 @@ super(element);
             */
             public java.util.List<LegalSystemMod> getLegalSystemMods() {
                 java.util.List<LegalSystemMod> result = new ArrayList<LegalSystemMod>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("LegalSystemMod".equalsIgnoreCase(widget.getType())) {
-            result.add((LegalSystemMod)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("LegalSystemMod".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((LegalSystemMod)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -242,7 +229,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<LegalSystemMod> getLegalSystemModList() {
-            return  getLegalSystemMods();
+                return  getLegalSystemMods();
             }
             /**
             * Add <code>java.util.List<LegalSystemMod></code> property in the list of properties

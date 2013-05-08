@@ -1,22 +1,9 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.MarkeroptComplexType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.PlacementTypeSimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NCNameSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
@@ -82,47 +69,11 @@ super(element);
 }
 
 // FIELDS ------------------
-    private AnyURISimpleType hrefAttr;
     private StringSimpleType markerAttr;
     private PlacementTypeSimpleType placementAttr;
     private AnyURISimpleType placementBaseAttr;
+    private AnyURISimpleType hrefAttr;
 
-        /**
-        * Return <code>hrefAttr</code> property
-        * @return hrefAttr
-        */
-        public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-                hrefAttr = new AnyURISimpleType();
-                hrefAttr.setValue(getElement().getAttribute("href"));
-        }
-
-        return hrefAttr;
-        }
-        /**
-        * Return <code>hrefAttr</code> property in DSL way
-        * @return hrefAttr
-        */
-        public AnyURISimpleType hrefAttr() {
-        return  getHrefAttr();
-        }
-        /**
-        * Set <code>hrefAttr</code> property
-        * @param hrefAttr the new value
-        */
-        public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-        getElement().setAttribute("href",hrefAttr.getValue());
-        }
-        /**
-        * Set <code>hrefAttr</code> property in DSL way
-        * @param hrefAttr the new value
-        * @return <code>NoteRef</code> instance
-        */
-        public NoteRef hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-        }
         /**
         * Return <code>markerAttr</code> property
         * @return markerAttr
@@ -230,14 +181,77 @@ super(element);
         setPlacementBaseAttr(placementBaseAttr);
         return this;
         }
+        /**
+        * Return <code>hrefAttr</code> property
+        * @return hrefAttr
+        */
+        public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+                hrefAttr = new AnyURISimpleType();
+                hrefAttr.setValue(getElement().getAttribute("href"));
+        }
+
+        return hrefAttr;
+        }
+        /**
+        * Return <code>hrefAttr</code> property in DSL way
+        * @return hrefAttr
+        */
+        public AnyURISimpleType hrefAttr() {
+        return  getHrefAttr();
+        }
+        /**
+        * Set <code>hrefAttr</code> property
+        * @param hrefAttr the new value
+        */
+        public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+        getElement().setAttribute("href",hrefAttr.getValue());
+        }
+        /**
+        * Set <code>hrefAttr</code> property in DSL way
+        * @param hrefAttr the new value
+        * @return <code>NoteRef</code> instance
+        */
+        public NoteRef hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+        }
 //Override all attributes methods to be conformant with DSL approach
         /**
-        * Set <code>alternativeToAttr</code> property in DSL way
-        * @param alternativeToAttr new value
+        * Set <code>langAttr</code> property in DSL way
+        * @param langAttr new value
         * @return <code> NoteRef</code> instance
         */
-        public NoteRef alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+        public NoteRef langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+        }
+        /**
+        * Set <code>spaceAttr</code> property in DSL way
+        * @param spaceAttr new value
+        * @return <code> NoteRef</code> instance
+        */
+        public NoteRef spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr new value
+        * @return <code> NoteRef</code> instance
+        */
+        public NoteRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
+        /**
+        * Set <code>refersToAttr</code> property in DSL way
+        * @param refersToAttr new value
+        * @return <code> NoteRef</code> instance
+        */
+        public NoteRef refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
         }
         /**
@@ -268,33 +282,6 @@ super(element);
         return this;
         }
         /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr new value
-        * @return <code> NoteRef</code> instance
-        */
-        public NoteRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-        }
-        /**
-        * Set <code>langAttr</code> property in DSL way
-        * @param langAttr new value
-        * @return <code> NoteRef</code> instance
-        */
-        public NoteRef langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-        }
-        /**
-        * Set <code>spaceAttr</code> property in DSL way
-        * @param spaceAttr new value
-        * @return <code> NoteRef</code> instance
-        */
-        public NoteRef spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-        }
-        /**
         * Set <code>statusAttr</code> property in DSL way
         * @param statusAttr new value
         * @return <code> NoteRef</code> instance
@@ -322,12 +309,12 @@ super(element);
         return this;
         }
         /**
-        * Set <code>refersToAttr</code> property in DSL way
-        * @param refersToAttr new value
+        * Set <code>alternativeToAttr</code> property in DSL way
+        * @param alternativeToAttr new value
         * @return <code> NoteRef</code> instance
         */
-        public NoteRef refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+        public NoteRef alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
         }
         /**
@@ -353,10 +340,10 @@ return "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02";
 public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         attrs.put("marker", getMarkerAttr() != null ? getMarkerAttr().getValue() : null);
         attrs.put("placement", getPlacementAttr() != null ? getPlacementAttr().value() : null);
         attrs.put("placementBase", getPlacementBaseAttr() != null ? getPlacementBaseAttr().getValue() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
 return attrs;
 }
 

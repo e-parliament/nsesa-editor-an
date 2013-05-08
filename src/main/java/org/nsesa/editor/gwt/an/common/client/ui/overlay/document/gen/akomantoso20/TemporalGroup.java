@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
@@ -197,12 +184,12 @@ super(element);
             */
             public java.util.List<TimeInterval> getTimeIntervals() {
                 java.util.List<TimeInterval> result = new ArrayList<TimeInterval>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TimeInterval".equalsIgnoreCase(widget.getType())) {
-            result.add((TimeInterval)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("TimeInterval".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((TimeInterval)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -210,7 +197,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<TimeInterval> getTimeIntervalList() {
-            return  getTimeIntervals();
+                return  getTimeIntervals();
             }
             /**
             * Add <code>java.util.List<TimeInterval></code> property in the list of properties

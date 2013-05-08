@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.MetaoptComplexType;
@@ -64,11 +51,11 @@ setType("keyword");
 /**
 * Constructor with required attributes
 */
-public Keyword(AnyURISimpleType dictionaryAttr,StringSimpleType showAsAttr,StringSimpleType valueAttr) {
+public Keyword(AnyURISimpleType dictionaryAttr,StringSimpleType valueAttr,StringSimpleType showAsAttr) {
 this();
 setDictionaryAttr(dictionaryAttr);
-setShowAsAttr(showAsAttr);
 setValueAttr(valueAttr);
+setShowAsAttr(showAsAttr);
 }
 
 
@@ -81,10 +68,10 @@ super(element);
 
 // FIELDS ------------------
     private AnyURISimpleType dictionaryAttr;
+    private StringSimpleType valueAttr;
+    private AnyURISimpleType hrefAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
-    private AnyURISimpleType hrefAttr;
-    private StringSimpleType valueAttr;
 
         /**
         * Return <code>dictionaryAttr</code> property
@@ -120,6 +107,78 @@ super(element);
         */
         public Keyword dictionaryAttr(final AnyURISimpleType dictionaryAttr) {
         setDictionaryAttr(dictionaryAttr);
+        return this;
+        }
+        /**
+        * Return <code>valueAttr</code> property
+        * @return valueAttr
+        */
+        public StringSimpleType getValueAttr() {
+        if (valueAttr == null) {
+                valueAttr = new StringSimpleType();
+                valueAttr.setValue(getElement().getAttribute("value"));
+        }
+
+        return valueAttr;
+        }
+        /**
+        * Return <code>valueAttr</code> property in DSL way
+        * @return valueAttr
+        */
+        public StringSimpleType valueAttr() {
+        return  getValueAttr();
+        }
+        /**
+        * Set <code>valueAttr</code> property
+        * @param valueAttr the new value
+        */
+        public void setValueAttr(final StringSimpleType valueAttr) {
+        this.valueAttr = valueAttr;
+        getElement().setAttribute("value",valueAttr.getValue());
+        }
+        /**
+        * Set <code>valueAttr</code> property in DSL way
+        * @param valueAttr the new value
+        * @return <code>Keyword</code> instance
+        */
+        public Keyword valueAttr(final StringSimpleType valueAttr) {
+        setValueAttr(valueAttr);
+        return this;
+        }
+        /**
+        * Return <code>hrefAttr</code> property
+        * @return hrefAttr
+        */
+        public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+                hrefAttr = new AnyURISimpleType();
+                hrefAttr.setValue(getElement().getAttribute("href"));
+        }
+
+        return hrefAttr;
+        }
+        /**
+        * Return <code>hrefAttr</code> property in DSL way
+        * @return hrefAttr
+        */
+        public AnyURISimpleType hrefAttr() {
+        return  getHrefAttr();
+        }
+        /**
+        * Set <code>hrefAttr</code> property
+        * @param hrefAttr the new value
+        */
+        public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+        getElement().setAttribute("href",hrefAttr.getValue());
+        }
+        /**
+        * Set <code>hrefAttr</code> property in DSL way
+        * @param hrefAttr the new value
+        * @return <code>Keyword</code> instance
+        */
+        public Keyword hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
         return this;
         }
         /**
@@ -194,88 +253,7 @@ super(element);
         setShortFormAttr(shortFormAttr);
         return this;
         }
-        /**
-        * Return <code>hrefAttr</code> property
-        * @return hrefAttr
-        */
-        public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-                hrefAttr = new AnyURISimpleType();
-                hrefAttr.setValue(getElement().getAttribute("href"));
-        }
-
-        return hrefAttr;
-        }
-        /**
-        * Return <code>hrefAttr</code> property in DSL way
-        * @return hrefAttr
-        */
-        public AnyURISimpleType hrefAttr() {
-        return  getHrefAttr();
-        }
-        /**
-        * Set <code>hrefAttr</code> property
-        * @param hrefAttr the new value
-        */
-        public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-        getElement().setAttribute("href",hrefAttr.getValue());
-        }
-        /**
-        * Set <code>hrefAttr</code> property in DSL way
-        * @param hrefAttr the new value
-        * @return <code>Keyword</code> instance
-        */
-        public Keyword hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-        }
-        /**
-        * Return <code>valueAttr</code> property
-        * @return valueAttr
-        */
-        public StringSimpleType getValueAttr() {
-        if (valueAttr == null) {
-                valueAttr = new StringSimpleType();
-                valueAttr.setValue(getElement().getAttribute("value"));
-        }
-
-        return valueAttr;
-        }
-        /**
-        * Return <code>valueAttr</code> property in DSL way
-        * @return valueAttr
-        */
-        public StringSimpleType valueAttr() {
-        return  getValueAttr();
-        }
-        /**
-        * Set <code>valueAttr</code> property
-        * @param valueAttr the new value
-        */
-        public void setValueAttr(final StringSimpleType valueAttr) {
-        this.valueAttr = valueAttr;
-        getElement().setAttribute("value",valueAttr.getValue());
-        }
-        /**
-        * Set <code>valueAttr</code> property in DSL way
-        * @param valueAttr the new value
-        * @return <code>Keyword</code> instance
-        */
-        public Keyword valueAttr(final StringSimpleType valueAttr) {
-        setValueAttr(valueAttr);
-        return this;
-        }
 //Override all attributes methods to be conformant with DSL approach
-        /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr new value
-        * @return <code> Keyword</code> instance
-        */
-        public Keyword wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-        }
         /**
         * Set <code>idAttr</code> property in DSL way
         * @param idAttr new value
@@ -294,6 +272,15 @@ super(element);
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
         }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr new value
+        * @return <code> Keyword</code> instance
+        */
+        public Keyword wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
 
 /**
 * Returns the namespace URI of this amendable widget.
@@ -309,10 +296,10 @@ public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
         attrs.put("dictionary", getDictionaryAttr() != null ? getDictionaryAttr().getValue() : null);
+        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
-        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
 return attrs;
 }
 

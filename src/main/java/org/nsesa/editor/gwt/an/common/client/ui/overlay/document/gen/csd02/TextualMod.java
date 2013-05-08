@@ -1,27 +1,14 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.ModificationTypeComplexType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.TextualModsSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Old;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.New;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -141,12 +128,12 @@ super(element);
             */
             public java.util.List<Old> getOlds() {
                 java.util.List<Old> result = new ArrayList<Old>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Old".equalsIgnoreCase(widget.getType())) {
-            result.add((Old)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Old".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Old)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -154,7 +141,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Old> getOldList() {
-            return  getOlds();
+                return  getOlds();
             }
             /**
             * Add <code>java.util.List<Old></code> property in the list of properties
@@ -171,12 +158,12 @@ super(element);
             */
             public java.util.List<New> getNews() {
                 java.util.List<New> result = new ArrayList<New>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("New".equalsIgnoreCase(widget.getType())) {
-            result.add((New)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("New".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((New)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -184,7 +171,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<New> getNewList() {
-            return  getNews();
+                return  getNews();
             }
             /**
             * Add <code>java.util.List<New></code> property in the list of properties
@@ -196,33 +183,6 @@ super(element);
             }
 
 //Override all attributes methods to be conformant with DSL approach
-        /**
-        * Set <code>refersToAttr</code> property in DSL way
-        * @param refersToAttr new value
-        * @return <code> TextualMod</code> instance
-        */
-        public TextualMod refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-        }
-        /**
-        * Set <code>statusAttr</code> property in DSL way
-        * @param statusAttr new value
-        * @return <code> TextualMod</code> instance
-        */
-        public TextualMod statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr new value
-        * @return <code> TextualMod</code> instance
-        */
-        public TextualMod wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-        }
         /**
         * Set <code>exclusionAttr</code> property in DSL way
         * @param exclusionAttr new value
@@ -257,6 +217,33 @@ super(element);
         */
         public TextualMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+        }
+        /**
+        * Set <code>refersToAttr</code> property in DSL way
+        * @param refersToAttr new value
+        * @return <code> TextualMod</code> instance
+        */
+        public TextualMod refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+        }
+        /**
+        * Set <code>statusAttr</code> property in DSL way
+        * @param statusAttr new value
+        * @return <code> TextualMod</code> instance
+        */
+        public TextualMod statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr new value
+        * @return <code> TextualMod</code> instance
+        */
+        public TextualMod wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
         }
         /**

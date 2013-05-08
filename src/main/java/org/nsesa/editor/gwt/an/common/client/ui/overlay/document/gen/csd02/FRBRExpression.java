@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.CorePropertiesComplexType;
@@ -93,12 +80,12 @@ super(element);
             */
             public java.util.List<FRBRlanguage> getFRBRlanguages() {
                 java.util.List<FRBRlanguage> result = new ArrayList<FRBRlanguage>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRlanguage".equalsIgnoreCase(widget.getType())) {
-            result.add((FRBRlanguage)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRlanguage".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((FRBRlanguage)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -106,7 +93,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<FRBRlanguage> getFRBRlanguageList() {
-            return  getFRBRlanguages();
+                return  getFRBRlanguages();
             }
             /**
             * Add <code>java.util.List<FRBRlanguage></code> property in the list of properties
@@ -123,12 +110,12 @@ super(element);
             */
             public java.util.List<FRBRtranslation> getFRBRtranslations() {
                 java.util.List<FRBRtranslation> result = new ArrayList<FRBRtranslation>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRtranslation".equalsIgnoreCase(widget.getType())) {
-            result.add((FRBRtranslation)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("FRBRtranslation".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((FRBRtranslation)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -136,7 +123,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<FRBRtranslation> getFRBRtranslationList() {
-            return  getFRBRtranslations();
+                return  getFRBRtranslations();
             }
             /**
             * Add <code>java.util.List<FRBRtranslation></code> property in the list of properties

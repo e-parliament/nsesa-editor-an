@@ -1,23 +1,10 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.BooleanSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Source;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Destination;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Condition;
@@ -71,50 +58,15 @@ super(element);
 }
 
 // FIELDS ------------------
-    private StatusTypeSimpleType statusAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private String wildcardContentAttr;
+    private StatusTypeSimpleType statusAttr;
+    private AnyURISimpleType refersToAttr;
     private BooleanSimpleType exclusionAttr;
     private BooleanSimpleType incompleteAttr;
-    private String wildcardContentAttr;
-    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
 
-        /**
-        * Return <code>statusAttr</code> property
-        * @return statusAttr
-        */
-        public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-                statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-        }
-        /**
-        * Return <code>statusAttr</code> property in DSL way
-        * @return statusAttr
-        */
-        public StatusTypeSimpleType statusAttr() {
-        return  getStatusAttr();
-        }
-        /**
-        * Set <code>statusAttr</code> property
-        * @param statusAttr the new value
-        */
-        public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status",statusAttr.value());
-        }
-        /**
-        * Set <code>statusAttr</code> property in DSL way
-        * @param statusAttr the new value
-        * @return <code>JudicialArgumentTypeComplexType</code> instance
-        */
-        public JudicialArgumentTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-        }
         /**
         * Return <code>idAttr</code> property
         * @return idAttr
@@ -185,6 +137,112 @@ super(element);
         */
         public JudicialArgumentTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+        }
+        /**
+        * Return <code>wildcardContentAttr</code> property
+        * @return wildcardContentAttr
+        */
+        public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+        }
+        /**
+        * Return <code>wildcardContentAttr</code> property in DSL way
+        * @return wildcardContentAttr
+        */
+        public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property
+        * @param wildcardContentAttr the new value
+        */
+        public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent",wildcardContentAttr);
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr the new value
+        * @return <code>JudicialArgumentTypeComplexType</code> instance
+        */
+        public JudicialArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
+        /**
+        * Return <code>statusAttr</code> property
+        * @return statusAttr
+        */
+        public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+                statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        }
+
+        return statusAttr;
+        }
+        /**
+        * Return <code>statusAttr</code> property in DSL way
+        * @return statusAttr
+        */
+        public StatusTypeSimpleType statusAttr() {
+        return  getStatusAttr();
+        }
+        /**
+        * Set <code>statusAttr</code> property
+        * @param statusAttr the new value
+        */
+        public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status",statusAttr.value());
+        }
+        /**
+        * Set <code>statusAttr</code> property in DSL way
+        * @param statusAttr the new value
+        * @return <code>JudicialArgumentTypeComplexType</code> instance
+        */
+        public JudicialArgumentTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+        }
+        /**
+        * Return <code>refersToAttr</code> property
+        * @return refersToAttr
+        */
+        public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+                refersToAttr = new AnyURISimpleType();
+                refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+        }
+        /**
+        * Return <code>refersToAttr</code> property in DSL way
+        * @return refersToAttr
+        */
+        public AnyURISimpleType refersToAttr() {
+        return  getRefersToAttr();
+        }
+        /**
+        * Set <code>refersToAttr</code> property
+        * @param refersToAttr the new value
+        */
+        public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo",refersToAttr.getValue());
+        }
+        /**
+        * Set <code>refersToAttr</code> property in DSL way
+        * @param refersToAttr the new value
+        * @return <code>JudicialArgumentTypeComplexType</code> instance
+        */
+        public JudicialArgumentTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
         }
         /**
@@ -259,89 +317,18 @@ super(element);
         setIncompleteAttr(incompleteAttr);
         return this;
         }
-        /**
-        * Return <code>wildcardContentAttr</code> property
-        * @return wildcardContentAttr
-        */
-        public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-        }
-        /**
-        * Return <code>wildcardContentAttr</code> property in DSL way
-        * @return wildcardContentAttr
-        */
-        public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property
-        * @param wildcardContentAttr the new value
-        */
-        public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent",wildcardContentAttr);
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr the new value
-        * @return <code>JudicialArgumentTypeComplexType</code> instance
-        */
-        public JudicialArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-        }
-        /**
-        * Return <code>refersToAttr</code> property
-        * @return refersToAttr
-        */
-        public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-                refersToAttr = new AnyURISimpleType();
-                refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-        }
-        /**
-        * Return <code>refersToAttr</code> property in DSL way
-        * @return refersToAttr
-        */
-        public AnyURISimpleType refersToAttr() {
-        return  getRefersToAttr();
-        }
-        /**
-        * Set <code>refersToAttr</code> property
-        * @param refersToAttr the new value
-        */
-        public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo",refersToAttr.getValue());
-        }
-        /**
-        * Set <code>refersToAttr</code> property in DSL way
-        * @param refersToAttr the new value
-        * @return <code>JudicialArgumentTypeComplexType</code> instance
-        */
-        public JudicialArgumentTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-        }
             /**
             * Return <code>java.util.List<Source></code> property
             * @return The property as unmodifiable list
             */
             public java.util.List<Source> getSources() {
                 java.util.List<Source> result = new ArrayList<Source>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Source".equalsIgnoreCase(widget.getType())) {
-            result.add((Source)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Source".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Source)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -349,7 +336,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Source> getSourceList() {
-            return  getSources();
+                return  getSources();
             }
             /**
             * Add <code>java.util.List<Source></code> property in the list of properties
@@ -366,12 +353,12 @@ super(element);
             */
             public java.util.List<Destination> getDestinations() {
                 java.util.List<Destination> result = new ArrayList<Destination>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Destination".equalsIgnoreCase(widget.getType())) {
-            result.add((Destination)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Destination".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Destination)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -379,7 +366,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Destination> getDestinationList() {
-            return  getDestinations();
+                return  getDestinations();
             }
             /**
             * Add <code>java.util.List<Destination></code> property in the list of properties
@@ -396,13 +383,13 @@ super(element);
             */
             public Condition getCondition() {
                 Condition result = null;
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Condition".equalsIgnoreCase(widget.getType())) {
-            result = (Condition)widget;
-            break;
-            }
-            }
-            return result;
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Condition".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result = (Condition)widget;
+                        break;
+                    }
+                }
+                return result;
             }
             /**
             * Set <code>conditionElem</code> property in DSL way
@@ -413,7 +400,7 @@ super(element);
                     Condition result = getCondition();
                 // remove the child of the same type if exist
                 if (result != null) {
-                this.removeOverlayWidget(result);
+                    this.removeOverlayWidget(result);
                 }
                 this.addOverlayWidget(conditionElem);
 
@@ -470,13 +457,13 @@ return "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02";
 public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("exclusion", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
         attrs.put("incomplete", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
 return attrs;
 }

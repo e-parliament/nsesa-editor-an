@@ -1,36 +1,17 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.AnyOtherTypeComplexType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.DateSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import java.util.HashMap;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
+
 import java.util.LinkedHashMap;
-import java.util.Map;
-import com.google.gwt.user.client.DOM;
 
 /**
-* The element step is a metadata element specifying facts about a workflow step occurred to the document. For each event, a date, a type, an actor (and the corresponding role) that generated the action must be referenced. The outcome, too, can be specified.
+* The element step is a metadata element specifying facts about a workflow step occurred to the<br/> document. For each event, a date, a type, an actor (and the corresponding role) that generated the<br/> action must be referenced. The outcome, too, can be specified.
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
@@ -83,9 +64,9 @@ super(element);
 
 // FIELDS ------------------
     private DateSimpleType dateAttr;
+    private AnyURISimpleType outcomeAttr;
     private AnyURISimpleType asAttr;
     private AnyURISimpleType actorAttr;
-    private AnyURISimpleType outcomeAttr;
 
         /**
         * Return <code>dateAttr</code> property
@@ -121,6 +102,42 @@ super(element);
         */
         public Step dateAttr(final DateSimpleType dateAttr) {
         setDateAttr(dateAttr);
+        return this;
+        }
+        /**
+        * Return <code>outcomeAttr</code> property
+        * @return outcomeAttr
+        */
+        public AnyURISimpleType getOutcomeAttr() {
+        if (outcomeAttr == null) {
+                outcomeAttr = new AnyURISimpleType();
+                outcomeAttr.setValue(getElement().getAttribute("outcome"));
+        }
+
+        return outcomeAttr;
+        }
+        /**
+        * Return <code>outcomeAttr</code> property in DSL way
+        * @return outcomeAttr
+        */
+        public AnyURISimpleType outcomeAttr() {
+        return  getOutcomeAttr();
+        }
+        /**
+        * Set <code>outcomeAttr</code> property
+        * @param outcomeAttr the new value
+        */
+        public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
+        this.outcomeAttr = outcomeAttr;
+        getElement().setAttribute("outcome",outcomeAttr.getValue());
+        }
+        /**
+        * Set <code>outcomeAttr</code> property in DSL way
+        * @param outcomeAttr the new value
+        * @return <code>Step</code> instance
+        */
+        public Step outcomeAttr(final AnyURISimpleType outcomeAttr) {
+        setOutcomeAttr(outcomeAttr);
         return this;
         }
         /**
@@ -195,42 +212,6 @@ super(element);
         setActorAttr(actorAttr);
         return this;
         }
-        /**
-        * Return <code>outcomeAttr</code> property
-        * @return outcomeAttr
-        */
-        public AnyURISimpleType getOutcomeAttr() {
-        if (outcomeAttr == null) {
-                outcomeAttr = new AnyURISimpleType();
-                outcomeAttr.setValue(getElement().getAttribute("outcome"));
-        }
-
-        return outcomeAttr;
-        }
-        /**
-        * Return <code>outcomeAttr</code> property in DSL way
-        * @return outcomeAttr
-        */
-        public AnyURISimpleType outcomeAttr() {
-        return  getOutcomeAttr();
-        }
-        /**
-        * Set <code>outcomeAttr</code> property
-        * @param outcomeAttr the new value
-        */
-        public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
-        this.outcomeAttr = outcomeAttr;
-        getElement().setAttribute("outcome",outcomeAttr.getValue());
-        }
-        /**
-        * Set <code>outcomeAttr</code> property in DSL way
-        * @param outcomeAttr the new value
-        * @return <code>Step</code> instance
-        */
-        public Step outcomeAttr(final AnyURISimpleType outcomeAttr) {
-        setOutcomeAttr(outcomeAttr);
-        return this;
-        }
 //Override all attributes methods to be conformant with DSL approach
         /**
         * Set <code>hrefAttr</code> property in DSL way
@@ -283,9 +264,9 @@ public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
         attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
+        attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
         attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
         attrs.put("actor", getActorAttr() != null ? getActorAttr().getValue() : null);
-        attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
 return attrs;
 }
 

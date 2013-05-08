@@ -1,23 +1,10 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.ReferenceTypeComplexType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,7 +17,7 @@ import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
-* The element TLCOrganization is a metadata reference to the Akoma Ntoso URI of an ontology instance of the class Organization
+* The element TLCOrganization is a metadata reference to the Akoma Ntoso URI of an ontology<br/> instance of the class Organization
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
@@ -64,11 +51,11 @@ setType("TLCOrganization");
 /**
 * Constructor with required attributes
 */
-public TLCOrganization(AnyURISimpleType hrefAttr,IDSimpleType idAttr,StringSimpleType showAsAttr) {
+public TLCOrganization(AnyURISimpleType hrefAttr,StringSimpleType showAsAttr,IDSimpleType idAttr) {
 this();
 setHrefAttr(hrefAttr);
-setIdAttr(idAttr);
 setShowAsAttr(showAsAttr);
+setIdAttr(idAttr);
 }
 
 
@@ -92,21 +79,12 @@ super(element);
         return this;
         }
         /**
-        * Set <code>idAttr</code> property in DSL way
-        * @param idAttr new value
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr new value
         * @return <code> TLCOrganization</code> instance
         */
-        public TLCOrganization idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-        }
-        /**
-        * Set <code>evolvingIdAttr</code> property in DSL way
-        * @param evolvingIdAttr new value
-        * @return <code> TLCOrganization</code> instance
-        */
-        public TLCOrganization evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+        public TLCOrganization wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
         }
         /**
@@ -128,12 +106,21 @@ super(element);
         return this;
         }
         /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr new value
+        * Set <code>idAttr</code> property in DSL way
+        * @param idAttr new value
         * @return <code> TLCOrganization</code> instance
         */
-        public TLCOrganization wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+        public TLCOrganization idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+        }
+        /**
+        * Set <code>evolvingIdAttr</code> property in DSL way
+        * @param evolvingIdAttr new value
+        * @return <code> TLCOrganization</code> instance
+        */
+        public TLCOrganization evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
         }
 

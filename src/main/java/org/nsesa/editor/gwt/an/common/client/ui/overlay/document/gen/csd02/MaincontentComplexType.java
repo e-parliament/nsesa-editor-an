@@ -1,88 +1,15 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.ComponentRef;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NCNameSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Hcontainer;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Foreign;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Block;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Container;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Clause;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Section;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Part;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Paragraph;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Chapter;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Title;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Article;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Book;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Tome;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Division;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.List;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Point;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Indent;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Alinea;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Subsection;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Subpart;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Subparagraph;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Subchapter;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Subtitle;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Subclause;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Sublist;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BlockList;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Tblock;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Ul;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Ol;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Table;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.P;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.AdministrationOfOath;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.RollCall;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Prayers;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.OralStatements;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.WrittenStatements;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.PersonalStatements;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.MinisterialStatements;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Resolutions;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.NationalInterest;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.DeclarationOfVote;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Communication;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Petitions;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Papers;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.NoticesOfMotion;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Questions;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Address;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.ProceduralMotions;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.PointOfOrder;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Adjournment;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.DebateSection;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Div;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import java.util.HashMap;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.*;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 
 /**
 * the complex type maincontent is used by container elements that can contain basically any other Akoma Ntoso structure
@@ -189,17 +116,17 @@ super(element);
 }
 
 // FIELDS ------------------
-    private AnyURISimpleType alternativeToAttr;
+    private StatusTypeSimpleType statusAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
-    private String wildcardContentAttr;
-    private LanguageSimpleType langAttr;
-    private NCNameSimpleType spaceAttr;
-    private StatusTypeSimpleType statusAttr;
+    private AnyURISimpleType alternativeToAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private String wildcardContentAttr;
     private AnyURISimpleType refersToAttr;
+    private LanguageSimpleType langAttr;
+    private NCNameSimpleType spaceAttr;
     private AnyURISimpleType periodAttr;
 
             /**
@@ -233,39 +160,38 @@ super(element);
             }
 
         /**
-        * Return <code>alternativeToAttr</code> property
-        * @return alternativeToAttr
+        * Return <code>statusAttr</code> property
+        * @return statusAttr
         */
-        public AnyURISimpleType getAlternativeToAttr() {
-        if (alternativeToAttr == null) {
-                alternativeToAttr = new AnyURISimpleType();
-                alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
+        public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+                statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
         }
 
-        return alternativeToAttr;
+        return statusAttr;
         }
         /**
-        * Return <code>alternativeToAttr</code> property in DSL way
-        * @return alternativeToAttr
+        * Return <code>statusAttr</code> property in DSL way
+        * @return statusAttr
         */
-        public AnyURISimpleType alternativeToAttr() {
-        return  getAlternativeToAttr();
+        public StatusTypeSimpleType statusAttr() {
+        return  getStatusAttr();
         }
         /**
-        * Set <code>alternativeToAttr</code> property
-        * @param alternativeToAttr the new value
+        * Set <code>statusAttr</code> property
+        * @param statusAttr the new value
         */
-        public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
-        getElement().setAttribute("alternativeTo",alternativeToAttr.getValue());
+        public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status",statusAttr.value());
         }
         /**
-        * Set <code>alternativeToAttr</code> property in DSL way
-        * @param alternativeToAttr the new value
+        * Set <code>statusAttr</code> property in DSL way
+        * @param statusAttr the new value
         * @return <code>MaincontentComplexType</code> instance
         */
-        public MaincontentComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+        public MaincontentComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
         }
         /**
@@ -377,145 +303,39 @@ super(element);
         return this;
         }
         /**
-        * Return <code>wildcardContentAttr</code> property
-        * @return wildcardContentAttr
+        * Return <code>alternativeToAttr</code> property
+        * @return alternativeToAttr
         */
-        public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+        public AnyURISimpleType getAlternativeToAttr() {
+        if (alternativeToAttr == null) {
+                alternativeToAttr = new AnyURISimpleType();
+                alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
         }
 
-        return wildcardContentAttr;
+        return alternativeToAttr;
         }
         /**
-        * Return <code>wildcardContentAttr</code> property in DSL way
-        * @return wildcardContentAttr
+        * Return <code>alternativeToAttr</code> property in DSL way
+        * @return alternativeToAttr
         */
-        public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
+        public AnyURISimpleType alternativeToAttr() {
+        return  getAlternativeToAttr();
         }
         /**
-        * Set <code>wildcardContentAttr</code> property
-        * @param wildcardContentAttr the new value
+        * Set <code>alternativeToAttr</code> property
+        * @param alternativeToAttr the new value
         */
-        public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent",wildcardContentAttr);
+        public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+        getElement().setAttribute("alternativeTo",alternativeToAttr.getValue());
         }
         /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr the new value
+        * Set <code>alternativeToAttr</code> property in DSL way
+        * @param alternativeToAttr the new value
         * @return <code>MaincontentComplexType</code> instance
         */
-        public MaincontentComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-        }
-        /**
-        * Return <code>langAttr</code> property
-        * @return langAttr
-        */
-        public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-                langAttr = new LanguageSimpleType();
-                langAttr.setValue(getElement().getAttribute("lang"));
-        }
-
-        return langAttr;
-        }
-        /**
-        * Return <code>langAttr</code> property in DSL way
-        * @return langAttr
-        */
-        public LanguageSimpleType langAttr() {
-        return  getLangAttr();
-        }
-        /**
-        * Set <code>langAttr</code> property
-        * @param langAttr the new value
-        */
-        public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-        getElement().setAttribute("lang",langAttr.getValue());
-        }
-        /**
-        * Set <code>langAttr</code> property in DSL way
-        * @param langAttr the new value
-        * @return <code>MaincontentComplexType</code> instance
-        */
-        public MaincontentComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-        }
-        /**
-        * Return <code>spaceAttr</code> property
-        * @return spaceAttr
-        */
-        public NCNameSimpleType getSpaceAttr() {
-        if (spaceAttr == null) {
-                spaceAttr = new NCNameSimpleType();
-                spaceAttr.setValue(getElement().getAttribute("space"));
-        }
-
-        return spaceAttr;
-        }
-        /**
-        * Return <code>spaceAttr</code> property in DSL way
-        * @return spaceAttr
-        */
-        public NCNameSimpleType spaceAttr() {
-        return  getSpaceAttr();
-        }
-        /**
-        * Set <code>spaceAttr</code> property
-        * @param spaceAttr the new value
-        */
-        public void setSpaceAttr(final NCNameSimpleType spaceAttr) {
-        this.spaceAttr = spaceAttr;
-        getElement().setAttribute("space",spaceAttr.getValue());
-        }
-        /**
-        * Set <code>spaceAttr</code> property in DSL way
-        * @param spaceAttr the new value
-        * @return <code>MaincontentComplexType</code> instance
-        */
-        public MaincontentComplexType spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-        }
-        /**
-        * Return <code>statusAttr</code> property
-        * @return statusAttr
-        */
-        public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-                statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-        }
-        /**
-        * Return <code>statusAttr</code> property in DSL way
-        * @return statusAttr
-        */
-        public StatusTypeSimpleType statusAttr() {
-        return  getStatusAttr();
-        }
-        /**
-        * Set <code>statusAttr</code> property
-        * @param statusAttr the new value
-        */
-        public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status",statusAttr.value());
-        }
-        /**
-        * Set <code>statusAttr</code> property in DSL way
-        * @param statusAttr the new value
-        * @return <code>MaincontentComplexType</code> instance
-        */
-        public MaincontentComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+        public MaincontentComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
         }
         /**
@@ -591,6 +411,41 @@ super(element);
         return this;
         }
         /**
+        * Return <code>wildcardContentAttr</code> property
+        * @return wildcardContentAttr
+        */
+        public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+        }
+        /**
+        * Return <code>wildcardContentAttr</code> property in DSL way
+        * @return wildcardContentAttr
+        */
+        public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property
+        * @param wildcardContentAttr the new value
+        */
+        public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent",wildcardContentAttr);
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr the new value
+        * @return <code>MaincontentComplexType</code> instance
+        */
+        public MaincontentComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
+        /**
         * Return <code>refersToAttr</code> property
         * @return refersToAttr
         */
@@ -624,6 +479,78 @@ super(element);
         */
         public MaincontentComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
+        return this;
+        }
+        /**
+        * Return <code>langAttr</code> property
+        * @return langAttr
+        */
+        public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+                langAttr = new LanguageSimpleType();
+                langAttr.setValue(getElement().getAttribute("lang"));
+        }
+
+        return langAttr;
+        }
+        /**
+        * Return <code>langAttr</code> property in DSL way
+        * @return langAttr
+        */
+        public LanguageSimpleType langAttr() {
+        return  getLangAttr();
+        }
+        /**
+        * Set <code>langAttr</code> property
+        * @param langAttr the new value
+        */
+        public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+        getElement().setAttribute("lang",langAttr.getValue());
+        }
+        /**
+        * Set <code>langAttr</code> property in DSL way
+        * @param langAttr the new value
+        * @return <code>MaincontentComplexType</code> instance
+        */
+        public MaincontentComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+        }
+        /**
+        * Return <code>spaceAttr</code> property
+        * @return spaceAttr
+        */
+        public NCNameSimpleType getSpaceAttr() {
+        if (spaceAttr == null) {
+                spaceAttr = new NCNameSimpleType();
+                spaceAttr.setValue(getElement().getAttribute("space"));
+        }
+
+        return spaceAttr;
+        }
+        /**
+        * Return <code>spaceAttr</code> property in DSL way
+        * @return spaceAttr
+        */
+        public NCNameSimpleType spaceAttr() {
+        return  getSpaceAttr();
+        }
+        /**
+        * Set <code>spaceAttr</code> property
+        * @param spaceAttr the new value
+        */
+        public void setSpaceAttr(final NCNameSimpleType spaceAttr) {
+        this.spaceAttr = spaceAttr;
+        getElement().setAttribute("space",spaceAttr.getValue());
+        }
+        /**
+        * Set <code>spaceAttr</code> property in DSL way
+        * @param spaceAttr the new value
+        * @return <code>MaincontentComplexType</code> instance
+        */
+        public MaincontentComplexType spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
         return this;
         }
         /**
@@ -2237,17 +2164,17 @@ return "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02";
 public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
-        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
-        attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
 return attrs;
 }

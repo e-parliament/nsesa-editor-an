@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.MarkerreqComplexType;
@@ -32,7 +19,7 @@ import java.util.Map;
 import com.google.gwt.user.client.DOM;
 
 /**
-* the element marker is a generic element for a marker. It can be placed in a block instead of any of the other markers. The attribute name is required and gives a name to the element.
+* the element marker is a generic element for a marker. It can be placed in a block instead of<br/> any of the other markers. The attribute name is required and gives a name to the element.
 * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
 */
 
@@ -121,6 +108,42 @@ super(element);
         }
 //Override all attributes methods to be conformant with DSL approach
         /**
+        * Set <code>alternativeToAttr</code> property in DSL way
+        * @param alternativeToAttr new value
+        * @return <code> Marker</code> instance
+        */
+        public Marker alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+        }
+        /**
+        * Set <code>classAttr</code> property in DSL way
+        * @param classAttr new value
+        * @return <code> Marker</code> instance
+        */
+        public Marker classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+        }
+        /**
+        * Set <code>styleAttr</code> property in DSL way
+        * @param styleAttr new value
+        * @return <code> Marker</code> instance
+        */
+        public Marker styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
+        return this;
+        }
+        /**
+        * Set <code>titleAttr</code> property in DSL way
+        * @param titleAttr new value
+        * @return <code> Marker</code> instance
+        */
+        public Marker titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
+        return this;
+        }
+        /**
         * Set <code>refersToAttr</code> property in DSL way
         * @param refersToAttr new value
         * @return <code> Marker</code> instance
@@ -166,48 +189,12 @@ super(element);
         return this;
         }
         /**
-        * Set <code>alternativeToAttr</code> property in DSL way
-        * @param alternativeToAttr new value
-        * @return <code> Marker</code> instance
-        */
-        public Marker alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-        }
-        /**
         * Set <code>statusAttr</code> property in DSL way
         * @param statusAttr new value
         * @return <code> Marker</code> instance
         */
         public Marker statusAttr(final StatusTypeSimpleType statusAttr) {
         setStatusAttr(statusAttr);
-        return this;
-        }
-        /**
-        * Set <code>classAttr</code> property in DSL way
-        * @param classAttr new value
-        * @return <code> Marker</code> instance
-        */
-        public Marker classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-        }
-        /**
-        * Set <code>styleAttr</code> property in DSL way
-        * @param styleAttr new value
-        * @return <code> Marker</code> instance
-        */
-        public Marker styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-        }
-        /**
-        * Set <code>titleAttr</code> property in DSL way
-        * @param titleAttr new value
-        * @return <code> Marker</code> instance
-        */
-        public Marker titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
         return this;
         }
         /**

@@ -1,16 +1,3 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
@@ -141,12 +128,12 @@ super(element);
             */
             public java.util.List<Original> getOriginals() {
                 java.util.List<Original> result = new ArrayList<Original>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Original".equalsIgnoreCase(widget.getType())) {
-            result.add((Original)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Original".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Original)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -154,7 +141,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Original> getOriginalList() {
-            return  getOriginals();
+                return  getOriginals();
             }
             /**
             * Add <code>java.util.List<Original></code> property in the list of properties
@@ -171,12 +158,12 @@ super(element);
             */
             public java.util.List<PassiveRef> getPassiveRefs() {
                 java.util.List<PassiveRef> result = new ArrayList<PassiveRef>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("PassiveRef".equalsIgnoreCase(widget.getType())) {
-            result.add((PassiveRef)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("PassiveRef".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((PassiveRef)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -184,7 +171,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<PassiveRef> getPassiveRefList() {
-            return  getPassiveRefs();
+                return  getPassiveRefs();
             }
             /**
             * Add <code>java.util.List<PassiveRef></code> property in the list of properties
@@ -201,12 +188,12 @@ super(element);
             */
             public java.util.List<ActiveRef> getActiveRefs() {
                 java.util.List<ActiveRef> result = new ArrayList<ActiveRef>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ActiveRef".equalsIgnoreCase(widget.getType())) {
-            result.add((ActiveRef)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("ActiveRef".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((ActiveRef)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -214,7 +201,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<ActiveRef> getActiveRefList() {
-            return  getActiveRefs();
+                return  getActiveRefs();
             }
             /**
             * Add <code>java.util.List<ActiveRef></code> property in the list of properties
@@ -231,12 +218,12 @@ super(element);
             */
             public java.util.List<Jurisprudence> getJurisprudences() {
                 java.util.List<Jurisprudence> result = new ArrayList<Jurisprudence>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Jurisprudence".equalsIgnoreCase(widget.getType())) {
-            result.add((Jurisprudence)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("Jurisprudence".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((Jurisprudence)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -244,7 +231,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<Jurisprudence> getJurisprudenceList() {
-            return  getJurisprudences();
+                return  getJurisprudences();
             }
             /**
             * Add <code>java.util.List<Jurisprudence></code> property in the list of properties
@@ -261,12 +248,12 @@ super(element);
             */
             public java.util.List<HasAttachment> getHasAttachments() {
                 java.util.List<HasAttachment> result = new ArrayList<HasAttachment>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("HasAttachment".equalsIgnoreCase(widget.getType())) {
-            result.add((HasAttachment)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("HasAttachment".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((HasAttachment)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -274,7 +261,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<HasAttachment> getHasAttachmentList() {
-            return  getHasAttachments();
+                return  getHasAttachments();
             }
             /**
             * Add <code>java.util.List<HasAttachment></code> property in the list of properties
@@ -291,12 +278,12 @@ super(element);
             */
             public java.util.List<AttachmentOf> getAttachmentOfs() {
                 java.util.List<AttachmentOf> result = new ArrayList<AttachmentOf>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("AttachmentOf".equalsIgnoreCase(widget.getType())) {
-            result.add((AttachmentOf)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("AttachmentOf".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((AttachmentOf)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -304,7 +291,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<AttachmentOf> getAttachmentOfList() {
-            return  getAttachmentOfs();
+                return  getAttachmentOfs();
             }
             /**
             * Add <code>java.util.List<AttachmentOf></code> property in the list of properties
@@ -321,12 +308,12 @@ super(element);
             */
             public java.util.List<TLCPerson> getTLCPersons() {
                 java.util.List<TLCPerson> result = new ArrayList<TLCPerson>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TLCPerson".equalsIgnoreCase(widget.getType())) {
-            result.add((TLCPerson)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("TLCPerson".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((TLCPerson)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -334,7 +321,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<TLCPerson> getTLCPersonList() {
-            return  getTLCPersons();
+                return  getTLCPersons();
             }
             /**
             * Add <code>java.util.List<TLCPerson></code> property in the list of properties
@@ -351,12 +338,12 @@ super(element);
             */
             public java.util.List<TLCOrganization> getTLCOrganizations() {
                 java.util.List<TLCOrganization> result = new ArrayList<TLCOrganization>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TLCOrganization".equalsIgnoreCase(widget.getType())) {
-            result.add((TLCOrganization)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("TLCOrganization".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((TLCOrganization)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -364,7 +351,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<TLCOrganization> getTLCOrganizationList() {
-            return  getTLCOrganizations();
+                return  getTLCOrganizations();
             }
             /**
             * Add <code>java.util.List<TLCOrganization></code> property in the list of properties
@@ -381,12 +368,12 @@ super(element);
             */
             public java.util.List<TLCConcept> getTLCConcepts() {
                 java.util.List<TLCConcept> result = new ArrayList<TLCConcept>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TLCConcept".equalsIgnoreCase(widget.getType())) {
-            result.add((TLCConcept)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("TLCConcept".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((TLCConcept)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -394,7 +381,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<TLCConcept> getTLCConceptList() {
-            return  getTLCConcepts();
+                return  getTLCConcepts();
             }
             /**
             * Add <code>java.util.List<TLCConcept></code> property in the list of properties
@@ -411,12 +398,12 @@ super(element);
             */
             public java.util.List<TLCObject> getTLCObjects() {
                 java.util.List<TLCObject> result = new ArrayList<TLCObject>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TLCObject".equalsIgnoreCase(widget.getType())) {
-            result.add((TLCObject)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("TLCObject".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((TLCObject)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -424,7 +411,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<TLCObject> getTLCObjectList() {
-            return  getTLCObjects();
+                return  getTLCObjects();
             }
             /**
             * Add <code>java.util.List<TLCObject></code> property in the list of properties
@@ -441,12 +428,12 @@ super(element);
             */
             public java.util.List<TLCEvent> getTLCEvents() {
                 java.util.List<TLCEvent> result = new ArrayList<TLCEvent>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TLCEvent".equalsIgnoreCase(widget.getType())) {
-            result.add((TLCEvent)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("TLCEvent".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((TLCEvent)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -454,7 +441,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<TLCEvent> getTLCEventList() {
-            return  getTLCEvents();
+                return  getTLCEvents();
             }
             /**
             * Add <code>java.util.List<TLCEvent></code> property in the list of properties
@@ -471,12 +458,12 @@ super(element);
             */
             public java.util.List<TLCLocation> getTLCLocations() {
                 java.util.List<TLCLocation> result = new ArrayList<TLCLocation>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TLCLocation".equalsIgnoreCase(widget.getType())) {
-            result.add((TLCLocation)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("TLCLocation".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((TLCLocation)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -484,7 +471,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<TLCLocation> getTLCLocationList() {
-            return  getTLCLocations();
+                return  getTLCLocations();
             }
             /**
             * Add <code>java.util.List<TLCLocation></code> property in the list of properties
@@ -501,12 +488,12 @@ super(element);
             */
             public java.util.List<TLCProcess> getTLCProcesses() {
                 java.util.List<TLCProcess> result = new ArrayList<TLCProcess>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TLCProcess".equalsIgnoreCase(widget.getType())) {
-            result.add((TLCProcess)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("TLCProcess".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((TLCProcess)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -514,7 +501,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<TLCProcess> getTLCProcessList() {
-            return  getTLCProcesses();
+                return  getTLCProcesses();
             }
             /**
             * Add <code>java.util.List<TLCProcess></code> property in the list of properties
@@ -531,12 +518,12 @@ super(element);
             */
             public java.util.List<TLCRole> getTLCRoles() {
                 java.util.List<TLCRole> result = new ArrayList<TLCRole>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TLCRole".equalsIgnoreCase(widget.getType())) {
-            result.add((TLCRole)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("TLCRole".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((TLCRole)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -544,7 +531,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<TLCRole> getTLCRoleList() {
-            return  getTLCRoles();
+                return  getTLCRoles();
             }
             /**
             * Add <code>java.util.List<TLCRole></code> property in the list of properties
@@ -561,12 +548,12 @@ super(element);
             */
             public java.util.List<TLCTerm> getTLCTerms() {
                 java.util.List<TLCTerm> result = new ArrayList<TLCTerm>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TLCTerm".equalsIgnoreCase(widget.getType())) {
-            result.add((TLCTerm)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("TLCTerm".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((TLCTerm)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -574,7 +561,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<TLCTerm> getTLCTermList() {
-            return  getTLCTerms();
+                return  getTLCTerms();
             }
             /**
             * Add <code>java.util.List<TLCTerm></code> property in the list of properties
@@ -591,12 +578,12 @@ super(element);
             */
             public java.util.List<TLCReference> getTLCReferences() {
                 java.util.List<TLCReference> result = new ArrayList<TLCReference>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TLCReference".equalsIgnoreCase(widget.getType())) {
-            result.add((TLCReference)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("TLCReference".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((TLCReference)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -604,7 +591,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<TLCReference> getTLCReferenceList() {
-            return  getTLCReferences();
+                return  getTLCReferences();
             }
             /**
             * Add <code>java.util.List<TLCReference></code> property in the list of properties

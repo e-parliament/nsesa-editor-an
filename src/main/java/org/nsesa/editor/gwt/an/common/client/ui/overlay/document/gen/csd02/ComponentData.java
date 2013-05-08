@@ -1,22 +1,9 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.ComponentData;
 import com.google.gwt.dom.client.Element;
 import java.util.ArrayList;
@@ -68,12 +55,12 @@ setType("componentData");
 /**
 * Constructor with required attributes
 */
-public ComponentData(IDSimpleType idAttr,StringSimpleType showAsAttr,AnyURISimpleType hrefAttr,StringSimpleType nameAttr) {
+public ComponentData(AnyURISimpleType hrefAttr,StringSimpleType nameAttr,IDSimpleType idAttr,StringSimpleType showAsAttr) {
 this();
-setIdAttr(idAttr);
-setShowAsAttr(showAsAttr);
 setHrefAttr(hrefAttr);
 setNameAttr(nameAttr);
+setIdAttr(idAttr);
+setShowAsAttr(showAsAttr);
 }
 
 
@@ -85,14 +72,121 @@ super(element);
 }
 
 // FIELDS ------------------
+    private String wildcardContentAttr;
+    private AnyURISimpleType hrefAttr;
+    private StringSimpleType nameAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
-    private AnyURISimpleType hrefAttr;
-    private StringSimpleType nameAttr;
-    private String wildcardContentAttr;
 
+        /**
+        * Return <code>wildcardContentAttr</code> property
+        * @return wildcardContentAttr
+        */
+        public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+        }
+        /**
+        * Return <code>wildcardContentAttr</code> property in DSL way
+        * @return wildcardContentAttr
+        */
+        public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property
+        * @param wildcardContentAttr the new value
+        */
+        public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent",wildcardContentAttr);
+        }
+        /**
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr the new value
+        * @return <code>ComponentData</code> instance
+        */
+        public ComponentData wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+        }
+        /**
+        * Return <code>hrefAttr</code> property
+        * @return hrefAttr
+        */
+        public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+                hrefAttr = new AnyURISimpleType();
+                hrefAttr.setValue(getElement().getAttribute("href"));
+        }
+
+        return hrefAttr;
+        }
+        /**
+        * Return <code>hrefAttr</code> property in DSL way
+        * @return hrefAttr
+        */
+        public AnyURISimpleType hrefAttr() {
+        return  getHrefAttr();
+        }
+        /**
+        * Set <code>hrefAttr</code> property
+        * @param hrefAttr the new value
+        */
+        public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+        getElement().setAttribute("href",hrefAttr.getValue());
+        }
+        /**
+        * Set <code>hrefAttr</code> property in DSL way
+        * @param hrefAttr the new value
+        * @return <code>ComponentData</code> instance
+        */
+        public ComponentData hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+        }
+        /**
+        * Return <code>nameAttr</code> property
+        * @return nameAttr
+        */
+        public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+                nameAttr = new StringSimpleType();
+                nameAttr.setValue(getElement().getAttribute("name"));
+        }
+
+        return nameAttr;
+        }
+        /**
+        * Return <code>nameAttr</code> property in DSL way
+        * @return nameAttr
+        */
+        public StringSimpleType nameAttr() {
+        return  getNameAttr();
+        }
+        /**
+        * Set <code>nameAttr</code> property
+        * @param nameAttr the new value
+        */
+        public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+        getElement().setAttribute("name",nameAttr.getValue());
+        }
+        /**
+        * Set <code>nameAttr</code> property in DSL way
+        * @param nameAttr the new value
+        * @return <code>ComponentData</code> instance
+        */
+        public ComponentData nameAttr(final StringSimpleType nameAttr) {
+        setNameAttr(nameAttr);
+        return this;
+        }
         /**
         * Return <code>idAttr</code> property
         * @return idAttr
@@ -237,125 +331,18 @@ super(element);
         setShortFormAttr(shortFormAttr);
         return this;
         }
-        /**
-        * Return <code>hrefAttr</code> property
-        * @return hrefAttr
-        */
-        public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-                hrefAttr = new AnyURISimpleType();
-                hrefAttr.setValue(getElement().getAttribute("href"));
-        }
-
-        return hrefAttr;
-        }
-        /**
-        * Return <code>hrefAttr</code> property in DSL way
-        * @return hrefAttr
-        */
-        public AnyURISimpleType hrefAttr() {
-        return  getHrefAttr();
-        }
-        /**
-        * Set <code>hrefAttr</code> property
-        * @param hrefAttr the new value
-        */
-        public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-        getElement().setAttribute("href",hrefAttr.getValue());
-        }
-        /**
-        * Set <code>hrefAttr</code> property in DSL way
-        * @param hrefAttr the new value
-        * @return <code>ComponentData</code> instance
-        */
-        public ComponentData hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-        }
-        /**
-        * Return <code>nameAttr</code> property
-        * @return nameAttr
-        */
-        public StringSimpleType getNameAttr() {
-        if (nameAttr == null) {
-                nameAttr = new StringSimpleType();
-                nameAttr.setValue(getElement().getAttribute("name"));
-        }
-
-        return nameAttr;
-        }
-        /**
-        * Return <code>nameAttr</code> property in DSL way
-        * @return nameAttr
-        */
-        public StringSimpleType nameAttr() {
-        return  getNameAttr();
-        }
-        /**
-        * Set <code>nameAttr</code> property
-        * @param nameAttr the new value
-        */
-        public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-        getElement().setAttribute("name",nameAttr.getValue());
-        }
-        /**
-        * Set <code>nameAttr</code> property in DSL way
-        * @param nameAttr the new value
-        * @return <code>ComponentData</code> instance
-        */
-        public ComponentData nameAttr(final StringSimpleType nameAttr) {
-        setNameAttr(nameAttr);
-        return this;
-        }
-        /**
-        * Return <code>wildcardContentAttr</code> property
-        * @return wildcardContentAttr
-        */
-        public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-        }
-        /**
-        * Return <code>wildcardContentAttr</code> property in DSL way
-        * @return wildcardContentAttr
-        */
-        public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property
-        * @param wildcardContentAttr the new value
-        */
-        public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent",wildcardContentAttr);
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr the new value
-        * @return <code>ComponentData</code> instance
-        */
-        public ComponentData wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-        }
             /**
             * Return <code>java.util.List<ComponentData></code> property
             * @return The property as unmodifiable list
             */
             public java.util.List<ComponentData> getComponentDatas() {
                 java.util.List<ComponentData> result = new ArrayList<ComponentData>();
-            for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ComponentData".equalsIgnoreCase(widget.getType())) {
-            result.add((ComponentData)widget);
-            }
-            }
-            return java.util.Collections.unmodifiableList(result);
+                for (OverlayWidget widget : getChildOverlayWidgets()) {
+                    if ("ComponentData".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                        result.add((ComponentData)widget);
+                    }
+                }
+                return java.util.Collections.unmodifiableList(result);
             }
 
             /**
@@ -363,7 +350,7 @@ super(element);
             * @return The property as unmodifiable list
             */
             public java.util.List<ComponentData> getComponentDataList() {
-            return  getComponentDatas();
+                return  getComponentDatas();
             }
             /**
             * Add <code>java.util.List<ComponentData></code> property in the list of properties
@@ -389,13 +376,13 @@ return "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02";
 public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
-        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
 return attrs;
 }
 

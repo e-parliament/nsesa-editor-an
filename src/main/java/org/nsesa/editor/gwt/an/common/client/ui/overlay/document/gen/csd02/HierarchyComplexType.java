@@ -1,62 +1,14 @@
-/**
- * Copyright 2013 European Parliament
- *
- * Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
- * You may not use this work except in compliance with the Licence.
- * You may obtain a copy of the Licence at:
- *
- * http://joinup.ec.europa.eu/software/page/eupl
- *
- * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the Licence for the specific language governing permissions and limitations under the Licence.
- */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Content;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.StatusTypeSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NCNameSimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Intro;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Wrap;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.ComponentRef;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Hcontainer;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Clause;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Section;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Part;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Paragraph;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Chapter;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Title;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Article;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Book;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Tome;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Division;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.List;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Point;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Indent;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Alinea;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Subsection;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Subpart;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Subparagraph;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Subchapter;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Subtitle;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Subclause;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Sublist;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import java.util.HashMap;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.*;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 
 /**
 * The complex type hierarchy is used by most or all the hierarchical elements of act-like documents.
@@ -132,17 +84,17 @@ super(element);
 }
 
 // FIELDS ------------------
-    private StatusTypeSimpleType statusAttr;
-    private AnyURISimpleType refersToAttr;
-    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType alternativeToAttr;
+    private LanguageSimpleType langAttr;
+    private NCNameSimpleType spaceAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
-    private LanguageSimpleType langAttr;
-    private NCNameSimpleType spaceAttr;
+    private String wildcardContentAttr;
+    private AnyURISimpleType refersToAttr;
+    private StatusTypeSimpleType statusAttr;
+    private AnyURISimpleType alternativeToAttr;
     private AnyURISimpleType periodAttr;
 
             /**
@@ -174,112 +126,6 @@ super(element);
 
                 return content_Elem;
             }
-        /**
-        * Return <code>statusAttr</code> property
-        * @return statusAttr
-        */
-        public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-                statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-        }
-        /**
-        * Return <code>statusAttr</code> property in DSL way
-        * @return statusAttr
-        */
-        public StatusTypeSimpleType statusAttr() {
-        return  getStatusAttr();
-        }
-        /**
-        * Set <code>statusAttr</code> property
-        * @param statusAttr the new value
-        */
-        public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status",statusAttr.value());
-        }
-        /**
-        * Set <code>statusAttr</code> property in DSL way
-        * @param statusAttr the new value
-        * @return <code>HierarchyComplexType</code> instance
-        */
-        public HierarchyComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-        }
-        /**
-        * Return <code>refersToAttr</code> property
-        * @return refersToAttr
-        */
-        public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-                refersToAttr = new AnyURISimpleType();
-                refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-        }
-        /**
-        * Return <code>refersToAttr</code> property in DSL way
-        * @return refersToAttr
-        */
-        public AnyURISimpleType refersToAttr() {
-        return  getRefersToAttr();
-        }
-        /**
-        * Set <code>refersToAttr</code> property
-        * @param refersToAttr the new value
-        */
-        public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo",refersToAttr.getValue());
-        }
-        /**
-        * Set <code>refersToAttr</code> property in DSL way
-        * @param refersToAttr the new value
-        * @return <code>HierarchyComplexType</code> instance
-        */
-        public HierarchyComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-        }
-        /**
-        * Return <code>wildcardContentAttr</code> property
-        * @return wildcardContentAttr
-        */
-        public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-        }
-        /**
-        * Return <code>wildcardContentAttr</code> property in DSL way
-        * @return wildcardContentAttr
-        */
-        public String wildcardContentAttr() {
-        return  getWildcardContentAttr();
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property
-        * @param wildcardContentAttr the new value
-        */
-        public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent",wildcardContentAttr);
-        }
-        /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr the new value
-        * @return <code>HierarchyComplexType</code> instance
-        */
-        public HierarchyComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-        }
         /**
         * Return <code>idAttr</code> property
         * @return idAttr
@@ -353,39 +199,75 @@ super(element);
         return this;
         }
         /**
-        * Return <code>alternativeToAttr</code> property
-        * @return alternativeToAttr
+        * Return <code>langAttr</code> property
+        * @return langAttr
         */
-        public AnyURISimpleType getAlternativeToAttr() {
-        if (alternativeToAttr == null) {
-                alternativeToAttr = new AnyURISimpleType();
-                alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
+        public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+                langAttr = new LanguageSimpleType();
+                langAttr.setValue(getElement().getAttribute("lang"));
         }
 
-        return alternativeToAttr;
+        return langAttr;
         }
         /**
-        * Return <code>alternativeToAttr</code> property in DSL way
-        * @return alternativeToAttr
+        * Return <code>langAttr</code> property in DSL way
+        * @return langAttr
         */
-        public AnyURISimpleType alternativeToAttr() {
-        return  getAlternativeToAttr();
+        public LanguageSimpleType langAttr() {
+        return  getLangAttr();
         }
         /**
-        * Set <code>alternativeToAttr</code> property
-        * @param alternativeToAttr the new value
+        * Set <code>langAttr</code> property
+        * @param langAttr the new value
         */
-        public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
-        getElement().setAttribute("alternativeTo",alternativeToAttr.getValue());
+        public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+        getElement().setAttribute("lang",langAttr.getValue());
         }
         /**
-        * Set <code>alternativeToAttr</code> property in DSL way
-        * @param alternativeToAttr the new value
+        * Set <code>langAttr</code> property in DSL way
+        * @param langAttr the new value
         * @return <code>HierarchyComplexType</code> instance
         */
-        public HierarchyComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+        public HierarchyComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+        }
+        /**
+        * Return <code>spaceAttr</code> property
+        * @return spaceAttr
+        */
+        public NCNameSimpleType getSpaceAttr() {
+        if (spaceAttr == null) {
+                spaceAttr = new NCNameSimpleType();
+                spaceAttr.setValue(getElement().getAttribute("space"));
+        }
+
+        return spaceAttr;
+        }
+        /**
+        * Return <code>spaceAttr</code> property in DSL way
+        * @return spaceAttr
+        */
+        public NCNameSimpleType spaceAttr() {
+        return  getSpaceAttr();
+        }
+        /**
+        * Set <code>spaceAttr</code> property
+        * @param spaceAttr the new value
+        */
+        public void setSpaceAttr(final NCNameSimpleType spaceAttr) {
+        this.spaceAttr = spaceAttr;
+        getElement().setAttribute("space",spaceAttr.getValue());
+        }
+        /**
+        * Set <code>spaceAttr</code> property in DSL way
+        * @param spaceAttr the new value
+        * @return <code>HierarchyComplexType</code> instance
+        */
+        public HierarchyComplexType spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
         return this;
         }
         /**
@@ -497,75 +379,145 @@ super(element);
         return this;
         }
         /**
-        * Return <code>langAttr</code> property
-        * @return langAttr
+        * Return <code>wildcardContentAttr</code> property
+        * @return wildcardContentAttr
         */
-        public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-                langAttr = new LanguageSimpleType();
-                langAttr.setValue(getElement().getAttribute("lang"));
+        public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return langAttr;
+        return wildcardContentAttr;
         }
         /**
-        * Return <code>langAttr</code> property in DSL way
-        * @return langAttr
+        * Return <code>wildcardContentAttr</code> property in DSL way
+        * @return wildcardContentAttr
         */
-        public LanguageSimpleType langAttr() {
-        return  getLangAttr();
+        public String wildcardContentAttr() {
+        return  getWildcardContentAttr();
         }
         /**
-        * Set <code>langAttr</code> property
-        * @param langAttr the new value
+        * Set <code>wildcardContentAttr</code> property
+        * @param wildcardContentAttr the new value
         */
-        public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-        getElement().setAttribute("lang",langAttr.getValue());
+        public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent",wildcardContentAttr);
         }
         /**
-        * Set <code>langAttr</code> property in DSL way
-        * @param langAttr the new value
+        * Set <code>wildcardContentAttr</code> property in DSL way
+        * @param wildcardContentAttr the new value
         * @return <code>HierarchyComplexType</code> instance
         */
-        public HierarchyComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
+        public HierarchyComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
         }
         /**
-        * Return <code>spaceAttr</code> property
-        * @return spaceAttr
+        * Return <code>refersToAttr</code> property
+        * @return refersToAttr
         */
-        public NCNameSimpleType getSpaceAttr() {
-        if (spaceAttr == null) {
-                spaceAttr = new NCNameSimpleType();
-                spaceAttr.setValue(getElement().getAttribute("space"));
+        public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+                refersToAttr = new AnyURISimpleType();
+                refersToAttr.setValue(getElement().getAttribute("refersTo"));
         }
 
-        return spaceAttr;
+        return refersToAttr;
         }
         /**
-        * Return <code>spaceAttr</code> property in DSL way
-        * @return spaceAttr
+        * Return <code>refersToAttr</code> property in DSL way
+        * @return refersToAttr
         */
-        public NCNameSimpleType spaceAttr() {
-        return  getSpaceAttr();
+        public AnyURISimpleType refersToAttr() {
+        return  getRefersToAttr();
         }
         /**
-        * Set <code>spaceAttr</code> property
-        * @param spaceAttr the new value
+        * Set <code>refersToAttr</code> property
+        * @param refersToAttr the new value
         */
-        public void setSpaceAttr(final NCNameSimpleType spaceAttr) {
-        this.spaceAttr = spaceAttr;
-        getElement().setAttribute("space",spaceAttr.getValue());
+        public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo",refersToAttr.getValue());
         }
         /**
-        * Set <code>spaceAttr</code> property in DSL way
-        * @param spaceAttr the new value
+        * Set <code>refersToAttr</code> property in DSL way
+        * @param refersToAttr the new value
         * @return <code>HierarchyComplexType</code> instance
         */
-        public HierarchyComplexType spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
+        public HierarchyComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+        }
+        /**
+        * Return <code>statusAttr</code> property
+        * @return statusAttr
+        */
+        public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+                statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        }
+
+        return statusAttr;
+        }
+        /**
+        * Return <code>statusAttr</code> property in DSL way
+        * @return statusAttr
+        */
+        public StatusTypeSimpleType statusAttr() {
+        return  getStatusAttr();
+        }
+        /**
+        * Set <code>statusAttr</code> property
+        * @param statusAttr the new value
+        */
+        public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status",statusAttr.value());
+        }
+        /**
+        * Set <code>statusAttr</code> property in DSL way
+        * @param statusAttr the new value
+        * @return <code>HierarchyComplexType</code> instance
+        */
+        public HierarchyComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+        }
+        /**
+        * Return <code>alternativeToAttr</code> property
+        * @return alternativeToAttr
+        */
+        public AnyURISimpleType getAlternativeToAttr() {
+        if (alternativeToAttr == null) {
+                alternativeToAttr = new AnyURISimpleType();
+                alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
+        }
+
+        return alternativeToAttr;
+        }
+        /**
+        * Return <code>alternativeToAttr</code> property in DSL way
+        * @return alternativeToAttr
+        */
+        public AnyURISimpleType alternativeToAttr() {
+        return  getAlternativeToAttr();
+        }
+        /**
+        * Set <code>alternativeToAttr</code> property
+        * @param alternativeToAttr the new value
+        */
+        public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+        getElement().setAttribute("alternativeTo",alternativeToAttr.getValue());
+        }
+        /**
+        * Set <code>alternativeToAttr</code> property in DSL way
+        * @param alternativeToAttr the new value
+        * @return <code>HierarchyComplexType</code> instance
+        */
+        public HierarchyComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
         }
             /**
@@ -1367,17 +1319,17 @@ return "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02";
 public LinkedHashMap<String, String> getAttributes() {
 final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
 attrs.putAll(super.getAttributes());
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
-        attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
 return attrs;
 }
