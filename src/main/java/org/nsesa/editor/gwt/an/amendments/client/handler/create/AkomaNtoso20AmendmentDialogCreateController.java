@@ -153,6 +153,8 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
             // set the amendment content
             final OverlayWidget amendmentBodyOverlayWidget = dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody());
 
+            // TODO nsesa-editor-an #86: won't work if the amendment itself contains already a quoted structure
+
             final java.util.List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", amendmentBodyOverlayWidget);
             view.setAmendmentContent(quotedStructures.get(1).getOverlayElement().getFirstChildElement().getInnerHTML());
 
