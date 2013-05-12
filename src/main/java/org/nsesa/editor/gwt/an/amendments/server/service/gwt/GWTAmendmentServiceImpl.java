@@ -144,6 +144,10 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
             if (data.getDocumentID() == null)
                 throw new NullPointerException("No documentID set on amendment DTO -- aborting");
+            if (data.getId() == null)
+                throw new NullPointerException("No ID set on amendment DTO -- aborting");
+            if (data.getRevisionID() == null)
+                throw new NullPointerException("No revisionID set on amendment DTO -- aborting");
 
             // manually copy for now ...
             final org.nsesa.server.dto.AmendmentContainerDTO backendDTO = new org.nsesa.server.dto.AmendmentContainerDTO();
