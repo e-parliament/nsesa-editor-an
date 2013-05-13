@@ -58,15 +58,24 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
     @Override
     public AmendmentContainerDTO getAmendmentContainer(final ClientContext clientContext, final String id) throws UnsupportedOperationException, ResourceNotFoundException {
-        return fromBackend(amendmentService.getAmendmentContainer(id));
+        try {
+            return fromBackend(amendmentService.getAmendmentContainer(id));
+        } catch (org.nsesa.server.exception.ResourceNotFoundException e) {
+            throw new ResourceNotFoundException(e.getMessage(), e.getCause());
+        }
     }
 
     @Override
-    public AmendmentContainerDTO[] getAmendmentContainers(final ClientContext clientContext) throws UnsupportedOperationException {
+    public AmendmentContainerDTO[] getAmendmentContainers(final ClientContext clientContext) throws UnsupportedOperationException, ResourceNotFoundException {
         try {
             final List<AmendmentContainerDTO> amendmentContainerDTOs = new ArrayList<AmendmentContainerDTO>();
             for (final String documentID : clientContext.getDocumentIDs()) {
-                final List<org.nsesa.server.dto.AmendmentContainerDTO> backend = amendmentService.getAmendmentContainersByDocumentAndPerson(documentID, clientContext.getLoggedInPerson().getId());
+                List<org.nsesa.server.dto.AmendmentContainerDTO> backend = null;
+                try {
+                    backend = amendmentService.getAmendmentContainersByDocumentAndPerson(documentID, clientContext.getLoggedInPerson().getId());
+                } catch (org.nsesa.server.exception.ResourceNotFoundException e) {
+                    throw new ResourceNotFoundException(e.getMessage(), e.getCause());
+                }
                 if (backend != null) {
                     for (final org.nsesa.server.dto.AmendmentContainerDTO b : backend) {
                         AmendmentContainerDTO amendmentContainerDTO = fromBackend(b);

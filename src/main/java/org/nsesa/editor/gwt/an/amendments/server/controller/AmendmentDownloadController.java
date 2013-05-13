@@ -15,7 +15,10 @@ package org.nsesa.editor.gwt.an.amendments.server.controller;
 
 import org.nsesa.editor.gwt.an.amendments.server.service.*;
 import org.nsesa.server.dto.AmendmentContainerDTO;
+import org.nsesa.server.exception.ResourceNotFoundException;
 import org.nsesa.server.service.api.AmendmentService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,6 +39,9 @@ import java.util.Map;
 @Controller
 @RequestMapping("/amendment")
 public class AmendmentDownloadController {
+
+    private static final Logger LOG = LoggerFactory.getLogger(AmendmentDownloadController.class);
+
     @Autowired
     AmendmentService amendmentService;
     @Autowired
@@ -47,8 +53,8 @@ public class AmendmentDownloadController {
     @Autowired
     private WordExportService wordExportService;
 
-    @RequestMapping(value="/{type}/{amendmentContainerID}", method = RequestMethod.GET)
-    public void download( @PathVariable("type") String type, @PathVariable("amendmentContainerID") String amendmentContainerID,
+    @RequestMapping(value = "/{type}/{amendmentContainerID}", method = RequestMethod.GET)
+    public void download(@PathVariable("type") String type, @PathVariable("amendmentContainerID") String amendmentContainerID,
                          HttpServletResponse response) {
         Map<String, ExportService> registered = new LinkedHashMap<String, ExportService>();
         registered.put("xml", xmlExportService);
@@ -56,24 +62,26 @@ public class AmendmentDownloadController {
         registered.put("pdf", pdfExportService);
         registered.put("word", wordExportService);
 
-        AmendmentContainerDTO amendmentContainerDTO = amendmentService.getAmendmentContainer(amendmentContainerID);
-        if (amendmentContainerDTO != null) {
-            try {
-                ExportService exportService = registered.get(type);
-                if (exportService != null) {
-                    exportService.export(amendmentContainerDTO, response.getOutputStream());
-                    response.setContentType(exportService.getContentType());
-                    response.setHeader("Content-Disposition", "attachment;filename=" + exportService.getName());
-                    response.setContentLength(exportService.getLength());
-                    response.setCharacterEncoding("UTF8");
-                    response.flushBuffer();
+        try {
+            AmendmentContainerDTO amendmentContainerDTO = amendmentService.getAmendmentContainer(amendmentContainerID);
+            if (amendmentContainerDTO != null) {
+                try {
+                    ExportService exportService = registered.get(type);
+                    if (exportService != null) {
+                        exportService.export(amendmentContainerDTO, response.getOutputStream());
+                        response.setContentType(exportService.getContentType());
+                        response.setHeader("Content-Disposition", "attachment;filename=" + exportService.getName());
+                        response.setContentLength(exportService.getLength());
+                        response.setCharacterEncoding("UTF8");
+                        response.flushBuffer();
 
+                    }
+                } catch (IOException ioe) {
+                    throw new RuntimeException("IOError writing to output stream", ioe);
                 }
-            } catch(IOException ioe) {
-                throw new RuntimeException("IOError writing to output stream", ioe);
             }
+        } catch (ResourceNotFoundException e) {
+            LOG.error("Could not find the amendment with amendmentContainerID " + amendmentContainerID);
         }
     }
-
-
 }
