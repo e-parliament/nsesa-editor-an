@@ -15,6 +15,7 @@ package org.nsesa.editor.gwt.an.amendments.client;
 
 import com.google.gwt.inject.client.GinModules;
 import com.google.gwt.inject.client.Ginjector;
+import org.nsesa.editor.gwt.compare.client.ui.compare.CompareController;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.AmendmentDialogController;
 import org.nsesa.editor.gwt.editor.client.Injector;
 
@@ -27,4 +28,6 @@ import org.nsesa.editor.gwt.editor.client.Injector;
 @GinModules({AmendmentModule.class})
 public interface AmendmentInjector extends Injector, Ginjector {
     AmendmentDialogController getAmendmentDialogController();
+
+    CompareController getCompareController();
 }
