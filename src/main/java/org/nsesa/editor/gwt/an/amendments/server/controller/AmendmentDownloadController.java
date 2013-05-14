@@ -44,6 +44,10 @@ public class AmendmentDownloadController {
 
     @Autowired
     AmendmentService amendmentService;
+
+    @Autowired
+    DiffHandlerService diffHandlerService;
+
     @Autowired
     private PdfExportService pdfExportService;
     @Autowired
@@ -56,18 +60,16 @@ public class AmendmentDownloadController {
     @RequestMapping(value = "/{type}/{amendmentContainerID}", method = RequestMethod.GET)
     public void download(@PathVariable("type") String type, @PathVariable("amendmentContainerID") String amendmentContainerID,
                          HttpServletResponse response) {
-        Map<String, ExportService> registered = new LinkedHashMap<String, ExportService>();
-        registered.put("xml", xmlExportService);
-        registered.put("html", htmlExportService);
-        registered.put("pdf", pdfExportService);
-        registered.put("word", wordExportService);
 
         try {
             AmendmentContainerDTO amendmentContainerDTO = amendmentService.getAmendmentContainer(amendmentContainerID);
             if (amendmentContainerDTO != null) {
                 try {
-                    ExportService exportService = registered.get(type);
+                    ExportService exportService = getExportServices().get(type);
                     if (exportService != null) {
+                        // diff now
+                        diffHandlerService.diff(amendmentContainerDTO);
+                        // and export it
                         exportService.export(amendmentContainerDTO, response.getOutputStream());
                         response.setContentType(exportService.getContentType());
                         response.setHeader("Content-Disposition", "attachment;filename=" + exportService.getName());
@@ -83,5 +85,17 @@ public class AmendmentDownloadController {
         } catch (ResourceNotFoundException e) {
             LOG.error("Could not find the amendment with amendmentContainerID " + amendmentContainerID);
         }
+    }
+
+    /**
+     * Returns a map with registered export services
+     */
+    private Map<String, ExportService> getExportServices() {
+        Map<java.lang.String, ExportService> registered = new LinkedHashMap<String, ExportService>();
+        registered.put("xml", xmlExportService);
+        registered.put("html", htmlExportService);
+        registered.put("pdf", pdfExportService);
+        registered.put("word", wordExportService);
+        return registered;
     }
 }

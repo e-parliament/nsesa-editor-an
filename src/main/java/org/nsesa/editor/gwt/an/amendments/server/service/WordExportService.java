@@ -42,6 +42,7 @@ public class WordExportService implements ExportService<AmendmentContainerDTO> {
     private String name;
     private int length;
 
+
     @Override
     public void export(AmendmentContainerDTO object, OutputStream outputStream) {
         this.name = object.getAmendmentContainerID();
@@ -89,5 +90,6 @@ public class WordExportService implements ExportService<AmendmentContainerDTO> {
     public String getName() {
         return name + ".docx";
     }
+
 
 }
