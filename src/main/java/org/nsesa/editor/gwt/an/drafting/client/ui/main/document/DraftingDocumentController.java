@@ -279,9 +279,17 @@ public class DraftingDocumentController extends DefaultDocumentController {
             public void onEvent(final OverlayWidgetNewEvent event) {
                 final OverlayWidget child = event.getChild();
                 // TODO does not work yet for create-child
-                event.getParentOverlayWidget().addOverlayWidget(child, event.getReference().getIndex() + 1, true);
-                DOM.insertChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getPosition());
-                if (!child.isAttached()) child.onAttach();
+                if (event.getReference() == event.getParentOverlayWidget()) {
+                    // this is a new child
+                    event.getParentOverlayWidget().addOverlayWidget(child, event.getPosition(), true);
+                    DOM.insertChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getPosition());
+                    if (!child.isAttached()) child.onAttach();
+                } else {
+                    // this is a sibling
+                    event.getParentOverlayWidget().addOverlayWidget(child, event.getReference().getIndex() + 1, true);
+                    DOM.insertChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getPosition());
+                    if (!child.isAttached()) child.onAttach();
+                }
 
                 clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
                     @Override
