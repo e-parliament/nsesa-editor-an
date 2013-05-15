@@ -278,7 +278,6 @@ public class DraftingDocumentController extends DefaultDocumentController {
             @Override
             public void onEvent(final OverlayWidgetNewEvent event) {
                 final OverlayWidget child = event.getChild();
-                // TODO does not work yet for create-child
                 if (event.getReference() == event.getParentOverlayWidget()) {
                     // this is a new child
                     event.getParentOverlayWidget().addOverlayWidget(child, event.getPosition(), true);
