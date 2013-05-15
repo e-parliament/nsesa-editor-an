@@ -36,7 +36,7 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
 
     private final Transformer transformer;
 
-    private final PopupPanel popupPanel = new DecoratedPopupPanel(false, false) {
+    private final PopupPanel exportPopupPanel = new DecoratedPopupPanel(false, false) {
         {
             setGlassEnabled(true);
         }
@@ -54,7 +54,7 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
                                                       final Transformer transformer) {
         super(amendmentActionPanelView, documentEventBus, coreMessages);
         this.transformer = transformer;
-        this.popupPanel.setWidget(mainPanel);
+        this.exportPopupPanel.setWidget(mainPanel);
 
         this.mainPanel.setHeight("600px");
         this.mainPanel.setWidth("800px");
@@ -72,7 +72,7 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
         closeButton.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
-                popupPanel.hide();
+                exportPopupPanel.hide();
             }
         });
 
@@ -80,9 +80,9 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
         xmlExport.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
-                popupPanel.hide();
                 final String url = GWT.getModuleBaseURL() + "download/amendment/xml/" + amendmentController.getModel().getId();
                 Window.open(URL.encode(url), "download", "");
+                popupPanel.hide();
             };
         });
         final Anchor pdfExport = new Anchor("Export to PDF");
