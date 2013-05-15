@@ -22,7 +22,6 @@ import com.google.gwt.user.client.ui.*;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.action.AmendmentActionPanelController;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.action.AmendmentActionPanelView;
-import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
 import org.nsesa.editor.gwt.core.client.ui.i18n.CoreMessages;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Transformer;
 
@@ -49,10 +48,9 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
 
     @Inject
     public AkomaNtoso20AmendmentActionPanelController(AmendmentActionPanelView amendmentActionPanelView,
-                                                      final DocumentEventBus documentEventBus,
                                                       final CoreMessages coreMessages,
                                                       final Transformer transformer) {
-        super(amendmentActionPanelView, documentEventBus, coreMessages);
+        super(amendmentActionPanelView, coreMessages);
         this.transformer = transformer;
         this.exportPopupPanel.setWidget(mainPanel);
 
