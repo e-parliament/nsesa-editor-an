@@ -37,7 +37,6 @@ import org.nsesa.editor.gwt.an.drafting.client.mode.StructureViewMode;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.event.*;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEvent;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEventHandler;
@@ -442,7 +441,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
                     if (actionBarCreatePanelControllerPopup.isShowing()) {
 
                         actionBarCreatePanelControllerPopup.hide();
-                        clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
+                        // there is no need to scroll into document
+                        // clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
 
                         final OverlayWidget selectedSibling = actionBarCreatePanelController.getSelectedSibling();
 
