@@ -154,16 +154,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
     @Override
     public void registerKeyCombos() {
         super.registerKeyCombos();
-        clientFactory.getKeyboardListener().register(ctrlEnter);
-        clientFactory.getKeyboardListener().register(enter);
-        clientFactory.getKeyboardListener().register(tab);
-        clientFactory.getKeyboardListener().register(escape);
-        clientFactory.getKeyboardListener().register(delete);
-        clientFactory.getKeyboardListener().register(ctrlS);
-        clientFactory.getKeyboardListener().register(upArrow);
-        clientFactory.getKeyboardListener().register(downArrow);
-        clientFactory.getKeyboardListener().register(altUpArrow);
-        clientFactory.getKeyboardListener().register(altDownArrow);
+        clientFactory.getKeyboardListener().register(ctrlEnter, enter, tab, escape, delete, ctrlS, upArrow, downArrow, altUpArrow, altDownArrow);
     }
 
     @Override
