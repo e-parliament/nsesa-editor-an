@@ -121,6 +121,13 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         amendmentContainerDTO.setId(b.getAmendmentContainerID());
         amendmentContainerDTO.setLanguageISO(b.getLanguageISO());
         amendmentContainerDTO.setRevisionID(b.getRevisionID());
+
+        try {
+            amendmentContainerDTO.setBody(toHTML(amendmentContainerDTO.getBody().getBytes("UTF-8")));
+        } catch (UnsupportedEncodingException e) {
+            LOG.error("Could not get encoding.", e);
+        }
+
         return amendmentContainerDTO;
     }
 
