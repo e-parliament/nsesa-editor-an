@@ -215,7 +215,8 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
                 final org.nsesa.server.dto.AmendmentContainerDTO saved = amendmentService.save(backendDTO);
                 final AmendmentContainerDTO amendmentContainerDTO = fromBackend(saved);
 
-                LOG.info("Saved amendment to the dto under document " + data.getDocumentID());
+                LOG.info("Saved amendment to the dto under document " + amendmentContainerDTO.getDocumentID() +
+                        " as revision " + amendmentContainerDTO.getRevisionID());
                 amendmentContainerDTOs.add(amendmentContainerDTO);
             }
             return amendmentContainerDTOs.toArray(new AmendmentContainerDTO[amendmentContainerDTOs.size()]);
