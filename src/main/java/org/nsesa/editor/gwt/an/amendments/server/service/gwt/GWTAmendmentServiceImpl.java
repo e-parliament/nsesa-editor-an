@@ -25,7 +25,6 @@ import org.nsesa.editor.gwt.core.shared.exception.ResourceNotFoundException;
 import org.nsesa.editor.gwt.core.shared.exception.StaleResourceException;
 import org.nsesa.editor.gwt.core.shared.exception.ValidationException;
 import org.nsesa.server.dto.AmendableWidgetReferenceDTO;
-import org.nsesa.server.dto.AmendmentAction;
 import org.nsesa.server.service.api.AmendmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -198,7 +197,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
                 backendDTO.setRevisionID(data.getRevisionID());
                 backendDTO.setAmendmentContainerStatus(data.getAmendmentContainerStatus());
                 backendDTO.setLanguageISO(data.getLanguageISO());
-                backendDTO.setAmendmentAction(AmendmentAction.valueOf(data.getAmendmentAction().toString()));
+                backendDTO.setAmendmentAction(org.nsesa.server.dto.AmendmentAction.valueOf(data.getAmendmentAction().toString()));
                 backendDTO.setAmendmentContainerID(data.getId());
                 backendDTO.setBody(data.getBody());
                 final AmendableWidgetReference dto = data.getSourceReference();
@@ -213,15 +212,16 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
                 backendDTO.setSourceReference(sourceReference);
 
-                amendmentService.save(backendDTO);
+                final org.nsesa.server.dto.AmendmentContainerDTO saved = amendmentService.save(backendDTO);
+                final AmendmentContainerDTO amendmentContainerDTO = fromBackend(saved);
 
                 LOG.info("Saved amendment to the dto under document " + data.getDocumentID());
                 try {
-                    data.setBody(toHTML(data.getBody().getBytes("UTF-8")));
+                    amendmentContainerDTO.setBody(toHTML(amendmentContainerDTO.getBody().getBytes("UTF-8")));
                 } catch (UnsupportedEncodingException e) {
                     LOG.error("Could not get encoding.", e);
                 }
-                amendmentContainerDTOs.add(data);
+                amendmentContainerDTOs.add(amendmentContainerDTO);
             }
             return amendmentContainerDTOs.toArray(new AmendmentContainerDTO[amendmentContainerDTOs.size()]);
         } catch (org.nsesa.server.exception.StaleResourceException e) {
