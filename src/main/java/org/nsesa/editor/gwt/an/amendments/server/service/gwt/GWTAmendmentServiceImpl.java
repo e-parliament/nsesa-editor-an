@@ -216,11 +216,6 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
                 final AmendmentContainerDTO amendmentContainerDTO = fromBackend(saved);
 
                 LOG.info("Saved amendment to the dto under document " + data.getDocumentID());
-                try {
-                    amendmentContainerDTO.setBody(toHTML(amendmentContainerDTO.getBody().getBytes("UTF-8")));
-                } catch (UnsupportedEncodingException e) {
-                    LOG.error("Could not get encoding.", e);
-                }
                 amendmentContainerDTOs.add(amendmentContainerDTO);
             }
             return amendmentContainerDTOs.toArray(new AmendmentContainerDTO[amendmentContainerDTOs.size()]);
