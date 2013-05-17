@@ -15,11 +15,11 @@ package org.nsesa.editor.gwt.an.amendments.client.handler.create;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
-import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.NumberingType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
@@ -68,7 +68,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
                                                        final MetaPanelController metaPanelController
     ) {
         super(clientFactory, view, locator, overlayFactory, visualStructureController,
-                amendmentInjectionPointFinder,overlayWidgetValidator);
+                amendmentInjectionPointFinder, overlayWidgetValidator);
         this.serviceFactory = serviceFactory;
         this.overlaySnippetFactory = overlaySnippetFactory;
         this.overlaySnippetEvaluator = overlaySnippetEvaluator;
@@ -108,7 +108,6 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         //set the origin
         overlayWidget.setOrigin(OverlayWidgetOrigin.AMENDMENT);
 
-        view.getRichTextEditor().resetBodyClass();
         view.getRichTextEditor().setOverlayWidget(overlayWidget);
 
         OverlaySnippet overlaySnippet = overlaySnippetFactory.getSnippet(overlayWidget);
