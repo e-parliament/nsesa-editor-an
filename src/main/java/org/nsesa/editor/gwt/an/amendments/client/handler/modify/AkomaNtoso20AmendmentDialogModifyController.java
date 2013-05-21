@@ -18,6 +18,7 @@ import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.an.amendments.client.AmendmentOverlayWidgetValidator;
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
@@ -111,11 +112,8 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
 
             // set the amendment content
             final OverlayWidget amendmentBodyOverlayWidget = dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody());
-            final java.util.List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", amendmentBodyOverlayWidget);
 
-            // TODO nsesa-editor-an #86: won't work if the amendment itself contains already a quoted structure
-
-            view.setAmendmentContent(quotedStructures.get(1).getOverlayElement().getFirstChildElement().getInnerHTML());
+            view.setAmendmentContent(AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(dialogContext.getAmendmentController()));
 
             // set the author(s)
             final Preface preface = (Preface) OverlayUtil.findSingle("preface", amendmentBodyOverlayWidget);
