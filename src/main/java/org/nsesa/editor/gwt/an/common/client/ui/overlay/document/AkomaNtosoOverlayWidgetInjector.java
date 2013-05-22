@@ -19,7 +19,6 @@ import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayWidgetInjector;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetInjector;
 
 import java.util.Collection;
 import java.util.logging.Logger;
@@ -30,12 +29,12 @@ import java.util.logging.Logger;
  * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtosoOverlayWidgetInjector implements OverlayWidgetInjector {
+public class AkomaNtosoOverlayWidgetInjector extends DefaultOverlayWidgetInjector {
 
     private static final Logger LOG = Logger.getLogger(DefaultOverlayWidgetInjector.class.getName());
 
     @Override
-    public void injectOverlayWidget(OverlayWidget parent, OverlayWidget child, int offset) {
+    public void injectAsChild(OverlayWidget parent, OverlayWidget child, int offset) {
         com.google.gwt.user.client.Element parentElement = parent.getOverlayElement().cast();
         com.google.gwt.user.client.Element childElement = child.getOverlayElement().cast();
 
