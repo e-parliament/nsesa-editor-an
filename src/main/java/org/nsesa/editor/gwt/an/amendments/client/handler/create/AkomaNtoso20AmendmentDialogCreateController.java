@@ -121,7 +121,12 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
             public String evaluate() {
                 if (overlayWidget.getNumberingType() == null) {
                     // if there is a sibling of the same type, use that one
-                    OverlayWidget sibling = dialogContext.getParentOverlayWidget().getChildOverlayWidgets().get(dialogContext.getIndex());
+                    OverlayWidget sibling = dialogContext.getOverlayWidget().next(new OverlayWidgetSelector() {
+                        @Override
+                        public boolean select(OverlayWidget toSelect) {
+                            return true;
+                        }
+                    });
                     if (sibling != null) {
                         overlayWidget.setNumberingType(sibling.getNumberingType());
                     } else {
@@ -131,7 +136,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
                     }
                 }
                 //add the overlay widget in the parent children collection to compute the num
-                dialogContext.getParentOverlayWidget().addOverlayWidget(overlayWidget, dialogContext.getIndex());
+                dialogContext.getParentOverlayWidget().addOverlayWidget(overlayWidget);
                 String num = locator.getNum(overlayWidget, clientFactory.getClientContext().getDocumentTranslationLanguageCode());
                 dialogContext.getParentOverlayWidget().removeOverlayWidget(overlayWidget);
                 return num == null ? "" : num;

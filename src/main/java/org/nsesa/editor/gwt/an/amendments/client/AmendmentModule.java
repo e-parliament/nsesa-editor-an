@@ -28,12 +28,14 @@ import org.nsesa.editor.gwt.an.amendments.client.ui.rte.ckeditor.Akomantoso20Ric
 import org.nsesa.editor.gwt.an.amendments.client.ui.rte.ckeditor.Akomantoso20RichTextEditorPlugin;
 import org.nsesa.editor.gwt.an.common.client.AkomaNtosoModule;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtoso20OverlayStrategy;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoOverlayWidgetInjectionStrategy;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Akomantoso20OverlayLocalizableResource;
 import org.nsesa.editor.gwt.compare.client.ui.compare.ComparePanelModule;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayLocalizableResource;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetInjectionStrategy;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditorConfig;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditorPlugin;
 import org.nsesa.editor.gwt.core.client.validation.Validator;
@@ -71,6 +73,7 @@ public class AmendmentModule extends AbstractGinModule {
 
         bind(OverlayLocalizableResource.class).to(Akomantoso20OverlayLocalizableResource.class).in(Singleton.class);
         bind(OverlayStrategy.class).to(AkomaNtoso20OverlayStrategy.class).in(Singleton.class);
+        bind(OverlayWidgetInjectionStrategy.class).to(AkomaNtosoOverlayWidgetInjectionStrategy.class).in(Singleton.class);
 
         bind(new TypeLiteral<Validator<OverlayWidget>>() {
         }).to(AmendmentOverlayWidgetValidator.class);

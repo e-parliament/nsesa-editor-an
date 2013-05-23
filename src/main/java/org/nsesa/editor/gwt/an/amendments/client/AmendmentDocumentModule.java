@@ -26,7 +26,7 @@ import org.nsesa.editor.gwt.amendment.client.ui.pagination.AmendmentPaginationCo
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.action.AkomaNtoso20AmendmentActionPanelController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.document.AkomaNtoso20SourceFileHeaderController;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoOverlayWidgetInjector;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoOverlayWidgetInjectionStrategy;
 import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentView;
@@ -34,7 +34,7 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.header.SourceFile
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.marker.MarkerController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultSelector;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Selector;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetInjector;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetInjectionStrategy;
 import org.nsesa.editor.gwt.core.client.ui.pagination.PaginationController;
 import org.nsesa.editor.gwt.core.client.undo.UndoManager;
 
@@ -52,7 +52,7 @@ public class AmendmentDocumentModule extends AbstractGinModule {
         bind(SourceFileHeaderController.class).to(AkomaNtoso20SourceFileHeaderController.class).in(Singleton.class);
         bind(AmendmentActionPanelController.class).to(AkomaNtoso20AmendmentActionPanelController.class).in(Singleton.class);
         bind(MarkerController.class).to(AmendmentMarkerController.class).in(Singleton.class);
-        bind(OverlayWidgetInjector.class).to(AkomaNtosoOverlayWidgetInjector.class).in(Singleton.class);
+        bind(OverlayWidgetInjectionStrategy.class).to(AkomaNtosoOverlayWidgetInjectionStrategy.class).in(Singleton.class);
         bind(UndoManager.class).in(Singleton.class);
         bind(PaginationController.class).to(AmendmentPaginationController.class).in(Singleton.class);
         bind(new TypeLiteral<DiffingManager<AmendmentController>>() {

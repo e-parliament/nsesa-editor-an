@@ -271,13 +271,13 @@ public class DraftingDocumentController extends DefaultDocumentController {
                 final OverlayWidget child = event.getChild();
                 if (event.getReference() == event.getParentOverlayWidget()) {
                     // this is a new child
-                    event.getParentOverlayWidget().addOverlayWidget(child, event.getPosition(), true);
-                    DOM.insertChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getPosition());
+                    event.getParentOverlayWidget().addOverlayWidget(child);
+                    DOM.appendChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement());
                     if (!child.isAttached()) child.onAttach();
                 } else {
                     // this is a sibling
                     event.getParentOverlayWidget().addOverlayWidget(child, event.getReference().getIndex() + 1, true);
-                    DOM.insertChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getPosition());
+                    DOM.insertChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getReference().getDomIndex());
                     if (!child.isAttached()) child.onAttach();
                 }
 
@@ -460,7 +460,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                             if (inlineEditorController.isShowing()) {
                                 clientFactory.getEventBus().fireEvent(new VisualStructureInsertionEvent(cloneSibling));
                             } else {
-                                documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget.getParentOverlayWidget(), activeOverlayWidget, cloneSibling, activeOverlayWidget.getDomIndex() + 1));
+                                documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget.getParentOverlayWidget(), activeOverlayWidget, cloneSibling));
                             }
 
                         }
@@ -478,7 +478,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                             if (inlineEditorController.isShowing()) {
                                 clientFactory.getEventBus().fireEvent(new VisualStructureInsertionEvent(cloneChild));
                             } else {
-                                documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget, activeOverlayWidget, cloneChild, -1));
+                                documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget, activeOverlayWidget, cloneChild));
                             }
                         }
 

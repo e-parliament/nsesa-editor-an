@@ -17,7 +17,7 @@ import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
 import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayWidgetInjector;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayWidgetInjectionStrategy;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 
 import java.util.Collection;
@@ -29,12 +29,25 @@ import java.util.logging.Logger;
  * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtosoOverlayWidgetInjector extends DefaultOverlayWidgetInjector {
+public class AkomaNtosoOverlayWidgetInjectionStrategy extends DefaultOverlayWidgetInjectionStrategy {
 
-    private static final Logger LOG = Logger.getLogger(DefaultOverlayWidgetInjector.class.getName());
+    private static final Logger LOG = Logger.getLogger(DefaultOverlayWidgetInjectionStrategy.class.getName());
 
     @Override
-    public void injectAsChild(OverlayWidget parent, OverlayWidget child, int offset) {
+    public int getInjectionPosition(OverlayWidget reference, OverlayWidget toInject) {
+        // find index just before the first child block
+        int position = 0;
+        for (final OverlayWidget child : reference.getChildOverlayWidgets()) {
+            if (child instanceof BasehierarchyComplexType || child instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType) {
+                return position;
+            }
+            position++;
+        }
+        return super.getInjectionPosition(reference, toInject);
+    }
+
+    @Override
+    public void injectAsChild(OverlayWidget parent, OverlayWidget child) {
         com.google.gwt.user.client.Element parentElement = parent.getOverlayElement().cast();
         com.google.gwt.user.client.Element childElement = child.getOverlayElement().cast();
 
@@ -42,7 +55,7 @@ public class AkomaNtosoOverlayWidgetInjector extends DefaultOverlayWidgetInjecto
         final Collection<OverlayWidget> blockOverlayWidgets = Collections2.filter(parent.getChildOverlayWidgets(), new Predicate<OverlayWidget>() {
             @Override
             public boolean apply(OverlayWidget input) {
-                return input instanceof BasehierarchyComplexType || input instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType;  //To change body of implemented methods use File | Settings | File Templates.
+                return input instanceof BasehierarchyComplexType || input instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType;
             }
         });
 
@@ -53,7 +66,7 @@ public class AkomaNtosoOverlayWidgetInjector extends DefaultOverlayWidgetInjecto
 
             LOG.info("Added new " + child + " as the last child to " + parent);
         } else {
-            // insert before the first child amendable widget
+            // insert before the first child 'block' widget
             int indexOfFirstBlockOverlayWidget = parent.getChildOverlayWidgets().indexOf(blockOverlayWidgets.iterator().next());
 
             final OverlayWidget overlayWidget = parent.getChildOverlayWidgets().get(indexOfFirstBlockOverlayWidget);
@@ -62,7 +75,7 @@ public class AkomaNtosoOverlayWidgetInjector extends DefaultOverlayWidgetInjecto
             DOM.insertBefore(parentElement, childElement, beforeElement);
             // logical
             parent.addOverlayWidget(child, indexOfFirstBlockOverlayWidget, true);
-            LOG.info("Added new " + child + " as the first child to " + parent + " at position " + offset);
+            LOG.info("Added new " + child + " as the first child to " + parent + " at position " + (indexOfFirstBlockOverlayWidget - 1));
         }
     }
 }
