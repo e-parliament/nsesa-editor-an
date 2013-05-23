@@ -38,8 +38,10 @@ public class AkomaNtosoOverlayWidgetInjectionStrategy extends DefaultOverlayWidg
         // find index just before the first child block
         int position = 0;
         for (final OverlayWidget child : reference.getChildOverlayWidgets()) {
-            if (child instanceof BasehierarchyComplexType || child instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType) {
-                return position;
+            if (!child.isIntroducedByAnAmendment()) {
+                if (child instanceof BasehierarchyComplexType || child instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType) {
+                    return position;
+                }
             }
             position++;
         }
@@ -55,7 +57,9 @@ public class AkomaNtosoOverlayWidgetInjectionStrategy extends DefaultOverlayWidg
         final Collection<OverlayWidget> blockOverlayWidgets = Collections2.filter(parent.getChildOverlayWidgets(), new Predicate<OverlayWidget>() {
             @Override
             public boolean apply(OverlayWidget input) {
-                return input instanceof BasehierarchyComplexType || input instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType;
+                return (!input.isIntroducedByAnAmendment() &&
+                        (input instanceof BasehierarchyComplexType ||
+                                input instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType));
             }
         });
 
