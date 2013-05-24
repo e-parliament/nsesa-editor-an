@@ -19,6 +19,7 @@ import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayWidgetInjectionStrategy;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetSelector;
 
 import java.util.Collection;
 import java.util.logging.Logger;
@@ -34,18 +35,43 @@ public class AkomaNtosoOverlayWidgetInjectionStrategy extends DefaultOverlayWidg
     private static final Logger LOG = Logger.getLogger(DefaultOverlayWidgetInjectionStrategy.class.getName());
 
     @Override
-    public int getInjectionPosition(OverlayWidget reference, OverlayWidget toInject) {
+    public int getInjectionPosition(OverlayWidget parent, OverlayWidget reference, OverlayWidget toInject) {
         // find index just before the first child block
-        int position = 0;
-        for (final OverlayWidget child : reference.getChildOverlayWidgets()) {
-            if (!child.isIntroducedByAnAmendment()) {
-                if (child instanceof BasehierarchyComplexType || child instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType) {
-                    return position;
+        final boolean sibling = (parent != reference);
+
+        if (sibling) {
+            // this will return the index to inject
+            OverlayWidget nextNonIntroducedOverlayWidget = reference.getNextSibling(new OverlayWidgetSelector() {
+                @Override
+                public boolean select(OverlayWidget toSelect) {
+                    return !toSelect.isIntroducedByAnAmendment() && (toSelect instanceof BasehierarchyComplexType || toSelect instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType);
                 }
+            });
+            if (nextNonIntroducedOverlayWidget != null) {
+                final int position = parent.getChildOverlayWidgets().indexOf(nextNonIntroducedOverlayWidget);
+                LOG.info("Sibling index (with another non-introduced overlay widget after): " + position);
+                return position;
+            } else {
+                // at the end
+                final int position = (parent.getChildOverlayWidgets().size());
+                LOG.info("Sibling index (without non-introduced overlay widget after): " + position);
+                return position;
             }
-            position++;
+
+        } else {
+            // this will return the index
+            int position = 0;
+            for (final OverlayWidget child : reference.getChildOverlayWidgets()) {
+                if (!child.isIntroducedByAnAmendment()) {
+                    if (child instanceof BasehierarchyComplexType || child instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType) {
+                        LOG.info("Child index: " + position);
+                        return position;
+                    }
+                }
+                position++;
+            }
         }
-        return super.getInjectionPosition(reference, toInject);
+        return super.getInjectionPosition(parent, reference, toInject);
     }
 
     @Override
