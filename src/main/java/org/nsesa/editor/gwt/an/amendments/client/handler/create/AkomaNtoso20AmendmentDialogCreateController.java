@@ -51,6 +51,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
     final AuthorPanelController authorPanelController;
     final MetaPanelController metaPanelController;
     final ServiceFactory serviceFactory;
+    final OverlayWidgetInjectionStrategy overlayWidgetInjectionStrategy;
 
 
     @Inject
@@ -65,7 +66,8 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
                                                        final OverlaySnippetEvaluator overlaySnippetEvaluator,
                                                        final Validator<OverlayWidget> overlayWidgetValidator,
                                                        final AuthorPanelController authorPanelController,
-                                                       final MetaPanelController metaPanelController
+                                                       final MetaPanelController metaPanelController,
+                                                       final OverlayWidgetInjectionStrategy overlayWidgetInjectionStrategy
     ) {
         super(clientFactory, view, locator, overlayFactory, visualStructureController,
                 amendmentInjectionPointFinder, overlayWidgetValidator);
@@ -75,6 +77,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
         this.authorPanelController = authorPanelController;
         this.metaPanelController = metaPanelController;
+        this.overlayWidgetInjectionStrategy = overlayWidgetInjectionStrategy;
 
         addChildControllers(authorPanelController, metaPanelController);
     }
@@ -136,7 +139,9 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
                     }
                 }
                 //add the overlay widget in the parent children collection to compute the num
-                dialogContext.getParentOverlayWidget().addOverlayWidget(overlayWidget);
+                final int injectionPosition = overlayWidgetInjectionStrategy.getInjectionPosition(dialogContext.getParentOverlayWidget(), dialogContext.getReferenceOverlayWidget(), dialogContext.getOverlayWidget());
+
+                dialogContext.getParentOverlayWidget().addOverlayWidget(overlayWidget, injectionPosition);
                 String num = locator.getNum(overlayWidget, clientFactory.getClientContext().getDocumentTranslationLanguageCode());
                 dialogContext.getParentOverlayWidget().removeOverlayWidget(overlayWidget);
                 return num == null ? "" : num;
