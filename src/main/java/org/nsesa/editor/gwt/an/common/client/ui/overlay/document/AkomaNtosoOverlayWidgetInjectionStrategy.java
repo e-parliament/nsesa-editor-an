@@ -13,15 +13,11 @@
  */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document;
 
-import com.google.common.base.Predicate;
-import com.google.common.collect.Collections2;
-import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayWidgetInjectionStrategy;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetSelector;
 
-import java.util.Collection;
 import java.util.logging.Logger;
 
 /**
@@ -70,42 +66,7 @@ public class AkomaNtosoOverlayWidgetInjectionStrategy extends DefaultOverlayWidg
                 }
                 position++;
             }
-        }
-        return super.getInjectionPosition(parent, reference, toInject);
-    }
-
-    @Override
-    public void injectAsChild(OverlayWidget parent, OverlayWidget child) {
-        com.google.gwt.user.client.Element parentElement = parent.getOverlayElement().cast();
-        com.google.gwt.user.client.Element childElement = child.getOverlayElement().cast();
-
-
-        final Collection<OverlayWidget> blockOverlayWidgets = Collections2.filter(parent.getChildOverlayWidgets(), new Predicate<OverlayWidget>() {
-            @Override
-            public boolean apply(OverlayWidget input) {
-                return (!input.isIntroducedByAnAmendment() &&
-                        (input instanceof BasehierarchyComplexType ||
-                                input instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType));
-            }
-        });
-
-        if (blockOverlayWidgets.isEmpty()) {
-            // ok, insert as the last child
-            DOM.insertChild(parentElement, childElement, parentElement.getChildCount());
-            parent.addOverlayWidget(child, -1, false);
-
-            LOG.info("Added new " + child + " as the last child to " + parent);
-        } else {
-            // insert before the first child 'block' widget
-            int indexOfFirstBlockOverlayWidget = parent.getChildOverlayWidgets().indexOf(blockOverlayWidgets.iterator().next());
-
-            final OverlayWidget overlayWidget = parent.getChildOverlayWidgets().get(indexOfFirstBlockOverlayWidget);
-
-            com.google.gwt.user.client.Element beforeElement = overlayWidget.getOverlayElement().cast();
-            DOM.insertBefore(parentElement, childElement, beforeElement);
-            // logical
-            parent.addOverlayWidget(child, indexOfFirstBlockOverlayWidget, true);
-            LOG.info("Added new " + child + " as the first child to " + parent + " at position " + (indexOfFirstBlockOverlayWidget - 1));
+            return position;
         }
     }
 }
