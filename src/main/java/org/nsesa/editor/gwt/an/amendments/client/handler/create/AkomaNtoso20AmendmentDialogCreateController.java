@@ -142,7 +142,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
                 final int injectionPosition = overlayWidgetInjectionStrategy.getInjectionPosition(dialogContext.getParentOverlayWidget(), dialogContext.getReferenceOverlayWidget(), dialogContext.getOverlayWidget());
 
                 dialogContext.getParentOverlayWidget().addOverlayWidget(overlayWidget, injectionPosition);
-                String num = locator.getNum(overlayWidget, clientFactory.getClientContext().getDocumentTranslationLanguageCode());
+                String num = locator.getNum(overlayWidget, clientFactory.getClientContext().getDocumentTranslationLanguageCode(), true);
                 dialogContext.getParentOverlayWidget().removeOverlayWidget(overlayWidget);
                 return num == null ? "" : num;
             }
