@@ -336,8 +336,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
                                     child.setParentOverlayWidget(event.getParentOverlayWidget());
                                     //add the overlay widget in the parent children collection to compute the num
-                                    String num = locator.getNum(child, document.getLanguageIso());
-                                    return num == null ? "" : child.getFormat().format(num);
+                                    String num = locator.getNum(child, document.getLanguageIso(), true);
+                                    return num == null ? "" : num;
                                 }
                             });
                             child.getOverlayElement().setInnerHTML(overlaySnippet.getContent(overlaySnippetEvaluator));
