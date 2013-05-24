@@ -306,12 +306,22 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                             child.setFormat(event.getReference().getFormat());
                                         } else {
                                             // find similar type, if any
-                                            final OverlayWidget previous = event.getReference().getPreviousNonIntroducedOverlayWidget(true);
+                                            final OverlayWidget previous = event.getReference().getPreviousSibling(new OverlayWidgetSelector() {
+                                                @Override
+                                                public boolean select(OverlayWidget toSelect) {
+                                                    return !toSelect.isIntroducedByAnAmendment() && event.getReference().getType().equalsIgnoreCase(toSelect.getType());
+                                                }
+                                            });
                                             if (previous != null) {
                                                 child.setNumberingType(previous.getNumberingType());
                                                 child.setFormat(previous.getFormat());
                                             } else {
-                                                final OverlayWidget next = event.getReference().getNextNonIntroducedOverlayWidget(true);
+                                                final OverlayWidget next = event.getReference().getNextSibling(new OverlayWidgetSelector() {
+                                                    @Override
+                                                    public boolean select(OverlayWidget toSelect) {
+                                                        return !toSelect.isIntroducedByAnAmendment() && event.getReference().getType().equalsIgnoreCase(toSelect.getType());
+                                                    }
+                                                });
                                                 if (next != null) {
                                                     child.setNumberingType(next.getNumberingType());
                                                     child.setFormat(next.getFormat());
