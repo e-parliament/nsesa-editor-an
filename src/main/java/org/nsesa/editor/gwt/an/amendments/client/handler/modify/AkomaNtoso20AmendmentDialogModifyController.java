@@ -85,7 +85,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
                 .setOverlayWidget(overlayWidget)
                 .setLanguageIso(languageIso)
                 .setAuthors(authorPanelController.getSelectedPersons())
-                .setLocation(locator.getLocation(overlayWidget, null, languageIso, true))
+                .setLocation(locator.getLocation(overlayWidget, languageIso, true))
                 .setOriginalText(contentPanelController.getView().getOriginalText())
                 .setAmendmentText(view.getAmendmentContent())
                 .setModifyIds(true)

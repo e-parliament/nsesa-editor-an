@@ -89,11 +89,20 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
         final OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
         final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
+
+        // temporarily add the widget to calculate its position
+        final int injectionPosition = overlayWidgetInjectionStrategy.getInjectionPosition(dialogContext.getParentOverlayWidget(),
+                dialogContext.getReferenceOverlayWidget(), dialogContext.getOverlayWidget());
+        dialogContext.getParentOverlayWidget().addOverlayWidget(dialogContext.getOverlayWidget(), injectionPosition);
+        final String location = locator.getLocation(dialogContext.getOverlayWidget(), languageIso, true);
+        // we're done, so remove it again
+        dialogContext.getParentOverlayWidget().removeOverlayWidget(dialogContext.getOverlayWidget());
+
         builder
                 .setOverlayWidget(overlayWidget)
                 .setLanguageIso(languageIso)
                 .setAuthors(authorPanelController.getSelectedPersons())
-                .setLocation(locator.getLocation(overlayWidget, null, languageIso, true))
+                .setLocation(location)
                 .setOriginalText("") // TODO null?
                 .setAmendmentText(view.getAmendmentContent())
                 .setJustification(metaPanelController.getJustification())

@@ -15,11 +15,11 @@ package org.nsesa.editor.gwt.an.amendments.client.handler.delete;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
-import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
@@ -81,7 +81,7 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
                 .setOverlayWidget(overlayWidget)
                 .setLanguageIso(languageIso)
                 .setAuthors(authorPanelController.getSelectedPersons())
-                .setLocation(locator.getLocation(overlayWidget, null, languageIso, true))
+                .setLocation(locator.getLocation(overlayWidget, languageIso, true))
                 .setOriginalText(contentPanelController.getView().getOriginalText())
                 .setAmendmentText("") // TODO: deleted or null?
                 .setJustification(metaPanelController.getJustification())
