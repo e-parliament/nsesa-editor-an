@@ -113,7 +113,11 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
             // set the amendment content
             final OverlayWidget amendmentBodyOverlayWidget = dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody());
 
-            view.setAmendmentContent(AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(dialogContext.getAmendmentController()));
+            String content = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(dialogContext.getAmendmentController());
+
+            final OverlayWidget amendmentOverlayWidget = dialogContext.getAmendmentController().asAmendableWidget(content);
+
+            view.setAmendmentContent(amendmentOverlayWidget.getInnerHTML());
 
             // set the author(s)
             final Preface preface = (Preface) OverlayUtil.findSingle("preface", amendmentBodyOverlayWidget);
