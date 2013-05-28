@@ -17,6 +17,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
@@ -26,7 +27,6 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.core.client.ui.visualstructure.VisualStructureController;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.core.client.validation.Validator;
-import org.nsesa.editor.gwt.core.shared.OverlayWidgetOrigin;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.author.AuthorPanelController;
@@ -90,13 +90,19 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         final OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
         final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
 
-        // temporarily add the widget to calculate its position
-        final int injectionPosition = overlayWidgetInjectionStrategy.getInjectionPosition(dialogContext.getParentOverlayWidget(),
-                dialogContext.getReferenceOverlayWidget(), dialogContext.getOverlayWidget());
-        dialogContext.getParentOverlayWidget().addOverlayWidget(dialogContext.getOverlayWidget(), injectionPosition);
-        final String location = locator.getLocation(dialogContext.getOverlayWidget(), languageIso, true);
-        // we're done, so remove it again
-        dialogContext.getParentOverlayWidget().removeOverlayWidget(dialogContext.getOverlayWidget());
+        final String location;
+        if (dialogContext.getAmendmentController() == null) {
+            // temporarily add the widget to calculate its position
+            final int injectionPosition = overlayWidgetInjectionStrategy.getInjectionPosition(dialogContext.getParentOverlayWidget(),
+                    dialogContext.getReferenceOverlayWidget(), dialogContext.getOverlayWidget());
+            dialogContext.getParentOverlayWidget().addOverlayWidget(dialogContext.getOverlayWidget(), injectionPosition);
+            location = locator.getLocation(dialogContext.getOverlayWidget(), languageIso, true);
+            // we're done, so remove it again
+            dialogContext.getParentOverlayWidget().removeOverlayWidget(dialogContext.getOverlayWidget());
+        } else {
+            // edit
+            location = locator.getLocation(dialogContext.getOverlayWidget(), languageIso, true);
+        }
 
         builder
                 .setOverlayWidget(overlayWidget)
@@ -117,46 +123,51 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
     public void setContext(final DialogContext dialogContext) {
         super.setContext(dialogContext);
         final OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
-        //set the origin
-        overlayWidget.setOrigin(OverlayWidgetOrigin.AMENDMENT);
+
+        assert overlayWidget.getOrigin() != null : "Origin has not been set on the overlay widget -- BUG";
 
         view.getRichTextEditor().setOverlayWidget(overlayWidget);
 
-        OverlaySnippet overlaySnippet = overlaySnippetFactory.getSnippet(overlayWidget);
-        overlaySnippetEvaluator.addEvaluator(new OverlaySnippetEvaluator.Evaluator() {
-            @Override
-            public String getPlaceHolder() {
-                return "${widget.num}";
-            }
+        if (dialogContext.getAmendmentController() == null) {
 
-            @Override
-            public String evaluate() {
-                if (overlayWidget.getNumberingType() == null) {
-                    // if there is a sibling of the same type, use that one
-                    OverlayWidget sibling = dialogContext.getOverlayWidget().next(new OverlayWidgetSelector() {
-                        @Override
-                        public boolean select(OverlayWidget toSelect) {
-                            return true;
-                        }
-                    });
-                    if (sibling != null) {
-                        overlayWidget.setNumberingType(sibling.getNumberingType());
-                    } else {
-                        // take the parent's numbering, but use a different one
-                        // TODO
-                        overlayWidget.setNumberingType(NumberingType.ROMANITO);
-                    }
+            OverlaySnippet overlaySnippet = overlaySnippetFactory.getSnippet(overlayWidget);
+            overlaySnippetEvaluator.addEvaluator(new OverlaySnippetEvaluator.Evaluator() {
+                @Override
+                public String getPlaceHolder() {
+                    return "${widget.num}";
                 }
-                //add the overlay widget in the parent children collection to compute the num
-                final int injectionPosition = overlayWidgetInjectionStrategy.getInjectionPosition(dialogContext.getParentOverlayWidget(), dialogContext.getReferenceOverlayWidget(), dialogContext.getOverlayWidget());
 
-                dialogContext.getParentOverlayWidget().addOverlayWidget(overlayWidget, injectionPosition);
-                String num = locator.getNum(overlayWidget, clientFactory.getClientContext().getDocumentTranslationLanguageCode(), true);
-                dialogContext.getParentOverlayWidget().removeOverlayWidget(overlayWidget);
-                return num == null ? "" : num;
-            }
-        });
-        view.setAmendmentContent(overlaySnippet != null ? overlaySnippet.getContent(overlaySnippetEvaluator) : "");
+                @Override
+                public String evaluate() {
+                    if (overlayWidget.getNumberingType() == null) {
+                        // if there is a sibling of the same type, use that one
+                        OverlayWidget sibling = dialogContext.getOverlayWidget().next(new OverlayWidgetSelector() {
+                            @Override
+                            public boolean select(OverlayWidget toSelect) {
+                                return true;
+                            }
+                        });
+                        if (sibling != null) {
+                            overlayWidget.setNumberingType(sibling.getNumberingType());
+                        } else {
+                            // take the parent's numbering, but use a different one
+                            // TODO
+                            overlayWidget.setNumberingType(NumberingType.ROMANITO);
+                        }
+                    }
+                    //add the overlay widget in the parent children collection to compute the num
+                    final int injectionPosition = overlayWidgetInjectionStrategy.getInjectionPosition(dialogContext.getParentOverlayWidget(), dialogContext.getReferenceOverlayWidget(), dialogContext.getOverlayWidget());
+
+                    dialogContext.getParentOverlayWidget().addOverlayWidget(overlayWidget, injectionPosition);
+                    String num = locator.getNum(overlayWidget, clientFactory.getClientContext().getDocumentTranslationLanguageCode(), true);
+                    dialogContext.getParentOverlayWidget().removeOverlayWidget(overlayWidget);
+                    return num == null ? "" : num;
+                }
+            });
+            view.setAmendmentContent(overlaySnippet != null ? overlaySnippet.getContent(overlaySnippetEvaluator) : "");
+        } else {
+            view.setAmendmentContent(AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(dialogContext.getAmendmentController()));
+        }
 
         // clear author panel
         authorPanelController.clear();
