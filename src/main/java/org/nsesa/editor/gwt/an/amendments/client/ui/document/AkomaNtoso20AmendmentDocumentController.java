@@ -92,7 +92,7 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
             @Override
             public boolean apply(final ActiveState state) {
                 final OverlayWidget topVisibleAmenableWidget = getSourceFileController().getTopVisibleOverlayWidget();
-                getSourceFileController().walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
+                getSourceFileController().walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                     @Override
                     public boolean visit(final OverlayWidget visited) {
                         if (visited.isAmended()) {

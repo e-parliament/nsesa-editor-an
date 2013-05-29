@@ -18,14 +18,10 @@ import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Akomantoso20OverlayFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Csd02OverlayFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.QuotedStructure;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
-import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
-
-import java.util.List;
 
 /**
  * Date: 27/03/13 13:51
@@ -96,7 +92,7 @@ public class CompositeOverlayFactory extends DefaultOverlayFactory {
             final String namespaceURI20 = akomantoso20OverlayFactory.getNamespaceURI();
             final String namespaceURI30 = csd02OverlayFactory.getNamespaceURI();
 
-            overlayWidget.walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
+            overlayWidget.walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                 @Override
                 public boolean visit(OverlayWidget visited) {
                     final boolean baseHierarchySubclass = (visited instanceof BasehierarchyComplexType ||

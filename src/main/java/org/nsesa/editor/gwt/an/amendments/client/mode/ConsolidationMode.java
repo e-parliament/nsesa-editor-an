@@ -53,7 +53,7 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
     public boolean apply(ActiveState state) {
         if (state.isActive()) {
             clientFactory.getEventBus().fireEvent(new NotificationEvent("Consolidation view is now active."));
-            documentController.getSourceFileController().walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
+            documentController.getSourceFileController().walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                 @Override
                 public boolean visit(OverlayWidget visited) {
                     if (visited.isAmended()) {
@@ -86,7 +86,7 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
             });
         } else {
             clientFactory.getEventBus().fireEvent(new NotificationEvent("Consolidation view is now inactive."));
-            documentController.getSourceFileController().walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
+            documentController.getSourceFileController().walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                 @Override
                 public boolean visit(OverlayWidget visited) {
                     if (visited.isAmended()) {

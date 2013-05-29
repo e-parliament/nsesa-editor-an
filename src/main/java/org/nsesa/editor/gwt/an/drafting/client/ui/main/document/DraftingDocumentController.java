@@ -661,7 +661,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                 }
             }
         }
-        overlayWidget.walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
+        overlayWidget.walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
             @Override
             public boolean visit(OverlayWidget visited) {
                 // if the widget is amendable, register a listener for its events
@@ -723,7 +723,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                 final List<OverlayWidget> overlayWidgets = sourceFileController.getOverlayWidgets();
                                 if (overlayWidgets != null && !overlayWidgets.isEmpty()) {
                                     // only display the first one
-                                    overlayWidgets.get(0).walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
+                                    overlayWidgets.get(0).walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                                         @Override
                                         public boolean visit(OverlayWidget visited) {
                                             if (visited.getOverlayElement().getClassName().contains("nsesa-select")) {
