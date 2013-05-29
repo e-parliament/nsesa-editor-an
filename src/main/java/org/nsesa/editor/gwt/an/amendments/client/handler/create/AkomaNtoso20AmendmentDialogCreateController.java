@@ -93,7 +93,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         final String location;
         if (dialogContext.getAmendmentController() == null) {
             // temporarily add the widget to calculate its position
-            final int injectionPosition = overlayWidgetInjectionStrategy.getInjectionPosition(dialogContext.getParentOverlayWidget(),
+            final int injectionPosition = overlayWidgetInjectionStrategy.getProposedInjectionPosition(dialogContext.getParentOverlayWidget(),
                     dialogContext.getReferenceOverlayWidget(), dialogContext.getOverlayWidget());
             dialogContext.getParentOverlayWidget().addOverlayWidget(dialogContext.getOverlayWidget(), injectionPosition);
             location = locator.getLocation(dialogContext.getOverlayWidget(), languageIso, true);
@@ -156,7 +156,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
                         }
                     }
                     //add the overlay widget in the parent children collection to compute the num
-                    final int injectionPosition = overlayWidgetInjectionStrategy.getInjectionPosition(dialogContext.getParentOverlayWidget(), dialogContext.getReferenceOverlayWidget(), dialogContext.getOverlayWidget());
+                    final int injectionPosition = overlayWidgetInjectionStrategy.getProposedInjectionPosition(dialogContext.getParentOverlayWidget(), dialogContext.getReferenceOverlayWidget(), dialogContext.getOverlayWidget());
 
                     dialogContext.getParentOverlayWidget().addOverlayWidget(overlayWidget, injectionPosition);
                     String num = locator.getNum(overlayWidget, clientFactory.getClientContext().getDocumentTranslationLanguageCode(), true);

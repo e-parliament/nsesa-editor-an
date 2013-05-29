@@ -31,7 +31,8 @@ public class AkomaNtosoOverlayWidgetInjectionStrategy extends DefaultOverlayWidg
     private static final Logger LOG = Logger.getLogger(DefaultOverlayWidgetInjectionStrategy.class.getName());
 
     @Override
-    public int getInjectionPosition(OverlayWidget parent, OverlayWidget reference, OverlayWidget toInject) {
+    public int getProposedInjectionPosition(OverlayWidget parent, OverlayWidget reference, OverlayWidget toInject) {
+
         // find index just before the first child block
         final boolean sibling = (parent != reference);
 
