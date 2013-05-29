@@ -15,25 +15,43 @@ package org.nsesa.editor.gwt.an.amendments.client.ui.document;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.KeyCodes;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.HandlerRegistration;
+import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerSaveEvent;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentController;
 import org.nsesa.editor.gwt.an.amendments.client.MyAmendmentDocumentInjector;
+import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
 import org.nsesa.editor.gwt.an.amendments.client.mode.ConsolidationMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.DiffMode;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.event.KeyComboEvent;
 import org.nsesa.editor.gwt.core.client.event.KeyComboEventHandler;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentOverlayCompletedEvent;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentOverlayCompletedEventHandler;
+import org.nsesa.editor.gwt.core.client.event.widget.OverlayWidgetStructureChangeEvent;
+import org.nsesa.editor.gwt.core.client.event.widget.OverlayWidgetStructureChangeEventHandler;
 import org.nsesa.editor.gwt.core.client.keyboard.KeyboardListener;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Mover;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetSelector;
+import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
+import org.nsesa.editor.gwt.core.shared.AmendableWidgetReference;
+import org.nsesa.editor.gwt.core.shared.AmendmentContainerDTO;
+import org.nsesa.editor.gwt.core.shared.PersonDTO;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -47,6 +65,7 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
     private static final Logger LOG = Logger.getLogger(AkomaNtoso20AmendmentDocumentController.class.getName());
 
     private final KeyboardListener keyboardListener;
+    private AmendmentInjectionPointFinder amendmentInjectionPointFinder;
 
     // --- key combos ---
 
@@ -54,6 +73,7 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
 
     private HandlerRegistration documentOverlayCompletedEventHandler;
     private HandlerRegistration keyComboHandlerRegistration;
+    private HandlerRegistration structureChangeHandlerRegistration;
 
     @Inject
     public AkomaNtoso20AmendmentDocumentController(final ClientFactory clientFactory,
@@ -62,9 +82,11 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
                                                    final Locator locator,
                                                    final Creator creator,
                                                    final Mover mover,
-                                                   final KeyboardListener keyboardListener) {
+                                                   final KeyboardListener keyboardListener,
+                                                   final AmendmentInjectionPointFinder amendmentInjectionPointFinder) {
         super(clientFactory, serviceFactory, overlayFactory, locator, creator, mover);
         this.keyboardListener = keyboardListener;
+        this.amendmentInjectionPointFinder = amendmentInjectionPointFinder;
     }
 
     @Override
@@ -95,6 +117,26 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
                 LOG.info("Key combo " + event.getKeyCombo());
             }
         });
+
+        structureChangeHandlerRegistration = documentEventBus.addHandler(OverlayWidgetStructureChangeEvent.TYPE, new OverlayWidgetStructureChangeEventHandler() {
+            @Override
+            public void onEvent(OverlayWidgetStructureChangeEvent event) {
+                final ArrayList<AmendmentContainerDTO> amendments = new ArrayList<AmendmentContainerDTO>();
+                for (final OverlayWidget widget : event.getAffectedWidgets()) {
+                    if (widget.getOverlayWidgetAwareList() != null && !widget.getOverlayWidgetAwareList().isEmpty()) {
+                        AmendmentController controller = (AmendmentController) widget.getOverlayWidgetAwareList().get(0);
+                        boolean needUpdate = updateAmendmentAfterStructuralChange(controller);
+                        if (needUpdate) {
+                            amendments.add(controller.getModel());
+                        }
+                    }
+                }
+                if (!amendments.isEmpty()) {
+                    documentEventBus.fireEvent(new AmendmentContainerSaveEvent(amendments.toArray(new AmendmentContainerDTO[0])));
+                }
+            }
+        });
+
     }
 
     @Override
@@ -107,5 +149,125 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
         super.removeListeners();
         documentOverlayCompletedEventHandler.removeHandler();
         keyComboHandlerRegistration.removeHandler();
+        structureChangeHandlerRegistration.removeHandler();
+    }
+
+    /**
+     * Update an amendment after structural change
+     * @param amendmentController
+     * @return True when the amendment content needs to be changed
+     */
+    private boolean updateAmendmentAfterStructuralChange(AmendmentController amendmentController) {
+        //identify the new overlay widget reference to be used when determining widget reference
+        final OverlayWidget newWidgetReference = determineWidgetReference(amendmentController.getOverlayWidget());
+        AmendableWidgetReference newReference = amendmentInjectionPointFinder.getInjectionPoint(
+                amendmentController.getOverlayWidget().getParentOverlayWidget(),
+                newWidgetReference,
+                amendmentController.getOverlayWidget());
+
+        AmendableWidgetReference oldReference = amendmentController.getModel().getSourceReference();
+
+        // oldReference and newReference are the same no need to update the amendment content
+        if (oldReference.getPath().equalsIgnoreCase(newReference.getPath()) && oldReference.getOffset() == newReference.getOffset()) {
+            return false;
+        }
+
+        final HashSet<PersonDTO> persons = new HashSet<PersonDTO>();
+        String justification = "";
+        String notes = "";
+        final OverlayWidget amendmentBodyOverlayWidget = amendmentController.asAmendableWidget(amendmentController.getModel().getBody());
+
+        final Preface preface = (Preface) OverlayUtil.findSingle("preface", amendmentBodyOverlayWidget);
+        final Container container = preface.getContainers().get(0);
+        if (container != null && "authors".equals(container.nameAttr().getValue())) {
+            List<OverlayWidget> docProponents = OverlayUtil.find("docProponent", container);
+            for (final OverlayWidget docProponent : docProponents) {
+                if (docProponent instanceof DocProponent) {
+                    final DocProponent proponent = (DocProponent) docProponent;
+                    final String refersToID = proponent.refersToAttr().getValue();
+
+                    final TLCPerson tlcPerson = (TLCPerson) OverlayUtil.xpathSingle(refersToID, amendmentBodyOverlayWidget);
+                    final String id = tlcPerson.hrefAttr().getValue().substring(tlcPerson.hrefAttr().getValue().lastIndexOf(":") + 1);
+                    serviceFactory.getGwtService().getPerson(clientFactory.getClientContext(), id, new AsyncCallback<PersonDTO>() {
+                        @Override
+                        public void onFailure(Throwable caught) {
+                            LOG.warning("Could not retrieve person: " + caught);
+                        }
+
+                        @Override
+                        public void onSuccess(PersonDTO result) {
+                            persons.add(result);
+                        }
+                    });
+                }
+            }
+        }
+
+        // get meta (justification, notes, ...)
+        final AmendmentJustification amendmentJustification =
+                (AmendmentJustification) OverlayUtil.findSingle("amendmentJustification", amendmentBodyOverlayWidget);
+        if (amendmentJustification != null) {
+            justification = amendmentJustification.getPs().get(0).getInnerHTML().trim();
+        }
+        final Mod mod = (Mod) OverlayUtil.findSingle("mod", amendmentBodyOverlayWidget);
+        if (mod != null) {
+            final List<AuthorialNote> authorialNotes = mod.getAuthorialNotes();
+            if (authorialNotes != null && !authorialNotes.isEmpty()) {
+                notes = authorialNotes.get(0).html().trim();
+            }
+        }
+
+        final AkomaNtoso20AmendmentBuilder builder = new AkomaNtoso20AmendmentBuilder(overlayFactory);
+        final String languageIso = amendmentController.getDocumentController().getDocument().getLanguageIso();
+        // set the num
+        String num = locator.getNum(amendmentController.getOverlayWidget(), clientFactory.getClientContext().getDocumentTranslationLanguageCode(), true);
+        AkomaNtoso20AmendmentControllerUtil.setAmendmentNum(amendmentBodyOverlayWidget, num);
+
+        String content = AkomaNtoso20AmendmentControllerUtil.getAmendmentContent(amendmentBodyOverlayWidget);
+        final OverlayWidget amendmentOverlayWidget = amendmentController.asAmendableWidget(content);
+
+        //build again the amendment
+        builder
+                .setOverlayWidget(amendmentController.getOverlayWidget())
+                .setLanguageIso(languageIso)
+                .setAuthors(persons)
+                .setLocation(locator.getLocation(amendmentController.getOverlayWidget(), languageIso, true))
+                .setOriginalText(AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController))
+                .setAmendmentText(amendmentOverlayWidget.getInnerHTML())
+                .setModifyIds(true)
+                .setJustification(justification)
+                .setNotes(notes);
+        amendmentController.getModel().setSourceReference(newReference);
+        amendmentController.getModel().setRoot(builder.build());
+
+        return true;
+    }
+
+    /**
+     * Determine the overlay widget reference
+     * @param overlayWidget
+     * @return {@link OverlayWidget} as reference
+     */
+    private OverlayWidget determineWidgetReference(OverlayWidget overlayWidget) {
+        OverlayWidget reference = overlayWidget.getPreviousSibling(new OverlayWidgetSelector() {
+            @Override
+            public boolean select(OverlayWidget toSelect) {
+                return !toSelect.isIntroducedByAnAmendment() &&
+                        (toSelect instanceof BasehierarchyComplexType || toSelect instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType);
+            }
+        });
+        if (reference == null) {
+            reference = overlayWidget.getNextSibling(new OverlayWidgetSelector() {
+                @Override
+                public boolean select(OverlayWidget toSelect) {
+                    return !toSelect.isIntroducedByAnAmendment() &&
+                            (toSelect instanceof BasehierarchyComplexType || toSelect instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType);
+                }
+            });
+        }
+        if (reference == null) {
+            reference = overlayWidget.getParentOverlayWidget();
+        }
+        return reference;
     }
 }

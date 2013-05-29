@@ -106,7 +106,7 @@ public class AkomaNtoso20AmendmentControllerUtil {
         return getAmendmentContent(amendmentController.asAmendableWidget(amendmentController.getModel().getBody()));
     }
 
-    private static String getAmendmentContent(final OverlayWidget overlayWidget) {
+    public static String getAmendmentContent(final OverlayWidget overlayWidget) {
         if (overlayWidget == null) throw new NullPointerException("Overlay widget cannot be null.");
         final OverlayWidget quotedStructure = OverlayUtil.xpathSingle("//akomaNtoso[0]/amendment[0]/amendmentBody[0]/amendmentContent[0]/block[2]/mod[0]/quotedStructure[1]", overlayWidget);
         return quotedStructure != null ? quotedStructure.getInnerHTML() : null;
@@ -136,7 +136,7 @@ public class AkomaNtoso20AmendmentControllerUtil {
         setAmendmentNum(amendmentController.asAmendableWidget(amendmentController.getView().getBody()), originalContent);
     }
 
-    private static void setAmendmentNum(final OverlayWidget overlayWidget, final String num) {
+    public static void setAmendmentNum(final OverlayWidget overlayWidget, final String num) {
         if (overlayWidget == null) throw new NullPointerException("Overlay widget cannot be null.");
         final OverlayWidget quotedStructure = OverlayUtil.xpathSingle("//akomaNtoso[0]/amendment[0]/amendmentBody[0]/amendmentContent[0]/block[2]/mod[0]/quotedStructure[1]", overlayWidget);
         final OverlayWidget numOverlayWidget = OverlayUtil.findSingle("num", quotedStructure);
