@@ -17,9 +17,9 @@ import org.apache.cxf.helpers.IOUtils;
 import org.nsesa.server.dto.AmendmentContainerDTO;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletResponse;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.OutputStream;
 
 /**
  * Export the amendment container DTO in xml format
@@ -29,34 +29,20 @@ import java.io.OutputStream;
  */
 @Service
 public class XMLExportService implements ExportService<AmendmentContainerDTO> {
-    private String name;
-    private int length;
 
     @Override
-    public void export(AmendmentContainerDTO object, OutputStream outputStream) {
-        name = object.getAmendmentContainerID();
+    public void export(AmendmentContainerDTO object, HttpServletResponse response) throws IOException {
         try {
+            response.setContentType("text/xml");
+            response.setHeader("Content-Disposition", "attachment;filename=" + object.getAmendmentContainerID() + ".xml");
+            response.setCharacterEncoding("UTF8");
+
             byte[] bytes = object.getBody().getBytes("utf-8");
-            IOUtils.copy(new ByteArrayInputStream(bytes), outputStream);
-            this.length = bytes.length;
+            IOUtils.copy(new ByteArrayInputStream(bytes), response.getOutputStream());
+            response.setContentLength(bytes.length);
+            response.flushBuffer();
         } catch (IOException e) {
             throw new RuntimeException("Failed to xml export", e);
         }
-
-    }
-
-    @Override
-    public String getContentType() {
-        return "application/xml";
-    }
-
-    @Override
-    public int getLength() {
-        return length;
-    }
-
-    @Override
-    public String getName() {
-        return name + ".xml";
     }
 }

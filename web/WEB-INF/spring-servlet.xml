@@ -17,13 +17,12 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:p="http://www.springframework.org/schema/p"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans.xsd
             http://www.springframework.org/schema/context
-            http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+            http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
     <context:annotation-config/>
     <context:component-scan base-package="org.nsesa.editor"/>
@@ -60,7 +59,8 @@
 
     <bean id="diffService" class="org.nsesa.diff.diffUtils.service.impl.DefaultDiffService" autowire="byName"/>
 
-    <bean id="gwtDiffService" class="org.nsesa.editor.gwt.an.common.server.service.gwt.GWTDiffServiceImpl" autowire="byName"/>
+    <bean id="gwtDiffService" class="org.nsesa.editor.gwt.an.common.server.service.gwt.GWTDiffServiceImpl"
+          autowire="byName"/>
     <bean id="gwtDocumentService" class="org.nsesa.editor.gwt.an.common.server.service.gwt.GWTDocumentServiceImpl"
           autowire="byName">
         <property name="documentTemplate" value="classpath:document.ftl"/>
@@ -79,4 +79,16 @@
         </property>
     </bean>
 
+    <util:map id="exportServices" scope="singleton" map-class="java.util.HashMap" key-type="java.lang.String"
+              value-type="org.nsesa.editor.gwt.an.amendments.server.service.ExportService">
+        <entry key="xml" value-ref="xmlExportService"/>
+        <entry key="html" value-ref="htmlExportService"/>
+        <entry key="pdf" value-ref="pdfExportService"/>
+        <entry key="word" value-ref="wordExportService"/>
+    </util:map>
+
+    <bean id="xmlExportService" class="org.nsesa.editor.gwt.an.amendments.server.service.XMLExportService"/>
+    <bean id="htmlExportService" class="org.nsesa.editor.gwt.an.amendments.server.service.HtmlExportService"/>
+    <bean id="pdfExportService" class="org.nsesa.editor.gwt.an.amendments.server.service.PdfExportService"/>
+    <bean id="wordExportService" class="org.nsesa.editor.gwt.an.amendments.server.service.WordExportService"/>
 </beans>

@@ -24,8 +24,12 @@ import org.springframework.stereotype.Service;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.StringReader;
+import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,12 +46,12 @@ public class HtmlExportService implements ExportService<AmendmentContainerDTO> {
     @Value("${editor.url}")
     private String editorUrl;
 
-    private String name;
-    private int length;
-
     @Override
-    public void export(AmendmentContainerDTO object, OutputStream outputStream) {
-        this.name = object.getAmendmentContainerID();
+    public void export(final AmendmentContainerDTO object, final HttpServletResponse response) throws IOException {
+        response.setContentType("text/html; charset=UTF-8");
+        response.setHeader("Content-Disposition", "attachment;filename=" + object.getAmendmentContainerID() + ".html");
+        response.setCharacterEncoding("UTF8");
+
         final String content = object.getBody();
         final InputSource inputSource;
         inputSource = new InputSource(new StringReader(content));
@@ -63,8 +67,10 @@ public class HtmlExportService implements ExportService<AmendmentContainerDTO> {
             root.put("editorUrl", editorUrl);
             configuration.getTemplate(template.getFile().getName()).process(root, sw);
             byte[] bytes = sw.toString().getBytes("utf-8");
-            this.length = bytes.length;
-            IOUtils.copy(new ByteArrayInputStream(bytes), outputStream);
+            IOUtils.copy(new ByteArrayInputStream(bytes), response.getOutputStream());
+            response.setContentLength(bytes.length);
+            response.flushBuffer();
+
         } catch (IOException e) {
             throw new RuntimeException("Could not read file.", e);
         } catch (SAXException e) {
@@ -74,23 +80,6 @@ public class HtmlExportService implements ExportService<AmendmentContainerDTO> {
         } catch (TemplateException e) {
             throw new RuntimeException("Could not load template.", e);
         }
-
-
-    }
-
-    @Override
-    public String getContentType() {
-        return "text/html; charset=UTF-8";
-    }
-
-    @Override
-    public int getLength() {
-        return length;
-    }
-
-    @Override
-    public String getName() {
-        return name + ".html";
     }
 
 }
