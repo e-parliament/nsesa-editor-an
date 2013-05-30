@@ -47,8 +47,8 @@ public class WordExportService implements ExportService<AmendmentContainerDTO> {
     @Override
     public void export(AmendmentContainerDTO object, HttpServletResponse response) throws IOException {
 
-        response.setContentType("application/msword");
-        response.setHeader("Content-Disposition", "attachment;filename=" + object.getAmendmentContainerID() + ".doc");
+        response.setContentType("application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+        response.setHeader("Content-Disposition", "attachment;filename=" + object.getAmendmentContainerID() + ".docx");
         response.setCharacterEncoding("UTF8");
 
         final String content = object.getBody();
