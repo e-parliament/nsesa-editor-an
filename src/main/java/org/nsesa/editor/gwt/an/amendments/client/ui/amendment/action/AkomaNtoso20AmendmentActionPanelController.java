@@ -26,6 +26,7 @@ import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerSaveEvent;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.action.AmendmentActionPanelController;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.action.AmendmentActionPanelView;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.action.resources.Constants;
 import org.nsesa.editor.gwt.compare.client.event.ShowComparePanelEvent;
 import org.nsesa.editor.gwt.compare.client.ui.compare.ComparisonProvider;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
@@ -59,7 +60,7 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
 
     @Inject
     public AkomaNtoso20AmendmentActionPanelController(final AmendmentActionPanelView amendmentActionPanelView,
-                                                      final CoreMessages coreMessages) {
+                                                      final CoreMessages coreMessages, final Constants constants) {
         super(amendmentActionPanelView, coreMessages);
         this.exportPopupPanel.setWidget(mainPanel);
 
@@ -83,7 +84,7 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
             }
         });
 
-        final Anchor history = new Anchor("History");
+        final Anchor history = new Anchor(constants.amendmentActionHistory());
         history.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
@@ -153,7 +154,7 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
         addSeparator();
         addWidget(history);
 
-        final Anchor xmlExport = new Anchor("Export to XML");
+        final Anchor xmlExport = new Anchor(constants.amendmentActionExportXml());
         xmlExport.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
@@ -162,7 +163,7 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
                 popupPanel.hide();
             }
         });
-        final Anchor pdfExport = new Anchor("Export to PDF");
+        final Anchor pdfExport = new Anchor(constants.amendmentActionExportPdf());
         pdfExport.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
@@ -171,7 +172,7 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
                 popupPanel.hide();
             }
         });
-        final Anchor wordExport = new Anchor("Export to Word");
+        final Anchor wordExport = new Anchor(constants.amendmentActionExportWord());
         wordExport.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
@@ -180,7 +181,7 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
                 popupPanel.hide();
             }
         });
-        final Anchor htmlExport = new Anchor("Export to HTML");
+        final Anchor htmlExport = new Anchor(constants.amendmentActionExportHtml());
         htmlExport.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
