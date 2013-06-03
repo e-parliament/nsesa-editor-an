@@ -25,8 +25,11 @@ import org.xhtmlrenderer.pdf.ITextRenderer;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.StringWriter;
 import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
@@ -44,12 +47,12 @@ public class PdfExportService implements ExportService<AmendmentContainerDTO> {
     @Value("${editor.url}")
     private String editorUrl;
 
-    private String name;
-    private int length;
 
     @Override
-    public void export(AmendmentContainerDTO object, OutputStream outputStream) {
-        this.name = object.getAmendmentContainerID();
+    public void export(AmendmentContainerDTO object, HttpServletResponse response) {
+        response.setContentType("application/pdf");
+        response.setHeader("Content-Disposition", "attachment;filename=" + object.getAmendmentContainerID() + ".pdf");
+        response.setCharacterEncoding("UTF8");
         final String content = object.getBody();
         final InputSource inputSource;
         byte[] bytes = content.getBytes(Charset.forName("UTF-8"));
@@ -66,11 +69,11 @@ public class PdfExportService implements ExportService<AmendmentContainerDTO> {
             configuration.getTemplate(template.getFile().getName()).process(root, sw);
             ITextRenderer renderer = new ITextRenderer();
             renderer.setDocumentFromString(sw.toString(), editorUrl + "/");
-
-            this.length = sw.toString().length();
-
             renderer.layout();
-            renderer.createPDF(outputStream);
+            renderer.createPDF(response.getOutputStream());
+            response.setContentLength(sw.toString().length());
+            response.flushBuffer();
+
         } catch (IOException e) {
             throw new RuntimeException("Could not read file.", e);
         } catch (SAXException e) {
@@ -83,20 +86,5 @@ public class PdfExportService implements ExportService<AmendmentContainerDTO> {
             throw new RuntimeException("Export to pdf failed", e);
         }
 
-    }
-
-    @Override
-    public String getContentType() {
-        return "application/pdf";
-    }
-
-    @Override
-    public int getLength() {
-        return length;
-    }
-
-    @Override
-    public String getName() {
-        return name + ".pdf";
     }
 }

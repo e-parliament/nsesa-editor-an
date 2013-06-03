@@ -11,14 +11,15 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the Licence for the specific language governing permissions and limitations under the Licence.
  */
+
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen;
 
 import com.google.gwt.i18n.client.Messages;
 
 /**
-* Note: this file is generated. Rather than changing this file, correct the template called
-<tt>overlayMessages.ftl</tt>.
-*/
+ * Note: this file is generated. Rather than changing this file, correct the template called
+ * <tt>overlayMessages.ftl</tt>.
+ */
 
 public interface XmlschemaOverlayMessages extends Messages {
 }

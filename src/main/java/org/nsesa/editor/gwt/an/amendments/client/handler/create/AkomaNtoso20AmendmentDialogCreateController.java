@@ -15,18 +15,18 @@ package org.nsesa.editor.gwt.an.amendments.client.handler.create;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
-import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.NumberingType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.core.client.ui.visualstructure.VisualStructureController;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.core.client.validation.Validator;
-import org.nsesa.editor.gwt.core.shared.OverlayWidgetOrigin;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.author.AuthorPanelController;
@@ -51,6 +51,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
     final AuthorPanelController authorPanelController;
     final MetaPanelController metaPanelController;
     final ServiceFactory serviceFactory;
+    final OverlayWidgetInjectionStrategy overlayWidgetInjectionStrategy;
 
 
     @Inject
@@ -65,16 +66,18 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
                                                        final OverlaySnippetEvaluator overlaySnippetEvaluator,
                                                        final Validator<OverlayWidget> overlayWidgetValidator,
                                                        final AuthorPanelController authorPanelController,
-                                                       final MetaPanelController metaPanelController
+                                                       final MetaPanelController metaPanelController,
+                                                       final OverlayWidgetInjectionStrategy overlayWidgetInjectionStrategy
     ) {
         super(clientFactory, view, locator, overlayFactory, visualStructureController,
-                amendmentInjectionPointFinder,overlayWidgetValidator);
+                amendmentInjectionPointFinder, overlayWidgetValidator);
         this.serviceFactory = serviceFactory;
         this.overlaySnippetFactory = overlaySnippetFactory;
         this.overlaySnippetEvaluator = overlaySnippetEvaluator;
 
         this.authorPanelController = authorPanelController;
         this.metaPanelController = metaPanelController;
+        this.overlayWidgetInjectionStrategy = overlayWidgetInjectionStrategy;
 
         addChildControllers(authorPanelController, metaPanelController);
     }
@@ -86,11 +89,26 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
         final OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
         final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
+
+        final String location;
+        if (dialogContext.getAmendmentController() == null) {
+            // temporarily add the widget to calculate its position
+            final int injectionPosition = overlayWidgetInjectionStrategy.getProposedInjectionPosition(dialogContext.getParentOverlayWidget(),
+                    dialogContext.getReferenceOverlayWidget(), dialogContext.getOverlayWidget());
+            dialogContext.getParentOverlayWidget().addOverlayWidget(dialogContext.getOverlayWidget(), injectionPosition);
+            location = locator.getLocation(dialogContext.getOverlayWidget(), languageIso, true);
+            // we're done, so remove it again
+            dialogContext.getParentOverlayWidget().removeOverlayWidget(dialogContext.getOverlayWidget());
+        } else {
+            // edit
+            location = locator.getLocation(dialogContext.getOverlayWidget(), languageIso, true);
+        }
+
         builder
                 .setOverlayWidget(overlayWidget)
                 .setLanguageIso(languageIso)
                 .setAuthors(authorPanelController.getSelectedPersons())
-                .setLocation(locator.getLocation(overlayWidget, null, languageIso, true))
+                .setLocation(location)
                 .setOriginalText("") // TODO null?
                 .setAmendmentText(view.getAmendmentContent())
                 .setJustification(metaPanelController.getJustification())
@@ -105,40 +123,51 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
     public void setContext(final DialogContext dialogContext) {
         super.setContext(dialogContext);
         final OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
-        //set the origin
-        overlayWidget.setOrigin(OverlayWidgetOrigin.AMENDMENT);
 
-        view.getRichTextEditor().resetBodyClass();
+        assert overlayWidget.getOrigin() != null : "Origin has not been set on the overlay widget -- BUG";
+
         view.getRichTextEditor().setOverlayWidget(overlayWidget);
 
-        OverlaySnippet overlaySnippet = overlaySnippetFactory.getSnippet(overlayWidget);
-        overlaySnippetEvaluator.addEvaluator(new OverlaySnippetEvaluator.Evaluator() {
-            @Override
-            public String getPlaceHolder() {
-                return "${widget.num}";
-            }
+        if (dialogContext.getAmendmentController() == null) {
 
-            @Override
-            public String evaluate() {
-                if (overlayWidget.getNumberingType() == null) {
-                    // if there is a sibling of the same type, use that one
-                    OverlayWidget sibling = dialogContext.getParentOverlayWidget().getChildOverlayWidgets().get(dialogContext.getIndex());
-                    if (sibling != null) {
-                        overlayWidget.setNumberingType(sibling.getNumberingType());
-                    } else {
-                        // take the parent's numbering, but use a different one
-                        // TODO
-                        overlayWidget.setNumberingType(NumberingType.ROMANITO);
-                    }
+            OverlaySnippet overlaySnippet = overlaySnippetFactory.getSnippet(overlayWidget);
+            overlaySnippetEvaluator.addEvaluator(new OverlaySnippetEvaluator.Evaluator() {
+                @Override
+                public String getPlaceHolder() {
+                    return "${widget.num}";
                 }
-                //add the overlay widget in the parent children collection to compute the num
-                dialogContext.getParentOverlayWidget().addOverlayWidget(overlayWidget, dialogContext.getIndex());
-                String num = locator.getNum(overlayWidget, clientFactory.getClientContext().getDocumentTranslationLanguageCode());
-                dialogContext.getParentOverlayWidget().removeOverlayWidget(overlayWidget);
-                return num == null ? "" : num;
-            }
-        });
-        view.setAmendmentContent(overlaySnippet != null ? overlaySnippet.getContent(overlaySnippetEvaluator) : "");
+
+                @Override
+                public String evaluate() {
+                    if (overlayWidget.getNumberingType() == null) {
+                        // if there is a sibling of the same type, use that one
+                        OverlayWidget sibling = dialogContext.getOverlayWidget().next(new OverlayWidgetSelector() {
+                            @Override
+                            public boolean select(OverlayWidget toSelect) {
+                                return true;
+                            }
+                        });
+                        if (sibling != null) {
+                            overlayWidget.setNumberingType(sibling.getNumberingType());
+                        } else {
+                            // take the parent's numbering, but use a different one
+                            // TODO
+                            overlayWidget.setNumberingType(NumberingType.ROMANITO);
+                        }
+                    }
+                    //add the overlay widget in the parent children collection to compute the num
+                    final int injectionPosition = overlayWidgetInjectionStrategy.getProposedInjectionPosition(dialogContext.getParentOverlayWidget(), dialogContext.getReferenceOverlayWidget(), dialogContext.getOverlayWidget());
+
+                    dialogContext.getParentOverlayWidget().addOverlayWidget(overlayWidget, injectionPosition);
+                    String num = locator.getNum(overlayWidget, clientFactory.getClientContext().getDocumentTranslationLanguageCode(), true);
+                    dialogContext.getParentOverlayWidget().removeOverlayWidget(overlayWidget);
+                    return num == null ? "" : num;
+                }
+            });
+            view.setAmendmentContent(overlaySnippet != null ? overlaySnippet.getContent(overlaySnippetEvaluator) : "");
+        } else {
+            view.setAmendmentContent(AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(dialogContext.getAmendmentController()));
+        }
 
         // clear author panel
         authorPanelController.clear();
@@ -152,6 +181,8 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
             // set the amendment content
             final OverlayWidget amendmentBodyOverlayWidget = dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody());
+
+            // TODO nsesa-editor-an #86: won't work if the amendment itself contains already a quoted structure
 
             final java.util.List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", amendmentBodyOverlayWidget);
             view.setAmendmentContent(quotedStructures.get(1).getOverlayElement().getFirstChildElement().getInnerHTML());

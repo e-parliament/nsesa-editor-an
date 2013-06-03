@@ -19,6 +19,7 @@
 <module rename-to="AkomaNtosoEditor">
     <inherits name="org.nsesa.editor.gwt.dialog.Dialog"/>
     <inherits name="org.nsesa.editor.gwt.inline.Inline"/>
+    <inherits name="org.nsesa.editor.gwt.compare.Revision"/>
     <inherits name="org.nsesa.editor.gwt.editor.Editor"/>
     <inherits name="org.nsesa.editor.gwt.an.common.AkomaNtoso"/>
 

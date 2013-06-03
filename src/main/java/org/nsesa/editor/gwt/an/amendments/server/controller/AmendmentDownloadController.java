@@ -13,18 +13,22 @@
  */
 package org.nsesa.editor.gwt.an.amendments.server.controller;
 
-import org.nsesa.editor.gwt.an.amendments.server.service.*;
+import org.nsesa.editor.gwt.an.amendments.server.service.DiffHandlerService;
+import org.nsesa.editor.gwt.an.amendments.server.service.ExportService;
 import org.nsesa.server.dto.AmendmentContainerDTO;
+import org.nsesa.server.exception.ResourceNotFoundException;
 import org.nsesa.server.service.api.AmendmentService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -36,44 +40,39 @@ import java.util.Map;
 @Controller
 @RequestMapping("/amendment")
 public class AmendmentDownloadController {
+
+    private static final Logger LOG = LoggerFactory.getLogger(AmendmentDownloadController.class);
+
     @Autowired
     AmendmentService amendmentService;
-    @Autowired
-    private PdfExportService pdfExportService;
-    @Autowired
-    private HtmlExportService htmlExportService;
-    @Autowired
-    private XMLExportService xmlExportService;
-    @Autowired
-    private WordExportService wordExportService;
 
-    @RequestMapping(value="/{type}/{amendmentContainerID}", method = RequestMethod.GET)
-    public void download( @PathVariable("type") String type, @PathVariable("amendmentContainerID") String amendmentContainerID,
+    @Autowired
+    DiffHandlerService diffHandlerService;
+
+    @Resource(name = "exportServices")
+    Map<String, ExportService<AmendmentContainerDTO>> exportServices;
+
+    @RequestMapping(value = "/{type}/{amendmentContainerID}", method = RequestMethod.GET)
+    public void download(@PathVariable("type") String type, @PathVariable("amendmentContainerID") String amendmentContainerID,
                          HttpServletResponse response) {
-        Map<String, ExportService> registered = new LinkedHashMap<String, ExportService>();
-        registered.put("xml", xmlExportService);
-        registered.put("html", htmlExportService);
-        registered.put("pdf", pdfExportService);
-        registered.put("word", wordExportService);
 
-        AmendmentContainerDTO amendmentContainerDTO = amendmentService.getAmendmentContainer(amendmentContainerID);
-        if (amendmentContainerDTO != null) {
-            try {
-                ExportService exportService = registered.get(type);
-                if (exportService != null) {
-                    exportService.export(amendmentContainerDTO, response.getOutputStream());
-                    response.setContentType(exportService.getContentType());
-                    response.setHeader("Content-Disposition", "attachment;filename=" + exportService.getName());
-                    response.setContentLength(exportService.getLength());
-                    response.setCharacterEncoding("UTF8");
-                    response.flushBuffer();
-
+        try {
+            AmendmentContainerDTO amendmentContainerDTO = amendmentService.getAmendmentContainer(amendmentContainerID);
+            if (amendmentContainerDTO != null) {
+                try {
+                    ExportService exportService = exportServices.get(type);
+                    if (exportService != null) {
+                        // diff now
+                        diffHandlerService.diff(amendmentContainerDTO);
+                        // and export it
+                        exportService.export(amendmentContainerDTO, response);
+                    }
+                } catch (IOException ioe) {
+                    throw new RuntimeException("IOError writing to output stream", ioe);
                 }
-            } catch(IOException ioe) {
-                throw new RuntimeException("IOError writing to output stream", ioe);
             }
+        } catch (ResourceNotFoundException e) {
+            LOG.error("Could not find the amendment with amendmentContainerID " + amendmentContainerID);
         }
     }
-
-
 }

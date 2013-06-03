@@ -21,7 +21,7 @@ import com.google.inject.Singleton;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 import org.nsesa.editor.gwt.an.amendments.client.mode.ConsolidationMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.DiffMode;
-import org.nsesa.editor.gwt.an.amendments.client.mode.InlineEditingMode;
+import org.nsesa.editor.gwt.an.amendments.client.ui.document.resources.Constants;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentModeStateChangedEvent;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentModeStateChangedEventHandler;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentOverlayCompletedEvent;
@@ -44,35 +44,33 @@ import static org.nsesa.editor.gwt.core.client.util.Scope.ScopeValue.DOCUMENT;
 @Scope(DOCUMENT)
 public class AkomaNtoso20SourceFileHeaderController extends SourceFileHeaderController {
 
-    // some example modes
-    private ToggleButton inlineEditingButton = new ToggleButton("Inline", "Inline", new ClickHandler() {
-        @Override
-        public void onClick(ClickEvent event) {
-            final InlineEditingMode inline = (InlineEditingMode) sourceFileController.getDocumentController().getMode(InlineEditingMode.KEY);
-            sourceFileController.getDocumentController().applyState(InlineEditingMode.KEY, new ActiveState(!inline.getState().isActive()));
-        }
-    });
-    private ToggleButton diffingButton = new ToggleButton("Diffing", "Diffing", new ClickHandler() {
-        @Override
-        public void onClick(ClickEvent event) {
-            final DiffMode diff = (DiffMode) sourceFileController.getDocumentController().getMode(DiffMode.KEY);
-            sourceFileController.getDocumentController().applyState(DiffMode.KEY, new ActiveState(!diff.getState().isActive()));
-        }
-    });
-    private ToggleButton consolidationButton = new ToggleButton("Consolidation", "Consolidation", new ClickHandler() {
-        @Override
-        public void onClick(ClickEvent event) {
-            final ConsolidationMode consolidationMode = (ConsolidationMode) sourceFileController.getDocumentController().getMode(ConsolidationMode.KEY);
-            sourceFileController.getDocumentController().applyState(ConsolidationMode.KEY, new ActiveState(!consolidationMode.getState().isActive()));
-        }
-    });
+    private final Constants constants;
+
+    private ToggleButton diffingButton;
+    private ToggleButton consolidationButton;
     private HandlerRegistration documentOverlayCompletedEventHandlerRegistration;
     private HandlerRegistration documentModeChangeHandlerRegistration;
 
     @Inject
-    public AkomaNtoso20SourceFileHeaderController(DocumentEventBus documentEventBus, SourceFileHeaderView view) {
+    public AkomaNtoso20SourceFileHeaderController(DocumentEventBus documentEventBus, SourceFileHeaderView view, Constants constants) {
         super(documentEventBus, view);
-        view.addWidget(inlineEditingButton);
+        this.constants = constants;
+
+        diffingButton = new ToggleButton(constants.documentModeDiffOff(), constants.documentModeDiffOn(), new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                final DiffMode diff = (DiffMode) sourceFileController.getDocumentController().getMode(DiffMode.KEY);
+                sourceFileController.getDocumentController().applyState(DiffMode.KEY, new ActiveState(!diff.getState().isActive()));
+            }
+        });
+        consolidationButton = new ToggleButton(constants.documentModeConsolidationOff(), constants.documentModeConsolidationOn(), new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                final ConsolidationMode consolidationMode = (ConsolidationMode) sourceFileController.getDocumentController().getMode(ConsolidationMode.KEY);
+                sourceFileController.getDocumentController().applyState(ConsolidationMode.KEY, new ActiveState(!consolidationMode.getState().isActive()));
+            }
+        });
+
         view.addWidget(diffingButton);
         view.addWidget(consolidationButton);
 
@@ -96,12 +94,9 @@ public class AkomaNtoso20SourceFileHeaderController extends SourceFileHeaderCont
     }
 
     private void matchModeStates() {
-        final InlineEditingMode inline = (InlineEditingMode) sourceFileController.getDocumentController().getMode(InlineEditingMode.KEY);
         final DiffMode diff = (DiffMode) sourceFileController.getDocumentController().getMode(DiffMode.KEY);
         final ConsolidationMode consolidationMode = (ConsolidationMode) sourceFileController.getDocumentController().getMode(ConsolidationMode.KEY);
 
-        // all done, so check the document mode states
-        inlineEditingButton.setDown(inline.getState().isActive());
         diffingButton.setDown(diff.getState().isActive());
         consolidationButton.setDown(consolidationMode.getState().isActive());
     }

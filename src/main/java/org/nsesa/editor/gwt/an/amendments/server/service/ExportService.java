@@ -13,10 +13,11 @@
  */
 package org.nsesa.editor.gwt.an.amendments.server.service;
 
-import java.io.OutputStream;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 /**
- *  Export the object into the given output stream
+ * Export the object into the given output stream
  *
  * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
  *         Date: 30/04/13 11:21
@@ -24,25 +25,9 @@ import java.io.OutputStream;
 public interface ExportService<T> {
     /**
      * Export the object into the given output stream
+     *
      * @param object
-     * @param outputStream
+     * @param response
      */
-    void export(T object, OutputStream outputStream);
-
-    /**
-     * Returns the content type of the export operation
-     * @return As String
-     */
-    String getContentType();
-
-    /**
-     * Return the length of the export
-     * @return as int
-     */
-    int getLength();
-    /**
-     * Returns the result name after the export operation
-     * @return As String
-     */
-    String getName();
+    void export(T object, HttpServletResponse response) throws IOException;
 }

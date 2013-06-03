@@ -55,7 +55,7 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
         // TODO: actually change the diffing for the amendments ...
         if (state.isActive()) {
             clientFactory.getEventBus().fireEvent(new NotificationEvent("Diffing is now active."));
-            documentController.getSourceFileController().walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
+            documentController.getSourceFileController().walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                 @Override
                 public boolean visit(OverlayWidget visited) {
                     if (visited.isAmended()) {
@@ -88,7 +88,7 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
             });
         } else {
             clientFactory.getEventBus().fireEvent(new NotificationEvent("Diffing is now inactive."));
-            documentController.getSourceFileController().walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
+            documentController.getSourceFileController().walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                 @Override
                 public boolean visit(OverlayWidget visited) {
                     if (visited.isAmended()) {

@@ -14,6 +14,7 @@
 package org.nsesa.editor.gwt.an.amendments.client;
 
 import com.google.gwt.core.client.GWT;
+import org.nsesa.editor.gwt.compare.client.ui.compare.CompareController;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.AmendmentDialogController;
 import org.nsesa.editor.gwt.editor.client.Editor;
 
@@ -28,11 +29,13 @@ public class AkomaNtosoEditor extends Editor {
     final AmendmentInjector injector = GWT.create(AmendmentInjector.class);
 
     private AmendmentDialogController amendmentDialogController;
+    private CompareController compareController;
 
     @Override
     public void onModuleLoad() {
         super.onModuleLoad();
         amendmentDialogController = injector.getAmendmentDialogController();
+        compareController = injector.getCompareController();
     }
 
     public AmendmentInjector getInjector() {

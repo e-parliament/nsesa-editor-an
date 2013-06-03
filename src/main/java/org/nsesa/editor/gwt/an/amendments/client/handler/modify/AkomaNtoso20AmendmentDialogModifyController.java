@@ -15,16 +15,17 @@ package org.nsesa.editor.gwt.an.amendments.client.handler.modify;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.an.amendments.client.AmendmentOverlayWidgetValidator;
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
-import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
-import org.nsesa.editor.gwt.core.client.ui.visualstructure.VisualStructureController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.visualstructure.VisualStructureController;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
@@ -84,7 +85,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
                 .setOverlayWidget(overlayWidget)
                 .setLanguageIso(languageIso)
                 .setAuthors(authorPanelController.getSelectedPersons())
-                .setLocation(locator.getLocation(overlayWidget, null, languageIso, true))
+                .setLocation(locator.getLocation(overlayWidget, languageIso, true))
                 .setOriginalText(contentPanelController.getView().getOriginalText())
                 .setAmendmentText(view.getAmendmentContent())
                 .setModifyIds(true)
@@ -103,7 +104,6 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         // clear meta panel
         metaPanelController.clear();
 
-        view.getRichTextEditor().resetBodyClass();
         view.getRichTextEditor().setOverlayWidget(dialogContext.getOverlayWidget());
 
         if (dialogContext.getAmendmentController() != null) {
@@ -112,8 +112,12 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
 
             // set the amendment content
             final OverlayWidget amendmentBodyOverlayWidget = dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody());
-            final java.util.List<OverlayWidget> quotedStructures = OverlayUtil.find("quotedStructure", amendmentBodyOverlayWidget);
-            view.setAmendmentContent(quotedStructures.get(1).getOverlayElement().getFirstChildElement().getInnerHTML());
+
+            String content = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(dialogContext.getAmendmentController());
+
+            final OverlayWidget amendmentOverlayWidget = dialogContext.getAmendmentController().asAmendableWidget(content);
+
+            view.setAmendmentContent(amendmentOverlayWidget.getInnerHTML());
 
             // set the author(s)
             final Preface preface = (Preface) OverlayUtil.findSingle("preface", amendmentBodyOverlayWidget);

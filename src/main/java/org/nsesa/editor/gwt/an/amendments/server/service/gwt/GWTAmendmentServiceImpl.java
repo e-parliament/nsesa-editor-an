@@ -20,14 +20,11 @@ import freemarker.template.Configuration;
 import freemarker.template.TemplateException;
 import org.nsesa.editor.gwt.an.common.server.service.gwt.SpringRemoteServiceServlet;
 import org.nsesa.editor.gwt.core.client.service.gwt.GWTAmendmentService;
-import org.nsesa.editor.gwt.core.shared.AmendableWidgetReference;
-import org.nsesa.editor.gwt.core.shared.AmendmentContainerDTO;
-import org.nsesa.editor.gwt.core.shared.ClientContext;
-import org.nsesa.editor.gwt.core.shared.PersonDTO;
+import org.nsesa.editor.gwt.core.shared.*;
 import org.nsesa.editor.gwt.core.shared.exception.ResourceNotFoundException;
 import org.nsesa.editor.gwt.core.shared.exception.StaleResourceException;
 import org.nsesa.editor.gwt.core.shared.exception.ValidationException;
-import org.nsesa.server.dto.AmendmentAction;
+import org.nsesa.server.dto.AmendableWidgetReferenceDTO;
 import org.nsesa.server.service.api.AmendmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -58,15 +55,33 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
     @Override
     public AmendmentContainerDTO getAmendmentContainer(final ClientContext clientContext, final String id) throws UnsupportedOperationException, ResourceNotFoundException {
-        return fromBackend(amendmentService.getAmendmentContainer(id));
+        try {
+            return fromBackend(amendmentService.getAmendmentContainer(id));
+        } catch (org.nsesa.server.exception.ResourceNotFoundException e) {
+            throw new ResourceNotFoundException(e.getMessage(), e.getCause());
+        }
     }
 
     @Override
-    public AmendmentContainerDTO[] getAmendmentContainers(final ClientContext clientContext) throws UnsupportedOperationException {
+    public AmendmentContainerDTO getAmendmentContainerRevision(ClientContext clientContext, String revisionID) throws UnsupportedOperationException, ResourceNotFoundException {
+        try {
+            return fromBackend(amendmentService.getAmendmentContainerVersion(revisionID));
+        } catch (org.nsesa.server.exception.ResourceNotFoundException e) {
+            throw new ResourceNotFoundException(e.getMessage(), e.getCause());
+        }
+    }
+
+    @Override
+    public AmendmentContainerDTO[] getAmendmentContainers(final ClientContext clientContext) throws UnsupportedOperationException, ResourceNotFoundException {
         try {
             final List<AmendmentContainerDTO> amendmentContainerDTOs = new ArrayList<AmendmentContainerDTO>();
             for (final String documentID : clientContext.getDocumentIDs()) {
-                final List<org.nsesa.server.dto.AmendmentContainerDTO> backend = amendmentService.getAmendmentContainersByDocumentAndPerson(documentID, clientContext.getLoggedInPerson().getId());
+                List<org.nsesa.server.dto.AmendmentContainerDTO> backend = null;
+                try {
+                    backend = amendmentService.getAmendmentContainersByDocumentAndPerson(documentID, clientContext.getLoggedInPerson().getId());
+                } catch (org.nsesa.server.exception.ResourceNotFoundException e) {
+                    throw new ResourceNotFoundException(e.getMessage(), e.getCause());
+                }
                 if (backend != null) {
                     for (final org.nsesa.server.dto.AmendmentContainerDTO b : backend) {
                         AmendmentContainerDTO amendmentContainerDTO = fromBackend(b);
@@ -89,7 +104,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         amendmentContainerDTO.setAmendmentContainerStatus(b.getAmendmentContainerStatus());
         amendmentContainerDTO.setDocumentID(b.getDocumentID());
 
-        final org.nsesa.server.dto.AmendableWidgetReference backend = b.getSourceReference();
+        final AmendableWidgetReferenceDTO backend = b.getSourceReference();
         final AmendableWidgetReference sourceReference = new AmendableWidgetReference();
         sourceReference.setNamespaceURI(backend.getNamespaceURI());
         sourceReference.setReferenceID(backend.getReferenceID());
@@ -105,6 +120,13 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         amendmentContainerDTO.setId(b.getAmendmentContainerID());
         amendmentContainerDTO.setLanguageISO(b.getLanguageISO());
         amendmentContainerDTO.setRevisionID(b.getRevisionID());
+
+        try {
+            amendmentContainerDTO.setBody(toHTML(amendmentContainerDTO.getBody().getBytes("UTF-8")));
+        } catch (UnsupportedEncodingException e) {
+            LOG.error("Could not get encoding.", e);
+        }
+
         return amendmentContainerDTO;
     }
 
@@ -133,52 +155,78 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     }
 
     @Override
-    public AmendmentContainerDTO[] getRevisions(final ClientContext clientContext, final String id) throws UnsupportedOperationException, ResourceNotFoundException {
-        return new AmendmentContainerDTO[0];
+    public ArrayList<RevisionDTO> getRevisions(final ClientContext clientContext, final String id) throws UnsupportedOperationException, ResourceNotFoundException {
+        final List<org.nsesa.server.dto.RevisionDTO> amendmentContainerVersions = amendmentService.getAmendmentContainerVersions(id);
+        // manually copy for now
+        final ArrayList<RevisionDTO> revisions = new ArrayList<RevisionDTO>();
+        for (final org.nsesa.server.dto.RevisionDTO fromBackend : amendmentContainerVersions) {
+            RevisionDTO revisionDTO = new RevisionDTO();
+            revisionDTO.setRevisionID(fromBackend.getRevisionID());
+            revisionDTO.setCreationDate(fromBackend.getCreationDate());
+            revisionDTO.setModificationDate(fromBackend.getModificationDate());
+
+            PersonDTO personDTO = new PersonDTO();
+            personDTO.setId(fromBackend.getPerson().getPersonID());
+            personDTO.setUsername(fromBackend.getPerson().getUsername());
+            personDTO.setName(fromBackend.getPerson().getName());
+            personDTO.setLastName(fromBackend.getPerson().getLastName());
+            revisionDTO.setPerson(personDTO);
+
+            revisions.add(revisionDTO);
+        }
+        return revisions;
     }
 
     @Override
     public AmendmentContainerDTO[] saveAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, StaleResourceException, ValidationException {
-        final List<AmendmentContainerDTO> amendmentContainerDTOs = new ArrayList<AmendmentContainerDTO>();
-        for (final AmendmentContainerDTO data : amendmentContainers) {
+        try {
+            final List<AmendmentContainerDTO> amendmentContainerDTOs = new ArrayList<AmendmentContainerDTO>();
+            for (final AmendmentContainerDTO data : amendmentContainers) {
 
-            if (data.getDocumentID() == null)
-                throw new NullPointerException("No documentID set on amendment DTO -- aborting");
+                if (data.getDocumentID() == null)
+                    throw new NullPointerException("No documentID set on amendment DTO -- aborting");
+                if (data.getId() == null)
+                    throw new NullPointerException("No ID set on amendment DTO -- aborting");
+                if (data.getRevisionID() == null)
+                    throw new NullPointerException("No revisionID set on amendment DTO -- aborting");
 
-            // manually copy for now ...
-            final org.nsesa.server.dto.AmendmentContainerDTO backendDTO = new org.nsesa.server.dto.AmendmentContainerDTO();
-            backendDTO.setPersonID(clientContext.getLoggedInPerson().getId());
-            backendDTO.setDocumentID(data.getDocumentID());
-            backendDTO.setRevisionID(data.getRevisionID());
-            backendDTO.setAmendmentContainerStatus(data.getAmendmentContainerStatus());
-            backendDTO.setLanguageISO(data.getLanguageISO());
-            backendDTO.setAmendmentAction(AmendmentAction.valueOf(data.getAmendmentAction().toString()));
-            backendDTO.setAmendmentContainerID(data.getId());
-            backendDTO.setBody(data.getBody());
-            final AmendableWidgetReference dto = data.getSourceReference();
-            final org.nsesa.server.dto.AmendableWidgetReference sourceReference = new org.nsesa.server.dto.AmendableWidgetReference(dto.getPath());
-            sourceReference.setNamespaceURI(dto.getNamespaceURI());
-            sourceReference.setReferenceID(dto.getReferenceID());
-            sourceReference.setType(dto.getType());
-            sourceReference.setPath(dto.getPath());
-            sourceReference.setSibling(dto.isSibling());
-            sourceReference.setCreation(dto.isCreation());
-            sourceReference.setOffset(dto.getOffset());
+                // manually copy for now ...
+                final org.nsesa.server.dto.AmendmentContainerDTO backendDTO = new org.nsesa.server.dto.AmendmentContainerDTO();
+                backendDTO.setPersonID(clientContext.getLoggedInPerson().getId());
+                backendDTO.setDocumentID(data.getDocumentID());
+                backendDTO.setRevisionID(data.getRevisionID());
+                backendDTO.setAmendmentContainerStatus(data.getAmendmentContainerStatus());
+                backendDTO.setLanguageISO(data.getLanguageISO());
+                backendDTO.setAmendmentAction(org.nsesa.server.dto.AmendmentAction.valueOf(data.getAmendmentAction().toString()));
+                backendDTO.setAmendmentContainerID(data.getId());
+                backendDTO.setBody(data.getBody());
+                final AmendableWidgetReference dto = data.getSourceReference();
+                final AmendableWidgetReferenceDTO sourceReference = new AmendableWidgetReferenceDTO(dto.getPath());
+                sourceReference.setNamespaceURI(dto.getNamespaceURI());
+                sourceReference.setReferenceID(dto.getReferenceID());
+                sourceReference.setType(dto.getType());
+                sourceReference.setPath(dto.getPath());
+                sourceReference.setSibling(dto.isSibling());
+                sourceReference.setCreation(dto.isCreation());
+                sourceReference.setOffset(dto.getOffset());
 
-            backendDTO.setSourceReference(sourceReference);
+                backendDTO.setSourceReference(sourceReference);
 
+                final org.nsesa.server.dto.AmendmentContainerDTO saved = amendmentService.save(backendDTO);
+                final AmendmentContainerDTO amendmentContainerDTO = fromBackend(saved);
 
-            amendmentService.save(backendDTO);
-
-            LOG.info("Saved amendment to the dto under document " + data.getDocumentID());
-            try {
-                data.setBody(toHTML(data.getBody().getBytes("UTF-8")));
-            } catch (UnsupportedEncodingException e) {
-                LOG.error("Could not get encoding.", e);
+                LOG.info("Saved amendment to the dto under document " + amendmentContainerDTO.getDocumentID() +
+                        " as revision " + amendmentContainerDTO.getRevisionID());
+                amendmentContainerDTOs.add(amendmentContainerDTO);
             }
-            amendmentContainerDTOs.add(data);
+            return amendmentContainerDTOs.toArray(new AmendmentContainerDTO[amendmentContainerDTOs.size()]);
+        } catch (org.nsesa.server.exception.StaleResourceException e) {
+            throw new StaleResourceException(e.getMessage(), e.getCause());
+        } catch (org.nsesa.server.exception.ValidationException e) {
+            throw new ValidationException(e.getMessage(), e.getCause());
+        } catch (org.nsesa.server.exception.ResourceNotFoundException e) {
+            throw new RuntimeException(e.getMessage(), e.getCause());
         }
-        return amendmentContainerDTOs.toArray(new AmendmentContainerDTO[amendmentContainerDTOs.size()]);
     }
 
     @Override

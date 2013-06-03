@@ -16,7 +16,10 @@ package org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline;
 import com.google.gwt.dom.client.Style;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.ui.*;
+import com.google.gwt.user.client.ui.FocusPanel;
+import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.user.client.ui.InlineHTML;
+import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
@@ -53,7 +56,7 @@ public class OutlineController {
     public void setRootOverlayWidget(OverlayWidget rootOverlayWidget) {
         this.rootOverlayWidget = rootOverlayWidget;
         final VerticalPanel outlinePanel = new VerticalPanel();
-        rootOverlayWidget.walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
+        rootOverlayWidget.walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
             @Override
             public boolean visit(final OverlayWidget visited) {
                 if (visited instanceof BasehierarchyComplexType) {

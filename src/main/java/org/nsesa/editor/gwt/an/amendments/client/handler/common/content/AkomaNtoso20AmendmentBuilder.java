@@ -20,15 +20,16 @@ import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso2
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.ui.overlay.TextUtils;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.util.Counter;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 
-import java.util.*;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import static org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtoso20XMLUtil.*;
 
@@ -232,7 +233,7 @@ public class AkomaNtoso20AmendmentBuilder {
     public void modifyIds(final OverlayWidget root) {
         // we only need to modify the ids if we're a new amendment (not editing an existing one)
         // now we need to make sure that the new structure has new ids assigned
-        root.walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
+        root.walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
             @Override
             public boolean visit(OverlayWidget visited) {
                 if (visited.getOverlayElement().getId() != null && !"".equals(visited.getOverlayElement().getId().trim())) {

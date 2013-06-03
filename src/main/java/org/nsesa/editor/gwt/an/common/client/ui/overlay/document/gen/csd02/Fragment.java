@@ -13,113 +13,113 @@
  */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
 
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.FragmentStructureComplexType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import java.util.HashMap;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import com.google.gwt.user.client.DOM;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
+
+import java.util.LinkedHashMap;
 
 /**
-* Element fragment is used for describing the structure and content of an independent fragment of a document
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * Element fragment is used for describing the structure and content of an independent fragment of a document
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class Fragment extends FragmentStructureComplexType  {
+public class Fragment extends FragmentStructureComplexType {
 
-/** Stores a structure indicator coming from xsd structure **/
-private static StructureIndicator STRUCTURE_INDICATOR = new StructureIndicator.DefaultStructureIndicator(1,1
-        ,
-        new StructureIndicator.DefaultSequence(1,1,        new StructureIndicator.DefaultElement(1,1,new Meta())
-,        new StructureIndicator.DefaultElement(1,1,new FragmentBody())
-)
-        
-);
+    /**
+     * Stores a structure indicator coming from xsd structure *
+     */
+    private static StructureIndicator STRUCTURE_INDICATOR = new StructureIndicator.DefaultStructureIndicator(1, 1
+            ,
+            new StructureIndicator.DefaultSequence(1, 1, new StructureIndicator.DefaultElement(1, 1, new Meta())
+                    , new StructureIndicator.DefaultElement(1, 1, new FragmentBody())
+            )
+
+    );
 
 
-/**
-* Create a browser DOM span element and set up "type", "ns" and css class attributes
-*/
-public static Element create() {
-com.google.gwt.user.client.Element span = DOM.createSpan();
-span.setAttribute("type", "fragment");
-span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
-span.setClassName("widget fragment");
-return span;
-}
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "fragment");
+        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setClassName("widget fragment");
+        return span;
+    }
 
 // CONSTRUCTORS ------------------
-/**
-* Create a <code>Fragment</code> object and set up its type
-*/
-public Fragment() {
-super(create());
-setType("fragment");
-}
 
-/**
-* Constructor with required attributes
-*/
-public Fragment(AnyURISimpleType includedInAttr) {
-this();
-setIncludedInAttr(includedInAttr);
-}
+    /**
+     * Create a <code>Fragment</code> object and set up its type
+     */
+    public Fragment() {
+        super(create());
+        setType("fragment");
+    }
+
+    /**
+     * Constructor with required attributes
+     */
+    public Fragment(AnyURISimpleType includedInAttr) {
+        this();
+        setIncludedInAttr(includedInAttr);
+    }
 
 
-/**
-* Create a <code>Fragment</code> object with the given DOM element
-*/
-public Fragment(Element element) {
-super(element);
-}
+    /**
+     * Create a <code>Fragment</code> object with the given DOM element
+     */
+    public Fragment(Element element) {
+        super(element);
+    }
 
 // FIELDS ------------------
 
 //Override all attributes methods to be conformant with DSL approach
-        /**
-        * Set <code>includedInAttr</code> property in DSL way
-        * @param includedInAttr new value
-        * @return <code> Fragment</code> instance
-        */
-        public Fragment includedInAttr(final AnyURISimpleType includedInAttr) {
+
+    /**
+     * Set <code>includedInAttr</code> property in DSL way
+     *
+     * @param includedInAttr new value
+     * @return <code> Fragment</code> instance
+     */
+    public Fragment includedInAttr(final AnyURISimpleType includedInAttr) {
         setIncludedInAttr(includedInAttr);
         return this;
-        }
+    }
 
-/**
-* Returns the namespace URI of this amendable widget.
-* @return The namesapce as String
-*/
-@Override
-public String getNamespaceURI() {
-return "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02";
-}
+    /**
+     * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
+     */
+    @Override
+    public String getNamespaceURI() {
+        return "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02";
+    }
 
-@Override
-public LinkedHashMap<String, String> getAttributes() {
-final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
-attrs.putAll(super.getAttributes());
-return attrs;
-}
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
+        attrs.putAll(super.getAttributes());
+        return attrs;
+    }
 
-@Override
-public StructureIndicator getStructureIndicator() {
-    return STRUCTURE_INDICATOR;
-}
+    @Override
+    public StructureIndicator getStructureIndicator() {
+        return STRUCTURE_INDICATOR;
+    }
 
-/**
-* DSL Style for html method
-*/
-@Override
-public Fragment html(String s) {
-    super.html(s);
-    return this;
-}
+    /**
+     * DSL Style for html method
+     */
+    @Override
+    public Fragment html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

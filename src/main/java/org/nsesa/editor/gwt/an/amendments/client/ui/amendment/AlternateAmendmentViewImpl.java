@@ -23,7 +23,7 @@ import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.ui.*;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentView;
-import org.nsesa.editor.gwt.amendment.client.ui.amendment.resources.Messages;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.resources.Constants;
 
 /**
  * Date: 20/03/13 11:27
@@ -37,7 +37,7 @@ public class AlternateAmendmentViewImpl extends Composite implements AmendmentVi
 
     private static MyUiBinder uiBinder = GWT.create(MyUiBinder.class);
 
-    private final Messages messages;
+    private final Constants constants;
 
     @UiField
     Label title;
@@ -61,8 +61,8 @@ public class AlternateAmendmentViewImpl extends Composite implements AmendmentVi
     Image deleteImage;
 
     @Inject
-    public AlternateAmendmentViewImpl(final Messages messages) {
-        this.messages = messages;
+    public AlternateAmendmentViewImpl(final Constants constants) {
+        this.constants = constants;
         final Widget widget = uiBinder.createAndBindUi(this);
         initWidget(widget);
     }
@@ -87,7 +87,7 @@ public class AlternateAmendmentViewImpl extends Composite implements AmendmentVi
     public void setStatus(final String status) {
         if (status != null) {
             // do a lookup ...
-            final String lookup = messages != null ? messages.getString(status.toLowerCase()) : null;
+            final String lookup = constants != null ? constants.getString(status.toLowerCase()) : null;
             if (lookup != null)
                 this.status.setText(lookup);
             else

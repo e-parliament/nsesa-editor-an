@@ -37,7 +37,6 @@ import org.nsesa.editor.gwt.an.drafting.client.mode.StructureViewMode;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.event.*;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEvent;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentScrollToEventHandler;
@@ -155,16 +154,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
     @Override
     public void registerKeyCombos() {
         super.registerKeyCombos();
-        clientFactory.getKeyboardListener().register(ctrlEnter);
-        clientFactory.getKeyboardListener().register(enter);
-        clientFactory.getKeyboardListener().register(tab);
-        clientFactory.getKeyboardListener().register(escape);
-        clientFactory.getKeyboardListener().register(delete);
-        clientFactory.getKeyboardListener().register(ctrlS);
-        clientFactory.getKeyboardListener().register(upArrow);
-        clientFactory.getKeyboardListener().register(downArrow);
-        clientFactory.getKeyboardListener().register(altUpArrow);
-        clientFactory.getKeyboardListener().register(altDownArrow);
+        clientFactory.getKeyboardListener().register(ctrlEnter, enter, tab, escape, delete, ctrlS, upArrow, downArrow, altUpArrow, altDownArrow);
     }
 
     @Override
@@ -279,10 +269,17 @@ public class DraftingDocumentController extends DefaultDocumentController {
             @Override
             public void onEvent(final OverlayWidgetNewEvent event) {
                 final OverlayWidget child = event.getChild();
-                // TODO does not work yet for create-child
-                event.getParentOverlayWidget().addOverlayWidget(child, event.getReference().getIndex() + 1, true);
-                DOM.insertChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getPosition());
-                if (!child.isAttached()) child.onAttach();
+                if (event.getReference() == event.getParentOverlayWidget()) {
+                    // this is a new child
+                    event.getParentOverlayWidget().addOverlayWidget(child);
+                    DOM.appendChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement());
+                    if (!child.isAttached()) child.onAttach();
+                } else {
+                    // this is a sibling
+                    event.getParentOverlayWidget().addOverlayWidget(child, event.getReference().getIndex() + 1, true);
+                    DOM.insertChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getReference().getDomIndex());
+                    if (!child.isAttached()) child.onAttach();
+                }
 
                 clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
                     @Override
@@ -309,12 +306,22 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                             child.setFormat(event.getReference().getFormat());
                                         } else {
                                             // find similar type, if any
-                                            final OverlayWidget previous = event.getReference().getPreviousNonIntroducedOverlayWidget(true);
+                                            final OverlayWidget previous = event.getReference().getPreviousSibling(new OverlayWidgetSelector() {
+                                                @Override
+                                                public boolean select(OverlayWidget toSelect) {
+                                                    return !toSelect.isIntroducedByAnAmendment() && event.getReference().getType().equalsIgnoreCase(toSelect.getType());
+                                                }
+                                            });
                                             if (previous != null) {
                                                 child.setNumberingType(previous.getNumberingType());
                                                 child.setFormat(previous.getFormat());
                                             } else {
-                                                final OverlayWidget next = event.getReference().getNextNonIntroducedOverlayWidget(true);
+                                                final OverlayWidget next = event.getReference().getNextSibling(new OverlayWidgetSelector() {
+                                                    @Override
+                                                    public boolean select(OverlayWidget toSelect) {
+                                                        return !toSelect.isIntroducedByAnAmendment() && event.getReference().getType().equalsIgnoreCase(toSelect.getType());
+                                                    }
+                                                });
                                                 if (next != null) {
                                                     child.setNumberingType(next.getNumberingType());
                                                     child.setFormat(next.getFormat());
@@ -329,8 +336,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
                                     child.setParentOverlayWidget(event.getParentOverlayWidget());
                                     //add the overlay widget in the parent children collection to compute the num
-                                    String num = locator.getNum(child, document.getLanguageIso());
-                                    return num == null ? "" : child.getFormat().format(num);
+                                    String num = locator.getNum(child, document.getLanguageIso(), true);
+                                    return num == null ? "" : num;
                                 }
                             });
                             child.getOverlayElement().setInnerHTML(overlaySnippet.getContent(overlaySnippetEvaluator));
@@ -442,7 +449,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
                     if (actionBarCreatePanelControllerPopup.isShowing()) {
 
                         actionBarCreatePanelControllerPopup.hide();
-                        clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
+                        // there is no need to scroll into document
+                        // clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
 
                         final OverlayWidget selectedSibling = actionBarCreatePanelController.getSelectedSibling();
 
@@ -462,7 +470,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                             if (inlineEditorController.isShowing()) {
                                 clientFactory.getEventBus().fireEvent(new VisualStructureInsertionEvent(cloneSibling));
                             } else {
-                                documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget.getParentOverlayWidget(), activeOverlayWidget, cloneSibling, activeOverlayWidget.getDomIndex() + 1));
+                                documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget.getParentOverlayWidget(), activeOverlayWidget, cloneSibling));
                             }
 
                         }
@@ -480,7 +488,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                             if (inlineEditorController.isShowing()) {
                                 clientFactory.getEventBus().fireEvent(new VisualStructureInsertionEvent(cloneChild));
                             } else {
-                                documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget, activeOverlayWidget, cloneChild, -1));
+                                documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget, activeOverlayWidget, cloneChild));
                             }
                         }
 
@@ -653,7 +661,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                 }
             }
         }
-        overlayWidget.walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
+        overlayWidget.walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
             @Override
             public boolean visit(OverlayWidget visited) {
                 // if the widget is amendable, register a listener for its events
@@ -715,7 +723,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                 final List<OverlayWidget> overlayWidgets = sourceFileController.getOverlayWidgets();
                                 if (overlayWidgets != null && !overlayWidgets.isEmpty()) {
                                     // only display the first one
-                                    overlayWidgets.get(0).walk(new OverlayWidgetWalker.OverlayWidgetVisitor() {
+                                    overlayWidgets.get(0).walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                                         @Override
                                         public boolean visit(OverlayWidget visited) {
                                             if (visited.getOverlayElement().getClassName().contains("nsesa-select")) {

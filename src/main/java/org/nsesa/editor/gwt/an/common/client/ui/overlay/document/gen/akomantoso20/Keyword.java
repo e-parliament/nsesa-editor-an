@@ -13,283 +13,318 @@
  */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20;
 
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.MetaoptComplexType;
+import com.google.gwt.dom.client.Element;
+import com.google.gwt.user.client.DOM;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.NMTOKENSimpleType;
-import com.google.gwt.dom.client.Element;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetImpl;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import java.util.HashMap;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
+
 import java.util.LinkedHashMap;
-import java.util.Map;
-import com.google.gwt.user.client.DOM;
 
 /**
-* The element keyword is a metadata element specifying a keyword associated to the FRBR expression of the document. Attribute dictionary (required) specifies the thesaurus out of which the keyword has been taken.
-* This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
-*/
+ * The element keyword is a metadata element specifying a keyword associated to the FRBR<br/> expression of the document. Attribute dictionary (required) specifies the thesaurus out of which the<br/> keyword has been taken.
+ * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
+ */
 
-public class Keyword extends MetaoptComplexType  {
+public class Keyword extends MetaoptComplexType {
 
-/** Stores a structure indicator coming from xsd structure **/
-private static StructureIndicator STRUCTURE_INDICATOR = new StructureIndicator.DefaultStructureIndicator(1,1
-);
+    /**
+     * Stores a structure indicator coming from xsd structure *
+     */
+    private static StructureIndicator STRUCTURE_INDICATOR = new StructureIndicator.DefaultStructureIndicator(1, 1
+    );
 
 
-/**
-* Create a browser DOM span element and set up "type", "ns" and css class attributes
-*/
-public static Element create() {
-com.google.gwt.user.client.Element span = DOM.createSpan();
-span.setAttribute("type", "keyword");
-span.setAttribute("ns", "http://www.akomantoso.org/2.0");
-span.setClassName("widget keyword");
-return span;
-}
+    /**
+     * Create a browser DOM span element and set up "type", "ns" and css class attributes
+     */
+    public static Element create() {
+        com.google.gwt.user.client.Element span = DOM.createSpan();
+        span.setAttribute("type", "keyword");
+        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setClassName("widget keyword");
+        return span;
+    }
 
 // CONSTRUCTORS ------------------
-/**
-* Create a <code>Keyword</code> object and set up its type
-*/
-public Keyword() {
-super(create());
-setType("keyword");
-}
 
-/**
-* Constructor with required attributes
-*/
-public Keyword(AnyURISimpleType dictionaryAttr,StringSimpleType showAsAttr,StringSimpleType valueAttr) {
-this();
-setDictionaryAttr(dictionaryAttr);
-setShowAsAttr(showAsAttr);
-setValueAttr(valueAttr);
-}
+    /**
+     * Create a <code>Keyword</code> object and set up its type
+     */
+    public Keyword() {
+        super(create());
+        setType("keyword");
+    }
+
+    /**
+     * Constructor with required attributes
+     */
+    public Keyword(AnyURISimpleType dictionaryAttr, StringSimpleType showAsAttr, StringSimpleType valueAttr) {
+        this();
+        setDictionaryAttr(dictionaryAttr);
+        setShowAsAttr(showAsAttr);
+        setValueAttr(valueAttr);
+    }
 
 
-/**
-* Create a <code>Keyword</code> object with the given DOM element
-*/
-public Keyword(Element element) {
-super(element);
-}
+    /**
+     * Create a <code>Keyword</code> object with the given DOM element
+     */
+    public Keyword(Element element) {
+        super(element);
+    }
 
-// FIELDS ------------------
+    // FIELDS ------------------
     private AnyURISimpleType dictionaryAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
     private StringSimpleType valueAttr;
 
-        /**
-        * Return <code>dictionaryAttr</code> property
-        * @return dictionaryAttr
-        */
-        public AnyURISimpleType getDictionaryAttr() {
+    /**
+     * Return <code>dictionaryAttr</code> property
+     *
+     * @return dictionaryAttr
+     */
+    public AnyURISimpleType getDictionaryAttr() {
         if (dictionaryAttr == null) {
-                dictionaryAttr = new AnyURISimpleType();
-                dictionaryAttr.setValue(getElement().getAttribute("dictionary"));
+            dictionaryAttr = new AnyURISimpleType();
+            dictionaryAttr.setValue(getElement().getAttribute("dictionary"));
         }
 
         return dictionaryAttr;
-        }
-        /**
-        * Return <code>dictionaryAttr</code> property in DSL way
-        * @return dictionaryAttr
-        */
-        public AnyURISimpleType dictionaryAttr() {
-        return  getDictionaryAttr();
-        }
-        /**
-        * Set <code>dictionaryAttr</code> property
-        * @param dictionaryAttr the new value
-        */
-        public void setDictionaryAttr(final AnyURISimpleType dictionaryAttr) {
+    }
+
+    /**
+     * Return <code>dictionaryAttr</code> property in DSL way
+     *
+     * @return dictionaryAttr
+     */
+    public AnyURISimpleType dictionaryAttr() {
+        return getDictionaryAttr();
+    }
+
+    /**
+     * Set <code>dictionaryAttr</code> property
+     *
+     * @param dictionaryAttr the new value
+     */
+    public void setDictionaryAttr(final AnyURISimpleType dictionaryAttr) {
         this.dictionaryAttr = dictionaryAttr;
-        getElement().setAttribute("dictionary",dictionaryAttr.getValue());
-        }
-        /**
-        * Set <code>dictionaryAttr</code> property in DSL way
-        * @param dictionaryAttr the new value
-        * @return <code>Keyword</code> instance
-        */
-        public Keyword dictionaryAttr(final AnyURISimpleType dictionaryAttr) {
+        getElement().setAttribute("dictionary", dictionaryAttr.getValue());
+    }
+
+    /**
+     * Set <code>dictionaryAttr</code> property in DSL way
+     *
+     * @param dictionaryAttr the new value
+     * @return <code>Keyword</code> instance
+     */
+    public Keyword dictionaryAttr(final AnyURISimpleType dictionaryAttr) {
         setDictionaryAttr(dictionaryAttr);
         return this;
-        }
-        /**
-        * Return <code>showAsAttr</code> property
-        * @return showAsAttr
-        */
-        public StringSimpleType getShowAsAttr() {
+    }
+
+    /**
+     * Return <code>showAsAttr</code> property
+     *
+     * @return showAsAttr
+     */
+    public StringSimpleType getShowAsAttr() {
         if (showAsAttr == null) {
-                showAsAttr = new StringSimpleType();
-                showAsAttr.setValue(getElement().getAttribute("showAs"));
+            showAsAttr = new StringSimpleType();
+            showAsAttr.setValue(getElement().getAttribute("showAs"));
         }
 
         return showAsAttr;
-        }
-        /**
-        * Return <code>showAsAttr</code> property in DSL way
-        * @return showAsAttr
-        */
-        public StringSimpleType showAsAttr() {
-        return  getShowAsAttr();
-        }
-        /**
-        * Set <code>showAsAttr</code> property
-        * @param showAsAttr the new value
-        */
-        public void setShowAsAttr(final StringSimpleType showAsAttr) {
+    }
+
+    /**
+     * Return <code>showAsAttr</code> property in DSL way
+     *
+     * @return showAsAttr
+     */
+    public StringSimpleType showAsAttr() {
+        return getShowAsAttr();
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property
+     *
+     * @param showAsAttr the new value
+     */
+    public void setShowAsAttr(final StringSimpleType showAsAttr) {
         this.showAsAttr = showAsAttr;
-        getElement().setAttribute("showAs",showAsAttr.getValue());
-        }
-        /**
-        * Set <code>showAsAttr</code> property in DSL way
-        * @param showAsAttr the new value
-        * @return <code>Keyword</code> instance
-        */
-        public Keyword showAsAttr(final StringSimpleType showAsAttr) {
+        getElement().setAttribute("showAs", showAsAttr.getValue());
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property in DSL way
+     *
+     * @param showAsAttr the new value
+     * @return <code>Keyword</code> instance
+     */
+    public Keyword showAsAttr(final StringSimpleType showAsAttr) {
         setShowAsAttr(showAsAttr);
         return this;
-        }
-        /**
-        * Return <code>shortFormAttr</code> property
-        * @return shortFormAttr
-        */
-        public StringSimpleType getShortFormAttr() {
+    }
+
+    /**
+     * Return <code>shortFormAttr</code> property
+     *
+     * @return shortFormAttr
+     */
+    public StringSimpleType getShortFormAttr() {
         if (shortFormAttr == null) {
-                shortFormAttr = new StringSimpleType();
-                shortFormAttr.setValue(getElement().getAttribute("shortForm"));
+            shortFormAttr = new StringSimpleType();
+            shortFormAttr.setValue(getElement().getAttribute("shortForm"));
         }
 
         return shortFormAttr;
-        }
-        /**
-        * Return <code>shortFormAttr</code> property in DSL way
-        * @return shortFormAttr
-        */
-        public StringSimpleType shortFormAttr() {
-        return  getShortFormAttr();
-        }
-        /**
-        * Set <code>shortFormAttr</code> property
-        * @param shortFormAttr the new value
-        */
-        public void setShortFormAttr(final StringSimpleType shortFormAttr) {
+    }
+
+    /**
+     * Return <code>shortFormAttr</code> property in DSL way
+     *
+     * @return shortFormAttr
+     */
+    public StringSimpleType shortFormAttr() {
+        return getShortFormAttr();
+    }
+
+    /**
+     * Set <code>shortFormAttr</code> property
+     *
+     * @param shortFormAttr the new value
+     */
+    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
         this.shortFormAttr = shortFormAttr;
-        getElement().setAttribute("shortForm",shortFormAttr.getValue());
-        }
-        /**
-        * Set <code>shortFormAttr</code> property in DSL way
-        * @param shortFormAttr the new value
-        * @return <code>Keyword</code> instance
-        */
-        public Keyword shortFormAttr(final StringSimpleType shortFormAttr) {
+        getElement().setAttribute("shortForm", shortFormAttr.getValue());
+    }
+
+    /**
+     * Set <code>shortFormAttr</code> property in DSL way
+     *
+     * @param shortFormAttr the new value
+     * @return <code>Keyword</code> instance
+     */
+    public Keyword shortFormAttr(final StringSimpleType shortFormAttr) {
         setShortFormAttr(shortFormAttr);
         return this;
-        }
-        /**
-        * Return <code>valueAttr</code> property
-        * @return valueAttr
-        */
-        public StringSimpleType getValueAttr() {
+    }
+
+    /**
+     * Return <code>valueAttr</code> property
+     *
+     * @return valueAttr
+     */
+    public StringSimpleType getValueAttr() {
         if (valueAttr == null) {
-                valueAttr = new StringSimpleType();
-                valueAttr.setValue(getElement().getAttribute("value"));
+            valueAttr = new StringSimpleType();
+            valueAttr.setValue(getElement().getAttribute("value"));
         }
 
         return valueAttr;
-        }
-        /**
-        * Return <code>valueAttr</code> property in DSL way
-        * @return valueAttr
-        */
-        public StringSimpleType valueAttr() {
-        return  getValueAttr();
-        }
-        /**
-        * Set <code>valueAttr</code> property
-        * @param valueAttr the new value
-        */
-        public void setValueAttr(final StringSimpleType valueAttr) {
+    }
+
+    /**
+     * Return <code>valueAttr</code> property in DSL way
+     *
+     * @return valueAttr
+     */
+    public StringSimpleType valueAttr() {
+        return getValueAttr();
+    }
+
+    /**
+     * Set <code>valueAttr</code> property
+     *
+     * @param valueAttr the new value
+     */
+    public void setValueAttr(final StringSimpleType valueAttr) {
         this.valueAttr = valueAttr;
-        getElement().setAttribute("value",valueAttr.getValue());
-        }
-        /**
-        * Set <code>valueAttr</code> property in DSL way
-        * @param valueAttr the new value
-        * @return <code>Keyword</code> instance
-        */
-        public Keyword valueAttr(final StringSimpleType valueAttr) {
+        getElement().setAttribute("value", valueAttr.getValue());
+    }
+
+    /**
+     * Set <code>valueAttr</code> property in DSL way
+     *
+     * @param valueAttr the new value
+     * @return <code>Keyword</code> instance
+     */
+    public Keyword valueAttr(final StringSimpleType valueAttr) {
         setValueAttr(valueAttr);
         return this;
-        }
+    }
 //Override all attributes methods to be conformant with DSL approach
-        /**
-        * Set <code>wildcardContentAttr</code> property in DSL way
-        * @param wildcardContentAttr new value
-        * @return <code> Keyword</code> instance
-        */
-        public Keyword wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-        }
-        /**
-        * Set <code>idAttr</code> property in DSL way
-        * @param idAttr new value
-        * @return <code> Keyword</code> instance
-        */
-        public Keyword idAttr(final IDSimpleType idAttr) {
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Keyword</code> instance
+     */
+    public Keyword idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
         return this;
-        }
-        /**
-        * Set <code>evolvingIdAttr</code> property in DSL way
-        * @param evolvingIdAttr new value
-        * @return <code> Keyword</code> instance
-        */
-        public Keyword evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Keyword</code> instance
+     */
+    public Keyword evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
-        }
+    }
 
-/**
-* Returns the namespace URI of this amendable widget.
-* @return The namesapce as String
-*/
-@Override
-public String getNamespaceURI() {
-return "http://www.akomantoso.org/2.0";
-}
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Keyword</code> instance
+     */
+    public Keyword wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
 
-@Override
-public LinkedHashMap<String, String> getAttributes() {
-final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
-attrs.putAll(super.getAttributes());
+    /**
+     * Returns the namespace URI of this amendable widget.
+     *
+     * @return The namesapce as String
+     */
+    @Override
+    public String getNamespaceURI() {
+        return "http://www.akomantoso.org/2.0";
+    }
+
+    @Override
+    public LinkedHashMap<String, String> getAttributes() {
+        final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
+        attrs.putAll(super.getAttributes());
         attrs.put("dictionary", getDictionaryAttr() != null ? getDictionaryAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
         attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
-return attrs;
-}
+        return attrs;
+    }
 
-@Override
-public StructureIndicator getStructureIndicator() {
-    return STRUCTURE_INDICATOR;
-}
+    @Override
+    public StructureIndicator getStructureIndicator() {
+        return STRUCTURE_INDICATOR;
+    }
 
-/**
-* DSL Style for html method
-*/
-@Override
-public Keyword html(String s) {
-    super.html(s);
-    return this;
-}
+    /**
+     * DSL Style for html method
+     */
+    @Override
+    public Keyword html(String s) {
+        super.html(s);
+        return this;
+    }
 }
 

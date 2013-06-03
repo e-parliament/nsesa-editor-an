@@ -24,8 +24,12 @@ import org.springframework.stereotype.Service;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.xml.parsers.ParserConfigurationException;
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.StringReader;
+import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,18 +43,21 @@ import java.util.Map;
 public class WordExportService implements ExportService<AmendmentContainerDTO> {
     @Value("classpath:/export/wordAmendmentTemplate.ftl")
     private Resource template;
-    private String name;
-    private int length;
 
     @Override
-    public void export(AmendmentContainerDTO object, OutputStream outputStream) {
-        this.name = object.getAmendmentContainerID();
+    public void export(AmendmentContainerDTO object, HttpServletResponse response) throws IOException {
+
+        response.setContentType("application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+        response.setHeader("Content-Disposition", "attachment;filename=" + object.getAmendmentContainerID() + ".docx");
+        response.setCharacterEncoding("UTF8");
 
         final String content = object.getBody();
         final InputSource inputSource;
         inputSource = new InputSource(new StringReader(content));
 
         try {
+
+
             final NodeModel model = NodeModel.parse(inputSource);
             final Configuration configuration = new Configuration();
             configuration.setDefaultEncoding("UTF-8");
@@ -60,8 +67,9 @@ public class WordExportService implements ExportService<AmendmentContainerDTO> {
             root.put("amendment", model);
             configuration.getTemplate(template.getFile().getName()).process(root, sw);
             byte[] bytes = sw.toString().getBytes("utf-8");
-            this.length = bytes.length;
-            IOUtils.copy(new ByteArrayInputStream(bytes), outputStream);
+            IOUtils.copy(new ByteArrayInputStream(bytes), response.getOutputStream());
+            response.setContentLength(sw.toString().length());
+            response.flushBuffer();
         } catch (IOException e) {
             throw new RuntimeException("Could not read file.", e);
         } catch (SAXException e) {
@@ -71,23 +79,6 @@ public class WordExportService implements ExportService<AmendmentContainerDTO> {
         } catch (TemplateException e) {
             throw new RuntimeException("Could not load template.", e);
         }
-
-
-    }
-
-    @Override
-    public String getContentType() {
-        return "application/octet-stream";
-    }
-
-    @Override
-    public int getLength() {
-        return length;
-    }
-
-    @Override
-    public String getName() {
-        return name + ".docx";
     }
 
 }
