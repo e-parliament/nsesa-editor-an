@@ -53,7 +53,7 @@ public class WordExportService implements ExportService<AmendmentContainerDTO> {
     @Value("classpath:/export/BASIC IP_To_Word.xslt")
     private Resource htmlToWordTransformationTemplate;
 
-    @Value("classpath:/export/htmlAmendmentTemplate.ftl")
+    @Value("classpath:/export/htmlAmendmentBodyTemplate.ftl")
     private Resource htmlTemplate;
 
     @Override
@@ -90,11 +90,11 @@ public class WordExportService implements ExportService<AmendmentContainerDTO> {
             transformer.transform(xmlSource, new StreamResult(html2Word));
             // set the body
 
-            final NodeModel wordModel = NodeModel.parse(new InputSource(html2Word.toString()));
+            final NodeModel nodeModel = NodeModel.parse(new InputSource(new ByteArrayInputStream(html2Word.toString().getBytes("utf-8"))));
             final StringWriter swWord = new StringWriter();
-            root.put("amendment", wordModel);
+            root.put("doc", nodeModel);
             configuration.getTemplate(template.getFile().getName()).process(root, swWord);
-            byte[] bytesWord = sw.toString().getBytes("utf-8");
+            byte[] bytesWord = swWord.toString().getBytes("utf-8");
             IOUtils.copy(new ByteArrayInputStream(bytesWord), response.getOutputStream());
             response.setContentLength(sw.toString().length());
             response.flushBuffer();

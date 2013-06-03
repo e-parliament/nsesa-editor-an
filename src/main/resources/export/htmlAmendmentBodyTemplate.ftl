@@ -1,3 +1,4 @@
+<#ftl ns_prefixes={"D":"http://www.akomantoso.org/2.0", "html5":"http://www.w3.org/1999/xhtml"}>
 <#--
 
     Copyright 2013 European Parliament
@@ -13,30 +14,64 @@
     See the Licence for the specific language governing permissions and limitations under the Licence.
 
 -->
-<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.1" productVersion="11.0.6565" PIVersion="1.0.0.0" href="IPTemplate.xsn" name="urn:schemas-microsoft-com:office:infopath:IPTemplate:-myXSD-2006-02-07T11-26-51" ?><?mso-application progid="InfoPath.Document"?>
-<div class="amendmentHolder" xmlns="http://www.w3.org/1999/xhtml">
-    <div>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?mso-infoPathSolution solutionVersion="1.0.0.1" productVersion="11.0.6565" PIVersion="1.0.0.0" href="IPTemplate.xsn" name="urn:schemas-microsoft-com:office:infopath:IPTemplate:-myXSD-2006-02-07T11-26-51" ?><?mso-application progid="InfoPath.Document"?>
+<my:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2006-02-07T11:26:51" xml:lang="en-us">
+    <my:IPRT>
+        <div
+                xmlns="http://www.w3.org/1999/xhtml"
+                >
 
-    <#macro element el debug=false>
-        <@compress single_line=true>
-            <span class="widget ${el?node_name} <#if el.@class[0]??> ${el.@class}</#if>"
-            <#list el.@@ as attr><#if attr?node_name?lower_case != "xmlns">${attr?node_name}="${attr}" </#if></#list>
-            type="${el?node_name}"
-            ns="${el?node_namespace}"><#t/>
-            <#if el?children?size gt 0><#t/>
-                <#list el?children as child><#t/>
-                    <#if child?node_type == 'element'><#t/>
-                        <@element el=child debug=debug/><#t/>
-                    <#elseif child?node_type == "text"><#t/>
-                    ${child?string?xml}<#t/>
-                    </#if><#t/>
-                </#list><#t/>
-            </#if><#t/>
-            </span><#lt/>
-        </@compress>
-    </#macro>
+        <#-- location -->
+            <p>${amendment.akomaNtoso[0].amendment.amendmentBody[0].amendmentHeading[0].block[0]}</p>
+            <table>
+                <tr>
+                    <td><h3>Proposed</h3></td>
+                    <td><h3>Amendment</h3></td>
+                </tr>
+                <tr>
+                    <td>
+                    <#-- amendment body -->
+                    <@transform amendment.akomaNtoso[0].amendment.amendmentBody[0].amendmentContent[0].block[2].mod[0].quotedStructure[0]/>
+                    </td>
+                    <td>
+                    <@transform amendment.akomaNtoso[0].amendment.amendmentBody[0].amendmentContent[0].block[2].mod[0].quotedStructure[1]/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </my:IPRT>
+</my:myFields>
+
+<#macro transform am>
     <@compress single_line=true>
-        <#list amendment?children as child><#if child?node_type == 'element'><@element child/></#if></#list>
+        <#if am?children?size gt 0><#t/>
+            <#list am?children as child><#t/>
+                <#if child?node_type == 'element'><#t/>
+                <<@transformElement child/>><@transform child/><#t/></<@transformElement child/>>
+                <#elseif child?node_type == "text"><#t/>
+                ${child?string?xml}<#t/>
+                </#if><#t/>
+            </#list><#t/>
+        </#if><#t/>
+        <#lt/>
     </@compress>
-    </div>
-</div>
+</#macro>
+
+<#macro transformElement el>
+    <@compress single_line=true>
+        <#switch el?node_name?lower_case>
+            <#case "p">p<#break/>
+            <#case "b">b<#break/>
+            <#case "i">i<#break/>
+            <#case "em">em<#break/>
+            <#case "strong">strong<#break/>
+            <#case "table">table<#break/>
+            <#case "tr">tr<#break/>
+            <#case "td">td<#break/>
+            <#case "img">img<#break/>
+            <#case "a">a<#break/>
+            <#default>span
+        </#switch>
+    </@compress>
+</#macro>
