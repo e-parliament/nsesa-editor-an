@@ -157,7 +157,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
             if (mod != null) {
                 final List<AuthorialNote> authorialNotes = mod.getAuthorialNotes();
                 if (authorialNotes != null && !authorialNotes.isEmpty()) {
-                    metaPanelController.setNotes(authorialNotes.get(0).html().trim());
+                    metaPanelController.setNotes(authorialNotes.get(0).getPs().get(0).getInnerHTML().trim());
                 }
             }
 
