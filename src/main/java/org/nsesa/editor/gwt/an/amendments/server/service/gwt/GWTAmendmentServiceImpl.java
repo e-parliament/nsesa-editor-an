@@ -26,6 +26,7 @@ import org.nsesa.editor.gwt.core.shared.exception.StaleResourceException;
 import org.nsesa.editor.gwt.core.shared.exception.ValidationException;
 import org.nsesa.server.dto.AmendableWidgetReferenceDTO;
 import org.nsesa.server.service.api.AmendmentService;
+import org.nsesa.server.service.api.PersonService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
@@ -50,6 +51,8 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     private static final Logger LOG = LoggerFactory.getLogger(GWTAmendmentServiceImpl.class);
 
     private AmendmentService amendmentService;
+
+    private PersonService personService;
 
     private Resource documentTemplate;
 
@@ -354,17 +357,14 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
     @Override
     public ArrayList<PersonDTO> getAvailableAuthors(ClientContext clientContext, String query, int limit) {
-        // TODO: this should do an ascii search for potential authors
-        return new ArrayList<PersonDTO>(Arrays.asList(createPerson("1", "mep1", "MEP", "Mep1"), createPerson("2", "mep2", "MEP", "Mep2")));
-    }
-
-    private PersonDTO createPerson(String id, String username, String name, String lastName) {
-        final PersonDTO person = new PersonDTO();
-        person.setLastName(lastName);
-        person.setName(name);
-        person.setUsername(username);
-        person.setId(id);
-        return person;
+        final List<org.nsesa.server.dto.PersonDTO> persons = personService.getPersons("%" + query + "%", 0, limit);
+        final ArrayList<PersonDTO> personDTOs = new ArrayList<PersonDTO>();
+        if (persons != null) {
+            for (org.nsesa.server.dto.PersonDTO fromServer : persons) {
+                personDTOs.add(new PersonDTO(fromServer.getPersonID(), fromServer.getUsername(), fromServer.getName(), fromServer.getLastName()));
+            }
+        }
+        return personDTOs;
     }
 
     // SPRING SETTERS -------------------------------------------
@@ -375,5 +375,9 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
     public void setAmendmentService(AmendmentService amendmentService) {
         this.amendmentService = amendmentService;
+    }
+
+    public void setPersonService(PersonService personService) {
+        this.personService = personService;
     }
 }
