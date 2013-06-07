@@ -24,6 +24,7 @@ import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentController;
 import org.nsesa.editor.gwt.an.amendments.client.MyAmendmentDocumentInjector;
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
+import org.nsesa.editor.gwt.an.amendments.client.mode.ColumnMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.ConsolidationMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.DiffMode;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
@@ -100,6 +101,7 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
         super.registerModes();
         registerMode(DiffMode.KEY, new DiffMode(this, clientFactory, serviceFactory));
         registerMode(ConsolidationMode.KEY, new ConsolidationMode(this, clientFactory));
+        registerMode(ColumnMode.KEY, new ColumnMode(this, clientFactory));
     }
 
     public void registerListeners() {
@@ -154,6 +156,7 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
 
     /**
      * Update an amendment after structural change
+     *
      * @param amendmentController
      * @return True when the amendment content needs to be changed
      */
@@ -221,9 +224,9 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
         final String languageIso = amendmentController.getDocumentController().getDocument().getLanguageIso();
         // set the num
         String num = locator.getNum(amendmentController.getOverlayWidget(), clientFactory.getClientContext().getDocumentTranslationLanguageCode(), true);
-        AkomaNtoso20AmendmentControllerUtil.setAmendmentNum(amendmentBodyOverlayWidget, num);
+        AkomaNtoso20AmendmentControllerUtil.setAmendmentNumOnModel(amendmentController, num);
 
-        String content = AkomaNtoso20AmendmentControllerUtil.getAmendmentContent(amendmentBodyOverlayWidget);
+        String content = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
         final OverlayWidget amendmentOverlayWidget = amendmentController.asAmendableWidget(content);
 
         //build again the amendment
@@ -245,6 +248,7 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
 
     /**
      * Determine the overlay widget reference
+     *
      * @param overlayWidget
      * @return {@link OverlayWidget} as reference
      */

@@ -23,7 +23,6 @@ import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.event.CriticalErrorEvent;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
-import org.nsesa.editor.gwt.core.shared.DiffMethod;
 import org.nsesa.editor.gwt.core.shared.DiffRequest;
 import org.nsesa.editor.gwt.core.shared.DiffResult;
 
@@ -53,7 +52,7 @@ public class AmendmentDiffingManager implements DiffingManager<AmendmentControll
     }
 
     @Override
-    public void diff(final DiffMethod method, final AmendmentController... amendmentControllers) {
+    public void diff(final AmendmentController... amendmentControllers) {
 
         final ServiceFactory serviceFactory = documentController.getServiceFactory();
         final ClientFactory clientFactory = documentController.getClientFactory();
@@ -63,7 +62,8 @@ public class AmendmentDiffingManager implements DiffingManager<AmendmentControll
             final String amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
             final String originalContentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
 
-            diffRequests.add(new DiffRequest(originalContentFromModel, amendmentContentFromModel));
+            diffRequests.add(new DiffRequest(originalContentFromModel, amendmentContentFromModel,
+                    amendmentController.getDiffMethod(), amendmentController.getDiffStyle()));
         }
 
         // request diffing from the backend service

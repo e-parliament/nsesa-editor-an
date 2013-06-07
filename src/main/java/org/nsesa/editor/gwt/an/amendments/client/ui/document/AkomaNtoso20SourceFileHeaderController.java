@@ -19,6 +19,7 @@ import com.google.gwt.user.client.ui.ToggleButton;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.google.web.bindery.event.shared.HandlerRegistration;
+import org.nsesa.editor.gwt.an.amendments.client.mode.ColumnMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.ConsolidationMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.DiffMode;
 import org.nsesa.editor.gwt.an.amendments.client.ui.document.resources.Constants;
@@ -48,6 +49,7 @@ public class AkomaNtoso20SourceFileHeaderController extends SourceFileHeaderCont
 
     private ToggleButton diffingButton;
     private ToggleButton consolidationButton;
+    private ToggleButton columnButton;
     private HandlerRegistration documentOverlayCompletedEventHandlerRegistration;
     private HandlerRegistration documentModeChangeHandlerRegistration;
 
@@ -70,9 +72,17 @@ public class AkomaNtoso20SourceFileHeaderController extends SourceFileHeaderCont
                 sourceFileController.getDocumentController().applyState(ConsolidationMode.KEY, new ActiveState(!consolidationMode.getState().isActive()));
             }
         });
+        columnButton = new ToggleButton("2 Column", "1 Column", new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                final ColumnMode columnMode = (ColumnMode) sourceFileController.getDocumentController().getMode(ColumnMode.KEY);
+                sourceFileController.getDocumentController().applyState(ColumnMode.KEY, new ActiveState(!columnMode.getState().isActive()));
+            }
+        });
 
         view.addWidget(diffingButton);
         view.addWidget(consolidationButton);
+        view.addWidget(columnButton);
 
         registerListeners();
     }

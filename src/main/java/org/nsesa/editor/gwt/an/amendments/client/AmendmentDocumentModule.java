@@ -25,6 +25,7 @@ import org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentViewIm
 import org.nsesa.editor.gwt.amendment.client.ui.document.marker.AmendmentMarkerController;
 import org.nsesa.editor.gwt.amendment.client.ui.pagination.AmendmentPaginationController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentController;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.action.AkomaNtoso20AmendmentActionPanelController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.document.AkomaNtoso20SourceFileHeaderController;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoOverlayWidgetInjectionStrategy;
@@ -59,6 +60,15 @@ public class AmendmentDocumentModule extends AbstractGinModule {
         bindConstant().annotatedWith(Names.named("amendmentsPerPage")).to(10);
         bind(new TypeLiteral<DiffingManager<AmendmentController>>() {
         }).to(AmendmentDiffingManager.class).in(Singleton.class);
+
+        bindConstant().annotatedWith(Names.named("default.pathToOriginalContent")).to("//akomaNtoso[0]/amendment[0]/amendmentBody[0]/amendmentContent[0]/block[2]/mod[0]/quotedStructure[0]");
+        bindConstant().annotatedWith(Names.named("default.pathToAmendmentContent")).to("//akomaNtoso[0]/amendment[0]/amendmentBody[0]/amendmentContent[0]/block[2]/mod[0]/quotedStructure[1]");
+        // bindConstant().annotatedWith(Names.named("single.pathToOriginalContent")).to(null);
+        bindConstant().annotatedWith(Names.named("single.pathToAmendmentContent")).to("//*");
+        // bindConstant().annotatedWith(Names.named("consolidation.pathToOriginalContent")).to(null);
+        bindConstant().annotatedWith(Names.named("consolidation.pathToAmendmentContent")).to("//*");
+
+        requestStaticInjection(AkomaNtoso20AmendmentControllerUtil.class);
 
     }
 

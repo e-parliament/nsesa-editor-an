@@ -14,17 +14,19 @@
 package org.nsesa.editor.gwt.an.amendments.client.mode;
 
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentView;
 import org.nsesa.editor.gwt.an.amendments.client.AmendmentDiffingManager;
-import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
-import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.event.NotificationEvent;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
+import org.nsesa.editor.gwt.core.client.mode.DocumentMode;
+import org.nsesa.editor.gwt.core.client.mode.DocumentState;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.document.OverlayWidgetAware;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
+import org.nsesa.editor.gwt.core.shared.DiffStyle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,35 +37,35 @@ import java.util.List;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode {
+public class ColumnMode implements DocumentMode<ActiveState> {
+
+    public static final String KEY = "column";
 
     private final DocumentController documentController;
     private final ClientFactory clientFactory;
-    private final ServiceFactory serviceFactory;
 
-    private ActiveState activeState = new ActiveState(false);
+    private ActiveState state = new ActiveState(false);
 
-    public DiffMode(DocumentController documentController, ClientFactory clientFactory, ServiceFactory serviceFactory) {
+    public ColumnMode(DocumentController documentController, ClientFactory clientFactory) {
         this.documentController = documentController;
         this.clientFactory = clientFactory;
-        this.serviceFactory = serviceFactory;
     }
 
     @Override
     public boolean apply(ActiveState state) {
-        // TODO: actually change the diffing for the amendments ...
+        final List<AmendmentController> amendmentControllers = new ArrayList<AmendmentController>();
         if (state.isActive()) {
-            clientFactory.getEventBus().fireEvent(new NotificationEvent("Diffing is now active."));
-
-            final List<AmendmentController> amendmentControllers = new ArrayList<AmendmentController>();
-
+            // single column
+            clientFactory.getEventBus().fireEvent(new NotificationEvent("Single column-mode is now active."));
             documentController.getSourceFileController().walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                 @Override
                 public boolean visit(OverlayWidget visited) {
                     if (visited.isAmended()) {
-                        for (final OverlayWidgetAware temp : visited.getOverlayWidgetAwareList()) {
-                            if (temp instanceof AmendmentController) {
-                                final AmendmentController amendmentController = (AmendmentController) temp;
+                        for (final OverlayWidgetAware t : visited.getOverlayWidgetAwareList()) {
+                            if (t instanceof AmendmentController) {
+                                AmendmentController amendmentController = (AmendmentController) t;
+                                amendmentController.switchTemplate(AmendmentView.SINGLE, AmendmentView.SINGLE);
+                                amendmentController.setDiffStyle(DiffStyle.TRACK_CHANGES);
                                 amendmentControllers.add(amendmentController);
                             }
                         }
@@ -71,23 +73,23 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
                     return true;
                 }
             });
-            final DiffingManager diffingManager = documentController.getDiffingManager();
-            if (diffingManager instanceof AmendmentDiffingManager) {
-                ((AmendmentDiffingManager) diffingManager).diff(amendmentControllers.toArray(new AmendmentController[amendmentControllers.size()]));
-            }
         } else {
-            clientFactory.getEventBus().fireEvent(new NotificationEvent("Diffing is now inactive."));
+            // two column
+            clientFactory.getEventBus().fireEvent(new NotificationEvent("Two column-mode is now active."));
             documentController.getSourceFileController().walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                 @Override
                 public boolean visit(OverlayWidget visited) {
                     if (visited.isAmended()) {
-                        for (final OverlayWidgetAware temp : visited.getOverlayWidgetAwareList()) {
-                            if (temp instanceof AmendmentController) {
-                                final AmendmentController amendmentController = (AmendmentController) temp;
-                                AkomaNtoso20AmendmentControllerUtil.setOriginalContentOnViews(amendmentController, AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController));
-                                AkomaNtoso20AmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController));
+
+                        for (final OverlayWidgetAware t : visited.getOverlayWidgetAwareList()) {
+                            if (t instanceof AmendmentController) {
+                                AmendmentController amendmentController = (AmendmentController) t;
+                                amendmentController.switchTemplate(AmendmentView.DEFAULT, AmendmentView.DEFAULT);
+                                amendmentController.setDiffStyle(DiffStyle.EP);
+                                amendmentControllers.add(amendmentController);
                             }
                         }
+
                     }
                     return true;
                 }
@@ -95,12 +97,28 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
 
             );
         }
-        this.activeState = state;
+        // renumber (just to make sure that the title is set correctly)
+        documentController.getSourceFileController().renumberOverlayWidgetsAware();
+
+        // rediff
+        final DocumentMode<? extends DocumentState> diffMode = documentController.getMode(org.nsesa.editor.gwt.core.client.mode.DiffMode.KEY);
+        if (diffMode != null) {
+            final boolean diffingActive = ((org.nsesa.editor.gwt.core.client.mode.DiffMode) diffMode).getState().isActive();
+            if (diffingActive) {
+                final DiffingManager diffingManager = documentController.getDiffingManager();
+                if (diffingManager instanceof AmendmentDiffingManager) {
+                    ((AmendmentDiffingManager) diffingManager).diff(amendmentControllers.toArray(new AmendmentController[amendmentControllers.size()]));
+                }
+            }
+        }
+
+        this.state = state;
         return true;
     }
 
+
     @Override
     public ActiveState getState() {
-        return activeState;
+        return state;
     }
 }
