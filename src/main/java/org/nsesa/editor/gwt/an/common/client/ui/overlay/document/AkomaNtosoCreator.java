@@ -15,7 +15,6 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Collections2;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultCreator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
@@ -34,7 +33,7 @@ public class AkomaNtosoCreator extends DefaultCreator {
     final Predicate<OverlayWidget> predicate = new Predicate<OverlayWidget>() {
         @Override
         public boolean apply(OverlayWidget input) {
-            return input instanceof BasehierarchyComplexType || input instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType;
+            return true; //input instanceof BasehierarchyComplexType || input instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType;
         }
     };
 
