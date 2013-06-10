@@ -18,14 +18,20 @@ import com.google.gwt.dom.client.Node;
 import com.google.gwt.dom.client.Style;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentView;
+import org.nsesa.editor.gwt.an.amendments.client.AmendmentDiffingManager;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
+import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.event.NotificationEvent;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.mode.DocumentMode;
+import org.nsesa.editor.gwt.core.client.mode.DocumentState;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.document.OverlayWidgetAware;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Date: 26/11/12 14:11
@@ -49,6 +55,7 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
 
     @Override
     public boolean apply(ActiveState state) {
+        final List<AmendmentController> amendmentControllers = new ArrayList<AmendmentController>();
         if (state.isActive()) {
             clientFactory.getEventBus().fireEvent(new NotificationEvent("Consolidation view is now active."));
             documentController.getSourceFileController().walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
@@ -59,6 +66,7 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
                             if (t instanceof AmendmentController) {
                                 AmendmentController amendmentController = (AmendmentController) t;
                                 amendmentController.switchTemplate(AmendmentView.CONSOLIDATION, AmendmentView.DEFAULT);
+                                amendmentControllers.add(amendmentController);
                             }
                         }
 
@@ -87,7 +95,8 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
                         for (final OverlayWidgetAware t : visited.getOverlayWidgetAwareList()) {
                             if (t instanceof AmendmentController) {
                                 AmendmentController amendmentController = (AmendmentController) t;
-                                amendmentController.switchTemplate(AmendmentView.DEFAULT, AmendmentView.DEFAULT);
+                                amendmentController.resetTemplate();
+                                amendmentControllers.add(amendmentController);
                             }
                         }
                         for (int i = 0; i < visited.asWidget().getElement().getChildNodes().getLength(); i++) {
@@ -115,6 +124,18 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
         }
         documentController.getSourceFileController().renumberOverlayWidgetsAware();
         this.state = state;
+
+        // rediff
+        final DocumentMode<? extends DocumentState> diffMode = documentController.getMode(org.nsesa.editor.gwt.core.client.mode.DiffMode.KEY);
+        if (diffMode != null) {
+            final boolean diffingActive = ((org.nsesa.editor.gwt.core.client.mode.DiffMode) diffMode).getState().isActive();
+            if (diffingActive) {
+                final DiffingManager diffingManager = documentController.getDiffingManager();
+                if (diffingManager instanceof AmendmentDiffingManager) {
+                    ((AmendmentDiffingManager) diffingManager).diff(amendmentControllers.toArray(new AmendmentController[amendmentControllers.size()]));
+                }
+            }
+        }
         return true;
     }
 
