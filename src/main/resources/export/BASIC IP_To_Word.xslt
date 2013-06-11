@@ -8,100 +8,17 @@
                 xmlns:o="urn:schemas-microsoft-com:office:office"
                 xmlns:xhtml="http://www.w3.org/1999/xhtml"
                 xmlns:xd="http://schemas.microsoft.com/office/infopath/2003"
-                xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2006-02-07T11:26:51">
+                xmlns:am="http://org.nsesa.editor/an/2013/1/amendment">
 
     <xsl:template match="/">
-        <xsl:processing-instruction name="mso-application">
-            <xsl:attribute name="progid">Word.Document</xsl:attribute>
-        </xsl:processing-instruction>
-        <w:wordDocument w:macrosPresent="no" w:embeddedObjPresent="no" w:ocxPresent="no" xml:space="preserve">
-   <o:DocumentProperties>
-    <o:Author>Stephane Bouillon</o:Author>
-    <o:LastAuthor>Stephane Bouillon</o:LastAuthor>
-    <o:Revision>1</o:Revision>
-    <o:TotalTime>1</o:TotalTime>
-    <o:Created>2006-02-07T11:08:00Z</o:Created>
-    <o:LastSaved>2006-02-07T11:09:00Z</o:LastSaved>
-    <o:Pages>1</o:Pages>
-    <o:Words>0</o:Words>
-    <o:Characters>0</o:Characters>
-    <o:Company>Microsoft EMEA</o:Company>
-    <o:Lines>1</o:Lines>
-    <o:Paragraphs>1</o:Paragraphs>
-    <o:CharactersWithSpaces>0</o:CharactersWithSpaces>
-    <o:Version>11.6568</o:Version>
-   </o:DocumentProperties>
-   <w:fonts>
-    <w:defaultFonts w:ascii="Times New Roman" w:fareast="Times New Roman" w:h-ansi="Times New Roman" w:cs="Times New Roman"/>
-   </w:fonts>
-   <w:styles>
-    <w:versionOfBuiltInStylenames w:val="4"/>
-    <w:latentStyles w:defLockedState="off" w:latentStyleCount="156"/>
-    <w:style w:type="paragraph" w:default="on" w:styleId="Normal">
-     <w:name w:val="Normal"/>
-     <w:rPr>
-      <wx:font wx:val="Times New Roman"/>
-      <w:sz w:val="24"/>
-      <w:sz-cs w:val="24"/>
-      <w:lang w:val="EN-US" w:fareast="EN-US" w:bidi="AR-SA"/>
-     </w:rPr>
-    </w:style>
-    <w:style w:type="character" w:default="on" w:styleId="DefaultParagraphFont">
-     <w:name w:val="Default Paragraph Font"/>
-     <w:semiHidden/>
-    </w:style>
-    <w:style w:type="table" w:default="on" w:styleId="TableNormal">
-     <w:name w:val="Normal Table"/>
-     <wx:uiName wx:val="Table Normal"/>
-     <w:semiHidden/>
-     <w:rPr>
-      <wx:font wx:val="Times New Roman"/>
-     </w:rPr>
-     <w:tblPr>
-      <w:tblInd w:w="0" w:type="dxa"/>
-      <w:tblCellMar>
-       <w:top w:w="0" w:type="dxa"/>
-       <w:left w:w="108" w:type="dxa"/>
-       <w:bottom w:w="0" w:type="dxa"/>
-       <w:right w:w="108" w:type="dxa"/>
-      </w:tblCellMar>
-     </w:tblPr>
-    </w:style>
-    <w:style w:type="list" w:default="on" w:styleId="NoList">
-     <w:name w:val="No List"/>
-     <w:semiHidden/>
-    </w:style>
-   </w:styles>
-   <w:docPr>
-    <w:view w:val="print"/>
-    <w:zoom w:val="best-fit" w:percent="124"/>
-    <w:doNotEmbedSystemFonts/>
-    <w:attachedTemplate w:val=""/>
-    <w:defaultTabStop w:val="720"/>
-    <w:punctuationKerning/>
-    <w:characterSpacingControl w:val="DontCompress"/>
-    <w:optimizeForBrowser/>
-    <w:validateAgainstSchema/>
-    <w:saveInvalidXML w:val="off"/>
-    <w:ignoreMixedContent w:val="off"/>
-    <w:alwaysShowPlaceholderText w:val="off"/>
-    <w:compat>
-     <w:breakWrappedTables/>
-     <w:snapToGridInCell/>
-     <w:wrapTextWithPunct/>
-     <w:useAsianBreakRules/>
-     <w:dontGrowAutofit/>
-    </w:compat>
-   </w:docPr>
    <w:body>
-    <xsl:apply-templates select="/my:myFields"/>
+    <xsl:apply-templates select="/am:amendment"/>
    </w:body>
-  </w:wordDocument>
     </xsl:template>
 
-    <xsl:template match="/my:myFields">
+    <xsl:template match="/am:amendment">
         <wx:sect>
-            <xsl:apply-templates select="my:IPRT"/>
+            <xsl:apply-templates select="am:content"/>
             <w:sectPr>
                 <w:pgSz w:w="12240" w:h="15840"/>
                 <w:pgMar w:top="1417" w:right="1417" w:bottom="1417" w:left="1417" w:header="708" w:footer="708"
@@ -112,7 +29,7 @@
         </wx:sect>
     </xsl:template>
 
-    <xsl:template match="my:IPRT">
+    <xsl:template match="am:content">
         <xsl:call-template name="infopath-rich-text">
             <!-- add params for pPr and rPr settings
              <xsl:with-param name="pPr_Default">

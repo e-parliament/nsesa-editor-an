@@ -64,7 +64,7 @@
                 xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
                 xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint">
             <w:body>
-            <@t doc.wordDocument.body/>
+            <@t doc.body/>
                 <w:p w:rsidR="00120BF7" w:rsidRDefault="00120BF7">
                     <w:pPr>
                         <w:rPr>

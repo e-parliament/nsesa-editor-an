@@ -15,18 +15,20 @@
 
 -->
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<?mso-infoPathSolution solutionVersion="1.0.0.1" productVersion="11.0.6565" PIVersion="1.0.0.0" href="IPTemplate.xsn" name="urn:schemas-microsoft-com:office:infopath:IPTemplate:-myXSD-2006-02-07T11-26-51" ?><?mso-application progid="InfoPath.Document"?>
-<my:myFields xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2006-02-07T11:26:51" xml:lang="en-us">
-    <my:IPRT>
+<am:amendment xmlns:am="http://org.nsesa.editor/an/2013/1/amendment" xml:lang="en-us">
+    <am:content>
         <div
                 xmlns="http://www.w3.org/1999/xhtml"
                 >
 
         <#-- location -->
-            <p>${amendment.akomaNtoso[0].amendment.amendmentBody[0].amendmentHeading[0].block[0]}</p>
             <table>
                 <tr>
-                    <td><h3>Proposed</h3></td>
+                    <td ><h3>${amendment.akomaNtoso[0].amendment.amendmentBody[0].amendmentHeading[0].block[0]}</h3></td>
+                    <td ></td>
+                </tr>
+                <tr>
+                    <td><h3>Text Proposed</h3></td>
                     <td><h3>Amendment</h3></td>
                 </tr>
                 <tr>
@@ -40,8 +42,8 @@
                 </tr>
             </table>
         </div>
-    </my:IPRT>
-</my:myFields>
+    </am:content>
+</am:amendment>
 
 <#macro transform am>
     <@compress single_line=true>
