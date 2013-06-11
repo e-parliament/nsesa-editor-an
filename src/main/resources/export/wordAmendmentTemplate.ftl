@@ -1,4 +1,4 @@
-<#ftl ns_prefixes={"D":"http://schemas.microsoft.com/office/word/2003/wordml", "my":"http://schemas.microsoft.com/office/infopath/2003/myXSD/2006-02-07T11:26:51", "w":"http://schemas.microsoft.com/office/word/2003/wordml", "wx":"http://schemas.microsoft.com/office/word/2003/auxHint"}>
+<#ftl ns_prefixes={"D":"http://schemas.microsoft.com/office/word/2003/wordml", "am":"http://org.nsesa.editor/an/2013/1/amendment", "w":"http://schemas.microsoft.com/office/word/2003/wordml", "wx":"http://schemas.microsoft.com/office/word/2003/auxHint"}>
 <#--
 
     Copyright 2013 European Parliament
@@ -832,8 +832,6 @@
         <#if am?children?size gt 0><#t/>
             <#list am?children as child><#t/>
                 <#if child?node_type == 'element'><#t/>
-                <#assign prefix = "w"><#t/>
-                <#if child?node_name == 'sect'><#assign prefix = "wx"></#if><#t/>
                 <<#if child?node_name == 'sect'>wx:<#else>w:</#if>${child?node_name} <#list child.@@ as attr>w:${attr?node_name}="${attr}" </#list>><@t am=child/></<#if child?node_name == 'sect'>wx:<#else>w:</#if>${child?node_name}><#t/>
                 <#elseif child?node_type == "text"><#t/>
                 ${child?string?xml}<#t/>
