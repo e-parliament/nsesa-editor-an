@@ -63,13 +63,13 @@
     padding-top: 15px;
 }
 
-.amendmentHolder .mod {
+.amendmentHolder > .mod {
     display: block;
     width: 100%;
     clear: both;
 }
 
-.amendmentHolder .mod > .quotedStructure {
+.amendmentHolder .block[name="changeBlock"] > .mod > .quotedStructure {
     width: 50%;
     display: inline-block;
     vertical-align: text-top;
