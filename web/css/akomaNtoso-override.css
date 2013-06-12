@@ -50,7 +50,6 @@
     width: 98%;
 }
 
-
 .chapter[ns="http://www.akomantoso.org/2.0"] > .num[ns="http://www.akomantoso.org/2.0"] {
     font-size: 1.0em;
     display: block;
@@ -107,6 +106,13 @@
 
 .num[ns="http://www.akomantoso.org/2.0"] + span[ns="http://www.akomantoso.org/2.0"] {
     display: inline;
+}
+
+.num[ns="http://www.akomantoso.org/2.0"] ~ .subparagraph[ns="http://www.akomantoso.org/2.0"] {
+    display: inline-block;
+    position: relative;
+    top: -2.7em;
+    margin-top: 0;
 }
 
 .num[ns="http://www.akomantoso.org/2.0"]:after {
@@ -243,26 +249,10 @@
     display: block;
 }
 
-.subparagraph[ns="http://www.akomantoso.org/2.0"] {
-    margin-left: 1.5em;
-}
-
 .block[ns="http://www.akomantoso.org/2.0"][name="qstart"] {
-    margin: 0;
-    display: inline;
+    display: none;
 }
 
 .block[ns="http://www.akomantoso.org/2.0"][name="qend"] {
-    margin: 0;
-    display: inline;
-}
-
-.block[ns="http://www.akomantoso.org/2.0"][name="qstart"] + span {
-    margin: 0;
-    display: inline;
-}
-
-span[ns="http://www.akomantoso.org/2.0"] + .block[ns="http://www.akomantoso.org/2.0"][name="qend"] {
-    margin: 0;
-    display: inline;
+    display: none;
 }
