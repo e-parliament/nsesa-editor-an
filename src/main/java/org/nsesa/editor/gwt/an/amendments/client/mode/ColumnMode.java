@@ -13,6 +13,9 @@
  */
 package org.nsesa.editor.gwt.an.amendments.client.mode;
 
+import com.google.web.bindery.event.shared.HandlerRegistration;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerInjectedEvent;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerInjectedEventHandler;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentView;
 import org.nsesa.editor.gwt.an.amendments.client.AmendmentDiffingManager;
@@ -44,11 +47,36 @@ public class ColumnMode implements DocumentMode<ActiveState> {
     private final DocumentController documentController;
     private final ClientFactory clientFactory;
 
+    private HandlerRegistration amednmentContainerInjectedHandlerRegistration;
+
     private ActiveState state = new ActiveState(false);
 
     public ColumnMode(DocumentController documentController, ClientFactory clientFactory) {
         this.documentController = documentController;
         this.clientFactory = clientFactory;
+    }
+
+    @Override
+    public void registerListeners() {
+        amednmentContainerInjectedHandlerRegistration = documentController.getDocumentEventBus().addHandler(AmendmentContainerInjectedEvent.TYPE, new AmendmentContainerInjectedEventHandler() {
+            @Override
+            public void onEvent(AmendmentContainerInjectedEvent event) {
+                // switch the template if necessary
+                if (state.isActive()) {
+                    event.getAmendmentController().switchTemplate(AmendmentView.SINGLE, AmendmentView.SINGLE);
+                    event.getAmendmentController().setDiffStyle(DiffStyle.TRACK_CHANGES);
+                } else {
+                    event.getAmendmentController().switchTemplate(AmendmentView.DEFAULT, AmendmentView.DEFAULT);
+                    event.getAmendmentController().setDiffStyle(DiffStyle.EP);
+                }
+                // TODO diff?
+            }
+        });
+    }
+
+    @Override
+    public void removeListeners() {
+        amednmentContainerInjectedHandlerRegistration.removeHandler();
     }
 
     @Override
@@ -99,7 +127,13 @@ public class ColumnMode implements DocumentMode<ActiveState> {
         }
         // renumber (just to make sure that the title is set correctly)
         documentController.getSourceFileController().renumberOverlayWidgetsAware();
+        // run the diff if necessary
+        runDiffIfEnabled(amendmentControllers);
+        this.state = state;
+        return true;
+    }
 
+    private void runDiffIfEnabled(final List<AmendmentController> amendmentControllers) {
         // rediff
         final DocumentMode<? extends DocumentState> diffMode = documentController.getMode(org.nsesa.editor.gwt.core.client.mode.DiffMode.KEY);
         if (diffMode != null) {
@@ -112,8 +146,6 @@ public class ColumnMode implements DocumentMode<ActiveState> {
             }
         }
 
-        this.state = state;
-        return true;
     }
 
 

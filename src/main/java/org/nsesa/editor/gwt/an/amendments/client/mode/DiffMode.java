@@ -13,6 +13,11 @@
  */
 package org.nsesa.editor.gwt.an.amendments.client.mode;
 
+import com.google.web.bindery.event.shared.HandlerRegistration;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerInjectedEvent;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerInjectedEventHandler;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerSavedEvent;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerSavedEventHandler;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.an.amendments.client.AmendmentDiffingManager;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
@@ -28,6 +33,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Date: 26/11/12 14:11
@@ -37,16 +43,58 @@ import java.util.List;
  */
 public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode {
 
+    private static final Logger LOG = Logger.getLogger(DiffMode.class.getName());
+
     private final DocumentController documentController;
     private final ClientFactory clientFactory;
     private final ServiceFactory serviceFactory;
 
+    private HandlerRegistration amendmentContainerInjectedHandlerRegistration;
+    private HandlerRegistration amendmentContainerSavedHandlerRegistration;
+
     private ActiveState activeState = new ActiveState(false);
 
-    public DiffMode(DocumentController documentController, ClientFactory clientFactory, ServiceFactory serviceFactory) {
+    public DiffMode(final DocumentController documentController, final ClientFactory clientFactory, final ServiceFactory serviceFactory) {
         this.documentController = documentController;
         this.clientFactory = clientFactory;
         this.serviceFactory = serviceFactory;
+    }
+
+    @Override
+    public void registerListeners() {
+        // forward the amendment injected event to the parent event bus
+        amendmentContainerInjectedHandlerRegistration = documentController.getDocumentEventBus().addHandler(AmendmentContainerInjectedEvent.TYPE, new AmendmentContainerInjectedEventHandler() {
+            @Override
+            public void onEvent(AmendmentContainerInjectedEvent event) {
+                assert event.getAmendmentController().getDocumentController() != null : "Expected document controller on injected amendment controller.";
+                if (activeState.isActive()) {
+                    final DiffingManager<AmendmentController> diffingManager = (DiffingManager<AmendmentController>) documentController.getDiffingManager();
+                    diffingManager.diff(event.getAmendmentController());
+                } else {
+                    LOG.info("Diff not active, skipping diff on amendment " + event.getAmendmentController().getModel().getId());
+                }
+                clientFactory.getEventBus().fireEvent(event);
+            }
+        });
+
+        // after an amendment has been saved, we have to redo its diffing
+        amendmentContainerSavedHandlerRegistration = documentController.getDocumentEventBus().addHandler(AmendmentContainerSavedEvent.TYPE, new AmendmentContainerSavedEventHandler() {
+            @Override
+            public void onEvent(AmendmentContainerSavedEvent event) {
+                if (activeState.isActive()) {
+                    final DiffingManager<AmendmentController> diffingManager = (DiffingManager<AmendmentController>) documentController.getDiffingManager();
+                    diffingManager.diff(event.getAmendmentController());
+                } else {
+                    LOG.info("Diff not active, skipping diff on amendment " + event.getAmendmentController().getModel().getId());
+                }
+            }
+        });
+    }
+
+    @Override
+    public void removeListeners() {
+        amendmentContainerInjectedHandlerRegistration.removeHandler();
+        amendmentContainerSavedHandlerRegistration.removeHandler();
     }
 
     @Override

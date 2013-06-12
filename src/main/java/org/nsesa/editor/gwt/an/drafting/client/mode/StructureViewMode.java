@@ -37,13 +37,20 @@ public class StructureViewMode implements DocumentMode<ActiveState> {
     }
 
     @Override
+    public void registerListeners() {
+    }
+
+    @Override
+    public void removeListeners() {
+    }
+
+    @Override
     public boolean apply(ActiveState state) {
         final ContentController contentController = documentController.getSourceFileController().getContentController();
         if (state.isActive()) {
-            contentController.getView().asWidget().addStyleName(" akomaNtoso-drafting");
-        }
-        else {
-            contentController.getView().asWidget().removeStyleName(" akomaNtoso-drafting");
+            contentController.getView().asWidget().addStyleName("akomaNtoso-drafting");
+        } else {
+            contentController.getView().asWidget().removeStyleName("akomaNtoso-drafting");
         }
         this.state = state;
         return true;

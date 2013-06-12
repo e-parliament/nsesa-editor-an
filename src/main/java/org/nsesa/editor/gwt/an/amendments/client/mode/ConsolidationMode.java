@@ -16,6 +16,9 @@ package org.nsesa.editor.gwt.an.amendments.client.mode;
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.Node;
 import com.google.gwt.dom.client.Style;
+import com.google.web.bindery.event.shared.HandlerRegistration;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerInjectedEvent;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerInjectedEventHandler;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentView;
 import org.nsesa.editor.gwt.an.amendments.client.AmendmentDiffingManager;
@@ -45,12 +48,30 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
 
     private final DocumentController documentController;
     private final ClientFactory clientFactory;
+    private HandlerRegistration amendmentContainerInjectedHandlerRegistration;
 
     private ActiveState state = new ActiveState(false);
 
     public ConsolidationMode(DocumentController documentController, ClientFactory clientFactory) {
         this.documentController = documentController;
         this.clientFactory = clientFactory;
+
+
+    }
+
+    @Override
+    public void registerListeners() {
+        amendmentContainerInjectedHandlerRegistration = documentController.getDocumentEventBus().addHandler(AmendmentContainerInjectedEvent.TYPE, new AmendmentContainerInjectedEventHandler() {
+            @Override
+            public void onEvent(AmendmentContainerInjectedEvent event) {
+                event.getAmendmentController().switchTemplate(AmendmentView.CONSOLIDATION, null);
+            }
+        });
+    }
+
+    @Override
+    public void removeListeners() {
+        amendmentContainerInjectedHandlerRegistration.removeHandler();
     }
 
     @Override
@@ -65,7 +86,7 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
                         for (final OverlayWidgetAware t : visited.getOverlayWidgetAwareList()) {
                             if (t instanceof AmendmentController) {
                                 AmendmentController amendmentController = (AmendmentController) t;
-                                amendmentController.switchTemplate(AmendmentView.CONSOLIDATION, AmendmentView.DEFAULT);
+                                amendmentController.switchTemplate(AmendmentView.CONSOLIDATION, null);
                                 amendmentControllers.add(amendmentController);
                             }
                         }
