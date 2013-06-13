@@ -20,6 +20,7 @@ import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso2
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.TextUtils;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
@@ -42,6 +43,8 @@ import static org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNto
 public class AkomaNtoso20AmendmentBuilder {
 
     private String languageIso, location, justification, notes, originalText, amendmentText;
+
+    private DocumentController documentController;
 
     private boolean modifyIds;
 
@@ -101,6 +104,11 @@ public class AkomaNtoso20AmendmentBuilder {
         return this;
     }
 
+    public AkomaNtoso20AmendmentBuilder setDocumentController(DocumentController documentController) {
+        this.documentController = documentController;
+        return this;
+    }
+
     public OverlayWidget build() {
         final Counter idGenerator = new Counter();
 
@@ -148,6 +156,10 @@ public class AkomaNtoso20AmendmentBuilder {
         References references = new References();
 
         references.addTLCOrganization(new TLCOrganization().idAttr(id("ep-parliament")).showAsAttr(s("European Parliament")).hrefAttr(u("http://www.europarl.europa.eu")));
+        // keep a reference to the amended document
+        if (documentController != null) {
+            references.addActiveRef(new ActiveRef(u("TODO"), s(documentController.getDocument().getName()), id(documentController.getDocument().getDocumentID())));
+        }
 
         for (final PersonDTO authorial : authors) {
             final IDSimpleType idSimpleType = new IDSimpleType();

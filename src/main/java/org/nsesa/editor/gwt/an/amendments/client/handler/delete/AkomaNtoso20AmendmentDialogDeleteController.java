@@ -79,6 +79,7 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
         final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
         builder
                 .setOverlayWidget(overlayWidget)
+                .setDocumentController(dialogContext.getDocumentController())
                 .setLanguageIso(languageIso)
                 .setAuthors(authorPanelController.getSelectedPersons())
                 .setLocation(locator.getLocation(overlayWidget, languageIso, true))

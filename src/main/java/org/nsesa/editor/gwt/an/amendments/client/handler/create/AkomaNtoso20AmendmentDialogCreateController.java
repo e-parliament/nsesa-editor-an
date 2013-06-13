@@ -106,6 +106,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
         builder
                 .setOverlayWidget(overlayWidget)
+                .setDocumentController(dialogContext.getDocumentController())
                 .setLanguageIso(languageIso)
                 .setAuthors(authorPanelController.getSelectedPersons())
                 .setLocation(location)
