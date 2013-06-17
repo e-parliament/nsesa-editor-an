@@ -20,6 +20,7 @@ import freemarker.template.Configuration;
 import freemarker.template.TemplateException;
 import org.nsesa.editor.gwt.an.common.server.service.gwt.SpringRemoteServiceServlet;
 import org.nsesa.editor.gwt.core.client.service.gwt.GWTAmendmentService;
+import org.nsesa.editor.gwt.core.client.util.Counter;
 import org.nsesa.editor.gwt.core.shared.*;
 import org.nsesa.editor.gwt.core.shared.exception.ResourceNotFoundException;
 import org.nsesa.editor.gwt.core.shared.exception.StaleResourceException;
@@ -183,6 +184,19 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     @Override
     public AmendmentContainerDTO[] saveAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, StaleResourceException, ValidationException {
         try {
+
+            final Boolean[] booleans = canSaveAmendmentContainers(clientContext, amendmentContainers);
+            final Counter counter = new Counter();
+            for (final Boolean b : booleans) {
+                if (b != null && !b) {
+                    // sorry, at least one amendment could not be saved.
+                    throw new ValidationException("You are not allowed to save amendment with ID " + amendmentContainers.get(counter.get()).getId());
+                }
+                counter.increment();
+            }
+
+            // all fine
+
             final List<AmendmentContainerDTO> amendmentContainerDTOs = new ArrayList<AmendmentContainerDTO>();
             for (final AmendmentContainerDTO data : amendmentContainers) {
 
@@ -243,7 +257,17 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     }
 
     @Override
-    public AmendmentContainerDTO[] deleteAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
+    public AmendmentContainerDTO[] deleteAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException, ValidationException {
+        final Boolean[] booleans = canDeleteAmendmentContainers(clientContext, amendmentContainers);
+        final Counter counter = new Counter();
+        for (final Boolean b : booleans) {
+            if (b != null && !b) {
+                // sorry, at least one amendment could not be deleted.
+                throw new ValidationException("You are not allowed to delete amendment with ID " + amendmentContainers.get(counter.get()).getId());
+            }
+            counter.increment();
+        }
+
         final Collection<AmendmentContainerDTO> deleted = Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, AmendmentContainerDTO>() {
             @Override
             public AmendmentContainerDTO apply(AmendmentContainerDTO input) {
@@ -267,7 +291,16 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     }
 
     @Override
-    public AmendmentContainerDTO[] tableAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
+    public AmendmentContainerDTO[] tableAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException, ValidationException {
+        final Boolean[] booleans = canTableAmendmentContainers(clientContext, amendmentContainers);
+        final Counter counter = new Counter();
+        for (final Boolean b : booleans) {
+            if (b != null && !b) {
+                // sorry, at least one amendment could not be tabled.
+                throw new ValidationException("You are not allowed to table amendment with ID " + amendmentContainers.get(counter.get()).getId());
+            }
+            counter.increment();
+        }
         final Collection<AmendmentContainerDTO> tabled = Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, AmendmentContainerDTO>() {
             @Override
             public AmendmentContainerDTO apply(AmendmentContainerDTO input) {
@@ -290,7 +323,17 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     }
 
     @Override
-    public AmendmentContainerDTO[] withdrawAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
+    public AmendmentContainerDTO[] withdrawAmendmentContainers(final ClientContext clientContext, final ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException, ValidationException {
+        final Boolean[] booleans = canWithdrawAmendmentContainers(clientContext, amendmentContainers);
+        final Counter counter = new Counter();
+        for (final Boolean b : booleans) {
+            if (b != null && !b) {
+                // sorry, at least one amendment could not be withdrawn.
+                throw new ValidationException("You are not allowed to withdraw amendment with ID " + amendmentContainers.get(counter.get()).getId());
+            }
+            counter.increment();
+        }
+
         final Collection<AmendmentContainerDTO> withdrawn = Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, AmendmentContainerDTO>() {
             @Override
             public AmendmentContainerDTO apply(AmendmentContainerDTO input) {
@@ -312,7 +355,17 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     }
 
     @Override
-    public AmendmentContainerDTO[] registerAmendmentContainers(ClientContext clientContext, ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
+    public AmendmentContainerDTO[] registerAmendmentContainers(ClientContext clientContext, ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException, ValidationException {
+        final Boolean[] booleans = canRegisterAmendmentContainers(clientContext, amendmentContainers);
+        final Counter counter = new Counter();
+        for (final Boolean b : booleans) {
+            if (b != null && !b) {
+                // sorry, at least one amendment could not be registered.
+                throw new ValidationException("You are not allowed to register amendment with ID " + amendmentContainers.get(counter.get()).getId());
+            }
+            counter.increment();
+        }
+
         final Collection<AmendmentContainerDTO> registered = Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, AmendmentContainerDTO>() {
             @Override
             public AmendmentContainerDTO apply(AmendmentContainerDTO input) {
@@ -334,7 +387,17 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     }
 
     @Override
-    public AmendmentContainerDTO[] returnAmendmentContainers(ClientContext clientContext, ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException {
+    public AmendmentContainerDTO[] returnAmendmentContainers(ClientContext clientContext, ArrayList<AmendmentContainerDTO> amendmentContainers) throws UnsupportedOperationException, ResourceNotFoundException, StaleResourceException, ValidationException {
+        final Boolean[] booleans = canReturnAmendmentContainers(clientContext, amendmentContainers);
+        final Counter counter = new Counter();
+        for (final Boolean b : booleans) {
+            if (b != null && !b) {
+                // sorry, at least one amendment could not be returned.
+                throw new ValidationException("You are not allowed to return amendment with ID " + amendmentContainers.get(counter.get()).getId());
+            }
+            counter.increment();
+        }
+
         final Collection<AmendmentContainerDTO> returned = Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, AmendmentContainerDTO>() {
             @Override
             public AmendmentContainerDTO apply(AmendmentContainerDTO input) {
