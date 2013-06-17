@@ -301,14 +301,40 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
             }
             counter.increment();
         }
+        final List<Exception> exceptions = new ArrayList<Exception>();
         final Collection<AmendmentContainerDTO> tabled = Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, AmendmentContainerDTO>() {
             @Override
             public AmendmentContainerDTO apply(AmendmentContainerDTO input) {
+                try {
+                    amendmentService.updateStatus(input.getRevisionID(), "tabled");
+                } catch (org.nsesa.server.exception.StaleResourceException e) {
+                    LOG.error("Could not table amendment: stale resource.", e);
+                    exceptions.add(new StaleResourceException(e));
+                } catch (org.nsesa.server.exception.ResourceNotFoundException e) {
+                    LOG.error("Could not table amendment: amendment not found.", e);
+                    exceptions.add(new ResourceNotFoundException(e));
+                }
                 input.setAmendmentContainerStatus("tabled");
                 return input;
             }
         });
-        return tabled.toArray(new AmendmentContainerDTO[tabled.size()]);
+        if (exceptions.isEmpty()) {
+            return tabled.toArray(new AmendmentContainerDTO[tabled.size()]);
+        } else {
+            for (Exception exception : exceptions) {
+                if (exception instanceof StaleResourceException) {
+                    StaleResourceException staleResourceException = (StaleResourceException) exception;
+                    throw staleResourceException;
+                } else if (exception instanceof ResourceNotFoundException) {
+                    ResourceNotFoundException resourceNotFoundException = (ResourceNotFoundException) exception;
+                    throw resourceNotFoundException;
+                } else {
+                    // unknown exception
+                    throw new UnsupportedOperationException("Something went wrong.");
+                }
+            }
+        }
+        return new AmendmentContainerDTO[0];
     }
 
     @Override
@@ -329,19 +355,44 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         for (final Boolean b : booleans) {
             if (b != null && !b) {
                 // sorry, at least one amendment could not be withdrawn.
-                throw new ValidationException("You are not allowed to withdraw amendment with ID " + amendmentContainers.get(counter.get()).getId());
+                throw new ValidationException("You are not allowed to withdraw amendment with revision ID " + amendmentContainers.get(counter.get()).getRevisionID());
             }
             counter.increment();
         }
-
+        final List<Exception> exceptions = new ArrayList<Exception>();
         final Collection<AmendmentContainerDTO> withdrawn = Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, AmendmentContainerDTO>() {
             @Override
             public AmendmentContainerDTO apply(AmendmentContainerDTO input) {
+                try {
+                    amendmentService.updateStatus(input.getRevisionID(), "withdrawn");
+                } catch (org.nsesa.server.exception.StaleResourceException e) {
+                    LOG.error("Could not table amendment: stale resource.", e);
+                    exceptions.add(new StaleResourceException(e));
+                } catch (org.nsesa.server.exception.ResourceNotFoundException e) {
+                    LOG.error("Could not table amendment: amendment not found.", e);
+                    exceptions.add(new ResourceNotFoundException(e));
+                }
                 input.setAmendmentContainerStatus("withdrawn");
                 return input;
             }
         });
-        return withdrawn.toArray(new AmendmentContainerDTO[withdrawn.size()]);
+        if (exceptions.isEmpty()) {
+            return withdrawn.toArray(new AmendmentContainerDTO[withdrawn.size()]);
+        } else {
+            for (Exception exception : exceptions) {
+                if (exception instanceof StaleResourceException) {
+                    StaleResourceException staleResourceException = (StaleResourceException) exception;
+                    throw staleResourceException;
+                } else if (exception instanceof ResourceNotFoundException) {
+                    ResourceNotFoundException resourceNotFoundException = (ResourceNotFoundException) exception;
+                    throw resourceNotFoundException;
+                } else {
+                    // unknown exception
+                    throw new UnsupportedOperationException("Something went wrong.");
+                }
+            }
+        }
+        return new AmendmentContainerDTO[0];
     }
 
     @Override
@@ -361,19 +412,44 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         for (final Boolean b : booleans) {
             if (b != null && !b) {
                 // sorry, at least one amendment could not be registered.
-                throw new ValidationException("You are not allowed to register amendment with ID " + amendmentContainers.get(counter.get()).getId());
+                throw new ValidationException("You are not allowed to register amendment with revision ID " + amendmentContainers.get(counter.get()).getRevisionID());
             }
             counter.increment();
         }
-
+        final List<Exception> exceptions = new ArrayList<Exception>();
         final Collection<AmendmentContainerDTO> registered = Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, AmendmentContainerDTO>() {
             @Override
             public AmendmentContainerDTO apply(AmendmentContainerDTO input) {
+                try {
+                    amendmentService.updateStatus(input.getRevisionID(), "registered");
+                } catch (org.nsesa.server.exception.StaleResourceException e) {
+                    LOG.error("Could not table amendment: stale resource.", e);
+                    exceptions.add(new StaleResourceException(e));
+                } catch (org.nsesa.server.exception.ResourceNotFoundException e) {
+                    LOG.error("Could not table amendment: amendment not found.", e);
+                    exceptions.add(new ResourceNotFoundException(e));
+                }
                 input.setAmendmentContainerStatus("registered");
                 return input;
             }
         });
-        return registered.toArray(new AmendmentContainerDTO[registered.size()]);
+        if (exceptions.isEmpty()) {
+            return registered.toArray(new AmendmentContainerDTO[registered.size()]);
+        } else {
+            for (Exception exception : exceptions) {
+                if (exception instanceof StaleResourceException) {
+                    StaleResourceException staleResourceException = (StaleResourceException) exception;
+                    throw staleResourceException;
+                } else if (exception instanceof ResourceNotFoundException) {
+                    ResourceNotFoundException resourceNotFoundException = (ResourceNotFoundException) exception;
+                    throw resourceNotFoundException;
+                } else {
+                    // unknown exception
+                    throw new UnsupportedOperationException("Something went wrong.");
+                }
+            }
+        }
+        return new AmendmentContainerDTO[0];
     }
 
     @Override
@@ -393,19 +469,44 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         for (final Boolean b : booleans) {
             if (b != null && !b) {
                 // sorry, at least one amendment could not be returned.
-                throw new ValidationException("You are not allowed to return amendment with ID " + amendmentContainers.get(counter.get()).getId());
+                throw new ValidationException("You are not allowed to return amendment with revision ID " + amendmentContainers.get(counter.get()).getRevisionID());
             }
             counter.increment();
         }
-
+        final List<Exception> exceptions = new ArrayList<Exception>();
         final Collection<AmendmentContainerDTO> returned = Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, AmendmentContainerDTO>() {
             @Override
             public AmendmentContainerDTO apply(AmendmentContainerDTO input) {
+                try {
+                    amendmentService.updateStatus(input.getRevisionID(), "returned");
+                } catch (org.nsesa.server.exception.StaleResourceException e) {
+                    LOG.error("Could not table amendment: stale resource.", e);
+                    exceptions.add(new StaleResourceException(e));
+                } catch (org.nsesa.server.exception.ResourceNotFoundException e) {
+                    LOG.error("Could not table amendment: amendment not found.", e);
+                    exceptions.add(new ResourceNotFoundException(e));
+                }
                 input.setAmendmentContainerStatus("returned");
                 return input;
             }
         });
-        return returned.toArray(new AmendmentContainerDTO[returned.size()]);
+        if (exceptions.isEmpty()) {
+            return returned.toArray(new AmendmentContainerDTO[returned.size()]);
+        } else {
+            for (Exception exception : exceptions) {
+                if (exception instanceof StaleResourceException) {
+                    StaleResourceException staleResourceException = (StaleResourceException) exception;
+                    throw staleResourceException;
+                } else if (exception instanceof ResourceNotFoundException) {
+                    ResourceNotFoundException resourceNotFoundException = (ResourceNotFoundException) exception;
+                    throw resourceNotFoundException;
+                } else {
+                    // unknown exception
+                    throw new UnsupportedOperationException("Something went wrong.");
+                }
+            }
+        }
+        return new AmendmentContainerDTO[0];
     }
 
     @Override
