@@ -263,7 +263,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         for (final Boolean b : booleans) {
             if (b != null && !b) {
                 // sorry, at least one amendment could not be deleted.
-                throw new ValidationException("You are not allowed to delete amendment with ID " + amendmentContainers.get(counter.get()).getId());
+                throw new ValidationException("You are not allowed to delete amendment with revision ID " + amendmentContainers.get(counter.get()).getRevisionID());
             }
             counter.increment();
         }
