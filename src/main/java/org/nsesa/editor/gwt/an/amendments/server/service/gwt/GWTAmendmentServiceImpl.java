@@ -285,7 +285,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
             @Override
             public Boolean apply(AmendmentContainerDTO input) {
-                return true;
+                return input.getAmendmentContainerStatus().equalsIgnoreCase("withdrawn") || input.getAmendmentContainerStatus().equalsIgnoreCase("candidate");
             }
         }).toArray(new Boolean[amendmentContainers.size()]);
     }
@@ -343,7 +343,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
             @Override
             public Boolean apply(AmendmentContainerDTO input) {
-                return true;
+                return input.getAmendmentContainerStatus().equalsIgnoreCase("candidate") || input.getAmendmentContainerStatus().equalsIgnoreCase("withdrawn");
             }
         }).toArray(new Boolean[amendmentContainers.size()]);
     }
@@ -400,7 +400,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         return Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, Boolean>() {
             @Override
             public Boolean apply(AmendmentContainerDTO input) {
-                return true;
+                return input.getAmendmentContainerStatus().equalsIgnoreCase("tabled");
             }
         }).toArray(new Boolean[amendmentContainers.size()]);
     }
@@ -457,7 +457,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         return Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, Boolean>() {
             @Override
             public Boolean apply(AmendmentContainerDTO input) {
-                return true;
+                return input.getAmendmentContainerStatus().equalsIgnoreCase("tabled");
             }
         }).toArray(new Boolean[amendmentContainers.size()]);
     }
@@ -514,7 +514,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         return Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, Boolean>() {
             @Override
             public Boolean apply(AmendmentContainerDTO input) {
-                return true;
+                return input.getAmendmentContainerStatus().equalsIgnoreCase("tabled") || input.getAmendmentContainerStatus().equalsIgnoreCase("registered");
             }
         }).toArray(new Boolean[amendmentContainers.size()]);
     }
