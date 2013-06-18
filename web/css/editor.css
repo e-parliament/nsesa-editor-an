@@ -93,3 +93,14 @@ span.logo {
 .gwt-SuggestBoxPopup {
     z-index: 101;
 }
+
+.amendmentActionPanel a {
+    display: block;
+    width: 100%;
+}
+
+.amendmentActionPanel a:hover {
+    background-color: #044fa0;
+    color: #fff;
+    text-decoration: no-underline;
+}
