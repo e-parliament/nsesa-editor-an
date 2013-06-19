@@ -145,7 +145,7 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
         document.setAmendable(fromServices.isAmendable());
         document.setName(fromServices.getName());
         document.setLanguageIso(fromServices.getLanguageIso());
-        document.setDeadline(new Date(fromServices.getDeadline().getTime().getTime()));
+        document.setDeadline(fromServices.getDeadline() != null ? new Date(fromServices.getDeadline().getTime().getTime()) : null);
         return document;
     }
 
