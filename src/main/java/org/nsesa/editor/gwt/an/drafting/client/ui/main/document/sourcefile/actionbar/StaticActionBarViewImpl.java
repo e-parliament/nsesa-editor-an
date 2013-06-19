@@ -54,6 +54,8 @@ public class StaticActionBarViewImpl extends Composite implements ActionBarView 
     public StaticActionBarViewImpl() {
         final Widget widget = uiBinder.createAndBindUi(this);
         initWidget(widget);
+        if (!GWT.isScript())
+            widget.setTitle(this.getClass().getName());
     }
 
     @Override

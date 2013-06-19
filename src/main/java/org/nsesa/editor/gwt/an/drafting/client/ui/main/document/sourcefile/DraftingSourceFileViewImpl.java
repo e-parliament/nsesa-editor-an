@@ -61,6 +61,9 @@ public class DraftingSourceFileViewImpl extends Composite implements SourceFileV
 
         final Widget widget = uiBinder.createAndBindUi(this);
         initWidget(widget);
+        if (!GWT.isScript())
+            widget.setTitle(this.getClass().getName());
+
         contentController.getView().setScrollPanelOffset(0);
     }
 }

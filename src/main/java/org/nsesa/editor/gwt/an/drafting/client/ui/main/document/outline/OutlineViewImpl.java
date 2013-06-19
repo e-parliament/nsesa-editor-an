@@ -59,6 +59,8 @@ public class OutlineViewImpl extends Composite implements OutlineView, ProvidesR
         this.documentEventBus = documentEventBus;
         final Widget widget = uiBinder.createAndBindUi(this);
         initWidget(widget);
+        if (!GWT.isScript())
+            widget.setTitle(this.getClass().getName());
     }
 
     @Override

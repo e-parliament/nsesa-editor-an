@@ -19,13 +19,12 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.*;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
+import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineView;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileView;
-import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditor;
 import org.nsesa.editor.gwt.core.client.util.Scope;
-import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
-import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineView;
 
 import java.util.logging.Logger;
 
@@ -78,6 +77,8 @@ public class DraftingDocumentViewImpl extends Composite implements DraftingDocum
 
         final Widget widget = uiBinder.createAndBindUi(this);
         initWidget(widget);
+        if (!GWT.isScript())
+            widget.setTitle(this.getClass().getName());
     }
 
     public void setDocumentHeight(final int height) {

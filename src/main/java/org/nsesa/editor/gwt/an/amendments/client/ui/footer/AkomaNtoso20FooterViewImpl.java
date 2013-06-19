@@ -36,5 +36,7 @@ public class AkomaNtoso20FooterViewImpl extends Composite implements FooterView 
     public AkomaNtoso20FooterViewImpl() {
         final Widget widget = uiBinder.createAndBindUi(this);
         initWidget(widget);
+        if (!GWT.isScript())
+            widget.setTitle(this.getClass().getName());
     }
 }

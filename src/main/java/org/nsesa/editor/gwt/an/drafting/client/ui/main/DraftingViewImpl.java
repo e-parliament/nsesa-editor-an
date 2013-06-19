@@ -38,6 +38,8 @@ public class DraftingViewImpl extends Composite implements DraftingView {
     public DraftingViewImpl() {
         final Widget widget = uiBinder.createAndBindUi(this);
         initWidget(widget);
+        if (!GWT.isScript())
+            widget.setTitle(this.getClass().getName());
     }
 
     @Override
