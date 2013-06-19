@@ -68,14 +68,14 @@ span.logo {
     position: relative;
     float: right;
     right: 15px;
-    top: 6px;
+    top: 9px;
 }
 
 .navbar .availableLanguages {
     position: relative;
     float: right;
     right: 9px;
-    top: 1px;
+    top: 5px;
 }
 
 #footer {
