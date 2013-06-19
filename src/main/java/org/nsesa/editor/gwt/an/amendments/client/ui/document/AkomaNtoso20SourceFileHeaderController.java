@@ -23,6 +23,7 @@ import org.nsesa.editor.gwt.an.amendments.client.mode.ColumnMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.ConsolidationMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.DiffMode;
 import org.nsesa.editor.gwt.an.amendments.client.ui.document.resources.Constants;
+import org.nsesa.editor.gwt.an.common.client.mode.StructureViewMode;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentModeStateChangedEvent;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentModeStateChangedEventHandler;
 import org.nsesa.editor.gwt.core.client.event.document.DocumentOverlayCompletedEvent;
@@ -50,6 +51,7 @@ public class AkomaNtoso20SourceFileHeaderController extends SourceFileHeaderCont
     private ToggleButton diffingButton;
     private ToggleButton consolidationButton;
     private ToggleButton columnButton;
+    private ToggleButton structureButton;
     private HandlerRegistration documentOverlayCompletedEventHandlerRegistration;
     private HandlerRegistration documentModeChangeHandlerRegistration;
 
@@ -79,10 +81,18 @@ public class AkomaNtoso20SourceFileHeaderController extends SourceFileHeaderCont
                 sourceFileController.getDocumentController().applyState(ColumnMode.KEY, new ActiveState(!columnMode.getState().isActive()));
             }
         });
+        structureButton = new ToggleButton("¶", "¶", new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                final StructureViewMode structureViewMode = (StructureViewMode) sourceFileController.getDocumentController().getMode(StructureViewMode.KEY);
+                sourceFileController.getDocumentController().applyState(StructureViewMode.KEY, new ActiveState(!structureViewMode.getState().isActive()));
+            }
+        });
 
         view.addWidget(diffingButton);
         view.addWidget(consolidationButton);
         view.addWidget(columnButton);
+        view.addWidget(structureButton);
 
         registerListeners();
     }

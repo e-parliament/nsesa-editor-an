@@ -28,6 +28,7 @@ import org.nsesa.editor.gwt.an.amendments.client.mode.ColumnMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.ConsolidationMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.DiffMode;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
+import org.nsesa.editor.gwt.an.common.client.mode.StructureViewMode;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
@@ -102,6 +103,7 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
         registerMode(DiffMode.KEY, new DiffMode(this, clientFactory, serviceFactory));
         registerMode(ConsolidationMode.KEY, new ConsolidationMode(this, clientFactory));
         registerMode(ColumnMode.KEY, new ColumnMode(this, clientFactory));
+        registerMode(StructureViewMode.KEY, new StructureViewMode(this));
     }
 
     public void registerListeners() {

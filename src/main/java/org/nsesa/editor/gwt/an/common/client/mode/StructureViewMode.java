@@ -11,7 +11,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the Licence for the specific language governing permissions and limitations under the Licence.
  */
-package org.nsesa.editor.gwt.an.drafting.client.mode;
+package org.nsesa.editor.gwt.an.common.client.mode;
 
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.mode.DocumentMode;
@@ -30,7 +30,7 @@ public class StructureViewMode implements DocumentMode<ActiveState> {
 
     private final DocumentController documentController;
 
-    private ActiveState state;
+    private ActiveState state = new ActiveState(false);
 
     public StructureViewMode(DocumentController documentController) {
         this.documentController = documentController;
@@ -48,9 +48,9 @@ public class StructureViewMode implements DocumentMode<ActiveState> {
     public boolean apply(ActiveState state) {
         final ContentController contentController = documentController.getSourceFileController().getContentController();
         if (state.isActive()) {
-            contentController.getView().asWidget().addStyleName("akomaNtoso-drafting");
+            contentController.getView().getContentPanel().asWidget().addStyleName("akomaNtoso-drafting");
         } else {
-            contentController.getView().asWidget().removeStyleName("akomaNtoso-drafting");
+            contentController.getView().getContentPanel().asWidget().removeStyleName("akomaNtoso-drafting");
         }
         this.state = state;
         return true;
