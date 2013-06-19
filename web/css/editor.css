@@ -104,3 +104,14 @@ span.logo {
     color: #fff;
     text-decoration: no-underline;
 }
+
+.actionBarCreatePanelView a {
+    display: block;
+    width: 100%;
+}
+
+.actionBarCreatePanelView a:hover {
+    background-color: #044fa0;
+    color: #fff;
+    text-decoration: no-underline;
+}
