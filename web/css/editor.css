@@ -90,6 +90,10 @@ span.logo {
     z-index: 100;
 }
 
+.gwt-PopupPanelGlass {
+    z-index: 100;
+}
+
 .gwt-SuggestBoxPopup {
     z-index: 101;
 }
