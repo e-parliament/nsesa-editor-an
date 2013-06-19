@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.rte.ckeditor.*;
 
 /**
  * A simple plugin to register all the plugins used by Akomantoso 20 editor.
- * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
+ * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
  * Date: 11/01/13 12:13
  */
 public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {

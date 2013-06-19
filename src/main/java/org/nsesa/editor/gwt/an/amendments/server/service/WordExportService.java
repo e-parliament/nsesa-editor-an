@@ -42,7 +42,7 @@ import java.util.Map;
 /**
  * Export the amendment container in word format
  *
- * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
+ * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
  *         Date: 30/04/13 11:33
  */
 @Service

@@ -36,7 +36,7 @@ import java.util.Map;
 /**
  * Export the amendment container in HTML format
  *
- * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
+ * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
  *         Date: 30/04/13 11:30
  */
 @Service

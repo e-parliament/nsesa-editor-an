@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.
 /**
  * Date: 15/10/12 21:24
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 @GinModules({DraftingDocumentModule.class})

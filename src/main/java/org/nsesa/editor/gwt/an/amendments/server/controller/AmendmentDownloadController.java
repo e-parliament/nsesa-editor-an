@@ -34,7 +34,7 @@ import java.util.Map;
 /**
  * Spring controller class used to download amendments in different formats
  *
- * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
+ * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
  *         Date: 29/04/13 11:44
  */
 @Controller

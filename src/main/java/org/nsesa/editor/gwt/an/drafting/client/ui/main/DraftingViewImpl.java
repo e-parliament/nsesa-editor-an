@@ -24,7 +24,7 @@ import com.google.gwt.user.client.ui.Widget;
 /**
  * Date: 23/03/13 21:08
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class DraftingViewImpl extends Composite implements DraftingView {

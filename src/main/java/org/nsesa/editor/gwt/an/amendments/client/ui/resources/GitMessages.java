@@ -20,7 +20,7 @@ import com.google.gwt.i18n.client.Messages;
  * latest commit information.
  * Date: 04/03/13 17:36
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public interface GitMessages extends Messages {

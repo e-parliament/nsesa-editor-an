@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippet;
 /**
  * Specialized factory for akomantoso snippets
  *
- * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
+ * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
  *         Date: 8/04/13 14:09
  */
 public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFactory {

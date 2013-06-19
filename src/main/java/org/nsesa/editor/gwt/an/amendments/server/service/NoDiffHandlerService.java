@@ -40,7 +40,7 @@ import static javax.xml.transform.OutputKeys.INDENT;
 /**
  * Default implementation of {@link DiffHandlerService} interface without doing anything with the text.
  *
- * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
+ * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
  *         Date: 3/05/13 14:24
  */
 @Service

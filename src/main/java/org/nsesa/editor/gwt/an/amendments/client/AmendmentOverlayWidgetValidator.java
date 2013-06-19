@@ -27,7 +27,7 @@ import java.util.List;
 /**
  * A simple "composite" validator to allow registration of several validators.
  *
- * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
+ * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
  *         Date: 21/03/13 12:31
  */
 public class AmendmentOverlayWidgetValidator implements Validator<OverlayWidget> {

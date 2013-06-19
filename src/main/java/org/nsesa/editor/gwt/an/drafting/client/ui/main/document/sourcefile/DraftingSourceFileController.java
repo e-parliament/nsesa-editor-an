@@ -32,7 +32,7 @@ import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEven
 /**
  * Date: 24/03/13 12:45
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class DraftingSourceFileController extends SourceFileController {

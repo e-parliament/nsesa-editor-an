@@ -21,7 +21,7 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.content.ContentCo
 /**
  * Date: 23/03/13 16:58
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class StructureViewMode implements DocumentMode<ActiveState> {
