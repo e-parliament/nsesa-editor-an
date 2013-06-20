@@ -68,8 +68,8 @@ public class NoDiffHandlerService implements DiffHandlerService {
     public void diff(AmendmentContainerDTO amendmentContainerDTO) {
 
         final XMLAmendmentHandler amendmentHandler = new XMLAmendmentHandler(amendmentContainerDTO.getBody());
-        amendmentHandler.setOriginal(amendmentHandler.getOriginal());
-        amendmentHandler.setAmendment(amendmentHandler.getAmendment());
+//        amendmentHandler.setOriginal(amendmentHandler.getOriginal());
+//        amendmentHandler.setAmendment(amendmentHandler.getAmendment());
        //amendmentContainerDTO.setBody(amendmentHandler.getContent());
 
     }
