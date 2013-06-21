@@ -20,6 +20,7 @@ import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.core.client.ui.rte.ckeditor.*;
+import org.nsesa.editor.gwt.core.shared.OverlayWidgetOrigin;
 
 
 /**
@@ -39,6 +40,7 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
     @Inject
     public Akomantoso20RichTextEditorPlugin(final OverlayFactory overlayFactory,
                                             final OverlaySnippetFactory snippetFactory,
+                                            final OverlaySnippetEvaluator overlaySnippetEvaluator,
                                             final ClientFactory clientFactory,
                                             final OverlayWidgetInjectionStrategy overlayWidgetInjectionStrategy,
                                             final Locator locator) {
@@ -55,9 +57,9 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
                         while (curr != null) {
                             if (curr instanceof BasehierarchyComplexType) {
                                 result = overlayFactory.getAmendableWidget(curr.getNamespaceURI(), curr.getType());
+                                result.setOrigin(OverlayWidgetOrigin.AMENDMENT);
                                 OverlaySnippet snippet = snippetFactory.getSnippet(curr);
                                 if (snippet != null) {
-                                    OverlaySnippetEvaluator overlaySnippetEvaluator = new DefaultOverlaySnippetEvaluator();
                                     overlaySnippetEvaluator.addEvaluator(
                                             new AkomaNtoso20OverlaySnippetFactory.NumEvaluator(
                                                     clientFactory,
