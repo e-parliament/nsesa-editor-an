@@ -167,7 +167,8 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
             });
             view.setAmendmentContent(overlaySnippet != null ? overlaySnippet.getContent(overlaySnippetEvaluator) : "");
         } else {
-            view.setAmendmentContent(AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(dialogContext.getAmendmentController()));
+            final OverlayWidget amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(dialogContext.getAmendmentController());
+            view.setAmendmentContent(amendmentContentFromModel.getInnerHTML());
         }
 
         // clear author panel

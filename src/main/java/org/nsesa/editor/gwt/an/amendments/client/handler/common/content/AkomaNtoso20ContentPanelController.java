@@ -43,9 +43,9 @@ public class AkomaNtoso20ContentPanelController extends ContentPanelController {
 
         if (dialogContext.getAmendmentController() != null) {
             // we're editing
+            final OverlayWidget originalContentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(dialogContext.getAmendmentController());
             final OverlayWidget overlayWidget = dialogContext.getAmendmentController().asAmendableWidget(
-                    AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(
-                            dialogContext.getAmendmentController()));
+                    originalContentFromModel.getInnerHTML());
             view.setOriginalText(overlayWidget.getInnerHTML());
         } else {
             view.setOriginalText(dialogContext.getOverlayWidget().getInnerHTML());

@@ -228,16 +228,18 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
         String num = locator.getNum(amendmentController.getOverlayWidget(), clientFactory.getClientContext().getDocumentTranslationLanguageCode(), true);
         AkomaNtoso20AmendmentControllerUtil.setAmendmentNumOnModel(amendmentController, num);
 
-        String content = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
+        final OverlayWidget amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
+        String content = amendmentContentFromModel.getInnerHTML();
         final OverlayWidget amendmentOverlayWidget = amendmentController.asAmendableWidget(content);
 
         //build again the amendment
+        final OverlayWidget originalContentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
         builder
                 .setOverlayWidget(amendmentController.getOverlayWidget())
                 .setLanguageIso(languageIso)
                 .setAuthors(persons)
                 .setLocation(locator.getLocation(amendmentController.getOverlayWidget(), languageIso, true))
-                .setOriginalText(AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController))
+                .setOriginalText(originalContentFromModel.getInnerHTML())
                 .setAmendmentText(amendmentOverlayWidget.getInnerHTML())
                 .setModifyIds(true)
                 .setJustification(justification)

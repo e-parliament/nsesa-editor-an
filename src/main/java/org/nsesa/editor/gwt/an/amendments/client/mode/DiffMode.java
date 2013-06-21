@@ -132,8 +132,10 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
                         for (final OverlayWidgetAware temp : visited.getOverlayWidgetAwareList()) {
                             if (temp instanceof AmendmentController) {
                                 final AmendmentController amendmentController = (AmendmentController) temp;
-                                AkomaNtoso20AmendmentControllerUtil.setOriginalContentOnViews(amendmentController, AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController));
-                                AkomaNtoso20AmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController));
+                                final OverlayWidget originalContentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
+                                AkomaNtoso20AmendmentControllerUtil.setOriginalContentOnViews(amendmentController, originalContentFromModel.getInnerHTML());
+                                final OverlayWidget amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
+                                AkomaNtoso20AmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, amendmentContentFromModel.getInnerHTML());
                             }
                         }
                     }

@@ -21,6 +21,7 @@ import org.nsesa.editor.gwt.amendment.client.ui.amendment.SingleColumnAmendmentV
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.action.AmendmentActionPanelController;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.resources.Constants;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.resources.Messages;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 
 /**
  * Date: 09/01/13 16:38
@@ -65,7 +66,8 @@ public class AkomaNtoso20AmendmentController extends DefaultAmendmentController 
         // to make sure we don't do a double overlaying -- too costly
         if (view != availableViews.get(AmendmentView.DEFAULT) || extendedView != availableExtendedViews.get(AmendmentView.DEFAULT)) {
             // if we're not in the default template (2 columns), then only set the amendment content on the body
-            String content = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(this);
+            final OverlayWidget amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(this);
+            String content = amendmentContentFromModel.getInnerHTML();
             if (view != availableViews.get(AmendmentView.DEFAULT))
                 view.setBody(content);
             if (extendedView != availableExtendedViews.get(AmendmentView.DEFAULT))
