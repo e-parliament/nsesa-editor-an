@@ -13,6 +13,7 @@
  */
 package org.nsesa.editor.gwt.an.amendments.client.ui.amendment;
 
+import com.google.gwt.user.client.DOM;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentView;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.ConsolidatedAmendmentViewImpl;
@@ -67,7 +68,7 @@ public class AkomaNtoso20AmendmentController extends DefaultAmendmentController 
         if (view != availableViews.get(AmendmentView.DEFAULT) || extendedView != availableExtendedViews.get(AmendmentView.DEFAULT)) {
             // if we're not in the default template (2 columns), then only set the amendment content on the body
             final OverlayWidget amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(this);
-            String content = amendmentContentFromModel.getInnerHTML();
+            String content = DOM.toString(amendmentContentFromModel.asWidget().getElement());
             if (view != availableViews.get(AmendmentView.DEFAULT))
                 view.setBody(content);
             if (extendedView != availableExtendedViews.get(AmendmentView.DEFAULT))
