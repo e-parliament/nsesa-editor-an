@@ -16,9 +16,11 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
+import org.nsesa.editor.gwt.core.client.ClientFactory;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
+import org.nsesa.editor.gwt.core.client.ui.overlay.NumberingType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Transformer;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlaySnippetFactory;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippet;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 
 /**
  * Specialized factory for akomantoso snippets
@@ -106,4 +108,62 @@ public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFact
         return caretPositionClassName;
     }
 
+    /**
+     * An evaluator for num that will compute the num based on the existing widgets
+     */
+    public static class NumEvaluator implements OverlaySnippetEvaluator.Evaluator {
+
+        private ClientFactory clientFactory;
+        private OverlayWidgetInjectionStrategy widgetInjectionStrategy;
+        private Locator locator;
+        private OverlayWidget overlayWidget;
+        private OverlayWidget parent;
+        private OverlayWidget reference;
+
+        public NumEvaluator(ClientFactory clientFactory,
+                            OverlayWidgetInjectionStrategy widgetInjectionStrategy,
+                            Locator locator,
+                            OverlayWidget overlayWidget,
+                            OverlayWidget parent,
+                            OverlayWidget reference) {
+            this.clientFactory = clientFactory;
+            this.widgetInjectionStrategy = widgetInjectionStrategy;
+            this.locator = locator;
+            this.overlayWidget = overlayWidget;
+            this.parent = parent;
+            this.reference = reference;
+        }
+
+        @Override
+        public String getPlaceHolder() {
+            return "${widget.num}";
+        }
+
+        @Override
+        public String evaluate() {
+            if (overlayWidget.getNumberingType() == null) {
+                // if there is a sibling of the same type, use that one
+                OverlayWidget sibling = overlayWidget.next(new OverlayWidgetSelector() {
+                    @Override
+                    public boolean select(OverlayWidget toSelect) {
+                        return true;
+                    }
+                });
+                if (sibling != null) {
+                    overlayWidget.setNumberingType(sibling.getNumberingType());
+                } else {
+                    // take the parent's numbering, but use a different one
+                    // TODO
+                    overlayWidget.setNumberingType(NumberingType.ROMANITO);
+                }
+            }
+            //add the overlay widget in the parent children collection to compute the num
+            final int injectionPosition = widgetInjectionStrategy.getProposedInjectionPosition(parent, reference, overlayWidget);
+
+            parent.addOverlayWidget(overlayWidget, injectionPosition);
+            String num = locator.getNum(overlayWidget, clientFactory.getClientContext().getDocumentTranslationLanguageCode(), true);
+            parent.removeOverlayWidget(overlayWidget);
+            return num == null ? "" : num;
+        }
+    }
 }

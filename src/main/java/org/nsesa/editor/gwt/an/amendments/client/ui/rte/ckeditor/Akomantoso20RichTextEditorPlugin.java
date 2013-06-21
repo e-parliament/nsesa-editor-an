@@ -14,8 +14,10 @@
 package org.nsesa.editor.gwt.an.amendments.client.ui.rte.ckeditor;
 
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtoso20OverlaySnippetFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.core.client.ui.rte.ckeditor.*;
 
@@ -37,7 +39,9 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
     @Inject
     public Akomantoso20RichTextEditorPlugin(final OverlayFactory overlayFactory,
                                             final OverlaySnippetFactory snippetFactory,
-                                            final ClientFactory clientFactory) {
+                                            final ClientFactory clientFactory,
+                                            final OverlayWidgetInjectionStrategy overlayWidgetInjectionStrategy,
+                                            final Locator locator) {
 
         //register here the available plugin
         registerPlugin(new CKEditorEnterKeyPlugin(overlayFactory,
@@ -53,12 +57,22 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
                                 result = overlayFactory.getAmendableWidget(curr.getNamespaceURI(), curr.getType());
                                 OverlaySnippet snippet = snippetFactory.getSnippet(curr);
                                 if (snippet != null) {
-                                    final String content = snippet.getContent(new DefaultOverlaySnippetEvaluator());
+                                    OverlaySnippetEvaluator overlaySnippetEvaluator = new DefaultOverlaySnippetEvaluator();
+                                    overlaySnippetEvaluator.addEvaluator(
+                                            new AkomaNtoso20OverlaySnippetFactory.NumEvaluator(
+                                                    clientFactory,
+                                                    overlayWidgetInjectionStrategy,
+                                                    locator,
+                                                    result,
+                                                    curr.getParentOverlayWidget(),
+                                                    curr));
+
+                                    final String content = snippet.getContent(overlaySnippetEvaluator);
                                     result.getOverlayElement().setInnerHTML(content);
                                 }
                                 break;
                             }
-                            curr = widget.getParentOverlayWidget();
+                            curr = curr.getParentOverlayWidget();
                         }
                         return result;
                     };

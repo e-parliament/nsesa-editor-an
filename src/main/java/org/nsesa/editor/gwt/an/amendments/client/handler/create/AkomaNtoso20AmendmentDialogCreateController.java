@@ -18,11 +18,11 @@ import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtoso20OverlaySnippetFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
-import org.nsesa.editor.gwt.core.client.ui.overlay.NumberingType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.core.client.ui.visualstructure.VisualStructureController;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
@@ -132,39 +132,14 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         if (dialogContext.getAmendmentController() == null) {
 
             OverlaySnippet overlaySnippet = overlaySnippetFactory.getSnippet(overlayWidget);
-            overlaySnippetEvaluator.addEvaluator(new OverlaySnippetEvaluator.Evaluator() {
-                @Override
-                public String getPlaceHolder() {
-                    return "${widget.num}";
-                }
-
-                @Override
-                public String evaluate() {
-                    if (overlayWidget.getNumberingType() == null) {
-                        // if there is a sibling of the same type, use that one
-                        OverlayWidget sibling = dialogContext.getOverlayWidget().next(new OverlayWidgetSelector() {
-                            @Override
-                            public boolean select(OverlayWidget toSelect) {
-                                return true;
-                            }
-                        });
-                        if (sibling != null) {
-                            overlayWidget.setNumberingType(sibling.getNumberingType());
-                        } else {
-                            // take the parent's numbering, but use a different one
-                            // TODO
-                            overlayWidget.setNumberingType(NumberingType.ROMANITO);
-                        }
-                    }
-                    //add the overlay widget in the parent children collection to compute the num
-                    final int injectionPosition = overlayWidgetInjectionStrategy.getProposedInjectionPosition(dialogContext.getParentOverlayWidget(), dialogContext.getReferenceOverlayWidget(), dialogContext.getOverlayWidget());
-
-                    dialogContext.getParentOverlayWidget().addOverlayWidget(overlayWidget, injectionPosition);
-                    String num = locator.getNum(overlayWidget, clientFactory.getClientContext().getDocumentTranslationLanguageCode(), true);
-                    dialogContext.getParentOverlayWidget().removeOverlayWidget(overlayWidget);
-                    return num == null ? "" : num;
-                }
-            });
+            overlaySnippetEvaluator.addEvaluator(
+                    new AkomaNtoso20OverlaySnippetFactory.NumEvaluator(
+                            clientFactory,
+                            overlayWidgetInjectionStrategy,
+                            locator,
+                            overlayWidget,
+                            dialogContext.getParentOverlayWidget(),
+                            dialogContext.getReferenceOverlayWidget()));
             view.setAmendmentContent(overlaySnippet != null ? overlaySnippet.getContent(overlaySnippetEvaluator) : "");
         } else {
             final OverlayWidget amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(dialogContext.getAmendmentController());
