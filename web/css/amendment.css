@@ -23,6 +23,16 @@
     font-family: "Times New Roman", serif !important;
 }
 
+.amendmentHolder .consolidation > .quotedStructure {
+    border: 0;
+    padding-left: 0;
+}
+
+.amendmentHolder .single > .quotedStructure {
+    border: 0;
+    padding-left: 0;
+}
+
 .amendmentHolder .header {
     font-size: 1.3em;
 }
