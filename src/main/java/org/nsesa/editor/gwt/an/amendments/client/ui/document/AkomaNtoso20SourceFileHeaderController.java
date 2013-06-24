@@ -52,6 +52,7 @@ public class AkomaNtoso20SourceFileHeaderController extends SourceFileHeaderCont
     private ToggleButton consolidationButton;
     private ToggleButton columnButton;
     private ToggleButton structureButton;
+
     private HandlerRegistration documentOverlayCompletedEventHandlerRegistration;
     private HandlerRegistration documentModeChangeHandlerRegistration;
 
@@ -93,11 +94,10 @@ public class AkomaNtoso20SourceFileHeaderController extends SourceFileHeaderCont
         view.addWidget(consolidationButton);
         view.addWidget(columnButton);
         view.addWidget(structureButton);
-
-        registerListeners();
     }
 
-    private void registerListeners() {
+    public void registerListeners() {
+        super.registerListeners();
         documentOverlayCompletedEventHandlerRegistration = documentEventBus.addHandler(DocumentOverlayCompletedEvent.TYPE, new DocumentOverlayCompletedEventHandler() {
             @Override
             public void onEvent(DocumentOverlayCompletedEvent event) {
@@ -116,9 +116,13 @@ public class AkomaNtoso20SourceFileHeaderController extends SourceFileHeaderCont
     private void matchModeStates() {
         final DiffMode diff = (DiffMode) sourceFileController.getDocumentController().getMode(DiffMode.KEY);
         final ConsolidationMode consolidationMode = (ConsolidationMode) sourceFileController.getDocumentController().getMode(ConsolidationMode.KEY);
+        final ColumnMode columnMode = (ColumnMode) sourceFileController.getDocumentController().getMode(ColumnMode.KEY);
+        final StructureViewMode structureViewMode = (StructureViewMode) sourceFileController.getDocumentController().getMode(StructureViewMode.KEY);
 
         diffingButton.setDown(diff.getState().isActive());
         consolidationButton.setDown(consolidationMode.getState().isActive());
+        columnButton.setDown(columnMode.getState().isActive());
+        structureButton.setDown(structureViewMode.getState().isActive());
     }
 
     @Override

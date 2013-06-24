@@ -76,6 +76,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
         this.overlaySnippetEvaluator = overlaySnippetEvaluator;
 
         this.authorPanelController = authorPanelController;
+        this.authorPanelController.registerListeners();
         this.metaPanelController = metaPanelController;
         this.overlayWidgetInjectionStrategy = overlayWidgetInjectionStrategy;
 

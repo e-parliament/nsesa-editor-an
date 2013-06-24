@@ -68,8 +68,11 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
     ) {
         super(clientFactory, view, locator, overlayFactory, visualStructureController, amendmentInjectionPointFinder, validator);
         this.authorPanelController = authorPanelController;
+        this.authorPanelController.registerListeners();
         this.contentPanelController = contentPanelController;
+        this.contentPanelController.registerListeners();
         this.metaPanelController = metaPanelController;
+        this.metaPanelController.registerListeners();
         this.serviceFactory = serviceFactory;
 
         addChildControllers(contentPanelController, authorPanelController, metaPanelController);

@@ -64,8 +64,11 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
         super(clientFactory, view, locator, overlayFactory, amendmentInjectionPointFinder);
         this.serviceFactory = serviceFactory;
         this.authorPanelController = authorPanelController;
+        this.authorPanelController.registerListeners();
         this.contentPanelController = contentPanelController;
+        this.contentPanelController.registerListeners();
         this.metaPanelController = metaPanelController;
+        this.metaPanelController.registerListeners();
 
         addChildControllers(contentPanelController, authorPanelController, metaPanelController);
     }
