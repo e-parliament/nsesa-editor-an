@@ -492,8 +492,6 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                 documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget, activeOverlayWidget, cloneChild));
                             }
                         }
-
-                        // TODO
                     } else if (activeOverlayWidget != null || !(inlineEditorController.getOverlayWidget().equals(activeOverlayWidget))) {
 
                         handleOverlayWidgetModify(activeOverlayWidget);
