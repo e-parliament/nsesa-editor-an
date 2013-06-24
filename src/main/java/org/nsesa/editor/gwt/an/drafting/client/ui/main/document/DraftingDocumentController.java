@@ -146,6 +146,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                       final @Named("xml") Transformer transformer) {
         super(clientFactory, serviceFactory, overlayFactory, locator, creator, mover);
         this.inlineEditorController = inlineEditorController;
+        this.inlineEditorController.registerListeners();
         this.overlaySnippetFactory = overlaySnippetFactory;
         this.overlaySnippetEvaluator = overlaySnippetEvaluator;
         this.transformer = transformer;
@@ -529,7 +530,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                 @Override
                                 public void execute() {
                                     documentEventBus.fireEvent(new OverlayWidgetSelectEvent(activeOverlayWidget, DraftingDocumentController.this));
-                                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, 100));
+                                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
                                     // TODO schedule via timer
                                     redrawOutline(activeOverlayWidget.getRoot());
                                 }
@@ -549,7 +550,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                 @Override
                                 public void execute() {
                                     documentEventBus.fireEvent(new OverlayWidgetSelectEvent(activeOverlayWidget, DraftingDocumentController.this));
-                                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, 100));
+                                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
                                     // TODO schedule via timer
                                     redrawOutline(activeOverlayWidget.getRoot());
                                 }
@@ -618,7 +619,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
             clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
                 @Override
                 public void execute() {
-                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(overlayWidget.asWidget(), DraftingDocumentController.this));
+                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(overlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
                     // then attach the inline editor
                     clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
                         @Override
