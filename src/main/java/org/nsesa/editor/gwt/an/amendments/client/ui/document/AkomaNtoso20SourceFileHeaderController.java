@@ -75,7 +75,7 @@ public class AkomaNtoso20SourceFileHeaderController extends SourceFileHeaderCont
                 sourceFileController.getDocumentController().applyState(ConsolidationMode.KEY, new ActiveState(!consolidationMode.getState().isActive()));
             }
         });
-        columnButton = new ToggleButton("2 Column", "1 Column", new ClickHandler() {
+        columnButton = new ToggleButton("2 Columns", "1 Column", new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
                 final ColumnMode columnMode = (ColumnMode) sourceFileController.getDocumentController().getMode(ColumnMode.KEY);
