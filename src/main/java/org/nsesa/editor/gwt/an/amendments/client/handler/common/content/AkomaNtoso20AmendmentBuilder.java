@@ -158,7 +158,15 @@ public class AkomaNtoso20AmendmentBuilder {
         references.addTLCOrganization(new TLCOrganization().idAttr(id("ep-parliament")).showAsAttr(s("European Parliament")).hrefAttr(u("http://www.europarl.europa.eu")));
         // keep a reference to the amended document
         if (documentController != null) {
-            references.addActiveRef(new ActiveRef(u("TODO"), s(documentController.getDocument().getName()), id(documentController.getDocument().getDocumentID())));
+            String documentId = documentController.getDocument().getDocumentID();
+            final boolean isRemote = documentId.startsWith("http://") || documentId.startsWith("https://");
+            if (isRemote) {
+                references.addActiveRef(new ActiveRef(u(documentId), s(documentController.getDocument().getName()),
+                        id(documentId.substring(documentId.lastIndexOf("/") + 1))));
+            } else {
+                references.addActiveRef(new ActiveRef(u("http://at4am.org/xml/"),
+                        s(documentController.getDocument().getName()), id(documentId)));
+            }
         }
 
         for (final PersonDTO authorial : authors) {
