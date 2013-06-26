@@ -65,10 +65,10 @@ public class ColumnMode implements DocumentMode<ActiveState> {
                 if (state.isActive()) {
                     event.getAmendmentController().switchTemplate(AmendmentView.SINGLE, AmendmentView.SINGLE);
                     event.getAmendmentController().setDiffStyle(DiffStyle.TRACK_CHANGES);
-                } else {
+                }/* else {
                     event.getAmendmentController().switchTemplate(AmendmentView.DEFAULT, AmendmentView.DEFAULT);
                     event.getAmendmentController().setDiffStyle(DiffStyle.EP);
-                }
+                }*/
                 // TODO diff?
             }
         });
