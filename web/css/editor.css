@@ -47,10 +47,10 @@ table {
 */
 .navbar {
     width: 100%;
-    background-color: #393939;
+    background-color: #494D4E;
     color: white;
-    border-top: 3px solid #333;
-    border-bottom: 3px solid #414141;
+    border-top: 1px solid #333;
+    border-bottom: 4px solid #3B3F41;
 }
 
 span.logo {
@@ -68,28 +68,58 @@ span.logo {
     position: relative;
     float: right;
     right: 15px;
-    top: 6px;
+    top: 9px;
 }
 
 .navbar .availableLanguages {
     position: relative;
     float: right;
     right: 9px;
-    top: 1px;
+    top: 5px;
 }
 
 #footer {
     width: 100%;
     text-align: center;
-    font-size: small;
     padding-top: 2px;
-    border-top: 1px solid #333;
+    border-top: 2px solid #3B3F41;
+    position: absolute;
+    bottom: 0;
+    background-color: #494D4E;
+    color: #fff;
+    font-size: small;
 }
 
 .gwt-DecoratedPopupPanel {
     z-index: 100;
 }
 
+.gwt-PopupPanelGlass {
+    z-index: 100;
+}
+
 .gwt-SuggestBoxPopup {
     z-index: 101;
+}
+
+.amendmentActionPanel a {
+    display: block;
+    width: 100%;
+}
+
+.amendmentActionPanel a:hover {
+    background-color: #044fa0;
+    color: #fff;
+    text-decoration: no-underline;
+}
+
+.actionBarCreatePanelView a {
+    display: block;
+    width: 100%;
+}
+
+.actionBarCreatePanelView a:hover {
+    background-color: #044fa0;
+    color: #fff;
+    text-decoration: no-underline;
 }

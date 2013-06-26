@@ -26,7 +26,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
 /**
  * Date: 27/03/13 13:51
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class CompositeOverlayFactory extends DefaultOverlayFactory {

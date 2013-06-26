@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 /**
  * Date: 21/05/13 16:11
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class AkomaNtosoOverlayWidgetInjectionStrategy extends DefaultOverlayWidgetInjectionStrategy {

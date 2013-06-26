@@ -21,7 +21,7 @@ import org.nsesa.editor.gwt.core.client.ui.rte.ckeditor.CKEditor;
 /**
  * Date: 05/02/13 17:47
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class DraftingRichTextEditorProvider implements Provider<RichTextEditor> {

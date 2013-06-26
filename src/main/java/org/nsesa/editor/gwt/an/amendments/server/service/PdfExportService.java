@@ -30,14 +30,13 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.StringWriter;
-import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Export the amendment container in pdf format
  *
- * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
+ * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
  *         Date: 29/04/13 13:38
  */
 @Service
@@ -55,10 +54,10 @@ public class PdfExportService implements ExportService<AmendmentContainerDTO> {
         response.setCharacterEncoding("UTF8");
         final String content = object.getBody();
         final InputSource inputSource;
-        byte[] bytes = content.getBytes(Charset.forName("UTF-8"));
-        inputSource = new InputSource(new ByteArrayInputStream(bytes));
 
         try {
+            byte[] bytes = content.getBytes("utf-8");
+            inputSource = new InputSource(new ByteArrayInputStream(bytes));
             final NodeModel model = NodeModel.parse(inputSource);
             final Configuration configuration = new Configuration();
             configuration.setDefaultEncoding("UTF-8");

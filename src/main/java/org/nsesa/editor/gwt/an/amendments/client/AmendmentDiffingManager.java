@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.event.CriticalErrorEvent;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
-import org.nsesa.editor.gwt.core.shared.DiffMethod;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.shared.DiffRequest;
 import org.nsesa.editor.gwt.core.shared.DiffResult;
 
@@ -53,17 +53,20 @@ public class AmendmentDiffingManager implements DiffingManager<AmendmentControll
     }
 
     @Override
-    public void diff(final DiffMethod method, final AmendmentController... amendmentControllers) {
+    public void diff(final AmendmentController... amendmentControllers) {
 
         final ServiceFactory serviceFactory = documentController.getServiceFactory();
         final ClientFactory clientFactory = documentController.getClientFactory();
 
         final ArrayList<DiffRequest> diffRequests = new ArrayList<DiffRequest>();
         for (final AmendmentController amendmentController : amendmentControllers) {
-            final String amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
-            final String originalContentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
+            final OverlayWidget amendmentContentFromModel1 = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
+            final String amendmentContentFromModel = amendmentContentFromModel1.getInnerHTML();
+            final OverlayWidget contentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
+            final String originalContentFromModel = contentFromModel.getInnerHTML();
 
-            diffRequests.add(new DiffRequest(originalContentFromModel, amendmentContentFromModel));
+            diffRequests.add(new DiffRequest(originalContentFromModel, amendmentContentFromModel,
+                    amendmentController.getDiffMethod(), amendmentController.getDiffStyle()));
         }
 
         // request diffing from the backend service

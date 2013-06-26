@@ -11,7 +11,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the Licence for the specific language governing permissions and limitations under the Licence.
  */
-package org.nsesa.editor.gwt.an.drafting.client.mode;
+package org.nsesa.editor.gwt.an.common.client.mode;
 
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.mode.DocumentMode;
@@ -21,7 +21,7 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.content.ContentCo
 /**
  * Date: 23/03/13 16:58
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class StructureViewMode implements DocumentMode<ActiveState> {
@@ -30,20 +30,27 @@ public class StructureViewMode implements DocumentMode<ActiveState> {
 
     private final DocumentController documentController;
 
-    private ActiveState state;
+    private ActiveState state = new ActiveState(false);
 
     public StructureViewMode(DocumentController documentController) {
         this.documentController = documentController;
     }
 
     @Override
+    public void registerListeners() {
+    }
+
+    @Override
+    public void removeListeners() {
+    }
+
+    @Override
     public boolean apply(ActiveState state) {
         final ContentController contentController = documentController.getSourceFileController().getContentController();
         if (state.isActive()) {
-            contentController.getView().asWidget().addStyleName(" akomaNtoso-drafting");
-        }
-        else {
-            contentController.getView().asWidget().removeStyleName(" akomaNtoso-drafting");
+            contentController.getView().getContentPanel().asWidget().addStyleName("akomaNtoso-drafting");
+        } else {
+            contentController.getView().getContentPanel().asWidget().removeStyleName("akomaNtoso-drafting");
         }
         this.state = state;
         return true;

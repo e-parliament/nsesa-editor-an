@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.TextUtils;
 /**
  * Date: 10/04/13 23:12
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class StaticActionBarViewImpl extends Composite implements ActionBarView {
@@ -54,6 +54,8 @@ public class StaticActionBarViewImpl extends Composite implements ActionBarView 
     public StaticActionBarViewImpl() {
         final Widget widget = uiBinder.createAndBindUi(this);
         initWidget(widget);
+        if (!GWT.isScript())
+            widget.setTitle(this.getClass().getName());
     }
 
     @Override

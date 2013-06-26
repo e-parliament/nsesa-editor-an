@@ -106,7 +106,7 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
                                 // wrap in a span to correct the rendering via amendment.css
                                 final Element span = DOM.createSpan();
                                 span.setInnerHTML(result.getBody());
-                                final String body = "<div class='amendmentHolder'><div>" + span.getFirstChildElement() + "</div></div>";
+                                final String body = "<div class='amendmentHolder'><div>" + DOM.toString((Element) span.getFirstChildElement()) + "</div></div>";
                                 asyncCallback.onSuccess(body);
                             }
                         });

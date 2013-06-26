@@ -13,22 +13,27 @@
  */
 package org.nsesa.editor.gwt.an.amendments.client.mode;
 
-import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.web.bindery.event.shared.HandlerRegistration;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerInjectedEvent;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerInjectedEventHandler;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerSavedEvent;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerSavedEventHandler;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
+import org.nsesa.editor.gwt.an.amendments.client.AmendmentDiffingManager;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
-import org.nsesa.editor.gwt.core.client.event.CriticalErrorEvent;
+import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.event.NotificationEvent;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.document.OverlayWidgetAware;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
-import org.nsesa.editor.gwt.core.shared.DiffRequest;
-import org.nsesa.editor.gwt.core.shared.DiffResult;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Date: 26/11/12 14:11
@@ -38,16 +43,58 @@ import java.util.ArrayList;
  */
 public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode {
 
+    private static final Logger LOG = Logger.getLogger(DiffMode.class.getName());
+
     private final DocumentController documentController;
     private final ClientFactory clientFactory;
     private final ServiceFactory serviceFactory;
 
+    private HandlerRegistration amendmentContainerInjectedHandlerRegistration;
+    private HandlerRegistration amendmentContainerSavedHandlerRegistration;
+
     private ActiveState activeState = new ActiveState(false);
 
-    public DiffMode(DocumentController documentController, ClientFactory clientFactory, ServiceFactory serviceFactory) {
+    public DiffMode(final DocumentController documentController, final ClientFactory clientFactory, final ServiceFactory serviceFactory) {
         this.documentController = documentController;
         this.clientFactory = clientFactory;
         this.serviceFactory = serviceFactory;
+    }
+
+    @Override
+    public void registerListeners() {
+        // forward the amendment injected event to the parent event bus
+        amendmentContainerInjectedHandlerRegistration = documentController.getDocumentEventBus().addHandler(AmendmentContainerInjectedEvent.TYPE, new AmendmentContainerInjectedEventHandler() {
+            @Override
+            public void onEvent(AmendmentContainerInjectedEvent event) {
+                assert event.getAmendmentController().getDocumentController() != null : "Expected document controller on injected amendment controller.";
+                if (activeState.isActive()) {
+                    final DiffingManager<AmendmentController> diffingManager = (DiffingManager<AmendmentController>) documentController.getDiffingManager();
+                    diffingManager.diff(event.getAmendmentController());
+                } else {
+                    LOG.info("Diff not active, skipping diff on amendment " + event.getAmendmentController().getModel().getId());
+                }
+                clientFactory.getEventBus().fireEvent(event);
+            }
+        });
+
+        // after an amendment has been saved, we have to redo its diffing
+        amendmentContainerSavedHandlerRegistration = documentController.getDocumentEventBus().addHandler(AmendmentContainerSavedEvent.TYPE, new AmendmentContainerSavedEventHandler() {
+            @Override
+            public void onEvent(AmendmentContainerSavedEvent event) {
+                if (activeState.isActive()) {
+                    final DiffingManager<AmendmentController> diffingManager = (DiffingManager<AmendmentController>) documentController.getDiffingManager();
+                    diffingManager.diff(event.getAmendmentController());
+                } else {
+                    LOG.info("Diff not active, skipping diff on amendment " + event.getAmendmentController().getModel().getId());
+                }
+            }
+        });
+    }
+
+    @Override
+    public void removeListeners() {
+        amendmentContainerInjectedHandlerRegistration.removeHandler();
+        amendmentContainerSavedHandlerRegistration.removeHandler();
     }
 
     @Override
@@ -55,6 +102,9 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
         // TODO: actually change the diffing for the amendments ...
         if (state.isActive()) {
             clientFactory.getEventBus().fireEvent(new NotificationEvent("Diffing is now active."));
+
+            final List<AmendmentController> amendmentControllers = new ArrayList<AmendmentController>();
+
             documentController.getSourceFileController().walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                 @Override
                 public boolean visit(OverlayWidget visited) {
@@ -62,30 +112,17 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
                         for (final OverlayWidgetAware temp : visited.getOverlayWidgetAwareList()) {
                             if (temp instanceof AmendmentController) {
                                 final AmendmentController amendmentController = (AmendmentController) temp;
-
-                                ArrayList<DiffRequest> diffRequests = new ArrayList<DiffRequest>();
-                                final String amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
-                                final String originalContentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
-                                diffRequests.add(new DiffRequest(originalContentFromModel, amendmentContentFromModel));
-                                serviceFactory.getGwtDiffService().diff(diffRequests, new AsyncCallback<ArrayList<DiffResult>>() {
-                                    @Override
-                                    public void onFailure(Throwable caught) {
-                                        documentController.getDocumentEventBus().fireEvent(new CriticalErrorEvent("Could not perform diffing ...", caught));
-                                    }
-
-                                    @Override
-                                    public void onSuccess(ArrayList<DiffResult> result) {
-                                        AkomaNtoso20AmendmentControllerUtil.setOriginalContentOnViews(amendmentController, result.get(0).getOriginal());
-                                        AkomaNtoso20AmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, result.get(0).getAmendment());
-
-                                    }
-                                });
+                                amendmentControllers.add(amendmentController);
                             }
                         }
                     }
                     return true;
                 }
             });
+            final DiffingManager diffingManager = documentController.getDiffingManager();
+            if (diffingManager instanceof AmendmentDiffingManager) {
+                ((AmendmentDiffingManager) diffingManager).diff(amendmentControllers.toArray(new AmendmentController[amendmentControllers.size()]));
+            }
         } else {
             clientFactory.getEventBus().fireEvent(new NotificationEvent("Diffing is now inactive."));
             documentController.getSourceFileController().walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
@@ -95,8 +132,10 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
                         for (final OverlayWidgetAware temp : visited.getOverlayWidgetAwareList()) {
                             if (temp instanceof AmendmentController) {
                                 final AmendmentController amendmentController = (AmendmentController) temp;
-                                AkomaNtoso20AmendmentControllerUtil.setOriginalContentOnViews(amendmentController, AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController));
-                                AkomaNtoso20AmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController));
+                                final OverlayWidget originalContentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
+                                AkomaNtoso20AmendmentControllerUtil.setOriginalContentOnViews(amendmentController, originalContentFromModel.getInnerHTML());
+                                final OverlayWidget amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
+                                AkomaNtoso20AmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, amendmentContentFromModel.getInnerHTML());
                             }
                         }
                     }

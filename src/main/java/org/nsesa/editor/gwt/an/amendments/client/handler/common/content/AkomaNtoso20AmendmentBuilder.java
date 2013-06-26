@@ -20,6 +20,7 @@ import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso2
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.AnyURISimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.IDSimpleType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
+import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.TextUtils;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
@@ -36,12 +37,14 @@ import static org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNto
 /**
  * Date: 25/03/13 16:33
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class AkomaNtoso20AmendmentBuilder {
 
     private String languageIso, location, justification, notes, originalText, amendmentText;
+
+    private DocumentController documentController;
 
     private boolean modifyIds;
 
@@ -101,6 +104,11 @@ public class AkomaNtoso20AmendmentBuilder {
         return this;
     }
 
+    public AkomaNtoso20AmendmentBuilder setDocumentController(DocumentController documentController) {
+        this.documentController = documentController;
+        return this;
+    }
+
     public OverlayWidget build() {
         final Counter idGenerator = new Counter();
 
@@ -148,6 +156,18 @@ public class AkomaNtoso20AmendmentBuilder {
         References references = new References();
 
         references.addTLCOrganization(new TLCOrganization().idAttr(id("ep-parliament")).showAsAttr(s("European Parliament")).hrefAttr(u("http://www.europarl.europa.eu")));
+        // keep a reference to the amended document
+        if (documentController != null) {
+            String documentId = documentController.getDocument().getDocumentID();
+            final boolean isRemote = documentId.startsWith("http://") || documentId.startsWith("https://");
+            if (isRemote) {
+                references.addActiveRef(new ActiveRef(u(documentId), s(documentController.getDocument().getName()),
+                        id(documentId.substring(documentId.lastIndexOf("/") + 1))));
+            } else {
+                references.addActiveRef(new ActiveRef(u("http://at4am.org/xml/"),
+                        s(documentController.getDocument().getName()), id(documentId)));
+            }
+        }
 
         for (final PersonDTO authorial : authors) {
             final IDSimpleType idSimpleType = new IDSimpleType();

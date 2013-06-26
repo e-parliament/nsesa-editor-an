@@ -13,9 +13,6 @@
  */
 package org.nsesa.editor.gwt.an.amendments.client.mode;
 
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.Node;
-import com.google.gwt.dom.client.Style;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerInjectedEvent;
 import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerInjectedEventHandler;
@@ -32,6 +29,7 @@ import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.document.OverlayWidgetAware;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
+import org.nsesa.editor.gwt.core.shared.DiffStyle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,43 +40,51 @@ import java.util.List;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class ConsolidationMode implements DocumentMode<ActiveState> {
+public class ColumnMode implements DocumentMode<ActiveState> {
 
-    public static final String KEY = "consolidation";
+    public static final String KEY = "column";
 
     private final DocumentController documentController;
     private final ClientFactory clientFactory;
-    private HandlerRegistration amendmentContainerInjectedHandlerRegistration;
+
+    private HandlerRegistration amednmentContainerInjectedHandlerRegistration;
 
     private ActiveState state = new ActiveState(false);
 
-    public ConsolidationMode(DocumentController documentController, ClientFactory clientFactory) {
+    public ColumnMode(DocumentController documentController, ClientFactory clientFactory) {
         this.documentController = documentController;
         this.clientFactory = clientFactory;
     }
 
     @Override
     public void registerListeners() {
-        amendmentContainerInjectedHandlerRegistration = documentController.getDocumentEventBus().addHandler(AmendmentContainerInjectedEvent.TYPE, new AmendmentContainerInjectedEventHandler() {
+        amednmentContainerInjectedHandlerRegistration = documentController.getDocumentEventBus().addHandler(AmendmentContainerInjectedEvent.TYPE, new AmendmentContainerInjectedEventHandler() {
             @Override
             public void onEvent(AmendmentContainerInjectedEvent event) {
+                // switch the template if necessary
                 if (state.isActive()) {
-                    event.getAmendmentController().switchTemplate(AmendmentView.CONSOLIDATION, null);
-                }
+                    event.getAmendmentController().switchTemplate(AmendmentView.SINGLE, AmendmentView.SINGLE);
+                    event.getAmendmentController().setDiffStyle(DiffStyle.TRACK_CHANGES);
+                }/* else {
+                    event.getAmendmentController().switchTemplate(AmendmentView.DEFAULT, AmendmentView.DEFAULT);
+                    event.getAmendmentController().setDiffStyle(DiffStyle.EP);
+                }*/
+                // TODO diff?
             }
         });
     }
 
     @Override
     public void removeListeners() {
-        amendmentContainerInjectedHandlerRegistration.removeHandler();
+        amednmentContainerInjectedHandlerRegistration.removeHandler();
     }
 
     @Override
     public boolean apply(ActiveState state) {
         final List<AmendmentController> amendmentControllers = new ArrayList<AmendmentController>();
         if (state.isActive()) {
-            clientFactory.getEventBus().fireEvent(new NotificationEvent("Consolidation view is now active."));
+            // single column
+            clientFactory.getEventBus().fireEvent(new NotificationEvent("Single column-mode is now active."));
             documentController.getSourceFileController().walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                 @Override
                 public boolean visit(OverlayWidget visited) {
@@ -86,20 +92,9 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
                         for (final OverlayWidgetAware t : visited.getOverlayWidgetAwareList()) {
                             if (t instanceof AmendmentController) {
                                 AmendmentController amendmentController = (AmendmentController) t;
-                                amendmentController.switchTemplate(AmendmentView.CONSOLIDATION, null);
+                                amendmentController.switchTemplate(AmendmentView.SINGLE, AmendmentView.SINGLE);
+                                amendmentController.setDiffStyle(DiffStyle.TRACK_CHANGES);
                                 amendmentControllers.add(amendmentController);
-                            }
-                        }
-
-                        for (int i = 0; i < visited.asWidget().getElement().getChildNodes().getLength(); i++) {
-                            final Node node = visited.asWidget().getElement().getChild(i);
-                            if (node.getNodeType() == Node.ELEMENT_NODE) {
-                                Element childElement = Element.as(node);
-                                if (childElement != visited.getAmendmentControllersHolderElement().getElement()) {
-                                    final String display = childElement.getStyle().getDisplay();
-                                    childElement.setAttribute("display-temp", display);
-                                    childElement.getStyle().setDisplay(Style.Display.NONE);
-                                }
                             }
                         }
                     }
@@ -107,7 +102,8 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
                 }
             });
         } else {
-            clientFactory.getEventBus().fireEvent(new NotificationEvent("Consolidation view is now inactive."));
+            // two column
+            clientFactory.getEventBus().fireEvent(new NotificationEvent("Two column-mode is now active."));
             documentController.getSourceFileController().walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                 @Override
                 public boolean visit(OverlayWidget visited) {
@@ -116,23 +112,9 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
                         for (final OverlayWidgetAware t : visited.getOverlayWidgetAwareList()) {
                             if (t instanceof AmendmentController) {
                                 AmendmentController amendmentController = (AmendmentController) t;
-                                amendmentController.resetTemplate();
+                                amendmentController.switchTemplate(AmendmentView.DEFAULT, AmendmentView.DEFAULT);
+                                amendmentController.setDiffStyle(DiffStyle.EP);
                                 amendmentControllers.add(amendmentController);
-                            }
-                        }
-                        for (int i = 0; i < visited.asWidget().getElement().getChildNodes().getLength(); i++) {
-                            final Node node = visited.asWidget().getElement().getChild(i);
-                            if (node.getNodeType() == Node.ELEMENT_NODE) {
-                                Element childElement = Element.as(node);
-                                if (childElement != visited.getAmendmentControllersHolderElement().getElement()) {
-                                    final String previousDisplayValue = childElement.getAttribute("display-temp");
-                                    if (previousDisplayValue != null && !"".equalsIgnoreCase(previousDisplayValue.trim())) {
-                                        childElement.getStyle().setDisplay(Style.Display.valueOf(previousDisplayValue.toUpperCase()));
-                                        childElement.removeAttribute("display-temp");
-                                    } else {
-                                        childElement.getStyle().setDisplay(Style.Display.INLINE);
-                                    }
-                                }
                             }
                         }
 
@@ -143,9 +125,15 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
 
             );
         }
+        // renumber (just to make sure that the title is set correctly)
         documentController.getSourceFileController().renumberOverlayWidgetsAware();
+        // run the diff if necessary
+        runDiffIfEnabled(amendmentControllers);
         this.state = state;
+        return true;
+    }
 
+    private void runDiffIfEnabled(final List<AmendmentController> amendmentControllers) {
         // rediff
         final DocumentMode<? extends DocumentState> diffMode = documentController.getMode(org.nsesa.editor.gwt.core.client.mode.DiffMode.KEY);
         if (diffMode != null) {
@@ -157,7 +145,7 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
                 }
             }
         }
-        return true;
+
     }
 
 

@@ -30,10 +30,10 @@ import com.google.gwt.user.client.ui.TextBox;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 import com.google.web.bindery.event.shared.HandlerRegistration;
+import org.nsesa.editor.gwt.an.common.client.mode.StructureViewMode;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEvent;
 import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEventHandler;
-import org.nsesa.editor.gwt.an.drafting.client.mode.StructureViewMode;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
@@ -62,7 +62,7 @@ import java.util.logging.Logger;
 /**
  * Date: 05/02/13 09:32
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class DraftingDocumentController extends DefaultDocumentController {
@@ -146,6 +146,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                       final @Named("xml") Transformer transformer) {
         super(clientFactory, serviceFactory, overlayFactory, locator, creator, mover);
         this.inlineEditorController = inlineEditorController;
+        this.inlineEditorController.registerListeners();
         this.overlaySnippetFactory = overlaySnippetFactory;
         this.overlaySnippetEvaluator = overlaySnippetEvaluator;
         this.transformer = transformer;
@@ -491,8 +492,6 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                 documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget, activeOverlayWidget, cloneChild));
                             }
                         }
-
-                        // TODO
                     } else if (activeOverlayWidget != null || !(inlineEditorController.getOverlayWidget().equals(activeOverlayWidget))) {
 
                         handleOverlayWidgetModify(activeOverlayWidget);
@@ -529,7 +528,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                 @Override
                                 public void execute() {
                                     documentEventBus.fireEvent(new OverlayWidgetSelectEvent(activeOverlayWidget, DraftingDocumentController.this));
-                                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, 100));
+                                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
                                     // TODO schedule via timer
                                     redrawOutline(activeOverlayWidget.getRoot());
                                 }
@@ -549,7 +548,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                 @Override
                                 public void execute() {
                                     documentEventBus.fireEvent(new OverlayWidgetSelectEvent(activeOverlayWidget, DraftingDocumentController.this));
-                                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, 100));
+                                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
                                     // TODO schedule via timer
                                     redrawOutline(activeOverlayWidget.getRoot());
                                 }
@@ -618,7 +617,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
             clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
                 @Override
                 public void execute() {
-                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(overlayWidget.asWidget(), DraftingDocumentController.this));
+                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(overlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
                     // then attach the inline editor
                     clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
                         @Override

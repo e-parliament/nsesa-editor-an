@@ -19,7 +19,7 @@ import java.io.IOException;
 /**
  * Export the object into the given output stream
  *
- * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
+ * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
  *         Date: 30/04/13 11:21
  */
 public interface ExportService<T> {

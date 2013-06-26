@@ -29,7 +29,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippetFactor
 /**
  * Date: 30/04/13 11:42
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class AkomaNtosoModule extends AbstractGinModule {

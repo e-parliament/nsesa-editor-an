@@ -26,6 +26,12 @@ import org.xml.sax.SAXException;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.StringReader;
@@ -36,7 +42,7 @@ import java.util.Map;
 /**
  * Export the amendment container in word format
  *
- * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
+ * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
  *         Date: 30/04/13 11:33
  */
 @Service
@@ -44,11 +50,17 @@ public class WordExportService implements ExportService<AmendmentContainerDTO> {
     @Value("classpath:/export/wordAmendmentTemplate.ftl")
     private Resource template;
 
+    @Value("classpath:/export/BASIC IP_To_Word.xslt")
+    private Resource htmlToWordTransformationTemplate;
+
+    @Value("classpath:/export/htmlAmendmentBodyTemplate.ftl")
+    private Resource htmlTemplate;
+
     @Override
     public void export(AmendmentContainerDTO object, HttpServletResponse response) throws IOException {
 
-        response.setContentType("application/vnd.openxmlformats-officedocument.wordprocessingml.document");
-        response.setHeader("Content-Disposition", "attachment;filename=" + object.getAmendmentContainerID() + ".docx");
+        response.setContentType("application/msword");
+        response.setHeader("Content-Disposition", "attachment;filename=" + object.getAmendmentContainerID() + ".doc");
         response.setCharacterEncoding("UTF8");
 
         final String content = object.getBody();
@@ -57,17 +69,33 @@ public class WordExportService implements ExportService<AmendmentContainerDTO> {
 
         try {
 
-
+            // transform the amendment to HTML
             final NodeModel model = NodeModel.parse(inputSource);
             final Configuration configuration = new Configuration();
             configuration.setDefaultEncoding("UTF-8");
-            configuration.setDirectoryForTemplateLoading(template.getFile().getParentFile());
+            configuration.setDirectoryForTemplateLoading(htmlTemplate.getFile().getParentFile());
             final StringWriter sw = new StringWriter();
             Map<String, Object> root = new HashMap<String, Object>();
             root.put("amendment", model);
-            configuration.getTemplate(template.getFile().getName()).process(root, sw);
+            root.put("editorUrl", "");
+            configuration.getTemplate(htmlTemplate.getFile().getName()).process(root, sw);
             byte[] bytes = sw.toString().getBytes("utf-8");
-            IOUtils.copy(new ByteArrayInputStream(bytes), response.getOutputStream());
+
+            // validate, and transform use the HTML-to-Word
+            TransformerFactory tFactory = TransformerFactory.newInstance();
+            StreamSource xmlSource = new StreamSource(new ByteArrayInputStream(bytes));
+            Transformer transformer = tFactory.newTransformer(new StreamSource(htmlToWordTransformationTemplate.getFile()));
+
+            StringWriter html2Word = new StringWriter();
+            transformer.transform(xmlSource, new StreamResult(html2Word));
+            // set the body
+
+            final NodeModel nodeModel = NodeModel.parse(new InputSource(new ByteArrayInputStream(html2Word.toString().getBytes("utf-8"))));
+            final StringWriter swWord = new StringWriter();
+            root.put("doc", nodeModel);
+            configuration.getTemplate(template.getFile().getName()).process(root, swWord);
+            byte[] bytesWord = swWord.toString().getBytes("utf-8");
+            IOUtils.copy(new ByteArrayInputStream(bytesWord), response.getOutputStream());
             response.setContentLength(sw.toString().length());
             response.flushBuffer();
         } catch (IOException e) {
@@ -78,6 +106,10 @@ public class WordExportService implements ExportService<AmendmentContainerDTO> {
             throw new RuntimeException("Could not parse file.", e);
         } catch (TemplateException e) {
             throw new RuntimeException("Could not load template.", e);
+        } catch (TransformerConfigurationException e) {
+            throw new RuntimeException("Could not perform transformation.", e);
+        } catch (TransformerException e) {
+            throw new RuntimeException("Could not perform transformation.", e);
         }
     }
 

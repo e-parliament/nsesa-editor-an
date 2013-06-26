@@ -41,6 +41,16 @@ public class InlineEditingMode implements DocumentMode<ActiveState> {
     }
 
     @Override
+    public void registerListeners() {
+
+    }
+
+    @Override
+    public void removeListeners() {
+
+    }
+
+    @Override
     public boolean apply(ActiveState state) {
         if (state.isActive()) {
             // don't do anything when this state is enabled

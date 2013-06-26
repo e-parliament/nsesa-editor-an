@@ -64,8 +64,11 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
         super(clientFactory, view, locator, overlayFactory, amendmentInjectionPointFinder);
         this.serviceFactory = serviceFactory;
         this.authorPanelController = authorPanelController;
+        this.authorPanelController.registerListeners();
         this.contentPanelController = contentPanelController;
+        this.contentPanelController.registerListeners();
         this.metaPanelController = metaPanelController;
+        this.metaPanelController.registerListeners();
 
         addChildControllers(contentPanelController, authorPanelController, metaPanelController);
     }
@@ -79,6 +82,7 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
         final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
         builder
                 .setOverlayWidget(overlayWidget)
+                .setDocumentController(dialogContext.getDocumentController())
                 .setLanguageIso(languageIso)
                 .setAuthors(authorPanelController.getSelectedPersons())
                 .setLocation(locator.getLocation(overlayWidget, languageIso, true))
@@ -144,7 +148,7 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
             if (mod != null) {
                 final java.util.List<AuthorialNote> authorialNotes = mod.getAuthorialNotes();
                 if (authorialNotes != null && !authorialNotes.isEmpty()) {
-                    metaPanelController.setNotes(authorialNotes.get(0).html().trim());
+                    metaPanelController.setNotes(authorialNotes.get(0).getPs().get(0).getInnerHTML().trim());
                 }
             }
 

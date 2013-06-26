@@ -31,7 +31,7 @@ import org.nsesa.editor.gwt.editor.client.ui.header.HeaderModule;
 /**
  * Date: 15/10/12 21:23
  *
- * @author <a href="philip.luppens@gmail.com">Philip Luppens</a>
+ * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
 public class DraftingModule extends AbstractGinModule {

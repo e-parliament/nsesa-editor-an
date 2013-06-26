@@ -40,7 +40,7 @@ import static javax.xml.transform.OutputKeys.INDENT;
 /**
  * Default implementation of {@link DiffHandlerService} interface without doing anything with the text.
  *
- * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
+ * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
  *         Date: 3/05/13 14:24
  */
 @Service
@@ -68,8 +68,8 @@ public class NoDiffHandlerService implements DiffHandlerService {
     public void diff(AmendmentContainerDTO amendmentContainerDTO) {
 
         final XMLAmendmentHandler amendmentHandler = new XMLAmendmentHandler(amendmentContainerDTO.getBody());
-        amendmentHandler.setOriginal(amendmentHandler.getOriginal());
-        amendmentHandler.setAmendment(amendmentHandler.getAmendment());
+//        amendmentHandler.setOriginal(amendmentHandler.getOriginal());
+//        amendmentHandler.setAmendment(amendmentHandler.getAmendment());
        //amendmentContainerDTO.setBody(amendmentHandler.getContent());
 
     }

@@ -50,7 +50,6 @@
     width: 98%;
 }
 
-
 .chapter[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     font-size: 1.0em;
     display: block;
@@ -107,6 +106,25 @@
 
 .num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] + span[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: inline;
+}
+
+/*
+ This is used to position the following construct:
+ - num (1.)
+ - subparagraph 1
+ - subparagraph 2
+ - subparagraph 3
+
+ (meaning, no content is to be found near the num, only siblings). We therefore move the underlying
+ siblings to the right (implied by the CSS for subparagraphs) and pull it up to the level of the num.
+
+ Note that this is a gross simplification - better solutions should be out there.
+*/
+.num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] ~ .subparagraph[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline-block;
+    position: relative;
+    top: -2.7em;
+    margin-top: 0;
 }
 
 .num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
@@ -179,7 +197,6 @@
 }
 
 .date[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-    /* TODO add calendar? */
     color: #86590a;
 }
 
@@ -243,6 +260,14 @@
     display: block;
 }
 
-.subparagraph[ns="http://www.akomantoso.org/2.0"] {
+.subparagraph[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     margin-left: 1.5em;
+}
+
+.block[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"][name="qstart"] {
+    display: none;
+}
+
+.block[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"][name="qend"] {
+    display: none;
 }

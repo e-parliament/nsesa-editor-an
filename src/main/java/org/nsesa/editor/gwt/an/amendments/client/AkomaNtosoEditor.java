@@ -35,7 +35,9 @@ public class AkomaNtosoEditor extends Editor {
     public void onModuleLoad() {
         super.onModuleLoad();
         amendmentDialogController = injector.getAmendmentDialogController();
+        amendmentDialogController.registerListeners();
         compareController = injector.getCompareController();
+        compareController.registerListeners();
     }
 
     public AmendmentInjector getInjector() {

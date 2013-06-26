@@ -68,8 +68,11 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
     ) {
         super(clientFactory, view, locator, overlayFactory, visualStructureController, amendmentInjectionPointFinder, validator);
         this.authorPanelController = authorPanelController;
+        this.authorPanelController.registerListeners();
         this.contentPanelController = contentPanelController;
+        this.contentPanelController.registerListeners();
         this.metaPanelController = metaPanelController;
+        this.metaPanelController.registerListeners();
         this.serviceFactory = serviceFactory;
 
         addChildControllers(contentPanelController, authorPanelController, metaPanelController);
@@ -83,6 +86,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
         final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
         builder
                 .setOverlayWidget(overlayWidget)
+                .setDocumentController(dialogContext.getDocumentController())
                 .setLanguageIso(languageIso)
                 .setAuthors(authorPanelController.getSelectedPersons())
                 .setLocation(locator.getLocation(overlayWidget, languageIso, true))
@@ -113,7 +117,8 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
             // set the amendment content
             final OverlayWidget amendmentBodyOverlayWidget = dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody());
 
-            String content = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(dialogContext.getAmendmentController());
+            final OverlayWidget amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(dialogContext.getAmendmentController());
+            String content = amendmentContentFromModel.getInnerHTML();
 
             final OverlayWidget amendmentOverlayWidget = dialogContext.getAmendmentController().asAmendableWidget(content);
 
@@ -157,7 +162,7 @@ public class AkomaNtoso20AmendmentDialogModifyController extends AmendmentDialog
             if (mod != null) {
                 final List<AuthorialNote> authorialNotes = mod.getAuthorialNotes();
                 if (authorialNotes != null && !authorialNotes.isEmpty()) {
-                    metaPanelController.setNotes(authorialNotes.get(0).html().trim());
+                    metaPanelController.setNotes(authorialNotes.get(0).getPs().get(0).getInnerHTML().trim());
                 }
             }
 

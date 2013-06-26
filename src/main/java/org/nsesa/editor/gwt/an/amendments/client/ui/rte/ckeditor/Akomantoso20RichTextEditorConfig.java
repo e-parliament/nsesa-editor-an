@@ -22,7 +22,7 @@ import java.util.Arrays;
 /**
  * An akomantoso specific editor configuration
  *
- * @author <a href="stelian.groza@gmail.com">Stelian Groza</a>
+ * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
  * Date: 11/01/13 11:44
  */
 public class Akomantoso20RichTextEditorConfig extends CKEditorConfig {
