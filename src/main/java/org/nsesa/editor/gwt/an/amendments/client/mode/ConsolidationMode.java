@@ -55,8 +55,6 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
     public ConsolidationMode(DocumentController documentController, ClientFactory clientFactory) {
         this.documentController = documentController;
         this.clientFactory = clientFactory;
-
-
     }
 
     @Override
@@ -64,7 +62,9 @@ public class ConsolidationMode implements DocumentMode<ActiveState> {
         amendmentContainerInjectedHandlerRegistration = documentController.getDocumentEventBus().addHandler(AmendmentContainerInjectedEvent.TYPE, new AmendmentContainerInjectedEventHandler() {
             @Override
             public void onEvent(AmendmentContainerInjectedEvent event) {
-                event.getAmendmentController().switchTemplate(AmendmentView.CONSOLIDATION, null);
+                if (state.isActive()) {
+                    event.getAmendmentController().switchTemplate(AmendmentView.CONSOLIDATION, null);
+                }
             }
         });
     }
