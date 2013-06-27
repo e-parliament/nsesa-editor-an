@@ -1,0 +1,9 @@
+Release 0.9 (26-Jun-2013)
+
+- Improved AkomaNtoso amendment builder to include the <activeRef> to point to the amendment document
+- Improved export in PDF and added a proof-of-concept for exporting to Microsoft Word 2003+
+- Corrected rendering of amended quoted structures and complex notes
+- Fixed a problem when the received document does not have a deadline set
+- Corrected a bug where the amendment status change was not sent to the backend
+- Corrected quoted structures styling
+- Authors are now styled correctly in the amendment, corrected the retrieval of MPs
