@@ -27,8 +27,9 @@ import static junit.framework.Assert.assertTrue;
 
 /**
  * A test class for <code>FileClassOverlayGenerator</code>.
+ *
  * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
- * Date: 15/11/12 11:02
+ *         Date: 15/11/12 11:02
  */
 public class AnFileClassOverlayGeneratorTest {
 
@@ -46,11 +47,12 @@ public class AnFileClassOverlayGeneratorTest {
             }
         };
 
-        String schema = "akomantoso20.xsd";
+        String schema = "akomantoso/akomantoso20.xsd";
         classGenerator.parse(schema);
         classGenerator.analyze();
         classGenerator.print();
     }
+
     @Test
     public void testConstructorWithRequiredAttributes() throws SAXException {
         //find entity type
@@ -68,7 +70,7 @@ public class AnFileClassOverlayGeneratorTest {
             foundClass = true;
             List<OverlayProperty> list = entityClass.getAllFlatAttributesProperties();
             Map<String, OverlayProperty> reqAttrs = new HashMap<String, OverlayProperty>();
-            for(OverlayProperty prop : list) {
+            for (OverlayProperty prop : list) {
                 if (prop.isRequired()) {
                     reqAttrs.put(prop.getName(), prop);
                 }
