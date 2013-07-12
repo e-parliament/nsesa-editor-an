@@ -161,6 +161,11 @@
     margin-top: 1.5em;
 }
 
+.content[ns="http://www.akomantoso.org/2.0"] .p[ns="http://www.akomantoso.org/2.0"] {
+    display: block;
+    margin: 1em;
+}
+
 .eol[ns="http://www.akomantoso.org/2.0"]:after {
     content: "\A";
     white-space: pre;
