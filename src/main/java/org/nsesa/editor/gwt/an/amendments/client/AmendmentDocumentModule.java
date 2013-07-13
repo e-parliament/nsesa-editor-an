@@ -19,6 +19,8 @@ import com.google.inject.Provides;
 import com.google.inject.Singleton;
 import com.google.inject.TypeLiteral;
 import com.google.inject.name.Names;
+import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
+import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointProvider;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.action.AmendmentActionPanelController;
 import org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentViewImpl;
@@ -29,6 +31,7 @@ import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20Amendm
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.action.AkomaNtoso20AmendmentActionPanelController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.document.AkomaNtoso20SourceFileHeaderController;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoOverlayWidgetInjectionStrategy;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.CompositeLocator;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.sourcefile.actionbar.create.AkomaNtosoActionBarCreatePanelController;
 import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
@@ -37,6 +40,7 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.header.SourceFileHeaderController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.marker.MarkerController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultSelector;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Selector;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetInjectionStrategy;
 import org.nsesa.editor.gwt.core.client.ui.pagination.PaginationController;
@@ -64,6 +68,10 @@ public class AmendmentDocumentModule extends AbstractGinModule {
         }).to(AmendmentDiffingManager.class).in(Singleton.class);
 
         bind(ActionBarCreatePanelController.class).to(AkomaNtosoActionBarCreatePanelController.class).in(Singleton.class);
+
+        bind(AmendmentInjectionPointFinder.class).to(CompositeAmendmentInjectionPointFinder.class).in(Singleton.class);
+        bind(AmendmentInjectionPointProvider.class).to(CompositeAmendmentInjectionPointProvider.class).in(Singleton.class);
+        bind(Locator.class).to(CompositeLocator.class).in(Singleton.class);
 
         bindConstant().annotatedWith(Names.named("default.pathToOriginalContent")).to("//akomaNtoso[0]/amendment[0]/amendmentBody[0]/amendmentContent[0]/block[2]/mod[0]/quotedStructure[0]");
         bindConstant().annotatedWith(Names.named("default.pathToAmendmentContent")).to("//akomaNtoso[0]/amendment[0]/amendmentBody[0]/amendmentContent[0]/block[2]/mod[0]/quotedStructure[1]");

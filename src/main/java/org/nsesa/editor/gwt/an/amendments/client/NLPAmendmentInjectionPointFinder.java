@@ -13,18 +13,15 @@
  */
 package org.nsesa.editor.gwt.an.amendments.client;
 
-import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.Element;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.amendment.DefaultAmendmentInjectionPointFinder;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetInjectionStrategy;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetWalker;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
-import org.nsesa.editor.gwt.core.shared.AmendmentContainerDTO;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,33 +41,27 @@ public class NLPAmendmentInjectionPointFinder extends DefaultAmendmentInjectionP
 
     private static final Logger LOG = Logger.getLogger(NLPAmendmentInjectionPointFinder.class.getName());
     protected final Locator locator;
-    protected final OverlayFactory overlayFactory;
 
     @Inject
     public NLPAmendmentInjectionPointFinder(final OverlayWidgetInjectionStrategy overlayWidgetInjectionStrategy,
-                                            final Locator locator,
-                                            final OverlayFactory overlayFactory) {
+                                            final Locator locator) {
         super(overlayWidgetInjectionStrategy);
         this.locator = locator;
-        this.overlayFactory = overlayFactory;
     }
 
     /**
      * Finds injection points for amendments based on the location string.
      *
-     * @param amendmentContainer the amendment to find the injection points for
-     * @param root               the root overlay widget node
-     * @param documentController the containing document controller
+     * @param amendmentController the amendment controller to find the injection points for
+     * @param root                the root overlay widget node
+     * @param documentController  the containing document controller
      * @return the list of injection points (that is, overlay widgets which should get the amendment controller)
      */
     @Override
-    public List<OverlayWidget> findInjectionPoints(final AmendmentContainerDTO amendmentContainer, final OverlayWidget root, final DocumentController documentController) {
-        final String body = amendmentContainer.getBody();
+    public List<OverlayWidget> findInjectionPoints(final AmendmentController amendmentController, final OverlayWidget root, final DocumentController documentController) {
 
-        final Element span = DOM.createSpan();
-        span.setInnerHTML(body);
-        final OverlayWidget amendableWidget = overlayFactory.getAmendableWidget(span.getFirstChildElement());
-        final OverlayWidget block = OverlayUtil.findSingle("block[name='heading']", amendableWidget);
+        final OverlayWidget amendableWidget = amendmentController.asAmendableWidget(amendmentController.getModel().getBody());
+        final OverlayWidget block = OverlayUtil.xpathSingle("//akomaNtoso/amendment/amendmentBody/amendmentHeading/block", amendableWidget);
 
         if (block == null) {
             LOG.info("Could not find heading block.");
@@ -85,7 +76,7 @@ public class NLPAmendmentInjectionPointFinder extends DefaultAmendmentInjectionP
         root.walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
             @Override
             public boolean visit(final OverlayWidget visited) {
-                final String location = locator.getLocation(visited, amendmentContainer.getLanguageISO(), false);
+                final String location = locator.getLocation(visited, amendmentController.getModel().getLanguageISO(), false);
                 if (holder[0] == null && path.equalsIgnoreCase(location)) {
                     // aha, found one
                     holder[0] = visited;

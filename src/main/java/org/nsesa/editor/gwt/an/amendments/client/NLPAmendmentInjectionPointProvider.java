@@ -13,8 +13,6 @@
  */
 package org.nsesa.editor.gwt.an.amendments.client;
 
-import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.Element;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.amendment.DefaultAmendmentInjectionPointProvider;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
@@ -54,12 +52,9 @@ public class NLPAmendmentInjectionPointProvider extends DefaultAmendmentInjectio
 
     @Override
     public OverlayWidget provideInjectionPoint(AmendmentController amendmentController, OverlayWidget injectionPoint, DocumentController documentController) {
-        final String body = amendmentController.getModel().getBody();
 
-        final Element span = DOM.createSpan();
-        span.setInnerHTML(body);
-        final OverlayWidget amendableWidget = overlayFactory.getAmendableWidget(span.getFirstChildElement());
-        final OverlayWidget block = OverlayUtil.findSingle("block[name='heading']", amendableWidget);
+        final OverlayWidget amendableWidget = amendmentController.asAmendableWidget(amendmentController.getModel().getBody());
+        final OverlayWidget block = OverlayUtil.xpathSingle("//akomaNtoso/amendment/amendmentBody/amendmentHeading/block", amendableWidget);
 
         if (block == null) {
             LOG.info("Could not find heading block.");

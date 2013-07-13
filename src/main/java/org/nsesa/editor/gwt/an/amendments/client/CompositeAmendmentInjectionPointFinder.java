@@ -16,10 +16,10 @@ package org.nsesa.editor.gwt.an.amendments.client;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.amendment.client.amendment.DefaultAmendmentInjectionPointFinder;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.shared.AmendableWidgetReference;
-import org.nsesa.editor.gwt.core.shared.AmendmentContainerDTO;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -46,11 +46,11 @@ public class CompositeAmendmentInjectionPointFinder implements AmendmentInjectio
     }
 
     @Override
-    public List<OverlayWidget> findInjectionPoints(AmendmentContainerDTO amendmentContainer, OverlayWidget root, DocumentController documentController) {
-        if (amendmentContainer.getSourceReference() != null) {
-            return defaultAmendmentInjectionPointFinder.findInjectionPoints(amendmentContainer, root, documentController);
+    public List<OverlayWidget> findInjectionPoints(AmendmentController amendmentController, OverlayWidget root, DocumentController documentController) {
+        if (amendmentController.getModel().getSourceReference() != null) {
+            return defaultAmendmentInjectionPointFinder.findInjectionPoints(amendmentController, root, documentController);
         }
-        return nlpAmendmentInjectionPointFinder.findInjectionPoints(amendmentContainer, root, documentController);
+        return nlpAmendmentInjectionPointFinder.findInjectionPoints(amendmentController, root, documentController);
     }
 
     @Override
