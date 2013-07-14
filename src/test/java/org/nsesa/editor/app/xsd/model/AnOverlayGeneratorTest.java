@@ -45,7 +45,7 @@ public class AnOverlayGeneratorTest {
                 result.add(overlayClassGenerator.getResult());
             }
         };
-        String schema = "akomantoso/akomantoso20.xsd";
+        String schema = "akomaNtoso/akomantoso20.xsd";
         generator.parse(schema);
         generator.analyze();
         generator.print();

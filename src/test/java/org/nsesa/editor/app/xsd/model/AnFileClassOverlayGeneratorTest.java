@@ -47,7 +47,7 @@ public class AnFileClassOverlayGeneratorTest {
             }
         };
 
-        String schema = "akomantoso/akomantoso20.xsd";
+        String schema = "akomaNtoso/akomantoso20.xsd";
         classGenerator.parse(schema);
         classGenerator.analyze();
         classGenerator.print();
