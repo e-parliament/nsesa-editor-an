@@ -41,14 +41,14 @@ public class AnOverlayGeneratorTest {
 
         OverlayGenerator generator = new OverlayGenerator() {
             @Override
-            public void print() {
+            public void export() {
                 result.add(overlayClassGenerator.getResult());
             }
         };
         String schema = "akomaNtoso/akomantoso20.xsd";
         generator.parse(schema);
         generator.analyze();
-        generator.print();
+        generator.export();
         rootClass = result.get(0);
     }
 

@@ -37,11 +37,10 @@ public class AnFileClassOverlayGeneratorTest {
 
     @Before
     public void init() throws SAXException {
-        final List<OverlayClass> result = new ArrayList<OverlayClass>();
-
 
         FileClassOverlayGenerator classGenerator = new FileClassOverlayGenerator("", "") {
-            public void print() {
+            @Override
+            public void export() {
                 genClasses.addAll(getFlatListWithNoGroups(overlayClassGenerator.getResult()));
 
             }
@@ -50,7 +49,7 @@ public class AnFileClassOverlayGeneratorTest {
         String schema = "akomaNtoso/akomantoso20.xsd";
         classGenerator.parse(schema);
         classGenerator.analyze();
-        classGenerator.print();
+        classGenerator.export();
     }
 
     @Test
