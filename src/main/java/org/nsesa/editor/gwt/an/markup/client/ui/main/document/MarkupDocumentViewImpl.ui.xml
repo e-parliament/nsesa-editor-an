@@ -1,0 +1,65 @@
+<!--
+
+    Copyright 2013 European Parliament
+
+    Licensed under the EUPL, Version 1.1 or - as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence");
+    You may not use this work except in compliance with the Licence.
+    You may obtain a copy of the Licence at:
+
+    http://joinup.ec.europa.eu/software/page/eupl
+
+    Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the Licence for the specific language governing permissions and limitations under the Licence.
+
+-->
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:sourcefile='urn:import:org.nsesa.editor.gwt.core.client.ui.document.sourcefile'
+             xmlns:outline='urn:import:org.nsesa.editor.gwt.an.markup.client.ui.main.document.outline'
+        >
+    <ui:style field="res">
+
+        .mainPanel {
+            width: 100%;
+            height: 100%;
+        }
+
+        .header {
+            display: inline;
+            width: 100%;
+        }
+
+        .documentTitle {
+            text-align: center;
+            background-color: #eee;
+            border-bottom: 1px solid #ccc;
+            height: 29px;
+            font-size: x-large;
+        }
+
+        .sourceFile {
+            width: 100%;
+            height: 100%;;
+        }
+
+        .outlineView {
+            background-color: #555;
+            border-right: 4px solid #333;
+        }
+    </ui:style>
+    <g:DockLayoutPanel ui:field="mainPanel" styleName="{res.mainPanel}" unit="PX">
+        <g:west size="250">
+            <outline:OutlineView ui:field="outlineView" styleName="{res.outlineView}"/>
+        </g:west>
+        <g:center>
+            <g:HTMLPanel>
+                <g:HTMLPanel styleName="{res.header}" visible="false">
+                    <g:HTML text="" styleName="{res.documentTitle} documentTitle" ui:field="documentTitle"/>
+                </g:HTMLPanel>
+                <sourcefile:SourceFileView ui:field="sourceFileView" styleName="{res.sourceFile}"/>
+            </g:HTMLPanel>
+        </g:center>
+    </g:DockLayoutPanel>
+
+</ui:UiBinder>

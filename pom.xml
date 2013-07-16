@@ -373,6 +373,7 @@
                     <modules>
                         <module>org.nsesa.editor.gwt.an.amendments.AkomaNtosoEditor</module>
                         <module>org.nsesa.editor.gwt.an.drafting.DraftingEditor</module>
+                        <module>org.nsesa.editor.gwt.an.markup.MarkupEditor</module>
                     </modules>
                     <compileReport>true</compileReport>
                     <strict>true</strict>

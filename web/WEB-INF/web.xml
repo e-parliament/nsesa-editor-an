@@ -65,6 +65,12 @@ the web app class loader and the classes that it holds. -->
         <url-pattern>/DraftingEditor/gwtDocumentService</url-pattern>
         <url-pattern>/DraftingEditor/download/*</url-pattern>
 
+        <url-pattern>/MarkupEditor/remote_logging</url-pattern>
+        <url-pattern>/MarkupEditor/gwtService</url-pattern>
+        <url-pattern>/MarkupEditor/gwtDiffService</url-pattern>
+        <url-pattern>/MarkupEditor/gwtDocumentService</url-pattern>
+        <url-pattern>/MarkupEditor/download/*</url-pattern>
+
     </servlet-mapping>
 
     <!-- session timeout (in minutes) -->
