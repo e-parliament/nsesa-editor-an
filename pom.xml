@@ -435,8 +435,7 @@
                         <exclude>src/main/resources/*.dtd</exclude>
                         <exclude>.gitignore</exclude>
                         <!-- automatic header would turn on quirksmode in IE -->
-                        <exclude>web/editor.html</exclude>
-                        <exclude>web/drafter.html</exclude>
+                        <exclude>web/*.html</exclude>
                         <exclude>**/*.css</exclude>
                         <exclude>**/README.md</exclude>
                         <exclude>**/GitMessages.properties</exclude>
