@@ -431,6 +431,8 @@
                     <excludes>
                         <exclude>web/js/**</exclude>
                         <exclude>target/**</exclude>
+                        <!-- contains the imported source files from the gwt-selection project -->
+                        <exclude>src/main/java/com/bfr/client/**</exclude>
                         <exclude>src/main/resources/examples/**</exclude>
                         <exclude>src/main/resources/*.xsd</exclude>
                         <exclude>src/main/resources/*.dtd</exclude>
