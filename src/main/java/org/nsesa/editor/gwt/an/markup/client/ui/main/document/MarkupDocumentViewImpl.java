@@ -21,6 +21,10 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import org.nsesa.editor.gwt.an.markup.client.ui.main.document.outline.OutlineController;
 import org.nsesa.editor.gwt.an.markup.client.ui.main.document.outline.OutlineView;
+import org.nsesa.editor.gwt.an.markup.client.ui.main.document.path.PathController;
+import org.nsesa.editor.gwt.an.markup.client.ui.main.document.path.PathView;
+import org.nsesa.editor.gwt.an.markup.client.ui.main.document.picker.PickerController;
+import org.nsesa.editor.gwt.an.markup.client.ui.main.document.picker.PickerView;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileView;
@@ -62,16 +66,26 @@ public class MarkupDocumentViewImpl extends Composite implements MarkupDocumentV
     @UiField(provided = true)
     OutlineView outlineView;
 
+    @UiField(provided = true)
+    PickerView pickerView;
+
+    @UiField(provided = true)
+    PathView pathView;
+
     final SourceFileController sourceFileController;
 
     @Inject
     public MarkupDocumentViewImpl(final DocumentEventBus documentEventBus,
                                   final SourceFileController sourceFileController,
-                                  final OutlineController outlineController
+                                  final OutlineController outlineController,
+                                  final PickerController pickerController,
+                                  final PathController pathController
     ) {
 
         this.documentEventBus = documentEventBus;
         this.outlineView = outlineController.getView();
+        this.pickerView = pickerController.getView();
+        this.pathView = pathController.getView();
         this.sourceFileController = sourceFileController;
         this.sourceFileView = sourceFileController.getView();
 

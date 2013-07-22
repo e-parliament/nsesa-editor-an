@@ -16,6 +16,8 @@ package org.nsesa.editor.gwt.an.markup.client.ui.main.document;
 import com.google.gwt.inject.client.GinModules;
 import com.google.gwt.inject.client.Ginjector;
 import org.nsesa.editor.gwt.an.markup.client.ui.main.document.outline.OutlineController;
+import org.nsesa.editor.gwt.an.markup.client.ui.main.document.path.PathController;
+import org.nsesa.editor.gwt.an.markup.client.ui.main.document.picker.PickerController;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentInjector;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.ActionBarCreatePanelController;
 
@@ -28,6 +30,10 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.
 @GinModules({MarkupDocumentModule.class})
 public interface MarkupDocumentInjector extends DocumentInjector, Ginjector {
     OutlineController getOutlineController();
+
+    PickerController getPickerController();
+
+    PathController getPathController();
 
     ActionBarCreatePanelController getActionBarCreatePanelController();
 }

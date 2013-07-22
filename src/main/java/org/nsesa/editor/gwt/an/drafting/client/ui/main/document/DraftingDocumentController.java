@@ -51,6 +51,7 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.
 import org.nsesa.editor.gwt.core.client.ui.overlay.*;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditor;
+import org.nsesa.editor.gwt.core.shared.DocumentContentDTO;
 import org.nsesa.editor.gwt.core.shared.DocumentDTO;
 import org.nsesa.editor.gwt.inline.client.event.AttachInlineEditorEvent;
 import org.nsesa.editor.gwt.inline.client.event.DetachInlineEditorEvent;
@@ -691,7 +692,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
     }
 
     @Override
-    public void onDocumentContentLoaded(String content) {
+    public void onDocumentContentLoaded(DocumentContentDTO content) {
         showLoadingIndicator(true, "Parsing document.");
         sourceFileController.setContent(content);
         showLoadingIndicator(true, "Building document tree.");
@@ -772,6 +773,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
         inlineEditorControllerCancelHandlerRegistration.removeHandler();
     }
 
+    @Override
     public void setInjector(DocumentInjector injector) {
         this.documentEventBus = injector.getDocumentEventBus();
         this.view = injector.getDocumentView();

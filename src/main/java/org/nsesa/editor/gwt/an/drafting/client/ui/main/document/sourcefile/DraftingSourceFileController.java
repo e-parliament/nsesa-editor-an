@@ -18,6 +18,7 @@ import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.user.client.Event;
 import com.google.gwt.user.client.ui.ToggleButton;
 import com.google.inject.Inject;
+import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEvent;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileView;
@@ -27,7 +28,6 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.content.ContentCo
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.header.SourceFileHeaderController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.marker.MarkerController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
-import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEvent;
 
 /**
  * Date: 24/03/13 12:45
@@ -61,5 +61,18 @@ public class DraftingSourceFileController extends SourceFileController {
     @Override
     public void onMouseOver(OverlayWidget sender, Event event) {
         // do nothing
+    }
+
+    @Override
+    public void setActiveOverlayWidget(OverlayWidget activeOverlayWidget) {
+        if (this.activeOverlayWidget != null) {
+            this.activeOverlayWidget.asWidget().removeStyleName(style.selected());
+        }
+
+        this.activeOverlayWidget = activeOverlayWidget;
+
+        if (this.activeOverlayWidget != null) {
+            this.activeOverlayWidget.asWidget().addStyleName(style.selected());
+        }
     }
 }

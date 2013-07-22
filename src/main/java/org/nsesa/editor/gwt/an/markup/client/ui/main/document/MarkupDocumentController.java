@@ -13,6 +13,7 @@
  */
 package org.nsesa.editor.gwt.an.markup.client.ui.main.document;
 
+import com.bfr.client.selection.Range;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.dom.client.Element;
@@ -31,10 +32,13 @@ import com.google.inject.Inject;
 import com.google.inject.name.Named;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 import org.nsesa.editor.gwt.an.common.client.mode.StructureViewMode;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.AkomaNtoso;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
-import org.nsesa.editor.gwt.an.markup.client.event.DocumentToggleStructureEvent;
-import org.nsesa.editor.gwt.an.markup.client.event.DocumentToggleStructureEventHandler;
+import org.nsesa.editor.gwt.an.markup.client.event.*;
+import org.nsesa.editor.gwt.an.markup.client.mode.WhitespacePreservationMode;
 import org.nsesa.editor.gwt.an.markup.client.ui.main.document.outline.OutlineController;
+import org.nsesa.editor.gwt.an.markup.client.ui.main.document.path.PathController;
+import org.nsesa.editor.gwt.an.markup.client.ui.main.document.picker.PickerController;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.event.*;
@@ -51,12 +55,14 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.
 import org.nsesa.editor.gwt.core.client.ui.overlay.*;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditor;
+import org.nsesa.editor.gwt.core.shared.DocumentContentDTO;
 import org.nsesa.editor.gwt.core.shared.DocumentDTO;
 import org.nsesa.editor.gwt.inline.client.event.AttachInlineEditorEvent;
 import org.nsesa.editor.gwt.inline.client.event.DetachInlineEditorEvent;
 import org.nsesa.editor.gwt.inline.client.ui.inline.InlineEditorController;
 
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -77,9 +83,14 @@ public class MarkupDocumentController extends DefaultDocumentController {
 
     private final InlineEditorController inlineEditorController;
 
-    private final Transformer transformer;
+    private final Transformer xmlTransformer;
+    private final Transformer htmlTransformer;
 
     private OutlineController outlineController;
+
+    private PickerController pickerController;
+
+    private PathController pathController;
 
     private ActionBarController actionBarController;
 
@@ -114,24 +125,20 @@ public class MarkupDocumentController extends DefaultDocumentController {
     // ----------------- keyboard shortcuts ---------------------
     private KeyboardListener.KeyCombo ctrlEnter = new KeyboardListener.KeyCombo(false, false, true, KeyCodes.KEY_ENTER);
     private KeyboardListener.KeyCombo enter = new KeyboardListener.KeyCombo(false, false, false, KeyCodes.KEY_ENTER);
-    private KeyboardListener.KeyCombo tab = new KeyboardListener.KeyCombo(false, false, false, KeyCodes.KEY_TAB);
     private KeyboardListener.KeyCombo escape = new KeyboardListener.KeyCombo(false, false, false, KeyCodes.KEY_ESCAPE);
     private KeyboardListener.KeyCombo delete = new KeyboardListener.KeyCombo(false, false, false, KeyCodes.KEY_DELETE);
 
     private KeyboardListener.KeyCombo ctrlS = new KeyboardListener.KeyCombo(false, false, true, 83); // 83 is 's' key
-
-    private KeyboardListener.KeyCombo upArrow = new KeyboardListener.KeyCombo(false, false, false, KeyCodes.KEY_UP);
-    private KeyboardListener.KeyCombo downArrow = new KeyboardListener.KeyCombo(false, false, false, KeyCodes.KEY_DOWN);
-
-    private KeyboardListener.KeyCombo altUpArrow = new KeyboardListener.KeyCombo(false, true, false, KeyCodes.KEY_UP);
-    private KeyboardListener.KeyCombo altDownArrow = new KeyboardListener.KeyCombo(false, true, false, KeyCodes.KEY_DOWN);
-
 
     private HandlerRegistration overlayWidgetModifyHandlerRegistration;
     private HandlerRegistration overlayWidgetDeleteHandlerRegistration;
     private HandlerRegistration overlayWidgetNewEventHandlerRegistration;
     private com.google.gwt.event.shared.HandlerRegistration inlineEditorControllerSaveHandlerRegistration;
     private com.google.gwt.event.shared.HandlerRegistration inlineEditorControllerCancelHandlerRegistration;
+    private HandlerRegistration whiteSpaceEventHandlerRegistration;
+
+    private Range currentSelectionRange;
+    private HandlerRegistration selectionEventHandlerRegistration;
 
     @Inject
     public MarkupDocumentController(final ClientFactory clientFactory,
@@ -143,25 +150,33 @@ public class MarkupDocumentController extends DefaultDocumentController {
                                     final InlineEditorController inlineEditorController,
                                     final OverlaySnippetFactory overlaySnippetFactory,
                                     final OverlaySnippetEvaluator overlaySnippetEvaluator,
-                                    final @Named("xml") Transformer transformer) {
+                                    final @Named("xml") Transformer xmlTransformer,
+                                    final @Named("html") Transformer htmlTransformer) {
         super(clientFactory, serviceFactory, overlayFactory, locator, creator, mover);
         this.inlineEditorController = inlineEditorController;
         this.inlineEditorController.registerListeners();
         this.overlaySnippetFactory = overlaySnippetFactory;
         this.overlaySnippetEvaluator = overlaySnippetEvaluator;
-        this.transformer = transformer;
+        this.xmlTransformer = xmlTransformer;
+        this.htmlTransformer = htmlTransformer;
     }
 
     @Override
     public void registerKeyCombos() {
         super.registerKeyCombos();
-        clientFactory.getKeyboardListener().register(ctrlEnter, enter, tab, escape, delete, ctrlS, upArrow, downArrow, altUpArrow, altDownArrow);
+        clientFactory.getKeyboardListener().register(ctrlEnter, enter, escape, delete, ctrlS);
     }
 
     @Override
     public void registerModes() {
         super.registerModes();
-        registerMode(StructureViewMode.KEY, new StructureViewMode(this));
+        final StructureViewMode structureViewMode = new StructureViewMode(this);
+        registerMode(StructureViewMode.KEY, structureViewMode);
+        documentEventBus.fireEvent(new VisualStructureToggleEvent(true));
+
+        final WhitespacePreservationMode whitespacePreservationMode = new WhitespacePreservationMode(this, clientFactory);
+        registerMode(WhitespacePreservationMode.KEY, whitespacePreservationMode);
+        documentEventBus.fireEvent(new WhitespaceToggleEvent(this, true));
     }
 
     @Override
@@ -190,23 +205,8 @@ public class MarkupDocumentController extends DefaultDocumentController {
                 sourceFileController.setActiveOverlayWidget(activeOverlayWidget);
 
                 if (activeOverlayWidget != null) {
-                    actionBarCreatePanelController.setOverlayWidget(activeOverlayWidget);
-
-                    actionBarController.attach(activeOverlayWidget, MarkupDocumentController.this);
-                    actionBarController.setLocation(locator.getLocation(activeOverlayWidget, document.getLanguageIso(), true));
-
-                    // check if the sender has the nsesa-inline class element
-                    if (activeOverlayWidget.getOverlayElement().getClassName().contains("nsesa-inline")) {
-                        // if so, immediately add the inline editor (don't wait for a enter)
-//                        clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, 100));
-
-                        clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
-                            @Override
-                            public void execute() {
-                                handleOverlayWidgetModify(activeOverlayWidget);
-                            }
-                        });
-                    }
+                    pickerController.setOverlayWidget(activeOverlayWidget);
+                    pathController.setOverlayWidget(activeOverlayWidget);
                 }
 
             }
@@ -248,6 +248,25 @@ public class MarkupDocumentController extends DefaultDocumentController {
             @Override
             public void onEvent(DocumentToggleStructureEvent event) {
                 applyState(StructureViewMode.KEY, new ActiveState(event.isToggle()));
+            }
+        });
+
+        whiteSpaceEventHandlerRegistration = documentEventBus.addHandler(WhitespaceToggleEvent.TYPE, new WhitespaceToggleEventHandler() {
+            @Override
+            public void onEvent(WhitespaceToggleEvent event) {
+                applyState(WhitespacePreservationMode.KEY, new ActiveState(event.isToggle()));
+            }
+        });
+
+        selectionEventHandlerRegistration = clientFactory.getEventBus().addHandler(SelectionEvent.TYPE, new SelectionEventHandler() {
+            @Override
+            public void onEvent(SelectionEvent event) {
+                if (event.getSelection().getRange() != null && !"".equalsIgnoreCase(event.getSelection().getRange().getText().trim())) {
+                    currentSelectionRange = event.getSelection().getRange();
+                    if (LOG.isLoggable(Level.FINE)) {
+                        LOG.fine("Current selection: " + (currentSelectionRange != null ? currentSelectionRange.getHtmlText() : "<<null>>"));
+                    }
+                }
             }
         });
 
@@ -395,7 +414,7 @@ public class MarkupDocumentController extends DefaultDocumentController {
 
 
                     // ------------- CTRL + s -------------
-                    final String content = transformer.transform(sourceFileController.getOverlayWidgets().get(0));
+                    final String content = xmlTransformer.transform(sourceFileController.getOverlayWidgets().get(0));
                     serviceFactory.getGwtDocumentService().saveDocumentContent(clientFactory.getClientContext(), document.getDocumentID(), content, new AsyncCallback<Void>() {
                         @Override
                         public void onFailure(Throwable caught) {
@@ -408,40 +427,6 @@ public class MarkupDocumentController extends DefaultDocumentController {
                             clientFactory.getEventBus().fireEvent(new NotificationEvent("Document successfully saved."));
                         }
                     });
-
-                } else if (downArrow.equals(event.getKeyCombo())) {
-
-
-                    // ------------- Down arrow -------------
-                    if (actionBarCreatePanelControllerPopup.isShowing()) {
-                        actionBarCreatePanelFocusPanel.setFocus(true);
-                        actionBarCreatePanelController.highlightNext();
-                    } else if (!inlineEditorController.isShowing()) {
-
-                        final OverlayWidget next = activeOverlayWidget != null ? activeOverlayWidget.next(overlayWidgetSelector) : sourceFileController.getOverlayWidgets().get(0);
-                        if (next != null) {
-                            documentEventBus.fireEvent(new OverlayWidgetSelectEvent(next, MarkupDocumentController.this));
-                            clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(next.asWidget(), MarkupDocumentController.this, false, SCROLL_TO_OFFSET));
-                        }
-                    }
-
-                } else if (upArrow.equals(event.getKeyCombo())) {
-
-
-                    // ------------- Up arrow -------------
-
-                    if (actionBarCreatePanelControllerPopup.isShowing()) {
-                        actionBarCreatePanelFocusPanel.setFocus(true);
-                        actionBarCreatePanelController.highlightPrevious();
-                    } else if (!inlineEditorController.isShowing()) {
-                        if (activeOverlayWidget != null) {
-                            final OverlayWidget previous = activeOverlayWidget.previous(overlayWidgetSelector);
-                            if (previous != null) {
-                                documentEventBus.fireEvent(new OverlayWidgetSelectEvent(previous, MarkupDocumentController.this));
-                                clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(previous.asWidget(), MarkupDocumentController.this, false, SCROLL_TO_OFFSET));
-                            }
-                        }
-                    }
 
                 } else if (enter.equals(event.getKeyCombo())) {
 
@@ -496,18 +481,6 @@ public class MarkupDocumentController extends DefaultDocumentController {
 
                         handleOverlayWidgetModify(activeOverlayWidget);
                     }
-                } else if (tab.equals(event.getKeyCombo())) {
-
-
-                    // ------------- Single TAB -------------
-                    if (inlineEditorController.isShowing()) {
-                        // close the editor, copy the value into the overlay widget
-                        modifyOverlayWidget(activeOverlayWidget, inlineEditorController.getRichTextEditor().getHTML());
-                        // and finally destroy the instance
-                        clientFactory.getEventBus().fireEvent(new DetachInlineEditorEvent(MarkupDocumentController.this));
-                        inlineEditorController.getRichTextEditor().setFocus(false);
-                        restoreFocusOnViewPort();
-                    }
                 } else if (delete.equals(event.getKeyCombo())) {
 
 
@@ -516,46 +489,6 @@ public class MarkupDocumentController extends DefaultDocumentController {
                         handleOverlayWidgetDelete(activeOverlayWidget);
                         restoreFocusOnViewPort();
                     }
-                } else if (altUpArrow.equals(event.getKeyCombo())) {
-
-
-                    // ------------- CTRL + Up arrow -------------
-
-                    if (activeOverlayWidget != null) {
-                        if (mover.canMoveUp(activeOverlayWidget)) {
-                            activeOverlayWidget.moveUp();
-                            clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
-                                @Override
-                                public void execute() {
-                                    documentEventBus.fireEvent(new OverlayWidgetSelectEvent(activeOverlayWidget, MarkupDocumentController.this));
-                                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), MarkupDocumentController.this, false, SCROLL_TO_OFFSET));
-                                    // TODO schedule via timer
-                                    redrawOutline(activeOverlayWidget.getRoot());
-                                }
-                            });
-                        }
-                    }
-
-                } else if (altDownArrow.equals(event.getKeyCombo())) {
-
-
-                    // ------------- CTRL + Down arrow -------------
-
-                    if (activeOverlayWidget != null) {
-                        if (mover.canMoveDown(activeOverlayWidget)) {
-                            activeOverlayWidget.moveDown();
-                            clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
-                                @Override
-                                public void execute() {
-                                    documentEventBus.fireEvent(new OverlayWidgetSelectEvent(activeOverlayWidget, MarkupDocumentController.this));
-                                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), MarkupDocumentController.this, false, SCROLL_TO_OFFSET));
-                                    // TODO schedule via timer
-                                    redrawOutline(activeOverlayWidget.getRoot());
-                                }
-                            });
-                        }
-                    }
-
                 }
             }
         });
@@ -691,54 +624,86 @@ public class MarkupDocumentController extends DefaultDocumentController {
     }
 
     @Override
-    public void onDocumentContentLoaded(String content) {
+    public void onDocumentContentLoaded(DocumentContentDTO documentContent) {
         showLoadingIndicator(true, "Parsing document.");
-        sourceFileController.setContent(content);
+        if ("XML".equalsIgnoreCase(documentContent.getDocumentContentType())) {
+            sourceFileController.setContent(documentContent);
+        } else if ("PLAIN".equalsIgnoreCase(documentContent.getDocumentContentType())) {
+            // wrap it in an akoma ntoso body
+            final AkomaNtoso akomaNtoso = new AkomaNtoso();
+            akomaNtoso.html(documentContent.getContent());
+
+            // replace the original content with the wrapped one
+            documentContent.setContent(htmlTransformer.transform(akomaNtoso));
+            sourceFileController.setContent(documentContent);
+        } else {
+            throw new UnsupportedOperationException("The document content type '" + documentContent.getDocumentContentType()
+                    + "' is currently unsupported in the client.");
+        }
         showLoadingIndicator(true, "Building document tree.");
+
         clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
             @Override
             public void execute() {
-                sourceFileController.overlay();
-                showLoadingIndicator(true, "Done overlaying document.");
+                overlay();
+            }
+        });
+    }
+
+    public void overlay() {
+        sourceFileController.overlay();
+        showLoadingIndicator(true, "Done overlaying document.");
+        clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
+            @Override
+            public void execute() {
+                clientFactory.getEventBus().fireEvent(new ResizeEvent(Window.getClientHeight(), Window.getClientWidth()));
+                showLoadingIndicator(false, "Done retrieving document.");
+
                 clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
                     @Override
                     public void execute() {
-                        clientFactory.getEventBus().fireEvent(new ResizeEvent(Window.getClientHeight(), Window.getClientWidth()));
-                        showLoadingIndicator(false, "Done retrieving document.");
-                        clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
-                            @Override
-                            public void execute() {
-                                final List<OverlayWidget> overlayWidgets = sourceFileController.getOverlayWidgets();
-                                if (overlayWidgets != null && !overlayWidgets.isEmpty()) {
-                                    // only display the first one
-                                    redrawOutline(overlayWidgets.get(0));
+                        final List<OverlayWidget> overlayWidgets = sourceFileController.getOverlayWidgets();
+                        if (overlayWidgets != null && !overlayWidgets.isEmpty()) {
+                            overlayWidgets.get(0).walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
+                                @Override
+                                public boolean visit(OverlayWidget visited) {
+                                    visited.setAmendable(true);
+                                    visited.setUIListener(sourceFileController);
+                                    return true;
                                 }
-                            }
-                        });
-                        // find the first element that has the nsesa-inline class name, and select it
-                        clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
-                            @Override
-                            public void execute() {
-                                final List<OverlayWidget> overlayWidgets = sourceFileController.getOverlayWidgets();
-                                if (overlayWidgets != null && !overlayWidgets.isEmpty()) {
-                                    // only display the first one
-                                    overlayWidgets.get(0).walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
-                                        @Override
-                                        public boolean visit(OverlayWidget visited) {
-                                            if (visited.getOverlayElement().getClassName().contains("nsesa-select")) {
-                                                documentEventBus.fireEvent(new OverlayWidgetSelectEvent(visited, MarkupDocumentController.this));
-                                                return false;
-                                            }
-                                            return true;
-                                        }
-                                    });
-                                }
-                            }
-                        });
+                            });
+                        }
+                    }
+                });
+
+                clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
+                    @Override
+                    public void execute() {
+                        final List<OverlayWidget> overlayWidgets = sourceFileController.getOverlayWidgets();
+                        if (overlayWidgets != null && !overlayWidgets.isEmpty()) {
+                            // only display the first one
+                            redrawOutline(overlayWidgets.get(0));
+                        }
+                    }
+                });
+
+                clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
+                    @Override
+                    public void execute() {
+                        final List<OverlayWidget> overlayWidgets = sourceFileController.getOverlayWidgets();
+                        if (overlayWidgets != null && !overlayWidgets.isEmpty()) {
+                            // only display the first one
+                            pickerController.setOverlayWidget(overlayWidgets.get(0));
+                            pathController.setOverlayWidget(overlayWidgets.get(0));
+                        }
                     }
                 });
             }
         });
+    }
+
+    public Range getCurrentSelectionRange() {
+        return currentSelectionRange;
     }
 
     @Override
@@ -762,6 +727,7 @@ public class MarkupDocumentController extends DefaultDocumentController {
         resizeEventHandlerRegistration.removeHandler();
         documentScrollToEventHandlerRegistration.removeHandler();
         documentToggleStructureEventHandler.removeHandler();
+        whiteSpaceEventHandlerRegistration.removeHandler();
         keyComboHandlerRegistration.removeHandler();
         draftingToggleEventHandlerRegistration.removeHandler();
         draftingAttributesToggleEventHandlerRegistration.removeHandler();
@@ -770,8 +736,10 @@ public class MarkupDocumentController extends DefaultDocumentController {
         overlayWidgetNewEventHandlerRegistration.removeHandler();
         inlineEditorControllerSaveHandlerRegistration.removeHandler();
         inlineEditorControllerCancelHandlerRegistration.removeHandler();
+        selectionEventHandlerRegistration.removeHandler();
     }
 
+    @Override
     public void setInjector(DocumentInjector injector) {
         this.documentEventBus = injector.getDocumentEventBus();
         this.view = injector.getDocumentView();
@@ -785,6 +753,13 @@ public class MarkupDocumentController extends DefaultDocumentController {
             final MarkupDocumentInjector markupDocumentInjector = (MarkupDocumentInjector) injector;
             this.outlineController = markupDocumentInjector.getOutlineController();
             this.outlineController.setDocumentController(this);
+
+            this.pathController = markupDocumentInjector.getPathController();
+            this.pathController.setDocumentController(this);
+
+            this.pickerController = markupDocumentInjector.getPickerController();
+            this.pickerController.setDocumentController(this);
+
             this.actionBarController = markupDocumentInjector.getActionBarController();
             this.actionBarController.setSourceFileController(sourceFileController);
 

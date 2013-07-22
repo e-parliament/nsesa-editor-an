@@ -17,6 +17,8 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:sourcefile='urn:import:org.nsesa.editor.gwt.core.client.ui.document.sourcefile'
              xmlns:outline='urn:import:org.nsesa.editor.gwt.an.markup.client.ui.main.document.outline'
+             xmlns:picker='urn:import:org.nsesa.editor.gwt.an.markup.client.ui.main.document.picker'
+             xmlns:path='urn:import:org.nsesa.editor.gwt.an.markup.client.ui.main.document.path'
         >
     <ui:style field="res">
 
@@ -47,19 +49,39 @@
             background-color: #555;
             border-right: 4px solid #333;
         }
+
+        .pickerView {
+            background-color: #555;
+            border-left: 4px solid #333;
+        }
+
+        .pathView {
+            background-color: #555;
+            color: white;
+        }
     </ui:style>
     <g:DockLayoutPanel ui:field="mainPanel" styleName="{res.mainPanel}" unit="PX">
         <g:west size="250">
             <outline:OutlineView ui:field="outlineView" styleName="{res.outlineView}"/>
         </g:west>
         <g:center>
-            <g:HTMLPanel>
-                <g:HTMLPanel styleName="{res.header}" visible="false">
-                    <g:HTML text="" styleName="{res.documentTitle} documentTitle" ui:field="documentTitle"/>
-                </g:HTMLPanel>
-                <sourcefile:SourceFileView ui:field="sourceFileView" styleName="{res.sourceFile}"/>
-            </g:HTMLPanel>
+            <g:DockLayoutPanel ui:field="innerMainPanel" styleName="{res.mainPanel}" unit="PX">
+                <g:center>
+                    <g:HTMLPanel>
+                        <g:HTMLPanel styleName="{res.header}" visible="false">
+                            <g:HTML text="" styleName="{res.documentTitle} documentTitle" ui:field="documentTitle"/>
+                        </g:HTMLPanel>
+                        <sourcefile:SourceFileView ui:field="sourceFileView" styleName="{res.sourceFile}"/>
+                    </g:HTMLPanel>
+                </g:center>
+                <g:south size="40">
+                    <path:PathView ui:field="pathView" styleName="{res.pathView}"/>
+                </g:south>
+            </g:DockLayoutPanel>
         </g:center>
+        <g:east size="200">
+            <picker:PickerView ui:field="pickerView" styleName="{res.pickerView}"/>
+        </g:east>
     </g:DockLayoutPanel>
 
 </ui:UiBinder>

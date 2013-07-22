@@ -95,36 +95,52 @@ public class GWTDocumentServiceImpl extends SpringRemoteServiceServlet implement
     }
 
     @Override
-    public String getDocumentContent(final ClientContext clientContext, final String documentID) {
-        final DocumentContentDTO documentContent = documentContentService.getDocumentContent(documentID);
+    public org.nsesa.editor.gwt.core.shared.DocumentContentDTO getDocumentContent(final ClientContext clientContext, final String documentID) {
+        final DocumentContentDTO fromBackend = documentContentService.getDocumentContent(documentID);
 
-        final InputSource inputSource;
-        if (documentContent.getContent() != null) {
-            byte[] bytes = documentContent.getContent().getBytes(Charset.forName("UTF-8"));
-            inputSource = new InputSource(new ByteArrayInputStream(bytes));
+        final org.nsesa.editor.gwt.core.shared.DocumentContentDTO documentContentDTO =
+                new org.nsesa.editor.gwt.core.shared.DocumentContentDTO();
+        documentContentDTO.setDocumentID(fromBackend.getDocumentID());
+        documentContentDTO.setDocumentContentType(fromBackend.getDocumentContentType());
+
+
+        if ("XML".equalsIgnoreCase(fromBackend.getDocumentContentType())) {
+            final InputSource inputSource;
+            if (fromBackend.getContent() != null) {
+                byte[] bytes = fromBackend.getContent().getBytes(Charset.forName("UTF-8"));
+                inputSource = new InputSource(new ByteArrayInputStream(bytes));
+            } else {
+                throw new RuntimeException("Could not retrieve document content.");
+            }
+
+            try {
+                final NodeModel model = NodeModel.parse(inputSource);
+                final Configuration configuration = new Configuration();
+                configuration.setDefaultEncoding("UTF-8");
+                configuration.setDirectoryForTemplateLoading(documentTemplate.getFile().getParentFile());
+                final StringWriter sw = new StringWriter();
+                Map<String, Object> root = new HashMap<String, Object>();
+                root.put("doc", model);
+                configuration.getTemplate(documentTemplate.getFile().getName()).process(root, sw);
+
+                documentContentDTO.setContent(sw.toString());
+                return documentContentDTO;
+
+            } catch (IOException e) {
+                throw new RuntimeException("Could not read file.", e);
+            } catch (SAXException e) {
+                throw new RuntimeException("Could not parse file.", e);
+            } catch (ParserConfigurationException e) {
+                throw new RuntimeException("Could not parse file.", e);
+            } catch (TemplateException e) {
+                throw new RuntimeException("Could not load template.", e);
+            }
+        } else if ("PLAIN".equalsIgnoreCase(fromBackend.getDocumentContentType())) {
+            // no transformation at the moment
+            documentContentDTO.setContent(fromBackend.getContent());
+            return documentContentDTO;
         } else {
-            throw new RuntimeException("Could not retrieve document content.");
-        }
-
-        try {
-            final NodeModel model = NodeModel.parse(inputSource);
-            final Configuration configuration = new Configuration();
-            configuration.setDefaultEncoding("UTF-8");
-            configuration.setDirectoryForTemplateLoading(documentTemplate.getFile().getParentFile());
-            final StringWriter sw = new StringWriter();
-            Map<String, Object> root = new HashMap<String, Object>();
-            root.put("doc", model);
-            configuration.getTemplate(documentTemplate.getFile().getName()).process(root, sw);
-            return sw.toString();
-
-        } catch (IOException e) {
-            throw new RuntimeException("Could not read file.", e);
-        } catch (SAXException e) {
-            throw new RuntimeException("Could not parse file.", e);
-        } catch (ParserConfigurationException e) {
-            throw new RuntimeException("Could not parse file.", e);
-        } catch (TemplateException e) {
-            throw new RuntimeException("Could not load template.", e);
+            throw new UnsupportedOperationException("Not yet implemented.");
         }
     }
 

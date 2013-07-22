@@ -22,7 +22,6 @@ import com.google.gwt.user.client.ui.InlineHTML;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.HierarchyComplexType;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.TextUtils;
@@ -59,46 +58,46 @@ public class OutlineController {
         rootOverlayWidget.walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
             @Override
             public boolean visit(final OverlayWidget visited) {
-                if (visited instanceof BasehierarchyComplexType) {
-                    String unformattedIndex = visited.getUnformattedIndex();
-                    if (unformattedIndex == null) unformattedIndex = Integer.toString(visited.getTypeIndex() + 1);
-                    final String repeat = TextUtils.repeat(visited.getParentOverlayWidgets().size() * 2, "&nbsp;");
-                    String heading = "";
-                    // see if there's a heading
-                    for (final OverlayWidget child : visited.getChildOverlayWidgets()) {
-                        if ("heading".equalsIgnoreCase(child.getType())) {
-                            heading = " <i>" + child.asWidget().getElement().getInnerText() + "</i>";
-                            break;
-                        }
+                //if (visited instanceof BasehierarchyComplexType) {
+                String unformattedIndex = visited.getUnformattedIndex();
+                if (unformattedIndex == null) unformattedIndex = Integer.toString(visited.getTypeIndex() + 1);
+                final String repeat = TextUtils.repeat(visited.getParentOverlayWidgets().size() * 2, "&nbsp;");
+                String heading = "";
+                // see if there's a heading
+                for (final OverlayWidget child : visited.getChildOverlayWidgets()) {
+                    if ("heading".equalsIgnoreCase(child.getType())) {
+                        heading = " <i>" + child.asWidget().getElement().getInnerText() + "</i>";
+                        break;
                     }
+                }
 
-                    final InlineHTML index = new InlineHTML(repeat + TextUtils.capitalize(visited.getType()) + " " + unformattedIndex);
-                    final InlineHTML description = new InlineHTML(heading);
+                final InlineHTML index = new InlineHTML(repeat + TextUtils.capitalize(visited.getType()) + " " + unformattedIndex);
+                final InlineHTML description = new InlineHTML(heading);
 
-                    description.getElement().getStyle().setTextOverflow(Style.TextOverflow.ELLIPSIS);
-                    description.getElement().getStyle().setOverflow(Style.Overflow.HIDDEN);
-                    description.getElement().getStyle().setFontStyle(Style.FontStyle.ITALIC);
+                description.getElement().getStyle().setTextOverflow(Style.TextOverflow.ELLIPSIS);
+                description.getElement().getStyle().setOverflow(Style.Overflow.HIDDEN);
+                description.getElement().getStyle().setFontStyle(Style.FontStyle.ITALIC);
 //                    description.getElement().getStyle().setWhiteSpace(Style.WhiteSpace.NOWRAP);
 
-                    HTMLPanel both = new HTMLPanel("");
-                    both.add(index);
-                    both.add(description);
-                    final FocusPanel w = new FocusPanel(both);
-                    w.getElement().getStyle().setPadding(5, Style.Unit.PX);
-                    outlinePanel.add(w);
+                HTMLPanel both = new HTMLPanel("");
+                both.add(index);
+                both.add(description);
+                final FocusPanel w = new FocusPanel(both);
+                w.getElement().getStyle().setPadding(5, Style.Unit.PX);
+                outlinePanel.add(w);
 
-                    w.addClickHandler(new ClickHandler() {
-                        @Override
-                        public void onClick(ClickEvent event) {
-                            if (documentController != null) {
-                                documentController.getSourceFileController().scrollTo(visited.asWidget());
-                            }
+                w.addClickHandler(new ClickHandler() {
+                    @Override
+                    public void onClick(ClickEvent event) {
+                        if (documentController != null) {
+                            documentController.getSourceFileController().scrollTo(visited.asWidget());
                         }
-                    });
+                    }
+                });
 
-                    return !(visited.getParentOverlayWidget() instanceof HierarchyComplexType);
-                }
-                return true;
+                return !(visited.getParentOverlayWidget() instanceof HierarchyComplexType);
+                //}
+                //return true;
             }
         });
         outlinePanel.getElement().getStyle().setTableLayout(Style.TableLayout.FIXED);

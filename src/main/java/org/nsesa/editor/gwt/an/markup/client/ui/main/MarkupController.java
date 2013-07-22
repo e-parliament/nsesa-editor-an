@@ -13,8 +13,11 @@
  */
 package org.nsesa.editor.gwt.an.markup.client.ui.main;
 
+import com.bfr.client.selection.Selection;
+import com.google.gwt.user.client.Event;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.HandlerRegistration;
+import org.nsesa.editor.gwt.an.markup.client.event.SelectionEvent;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.event.BootstrapEvent;
@@ -40,6 +43,7 @@ public class MarkupController {
     private final MarkupView view;
     private Injector injector;
     private HandlerRegistration bootstrapEventHandlerRegistration;
+    private com.google.gwt.event.shared.HandlerRegistration nativeEventHandlerRegistration;
 
     @Inject
     public MarkupController(final ClientFactory clientFactory,
@@ -73,10 +77,27 @@ public class MarkupController {
                 }
             }
         });
+
+        nativeEventHandlerRegistration = Event.addNativePreviewHandler(new Event.NativePreviewHandler() {
+            @Override
+            public void onPreviewNativeEvent(Event.NativePreviewEvent event) {
+                if ("mouseup".equalsIgnoreCase(event.getNativeEvent().getType())) {
+                    handleSelectionChange();
+                } else if ("keyup".equalsIgnoreCase(event.getNativeEvent().getType())) {
+                    handleSelectionChange();
+                }
+
+            }
+        });
+    }
+
+    private void handleSelectionChange() {
+        clientFactory.getEventBus().fireEvent(new SelectionEvent(Selection.getSelection()));
     }
 
     public void removeListeners() {
         bootstrapEventHandlerRegistration.removeHandler();
+        nativeEventHandlerRegistration.removeHandler();
     }
 
     public DocumentController getDocumentController() {
