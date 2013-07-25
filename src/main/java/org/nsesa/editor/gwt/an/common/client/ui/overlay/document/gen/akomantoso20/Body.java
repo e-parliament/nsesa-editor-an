@@ -26,7 +26,8 @@ import java.util.LinkedHashMap;
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
-public class Body extends BodyTypeComplexType {
+public class
+        Body extends BodyTypeComplexType {
 
     /**
      * Stores a structure indicator coming from xsd structure *

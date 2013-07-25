@@ -33,7 +33,7 @@
     </ui:style>
     <g:HTMLPanel>
         <g:ScrollPanel ui:field="scrollPanel" styleName="{res.scrollPanel}">
-            <g:HTMLPanel styleName="{res.mainPanel} pathPanel" ui:field="mainPanel">
+            <g:HTMLPanel styleName="{res.mainPanel} replacePanel" ui:field="mainPanel">
                 <g:HTMLPanel styleName="{res.holderPanel}" ui:field="holderPanel"/>
             </g:HTMLPanel>
         </g:ScrollPanel>

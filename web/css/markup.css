@@ -1,48 +1,20 @@
-.body, .preface, .preamble, .conclusion {
-    border: 3px dotted blue;
-    min-height: 50px;
-    width: 100%;
-    margin-bottom: 30px;
+.pathPanel a {
+    color: white;
+    cursor: pointer
 }
 
-.preface:before {
-    background-color: blue;
+.pathPanel td:after {
     color: white;
-    text-transform: uppercase;
-    position: relative;
-    top: -18px;
-    left: -2px;
-    content: 'preface';
+    content: " > ";
 }
 
-.preamble:before {
-    background-color: blue;
-    color: white;
-    text-transform: uppercase;
-    position: relative;
-    top: -18px;
-    left: -2px;
-    content: 'preamble';
+.pathPanel td:last-child:after {
+    content: "";
 }
 
-.body:before {
-    background-color: blue;
+.pathPanel a:hover {
     color: white;
-    text-transform: uppercase;
-    position: relative;
-    top: -18px;
-    left: -2px;
-    content: 'body';
-}
-
-.conclusion:before {
-    background-color: blue;
-    color: white;
-    text-transform: uppercase;
-    position: relative;
-    top: -18px;
-    left: -2px;
-    content: 'conclusion';
+    cursor: pointer
 }
 
 .pickerPanel a {
@@ -53,6 +25,19 @@
 }
 
 .pickerPanel a:hover {
+    color: black;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.replacePanel a {
+    width: 100%;
+    display: block;
+    color: black;
+    cursor: pointer;
+}
+
+.replacePanel a:hover {
     color: black;
     background-color: #f5f5f5;
     cursor: pointer;

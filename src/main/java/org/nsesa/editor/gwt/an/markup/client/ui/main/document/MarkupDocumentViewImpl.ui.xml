@@ -74,7 +74,7 @@
                         <sourcefile:SourceFileView ui:field="sourceFileView" styleName="{res.sourceFile}"/>
                     </g:HTMLPanel>
                 </g:center>
-                <g:south size="40">
+                <g:south size="30">
                     <path:PathView ui:field="pathView" styleName="{res.pathView}"/>
                 </g:south>
             </g:DockLayoutPanel>
