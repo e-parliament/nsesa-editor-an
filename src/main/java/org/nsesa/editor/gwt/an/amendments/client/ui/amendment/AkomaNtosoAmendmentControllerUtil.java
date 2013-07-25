@@ -25,7 +25,7 @@ import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtoso20AmendmentControllerUtil {
+public class AkomaNtosoAmendmentControllerUtil {
 
     @Inject
     @Named("default.pathToOriginalContent")

@@ -16,10 +16,10 @@ package org.nsesa.editor.gwt.an.amendments.client.handler.create;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
-import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
+import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso30AmendmentBuilder;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmentControllerUtil;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtoso20OverlaySnippetFactory;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtoso30OverlaySnippetFactory;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
@@ -42,9 +42,9 @@ import java.util.logging.Logger;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialogCreateController {
+public class AkomaNtoso30AmendmentDialogCreateController extends AmendmentDialogCreateController {
 
-    private static final Logger LOG = Logger.getLogger(AkomaNtoso20AmendmentDialogCreateController.class.getName());
+    private static final Logger LOG = Logger.getLogger(AkomaNtoso30AmendmentDialogCreateController.class.getName());
 
     private OverlaySnippetFactory overlaySnippetFactory;
     private OverlaySnippetEvaluator overlaySnippetEvaluator;
@@ -55,7 +55,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
 
     @Inject
-    public AkomaNtoso20AmendmentDialogCreateController(final ClientFactory clientFactory,
+    public AkomaNtoso30AmendmentDialogCreateController(final ClientFactory clientFactory,
                                                        final ServiceFactory serviceFactory,
                                                        final AmendmentDialogCreateView view,
                                                        final Locator locator,
@@ -86,7 +86,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
     @Override
     public void handleSave() {
 
-        final AkomaNtoso20AmendmentBuilder builder = new AkomaNtoso20AmendmentBuilder(overlayFactory);
+        final AkomaNtoso30AmendmentBuilder builder = new AkomaNtoso30AmendmentBuilder(overlayFactory);
 
         final OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
         final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
@@ -134,7 +134,7 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
             OverlaySnippet overlaySnippet = overlaySnippetFactory.getSnippet(overlayWidget);
             overlaySnippetEvaluator.addEvaluator(
-                    new AkomaNtoso20OverlaySnippetFactory.NumEvaluator(
+                    new AkomaNtoso30OverlaySnippetFactory.NumEvaluator(
                             clientFactory,
                             overlayWidgetInjectionStrategy,
                             locator,

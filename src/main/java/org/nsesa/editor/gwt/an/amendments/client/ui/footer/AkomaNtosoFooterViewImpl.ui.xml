@@ -15,7 +15,7 @@
 -->
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'>
-    <ui:style src="AkomaNtoso20FooterViewImpl.css" field="css"
+    <ui:style src="AkomaNtosoFooterViewImpl.css" field="css"
               type='org.nsesa.editor.gwt.editor.client.ui.footer.FooterViewCss'/>
     <ui:with field='res' type='org.nsesa.editor.gwt.core.client.ui.resources.GitMessages'/>
     <ui:with field='res2' type='org.nsesa.editor.gwt.an.amendments.client.ui.resources.GitMessages'/>

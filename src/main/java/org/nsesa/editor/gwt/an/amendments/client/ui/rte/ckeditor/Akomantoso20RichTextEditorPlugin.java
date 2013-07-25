@@ -25,14 +25,16 @@ import org.nsesa.editor.gwt.core.shared.OverlayWidgetOrigin;
 
 /**
  * A simple plugin to register all the plugins used by Akomantoso 20 editor.
+ *
  * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
- * Date: 11/01/13 12:13
+ *         Date: 11/01/13 12:13
  */
 public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
 
     /**
      * Create <code>Akomantoso20RichTextEditorPlugin</Akomantoso20RichTextEditorPlugin> object and
      * wrap all the available plugins
+     *
      * @param overlayFactory
      * @param snippetFactory
      * @param clientFactory
@@ -55,7 +57,8 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
                         OverlayWidget result = null;
                         OverlayWidget curr = widget;
                         while (curr != null) {
-                            if (curr instanceof BasehierarchyComplexType) {
+                            if (curr instanceof BasehierarchyComplexType
+                                    || curr instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType) {
                                 result = overlayFactory.getAmendableWidget(curr.getNamespaceURI(), curr.getType());
                                 result.setOrigin(OverlayWidgetOrigin.AMENDMENT);
                                 OverlaySnippet snippet = snippetFactory.getSnippet(curr);
@@ -77,7 +80,9 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
                             curr = curr.getParentOverlayWidget();
                         }
                         return result;
-                    };
+                    }
+
+                    ;
                 }));
 
         registerPlugin(new CKEditorBasicStylesPlugin(overlayFactory));

@@ -16,7 +16,7 @@ package org.nsesa.editor.gwt.an.amendments.client;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
-import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmentControllerUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
@@ -60,9 +60,9 @@ public class AmendmentDiffingManager implements DiffingManager<AmendmentControll
 
         final ArrayList<DiffRequest> diffRequests = new ArrayList<DiffRequest>();
         for (final AmendmentController amendmentController : amendmentControllers) {
-            final OverlayWidget amendmentContentFromModel1 = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
+            final OverlayWidget amendmentContentFromModel1 = AkomaNtosoAmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
             final String amendmentContentFromModel = amendmentContentFromModel1.getInnerHTML();
-            final OverlayWidget contentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
+            final OverlayWidget contentFromModel = AkomaNtosoAmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
             final String originalContentFromModel = contentFromModel.getInnerHTML();
 
             diffRequests.add(new DiffRequest(originalContentFromModel, amendmentContentFromModel,
@@ -81,8 +81,8 @@ public class AmendmentDiffingManager implements DiffingManager<AmendmentControll
                 int index = 0;
                 for (final DiffResult complexDiffResult : result) {
                     final AmendmentController amendmentController = amendmentControllers[index];
-                    AkomaNtoso20AmendmentControllerUtil.setOriginalContentOnViews(amendmentController, complexDiffResult.getOriginal());
-                    AkomaNtoso20AmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, complexDiffResult.getAmendment());
+                    AkomaNtosoAmendmentControllerUtil.setOriginalContentOnViews(amendmentController, complexDiffResult.getOriginal());
+                    AkomaNtosoAmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, complexDiffResult.getAmendment());
                     index++;
                 }
             }

@@ -45,7 +45,7 @@ import java.util.List;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionPanelController {
+public class AkomaNtosoAmendmentActionPanelController extends AmendmentActionPanelController {
 
     private final PopupPanel exportPopupPanel = new DecoratedPopupPanel(false, false) {
         {
@@ -59,8 +59,8 @@ public class AkomaNtoso20AmendmentActionPanelController extends AmendmentActionP
     private final HTML content = new HTML();
 
     @Inject
-    public AkomaNtoso20AmendmentActionPanelController(final AmendmentActionPanelView amendmentActionPanelView,
-                                                      final CoreMessages coreMessages, final Constants constants) {
+    public AkomaNtosoAmendmentActionPanelController(final AmendmentActionPanelView amendmentActionPanelView,
+                                                    final CoreMessages coreMessages, final Constants constants) {
         super(amendmentActionPanelView, coreMessages);
         this.exportPopupPanel.setWidget(mainPanel);
 

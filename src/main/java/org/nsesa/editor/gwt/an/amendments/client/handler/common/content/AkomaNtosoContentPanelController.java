@@ -14,7 +14,7 @@
 package org.nsesa.editor.gwt.an.amendments.client.handler.common.content;
 
 import com.google.inject.Inject;
-import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmentControllerUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
@@ -27,10 +27,10 @@ import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentPanel
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtoso20ContentPanelController extends ContentPanelController {
+public class AkomaNtosoContentPanelController extends ContentPanelController {
 
     @Inject
-    public AkomaNtoso20ContentPanelController(ClientFactory clientFactory, ContentControllerView view) {
+    public AkomaNtosoContentPanelController(ClientFactory clientFactory, ContentControllerView view) {
         super(clientFactory, view);
     }
 
@@ -43,7 +43,7 @@ public class AkomaNtoso20ContentPanelController extends ContentPanelController {
 
         if (dialogContext.getAmendmentController() != null) {
             // we're editing
-            final OverlayWidget originalContentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(dialogContext.getAmendmentController());
+            final OverlayWidget originalContentFromModel = AkomaNtosoAmendmentControllerUtil.getOriginalContentFromModel(dialogContext.getAmendmentController());
             final OverlayWidget overlayWidget = dialogContext.getAmendmentController().asAmendableWidget(
                     originalContentFromModel.getInnerHTML());
             view.setOriginalText(overlayWidget.getInnerHTML());

@@ -23,9 +23,9 @@ import java.util.Arrays;
  * An akomantoso specific editor configuration
  *
  * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
- * Date: 11/01/13 11:44
+ *         Date: 11/01/13 11:44
  */
-public class Akomantoso20RichTextEditorConfig extends CKEditorConfig {
+public class AkomantosoRichTextEditorConfig extends CKEditorConfig {
     /**
      * keep empty span tags when editing
      */
@@ -36,7 +36,7 @@ public class Akomantoso20RichTextEditorConfig extends CKEditorConfig {
     /**
      * Create a <code>Akomantoso20RichTextEditorConfig</code> with predefined settings
      */
-    public Akomantoso20RichTextEditorConfig() {
+    public AkomantosoRichTextEditorConfig() {
         super();
         setDraftingClassName("akomaNtoso-drafting");
         //configure the editor configuration
@@ -66,6 +66,7 @@ public class Akomantoso20RichTextEditorConfig extends CKEditorConfig {
 
     /**
      * Set the editor config as read only, remove nsesa extra plugin and set up an empty toolbar
+     *
      * @param readOnly
      */
     public void setReadOnly(boolean readOnly) {

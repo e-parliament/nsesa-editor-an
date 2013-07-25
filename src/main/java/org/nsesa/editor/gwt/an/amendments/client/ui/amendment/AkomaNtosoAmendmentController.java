@@ -30,7 +30,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtoso20AmendmentController extends DefaultAmendmentController {
+public class AkomaNtosoAmendmentController extends DefaultAmendmentController {
 
     private final ConsolidatedAmendmentViewImpl consolidatedAmendmentView;
     private final ConsolidatedAmendmentViewImpl consolidatedAmendmentViewExtended;
@@ -38,13 +38,13 @@ public class AkomaNtoso20AmendmentController extends DefaultAmendmentController 
     private final SingleColumnAmendmentViewImpl singleColumnAmendmentViewExtended;
 
     @Inject
-    public AkomaNtoso20AmendmentController(AmendmentView amendmentView, AmendmentView amendmentExtendedView,
-                                           AmendmentActionPanelController amendmentActionPanelController,
-                                           Constants constants, Messages messages,
-                                           ConsolidatedAmendmentViewImpl consolidatedAmendmentView,
-                                           ConsolidatedAmendmentViewImpl consolidatedAmendmentViewExtended,
-                                           SingleColumnAmendmentViewImpl singleColumnAmendmentView,
-                                           SingleColumnAmendmentViewImpl singleColumnAmendmentViewExtended) {
+    public AkomaNtosoAmendmentController(AmendmentView amendmentView, AmendmentView amendmentExtendedView,
+                                         AmendmentActionPanelController amendmentActionPanelController,
+                                         Constants constants, Messages messages,
+                                         ConsolidatedAmendmentViewImpl consolidatedAmendmentView,
+                                         ConsolidatedAmendmentViewImpl consolidatedAmendmentViewExtended,
+                                         SingleColumnAmendmentViewImpl singleColumnAmendmentView,
+                                         SingleColumnAmendmentViewImpl singleColumnAmendmentViewExtended) {
         super(amendmentView, amendmentExtendedView, amendmentActionPanelController, constants, messages);
         this.consolidatedAmendmentView = consolidatedAmendmentView;
         this.consolidatedAmendmentViewExtended = consolidatedAmendmentViewExtended;
@@ -67,7 +67,7 @@ public class AkomaNtoso20AmendmentController extends DefaultAmendmentController 
         // to make sure we don't do a double overlaying -- too costly
         if (view != availableViews.get(AmendmentView.DEFAULT) || extendedView != availableExtendedViews.get(AmendmentView.DEFAULT)) {
             // if we're not in the default template (2 columns), then only set the amendment content on the body
-            final OverlayWidget amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(this);
+            final OverlayWidget amendmentContentFromModel = AkomaNtosoAmendmentControllerUtil.getAmendmentContentFromModel(this);
             String content = DOM.toString(amendmentContentFromModel.asWidget().getElement());
             if (view != availableViews.get(AmendmentView.DEFAULT))
                 view.setBody(content);

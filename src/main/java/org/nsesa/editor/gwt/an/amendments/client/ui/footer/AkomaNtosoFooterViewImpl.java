@@ -26,14 +26,14 @@ import org.nsesa.editor.gwt.editor.client.ui.footer.FooterView;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtoso20FooterViewImpl extends Composite implements FooterView {
-    interface MyUiBinder extends UiBinder<Widget, AkomaNtoso20FooterViewImpl> {
+public class AkomaNtosoFooterViewImpl extends Composite implements FooterView {
+    interface MyUiBinder extends UiBinder<Widget, AkomaNtosoFooterViewImpl> {
     }
 
     private static MyUiBinder uiBinder = GWT.create(MyUiBinder.class);
 
     @Inject
-    public AkomaNtoso20FooterViewImpl() {
+    public AkomaNtosoFooterViewImpl() {
         final Widget widget = uiBinder.createAndBindUi(this);
         initWidget(widget);
         if (!GWT.isScript())

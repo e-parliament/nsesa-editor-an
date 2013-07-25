@@ -44,7 +44,7 @@ import static org.nsesa.editor.gwt.core.client.util.Scope.ScopeValue.DOCUMENT;
  */
 @Singleton
 @Scope(DOCUMENT)
-public class AkomaNtoso20SourceFileHeaderController extends SourceFileHeaderController {
+public class AkomaNtosoSourceFileHeaderController extends SourceFileHeaderController {
 
     private final Constants constants;
 
@@ -57,7 +57,7 @@ public class AkomaNtoso20SourceFileHeaderController extends SourceFileHeaderCont
     private HandlerRegistration documentModeChangeHandlerRegistration;
 
     @Inject
-    public AkomaNtoso20SourceFileHeaderController(DocumentEventBus documentEventBus, SourceFileHeaderView view, Constants constants) {
+    public AkomaNtosoSourceFileHeaderController(DocumentEventBus documentEventBus, SourceFileHeaderView view, Constants constants) {
         super(documentEventBus, view);
         this.constants = constants;
 

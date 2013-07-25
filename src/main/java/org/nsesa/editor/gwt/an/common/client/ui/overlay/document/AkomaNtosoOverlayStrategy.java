@@ -13,20 +13,32 @@
  */
 package org.nsesa.editor.gwt.an.common.client.ui.overlay.document;
 
+import com.google.gwt.dom.client.Element;
 import com.google.inject.Inject;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
-import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultLocator;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayStrategy;
+
+import java.util.Arrays;
 
 /**
- * Date: 06/07/12 17:24                                                                              `
+ * Date: 03/07/12 22:54
  *
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtoso20Locator extends DefaultLocator {
+public class AkomaNtosoOverlayStrategy extends DefaultOverlayStrategy {
 
     @Inject
-    public AkomaNtoso20Locator() {
-        hide(AkomaNtoso.class, Body.class, Preamble.class, Bill.class, Components.class, Component.class, Eol.class, P.class, B.class, I.class, Span.class, Recitals.class, Content.class/*, Num.class*/);
+    public AkomaNtosoOverlayStrategy() {
+    }
+
+    @Override
+    public Boolean isAmendable(Element element) {
+        // don't allow references to be amendable by themselves
+        final String type = element.getAttribute("type") != null ? element.getAttribute("type").toLowerCase() : null;
+        if (type != null && !Arrays.asList("noteRef", "passiveRef", "eventRef", "componentRef", "activeRef", "mRef", "ref")
+                .contains(type)) {
+            return super.isAmendable(element);
+        }
+        return false;
     }
 }

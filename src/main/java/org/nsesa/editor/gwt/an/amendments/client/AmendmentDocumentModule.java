@@ -26,10 +26,10 @@ import org.nsesa.editor.gwt.amendment.client.ui.amendment.action.AmendmentAction
 import org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentViewImpl;
 import org.nsesa.editor.gwt.amendment.client.ui.document.marker.AmendmentMarkerController;
 import org.nsesa.editor.gwt.amendment.client.ui.pagination.AmendmentPaginationController;
-import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentController;
-import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
-import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.action.AkomaNtoso20AmendmentActionPanelController;
-import org.nsesa.editor.gwt.an.amendments.client.ui.document.AkomaNtoso20SourceFileHeaderController;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmentController;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmentControllerUtil;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.action.AkomaNtosoAmendmentActionPanelController;
+import org.nsesa.editor.gwt.an.amendments.client.ui.document.AkomaNtosoSourceFileHeaderController;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoOverlayWidgetInjectionStrategy;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.CompositeLocator;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.sourcefile.actionbar.create.AkomaNtosoActionBarCreatePanelController;
@@ -55,10 +55,10 @@ import org.nsesa.editor.gwt.core.client.undo.UndoManager;
 public class AmendmentDocumentModule extends AbstractGinModule {
     @Override
     protected void configure() {
-        bind(AmendmentController.class).to(AkomaNtoso20AmendmentController.class);
+        bind(AmendmentController.class).to(AkomaNtosoAmendmentController.class);
         bind(DocumentView.class).to(AmendmentDocumentViewImpl.class).in(Singleton.class);
-        bind(SourceFileHeaderController.class).to(AkomaNtoso20SourceFileHeaderController.class).in(Singleton.class);
-        bind(AmendmentActionPanelController.class).to(AkomaNtoso20AmendmentActionPanelController.class).in(Singleton.class);
+        bind(SourceFileHeaderController.class).to(AkomaNtosoSourceFileHeaderController.class).in(Singleton.class);
+        bind(AmendmentActionPanelController.class).to(AkomaNtosoAmendmentActionPanelController.class).in(Singleton.class);
         bind(MarkerController.class).to(AmendmentMarkerController.class).in(Singleton.class);
         bind(OverlayWidgetInjectionStrategy.class).to(AkomaNtosoOverlayWidgetInjectionStrategy.class).in(Singleton.class);
         bind(UndoManager.class).in(Singleton.class);
@@ -80,7 +80,7 @@ public class AmendmentDocumentModule extends AbstractGinModule {
         // bindConstant().annotatedWith(Names.named("consolidation.pathToOriginalContent")).to(null);
         bindConstant().annotatedWith(Names.named("consolidation.pathToAmendmentContent")).to("//*");
 
-        requestStaticInjection(AkomaNtoso20AmendmentControllerUtil.class);
+        requestStaticInjection(AkomaNtosoAmendmentControllerUtil.class);
 
     }
 
