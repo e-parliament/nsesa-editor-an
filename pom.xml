@@ -371,7 +371,7 @@
                     <extraJvmArgs>-Xss2M -XX:MaxPermSize=400M -Xms700M -Xmx700M</extraJvmArgs>
                     <hostedWebapp>web</hostedWebapp>
                     <modules>
-                        <module>org.nsesa.editor.gwt.an.amendments.AkomaNtosoEditor</module>
+                        <module>org.nsesa.editor.gwt.an.amendments.AmendmentEditor</module>
                         <module>org.nsesa.editor.gwt.an.drafting.DraftingEditor</module>
                         <module>org.nsesa.editor.gwt.an.markup.MarkupEditor</module>
                     </modules>

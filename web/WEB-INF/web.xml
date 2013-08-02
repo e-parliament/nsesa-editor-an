@@ -52,12 +52,12 @@ the web app class loader and the classes that it holds. -->
     <servlet-mapping>
         <servlet-name>spring</servlet-name>
         <url-pattern>/remote_logging</url-pattern>
-        <url-pattern>/AkomaNtosoEditor/remote_logging</url-pattern>
-        <url-pattern>/AkomaNtosoEditor/gwtService</url-pattern>
-        <url-pattern>/AkomaNtosoEditor/gwtDiffService</url-pattern>
-        <url-pattern>/AkomaNtosoEditor/gwtDocumentService</url-pattern>
-        <url-pattern>/AkomaNtosoEditor/gwtAmendmentService</url-pattern>
-        <url-pattern>/AkomaNtosoEditor/download/*</url-pattern>
+        <url-pattern>/AmendmentEditor/remote_logging</url-pattern>
+        <url-pattern>/AmendmentEditor/gwtService</url-pattern>
+        <url-pattern>/AmendmentEditor/gwtDiffService</url-pattern>
+        <url-pattern>/AmendmentEditor/gwtDocumentService</url-pattern>
+        <url-pattern>/AmendmentEditor/gwtAmendmentService</url-pattern>
+        <url-pattern>/AmendmentEditor/download/*</url-pattern>
 
         <url-pattern>/DraftingEditor/remote_logging</url-pattern>
         <url-pattern>/DraftingEditor/gwtService</url-pattern>

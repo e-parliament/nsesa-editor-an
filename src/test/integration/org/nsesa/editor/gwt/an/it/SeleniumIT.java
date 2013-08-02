@@ -28,7 +28,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class SeleniumIT {
     public static void main(String[] args) {
         WebDriver driver = new FirefoxDriver();
-        driver.get("http://localhost:8080/editor/editor.html?documentID=1");
+        driver.get("http://localhost:8080/editor/amendment.html?documentID=1");
         final String title = driver.getTitle();
         new WebDriverWait(driver, 10).until(new ExpectedCondition<Boolean>() {
             @Override

@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.editor.client.Editor;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtosoEditor extends Editor {
+public class AmendmentEditor extends Editor {
 
     final AmendmentInjector injector = GWT.create(AmendmentInjector.class);
 
