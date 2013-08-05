@@ -71,7 +71,7 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
                     final DiffingManager<AmendmentController> diffingManager = (DiffingManager<AmendmentController>) documentController.getDiffingManager();
                     diffingManager.diff(event.getAmendmentController());
                 } else {
-                    LOG.info("Diff not active, skipping diff on amendment " + event.getAmendmentController().getModel().getId());
+                    LOG.info("Diff not active, skipping diff on amendment " + event.getAmendmentController().getModel().getAmendmentContainerID());
                 }
                 clientFactory.getEventBus().fireEvent(event);
             }
@@ -85,7 +85,7 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
                     final DiffingManager<AmendmentController> diffingManager = (DiffingManager<AmendmentController>) documentController.getDiffingManager();
                     diffingManager.diff(event.getAmendmentController());
                 } else {
-                    LOG.info("Diff not active, skipping diff on amendment " + event.getAmendmentController().getModel().getId());
+                    LOG.info("Diff not active, skipping diff on amendment " + event.getAmendmentController().getModel().getAmendmentContainerID());
                 }
             }
         });

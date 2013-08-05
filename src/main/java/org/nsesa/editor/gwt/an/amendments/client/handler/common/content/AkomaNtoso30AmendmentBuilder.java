@@ -171,13 +171,13 @@ public class AkomaNtoso30AmendmentBuilder {
 
         for (final PersonDTO authorial : authors) {
             final IDSimpleType idSimpleType = new IDSimpleType();
-            idSimpleType.setValue("person-" + authorial.getId());
+            idSimpleType.setValue("person-" + authorial.getPersonID());
 
             final StringSimpleType stringSimpleType = new StringSimpleType();
             stringSimpleType.setValue(authorial.getDisplayName());
 
             final AnyURISimpleType anyURISimpleType = new AnyURISimpleType();
-            anyURISimpleType.setValue("urn:lex:eu:parliament:codict:person:" + authorial.getId());
+            anyURISimpleType.setValue("urn:lex:eu:parliament:codict:person:" + authorial.getPersonID());
 
             references.addTLCPerson(new TLCPerson().idAttr(idSimpleType).showAsAttr(stringSimpleType).hrefAttr(anyURISimpleType));
         }
@@ -188,7 +188,7 @@ public class AkomaNtoso30AmendmentBuilder {
         // preface;
         final P p = new P();
         for (final PersonDTO authorial : authors) {
-            final DocProponent docProponent = new DocProponent().refersToAttr(u("#person-" + authorial.getId()));
+            final DocProponent docProponent = new DocProponent().refersToAttr(u("#person-" + authorial.getPersonID()));
             docProponent.html(authorial.getDisplayName());
             p.addDocProponent(docProponent);
         }

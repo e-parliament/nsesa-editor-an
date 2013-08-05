@@ -114,7 +114,7 @@ public class AkomaNtosoAmendmentActionPanelController extends AmendmentActionPan
 
                     @Override
                     public void getRevisions(final AsyncCallback<List<RevisionDTO>> asyncCallback) {
-                        serviceFactory.getGwtAmendmentService().getRevisions(clientFactory.getClientContext(), amendmentController.getModel().getId(), new AsyncCallback<ArrayList<RevisionDTO>>() {
+                        serviceFactory.getGwtAmendmentService().getRevisions(clientFactory.getClientContext(), amendmentController.getModel().getAmendmentContainerID(), new AsyncCallback<ArrayList<RevisionDTO>>() {
                             @Override
                             public void onFailure(final Throwable caught) {
                                 asyncCallback.onFailure(caught);
@@ -158,7 +158,7 @@ public class AkomaNtosoAmendmentActionPanelController extends AmendmentActionPan
         xmlExport.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
-                final String url = GWT.getModuleBaseURL() + "download/amendment/xml/" + amendmentController.getModel().getId();
+                final String url = GWT.getModuleBaseURL() + "download/amendment/xml/" + amendmentController.getModel().getAmendmentContainerID();
                 Window.open(URL.encode(url), "download", "");
                 popupPanel.hide();
             }
@@ -167,7 +167,7 @@ public class AkomaNtosoAmendmentActionPanelController extends AmendmentActionPan
         pdfExport.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
-                final String url = GWT.getModuleBaseURL() + "download/amendment/pdf/" + amendmentController.getModel().getId();
+                final String url = GWT.getModuleBaseURL() + "download/amendment/pdf/" + amendmentController.getModel().getAmendmentContainerID();
                 Window.open(URL.encode(url), "download", "");
                 popupPanel.hide();
             }
@@ -176,7 +176,7 @@ public class AkomaNtosoAmendmentActionPanelController extends AmendmentActionPan
         wordExport.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
-                final String url = GWT.getModuleBaseURL() + "download/amendment/word/" + amendmentController.getModel().getId();
+                final String url = GWT.getModuleBaseURL() + "download/amendment/word/" + amendmentController.getModel().getAmendmentContainerID();
                 Window.open(URL.encode(url), "download", "");
                 popupPanel.hide();
             }
@@ -185,7 +185,7 @@ public class AkomaNtosoAmendmentActionPanelController extends AmendmentActionPan
         htmlExport.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
-                final String url = GWT.getModuleBaseURL() + "download/amendment/html/" + amendmentController.getModel().getId();
+                final String url = GWT.getModuleBaseURL() + "download/amendment/html/" + amendmentController.getModel().getAmendmentContainerID();
                 Window.open(URL.encode(url), "download", "");
                 popupPanel.hide();
             }

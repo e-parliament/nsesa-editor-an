@@ -82,7 +82,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
             for (final String documentID : clientContext.getDocumentIDs()) {
                 List<org.nsesa.server.dto.AmendmentContainerDTO> backend = null;
                 try {
-                    backend = amendmentService.getAmendmentContainersByDocumentAndPerson(documentID, clientContext.getLoggedInPerson().getId());
+                    backend = amendmentService.getAmendmentContainersByDocumentAndPerson(documentID, clientContext.getLoggedInPerson().getPersonID());
                 } catch (org.nsesa.server.exception.ResourceNotFoundException e) {
                     throw new ResourceNotFoundException(e.getMessage(), e.getCause());
                 }
@@ -121,7 +121,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         amendmentContainerDTO.setSourceReference(sourceReference);
         amendmentContainerDTO.setAmendmentAction(org.nsesa.editor.gwt.core.shared.AmendmentAction.valueOf(b.getAmendmentAction().toString()));
         amendmentContainerDTO.setBody(b.getBody());
-        amendmentContainerDTO.setId(b.getAmendmentContainerID());
+        amendmentContainerDTO.setAmendmentContainerID(b.getAmendmentContainerID());
         amendmentContainerDTO.setLanguageISO(b.getLanguageISO());
         amendmentContainerDTO.setRevisionID(b.getRevisionID());
 
@@ -170,7 +170,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
             revisionDTO.setModificationDate(fromBackend.getModificationDate());
 
             PersonDTO personDTO = new PersonDTO();
-            personDTO.setId(fromBackend.getPerson().getPersonID());
+            personDTO.setPersonID(fromBackend.getPerson().getPersonID());
             personDTO.setUsername(fromBackend.getPerson().getUsername());
             personDTO.setName(fromBackend.getPerson().getName());
             personDTO.setLastName(fromBackend.getPerson().getLastName());
@@ -190,7 +190,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
             for (final Boolean b : booleans) {
                 if (b != null && !b) {
                     // sorry, at least one amendment could not be saved.
-                    throw new ValidationException("You are not allowed to save amendment with ID " + amendmentContainers.get(counter.get()).getId());
+                    throw new ValidationException("You are not allowed to save amendment with ID " + amendmentContainers.get(counter.get()).getAmendmentContainerID());
                 }
                 counter.increment();
             }
@@ -202,20 +202,20 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
 
                 if (data.getDocumentID() == null)
                     throw new NullPointerException("No documentID set on amendment DTO -- aborting");
-                if (data.getId() == null)
+                if (data.getAmendmentContainerID() == null)
                     throw new NullPointerException("No ID set on amendment DTO -- aborting");
                 if (data.getRevisionID() == null)
                     throw new NullPointerException("No revisionID set on amendment DTO -- aborting");
 
                 // manually copy for now ...
                 final org.nsesa.server.dto.AmendmentContainerDTO backendDTO = new org.nsesa.server.dto.AmendmentContainerDTO();
-                backendDTO.setPersonID(clientContext.getLoggedInPerson().getId());
+                backendDTO.setPersonID(clientContext.getLoggedInPerson().getPersonID());
                 backendDTO.setDocumentID(data.getDocumentID());
                 backendDTO.setRevisionID(data.getRevisionID());
                 backendDTO.setAmendmentContainerStatus(data.getAmendmentContainerStatus());
                 backendDTO.setLanguageISO(data.getLanguageISO());
                 backendDTO.setAmendmentAction(org.nsesa.server.dto.AmendmentAction.valueOf(data.getAmendmentAction().toString()));
-                backendDTO.setAmendmentContainerID(data.getId());
+                backendDTO.setAmendmentContainerID(data.getAmendmentContainerID());
                 backendDTO.setBody(data.getBody());
                 final AmendableWidgetReference dto = data.getSourceReference();
                 final AmendableWidgetReferenceDTO sourceReference = new AmendableWidgetReferenceDTO(dto.getPath());
@@ -271,7 +271,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         final Collection<AmendmentContainerDTO> deleted = Collections2.transform(amendmentContainers, new Function<AmendmentContainerDTO, AmendmentContainerDTO>() {
             @Override
             public AmendmentContainerDTO apply(AmendmentContainerDTO input) {
-                amendmentService.delete(input.getId());
+                amendmentService.delete(input.getAmendmentContainerID());
                 input.setAmendmentContainerStatus("deleted");
                 return input;
             }
@@ -297,7 +297,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         for (final Boolean b : booleans) {
             if (b != null && !b) {
                 // sorry, at least one amendment could not be tabled.
-                throw new ValidationException("You are not allowed to table amendment with ID " + amendmentContainers.get(counter.get()).getId());
+                throw new ValidationException("You are not allowed to table amendment with ID " + amendmentContainers.get(counter.get()).getAmendmentContainerID());
             }
             counter.increment();
         }
