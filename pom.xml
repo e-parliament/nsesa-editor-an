@@ -289,6 +289,20 @@
             <version>9.0.1</version>
         </dependency>
 
+        <!-- core module: use can you it on its own if you are not using Spring 3 -->
+        <dependency>
+            <groupId>com.inspire-software.lib.dto.geda</groupId>
+            <artifactId>geda.core</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <!-- spring integration: spring 3 AOP wrapper for core -->
+        <dependency>
+            <groupId>com.inspire-software.lib.dto.geda</groupId>
+            <artifactId>geda.spring-integration</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
         <!-- TEST ONLY DEPENDENCIES -->
         <dependency>
             <groupId>junit</groupId>
