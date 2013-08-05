@@ -251,6 +251,16 @@
             <artifactId>gwtquery</artifactId>
             <version>1.2.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.atmosphere.extensions</groupId>
+            <artifactId>atmosphere-gwt20-client</artifactId>
+            <version>1.1.0.RC5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atmosphere.extensions</groupId>
+            <artifactId>atmosphere-gwt20-server</artifactId>
+            <version>1.1.0.RC5</version>
+        </dependency>
 
         <dependency>
             <groupId>org.fusesource.restygwt</groupId>
@@ -451,6 +461,8 @@
                         <exclude>src/main/resources/*.xsd</exclude>
                         <exclude>src/main/resources/*.dtd</exclude>
                         <exclude>.gitignore</exclude>
+                        <!-- Seems like this is necessary due to the atmosphere integration -->
+                        <exclude>overlays/**</exclude>
                         <!-- automatic header would turn on quirksmode in IE -->
                         <exclude>web/*.html</exclude>
                         <exclude>**/*.css</exclude>
