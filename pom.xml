@@ -357,7 +357,7 @@
                 </includes>
             </resource>
             <resource>
-                <directory>src/main/java/org/nsesa/editor/gwt/an</directory>
+                <directory>src/main/java</directory>
                 <includes>
                     <include>**/*.java</include>
                     <include>**/*.xml</include>
