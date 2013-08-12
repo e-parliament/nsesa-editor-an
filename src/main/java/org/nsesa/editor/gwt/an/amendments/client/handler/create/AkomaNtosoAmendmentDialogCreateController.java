@@ -17,6 +17,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
+import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso30AmendmentBuilder;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmentControllerUtil;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtoso20OverlaySnippetFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
@@ -42,9 +43,9 @@ import java.util.logging.Logger;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialogCreateController {
+public class AkomaNtosoAmendmentDialogCreateController extends AmendmentDialogCreateController {
 
-    private static final Logger LOG = Logger.getLogger(AkomaNtoso20AmendmentDialogCreateController.class.getName());
+    private static final Logger LOG = Logger.getLogger(AkomaNtosoAmendmentDialogCreateController.class.getName());
 
     private OverlaySnippetFactory overlaySnippetFactory;
     private OverlaySnippetEvaluator overlaySnippetEvaluator;
@@ -55,19 +56,19 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
 
 
     @Inject
-    public AkomaNtoso20AmendmentDialogCreateController(final ClientFactory clientFactory,
-                                                       final ServiceFactory serviceFactory,
-                                                       final AmendmentDialogCreateView view,
-                                                       final Locator locator,
-                                                       final OverlayFactory overlayFactory,
-                                                       final VisualStructureController visualStructureController,
-                                                       final AmendmentInjectionPointFinder amendmentInjectionPointFinder,
-                                                       final OverlaySnippetFactory overlaySnippetFactory,
-                                                       final OverlaySnippetEvaluator overlaySnippetEvaluator,
-                                                       final Validator<OverlayWidget> overlayWidgetValidator,
-                                                       final AuthorPanelController authorPanelController,
-                                                       final MetaPanelController metaPanelController,
-                                                       final OverlayWidgetInjectionStrategy overlayWidgetInjectionStrategy
+    public AkomaNtosoAmendmentDialogCreateController(final ClientFactory clientFactory,
+                                                     final ServiceFactory serviceFactory,
+                                                     final AmendmentDialogCreateView view,
+                                                     final Locator locator,
+                                                     final OverlayFactory overlayFactory,
+                                                     final VisualStructureController visualStructureController,
+                                                     final AmendmentInjectionPointFinder amendmentInjectionPointFinder,
+                                                     final OverlaySnippetFactory overlaySnippetFactory,
+                                                     final OverlaySnippetEvaluator overlaySnippetEvaluator,
+                                                     final Validator<OverlayWidget> overlayWidgetValidator,
+                                                     final AuthorPanelController authorPanelController,
+                                                     final MetaPanelController metaPanelController,
+                                                     final OverlayWidgetInjectionStrategy overlayWidgetInjectionStrategy
     ) {
         super(clientFactory, view, locator, overlayFactory, visualStructureController,
                 amendmentInjectionPointFinder, overlayWidgetValidator);
@@ -86,8 +87,6 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
     @Override
     public void handleSave() {
 
-        final AkomaNtoso20AmendmentBuilder builder = new AkomaNtoso20AmendmentBuilder(overlayFactory);
-
         final OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
         final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
 
@@ -105,19 +104,38 @@ public class AkomaNtoso20AmendmentDialogCreateController extends AmendmentDialog
             location = locator.getLocation(dialogContext.getOverlayWidget(), languageIso, true);
         }
 
-        builder
-                .setOverlayWidget(overlayWidget)
-                .setDocumentController(dialogContext.getDocumentController())
-                .setLanguageIso(languageIso)
-                .setAuthors(authorPanelController.getSelectedPersons())
-                .setLocation(location)
-                .setOriginalText("") // TODO null?
-                .setAmendmentText(view.getAmendmentContent())
-                .setJustification(metaPanelController.getJustification())
-                .setNotes(metaPanelController.getNotes());
-        dialogContext.getAmendment().setRoot(builder.build());
-
-
+        // we create the amendment based on the namespace of the overlay widget
+        final OverlayWidget amendment;
+        if (overlayWidget.getNamespaceURI().equalsIgnoreCase(new AkomaNtoso().getNamespaceURI())) {
+            final AkomaNtoso20AmendmentBuilder akomaNtoso20AmendmentBuilder = new AkomaNtoso20AmendmentBuilder(overlayFactory);
+            // use AkomaNtoso 2.0
+            akomaNtoso20AmendmentBuilder
+                    .setOverlayWidget(overlayWidget)
+                    .setDocumentController(dialogContext.getDocumentController())
+                    .setLanguageIso(languageIso)
+                    .setAuthors(authorPanelController.getSelectedPersons())
+                    .setLocation(location)
+                    .setOriginalText("") // TODO null?
+                    .setAmendmentText(view.getAmendmentContent())
+                    .setJustification(metaPanelController.getJustification())
+                    .setNotes(metaPanelController.getNotes());
+            amendment = akomaNtoso20AmendmentBuilder.build();
+        } else {
+            // use AkomaNtoso 3.0 draft
+            final AkomaNtoso30AmendmentBuilder akomaNtoso30AmendmentBuilder = new AkomaNtoso30AmendmentBuilder(overlayFactory);
+            akomaNtoso30AmendmentBuilder
+                    .setOverlayWidget(overlayWidget)
+                    .setDocumentController(dialogContext.getDocumentController())
+                    .setLanguageIso(languageIso)
+                    .setAuthors(authorPanelController.getSelectedPersons())
+                    .setLocation(location)
+                    .setOriginalText("") // TODO null?
+                    .setAmendmentText(view.getAmendmentContent())
+                    .setJustification(metaPanelController.getJustification())
+                    .setNotes(metaPanelController.getNotes());
+            amendment = akomaNtoso30AmendmentBuilder.build();
+        }
+        dialogContext.getAmendment().setRoot(amendment);
         super.handleSave();
     }
 

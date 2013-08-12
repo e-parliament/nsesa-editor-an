@@ -11,27 +11,32 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the Licence for the specific language governing permissions and limitations under the Licence.
  */
-package org.nsesa.editor.gwt.an.amendments.client.handler.delete;
+package org.nsesa.editor.gwt.an.amendments.client.handler.modify;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
+import org.nsesa.editor.gwt.an.amendments.client.AmendmentOverlayWidgetValidator;
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
+import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso30AmendmentBuilder;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmentControllerUtil;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.visualstructure.VisualStructureController;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.author.AuthorPanelController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentPanelController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.meta.MetaPanelController;
-import org.nsesa.editor.gwt.dialog.client.ui.handler.delete.AmendmentDialogDeleteController;
-import org.nsesa.editor.gwt.dialog.client.ui.handler.delete.AmendmentDialogDeleteView;
+import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentDialogModifyController;
+import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentDialogModifyView;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -40,58 +45,75 @@ import java.util.logging.Logger;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialogDeleteController {
+public class AkomaNtosoAmendmentDialogModifyController extends AmendmentDialogModifyController {
 
-    private static final Logger LOG = Logger.getLogger(AkomaNtoso20AmendmentDialogDeleteController.class.getName());
+    private static final Logger LOG = Logger.getLogger(AkomaNtosoAmendmentDialogModifyController.class.getName());
 
     final AuthorPanelController authorPanelController;
     final MetaPanelController metaPanelController;
     final ContentPanelController contentPanelController;
-
     final ServiceFactory serviceFactory;
 
     @Inject
-    public AkomaNtoso20AmendmentDialogDeleteController(final ClientFactory clientFactory,
-                                                       final ServiceFactory serviceFactory,
-                                                       final AmendmentDialogDeleteView view,
-                                                       final Locator locator,
-                                                       final OverlayFactory overlayFactory,
-                                                       final AuthorPanelController authorPanelController,
-                                                       final ContentPanelController contentPanelController,
-                                                       final MetaPanelController metaPanelController,
-                                                       final AmendmentInjectionPointFinder amendmentInjectionPointFinder
+    public AkomaNtosoAmendmentDialogModifyController(final ClientFactory clientFactory,
+                                                     final AmendmentDialogModifyView view,
+                                                     final Locator locator,
+                                                     final OverlayFactory overlayFactory,
+                                                     final VisualStructureController visualStructureController,
+                                                     final AuthorPanelController authorPanelController,
+                                                     final ContentPanelController contentPanelController,
+                                                     final MetaPanelController metaPanelController,
+                                                     final ServiceFactory serviceFactory,
+                                                     final AmendmentInjectionPointFinder amendmentInjectionPointFinder,
+                                                     final AmendmentOverlayWidgetValidator validator
     ) {
-        super(clientFactory, view, locator, overlayFactory, amendmentInjectionPointFinder);
-        this.serviceFactory = serviceFactory;
+        super(clientFactory, view, locator, overlayFactory, visualStructureController, amendmentInjectionPointFinder, validator);
         this.authorPanelController = authorPanelController;
         this.authorPanelController.registerListeners();
         this.contentPanelController = contentPanelController;
         this.contentPanelController.registerListeners();
         this.metaPanelController = metaPanelController;
         this.metaPanelController.registerListeners();
+        this.serviceFactory = serviceFactory;
 
         addChildControllers(contentPanelController, authorPanelController, metaPanelController);
     }
 
     @Override
     public void handleSave() {
-
-        final AkomaNtoso20AmendmentBuilder builder = new AkomaNtoso20AmendmentBuilder(overlayFactory);
-
         final OverlayWidget overlayWidget = dialogContext.getOverlayWidget();
         final String languageIso = dialogContext.getDocumentController().getDocument().getLanguageIso();
-        builder
-                .setOverlayWidget(overlayWidget)
-                .setDocumentController(dialogContext.getDocumentController())
-                .setLanguageIso(languageIso)
-                .setAuthors(authorPanelController.getSelectedPersons())
-                .setLocation(locator.getLocation(overlayWidget, languageIso, true))
-                .setOriginalText(contentPanelController.getView().getOriginalText())
-                .setAmendmentText("") // TODO: deleted or null?
-                .setJustification(metaPanelController.getJustification())
-                .setNotes(metaPanelController.getNotes());
-        dialogContext.getAmendment().setRoot(builder.build());
-
+        final OverlayWidget amendment;
+        if (overlayWidget.getNamespaceURI().equals(new AkomaNtoso().getNamespaceURI())) {
+            final AkomaNtoso20AmendmentBuilder akomaNtoso20AmendmentBuilder = new AkomaNtoso20AmendmentBuilder(overlayFactory);
+            akomaNtoso20AmendmentBuilder
+                    .setOverlayWidget(overlayWidget)
+                    .setDocumentController(dialogContext.getDocumentController())
+                    .setLanguageIso(languageIso)
+                    .setAuthors(authorPanelController.getSelectedPersons())
+                    .setLocation(locator.getLocation(overlayWidget, languageIso, true))
+                    .setOriginalText(contentPanelController.getView().getOriginalText())
+                    .setAmendmentText(view.getAmendmentContent())
+                    .setModifyIds(true)
+                    .setJustification(metaPanelController.getJustification())
+                    .setNotes(metaPanelController.getNotes());
+            amendment = akomaNtoso20AmendmentBuilder.build();
+        } else {
+            final AkomaNtoso30AmendmentBuilder akomaNtoso30AmendmentBuilder = new AkomaNtoso30AmendmentBuilder(overlayFactory);
+            akomaNtoso30AmendmentBuilder
+                    .setOverlayWidget(overlayWidget)
+                    .setDocumentController(dialogContext.getDocumentController())
+                    .setLanguageIso(languageIso)
+                    .setAuthors(authorPanelController.getSelectedPersons())
+                    .setLocation(locator.getLocation(overlayWidget, languageIso, true))
+                    .setOriginalText(contentPanelController.getView().getOriginalText())
+                    .setAmendmentText(view.getAmendmentContent())
+                    .setModifyIds(true)
+                    .setJustification(metaPanelController.getJustification())
+                    .setNotes(metaPanelController.getNotes());
+            amendment = akomaNtoso30AmendmentBuilder.build();
+        }
+        dialogContext.getAmendment().setRoot(amendment);
         super.handleSave();
     }
 
@@ -104,18 +126,28 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
         // clear meta panel
         metaPanelController.clear();
 
+        view.getRichTextEditor().setOverlayWidget(dialogContext.getOverlayWidget());
+
         if (dialogContext.getAmendmentController() != null) {
             // get the location from the amendable widget, if it is passed
             view.setTitle("Edit amendment");
 
+            // set the amendment content
             final OverlayWidget amendmentBodyOverlayWidget = dialogContext.getAmendmentController().asAmendableWidget(dialogContext.getAmendmentController().getModel().getBody());
+
+            final OverlayWidget amendmentContentFromModel = AkomaNtosoAmendmentControllerUtil.getAmendmentContentFromModel(dialogContext.getAmendmentController());
+            String content = amendmentContentFromModel.getInnerHTML();
+
+            final OverlayWidget amendmentOverlayWidget = dialogContext.getAmendmentController().asAmendableWidget(content);
+
+            view.setAmendmentContent(amendmentOverlayWidget.getInnerHTML());
 
             // set the author(s)
             final Preface preface = (Preface) OverlayUtil.findSingle("preface", amendmentBodyOverlayWidget);
 
             final Container container = preface.getContainers().get(0);
             if (container != null && "authors".equals(container.nameAttr().getValue())) {
-                java.util.List<OverlayWidget> docProponents = OverlayUtil.find("docProponent", container);
+                List<OverlayWidget> docProponents = OverlayUtil.find("docProponent", container);
                 for (final OverlayWidget docProponent : docProponents) {
                     if (docProponent instanceof DocProponent) {
                         final DocProponent proponent = (DocProponent) docProponent;
@@ -146,14 +178,16 @@ public class AkomaNtoso20AmendmentDialogDeleteController extends AmendmentDialog
             }
             final Mod mod = (Mod) OverlayUtil.findSingle("mod", amendmentBodyOverlayWidget);
             if (mod != null) {
-                final java.util.List<AuthorialNote> authorialNotes = mod.getAuthorialNotes();
+                final List<AuthorialNote> authorialNotes = mod.getAuthorialNotes();
                 if (authorialNotes != null && !authorialNotes.isEmpty()) {
                     metaPanelController.setNotes(authorialNotes.get(0).getPs().get(0).getInnerHTML().trim());
                 }
             }
 
+
         } else {
             view.setTitle(locator.getLocation(dialogContext.getOverlayWidget(), clientFactory.getClientContext().getDocumentTranslationLanguageCode(), false));
+            view.setAmendmentContent(dialogContext.getOverlayWidget().getInnerHTML());
         }
     }
 }

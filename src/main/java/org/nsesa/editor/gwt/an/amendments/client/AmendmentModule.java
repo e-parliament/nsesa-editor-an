@@ -19,9 +19,9 @@ import com.google.inject.Singleton;
 import com.google.inject.TypeLiteral;
 import org.nsesa.editor.gwt.amendment.client.ui.document.amendments.AmendmentsPanelModule;
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtosoContentPanelController;
-import org.nsesa.editor.gwt.an.amendments.client.handler.create.AkomaNtoso20AmendmentDialogCreateController;
-import org.nsesa.editor.gwt.an.amendments.client.handler.delete.AkomaNtoso20AmendmentDialogDeleteController;
-import org.nsesa.editor.gwt.an.amendments.client.handler.modify.AkomaNtoso20AmendmentDialogModifyController;
+import org.nsesa.editor.gwt.an.amendments.client.handler.create.AkomaNtosoAmendmentDialogCreateController;
+import org.nsesa.editor.gwt.an.amendments.client.handler.delete.AkomaNtosoAmendmentDialogDeleteController;
+import org.nsesa.editor.gwt.an.amendments.client.handler.modify.AkomaNtosoAmendmentDialogModifyController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.document.AkomaNtoso20AmendmentDocumentController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.footer.AkomaNtosoFooterViewImpl;
 import org.nsesa.editor.gwt.an.amendments.client.ui.rte.ckeditor.Akomantoso20RichTextEditorPlugin;
@@ -78,9 +78,9 @@ public class AmendmentModule extends AbstractGinModule {
         bind(new TypeLiteral<Validator<OverlayWidget>>() {
         }).to(AmendmentOverlayWidgetValidator.class);
 
-        bind(AmendmentDialogModifyController.class).to(AkomaNtoso20AmendmentDialogModifyController.class);
-        bind(AmendmentDialogCreateController.class).to(AkomaNtoso20AmendmentDialogCreateController.class);
-        bind(AmendmentDialogDeleteController.class).to(AkomaNtoso20AmendmentDialogDeleteController.class);
+        bind(AmendmentDialogModifyController.class).to(AkomaNtosoAmendmentDialogModifyController.class);
+        bind(AmendmentDialogCreateController.class).to(AkomaNtosoAmendmentDialogCreateController.class);
+        bind(AmendmentDialogDeleteController.class).to(AkomaNtosoAmendmentDialogDeleteController.class);
         bind(ContentPanelController.class).to(AkomaNtosoContentPanelController.class);
         bind(FooterView.class).to(AkomaNtosoFooterViewImpl.class);
 
