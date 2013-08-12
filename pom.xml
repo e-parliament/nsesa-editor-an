@@ -391,7 +391,7 @@
                     </modules>
                     <compileReport>true</compileReport>
                     <strict>true</strict>
-                    <runTarget>editor.html</runTarget>
+                    <runTarget>amendment.html</runTarget>
                 </configuration>
                 <executions>
                     <execution>
