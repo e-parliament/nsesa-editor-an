@@ -445,6 +445,8 @@
                     <excludes>
                         <exclude>web/js/**</exclude>
                         <exclude>target/**</exclude>
+                        <!-- excludes anything that comes in via overlays (atmosphere-gwt)-->
+                        <exclude>overlays/**</exclude>
                         <!-- contains the imported source files from the gwt-selection project -->
                         <exclude>src/main/java/com/bfr/client/**</exclude>
                         <exclude>src/main/resources/examples/**</exclude>
