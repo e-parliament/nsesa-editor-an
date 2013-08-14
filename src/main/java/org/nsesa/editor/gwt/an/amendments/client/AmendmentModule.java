@@ -29,7 +29,7 @@ import org.nsesa.editor.gwt.an.amendments.client.ui.rte.ckeditor.AkomantosoRichT
 import org.nsesa.editor.gwt.an.common.client.AkomaNtosoModule;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoOverlayStrategy;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoOverlayWidgetInjectionStrategy;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Akomantoso20OverlayLocalizableResource;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.CompositeOverlayLocalizableResource;
 import org.nsesa.editor.gwt.compare.client.ui.compare.ComparePanelModule;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayLocalizableResource;
@@ -71,7 +71,7 @@ public class AmendmentModule extends AbstractGinModule {
         // bind the mapper
         bind(ActivityMapper.class).to(EditorActivityMapper.class).in(Singleton.class);
 
-        bind(OverlayLocalizableResource.class).to(Akomantoso20OverlayLocalizableResource.class).in(Singleton.class);
+        bind(OverlayLocalizableResource.class).to(CompositeOverlayLocalizableResource.class).in(Singleton.class);
         bind(OverlayStrategy.class).to(AkomaNtosoOverlayStrategy.class).in(Singleton.class);
         bind(OverlayWidgetInjectionStrategy.class).to(AkomaNtosoOverlayWidgetInjectionStrategy.class).in(Singleton.class);
 
