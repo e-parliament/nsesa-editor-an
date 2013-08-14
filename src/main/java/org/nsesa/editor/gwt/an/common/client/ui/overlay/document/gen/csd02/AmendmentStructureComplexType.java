@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the type amendmentStructure specifies the overall content model of the document types that describe amendments
+ * the type amendmentStructure specifies the overall content model of the document types that describe<br/> amendments
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -118,7 +118,7 @@ public class AmendmentStructureComplexType extends OverlayWidgetImpl {
     public Meta getMeta() {
         Meta result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Meta".equalsIgnoreCase(widget.getType())) {
+            if ("Meta".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (Meta) widget;
                 break;
             }
@@ -151,7 +151,7 @@ public class AmendmentStructureComplexType extends OverlayWidgetImpl {
     public CoverPage getCoverPage() {
         CoverPage result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("CoverPage".equalsIgnoreCase(widget.getType())) {
+            if ("CoverPage".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (CoverPage) widget;
                 break;
             }
@@ -184,7 +184,7 @@ public class AmendmentStructureComplexType extends OverlayWidgetImpl {
     public Preface getPreface() {
         Preface result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Preface".equalsIgnoreCase(widget.getType())) {
+            if ("Preface".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (Preface) widget;
                 break;
             }
@@ -217,7 +217,7 @@ public class AmendmentStructureComplexType extends OverlayWidgetImpl {
     public AmendmentBody getAmendmentBody() {
         AmendmentBody result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("AmendmentBody".equalsIgnoreCase(widget.getType())) {
+            if ("AmendmentBody".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (AmendmentBody) widget;
                 break;
             }
@@ -250,7 +250,7 @@ public class AmendmentStructureComplexType extends OverlayWidgetImpl {
     public Conclusions getConclusions() {
         Conclusions result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Conclusions".equalsIgnoreCase(widget.getType())) {
+            if ("Conclusions".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (Conclusions) widget;
                 break;
             }
@@ -283,7 +283,7 @@ public class AmendmentStructureComplexType extends OverlayWidgetImpl {
     public Attachments getAttachments() {
         Attachments result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Attachments".equalsIgnoreCase(widget.getType())) {
+            if ("Attachments".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (Attachments) widget;
                 break;
             }

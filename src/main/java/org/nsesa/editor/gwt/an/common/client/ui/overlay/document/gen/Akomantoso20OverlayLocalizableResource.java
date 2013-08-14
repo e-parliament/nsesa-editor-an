@@ -23,7 +23,9 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
  * Note: this file is generated. Rather than changing this file, correct the template called <tt>overlayLocalizableResource.ftl</tt>.
  */
 public class Akomantoso20OverlayLocalizableResource extends DefaultOverlayLocalizableResource {
+
     private static Akomantoso20OverlayMessages MESSAGES = GWT.create(Akomantoso20OverlayMessages.class);
+    private final String namespaceURI = "http://www.akomantoso.org/2.0";
 
     @Override
     public String getName(final OverlayWidget widget) {
@@ -1181,6 +1183,11 @@ public class Akomantoso20OverlayLocalizableResource extends DefaultOverlayLocali
         } else {
             return widget.getType();
         }
+    }
+
+    @Override
+    public String getNamespaceURI() {
+        return namespaceURI;
     }
 
 }

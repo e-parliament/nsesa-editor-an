@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element TLCConcept is a metadata reference to the Akoma Ntoso URI of an ontology instance of the class Concept
+ * The element TLCConcept is a metadata reference to the Akoma Ntoso URI of an ontology instance of the<br/> class Concept
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -61,11 +61,11 @@ public class TLCConcept extends ReferenceTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public TLCConcept(AnyURISimpleType hrefAttr, IDSimpleType idAttr, StringSimpleType showAsAttr) {
+    public TLCConcept(StringSimpleType showAsAttr, AnyURISimpleType hrefAttr, IDSimpleType idAttr) {
         this();
+        setShowAsAttr(showAsAttr);
         setHrefAttr(hrefAttr);
         setIdAttr(idAttr);
-        setShowAsAttr(showAsAttr);
     }
 
 
@@ -79,39 +79,6 @@ public class TLCConcept extends ReferenceTypeComplexType {
 // FIELDS ------------------
 
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> TLCConcept</code> instance
-     */
-    public TLCConcept hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> TLCConcept</code> instance
-     */
-    public TLCConcept idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> TLCConcept</code> instance
-     */
-    public TLCConcept evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
 
     /**
      * Set <code>showAsAttr</code> property in DSL way
@@ -136,6 +103,17 @@ public class TLCConcept extends ReferenceTypeComplexType {
     }
 
     /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> TLCConcept</code> instance
+     */
+    public TLCConcept hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
      * Set <code>wildcardContentAttr</code> property in DSL way
      *
      * @param wildcardContentAttr new value
@@ -143,6 +121,28 @@ public class TLCConcept extends ReferenceTypeComplexType {
      */
     public TLCConcept wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> TLCConcept</code> instance
+     */
+    public TLCConcept idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> TLCConcept</code> instance
+     */
+    public TLCConcept evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 

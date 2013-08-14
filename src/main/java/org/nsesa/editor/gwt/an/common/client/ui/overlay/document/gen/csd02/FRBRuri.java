@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element FRBRuri is the metadata property containing the URI of the whole document in the respective level of the FRBR hierarchy
+ * The element FRBRuri is the metadata property containing the URI of the whole document in the<br/> respective level of the FRBR hierarchy
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 

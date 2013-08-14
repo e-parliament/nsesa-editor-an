@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element dissentsFrom is a metadata element specifying a reference to a source dissented from the argument being described.
+ * The element dissentsFrom is a metadata element specifying a reference to a source dissented from the<br/> argument being described.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -85,6 +85,39 @@ public class DissentsFrom extends JudicialArgumentTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>exclusionAttr</code> property in DSL way
+     *
+     * @param exclusionAttr new value
+     * @return <code> DissentsFrom</code> instance
+     */
+    public DissentsFrom exclusionAttr(final BooleanSimpleType exclusionAttr) {
+        setExclusionAttr(exclusionAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>incompleteAttr</code> property in DSL way
+     *
+     * @param incompleteAttr new value
+     * @return <code> DissentsFrom</code> instance
+     */
+    public DissentsFrom incompleteAttr(final BooleanSimpleType incompleteAttr) {
+        setIncompleteAttr(incompleteAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> DissentsFrom</code> instance
+     */
+    public DissentsFrom wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -107,17 +140,6 @@ public class DissentsFrom extends JudicialArgumentTypeComplexType {
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> DissentsFrom</code> instance
-     */
-    public DissentsFrom wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
      * Set <code>statusAttr</code> property in DSL way
      *
      * @param statusAttr new value
@@ -136,28 +158,6 @@ public class DissentsFrom extends JudicialArgumentTypeComplexType {
      */
     public DissentsFrom refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>exclusionAttr</code> property in DSL way
-     *
-     * @param exclusionAttr new value
-     * @return <code> DissentsFrom</code> instance
-     */
-    public DissentsFrom exclusionAttr(final BooleanSimpleType exclusionAttr) {
-        setExclusionAttr(exclusionAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>incompleteAttr</code> property in DSL way
-     *
-     * @param incompleteAttr new value
-     * @return <code> DissentsFrom</code> instance
-     */
-    public DissentsFrom incompleteAttr(final BooleanSimpleType incompleteAttr) {
-        setIncompleteAttr(incompleteAttr);
         return this;
     }
 

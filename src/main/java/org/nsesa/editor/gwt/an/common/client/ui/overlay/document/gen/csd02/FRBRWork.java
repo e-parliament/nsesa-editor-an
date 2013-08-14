@@ -21,7 +21,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element FRBRWork is the metadata container of identifying properties related to the Work level according to the FRBR hierarchy
+ * The element FRBRWork is the metadata container of identifying properties related to the Work level<br/> according to the FRBR hierarchy
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 

@@ -105,6 +105,17 @@ public class ValueTypeComplexType extends MetaoptComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> ValueTypeComplexType</code> instance
+     */
+    public ValueTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -123,17 +134,6 @@ public class ValueTypeComplexType extends MetaoptComplexType {
      */
     public ValueTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> ValueTypeComplexType</code> instance
-     */
-    public ValueTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

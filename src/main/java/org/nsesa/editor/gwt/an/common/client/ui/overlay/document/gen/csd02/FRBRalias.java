@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element FRBRalias is the metadata property containing additional well-known names of the document in the respective level of the FRBR hierarchy
+ * The element FRBRalias is the metadata property containing additional well-known names of the<br/> document in the respective level of the FRBR hierarchy
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -76,52 +76,8 @@ public class FRBRalias extends ValueTypeComplexType {
     }
 
     // FIELDS ------------------
-    private StringSimpleType nameAttr;
     private AnyURISimpleType refersToAttr;
-
-    /**
-     * Return <code>nameAttr</code> property
-     *
-     * @return nameAttr
-     */
-    public StringSimpleType getNameAttr() {
-        if (nameAttr == null) {
-            nameAttr = new StringSimpleType();
-            nameAttr.setValue(getElement().getAttribute("name"));
-        }
-
-        return nameAttr;
-    }
-
-    /**
-     * Return <code>nameAttr</code> property in DSL way
-     *
-     * @return nameAttr
-     */
-    public StringSimpleType nameAttr() {
-        return getNameAttr();
-    }
-
-    /**
-     * Set <code>nameAttr</code> property
-     *
-     * @param nameAttr the new value
-     */
-    public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-        getElement().setAttribute("name", nameAttr.getValue());
-    }
-
-    /**
-     * Set <code>nameAttr</code> property in DSL way
-     *
-     * @param nameAttr the new value
-     * @return <code>FRBRalias</code> instance
-     */
-    public FRBRalias nameAttr(final StringSimpleType nameAttr) {
-        setNameAttr(nameAttr);
-        return this;
-    }
+    private StringSimpleType nameAttr;
 
     /**
      * Return <code>refersToAttr</code> property
@@ -166,6 +122,50 @@ public class FRBRalias extends ValueTypeComplexType {
         setRefersToAttr(refersToAttr);
         return this;
     }
+
+    /**
+     * Return <code>nameAttr</code> property
+     *
+     * @return nameAttr
+     */
+    public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+            nameAttr = new StringSimpleType();
+            nameAttr.setValue(getElement().getAttribute("name"));
+        }
+
+        return nameAttr;
+    }
+
+    /**
+     * Return <code>nameAttr</code> property in DSL way
+     *
+     * @return nameAttr
+     */
+    public StringSimpleType nameAttr() {
+        return getNameAttr();
+    }
+
+    /**
+     * Set <code>nameAttr</code> property
+     *
+     * @param nameAttr the new value
+     */
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+        getElement().setAttribute("name", nameAttr.getValue());
+    }
+
+    /**
+     * Set <code>nameAttr</code> property in DSL way
+     *
+     * @param nameAttr the new value
+     * @return <code>FRBRalias</code> instance
+     */
+    public FRBRalias nameAttr(final StringSimpleType nameAttr) {
+        setNameAttr(nameAttr);
+        return this;
+    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
@@ -176,6 +176,17 @@ public class FRBRalias extends ValueTypeComplexType {
      */
     public FRBRalias valueAttr(final StringSimpleType valueAttr) {
         setValueAttr(valueAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> FRBRalias</code> instance
+     */
+    public FRBRalias wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -202,17 +213,6 @@ public class FRBRalias extends ValueTypeComplexType {
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> FRBRalias</code> instance
-     */
-    public FRBRalias wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
      * Returns the namespace URI of this amendable widget.
      *
      * @return The namesapce as String
@@ -226,8 +226,8 @@ public class FRBRalias extends ValueTypeComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         return attrs;
     }
 

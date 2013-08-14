@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element forceMod is a metadata element specifying an (active or passive) modification in force for the document.
+ * The element forceMod is a metadata element specifying an (active or passive) modification in force<br/> for the document.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -155,24 +155,13 @@ public class ForceMod extends ModificationTypeComplexType {
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param idAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> ForceMod</code> instance
      */
-    public ForceMod idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> ForceMod</code> instance
-     */
-    public ForceMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public ForceMod wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -199,13 +188,24 @@ public class ForceMod extends ModificationTypeComplexType {
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param idAttr new value
      * @return <code> ForceMod</code> instance
      */
-    public ForceMod wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public ForceMod idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> ForceMod</code> instance
+     */
+    public ForceMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 

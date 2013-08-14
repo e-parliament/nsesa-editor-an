@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
- * The complex type Amendments is a list of all the amendment elements that can be used on a document analysis
+ * The complex type Amendments is a list of all the amendment elements that can be used on a document<br/> analysis
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 

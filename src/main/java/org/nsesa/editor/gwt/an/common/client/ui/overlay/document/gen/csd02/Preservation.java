@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element preservation is the metadata property containing an arbitrary list of elements detailing the preservation actions taken for the document is the respective level of the FRBR hierarchy..
+ * The element preservation is the metadata property containing an arbitrary list of elements detailing<br/> the preservation actions taken for the document is the respective level of the FRBR hierarchy..
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -74,6 +74,17 @@ public class Preservation extends AnyOtherTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> Preservation</code> instance
+     */
+    public Preservation hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -103,17 +114,6 @@ public class Preservation extends AnyOtherTypeComplexType {
      */
     public Preservation wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> Preservation</code> instance
-     */
-    public Preservation hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
         return this;
     }
 

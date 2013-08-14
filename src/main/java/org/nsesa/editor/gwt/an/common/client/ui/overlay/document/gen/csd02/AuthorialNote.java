@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element authorialNote is a popup element containing an authorial (non-editorial) note in the main flow of the text.
+ * the element authorialNote is a popup element containing an authorial (non-editorial) note in the<br/> main flow of the text.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -305,6 +305,17 @@ public class AuthorialNote extends PopupStructureComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> AuthorialNote</code> instance
+     */
+    public AuthorialNote refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -323,28 +334,6 @@ public class AuthorialNote extends PopupStructureComplexType {
      */
     public AuthorialNote evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> AuthorialNote</code> instance
-     */
-    public AuthorialNote langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>spaceAttr</code> property in DSL way
-     *
-     * @param spaceAttr new value
-     * @return <code> AuthorialNote</code> instance
-     */
-    public AuthorialNote spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
         return this;
     }
 
@@ -382,24 +371,24 @@ public class AuthorialNote extends PopupStructureComplexType {
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>langAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param langAttr new value
      * @return <code> AuthorialNote</code> instance
      */
-    public AuthorialNote wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public AuthorialNote langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>spaceAttr</code> property in DSL way
      *
-     * @param refersToAttr new value
+     * @param spaceAttr new value
      * @return <code> AuthorialNote</code> instance
      */
-    public AuthorialNote refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public AuthorialNote spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
         return this;
     }
 
@@ -422,6 +411,17 @@ public class AuthorialNote extends PopupStructureComplexType {
      */
     public AuthorialNote alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> AuthorialNote</code> instance
+     */
+    public AuthorialNote wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

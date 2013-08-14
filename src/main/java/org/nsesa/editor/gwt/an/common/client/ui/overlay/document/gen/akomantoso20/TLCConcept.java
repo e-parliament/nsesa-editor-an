@@ -61,11 +61,11 @@ public class TLCConcept extends ReferenceTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public TLCConcept(AnyURISimpleType hrefAttr, StringSimpleType showAsAttr, IDSimpleType idAttr) {
+    public TLCConcept(IDSimpleType idAttr, AnyURISimpleType hrefAttr, StringSimpleType showAsAttr) {
         this();
+        setIdAttr(idAttr);
         setHrefAttr(hrefAttr);
         setShowAsAttr(showAsAttr);
-        setIdAttr(idAttr);
     }
 
 
@@ -81,17 +81,6 @@ public class TLCConcept extends ReferenceTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> TLCConcept</code> instance
-     */
-    public TLCConcept hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
      * Set <code>wildcardContentAttr</code> property in DSL way
      *
      * @param wildcardContentAttr new value
@@ -99,28 +88,6 @@ public class TLCConcept extends ReferenceTypeComplexType {
      */
     public TLCConcept wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>showAsAttr</code> property in DSL way
-     *
-     * @param showAsAttr new value
-     * @return <code> TLCConcept</code> instance
-     */
-    public TLCConcept showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>shortFormAttr</code> property in DSL way
-     *
-     * @param shortFormAttr new value
-     * @return <code> TLCConcept</code> instance
-     */
-    public TLCConcept shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -143,6 +110,39 @@ public class TLCConcept extends ReferenceTypeComplexType {
      */
     public TLCConcept evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> TLCConcept</code> instance
+     */
+    public TLCConcept hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property in DSL way
+     *
+     * @param showAsAttr new value
+     * @return <code> TLCConcept</code> instance
+     */
+    public TLCConcept showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>shortFormAttr</code> property in DSL way
+     *
+     * @param shortFormAttr new value
+     * @return <code> TLCConcept</code> instance
+     */
+    public TLCConcept shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
         return this;
     }
 

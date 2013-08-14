@@ -20,7 +20,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element passiveModifications is a metadata container of the passive modifications affecting the document.
+ * The element passiveModifications is a metadata container of the passive modifications affecting the<br/> document.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 

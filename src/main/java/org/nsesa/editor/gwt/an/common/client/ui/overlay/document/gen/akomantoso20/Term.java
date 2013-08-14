@@ -158,10 +158,10 @@ public class Term extends InlinereqreqComplexType {
     /**
      * Constructor with required attributes
      */
-    public Term(AnyURISimpleType refersToAttr, IDSimpleType idAttr) {
+    public Term(IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
         this();
-        setRefersToAttr(refersToAttr);
         setIdAttr(idAttr);
+        setRefersToAttr(refersToAttr);
     }
 
 
@@ -177,13 +177,24 @@ public class Term extends InlinereqreqComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>langAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param langAttr new value
+     * @param idAttr new value
      * @return <code> Term</code> instance
      */
-    public Term langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
+    public Term idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Term</code> instance
+     */
+    public Term evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -221,35 +232,13 @@ public class Term extends InlinereqreqComplexType {
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>langAttr</code> property in DSL way
      *
-     * @param idAttr new value
+     * @param langAttr new value
      * @return <code> Term</code> instance
      */
-    public Term idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Term</code> instance
-     */
-    public Term evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Term</code> instance
-     */
-    public Term wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Term langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
@@ -283,6 +272,17 @@ public class Term extends InlinereqreqComplexType {
      */
     public Term titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Term</code> instance
+     */
+    public Term wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

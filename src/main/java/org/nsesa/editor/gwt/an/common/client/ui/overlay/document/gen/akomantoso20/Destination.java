@@ -89,17 +89,6 @@ public class Destination extends ArgumentTypeComplexType {
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Destination</code> instance
-     */
-    public Destination wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -129,6 +118,17 @@ public class Destination extends ArgumentTypeComplexType {
      */
     public Destination posAttr(final PosTypeSimpleType posAttr) {
         setPosAttr(posAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Destination</code> instance
+     */
+    public Destination wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

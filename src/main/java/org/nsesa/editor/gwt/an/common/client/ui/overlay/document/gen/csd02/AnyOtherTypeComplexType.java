@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
- * the complex type anyOtherType defines an open content model for elements that may use elements from other namespaces.
+ * the complex type anyOtherType defines an open content model for elements that may use elements from<br/> other namespaces.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -64,10 +64,54 @@ public class AnyOtherTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
+    private AnyURISimpleType hrefAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private String wildcardContentAttr;
-    private AnyURISimpleType hrefAttr;
+
+    /**
+     * Return <code>hrefAttr</code> property
+     *
+     * @return hrefAttr
+     */
+    public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(getElement().getAttribute("href"));
+        }
+
+        return hrefAttr;
+    }
+
+    /**
+     * Return <code>hrefAttr</code> property in DSL way
+     *
+     * @return hrefAttr
+     */
+    public AnyURISimpleType hrefAttr() {
+        return getHrefAttr();
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property
+     *
+     * @param hrefAttr the new value
+     */
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+        getElement().setAttribute("href", hrefAttr.getValue());
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr the new value
+     * @return <code>AnyOtherTypeComplexType</code> instance
+     */
+    public AnyOtherTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
 
     /**
      * Return <code>idAttr</code> property
@@ -201,50 +245,6 @@ public class AnyOtherTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>hrefAttr</code> property
-     *
-     * @return hrefAttr
-     */
-    public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-            hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(getElement().getAttribute("href"));
-        }
-
-        return hrefAttr;
-    }
-
-    /**
-     * Return <code>hrefAttr</code> property in DSL way
-     *
-     * @return hrefAttr
-     */
-    public AnyURISimpleType hrefAttr() {
-        return getHrefAttr();
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property
-     *
-     * @param hrefAttr the new value
-     */
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-        getElement().setAttribute("href", hrefAttr.getValue());
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr the new value
-     * @return <code>AnyOtherTypeComplexType</code> instance
-     */
-    public AnyOtherTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
      * Return <code>java.util.List<OverlayWidgetImpl></code> property
      *
      * @return The property as unmodifiable list
@@ -293,10 +293,10 @@ public class AnyOtherTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         return attrs;
     }
 

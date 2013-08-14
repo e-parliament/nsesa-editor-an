@@ -79,7 +79,7 @@ public class ComponentInfo extends OverlayWidgetImpl {
     public java.util.List<ComponentData> getComponentDatas() {
         java.util.List<ComponentData> result = new ArrayList<ComponentData>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ComponentData".equalsIgnoreCase(widget.getType())) {
+            if ("ComponentData".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((ComponentData) widget);
             }
         }

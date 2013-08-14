@@ -158,11 +158,11 @@ public class Entity extends InlinereqreqComplexType {
     /**
      * Constructor with required attributes
      */
-    public Entity(StringSimpleType nameAttr, AnyURISimpleType refersToAttr, IDSimpleType idAttr) {
+    public Entity(StringSimpleType nameAttr, IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
         this();
         setNameAttr(nameAttr);
-        setRefersToAttr(refersToAttr);
         setIdAttr(idAttr);
+        setRefersToAttr(refersToAttr);
     }
 
 
@@ -222,13 +222,24 @@ public class Entity extends InlinereqreqComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>langAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param langAttr new value
+     * @param idAttr new value
      * @return <code> Entity</code> instance
      */
-    public Entity langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
+    public Entity idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Entity</code> instance
+     */
+    public Entity evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -266,35 +277,13 @@ public class Entity extends InlinereqreqComplexType {
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>langAttr</code> property in DSL way
      *
-     * @param idAttr new value
+     * @param langAttr new value
      * @return <code> Entity</code> instance
      */
-    public Entity idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Entity</code> instance
-     */
-    public Entity evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Entity</code> instance
-     */
-    public Entity wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Entity langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
@@ -328,6 +317,17 @@ public class Entity extends InlinereqreqComplexType {
      */
     public Entity titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Entity</code> instance
+     */
+    public Entity wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

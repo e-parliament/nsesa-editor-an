@@ -96,28 +96,6 @@ public class Overrules extends JudicialArgumentTypeComplexType {
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Overrules</code> instance
-     */
-    public Overrules idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Overrules</code> instance
-     */
-    public Overrules evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
      * Set <code>wildcardContentAttr</code> property in DSL way
      *
      * @param wildcardContentAttr new value
@@ -125,6 +103,17 @@ public class Overrules extends JudicialArgumentTypeComplexType {
      */
     public Overrules wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Overrules</code> instance
+     */
+    public Overrules refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -151,13 +140,24 @@ public class Overrules extends JudicialArgumentTypeComplexType {
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param refersToAttr new value
+     * @param idAttr new value
      * @return <code> Overrules</code> instance
      */
-    public Overrules refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Overrules idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Overrules</code> instance
+     */
+    public Overrules evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 

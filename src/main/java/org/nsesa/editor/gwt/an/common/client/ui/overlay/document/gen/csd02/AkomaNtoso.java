@@ -20,7 +20,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * NAME<br/>akomaNtoso<br/>the element akomaNtoso is the root element of all document types in Akoma Ntoso. It follows the pattern Universal Root (http://www.xmlpatterns.com/UniversalRootMain.shtml)
+ * NAME<br/> akomaNtoso<br/> the element akomaNtoso is the root element of all document types in Akoma Ntoso. It follows the<br/> pattern Universal Root (http://www.xmlpatterns.com/UniversalRootMain.shtml)
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 

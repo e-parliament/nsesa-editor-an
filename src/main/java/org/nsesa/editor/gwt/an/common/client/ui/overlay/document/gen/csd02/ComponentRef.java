@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element componentRef is a reference to a separate manifestation-level resource that holds the content of the component of the document not physically placed at the position specified. Actual resources can either be external (e.g. in the package or even in a different position) or internal (within the components element)
+ * the element componentRef is a reference to a separate manifestation-level resource that holds the<br/> content of the component of the document not physically placed at the position specified. Actual<br/> resources can either be external (e.g. in the package or even in a different position) or internal<br/> (within the components element)
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -61,10 +61,10 @@ public class ComponentRef extends SrcTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public ComponentRef(AnyURISimpleType srcAttr, StringSimpleType showAsAttr) {
+    public ComponentRef(StringSimpleType showAsAttr, AnyURISimpleType srcAttr) {
         this();
-        setSrcAttr(srcAttr);
         setShowAsAttr(showAsAttr);
+        setSrcAttr(srcAttr);
     }
 
 
@@ -78,39 +78,6 @@ public class ComponentRef extends SrcTypeComplexType {
 // FIELDS ------------------
 
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>srcAttr</code> property in DSL way
-     *
-     * @param srcAttr new value
-     * @return <code> ComponentRef</code> instance
-     */
-    public ComponentRef srcAttr(final AnyURISimpleType srcAttr) {
-        setSrcAttr(srcAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>altAttr</code> property in DSL way
-     *
-     * @param altAttr new value
-     * @return <code> ComponentRef</code> instance
-     */
-    public ComponentRef altAttr(final StringSimpleType altAttr) {
-        setAltAttr(altAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> ComponentRef</code> instance
-     */
-    public ComponentRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
 
     /**
      * Set <code>showAsAttr</code> property in DSL way
@@ -135,6 +102,17 @@ public class ComponentRef extends SrcTypeComplexType {
     }
 
     /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> ComponentRef</code> instance
+     */
+    public ComponentRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -153,6 +131,28 @@ public class ComponentRef extends SrcTypeComplexType {
      */
     public ComponentRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>srcAttr</code> property in DSL way
+     *
+     * @param srcAttr new value
+     * @return <code> ComponentRef</code> instance
+     */
+    public ComponentRef srcAttr(final AnyURISimpleType srcAttr) {
+        setSrcAttr(srcAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>altAttr</code> property in DSL way
+     *
+     * @param altAttr new value
+     * @return <code> ComponentRef</code> instance
+     */
+    public ComponentRef altAttr(final StringSimpleType altAttr) {
+        setAltAttr(altAttr);
         return this;
     }
 

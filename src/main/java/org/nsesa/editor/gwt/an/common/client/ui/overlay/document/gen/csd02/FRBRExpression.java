@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
- * The element FRBRExpression is the metadata container of identifying properties related to the Expression level according to the FRBR hierarchy
+ * The element FRBRExpression is the metadata container of identifying properties related to the<br/> Expression level according to the FRBR hierarchy
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 

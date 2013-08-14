@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element documentRef is a reference to a separate work- or expression-level resource that should be placed in this position. Actual resources are external (e.g. in the package or even in a different position) and are (an expression or any expression of) a separate Work.
+ * the element documentRef is a reference to a separate work- or expression-level resource that should<br/> be placed in this position. Actual resources are external (e.g. in the package or even in a<br/> different position) and are (an expression or any expression of) a separate Work.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -61,11 +61,11 @@ public class DocumentRef extends LinkTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public DocumentRef(AnyURISimpleType hrefAttr, IDSimpleType idAttr, StringSimpleType showAsAttr) {
+    public DocumentRef(StringSimpleType showAsAttr, AnyURISimpleType hrefAttr, IDSimpleType idAttr) {
         this();
+        setShowAsAttr(showAsAttr);
         setHrefAttr(hrefAttr);
         setIdAttr(idAttr);
-        setShowAsAttr(showAsAttr);
     }
 
 
@@ -81,13 +81,24 @@ public class DocumentRef extends LinkTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>showAsAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param showAsAttr new value
      * @return <code> DocumentRef</code> instance
      */
-    public DocumentRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public DocumentRef showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>shortFormAttr</code> property in DSL way
+     *
+     * @param shortFormAttr new value
+     * @return <code> DocumentRef</code> instance
+     */
+    public DocumentRef shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -99,6 +110,17 @@ public class DocumentRef extends LinkTypeComplexType {
      */
     public DocumentRef hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> DocumentRef</code> instance
+     */
+    public DocumentRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -121,28 +143,6 @@ public class DocumentRef extends LinkTypeComplexType {
      */
     public DocumentRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>showAsAttr</code> property in DSL way
-     *
-     * @param showAsAttr new value
-     * @return <code> DocumentRef</code> instance
-     */
-    public DocumentRef showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>shortFormAttr</code> property in DSL way
-     *
-     * @param shortFormAttr new value
-     * @return <code> DocumentRef</code> instance
-     */
-    public DocumentRef shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
         return this;
     }
 

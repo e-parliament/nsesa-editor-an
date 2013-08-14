@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element foreign is a generic container for elements not belonging to the Akoma Ntoso namespace (e.g., mathematical formulas). It is a block element and thus can be placed in a container.
+ * the element foreign is a generic container for elements not belonging to the Akoma Ntoso namespace<br/> (e.g., mathematical formulas). It is a block element and thus can be placed in a container.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -85,17 +85,6 @@ public class Foreign extends AnyOtherTypeComplexType {
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Foreign</code> instance
-     */
-    public Foreign wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -114,6 +103,17 @@ public class Foreign extends AnyOtherTypeComplexType {
      */
     public Foreign evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Foreign</code> instance
+     */
+    public Foreign wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

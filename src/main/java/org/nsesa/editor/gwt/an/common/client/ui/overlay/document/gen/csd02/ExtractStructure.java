@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element extractStructure is a popup element containing a full structure used as an extract from another document or position. Attribute quote is used to specify the quote character used in the original; no quote attribute implies that the quote is left in the text; quote="" implies that there is no quote character. Attribute for is used in a mmod or rmod to point to the id of the corresponding ref element.
+ * the element extractStructure is a popup element containing a full structure used as an extract from<br/> another document or position. Attribute quote is used to specify the quote character used in the<br/> original; no quote attribute implies that the quote is left in the text; quote="" implies that there<br/> is no quote character. Attribute for is used in a mmod or rmod to point to the id of the<br/> corresponding ref element.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -261,6 +261,17 @@ public class ExtractStructure extends PopupStructureComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> ExtractStructure</code> instance
+     */
+    public ExtractStructure refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -279,28 +290,6 @@ public class ExtractStructure extends PopupStructureComplexType {
      */
     public ExtractStructure evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> ExtractStructure</code> instance
-     */
-    public ExtractStructure langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>spaceAttr</code> property in DSL way
-     *
-     * @param spaceAttr new value
-     * @return <code> ExtractStructure</code> instance
-     */
-    public ExtractStructure spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
         return this;
     }
 
@@ -338,24 +327,24 @@ public class ExtractStructure extends PopupStructureComplexType {
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>langAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param langAttr new value
      * @return <code> ExtractStructure</code> instance
      */
-    public ExtractStructure wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public ExtractStructure langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>spaceAttr</code> property in DSL way
      *
-     * @param refersToAttr new value
+     * @param spaceAttr new value
      * @return <code> ExtractStructure</code> instance
      */
-    public ExtractStructure refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public ExtractStructure spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
         return this;
     }
 
@@ -378,6 +367,17 @@ public class ExtractStructure extends PopupStructureComplexType {
      */
     public ExtractStructure alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> ExtractStructure</code> instance
+     */
+    public ExtractStructure wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

@@ -89,7 +89,7 @@ public class Meta extends OverlayWidgetImpl {
     public Identification getIdentification() {
         Identification result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Identification".equalsIgnoreCase(widget.getType())) {
+            if ("Identification".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (Identification) widget;
                 break;
             }
@@ -122,7 +122,7 @@ public class Meta extends OverlayWidgetImpl {
     public Publication getPublication() {
         Publication result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Publication".equalsIgnoreCase(widget.getType())) {
+            if ("Publication".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (Publication) widget;
                 break;
             }
@@ -155,7 +155,7 @@ public class Meta extends OverlayWidgetImpl {
     public java.util.List<Classification> getClassifications() {
         java.util.List<Classification> result = new ArrayList<Classification>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Classification".equalsIgnoreCase(widget.getType())) {
+            if ("Classification".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Classification) widget);
             }
         }
@@ -189,7 +189,7 @@ public class Meta extends OverlayWidgetImpl {
     public java.util.List<Lifecycle> getLifecycles() {
         java.util.List<Lifecycle> result = new ArrayList<Lifecycle>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Lifecycle".equalsIgnoreCase(widget.getType())) {
+            if ("Lifecycle".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Lifecycle) widget);
             }
         }
@@ -223,7 +223,7 @@ public class Meta extends OverlayWidgetImpl {
     public java.util.List<Workflow> getWorkflows() {
         java.util.List<Workflow> result = new ArrayList<Workflow>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Workflow".equalsIgnoreCase(widget.getType())) {
+            if ("Workflow".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Workflow) widget);
             }
         }
@@ -257,7 +257,7 @@ public class Meta extends OverlayWidgetImpl {
     public java.util.List<Analysis> getAnalysises() {
         java.util.List<Analysis> result = new ArrayList<Analysis>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Analysis".equalsIgnoreCase(widget.getType())) {
+            if ("Analysis".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Analysis) widget);
             }
         }
@@ -291,7 +291,7 @@ public class Meta extends OverlayWidgetImpl {
     public java.util.List<TemporalData> getTemporalDatas() {
         java.util.List<TemporalData> result = new ArrayList<TemporalData>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TemporalData".equalsIgnoreCase(widget.getType())) {
+            if ("TemporalData".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((TemporalData) widget);
             }
         }
@@ -325,7 +325,7 @@ public class Meta extends OverlayWidgetImpl {
     public java.util.List<References> getReferenceses() {
         java.util.List<References> result = new ArrayList<References>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("References".equalsIgnoreCase(widget.getType())) {
+            if ("References".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((References) widget);
             }
         }
@@ -359,7 +359,7 @@ public class Meta extends OverlayWidgetImpl {
     public java.util.List<Notes> getNoteses() {
         java.util.List<Notes> result = new ArrayList<Notes>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Notes".equalsIgnoreCase(widget.getType())) {
+            if ("Notes".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Notes) widget);
             }
         }
@@ -393,7 +393,7 @@ public class Meta extends OverlayWidgetImpl {
     public java.util.List<Proprietary> getProprietaries() {
         java.util.List<Proprietary> result = new ArrayList<Proprietary>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Proprietary".equalsIgnoreCase(widget.getType())) {
+            if ("Proprietary".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Proprietary) widget);
             }
         }
@@ -427,7 +427,7 @@ public class Meta extends OverlayWidgetImpl {
     public java.util.List<Presentation> getPresentations() {
         java.util.List<Presentation> result = new ArrayList<Presentation>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Presentation".equalsIgnoreCase(widget.getType())) {
+            if ("Presentation".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Presentation) widget);
             }
         }

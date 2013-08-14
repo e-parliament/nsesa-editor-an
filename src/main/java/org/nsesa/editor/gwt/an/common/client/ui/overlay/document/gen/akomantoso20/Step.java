@@ -79,10 +79,54 @@ public class Step extends AnyOtherTypeComplexType {
     }
 
     // FIELDS ------------------
-    private DateSimpleType dateAttr;
-    private AnyURISimpleType outcomeAttr;
-    private AnyURISimpleType asAttr;
     private AnyURISimpleType actorAttr;
+    private DateSimpleType dateAttr;
+    private AnyURISimpleType asAttr;
+    private AnyURISimpleType outcomeAttr;
+
+    /**
+     * Return <code>actorAttr</code> property
+     *
+     * @return actorAttr
+     */
+    public AnyURISimpleType getActorAttr() {
+        if (actorAttr == null) {
+            actorAttr = new AnyURISimpleType();
+            actorAttr.setValue(getElement().getAttribute("actor"));
+        }
+
+        return actorAttr;
+    }
+
+    /**
+     * Return <code>actorAttr</code> property in DSL way
+     *
+     * @return actorAttr
+     */
+    public AnyURISimpleType actorAttr() {
+        return getActorAttr();
+    }
+
+    /**
+     * Set <code>actorAttr</code> property
+     *
+     * @param actorAttr the new value
+     */
+    public void setActorAttr(final AnyURISimpleType actorAttr) {
+        this.actorAttr = actorAttr;
+        getElement().setAttribute("actor", actorAttr.getValue());
+    }
+
+    /**
+     * Set <code>actorAttr</code> property in DSL way
+     *
+     * @param actorAttr the new value
+     * @return <code>Step</code> instance
+     */
+    public Step actorAttr(final AnyURISimpleType actorAttr) {
+        setActorAttr(actorAttr);
+        return this;
+    }
 
     /**
      * Return <code>dateAttr</code> property
@@ -125,50 +169,6 @@ public class Step extends AnyOtherTypeComplexType {
      */
     public Step dateAttr(final DateSimpleType dateAttr) {
         setDateAttr(dateAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>outcomeAttr</code> property
-     *
-     * @return outcomeAttr
-     */
-    public AnyURISimpleType getOutcomeAttr() {
-        if (outcomeAttr == null) {
-            outcomeAttr = new AnyURISimpleType();
-            outcomeAttr.setValue(getElement().getAttribute("outcome"));
-        }
-
-        return outcomeAttr;
-    }
-
-    /**
-     * Return <code>outcomeAttr</code> property in DSL way
-     *
-     * @return outcomeAttr
-     */
-    public AnyURISimpleType outcomeAttr() {
-        return getOutcomeAttr();
-    }
-
-    /**
-     * Set <code>outcomeAttr</code> property
-     *
-     * @param outcomeAttr the new value
-     */
-    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
-        this.outcomeAttr = outcomeAttr;
-        getElement().setAttribute("outcome", outcomeAttr.getValue());
-    }
-
-    /**
-     * Set <code>outcomeAttr</code> property in DSL way
-     *
-     * @param outcomeAttr the new value
-     * @return <code>Step</code> instance
-     */
-    public Step outcomeAttr(final AnyURISimpleType outcomeAttr) {
-        setOutcomeAttr(outcomeAttr);
         return this;
     }
 
@@ -217,60 +217,49 @@ public class Step extends AnyOtherTypeComplexType {
     }
 
     /**
-     * Return <code>actorAttr</code> property
+     * Return <code>outcomeAttr</code> property
      *
-     * @return actorAttr
+     * @return outcomeAttr
      */
-    public AnyURISimpleType getActorAttr() {
-        if (actorAttr == null) {
-            actorAttr = new AnyURISimpleType();
-            actorAttr.setValue(getElement().getAttribute("actor"));
+    public AnyURISimpleType getOutcomeAttr() {
+        if (outcomeAttr == null) {
+            outcomeAttr = new AnyURISimpleType();
+            outcomeAttr.setValue(getElement().getAttribute("outcome"));
         }
 
-        return actorAttr;
+        return outcomeAttr;
     }
 
     /**
-     * Return <code>actorAttr</code> property in DSL way
+     * Return <code>outcomeAttr</code> property in DSL way
      *
-     * @return actorAttr
+     * @return outcomeAttr
      */
-    public AnyURISimpleType actorAttr() {
-        return getActorAttr();
+    public AnyURISimpleType outcomeAttr() {
+        return getOutcomeAttr();
     }
 
     /**
-     * Set <code>actorAttr</code> property
+     * Set <code>outcomeAttr</code> property
      *
-     * @param actorAttr the new value
+     * @param outcomeAttr the new value
      */
-    public void setActorAttr(final AnyURISimpleType actorAttr) {
-        this.actorAttr = actorAttr;
-        getElement().setAttribute("actor", actorAttr.getValue());
+    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
+        this.outcomeAttr = outcomeAttr;
+        getElement().setAttribute("outcome", outcomeAttr.getValue());
     }
 
     /**
-     * Set <code>actorAttr</code> property in DSL way
+     * Set <code>outcomeAttr</code> property in DSL way
      *
-     * @param actorAttr the new value
+     * @param outcomeAttr the new value
      * @return <code>Step</code> instance
      */
-    public Step actorAttr(final AnyURISimpleType actorAttr) {
-        setActorAttr(actorAttr);
+    public Step outcomeAttr(final AnyURISimpleType outcomeAttr) {
+        setOutcomeAttr(outcomeAttr);
         return this;
     }
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> Step</code> instance
-     */
-    public Step hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
 
     /**
      * Set <code>wildcardContentAttr</code> property in DSL way
@@ -280,6 +269,17 @@ public class Step extends AnyOtherTypeComplexType {
      */
     public Step wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> Step</code> instance
+     */
+    public Step hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
         return this;
     }
 
@@ -319,10 +319,10 @@ public class Step extends AnyOtherTypeComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
-        attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
-        attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
         attrs.put("actor", getActorAttr() != null ? getActorAttr().getValue() : null);
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
+        attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
+        attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
         return attrs;
     }
 

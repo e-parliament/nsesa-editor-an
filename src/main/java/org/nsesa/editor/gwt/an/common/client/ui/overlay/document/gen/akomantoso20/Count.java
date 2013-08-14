@@ -65,10 +65,10 @@ public class Count extends CountTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public Count(IDSimpleType idAttr, StringSimpleType valueAttr) {
+    public Count(StringSimpleType valueAttr, IDSimpleType idAttr) {
         this();
-        setIdAttr(idAttr);
         setValueAttr(valueAttr);
+        setIdAttr(idAttr);
     }
 
 
@@ -82,6 +82,28 @@ public class Count extends CountTypeComplexType {
 // FIELDS ------------------
 
 //Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> Count</code> instance
+     */
+    public Count hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>valueAttr</code> property in DSL way
+     *
+     * @param valueAttr new value
+     * @return <code> Count</code> instance
+     */
+    public Count valueAttr(final StringSimpleType valueAttr) {
+        setValueAttr(valueAttr);
+        return this;
+    }
 
     /**
      * Set <code>refersToAttr</code> property in DSL way
@@ -113,28 +135,6 @@ public class Count extends CountTypeComplexType {
      */
     public Count evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> Count</code> instance
-     */
-    public Count hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>valueAttr</code> property in DSL way
-     *
-     * @param valueAttr new value
-     * @return <code> Count</code> instance
-     */
-    public Count valueAttr(final StringSimpleType valueAttr) {
-        setValueAttr(valueAttr);
         return this;
     }
 

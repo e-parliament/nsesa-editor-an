@@ -25,7 +25,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element scopeMod is a metadata element specifying an (active or passive) modification in scope for the document.
+ * The element scopeMod is a metadata element specifying an (active or passive) modification in scope<br/> for the document.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -193,24 +193,13 @@ public class ScopeMod extends ModificationTypeComplexType {
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param idAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> ScopeMod</code> instance
      */
-    public ScopeMod idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> ScopeMod</code> instance
-     */
-    public ScopeMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public ScopeMod wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -237,13 +226,24 @@ public class ScopeMod extends ModificationTypeComplexType {
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param idAttr new value
      * @return <code> ScopeMod</code> instance
      */
-    public ScopeMod wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public ScopeMod idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> ScopeMod</code> instance
+     */
+    public ScopeMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 

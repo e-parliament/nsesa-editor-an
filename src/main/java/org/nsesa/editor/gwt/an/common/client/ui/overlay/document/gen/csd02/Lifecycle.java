@@ -133,7 +133,7 @@ public class Lifecycle extends OverlayWidgetImpl {
     public java.util.List<EventRef> getEventRefs() {
         java.util.List<EventRef> result = new ArrayList<EventRef>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("EventRef".equalsIgnoreCase(widget.getType())) {
+            if ("EventRef".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((EventRef) widget);
             }
         }

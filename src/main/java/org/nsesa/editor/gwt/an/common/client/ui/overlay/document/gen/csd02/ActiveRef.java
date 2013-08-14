@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element activeRef is a metadata reference to the Akoma Ntoso URI of a document that is modified by this document (i.e., an active references)
+ * The element activeRef is a metadata reference to the Akoma Ntoso URI of a document that is modified<br/> by this document (i.e., an active references)
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -61,10 +61,10 @@ public class ActiveRef extends ReferenceTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public ActiveRef(AnyURISimpleType hrefAttr, StringSimpleType showAsAttr, IDSimpleType idAttr) {
+    public ActiveRef(StringSimpleType showAsAttr, AnyURISimpleType hrefAttr, IDSimpleType idAttr) {
         this();
-        setHrefAttr(hrefAttr);
         setShowAsAttr(showAsAttr);
+        setHrefAttr(hrefAttr);
         setIdAttr(idAttr);
     }
 
@@ -79,28 +79,6 @@ public class ActiveRef extends ReferenceTypeComplexType {
 // FIELDS ------------------
 
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> ActiveRef</code> instance
-     */
-    public ActiveRef hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> ActiveRef</code> instance
-     */
-    public ActiveRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
 
     /**
      * Set <code>showAsAttr</code> property in DSL way
@@ -121,6 +99,28 @@ public class ActiveRef extends ReferenceTypeComplexType {
      */
     public ActiveRef shortFormAttr(final StringSimpleType shortFormAttr) {
         setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> ActiveRef</code> instance
+     */
+    public ActiveRef hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> ActiveRef</code> instance
+     */
+    public ActiveRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

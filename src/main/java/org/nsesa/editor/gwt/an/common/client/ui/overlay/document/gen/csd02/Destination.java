@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element destination is a metadata element specifying the URI of the destination of the modification.
+ * The element destination is a metadata element specifying the URI of the destination of the<br/> modification.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -89,6 +89,28 @@ public class Destination extends ArgumentTypeComplexType {
     }
 
     /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> Destination</code> instance
+     */
+    public Destination hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>posAttr</code> property in DSL way
+     *
+     * @param posAttr new value
+     * @return <code> Destination</code> instance
+     */
+    public Destination posAttr(final PosTypeSimpleType posAttr) {
+        setPosAttr(posAttr);
+        return this;
+    }
+
+    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -118,28 +140,6 @@ public class Destination extends ArgumentTypeComplexType {
      */
     public Destination wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>posAttr</code> property in DSL way
-     *
-     * @param posAttr new value
-     * @return <code> Destination</code> instance
-     */
-    public Destination posAttr(final PosTypeSimpleType posAttr) {
-        setPosAttr(posAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> Destination</code> instance
-     */
-    public Destination hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
         return this;
     }
 

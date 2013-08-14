@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element entity is a generic inline element to identify a text fragment introducing or referring to a concept in the ontology
+ * the element entity is a generic inline element to identify a text fragment introducing or referring<br/> to a concept in the ontology
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -161,11 +161,11 @@ public class Entity extends InlinereqreqComplexType {
     /**
      * Constructor with required attributes
      */
-    public Entity(StringSimpleType nameAttr, IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
+    public Entity(StringSimpleType nameAttr, AnyURISimpleType refersToAttr, IDSimpleType idAttr) {
         this();
         setNameAttr(nameAttr);
-        setIdAttr(idAttr);
         setRefersToAttr(refersToAttr);
+        setIdAttr(idAttr);
     }
 
 
@@ -225,28 +225,6 @@ public class Entity extends InlinereqreqComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Entity</code> instance
-     */
-    public Entity idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Entity</code> instance
-     */
-    public Entity evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
      * Set <code>alternativeToAttr</code> property in DSL way
      *
      * @param alternativeToAttr new value
@@ -258,13 +236,13 @@ public class Entity extends InlinereqreqComplexType {
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>statusAttr</code> property in DSL way
      *
-     * @param refersToAttr new value
+     * @param statusAttr new value
      * @return <code> Entity</code> instance
      */
-    public Entity refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Entity statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -302,17 +280,6 @@ public class Entity extends InlinereqreqComplexType {
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr new value
-     * @return <code> Entity</code> instance
-     */
-    public Entity statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
      * Set <code>wildcardContentAttr</code> property in DSL way
      *
      * @param wildcardContentAttr new value
@@ -342,6 +309,39 @@ public class Entity extends InlinereqreqComplexType {
      */
     public Entity spaceAttr(final NCNameSimpleType spaceAttr) {
         setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Entity</code> instance
+     */
+    public Entity refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Entity</code> instance
+     */
+    public Entity idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Entity</code> instance
+     */
+    public Entity evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 

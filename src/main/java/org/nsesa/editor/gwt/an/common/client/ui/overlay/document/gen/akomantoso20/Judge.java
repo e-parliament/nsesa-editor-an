@@ -158,10 +158,10 @@ public class Judge extends InlinereqreqComplexType {
     /**
      * Constructor with required attributes
      */
-    public Judge(AnyURISimpleType refersToAttr, IDSimpleType idAttr) {
+    public Judge(IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
         this();
-        setRefersToAttr(refersToAttr);
         setIdAttr(idAttr);
+        setRefersToAttr(refersToAttr);
     }
 
 
@@ -221,13 +221,24 @@ public class Judge extends InlinereqreqComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>langAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param langAttr new value
+     * @param idAttr new value
      * @return <code> Judge</code> instance
      */
-    public Judge langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
+    public Judge idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Judge</code> instance
+     */
+    public Judge evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -265,35 +276,13 @@ public class Judge extends InlinereqreqComplexType {
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>langAttr</code> property in DSL way
      *
-     * @param idAttr new value
+     * @param langAttr new value
      * @return <code> Judge</code> instance
      */
-    public Judge idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Judge</code> instance
-     */
-    public Judge evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Judge</code> instance
-     */
-    public Judge wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Judge langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
@@ -327,6 +316,17 @@ public class Judge extends InlinereqreqComplexType {
      */
     public Judge titleAttr(final StringSimpleType titleAttr) {
         setTitleAttr(titleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Judge</code> instance
+     */
+    public Judge wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

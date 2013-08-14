@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
- * The complex type judicialArguments is a list of all the judicial analysis elements that can be used on the analysis of a judgement
+ * The complex type judicialArguments is a list of all the judicial analysis elements that can be used<br/> on the analysis of a judgement
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 

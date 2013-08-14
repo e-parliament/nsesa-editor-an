@@ -161,11 +161,10 @@ public class AkomaNtoso20AmendmentBuilder {
             String documentId = documentController.getDocument().getDocumentID();
             final boolean isRemote = documentId.startsWith("http://") || documentId.startsWith("https://");
             if (isRemote) {
-                references.addActiveRef(new ActiveRef(u(documentId), s(documentController.getDocument().getName()),
-                        id(documentId.substring(documentId.lastIndexOf("/") + 1))));
+                references.addActiveRef(new ActiveRef(id(documentId.substring(documentId.lastIndexOf("/") + 1)), u(documentId), s(documentController.getDocument().getName())));
             } else {
-                references.addActiveRef(new ActiveRef(u("http://at4am.org/xml/"),
-                        s(documentController.getDocument().getName()), id(documentId)));
+                references.addActiveRef(new ActiveRef(id(documentId), u("http://at4am.org/xml/"),
+                        s(documentController.getDocument().getName())));
             }
         }
 

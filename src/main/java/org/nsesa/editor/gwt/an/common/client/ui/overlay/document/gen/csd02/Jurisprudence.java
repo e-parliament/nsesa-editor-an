@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element jurisprudence is a metadata reference to the Akoma Ntoso URI of a document providing jurisprudence on this document
+ * The element jurisprudence is a metadata reference to the Akoma Ntoso URI of a document providing<br/> jurisprudence on this document
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -61,10 +61,10 @@ public class Jurisprudence extends ReferenceTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public Jurisprudence(AnyURISimpleType hrefAttr, StringSimpleType showAsAttr, IDSimpleType idAttr) {
+    public Jurisprudence(StringSimpleType showAsAttr, AnyURISimpleType hrefAttr, IDSimpleType idAttr) {
         this();
-        setHrefAttr(hrefAttr);
         setShowAsAttr(showAsAttr);
+        setHrefAttr(hrefAttr);
         setIdAttr(idAttr);
     }
 
@@ -79,28 +79,6 @@ public class Jurisprudence extends ReferenceTypeComplexType {
 // FIELDS ------------------
 
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> Jurisprudence</code> instance
-     */
-    public Jurisprudence hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Jurisprudence</code> instance
-     */
-    public Jurisprudence wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
 
     /**
      * Set <code>showAsAttr</code> property in DSL way
@@ -121,6 +99,28 @@ public class Jurisprudence extends ReferenceTypeComplexType {
      */
     public Jurisprudence shortFormAttr(final StringSimpleType shortFormAttr) {
         setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> Jurisprudence</code> instance
+     */
+    public Jurisprudence hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Jurisprudence</code> instance
+     */
+    public Jurisprudence wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

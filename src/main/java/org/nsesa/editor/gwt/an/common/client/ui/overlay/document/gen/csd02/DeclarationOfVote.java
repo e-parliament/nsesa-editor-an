@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * this element is a structural container for parts of a debates that are relevant to the declaration of votes
+ * this element is a structural container for parts of a debates that are relevant to the declaration<br/> of votes
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -139,6 +139,17 @@ public class DeclarationOfVote extends AlthierarchyComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> DeclarationOfVote</code> instance
+     */
+    public DeclarationOfVote refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -157,28 +168,6 @@ public class DeclarationOfVote extends AlthierarchyComplexType {
      */
     public DeclarationOfVote evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> DeclarationOfVote</code> instance
-     */
-    public DeclarationOfVote langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>spaceAttr</code> property in DSL way
-     *
-     * @param spaceAttr new value
-     * @return <code> DeclarationOfVote</code> instance
-     */
-    public DeclarationOfVote spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
         return this;
     }
 
@@ -216,24 +205,24 @@ public class DeclarationOfVote extends AlthierarchyComplexType {
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>langAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param langAttr new value
      * @return <code> DeclarationOfVote</code> instance
      */
-    public DeclarationOfVote wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public DeclarationOfVote langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>spaceAttr</code> property in DSL way
      *
-     * @param refersToAttr new value
+     * @param spaceAttr new value
      * @return <code> DeclarationOfVote</code> instance
      */
-    public DeclarationOfVote refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public DeclarationOfVote spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
         return this;
     }
 
@@ -256,6 +245,17 @@ public class DeclarationOfVote extends AlthierarchyComplexType {
      */
     public DeclarationOfVote alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
         setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> DeclarationOfVote</code> instance
+     */
+    public DeclarationOfVote wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

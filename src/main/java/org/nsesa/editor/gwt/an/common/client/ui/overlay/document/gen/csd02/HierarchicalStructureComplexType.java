@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the type hierarchicalStructure specifies the overall content model of the document types that are hierarchical in nature, especially acts and bills
+ * the type hierarchicalStructure specifies the overall content model of the document types that are<br/> hierarchical in nature, especially acts and bills
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 

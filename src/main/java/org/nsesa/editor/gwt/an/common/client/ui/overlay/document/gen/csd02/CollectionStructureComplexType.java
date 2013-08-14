@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the type collectionStructure specifies the overall content model of the document types that are collections of other documents
+ * the type collectionStructure specifies the overall content model of the document types that are<br/> collections of other documents
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 

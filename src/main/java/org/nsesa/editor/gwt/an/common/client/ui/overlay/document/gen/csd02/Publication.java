@@ -21,7 +21,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element publication is the metadata container specifying a publication event for the FRBR expression of the document.
+ * The element publication is the metadata container specifying a publication event for the FRBR<br/> expression of the document.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -58,11 +58,11 @@ public class Publication extends MetaoptComplexType {
     /**
      * Constructor with required attributes
      */
-    public Publication(DateSimpleType dateAttr, StringSimpleType nameAttr, StringSimpleType showAsAttr) {
+    public Publication(StringSimpleType nameAttr, StringSimpleType showAsAttr, DateSimpleType dateAttr) {
         this();
-        setDateAttr(dateAttr);
         setNameAttr(nameAttr);
         setShowAsAttr(showAsAttr);
+        setDateAttr(dateAttr);
     }
 
 
@@ -74,145 +74,13 @@ public class Publication extends MetaoptComplexType {
     }
 
     // FIELDS ------------------
-    private DateSimpleType dateAttr;
-    private TimeSimpleType timeAttr;
-    private StringSimpleType numberAttr;
     private StringSimpleType nameAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
+    private DateSimpleType dateAttr;
+    private TimeSimpleType timeAttr;
+    private StringSimpleType numberAttr;
     private AnyURISimpleType refersToAttr;
-
-    /**
-     * Return <code>dateAttr</code> property
-     *
-     * @return dateAttr
-     */
-    public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-            dateAttr = new DateSimpleType();
-            dateAttr.setValue(getElement().getAttribute("date"));
-        }
-
-        return dateAttr;
-    }
-
-    /**
-     * Return <code>dateAttr</code> property in DSL way
-     *
-     * @return dateAttr
-     */
-    public DateSimpleType dateAttr() {
-        return getDateAttr();
-    }
-
-    /**
-     * Set <code>dateAttr</code> property
-     *
-     * @param dateAttr the new value
-     */
-    public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-        getElement().setAttribute("date", dateAttr.getValue());
-    }
-
-    /**
-     * Set <code>dateAttr</code> property in DSL way
-     *
-     * @param dateAttr the new value
-     * @return <code>Publication</code> instance
-     */
-    public Publication dateAttr(final DateSimpleType dateAttr) {
-        setDateAttr(dateAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>timeAttr</code> property
-     *
-     * @return timeAttr
-     */
-    public TimeSimpleType getTimeAttr() {
-        if (timeAttr == null) {
-            timeAttr = new TimeSimpleType();
-            timeAttr.setValue(getElement().getAttribute("time"));
-        }
-
-        return timeAttr;
-    }
-
-    /**
-     * Return <code>timeAttr</code> property in DSL way
-     *
-     * @return timeAttr
-     */
-    public TimeSimpleType timeAttr() {
-        return getTimeAttr();
-    }
-
-    /**
-     * Set <code>timeAttr</code> property
-     *
-     * @param timeAttr the new value
-     */
-    public void setTimeAttr(final TimeSimpleType timeAttr) {
-        this.timeAttr = timeAttr;
-        getElement().setAttribute("time", timeAttr.getValue());
-    }
-
-    /**
-     * Set <code>timeAttr</code> property in DSL way
-     *
-     * @param timeAttr the new value
-     * @return <code>Publication</code> instance
-     */
-    public Publication timeAttr(final TimeSimpleType timeAttr) {
-        setTimeAttr(timeAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>numberAttr</code> property
-     *
-     * @return numberAttr
-     */
-    public StringSimpleType getNumberAttr() {
-        if (numberAttr == null) {
-            numberAttr = new StringSimpleType();
-            numberAttr.setValue(getElement().getAttribute("number"));
-        }
-
-        return numberAttr;
-    }
-
-    /**
-     * Return <code>numberAttr</code> property in DSL way
-     *
-     * @return numberAttr
-     */
-    public StringSimpleType numberAttr() {
-        return getNumberAttr();
-    }
-
-    /**
-     * Set <code>numberAttr</code> property
-     *
-     * @param numberAttr the new value
-     */
-    public void setNumberAttr(final StringSimpleType numberAttr) {
-        this.numberAttr = numberAttr;
-        getElement().setAttribute("number", numberAttr.getValue());
-    }
-
-    /**
-     * Set <code>numberAttr</code> property in DSL way
-     *
-     * @param numberAttr the new value
-     * @return <code>Publication</code> instance
-     */
-    public Publication numberAttr(final StringSimpleType numberAttr) {
-        setNumberAttr(numberAttr);
-        return this;
-    }
 
     /**
      * Return <code>nameAttr</code> property
@@ -347,6 +215,138 @@ public class Publication extends MetaoptComplexType {
     }
 
     /**
+     * Return <code>dateAttr</code> property
+     *
+     * @return dateAttr
+     */
+    public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(getElement().getAttribute("date"));
+        }
+
+        return dateAttr;
+    }
+
+    /**
+     * Return <code>dateAttr</code> property in DSL way
+     *
+     * @return dateAttr
+     */
+    public DateSimpleType dateAttr() {
+        return getDateAttr();
+    }
+
+    /**
+     * Set <code>dateAttr</code> property
+     *
+     * @param dateAttr the new value
+     */
+    public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+        getElement().setAttribute("date", dateAttr.getValue());
+    }
+
+    /**
+     * Set <code>dateAttr</code> property in DSL way
+     *
+     * @param dateAttr the new value
+     * @return <code>Publication</code> instance
+     */
+    public Publication dateAttr(final DateSimpleType dateAttr) {
+        setDateAttr(dateAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>timeAttr</code> property
+     *
+     * @return timeAttr
+     */
+    public TimeSimpleType getTimeAttr() {
+        if (timeAttr == null) {
+            timeAttr = new TimeSimpleType();
+            timeAttr.setValue(getElement().getAttribute("time"));
+        }
+
+        return timeAttr;
+    }
+
+    /**
+     * Return <code>timeAttr</code> property in DSL way
+     *
+     * @return timeAttr
+     */
+    public TimeSimpleType timeAttr() {
+        return getTimeAttr();
+    }
+
+    /**
+     * Set <code>timeAttr</code> property
+     *
+     * @param timeAttr the new value
+     */
+    public void setTimeAttr(final TimeSimpleType timeAttr) {
+        this.timeAttr = timeAttr;
+        getElement().setAttribute("time", timeAttr.getValue());
+    }
+
+    /**
+     * Set <code>timeAttr</code> property in DSL way
+     *
+     * @param timeAttr the new value
+     * @return <code>Publication</code> instance
+     */
+    public Publication timeAttr(final TimeSimpleType timeAttr) {
+        setTimeAttr(timeAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>numberAttr</code> property
+     *
+     * @return numberAttr
+     */
+    public StringSimpleType getNumberAttr() {
+        if (numberAttr == null) {
+            numberAttr = new StringSimpleType();
+            numberAttr.setValue(getElement().getAttribute("number"));
+        }
+
+        return numberAttr;
+    }
+
+    /**
+     * Return <code>numberAttr</code> property in DSL way
+     *
+     * @return numberAttr
+     */
+    public StringSimpleType numberAttr() {
+        return getNumberAttr();
+    }
+
+    /**
+     * Set <code>numberAttr</code> property
+     *
+     * @param numberAttr the new value
+     */
+    public void setNumberAttr(final StringSimpleType numberAttr) {
+        this.numberAttr = numberAttr;
+        getElement().setAttribute("number", numberAttr.getValue());
+    }
+
+    /**
+     * Set <code>numberAttr</code> property in DSL way
+     *
+     * @param numberAttr the new value
+     * @return <code>Publication</code> instance
+     */
+    public Publication numberAttr(final StringSimpleType numberAttr) {
+        setNumberAttr(numberAttr);
+        return this;
+    }
+
+    /**
      * Return <code>refersToAttr</code> property
      *
      * @return refersToAttr
@@ -392,6 +392,17 @@ public class Publication extends MetaoptComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Publication</code> instance
+     */
+    public Publication wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -414,17 +425,6 @@ public class Publication extends MetaoptComplexType {
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Publication</code> instance
-     */
-    public Publication wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
      * Returns the namespace URI of this amendable widget.
      *
      * @return The namesapce as String
@@ -438,12 +438,12 @@ public class Publication extends MetaoptComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
-        attrs.put("time", getTimeAttr() != null ? getTimeAttr().getValue() : null);
-        attrs.put("number", getNumberAttr() != null ? getNumberAttr().getValue() : null);
         attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
+        attrs.put("time", getTimeAttr() != null ? getTimeAttr().getValue() : null);
+        attrs.put("number", getNumberAttr() != null ? getNumberAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         return attrs;
     }

@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element attachmentOf is a metadata reference to the Akoma Ntoso URI of a document of which this document is an attachment
+ * The element attachmentOf is a metadata reference to the Akoma Ntoso URI of a document of which this<br/> document is an attachment
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -61,10 +61,10 @@ public class AttachmentOf extends ReferenceTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public AttachmentOf(AnyURISimpleType hrefAttr, StringSimpleType showAsAttr, IDSimpleType idAttr) {
+    public AttachmentOf(StringSimpleType showAsAttr, AnyURISimpleType hrefAttr, IDSimpleType idAttr) {
         this();
-        setHrefAttr(hrefAttr);
         setShowAsAttr(showAsAttr);
+        setHrefAttr(hrefAttr);
         setIdAttr(idAttr);
     }
 
@@ -125,28 +125,6 @@ public class AttachmentOf extends ReferenceTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> AttachmentOf</code> instance
-     */
-    public AttachmentOf hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> AttachmentOf</code> instance
-     */
-    public AttachmentOf wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
      * Set <code>showAsAttr</code> property in DSL way
      *
      * @param showAsAttr new value
@@ -165,6 +143,28 @@ public class AttachmentOf extends ReferenceTypeComplexType {
      */
     public AttachmentOf shortFormAttr(final StringSimpleType shortFormAttr) {
         setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> AttachmentOf</code> instance
+     */
+    public AttachmentOf hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> AttachmentOf</code> instance
+     */
+    public AttachmentOf wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

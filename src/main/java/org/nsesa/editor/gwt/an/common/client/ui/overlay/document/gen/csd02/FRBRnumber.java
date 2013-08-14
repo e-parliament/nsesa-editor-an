@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element FRBRnumber is the metadata property containing a string or number for the number to be used in the work-level URI of this document
+ * The element FRBRnumber is the metadata property containing a string or number for the number to be<br/> used in the work-level URI of this document
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 

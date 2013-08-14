@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element TLCreference is a generic metadata reference to the Akoma Ntoso URI of an ontology instance of a class specified through the name attribute
+ * The element TLCreference is a generic metadata reference to the Akoma Ntoso URI of an ontology<br/> instance of a class specified through the name attribute
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -61,11 +61,11 @@ public class TLCReference extends ReferenceTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public TLCReference(StringSimpleType nameAttr, AnyURISimpleType hrefAttr, StringSimpleType showAsAttr, IDSimpleType idAttr) {
+    public TLCReference(StringSimpleType nameAttr, StringSimpleType showAsAttr, AnyURISimpleType hrefAttr, IDSimpleType idAttr) {
         this();
         setNameAttr(nameAttr);
-        setHrefAttr(hrefAttr);
         setShowAsAttr(showAsAttr);
+        setHrefAttr(hrefAttr);
         setIdAttr(idAttr);
     }
 
@@ -126,28 +126,6 @@ public class TLCReference extends ReferenceTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> TLCReference</code> instance
-     */
-    public TLCReference hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> TLCReference</code> instance
-     */
-    public TLCReference wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
      * Set <code>showAsAttr</code> property in DSL way
      *
      * @param showAsAttr new value
@@ -166,6 +144,28 @@ public class TLCReference extends ReferenceTypeComplexType {
      */
     public TLCReference shortFormAttr(final StringSimpleType shortFormAttr) {
         setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> TLCReference</code> instance
+     */
+    public TLCReference hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> TLCReference</code> instance
+     */
+    public TLCReference wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

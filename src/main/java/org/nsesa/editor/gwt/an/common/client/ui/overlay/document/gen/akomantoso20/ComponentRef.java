@@ -61,10 +61,10 @@ public class ComponentRef extends SrcTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public ComponentRef(AnyURISimpleType srcAttr, StringSimpleType showAsAttr) {
+    public ComponentRef(StringSimpleType showAsAttr, AnyURISimpleType srcAttr) {
         this();
-        setSrcAttr(srcAttr);
         setShowAsAttr(showAsAttr);
+        setSrcAttr(srcAttr);
     }
 
 
@@ -91,24 +91,24 @@ public class ComponentRef extends SrcTypeComplexType {
     }
 
     /**
-     * Set <code>srcAttr</code> property in DSL way
+     * Set <code>showAsAttr</code> property in DSL way
      *
-     * @param srcAttr new value
+     * @param showAsAttr new value
      * @return <code> ComponentRef</code> instance
      */
-    public ComponentRef srcAttr(final AnyURISimpleType srcAttr) {
-        setSrcAttr(srcAttr);
+    public ComponentRef showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
         return this;
     }
 
     /**
-     * Set <code>altAttr</code> property in DSL way
+     * Set <code>shortFormAttr</code> property in DSL way
      *
-     * @param altAttr new value
+     * @param shortFormAttr new value
      * @return <code> ComponentRef</code> instance
      */
-    public ComponentRef altAttr(final StringSimpleType altAttr) {
-        setAltAttr(altAttr);
+    public ComponentRef shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -135,24 +135,24 @@ public class ComponentRef extends SrcTypeComplexType {
     }
 
     /**
-     * Set <code>showAsAttr</code> property in DSL way
+     * Set <code>srcAttr</code> property in DSL way
      *
-     * @param showAsAttr new value
+     * @param srcAttr new value
      * @return <code> ComponentRef</code> instance
      */
-    public ComponentRef showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
+    public ComponentRef srcAttr(final AnyURISimpleType srcAttr) {
+        setSrcAttr(srcAttr);
         return this;
     }
 
     /**
-     * Set <code>shortFormAttr</code> property in DSL way
+     * Set <code>altAttr</code> property in DSL way
      *
-     * @param shortFormAttr new value
+     * @param altAttr new value
      * @return <code> ComponentRef</code> instance
      */
-    public ComponentRef shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
+    public ComponentRef altAttr(final StringSimpleType altAttr) {
+        setAltAttr(altAttr);
         return this;
     }
 

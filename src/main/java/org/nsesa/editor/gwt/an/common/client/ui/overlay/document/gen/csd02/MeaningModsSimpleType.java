@@ -18,7 +18,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
  */
 public enum MeaningModsSimpleType {
 
-// FIELDS ------------------
+    // ENUM VALUES ------------------
 
     VARIATION("variation"),
     TERMMODIFICATION("termModification"),
@@ -55,5 +55,11 @@ public enum MeaningModsSimpleType {
             }
         }
         return null;
+    }
+
+    private static final String namespaceURI = "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02";
+
+    public static String getNamespaceURI() {
+        return namespaceURI;
     }
 }

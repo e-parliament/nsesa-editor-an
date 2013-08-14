@@ -135,7 +135,7 @@ public class Identification extends OverlayWidgetImpl {
     public FRBRWork getFRBRWork() {
         FRBRWork result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRWork".equalsIgnoreCase(widget.getType())) {
+            if ("FRBRWork".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (FRBRWork) widget;
                 break;
             }
@@ -168,7 +168,7 @@ public class Identification extends OverlayWidgetImpl {
     public FRBRExpression getFRBRExpression() {
         FRBRExpression result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRExpression".equalsIgnoreCase(widget.getType())) {
+            if ("FRBRExpression".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (FRBRExpression) widget;
                 break;
             }
@@ -201,7 +201,7 @@ public class Identification extends OverlayWidgetImpl {
     public FRBRManifestation getFRBRManifestation() {
         FRBRManifestation result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRManifestation".equalsIgnoreCase(widget.getType())) {
+            if ("FRBRManifestation".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (FRBRManifestation) widget;
                 break;
             }
@@ -234,7 +234,7 @@ public class Identification extends OverlayWidgetImpl {
     public FRBRItem getFRBRItem() {
         FRBRItem result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRItem".equalsIgnoreCase(widget.getType())) {
+            if ("FRBRItem".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (FRBRItem) widget;
                 break;
             }

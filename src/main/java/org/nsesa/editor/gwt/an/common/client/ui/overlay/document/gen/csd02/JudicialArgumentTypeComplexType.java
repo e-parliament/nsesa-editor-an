@@ -67,14 +67,145 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
-    private String wildcardContentAttr;
-    private StatusTypeSimpleType statusAttr;
-    private AnyURISimpleType refersToAttr;
     private BooleanSimpleType exclusionAttr;
     private BooleanSimpleType incompleteAttr;
+    private String wildcardContentAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private StatusTypeSimpleType statusAttr;
+    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
+
+    /**
+     * Return <code>exclusionAttr</code> property
+     *
+     * @return exclusionAttr
+     */
+    public BooleanSimpleType getExclusionAttr() {
+        if (exclusionAttr == null) {
+            exclusionAttr = new BooleanSimpleType();
+            exclusionAttr.setValue(getElement().getAttribute("exclusion"));
+        }
+
+        return exclusionAttr;
+    }
+
+    /**
+     * Return <code>exclusionAttr</code> property in DSL way
+     *
+     * @return exclusionAttr
+     */
+    public BooleanSimpleType exclusionAttr() {
+        return getExclusionAttr();
+    }
+
+    /**
+     * Set <code>exclusionAttr</code> property
+     *
+     * @param exclusionAttr the new value
+     */
+    public void setExclusionAttr(final BooleanSimpleType exclusionAttr) {
+        this.exclusionAttr = exclusionAttr;
+        getElement().setAttribute("exclusion", exclusionAttr.getValue());
+    }
+
+    /**
+     * Set <code>exclusionAttr</code> property in DSL way
+     *
+     * @param exclusionAttr the new value
+     * @return <code>JudicialArgumentTypeComplexType</code> instance
+     */
+    public JudicialArgumentTypeComplexType exclusionAttr(final BooleanSimpleType exclusionAttr) {
+        setExclusionAttr(exclusionAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>incompleteAttr</code> property
+     *
+     * @return incompleteAttr
+     */
+    public BooleanSimpleType getIncompleteAttr() {
+        if (incompleteAttr == null) {
+            incompleteAttr = new BooleanSimpleType();
+            incompleteAttr.setValue(getElement().getAttribute("incomplete"));
+        }
+
+        return incompleteAttr;
+    }
+
+    /**
+     * Return <code>incompleteAttr</code> property in DSL way
+     *
+     * @return incompleteAttr
+     */
+    public BooleanSimpleType incompleteAttr() {
+        return getIncompleteAttr();
+    }
+
+    /**
+     * Set <code>incompleteAttr</code> property
+     *
+     * @param incompleteAttr the new value
+     */
+    public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
+        this.incompleteAttr = incompleteAttr;
+        getElement().setAttribute("incomplete", incompleteAttr.getValue());
+    }
+
+    /**
+     * Set <code>incompleteAttr</code> property in DSL way
+     *
+     * @param incompleteAttr the new value
+     * @return <code>JudicialArgumentTypeComplexType</code> instance
+     */
+    public JudicialArgumentTypeComplexType incompleteAttr(final BooleanSimpleType incompleteAttr) {
+        setIncompleteAttr(incompleteAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>JudicialArgumentTypeComplexType</code> instance
+     */
+    public JudicialArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
 
     /**
      * Return <code>idAttr</code> property
@@ -165,49 +296,6 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property
-     *
-     * @return wildcardContentAttr
-     */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @return wildcardContentAttr
-     */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property
-     *
-     * @param wildcardContentAttr the new value
-     */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr the new value
-     * @return <code>JudicialArgumentTypeComplexType</code> instance
-     */
-    public JudicialArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
      * Return <code>statusAttr</code> property
      *
      * @return statusAttr
@@ -291,94 +379,6 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
      */
     public JudicialArgumentTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>exclusionAttr</code> property
-     *
-     * @return exclusionAttr
-     */
-    public BooleanSimpleType getExclusionAttr() {
-        if (exclusionAttr == null) {
-            exclusionAttr = new BooleanSimpleType();
-            exclusionAttr.setValue(getElement().getAttribute("exclusion"));
-        }
-
-        return exclusionAttr;
-    }
-
-    /**
-     * Return <code>exclusionAttr</code> property in DSL way
-     *
-     * @return exclusionAttr
-     */
-    public BooleanSimpleType exclusionAttr() {
-        return getExclusionAttr();
-    }
-
-    /**
-     * Set <code>exclusionAttr</code> property
-     *
-     * @param exclusionAttr the new value
-     */
-    public void setExclusionAttr(final BooleanSimpleType exclusionAttr) {
-        this.exclusionAttr = exclusionAttr;
-        getElement().setAttribute("exclusion", exclusionAttr.getValue());
-    }
-
-    /**
-     * Set <code>exclusionAttr</code> property in DSL way
-     *
-     * @param exclusionAttr the new value
-     * @return <code>JudicialArgumentTypeComplexType</code> instance
-     */
-    public JudicialArgumentTypeComplexType exclusionAttr(final BooleanSimpleType exclusionAttr) {
-        setExclusionAttr(exclusionAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>incompleteAttr</code> property
-     *
-     * @return incompleteAttr
-     */
-    public BooleanSimpleType getIncompleteAttr() {
-        if (incompleteAttr == null) {
-            incompleteAttr = new BooleanSimpleType();
-            incompleteAttr.setValue(getElement().getAttribute("incomplete"));
-        }
-
-        return incompleteAttr;
-    }
-
-    /**
-     * Return <code>incompleteAttr</code> property in DSL way
-     *
-     * @return incompleteAttr
-     */
-    public BooleanSimpleType incompleteAttr() {
-        return getIncompleteAttr();
-    }
-
-    /**
-     * Set <code>incompleteAttr</code> property
-     *
-     * @param incompleteAttr the new value
-     */
-    public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
-        this.incompleteAttr = incompleteAttr;
-        getElement().setAttribute("incomplete", incompleteAttr.getValue());
-    }
-
-    /**
-     * Set <code>incompleteAttr</code> property in DSL way
-     *
-     * @param incompleteAttr the new value
-     * @return <code>JudicialArgumentTypeComplexType</code> instance
-     */
-    public JudicialArgumentTypeComplexType incompleteAttr(final BooleanSimpleType incompleteAttr) {
-        setIncompleteAttr(incompleteAttr);
         return this;
     }
 
@@ -542,13 +542,13 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("exclusion", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
         attrs.put("incomplete", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }

@@ -96,28 +96,6 @@ public class IsAnalogTo extends JudicialArgumentTypeComplexType {
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> IsAnalogTo</code> instance
-     */
-    public IsAnalogTo idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> IsAnalogTo</code> instance
-     */
-    public IsAnalogTo evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
      * Set <code>wildcardContentAttr</code> property in DSL way
      *
      * @param wildcardContentAttr new value
@@ -125,6 +103,17 @@ public class IsAnalogTo extends JudicialArgumentTypeComplexType {
      */
     public IsAnalogTo wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> IsAnalogTo</code> instance
+     */
+    public IsAnalogTo refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -151,13 +140,24 @@ public class IsAnalogTo extends JudicialArgumentTypeComplexType {
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param refersToAttr new value
+     * @param idAttr new value
      * @return <code> IsAnalogTo</code> instance
      */
-    public IsAnalogTo refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public IsAnalogTo idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> IsAnalogTo</code> instance
+     */
+    public IsAnalogTo evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 

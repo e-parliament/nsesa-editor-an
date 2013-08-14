@@ -61,10 +61,10 @@ public class FRBRdate extends MetaoptComplexType {
     /**
      * Constructor with required attributes
      */
-    public FRBRdate(StringSimpleType nameAttr, DateSimpleType dateAttr) {
+    public FRBRdate(DateSimpleType dateAttr, StringSimpleType nameAttr) {
         this();
-        setNameAttr(nameAttr);
         setDateAttr(dateAttr);
+        setNameAttr(nameAttr);
     }
 
 
@@ -76,52 +76,8 @@ public class FRBRdate extends MetaoptComplexType {
     }
 
     // FIELDS ------------------
-    private StringSimpleType nameAttr;
     private DateSimpleType dateAttr;
-
-    /**
-     * Return <code>nameAttr</code> property
-     *
-     * @return nameAttr
-     */
-    public StringSimpleType getNameAttr() {
-        if (nameAttr == null) {
-            nameAttr = new StringSimpleType();
-            nameAttr.setValue(getElement().getAttribute("name"));
-        }
-
-        return nameAttr;
-    }
-
-    /**
-     * Return <code>nameAttr</code> property in DSL way
-     *
-     * @return nameAttr
-     */
-    public StringSimpleType nameAttr() {
-        return getNameAttr();
-    }
-
-    /**
-     * Set <code>nameAttr</code> property
-     *
-     * @param nameAttr the new value
-     */
-    public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-        getElement().setAttribute("name", nameAttr.getValue());
-    }
-
-    /**
-     * Set <code>nameAttr</code> property in DSL way
-     *
-     * @param nameAttr the new value
-     * @return <code>FRBRdate</code> instance
-     */
-    public FRBRdate nameAttr(final StringSimpleType nameAttr) {
-        setNameAttr(nameAttr);
-        return this;
-    }
+    private StringSimpleType nameAttr;
 
     /**
      * Return <code>dateAttr</code> property
@@ -164,6 +120,50 @@ public class FRBRdate extends MetaoptComplexType {
      */
     public FRBRdate dateAttr(final DateSimpleType dateAttr) {
         setDateAttr(dateAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>nameAttr</code> property
+     *
+     * @return nameAttr
+     */
+    public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+            nameAttr = new StringSimpleType();
+            nameAttr.setValue(getElement().getAttribute("name"));
+        }
+
+        return nameAttr;
+    }
+
+    /**
+     * Return <code>nameAttr</code> property in DSL way
+     *
+     * @return nameAttr
+     */
+    public StringSimpleType nameAttr() {
+        return getNameAttr();
+    }
+
+    /**
+     * Set <code>nameAttr</code> property
+     *
+     * @param nameAttr the new value
+     */
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+        getElement().setAttribute("name", nameAttr.getValue());
+    }
+
+    /**
+     * Set <code>nameAttr</code> property in DSL way
+     *
+     * @param nameAttr the new value
+     * @return <code>FRBRdate</code> instance
+     */
+    public FRBRdate nameAttr(final StringSimpleType nameAttr) {
+        setNameAttr(nameAttr);
         return this;
     }
 //Override all attributes methods to be conformant with DSL approach
@@ -215,8 +215,8 @@ public class FRBRdate extends MetaoptComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         return attrs;
     }
 

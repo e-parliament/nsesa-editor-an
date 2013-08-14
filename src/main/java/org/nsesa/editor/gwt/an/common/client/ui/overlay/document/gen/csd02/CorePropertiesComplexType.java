@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
- * The complexType coreProperties lists the identifying properties available at any of the FRBR hierarchy levels.
+ * The complexType coreProperties lists the identifying properties available at any of the FRBR<br/> hierarchy levels.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -76,7 +76,7 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
     public FRBRthis getFRBRthis() {
         FRBRthis result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRthis".equalsIgnoreCase(widget.getType())) {
+            if ("FRBRthis".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (FRBRthis) widget;
                 break;
             }
@@ -109,7 +109,7 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
     public java.util.List<FRBRuri> getFRBRuris() {
         java.util.List<FRBRuri> result = new ArrayList<FRBRuri>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRuri".equalsIgnoreCase(widget.getType())) {
+            if ("FRBRuri".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((FRBRuri) widget);
             }
         }
@@ -143,7 +143,7 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
     public java.util.List<FRBRalias> getFRBRaliases() {
         java.util.List<FRBRalias> result = new ArrayList<FRBRalias>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRalias".equalsIgnoreCase(widget.getType())) {
+            if ("FRBRalias".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((FRBRalias) widget);
             }
         }
@@ -177,7 +177,7 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
     public java.util.List<FRBRdate> getFRBRdates() {
         java.util.List<FRBRdate> result = new ArrayList<FRBRdate>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRdate".equalsIgnoreCase(widget.getType())) {
+            if ("FRBRdate".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((FRBRdate) widget);
             }
         }
@@ -211,7 +211,7 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
     public java.util.List<FRBRauthor> getFRBRauthors() {
         java.util.List<FRBRauthor> result = new ArrayList<FRBRauthor>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRauthor".equalsIgnoreCase(widget.getType())) {
+            if ("FRBRauthor".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((FRBRauthor) widget);
             }
         }
@@ -245,7 +245,7 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
     public ComponentInfo getComponentInfo() {
         ComponentInfo result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ComponentInfo".equalsIgnoreCase(widget.getType())) {
+            if ("ComponentInfo".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (ComponentInfo) widget;
                 break;
             }
@@ -278,7 +278,7 @@ public class CorePropertiesComplexType extends OverlayWidgetImpl {
     public Preservation getPreservation() {
         Preservation result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Preservation".equalsIgnoreCase(widget.getType())) {
+            if ("Preservation".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (Preservation) widget;
                 break;
             }

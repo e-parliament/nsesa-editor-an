@@ -18,7 +18,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso
  */
 public enum StatusTypeSimpleType {
 
-// FIELDS ------------------
+    // ENUM VALUES ------------------
 
     OMISSIS("omissis"),
     REPEALED("repealed"),
@@ -60,5 +60,11 @@ public enum StatusTypeSimpleType {
             }
         }
         return null;
+    }
+
+    private static final String namespaceURI = "http://www.akomantoso.org/2.0";
+
+    public static String getNamespaceURI() {
+        return namespaceURI;
     }
 }

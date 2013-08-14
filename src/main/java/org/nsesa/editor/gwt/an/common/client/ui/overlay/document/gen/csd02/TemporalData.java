@@ -132,7 +132,7 @@ public class TemporalData extends OverlayWidgetImpl {
     public java.util.List<TemporalGroup> getTemporalGroups() {
         java.util.List<TemporalGroup> result = new ArrayList<TemporalGroup>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TemporalGroup".equalsIgnoreCase(widget.getType())) {
+            if ("TemporalGroup".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((TemporalGroup) widget);
             }
         }

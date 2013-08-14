@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element FRBRtranslation is the metadata property specifying the source of which this expression is a translation of.
+ * The element FRBRtranslation is the metadata property specifying the source of which this expression<br/> is a translation of.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -305,6 +305,17 @@ public class FRBRtranslation extends MetaoptComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> FRBRtranslation</code> instance
+     */
+    public FRBRtranslation wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -323,17 +334,6 @@ public class FRBRtranslation extends MetaoptComplexType {
      */
     public FRBRtranslation evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> FRBRtranslation</code> instance
-     */
-    public FRBRtranslation wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

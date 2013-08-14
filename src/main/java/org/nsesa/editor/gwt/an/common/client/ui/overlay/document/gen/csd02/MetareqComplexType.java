@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the complex type metareq defines the content model and attributes shared by all metadata elements. Here the id attribute is required
+ * the complex type metareq defines the content model and attributes shared by all metadata elements.<br/> Here the id attribute is required
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 

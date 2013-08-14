@@ -18,7 +18,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso
  */
 public enum TimeTypeSimpleType {
 
-// FIELDS ------------------
+    // ENUM VALUES ------------------
 
     STARTEVENT("startEvent"),
     ENDEVENT("endEvent");
@@ -54,5 +54,11 @@ public enum TimeTypeSimpleType {
             }
         }
         return null;
+    }
+
+    private static final String namespaceURI = "http://www.akomantoso.org/2.0";
+
+    public static String getNamespaceURI() {
+        return namespaceURI;
     }
 }

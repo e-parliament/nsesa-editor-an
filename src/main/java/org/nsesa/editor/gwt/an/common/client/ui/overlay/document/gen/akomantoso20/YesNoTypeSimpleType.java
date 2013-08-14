@@ -18,7 +18,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso
  */
 public enum YesNoTypeSimpleType {
 
-// FIELDS ------------------
+    // ENUM VALUES ------------------
 
     YES("yes"),
     NO("no");
@@ -54,5 +54,11 @@ public enum YesNoTypeSimpleType {
             }
         }
         return null;
+    }
+
+    private static final String namespaceURI = "http://www.akomantoso.org/2.0";
+
+    public static String getNamespaceURI() {
+        return namespaceURI;
     }
 }
