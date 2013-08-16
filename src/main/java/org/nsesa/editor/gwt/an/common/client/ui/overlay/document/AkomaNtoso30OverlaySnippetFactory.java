@@ -23,7 +23,14 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.Transformer;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 
 /**
- * Specialized factory for akomantoso snippets
+ * Specialized factory for snippets that contain small 'templates' for a given overlay widget. For example, if you add
+ * a paragraph, you'd want to retrieve a structure that resolves something like:
+ * {@code <paragraph><num>${placeholder.num}</num><content><p>${placeholder.content}</p></content></paragraph>}
+ * Rather than just the {@code <paragraph></paragraph>} structure.
+ * <p/>
+ * It also supports the ability to set a selection and caret position, for easier and quicker editing in the CKEditor.
+ * <p/>
+ * This class provides snippets for the AkomaNtoso 3.0 specification.
  *
  * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
  *         Date: 8/04/13 14:09
@@ -56,7 +63,7 @@ public class AkomaNtoso30OverlaySnippetFactory extends DefaultOverlaySnippetFact
 
         P p = new P();
         p.html("Type your content here ...​​");
-        p.getOverlayElement().addClassName(caretPositionClassName);
+        setCaret(p);
         Content content = new Content();
         content.addP(p);
 
@@ -73,7 +80,7 @@ public class AkomaNtoso30OverlaySnippetFactory extends DefaultOverlaySnippetFact
         P p = new P();
         // set an empty character - this acts as a caret anchor position.
         p.html("Type your content here ...​​");
-        p.getOverlayElement().addClassName(caretPositionClassName);
+        setCaret(p);
         Content content = new Content();
         content.addP(p);
 
@@ -87,7 +94,7 @@ public class AkomaNtoso30OverlaySnippetFactory extends DefaultOverlaySnippetFact
         P p = new P();
         // set an empty character - this acts as a caret anchor position.
         p.html("Type your content here...");
-        p.getOverlayElement().addClassName(caretPositionClassName);
+        setCaret(p);
         return transformer.transform(num) + transformer.transform(p);
     }
 
@@ -96,7 +103,7 @@ public class AkomaNtoso30OverlaySnippetFactory extends DefaultOverlaySnippetFact
         P p = new P();
         // set an empty character - this acts as a caret anchor position.
         p.html("Type your content here ...​​");
-        p.getOverlayElement().addClassName(caretPositionClassName);
+        setCaret(p);
         Content content = new Content();
         content.addP(p);
 
@@ -106,6 +113,10 @@ public class AkomaNtoso30OverlaySnippetFactory extends DefaultOverlaySnippetFact
     @Override
     public String getCaretPositionClassName() {
         return caretPositionClassName;
+    }
+
+    protected void setCaret(final OverlayWidget overlayWidget) {
+        overlayWidget.getOverlayElement().addClassName(caretPositionClassName);
     }
 
     /**
