@@ -16,11 +16,11 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
-import org.nsesa.editor.gwt.core.client.ClientFactory;
-import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
-import org.nsesa.editor.gwt.core.client.ui.overlay.NumberingType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.resources.Messages;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Transformer;
-import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlaySnippetFactory;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippet;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 
 /**
  * Specialized factory for snippets that contain small 'templates' for a given overlay widget. For example, if you add
@@ -39,13 +39,16 @@ public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFact
 
     private final Transformer transformer;
     private final String caretPositionClassName;
+    private final Messages messages;
 
     @Inject
     public AkomaNtoso20OverlaySnippetFactory(@Named("html") final Transformer transformer,
-                                             @Named("caretPositionClassName") final String caretPositionClassName) {
+                                             @Named("caretPositionClassName") final String caretPositionClassName,
+                                             Messages messages) {
 
         this.transformer = transformer;
         this.caretPositionClassName = caretPositionClassName;
+        this.messages = messages;
 
         registerSnippet(new Citation(), new OverlaySnippet("citation", getCitationSnippet()));
         registerSnippet(new Recital(), new OverlaySnippet("recital", getRecitalSnippet()));
@@ -56,13 +59,13 @@ public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFact
 
     protected String getArticleSnippet() {
         I i = new I();
-        i.html("Article ${widget.num}");
+        i.html(messages.placeholderNumArticle());
 
         Num num = new Num();
         num.addI(i);
 
         P p = new P();
-        p.html("Type your content here ...​​");
+        p.html(messages.placeholderContentDefault());
         setCaret(p);
         Content content = new Content();
         content.addP(p);
@@ -75,11 +78,11 @@ public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFact
 
     protected String getParagraphSnippet() {
         Num num = new Num();
-        num.html("${widget.num}");
+        num.html(messages.placeholderNumDefault());
 
         P p = new P();
         // set an empty character - this acts as a caret anchor position.
-        p.html("Type your content here ...​​");
+        p.html(messages.placeholderContentDefault());
         setCaret(p);
         Content content = new Content();
         content.addP(p);
@@ -89,11 +92,11 @@ public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFact
 
     protected String getRecitalSnippet() {
         Num num = new Num();
-        num.html("${widget.num}");
+        num.html(messages.placeholderNumDefault());
 
         P p = new P();
         // set an empty character - this acts as a caret anchor position.
-        p.html("Type your content here...");
+        p.html(messages.placeholderContentDefault());
         setCaret(p);
         return transformer.transform(num) + transformer.transform(p);
     }
@@ -102,7 +105,7 @@ public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFact
 
         P p = new P();
         // set an empty character - this acts as a caret anchor position.
-        p.html("Type your content here ...​​");
+        p.html(messages.placeholderContentDefault());
         setCaret(p);
         Content content = new Content();
         content.addP(p);
@@ -117,64 +120,5 @@ public class AkomaNtoso20OverlaySnippetFactory extends DefaultOverlaySnippetFact
 
     protected void setCaret(final OverlayWidget overlayWidget) {
         overlayWidget.getOverlayElement().addClassName(caretPositionClassName);
-    }
-
-    /**
-     * An evaluator for num that will compute the num based on the existing widgets
-     */
-    public static class NumEvaluator implements OverlaySnippetEvaluator.Evaluator {
-
-        private ClientFactory clientFactory;
-        private OverlayWidgetInjectionStrategy widgetInjectionStrategy;
-        private Locator locator;
-        private OverlayWidget overlayWidget;
-        private OverlayWidget parent;
-        private OverlayWidget reference;
-
-        public NumEvaluator(ClientFactory clientFactory,
-                            OverlayWidgetInjectionStrategy widgetInjectionStrategy,
-                            Locator locator,
-                            OverlayWidget overlayWidget,
-                            OverlayWidget parent,
-                            OverlayWidget reference) {
-            this.clientFactory = clientFactory;
-            this.widgetInjectionStrategy = widgetInjectionStrategy;
-            this.locator = locator;
-            this.overlayWidget = overlayWidget;
-            this.parent = parent;
-            this.reference = reference;
-        }
-
-        @Override
-        public String getPlaceHolder() {
-            return "${widget.num}";
-        }
-
-        @Override
-        public String evaluate() {
-            if (overlayWidget.getNumberingType() == null) {
-                // if there is a sibling of the same type, use that one
-                OverlayWidget sibling = overlayWidget.next(new OverlayWidgetSelector() {
-                    @Override
-                    public boolean select(OverlayWidget toSelect) {
-                        return true;
-                    }
-                });
-                if (sibling != null) {
-                    overlayWidget.setNumberingType(sibling.getNumberingType());
-                } else {
-                    // take the parent's numbering, but use a different one
-                    // TODO
-                    overlayWidget.setNumberingType(NumberingType.ROMANITO);
-                }
-            }
-            //add the overlay widget in the parent children collection to compute the num
-            final int injectionPosition = widgetInjectionStrategy.getProposedInjectionPosition(parent, reference, overlayWidget);
-
-            parent.addOverlayWidget(overlayWidget, injectionPosition);
-            String num = locator.getNum(overlayWidget, clientFactory.getClientContext().getDocumentTranslationLanguageCode(), true);
-            parent.removeOverlayWidget(overlayWidget);
-            return num == null ? "" : num;
-        }
     }
 }

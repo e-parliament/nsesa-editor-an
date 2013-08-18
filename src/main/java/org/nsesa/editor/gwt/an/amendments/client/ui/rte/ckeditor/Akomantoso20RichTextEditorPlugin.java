@@ -14,7 +14,6 @@
 package org.nsesa.editor.gwt.an.amendments.client.ui.rte.ckeditor;
 
 import com.google.inject.Inject;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtoso20OverlaySnippetFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
@@ -64,7 +63,7 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
                                 OverlaySnippet snippet = snippetFactory.getSnippet(curr);
                                 if (snippet != null) {
                                     overlaySnippetEvaluator.addEvaluator(
-                                            new AkomaNtoso20OverlaySnippetFactory.NumEvaluator(
+                                            new DefaultNumEvaluator(
                                                     clientFactory,
                                                     overlayWidgetInjectionStrategy,
                                                     locator,

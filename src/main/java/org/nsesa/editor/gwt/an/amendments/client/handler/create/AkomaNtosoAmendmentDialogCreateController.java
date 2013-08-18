@@ -19,7 +19,6 @@ import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFi
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso20AmendmentBuilder;
 import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNtoso30AmendmentBuilder;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmentControllerUtil;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtoso20OverlaySnippetFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
@@ -152,7 +151,7 @@ public class AkomaNtosoAmendmentDialogCreateController extends AmendmentDialogCr
 
             OverlaySnippet overlaySnippet = overlaySnippetFactory.getSnippet(overlayWidget);
             overlaySnippetEvaluator.addEvaluator(
-                    new AkomaNtoso20OverlaySnippetFactory.NumEvaluator(
+                    new DefaultNumEvaluator(
                             clientFactory,
                             overlayWidgetInjectionStrategy,
                             locator,

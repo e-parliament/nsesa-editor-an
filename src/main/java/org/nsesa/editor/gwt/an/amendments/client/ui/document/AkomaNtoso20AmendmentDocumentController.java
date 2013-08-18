@@ -40,6 +40,7 @@ import org.nsesa.editor.gwt.core.client.event.widget.OverlayWidgetStructureChang
 import org.nsesa.editor.gwt.core.client.event.widget.OverlayWidgetStructureChangeEventHandler;
 import org.nsesa.editor.gwt.core.client.keyboard.KeyboardListener;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
+import org.nsesa.editor.gwt.core.client.ui.document.OverlayWidgetAware;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Mover;
@@ -128,15 +129,19 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
                 final ArrayList<AmendmentContainerDTO> amendments = new ArrayList<AmendmentContainerDTO>();
                 for (final OverlayWidget widget : event.getAffectedWidgets()) {
                     if (widget.getOverlayWidgetAwareList() != null && !widget.getOverlayWidgetAwareList().isEmpty()) {
-                        AmendmentController controller = (AmendmentController) widget.getOverlayWidgetAwareList().get(0);
-                        boolean needUpdate = updateAmendmentAfterStructuralChange(controller);
-                        if (needUpdate) {
-                            amendments.add(controller.getModel());
+                        for (final OverlayWidgetAware overlayWidgetAware : widget.getOverlayWidgetAwareList()) {
+                            if (overlayWidgetAware instanceof AmendmentController) {
+                                AmendmentController controller = (AmendmentController) overlayWidgetAware;
+                                boolean needUpdate = updateAmendmentAfterStructuralChange(controller);
+                                if (needUpdate) {
+                                    amendments.add(controller.getModel());
+                                }
+                            }
                         }
                     }
                 }
                 if (!amendments.isEmpty()) {
-                    documentEventBus.fireEvent(new AmendmentContainerSaveEvent(amendments.toArray(new AmendmentContainerDTO[0])));
+                    documentEventBus.fireEvent(new AmendmentContainerSaveEvent(amendments.toArray(new AmendmentContainerDTO[amendments.size()])));
                 }
             }
         });
@@ -157,20 +162,25 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
     }
 
     /**
-     * Update an amendment after structural change
+     * Update an amendment after structural change. The idea is that we currently need to rebuild the entire amendment
+     * just to be sure that the content wasn't changed.
+     * <p/>
+     * TODO: this doesn't seem the best idea - this needs a rewrite
      *
-     * @param amendmentController
-     * @return True when the amendment content needs to be changed
+     * @param amendmentController the amendment controller to rebuild
+     * @return <tt>true</tt> when the amendment content needs to be persisted to the backend.
      */
-    private boolean updateAmendmentAfterStructuralChange(AmendmentController amendmentController) {
+    private boolean updateAmendmentAfterStructuralChange(final AmendmentController amendmentController) {
+
+
         //identify the new overlay widget reference to be used when determining widget reference
         final OverlayWidget newWidgetReference = determineWidgetReference(amendmentController.getOverlayWidget());
-        AmendableWidgetReference newReference = amendmentInjectionPointFinder.getInjectionPoint(
+        final AmendableWidgetReference newReference = amendmentInjectionPointFinder.getInjectionPoint(
                 amendmentController.getOverlayWidget().getParentOverlayWidget(),
                 newWidgetReference,
                 amendmentController.getOverlayWidget());
 
-        AmendableWidgetReference oldReference = amendmentController.getModel().getSourceReference();
+        final AmendableWidgetReference oldReference = amendmentController.getModel().getSourceReference();
 
         // oldReference and newReference are the same no need to update the amendment content
         if (oldReference.getPath().equalsIgnoreCase(newReference.getPath()) && oldReference.getOffset().equals(newReference.getOffset())) {
@@ -185,7 +195,7 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
         final Preface preface = (Preface) OverlayUtil.findSingle("preface", amendmentBodyOverlayWidget);
         final Container container = preface.getContainers().get(0);
         if (container != null && "authors".equals(container.nameAttr().getValue())) {
-            List<OverlayWidget> docProponents = OverlayUtil.find("docProponent", container);
+            final List<OverlayWidget> docProponents = OverlayUtil.find("docProponent", container);
             for (final OverlayWidget docProponent : docProponents) {
                 if (docProponent instanceof DocProponent) {
                     final DocProponent proponent = (DocProponent) docProponent;
@@ -246,7 +256,6 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
                 .setNotes(notes);
         amendmentController.getModel().setSourceReference(newReference);
         amendmentController.getModel().setRoot(builder.build());
-
         return true;
     }
 
