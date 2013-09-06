@@ -54,7 +54,7 @@ public class AkomaNtosoAmendmentActionPanelController extends AmendmentActionPan
     };
     private final FlowPanel mainPanel = new FlowPanel();
     private final HorizontalPanel buttonPanel = new HorizontalPanel();
-    private final Button closeButton = new Button("Close");
+    private final Button closeButton = new Button();
     private final ScrollPanel scrollPanel = new ScrollPanel();
     private final HTML content = new HTML();
 
@@ -70,6 +70,7 @@ public class AkomaNtosoAmendmentActionPanelController extends AmendmentActionPan
         buttonPanel.setWidth("800px");
         buttonPanel.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
         this.mainPanel.add(buttonPanel);
+        closeButton.setText(constants.amendmentActionClose());
         buttonPanel.add(closeButton);
         this.scrollPanel.setHeight("570px");
         this.scrollPanel.setWidth("100%");
