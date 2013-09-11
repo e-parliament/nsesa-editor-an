@@ -279,7 +279,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                 } else {
                     // this is a sibling
                     event.getParentOverlayWidget().addOverlayWidget(child, event.getReference().getIndex() + 1, true);
-                    DOM.insertChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getReference().getDomIndex());
+                    DOM.insertChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getReference().getDomIndex() + 1);
                     if (!child.isAttached()) child.onAttach();
                 }
 
