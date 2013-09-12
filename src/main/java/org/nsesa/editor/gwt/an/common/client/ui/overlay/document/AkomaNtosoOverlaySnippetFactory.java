@@ -57,7 +57,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         registerSnippet(new Paragraph(), new OverlaySnippet("paragraph", getAN20ParagraphSnippet()));
         registerSnippet(new Article(), new OverlaySnippet("article", getAN20ArticleSnippet()));
 
-        // AN 3.0
+        // AN 3.0 - 02
         registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Citation(), new OverlaySnippet("citation", getAN30CitationSnippet()));
         registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Recital(), new OverlaySnippet("recital", getAN30RecitalSnippet()));
         registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Paragraph(), new OverlaySnippet("paragraph", getAN30ParagraphSnippet()));

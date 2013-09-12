@@ -17,6 +17,7 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Akomantoso20OverlayLocalizableResource;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Csd02OverlayLocalizableResource;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Csd05OverlayLocalizableResource;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayLocalizableResource;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 
@@ -31,11 +32,15 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 public class CompositeOverlayLocalizableResource extends DefaultOverlayLocalizableResource {
     private final Akomantoso20OverlayLocalizableResource akomantoso20OverlayLocalizableResource;
     private final Csd02OverlayLocalizableResource csd02OverlayLocalizableResource;
+    private final Csd05OverlayLocalizableResource csd05OverlayLocalizableResource;
 
     @Inject
-    public CompositeOverlayLocalizableResource(Akomantoso20OverlayLocalizableResource akomantoso20OverlayLocalizableResource, Csd02OverlayLocalizableResource csd02OverlayLocalizableResource) {
+    public CompositeOverlayLocalizableResource(Akomantoso20OverlayLocalizableResource akomantoso20OverlayLocalizableResource,
+                                               Csd02OverlayLocalizableResource csd02OverlayLocalizableResource,
+                                               Csd05OverlayLocalizableResource csd05OverlayLocalizableResource) {
         this.akomantoso20OverlayLocalizableResource = akomantoso20OverlayLocalizableResource;
         this.csd02OverlayLocalizableResource = csd02OverlayLocalizableResource;
+        this.csd05OverlayLocalizableResource = csd05OverlayLocalizableResource;
     }
 
     @Override
@@ -44,6 +49,8 @@ public class CompositeOverlayLocalizableResource extends DefaultOverlayLocalizab
             return akomantoso20OverlayLocalizableResource.getName(widget);
         else if (widget.getNamespaceURI().equals(csd02OverlayLocalizableResource.getNamespaceURI()))
             return csd02OverlayLocalizableResource.getName(widget);
+        else if (widget.getNamespaceURI().equals(csd05OverlayLocalizableResource.getNamespaceURI()))
+            return csd05OverlayLocalizableResource.getName(widget);
         return super.getName(widget);
     }
 
@@ -53,6 +60,8 @@ public class CompositeOverlayLocalizableResource extends DefaultOverlayLocalizab
             return akomantoso20OverlayLocalizableResource.getDescription(widget);
         else if (widget.getNamespaceURI().equals(csd02OverlayLocalizableResource.getNamespaceURI()))
             return csd02OverlayLocalizableResource.getDescription(widget);
+        else if (widget.getNamespaceURI().equals(csd05OverlayLocalizableResource.getNamespaceURI()))
+            return csd05OverlayLocalizableResource.getDescription(widget);
         return super.getDescription(widget);
     }
 }

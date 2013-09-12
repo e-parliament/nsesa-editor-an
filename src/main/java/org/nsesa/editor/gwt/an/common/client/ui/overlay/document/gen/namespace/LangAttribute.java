@@ -15,13 +15,14 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.namespace;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.DOM;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 
 /**
+ * Generated class
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
-public class LangAttribute extends LanguageSimpleType {
+public class LangAttribute extends StringSimpleType {
 
 
     /**
