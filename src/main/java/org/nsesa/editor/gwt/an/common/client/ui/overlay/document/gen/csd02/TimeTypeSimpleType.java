@@ -18,7 +18,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
  */
 public enum TimeTypeSimpleType {
 
-    // ENUM VALUES ------------------
+// ENUM VALUES ------------------
 
     STARTEVENT("startEvent"),
     ENDEVENT("endEvent");

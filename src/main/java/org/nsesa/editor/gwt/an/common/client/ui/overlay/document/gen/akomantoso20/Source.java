@@ -78,13 +78,24 @@ public class Source extends ArgumentTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>upToAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param upToAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> Source</code> instance
      */
-    public Source upToAttr(final AnyURISimpleType upToAttr) {
-        setUpToAttr(upToAttr);
+    public Source evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> Source</code> instance
+     */
+    public Source hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
         return this;
     }
 
@@ -100,17 +111,6 @@ public class Source extends ArgumentTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Source</code> instance
-     */
-    public Source evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
      * Set <code>posAttr</code> property in DSL way
      *
      * @param posAttr new value
@@ -122,6 +122,17 @@ public class Source extends ArgumentTypeComplexType {
     }
 
     /**
+     * Set <code>upToAttr</code> property in DSL way
+     *
+     * @param upToAttr new value
+     * @return <code> Source</code> instance
+     */
+    public Source upToAttr(final AnyURISimpleType upToAttr) {
+        setUpToAttr(upToAttr);
+        return this;
+    }
+
+    /**
      * Set <code>wildcardContentAttr</code> property in DSL way
      *
      * @param wildcardContentAttr new value
@@ -129,17 +140,6 @@ public class Source extends ArgumentTypeComplexType {
      */
     public Source wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> Source</code> instance
-     */
-    public Source hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
         return this;
     }
 

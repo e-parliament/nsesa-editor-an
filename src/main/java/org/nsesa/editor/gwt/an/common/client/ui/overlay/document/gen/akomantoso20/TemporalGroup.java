@@ -79,53 +79,9 @@ public class TemporalGroup extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private IDSimpleType idAttr;
     private String wildcardContentAttr;
-
-    /**
-     * Return <code>idAttr</code> property
-     *
-     * @return idAttr
-     */
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
-        }
-
-        return idAttr;
-    }
-
-    /**
-     * Return <code>idAttr</code> property in DSL way
-     *
-     * @return idAttr
-     */
-    public IDSimpleType idAttr() {
-        return getIdAttr();
-    }
-
-    /**
-     * Set <code>idAttr</code> property
-     *
-     * @param idAttr the new value
-     */
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr the new value
-     * @return <code>TemporalGroup</code> instance
-     */
-    public TemporalGroup idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
 
     /**
      * Return <code>evolvingIdAttr</code> property
@@ -172,6 +128,84 @@ public class TemporalGroup extends OverlayWidgetImpl {
     }
 
     /**
+     * Return <code>idAttr</code> property
+     *
+     * @return idAttr
+     */
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
+        }
+
+        return idAttr;
+    }
+
+    /**
+     * Return <code>idAttr</code> property in DSL way
+     *
+     * @return idAttr
+     */
+    public IDSimpleType idAttr() {
+        return getIdAttr();
+    }
+
+    /**
+     * Set <code>idAttr</code> property
+     *
+     * @param idAttr the new value
+     */
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr the new value
+     * @return <code>TemporalGroup</code> instance
+     */
+    public TemporalGroup idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>java.util.List<TimeInterval></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<TimeInterval> getTimeIntervals() {
+        java.util.List<TimeInterval> result = new ArrayList<TimeInterval>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("TimeInterval".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((TimeInterval) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<TimeInterval></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<TimeInterval> getTimeIntervalList() {
+        return getTimeIntervals();
+    }
+
+    /**
+     * Add <code>java.util.List<TimeInterval></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public TimeInterval addTimeInterval(TimeInterval timeIntervalElem) {
+        this.addOverlayWidget(timeIntervalElem);
+        return timeIntervalElem;
+    }
+
+    /**
      * Return <code>wildcardContentAttr</code> property
      *
      * @return wildcardContentAttr
@@ -213,41 +247,6 @@ public class TemporalGroup extends OverlayWidgetImpl {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
-
-    /**
-     * Return <code>java.util.List<TimeInterval></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<TimeInterval> getTimeIntervals() {
-        java.util.List<TimeInterval> result = new ArrayList<TimeInterval>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TimeInterval".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((TimeInterval) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<TimeInterval></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<TimeInterval> getTimeIntervalList() {
-        return getTimeIntervals();
-    }
-
-    /**
-     * Add <code>java.util.List<TimeInterval></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public TimeInterval addTimeInterval(TimeInterval timeIntervalElem) {
-        this.addOverlayWidget(timeIntervalElem);
-        return timeIntervalElem;
-    }
-
 //Override all attributes methods to be conformant with DSL approach
 
     /**
@@ -264,8 +263,8 @@ public class TemporalGroup extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }

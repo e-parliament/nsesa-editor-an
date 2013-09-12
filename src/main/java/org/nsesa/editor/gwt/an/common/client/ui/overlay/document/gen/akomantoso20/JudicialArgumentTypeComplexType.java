@@ -68,12 +68,12 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
 
     // FIELDS ------------------
     private StatusTypeSimpleType statusAttr;
-    private String wildcardContentAttr;
-    private AnyURISimpleType refersToAttr;
-    private BooleanSimpleType exclusionAttr;
-    private BooleanSimpleType incompleteAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private BooleanSimpleType exclusionAttr;
+    private BooleanSimpleType incompleteAttr;
+    private String wildcardContentAttr;
+    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
 
     /**
@@ -120,89 +120,90 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property
+     * Return <code>idAttr</code> property
      *
-     * @return wildcardContentAttr
+     * @return idAttr
      */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
         }
 
-        return wildcardContentAttr;
+        return idAttr;
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
+     * Return <code>idAttr</code> property in DSL way
      *
-     * @return wildcardContentAttr
+     * @return idAttr
      */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
+    public IDSimpleType idAttr() {
+        return getIdAttr();
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property
+     * Set <code>idAttr</code> property
      *
-     * @param wildcardContentAttr the new value
+     * @param idAttr the new value
      */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr the new value
+     * @param idAttr the new value
      * @return <code>JudicialArgumentTypeComplexType</code> instance
      */
-    public JudicialArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public JudicialArgumentTypeComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 
     /**
-     * Return <code>refersToAttr</code> property
+     * Return <code>evolvingIdAttr</code> property
      *
-     * @return refersToAttr
+     * @return evolvingIdAttr
      */
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
         }
 
-        return refersToAttr;
+        return evolvingIdAttr;
     }
 
     /**
-     * Return <code>refersToAttr</code> property in DSL way
+     * Return <code>evolvingIdAttr</code> property in DSL way
      *
-     * @return refersToAttr
+     * @return evolvingIdAttr
      */
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
     }
 
     /**
-     * Set <code>refersToAttr</code> property
+     * Set <code>evolvingIdAttr</code> property
      *
-     * @param refersToAttr the new value
+     * @param evolvingIdAttr the new value
      */
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param refersToAttr the new value
+     * @param evolvingIdAttr the new value
      * @return <code>JudicialArgumentTypeComplexType</code> instance
      */
-    public JudicialArgumentTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public JudicialArgumentTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -295,90 +296,89 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>idAttr</code> property
+     * Return <code>wildcardContentAttr</code> property
      *
-     * @return idAttr
+     * @return wildcardContentAttr
      */
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return idAttr;
+        return wildcardContentAttr;
     }
 
     /**
-     * Return <code>idAttr</code> property in DSL way
+     * Return <code>wildcardContentAttr</code> property in DSL way
      *
-     * @return idAttr
+     * @return wildcardContentAttr
      */
-    public IDSimpleType idAttr() {
-        return getIdAttr();
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
     }
 
     /**
-     * Set <code>idAttr</code> property
+     * Set <code>wildcardContentAttr</code> property
      *
-     * @param idAttr the new value
+     * @param wildcardContentAttr the new value
      */
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param idAttr the new value
+     * @param wildcardContentAttr the new value
      * @return <code>JudicialArgumentTypeComplexType</code> instance
      */
-    public JudicialArgumentTypeComplexType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
+    public JudicialArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
     /**
-     * Return <code>evolvingIdAttr</code> property
+     * Return <code>refersToAttr</code> property
      *
-     * @return evolvingIdAttr
+     * @return refersToAttr
      */
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
         }
 
-        return evolvingIdAttr;
+        return refersToAttr;
     }
 
     /**
-     * Return <code>evolvingIdAttr</code> property in DSL way
+     * Return <code>refersToAttr</code> property in DSL way
      *
-     * @return evolvingIdAttr
+     * @return refersToAttr
      */
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property
+     * Set <code>refersToAttr</code> property
      *
-     * @param evolvingIdAttr the new value
+     * @param refersToAttr the new value
      */
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>refersToAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr the new value
+     * @param refersToAttr the new value
      * @return <code>JudicialArgumentTypeComplexType</code> instance
      */
-    public JudicialArgumentTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public JudicialArgumentTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -543,12 +543,12 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("exclusion", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
-        attrs.put("incomplete", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("exclusion", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
+        attrs.put("incomplete", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }

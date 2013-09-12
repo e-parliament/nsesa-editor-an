@@ -158,10 +158,10 @@ public class TocItem extends InlineComplexType {
     /**
      * Constructor with required attributes
      */
-    public TocItem(IntegerSimpleType levelAttr, AnyURISimpleType hrefAttr) {
+    public TocItem(AnyURISimpleType hrefAttr, IntegerSimpleType levelAttr) {
         this();
-        setLevelAttr(levelAttr);
         setHrefAttr(hrefAttr);
+        setLevelAttr(levelAttr);
     }
 
 
@@ -173,52 +173,8 @@ public class TocItem extends InlineComplexType {
     }
 
     // FIELDS ------------------
-    private IntegerSimpleType levelAttr;
     private AnyURISimpleType hrefAttr;
-
-    /**
-     * Return <code>levelAttr</code> property
-     *
-     * @return levelAttr
-     */
-    public IntegerSimpleType getLevelAttr() {
-        if (levelAttr == null) {
-            levelAttr = new IntegerSimpleType();
-            levelAttr.setValue(getElement().getAttribute("level"));
-        }
-
-        return levelAttr;
-    }
-
-    /**
-     * Return <code>levelAttr</code> property in DSL way
-     *
-     * @return levelAttr
-     */
-    public IntegerSimpleType levelAttr() {
-        return getLevelAttr();
-    }
-
-    /**
-     * Set <code>levelAttr</code> property
-     *
-     * @param levelAttr the new value
-     */
-    public void setLevelAttr(final IntegerSimpleType levelAttr) {
-        this.levelAttr = levelAttr;
-        getElement().setAttribute("level", levelAttr.getValue());
-    }
-
-    /**
-     * Set <code>levelAttr</code> property in DSL way
-     *
-     * @param levelAttr the new value
-     * @return <code>TocItem</code> instance
-     */
-    public TocItem levelAttr(final IntegerSimpleType levelAttr) {
-        setLevelAttr(levelAttr);
-        return this;
-    }
+    private IntegerSimpleType levelAttr;
 
     /**
      * Return <code>hrefAttr</code> property
@@ -263,40 +219,51 @@ public class TocItem extends InlineComplexType {
         setHrefAttr(hrefAttr);
         return this;
     }
+
+    /**
+     * Return <code>levelAttr</code> property
+     *
+     * @return levelAttr
+     */
+    public IntegerSimpleType getLevelAttr() {
+        if (levelAttr == null) {
+            levelAttr = new IntegerSimpleType();
+            levelAttr.setValue(getElement().getAttribute("level"));
+        }
+
+        return levelAttr;
+    }
+
+    /**
+     * Return <code>levelAttr</code> property in DSL way
+     *
+     * @return levelAttr
+     */
+    public IntegerSimpleType levelAttr() {
+        return getLevelAttr();
+    }
+
+    /**
+     * Set <code>levelAttr</code> property
+     *
+     * @param levelAttr the new value
+     */
+    public void setLevelAttr(final IntegerSimpleType levelAttr) {
+        this.levelAttr = levelAttr;
+        getElement().setAttribute("level", levelAttr.getValue());
+    }
+
+    /**
+     * Set <code>levelAttr</code> property in DSL way
+     *
+     * @param levelAttr the new value
+     * @return <code>TocItem</code> instance
+     */
+    public TocItem levelAttr(final IntegerSimpleType levelAttr) {
+        setLevelAttr(levelAttr);
+        return this;
+    }
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr new value
-     * @return <code> TocItem</code> instance
-     */
-    public TocItem statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> TocItem</code> instance
-     */
-    public TocItem wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> TocItem</code> instance
-     */
-    public TocItem langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
 
     /**
      * Set <code>alternativeToAttr</code> property in DSL way
@@ -310,24 +277,13 @@ public class TocItem extends InlineComplexType {
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>classAttr</code> property in DSL way
      *
-     * @param refersToAttr new value
+     * @param classAttr new value
      * @return <code> TocItem</code> instance
      */
-    public TocItem refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> TocItem</code> instance
-     */
-    public TocItem idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
+    public TocItem classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
         return this;
     }
 
@@ -343,13 +299,57 @@ public class TocItem extends InlineComplexType {
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param idAttr new value
      * @return <code> TocItem</code> instance
      */
-    public TocItem classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public TocItem idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> TocItem</code> instance
+     */
+    public TocItem langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> TocItem</code> instance
+     */
+    public TocItem periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> TocItem</code> instance
+     */
+    public TocItem refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> TocItem</code> instance
+     */
+    public TocItem statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -376,13 +376,13 @@ public class TocItem extends InlineComplexType {
     }
 
     /**
-     * Set <code>periodAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param periodAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> TocItem</code> instance
      */
-    public TocItem periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public TocItem wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -400,8 +400,8 @@ public class TocItem extends InlineComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("level", getLevelAttr() != null ? getLevelAttr().getValue() : null);
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("level", getLevelAttr() != null ? getLevelAttr().getValue() : null);
         return attrs;
     }
 

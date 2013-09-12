@@ -72,181 +72,17 @@ public class Attachments extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private StatusTypeSimpleType statusAttr;
-    private String wildcardContentAttr;
-    private LanguageSimpleType langAttr;
     private AnyURISimpleType alternativeToAttr;
-    private AnyURISimpleType refersToAttr;
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
     private StringSimpleType classAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private IDSimpleType idAttr;
+    private LanguageSimpleType langAttr;
+    private AnyURISimpleType periodAttr;
+    private AnyURISimpleType refersToAttr;
+    private StatusTypeSimpleType statusAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
-    private AnyURISimpleType periodAttr;
-
-    /**
-     * Return <code>java.util.List<ComponentRef></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<ComponentRef> getComponentRefs() {
-        java.util.List<ComponentRef> result = new ArrayList<ComponentRef>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ComponentRef".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((ComponentRef) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<ComponentRef></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<ComponentRef> getComponentRefList() {
-        return getComponentRefs();
-    }
-
-    /**
-     * Add <code>java.util.List<ComponentRef></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public ComponentRef addComponentRef(ComponentRef componentRefElem) {
-        this.addOverlayWidget(componentRefElem);
-        return componentRefElem;
-    }
-
-    /**
-     * Return <code>statusAttr</code> property
-     *
-     * @return statusAttr
-     */
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-    }
-
-    /**
-     * Return <code>statusAttr</code> property in DSL way
-     *
-     * @return statusAttr
-     */
-    public StatusTypeSimpleType statusAttr() {
-        return getStatusAttr();
-    }
-
-    /**
-     * Set <code>statusAttr</code> property
-     *
-     * @param statusAttr the new value
-     */
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status", statusAttr.value());
-    }
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr the new value
-     * @return <code>Attachments</code> instance
-     */
-    public Attachments statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>wildcardContentAttr</code> property
-     *
-     * @return wildcardContentAttr
-     */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @return wildcardContentAttr
-     */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property
-     *
-     * @param wildcardContentAttr the new value
-     */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr the new value
-     * @return <code>Attachments</code> instance
-     */
-    public Attachments wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>langAttr</code> property
-     *
-     * @return langAttr
-     */
-    public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-            langAttr = new LanguageSimpleType();
-            langAttr.setValue(getElement().getAttribute("lang"));
-        }
-
-        return langAttr;
-    }
-
-    /**
-     * Return <code>langAttr</code> property in DSL way
-     *
-     * @return langAttr
-     */
-    public LanguageSimpleType langAttr() {
-        return getLangAttr();
-    }
-
-    /**
-     * Set <code>langAttr</code> property
-     *
-     * @param langAttr the new value
-     */
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-        getElement().setAttribute("lang", langAttr.getValue());
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr the new value
-     * @return <code>Attachments</code> instance
-     */
-    public Attachments langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
+    private String wildcardContentAttr;
 
     /**
      * Return <code>alternativeToAttr</code> property
@@ -293,46 +129,124 @@ public class Attachments extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>refersToAttr</code> property
+     * Return <code>classAttr</code> property
      *
-     * @return refersToAttr
+     * @return classAttr
      */
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+    public StringSimpleType getClassAttr() {
+        if (classAttr == null) {
+            classAttr = new StringSimpleType();
+            classAttr.setValue(getElement().getAttribute("class"));
         }
 
-        return refersToAttr;
+        return classAttr;
     }
 
     /**
-     * Return <code>refersToAttr</code> property in DSL way
+     * Return <code>classAttr</code> property in DSL way
      *
-     * @return refersToAttr
+     * @return classAttr
      */
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
+    public StringSimpleType classAttr() {
+        return getClassAttr();
     }
 
     /**
-     * Set <code>refersToAttr</code> property
+     * Set <code>classAttr</code> property
      *
-     * @param refersToAttr the new value
+     * @param classAttr the new value
      */
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    public void setClassAttr(final StringSimpleType classAttr) {
+        this.classAttr = classAttr;
+        getElement().setAttribute("class", classAttr.getValue());
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>classAttr</code> property in DSL way
      *
-     * @param refersToAttr the new value
+     * @param classAttr the new value
      * @return <code>Attachments</code> instance
      */
-    public Attachments refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Attachments classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>java.util.List<ComponentRef></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<ComponentRef> getComponentRefs() {
+        java.util.List<ComponentRef> result = new ArrayList<ComponentRef>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("ComponentRef".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((ComponentRef) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<ComponentRef></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<ComponentRef> getComponentRefList() {
+        return getComponentRefs();
+    }
+
+    /**
+     * Add <code>java.util.List<ComponentRef></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public ComponentRef addComponentRef(ComponentRef componentRefElem) {
+        this.addOverlayWidget(componentRefElem);
+        return componentRefElem;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property
+     *
+     * @param evolvingIdAttr the new value
+     */
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr the new value
+     * @return <code>Attachments</code> instance
+     */
+    public Attachments evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -381,90 +295,177 @@ public class Attachments extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>evolvingIdAttr</code> property
+     * Return <code>langAttr</code> property
      *
-     * @return evolvingIdAttr
+     * @return langAttr
      */
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+    public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+            langAttr = new LanguageSimpleType();
+            langAttr.setValue(getElement().getAttribute("lang"));
         }
 
-        return evolvingIdAttr;
+        return langAttr;
     }
 
     /**
-     * Return <code>evolvingIdAttr</code> property in DSL way
+     * Return <code>langAttr</code> property in DSL way
      *
-     * @return evolvingIdAttr
+     * @return langAttr
      */
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
+    public LanguageSimpleType langAttr() {
+        return getLangAttr();
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property
+     * Set <code>langAttr</code> property
      *
-     * @param evolvingIdAttr the new value
+     * @param langAttr the new value
      */
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+        getElement().setAttribute("lang", langAttr.getValue());
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>langAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr the new value
+     * @param langAttr the new value
      * @return <code>Attachments</code> instance
      */
-    public Attachments evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public Attachments langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
     /**
-     * Return <code>classAttr</code> property
+     * Return <code>periodAttr</code> property
      *
-     * @return classAttr
+     * @return periodAttr
      */
-    public StringSimpleType getClassAttr() {
-        if (classAttr == null) {
-            classAttr = new StringSimpleType();
-            classAttr.setValue(getElement().getAttribute("class"));
+    public AnyURISimpleType getPeriodAttr() {
+        if (periodAttr == null) {
+            periodAttr = new AnyURISimpleType();
+            periodAttr.setValue(getElement().getAttribute("period"));
         }
 
-        return classAttr;
+        return periodAttr;
     }
 
     /**
-     * Return <code>classAttr</code> property in DSL way
+     * Return <code>periodAttr</code> property in DSL way
      *
-     * @return classAttr
+     * @return periodAttr
      */
-    public StringSimpleType classAttr() {
-        return getClassAttr();
+    public AnyURISimpleType periodAttr() {
+        return getPeriodAttr();
     }
 
     /**
-     * Set <code>classAttr</code> property
+     * Set <code>periodAttr</code> property
      *
-     * @param classAttr the new value
+     * @param periodAttr the new value
      */
-    public void setClassAttr(final StringSimpleType classAttr) {
-        this.classAttr = classAttr;
-        getElement().setAttribute("class", classAttr.getValue());
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
+        getElement().setAttribute("period", periodAttr.getValue());
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param classAttr the new value
+     * @param periodAttr the new value
      * @return <code>Attachments</code> instance
      */
-    public Attachments classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public Attachments periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property in DSL way
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property
+     *
+     * @param refersToAttr the new value
+     */
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr the new value
+     * @return <code>Attachments</code> instance
+     */
+    public Attachments refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>statusAttr</code> property
+     *
+     * @return statusAttr
+     */
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        }
+
+        return statusAttr;
+    }
+
+    /**
+     * Return <code>statusAttr</code> property in DSL way
+     *
+     * @return statusAttr
+     */
+    public StatusTypeSimpleType statusAttr() {
+        return getStatusAttr();
+    }
+
+    /**
+     * Set <code>statusAttr</code> property
+     *
+     * @param statusAttr the new value
+     */
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status", statusAttr.value());
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr the new value
+     * @return <code>Attachments</code> instance
+     */
+    public Attachments statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -557,46 +558,45 @@ public class Attachments extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>periodAttr</code> property
+     * Return <code>wildcardContentAttr</code> property
      *
-     * @return periodAttr
+     * @return wildcardContentAttr
      */
-    public AnyURISimpleType getPeriodAttr() {
-        if (periodAttr == null) {
-            periodAttr = new AnyURISimpleType();
-            periodAttr.setValue(getElement().getAttribute("period"));
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return periodAttr;
+        return wildcardContentAttr;
     }
 
     /**
-     * Return <code>periodAttr</code> property in DSL way
+     * Return <code>wildcardContentAttr</code> property in DSL way
      *
-     * @return periodAttr
+     * @return wildcardContentAttr
      */
-    public AnyURISimpleType periodAttr() {
-        return getPeriodAttr();
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
     }
 
     /**
-     * Set <code>periodAttr</code> property
+     * Set <code>wildcardContentAttr</code> property
      *
-     * @param periodAttr the new value
+     * @param wildcardContentAttr the new value
      */
-    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-        this.periodAttr = periodAttr;
-        getElement().setAttribute("period", periodAttr.getValue());
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
     }
 
     /**
-     * Set <code>periodAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param periodAttr the new value
+     * @param wildcardContentAttr the new value
      * @return <code>Attachments</code> instance
      */
-    public Attachments periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public Attachments wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 //Override all attributes methods to be conformant with DSL approach
@@ -615,17 +615,17 @@ public class Attachments extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
         attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
-        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }
 

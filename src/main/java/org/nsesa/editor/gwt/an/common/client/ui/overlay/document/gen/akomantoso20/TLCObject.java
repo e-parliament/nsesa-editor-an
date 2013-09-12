@@ -61,10 +61,10 @@ public class TLCObject extends ReferenceTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public TLCObject(IDSimpleType idAttr, AnyURISimpleType hrefAttr, StringSimpleType showAsAttr) {
+    public TLCObject(AnyURISimpleType hrefAttr, IDSimpleType idAttr, StringSimpleType showAsAttr) {
         this();
-        setIdAttr(idAttr);
         setHrefAttr(hrefAttr);
+        setIdAttr(idAttr);
         setShowAsAttr(showAsAttr);
     }
 
@@ -79,28 +79,6 @@ public class TLCObject extends ReferenceTypeComplexType {
 // FIELDS ------------------
 
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> TLCObject</code> instance
-     */
-    public TLCObject wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> TLCObject</code> instance
-     */
-    public TLCObject idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
 
     /**
      * Set <code>evolvingIdAttr</code> property in DSL way
@@ -125,13 +103,13 @@ public class TLCObject extends ReferenceTypeComplexType {
     }
 
     /**
-     * Set <code>showAsAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param showAsAttr new value
+     * @param idAttr new value
      * @return <code> TLCObject</code> instance
      */
-    public TLCObject showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
+    public TLCObject idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 
@@ -143,6 +121,28 @@ public class TLCObject extends ReferenceTypeComplexType {
      */
     public TLCObject shortFormAttr(final StringSimpleType shortFormAttr) {
         setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property in DSL way
+     *
+     * @param showAsAttr new value
+     * @return <code> TLCObject</code> instance
+     */
+    public TLCObject showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> TLCObject</code> instance
+     */
+    public TLCObject wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

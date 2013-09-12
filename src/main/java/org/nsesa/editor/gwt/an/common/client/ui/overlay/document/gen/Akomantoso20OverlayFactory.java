@@ -31,6 +31,7 @@ import java.util.logging.Logger;
 public class Akomantoso20OverlayFactory extends DefaultOverlayFactory {
 
     private final static Logger LOG = Logger.getLogger(Akomantoso20OverlayFactory.class.getName());
+
     /**
      * the namespace URI of the overlay factory *
      */
@@ -640,7 +641,7 @@ public class Akomantoso20OverlayFactory extends DefaultOverlayFactory {
         } else if ("identification".equalsIgnoreCase(nodeName)) {
             return new Identification(element);
         }
-// nothing found
+        // nothing found
         LOG.warning("Could not find overlay element (nodename: " + nodeName + " in namespace URI '" + namespaceURI + "')");
         return null;
     }

@@ -103,13 +103,13 @@ public class Speech extends SpeechTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>byAttr</code> property in DSL way
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @param byAttr new value
+     * @param alternativeToAttr new value
      * @return <code> Speech</code> instance
      */
-    public Speech byAttr(final AnyURISimpleType byAttr) {
-        setByAttr(byAttr);
+    public Speech alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
@@ -125,13 +125,24 @@ public class Speech extends SpeechTypeComplexType {
     }
 
     /**
-     * Set <code>startTimeAttr</code> property in DSL way
+     * Set <code>byAttr</code> property in DSL way
      *
-     * @param startTimeAttr new value
+     * @param byAttr new value
      * @return <code> Speech</code> instance
      */
-    public Speech startTimeAttr(final DateTimeSimpleType startTimeAttr) {
-        setStartTimeAttr(startTimeAttr);
+    public Speech byAttr(final AnyURISimpleType byAttr) {
+        setByAttr(byAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Speech</code> instance
+     */
+    public Speech classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
         return this;
     }
 
@@ -147,68 +158,13 @@ public class Speech extends SpeechTypeComplexType {
     }
 
     /**
-     * Set <code>toAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param toAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> Speech</code> instance
      */
-    public Speech toAttr(final AnyURISimpleType toAttr) {
-        setToAttr(toAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr new value
-     * @return <code> Speech</code> instance
-     */
-    public Speech statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Speech</code> instance
-     */
-    public Speech wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> Speech</code> instance
-     */
-    public Speech langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> Speech</code> instance
-     */
-    public Speech alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> Speech</code> instance
-     */
-    public Speech refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Speech evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -224,24 +180,57 @@ public class Speech extends SpeechTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>langAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param langAttr new value
      * @return <code> Speech</code> instance
      */
-    public Speech evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public Speech langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
         return this;
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param periodAttr new value
      * @return <code> Speech</code> instance
      */
-    public Speech classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public Speech periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Speech</code> instance
+     */
+    public Speech refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>startTimeAttr</code> property in DSL way
+     *
+     * @param startTimeAttr new value
+     * @return <code> Speech</code> instance
+     */
+    public Speech startTimeAttr(final DateTimeSimpleType startTimeAttr) {
+        setStartTimeAttr(startTimeAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> Speech</code> instance
+     */
+    public Speech statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -268,13 +257,24 @@ public class Speech extends SpeechTypeComplexType {
     }
 
     /**
-     * Set <code>periodAttr</code> property in DSL way
+     * Set <code>toAttr</code> property in DSL way
      *
-     * @param periodAttr new value
+     * @param toAttr new value
      * @return <code> Speech</code> instance
      */
-    public Speech periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public Speech toAttr(final AnyURISimpleType toAttr) {
+        setToAttr(toAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Speech</code> instance
+     */
+    public Speech wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

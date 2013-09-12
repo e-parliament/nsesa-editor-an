@@ -73,52 +73,52 @@ public class Img extends MarkeroptComplexType {
     }
 
     // FIELDS ------------------
-    private IntegerSimpleType widthAttr;
+    private StringSimpleType altAttr;
     private IntegerSimpleType heightAttr;
     private AnyURISimpleType srcAttr;
-    private StringSimpleType altAttr;
+    private IntegerSimpleType widthAttr;
 
     /**
-     * Return <code>widthAttr</code> property
+     * Return <code>altAttr</code> property
      *
-     * @return widthAttr
+     * @return altAttr
      */
-    public IntegerSimpleType getWidthAttr() {
-        if (widthAttr == null) {
-            widthAttr = new IntegerSimpleType();
-            widthAttr.setValue(getElement().getAttribute("width"));
+    public StringSimpleType getAltAttr() {
+        if (altAttr == null) {
+            altAttr = new StringSimpleType();
+            altAttr.setValue(getElement().getAttribute("alt"));
         }
 
-        return widthAttr;
+        return altAttr;
     }
 
     /**
-     * Return <code>widthAttr</code> property in DSL way
+     * Return <code>altAttr</code> property in DSL way
      *
-     * @return widthAttr
+     * @return altAttr
      */
-    public IntegerSimpleType widthAttr() {
-        return getWidthAttr();
+    public StringSimpleType altAttr() {
+        return getAltAttr();
     }
 
     /**
-     * Set <code>widthAttr</code> property
+     * Set <code>altAttr</code> property
      *
-     * @param widthAttr the new value
+     * @param altAttr the new value
      */
-    public void setWidthAttr(final IntegerSimpleType widthAttr) {
-        this.widthAttr = widthAttr;
-        getElement().setAttribute("width", widthAttr.getValue());
+    public void setAltAttr(final StringSimpleType altAttr) {
+        this.altAttr = altAttr;
+        getElement().setAttribute("alt", altAttr.getValue());
     }
 
     /**
-     * Set <code>widthAttr</code> property in DSL way
+     * Set <code>altAttr</code> property in DSL way
      *
-     * @param widthAttr the new value
+     * @param altAttr the new value
      * @return <code>Img</code> instance
      */
-    public Img widthAttr(final IntegerSimpleType widthAttr) {
-        setWidthAttr(widthAttr);
+    public Img altAttr(final StringSimpleType altAttr) {
+        setAltAttr(altAttr);
         return this;
     }
 
@@ -211,82 +211,49 @@ public class Img extends MarkeroptComplexType {
     }
 
     /**
-     * Return <code>altAttr</code> property
+     * Return <code>widthAttr</code> property
      *
-     * @return altAttr
+     * @return widthAttr
      */
-    public StringSimpleType getAltAttr() {
-        if (altAttr == null) {
-            altAttr = new StringSimpleType();
-            altAttr.setValue(getElement().getAttribute("alt"));
+    public IntegerSimpleType getWidthAttr() {
+        if (widthAttr == null) {
+            widthAttr = new IntegerSimpleType();
+            widthAttr.setValue(getElement().getAttribute("width"));
         }
 
-        return altAttr;
+        return widthAttr;
     }
 
     /**
-     * Return <code>altAttr</code> property in DSL way
+     * Return <code>widthAttr</code> property in DSL way
      *
-     * @return altAttr
+     * @return widthAttr
      */
-    public StringSimpleType altAttr() {
-        return getAltAttr();
+    public IntegerSimpleType widthAttr() {
+        return getWidthAttr();
     }
 
     /**
-     * Set <code>altAttr</code> property
+     * Set <code>widthAttr</code> property
      *
-     * @param altAttr the new value
+     * @param widthAttr the new value
      */
-    public void setAltAttr(final StringSimpleType altAttr) {
-        this.altAttr = altAttr;
-        getElement().setAttribute("alt", altAttr.getValue());
+    public void setWidthAttr(final IntegerSimpleType widthAttr) {
+        this.widthAttr = widthAttr;
+        getElement().setAttribute("width", widthAttr.getValue());
     }
 
     /**
-     * Set <code>altAttr</code> property in DSL way
+     * Set <code>widthAttr</code> property in DSL way
      *
-     * @param altAttr the new value
+     * @param widthAttr the new value
      * @return <code>Img</code> instance
      */
-    public Img altAttr(final StringSimpleType altAttr) {
-        setAltAttr(altAttr);
+    public Img widthAttr(final IntegerSimpleType widthAttr) {
+        setWidthAttr(widthAttr);
         return this;
     }
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr new value
-     * @return <code> Img</code> instance
-     */
-    public Img statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Img</code> instance
-     */
-    public Img wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> Img</code> instance
-     */
-    public Img langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
 
     /**
      * Set <code>alternativeToAttr</code> property in DSL way
@@ -300,24 +267,13 @@ public class Img extends MarkeroptComplexType {
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>classAttr</code> property in DSL way
      *
-     * @param refersToAttr new value
+     * @param classAttr new value
      * @return <code> Img</code> instance
      */
-    public Img refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Img</code> instance
-     */
-    public Img idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
+    public Img classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
         return this;
     }
 
@@ -333,13 +289,57 @@ public class Img extends MarkeroptComplexType {
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param idAttr new value
      * @return <code> Img</code> instance
      */
-    public Img classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public Img idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> Img</code> instance
+     */
+    public Img langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Img</code> instance
+     */
+    public Img periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Img</code> instance
+     */
+    public Img refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> Img</code> instance
+     */
+    public Img statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -366,13 +366,13 @@ public class Img extends MarkeroptComplexType {
     }
 
     /**
-     * Set <code>periodAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param periodAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> Img</code> instance
      */
-    public Img periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public Img wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -390,10 +390,10 @@ public class Img extends MarkeroptComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("width", getWidthAttr() != null ? getWidthAttr().getValue() : null);
+        attrs.put("alt", getAltAttr() != null ? getAltAttr().getValue() : null);
         attrs.put("height", getHeightAttr() != null ? getHeightAttr().getValue() : null);
         attrs.put("src", getSrcAttr() != null ? getSrcAttr().getValue() : null);
-        attrs.put("alt", getAltAttr() != null ? getAltAttr().getValue() : null);
+        attrs.put("width", getWidthAttr() != null ? getWidthAttr().getValue() : null);
         return attrs;
     }
 

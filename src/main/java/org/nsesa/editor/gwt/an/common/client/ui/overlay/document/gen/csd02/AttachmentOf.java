@@ -61,11 +61,11 @@ public class AttachmentOf extends ReferenceTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public AttachmentOf(StringSimpleType showAsAttr, AnyURISimpleType hrefAttr, IDSimpleType idAttr) {
+    public AttachmentOf(IDSimpleType idAttr, AnyURISimpleType hrefAttr, StringSimpleType showAsAttr) {
         this();
-        setShowAsAttr(showAsAttr);
-        setHrefAttr(hrefAttr);
         setIdAttr(idAttr);
+        setHrefAttr(hrefAttr);
+        setShowAsAttr(showAsAttr);
     }
 
 
@@ -125,50 +125,6 @@ public class AttachmentOf extends ReferenceTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>showAsAttr</code> property in DSL way
-     *
-     * @param showAsAttr new value
-     * @return <code> AttachmentOf</code> instance
-     */
-    public AttachmentOf showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>shortFormAttr</code> property in DSL way
-     *
-     * @param shortFormAttr new value
-     * @return <code> AttachmentOf</code> instance
-     */
-    public AttachmentOf shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> AttachmentOf</code> instance
-     */
-    public AttachmentOf hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> AttachmentOf</code> instance
-     */
-    public AttachmentOf wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -187,6 +143,50 @@ public class AttachmentOf extends ReferenceTypeComplexType {
      */
     public AttachmentOf evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> AttachmentOf</code> instance
+     */
+    public AttachmentOf wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> AttachmentOf</code> instance
+     */
+    public AttachmentOf hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property in DSL way
+     *
+     * @param showAsAttr new value
+     * @return <code> AttachmentOf</code> instance
+     */
+    public AttachmentOf showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>shortFormAttr</code> property in DSL way
+     *
+     * @param shortFormAttr new value
+     * @return <code> AttachmentOf</code> instance
+     */
+    public AttachmentOf shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
         return this;
     }
 

@@ -61,10 +61,10 @@ public class AttachmentOf extends ReferenceTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public AttachmentOf(IDSimpleType idAttr, AnyURISimpleType hrefAttr, StringSimpleType showAsAttr) {
+    public AttachmentOf(AnyURISimpleType hrefAttr, IDSimpleType idAttr, StringSimpleType showAsAttr) {
         this();
-        setIdAttr(idAttr);
         setHrefAttr(hrefAttr);
+        setIdAttr(idAttr);
         setShowAsAttr(showAsAttr);
     }
 
@@ -125,28 +125,6 @@ public class AttachmentOf extends ReferenceTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> AttachmentOf</code> instance
-     */
-    public AttachmentOf wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> AttachmentOf</code> instance
-     */
-    public AttachmentOf idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
      * Set <code>evolvingIdAttr</code> property in DSL way
      *
      * @param evolvingIdAttr new value
@@ -169,13 +147,13 @@ public class AttachmentOf extends ReferenceTypeComplexType {
     }
 
     /**
-     * Set <code>showAsAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param showAsAttr new value
+     * @param idAttr new value
      * @return <code> AttachmentOf</code> instance
      */
-    public AttachmentOf showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
+    public AttachmentOf idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 
@@ -187,6 +165,28 @@ public class AttachmentOf extends ReferenceTypeComplexType {
      */
     public AttachmentOf shortFormAttr(final StringSimpleType shortFormAttr) {
         setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property in DSL way
+     *
+     * @param showAsAttr new value
+     * @return <code> AttachmentOf</code> instance
+     */
+    public AttachmentOf showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> AttachmentOf</code> instance
+     */
+    public AttachmentOf wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

@@ -58,10 +58,10 @@ public class Publication extends MetaoptComplexType {
     /**
      * Constructor with required attributes
      */
-    public Publication(StringSimpleType nameAttr, StringSimpleType showAsAttr, DateSimpleType dateAttr) {
+    public Publication(StringSimpleType showAsAttr, StringSimpleType nameAttr, DateSimpleType dateAttr) {
         this();
-        setNameAttr(nameAttr);
         setShowAsAttr(showAsAttr);
+        setNameAttr(nameAttr);
         setDateAttr(dateAttr);
     }
 
@@ -74,57 +74,13 @@ public class Publication extends MetaoptComplexType {
     }
 
     // FIELDS ------------------
-    private StringSimpleType nameAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
+    private StringSimpleType numberAttr;
+    private StringSimpleType nameAttr;
+    private AnyURISimpleType refersToAttr;
     private DateSimpleType dateAttr;
     private TimeSimpleType timeAttr;
-    private StringSimpleType numberAttr;
-    private AnyURISimpleType refersToAttr;
-
-    /**
-     * Return <code>nameAttr</code> property
-     *
-     * @return nameAttr
-     */
-    public StringSimpleType getNameAttr() {
-        if (nameAttr == null) {
-            nameAttr = new StringSimpleType();
-            nameAttr.setValue(getElement().getAttribute("name"));
-        }
-
-        return nameAttr;
-    }
-
-    /**
-     * Return <code>nameAttr</code> property in DSL way
-     *
-     * @return nameAttr
-     */
-    public StringSimpleType nameAttr() {
-        return getNameAttr();
-    }
-
-    /**
-     * Set <code>nameAttr</code> property
-     *
-     * @param nameAttr the new value
-     */
-    public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-        getElement().setAttribute("name", nameAttr.getValue());
-    }
-
-    /**
-     * Set <code>nameAttr</code> property in DSL way
-     *
-     * @param nameAttr the new value
-     * @return <code>Publication</code> instance
-     */
-    public Publication nameAttr(final StringSimpleType nameAttr) {
-        setNameAttr(nameAttr);
-        return this;
-    }
 
     /**
      * Return <code>showAsAttr</code> property
@@ -215,6 +171,138 @@ public class Publication extends MetaoptComplexType {
     }
 
     /**
+     * Return <code>numberAttr</code> property
+     *
+     * @return numberAttr
+     */
+    public StringSimpleType getNumberAttr() {
+        if (numberAttr == null) {
+            numberAttr = new StringSimpleType();
+            numberAttr.setValue(getElement().getAttribute("number"));
+        }
+
+        return numberAttr;
+    }
+
+    /**
+     * Return <code>numberAttr</code> property in DSL way
+     *
+     * @return numberAttr
+     */
+    public StringSimpleType numberAttr() {
+        return getNumberAttr();
+    }
+
+    /**
+     * Set <code>numberAttr</code> property
+     *
+     * @param numberAttr the new value
+     */
+    public void setNumberAttr(final StringSimpleType numberAttr) {
+        this.numberAttr = numberAttr;
+        getElement().setAttribute("number", numberAttr.getValue());
+    }
+
+    /**
+     * Set <code>numberAttr</code> property in DSL way
+     *
+     * @param numberAttr the new value
+     * @return <code>Publication</code> instance
+     */
+    public Publication numberAttr(final StringSimpleType numberAttr) {
+        setNumberAttr(numberAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>nameAttr</code> property
+     *
+     * @return nameAttr
+     */
+    public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+            nameAttr = new StringSimpleType();
+            nameAttr.setValue(getElement().getAttribute("name"));
+        }
+
+        return nameAttr;
+    }
+
+    /**
+     * Return <code>nameAttr</code> property in DSL way
+     *
+     * @return nameAttr
+     */
+    public StringSimpleType nameAttr() {
+        return getNameAttr();
+    }
+
+    /**
+     * Set <code>nameAttr</code> property
+     *
+     * @param nameAttr the new value
+     */
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+        getElement().setAttribute("name", nameAttr.getValue());
+    }
+
+    /**
+     * Set <code>nameAttr</code> property in DSL way
+     *
+     * @param nameAttr the new value
+     * @return <code>Publication</code> instance
+     */
+    public Publication nameAttr(final StringSimpleType nameAttr) {
+        setNameAttr(nameAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property in DSL way
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property
+     *
+     * @param refersToAttr the new value
+     */
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr the new value
+     * @return <code>Publication</code> instance
+     */
+    public Publication refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
      * Return <code>dateAttr</code> property
      *
      * @return dateAttr
@@ -301,94 +389,6 @@ public class Publication extends MetaoptComplexType {
         setTimeAttr(timeAttr);
         return this;
     }
-
-    /**
-     * Return <code>numberAttr</code> property
-     *
-     * @return numberAttr
-     */
-    public StringSimpleType getNumberAttr() {
-        if (numberAttr == null) {
-            numberAttr = new StringSimpleType();
-            numberAttr.setValue(getElement().getAttribute("number"));
-        }
-
-        return numberAttr;
-    }
-
-    /**
-     * Return <code>numberAttr</code> property in DSL way
-     *
-     * @return numberAttr
-     */
-    public StringSimpleType numberAttr() {
-        return getNumberAttr();
-    }
-
-    /**
-     * Set <code>numberAttr</code> property
-     *
-     * @param numberAttr the new value
-     */
-    public void setNumberAttr(final StringSimpleType numberAttr) {
-        this.numberAttr = numberAttr;
-        getElement().setAttribute("number", numberAttr.getValue());
-    }
-
-    /**
-     * Set <code>numberAttr</code> property in DSL way
-     *
-     * @param numberAttr the new value
-     * @return <code>Publication</code> instance
-     */
-    public Publication numberAttr(final StringSimpleType numberAttr) {
-        setNumberAttr(numberAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>refersToAttr</code> property
-     *
-     * @return refersToAttr
-     */
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-    }
-
-    /**
-     * Return <code>refersToAttr</code> property in DSL way
-     *
-     * @return refersToAttr
-     */
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property
-     *
-     * @param refersToAttr the new value
-     */
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr the new value
-     * @return <code>Publication</code> instance
-     */
-    public Publication refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
@@ -438,13 +438,13 @@ public class Publication extends MetaoptComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("number", getNumberAttr() != null ? getNumberAttr().getValue() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("time", getTimeAttr() != null ? getTimeAttr().getValue() : null);
-        attrs.put("number", getNumberAttr() != null ? getNumberAttr().getValue() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         return attrs;
     }
 

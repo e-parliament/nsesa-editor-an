@@ -71,143 +71,55 @@ public class ModificationTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private BooleanSimpleType exclusionAttr;
-    private BooleanSimpleType incompleteAttr;
-    private String wildcardContentAttr;
-    private AnyURISimpleType refersToAttr;
     private StatusTypeSimpleType statusAttr;
+    private AnyURISimpleType refersToAttr;
+    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private BooleanSimpleType exclusionAttr;
+    private BooleanSimpleType incompleteAttr;
     private AnyURISimpleType periodAttr;
 
     /**
-     * Return <code>exclusionAttr</code> property
+     * Return <code>statusAttr</code> property
      *
-     * @return exclusionAttr
+     * @return statusAttr
      */
-    public BooleanSimpleType getExclusionAttr() {
-        if (exclusionAttr == null) {
-            exclusionAttr = new BooleanSimpleType();
-            exclusionAttr.setValue(getElement().getAttribute("exclusion"));
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
         }
 
-        return exclusionAttr;
+        return statusAttr;
     }
 
     /**
-     * Return <code>exclusionAttr</code> property in DSL way
+     * Return <code>statusAttr</code> property in DSL way
      *
-     * @return exclusionAttr
+     * @return statusAttr
      */
-    public BooleanSimpleType exclusionAttr() {
-        return getExclusionAttr();
+    public StatusTypeSimpleType statusAttr() {
+        return getStatusAttr();
     }
 
     /**
-     * Set <code>exclusionAttr</code> property
+     * Set <code>statusAttr</code> property
      *
-     * @param exclusionAttr the new value
+     * @param statusAttr the new value
      */
-    public void setExclusionAttr(final BooleanSimpleType exclusionAttr) {
-        this.exclusionAttr = exclusionAttr;
-        getElement().setAttribute("exclusion", exclusionAttr.getValue());
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status", statusAttr.value());
     }
 
     /**
-     * Set <code>exclusionAttr</code> property in DSL way
+     * Set <code>statusAttr</code> property in DSL way
      *
-     * @param exclusionAttr the new value
+     * @param statusAttr the new value
      * @return <code>ModificationTypeComplexType</code> instance
      */
-    public ModificationTypeComplexType exclusionAttr(final BooleanSimpleType exclusionAttr) {
-        setExclusionAttr(exclusionAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>incompleteAttr</code> property
-     *
-     * @return incompleteAttr
-     */
-    public BooleanSimpleType getIncompleteAttr() {
-        if (incompleteAttr == null) {
-            incompleteAttr = new BooleanSimpleType();
-            incompleteAttr.setValue(getElement().getAttribute("incomplete"));
-        }
-
-        return incompleteAttr;
-    }
-
-    /**
-     * Return <code>incompleteAttr</code> property in DSL way
-     *
-     * @return incompleteAttr
-     */
-    public BooleanSimpleType incompleteAttr() {
-        return getIncompleteAttr();
-    }
-
-    /**
-     * Set <code>incompleteAttr</code> property
-     *
-     * @param incompleteAttr the new value
-     */
-    public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
-        this.incompleteAttr = incompleteAttr;
-        getElement().setAttribute("incomplete", incompleteAttr.getValue());
-    }
-
-    /**
-     * Set <code>incompleteAttr</code> property in DSL way
-     *
-     * @param incompleteAttr the new value
-     * @return <code>ModificationTypeComplexType</code> instance
-     */
-    public ModificationTypeComplexType incompleteAttr(final BooleanSimpleType incompleteAttr) {
-        setIncompleteAttr(incompleteAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>wildcardContentAttr</code> property
-     *
-     * @return wildcardContentAttr
-     */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @return wildcardContentAttr
-     */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property
-     *
-     * @param wildcardContentAttr the new value
-     */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr the new value
-     * @return <code>ModificationTypeComplexType</code> instance
-     */
-    public ModificationTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public ModificationTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -256,45 +168,45 @@ public class ModificationTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>statusAttr</code> property
+     * Return <code>wildcardContentAttr</code> property
      *
-     * @return statusAttr
+     * @return wildcardContentAttr
      */
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return statusAttr;
+        return wildcardContentAttr;
     }
 
     /**
-     * Return <code>statusAttr</code> property in DSL way
+     * Return <code>wildcardContentAttr</code> property in DSL way
      *
-     * @return statusAttr
+     * @return wildcardContentAttr
      */
-    public StatusTypeSimpleType statusAttr() {
-        return getStatusAttr();
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
     }
 
     /**
-     * Set <code>statusAttr</code> property
+     * Set <code>wildcardContentAttr</code> property
      *
-     * @param statusAttr the new value
+     * @param wildcardContentAttr the new value
      */
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status", statusAttr.value());
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param statusAttr the new value
+     * @param wildcardContentAttr the new value
      * @return <code>ModificationTypeComplexType</code> instance
      */
-    public ModificationTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public ModificationTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -383,6 +295,94 @@ public class ModificationTypeComplexType extends OverlayWidgetImpl {
      */
     public ModificationTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>exclusionAttr</code> property
+     *
+     * @return exclusionAttr
+     */
+    public BooleanSimpleType getExclusionAttr() {
+        if (exclusionAttr == null) {
+            exclusionAttr = new BooleanSimpleType();
+            exclusionAttr.setValue(getElement().getAttribute("exclusion"));
+        }
+
+        return exclusionAttr;
+    }
+
+    /**
+     * Return <code>exclusionAttr</code> property in DSL way
+     *
+     * @return exclusionAttr
+     */
+    public BooleanSimpleType exclusionAttr() {
+        return getExclusionAttr();
+    }
+
+    /**
+     * Set <code>exclusionAttr</code> property
+     *
+     * @param exclusionAttr the new value
+     */
+    public void setExclusionAttr(final BooleanSimpleType exclusionAttr) {
+        this.exclusionAttr = exclusionAttr;
+        getElement().setAttribute("exclusion", exclusionAttr.getValue());
+    }
+
+    /**
+     * Set <code>exclusionAttr</code> property in DSL way
+     *
+     * @param exclusionAttr the new value
+     * @return <code>ModificationTypeComplexType</code> instance
+     */
+    public ModificationTypeComplexType exclusionAttr(final BooleanSimpleType exclusionAttr) {
+        setExclusionAttr(exclusionAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>incompleteAttr</code> property
+     *
+     * @return incompleteAttr
+     */
+    public BooleanSimpleType getIncompleteAttr() {
+        if (incompleteAttr == null) {
+            incompleteAttr = new BooleanSimpleType();
+            incompleteAttr.setValue(getElement().getAttribute("incomplete"));
+        }
+
+        return incompleteAttr;
+    }
+
+    /**
+     * Return <code>incompleteAttr</code> property in DSL way
+     *
+     * @return incompleteAttr
+     */
+    public BooleanSimpleType incompleteAttr() {
+        return getIncompleteAttr();
+    }
+
+    /**
+     * Set <code>incompleteAttr</code> property
+     *
+     * @param incompleteAttr the new value
+     */
+    public void setIncompleteAttr(final BooleanSimpleType incompleteAttr) {
+        this.incompleteAttr = incompleteAttr;
+        getElement().setAttribute("incomplete", incompleteAttr.getValue());
+    }
+
+    /**
+     * Set <code>incompleteAttr</code> property in DSL way
+     *
+     * @param incompleteAttr the new value
+     * @return <code>ModificationTypeComplexType</code> instance
+     */
+    public ModificationTypeComplexType incompleteAttr(final BooleanSimpleType incompleteAttr) {
+        setIncompleteAttr(incompleteAttr);
         return this;
     }
 
@@ -678,13 +678,13 @@ public class ModificationTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("exclusion", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
-        attrs.put("incomplete", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("exclusion", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
+        attrs.put("incomplete", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }

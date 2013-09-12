@@ -83,28 +83,6 @@ public class QuorumVerification extends ParliamentaryAnalysisTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> QuorumVerification</code> instance
-     */
-    public QuorumVerification wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> QuorumVerification</code> instance
-     */
-    public QuorumVerification idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
      * Set <code>evolvingIdAttr</code> property in DSL way
      *
      * @param evolvingIdAttr new value
@@ -112,17 +90,6 @@ public class QuorumVerification extends ParliamentaryAnalysisTypeComplexType {
      */
     public QuorumVerification evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> QuorumVerification</code> instance
-     */
-    public QuorumVerification refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -138,6 +105,17 @@ public class QuorumVerification extends ParliamentaryAnalysisTypeComplexType {
     }
 
     /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> QuorumVerification</code> instance
+     */
+    public QuorumVerification idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
      * Set <code>outcomeAttr</code> property in DSL way
      *
      * @param outcomeAttr new value
@@ -145,6 +123,28 @@ public class QuorumVerification extends ParliamentaryAnalysisTypeComplexType {
      */
     public QuorumVerification outcomeAttr(final AnyURISimpleType outcomeAttr) {
         setOutcomeAttr(outcomeAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> QuorumVerification</code> instance
+     */
+    public QuorumVerification refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> QuorumVerification</code> instance
+     */
+    public QuorumVerification wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

@@ -18,7 +18,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
  */
 public enum VersionTypeSimpleType {
 
-    // ENUM VALUES ------------------
+// ENUM VALUES ------------------
 
     ORIGINALVERSION("originalVersion"),
     SINGLEVERSION("singleVersion"),

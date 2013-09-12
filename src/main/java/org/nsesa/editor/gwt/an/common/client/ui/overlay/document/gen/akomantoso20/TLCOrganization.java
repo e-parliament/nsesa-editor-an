@@ -61,10 +61,10 @@ public class TLCOrganization extends ReferenceTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public TLCOrganization(IDSimpleType idAttr, AnyURISimpleType hrefAttr, StringSimpleType showAsAttr) {
+    public TLCOrganization(AnyURISimpleType hrefAttr, IDSimpleType idAttr, StringSimpleType showAsAttr) {
         this();
-        setIdAttr(idAttr);
         setHrefAttr(hrefAttr);
+        setIdAttr(idAttr);
         setShowAsAttr(showAsAttr);
     }
 
@@ -79,28 +79,6 @@ public class TLCOrganization extends ReferenceTypeComplexType {
 // FIELDS ------------------
 
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> TLCOrganization</code> instance
-     */
-    public TLCOrganization wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> TLCOrganization</code> instance
-     */
-    public TLCOrganization idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
 
     /**
      * Set <code>evolvingIdAttr</code> property in DSL way
@@ -125,13 +103,13 @@ public class TLCOrganization extends ReferenceTypeComplexType {
     }
 
     /**
-     * Set <code>showAsAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param showAsAttr new value
+     * @param idAttr new value
      * @return <code> TLCOrganization</code> instance
      */
-    public TLCOrganization showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
+    public TLCOrganization idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 
@@ -143,6 +121,28 @@ public class TLCOrganization extends ReferenceTypeComplexType {
      */
     public TLCOrganization shortFormAttr(final StringSimpleType shortFormAttr) {
         setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property in DSL way
+     *
+     * @param showAsAttr new value
+     * @return <code> TLCOrganization</code> instance
+     */
+    public TLCOrganization showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> TLCOrganization</code> instance
+     */
+    public TLCOrganization wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

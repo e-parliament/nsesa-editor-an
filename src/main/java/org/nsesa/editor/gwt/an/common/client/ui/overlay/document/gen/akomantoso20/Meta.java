@@ -82,69 +82,37 @@ public class Meta extends OverlayWidgetImpl {
 // FIELDS ------------------
 
     /**
-     * Add <code>Identification</code> property in the list of properties
+     * Return <code>java.util.List<Analysis></code> property
      *
      * @return The property as unmodifiable list
      */
-    public Identification getIdentification() {
-        Identification result = null;
+    public java.util.List<Analysis> getAnalysises() {
+        java.util.List<Analysis> result = new ArrayList<Analysis>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Identification".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Identification) widget;
-                break;
+            if ("Analysis".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Analysis) widget);
             }
         }
-        return result;
+        return java.util.Collections.unmodifiableList(result);
     }
 
     /**
-     * Set <code>identificationElem</code> property in DSL way
-     *
-     * @param identificationElem new value
-     * @return <code>Identification</code> instance
-     */
-    public Identification setIdentification(Identification identificationElem) {
-        Identification result = getIdentification();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(identificationElem);
-
-        return identificationElem;
-    }
-
-    /**
-     * Add <code>Publication</code> property in the list of properties
+     * Return <code>java.util.List<Analysis></code> property in DSL way
      *
      * @return The property as unmodifiable list
      */
-    public Publication getPublication() {
-        Publication result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Publication".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Publication) widget;
-                break;
-            }
-        }
-        return result;
+    public java.util.List<Analysis> getAnalysisList() {
+        return getAnalysises();
     }
 
     /**
-     * Set <code>publicationElem</code> property in DSL way
+     * Add <code>java.util.List<Analysis></code> property in the list of properties
      *
-     * @param publicationElem new value
-     * @return <code>Publication</code> instance
+     * @return The property as unmodifiable list
      */
-    public Publication setPublication(Publication publicationElem) {
-        Publication result = getPublication();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(publicationElem);
-
-        return publicationElem;
+    public Analysis addAnalysis(Analysis analysisElem) {
+        this.addOverlayWidget(analysisElem);
+        return analysisElem;
     }
 
     /**
@@ -182,6 +150,39 @@ public class Meta extends OverlayWidgetImpl {
     }
 
     /**
+     * Add <code>Identification</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Identification getIdentification() {
+        Identification result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Identification".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Identification) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>identificationElem</code> property in DSL way
+     *
+     * @param identificationElem new value
+     * @return <code>Identification</code> instance
+     */
+    public Identification setIdentification(Identification identificationElem) {
+        Identification result = getIdentification();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(identificationElem);
+
+        return identificationElem;
+    }
+
+    /**
      * Return <code>java.util.List<Lifecycle></code> property
      *
      * @return The property as unmodifiable list
@@ -213,142 +214,6 @@ public class Meta extends OverlayWidgetImpl {
     public Lifecycle addLifecycle(Lifecycle lifecycleElem) {
         this.addOverlayWidget(lifecycleElem);
         return lifecycleElem;
-    }
-
-    /**
-     * Return <code>java.util.List<Workflow></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Workflow> getWorkflows() {
-        java.util.List<Workflow> result = new ArrayList<Workflow>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Workflow".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Workflow) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Workflow></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Workflow> getWorkflowList() {
-        return getWorkflows();
-    }
-
-    /**
-     * Add <code>java.util.List<Workflow></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Workflow addWorkflow(Workflow workflowElem) {
-        this.addOverlayWidget(workflowElem);
-        return workflowElem;
-    }
-
-    /**
-     * Return <code>java.util.List<Analysis></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Analysis> getAnalysises() {
-        java.util.List<Analysis> result = new ArrayList<Analysis>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Analysis".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Analysis) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Analysis></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Analysis> getAnalysisList() {
-        return getAnalysises();
-    }
-
-    /**
-     * Add <code>java.util.List<Analysis></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Analysis addAnalysis(Analysis analysisElem) {
-        this.addOverlayWidget(analysisElem);
-        return analysisElem;
-    }
-
-    /**
-     * Return <code>java.util.List<TemporalData></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<TemporalData> getTemporalDatas() {
-        java.util.List<TemporalData> result = new ArrayList<TemporalData>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TemporalData".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((TemporalData) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<TemporalData></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<TemporalData> getTemporalDataList() {
-        return getTemporalDatas();
-    }
-
-    /**
-     * Add <code>java.util.List<TemporalData></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public TemporalData addTemporalData(TemporalData temporalDataElem) {
-        this.addOverlayWidget(temporalDataElem);
-        return temporalDataElem;
-    }
-
-    /**
-     * Return <code>java.util.List<References></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<References> getReferenceses() {
-        java.util.List<References> result = new ArrayList<References>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("References".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((References) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<References></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<References> getReferencesList() {
-        return getReferenceses();
-    }
-
-    /**
-     * Add <code>java.util.List<References></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public References addReferences(References referencesElem) {
-        this.addOverlayWidget(referencesElem);
-        return referencesElem;
     }
 
     /**
@@ -386,6 +251,40 @@ public class Meta extends OverlayWidgetImpl {
     }
 
     /**
+     * Return <code>java.util.List<Presentation></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Presentation> getPresentations() {
+        java.util.List<Presentation> result = new ArrayList<Presentation>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Presentation".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Presentation) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Presentation></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Presentation> getPresentationList() {
+        return getPresentations();
+    }
+
+    /**
+     * Add <code>java.util.List<Presentation></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Presentation addPresentation(Presentation presentationElem) {
+        this.addOverlayWidget(presentationElem);
+        return presentationElem;
+    }
+
+    /**
      * Return <code>java.util.List<Proprietary></code> property
      *
      * @return The property as unmodifiable list
@@ -420,37 +319,138 @@ public class Meta extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>java.util.List<Presentation></code> property
+     * Add <code>Publication</code> property in the list of properties
      *
      * @return The property as unmodifiable list
      */
-    public java.util.List<Presentation> getPresentations() {
-        java.util.List<Presentation> result = new ArrayList<Presentation>();
+    public Publication getPublication() {
+        Publication result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Presentation".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Presentation) widget);
+            if ("Publication".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Publication) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>publicationElem</code> property in DSL way
+     *
+     * @param publicationElem new value
+     * @return <code>Publication</code> instance
+     */
+    public Publication setPublication(Publication publicationElem) {
+        Publication result = getPublication();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(publicationElem);
+
+        return publicationElem;
+    }
+
+    /**
+     * Return <code>java.util.List<References></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<References> getReferenceses() {
+        java.util.List<References> result = new ArrayList<References>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("References".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((References) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
     /**
-     * Return <code>java.util.List<Presentation></code> property in DSL way
+     * Return <code>java.util.List<References></code> property in DSL way
      *
      * @return The property as unmodifiable list
      */
-    public java.util.List<Presentation> getPresentationList() {
-        return getPresentations();
+    public java.util.List<References> getReferencesList() {
+        return getReferenceses();
     }
 
     /**
-     * Add <code>java.util.List<Presentation></code> property in the list of properties
+     * Add <code>java.util.List<References></code> property in the list of properties
      *
      * @return The property as unmodifiable list
      */
-    public Presentation addPresentation(Presentation presentationElem) {
-        this.addOverlayWidget(presentationElem);
-        return presentationElem;
+    public References addReferences(References referencesElem) {
+        this.addOverlayWidget(referencesElem);
+        return referencesElem;
+    }
+
+    /**
+     * Return <code>java.util.List<TemporalData></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<TemporalData> getTemporalDatas() {
+        java.util.List<TemporalData> result = new ArrayList<TemporalData>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("TemporalData".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((TemporalData) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<TemporalData></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<TemporalData> getTemporalDataList() {
+        return getTemporalDatas();
+    }
+
+    /**
+     * Add <code>java.util.List<TemporalData></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public TemporalData addTemporalData(TemporalData temporalDataElem) {
+        this.addOverlayWidget(temporalDataElem);
+        return temporalDataElem;
+    }
+
+    /**
+     * Return <code>java.util.List<Workflow></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Workflow> getWorkflows() {
+        java.util.List<Workflow> result = new ArrayList<Workflow>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Workflow".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Workflow) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Workflow></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Workflow> getWorkflowList() {
+        return getWorkflows();
+    }
+
+    /**
+     * Add <code>java.util.List<Workflow></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Workflow addWorkflow(Workflow workflowElem) {
+        this.addOverlayWidget(workflowElem);
+        return workflowElem;
     }
 
 //Override all attributes methods to be conformant with DSL approach

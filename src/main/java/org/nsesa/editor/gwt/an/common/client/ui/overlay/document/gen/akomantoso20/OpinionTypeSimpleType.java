@@ -18,7 +18,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso
  */
 public enum OpinionTypeSimpleType {
 
-    // ENUM VALUES ------------------
+// ENUM VALUES ------------------
 
     DISSENTING("dissenting"),
     AGREEING("agreeing"),

@@ -18,7 +18,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
  */
 public enum LegalSystemModsSimpleType {
 
-    // ENUM VALUES ------------------
+// ENUM VALUES ------------------
 
     STATICREFERENCE("staticReference"),
     IMPLEMENTATION("implementation"),

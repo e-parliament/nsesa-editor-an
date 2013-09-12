@@ -80,46 +80,13 @@ public class ComponentRef extends SrcTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>altAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param altAttr new value
      * @return <code> ComponentRef</code> instance
      */
-    public ComponentRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>showAsAttr</code> property in DSL way
-     *
-     * @param showAsAttr new value
-     * @return <code> ComponentRef</code> instance
-     */
-    public ComponentRef showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>shortFormAttr</code> property in DSL way
-     *
-     * @param shortFormAttr new value
-     * @return <code> ComponentRef</code> instance
-     */
-    public ComponentRef shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> ComponentRef</code> instance
-     */
-    public ComponentRef idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
+    public ComponentRef altAttr(final StringSimpleType altAttr) {
+        setAltAttr(altAttr);
         return this;
     }
 
@@ -135,6 +102,39 @@ public class ComponentRef extends SrcTypeComplexType {
     }
 
     /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> ComponentRef</code> instance
+     */
+    public ComponentRef idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>shortFormAttr</code> property in DSL way
+     *
+     * @param shortFormAttr new value
+     * @return <code> ComponentRef</code> instance
+     */
+    public ComponentRef shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property in DSL way
+     *
+     * @param showAsAttr new value
+     * @return <code> ComponentRef</code> instance
+     */
+    public ComponentRef showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    /**
      * Set <code>srcAttr</code> property in DSL way
      *
      * @param srcAttr new value
@@ -146,13 +146,13 @@ public class ComponentRef extends SrcTypeComplexType {
     }
 
     /**
-     * Set <code>altAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param altAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> ComponentRef</code> instance
      */
-    public ComponentRef altAttr(final StringSimpleType altAttr) {
-        setAltAttr(altAttr);
+    public ComponentRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

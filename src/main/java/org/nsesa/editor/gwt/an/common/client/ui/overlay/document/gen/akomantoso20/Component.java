@@ -89,50 +89,315 @@ public class Component extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private String wildcardContentAttr;
-    private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private IDSimpleType idAttr;
+    private String wildcardContentAttr;
 
     /**
-     * Return <code>wildcardContentAttr</code> property
+     * Add <code>Act</code> property in the list of properties
      *
-     * @return wildcardContentAttr
+     * @return The property as unmodifiable list
      */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+    public Act getAct() {
+        Act result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Act".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Act) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>actElem</code> property in DSL way
+     *
+     * @param actElem new value
+     * @return <code>Act</code> instance
+     */
+    public Act setAct(Act actElem) {
+        Act result = getAct();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(actElem);
+
+        return actElem;
+    }
+
+    /**
+     * Add <code>Amendment</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Amendment getAmendment() {
+        Amendment result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Amendment".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Amendment) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>amendmentElem</code> property in DSL way
+     *
+     * @param amendmentElem new value
+     * @return <code>Amendment</code> instance
+     */
+    public Amendment setAmendment(Amendment amendmentElem) {
+        Amendment result = getAmendment();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(amendmentElem);
+
+        return amendmentElem;
+    }
+
+    /**
+     * Add <code>AmendmentList</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public AmendmentList getAmendmentList() {
+        AmendmentList result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("AmendmentList".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (AmendmentList) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>amendmentListElem</code> property in DSL way
+     *
+     * @param amendmentListElem new value
+     * @return <code>AmendmentList</code> instance
+     */
+    public AmendmentList setAmendmentList(AmendmentList amendmentListElem) {
+        AmendmentList result = getAmendmentList();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(amendmentListElem);
+
+        return amendmentListElem;
+    }
+
+    /**
+     * Add <code>Bill</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Bill getBill() {
+        Bill result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Bill".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Bill) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>billElem</code> property in DSL way
+     *
+     * @param billElem new value
+     * @return <code>Bill</code> instance
+     */
+    public Bill setBill(Bill billElem) {
+        Bill result = getBill();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(billElem);
+
+        return billElem;
+    }
+
+    /**
+     * Add <code>Debate</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Debate getDebate() {
+        Debate result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Debate".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Debate) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>debateElem</code> property in DSL way
+     *
+     * @param debateElem new value
+     * @return <code>Debate</code> instance
+     */
+    public Debate setDebate(Debate debateElem) {
+        Debate result = getDebate();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(debateElem);
+
+        return debateElem;
+    }
+
+    /**
+     * Add <code>DebateReport</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public DebateReport getDebateReport() {
+        DebateReport result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("DebateReport".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (DebateReport) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>debateReportElem</code> property in DSL way
+     *
+     * @param debateReportElem new value
+     * @return <code>DebateReport</code> instance
+     */
+    public DebateReport setDebateReport(DebateReport debateReportElem) {
+        DebateReport result = getDebateReport();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(debateReportElem);
+
+        return debateReportElem;
+    }
+
+    /**
+     * Add <code>Doc</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Doc getDoc() {
+        Doc result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Doc".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Doc) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>docElem</code> property in DSL way
+     *
+     * @param docElem new value
+     * @return <code>Doc</code> instance
+     */
+    public Doc setDoc(Doc docElem) {
+        Doc result = getDoc();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(docElem);
+
+        return docElem;
+    }
+
+    /**
+     * Add <code>DocumentCollection</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public DocumentCollection getDocumentCollection() {
+        DocumentCollection result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("DocumentCollection".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (DocumentCollection) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>documentCollectionElem</code> property in DSL way
+     *
+     * @param documentCollectionElem new value
+     * @return <code>DocumentCollection</code> instance
+     */
+    public DocumentCollection setDocumentCollection(DocumentCollection documentCollectionElem) {
+        DocumentCollection result = getDocumentCollection();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(documentCollectionElem);
+
+        return documentCollectionElem;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
         }
 
-        return wildcardContentAttr;
+        return evolvingIdAttr;
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
+     * Return <code>evolvingIdAttr</code> property in DSL way
      *
-     * @return wildcardContentAttr
+     * @return evolvingIdAttr
      */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property
+     * Set <code>evolvingIdAttr</code> property
      *
-     * @param wildcardContentAttr the new value
+     * @param evolvingIdAttr the new value
      */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr the new value
+     * @param evolvingIdAttr the new value
      * @return <code>Component</code> instance
      */
-    public Component wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Component evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -181,59 +446,15 @@ public class Component extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>evolvingIdAttr</code> property
-     *
-     * @return evolvingIdAttr
-     */
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-    }
-
-    /**
-     * Return <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @return evolvingIdAttr
-     */
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property
-     *
-     * @param evolvingIdAttr the new value
-     */
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr the new value
-     * @return <code>Component</code> instance
-     */
-    public Component evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Add <code>AmendmentList</code> property in the list of properties
+     * Add <code>Judgement</code> property in the list of properties
      *
      * @return The property as unmodifiable list
      */
-    public AmendmentList getAmendmentList() {
-        AmendmentList result = null;
+    public Judgement getJudgement() {
+        Judgement result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("AmendmentList".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (AmendmentList) widget;
+            if ("Judgement".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Judgement) widget;
                 break;
             }
         }
@@ -241,20 +462,20 @@ public class Component extends OverlayWidgetImpl {
     }
 
     /**
-     * Set <code>amendmentListElem</code> property in DSL way
+     * Set <code>judgementElem</code> property in DSL way
      *
-     * @param amendmentListElem new value
-     * @return <code>AmendmentList</code> instance
+     * @param judgementElem new value
+     * @return <code>Judgement</code> instance
      */
-    public AmendmentList setAmendmentList(AmendmentList amendmentListElem) {
-        AmendmentList result = getAmendmentList();
+    public Judgement setJudgement(Judgement judgementElem) {
+        Judgement result = getJudgement();
         // remove the child of the same type if exist
         if (result != null) {
             this.removeOverlayWidget(result);
         }
-        this.addOverlayWidget(amendmentListElem);
+        this.addOverlayWidget(judgementElem);
 
-        return amendmentListElem;
+        return judgementElem;
     }
 
     /**
@@ -291,267 +512,46 @@ public class Component extends OverlayWidgetImpl {
     }
 
     /**
-     * Add <code>DocumentCollection</code> property in the list of properties
+     * Return <code>wildcardContentAttr</code> property
      *
-     * @return The property as unmodifiable list
+     * @return wildcardContentAttr
      */
-    public DocumentCollection getDocumentCollection() {
-        DocumentCollection result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocumentCollection".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (DocumentCollection) widget;
-                break;
-            }
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
-        return result;
+
+        return wildcardContentAttr;
     }
 
     /**
-     * Set <code>documentCollectionElem</code> property in DSL way
+     * Return <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param documentCollectionElem new value
-     * @return <code>DocumentCollection</code> instance
+     * @return wildcardContentAttr
      */
-    public DocumentCollection setDocumentCollection(DocumentCollection documentCollectionElem) {
-        DocumentCollection result = getDocumentCollection();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(documentCollectionElem);
-
-        return documentCollectionElem;
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
     }
 
     /**
-     * Add <code>Act</code> property in the list of properties
+     * Set <code>wildcardContentAttr</code> property
      *
-     * @return The property as unmodifiable list
+     * @param wildcardContentAttr the new value
      */
-    public Act getAct() {
-        Act result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Act".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Act) widget;
-                break;
-            }
-        }
-        return result;
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
     }
 
     /**
-     * Set <code>actElem</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param actElem new value
-     * @return <code>Act</code> instance
+     * @param wildcardContentAttr the new value
+     * @return <code>Component</code> instance
      */
-    public Act setAct(Act actElem) {
-        Act result = getAct();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(actElem);
-
-        return actElem;
-    }
-
-    /**
-     * Add <code>Bill</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Bill getBill() {
-        Bill result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Bill".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Bill) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>billElem</code> property in DSL way
-     *
-     * @param billElem new value
-     * @return <code>Bill</code> instance
-     */
-    public Bill setBill(Bill billElem) {
-        Bill result = getBill();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(billElem);
-
-        return billElem;
-    }
-
-    /**
-     * Add <code>DebateReport</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public DebateReport getDebateReport() {
-        DebateReport result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DebateReport".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (DebateReport) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>debateReportElem</code> property in DSL way
-     *
-     * @param debateReportElem new value
-     * @return <code>DebateReport</code> instance
-     */
-    public DebateReport setDebateReport(DebateReport debateReportElem) {
-        DebateReport result = getDebateReport();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(debateReportElem);
-
-        return debateReportElem;
-    }
-
-    /**
-     * Add <code>Debate</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Debate getDebate() {
-        Debate result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Debate".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Debate) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>debateElem</code> property in DSL way
-     *
-     * @param debateElem new value
-     * @return <code>Debate</code> instance
-     */
-    public Debate setDebate(Debate debateElem) {
-        Debate result = getDebate();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(debateElem);
-
-        return debateElem;
-    }
-
-    /**
-     * Add <code>Amendment</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Amendment getAmendment() {
-        Amendment result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Amendment".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Amendment) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>amendmentElem</code> property in DSL way
-     *
-     * @param amendmentElem new value
-     * @return <code>Amendment</code> instance
-     */
-    public Amendment setAmendment(Amendment amendmentElem) {
-        Amendment result = getAmendment();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(amendmentElem);
-
-        return amendmentElem;
-    }
-
-    /**
-     * Add <code>Judgement</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Judgement getJudgement() {
-        Judgement result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Judgement".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Judgement) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>judgementElem</code> property in DSL way
-     *
-     * @param judgementElem new value
-     * @return <code>Judgement</code> instance
-     */
-    public Judgement setJudgement(Judgement judgementElem) {
-        Judgement result = getJudgement();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(judgementElem);
-
-        return judgementElem;
-    }
-
-    /**
-     * Add <code>Doc</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Doc getDoc() {
-        Doc result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Doc".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Doc) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>docElem</code> property in DSL way
-     *
-     * @param docElem new value
-     * @return <code>Doc</code> instance
-     */
-    public Doc setDoc(Doc docElem) {
-        Doc result = getDoc();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(docElem);
-
-        return docElem;
+    public Component wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
     }
 //Override all attributes methods to be conformant with DSL approach
 
@@ -569,9 +569,9 @@ public class Component extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }
 

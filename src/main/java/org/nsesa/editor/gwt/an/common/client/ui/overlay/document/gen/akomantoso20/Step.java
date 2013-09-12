@@ -80,8 +80,8 @@ public class Step extends AnyOtherTypeComplexType {
 
     // FIELDS ------------------
     private AnyURISimpleType actorAttr;
-    private DateSimpleType dateAttr;
     private AnyURISimpleType asAttr;
+    private DateSimpleType dateAttr;
     private AnyURISimpleType outcomeAttr;
 
     /**
@@ -129,50 +129,6 @@ public class Step extends AnyOtherTypeComplexType {
     }
 
     /**
-     * Return <code>dateAttr</code> property
-     *
-     * @return dateAttr
-     */
-    public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-            dateAttr = new DateSimpleType();
-            dateAttr.setValue(getElement().getAttribute("date"));
-        }
-
-        return dateAttr;
-    }
-
-    /**
-     * Return <code>dateAttr</code> property in DSL way
-     *
-     * @return dateAttr
-     */
-    public DateSimpleType dateAttr() {
-        return getDateAttr();
-    }
-
-    /**
-     * Set <code>dateAttr</code> property
-     *
-     * @param dateAttr the new value
-     */
-    public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-        getElement().setAttribute("date", dateAttr.getValue());
-    }
-
-    /**
-     * Set <code>dateAttr</code> property in DSL way
-     *
-     * @param dateAttr the new value
-     * @return <code>Step</code> instance
-     */
-    public Step dateAttr(final DateSimpleType dateAttr) {
-        setDateAttr(dateAttr);
-        return this;
-    }
-
-    /**
      * Return <code>asAttr</code> property
      *
      * @return asAttr
@@ -213,6 +169,50 @@ public class Step extends AnyOtherTypeComplexType {
      */
     public Step asAttr(final AnyURISimpleType asAttr) {
         setAsAttr(asAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>dateAttr</code> property
+     *
+     * @return dateAttr
+     */
+    public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(getElement().getAttribute("date"));
+        }
+
+        return dateAttr;
+    }
+
+    /**
+     * Return <code>dateAttr</code> property in DSL way
+     *
+     * @return dateAttr
+     */
+    public DateSimpleType dateAttr() {
+        return getDateAttr();
+    }
+
+    /**
+     * Set <code>dateAttr</code> property
+     *
+     * @param dateAttr the new value
+     */
+    public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+        getElement().setAttribute("date", dateAttr.getValue());
+    }
+
+    /**
+     * Set <code>dateAttr</code> property in DSL way
+     *
+     * @param dateAttr the new value
+     * @return <code>Step</code> instance
+     */
+    public Step dateAttr(final DateSimpleType dateAttr) {
+        setDateAttr(dateAttr);
         return this;
     }
 
@@ -262,13 +262,13 @@ public class Step extends AnyOtherTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> Step</code> instance
      */
-    public Step wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Step evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -295,13 +295,13 @@ public class Step extends AnyOtherTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> Step</code> instance
      */
-    public Step evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public Step wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -320,8 +320,8 @@ public class Step extends AnyOtherTypeComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         attrs.put("actor", getActorAttr() != null ? getActorAttr().getValue() : null);
-        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
         return attrs;
     }

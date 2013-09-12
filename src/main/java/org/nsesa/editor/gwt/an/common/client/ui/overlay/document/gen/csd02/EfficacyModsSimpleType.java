@@ -18,7 +18,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
  */
 public enum EfficacyModsSimpleType {
 
-    // ENUM VALUES ------------------
+// ENUM VALUES ------------------
 
     ENTRYINTOEFFICACY("entryIntoEfficacy"),
     ENDOFEFFICACY("endOfEfficacy"),

@@ -61,11 +61,11 @@ public class DocumentRef extends LinkTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public DocumentRef(StringSimpleType showAsAttr, AnyURISimpleType hrefAttr, IDSimpleType idAttr) {
+    public DocumentRef(IDSimpleType idAttr, StringSimpleType showAsAttr, AnyURISimpleType hrefAttr) {
         this();
+        setIdAttr(idAttr);
         setShowAsAttr(showAsAttr);
         setHrefAttr(hrefAttr);
-        setIdAttr(idAttr);
     }
 
 
@@ -79,39 +79,6 @@ public class DocumentRef extends LinkTypeComplexType {
 // FIELDS ------------------
 
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>showAsAttr</code> property in DSL way
-     *
-     * @param showAsAttr new value
-     * @return <code> DocumentRef</code> instance
-     */
-    public DocumentRef showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>shortFormAttr</code> property in DSL way
-     *
-     * @param shortFormAttr new value
-     * @return <code> DocumentRef</code> instance
-     */
-    public DocumentRef shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> DocumentRef</code> instance
-     */
-    public DocumentRef hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
 
     /**
      * Set <code>wildcardContentAttr</code> property in DSL way
@@ -143,6 +110,39 @@ public class DocumentRef extends LinkTypeComplexType {
      */
     public DocumentRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property in DSL way
+     *
+     * @param showAsAttr new value
+     * @return <code> DocumentRef</code> instance
+     */
+    public DocumentRef showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>shortFormAttr</code> property in DSL way
+     *
+     * @param shortFormAttr new value
+     * @return <code> DocumentRef</code> instance
+     */
+    public DocumentRef shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> DocumentRef</code> instance
+     */
+    public DocumentRef hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
         return this;
     }
 

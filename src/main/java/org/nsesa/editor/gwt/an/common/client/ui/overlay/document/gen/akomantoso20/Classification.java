@@ -82,6 +82,40 @@ public class Classification extends OverlayWidgetImpl {
     private AnyURISimpleType sourceAttr;
 
     /**
+     * Return <code>java.util.List<Keyword></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Keyword> getKeywords() {
+        java.util.List<Keyword> result = new ArrayList<Keyword>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Keyword".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Keyword) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Keyword></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Keyword> getKeywordList() {
+        return getKeywords();
+    }
+
+    /**
+     * Add <code>java.util.List<Keyword></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Keyword addKeyword(Keyword keywordElem) {
+        this.addOverlayWidget(keywordElem);
+        return keywordElem;
+    }
+
+    /**
      * Return <code>sourceAttr</code> property
      *
      * @return sourceAttr
@@ -124,41 +158,6 @@ public class Classification extends OverlayWidgetImpl {
         setSourceAttr(sourceAttr);
         return this;
     }
-
-    /**
-     * Return <code>java.util.List<Keyword></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Keyword> getKeywords() {
-        java.util.List<Keyword> result = new ArrayList<Keyword>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Keyword".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Keyword) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Keyword></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Keyword> getKeywordList() {
-        return getKeywords();
-    }
-
-    /**
-     * Add <code>java.util.List<Keyword></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Keyword addKeyword(Keyword keywordElem) {
-        this.addOverlayWidget(keywordElem);
-        return keywordElem;
-    }
-
 //Override all attributes methods to be conformant with DSL approach
 
     /**

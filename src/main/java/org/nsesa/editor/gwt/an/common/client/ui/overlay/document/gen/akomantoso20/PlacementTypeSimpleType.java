@@ -18,7 +18,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso
  */
 public enum PlacementTypeSimpleType {
 
-    // ENUM VALUES ------------------
+// ENUM VALUES ------------------
 
     SIDE("side"),
     LEFT("left"),

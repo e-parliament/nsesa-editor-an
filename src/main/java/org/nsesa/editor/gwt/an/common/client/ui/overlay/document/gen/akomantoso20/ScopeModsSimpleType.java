@@ -18,7 +18,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso
  */
 public enum ScopeModsSimpleType {
 
-    // ENUM VALUES ------------------
+// ENUM VALUES ------------------
 
     EXCEPTIONOFSCOPE("exceptionOfScope"),
     EXTENSIONOFSCOPE("extensionOfScope");

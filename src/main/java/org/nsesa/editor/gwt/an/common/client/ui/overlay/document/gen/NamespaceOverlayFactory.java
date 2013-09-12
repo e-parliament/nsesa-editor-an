@@ -28,6 +28,7 @@ import java.util.logging.Logger;
 public class NamespaceOverlayFactory extends DefaultOverlayFactory {
 
     private final static Logger LOG = Logger.getLogger(NamespaceOverlayFactory.class.getName());
+
     /**
      * the namespace URI of the overlay factory *
      */
@@ -67,7 +68,7 @@ public class NamespaceOverlayFactory extends DefaultOverlayFactory {
         if ("".equals(nodeName)) {
             throw new IllegalArgumentException("Empty element or null passed.");
         }
-// nothing found
+        // nothing found
         LOG.warning("Could not find overlay element (nodename: " + nodeName + " in namespace URI '" + namespaceURI + "')");
         return null;
     }

@@ -173,51 +173,51 @@ public class Lawyer extends InlinereqreqComplexType {
     }
 
     // FIELDS ------------------
-    private AnyURISimpleType forAttr;
-    private AnyURISimpleType empoweredByAttr;
     private AnyURISimpleType asAttr;
+    private AnyURISimpleType empoweredByAttr;
+    private AnyURISimpleType forAttr;
 
     /**
-     * Return <code>forAttr</code> property
+     * Return <code>asAttr</code> property
      *
-     * @return forAttr
+     * @return asAttr
      */
-    public AnyURISimpleType getForAttr() {
-        if (forAttr == null) {
-            forAttr = new AnyURISimpleType();
-            forAttr.setValue(getElement().getAttribute("for"));
+    public AnyURISimpleType getAsAttr() {
+        if (asAttr == null) {
+            asAttr = new AnyURISimpleType();
+            asAttr.setValue(getElement().getAttribute("as"));
         }
 
-        return forAttr;
+        return asAttr;
     }
 
     /**
-     * Return <code>forAttr</code> property in DSL way
+     * Return <code>asAttr</code> property in DSL way
      *
-     * @return forAttr
+     * @return asAttr
      */
-    public AnyURISimpleType forAttr() {
-        return getForAttr();
+    public AnyURISimpleType asAttr() {
+        return getAsAttr();
     }
 
     /**
-     * Set <code>forAttr</code> property
+     * Set <code>asAttr</code> property
      *
-     * @param forAttr the new value
+     * @param asAttr the new value
      */
-    public void setForAttr(final AnyURISimpleType forAttr) {
-        this.forAttr = forAttr;
-        getElement().setAttribute("for", forAttr.getValue());
+    public void setAsAttr(final AnyURISimpleType asAttr) {
+        this.asAttr = asAttr;
+        getElement().setAttribute("as", asAttr.getValue());
     }
 
     /**
-     * Set <code>forAttr</code> property in DSL way
+     * Set <code>asAttr</code> property in DSL way
      *
-     * @param forAttr the new value
+     * @param asAttr the new value
      * @return <code>Lawyer</code> instance
      */
-    public Lawyer forAttr(final AnyURISimpleType forAttr) {
-        setForAttr(forAttr);
+    public Lawyer asAttr(final AnyURISimpleType asAttr) {
+        setAsAttr(asAttr);
         return this;
     }
 
@@ -266,49 +266,82 @@ public class Lawyer extends InlinereqreqComplexType {
     }
 
     /**
-     * Return <code>asAttr</code> property
+     * Return <code>forAttr</code> property
      *
-     * @return asAttr
+     * @return forAttr
      */
-    public AnyURISimpleType getAsAttr() {
-        if (asAttr == null) {
-            asAttr = new AnyURISimpleType();
-            asAttr.setValue(getElement().getAttribute("as"));
+    public AnyURISimpleType getForAttr() {
+        if (forAttr == null) {
+            forAttr = new AnyURISimpleType();
+            forAttr.setValue(getElement().getAttribute("for"));
         }
 
-        return asAttr;
+        return forAttr;
     }
 
     /**
-     * Return <code>asAttr</code> property in DSL way
+     * Return <code>forAttr</code> property in DSL way
      *
-     * @return asAttr
+     * @return forAttr
      */
-    public AnyURISimpleType asAttr() {
-        return getAsAttr();
+    public AnyURISimpleType forAttr() {
+        return getForAttr();
     }
 
     /**
-     * Set <code>asAttr</code> property
+     * Set <code>forAttr</code> property
      *
-     * @param asAttr the new value
+     * @param forAttr the new value
      */
-    public void setAsAttr(final AnyURISimpleType asAttr) {
-        this.asAttr = asAttr;
-        getElement().setAttribute("as", asAttr.getValue());
+    public void setForAttr(final AnyURISimpleType forAttr) {
+        this.forAttr = forAttr;
+        getElement().setAttribute("for", forAttr.getValue());
     }
 
     /**
-     * Set <code>asAttr</code> property in DSL way
+     * Set <code>forAttr</code> property in DSL way
      *
-     * @param asAttr the new value
+     * @param forAttr the new value
      * @return <code>Lawyer</code> instance
      */
-    public Lawyer asAttr(final AnyURISimpleType asAttr) {
-        setAsAttr(asAttr);
+    public Lawyer forAttr(final AnyURISimpleType forAttr) {
+        setForAttr(forAttr);
         return this;
     }
 //Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> Lawyer</code> instance
+     */
+    public Lawyer alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Lawyer</code> instance
+     */
+    public Lawyer classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Lawyer</code> instance
+     */
+    public Lawyer evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
 
     /**
      * Set <code>idAttr</code> property in DSL way
@@ -322,13 +355,24 @@ public class Lawyer extends InlinereqreqComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>langAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param langAttr new value
      * @return <code> Lawyer</code> instance
      */
-    public Lawyer evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public Lawyer langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Lawyer</code> instance
+     */
+    public Lawyer periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -351,39 +395,6 @@ public class Lawyer extends InlinereqreqComplexType {
      */
     public Lawyer statusAttr(final StatusTypeSimpleType statusAttr) {
         setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> Lawyer</code> instance
-     */
-    public Lawyer alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> Lawyer</code> instance
-     */
-    public Lawyer langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>classAttr</code> property in DSL way
-     *
-     * @param classAttr new value
-     * @return <code> Lawyer</code> instance
-     */
-    public Lawyer classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
         return this;
     }
 
@@ -421,17 +432,6 @@ public class Lawyer extends InlinereqreqComplexType {
     }
 
     /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> Lawyer</code> instance
-     */
-    public Lawyer periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
-        return this;
-    }
-
-    /**
      * Returns the namespace URI of this amendable widget.
      *
      * @return The namesapce as String
@@ -445,9 +445,9 @@ public class Lawyer extends InlinereqreqComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("for", getForAttr() != null ? getForAttr().getValue() : null);
-        attrs.put("empoweredBy", getEmpoweredByAttr() != null ? getEmpoweredByAttr().getValue() : null);
         attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
+        attrs.put("empoweredBy", getEmpoweredByAttr() != null ? getEmpoweredByAttr().getValue() : null);
+        attrs.put("for", getForAttr() != null ? getForAttr().getValue() : null);
         return attrs;
     }
 

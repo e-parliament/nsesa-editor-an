@@ -94,6 +94,39 @@ public class MeaningMod extends ModificationTypeComplexType {
     private MeaningModsSimpleType typeAttr;
 
     /**
+     * Add <code>Domain</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Domain getDomain() {
+        Domain result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Domain".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Domain) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>domainElem</code> property in DSL way
+     *
+     * @param domainElem new value
+     * @return <code>Domain</code> instance
+     */
+    public Domain setDomain(Domain domainElem) {
+        Domain result = getDomain();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(domainElem);
+
+        return domainElem;
+    }
+
+    /**
      * Return <code>typeAttr</code> property
      *
      * @return typeAttr
@@ -135,51 +168,7 @@ public class MeaningMod extends ModificationTypeComplexType {
         setTypeAttr(typeAttr);
         return this;
     }
-
-    /**
-     * Add <code>Domain</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Domain getDomain() {
-        Domain result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Domain".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Domain) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>domainElem</code> property in DSL way
-     *
-     * @param domainElem new value
-     * @return <code>Domain</code> instance
-     */
-    public Domain setDomain(Domain domainElem) {
-        Domain result = getDomain();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(domainElem);
-
-        return domainElem;
-    }
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> MeaningMod</code> instance
-     */
-    public MeaningMod idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
 
     /**
      * Set <code>evolvingIdAttr</code> property in DSL way
@@ -204,6 +193,17 @@ public class MeaningMod extends ModificationTypeComplexType {
     }
 
     /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> MeaningMod</code> instance
+     */
+    public MeaningMod idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
      * Set <code>incompleteAttr</code> property in DSL way
      *
      * @param incompleteAttr new value
@@ -215,13 +215,13 @@ public class MeaningMod extends ModificationTypeComplexType {
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param statusAttr new value
+     * @param periodAttr new value
      * @return <code> MeaningMod</code> instance
      */
-    public MeaningMod statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public MeaningMod periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -237,6 +237,17 @@ public class MeaningMod extends ModificationTypeComplexType {
     }
 
     /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> MeaningMod</code> instance
+     */
+    public MeaningMod statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
      * Set <code>wildcardContentAttr</code> property in DSL way
      *
      * @param wildcardContentAttr new value
@@ -244,17 +255,6 @@ public class MeaningMod extends ModificationTypeComplexType {
      */
     public MeaningMod wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> MeaningMod</code> instance
-     */
-    public MeaningMod periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
         return this;
     }
 

@@ -86,6 +86,172 @@ public class Analysis extends OverlayWidgetImpl {
     private AnyURISimpleType sourceAttr;
 
     /**
+     * Add <code>ActiveModifications</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public ActiveModifications getActiveModifications() {
+        ActiveModifications result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("ActiveModifications".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (ActiveModifications) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>activeModificationsElem</code> property in DSL way
+     *
+     * @param activeModificationsElem new value
+     * @return <code>ActiveModifications</code> instance
+     */
+    public ActiveModifications setActiveModifications(ActiveModifications activeModificationsElem) {
+        ActiveModifications result = getActiveModifications();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(activeModificationsElem);
+
+        return activeModificationsElem;
+    }
+
+    /**
+     * Add <code>Judicial</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Judicial getJudicial() {
+        Judicial result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Judicial".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Judicial) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>judicialElem</code> property in DSL way
+     *
+     * @param judicialElem new value
+     * @return <code>Judicial</code> instance
+     */
+    public Judicial setJudicial(Judicial judicialElem) {
+        Judicial result = getJudicial();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(judicialElem);
+
+        return judicialElem;
+    }
+
+    /**
+     * Return <code>java.util.List<OtherAnalysis></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<OtherAnalysis> getOtherAnalysises() {
+        java.util.List<OtherAnalysis> result = new ArrayList<OtherAnalysis>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("OtherAnalysis".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((OtherAnalysis) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<OtherAnalysis></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<OtherAnalysis> getOtherAnalysisList() {
+        return getOtherAnalysises();
+    }
+
+    /**
+     * Add <code>java.util.List<OtherAnalysis></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public OtherAnalysis addOtherAnalysis(OtherAnalysis otherAnalysisElem) {
+        this.addOverlayWidget(otherAnalysisElem);
+        return otherAnalysisElem;
+    }
+
+    /**
+     * Add <code>Parliamentary</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Parliamentary getParliamentary() {
+        Parliamentary result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Parliamentary".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Parliamentary) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>parliamentaryElem</code> property in DSL way
+     *
+     * @param parliamentaryElem new value
+     * @return <code>Parliamentary</code> instance
+     */
+    public Parliamentary setParliamentary(Parliamentary parliamentaryElem) {
+        Parliamentary result = getParliamentary();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(parliamentaryElem);
+
+        return parliamentaryElem;
+    }
+
+    /**
+     * Add <code>PassiveModifications</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public PassiveModifications getPassiveModifications() {
+        PassiveModifications result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("PassiveModifications".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (PassiveModifications) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>passiveModificationsElem</code> property in DSL way
+     *
+     * @param passiveModificationsElem new value
+     * @return <code>PassiveModifications</code> instance
+     */
+    public PassiveModifications setPassiveModifications(PassiveModifications passiveModificationsElem) {
+        PassiveModifications result = getPassiveModifications();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(passiveModificationsElem);
+
+        return passiveModificationsElem;
+    }
+
+    /**
      * Return <code>sourceAttr</code> property
      *
      * @return sourceAttr
@@ -128,173 +294,6 @@ public class Analysis extends OverlayWidgetImpl {
         setSourceAttr(sourceAttr);
         return this;
     }
-
-    /**
-     * Add <code>ActiveModifications</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public ActiveModifications getActiveModifications() {
-        ActiveModifications result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ActiveModifications".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (ActiveModifications) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>activeModificationsElem</code> property in DSL way
-     *
-     * @param activeModificationsElem new value
-     * @return <code>ActiveModifications</code> instance
-     */
-    public ActiveModifications setActiveModifications(ActiveModifications activeModificationsElem) {
-        ActiveModifications result = getActiveModifications();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(activeModificationsElem);
-
-        return activeModificationsElem;
-    }
-
-    /**
-     * Add <code>PassiveModifications</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public PassiveModifications getPassiveModifications() {
-        PassiveModifications result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("PassiveModifications".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (PassiveModifications) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>passiveModificationsElem</code> property in DSL way
-     *
-     * @param passiveModificationsElem new value
-     * @return <code>PassiveModifications</code> instance
-     */
-    public PassiveModifications setPassiveModifications(PassiveModifications passiveModificationsElem) {
-        PassiveModifications result = getPassiveModifications();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(passiveModificationsElem);
-
-        return passiveModificationsElem;
-    }
-
-    /**
-     * Add <code>Judicial</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Judicial getJudicial() {
-        Judicial result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Judicial".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Judicial) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>judicialElem</code> property in DSL way
-     *
-     * @param judicialElem new value
-     * @return <code>Judicial</code> instance
-     */
-    public Judicial setJudicial(Judicial judicialElem) {
-        Judicial result = getJudicial();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(judicialElem);
-
-        return judicialElem;
-    }
-
-    /**
-     * Add <code>Parliamentary</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Parliamentary getParliamentary() {
-        Parliamentary result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Parliamentary".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Parliamentary) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>parliamentaryElem</code> property in DSL way
-     *
-     * @param parliamentaryElem new value
-     * @return <code>Parliamentary</code> instance
-     */
-    public Parliamentary setParliamentary(Parliamentary parliamentaryElem) {
-        Parliamentary result = getParliamentary();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(parliamentaryElem);
-
-        return parliamentaryElem;
-    }
-
-    /**
-     * Return <code>java.util.List<OtherAnalysis></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<OtherAnalysis> getOtherAnalysises() {
-        java.util.List<OtherAnalysis> result = new ArrayList<OtherAnalysis>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("OtherAnalysis".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((OtherAnalysis) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<OtherAnalysis></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<OtherAnalysis> getOtherAnalysisList() {
-        return getOtherAnalysises();
-    }
-
-    /**
-     * Add <code>java.util.List<OtherAnalysis></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public OtherAnalysis addOtherAnalysis(OtherAnalysis otherAnalysisElem) {
-        this.addOverlayWidget(otherAnalysisElem);
-        return otherAnalysisElem;
-    }
-
 //Override all attributes methods to be conformant with DSL approach
 
     /**
