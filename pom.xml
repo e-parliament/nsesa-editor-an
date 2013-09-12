@@ -450,8 +450,8 @@
                         <!-- contains the imported source files from the gwt-selection project -->
                         <exclude>src/main/java/com/bfr/client/**</exclude>
                         <exclude>src/main/resources/examples/**</exclude>
-                        <exclude>src/main/resources/*.xsd</exclude>
-                        <exclude>src/main/resources/*.dtd</exclude>
+                        <exclude>src/main/resources/**/*.xsd</exclude>
+                        <exclude>src/main/resources/**/*.dtd</exclude>
                         <exclude>.gitignore</exclude>
                         <!-- automatic header would turn on quirksmode in IE -->
                         <exclude>web/*.html</exclude>
