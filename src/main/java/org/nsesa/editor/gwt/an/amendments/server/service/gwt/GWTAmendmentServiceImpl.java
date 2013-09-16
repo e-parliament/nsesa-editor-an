@@ -124,6 +124,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         amendmentContainerDTO.setAmendmentContainerID(b.getAmendmentContainerID());
         amendmentContainerDTO.setLanguageISO(b.getLanguageISO());
         amendmentContainerDTO.setRevisionID(b.getRevisionID());
+        amendmentContainerDTO.setBundledAmendmentContainerIDs(b.getBundledAmendmentContainerIDs());
 
         try {
             amendmentContainerDTO.setBody(toHTML(amendmentContainerDTO.getBody().getBytes("UTF-8")));
@@ -217,6 +218,7 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
                 backendDTO.setAmendmentAction(org.nsesa.server.dto.AmendmentAction.valueOf(data.getAmendmentAction().toString()));
                 backendDTO.setAmendmentContainerID(data.getAmendmentContainerID());
                 backendDTO.setBody(data.getBody());
+                backendDTO.setBundledAmendmentContainerIDs(data.getBundledAmendmentContainerIDs());
                 final AmendableWidgetReference dto = data.getSourceReference();
                 final AmendableWidgetReferenceDTO sourceReference = new AmendableWidgetReferenceDTO(dto.getPath());
                 sourceReference.setNamespaceURI(dto.getNamespaceURI());
