@@ -68,7 +68,7 @@ public class AkomaNtosoAmendmentController extends DefaultAmendmentController {
         if (view != availableViews.get(AmendmentView.DEFAULT) || extendedView != availableExtendedViews.get(AmendmentView.DEFAULT)) {
             // if we're not in the default template (2 columns), then only set the amendment content on the body
             final OverlayWidget amendmentContentFromModel = AkomaNtosoAmendmentControllerUtil.getAmendmentContentFromModel(this);
-            String content = DOM.toString(amendmentContentFromModel.asWidget().getElement());
+            final String content = DOM.toString(amendmentContentFromModel.asWidget().getElement());
             if (view != availableViews.get(AmendmentView.DEFAULT))
                 view.setBody(content);
             if (extendedView != availableExtendedViews.get(AmendmentView.DEFAULT))
