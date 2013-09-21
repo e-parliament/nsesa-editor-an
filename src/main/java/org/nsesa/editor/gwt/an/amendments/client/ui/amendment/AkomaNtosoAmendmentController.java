@@ -15,14 +15,15 @@ package org.nsesa.editor.gwt.an.amendments.client.ui.amendment;
 
 import com.google.gwt.user.client.DOM;
 import com.google.inject.Inject;
-import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentView;
-import org.nsesa.editor.gwt.amendment.client.ui.amendment.ConsolidatedAmendmentViewImpl;
-import org.nsesa.editor.gwt.amendment.client.ui.amendment.DefaultAmendmentController;
-import org.nsesa.editor.gwt.amendment.client.ui.amendment.SingleColumnAmendmentViewImpl;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.*;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.action.AmendmentActionPanelController;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.resources.Constants;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.resources.Messages;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
+
+import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Date: 09/01/13 16:38
@@ -31,6 +32,8 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
  * @version $Id$
  */
 public class AkomaNtosoAmendmentController extends DefaultAmendmentController {
+
+    private static final Logger LOG = Logger.getLogger(AkomaNtosoAmendmentController.class.getName());
 
     private final ConsolidatedAmendmentViewImpl consolidatedAmendmentView;
     private final ConsolidatedAmendmentViewImpl consolidatedAmendmentViewExtended;
@@ -76,5 +79,39 @@ public class AkomaNtosoAmendmentController extends DefaultAmendmentController {
         } else {
             super.setBody(xmlContent);
         }
+    }
+
+    @Override
+    public void mergeIntoBundle(AmendmentController toBundle) {
+        super.mergeIntoBundle(toBundle);
+
+        // merge the xml content in
+        // TODO xpath expression to the change block is not configurable
+        final OverlayWidget amendmentOverlayWidget = toBundle.asAmendableWidget(toBundle.getModel().getBody());
+        final List<OverlayWidget> mods = OverlayUtil.find("mod", amendmentOverlayWidget);
+
+        if (mods != null && !mods.isEmpty()) {
+            // add all mods to this body
+            final OverlayWidget overlayWidget = asAmendableWidget(getModel().getBody());
+            final OverlayWidget changeBlock = OverlayUtil.findSingle("block[name=\"changeBlock\"]", overlayWidget);
+
+            for (final OverlayWidget mod : mods) {
+                changeBlock.addOverlayWidget(mod);
+                // add to the DOM as well
+                changeBlock.getOverlayElement().appendChild(mod.getOverlayElement());
+            }
+            getModel().setRoot(overlayWidget);
+            LOG.info("Successfully merged " + toBundle + " into " + this);
+        } else {
+            LOG.warning("Could not find mods in amendment body?");
+        }
+    }
+
+    @Override
+    public void removedFromBundle(AmendmentController amendmentController) {
+        super.removedFromBundle(amendmentController);
+
+        // remove the xml content
+
     }
 }
