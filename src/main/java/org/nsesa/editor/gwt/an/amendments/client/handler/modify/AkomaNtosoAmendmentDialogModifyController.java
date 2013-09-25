@@ -30,7 +30,7 @@ import org.nsesa.editor.gwt.core.client.ui.visualstructure.VisualStructureContro
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
-import org.nsesa.editor.gwt.dialog.client.ui.handler.common.author.AuthorPanelController;
+import org.nsesa.editor.gwt.dialog.client.ui.handler.common.authors.AuthorsPanelController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.content.ContentPanelController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.meta.MetaPanelController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.modify.AmendmentDialogModifyController;
@@ -49,7 +49,7 @@ public class AkomaNtosoAmendmentDialogModifyController extends AmendmentDialogMo
 
     private static final Logger LOG = Logger.getLogger(AkomaNtosoAmendmentDialogModifyController.class.getName());
 
-    final AuthorPanelController authorPanelController;
+    final AuthorsPanelController authorsPanelController;
     final MetaPanelController metaPanelController;
     final ContentPanelController contentPanelController;
     final ServiceFactory serviceFactory;
@@ -60,7 +60,7 @@ public class AkomaNtosoAmendmentDialogModifyController extends AmendmentDialogMo
                                                      final Locator locator,
                                                      final OverlayFactory overlayFactory,
                                                      final VisualStructureController visualStructureController,
-                                                     final AuthorPanelController authorPanelController,
+                                                     final AuthorsPanelController authorsPanelController,
                                                      final ContentPanelController contentPanelController,
                                                      final MetaPanelController metaPanelController,
                                                      final ServiceFactory serviceFactory,
@@ -68,15 +68,15 @@ public class AkomaNtosoAmendmentDialogModifyController extends AmendmentDialogMo
                                                      final AmendmentOverlayWidgetValidator validator
     ) {
         super(clientFactory, view, locator, overlayFactory, visualStructureController, amendmentInjectionPointFinder, validator);
-        this.authorPanelController = authorPanelController;
-        this.authorPanelController.registerListeners();
+        this.authorsPanelController = authorsPanelController;
+        this.authorsPanelController.registerListeners();
         this.contentPanelController = contentPanelController;
         this.contentPanelController.registerListeners();
         this.metaPanelController = metaPanelController;
         this.metaPanelController.registerListeners();
         this.serviceFactory = serviceFactory;
 
-        addChildControllers(contentPanelController, authorPanelController, metaPanelController);
+        addChildControllers(contentPanelController, authorsPanelController, metaPanelController);
     }
 
     @Override
@@ -90,7 +90,7 @@ public class AkomaNtosoAmendmentDialogModifyController extends AmendmentDialogMo
                     .setOverlayWidget(overlayWidget)
                     .setDocumentController(dialogContext.getDocumentController())
                     .setLanguageIso(languageIso)
-                    .setAuthors(authorPanelController.getSelectedPersons())
+                    .setAuthors(authorsPanelController.getSelectedPersons())
                     .setLocation(locator.getLocation(overlayWidget, languageIso, true))
                     .setOriginalText(contentPanelController.getView().getOriginalText())
                     .setAmendmentText(view.getAmendmentContent())
@@ -104,7 +104,7 @@ public class AkomaNtosoAmendmentDialogModifyController extends AmendmentDialogMo
                     .setOverlayWidget(overlayWidget)
                     .setDocumentController(dialogContext.getDocumentController())
                     .setLanguageIso(languageIso)
-                    .setAuthors(authorPanelController.getSelectedPersons())
+                    .setAuthors(authorsPanelController.getSelectedPersons())
                     .setLocation(locator.getLocation(overlayWidget, languageIso, true))
                     .setOriginalText(contentPanelController.getView().getOriginalText())
                     .setAmendmentText(view.getAmendmentContent())
@@ -121,7 +121,7 @@ public class AkomaNtosoAmendmentDialogModifyController extends AmendmentDialogMo
     public void setContext(DialogContext dialogContext) {
         super.setContext(dialogContext);
         // clear author panel
-        authorPanelController.clear();
+        authorsPanelController.clear();
 
         // clear meta panel
         metaPanelController.clear();
@@ -163,7 +163,7 @@ public class AkomaNtosoAmendmentDialogModifyController extends AmendmentDialogMo
 
                             @Override
                             public void onSuccess(PersonDTO result) {
-                                authorPanelController.addPerson(result);
+                                authorsPanelController.addPerson(result);
                             }
                         });
                     }

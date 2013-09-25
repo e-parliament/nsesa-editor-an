@@ -29,7 +29,7 @@ import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.core.client.validation.Validator;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.editor.gwt.dialog.client.ui.dialog.DialogContext;
-import org.nsesa.editor.gwt.dialog.client.ui.handler.common.author.AuthorPanelController;
+import org.nsesa.editor.gwt.dialog.client.ui.handler.common.authors.AuthorsPanelController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.common.meta.MetaPanelController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreateController;
 import org.nsesa.editor.gwt.dialog.client.ui.handler.create.AmendmentDialogCreateView;
@@ -48,7 +48,7 @@ public class AkomaNtosoAmendmentDialogCreateController extends AmendmentDialogCr
 
     private OverlaySnippetFactory overlaySnippetFactory;
     private OverlaySnippetEvaluator overlaySnippetEvaluator;
-    final AuthorPanelController authorPanelController;
+    final AuthorsPanelController authorsPanelController;
     final MetaPanelController metaPanelController;
     final ServiceFactory serviceFactory;
     final OverlayWidgetInjectionStrategy overlayWidgetInjectionStrategy;
@@ -65,7 +65,7 @@ public class AkomaNtosoAmendmentDialogCreateController extends AmendmentDialogCr
                                                      final OverlaySnippetFactory overlaySnippetFactory,
                                                      final OverlaySnippetEvaluator overlaySnippetEvaluator,
                                                      final Validator<OverlayWidget> overlayWidgetValidator,
-                                                     final AuthorPanelController authorPanelController,
+                                                     final AuthorsPanelController authorsPanelController,
                                                      final MetaPanelController metaPanelController,
                                                      final OverlayWidgetInjectionStrategy overlayWidgetInjectionStrategy
     ) {
@@ -75,12 +75,12 @@ public class AkomaNtosoAmendmentDialogCreateController extends AmendmentDialogCr
         this.overlaySnippetFactory = overlaySnippetFactory;
         this.overlaySnippetEvaluator = overlaySnippetEvaluator;
 
-        this.authorPanelController = authorPanelController;
-        this.authorPanelController.registerListeners();
+        this.authorsPanelController = authorsPanelController;
+        this.authorsPanelController.registerListeners();
         this.metaPanelController = metaPanelController;
         this.overlayWidgetInjectionStrategy = overlayWidgetInjectionStrategy;
 
-        addChildControllers(authorPanelController, metaPanelController);
+        addChildControllers(authorsPanelController, metaPanelController);
     }
 
     @Override
@@ -112,7 +112,7 @@ public class AkomaNtosoAmendmentDialogCreateController extends AmendmentDialogCr
                     .setOverlayWidget(overlayWidget)
                     .setDocumentController(dialogContext.getDocumentController())
                     .setLanguageIso(languageIso)
-                    .setAuthors(authorPanelController.getSelectedPersons())
+                    .setAuthors(authorsPanelController.getSelectedPersons())
                     .setLocation(location)
                     .setOriginalText("") // TODO null?
                     .setAmendmentText(view.getAmendmentContent())
@@ -126,7 +126,7 @@ public class AkomaNtosoAmendmentDialogCreateController extends AmendmentDialogCr
                     .setOverlayWidget(overlayWidget)
                     .setDocumentController(dialogContext.getDocumentController())
                     .setLanguageIso(languageIso)
-                    .setAuthors(authorPanelController.getSelectedPersons())
+                    .setAuthors(authorsPanelController.getSelectedPersons())
                     .setLocation(location)
                     .setOriginalText("") // TODO null?
                     .setAmendmentText(view.getAmendmentContent())
@@ -165,7 +165,7 @@ public class AkomaNtosoAmendmentDialogCreateController extends AmendmentDialogCr
         }
 
         // clear author panel
-        authorPanelController.clear();
+        authorsPanelController.clear();
 
         // clear meta panel
         metaPanelController.clear();
@@ -204,7 +204,7 @@ public class AkomaNtosoAmendmentDialogCreateController extends AmendmentDialogCr
 
                             @Override
                             public void onSuccess(PersonDTO result) {
-                                authorPanelController.addPerson(result);
+                                authorsPanelController.addPerson(result);
                             }
                         });
                     }
