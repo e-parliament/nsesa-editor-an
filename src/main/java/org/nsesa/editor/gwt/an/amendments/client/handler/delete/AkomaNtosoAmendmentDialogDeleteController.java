@@ -133,7 +133,7 @@ public class AkomaNtosoAmendmentDialogDeleteController extends AmendmentDialogDe
 
             final Container container = preface.getContainers().get(0);
             if (container != null && "authors".equals(container.nameAttr().getValue())) {
-                java.util.List<OverlayWidget> docProponents = OverlayUtil.find("docProponent", container);
+                final java.util.List<OverlayWidget> docProponents = OverlayUtil.find("docProponent", container);
                 for (final OverlayWidget docProponent : docProponents) {
                     if (docProponent instanceof DocProponent) {
                         final DocProponent proponent = (DocProponent) docProponent;
@@ -149,7 +149,7 @@ public class AkomaNtosoAmendmentDialogDeleteController extends AmendmentDialogDe
 
                             @Override
                             public void onSuccess(PersonDTO result) {
-                                authorsPanelController.addPerson(result);
+                                authorsPanelController.addPerson(result, docProponents.indexOf(docProponent));
                             }
                         });
                     }
