@@ -30,7 +30,6 @@ import org.nsesa.editor.gwt.an.amendments.client.mode.DiffMode;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmentControllerUtil;
 import org.nsesa.editor.gwt.an.common.client.mode.StructureViewMode;
 import org.nsesa.editor.gwt.an.common.client.push.PushManager;
-import org.nsesa.editor.gwt.an.common.client.push.SimpleRPCEvent;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
@@ -118,7 +117,6 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
             @Override
             public void onEvent(DocumentOverlayCompletedEvent event) {
                 applyState(DiffMode.KEY, new ActiveState(true));
-                pushManager.send(new SimpleRPCEvent("First test!"));
             }
         });
 
