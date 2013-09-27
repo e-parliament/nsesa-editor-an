@@ -225,6 +225,11 @@
 
 .table[ns="http://www.akomantoso.org/2.0"] {
     min-width: 90%;
+    padding: 5px;
+}
+
+.table[ns="http://www.akomantoso.org/2.0"] .td[ns="http://www.akomantoso.org/2.0"] {
+    padding: 5px;
 }
 
 [ns="http://www.akomantoso.org/2.0"][href] {

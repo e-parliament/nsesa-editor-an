@@ -225,6 +225,11 @@
 
 .table[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     min-width: 90%;
+    padding: 5px;
+}
+
+.table[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] .td[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    padding: 5px;
 }
 
 [ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"][href] {
