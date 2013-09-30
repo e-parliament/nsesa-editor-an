@@ -66,13 +66,19 @@ public class CompositeOverlayFactory extends DefaultOverlayFactory {
     @Override
     public OverlayWidget getAmendableWidget(Element element) {
         OverlayWidget amendableWidget = null;
-        final String namespaceURI = element.getAttribute("ns");
+        String namespaceURI = akomantoso20OverlayFactory.getOverlayStrategy().getNamespaceURI(element);
         if (akomantoso20OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
             amendableWidget = akomantoso20OverlayFactory.getAmendableWidget(element);
-        } else if (csd02OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
-            amendableWidget = csd02OverlayFactory.getAmendableWidget(element);
-        } else if (csd05OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
-            amendableWidget = csd05OverlayFactory.getAmendableWidget(element);
+        } else {
+            namespaceURI = csd02OverlayFactory.getOverlayStrategy().getNamespaceURI(element);
+            if (csd02OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
+                amendableWidget = csd02OverlayFactory.getAmendableWidget(element);
+            } else {
+                namespaceURI = csd05OverlayFactory.getOverlayStrategy().getNamespaceURI(element);
+                if (csd05OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
+                    amendableWidget = csd05OverlayFactory.getAmendableWidget(element);
+                }
+            }
         }
         if (amendableWidget == null)
             amendableWidget = super.getAmendableWidget(element);
@@ -83,14 +89,21 @@ public class CompositeOverlayFactory extends DefaultOverlayFactory {
     @Override
     public OverlayWidget toAmendableWidget(Element element) {
         OverlayWidget amendableWidget = null;
-        final String namespaceURI = element.getAttribute("ns");
+        String namespaceURI = akomantoso20OverlayFactory.getOverlayStrategy().getNamespaceURI(element);
         if (akomantoso20OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
             amendableWidget = akomantoso20OverlayFactory.toAmendableWidget(element);
-        } else if (csd02OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
-            amendableWidget = csd02OverlayFactory.toAmendableWidget(element);
-        } else if (csd05OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
-            amendableWidget = csd05OverlayFactory.toAmendableWidget(element);
+        } else {
+            namespaceURI = csd02OverlayFactory.getOverlayStrategy().getNamespaceURI(element);
+            if (csd02OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
+                amendableWidget = csd02OverlayFactory.toAmendableWidget(element);
+            } else {
+                namespaceURI = csd05OverlayFactory.getOverlayStrategy().getNamespaceURI(element);
+                if (csd05OverlayFactory.getNamespaceURI().equals(namespaceURI)) {
+                    amendableWidget = csd05OverlayFactory.toAmendableWidget(element);
+                }
+            }
         }
+
         if (amendableWidget == null)
             amendableWidget = super.toAmendableWidget(element);
         setAmendable(amendableWidget);

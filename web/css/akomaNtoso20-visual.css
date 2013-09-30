@@ -39,7 +39,7 @@
     * basehierarchy
     * --------------------------
     */
-.akomaNtoso-drafting .basehierarchy[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .basehierarchy[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "basehierarchy " !important;
     border: 1px solid #000000 !important;
     background-color: #feeb68 !important;
@@ -53,7 +53,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .basehierarchy[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .basehierarchy[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/basehierarchy" !important;
     border: 1px solid #000000 !important;
     background-color: #feeb68 !important;
@@ -72,7 +72,7 @@
     * althierarchy
     * --------------------------
     */
-.akomaNtoso-drafting .althierarchy[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .althierarchy[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "althierarchy " !important;
     border: 1px solid #000000 !important;
     background-color: #d0be52 !important;
@@ -86,7 +86,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .althierarchy[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .althierarchy[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/althierarchy" !important;
     border: 1px solid #000000 !important;
     background-color: #d0be52 !important;
@@ -100,7 +100,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .address[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .address[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "address " !important;
     border: 1px solid #000000 !important;
     background-color: #564c96 !important;
@@ -114,7 +114,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .address[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .address[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/address" !important;
     border: 1px solid #000000 !important;
     background-color: #564c96 !important;
@@ -128,7 +128,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .adjournment[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .adjournment[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "adjournment " !important;
     border: 1px solid #000000 !important;
     background-color: #12f224 !important;
@@ -142,7 +142,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .adjournment[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .adjournment[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/adjournment" !important;
     border: 1px solid #000000 !important;
     background-color: #12f224 !important;
@@ -156,7 +156,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .administrationOfOath[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .administrationOfOath[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "administrationOfOath " !important;
     border: 1px solid #000000 !important;
     background-color: #7b4fe5 !important;
@@ -170,7 +170,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .administrationOfOath[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .administrationOfOath[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/administrationOfOath" !important;
     border: 1px solid #000000 !important;
     background-color: #7b4fe5 !important;
@@ -184,7 +184,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .communication[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .communication[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "communication " !important;
     border: 1px solid #000000 !important;
     background-color: #82961f !important;
@@ -198,7 +198,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .communication[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .communication[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/communication" !important;
     border: 1px solid #000000 !important;
     background-color: #82961f !important;
@@ -212,7 +212,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .debateSection[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .debateSection[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "debateSection " !important;
     border: 1px solid #000000 !important;
     background-color: #3db3ec !important;
@@ -226,7 +226,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .debateSection[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .debateSection[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/debateSection" !important;
     border: 1px solid #000000 !important;
     background-color: #3db3ec !important;
@@ -240,7 +240,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .declarationOfVote[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .declarationOfVote[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "declarationOfVote " !important;
     border: 1px solid #000000 !important;
     background-color: #a1ce36 !important;
@@ -254,7 +254,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .declarationOfVote[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .declarationOfVote[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/declarationOfVote" !important;
     border: 1px solid #000000 !important;
     background-color: #a1ce36 !important;
@@ -268,7 +268,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .ministerialStatements[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .ministerialStatements[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "ministerialStatements " !important;
     border: 1px solid #000000 !important;
     background-color: #273b97 !important;
@@ -282,7 +282,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .ministerialStatements[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .ministerialStatements[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/ministerialStatements" !important;
     border: 1px solid #000000 !important;
     background-color: #273b97 !important;
@@ -296,7 +296,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .nationalInterest[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .nationalInterest[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "nationalInterest " !important;
     border: 1px solid #000000 !important;
     background-color: #4be3af !important;
@@ -310,7 +310,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .nationalInterest[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .nationalInterest[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/nationalInterest" !important;
     border: 1px solid #000000 !important;
     background-color: #4be3af !important;
@@ -324,7 +324,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .noticesOfMotion[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .noticesOfMotion[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "noticesOfMotion " !important;
     border: 1px solid #000000 !important;
     background-color: #5fe456 !important;
@@ -338,7 +338,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .noticesOfMotion[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .noticesOfMotion[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/noticesOfMotion" !important;
     border: 1px solid #000000 !important;
     background-color: #5fe456 !important;
@@ -352,7 +352,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .oralStatements[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .oralStatements[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "oralStatements " !important;
     border: 1px solid #000000 !important;
     background-color: #c9f47d !important;
@@ -366,7 +366,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .oralStatements[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .oralStatements[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/oralStatements" !important;
     border: 1px solid #000000 !important;
     background-color: #c9f47d !important;
@@ -380,7 +380,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .papers[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .papers[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "papers " !important;
     border: 1px solid #000000 !important;
     background-color: #db385f !important;
@@ -394,7 +394,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .papers[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .papers[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/papers" !important;
     border: 1px solid #000000 !important;
     background-color: #db385f !important;
@@ -408,7 +408,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .personalStatements[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .personalStatements[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "personalStatements " !important;
     border: 1px solid #000000 !important;
     background-color: #10315b !important;
@@ -422,7 +422,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .personalStatements[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .personalStatements[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/personalStatements" !important;
     border: 1px solid #000000 !important;
     background-color: #10315b !important;
@@ -436,7 +436,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .petitions[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .petitions[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "petitions " !important;
     border: 1px solid #000000 !important;
     background-color: #def659 !important;
@@ -450,7 +450,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .petitions[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .petitions[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/petitions" !important;
     border: 1px solid #000000 !important;
     background-color: #def659 !important;
@@ -464,7 +464,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .pointOfOrder[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .pointOfOrder[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "pointOfOrder " !important;
     border: 1px solid #000000 !important;
     background-color: #8ee7a7 !important;
@@ -478,7 +478,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .pointOfOrder[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .pointOfOrder[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/pointOfOrder" !important;
     border: 1px solid #000000 !important;
     background-color: #8ee7a7 !important;
@@ -492,7 +492,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .prayers[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .prayers[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "prayers " !important;
     border: 1px solid #000000 !important;
     background-color: #46c7cc !important;
@@ -506,7 +506,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .prayers[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .prayers[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/prayers" !important;
     border: 1px solid #000000 !important;
     background-color: #46c7cc !important;
@@ -520,7 +520,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .proceduralMotions[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .proceduralMotions[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "proceduralMotions " !important;
     border: 1px solid #000000 !important;
     background-color: #ce2410 !important;
@@ -534,7 +534,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .proceduralMotions[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .proceduralMotions[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/proceduralMotions" !important;
     border: 1px solid #000000 !important;
     background-color: #ce2410 !important;
@@ -548,7 +548,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .questions[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .questions[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "questions " !important;
     border: 1px solid #000000 !important;
     background-color: #1cbddd !important;
@@ -562,7 +562,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .questions[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .questions[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/questions" !important;
     border: 1px solid #000000 !important;
     background-color: #1cbddd !important;
@@ -576,7 +576,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .resolutions[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .resolutions[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "resolutions " !important;
     border: 1px solid #000000 !important;
     background-color: #e748d6 !important;
@@ -590,7 +590,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .resolutions[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .resolutions[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/resolutions" !important;
     border: 1px solid #000000 !important;
     background-color: #e748d6 !important;
@@ -604,7 +604,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .rollCall[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .rollCall[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "rollCall " !important;
     border: 1px solid #000000 !important;
     background-color: #be90a6 !important;
@@ -618,7 +618,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .rollCall[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .rollCall[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/rollCall" !important;
     border: 1px solid #000000 !important;
     background-color: #be90a6 !important;
@@ -632,7 +632,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .writtenStatements[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .writtenStatements[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "writtenStatements " !important;
     border: 1px solid #000000 !important;
     background-color: #1206c1 !important;
@@ -646,7 +646,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .writtenStatements[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .writtenStatements[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/writtenStatements" !important;
     border: 1px solid #000000 !important;
     background-color: #1206c1 !important;
@@ -665,7 +665,7 @@
     * hierarchy
     * --------------------------
     */
-.akomaNtoso-drafting .hierarchy[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .hierarchy[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "hierarchy " !important;
     border: 1px solid #000000 !important;
     background-color: #2e4754 !important;
@@ -679,7 +679,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .hierarchy[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .hierarchy[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/hierarchy" !important;
     border: 1px solid #000000 !important;
     background-color: #2e4754 !important;
@@ -693,7 +693,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .alinea[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .alinea[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "alinea " !important;
     border: 1px solid #000000 !important;
     background-color: #e24844 !important;
@@ -707,7 +707,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .alinea[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .alinea[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/alinea" !important;
     border: 1px solid #000000 !important;
     background-color: #e24844 !important;
@@ -721,7 +721,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .article[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .article[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "article " !important;
     border: 1px solid #000000 !important;
     background-color: #5b7981 !important;
@@ -735,7 +735,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .article[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .article[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/article" !important;
     border: 1px solid #000000 !important;
     background-color: #5b7981 !important;
@@ -749,7 +749,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .book[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .book[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "book " !important;
     border: 1px solid #000000 !important;
     background-color: #3b8454 !important;
@@ -763,7 +763,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .book[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .book[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/book" !important;
     border: 1px solid #000000 !important;
     background-color: #3b8454 !important;
@@ -777,7 +777,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .chapter[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .chapter[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "chapter " !important;
     border: 1px solid #000000 !important;
     background-color: #e02029 !important;
@@ -791,7 +791,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .chapter[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .chapter[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/chapter" !important;
     border: 1px solid #000000 !important;
     background-color: #e02029 !important;
@@ -805,7 +805,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .clause[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .clause[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "clause " !important;
     border: 1px solid #000000 !important;
     background-color: #5f4105 !important;
@@ -819,7 +819,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .clause[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .clause[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/clause" !important;
     border: 1px solid #000000 !important;
     background-color: #5f4105 !important;
@@ -833,7 +833,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .division[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .division[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "division " !important;
     border: 1px solid #000000 !important;
     background-color: #5d9a3f !important;
@@ -847,7 +847,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .division[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .division[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/division" !important;
     border: 1px solid #000000 !important;
     background-color: #5d9a3f !important;
@@ -861,7 +861,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .hcontainer[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .hcontainer[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "hcontainer " !important;
     border: 1px solid #000000 !important;
     background-color: #550eeb !important;
@@ -875,7 +875,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .hcontainer[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .hcontainer[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/hcontainer" !important;
     border: 1px solid #000000 !important;
     background-color: #550eeb !important;
@@ -889,7 +889,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .indent[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .indent[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "indent " !important;
     border: 1px solid #000000 !important;
     background-color: #0cc30b !important;
@@ -903,7 +903,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .indent[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .indent[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/indent" !important;
     border: 1px solid #000000 !important;
     background-color: #0cc30b !important;
@@ -917,7 +917,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .list[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .list[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "list " !important;
     border: 1px solid #000000 !important;
     background-color: #3767ae !important;
@@ -931,7 +931,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .list[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .list[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/list" !important;
     border: 1px solid #000000 !important;
     background-color: #3767ae !important;
@@ -945,7 +945,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .paragraph[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .paragraph[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "paragraph " !important;
     border: 1px solid #000000 !important;
     background-color: #34cf86 !important;
@@ -959,7 +959,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .paragraph[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .paragraph[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/paragraph" !important;
     border: 1px solid #000000 !important;
     background-color: #34cf86 !important;
@@ -973,7 +973,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .part[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .part[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "part " !important;
     border: 1px solid #000000 !important;
     background-color: #6f4203 !important;
@@ -987,7 +987,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .part[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .part[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/part" !important;
     border: 1px solid #000000 !important;
     background-color: #6f4203 !important;
@@ -1001,7 +1001,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .point[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .point[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "point " !important;
     border: 1px solid #000000 !important;
     background-color: #d0fb4e !important;
@@ -1015,7 +1015,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .point[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .point[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/point" !important;
     border: 1px solid #000000 !important;
     background-color: #d0fb4e !important;
@@ -1029,7 +1029,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .section[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .section[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "section " !important;
     border: 1px solid #000000 !important;
     background-color: #a9ae0a !important;
@@ -1043,7 +1043,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .section[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .section[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/section" !important;
     border: 1px solid #000000 !important;
     background-color: #a9ae0a !important;
@@ -1057,7 +1057,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subchapter[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .subchapter[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "subchapter " !important;
     border: 1px solid #000000 !important;
     background-color: #25efc8 !important;
@@ -1071,7 +1071,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subchapter[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .subchapter[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/subchapter" !important;
     border: 1px solid #000000 !important;
     background-color: #25efc8 !important;
@@ -1085,7 +1085,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subclause[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .subclause[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "subclause " !important;
     border: 1px solid #000000 !important;
     background-color: #ba810d !important;
@@ -1099,7 +1099,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subclause[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .subclause[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/subclause" !important;
     border: 1px solid #000000 !important;
     background-color: #ba810d !important;
@@ -1113,7 +1113,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subdivision[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .subdivision[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "subdivision " !important;
     border: 1px solid #000000 !important;
     background-color: #33c628 !important;
@@ -1127,7 +1127,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subdivision[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .subdivision[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/subdivision" !important;
     border: 1px solid #000000 !important;
     background-color: #33c628 !important;
@@ -1141,7 +1141,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .sublist[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .sublist[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "sublist " !important;
     border: 1px solid #000000 !important;
     background-color: #630a4f !important;
@@ -1155,7 +1155,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .sublist[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .sublist[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/sublist" !important;
     border: 1px solid #000000 !important;
     background-color: #630a4f !important;
@@ -1169,7 +1169,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subparagraph[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .subparagraph[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "subparagraph " !important;
     border: 1px solid #000000 !important;
     background-color: #fb1a92 !important;
@@ -1183,7 +1183,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subparagraph[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .subparagraph[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/subparagraph" !important;
     border: 1px solid #000000 !important;
     background-color: #fb1a92 !important;
@@ -1197,7 +1197,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subpart[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .subpart[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "subpart " !important;
     border: 1px solid #000000 !important;
     background-color: #c88296 !important;
@@ -1211,7 +1211,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subpart[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .subpart[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/subpart" !important;
     border: 1px solid #000000 !important;
     background-color: #c88296 !important;
@@ -1225,7 +1225,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subsection[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .subsection[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "subsection " !important;
     border: 1px solid #000000 !important;
     background-color: #6301b5 !important;
@@ -1239,7 +1239,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subsection[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .subsection[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/subsection" !important;
     border: 1px solid #000000 !important;
     background-color: #6301b5 !important;
@@ -1253,7 +1253,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subtitle[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .subtitle[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "subtitle " !important;
     border: 1px solid #000000 !important;
     background-color: #6a75c0 !important;
@@ -1267,7 +1267,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subtitle[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .subtitle[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/subtitle" !important;
     border: 1px solid #000000 !important;
     background-color: #6a75c0 !important;
@@ -1281,7 +1281,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .title[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .title[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "title " !important;
     border: 1px solid #000000 !important;
     background-color: #f7dc5c !important;
@@ -1295,7 +1295,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .title[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .title[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/title" !important;
     border: 1px solid #000000 !important;
     background-color: #f7dc5c !important;
@@ -1309,7 +1309,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .tome[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .tome[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "tome " !important;
     border: 1px solid #000000 !important;
     background-color: #d4fb08 !important;
@@ -1323,7 +1323,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .tome[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .tome[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/tome" !important;
     border: 1px solid #000000 !important;
     background-color: #d4fb08 !important;
@@ -1337,7 +1337,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .transitional[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .transitional[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "transitional " !important;
     border: 1px solid #000000 !important;
     background-color: #29e4e4 !important;
@@ -1351,7 +1351,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .transitional[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .transitional[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/transitional" !important;
     border: 1px solid #000000 !important;
     background-color: #29e4e4 !important;
@@ -1370,7 +1370,7 @@
     * itemType
     * --------------------------
     */
-.akomaNtoso-drafting .itemType[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .itemType[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "itemType " !important;
     border: 1px solid #000000 !important;
     background-color: #9bdd78 !important;
@@ -1384,7 +1384,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .itemType[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .itemType[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/itemType" !important;
     border: 1px solid #000000 !important;
     background-color: #9bdd78 !important;
@@ -1398,7 +1398,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .citation[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .citation[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "citation " !important;
     border: 1px solid #000000 !important;
     background-color: #84bcb4 !important;
@@ -1412,7 +1412,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .citation[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .citation[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/citation" !important;
     border: 1px solid #000000 !important;
     background-color: #84bcb4 !important;
@@ -1426,7 +1426,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .item[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .item[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "item " !important;
     border: 1px solid #000000 !important;
     background-color: #c38c14 !important;
@@ -1440,7 +1440,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .item[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .item[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/item" !important;
     border: 1px solid #000000 !important;
     background-color: #c38c14 !important;
@@ -1454,7 +1454,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .recital[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .recital[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "recital " !important;
     border: 1px solid #000000 !important;
     background-color: #efa996 !important;
@@ -1468,7 +1468,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .recital[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .recital[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/recital" !important;
     border: 1px solid #000000 !important;
     background-color: #efa996 !important;
@@ -1482,7 +1482,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .tblock[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .tblock[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "tblock " !important;
     border: 1px solid #000000 !important;
     background-color: #5d5aa6 !important;
@@ -1496,7 +1496,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .tblock[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .tblock[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/tblock" !important;
     border: 1px solid #000000 !important;
     background-color: #5d5aa6 !important;
@@ -1515,7 +1515,7 @@
     * speechType
     * --------------------------
     */
-.akomaNtoso-drafting .speechType[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .speechType[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "speechType " !important;
     border: 1px solid #000000 !important;
     background-color: #d2c8fe !important;
@@ -1529,7 +1529,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .speechType[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .speechType[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/speechType" !important;
     border: 1px solid #000000 !important;
     background-color: #d2c8fe !important;
@@ -1543,7 +1543,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .answer[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .answer[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "answer " !important;
     border: 1px solid #000000 !important;
     background-color: #817c90 !important;
@@ -1557,7 +1557,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .answer[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .answer[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/answer" !important;
     border: 1px solid #000000 !important;
     background-color: #817c90 !important;
@@ -1571,7 +1571,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .question[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .question[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "question " !important;
     border: 1px solid #000000 !important;
     background-color: #35c7b2 !important;
@@ -1585,7 +1585,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .question[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .question[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/question" !important;
     border: 1px solid #000000 !important;
     background-color: #35c7b2 !important;
@@ -1599,7 +1599,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .speech[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .speech[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "speech " !important;
     border: 1px solid #000000 !important;
     background-color: #342dd0 !important;
@@ -1613,7 +1613,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .speech[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .speech[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/speech" !important;
     border: 1px solid #000000 !important;
     background-color: #342dd0 !important;
@@ -1637,7 +1637,7 @@
     * blocksopt
     * --------------------------
     */
-.akomaNtoso-drafting .blocksopt[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .blocksopt[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "blocksopt " !important;
     border: 1px solid #000000 !important;
     background-color: #b2476c !important;
@@ -1651,7 +1651,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .blocksopt[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .blocksopt[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/blocksopt" !important;
     border: 1px solid #000000 !important;
     background-color: #b2476c !important;
@@ -1665,7 +1665,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .amendmentContent[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .amendmentContent[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "amendmentContent " !important;
     border: 1px solid #000000 !important;
     background-color: #b9ae8c !important;
@@ -1679,7 +1679,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .amendmentContent[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .amendmentContent[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/amendmentContent" !important;
     border: 1px solid #000000 !important;
     background-color: #b9ae8c !important;
@@ -1693,7 +1693,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .amendmentHeading[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .amendmentHeading[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "amendmentHeading " !important;
     border: 1px solid #000000 !important;
     background-color: #ca062c !important;
@@ -1707,7 +1707,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .amendmentHeading[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .amendmentHeading[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/amendmentHeading" !important;
     border: 1px solid #000000 !important;
     background-color: #ca062c !important;
@@ -1721,7 +1721,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .amendmentJustification[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .amendmentJustification[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "amendmentJustification " !important;
     border: 1px solid #000000 !important;
     background-color: #c6bc7b !important;
@@ -1735,7 +1735,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .amendmentJustification[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .amendmentJustification[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/amendmentJustification" !important;
     border: 1px solid #000000 !important;
     background-color: #c6bc7b !important;
@@ -1749,7 +1749,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .amendmentReference[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .amendmentReference[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "amendmentReference " !important;
     border: 1px solid #000000 !important;
     background-color: #ee4a09 !important;
@@ -1763,7 +1763,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .amendmentReference[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .amendmentReference[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/amendmentReference" !important;
     border: 1px solid #000000 !important;
     background-color: #ee4a09 !important;
@@ -1777,7 +1777,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .content[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .content[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "content " !important;
     border: 1px solid #000000 !important;
     background-color: #f933dd !important;
@@ -1791,7 +1791,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .content[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .content[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/content" !important;
     border: 1px solid #000000 !important;
     background-color: #f933dd !important;
@@ -1805,7 +1805,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .formula[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .formula[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "formula " !important;
     border: 1px solid #000000 !important;
     background-color: #7c3fbd !important;
@@ -1819,7 +1819,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .formula[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .formula[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/formula" !important;
     border: 1px solid #000000 !important;
     background-color: #7c3fbd !important;
@@ -1833,7 +1833,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .header[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .header[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "header " !important;
     border: 1px solid #000000 !important;
     background-color: #966c17 !important;
@@ -1847,7 +1847,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .header[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .header[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/header" !important;
     border: 1px solid #000000 !important;
     background-color: #966c17 !important;
@@ -1861,7 +1861,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .intro[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .intro[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "intro " !important;
     border: 1px solid #000000 !important;
     background-color: #2c8761 !important;
@@ -1875,7 +1875,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .intro[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .intro[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/intro" !important;
     border: 1px solid #000000 !important;
     background-color: #2c8761 !important;
@@ -1889,7 +1889,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .longTitle[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .longTitle[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "longTitle " !important;
     border: 1px solid #000000 !important;
     background-color: #8bcd0c !important;
@@ -1903,7 +1903,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .longTitle[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .longTitle[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/longTitle" !important;
     border: 1px solid #000000 !important;
     background-color: #8bcd0c !important;
@@ -1917,7 +1917,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .other[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .other[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "other " !important;
     border: 1px solid #000000 !important;
     background-color: #c4e02a !important;
@@ -1931,7 +1931,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .other[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .other[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/other" !important;
     border: 1px solid #000000 !important;
     background-color: #c4e02a !important;
@@ -1945,7 +1945,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .td[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .td[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "td " !important;
     border: 1px solid #000000 !important;
     background-color: #6bd163 !important;
@@ -1959,7 +1959,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .td[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .td[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/td" !important;
     border: 1px solid #000000 !important;
     background-color: #6bd163 !important;
@@ -1973,7 +1973,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .th[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .th[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "th " !important;
     border: 1px solid #000000 !important;
     background-color: #c77178 !important;
@@ -1987,7 +1987,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .th[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .th[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/th" !important;
     border: 1px solid #000000 !important;
     background-color: #c77178 !important;
@@ -2001,7 +2001,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .wrap[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .wrap[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "wrap " !important;
     border: 1px solid #000000 !important;
     background-color: #77e9cb !important;
@@ -2015,7 +2015,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .wrap[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .wrap[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/wrap" !important;
     border: 1px solid #000000 !important;
     background-color: #77e9cb !important;
@@ -2034,7 +2034,7 @@
     * blocksreq
     * --------------------------
     */
-.akomaNtoso-drafting .blocksreq[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .blocksreq[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "blocksreq " !important;
     border: 1px solid #000000 !important;
     background-color: #9065db !important;
@@ -2048,7 +2048,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .blocksreq[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .blocksreq[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/blocksreq" !important;
     border: 1px solid #000000 !important;
     background-color: #9065db !important;
@@ -2062,7 +2062,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .div[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .div[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "div " !important;
     border: 1px solid #000000 !important;
     background-color: #2218e9 !important;
@@ -2076,7 +2076,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .div[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .div[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/div" !important;
     border: 1px solid #000000 !important;
     background-color: #2218e9 !important;
@@ -2090,7 +2090,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .interstitial[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .interstitial[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "interstitial " !important;
     border: 1px solid #000000 !important;
     background-color: #d62b3c !important;
@@ -2104,7 +2104,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .interstitial[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .interstitial[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/interstitial" !important;
     border: 1px solid #000000 !important;
     background-color: #d62b3c !important;
@@ -2118,7 +2118,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .note[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .note[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "note " !important;
     border: 1px solid #000000 !important;
     background-color: #32a3a5 !important;
@@ -2132,7 +2132,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .note[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .note[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/note" !important;
     border: 1px solid #000000 !important;
     background-color: #32a3a5 !important;
@@ -2161,7 +2161,7 @@
     * collectionStructure
     * --------------------------
     */
-.akomaNtoso-drafting .component[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .component[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "component " !important;
     border: 1px solid #000000 !important;
     background-color: #c5160b !important;
@@ -2175,7 +2175,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .component[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .component[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/component" !important;
     border: 1px solid #000000 !important;
     background-color: #c5160b !important;
@@ -2194,7 +2194,7 @@
     * containerType
     * --------------------------
     */
-.akomaNtoso-drafting .container[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .container[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "container " !important;
     border: 1px solid #000000 !important;
     background-color: #a271cd !important;
@@ -2208,7 +2208,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .container[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .container[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/container" !important;
     border: 1px solid #000000 !important;
     background-color: #a271cd !important;
@@ -2262,7 +2262,7 @@
     * inline
     * --------------------------
     */
-.akomaNtoso-drafting .inline[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .inline[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "inline " !important;
     border: 1px solid #000000 !important;
     background-color: #bbd72c !important;
@@ -2276,7 +2276,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .inline[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .inline[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/inline" !important;
     border: 1px solid #000000 !important;
     background-color: #bbd72c !important;
@@ -2290,7 +2290,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .a[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .a[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "a " !important;
     border: 1px solid #000000 !important;
     background-color: #bc187a !important;
@@ -2304,7 +2304,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .a[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .a[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/a" !important;
     border: 1px solid #000000 !important;
     background-color: #bc187a !important;
@@ -2318,7 +2318,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .affectedDocument[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .affectedDocument[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "affectedDocument " !important;
     border: 1px solid #000000 !important;
     background-color: #6a5762 !important;
@@ -2332,7 +2332,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .affectedDocument[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .affectedDocument[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/affectedDocument" !important;
     border: 1px solid #000000 !important;
     background-color: #6a5762 !important;
@@ -2346,7 +2346,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .b[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .b[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "b " !important;
     border: 1px solid #000000 !important;
     background-color: #f600c9 !important;
@@ -2360,7 +2360,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .b[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .b[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/b" !important;
     border: 1px solid #000000 !important;
     background-color: #f600c9 !important;
@@ -2374,7 +2374,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .block[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .block[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "block " !important;
     border: 1px solid #000000 !important;
     background-color: #50087b !important;
@@ -2388,7 +2388,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .block[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .block[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/block" !important;
     border: 1px solid #000000 !important;
     background-color: #50087b !important;
@@ -2402,7 +2402,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .caption[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .caption[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "caption " !important;
     border: 1px solid #000000 !important;
     background-color: #044fa0 !important;
@@ -2416,7 +2416,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .caption[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .caption[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/caption" !important;
     border: 1px solid #000000 !important;
     background-color: #044fa0 !important;
@@ -2430,7 +2430,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .change[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .change[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "change " !important;
     border: 1px solid #000000 !important;
     background-color: #d22989 !important;
@@ -2444,7 +2444,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .change[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .change[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/change" !important;
     border: 1px solid #000000 !important;
     background-color: #d22989 !important;
@@ -2458,7 +2458,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .courtType[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .courtType[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "courtType " !important;
     border: 1px solid #000000 !important;
     background-color: #4d54e2 !important;
@@ -2472,7 +2472,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .courtType[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .courtType[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/courtType" !important;
     border: 1px solid #000000 !important;
     background-color: #4d54e2 !important;
@@ -2486,7 +2486,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .date[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .date[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "date " !important;
     border: 1px solid #000000 !important;
     background-color: #a7e584 !important;
@@ -2500,7 +2500,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .date[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .date[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/date" !important;
     border: 1px solid #000000 !important;
     background-color: #a7e584 !important;
@@ -2514,7 +2514,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .def[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .def[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "def " !important;
     border: 1px solid #000000 !important;
     background-color: #83a58c !important;
@@ -2528,7 +2528,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .def[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .def[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/def" !important;
     border: 1px solid #000000 !important;
     background-color: #83a58c !important;
@@ -2542,7 +2542,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .del[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .del[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "del " !important;
     border: 1px solid #000000 !important;
     background-color: #b1b557 !important;
@@ -2556,7 +2556,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .del[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .del[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/del" !important;
     border: 1px solid #000000 !important;
     background-color: #b1b557 !important;
@@ -2570,7 +2570,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docCommittee[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .docCommittee[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "docCommittee " !important;
     border: 1px solid #000000 !important;
     background-color: #c4755d !important;
@@ -2584,7 +2584,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docCommittee[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .docCommittee[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/docCommittee" !important;
     border: 1px solid #000000 !important;
     background-color: #c4755d !important;
@@ -2598,7 +2598,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docDate[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .docDate[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "docDate " !important;
     border: 1px solid #000000 !important;
     background-color: #7ba1cd !important;
@@ -2612,7 +2612,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docDate[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .docDate[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/docDate" !important;
     border: 1px solid #000000 !important;
     background-color: #7ba1cd !important;
@@ -2626,7 +2626,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docIntroducer[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .docIntroducer[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "docIntroducer " !important;
     border: 1px solid #000000 !important;
     background-color: #b68503 !important;
@@ -2640,7 +2640,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docIntroducer[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .docIntroducer[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/docIntroducer" !important;
     border: 1px solid #000000 !important;
     background-color: #b68503 !important;
@@ -2654,7 +2654,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docJurisdiction[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .docJurisdiction[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "docJurisdiction " !important;
     border: 1px solid #000000 !important;
     background-color: #585a0d !important;
@@ -2668,7 +2668,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docJurisdiction[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .docJurisdiction[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/docJurisdiction" !important;
     border: 1px solid #000000 !important;
     background-color: #585a0d !important;
@@ -2682,7 +2682,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docNumber[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .docNumber[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "docNumber " !important;
     border: 1px solid #000000 !important;
     background-color: #c65c22 !important;
@@ -2696,7 +2696,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docNumber[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .docNumber[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/docNumber" !important;
     border: 1px solid #000000 !important;
     background-color: #c65c22 !important;
@@ -2710,7 +2710,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docProponent[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .docProponent[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "docProponent " !important;
     border: 1px solid #000000 !important;
     background-color: #aab5ae !important;
@@ -2724,7 +2724,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docProponent[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .docProponent[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/docProponent" !important;
     border: 1px solid #000000 !important;
     background-color: #aab5ae !important;
@@ -2738,7 +2738,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docPurpose[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .docPurpose[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "docPurpose " !important;
     border: 1px solid #000000 !important;
     background-color: #5b4fa1 !important;
@@ -2752,7 +2752,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docPurpose[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .docPurpose[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/docPurpose" !important;
     border: 1px solid #000000 !important;
     background-color: #5b4fa1 !important;
@@ -2766,7 +2766,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docStage[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .docStage[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "docStage " !important;
     border: 1px solid #000000 !important;
     background-color: #807104 !important;
@@ -2780,7 +2780,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docStage[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .docStage[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/docStage" !important;
     border: 1px solid #000000 !important;
     background-color: #807104 !important;
@@ -2794,7 +2794,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docStatus[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .docStatus[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "docStatus " !important;
     border: 1px solid #000000 !important;
     background-color: #cc3296 !important;
@@ -2808,7 +2808,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docStatus[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .docStatus[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/docStatus" !important;
     border: 1px solid #000000 !important;
     background-color: #cc3296 !important;
@@ -2822,7 +2822,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docTitle[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .docTitle[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "docTitle " !important;
     border: 1px solid #000000 !important;
     background-color: #ab19a1 !important;
@@ -2836,7 +2836,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docTitle[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .docTitle[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/docTitle" !important;
     border: 1px solid #000000 !important;
     background-color: #ab19a1 !important;
@@ -2850,7 +2850,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docType[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .docType[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "docType " !important;
     border: 1px solid #000000 !important;
     background-color: #bbba26 !important;
@@ -2864,7 +2864,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docType[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .docType[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/docType" !important;
     border: 1px solid #000000 !important;
     background-color: #bbba26 !important;
@@ -2878,7 +2878,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docketNumber[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .docketNumber[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "docketNumber " !important;
     border: 1px solid #000000 !important;
     background-color: #223fe8 !important;
@@ -2892,7 +2892,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .docketNumber[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .docketNumber[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/docketNumber" !important;
     border: 1px solid #000000 !important;
     background-color: #223fe8 !important;
@@ -2906,7 +2906,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .extractText[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .extractText[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "extractText " !important;
     border: 1px solid #000000 !important;
     background-color: #847220 !important;
@@ -2920,7 +2920,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .extractText[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .extractText[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/extractText" !important;
     border: 1px solid #000000 !important;
     background-color: #847220 !important;
@@ -2934,7 +2934,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .fillIn[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .fillIn[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "fillIn " !important;
     border: 1px solid #000000 !important;
     background-color: #f4bcda !important;
@@ -2948,7 +2948,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .fillIn[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .fillIn[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/fillIn" !important;
     border: 1px solid #000000 !important;
     background-color: #f4bcda !important;
@@ -2962,7 +2962,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .from[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .from[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "from " !important;
     border: 1px solid #000000 !important;
     background-color: #4ff5a3 !important;
@@ -2976,7 +2976,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .from[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .from[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/from" !important;
     border: 1px solid #000000 !important;
     background-color: #4ff5a3 !important;
@@ -2990,7 +2990,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .heading[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .heading[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "heading " !important;
     border: 1px solid #000000 !important;
     background-color: #b3fa15 !important;
@@ -3004,7 +3004,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .heading[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .heading[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/heading" !important;
     border: 1px solid #000000 !important;
     background-color: #b3fa15 !important;
@@ -3018,7 +3018,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .i[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .i[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "i " !important;
     border: 1px solid #000000 !important;
     background-color: #75d6a5 !important;
@@ -3032,7 +3032,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .i[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .i[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/i" !important;
     border: 1px solid #000000 !important;
     background-color: #75d6a5 !important;
@@ -3046,7 +3046,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .inline[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .inline[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "inline " !important;
     border: 1px solid #000000 !important;
     background-color: #bbd72c !important;
@@ -3060,7 +3060,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .inline[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .inline[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/inline" !important;
     border: 1px solid #000000 !important;
     background-color: #bbd72c !important;
@@ -3074,7 +3074,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .ins[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .ins[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "ins " !important;
     border: 1px solid #000000 !important;
     background-color: #772ef0 !important;
@@ -3088,7 +3088,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .ins[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .ins[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/ins" !important;
     border: 1px solid #000000 !important;
     background-color: #772ef0 !important;
@@ -3102,7 +3102,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .legislature[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .legislature[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "legislature " !important;
     border: 1px solid #000000 !important;
     background-color: #9d190c !important;
@@ -3116,7 +3116,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .legislature[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .legislature[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/legislature" !important;
     border: 1px solid #000000 !important;
     background-color: #9d190c !important;
@@ -3130,7 +3130,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .listConclusion[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .listConclusion[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "listConclusion " !important;
     border: 1px solid #000000 !important;
     background-color: #8ca6a6 !important;
@@ -3144,7 +3144,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .listConclusion[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .listConclusion[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/listConclusion" !important;
     border: 1px solid #000000 !important;
     background-color: #8ca6a6 !important;
@@ -3158,7 +3158,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .listIntroduction[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .listIntroduction[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "listIntroduction " !important;
     border: 1px solid #000000 !important;
     background-color: #5b1d94 !important;
@@ -3172,7 +3172,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .listIntroduction[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .listIntroduction[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/listIntroduction" !important;
     border: 1px solid #000000 !important;
     background-color: #5b1d94 !important;
@@ -3186,7 +3186,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .mref[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .mref[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "mref " !important;
     border: 1px solid #000000 !important;
     background-color: #43e84c !important;
@@ -3200,7 +3200,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .mref[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .mref[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/mref" !important;
     border: 1px solid #000000 !important;
     background-color: #43e84c !important;
@@ -3214,7 +3214,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .narrative[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .narrative[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "narrative " !important;
     border: 1px solid #000000 !important;
     background-color: #36a0ae !important;
@@ -3228,7 +3228,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .narrative[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .narrative[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/narrative" !important;
     border: 1px solid #000000 !important;
     background-color: #36a0ae !important;
@@ -3242,7 +3242,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .neutralCitation[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .neutralCitation[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "neutralCitation " !important;
     border: 1px solid #000000 !important;
     background-color: #ad972c !important;
@@ -3256,7 +3256,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .neutralCitation[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .neutralCitation[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/neutralCitation" !important;
     border: 1px solid #000000 !important;
     background-color: #ad972c !important;
@@ -3270,7 +3270,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .num[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .num[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "num " !important;
     border: 1px solid #000000 !important;
     background-color: #1e839e !important;
@@ -3284,7 +3284,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .num[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .num[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/num" !important;
     border: 1px solid #000000 !important;
     background-color: #1e839e !important;
@@ -3298,7 +3298,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .omissis[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .omissis[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "omissis " !important;
     border: 1px solid #000000 !important;
     background-color: #df6c64 !important;
@@ -3312,7 +3312,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .omissis[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .omissis[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/omissis" !important;
     border: 1px solid #000000 !important;
     background-color: #df6c64 !important;
@@ -3326,7 +3326,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .opinion[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .opinion[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "opinion " !important;
     border: 1px solid #000000 !important;
     background-color: #5d63c9 !important;
@@ -3340,7 +3340,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .opinion[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .opinion[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/opinion" !important;
     border: 1px solid #000000 !important;
     background-color: #5d63c9 !important;
@@ -3354,7 +3354,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .outcome[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .outcome[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "outcome " !important;
     border: 1px solid #000000 !important;
     background-color: #793427 !important;
@@ -3368,7 +3368,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .outcome[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .outcome[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/outcome" !important;
     border: 1px solid #000000 !important;
     background-color: #793427 !important;
@@ -3382,7 +3382,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .p[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .p[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "p " !important;
     border: 1px solid #000000 !important;
     background-color: #b391bd !important;
@@ -3396,7 +3396,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .p[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .p[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/p" !important;
     border: 1px solid #000000 !important;
     background-color: #b391bd !important;
@@ -3410,7 +3410,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .placeholder[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .placeholder[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "placeholder " !important;
     border: 1px solid #000000 !important;
     background-color: #a384d5 !important;
@@ -3424,7 +3424,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .placeholder[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .placeholder[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/placeholder" !important;
     border: 1px solid #000000 !important;
     background-color: #a384d5 !important;
@@ -3438,7 +3438,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .quotedText[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .quotedText[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "quotedText " !important;
     border: 1px solid #000000 !important;
     background-color: #23ecaf !important;
@@ -3452,7 +3452,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .quotedText[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .quotedText[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/quotedText" !important;
     border: 1px solid #000000 !important;
     background-color: #23ecaf !important;
@@ -3466,7 +3466,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .recordedTime[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .recordedTime[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "recordedTime " !important;
     border: 1px solid #000000 !important;
     background-color: #488e18 !important;
@@ -3480,7 +3480,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .recordedTime[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .recordedTime[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/recordedTime" !important;
     border: 1px solid #000000 !important;
     background-color: #488e18 !important;
@@ -3494,7 +3494,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .relatedDocument[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .relatedDocument[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "relatedDocument " !important;
     border: 1px solid #000000 !important;
     background-color: #309516 !important;
@@ -3508,7 +3508,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .relatedDocument[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .relatedDocument[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/relatedDocument" !important;
     border: 1px solid #000000 !important;
     background-color: #309516 !important;
@@ -3522,7 +3522,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .remark[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .remark[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "remark " !important;
     border: 1px solid #000000 !important;
     background-color: #cc93f7 !important;
@@ -3536,7 +3536,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .remark[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .remark[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/remark" !important;
     border: 1px solid #000000 !important;
     background-color: #cc93f7 !important;
@@ -3550,7 +3550,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .scene[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .scene[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "scene " !important;
     border: 1px solid #000000 !important;
     background-color: #ba6148 !important;
@@ -3564,7 +3564,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .scene[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .scene[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/scene" !important;
     border: 1px solid #000000 !important;
     background-color: #ba6148 !important;
@@ -3578,7 +3578,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .session[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .session[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "session " !important;
     border: 1px solid #000000 !important;
     background-color: #ab13b5 !important;
@@ -3592,7 +3592,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .session[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .session[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/session" !important;
     border: 1px solid #000000 !important;
     background-color: #ab13b5 !important;
@@ -3606,7 +3606,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .shortTitle[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .shortTitle[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "shortTitle " !important;
     border: 1px solid #000000 !important;
     background-color: #5c5c74 !important;
@@ -3620,7 +3620,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .shortTitle[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .shortTitle[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/shortTitle" !important;
     border: 1px solid #000000 !important;
     background-color: #5c5c74 !important;
@@ -3634,7 +3634,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .signature[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .signature[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "signature " !important;
     border: 1px solid #000000 !important;
     background-color: #ad2507 !important;
@@ -3648,7 +3648,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .signature[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .signature[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/signature" !important;
     border: 1px solid #000000 !important;
     background-color: #ad2507 !important;
@@ -3662,7 +3662,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .span[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .span[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "span " !important;
     border: 1px solid #000000 !important;
     background-color: #894a59 !important;
@@ -3676,7 +3676,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .span[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .span[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/span" !important;
     border: 1px solid #000000 !important;
     background-color: #894a59 !important;
@@ -3690,7 +3690,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .sub[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .sub[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "sub " !important;
     border: 1px solid #000000 !important;
     background-color: #bf39b2 !important;
@@ -3704,7 +3704,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .sub[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .sub[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/sub" !important;
     border: 1px solid #000000 !important;
     background-color: #bf39b2 !important;
@@ -3718,7 +3718,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subheading[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .subheading[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "subheading " !important;
     border: 1px solid #000000 !important;
     background-color: #802804 !important;
@@ -3732,7 +3732,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .subheading[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .subheading[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/subheading" !important;
     border: 1px solid #000000 !important;
     background-color: #802804 !important;
@@ -3746,7 +3746,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .summary[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .summary[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "summary " !important;
     border: 1px solid #000000 !important;
     background-color: #59b2bc !important;
@@ -3760,7 +3760,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .summary[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .summary[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/summary" !important;
     border: 1px solid #000000 !important;
     background-color: #59b2bc !important;
@@ -3774,7 +3774,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .sup[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .sup[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "sup " !important;
     border: 1px solid #000000 !important;
     background-color: #a60829 !important;
@@ -3788,7 +3788,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .sup[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .sup[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/sup" !important;
     border: 1px solid #000000 !important;
     background-color: #a60829 !important;
@@ -3802,7 +3802,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .tocItem[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .tocItem[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "tocItem " !important;
     border: 1px solid #000000 !important;
     background-color: #eb4e86 !important;
@@ -3816,7 +3816,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .tocItem[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .tocItem[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/tocItem" !important;
     border: 1px solid #000000 !important;
     background-color: #eb4e86 !important;
@@ -3830,7 +3830,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .u[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .u[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "u " !important;
     border: 1px solid #000000 !important;
     background-color: #a639b8 !important;
@@ -3844,7 +3844,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .u[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .u[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/u" !important;
     border: 1px solid #000000 !important;
     background-color: #a639b8 !important;
@@ -3858,7 +3858,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .vote[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .vote[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "vote " !important;
     border: 1px solid #000000 !important;
     background-color: #99986e !important;
@@ -3872,7 +3872,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .vote[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .vote[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/vote" !important;
     border: 1px solid #000000 !important;
     background-color: #99986e !important;
@@ -3891,7 +3891,7 @@
     * inlinereq
     * --------------------------
     */
-.akomaNtoso-drafting .inlinereq[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .inlinereq[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "inlinereq " !important;
     border: 1px solid #000000 !important;
     background-color: #c26dd0 !important;
@@ -3905,7 +3905,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .inlinereq[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .inlinereq[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/inlinereq" !important;
     border: 1px solid #000000 !important;
     background-color: #c26dd0 !important;
@@ -3919,7 +3919,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .ref[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .ref[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "ref " !important;
     border: 1px solid #000000 !important;
     background-color: #8309d3 !important;
@@ -3933,7 +3933,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .ref[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .ref[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/ref" !important;
     border: 1px solid #000000 !important;
     background-color: #8309d3 !important;
@@ -3947,7 +3947,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .rref[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .rref[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "rref " !important;
     border: 1px solid #000000 !important;
     background-color: #22f9f3 !important;
@@ -3961,7 +3961,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .rref[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .rref[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/rref" !important;
     border: 1px solid #000000 !important;
     background-color: #22f9f3 !important;
@@ -3980,7 +3980,7 @@
     * inlinereqreq
     * --------------------------
     */
-.akomaNtoso-drafting .inlinereqreq[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .inlinereqreq[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "inlinereqreq " !important;
     border: 1px solid #000000 !important;
     background-color: #94efe9 !important;
@@ -3994,7 +3994,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .inlinereqreq[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .inlinereqreq[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/inlinereqreq" !important;
     border: 1px solid #000000 !important;
     background-color: #94efe9 !important;
@@ -4008,7 +4008,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .concept[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .concept[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "concept " !important;
     border: 1px solid #000000 !important;
     background-color: #f198ce !important;
@@ -4022,7 +4022,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .concept[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .concept[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/concept" !important;
     border: 1px solid #000000 !important;
     background-color: #f198ce !important;
@@ -4036,7 +4036,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .entity[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .entity[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "entity " !important;
     border: 1px solid #000000 !important;
     background-color: #f2fbbe !important;
@@ -4050,7 +4050,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .entity[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .entity[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/entity" !important;
     border: 1px solid #000000 !important;
     background-color: #f2fbbe !important;
@@ -4064,7 +4064,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .event[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .event[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "event " !important;
     border: 1px solid #000000 !important;
     background-color: #49fb4d !important;
@@ -4078,7 +4078,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .event[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .event[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/event" !important;
     border: 1px solid #000000 !important;
     background-color: #49fb4d !important;
@@ -4092,7 +4092,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .judge[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .judge[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "judge " !important;
     border: 1px solid #000000 !important;
     background-color: #5d020a !important;
@@ -4106,7 +4106,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .judge[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .judge[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/judge" !important;
     border: 1px solid #000000 !important;
     background-color: #5d020a !important;
@@ -4120,7 +4120,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .lawyer[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .lawyer[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "lawyer " !important;
     border: 1px solid #000000 !important;
     background-color: #10f04d !important;
@@ -4134,7 +4134,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .lawyer[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .lawyer[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/lawyer" !important;
     border: 1px solid #000000 !important;
     background-color: #10f04d !important;
@@ -4148,7 +4148,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .location[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .location[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "location " !important;
     border: 1px solid #000000 !important;
     background-color: #bc83b7 !important;
@@ -4162,7 +4162,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .location[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .location[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/location" !important;
     border: 1px solid #000000 !important;
     background-color: #bc83b7 !important;
@@ -4176,7 +4176,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .object[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .object[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "object " !important;
     border: 1px solid #000000 !important;
     background-color: #7846f9 !important;
@@ -4190,7 +4190,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .object[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .object[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/object" !important;
     border: 1px solid #000000 !important;
     background-color: #7846f9 !important;
@@ -4204,7 +4204,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .organization[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .organization[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "organization " !important;
     border: 1px solid #000000 !important;
     background-color: #9ff2bd !important;
@@ -4218,7 +4218,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .organization[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .organization[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/organization" !important;
     border: 1px solid #000000 !important;
     background-color: #9ff2bd !important;
@@ -4232,7 +4232,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .party[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .party[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "party " !important;
     border: 1px solid #000000 !important;
     background-color: #7f158a !important;
@@ -4246,7 +4246,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .party[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .party[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/party" !important;
     border: 1px solid #000000 !important;
     background-color: #7f158a !important;
@@ -4260,7 +4260,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .person[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .person[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "person " !important;
     border: 1px solid #000000 !important;
     background-color: #18a8cb !important;
@@ -4274,7 +4274,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .person[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .person[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/person" !important;
     border: 1px solid #000000 !important;
     background-color: #18a8cb !important;
@@ -4288,7 +4288,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .process[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .process[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "process " !important;
     border: 1px solid #000000 !important;
     background-color: #daa89a !important;
@@ -4302,7 +4302,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .process[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .process[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/process" !important;
     border: 1px solid #000000 !important;
     background-color: #daa89a !important;
@@ -4316,7 +4316,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .quantity[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .quantity[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "quantity " !important;
     border: 1px solid #000000 !important;
     background-color: #bbbdaa !important;
@@ -4330,7 +4330,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .quantity[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .quantity[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/quantity" !important;
     border: 1px solid #000000 !important;
     background-color: #bbbdaa !important;
@@ -4344,7 +4344,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .role[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .role[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "role " !important;
     border: 1px solid #000000 !important;
     background-color: #b0b44a !important;
@@ -4358,7 +4358,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .role[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .role[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/role" !important;
     border: 1px solid #000000 !important;
     background-color: #b0b44a !important;
@@ -4372,7 +4372,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .term[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .term[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "term " !important;
     border: 1px solid #000000 !important;
     background-color: #2d3815 !important;
@@ -4386,7 +4386,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .term[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .term[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/term" !important;
     border: 1px solid #000000 !important;
     background-color: #2d3815 !important;
@@ -4420,7 +4420,7 @@
     * judicialArguments
     * --------------------------
     */
-.akomaNtoso-drafting .li[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .li[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "li " !important;
     border: 1px solid #000000 !important;
     background-color: #ac17c1 !important;
@@ -4434,7 +4434,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .li[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .li[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/li" !important;
     border: 1px solid #000000 !important;
     background-color: #ac17c1 !important;
@@ -4453,7 +4453,7 @@
     * listItems
     * --------------------------
     */
-.akomaNtoso-drafting .ol[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .ol[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "ol " !important;
     border: 1px solid #000000 !important;
     background-color: #36aadc !important;
@@ -4467,7 +4467,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .ol[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .ol[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/ol" !important;
     border: 1px solid #000000 !important;
     background-color: #36aadc !important;
@@ -4481,7 +4481,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .ul[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .ul[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "ul " !important;
     border: 1px solid #000000 !important;
     background-color: #f084d3 !important;
@@ -4495,7 +4495,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .ul[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .ul[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/ul" !important;
     border: 1px solid #000000 !important;
     background-color: #f084d3 !important;
@@ -4514,7 +4514,7 @@
     * maincontent
     * --------------------------
     */
-.akomaNtoso-drafting .maincontent[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .maincontent[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "maincontent " !important;
     border: 1px solid #000000 !important;
     background-color: #9d1860 !important;
@@ -4528,7 +4528,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .maincontent[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .maincontent[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/maincontent" !important;
     border: 1px solid #000000 !important;
     background-color: #9d1860 !important;
@@ -4542,7 +4542,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .background[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .background[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "background " !important;
     border: 1px solid #000000 !important;
     background-color: #bc8186 !important;
@@ -4556,7 +4556,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .background[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .background[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/background" !important;
     border: 1px solid #000000 !important;
     background-color: #bc8186 !important;
@@ -4570,7 +4570,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .decision[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .decision[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "decision " !important;
     border: 1px solid #000000 !important;
     background-color: #c2b815 !important;
@@ -4584,7 +4584,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .decision[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .decision[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/decision" !important;
     border: 1px solid #000000 !important;
     background-color: #c2b815 !important;
@@ -4598,7 +4598,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .introduction[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .introduction[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "introduction " !important;
     border: 1px solid #000000 !important;
     background-color: #891690 !important;
@@ -4612,7 +4612,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .introduction[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .introduction[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/introduction" !important;
     border: 1px solid #000000 !important;
     background-color: #891690 !important;
@@ -4626,7 +4626,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .mainBody[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .mainBody[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "mainBody " !important;
     border: 1px solid #000000 !important;
     background-color: #fd1abc !important;
@@ -4640,7 +4640,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .mainBody[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .mainBody[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/mainBody" !important;
     border: 1px solid #000000 !important;
     background-color: #fd1abc !important;
@@ -4654,7 +4654,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .motivation[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .motivation[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "motivation " !important;
     border: 1px solid #000000 !important;
     background-color: #27771c !important;
@@ -4668,7 +4668,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .motivation[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .motivation[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/motivation" !important;
     border: 1px solid #000000 !important;
     background-color: #27771c !important;
@@ -4687,7 +4687,7 @@
     * markeropt
     * --------------------------
     */
-.akomaNtoso-drafting .br[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .br[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "br " !important;
     border: 1px solid #000000 !important;
     background-color: #3f15da !important;
@@ -4701,7 +4701,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .br[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .br[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/br" !important;
     border: 1px solid #000000 !important;
     background-color: #3f15da !important;
@@ -4770,7 +4770,7 @@
     * popupStructure
     * --------------------------
     */
-.akomaNtoso-drafting .extractStructure[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .extractStructure[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "extractStructure " !important;
     border: 1px solid #000000 !important;
     background-color: #d55c57 !important;
@@ -4784,7 +4784,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .extractStructure[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .extractStructure[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/extractStructure" !important;
     border: 1px solid #000000 !important;
     background-color: #d55c57 !important;
@@ -4798,7 +4798,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .quotedStructure[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .quotedStructure[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "quotedStructure " !important;
     border: 1px solid #000000 !important;
     background-color: #3317f8 !important;
@@ -4812,7 +4812,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .quotedStructure[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .quotedStructure[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/quotedStructure" !important;
     border: 1px solid #000000 !important;
     background-color: #3317f8 !important;
@@ -4851,7 +4851,7 @@
     * srcType
     * --------------------------
     */
-.akomaNtoso-drafting .table[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .table[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "table " !important;
     border: 1px solid #000000 !important;
     background-color: #c2241c !important;
@@ -4865,7 +4865,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .table[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .table[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/table" !important;
     border: 1px solid #000000 !important;
     background-color: #c2241c !important;
@@ -4879,7 +4879,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .tr[ns="http://www.akomantoso.org/2.0"]:before {
+.akomaNtoso-drafting .tr[data-ns="http://www.akomantoso.org/2.0"]:before {
     content: "tr " !important;
     border: 1px solid #000000 !important;
     background-color: #529f59 !important;
@@ -4893,7 +4893,7 @@
     padding: 1px !important;
 }
 
-.akomaNtoso-drafting .tr[ns="http://www.akomantoso.org/2.0"]:after {
+.akomaNtoso-drafting .tr[data-ns="http://www.akomantoso.org/2.0"]:after {
     content: "/tr" !important;
     border: 1px solid #000000 !important;
     background-color: #529f59 !important;

@@ -1,110 +1,110 @@
-.preface[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.preface[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: block;
 }
 
-.preface[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] .docTitle[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.preface[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] .docTitle[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: block;
     text-align: center;
 }
 
-.coverPage[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.coverPage[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
 
 }
 
-.coverPage[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] .p[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.coverPage[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] .p[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: block;
 }
 
-.docTitle[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.docTitle[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     font-weight: bold;
     line-height: 2.5em;
 }
 
-.docStage[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.docStage[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: block;
     font-size: 1.4em;
 }
 
-.docType[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.docType[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: block;
     font-size: 1.4em;
 }
 
-.docPurpose[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.docPurpose[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: block;
     font-size: 1.2em;
 }
 
-.body[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.body[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: block;
     margin-top: 20px;
 }
 
-.conclusions[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.conclusions[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: block;
     margin-top: 20px;
 }
 
-.chapter[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.chapter[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: block;
     width: 98%;
 }
 
-.chapter[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.chapter[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .num[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     font-size: 1.0em;
     display: block;
     text-align: center;
 }
 
-.chapter[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .heading[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.chapter[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .heading[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     font-size: 1.5em;
     display: block;
     text-align: center;
 }
 
-.article[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.article[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: block;
     width: 98%;
 }
 
-.article[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] *[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.article[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] *[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     text-align: left;
 }
 
-.article[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.article[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .num[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     font-size: 1.0em;
     text-align: center;
     display: block;
 }
 
-.article[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] >  .heading[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.article[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] >  .heading[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     font-size: 1.3em;
     text-align: center;
     display: block;
     width: 100%;
 }
 
-.list[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .intro[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.list[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .intro[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: inline;
 }
 
-.list[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .point[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.list[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .point[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     margin-left: 2em;
 }
 
-.docNumber[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.docNumber[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     font-weight: bold;
 }
 
-.docDate[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.docDate[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     font-weight: bold;
 }
 
-.item[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.item[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: block;
 }
 
-.num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] + span[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.num[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] + .widget[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: inline;
 }
 
@@ -120,66 +120,66 @@
 
  Note that this is a gross simplification - better solutions should be out there.
 */
-.num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] ~ .subparagraph[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.num[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] ~ .subparagraph[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: inline-block;
     position: relative;
     top: -2.7em;
     margin-top: 0;
 }
 
-.num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
+.num[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
     content: " ";
 }
 
-.authorialNote[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.authorialNote[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     color: blue;
     font-size: 70%;
     vertical-align: text-top;
 }
 
-.authorialNote[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"][marker]:before {
+.authorialNote[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"][marker]:before {
     content: " " attr(marker);
 }
 
-.authorialNote[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:not(:empty):before {
+.authorialNote[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:not(:empty):before {
     content: " [";
 }
 
-.authorialNote[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:not(:empty):after {
+.authorialNote[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:not(:empty):after {
     content: "]";
 }
 
-.preamble[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
+.preamble[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
     content: "\A";
     white-space: pre;
     margin-top: 1.5em;
 }
 
-.content[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
+.content[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
     content: "\A";
     white-space: pre;
     margin-top: 1.5em;
 }
 
-.eol[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
+.eol[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
     content: "\A";
     white-space: pre;
     margin-top: 1.5em;
 }
 
-.eop[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
+.eop[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
     content: "\A\A\A";
     white-space: pre;
     page-break-after: always;
     margin-top: 1.5em;
 }
 
-.br[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
+.br[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
     content: "\A";
     white-space: pre;
 }
 
-.notes[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:before {
+.notes[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:before {
     content: "Notes";
     border: 1px solid #000000;
     background-color: blue;
@@ -196,49 +196,49 @@
     position: relative;
 }
 
-.date[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.date[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     color: #86590a;
 }
 
-.placeholder[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.placeholder[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     color: #333;
     background-color: #888;
 }
 
-.notes[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.notes[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     color: blue;
     margin-left: 2em;
 }
 
 /* Listings */
-.ul[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.ul[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     margin: 1.5em;
 }
 
-.ol[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.ol[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     margin: 1.5em;
 }
 
-.li[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.li[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
 
 }
 
-.table[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.table[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     min-width: 90%;
     padding: 5px;
 }
 
-.table[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] .td[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.table[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] .td[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     padding: 5px;
 }
 
-[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"][href] {
+[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"][href] {
     text-decoration: underline;
     color: blue;
     font-style: italic;
 }
 
-.validation-error[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:before {
+.validation-error[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:before {
     position: relative;
     top: -23px;
     content: attr(error);
@@ -249,30 +249,30 @@
     background-size: 102% 90em;
 }
 
-.validation-error[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.validation-error[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     background-color: red;
 }
 
-.placeholder[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.placeholder[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     background-color: #fffacd;
 }
 
-.nsesa-inline[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.nsesa-inline[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     background-color: #fffacd;
 }
 
-.mainBody[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.mainBody[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] > .p[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     display: block;
 }
 
-.subparagraph[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+.subparagraph[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     margin-left: 1.5em;
 }
 
-.block[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"][name="qstart"] {
+.block[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"][name="qstart"] {
     display: none;
 }
 
-.block[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"][name="qend"] {
+.block[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"][name="qend"] {
     display: none;
 }
