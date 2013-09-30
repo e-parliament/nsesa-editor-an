@@ -60,8 +60,8 @@ public class Attachments extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "attachments");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "attachments");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget attachments");
         return span;
     }
@@ -85,18 +85,378 @@ public class Attachments extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private LanguageSimpleType langAttr;
-    private NCNameSimpleType spaceAttr;
-    private AnyURISimpleType refersToAttr;
-    private StatusTypeSimpleType statusAttr;
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
     private AnyURISimpleType alternativeToAttr;
     private StringSimpleType classAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private IDSimpleType idAttr;
+    private LanguageSimpleType langAttr;
+    private AnyURISimpleType periodAttr;
+    private AnyURISimpleType refersToAttr;
+    private NCNameSimpleType spaceAttr;
+    private StatusTypeSimpleType statusAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
     private String wildcardContentAttr;
-    private AnyURISimpleType periodAttr;
+
+    /**
+     * Return <code>java.util.List<Act></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Act> getActs() {
+        java.util.List<Act> result = new ArrayList<Act>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Act".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Act) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Act></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Act> getActList() {
+        return getActs();
+    }
+
+    /**
+     * Add <code>java.util.List<Act></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Act addAct(Act actElem) {
+        this.addOverlayWidget(actElem);
+        return actElem;
+    }
+
+    /**
+     * Return <code>alternativeToAttr</code> property
+     *
+     * @return alternativeToAttr
+     */
+    public AnyURISimpleType getAlternativeToAttr() {
+        if (alternativeToAttr == null) {
+            alternativeToAttr = new AnyURISimpleType();
+            alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
+        }
+
+        return alternativeToAttr;
+    }
+
+    /**
+     * Return <code>alternativeToAttr</code> property in DSL way
+     *
+     * @return alternativeToAttr
+     */
+    public AnyURISimpleType alternativeToAttr() {
+        return getAlternativeToAttr();
+    }
+
+    /**
+     * Set <code>alternativeToAttr</code> property
+     *
+     * @param alternativeToAttr the new value
+     */
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+        getElement().setAttribute("alternativeTo", alternativeToAttr.getValue());
+    }
+
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr the new value
+     * @return <code>Attachments</code> instance
+     */
+    public Attachments alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>java.util.List<Amendment></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Amendment> getAmendments() {
+        java.util.List<Amendment> result = new ArrayList<Amendment>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Amendment".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Amendment) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Amendment></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Amendment> getAmendmentList() {
+        return getAmendments();
+    }
+
+    /**
+     * Add <code>java.util.List<Amendment></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Amendment addAmendment(Amendment amendmentElem) {
+        this.addOverlayWidget(amendmentElem);
+        return amendmentElem;
+    }
+
+    /**
+     * Return <code>java.util.List<AmendmentList></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<AmendmentList> getAmendmentLists() {
+        java.util.List<AmendmentList> result = new ArrayList<AmendmentList>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("AmendmentList".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((AmendmentList) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<AmendmentList></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<AmendmentList> getAmendmentListList() {
+        return getAmendmentLists();
+    }
+
+    /**
+     * Add <code>java.util.List<AmendmentList></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public AmendmentList addAmendmentList(AmendmentList amendmentListElem) {
+        this.addOverlayWidget(amendmentListElem);
+        return amendmentListElem;
+    }
+
+    /**
+     * Return <code>java.util.List<Bill></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Bill> getBills() {
+        java.util.List<Bill> result = new ArrayList<Bill>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Bill".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Bill) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Bill></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Bill> getBillList() {
+        return getBills();
+    }
+
+    /**
+     * Add <code>java.util.List<Bill></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Bill addBill(Bill billElem) {
+        this.addOverlayWidget(billElem);
+        return billElem;
+    }
+
+    /**
+     * Return <code>classAttr</code> property
+     *
+     * @return classAttr
+     */
+    public StringSimpleType getClassAttr() {
+        if (classAttr == null) {
+            classAttr = new StringSimpleType();
+            classAttr.setValue(getElement().getAttribute("class"));
+        }
+
+        return classAttr;
+    }
+
+    /**
+     * Return <code>classAttr</code> property in DSL way
+     *
+     * @return classAttr
+     */
+    public StringSimpleType classAttr() {
+        return getClassAttr();
+    }
+
+    /**
+     * Set <code>classAttr</code> property
+     *
+     * @param classAttr the new value
+     */
+    public void setClassAttr(final StringSimpleType classAttr) {
+        this.classAttr = classAttr;
+        getElement().setAttribute("class", classAttr.getValue());
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr the new value
+     * @return <code>Attachments</code> instance
+     */
+    public Attachments classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>java.util.List<Debate></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Debate> getDebates() {
+        java.util.List<Debate> result = new ArrayList<Debate>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Debate".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Debate) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Debate></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Debate> getDebateList() {
+        return getDebates();
+    }
+
+    /**
+     * Add <code>java.util.List<Debate></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Debate addDebate(Debate debateElem) {
+        this.addOverlayWidget(debateElem);
+        return debateElem;
+    }
+
+    /**
+     * Return <code>java.util.List<DebateReport></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<DebateReport> getDebateReports() {
+        java.util.List<DebateReport> result = new ArrayList<DebateReport>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("DebateReport".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((DebateReport) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<DebateReport></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<DebateReport> getDebateReportList() {
+        return getDebateReports();
+    }
+
+    /**
+     * Add <code>java.util.List<DebateReport></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public DebateReport addDebateReport(DebateReport debateReportElem) {
+        this.addOverlayWidget(debateReportElem);
+        return debateReportElem;
+    }
+
+    /**
+     * Return <code>java.util.List<Doc></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Doc> getDocs() {
+        java.util.List<Doc> result = new ArrayList<Doc>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Doc".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Doc) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Doc></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Doc> getDocList() {
+        return getDocs();
+    }
+
+    /**
+     * Add <code>java.util.List<Doc></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Doc addDoc(Doc docElem) {
+        this.addOverlayWidget(docElem);
+        return docElem;
+    }
+
+    /**
+     * Return <code>java.util.List<DocumentCollection></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<DocumentCollection> getDocumentCollections() {
+        java.util.List<DocumentCollection> result = new ArrayList<DocumentCollection>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("DocumentCollection".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((DocumentCollection) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<DocumentCollection></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<DocumentCollection> getDocumentCollectionList() {
+        return getDocumentCollections();
+    }
+
+    /**
+     * Add <code>java.util.List<DocumentCollection></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public DocumentCollection addDocumentCollection(DocumentCollection documentCollectionElem) {
+        this.addOverlayWidget(documentCollectionElem);
+        return documentCollectionElem;
+    }
 
     /**
      * Return <code>java.util.List<DocumentRef></code> property
@@ -130,6 +490,162 @@ public class Attachments extends OverlayWidgetImpl {
     public DocumentRef addDocumentRef(DocumentRef documentRefElem) {
         this.addOverlayWidget(documentRefElem);
         return documentRefElem;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property
+     *
+     * @param evolvingIdAttr the new value
+     */
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr the new value
+     * @return <code>Attachments</code> instance
+     */
+    public Attachments evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>java.util.List<Fragment></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Fragment> getFragments() {
+        java.util.List<Fragment> result = new ArrayList<Fragment>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Fragment".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Fragment) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Fragment></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Fragment> getFragmentList() {
+        return getFragments();
+    }
+
+    /**
+     * Add <code>java.util.List<Fragment></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Fragment addFragment(Fragment fragmentElem) {
+        this.addOverlayWidget(fragmentElem);
+        return fragmentElem;
+    }
+
+    /**
+     * Return <code>idAttr</code> property
+     *
+     * @return idAttr
+     */
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
+        }
+
+        return idAttr;
+    }
+
+    /**
+     * Return <code>idAttr</code> property in DSL way
+     *
+     * @return idAttr
+     */
+    public IDSimpleType idAttr() {
+        return getIdAttr();
+    }
+
+    /**
+     * Set <code>idAttr</code> property
+     *
+     * @param idAttr the new value
+     */
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr the new value
+     * @return <code>Attachments</code> instance
+     */
+    public Attachments idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>java.util.List<Judgement></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Judgement> getJudgements() {
+        java.util.List<Judgement> result = new ArrayList<Judgement>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Judgement".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Judgement) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Judgement></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Judgement> getJudgementList() {
+        return getJudgements();
+    }
+
+    /**
+     * Add <code>java.util.List<Judgement></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Judgement addJudgement(Judgement judgementElem) {
+        this.addOverlayWidget(judgementElem);
+        return judgementElem;
     }
 
     /**
@@ -177,46 +693,80 @@ public class Attachments extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>spaceAttr</code> property
+     * Return <code>java.util.List<OfficialGazette></code> property
      *
-     * @return spaceAttr
+     * @return The property as unmodifiable list
      */
-    public NCNameSimpleType getSpaceAttr() {
-        if (spaceAttr == null) {
-            spaceAttr = new NCNameSimpleType();
-            spaceAttr.setValue(getElement().getAttribute("space"));
+    public java.util.List<OfficialGazette> getOfficialGazettes() {
+        java.util.List<OfficialGazette> result = new ArrayList<OfficialGazette>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("OfficialGazette".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((OfficialGazette) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<OfficialGazette></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<OfficialGazette> getOfficialGazetteList() {
+        return getOfficialGazettes();
+    }
+
+    /**
+     * Add <code>java.util.List<OfficialGazette></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public OfficialGazette addOfficialGazette(OfficialGazette officialGazetteElem) {
+        this.addOverlayWidget(officialGazetteElem);
+        return officialGazetteElem;
+    }
+
+    /**
+     * Return <code>periodAttr</code> property
+     *
+     * @return periodAttr
+     */
+    public AnyURISimpleType getPeriodAttr() {
+        if (periodAttr == null) {
+            periodAttr = new AnyURISimpleType();
+            periodAttr.setValue(getElement().getAttribute("period"));
         }
 
-        return spaceAttr;
+        return periodAttr;
     }
 
     /**
-     * Return <code>spaceAttr</code> property in DSL way
+     * Return <code>periodAttr</code> property in DSL way
      *
-     * @return spaceAttr
+     * @return periodAttr
      */
-    public NCNameSimpleType spaceAttr() {
-        return getSpaceAttr();
+    public AnyURISimpleType periodAttr() {
+        return getPeriodAttr();
     }
 
     /**
-     * Set <code>spaceAttr</code> property
+     * Set <code>periodAttr</code> property
      *
-     * @param spaceAttr the new value
+     * @param periodAttr the new value
      */
-    public void setSpaceAttr(final NCNameSimpleType spaceAttr) {
-        this.spaceAttr = spaceAttr;
-        getElement().setAttribute("space", spaceAttr.getValue());
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
+        getElement().setAttribute("period", periodAttr.getValue());
     }
 
     /**
-     * Set <code>spaceAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param spaceAttr the new value
+     * @param periodAttr the new value
      * @return <code>Attachments</code> instance
      */
-    public Attachments spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
+    public Attachments periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -265,6 +815,50 @@ public class Attachments extends OverlayWidgetImpl {
     }
 
     /**
+     * Return <code>spaceAttr</code> property
+     *
+     * @return spaceAttr
+     */
+    public NCNameSimpleType getSpaceAttr() {
+        if (spaceAttr == null) {
+            spaceAttr = new NCNameSimpleType();
+            spaceAttr.setValue(getElement().getAttribute("space"));
+        }
+
+        return spaceAttr;
+    }
+
+    /**
+     * Return <code>spaceAttr</code> property in DSL way
+     *
+     * @return spaceAttr
+     */
+    public NCNameSimpleType spaceAttr() {
+        return getSpaceAttr();
+    }
+
+    /**
+     * Set <code>spaceAttr</code> property
+     *
+     * @param spaceAttr the new value
+     */
+    public void setSpaceAttr(final NCNameSimpleType spaceAttr) {
+        this.spaceAttr = spaceAttr;
+        getElement().setAttribute("space", spaceAttr.getValue());
+    }
+
+    /**
+     * Set <code>spaceAttr</code> property in DSL way
+     *
+     * @param spaceAttr the new value
+     * @return <code>Attachments</code> instance
+     */
+    public Attachments spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
      * Return <code>statusAttr</code> property
      *
      * @return statusAttr
@@ -304,182 +898,6 @@ public class Attachments extends OverlayWidgetImpl {
      */
     public Attachments statusAttr(final StatusTypeSimpleType statusAttr) {
         setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>idAttr</code> property
-     *
-     * @return idAttr
-     */
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
-        }
-
-        return idAttr;
-    }
-
-    /**
-     * Return <code>idAttr</code> property in DSL way
-     *
-     * @return idAttr
-     */
-    public IDSimpleType idAttr() {
-        return getIdAttr();
-    }
-
-    /**
-     * Set <code>idAttr</code> property
-     *
-     * @param idAttr the new value
-     */
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr the new value
-     * @return <code>Attachments</code> instance
-     */
-    public Attachments idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>evolvingIdAttr</code> property
-     *
-     * @return evolvingIdAttr
-     */
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-    }
-
-    /**
-     * Return <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @return evolvingIdAttr
-     */
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property
-     *
-     * @param evolvingIdAttr the new value
-     */
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr the new value
-     * @return <code>Attachments</code> instance
-     */
-    public Attachments evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>alternativeToAttr</code> property
-     *
-     * @return alternativeToAttr
-     */
-    public AnyURISimpleType getAlternativeToAttr() {
-        if (alternativeToAttr == null) {
-            alternativeToAttr = new AnyURISimpleType();
-            alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
-        }
-
-        return alternativeToAttr;
-    }
-
-    /**
-     * Return <code>alternativeToAttr</code> property in DSL way
-     *
-     * @return alternativeToAttr
-     */
-    public AnyURISimpleType alternativeToAttr() {
-        return getAlternativeToAttr();
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property
-     *
-     * @param alternativeToAttr the new value
-     */
-    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
-        getElement().setAttribute("alternativeTo", alternativeToAttr.getValue());
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr the new value
-     * @return <code>Attachments</code> instance
-     */
-    public Attachments alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>classAttr</code> property
-     *
-     * @return classAttr
-     */
-    public StringSimpleType getClassAttr() {
-        if (classAttr == null) {
-            classAttr = new StringSimpleType();
-            classAttr.setValue(getElement().getAttribute("class"));
-        }
-
-        return classAttr;
-    }
-
-    /**
-     * Return <code>classAttr</code> property in DSL way
-     *
-     * @return classAttr
-     */
-    public StringSimpleType classAttr() {
-        return getClassAttr();
-    }
-
-    /**
-     * Set <code>classAttr</code> property
-     *
-     * @param classAttr the new value
-     */
-    public void setClassAttr(final StringSimpleType classAttr) {
-        this.classAttr = classAttr;
-        getElement().setAttribute("class", classAttr.getValue());
-    }
-
-    /**
-     * Set <code>classAttr</code> property in DSL way
-     *
-     * @param classAttr the new value
-     * @return <code>Attachments</code> instance
-     */
-    public Attachments classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
         return this;
     }
 
@@ -613,425 +1031,6 @@ public class Attachments extends OverlayWidgetImpl {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
-
-    /**
-     * Return <code>periodAttr</code> property
-     *
-     * @return periodAttr
-     */
-    public AnyURISimpleType getPeriodAttr() {
-        if (periodAttr == null) {
-            periodAttr = new AnyURISimpleType();
-            periodAttr.setValue(getElement().getAttribute("period"));
-        }
-
-        return periodAttr;
-    }
-
-    /**
-     * Return <code>periodAttr</code> property in DSL way
-     *
-     * @return periodAttr
-     */
-    public AnyURISimpleType periodAttr() {
-        return getPeriodAttr();
-    }
-
-    /**
-     * Set <code>periodAttr</code> property
-     *
-     * @param periodAttr the new value
-     */
-    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-        this.periodAttr = periodAttr;
-        getElement().setAttribute("period", periodAttr.getValue());
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr the new value
-     * @return <code>Attachments</code> instance
-     */
-    public Attachments periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>java.util.List<AmendmentList></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<AmendmentList> getAmendmentLists() {
-        java.util.List<AmendmentList> result = new ArrayList<AmendmentList>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("AmendmentList".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((AmendmentList) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<AmendmentList></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<AmendmentList> getAmendmentListList() {
-        return getAmendmentLists();
-    }
-
-    /**
-     * Add <code>java.util.List<AmendmentList></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public AmendmentList addAmendmentList(AmendmentList amendmentListElem) {
-        this.addOverlayWidget(amendmentListElem);
-        return amendmentListElem;
-    }
-
-    /**
-     * Return <code>java.util.List<OfficialGazette></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<OfficialGazette> getOfficialGazettes() {
-        java.util.List<OfficialGazette> result = new ArrayList<OfficialGazette>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("OfficialGazette".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((OfficialGazette) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<OfficialGazette></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<OfficialGazette> getOfficialGazetteList() {
-        return getOfficialGazettes();
-    }
-
-    /**
-     * Add <code>java.util.List<OfficialGazette></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public OfficialGazette addOfficialGazette(OfficialGazette officialGazetteElem) {
-        this.addOverlayWidget(officialGazetteElem);
-        return officialGazetteElem;
-    }
-
-    /**
-     * Return <code>java.util.List<DocumentCollection></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<DocumentCollection> getDocumentCollections() {
-        java.util.List<DocumentCollection> result = new ArrayList<DocumentCollection>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocumentCollection".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((DocumentCollection) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<DocumentCollection></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<DocumentCollection> getDocumentCollectionList() {
-        return getDocumentCollections();
-    }
-
-    /**
-     * Add <code>java.util.List<DocumentCollection></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public DocumentCollection addDocumentCollection(DocumentCollection documentCollectionElem) {
-        this.addOverlayWidget(documentCollectionElem);
-        return documentCollectionElem;
-    }
-
-    /**
-     * Return <code>java.util.List<Act></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Act> getActs() {
-        java.util.List<Act> result = new ArrayList<Act>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Act".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Act) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Act></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Act> getActList() {
-        return getActs();
-    }
-
-    /**
-     * Add <code>java.util.List<Act></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Act addAct(Act actElem) {
-        this.addOverlayWidget(actElem);
-        return actElem;
-    }
-
-    /**
-     * Return <code>java.util.List<Bill></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Bill> getBills() {
-        java.util.List<Bill> result = new ArrayList<Bill>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Bill".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Bill) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Bill></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Bill> getBillList() {
-        return getBills();
-    }
-
-    /**
-     * Add <code>java.util.List<Bill></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Bill addBill(Bill billElem) {
-        this.addOverlayWidget(billElem);
-        return billElem;
-    }
-
-    /**
-     * Return <code>java.util.List<DebateReport></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<DebateReport> getDebateReports() {
-        java.util.List<DebateReport> result = new ArrayList<DebateReport>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DebateReport".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((DebateReport) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<DebateReport></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<DebateReport> getDebateReportList() {
-        return getDebateReports();
-    }
-
-    /**
-     * Add <code>java.util.List<DebateReport></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public DebateReport addDebateReport(DebateReport debateReportElem) {
-        this.addOverlayWidget(debateReportElem);
-        return debateReportElem;
-    }
-
-    /**
-     * Return <code>java.util.List<Debate></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Debate> getDebates() {
-        java.util.List<Debate> result = new ArrayList<Debate>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Debate".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Debate) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Debate></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Debate> getDebateList() {
-        return getDebates();
-    }
-
-    /**
-     * Add <code>java.util.List<Debate></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Debate addDebate(Debate debateElem) {
-        this.addOverlayWidget(debateElem);
-        return debateElem;
-    }
-
-    /**
-     * Return <code>java.util.List<Amendment></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Amendment> getAmendments() {
-        java.util.List<Amendment> result = new ArrayList<Amendment>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Amendment".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Amendment) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Amendment></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Amendment> getAmendmentList() {
-        return getAmendments();
-    }
-
-    /**
-     * Add <code>java.util.List<Amendment></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Amendment addAmendment(Amendment amendmentElem) {
-        this.addOverlayWidget(amendmentElem);
-        return amendmentElem;
-    }
-
-    /**
-     * Return <code>java.util.List<Judgement></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Judgement> getJudgements() {
-        java.util.List<Judgement> result = new ArrayList<Judgement>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Judgement".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Judgement) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Judgement></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Judgement> getJudgementList() {
-        return getJudgements();
-    }
-
-    /**
-     * Add <code>java.util.List<Judgement></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Judgement addJudgement(Judgement judgementElem) {
-        this.addOverlayWidget(judgementElem);
-        return judgementElem;
-    }
-
-    /**
-     * Return <code>java.util.List<Fragment></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Fragment> getFragments() {
-        java.util.List<Fragment> result = new ArrayList<Fragment>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Fragment".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Fragment) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Fragment></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Fragment> getFragmentList() {
-        return getFragments();
-    }
-
-    /**
-     * Add <code>java.util.List<Fragment></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Fragment addFragment(Fragment fragmentElem) {
-        this.addOverlayWidget(fragmentElem);
-        return fragmentElem;
-    }
-
-    /**
-     * Return <code>java.util.List<Doc></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Doc> getDocs() {
-        java.util.List<Doc> result = new ArrayList<Doc>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Doc".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Doc) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Doc></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Doc> getDocList() {
-        return getDocs();
-    }
-
-    /**
-     * Add <code>java.util.List<Doc></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Doc addDoc(Doc docElem) {
-        this.addOverlayWidget(docElem);
-        return docElem;
-    }
-
 //Override all attributes methods to be conformant with DSL approach
 
     /**
@@ -1048,18 +1047,18 @@ public class Attachments extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
-        attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
 

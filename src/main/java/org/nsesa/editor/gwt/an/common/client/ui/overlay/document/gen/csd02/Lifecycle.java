@@ -46,8 +46,8 @@ public class Lifecycle extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "lifecycle");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "lifecycle");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget lifecycle");
         return span;
     }
@@ -80,6 +80,40 @@ public class Lifecycle extends OverlayWidgetImpl {
 
     // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
+
+    /**
+     * Return <code>java.util.List<EventRef></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<EventRef> getEventRefs() {
+        java.util.List<EventRef> result = new ArrayList<EventRef>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("EventRef".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((EventRef) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<EventRef></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<EventRef> getEventRefList() {
+        return getEventRefs();
+    }
+
+    /**
+     * Add <code>java.util.List<EventRef></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public EventRef addEventRef(EventRef eventRefElem) {
+        this.addOverlayWidget(eventRefElem);
+        return eventRefElem;
+    }
 
     /**
      * Return <code>sourceAttr</code> property
@@ -124,41 +158,6 @@ public class Lifecycle extends OverlayWidgetImpl {
         setSourceAttr(sourceAttr);
         return this;
     }
-
-    /**
-     * Return <code>java.util.List<EventRef></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<EventRef> getEventRefs() {
-        java.util.List<EventRef> result = new ArrayList<EventRef>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("EventRef".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((EventRef) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<EventRef></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<EventRef> getEventRefList() {
-        return getEventRefs();
-    }
-
-    /**
-     * Add <code>java.util.List<EventRef></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public EventRef addEventRef(EventRef eventRefElem) {
-        this.addOverlayWidget(eventRefElem);
-        return eventRefElem;
-    }
-
 //Override all attributes methods to be conformant with DSL approach
 
     /**

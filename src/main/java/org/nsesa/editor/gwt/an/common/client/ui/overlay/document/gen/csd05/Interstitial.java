@@ -61,8 +61,8 @@ public class Interstitial extends BlocksreqComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "interstitial");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD05");
+        span.setAttribute("data-type", "interstitial");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD05");
         span.setClassName("widget interstitial");
         return span;
     }

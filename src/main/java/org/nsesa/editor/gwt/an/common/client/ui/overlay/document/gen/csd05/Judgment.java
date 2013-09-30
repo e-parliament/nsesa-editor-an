@@ -49,8 +49,8 @@ public class Judgment extends JudgmentStructureComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "judgment");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD05");
+        span.setAttribute("data-type", "judgment");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD05");
         span.setClassName("widget judgment");
         return span;
     }

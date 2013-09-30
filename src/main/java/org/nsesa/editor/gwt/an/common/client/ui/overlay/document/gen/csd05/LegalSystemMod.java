@@ -52,8 +52,8 @@ public class LegalSystemMod extends ModificationTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "legalSystemMod");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD05");
+        span.setAttribute("data-type", "legalSystemMod");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD05");
         span.setClassName("widget legalSystemMod");
         return span;
     }

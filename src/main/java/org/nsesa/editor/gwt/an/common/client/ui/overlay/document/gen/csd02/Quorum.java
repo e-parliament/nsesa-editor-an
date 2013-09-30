@@ -46,8 +46,8 @@ public class Quorum extends CountTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "quorum");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "quorum");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget quorum");
         return span;
     }
@@ -65,10 +65,10 @@ public class Quorum extends CountTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public Quorum(StringSimpleType valueAttr, IDSimpleType idAttr) {
+    public Quorum(IDSimpleType idAttr, StringSimpleType valueAttr) {
         this();
-        setValueAttr(valueAttr);
         setIdAttr(idAttr);
+        setValueAttr(valueAttr);
     }
 
 
@@ -84,24 +84,13 @@ public class Quorum extends CountTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>valueAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param valueAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> Quorum</code> instance
      */
-    public Quorum valueAttr(final StringSimpleType valueAttr) {
-        setValueAttr(valueAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> Quorum</code> instance
-     */
-    public Quorum refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Quorum evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -128,13 +117,24 @@ public class Quorum extends CountTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>refersToAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param refersToAttr new value
      * @return <code> Quorum</code> instance
      */
-    public Quorum evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public Quorum refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>valueAttr</code> property in DSL way
+     *
+     * @param valueAttr new value
+     * @return <code> Quorum</code> instance
+     */
+    public Quorum valueAttr(final StringSimpleType valueAttr) {
+        setValueAttr(valueAttr);
         return this;
     }
 

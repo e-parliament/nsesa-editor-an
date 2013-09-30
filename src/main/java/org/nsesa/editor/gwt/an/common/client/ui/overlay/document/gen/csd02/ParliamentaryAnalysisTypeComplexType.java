@@ -49,8 +49,8 @@ public class ParliamentaryAnalysisTypeComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "parliamentaryAnalysisTypeComplexType");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "parliamentaryAnalysisTypeComplexType");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget parliamentaryAnalysisTypeComplexType");
         return span;
     }
@@ -65,97 +65,54 @@ public class ParliamentaryAnalysisTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private String wildcardContentAttr;
-    private AnyURISimpleType hrefAttr;
-    private AnyURISimpleType outcomeAttr;
     private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType outcomeAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private String wildcardContentAttr;
+    private AnyURISimpleType hrefAttr;
 
     /**
-     * Return <code>wildcardContentAttr</code> property
+     * Return <code>refersToAttr</code> property
      *
-     * @return wildcardContentAttr
+     * @return refersToAttr
      */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
         }
 
-        return wildcardContentAttr;
+        return refersToAttr;
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
+     * Return <code>refersToAttr</code> property in DSL way
      *
-     * @return wildcardContentAttr
+     * @return refersToAttr
      */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property
+     * Set <code>refersToAttr</code> property
      *
-     * @param wildcardContentAttr the new value
+     * @param refersToAttr the new value
      */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>refersToAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr the new value
+     * @param refersToAttr the new value
      * @return <code>ParliamentaryAnalysisTypeComplexType</code> instance
      */
-    public ParliamentaryAnalysisTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>hrefAttr</code> property
-     *
-     * @return hrefAttr
-     */
-    public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-            hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(getElement().getAttribute("href"));
-        }
-
-        return hrefAttr;
-    }
-
-    /**
-     * Return <code>hrefAttr</code> property in DSL way
-     *
-     * @return hrefAttr
-     */
-    public AnyURISimpleType hrefAttr() {
-        return getHrefAttr();
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property
-     *
-     * @param hrefAttr the new value
-     */
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-        getElement().setAttribute("href", hrefAttr.getValue());
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr the new value
-     * @return <code>ParliamentaryAnalysisTypeComplexType</code> instance
-     */
-    public ParliamentaryAnalysisTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
+    public ParliamentaryAnalysisTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -200,50 +157,6 @@ public class ParliamentaryAnalysisTypeComplexType extends OverlayWidgetImpl {
      */
     public ParliamentaryAnalysisTypeComplexType outcomeAttr(final AnyURISimpleType outcomeAttr) {
         setOutcomeAttr(outcomeAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>refersToAttr</code> property
-     *
-     * @return refersToAttr
-     */
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-    }
-
-    /**
-     * Return <code>refersToAttr</code> property in DSL way
-     *
-     * @return refersToAttr
-     */
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property
-     *
-     * @param refersToAttr the new value
-     */
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr the new value
-     * @return <code>ParliamentaryAnalysisTypeComplexType</code> instance
-     */
-    public ParliamentaryAnalysisTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -336,6 +249,93 @@ public class ParliamentaryAnalysisTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>ParliamentaryAnalysisTypeComplexType</code> instance
+     */
+    public ParliamentaryAnalysisTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>hrefAttr</code> property
+     *
+     * @return hrefAttr
+     */
+    public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(getElement().getAttribute("href"));
+        }
+
+        return hrefAttr;
+    }
+
+    /**
+     * Return <code>hrefAttr</code> property in DSL way
+     *
+     * @return hrefAttr
+     */
+    public AnyURISimpleType hrefAttr() {
+        return getHrefAttr();
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property
+     *
+     * @param hrefAttr the new value
+     */
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+        getElement().setAttribute("href", hrefAttr.getValue());
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr the new value
+     * @return <code>ParliamentaryAnalysisTypeComplexType</code> instance
+     */
+    public ParliamentaryAnalysisTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
      * Return <code>java.util.List<Quorum></code> property
      *
      * @return The property as unmodifiable list
@@ -419,12 +419,12 @@ public class ParliamentaryAnalysisTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
-        attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         return attrs;
     }
 

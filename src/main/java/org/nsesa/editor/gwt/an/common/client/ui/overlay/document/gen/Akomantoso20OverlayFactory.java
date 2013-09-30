@@ -641,7 +641,7 @@ public class Akomantoso20OverlayFactory extends DefaultOverlayFactory {
         } else if ("identification".equalsIgnoreCase(nodeName)) {
             return new Identification(element);
         }
-        // nothing found
+// nothing found
         LOG.warning("Could not find overlay element (nodename: " + nodeName + " in namespace URI '" + namespaceURI + "')");
         return null;
     }

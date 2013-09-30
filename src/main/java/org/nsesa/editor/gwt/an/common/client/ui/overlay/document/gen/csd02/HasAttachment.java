@@ -42,8 +42,8 @@ public class HasAttachment extends ReferenceTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "hasAttachment");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "hasAttachment");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget hasAttachment");
         return span;
     }
@@ -61,10 +61,10 @@ public class HasAttachment extends ReferenceTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public HasAttachment(IDSimpleType idAttr, AnyURISimpleType hrefAttr, StringSimpleType showAsAttr) {
+    public HasAttachment(AnyURISimpleType hrefAttr, IDSimpleType idAttr, StringSimpleType showAsAttr) {
         this();
-        setIdAttr(idAttr);
         setHrefAttr(hrefAttr);
+        setIdAttr(idAttr);
         setShowAsAttr(showAsAttr);
     }
 
@@ -125,17 +125,6 @@ public class HasAttachment extends ReferenceTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> HasAttachment</code> instance
-     */
-    public HasAttachment idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
      * Set <code>evolvingIdAttr</code> property in DSL way
      *
      * @param evolvingIdAttr new value
@@ -143,17 +132,6 @@ public class HasAttachment extends ReferenceTypeComplexType {
      */
     public HasAttachment evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> HasAttachment</code> instance
-     */
-    public HasAttachment wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -169,13 +147,13 @@ public class HasAttachment extends ReferenceTypeComplexType {
     }
 
     /**
-     * Set <code>showAsAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param showAsAttr new value
+     * @param idAttr new value
      * @return <code> HasAttachment</code> instance
      */
-    public HasAttachment showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
+    public HasAttachment idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 
@@ -187,6 +165,28 @@ public class HasAttachment extends ReferenceTypeComplexType {
      */
     public HasAttachment shortFormAttr(final StringSimpleType shortFormAttr) {
         setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property in DSL way
+     *
+     * @param showAsAttr new value
+     * @return <code> HasAttachment</code> instance
+     */
+    public HasAttachment showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> HasAttachment</code> instance
+     */
+    public HasAttachment wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

@@ -43,8 +43,8 @@ public class Step extends AnyOtherTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "step");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "step");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget step");
         return span;
     }
@@ -76,186 +76,54 @@ public class Step extends AnyOtherTypeComplexType {
     }
 
     // FIELDS ------------------
-    private AnyURISimpleType refersToAttr;
-    private DateSimpleType dateAttr;
-    private TimeSimpleType timeAttr;
-    private AnyURISimpleType outcomeAttr;
-    private AnyURISimpleType asAttr;
     private AnyURISimpleType actorAttr;
+    private AnyURISimpleType asAttr;
+    private DateSimpleType dateAttr;
+    private AnyURISimpleType outcomeAttr;
+    private AnyURISimpleType refersToAttr;
+    private TimeSimpleType timeAttr;
 
     /**
-     * Return <code>refersToAttr</code> property
+     * Return <code>actorAttr</code> property
      *
-     * @return refersToAttr
+     * @return actorAttr
      */
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+    public AnyURISimpleType getActorAttr() {
+        if (actorAttr == null) {
+            actorAttr = new AnyURISimpleType();
+            actorAttr.setValue(getElement().getAttribute("actor"));
         }
 
-        return refersToAttr;
+        return actorAttr;
     }
 
     /**
-     * Return <code>refersToAttr</code> property in DSL way
+     * Return <code>actorAttr</code> property in DSL way
      *
-     * @return refersToAttr
+     * @return actorAttr
      */
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
+    public AnyURISimpleType actorAttr() {
+        return getActorAttr();
     }
 
     /**
-     * Set <code>refersToAttr</code> property
+     * Set <code>actorAttr</code> property
      *
-     * @param refersToAttr the new value
+     * @param actorAttr the new value
      */
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    public void setActorAttr(final AnyURISimpleType actorAttr) {
+        this.actorAttr = actorAttr;
+        getElement().setAttribute("actor", actorAttr.getValue());
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>actorAttr</code> property in DSL way
      *
-     * @param refersToAttr the new value
+     * @param actorAttr the new value
      * @return <code>Step</code> instance
      */
-    public Step refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>dateAttr</code> property
-     *
-     * @return dateAttr
-     */
-    public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-            dateAttr = new DateSimpleType();
-            dateAttr.setValue(getElement().getAttribute("date"));
-        }
-
-        return dateAttr;
-    }
-
-    /**
-     * Return <code>dateAttr</code> property in DSL way
-     *
-     * @return dateAttr
-     */
-    public DateSimpleType dateAttr() {
-        return getDateAttr();
-    }
-
-    /**
-     * Set <code>dateAttr</code> property
-     *
-     * @param dateAttr the new value
-     */
-    public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-        getElement().setAttribute("date", dateAttr.getValue());
-    }
-
-    /**
-     * Set <code>dateAttr</code> property in DSL way
-     *
-     * @param dateAttr the new value
-     * @return <code>Step</code> instance
-     */
-    public Step dateAttr(final DateSimpleType dateAttr) {
-        setDateAttr(dateAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>timeAttr</code> property
-     *
-     * @return timeAttr
-     */
-    public TimeSimpleType getTimeAttr() {
-        if (timeAttr == null) {
-            timeAttr = new TimeSimpleType();
-            timeAttr.setValue(getElement().getAttribute("time"));
-        }
-
-        return timeAttr;
-    }
-
-    /**
-     * Return <code>timeAttr</code> property in DSL way
-     *
-     * @return timeAttr
-     */
-    public TimeSimpleType timeAttr() {
-        return getTimeAttr();
-    }
-
-    /**
-     * Set <code>timeAttr</code> property
-     *
-     * @param timeAttr the new value
-     */
-    public void setTimeAttr(final TimeSimpleType timeAttr) {
-        this.timeAttr = timeAttr;
-        getElement().setAttribute("time", timeAttr.getValue());
-    }
-
-    /**
-     * Set <code>timeAttr</code> property in DSL way
-     *
-     * @param timeAttr the new value
-     * @return <code>Step</code> instance
-     */
-    public Step timeAttr(final TimeSimpleType timeAttr) {
-        setTimeAttr(timeAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>outcomeAttr</code> property
-     *
-     * @return outcomeAttr
-     */
-    public AnyURISimpleType getOutcomeAttr() {
-        if (outcomeAttr == null) {
-            outcomeAttr = new AnyURISimpleType();
-            outcomeAttr.setValue(getElement().getAttribute("outcome"));
-        }
-
-        return outcomeAttr;
-    }
-
-    /**
-     * Return <code>outcomeAttr</code> property in DSL way
-     *
-     * @return outcomeAttr
-     */
-    public AnyURISimpleType outcomeAttr() {
-        return getOutcomeAttr();
-    }
-
-    /**
-     * Set <code>outcomeAttr</code> property
-     *
-     * @param outcomeAttr the new value
-     */
-    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
-        this.outcomeAttr = outcomeAttr;
-        getElement().setAttribute("outcome", outcomeAttr.getValue());
-    }
-
-    /**
-     * Set <code>outcomeAttr</code> property in DSL way
-     *
-     * @param outcomeAttr the new value
-     * @return <code>Step</code> instance
-     */
-    public Step outcomeAttr(final AnyURISimpleType outcomeAttr) {
-        setOutcomeAttr(outcomeAttr);
+    public Step actorAttr(final AnyURISimpleType actorAttr) {
+        setActorAttr(actorAttr);
         return this;
     }
 
@@ -304,49 +172,192 @@ public class Step extends AnyOtherTypeComplexType {
     }
 
     /**
-     * Return <code>actorAttr</code> property
+     * Return <code>dateAttr</code> property
      *
-     * @return actorAttr
+     * @return dateAttr
      */
-    public AnyURISimpleType getActorAttr() {
-        if (actorAttr == null) {
-            actorAttr = new AnyURISimpleType();
-            actorAttr.setValue(getElement().getAttribute("actor"));
+    public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(getElement().getAttribute("date"));
         }
 
-        return actorAttr;
+        return dateAttr;
     }
 
     /**
-     * Return <code>actorAttr</code> property in DSL way
+     * Return <code>dateAttr</code> property in DSL way
      *
-     * @return actorAttr
+     * @return dateAttr
      */
-    public AnyURISimpleType actorAttr() {
-        return getActorAttr();
+    public DateSimpleType dateAttr() {
+        return getDateAttr();
     }
 
     /**
-     * Set <code>actorAttr</code> property
+     * Set <code>dateAttr</code> property
      *
-     * @param actorAttr the new value
+     * @param dateAttr the new value
      */
-    public void setActorAttr(final AnyURISimpleType actorAttr) {
-        this.actorAttr = actorAttr;
-        getElement().setAttribute("actor", actorAttr.getValue());
+    public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+        getElement().setAttribute("date", dateAttr.getValue());
     }
 
     /**
-     * Set <code>actorAttr</code> property in DSL way
+     * Set <code>dateAttr</code> property in DSL way
      *
-     * @param actorAttr the new value
+     * @param dateAttr the new value
      * @return <code>Step</code> instance
      */
-    public Step actorAttr(final AnyURISimpleType actorAttr) {
-        setActorAttr(actorAttr);
+    public Step dateAttr(final DateSimpleType dateAttr) {
+        setDateAttr(dateAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>outcomeAttr</code> property
+     *
+     * @return outcomeAttr
+     */
+    public AnyURISimpleType getOutcomeAttr() {
+        if (outcomeAttr == null) {
+            outcomeAttr = new AnyURISimpleType();
+            outcomeAttr.setValue(getElement().getAttribute("outcome"));
+        }
+
+        return outcomeAttr;
+    }
+
+    /**
+     * Return <code>outcomeAttr</code> property in DSL way
+     *
+     * @return outcomeAttr
+     */
+    public AnyURISimpleType outcomeAttr() {
+        return getOutcomeAttr();
+    }
+
+    /**
+     * Set <code>outcomeAttr</code> property
+     *
+     * @param outcomeAttr the new value
+     */
+    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
+        this.outcomeAttr = outcomeAttr;
+        getElement().setAttribute("outcome", outcomeAttr.getValue());
+    }
+
+    /**
+     * Set <code>outcomeAttr</code> property in DSL way
+     *
+     * @param outcomeAttr the new value
+     * @return <code>Step</code> instance
+     */
+    public Step outcomeAttr(final AnyURISimpleType outcomeAttr) {
+        setOutcomeAttr(outcomeAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property in DSL way
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property
+     *
+     * @param refersToAttr the new value
+     */
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr the new value
+     * @return <code>Step</code> instance
+     */
+    public Step refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>timeAttr</code> property
+     *
+     * @return timeAttr
+     */
+    public TimeSimpleType getTimeAttr() {
+        if (timeAttr == null) {
+            timeAttr = new TimeSimpleType();
+            timeAttr.setValue(getElement().getAttribute("time"));
+        }
+
+        return timeAttr;
+    }
+
+    /**
+     * Return <code>timeAttr</code> property in DSL way
+     *
+     * @return timeAttr
+     */
+    public TimeSimpleType timeAttr() {
+        return getTimeAttr();
+    }
+
+    /**
+     * Set <code>timeAttr</code> property
+     *
+     * @param timeAttr the new value
+     */
+    public void setTimeAttr(final TimeSimpleType timeAttr) {
+        this.timeAttr = timeAttr;
+        getElement().setAttribute("time", timeAttr.getValue());
+    }
+
+    /**
+     * Set <code>timeAttr</code> property in DSL way
+     *
+     * @param timeAttr the new value
+     * @return <code>Step</code> instance
+     */
+    public Step timeAttr(final TimeSimpleType timeAttr) {
+        setTimeAttr(timeAttr);
         return this;
     }
 //Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Step</code> instance
+     */
+    public Step evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
 
     /**
      * Set <code>hrefAttr</code> property in DSL way
@@ -367,17 +378,6 @@ public class Step extends AnyOtherTypeComplexType {
      */
     public Step idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Step</code> instance
-     */
-    public Step evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -406,12 +406,12 @@ public class Step extends AnyOtherTypeComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
-        attrs.put("time", getTimeAttr() != null ? getTimeAttr().getValue() : null);
-        attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
-        attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
         attrs.put("actor", getActorAttr() != null ? getActorAttr().getValue() : null);
+        attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
+        attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
+        attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("time", getTimeAttr() != null ? getTimeAttr().getValue() : null);
         return attrs;
     }
 

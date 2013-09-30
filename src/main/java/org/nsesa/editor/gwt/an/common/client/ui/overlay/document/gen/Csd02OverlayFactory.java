@@ -31,6 +31,7 @@ import java.util.logging.Logger;
 public class Csd02OverlayFactory extends DefaultOverlayFactory {
 
     private final static Logger LOG = Logger.getLogger(Csd02OverlayFactory.class.getName());
+
     /**
      * the namespace URI of the overlay factory *
      */

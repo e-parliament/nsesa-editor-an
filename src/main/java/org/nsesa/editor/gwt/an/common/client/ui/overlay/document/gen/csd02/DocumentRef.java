@@ -42,8 +42,8 @@ public class DocumentRef extends LinkTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "documentRef");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "documentRef");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget documentRef");
         return span;
     }
@@ -61,11 +61,11 @@ public class DocumentRef extends LinkTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public DocumentRef(IDSimpleType idAttr, StringSimpleType showAsAttr, AnyURISimpleType hrefAttr) {
+    public DocumentRef(AnyURISimpleType hrefAttr, IDSimpleType idAttr, StringSimpleType showAsAttr) {
         this();
+        setHrefAttr(hrefAttr);
         setIdAttr(idAttr);
         setShowAsAttr(showAsAttr);
-        setHrefAttr(hrefAttr);
     }
 
 
@@ -81,13 +81,24 @@ public class DocumentRef extends LinkTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> DocumentRef</code> instance
      */
-    public DocumentRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public DocumentRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> DocumentRef</code> instance
+     */
+    public DocumentRef hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
         return this;
     }
 
@@ -103,13 +114,13 @@ public class DocumentRef extends LinkTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>shortFormAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param shortFormAttr new value
      * @return <code> DocumentRef</code> instance
      */
-    public DocumentRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public DocumentRef shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -125,24 +136,13 @@ public class DocumentRef extends LinkTypeComplexType {
     }
 
     /**
-     * Set <code>shortFormAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param shortFormAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> DocumentRef</code> instance
      */
-    public DocumentRef shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> DocumentRef</code> instance
-     */
-    public DocumentRef hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
+    public DocumentRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

@@ -42,8 +42,8 @@ public class TimeInterval extends MetaoptComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "timeInterval");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "timeInterval");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget timeInterval");
         return span;
     }
@@ -75,52 +75,52 @@ public class TimeInterval extends MetaoptComplexType {
     }
 
     // FIELDS ------------------
-    private AnyURISimpleType startAttr;
-    private AnyURISimpleType endAttr;
     private DurationSimpleType durationAttr;
+    private AnyURISimpleType endAttr;
     private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType startAttr;
 
     /**
-     * Return <code>startAttr</code> property
+     * Return <code>durationAttr</code> property
      *
-     * @return startAttr
+     * @return durationAttr
      */
-    public AnyURISimpleType getStartAttr() {
-        if (startAttr == null) {
-            startAttr = new AnyURISimpleType();
-            startAttr.setValue(getElement().getAttribute("start"));
+    public DurationSimpleType getDurationAttr() {
+        if (durationAttr == null) {
+            durationAttr = new DurationSimpleType();
+            durationAttr.setValue(getElement().getAttribute("duration"));
         }
 
-        return startAttr;
+        return durationAttr;
     }
 
     /**
-     * Return <code>startAttr</code> property in DSL way
+     * Return <code>durationAttr</code> property in DSL way
      *
-     * @return startAttr
+     * @return durationAttr
      */
-    public AnyURISimpleType startAttr() {
-        return getStartAttr();
+    public DurationSimpleType durationAttr() {
+        return getDurationAttr();
     }
 
     /**
-     * Set <code>startAttr</code> property
+     * Set <code>durationAttr</code> property
      *
-     * @param startAttr the new value
+     * @param durationAttr the new value
      */
-    public void setStartAttr(final AnyURISimpleType startAttr) {
-        this.startAttr = startAttr;
-        getElement().setAttribute("start", startAttr.getValue());
+    public void setDurationAttr(final DurationSimpleType durationAttr) {
+        this.durationAttr = durationAttr;
+        getElement().setAttribute("duration", durationAttr.getValue());
     }
 
     /**
-     * Set <code>startAttr</code> property in DSL way
+     * Set <code>durationAttr</code> property in DSL way
      *
-     * @param startAttr the new value
+     * @param durationAttr the new value
      * @return <code>TimeInterval</code> instance
      */
-    public TimeInterval startAttr(final AnyURISimpleType startAttr) {
-        setStartAttr(startAttr);
+    public TimeInterval durationAttr(final DurationSimpleType durationAttr) {
+        setDurationAttr(durationAttr);
         return this;
     }
 
@@ -169,50 +169,6 @@ public class TimeInterval extends MetaoptComplexType {
     }
 
     /**
-     * Return <code>durationAttr</code> property
-     *
-     * @return durationAttr
-     */
-    public DurationSimpleType getDurationAttr() {
-        if (durationAttr == null) {
-            durationAttr = new DurationSimpleType();
-            durationAttr.setValue(getElement().getAttribute("duration"));
-        }
-
-        return durationAttr;
-    }
-
-    /**
-     * Return <code>durationAttr</code> property in DSL way
-     *
-     * @return durationAttr
-     */
-    public DurationSimpleType durationAttr() {
-        return getDurationAttr();
-    }
-
-    /**
-     * Set <code>durationAttr</code> property
-     *
-     * @param durationAttr the new value
-     */
-    public void setDurationAttr(final DurationSimpleType durationAttr) {
-        this.durationAttr = durationAttr;
-        getElement().setAttribute("duration", durationAttr.getValue());
-    }
-
-    /**
-     * Set <code>durationAttr</code> property in DSL way
-     *
-     * @param durationAttr the new value
-     * @return <code>TimeInterval</code> instance
-     */
-    public TimeInterval durationAttr(final DurationSimpleType durationAttr) {
-        setDurationAttr(durationAttr);
-        return this;
-    }
-
-    /**
      * Return <code>refersToAttr</code> property
      *
      * @return refersToAttr
@@ -255,16 +211,60 @@ public class TimeInterval extends MetaoptComplexType {
         setRefersToAttr(refersToAttr);
         return this;
     }
+
+    /**
+     * Return <code>startAttr</code> property
+     *
+     * @return startAttr
+     */
+    public AnyURISimpleType getStartAttr() {
+        if (startAttr == null) {
+            startAttr = new AnyURISimpleType();
+            startAttr.setValue(getElement().getAttribute("start"));
+        }
+
+        return startAttr;
+    }
+
+    /**
+     * Return <code>startAttr</code> property in DSL way
+     *
+     * @return startAttr
+     */
+    public AnyURISimpleType startAttr() {
+        return getStartAttr();
+    }
+
+    /**
+     * Set <code>startAttr</code> property
+     *
+     * @param startAttr the new value
+     */
+    public void setStartAttr(final AnyURISimpleType startAttr) {
+        this.startAttr = startAttr;
+        getElement().setAttribute("start", startAttr.getValue());
+    }
+
+    /**
+     * Set <code>startAttr</code> property in DSL way
+     *
+     * @param startAttr the new value
+     * @return <code>TimeInterval</code> instance
+     */
+    public TimeInterval startAttr(final AnyURISimpleType startAttr) {
+        setStartAttr(startAttr);
+        return this;
+    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> TimeInterval</code> instance
      */
-    public TimeInterval wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public TimeInterval evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -280,13 +280,13 @@ public class TimeInterval extends MetaoptComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> TimeInterval</code> instance
      */
-    public TimeInterval evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public TimeInterval wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -304,10 +304,10 @@ public class TimeInterval extends MetaoptComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("start", getStartAttr() != null ? getStartAttr().getValue() : null);
-        attrs.put("end", getEndAttr() != null ? getEndAttr().getValue() : null);
         attrs.put("duration", getDurationAttr() != null ? getDurationAttr().getValue() : null);
+        attrs.put("end", getEndAttr() != null ? getEndAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("start", getStartAttr() != null ? getStartAttr().getValue() : null);
         return attrs;
     }
 

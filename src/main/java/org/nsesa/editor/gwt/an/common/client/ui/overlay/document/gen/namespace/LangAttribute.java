@@ -30,8 +30,8 @@ public class LangAttribute extends StringSimpleType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "langAttribute");
-        span.setAttribute("ns", "http://www.w3.org/XML/1998/namespace");
+        span.setAttribute("data-type", "langAttribute");
+        span.setAttribute("data-ns", "http://www.w3.org/XML/1998/namespace");
         span.setClassName("widget langAttribute");
         return span;
     }

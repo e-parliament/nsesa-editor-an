@@ -43,8 +43,8 @@ public class EventRef extends AnyOtherTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "eventRef");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "eventRef");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget eventRef");
         return span;
     }
@@ -77,53 +77,54 @@ public class EventRef extends AnyOtherTypeComplexType {
     }
 
     // FIELDS ------------------
-    private EventTypeSimpleType typeAttr;
-    private BooleanSimpleType originatingExpressionAttr;
     private DateSimpleType dateAttr;
-    private TimeSimpleType timeAttr;
-    private AnyURISimpleType sourceAttr;
+    private BooleanSimpleType originatingExpressionAttr;
     private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType sourceAttr;
+    private TimeSimpleType timeAttr;
+    private EventTypeSimpleType typeAttr;
 
     /**
-     * Return <code>typeAttr</code> property
+     * Return <code>dateAttr</code> property
      *
-     * @return typeAttr
+     * @return dateAttr
      */
-    public EventTypeSimpleType getTypeAttr() {
-        if (typeAttr == null) {
-            typeAttr = EventTypeSimpleType.fromString(getElement().getAttribute("type"));
+    public DateSimpleType getDateAttr() {
+        if (dateAttr == null) {
+            dateAttr = new DateSimpleType();
+            dateAttr.setValue(getElement().getAttribute("date"));
         }
 
-        return typeAttr;
+        return dateAttr;
     }
 
     /**
-     * Return <code>typeAttr</code> property in DSL way
+     * Return <code>dateAttr</code> property in DSL way
      *
-     * @return typeAttr
+     * @return dateAttr
      */
-    public EventTypeSimpleType typeAttr() {
-        return getTypeAttr();
+    public DateSimpleType dateAttr() {
+        return getDateAttr();
     }
 
     /**
-     * Set <code>typeAttr</code> property
+     * Set <code>dateAttr</code> property
      *
-     * @param typeAttr the new value
+     * @param dateAttr the new value
      */
-    public void setTypeAttr(final EventTypeSimpleType typeAttr) {
-        this.typeAttr = typeAttr;
-        getElement().setAttribute("type", typeAttr.value());
+    public void setDateAttr(final DateSimpleType dateAttr) {
+        this.dateAttr = dateAttr;
+        getElement().setAttribute("date", dateAttr.getValue());
     }
 
     /**
-     * Set <code>typeAttr</code> property in DSL way
+     * Set <code>dateAttr</code> property in DSL way
      *
-     * @param typeAttr the new value
+     * @param dateAttr the new value
      * @return <code>EventRef</code> instance
      */
-    public EventRef typeAttr(final EventTypeSimpleType typeAttr) {
-        setTypeAttr(typeAttr);
+    public EventRef dateAttr(final DateSimpleType dateAttr) {
+        setDateAttr(dateAttr);
         return this;
     }
 
@@ -172,90 +173,46 @@ public class EventRef extends AnyOtherTypeComplexType {
     }
 
     /**
-     * Return <code>dateAttr</code> property
+     * Return <code>refersToAttr</code> property
      *
-     * @return dateAttr
+     * @return refersToAttr
      */
-    public DateSimpleType getDateAttr() {
-        if (dateAttr == null) {
-            dateAttr = new DateSimpleType();
-            dateAttr.setValue(getElement().getAttribute("date"));
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
         }
 
-        return dateAttr;
+        return refersToAttr;
     }
 
     /**
-     * Return <code>dateAttr</code> property in DSL way
+     * Return <code>refersToAttr</code> property in DSL way
      *
-     * @return dateAttr
+     * @return refersToAttr
      */
-    public DateSimpleType dateAttr() {
-        return getDateAttr();
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
     }
 
     /**
-     * Set <code>dateAttr</code> property
+     * Set <code>refersToAttr</code> property
      *
-     * @param dateAttr the new value
+     * @param refersToAttr the new value
      */
-    public void setDateAttr(final DateSimpleType dateAttr) {
-        this.dateAttr = dateAttr;
-        getElement().setAttribute("date", dateAttr.getValue());
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
     }
 
     /**
-     * Set <code>dateAttr</code> property in DSL way
+     * Set <code>refersToAttr</code> property in DSL way
      *
-     * @param dateAttr the new value
+     * @param refersToAttr the new value
      * @return <code>EventRef</code> instance
      */
-    public EventRef dateAttr(final DateSimpleType dateAttr) {
-        setDateAttr(dateAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>timeAttr</code> property
-     *
-     * @return timeAttr
-     */
-    public TimeSimpleType getTimeAttr() {
-        if (timeAttr == null) {
-            timeAttr = new TimeSimpleType();
-            timeAttr.setValue(getElement().getAttribute("time"));
-        }
-
-        return timeAttr;
-    }
-
-    /**
-     * Return <code>timeAttr</code> property in DSL way
-     *
-     * @return timeAttr
-     */
-    public TimeSimpleType timeAttr() {
-        return getTimeAttr();
-    }
-
-    /**
-     * Set <code>timeAttr</code> property
-     *
-     * @param timeAttr the new value
-     */
-    public void setTimeAttr(final TimeSimpleType timeAttr) {
-        this.timeAttr = timeAttr;
-        getElement().setAttribute("time", timeAttr.getValue());
-    }
-
-    /**
-     * Set <code>timeAttr</code> property in DSL way
-     *
-     * @param timeAttr the new value
-     * @return <code>EventRef</code> instance
-     */
-    public EventRef timeAttr(final TimeSimpleType timeAttr) {
-        setTimeAttr(timeAttr);
+    public EventRef refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -304,49 +261,103 @@ public class EventRef extends AnyOtherTypeComplexType {
     }
 
     /**
-     * Return <code>refersToAttr</code> property
+     * Return <code>timeAttr</code> property
      *
-     * @return refersToAttr
+     * @return timeAttr
      */
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+    public TimeSimpleType getTimeAttr() {
+        if (timeAttr == null) {
+            timeAttr = new TimeSimpleType();
+            timeAttr.setValue(getElement().getAttribute("time"));
         }
 
-        return refersToAttr;
+        return timeAttr;
     }
 
     /**
-     * Return <code>refersToAttr</code> property in DSL way
+     * Return <code>timeAttr</code> property in DSL way
      *
-     * @return refersToAttr
+     * @return timeAttr
      */
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
+    public TimeSimpleType timeAttr() {
+        return getTimeAttr();
     }
 
     /**
-     * Set <code>refersToAttr</code> property
+     * Set <code>timeAttr</code> property
      *
-     * @param refersToAttr the new value
+     * @param timeAttr the new value
      */
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    public void setTimeAttr(final TimeSimpleType timeAttr) {
+        this.timeAttr = timeAttr;
+        getElement().setAttribute("time", timeAttr.getValue());
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>timeAttr</code> property in DSL way
      *
-     * @param refersToAttr the new value
+     * @param timeAttr the new value
      * @return <code>EventRef</code> instance
      */
-    public EventRef refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public EventRef timeAttr(final TimeSimpleType timeAttr) {
+        setTimeAttr(timeAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>typeAttr</code> property
+     *
+     * @return typeAttr
+     */
+    public EventTypeSimpleType getTypeAttr() {
+        if (typeAttr == null) {
+            typeAttr = EventTypeSimpleType.fromString(getElement().getAttribute("type"));
+        }
+
+        return typeAttr;
+    }
+
+    /**
+     * Return <code>typeAttr</code> property in DSL way
+     *
+     * @return typeAttr
+     */
+    public EventTypeSimpleType typeAttr() {
+        return getTypeAttr();
+    }
+
+    /**
+     * Set <code>typeAttr</code> property
+     *
+     * @param typeAttr the new value
+     */
+    public void setTypeAttr(final EventTypeSimpleType typeAttr) {
+        this.typeAttr = typeAttr;
+        getElement().setAttribute("type", typeAttr.value());
+    }
+
+    /**
+     * Set <code>typeAttr</code> property in DSL way
+     *
+     * @param typeAttr the new value
+     * @return <code>EventRef</code> instance
+     */
+    public EventRef typeAttr(final EventTypeSimpleType typeAttr) {
+        setTypeAttr(typeAttr);
         return this;
     }
 //Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> EventRef</code> instance
+     */
+    public EventRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
 
     /**
      * Set <code>hrefAttr</code> property in DSL way
@@ -367,17 +378,6 @@ public class EventRef extends AnyOtherTypeComplexType {
      */
     public EventRef idAttr(final IDSimpleType idAttr) {
         setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> EventRef</code> instance
-     */
-    public EventRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -406,12 +406,12 @@ public class EventRef extends AnyOtherTypeComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
-        attrs.put("originatingExpression", getOriginatingExpressionAttr() != null ? getOriginatingExpressionAttr().getValue() : null);
         attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
-        attrs.put("time", getTimeAttr() != null ? getTimeAttr().getValue() : null);
-        attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
+        attrs.put("originatingExpression", getOriginatingExpressionAttr() != null ? getOriginatingExpressionAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("source", getSourceAttr() != null ? getSourceAttr().getValue() : null);
+        attrs.put("time", getTimeAttr() != null ? getTimeAttr().getValue() : null);
+        attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
         return attrs;
     }
 

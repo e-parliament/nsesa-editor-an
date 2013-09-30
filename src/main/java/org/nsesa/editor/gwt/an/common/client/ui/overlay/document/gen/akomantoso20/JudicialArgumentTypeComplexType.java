@@ -51,8 +51,8 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "judicialArgumentTypeComplexType");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "judicialArgumentTypeComplexType");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget judicialArgumentTypeComplexType");
         return span;
     }
@@ -67,57 +67,14 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private StatusTypeSimpleType statusAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
     private BooleanSimpleType exclusionAttr;
     private BooleanSimpleType incompleteAttr;
-    private String wildcardContentAttr;
+    private StatusTypeSimpleType statusAttr;
     private AnyURISimpleType refersToAttr;
+    private String wildcardContentAttr;
     private AnyURISimpleType periodAttr;
-
-    /**
-     * Return <code>statusAttr</code> property
-     *
-     * @return statusAttr
-     */
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-    }
-
-    /**
-     * Return <code>statusAttr</code> property in DSL way
-     *
-     * @return statusAttr
-     */
-    public StatusTypeSimpleType statusAttr() {
-        return getStatusAttr();
-    }
-
-    /**
-     * Set <code>statusAttr</code> property
-     *
-     * @param statusAttr the new value
-     */
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status", statusAttr.value());
-    }
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr the new value
-     * @return <code>JudicialArgumentTypeComplexType</code> instance
-     */
-    public JudicialArgumentTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
 
     /**
      * Return <code>idAttr</code> property
@@ -296,45 +253,45 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property
+     * Return <code>statusAttr</code> property
      *
-     * @return wildcardContentAttr
+     * @return statusAttr
      */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
         }
 
-        return wildcardContentAttr;
+        return statusAttr;
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
+     * Return <code>statusAttr</code> property in DSL way
      *
-     * @return wildcardContentAttr
+     * @return statusAttr
      */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
+    public StatusTypeSimpleType statusAttr() {
+        return getStatusAttr();
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property
+     * Set <code>statusAttr</code> property
      *
-     * @param wildcardContentAttr the new value
+     * @param statusAttr the new value
      */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status", statusAttr.value());
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>statusAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr the new value
+     * @param statusAttr the new value
      * @return <code>JudicialArgumentTypeComplexType</code> instance
      */
-    public JudicialArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public JudicialArgumentTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -379,6 +336,49 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
      */
     public JudicialArgumentTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>JudicialArgumentTypeComplexType</code> instance
+     */
+    public JudicialArgumentTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -542,13 +542,13 @@ public class JudicialArgumentTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("exclusion", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
         attrs.put("incomplete", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }

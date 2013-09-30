@@ -42,8 +42,8 @@ public class FRBRtranslation extends MetaoptComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "FRBRtranslation");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "FRBRtranslation");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget FRBRtranslation");
         return span;
     }
@@ -61,10 +61,10 @@ public class FRBRtranslation extends MetaoptComplexType {
     /**
      * Constructor with required attributes
      */
-    public FRBRtranslation(LanguageSimpleType fromLanguageAttr, AnyURISimpleType byAttr, AnyURISimpleType hrefAttr) {
+    public FRBRtranslation(AnyURISimpleType byAttr, LanguageSimpleType fromLanguageAttr, AnyURISimpleType hrefAttr) {
         this();
-        setFromLanguageAttr(fromLanguageAttr);
         setByAttr(byAttr);
+        setFromLanguageAttr(fromLanguageAttr);
         setHrefAttr(hrefAttr);
     }
 
@@ -77,55 +77,11 @@ public class FRBRtranslation extends MetaoptComplexType {
     }
 
     // FIELDS ------------------
-    private LanguageSimpleType fromLanguageAttr;
     private BooleanSimpleType authoritativeAttr;
-    private LanguageSimpleType pivotAttr;
     private AnyURISimpleType byAttr;
+    private LanguageSimpleType fromLanguageAttr;
     private AnyURISimpleType hrefAttr;
-
-    /**
-     * Return <code>fromLanguageAttr</code> property
-     *
-     * @return fromLanguageAttr
-     */
-    public LanguageSimpleType getFromLanguageAttr() {
-        if (fromLanguageAttr == null) {
-            fromLanguageAttr = new LanguageSimpleType();
-            fromLanguageAttr.setValue(getElement().getAttribute("fromLanguage"));
-        }
-
-        return fromLanguageAttr;
-    }
-
-    /**
-     * Return <code>fromLanguageAttr</code> property in DSL way
-     *
-     * @return fromLanguageAttr
-     */
-    public LanguageSimpleType fromLanguageAttr() {
-        return getFromLanguageAttr();
-    }
-
-    /**
-     * Set <code>fromLanguageAttr</code> property
-     *
-     * @param fromLanguageAttr the new value
-     */
-    public void setFromLanguageAttr(final LanguageSimpleType fromLanguageAttr) {
-        this.fromLanguageAttr = fromLanguageAttr;
-        getElement().setAttribute("fromLanguage", fromLanguageAttr.getValue());
-    }
-
-    /**
-     * Set <code>fromLanguageAttr</code> property in DSL way
-     *
-     * @param fromLanguageAttr the new value
-     * @return <code>FRBRtranslation</code> instance
-     */
-    public FRBRtranslation fromLanguageAttr(final LanguageSimpleType fromLanguageAttr) {
-        setFromLanguageAttr(fromLanguageAttr);
-        return this;
-    }
+    private LanguageSimpleType pivotAttr;
 
     /**
      * Return <code>authoritativeAttr</code> property
@@ -168,50 +124,6 @@ public class FRBRtranslation extends MetaoptComplexType {
      */
     public FRBRtranslation authoritativeAttr(final BooleanSimpleType authoritativeAttr) {
         setAuthoritativeAttr(authoritativeAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>pivotAttr</code> property
-     *
-     * @return pivotAttr
-     */
-    public LanguageSimpleType getPivotAttr() {
-        if (pivotAttr == null) {
-            pivotAttr = new LanguageSimpleType();
-            pivotAttr.setValue(getElement().getAttribute("pivot"));
-        }
-
-        return pivotAttr;
-    }
-
-    /**
-     * Return <code>pivotAttr</code> property in DSL way
-     *
-     * @return pivotAttr
-     */
-    public LanguageSimpleType pivotAttr() {
-        return getPivotAttr();
-    }
-
-    /**
-     * Set <code>pivotAttr</code> property
-     *
-     * @param pivotAttr the new value
-     */
-    public void setPivotAttr(final LanguageSimpleType pivotAttr) {
-        this.pivotAttr = pivotAttr;
-        getElement().setAttribute("pivot", pivotAttr.getValue());
-    }
-
-    /**
-     * Set <code>pivotAttr</code> property in DSL way
-     *
-     * @param pivotAttr the new value
-     * @return <code>FRBRtranslation</code> instance
-     */
-    public FRBRtranslation pivotAttr(final LanguageSimpleType pivotAttr) {
-        setPivotAttr(pivotAttr);
         return this;
     }
 
@@ -260,6 +172,50 @@ public class FRBRtranslation extends MetaoptComplexType {
     }
 
     /**
+     * Return <code>fromLanguageAttr</code> property
+     *
+     * @return fromLanguageAttr
+     */
+    public LanguageSimpleType getFromLanguageAttr() {
+        if (fromLanguageAttr == null) {
+            fromLanguageAttr = new LanguageSimpleType();
+            fromLanguageAttr.setValue(getElement().getAttribute("fromLanguage"));
+        }
+
+        return fromLanguageAttr;
+    }
+
+    /**
+     * Return <code>fromLanguageAttr</code> property in DSL way
+     *
+     * @return fromLanguageAttr
+     */
+    public LanguageSimpleType fromLanguageAttr() {
+        return getFromLanguageAttr();
+    }
+
+    /**
+     * Set <code>fromLanguageAttr</code> property
+     *
+     * @param fromLanguageAttr the new value
+     */
+    public void setFromLanguageAttr(final LanguageSimpleType fromLanguageAttr) {
+        this.fromLanguageAttr = fromLanguageAttr;
+        getElement().setAttribute("fromLanguage", fromLanguageAttr.getValue());
+    }
+
+    /**
+     * Set <code>fromLanguageAttr</code> property in DSL way
+     *
+     * @param fromLanguageAttr the new value
+     * @return <code>FRBRtranslation</code> instance
+     */
+    public FRBRtranslation fromLanguageAttr(final LanguageSimpleType fromLanguageAttr) {
+        setFromLanguageAttr(fromLanguageAttr);
+        return this;
+    }
+
+    /**
      * Return <code>hrefAttr</code> property
      *
      * @return hrefAttr
@@ -302,16 +258,60 @@ public class FRBRtranslation extends MetaoptComplexType {
         setHrefAttr(hrefAttr);
         return this;
     }
+
+    /**
+     * Return <code>pivotAttr</code> property
+     *
+     * @return pivotAttr
+     */
+    public LanguageSimpleType getPivotAttr() {
+        if (pivotAttr == null) {
+            pivotAttr = new LanguageSimpleType();
+            pivotAttr.setValue(getElement().getAttribute("pivot"));
+        }
+
+        return pivotAttr;
+    }
+
+    /**
+     * Return <code>pivotAttr</code> property in DSL way
+     *
+     * @return pivotAttr
+     */
+    public LanguageSimpleType pivotAttr() {
+        return getPivotAttr();
+    }
+
+    /**
+     * Set <code>pivotAttr</code> property
+     *
+     * @param pivotAttr the new value
+     */
+    public void setPivotAttr(final LanguageSimpleType pivotAttr) {
+        this.pivotAttr = pivotAttr;
+        getElement().setAttribute("pivot", pivotAttr.getValue());
+    }
+
+    /**
+     * Set <code>pivotAttr</code> property in DSL way
+     *
+     * @param pivotAttr the new value
+     * @return <code>FRBRtranslation</code> instance
+     */
+    public FRBRtranslation pivotAttr(final LanguageSimpleType pivotAttr) {
+        setPivotAttr(pivotAttr);
+        return this;
+    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> FRBRtranslation</code> instance
      */
-    public FRBRtranslation wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public FRBRtranslation evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -327,13 +327,13 @@ public class FRBRtranslation extends MetaoptComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> FRBRtranslation</code> instance
      */
-    public FRBRtranslation evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public FRBRtranslation wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -351,11 +351,11 @@ public class FRBRtranslation extends MetaoptComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("fromLanguage", getFromLanguageAttr() != null ? getFromLanguageAttr().getValue() : null);
         attrs.put("authoritative", getAuthoritativeAttr() != null ? getAuthoritativeAttr().getValue() : null);
-        attrs.put("pivot", getPivotAttr() != null ? getPivotAttr().getValue() : null);
         attrs.put("by", getByAttr() != null ? getByAttr().getValue() : null);
+        attrs.put("fromLanguage", getFromLanguageAttr() != null ? getFromLanguageAttr().getValue() : null);
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("pivot", getPivotAttr() != null ? getPivotAttr().getValue() : null);
         return attrs;
     }
 

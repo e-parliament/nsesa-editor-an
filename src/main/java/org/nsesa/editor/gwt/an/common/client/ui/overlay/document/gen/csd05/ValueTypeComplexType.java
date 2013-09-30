@@ -42,8 +42,8 @@ public class ValueTypeComplexType extends MetaoptComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "valueTypeComplexType");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD05");
+        span.setAttribute("data-type", "valueTypeComplexType");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD05");
         span.setClassName("widget valueTypeComplexType");
         return span;
     }
@@ -58,10 +58,54 @@ public class ValueTypeComplexType extends MetaoptComplexType {
     }
 
     // FIELDS ------------------
+    private StringSimpleType valueAttr;
     private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
-    private StringSimpleType valueAttr;
     private AnyURISimpleType refersToAttr;
+
+    /**
+     * Return <code>valueAttr</code> property
+     *
+     * @return valueAttr
+     */
+    public StringSimpleType getValueAttr() {
+        if (valueAttr == null) {
+            valueAttr = new StringSimpleType();
+            valueAttr.setValue(getElement().getAttribute("value"));
+        }
+
+        return valueAttr;
+    }
+
+    /**
+     * Return <code>valueAttr</code> property in DSL way
+     *
+     * @return valueAttr
+     */
+    public StringSimpleType valueAttr() {
+        return getValueAttr();
+    }
+
+    /**
+     * Set <code>valueAttr</code> property
+     *
+     * @param valueAttr the new value
+     */
+    public void setValueAttr(final StringSimpleType valueAttr) {
+        this.valueAttr = valueAttr;
+        getElement().setAttribute("value", valueAttr.getValue());
+    }
+
+    /**
+     * Set <code>valueAttr</code> property in DSL way
+     *
+     * @param valueAttr the new value
+     * @return <code>ValueTypeComplexType</code> instance
+     */
+    public ValueTypeComplexType valueAttr(final StringSimpleType valueAttr) {
+        setValueAttr(valueAttr);
+        return this;
+    }
 
     /**
      * Return <code>showAsAttr</code> property
@@ -148,50 +192,6 @@ public class ValueTypeComplexType extends MetaoptComplexType {
      */
     public ValueTypeComplexType shortFormAttr(final StringSimpleType shortFormAttr) {
         setShortFormAttr(shortFormAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>valueAttr</code> property
-     *
-     * @return valueAttr
-     */
-    public StringSimpleType getValueAttr() {
-        if (valueAttr == null) {
-            valueAttr = new StringSimpleType();
-            valueAttr.setValue(getElement().getAttribute("value"));
-        }
-
-        return valueAttr;
-    }
-
-    /**
-     * Return <code>valueAttr</code> property in DSL way
-     *
-     * @return valueAttr
-     */
-    public StringSimpleType valueAttr() {
-        return getValueAttr();
-    }
-
-    /**
-     * Set <code>valueAttr</code> property
-     *
-     * @param valueAttr the new value
-     */
-    public void setValueAttr(final StringSimpleType valueAttr) {
-        this.valueAttr = valueAttr;
-        getElement().setAttribute("value", valueAttr.getValue());
-    }
-
-    /**
-     * Set <code>valueAttr</code> property in DSL way
-     *
-     * @param valueAttr the new value
-     * @return <code>ValueTypeComplexType</code> instance
-     */
-    public ValueTypeComplexType valueAttr(final StringSimpleType valueAttr) {
-        setValueAttr(valueAttr);
         return this;
     }
 
@@ -287,9 +287,9 @@ public class ValueTypeComplexType extends MetaoptComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
         attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
-        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         return attrs;
     }

@@ -49,8 +49,8 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "countTypeComplexType");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "countTypeComplexType");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget countTypeComplexType");
         return span;
     }
@@ -65,54 +65,53 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private AnyURISimpleType hrefAttr;
+    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private StringSimpleType valueAttr;
     private AnyURISimpleType refersToAttr;
-    private String wildcardContentAttr;
+    private AnyURISimpleType hrefAttr;
+    private StringSimpleType valueAttr;
 
     /**
-     * Return <code>hrefAttr</code> property
+     * Return <code>wildcardContentAttr</code> property
      *
-     * @return hrefAttr
+     * @return wildcardContentAttr
      */
-    public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-            hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(getElement().getAttribute("href"));
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return hrefAttr;
+        return wildcardContentAttr;
     }
 
     /**
-     * Return <code>hrefAttr</code> property in DSL way
+     * Return <code>wildcardContentAttr</code> property in DSL way
      *
-     * @return hrefAttr
+     * @return wildcardContentAttr
      */
-    public AnyURISimpleType hrefAttr() {
-        return getHrefAttr();
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
     }
 
     /**
-     * Set <code>hrefAttr</code> property
+     * Set <code>wildcardContentAttr</code> property
      *
-     * @param hrefAttr the new value
+     * @param wildcardContentAttr the new value
      */
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-        getElement().setAttribute("href", hrefAttr.getValue());
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
     }
 
     /**
-     * Set <code>hrefAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param hrefAttr the new value
+     * @param wildcardContentAttr the new value
      * @return <code>CountTypeComplexType</code> instance
      */
-    public CountTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
+    public CountTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -205,50 +204,6 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>valueAttr</code> property
-     *
-     * @return valueAttr
-     */
-    public StringSimpleType getValueAttr() {
-        if (valueAttr == null) {
-            valueAttr = new StringSimpleType();
-            valueAttr.setValue(getElement().getAttribute("value"));
-        }
-
-        return valueAttr;
-    }
-
-    /**
-     * Return <code>valueAttr</code> property in DSL way
-     *
-     * @return valueAttr
-     */
-    public StringSimpleType valueAttr() {
-        return getValueAttr();
-    }
-
-    /**
-     * Set <code>valueAttr</code> property
-     *
-     * @param valueAttr the new value
-     */
-    public void setValueAttr(final StringSimpleType valueAttr) {
-        this.valueAttr = valueAttr;
-        getElement().setAttribute("value", valueAttr.getValue());
-    }
-
-    /**
-     * Set <code>valueAttr</code> property in DSL way
-     *
-     * @param valueAttr the new value
-     * @return <code>CountTypeComplexType</code> instance
-     */
-    public CountTypeComplexType valueAttr(final StringSimpleType valueAttr) {
-        setValueAttr(valueAttr);
-        return this;
-    }
-
-    /**
      * Return <code>refersToAttr</code> property
      *
      * @return refersToAttr
@@ -293,45 +248,90 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property
+     * Return <code>hrefAttr</code> property
      *
-     * @return wildcardContentAttr
+     * @return hrefAttr
      */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+    public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(getElement().getAttribute("href"));
         }
 
-        return wildcardContentAttr;
+        return hrefAttr;
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
+     * Return <code>hrefAttr</code> property in DSL way
      *
-     * @return wildcardContentAttr
+     * @return hrefAttr
      */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
+    public AnyURISimpleType hrefAttr() {
+        return getHrefAttr();
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property
+     * Set <code>hrefAttr</code> property
      *
-     * @param wildcardContentAttr the new value
+     * @param hrefAttr the new value
      */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+        getElement().setAttribute("href", hrefAttr.getValue());
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>hrefAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr the new value
+     * @param hrefAttr the new value
      * @return <code>CountTypeComplexType</code> instance
      */
-    public CountTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public CountTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>valueAttr</code> property
+     *
+     * @return valueAttr
+     */
+    public StringSimpleType getValueAttr() {
+        if (valueAttr == null) {
+            valueAttr = new StringSimpleType();
+            valueAttr.setValue(getElement().getAttribute("value"));
+        }
+
+        return valueAttr;
+    }
+
+    /**
+     * Return <code>valueAttr</code> property in DSL way
+     *
+     * @return valueAttr
+     */
+    public StringSimpleType valueAttr() {
+        return getValueAttr();
+    }
+
+    /**
+     * Set <code>valueAttr</code> property
+     *
+     * @param valueAttr the new value
+     */
+    public void setValueAttr(final StringSimpleType valueAttr) {
+        this.valueAttr = valueAttr;
+        getElement().setAttribute("value", valueAttr.getValue());
+    }
+
+    /**
+     * Set <code>valueAttr</code> property in DSL way
+     *
+     * @param valueAttr the new value
+     * @return <code>CountTypeComplexType</code> instance
+     */
+    public CountTypeComplexType valueAttr(final StringSimpleType valueAttr) {
+        setValueAttr(valueAttr);
         return this;
     }
 
@@ -384,12 +384,12 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
         return attrs;
     }
 

@@ -29,8 +29,8 @@ public class BaseAttribute extends AnyURISimpleType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "baseAttribute");
-        span.setAttribute("ns", "http://www.w3.org/XML/1998/namespace");
+        span.setAttribute("data-type", "baseAttribute");
+        span.setAttribute("data-ns", "http://www.w3.org/XML/1998/namespace");
         span.setClassName("widget baseAttribute");
         return span;
     }

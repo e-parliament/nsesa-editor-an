@@ -29,8 +29,8 @@ public class Base64BinarySimpleType extends AnySimpleTypeSimpleType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "base64BinarySimpleType");
-        span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
+        span.setAttribute("data-type", "base64BinarySimpleType");
+        span.setAttribute("data-ns", "http://www.w3.org/2001/XMLSchema");
         span.setClassName("widget base64BinarySimpleType");
         return span;
     }

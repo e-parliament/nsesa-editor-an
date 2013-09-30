@@ -59,8 +59,8 @@ public class TextualMod extends ModificationTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "textualMod");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "textualMod");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget textualMod");
         return span;
     }
@@ -94,6 +94,74 @@ public class TextualMod extends ModificationTypeComplexType {
 
     // FIELDS ------------------
     private TextualModsSimpleType typeAttr;
+
+    /**
+     * Return <code>java.util.List<New></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<New> getNews() {
+        java.util.List<New> result = new ArrayList<New>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("New".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((New) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<New></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<New> getNewList() {
+        return getNews();
+    }
+
+    /**
+     * Add <code>java.util.List<New></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public New addNew(New newElem) {
+        this.addOverlayWidget(newElem);
+        return newElem;
+    }
+
+    /**
+     * Return <code>java.util.List<Old></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Old> getOlds() {
+        java.util.List<Old> result = new ArrayList<Old>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Old".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Old) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Old></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Old> getOldList() {
+        return getOlds();
+    }
+
+    /**
+     * Add <code>java.util.List<Old></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Old addOld(Old oldElem) {
+        this.addOverlayWidget(oldElem);
+        return oldElem;
+    }
 
     /**
      * Return <code>typeAttr</code> property
@@ -137,120 +205,7 @@ public class TextualMod extends ModificationTypeComplexType {
         setTypeAttr(typeAttr);
         return this;
     }
-
-    /**
-     * Return <code>java.util.List<Old></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Old> getOlds() {
-        java.util.List<Old> result = new ArrayList<Old>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Old".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Old) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Old></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Old> getOldList() {
-        return getOlds();
-    }
-
-    /**
-     * Add <code>java.util.List<Old></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Old addOld(Old oldElem) {
-        this.addOverlayWidget(oldElem);
-        return oldElem;
-    }
-
-    /**
-     * Return <code>java.util.List<New></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<New> getNews() {
-        java.util.List<New> result = new ArrayList<New>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("New".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((New) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<New></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<New> getNewList() {
-        return getNews();
-    }
-
-    /**
-     * Add <code>java.util.List<New></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public New addNew(New newElem) {
-        this.addOverlayWidget(newElem);
-        return newElem;
-    }
-
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr new value
-     * @return <code> TextualMod</code> instance
-     */
-    public TextualMod statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> TextualMod</code> instance
-     */
-    public TextualMod refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> TextualMod</code> instance
-     */
-    public TextualMod wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> TextualMod</code> instance
-     */
-    public TextualMod idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
 
     /**
      * Set <code>evolvingIdAttr</code> property in DSL way
@@ -275,6 +230,17 @@ public class TextualMod extends ModificationTypeComplexType {
     }
 
     /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> TextualMod</code> instance
+     */
+    public TextualMod idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
      * Set <code>incompleteAttr</code> property in DSL way
      *
      * @param incompleteAttr new value
@@ -293,6 +259,39 @@ public class TextualMod extends ModificationTypeComplexType {
      */
     public TextualMod periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> TextualMod</code> instance
+     */
+    public TextualMod refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> TextualMod</code> instance
+     */
+    public TextualMod statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> TextualMod</code> instance
+     */
+    public TextualMod wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

@@ -58,8 +58,8 @@ public class FRBRWork extends CorePropertiesComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "FRBRWork");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "FRBRWork");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget FRBRWork");
         return span;
     }
@@ -118,15 +118,15 @@ public class FRBRWork extends CorePropertiesComplexType {
     }
 
     /**
-     * Add <code>FRBRsubtype</code> property in the list of properties
+     * Add <code>FRBRname</code> property in the list of properties
      *
      * @return The property as unmodifiable list
      */
-    public FRBRsubtype getFRBRsubtype() {
-        FRBRsubtype result = null;
+    public FRBRname getFRBRname() {
+        FRBRname result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRsubtype".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (FRBRsubtype) widget;
+            if ("FRBRname".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (FRBRname) widget;
                 break;
             }
         }
@@ -134,20 +134,20 @@ public class FRBRWork extends CorePropertiesComplexType {
     }
 
     /**
-     * Set <code>FRBRsubtypeElem</code> property in DSL way
+     * Set <code>FRBRnameElem</code> property in DSL way
      *
-     * @param FRBRsubtypeElem new value
-     * @return <code>FRBRsubtype</code> instance
+     * @param FRBRnameElem new value
+     * @return <code>FRBRname</code> instance
      */
-    public FRBRsubtype setFRBRsubtype(FRBRsubtype FRBRsubtypeElem) {
-        FRBRsubtype result = getFRBRsubtype();
+    public FRBRname setFRBRname(FRBRname FRBRnameElem) {
+        FRBRname result = getFRBRname();
         // remove the child of the same type if exist
         if (result != null) {
             this.removeOverlayWidget(result);
         }
-        this.addOverlayWidget(FRBRsubtypeElem);
+        this.addOverlayWidget(FRBRnameElem);
 
-        return FRBRsubtypeElem;
+        return FRBRnameElem;
     }
 
     /**
@@ -184,15 +184,15 @@ public class FRBRWork extends CorePropertiesComplexType {
     }
 
     /**
-     * Add <code>FRBRname</code> property in the list of properties
+     * Add <code>FRBRsubtype</code> property in the list of properties
      *
      * @return The property as unmodifiable list
      */
-    public FRBRname getFRBRname() {
-        FRBRname result = null;
+    public FRBRsubtype getFRBRsubtype() {
+        FRBRsubtype result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRname".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (FRBRname) widget;
+            if ("FRBRsubtype".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (FRBRsubtype) widget;
                 break;
             }
         }
@@ -200,20 +200,20 @@ public class FRBRWork extends CorePropertiesComplexType {
     }
 
     /**
-     * Set <code>FRBRnameElem</code> property in DSL way
+     * Set <code>FRBRsubtypeElem</code> property in DSL way
      *
-     * @param FRBRnameElem new value
-     * @return <code>FRBRname</code> instance
+     * @param FRBRsubtypeElem new value
+     * @return <code>FRBRsubtype</code> instance
      */
-    public FRBRname setFRBRname(FRBRname FRBRnameElem) {
-        FRBRname result = getFRBRname();
+    public FRBRsubtype setFRBRsubtype(FRBRsubtype FRBRsubtypeElem) {
+        FRBRsubtype result = getFRBRsubtype();
         // remove the child of the same type if exist
         if (result != null) {
             this.removeOverlayWidget(result);
         }
-        this.addOverlayWidget(FRBRnameElem);
+        this.addOverlayWidget(FRBRsubtypeElem);
 
-        return FRBRnameElem;
+        return FRBRsubtypeElem;
     }
 //Override all attributes methods to be conformant with DSL approach
 

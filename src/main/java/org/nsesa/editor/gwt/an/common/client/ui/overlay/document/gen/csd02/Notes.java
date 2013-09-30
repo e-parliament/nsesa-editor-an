@@ -46,8 +46,8 @@ public class Notes extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "notes");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "notes");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget notes");
         return span;
     }
@@ -80,6 +80,40 @@ public class Notes extends OverlayWidgetImpl {
 
     // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
+
+    /**
+     * Return <code>java.util.List<Note></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Note> getNotes() {
+        java.util.List<Note> result = new ArrayList<Note>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Note".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Note) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Note></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Note> getNoteList() {
+        return getNotes();
+    }
+
+    /**
+     * Add <code>java.util.List<Note></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Note addNote(Note noteElem) {
+        this.addOverlayWidget(noteElem);
+        return noteElem;
+    }
 
     /**
      * Return <code>sourceAttr</code> property
@@ -124,41 +158,6 @@ public class Notes extends OverlayWidgetImpl {
         setSourceAttr(sourceAttr);
         return this;
     }
-
-    /**
-     * Return <code>java.util.List<Note></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Note> getNotes() {
-        java.util.List<Note> result = new ArrayList<Note>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Note".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Note) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Note></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Note> getNoteList() {
-        return getNotes();
-    }
-
-    /**
-     * Add <code>java.util.List<Note></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Note addNote(Note noteElem) {
-        this.addOverlayWidget(noteElem);
-        return noteElem;
-    }
-
 //Override all attributes methods to be conformant with DSL approach
 
     /**
