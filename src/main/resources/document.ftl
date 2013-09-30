@@ -16,15 +16,22 @@
 <#-- Freemarker template to handle XML transformations for IE -->
 <#macro element el debug=false>
     <@compress single_line=true>
-    <span class="widget ${el?node_name} <#if el.@class[0]??> ${el.@class}</#if>"
+    <<@elementName el=el/> class="widget ${el?node_name} <#if el.@class[0]??> ${el.@class}</#if>"
         <#list el.@@ as attr><#if attr?node_name?lower_case != "xmlns">${attr?node_name}="${attr}" </#if></#list>
-            data-type="${el?node_name}"
-            data-ns="${el?node_namespace}"><#t/>
+    data-type="${el?node_name}"
+    data-ns="${el?node_namespace}"><#t/>
         <#if el?children?size gt 0><#t/>
             <#list el?children as child><#t/>
                 <#if child?node_type == 'element'><#t/>
                     <@element el=child debug=debug/><#t/>
-                <#elseif child?node_type == "text"><#t/>${child?string?xml?replace("&apos;", "&#39;")}</#if></#list></#if></span><#lt/>
+                <#elseif child?node_type == "text"><#t/>${child?string?xml?replace("&apos;", "&#39;")}</#if></#list></#if></<@elementName el=el/>><#lt/>
+    </@compress>
+</#macro>
+<#macro elementName el>
+    <@compress single_line=true>
+        <#assign native_element_node_names = ["table", "thead", "tfoot", "tbody", "tr", "td","img"] />
+        <#if native_element_node_names?seq_contains(el?node_name?string?lower_case)>${el?node_name?string?lower_case}
+        <#else>span</#if>
     </@compress>
 </#macro>
 <@compress single_line=true>
