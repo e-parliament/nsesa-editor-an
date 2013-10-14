@@ -182,6 +182,15 @@ public class AkomaNtosoAmendmentActionPanelController extends AmendmentActionPan
                 popupPanel.hide();
             }
         });
+        final Anchor openOfficeExport = new Anchor(constants.amendmentActionExportOo());
+        openOfficeExport.addClickHandler(new ClickHandler() {
+            @Override
+            public void onClick(ClickEvent event) {
+                final String url = GWT.getModuleBaseURL() + "download/amendment/odt/" + amendmentController.getModel().getAmendmentContainerID();
+                Window.open(URL.encode(url), "download", "");
+                popupPanel.hide();
+            }
+        });
         final Anchor htmlExport = new Anchor(constants.amendmentActionExportHtml());
         htmlExport.addClickHandler(new ClickHandler() {
             @Override
@@ -195,6 +204,7 @@ public class AkomaNtosoAmendmentActionPanelController extends AmendmentActionPan
         addWidget(xmlExport);
         addWidget(pdfExport);
         addWidget(wordExport);
+        addWidget(openOfficeExport);
         addWidget(htmlExport);
 
     }
