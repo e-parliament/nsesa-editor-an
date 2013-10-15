@@ -18,7 +18,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02;
  */
 public enum TimeTypeSimpleType {
 
-// FIELDS ------------------
+// ENUM VALUES ------------------
 
     STARTEVENT("startEvent"),
     ENDEVENT("endEvent");
@@ -54,5 +54,11 @@ public enum TimeTypeSimpleType {
             }
         }
         return null;
+    }
+
+    private static final String namespaceURI = "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02";
+
+    public static String getNamespaceURI() {
+        return namespaceURI;
     }
 }

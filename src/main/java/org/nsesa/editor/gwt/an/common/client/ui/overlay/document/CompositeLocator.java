@@ -27,9 +27,25 @@ public class CompositeLocator extends DefaultLocator {
 
     @Inject
     public CompositeLocator() {
-        // AN 3.0
+        // AN 3.0 - 02
         hide(AkomaNtoso.class, Body.class, Preamble.class, Bill.class, Components.class, Component.class, Eol.class,
                 P.class, B.class, I.class, Span.class, Recitals.class, Content.class, List.class/*, Num.class*/);
+        // AN 3.0 - 05
+        hide(org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.AkomaNtoso.class,
+                org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.Body.class,
+                org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.Preamble.class,
+                org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.Bill.class,
+                org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.Components.class,
+                org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.Component.class,
+                org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.Eol.class,
+                org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.P.class,
+                org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.B.class,
+                org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.I.class,
+                org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.Span.class,
+                org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.Recitals.class,
+                org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.Content.class,
+                org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.List.class
+                /*, Num.class*/);
         // AN 2.0
         hide(org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.AkomaNtoso.class,
                 org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Body.class,

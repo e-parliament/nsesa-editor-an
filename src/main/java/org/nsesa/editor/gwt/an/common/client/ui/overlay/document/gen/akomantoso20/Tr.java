@@ -48,8 +48,8 @@ public class Tr extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "tr");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "tr");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget tr");
         return span;
     }
@@ -73,257 +73,59 @@ public class Tr extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
-    private StatusTypeSimpleType statusAttr;
-    private String wildcardContentAttr;
+    private AnyURISimpleType alternativeToAttr;
     private StringSimpleType classAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private IDSimpleType idAttr;
+    private LanguageSimpleType langAttr;
+    private AnyURISimpleType periodAttr;
+    private AnyURISimpleType refersToAttr;
+    private StatusTypeSimpleType statusAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
-    private AnyURISimpleType alternativeToAttr;
-    private LanguageSimpleType langAttr;
-    private AnyURISimpleType refersToAttr;
-    private AnyURISimpleType periodAttr;
+    private String wildcardContentAttr;
 
     /**
-     * Return <code>java.util.List<Th></code> property
+     * Return <code>alternativeToAttr</code> property
      *
-     * @return The property as unmodifiable list
+     * @return alternativeToAttr
      */
-    public java.util.List<Th> getThs() {
-        java.util.List<Th> result = new ArrayList<Th>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Th".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Th) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Th></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Th> getThList() {
-        return getThs();
-    }
-
-    /**
-     * Add <code>java.util.List<Th></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Th addTh(Th thElem) {
-        this.addOverlayWidget(thElem);
-        return thElem;
-    }
-
-    /**
-     * Return <code>java.util.List<Td></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Td> getTds() {
-        java.util.List<Td> result = new ArrayList<Td>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Td".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Td) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Td></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Td> getTdList() {
-        return getTds();
-    }
-
-    /**
-     * Add <code>java.util.List<Td></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Td addTd(Td tdElem) {
-        this.addOverlayWidget(tdElem);
-        return tdElem;
-    }
-
-    /**
-     * Return <code>idAttr</code> property
-     *
-     * @return idAttr
-     */
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
+    public AnyURISimpleType getAlternativeToAttr() {
+        if (alternativeToAttr == null) {
+            alternativeToAttr = new AnyURISimpleType();
+            alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
         }
 
-        return idAttr;
+        return alternativeToAttr;
     }
 
     /**
-     * Return <code>idAttr</code> property in DSL way
+     * Return <code>alternativeToAttr</code> property in DSL way
      *
-     * @return idAttr
+     * @return alternativeToAttr
      */
-    public IDSimpleType idAttr() {
-        return getIdAttr();
+    public AnyURISimpleType alternativeToAttr() {
+        return getAlternativeToAttr();
     }
 
     /**
-     * Set <code>idAttr</code> property
+     * Set <code>alternativeToAttr</code> property
      *
-     * @param idAttr the new value
+     * @param alternativeToAttr the new value
      */
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+        getElement().setAttribute("alternativeTo", alternativeToAttr.getValue());
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @param idAttr the new value
+     * @param alternativeToAttr the new value
      * @return <code>Tr</code> instance
      */
-    public Tr idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>evolvingIdAttr</code> property
-     *
-     * @return evolvingIdAttr
-     */
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-    }
-
-    /**
-     * Return <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @return evolvingIdAttr
-     */
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property
-     *
-     * @param evolvingIdAttr the new value
-     */
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr the new value
-     * @return <code>Tr</code> instance
-     */
-    public Tr evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>statusAttr</code> property
-     *
-     * @return statusAttr
-     */
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-    }
-
-    /**
-     * Return <code>statusAttr</code> property in DSL way
-     *
-     * @return statusAttr
-     */
-    public StatusTypeSimpleType statusAttr() {
-        return getStatusAttr();
-    }
-
-    /**
-     * Set <code>statusAttr</code> property
-     *
-     * @param statusAttr the new value
-     */
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status", statusAttr.value());
-    }
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr the new value
-     * @return <code>Tr</code> instance
-     */
-    public Tr statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>wildcardContentAttr</code> property
-     *
-     * @return wildcardContentAttr
-     */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @return wildcardContentAttr
-     */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property
-     *
-     * @param wildcardContentAttr the new value
-     */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr the new value
-     * @return <code>Tr</code> instance
-     */
-    public Tr wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Tr alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
@@ -372,134 +174,90 @@ public class Tr extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>styleAttr</code> property
+     * Return <code>evolvingIdAttr</code> property
      *
-     * @return styleAttr
+     * @return evolvingIdAttr
      */
-    public StringSimpleType getStyleAttr() {
-        if (styleAttr == null) {
-            styleAttr = new StringSimpleType();
-            styleAttr.setValue(getElement().getAttribute("style"));
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
         }
 
-        return styleAttr;
+        return evolvingIdAttr;
     }
 
     /**
-     * Return <code>styleAttr</code> property in DSL way
+     * Return <code>evolvingIdAttr</code> property in DSL way
      *
-     * @return styleAttr
+     * @return evolvingIdAttr
      */
-    public StringSimpleType styleAttr() {
-        return getStyleAttr();
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
     }
 
     /**
-     * Set <code>styleAttr</code> property
+     * Set <code>evolvingIdAttr</code> property
      *
-     * @param styleAttr the new value
+     * @param evolvingIdAttr the new value
      */
-    public void setStyleAttr(final StringSimpleType styleAttr) {
-        this.styleAttr = styleAttr;
-        getElement().setAttribute("style", styleAttr.getValue());
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
     }
 
     /**
-     * Set <code>styleAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param styleAttr the new value
+     * @param evolvingIdAttr the new value
      * @return <code>Tr</code> instance
      */
-    public Tr styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
+    public Tr evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
     /**
-     * Return <code>titleAttr</code> property
+     * Return <code>idAttr</code> property
      *
-     * @return titleAttr
+     * @return idAttr
      */
-    public StringSimpleType getTitleAttr() {
-        if (titleAttr == null) {
-            titleAttr = new StringSimpleType();
-            titleAttr.setValue(getElement().getAttribute("title"));
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
         }
 
-        return titleAttr;
+        return idAttr;
     }
 
     /**
-     * Return <code>titleAttr</code> property in DSL way
+     * Return <code>idAttr</code> property in DSL way
      *
-     * @return titleAttr
+     * @return idAttr
      */
-    public StringSimpleType titleAttr() {
-        return getTitleAttr();
+    public IDSimpleType idAttr() {
+        return getIdAttr();
     }
 
     /**
-     * Set <code>titleAttr</code> property
+     * Set <code>idAttr</code> property
      *
-     * @param titleAttr the new value
+     * @param idAttr the new value
      */
-    public void setTitleAttr(final StringSimpleType titleAttr) {
-        this.titleAttr = titleAttr;
-        getElement().setAttribute("title", titleAttr.getValue());
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
     }
 
     /**
-     * Set <code>titleAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param titleAttr the new value
+     * @param idAttr the new value
      * @return <code>Tr</code> instance
      */
-    public Tr titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>alternativeToAttr</code> property
-     *
-     * @return alternativeToAttr
-     */
-    public AnyURISimpleType getAlternativeToAttr() {
-        if (alternativeToAttr == null) {
-            alternativeToAttr = new AnyURISimpleType();
-            alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
-        }
-
-        return alternativeToAttr;
-    }
-
-    /**
-     * Return <code>alternativeToAttr</code> property in DSL way
-     *
-     * @return alternativeToAttr
-     */
-    public AnyURISimpleType alternativeToAttr() {
-        return getAlternativeToAttr();
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property
-     *
-     * @param alternativeToAttr the new value
-     */
-    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
-        getElement().setAttribute("alternativeTo", alternativeToAttr.getValue());
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr the new value
-     * @return <code>Tr</code> instance
-     */
-    public Tr alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public Tr idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 
@@ -548,6 +306,50 @@ public class Tr extends OverlayWidgetImpl {
     }
 
     /**
+     * Return <code>periodAttr</code> property
+     *
+     * @return periodAttr
+     */
+    public AnyURISimpleType getPeriodAttr() {
+        if (periodAttr == null) {
+            periodAttr = new AnyURISimpleType();
+            periodAttr.setValue(getElement().getAttribute("period"));
+        }
+
+        return periodAttr;
+    }
+
+    /**
+     * Return <code>periodAttr</code> property in DSL way
+     *
+     * @return periodAttr
+     */
+    public AnyURISimpleType periodAttr() {
+        return getPeriodAttr();
+    }
+
+    /**
+     * Set <code>periodAttr</code> property
+     *
+     * @param periodAttr the new value
+     */
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
+        getElement().setAttribute("period", periodAttr.getValue());
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr the new value
+     * @return <code>Tr</code> instance
+     */
+    public Tr periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
      * Return <code>refersToAttr</code> property
      *
      * @return refersToAttr
@@ -592,46 +394,244 @@ public class Tr extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>periodAttr</code> property
+     * Return <code>statusAttr</code> property
      *
-     * @return periodAttr
+     * @return statusAttr
      */
-    public AnyURISimpleType getPeriodAttr() {
-        if (periodAttr == null) {
-            periodAttr = new AnyURISimpleType();
-            periodAttr.setValue(getElement().getAttribute("period"));
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
         }
 
-        return periodAttr;
+        return statusAttr;
     }
 
     /**
-     * Return <code>periodAttr</code> property in DSL way
+     * Return <code>statusAttr</code> property in DSL way
      *
-     * @return periodAttr
+     * @return statusAttr
      */
-    public AnyURISimpleType periodAttr() {
-        return getPeriodAttr();
+    public StatusTypeSimpleType statusAttr() {
+        return getStatusAttr();
     }
 
     /**
-     * Set <code>periodAttr</code> property
+     * Set <code>statusAttr</code> property
      *
-     * @param periodAttr the new value
+     * @param statusAttr the new value
      */
-    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-        this.periodAttr = periodAttr;
-        getElement().setAttribute("period", periodAttr.getValue());
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status", statusAttr.value());
     }
 
     /**
-     * Set <code>periodAttr</code> property in DSL way
+     * Set <code>statusAttr</code> property in DSL way
      *
-     * @param periodAttr the new value
+     * @param statusAttr the new value
      * @return <code>Tr</code> instance
      */
-    public Tr periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public Tr statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>styleAttr</code> property
+     *
+     * @return styleAttr
+     */
+    public StringSimpleType getStyleAttr() {
+        if (styleAttr == null) {
+            styleAttr = new StringSimpleType();
+            styleAttr.setValue(getElement().getAttribute("style"));
+        }
+
+        return styleAttr;
+    }
+
+    /**
+     * Return <code>styleAttr</code> property in DSL way
+     *
+     * @return styleAttr
+     */
+    public StringSimpleType styleAttr() {
+        return getStyleAttr();
+    }
+
+    /**
+     * Set <code>styleAttr</code> property
+     *
+     * @param styleAttr the new value
+     */
+    public void setStyleAttr(final StringSimpleType styleAttr) {
+        this.styleAttr = styleAttr;
+        getElement().setAttribute("style", styleAttr.getValue());
+    }
+
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr the new value
+     * @return <code>Tr</code> instance
+     */
+    public Tr styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>java.util.List<Td></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Td> getTds() {
+        java.util.List<Td> result = new ArrayList<Td>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Td".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Td) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Td></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Td> getTdList() {
+        return getTds();
+    }
+
+    /**
+     * Add <code>java.util.List<Td></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Td addTd(Td tdElem) {
+        this.addOverlayWidget(tdElem);
+        return tdElem;
+    }
+
+    /**
+     * Return <code>java.util.List<Th></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Th> getThs() {
+        java.util.List<Th> result = new ArrayList<Th>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Th".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Th) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Th></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Th> getThList() {
+        return getThs();
+    }
+
+    /**
+     * Add <code>java.util.List<Th></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Th addTh(Th thElem) {
+        this.addOverlayWidget(thElem);
+        return thElem;
+    }
+
+    /**
+     * Return <code>titleAttr</code> property
+     *
+     * @return titleAttr
+     */
+    public StringSimpleType getTitleAttr() {
+        if (titleAttr == null) {
+            titleAttr = new StringSimpleType();
+            titleAttr.setValue(getElement().getAttribute("title"));
+        }
+
+        return titleAttr;
+    }
+
+    /**
+     * Return <code>titleAttr</code> property in DSL way
+     *
+     * @return titleAttr
+     */
+    public StringSimpleType titleAttr() {
+        return getTitleAttr();
+    }
+
+    /**
+     * Set <code>titleAttr</code> property
+     *
+     * @param titleAttr the new value
+     */
+    public void setTitleAttr(final StringSimpleType titleAttr) {
+        this.titleAttr = titleAttr;
+        getElement().setAttribute("title", titleAttr.getValue());
+    }
+
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr the new value
+     * @return <code>Tr</code> instance
+     */
+    public Tr titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>Tr</code> instance
+     */
+    public Tr wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 //Override all attributes methods to be conformant with DSL approach
@@ -650,17 +650,17 @@ public class Tr extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
-        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
-        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }
 

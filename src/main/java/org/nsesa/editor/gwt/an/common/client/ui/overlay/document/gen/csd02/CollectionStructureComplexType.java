@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the type collectionStructure specifies the overall content model of the document types that are collections of other documents
+ * the type collectionStructure specifies the overall content model of the document types that are<br/> collections of other documents
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -49,8 +49,8 @@ public class CollectionStructureComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "collectionStructureComplexType");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "collectionStructureComplexType");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget collectionStructureComplexType");
         return span;
     }

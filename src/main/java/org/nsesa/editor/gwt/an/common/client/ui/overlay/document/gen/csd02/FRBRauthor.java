@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element FRBRauthor is the metadata property containing a relevant author of the document in the respective level of the FRBR hierarchy. Attribute as specifies the role of the author.
+ * The element FRBRauthor is the metadata property containing a relevant author of the document in the<br/> respective level of the FRBR hierarchy. Attribute as specifies the role of the author.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -41,8 +41,8 @@ public class FRBRauthor extends MetaoptComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "FRBRauthor");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "FRBRauthor");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget FRBRauthor");
         return span;
     }
@@ -167,17 +167,6 @@ public class FRBRauthor extends MetaoptComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> FRBRauthor</code> instance
-     */
-    public FRBRauthor idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
      * Set <code>evolvingIdAttr</code> property in DSL way
      *
      * @param evolvingIdAttr new value
@@ -185,6 +174,17 @@ public class FRBRauthor extends MetaoptComplexType {
      */
     public FRBRauthor evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> FRBRauthor</code> instance
+     */
+    public FRBRauthor idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 

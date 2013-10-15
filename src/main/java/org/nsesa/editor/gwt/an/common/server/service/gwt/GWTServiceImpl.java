@@ -13,6 +13,9 @@
  */
 package org.nsesa.editor.gwt.an.common.server.service.gwt;
 
+import com.inspiresoftware.lib.dto.geda.assembler.Assembler;
+import com.inspiresoftware.lib.dto.geda.assembler.DTOAssembler;
+import com.inspiresoftware.lib.dto.geda.assembler.dsl.impl.DefaultDSLRegistry;
 import org.nsesa.editor.gwt.core.client.service.gwt.GWTService;
 import org.nsesa.editor.gwt.core.shared.ClientContext;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
@@ -32,13 +35,7 @@ public class GWTServiceImpl extends SpringRemoteServiceServlet implements GWTSer
 
     private PersonService personService;
 
-    final static Map<String, PersonDTO> personDB = new HashMap<String, PersonDTO>(){
-        {
-            put("1", new PersonDTO("1", "mep1", "mep1", "MEP"));
-            put("2", new PersonDTO("2", "mep2", "mep2", "MEP"));
-            put("3", new PersonDTO("3", "mep3", "mep3", "MEP"));
-        }
-    };
+    final Assembler personAssembler = DTOAssembler.newAssembler(PersonDTO.class, org.nsesa.server.dto.PersonDTO.class);
 
     @Override
     public ClientContext authenticate(final ClientContext clientContext) {
@@ -47,13 +44,13 @@ public class GWTServiceImpl extends SpringRemoteServiceServlet implements GWTSer
         if (username != null) {
             // see if we can find a person by the username (will be created if it does not yet exist)
             backend = personService.getPersonByUsername(username);
-        }
-        else {
+        } else {
             // create a new person based on a random UUID username
             backend = personService.getPersonByUsername(UUID.randomUUID().toString());
         }
 
-        PersonDTO person = fromBackend(backend);
+        PersonDTO person = new PersonDTO();
+        personAssembler.assembleDto(person, backend, getConvertors(), new DefaultDSLRegistry());
 
         clientContext.setLoggedInPerson(person);
         clientContext.setRoles(new String[]{"GUEST"});
@@ -65,22 +62,20 @@ public class GWTServiceImpl extends SpringRemoteServiceServlet implements GWTSer
     public PersonDTO getPerson(ClientContext clientContext, String id) {
         final org.nsesa.server.dto.PersonDTO backend = personService.getPerson(id);
         if (backend != null) {
-            return fromBackend(backend);
+            PersonDTO person = new PersonDTO();
+            personAssembler.assembleDto(person, backend, getConvertors(), new DefaultDSLRegistry());
+            return person;
         }
         return null;
     }
 
-    private PersonDTO fromBackend(org.nsesa.server.dto.PersonDTO backend) {
-        return new PersonDTO(backend.getPersonID(), backend.getUsername(), backend.getName(), backend.getLastName());
+
+    private Map<String, Object> getConvertors() {
+        final Map<String, Object> map = new HashMap<String, Object>();
+        return map;
     }
 
-    private org.nsesa.server.dto.PersonDTO toBackend(PersonDTO personDTO) {
-        return new org.nsesa.server.dto.PersonDTO(
-                personDTO.getId(),
-                personDTO.getUsername(),
-                personDTO.getName(),
-                personDTO.getLastName());
-    }
+    // SPRING SETTERS ---------------------------
 
     public void setPersonService(PersonService personService) {
         this.personService = personService;

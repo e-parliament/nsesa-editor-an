@@ -40,8 +40,8 @@ public class FRBRlanguage extends MetaoptComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "FRBRlanguage");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "FRBRlanguage");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget FRBRlanguage");
         return span;
     }
@@ -121,17 +121,6 @@ public class FRBRlanguage extends MetaoptComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> FRBRlanguage</code> instance
-     */
-    public FRBRlanguage idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
      * Set <code>evolvingIdAttr</code> property in DSL way
      *
      * @param evolvingIdAttr new value
@@ -139,6 +128,17 @@ public class FRBRlanguage extends MetaoptComplexType {
      */
     public FRBRlanguage evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> FRBRlanguage</code> instance
+     */
+    public FRBRlanguage idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 

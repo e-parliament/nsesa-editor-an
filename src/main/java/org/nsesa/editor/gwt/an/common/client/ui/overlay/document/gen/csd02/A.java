@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element a is an HTML element and is used in Akoma Ntoso as in HTML, for the generic link to a web resource (NOT to an Akoma Ntoso document: use ref for that). It is an inline.
+ * The element a is an HTML element and is used in Akoma Ntoso as in HTML, for the generic link to a<br/> web resource (NOT to an Akoma Ntoso document: use ref for that). It is an inline.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -142,8 +142,8 @@ public class A extends InlineComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "a");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "a");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget a");
         return span;
     }
@@ -175,52 +175,8 @@ public class A extends InlineComplexType {
     }
 
     // FIELDS ------------------
-    private StringSimpleType targetAttr;
     private AnyURISimpleType hrefAttr;
-
-    /**
-     * Return <code>targetAttr</code> property
-     *
-     * @return targetAttr
-     */
-    public StringSimpleType getTargetAttr() {
-        if (targetAttr == null) {
-            targetAttr = new StringSimpleType();
-            targetAttr.setValue(getElement().getAttribute("target"));
-        }
-
-        return targetAttr;
-    }
-
-    /**
-     * Return <code>targetAttr</code> property in DSL way
-     *
-     * @return targetAttr
-     */
-    public StringSimpleType targetAttr() {
-        return getTargetAttr();
-    }
-
-    /**
-     * Set <code>targetAttr</code> property
-     *
-     * @param targetAttr the new value
-     */
-    public void setTargetAttr(final StringSimpleType targetAttr) {
-        this.targetAttr = targetAttr;
-        getElement().setAttribute("target", targetAttr.getValue());
-    }
-
-    /**
-     * Set <code>targetAttr</code> property in DSL way
-     *
-     * @param targetAttr the new value
-     * @return <code>A</code> instance
-     */
-    public A targetAttr(final StringSimpleType targetAttr) {
-        setTargetAttr(targetAttr);
-        return this;
-    }
+    private StringSimpleType targetAttr;
 
     /**
      * Return <code>hrefAttr</code> property
@@ -265,7 +221,95 @@ public class A extends InlineComplexType {
         setHrefAttr(hrefAttr);
         return this;
     }
+
+    /**
+     * Return <code>targetAttr</code> property
+     *
+     * @return targetAttr
+     */
+    public StringSimpleType getTargetAttr() {
+        if (targetAttr == null) {
+            targetAttr = new StringSimpleType();
+            targetAttr.setValue(getElement().getAttribute("target"));
+        }
+
+        return targetAttr;
+    }
+
+    /**
+     * Return <code>targetAttr</code> property in DSL way
+     *
+     * @return targetAttr
+     */
+    public StringSimpleType targetAttr() {
+        return getTargetAttr();
+    }
+
+    /**
+     * Set <code>targetAttr</code> property
+     *
+     * @param targetAttr the new value
+     */
+    public void setTargetAttr(final StringSimpleType targetAttr) {
+        this.targetAttr = targetAttr;
+        getElement().setAttribute("target", targetAttr.getValue());
+    }
+
+    /**
+     * Set <code>targetAttr</code> property in DSL way
+     *
+     * @param targetAttr the new value
+     * @return <code>A</code> instance
+     */
+    public A targetAttr(final StringSimpleType targetAttr) {
+        setTargetAttr(targetAttr);
+        return this;
+    }
 //Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> A</code> instance
+     */
+    public A alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> A</code> instance
+     */
+    public A classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> A</code> instance
+     */
+    public A evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> A</code> instance
+     */
+    public A idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
 
     /**
      * Set <code>langAttr</code> property in DSL way
@@ -279,24 +323,13 @@ public class A extends InlineComplexType {
     }
 
     /**
-     * Set <code>spaceAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param spaceAttr new value
+     * @param periodAttr new value
      * @return <code> A</code> instance
      */
-    public A spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> A</code> instance
-     */
-    public A wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public A periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -312,13 +345,24 @@ public class A extends InlineComplexType {
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>spaceAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param spaceAttr new value
      * @return <code> A</code> instance
      */
-    public A classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public A spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> A</code> instance
+     */
+    public A statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -345,57 +389,13 @@ public class A extends InlineComplexType {
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param statusAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> A</code> instance
      */
-    public A statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> A</code> instance
-     */
-    public A idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> A</code> instance
-     */
-    public A evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> A</code> instance
-     */
-    public A alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> A</code> instance
-     */
-    public A periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public A wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -413,8 +413,8 @@ public class A extends InlineComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("target", getTargetAttr() != null ? getTargetAttr().getValue() : null);
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("target", getTargetAttr() != null ? getTargetAttr().getValue() : null);
         return attrs;
     }
 

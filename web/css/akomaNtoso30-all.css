@@ -1,878 +1,1042 @@
-
 /*
 * --------------------------------------------------------------------------
 * Akoma Ntoso default stylesheet.
 * Note: this is generated!
 * --------------------------------------------------------------------------
 */
-    /*
-    * --------------------------
-    * Amendments
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * akomaNtosoType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * amendmentBodyType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * amendmentStructure
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * anyOtherType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * argumentType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * basehierarchy
-    * --------------------------
-    */
-        .basehierarchy[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-    /*
-    * --------------------------
-    * althierarchy
-    * --------------------------
-    */
-        .althierarchy[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .address[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .adjournment[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .administrationOfOath[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .communication[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .debateSection[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .declarationOfVote[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .ministerialStatements[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .nationalInterest[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .noticesOfMotion[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .oralStatements[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .papers[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .personalStatements[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .petitions[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .pointOfOrder[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .prayers[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .proceduralMotions[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .questions[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .resolutions[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .rollCall[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .writtenStatements[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-    /*
-    * --------------------------
-    * hierarchy
-    * --------------------------
-    */
-        .hierarchy[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .alinea[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .article[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .book[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .chapter[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .clause[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .division[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .hcontainer[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .indent[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .list[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .paragraph[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .part[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .point[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .section[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .subchapter[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .subclause[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .subdivision[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .sublist[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .subparagraph[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .subpart[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .subsection[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .subtitle[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .title[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .tome[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .transitional[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-    /*
-    * --------------------------
-    * itemType
-    * --------------------------
-    */
-        .itemType[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            margin:1.5em;
-            display:block;
-            margin-top:1.5em;
-        }
-        .citation[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            margin:1.5em;
-            display:block;
-            margin-top:1.5em;
-        }
-        .item[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            margin:1.5em;
-            display:block;
-            margin-top:1.5em;
-        }
-        .recital[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            margin:1.5em;
-            display:block;
-            margin-top:1.5em;
-        }
-        .tblock[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            margin:1.5em;
-            display:block;
-            margin-top:1.5em;
-        }
-    /*
-    * --------------------------
-    * speechType
-    * --------------------------
-    */
-        .speechType[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .answer[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .question[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .speech[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-    /*
-    * --------------------------
-    * basicopt
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * blocksopt
-    * --------------------------
-    */
-        .blocksopt[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .amendmentContent[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .amendmentHeading[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .amendmentJustification[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .amendmentReference[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .content[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .formula[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .header[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .intro[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .longTitle[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .other[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .td[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:table-cell;
-            margin-top:1.5em;
-        }
-        .th[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .wrap[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-    /*
-    * --------------------------
-    * blocksreq
-    * --------------------------
-    */
-        .blocksreq[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .div[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .interstitial[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .note[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-    /*
-    * --------------------------
-    * bodyType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * collectionBodyType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * collectionStructure
-    * --------------------------
-    */
-        .component[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-    /*
-    * --------------------------
-    * containerType
-    * --------------------------
-    */
-        .container[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-    /*
-    * --------------------------
-    * coreProperties
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * countType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * debateBodyType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * debateStructure
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * fragmentBodyType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * fragmentStructure
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * hierarchicalStructure
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * inline
-    * --------------------------
-    */
-        .inline[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .a[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            cursor:pointer;
-            color:blue;
-            text-decoration:underline;
-            display:inline;
-        }
-        .affectedDocument[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .b[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-            font-weight:bold;
-        }
-        .block[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            margin:1.5em;
-            display:block;
-        }
-        .caption[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .change[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .courtType[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .date[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .def[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            border-bottom:1px solid #b68503;
-            background-color:yellow;
-            display:inline;
-        }
-        .del[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            color:red;
-            font-style:italic;
-            background-color:pink;
-            text-decoration:line-through;
-            display:inline;
-        }
-        .docCommittee[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .docDate[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .docIntroducer[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .docJurisdiction[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .docNumber[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .docProponent[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .docPurpose[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .docStage[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .docStatus[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .docTitle[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .docType[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .docketNumber[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .extractText[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .fillIn[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .from[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .heading[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .i[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            font-style:italic;
-            display:inline;
-        }
-        .inline[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .ins[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            color:blue;
-            font-style: italic;
-            background-color:lightblue;
-            text-decoration: underline;
-            display:inline;
-        }
-        .legislature[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .listConclusion[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .listIntroduction[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .mref[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .narrative[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .neutralCitation[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .num[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .omissis[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .opinion[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .outcome[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .p[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .placeholder[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .quotedText[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .recordedTime[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .relatedDocument[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .remark[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .scene[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .session[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .shortTitle[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .signature[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .span[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .sub[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-             vertical-align:sub;
-            font-size:xx-small;
-            display:inline;
-        }
-        .subheading[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .summary[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .sup[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-             vertical-align:super;
-            font-size:xx-small;
-            display:inline;
-        }
-        .tocItem[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .u[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            text-decoration:underline;
-            display:inline;
-        }
-        .vote[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-    /*
-    * --------------------------
-    * inlinereq
-    * --------------------------
-    */
-        .inlinereq[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .ref[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .rref[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-    /*
-    * --------------------------
-    * inlinereqreq
-    * --------------------------
-    */
-        .inlinereqreq[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .concept[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .entity[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .event[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .judge[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .lawyer[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .location[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .object[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .organization[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .party[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .person[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .process[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .quantity[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .role[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-        .term[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:inline;
-        }
-    /*
-    * --------------------------
-    * judgementBodyType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * judgementStructure
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * judicialArgumentType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * judicialArguments
-    * --------------------------
-    */
-        .li[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            margin-left:1.5;
-            display:list-item;
-        }
-    /*
-    * --------------------------
-    * listItems
-    * --------------------------
-    */
-        .ol[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-        }
-        .ul[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-        }
-    /*
-    * --------------------------
-    * maincontent
-    * --------------------------
-    */
-        .maincontent[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .background[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .decision[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .introduction[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .mainBody[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-        .motivation[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-            margin-top:1.5em;
-        }
-    /*
-    * --------------------------
-    * markeropt
-    * --------------------------
-    */
-        .br[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:block;
-        }
-    /*
-    * --------------------------
-    * eolType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * markerreq
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * metaopt
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * valueType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * modType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * modificationType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * openStructure
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * parliamentaryAnalysis
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * parliamentaryAnalysisType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * periodType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * popupStructure
-    * --------------------------
-    */
-        .extractStructure[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            padding-left:2.5em;
-            color:#333;
-            margin:1.5em;
-            display:block;
-            border-left:15px solid #ccc;
-        }
-        .quotedStructure[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            padding-left:2.5em;
-            color:#333;
-            margin:1.5em;
-            display:block;
-            border-left:15px solid #ccc;
-        }
-    /*
-    * --------------------------
-    * preambleopt
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * prefaceopt
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * refItems
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * referenceType
-    * --------------------------
-    */
-    /*
-    * --------------------------
-    * srcType
-    * --------------------------
-    */
-        .table[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:table;
-        }
-        .tr[ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
-            display:table-row;
-        }
+/*
+* --------------------------
+* Amendments
+* --------------------------
+*/
+/*
+* --------------------------
+* akomaNtosoType
+* --------------------------
+*/
+/*
+* --------------------------
+* amendmentBodyType
+* --------------------------
+*/
+/*
+* --------------------------
+* amendmentStructure
+* --------------------------
+*/
+/*
+* --------------------------
+* anyOtherType
+* --------------------------
+*/
+/*
+* --------------------------
+* argumentType
+* --------------------------
+*/
+/*
+* --------------------------
+* basehierarchy
+* --------------------------
+*/
+.basehierarchy[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+/*
+* --------------------------
+* althierarchy
+* --------------------------
+*/
+.althierarchy[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.address[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.adjournment[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.administrationOfOath[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.communication[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.debateSection[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.declarationOfVote[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.ministerialStatements[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.nationalInterest[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.noticesOfMotion[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.oralStatements[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.papers[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.personalStatements[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.petitions[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.pointOfOrder[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.prayers[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.proceduralMotions[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.questions[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.resolutions[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.rollCall[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.writtenStatements[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+/*
+* --------------------------
+* hierarchy
+* --------------------------
+*/
+.hierarchy[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.alinea[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.article[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.book[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.chapter[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.clause[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.division[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.hcontainer[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.indent[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.list[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.paragraph[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.part[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.point[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.section[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.subchapter[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.subclause[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.subdivision[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.sublist[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.subparagraph[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.subpart[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.subsection[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.subtitle[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.title[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.tome[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.transitional[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+/*
+* --------------------------
+* itemType
+* --------------------------
+*/
+.itemType[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    margin: 1.5em;
+    display: block;
+    margin-top: 1.5em;
+}
+
+.citation[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    margin: 1.5em;
+    display: block;
+    margin-top: 1.5em;
+}
+
+.item[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    margin: 1.5em;
+    display: block;
+    margin-top: 1.5em;
+}
+
+.recital[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    margin: 1.5em;
+    display: block;
+    margin-top: 1.5em;
+}
+
+.tblock[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    margin: 1.5em;
+    display: block;
+    margin-top: 1.5em;
+}
+
+/*
+* --------------------------
+* speechType
+* --------------------------
+*/
+.speechType[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.answer[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.question[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.speech[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+/*
+* --------------------------
+* basicopt
+* --------------------------
+*/
+/*
+* --------------------------
+* blocksopt
+* --------------------------
+*/
+.blocksopt[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.amendmentContent[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.amendmentHeading[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.amendmentJustification[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.amendmentReference[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.content[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.formula[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.header[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.intro[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.longTitle[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.other[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.td[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: table-cell;
+    margin-top: 1.5em;
+}
+
+.th[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.wrap[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+/*
+* --------------------------
+* blocksreq
+* --------------------------
+*/
+.blocksreq[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.div[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.interstitial[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.note[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+/*
+* --------------------------
+* bodyType
+* --------------------------
+*/
+/*
+* --------------------------
+* collectionBodyType
+* --------------------------
+*/
+/*
+* --------------------------
+* collectionStructure
+* --------------------------
+*/
+.component[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+/*
+* --------------------------
+* containerType
+* --------------------------
+*/
+.container[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+/*
+* --------------------------
+* coreProperties
+* --------------------------
+*/
+/*
+* --------------------------
+* countType
+* --------------------------
+*/
+/*
+* --------------------------
+* debateBodyType
+* --------------------------
+*/
+/*
+* --------------------------
+* debateStructure
+* --------------------------
+*/
+/*
+* --------------------------
+* fragmentBodyType
+* --------------------------
+*/
+/*
+* --------------------------
+* fragmentStructure
+* --------------------------
+*/
+/*
+* --------------------------
+* hierarchicalStructure
+* --------------------------
+*/
+/*
+* --------------------------
+* inline
+* --------------------------
+*/
+.inline[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.a[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    display: inline;
+}
+
+.affectedDocument[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.b[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+    font-weight: bold;
+}
+
+.block[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    margin: 1.5em;
+    display: block;
+}
+
+.caption[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.change[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.courtType[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.date[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.def[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    border-bottom: 1px solid #b68503;
+    background-color: yellow;
+    display: inline;
+}
+
+.del[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    color: red;
+    font-style: italic;
+    background-color: pink;
+    text-decoration: line-through;
+    display: inline;
+}
+
+.docCommittee[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.docDate[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.docIntroducer[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.docJurisdiction[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.docNumber[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.docProponent[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.docPurpose[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.docStage[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.docStatus[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.docTitle[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.docType[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.docketNumber[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.extractText[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.fillIn[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.from[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.heading[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.i[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    font-style: italic;
+    display: inline;
+}
+
+.inline[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.ins[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    color: blue;
+    font-style: italic;
+    background-color: lightblue;
+    text-decoration: underline;
+    display: inline;
+}
+
+.legislature[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.listConclusion[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.listIntroduction[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.mref[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.narrative[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.neutralCitation[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.num[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.omissis[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.opinion[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.outcome[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.p[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.placeholder[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.quotedText[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.recordedTime[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.relatedDocument[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.remark[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.scene[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.session[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.shortTitle[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.signature[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.span[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.sub[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    vertical-align: sub;
+    font-size: xx-small;
+    display: inline;
+}
+
+.subheading[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.summary[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.sup[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    vertical-align: super;
+    font-size: xx-small;
+    display: inline;
+}
+
+.tocItem[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.u[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    text-decoration: underline;
+    display: inline;
+}
+
+.vote[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+/*
+* --------------------------
+* inlinereq
+* --------------------------
+*/
+.inlinereq[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.ref[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.rref[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+/*
+* --------------------------
+* inlinereqreq
+* --------------------------
+*/
+.inlinereqreq[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.concept[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.entity[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.event[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.judge[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.lawyer[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.location[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.object[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.organization[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.party[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.person[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.process[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.quantity[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.role[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+.term[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: inline;
+}
+
+/*
+* --------------------------
+* judgementBodyType
+* --------------------------
+*/
+/*
+* --------------------------
+* judgementStructure
+* --------------------------
+*/
+/*
+* --------------------------
+* judicialArgumentType
+* --------------------------
+*/
+/*
+* --------------------------
+* judicialArguments
+* --------------------------
+*/
+.li[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    margin-left: 1.5;
+    display: list-item;
+}
+
+/*
+* --------------------------
+* listItems
+* --------------------------
+*/
+.ol[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+}
+
+.ul[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+}
+
+/*
+* --------------------------
+* maincontent
+* --------------------------
+*/
+.maincontent[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.background[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.decision[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.introduction[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.mainBody[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+.motivation[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+    margin-top: 1.5em;
+}
+
+/*
+* --------------------------
+* markeropt
+* --------------------------
+*/
+.br[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: block;
+}
+
+/*
+* --------------------------
+* eolType
+* --------------------------
+*/
+/*
+* --------------------------
+* markerreq
+* --------------------------
+*/
+/*
+* --------------------------
+* metaopt
+* --------------------------
+*/
+/*
+* --------------------------
+* valueType
+* --------------------------
+*/
+/*
+* --------------------------
+* modType
+* --------------------------
+*/
+/*
+* --------------------------
+* modificationType
+* --------------------------
+*/
+/*
+* --------------------------
+* openStructure
+* --------------------------
+*/
+/*
+* --------------------------
+* parliamentaryAnalysis
+* --------------------------
+*/
+/*
+* --------------------------
+* parliamentaryAnalysisType
+* --------------------------
+*/
+/*
+* --------------------------
+* periodType
+* --------------------------
+*/
+/*
+* --------------------------
+* popupStructure
+* --------------------------
+*/
+.extractStructure[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    padding-left: 2.5em;
+    color: #333;
+    margin: 1.5em;
+    display: block;
+    border-left: 15px solid #ccc;
+}
+
+.quotedStructure[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    padding-left: 2.5em;
+    color: #333;
+    margin: 1.5em;
+    display: block;
+    border-left: 15px solid #ccc;
+}
+
+/*
+* --------------------------
+* preambleopt
+* --------------------------
+*/
+/*
+* --------------------------
+* prefaceopt
+* --------------------------
+*/
+/*
+* --------------------------
+* refItems
+* --------------------------
+*/
+/*
+* --------------------------
+* referenceType
+* --------------------------
+*/
+/*
+* --------------------------
+* srcType
+* --------------------------
+*/
+.table[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: table;
+}
+
+.tr[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    display: table-row;
+}
 

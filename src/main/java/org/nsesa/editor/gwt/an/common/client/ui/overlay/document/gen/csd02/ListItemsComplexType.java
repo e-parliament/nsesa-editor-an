@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
- * the complex type listItems specifies the content model of elements ul and ol, and specifies just a sequence of list items (elements li).
+ * the complex type listItems specifies the content model of elements ul and ol, and specifies just a<br/> sequence of list items (elements li).
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -47,8 +47,8 @@ public class ListItemsComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "listItemsComplexType");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "listItemsComplexType");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget listItemsComplexType");
         return span;
     }
@@ -63,17 +63,17 @@ public class ListItemsComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
-    private LanguageSimpleType langAttr;
-    private NCNameSimpleType spaceAttr;
+    private AnyURISimpleType alternativeToAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
     private String wildcardContentAttr;
-    private AnyURISimpleType refersToAttr;
+    private LanguageSimpleType langAttr;
+    private NCNameSimpleType spaceAttr;
     private StatusTypeSimpleType statusAttr;
-    private AnyURISimpleType alternativeToAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
 
     /**
@@ -84,7 +84,7 @@ public class ListItemsComplexType extends OverlayWidgetImpl {
     public java.util.List<Li> getLis() {
         java.util.List<Li> result = new ArrayList<Li>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Li".equalsIgnoreCase(widget.getType())) {
+            if ("Li".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Li) widget);
             }
         }
@@ -111,178 +111,46 @@ public class ListItemsComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>idAttr</code> property
+     * Return <code>alternativeToAttr</code> property
      *
-     * @return idAttr
+     * @return alternativeToAttr
      */
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
+    public AnyURISimpleType getAlternativeToAttr() {
+        if (alternativeToAttr == null) {
+            alternativeToAttr = new AnyURISimpleType();
+            alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
         }
 
-        return idAttr;
+        return alternativeToAttr;
     }
 
     /**
-     * Return <code>idAttr</code> property in DSL way
+     * Return <code>alternativeToAttr</code> property in DSL way
      *
-     * @return idAttr
+     * @return alternativeToAttr
      */
-    public IDSimpleType idAttr() {
-        return getIdAttr();
+    public AnyURISimpleType alternativeToAttr() {
+        return getAlternativeToAttr();
     }
 
     /**
-     * Set <code>idAttr</code> property
+     * Set <code>alternativeToAttr</code> property
      *
-     * @param idAttr the new value
+     * @param alternativeToAttr the new value
      */
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+        getElement().setAttribute("alternativeTo", alternativeToAttr.getValue());
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @param idAttr the new value
+     * @param alternativeToAttr the new value
      * @return <code>ListItemsComplexType</code> instance
      */
-    public ListItemsComplexType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>evolvingIdAttr</code> property
-     *
-     * @return evolvingIdAttr
-     */
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-    }
-
-    /**
-     * Return <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @return evolvingIdAttr
-     */
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property
-     *
-     * @param evolvingIdAttr the new value
-     */
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr the new value
-     * @return <code>ListItemsComplexType</code> instance
-     */
-    public ListItemsComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>langAttr</code> property
-     *
-     * @return langAttr
-     */
-    public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-            langAttr = new LanguageSimpleType();
-            langAttr.setValue(getElement().getAttribute("lang"));
-        }
-
-        return langAttr;
-    }
-
-    /**
-     * Return <code>langAttr</code> property in DSL way
-     *
-     * @return langAttr
-     */
-    public LanguageSimpleType langAttr() {
-        return getLangAttr();
-    }
-
-    /**
-     * Set <code>langAttr</code> property
-     *
-     * @param langAttr the new value
-     */
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-        getElement().setAttribute("lang", langAttr.getValue());
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr the new value
-     * @return <code>ListItemsComplexType</code> instance
-     */
-    public ListItemsComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>spaceAttr</code> property
-     *
-     * @return spaceAttr
-     */
-    public NCNameSimpleType getSpaceAttr() {
-        if (spaceAttr == null) {
-            spaceAttr = new NCNameSimpleType();
-            spaceAttr.setValue(getElement().getAttribute("space"));
-        }
-
-        return spaceAttr;
-    }
-
-    /**
-     * Return <code>spaceAttr</code> property in DSL way
-     *
-     * @return spaceAttr
-     */
-    public NCNameSimpleType spaceAttr() {
-        return getSpaceAttr();
-    }
-
-    /**
-     * Set <code>spaceAttr</code> property
-     *
-     * @param spaceAttr the new value
-     */
-    public void setSpaceAttr(final NCNameSimpleType spaceAttr) {
-        this.spaceAttr = spaceAttr;
-        getElement().setAttribute("space", spaceAttr.getValue());
-    }
-
-    /**
-     * Set <code>spaceAttr</code> property in DSL way
-     *
-     * @param spaceAttr the new value
-     * @return <code>ListItemsComplexType</code> instance
-     */
-    public ListItemsComplexType spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
+    public ListItemsComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
@@ -462,46 +330,90 @@ public class ListItemsComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>refersToAttr</code> property
+     * Return <code>langAttr</code> property
      *
-     * @return refersToAttr
+     * @return langAttr
      */
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+    public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+            langAttr = new LanguageSimpleType();
+            langAttr.setValue(getElement().getAttribute("lang"));
         }
 
-        return refersToAttr;
+        return langAttr;
     }
 
     /**
-     * Return <code>refersToAttr</code> property in DSL way
+     * Return <code>langAttr</code> property in DSL way
      *
-     * @return refersToAttr
+     * @return langAttr
      */
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
+    public LanguageSimpleType langAttr() {
+        return getLangAttr();
     }
 
     /**
-     * Set <code>refersToAttr</code> property
+     * Set <code>langAttr</code> property
      *
-     * @param refersToAttr the new value
+     * @param langAttr the new value
      */
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+        getElement().setAttribute("lang", langAttr.getValue());
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>langAttr</code> property in DSL way
      *
-     * @param refersToAttr the new value
+     * @param langAttr the new value
      * @return <code>ListItemsComplexType</code> instance
      */
-    public ListItemsComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public ListItemsComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>spaceAttr</code> property
+     *
+     * @return spaceAttr
+     */
+    public NCNameSimpleType getSpaceAttr() {
+        if (spaceAttr == null) {
+            spaceAttr = new NCNameSimpleType();
+            spaceAttr.setValue(getElement().getAttribute("space"));
+        }
+
+        return spaceAttr;
+    }
+
+    /**
+     * Return <code>spaceAttr</code> property in DSL way
+     *
+     * @return spaceAttr
+     */
+    public NCNameSimpleType spaceAttr() {
+        return getSpaceAttr();
+    }
+
+    /**
+     * Set <code>spaceAttr</code> property
+     *
+     * @param spaceAttr the new value
+     */
+    public void setSpaceAttr(final NCNameSimpleType spaceAttr) {
+        this.spaceAttr = spaceAttr;
+        getElement().setAttribute("space", spaceAttr.getValue());
+    }
+
+    /**
+     * Set <code>spaceAttr</code> property in DSL way
+     *
+     * @param spaceAttr the new value
+     * @return <code>ListItemsComplexType</code> instance
+     */
+    public ListItemsComplexType spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
         return this;
     }
 
@@ -549,46 +461,134 @@ public class ListItemsComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>alternativeToAttr</code> property
+     * Return <code>idAttr</code> property
      *
-     * @return alternativeToAttr
+     * @return idAttr
      */
-    public AnyURISimpleType getAlternativeToAttr() {
-        if (alternativeToAttr == null) {
-            alternativeToAttr = new AnyURISimpleType();
-            alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
         }
 
-        return alternativeToAttr;
+        return idAttr;
     }
 
     /**
-     * Return <code>alternativeToAttr</code> property in DSL way
+     * Return <code>idAttr</code> property in DSL way
      *
-     * @return alternativeToAttr
+     * @return idAttr
      */
-    public AnyURISimpleType alternativeToAttr() {
-        return getAlternativeToAttr();
+    public IDSimpleType idAttr() {
+        return getIdAttr();
     }
 
     /**
-     * Set <code>alternativeToAttr</code> property
+     * Set <code>idAttr</code> property
      *
-     * @param alternativeToAttr the new value
+     * @param idAttr the new value
      */
-    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
-        getElement().setAttribute("alternativeTo", alternativeToAttr.getValue());
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
     }
 
     /**
-     * Set <code>alternativeToAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param alternativeToAttr the new value
+     * @param idAttr the new value
      * @return <code>ListItemsComplexType</code> instance
      */
-    public ListItemsComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public ListItemsComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property
+     *
+     * @param evolvingIdAttr the new value
+     */
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr the new value
+     * @return <code>ListItemsComplexType</code> instance
+     */
+    public ListItemsComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property in DSL way
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property
+     *
+     * @param refersToAttr the new value
+     */
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr the new value
+     * @return <code>ListItemsComplexType</code> instance
+     */
+    public ListItemsComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -651,17 +651,17 @@ public class ListItemsComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
-        attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
+        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
         attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }

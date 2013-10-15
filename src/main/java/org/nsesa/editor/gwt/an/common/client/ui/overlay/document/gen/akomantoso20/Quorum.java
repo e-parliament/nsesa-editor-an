@@ -46,8 +46,8 @@ public class Quorum extends CountTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "quorum");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "quorum");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget quorum");
         return span;
     }
@@ -84,28 +84,6 @@ public class Quorum extends CountTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> Quorum</code> instance
-     */
-    public Quorum refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Quorum</code> instance
-     */
-    public Quorum idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
      * Set <code>evolvingIdAttr</code> property in DSL way
      *
      * @param evolvingIdAttr new value
@@ -124,6 +102,28 @@ public class Quorum extends CountTypeComplexType {
      */
     public Quorum hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Quorum</code> instance
+     */
+    public Quorum idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Quorum</code> instance
+     */
+    public Quorum refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 

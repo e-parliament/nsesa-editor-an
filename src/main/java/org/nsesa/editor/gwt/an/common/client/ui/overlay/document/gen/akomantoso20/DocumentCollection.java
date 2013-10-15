@@ -48,8 +48,8 @@ public class DocumentCollection extends CollectionStructureComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "documentCollection");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "documentCollection");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget documentCollection");
         return span;
     }

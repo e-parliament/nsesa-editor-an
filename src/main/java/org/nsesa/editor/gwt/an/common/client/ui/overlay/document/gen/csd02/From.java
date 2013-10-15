@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element from is a heading element in a debate that contains the name or role or a reference to the person doing the speech
+ * the element from is a heading element in a debate that contains the name or role or a reference to<br/> the person doing the speech
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -142,8 +142,8 @@ public class From extends InlineComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "from");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "from");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget from");
         return span;
     }
@@ -171,6 +171,50 @@ public class From extends InlineComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> From</code> instance
+     */
+    public From alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> From</code> instance
+     */
+    public From classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> From</code> instance
+     */
+    public From evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> From</code> instance
+     */
+    public From idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
      * Set <code>langAttr</code> property in DSL way
      *
      * @param langAttr new value
@@ -182,24 +226,13 @@ public class From extends InlineComplexType {
     }
 
     /**
-     * Set <code>spaceAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param spaceAttr new value
+     * @param periodAttr new value
      * @return <code> From</code> instance
      */
-    public From spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> From</code> instance
-     */
-    public From wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public From periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -215,13 +248,24 @@ public class From extends InlineComplexType {
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>spaceAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param spaceAttr new value
      * @return <code> From</code> instance
      */
-    public From classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public From spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> From</code> instance
+     */
+    public From statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -248,57 +292,13 @@ public class From extends InlineComplexType {
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param statusAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> From</code> instance
      */
-    public From statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> From</code> instance
-     */
-    public From idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> From</code> instance
-     */
-    public From evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> From</code> instance
-     */
-    public From alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> From</code> instance
-     */
-    public From periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public From wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

@@ -56,8 +56,8 @@ public class TocHierarchyComplexType extends BasehierarchyComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "tocHierarchyComplexType");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "tocHierarchyComplexType");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget tocHierarchyComplexType");
         return span;
     }
@@ -72,17 +72,17 @@ public class TocHierarchyComplexType extends BasehierarchyComplexType {
     }
 
     // FIELDS ------------------
+    private StatusTypeSimpleType statusAttr;
+    private String wildcardContentAttr;
     private LanguageSimpleType langAttr;
     private NCNameSimpleType spaceAttr;
-    private String wildcardContentAttr;
+    private AnyURISimpleType alternativeToAttr;
     private AnyURISimpleType refersToAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
-    private StatusTypeSimpleType statusAttr;
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType alternativeToAttr;
     private AnyURISimpleType periodAttr;
 
     /**
@@ -149,6 +149,92 @@ public class TocHierarchyComplexType extends BasehierarchyComplexType {
         this.addOverlayWidget(wrapElem);
 
         return wrapElem;
+    }
+
+    /**
+     * Return <code>statusAttr</code> property
+     *
+     * @return statusAttr
+     */
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        }
+
+        return statusAttr;
+    }
+
+    /**
+     * Return <code>statusAttr</code> property in DSL way
+     *
+     * @return statusAttr
+     */
+    public StatusTypeSimpleType statusAttr() {
+        return getStatusAttr();
+    }
+
+    /**
+     * Set <code>statusAttr</code> property
+     *
+     * @param statusAttr the new value
+     */
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status", statusAttr.value());
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr the new value
+     * @return <code>TocHierarchyComplexType</code> instance
+     */
+    public TocHierarchyComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>TocHierarchyComplexType</code> instance
+     */
+    public TocHierarchyComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
     }
 
     /**
@@ -240,45 +326,46 @@ public class TocHierarchyComplexType extends BasehierarchyComplexType {
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property
+     * Return <code>alternativeToAttr</code> property
      *
-     * @return wildcardContentAttr
+     * @return alternativeToAttr
      */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+    public AnyURISimpleType getAlternativeToAttr() {
+        if (alternativeToAttr == null) {
+            alternativeToAttr = new AnyURISimpleType();
+            alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
         }
 
-        return wildcardContentAttr;
+        return alternativeToAttr;
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
+     * Return <code>alternativeToAttr</code> property in DSL way
      *
-     * @return wildcardContentAttr
+     * @return alternativeToAttr
      */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
+    public AnyURISimpleType alternativeToAttr() {
+        return getAlternativeToAttr();
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property
+     * Set <code>alternativeToAttr</code> property
      *
-     * @param wildcardContentAttr the new value
+     * @param alternativeToAttr the new value
      */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+        getElement().setAttribute("alternativeTo", alternativeToAttr.getValue());
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr the new value
+     * @param alternativeToAttr the new value
      * @return <code>TocHierarchyComplexType</code> instance
      */
-    public TocHierarchyComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public TocHierarchyComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
@@ -323,6 +410,94 @@ public class TocHierarchyComplexType extends BasehierarchyComplexType {
      */
     public TocHierarchyComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
         setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>idAttr</code> property
+     *
+     * @return idAttr
+     */
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
+        }
+
+        return idAttr;
+    }
+
+    /**
+     * Return <code>idAttr</code> property in DSL way
+     *
+     * @return idAttr
+     */
+    public IDSimpleType idAttr() {
+        return getIdAttr();
+    }
+
+    /**
+     * Set <code>idAttr</code> property
+     *
+     * @param idAttr the new value
+     */
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr the new value
+     * @return <code>TocHierarchyComplexType</code> instance
+     */
+    public TocHierarchyComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property
+     *
+     * @param evolvingIdAttr the new value
+     */
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr the new value
+     * @return <code>TocHierarchyComplexType</code> instance
+     */
+    public TocHierarchyComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -459,181 +634,6 @@ public class TocHierarchyComplexType extends BasehierarchyComplexType {
     }
 
     /**
-     * Return <code>statusAttr</code> property
-     *
-     * @return statusAttr
-     */
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-    }
-
-    /**
-     * Return <code>statusAttr</code> property in DSL way
-     *
-     * @return statusAttr
-     */
-    public StatusTypeSimpleType statusAttr() {
-        return getStatusAttr();
-    }
-
-    /**
-     * Set <code>statusAttr</code> property
-     *
-     * @param statusAttr the new value
-     */
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status", statusAttr.value());
-    }
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr the new value
-     * @return <code>TocHierarchyComplexType</code> instance
-     */
-    public TocHierarchyComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>idAttr</code> property
-     *
-     * @return idAttr
-     */
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
-        }
-
-        return idAttr;
-    }
-
-    /**
-     * Return <code>idAttr</code> property in DSL way
-     *
-     * @return idAttr
-     */
-    public IDSimpleType idAttr() {
-        return getIdAttr();
-    }
-
-    /**
-     * Set <code>idAttr</code> property
-     *
-     * @param idAttr the new value
-     */
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr the new value
-     * @return <code>TocHierarchyComplexType</code> instance
-     */
-    public TocHierarchyComplexType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>evolvingIdAttr</code> property
-     *
-     * @return evolvingIdAttr
-     */
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-    }
-
-    /**
-     * Return <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @return evolvingIdAttr
-     */
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property
-     *
-     * @param evolvingIdAttr the new value
-     */
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr the new value
-     * @return <code>TocHierarchyComplexType</code> instance
-     */
-    public TocHierarchyComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>alternativeToAttr</code> property
-     *
-     * @return alternativeToAttr
-     */
-    public AnyURISimpleType getAlternativeToAttr() {
-        if (alternativeToAttr == null) {
-            alternativeToAttr = new AnyURISimpleType();
-            alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
-        }
-
-        return alternativeToAttr;
-    }
-
-    /**
-     * Return <code>alternativeToAttr</code> property in DSL way
-     *
-     * @return alternativeToAttr
-     */
-    public AnyURISimpleType alternativeToAttr() {
-        return getAlternativeToAttr();
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property
-     *
-     * @param alternativeToAttr the new value
-     */
-    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
-        getElement().setAttribute("alternativeTo", alternativeToAttr.getValue());
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr the new value
-     * @return <code>TocHierarchyComplexType</code> instance
-     */
-    public TocHierarchyComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
      * Return <code>java.util.List<ComponentRef></code> property
      *
      * @return The property as unmodifiable list
@@ -760,17 +760,17 @@ public class TocHierarchyComplexType extends BasehierarchyComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
         attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }

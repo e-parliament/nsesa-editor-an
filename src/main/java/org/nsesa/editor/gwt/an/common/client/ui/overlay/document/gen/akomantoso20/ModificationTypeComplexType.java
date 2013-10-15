@@ -55,8 +55,8 @@ public class ModificationTypeComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "modificationTypeComplexType");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "modificationTypeComplexType");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget modificationTypeComplexType");
         return span;
     }
@@ -71,55 +71,100 @@ public class ModificationTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private StatusTypeSimpleType statusAttr;
-    private String wildcardContentAttr;
-    private AnyURISimpleType refersToAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private String wildcardContentAttr;
+    private AnyURISimpleType refersToAttr;
+    private StatusTypeSimpleType statusAttr;
     private BooleanSimpleType exclusionAttr;
     private BooleanSimpleType incompleteAttr;
     private AnyURISimpleType periodAttr;
 
     /**
-     * Return <code>statusAttr</code> property
+     * Return <code>idAttr</code> property
      *
-     * @return statusAttr
+     * @return idAttr
      */
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
         }
 
-        return statusAttr;
+        return idAttr;
     }
 
     /**
-     * Return <code>statusAttr</code> property in DSL way
+     * Return <code>idAttr</code> property in DSL way
      *
-     * @return statusAttr
+     * @return idAttr
      */
-    public StatusTypeSimpleType statusAttr() {
-        return getStatusAttr();
+    public IDSimpleType idAttr() {
+        return getIdAttr();
     }
 
     /**
-     * Set <code>statusAttr</code> property
+     * Set <code>idAttr</code> property
      *
-     * @param statusAttr the new value
+     * @param idAttr the new value
      */
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status", statusAttr.value());
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param statusAttr the new value
+     * @param idAttr the new value
      * @return <code>ModificationTypeComplexType</code> instance
      */
-    public ModificationTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public ModificationTypeComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property
+     *
+     * @param evolvingIdAttr the new value
+     */
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr the new value
+     * @return <code>ModificationTypeComplexType</code> instance
+     */
+    public ModificationTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -211,90 +256,45 @@ public class ModificationTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>idAttr</code> property
+     * Return <code>statusAttr</code> property
      *
-     * @return idAttr
+     * @return statusAttr
      */
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
         }
 
-        return idAttr;
+        return statusAttr;
     }
 
     /**
-     * Return <code>idAttr</code> property in DSL way
+     * Return <code>statusAttr</code> property in DSL way
      *
-     * @return idAttr
+     * @return statusAttr
      */
-    public IDSimpleType idAttr() {
-        return getIdAttr();
+    public StatusTypeSimpleType statusAttr() {
+        return getStatusAttr();
     }
 
     /**
-     * Set <code>idAttr</code> property
+     * Set <code>statusAttr</code> property
      *
-     * @param idAttr the new value
+     * @param statusAttr the new value
      */
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status", statusAttr.value());
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>statusAttr</code> property in DSL way
      *
-     * @param idAttr the new value
+     * @param statusAttr the new value
      * @return <code>ModificationTypeComplexType</code> instance
      */
-    public ModificationTypeComplexType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>evolvingIdAttr</code> property
-     *
-     * @return evolvingIdAttr
-     */
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-    }
-
-    /**
-     * Return <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @return evolvingIdAttr
-     */
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property
-     *
-     * @param evolvingIdAttr the new value
-     */
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr the new value
-     * @return <code>ModificationTypeComplexType</code> instance
-     */
-    public ModificationTypeComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public ModificationTypeComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -678,11 +678,11 @@ public class ModificationTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("exclusion", getExclusionAttr() != null ? getExclusionAttr().getValue() : null);
         attrs.put("incomplete", getIncompleteAttr() != null ? getIncompleteAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);

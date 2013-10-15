@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element person is an inline element to identify a text fragment introducing or referring to a person in the ontology. Attribute as allows to specify a TLCrole the person is holding in the context of the document''s mention
+ * the element person is an inline element to identify a text fragment introducing or referring to a<br/> person in the ontology. Attribute as allows to specify a TLCrole the person is holding in the<br/> context of the document''s mention
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -142,8 +142,8 @@ public class Person extends InlinereqreqComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "person");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "person");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget person");
         return span;
     }
@@ -161,10 +161,10 @@ public class Person extends InlinereqreqComplexType {
     /**
      * Constructor with required attributes
      */
-    public Person(AnyURISimpleType refersToAttr, IDSimpleType idAttr) {
+    public Person(IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
         this();
-        setRefersToAttr(refersToAttr);
         setIdAttr(idAttr);
+        setRefersToAttr(refersToAttr);
     }
 
 
@@ -224,39 +224,6 @@ public class Person extends InlinereqreqComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>classAttr</code> property in DSL way
-     *
-     * @param classAttr new value
-     * @return <code> Person</code> instance
-     */
-    public Person classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>styleAttr</code> property in DSL way
-     *
-     * @param styleAttr new value
-     * @return <code> Person</code> instance
-     */
-    public Person styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>titleAttr</code> property in DSL way
-     *
-     * @param titleAttr new value
-     * @return <code> Person</code> instance
-     */
-    public Person titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
-        return this;
-    }
-
-    /**
      * Set <code>alternativeToAttr</code> property in DSL way
      *
      * @param alternativeToAttr new value
@@ -268,13 +235,35 @@ public class Person extends InlinereqreqComplexType {
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>classAttr</code> property in DSL way
      *
-     * @param refersToAttr new value
+     * @param classAttr new value
      * @return <code> Person</code> instance
      */
-    public Person refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Person classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Person</code> instance
+     */
+    public Person evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Person</code> instance
+     */
+    public Person idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 
@@ -286,6 +275,28 @@ public class Person extends InlinereqreqComplexType {
      */
     public Person langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Person</code> instance
+     */
+    public Person periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Person</code> instance
+     */
+    public Person refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -312,6 +323,28 @@ public class Person extends InlinereqreqComplexType {
     }
 
     /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr new value
+     * @return <code> Person</code> instance
+     */
+    public Person styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr new value
+     * @return <code> Person</code> instance
+     */
+    public Person titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
+        return this;
+    }
+
+    /**
      * Set <code>wildcardContentAttr</code> property in DSL way
      *
      * @param wildcardContentAttr new value
@@ -319,39 +352,6 @@ public class Person extends InlinereqreqComplexType {
      */
     public Person wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Person</code> instance
-     */
-    public Person idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Person</code> instance
-     */
-    public Person evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> Person</code> instance
-     */
-    public Person periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
         return this;
     }
 

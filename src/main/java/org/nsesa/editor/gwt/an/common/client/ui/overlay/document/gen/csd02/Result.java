@@ -45,8 +45,8 @@ public class Result extends AnyOtherTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "result");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "result");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget result");
         return span;
     }
@@ -125,6 +125,17 @@ public class Result extends AnyOtherTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Result</code> instance
+     */
+    public Result evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
      * Set <code>hrefAttr</code> property in DSL way
      *
      * @param hrefAttr new value
@@ -132,17 +143,6 @@ public class Result extends AnyOtherTypeComplexType {
      */
     public Result hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Result</code> instance
-     */
-    public Result wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -158,13 +158,13 @@ public class Result extends AnyOtherTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> Result</code> instance
      */
-    public Result evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public Result wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

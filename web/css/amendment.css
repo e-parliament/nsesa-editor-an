@@ -23,6 +23,10 @@
     font-family: "Times New Roman", serif !important;
 }
 
+.amendmentHolder .bundle {
+    background-color: red;
+}
+
 .amendmentHolder .consolidation > .quotedStructure {
     border: 0;
     padding-left: 0;

@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element eol (end of line) is a marker for where in the original text the line breaks. If the line breaks within a word, place the element BEFORE the word and place the number of characters before the break in the attribute breakat
+ * the element eol (end of line) is a marker for where in the original text the line breaks. If the<br/> line breaks within a word, place the element BEFORE the word and place the number of characters<br/> before the break in the attribute breakat
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -40,8 +40,8 @@ public class Eol extends EolTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "eol");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "eol");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget eol");
         return span;
     }
@@ -80,13 +80,13 @@ public class Eol extends EolTypeComplexType {
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @param statusAttr new value
+     * @param alternativeToAttr new value
      * @return <code> Eol</code> instance
      */
-    public Eol statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Eol alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
@@ -98,6 +98,83 @@ public class Eol extends EolTypeComplexType {
      */
     public Eol classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Eol</code> instance
+     */
+    public Eol evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Eol</code> instance
+     */
+    public Eol idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> Eol</code> instance
+     */
+    public Eol langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Eol</code> instance
+     */
+    public Eol periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Eol</code> instance
+     */
+    public Eol refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>spaceAttr</code> property in DSL way
+     *
+     * @param spaceAttr new value
+     * @return <code> Eol</code> instance
+     */
+    public Eol spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> Eol</code> instance
+     */
+    public Eol statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -124,39 +201,6 @@ public class Eol extends EolTypeComplexType {
     }
 
     /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> Eol</code> instance
-     */
-    public Eol alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Eol</code> instance
-     */
-    public Eol idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Eol</code> instance
-     */
-    public Eol evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
      * Set <code>wildcardContentAttr</code> property in DSL way
      *
      * @param wildcardContentAttr new value
@@ -164,50 +208,6 @@ public class Eol extends EolTypeComplexType {
      */
     public Eol wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> Eol</code> instance
-     */
-    public Eol refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> Eol</code> instance
-     */
-    public Eol langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>spaceAttr</code> property in DSL way
-     *
-     * @param spaceAttr new value
-     * @return <code> Eol</code> instance
-     */
-    public Eol spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> Eol</code> instance
-     */
-    public Eol periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
         return this;
     }
 

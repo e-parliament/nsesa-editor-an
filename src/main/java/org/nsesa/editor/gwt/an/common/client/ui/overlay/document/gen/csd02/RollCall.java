@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * this element is a structural container for parts of a debates that contain a roll call of individuals
+ * this element is a structural container for parts of a debates that contain a roll call of<br/> individuals
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -102,8 +102,8 @@ public class RollCall extends AlthierarchyComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "rollCall");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "rollCall");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget rollCall");
         return span;
     }
@@ -139,6 +139,17 @@ public class RollCall extends AlthierarchyComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> RollCall</code> instance
+     */
+    public RollCall alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
      * Set <code>classAttr</code> property in DSL way
      *
      * @param classAttr new value
@@ -146,6 +157,83 @@ public class RollCall extends AlthierarchyComplexType {
      */
     public RollCall classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> RollCall</code> instance
+     */
+    public RollCall evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> RollCall</code> instance
+     */
+    public RollCall idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> RollCall</code> instance
+     */
+    public RollCall langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> RollCall</code> instance
+     */
+    public RollCall periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> RollCall</code> instance
+     */
+    public RollCall refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>spaceAttr</code> property in DSL way
+     *
+     * @param spaceAttr new value
+     * @return <code> RollCall</code> instance
+     */
+    public RollCall spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> RollCall</code> instance
+     */
+    public RollCall statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -172,72 +260,6 @@ public class RollCall extends AlthierarchyComplexType {
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> RollCall</code> instance
-     */
-    public RollCall idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> RollCall</code> instance
-     */
-    public RollCall evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> RollCall</code> instance
-     */
-    public RollCall alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr new value
-     * @return <code> RollCall</code> instance
-     */
-    public RollCall statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> RollCall</code> instance
-     */
-    public RollCall langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>spaceAttr</code> property in DSL way
-     *
-     * @param spaceAttr new value
-     * @return <code> RollCall</code> instance
-     */
-    public RollCall spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-    }
-
-    /**
      * Set <code>wildcardContentAttr</code> property in DSL way
      *
      * @param wildcardContentAttr new value
@@ -245,28 +267,6 @@ public class RollCall extends AlthierarchyComplexType {
      */
     public RollCall wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> RollCall</code> instance
-     */
-    public RollCall refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> RollCall</code> instance
-     */
-    public RollCall periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
         return this;
     }
 

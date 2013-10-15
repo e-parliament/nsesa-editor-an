@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element quotedStructure is a popup element containing a full structure proposed as an insertion or a replacement. Attribute quote is used to specify the quote character used in the original; no quote attribute implies that the quote is left in the text; quote="" implies that there is no quote character. Attribute for is used in a mmod or rmod to point to the id of the corresponding ref element.
+ * the element quotedStructure is a popup element containing a full structure proposed as an insertion<br/> or a replacement. Attribute quote is used to specify the quote character used in the original; no<br/> quote attribute implies that the quote is left in the text; quote="" implies that there is no quote<br/> character. Attribute for is used in a mmod or rmod to point to the id of the corresponding ref<br/> element.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -135,8 +135,8 @@ public class QuotedStructure extends PopupStructureComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "quotedStructure");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "quotedStructure");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget quotedStructure");
         return span;
     }
@@ -168,9 +168,53 @@ public class QuotedStructure extends PopupStructureComplexType {
     }
 
     // FIELDS ------------------
+    private StringSimpleType endQuoteAttr;
     private AnyURISimpleType forAttr;
     private StringSimpleType startQuoteAttr;
-    private StringSimpleType endQuoteAttr;
+
+    /**
+     * Return <code>endQuoteAttr</code> property
+     *
+     * @return endQuoteAttr
+     */
+    public StringSimpleType getEndQuoteAttr() {
+        if (endQuoteAttr == null) {
+            endQuoteAttr = new StringSimpleType();
+            endQuoteAttr.setValue(getElement().getAttribute("endQuote"));
+        }
+
+        return endQuoteAttr;
+    }
+
+    /**
+     * Return <code>endQuoteAttr</code> property in DSL way
+     *
+     * @return endQuoteAttr
+     */
+    public StringSimpleType endQuoteAttr() {
+        return getEndQuoteAttr();
+    }
+
+    /**
+     * Set <code>endQuoteAttr</code> property
+     *
+     * @param endQuoteAttr the new value
+     */
+    public void setEndQuoteAttr(final StringSimpleType endQuoteAttr) {
+        this.endQuoteAttr = endQuoteAttr;
+        getElement().setAttribute("endQuote", endQuoteAttr.getValue());
+    }
+
+    /**
+     * Set <code>endQuoteAttr</code> property in DSL way
+     *
+     * @param endQuoteAttr the new value
+     * @return <code>QuotedStructure</code> instance
+     */
+    public QuotedStructure endQuoteAttr(final StringSimpleType endQuoteAttr) {
+        setEndQuoteAttr(endQuoteAttr);
+        return this;
+    }
 
     /**
      * Return <code>forAttr</code> property
@@ -259,51 +303,18 @@ public class QuotedStructure extends PopupStructureComplexType {
         setStartQuoteAttr(startQuoteAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Return <code>endQuoteAttr</code> property
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @return endQuoteAttr
+     * @param alternativeToAttr new value
+     * @return <code> QuotedStructure</code> instance
      */
-    public StringSimpleType getEndQuoteAttr() {
-        if (endQuoteAttr == null) {
-            endQuoteAttr = new StringSimpleType();
-            endQuoteAttr.setValue(getElement().getAttribute("endQuote"));
-        }
-
-        return endQuoteAttr;
-    }
-
-    /**
-     * Return <code>endQuoteAttr</code> property in DSL way
-     *
-     * @return endQuoteAttr
-     */
-    public StringSimpleType endQuoteAttr() {
-        return getEndQuoteAttr();
-    }
-
-    /**
-     * Set <code>endQuoteAttr</code> property
-     *
-     * @param endQuoteAttr the new value
-     */
-    public void setEndQuoteAttr(final StringSimpleType endQuoteAttr) {
-        this.endQuoteAttr = endQuoteAttr;
-        getElement().setAttribute("endQuote", endQuoteAttr.getValue());
-    }
-
-    /**
-     * Set <code>endQuoteAttr</code> property in DSL way
-     *
-     * @param endQuoteAttr the new value
-     * @return <code>QuotedStructure</code> instance
-     */
-    public QuotedStructure endQuoteAttr(final StringSimpleType endQuoteAttr) {
-        setEndQuoteAttr(endQuoteAttr);
+    public QuotedStructure alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
-//Override all attributes methods to be conformant with DSL approach
 
     /**
      * Set <code>classAttr</code> property in DSL way
@@ -313,6 +324,83 @@ public class QuotedStructure extends PopupStructureComplexType {
      */
     public QuotedStructure classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> QuotedStructure</code> instance
+     */
+    public QuotedStructure evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> QuotedStructure</code> instance
+     */
+    public QuotedStructure idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> QuotedStructure</code> instance
+     */
+    public QuotedStructure langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> QuotedStructure</code> instance
+     */
+    public QuotedStructure periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> QuotedStructure</code> instance
+     */
+    public QuotedStructure refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>spaceAttr</code> property in DSL way
+     *
+     * @param spaceAttr new value
+     * @return <code> QuotedStructure</code> instance
+     */
+    public QuotedStructure spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> QuotedStructure</code> instance
+     */
+    public QuotedStructure statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -339,72 +427,6 @@ public class QuotedStructure extends PopupStructureComplexType {
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> QuotedStructure</code> instance
-     */
-    public QuotedStructure idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> QuotedStructure</code> instance
-     */
-    public QuotedStructure evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> QuotedStructure</code> instance
-     */
-    public QuotedStructure alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr new value
-     * @return <code> QuotedStructure</code> instance
-     */
-    public QuotedStructure statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> QuotedStructure</code> instance
-     */
-    public QuotedStructure langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>spaceAttr</code> property in DSL way
-     *
-     * @param spaceAttr new value
-     * @return <code> QuotedStructure</code> instance
-     */
-    public QuotedStructure spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-    }
-
-    /**
      * Set <code>wildcardContentAttr</code> property in DSL way
      *
      * @param wildcardContentAttr new value
@@ -412,28 +434,6 @@ public class QuotedStructure extends PopupStructureComplexType {
      */
     public QuotedStructure wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> QuotedStructure</code> instance
-     */
-    public QuotedStructure refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> QuotedStructure</code> instance
-     */
-    public QuotedStructure periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -451,9 +451,9 @@ public class QuotedStructure extends PopupStructureComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("endQuote", getEndQuoteAttr() != null ? getEndQuoteAttr().getValue() : null);
         attrs.put("for", getForAttr() != null ? getForAttr().getValue() : null);
         attrs.put("startQuote", getStartQuoteAttr() != null ? getStartQuoteAttr().getValue() : null);
-        attrs.put("endQuote", getEndQuoteAttr() != null ? getEndQuoteAttr().getValue() : null);
         return attrs;
     }
 

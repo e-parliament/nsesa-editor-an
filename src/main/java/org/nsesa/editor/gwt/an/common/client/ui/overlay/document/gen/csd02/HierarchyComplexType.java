@@ -83,8 +83,8 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "hierarchyComplexType");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "hierarchyComplexType");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget hierarchyComplexType");
         return span;
     }
@@ -99,17 +99,17 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     }
 
     // FIELDS ------------------
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
-    private LanguageSimpleType langAttr;
-    private NCNameSimpleType spaceAttr;
+    private AnyURISimpleType alternativeToAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
     private String wildcardContentAttr;
-    private AnyURISimpleType refersToAttr;
+    private LanguageSimpleType langAttr;
+    private NCNameSimpleType spaceAttr;
     private StatusTypeSimpleType statusAttr;
-    private AnyURISimpleType alternativeToAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType periodAttr;
 
     /**
@@ -120,7 +120,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public Content getContent_() {
         Content result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Content".equalsIgnoreCase(widget.getType())) {
+            if ("Content".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (Content) widget;
                 break;
             }
@@ -146,178 +146,46 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     }
 
     /**
-     * Return <code>idAttr</code> property
+     * Return <code>alternativeToAttr</code> property
      *
-     * @return idAttr
+     * @return alternativeToAttr
      */
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
+    public AnyURISimpleType getAlternativeToAttr() {
+        if (alternativeToAttr == null) {
+            alternativeToAttr = new AnyURISimpleType();
+            alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
         }
 
-        return idAttr;
+        return alternativeToAttr;
     }
 
     /**
-     * Return <code>idAttr</code> property in DSL way
+     * Return <code>alternativeToAttr</code> property in DSL way
      *
-     * @return idAttr
+     * @return alternativeToAttr
      */
-    public IDSimpleType idAttr() {
-        return getIdAttr();
+    public AnyURISimpleType alternativeToAttr() {
+        return getAlternativeToAttr();
     }
 
     /**
-     * Set <code>idAttr</code> property
+     * Set <code>alternativeToAttr</code> property
      *
-     * @param idAttr the new value
+     * @param alternativeToAttr the new value
      */
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
+    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        this.alternativeToAttr = alternativeToAttr;
+        getElement().setAttribute("alternativeTo", alternativeToAttr.getValue());
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @param idAttr the new value
+     * @param alternativeToAttr the new value
      * @return <code>HierarchyComplexType</code> instance
      */
-    public HierarchyComplexType idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>evolvingIdAttr</code> property
-     *
-     * @return evolvingIdAttr
-     */
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
-        }
-
-        return evolvingIdAttr;
-    }
-
-    /**
-     * Return <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @return evolvingIdAttr
-     */
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property
-     *
-     * @param evolvingIdAttr the new value
-     */
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr the new value
-     * @return <code>HierarchyComplexType</code> instance
-     */
-    public HierarchyComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>langAttr</code> property
-     *
-     * @return langAttr
-     */
-    public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-            langAttr = new LanguageSimpleType();
-            langAttr.setValue(getElement().getAttribute("lang"));
-        }
-
-        return langAttr;
-    }
-
-    /**
-     * Return <code>langAttr</code> property in DSL way
-     *
-     * @return langAttr
-     */
-    public LanguageSimpleType langAttr() {
-        return getLangAttr();
-    }
-
-    /**
-     * Set <code>langAttr</code> property
-     *
-     * @param langAttr the new value
-     */
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-        getElement().setAttribute("lang", langAttr.getValue());
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr the new value
-     * @return <code>HierarchyComplexType</code> instance
-     */
-    public HierarchyComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>spaceAttr</code> property
-     *
-     * @return spaceAttr
-     */
-    public NCNameSimpleType getSpaceAttr() {
-        if (spaceAttr == null) {
-            spaceAttr = new NCNameSimpleType();
-            spaceAttr.setValue(getElement().getAttribute("space"));
-        }
-
-        return spaceAttr;
-    }
-
-    /**
-     * Return <code>spaceAttr</code> property in DSL way
-     *
-     * @return spaceAttr
-     */
-    public NCNameSimpleType spaceAttr() {
-        return getSpaceAttr();
-    }
-
-    /**
-     * Set <code>spaceAttr</code> property
-     *
-     * @param spaceAttr the new value
-     */
-    public void setSpaceAttr(final NCNameSimpleType spaceAttr) {
-        this.spaceAttr = spaceAttr;
-        getElement().setAttribute("space", spaceAttr.getValue());
-    }
-
-    /**
-     * Set <code>spaceAttr</code> property in DSL way
-     *
-     * @param spaceAttr the new value
-     * @return <code>HierarchyComplexType</code> instance
-     */
-    public HierarchyComplexType spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
+    public HierarchyComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
@@ -497,46 +365,90 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     }
 
     /**
-     * Return <code>refersToAttr</code> property
+     * Return <code>langAttr</code> property
      *
-     * @return refersToAttr
+     * @return langAttr
      */
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+    public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+            langAttr = new LanguageSimpleType();
+            langAttr.setValue(getElement().getAttribute("lang"));
         }
 
-        return refersToAttr;
+        return langAttr;
     }
 
     /**
-     * Return <code>refersToAttr</code> property in DSL way
+     * Return <code>langAttr</code> property in DSL way
      *
-     * @return refersToAttr
+     * @return langAttr
      */
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
+    public LanguageSimpleType langAttr() {
+        return getLangAttr();
     }
 
     /**
-     * Set <code>refersToAttr</code> property
+     * Set <code>langAttr</code> property
      *
-     * @param refersToAttr the new value
+     * @param langAttr the new value
      */
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+        getElement().setAttribute("lang", langAttr.getValue());
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>langAttr</code> property in DSL way
      *
-     * @param refersToAttr the new value
+     * @param langAttr the new value
      * @return <code>HierarchyComplexType</code> instance
      */
-    public HierarchyComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public HierarchyComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>spaceAttr</code> property
+     *
+     * @return spaceAttr
+     */
+    public NCNameSimpleType getSpaceAttr() {
+        if (spaceAttr == null) {
+            spaceAttr = new NCNameSimpleType();
+            spaceAttr.setValue(getElement().getAttribute("space"));
+        }
+
+        return spaceAttr;
+    }
+
+    /**
+     * Return <code>spaceAttr</code> property in DSL way
+     *
+     * @return spaceAttr
+     */
+    public NCNameSimpleType spaceAttr() {
+        return getSpaceAttr();
+    }
+
+    /**
+     * Set <code>spaceAttr</code> property
+     *
+     * @param spaceAttr the new value
+     */
+    public void setSpaceAttr(final NCNameSimpleType spaceAttr) {
+        this.spaceAttr = spaceAttr;
+        getElement().setAttribute("space", spaceAttr.getValue());
+    }
+
+    /**
+     * Set <code>spaceAttr</code> property in DSL way
+     *
+     * @param spaceAttr the new value
+     * @return <code>HierarchyComplexType</code> instance
+     */
+    public HierarchyComplexType spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
         return this;
     }
 
@@ -584,46 +496,134 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     }
 
     /**
-     * Return <code>alternativeToAttr</code> property
+     * Return <code>idAttr</code> property
      *
-     * @return alternativeToAttr
+     * @return idAttr
      */
-    public AnyURISimpleType getAlternativeToAttr() {
-        if (alternativeToAttr == null) {
-            alternativeToAttr = new AnyURISimpleType();
-            alternativeToAttr.setValue(getElement().getAttribute("alternativeTo"));
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
         }
 
-        return alternativeToAttr;
+        return idAttr;
     }
 
     /**
-     * Return <code>alternativeToAttr</code> property in DSL way
+     * Return <code>idAttr</code> property in DSL way
      *
-     * @return alternativeToAttr
+     * @return idAttr
      */
-    public AnyURISimpleType alternativeToAttr() {
-        return getAlternativeToAttr();
+    public IDSimpleType idAttr() {
+        return getIdAttr();
     }
 
     /**
-     * Set <code>alternativeToAttr</code> property
+     * Set <code>idAttr</code> property
      *
-     * @param alternativeToAttr the new value
+     * @param idAttr the new value
      */
-    public void setAlternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        this.alternativeToAttr = alternativeToAttr;
-        getElement().setAttribute("alternativeTo", alternativeToAttr.getValue());
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
     }
 
     /**
-     * Set <code>alternativeToAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param alternativeToAttr the new value
+     * @param idAttr the new value
      * @return <code>HierarchyComplexType</code> instance
      */
-    public HierarchyComplexType alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public HierarchyComplexType idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property
+     *
+     * @param evolvingIdAttr the new value
+     */
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr the new value
+     * @return <code>HierarchyComplexType</code> instance
+     */
+    public HierarchyComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property in DSL way
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property
+     *
+     * @param refersToAttr the new value
+     */
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr the new value
+     * @return <code>HierarchyComplexType</code> instance
+     */
+    public HierarchyComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -635,7 +635,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public Intro getIntro() {
         Intro result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Intro".equalsIgnoreCase(widget.getType())) {
+            if ("Intro".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (Intro) widget;
                 break;
             }
@@ -668,7 +668,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public Wrap getWrap() {
         Wrap result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Wrap".equalsIgnoreCase(widget.getType())) {
+            if ("Wrap".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result = (Wrap) widget;
                 break;
             }
@@ -745,7 +745,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<ComponentRef> getComponentRefs() {
         java.util.List<ComponentRef> result = new ArrayList<ComponentRef>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ComponentRef".equalsIgnoreCase(widget.getType())) {
+            if ("ComponentRef".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((ComponentRef) widget);
             }
         }
@@ -779,7 +779,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Hcontainer> getHcontainers() {
         java.util.List<Hcontainer> result = new ArrayList<Hcontainer>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Hcontainer".equalsIgnoreCase(widget.getType())) {
+            if ("Hcontainer".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Hcontainer) widget);
             }
         }
@@ -813,7 +813,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Clause> getClauses() {
         java.util.List<Clause> result = new ArrayList<Clause>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Clause".equalsIgnoreCase(widget.getType())) {
+            if ("Clause".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Clause) widget);
             }
         }
@@ -847,7 +847,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Section> getSections() {
         java.util.List<Section> result = new ArrayList<Section>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Section".equalsIgnoreCase(widget.getType())) {
+            if ("Section".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Section) widget);
             }
         }
@@ -881,7 +881,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Part> getParts() {
         java.util.List<Part> result = new ArrayList<Part>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Part".equalsIgnoreCase(widget.getType())) {
+            if ("Part".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Part) widget);
             }
         }
@@ -915,7 +915,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Paragraph> getParagraphs() {
         java.util.List<Paragraph> result = new ArrayList<Paragraph>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Paragraph".equalsIgnoreCase(widget.getType())) {
+            if ("Paragraph".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Paragraph) widget);
             }
         }
@@ -949,7 +949,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Chapter> getChapters() {
         java.util.List<Chapter> result = new ArrayList<Chapter>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Chapter".equalsIgnoreCase(widget.getType())) {
+            if ("Chapter".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Chapter) widget);
             }
         }
@@ -983,7 +983,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Title> getTitle_s() {
         java.util.List<Title> result = new ArrayList<Title>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Title".equalsIgnoreCase(widget.getType())) {
+            if ("Title".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Title) widget);
             }
         }
@@ -1017,7 +1017,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Article> getArticles() {
         java.util.List<Article> result = new ArrayList<Article>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Article".equalsIgnoreCase(widget.getType())) {
+            if ("Article".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Article) widget);
             }
         }
@@ -1051,7 +1051,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Book> getBooks() {
         java.util.List<Book> result = new ArrayList<Book>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Book".equalsIgnoreCase(widget.getType())) {
+            if ("Book".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Book) widget);
             }
         }
@@ -1085,7 +1085,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Tome> getTomes() {
         java.util.List<Tome> result = new ArrayList<Tome>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Tome".equalsIgnoreCase(widget.getType())) {
+            if ("Tome".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Tome) widget);
             }
         }
@@ -1119,7 +1119,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Division> getDivisions() {
         java.util.List<Division> result = new ArrayList<Division>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Division".equalsIgnoreCase(widget.getType())) {
+            if ("Division".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Division) widget);
             }
         }
@@ -1153,7 +1153,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<List> getLists() {
         java.util.List<List> result = new ArrayList<List>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("List".equalsIgnoreCase(widget.getType())) {
+            if ("List".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((List) widget);
             }
         }
@@ -1187,7 +1187,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Point> getPoints() {
         java.util.List<Point> result = new ArrayList<Point>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Point".equalsIgnoreCase(widget.getType())) {
+            if ("Point".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Point) widget);
             }
         }
@@ -1221,7 +1221,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Indent> getIndents() {
         java.util.List<Indent> result = new ArrayList<Indent>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Indent".equalsIgnoreCase(widget.getType())) {
+            if ("Indent".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Indent) widget);
             }
         }
@@ -1255,7 +1255,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Alinea> getAlineas() {
         java.util.List<Alinea> result = new ArrayList<Alinea>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Alinea".equalsIgnoreCase(widget.getType())) {
+            if ("Alinea".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Alinea) widget);
             }
         }
@@ -1289,7 +1289,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Subsection> getSubsections() {
         java.util.List<Subsection> result = new ArrayList<Subsection>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subsection".equalsIgnoreCase(widget.getType())) {
+            if ("Subsection".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Subsection) widget);
             }
         }
@@ -1323,7 +1323,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Subpart> getSubparts() {
         java.util.List<Subpart> result = new ArrayList<Subpart>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subpart".equalsIgnoreCase(widget.getType())) {
+            if ("Subpart".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Subpart) widget);
             }
         }
@@ -1357,7 +1357,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Subparagraph> getSubparagraphs() {
         java.util.List<Subparagraph> result = new ArrayList<Subparagraph>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subparagraph".equalsIgnoreCase(widget.getType())) {
+            if ("Subparagraph".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Subparagraph) widget);
             }
         }
@@ -1391,7 +1391,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Subchapter> getSubchapters() {
         java.util.List<Subchapter> result = new ArrayList<Subchapter>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subchapter".equalsIgnoreCase(widget.getType())) {
+            if ("Subchapter".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Subchapter) widget);
             }
         }
@@ -1425,7 +1425,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Subtitle> getSubtitles() {
         java.util.List<Subtitle> result = new ArrayList<Subtitle>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subtitle".equalsIgnoreCase(widget.getType())) {
+            if ("Subtitle".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Subtitle) widget);
             }
         }
@@ -1459,7 +1459,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Subclause> getSubclauses() {
         java.util.List<Subclause> result = new ArrayList<Subclause>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Subclause".equalsIgnoreCase(widget.getType())) {
+            if ("Subclause".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Subclause) widget);
             }
         }
@@ -1493,7 +1493,7 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public java.util.List<Sublist> getSublists() {
         java.util.List<Sublist> result = new ArrayList<Sublist>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Sublist".equalsIgnoreCase(widget.getType())) {
+            if ("Sublist".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Sublist) widget);
             }
         }
@@ -1535,17 +1535,17 @@ public class HierarchyComplexType extends BasehierarchyComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
-        attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
+        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
         attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
-        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }

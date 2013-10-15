@@ -112,8 +112,8 @@ public class Motivation extends MaincontentComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "motivation");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "motivation");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget motivation");
         return span;
     }
@@ -141,6 +141,50 @@ public class Motivation extends MaincontentComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> Motivation</code> instance
+     */
+    public Motivation alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Motivation</code> instance
+     */
+    public Motivation classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Motivation</code> instance
+     */
+    public Motivation evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Motivation</code> instance
+     */
+    public Motivation idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
      * Set <code>langAttr</code> property in DSL way
      *
      * @param langAttr new value
@@ -152,24 +196,13 @@ public class Motivation extends MaincontentComplexType {
     }
 
     /**
-     * Set <code>spaceAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param spaceAttr new value
+     * @param periodAttr new value
      * @return <code> Motivation</code> instance
      */
-    public Motivation spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Motivation</code> instance
-     */
-    public Motivation wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Motivation periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -185,13 +218,24 @@ public class Motivation extends MaincontentComplexType {
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>spaceAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param spaceAttr new value
      * @return <code> Motivation</code> instance
      */
-    public Motivation classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public Motivation spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> Motivation</code> instance
+     */
+    public Motivation statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -218,57 +262,13 @@ public class Motivation extends MaincontentComplexType {
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param statusAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> Motivation</code> instance
      */
-    public Motivation statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Motivation</code> instance
-     */
-    public Motivation idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Motivation</code> instance
-     */
-    public Motivation evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> Motivation</code> instance
-     */
-    public Motivation alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> Motivation</code> instance
-     */
-    public Motivation periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public Motivation wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

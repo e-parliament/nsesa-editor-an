@@ -42,8 +42,8 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "periodTypeComplexType");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "periodTypeComplexType");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget periodTypeComplexType");
         return span;
     }
@@ -58,53 +58,10 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private String wildcardContentAttr;
     private AnyURISimpleType periodAttr;
+    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-
-    /**
-     * Return <code>wildcardContentAttr</code> property
-     *
-     * @return wildcardContentAttr
-     */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @return wildcardContentAttr
-     */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property
-     *
-     * @param wildcardContentAttr the new value
-     */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr the new value
-     * @return <code>PeriodTypeComplexType</code> instance
-     */
-    public PeriodTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
 
     /**
      * Return <code>periodAttr</code> property
@@ -147,6 +104,49 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
      */
     public PeriodTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>PeriodTypeComplexType</code> instance
+     */
+    public PeriodTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -253,8 +253,8 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         return attrs;

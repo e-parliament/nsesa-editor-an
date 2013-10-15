@@ -1,0 +1,46 @@
+.pathPanel a {
+    color: white;
+    cursor: pointer
+}
+
+.pathPanel td:after {
+    color: white;
+    content: " > ";
+}
+
+.pathPanel td:last-child:after {
+    content: "";
+}
+
+.pathPanel a:hover {
+    color: white;
+    cursor: pointer
+}
+
+.pickerPanel a {
+    width: 100%;
+    display: block;
+    color: white;
+    cursor: pointer;
+}
+
+.pickerPanel a:hover {
+    color: black;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.replacePanel a {
+    width: 100%;
+    display: block;
+    color: black;
+    cursor: pointer;
+}
+
+.replacePanel a:hover {
+    color: black;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+

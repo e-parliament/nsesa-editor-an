@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the complex type periodType defines the empty content model and the list of attributes for metadata elements in the analysis section using periods
+ * the complex type periodType defines the empty content model and the list of attributes for metadata<br/> elements in the analysis section using periods
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -42,8 +42,8 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "periodTypeComplexType");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "periodTypeComplexType");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget periodTypeComplexType");
         return span;
     }
@@ -58,10 +58,97 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
+    private AnyURISimpleType periodAttr;
+    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private String wildcardContentAttr;
-    private AnyURISimpleType periodAttr;
+
+    /**
+     * Return <code>periodAttr</code> property
+     *
+     * @return periodAttr
+     */
+    public AnyURISimpleType getPeriodAttr() {
+        if (periodAttr == null) {
+            periodAttr = new AnyURISimpleType();
+            periodAttr.setValue(getElement().getAttribute("period"));
+        }
+
+        return periodAttr;
+    }
+
+    /**
+     * Return <code>periodAttr</code> property in DSL way
+     *
+     * @return periodAttr
+     */
+    public AnyURISimpleType periodAttr() {
+        return getPeriodAttr();
+    }
+
+    /**
+     * Set <code>periodAttr</code> property
+     *
+     * @param periodAttr the new value
+     */
+    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
+        this.periodAttr = periodAttr;
+        getElement().setAttribute("period", periodAttr.getValue());
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr the new value
+     * @return <code>PeriodTypeComplexType</code> instance
+     */
+    public PeriodTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>PeriodTypeComplexType</code> instance
+     */
+    public PeriodTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
 
     /**
      * Return <code>idAttr</code> property
@@ -150,93 +237,6 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
-
-    /**
-     * Return <code>wildcardContentAttr</code> property
-     *
-     * @return wildcardContentAttr
-     */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @return wildcardContentAttr
-     */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property
-     *
-     * @param wildcardContentAttr the new value
-     */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr the new value
-     * @return <code>PeriodTypeComplexType</code> instance
-     */
-    public PeriodTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>periodAttr</code> property
-     *
-     * @return periodAttr
-     */
-    public AnyURISimpleType getPeriodAttr() {
-        if (periodAttr == null) {
-            periodAttr = new AnyURISimpleType();
-            periodAttr.setValue(getElement().getAttribute("period"));
-        }
-
-        return periodAttr;
-    }
-
-    /**
-     * Return <code>periodAttr</code> property in DSL way
-     *
-     * @return periodAttr
-     */
-    public AnyURISimpleType periodAttr() {
-        return getPeriodAttr();
-    }
-
-    /**
-     * Set <code>periodAttr</code> property
-     *
-     * @param periodAttr the new value
-     */
-    public void setPeriodAttr(final AnyURISimpleType periodAttr) {
-        this.periodAttr = periodAttr;
-        getElement().setAttribute("period", periodAttr.getValue());
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr the new value
-     * @return <code>PeriodTypeComplexType</code> instance
-     */
-    public PeriodTypeComplexType periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
-        return this;
-    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
@@ -253,10 +253,10 @@ public class PeriodTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }
 

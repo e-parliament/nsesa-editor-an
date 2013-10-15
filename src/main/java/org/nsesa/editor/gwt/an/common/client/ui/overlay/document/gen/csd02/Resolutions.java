@@ -102,8 +102,8 @@ public class Resolutions extends AlthierarchyComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "resolutions");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "resolutions");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget resolutions");
         return span;
     }
@@ -139,13 +139,24 @@ public class Resolutions extends AlthierarchyComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @param idAttr new value
+     * @param alternativeToAttr new value
      * @return <code> Resolutions</code> instance
      */
-    public Resolutions idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
+    public Resolutions alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Resolutions</code> instance
+     */
+    public Resolutions classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
         return this;
     }
 
@@ -161,6 +172,17 @@ public class Resolutions extends AlthierarchyComplexType {
     }
 
     /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Resolutions</code> instance
+     */
+    public Resolutions idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
      * Set <code>langAttr</code> property in DSL way
      *
      * @param langAttr new value
@@ -168,6 +190,28 @@ public class Resolutions extends AlthierarchyComplexType {
      */
     public Resolutions langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Resolutions</code> instance
+     */
+    public Resolutions periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Resolutions</code> instance
+     */
+    public Resolutions refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -183,13 +227,13 @@ public class Resolutions extends AlthierarchyComplexType {
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>statusAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param statusAttr new value
      * @return <code> Resolutions</code> instance
      */
-    public Resolutions classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public Resolutions statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -223,50 +267,6 @@ public class Resolutions extends AlthierarchyComplexType {
      */
     public Resolutions wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> Resolutions</code> instance
-     */
-    public Resolutions refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr new value
-     * @return <code> Resolutions</code> instance
-     */
-    public Resolutions statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> Resolutions</code> instance
-     */
-    public Resolutions alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> Resolutions</code> instance
-     */
-    public Resolutions periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
         return this;
     }
 

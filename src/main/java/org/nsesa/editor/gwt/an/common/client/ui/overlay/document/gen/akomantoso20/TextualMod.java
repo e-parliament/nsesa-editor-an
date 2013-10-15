@@ -58,8 +58,8 @@ public class TextualMod extends ModificationTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "textualMod");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "textualMod");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget textualMod");
         return span;
     }
@@ -93,6 +93,72 @@ public class TextualMod extends ModificationTypeComplexType {
 
     // FIELDS ------------------
     private TextualModsSimpleType typeAttr;
+
+    /**
+     * Add <code>New</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public New getNew() {
+        New result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("New".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (New) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>newElem</code> property in DSL way
+     *
+     * @param newElem new value
+     * @return <code>New</code> instance
+     */
+    public New setNew(New newElem) {
+        New result = getNew();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(newElem);
+
+        return newElem;
+    }
+
+    /**
+     * Add <code>Old</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Old getOld() {
+        Old result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Old".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Old) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>oldElem</code> property in DSL way
+     *
+     * @param oldElem new value
+     * @return <code>Old</code> instance
+     */
+    public Old setOld(Old oldElem) {
+        Old result = getOld();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(oldElem);
+
+        return oldElem;
+    }
 
     /**
      * Return <code>typeAttr</code> property
@@ -136,117 +202,7 @@ public class TextualMod extends ModificationTypeComplexType {
         setTypeAttr(typeAttr);
         return this;
     }
-
-    /**
-     * Add <code>Old</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Old getOld() {
-        Old result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Old".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Old) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>oldElem</code> property in DSL way
-     *
-     * @param oldElem new value
-     * @return <code>Old</code> instance
-     */
-    public Old setOld(Old oldElem) {
-        Old result = getOld();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(oldElem);
-
-        return oldElem;
-    }
-
-    /**
-     * Add <code>New</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public New getNew() {
-        New result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("New".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (New) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>newElem</code> property in DSL way
-     *
-     * @param newElem new value
-     * @return <code>New</code> instance
-     */
-    public New setNew(New newElem) {
-        New result = getNew();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(newElem);
-
-        return newElem;
-    }
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr new value
-     * @return <code> TextualMod</code> instance
-     */
-    public TextualMod statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> TextualMod</code> instance
-     */
-    public TextualMod wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> TextualMod</code> instance
-     */
-    public TextualMod refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> TextualMod</code> instance
-     */
-    public TextualMod idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
 
     /**
      * Set <code>evolvingIdAttr</code> property in DSL way
@@ -271,6 +227,17 @@ public class TextualMod extends ModificationTypeComplexType {
     }
 
     /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> TextualMod</code> instance
+     */
+    public TextualMod idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
      * Set <code>incompleteAttr</code> property in DSL way
      *
      * @param incompleteAttr new value
@@ -289,6 +256,39 @@ public class TextualMod extends ModificationTypeComplexType {
      */
     public TextualMod periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> TextualMod</code> instance
+     */
+    public TextualMod refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> TextualMod</code> instance
+     */
+    public TextualMod statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> TextualMod</code> instance
+     */
+    public TextualMod wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

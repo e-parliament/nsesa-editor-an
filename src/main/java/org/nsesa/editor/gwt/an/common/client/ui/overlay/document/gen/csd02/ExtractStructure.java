@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element extractStructure is a popup element containing a full structure used as an extract from another document or position. Attribute quote is used to specify the quote character used in the original; no quote attribute implies that the quote is left in the text; quote="" implies that there is no quote character. Attribute for is used in a mmod or rmod to point to the id of the corresponding ref element.
+ * the element extractStructure is a popup element containing a full structure used as an extract from<br/> another document or position. Attribute quote is used to specify the quote character used in the<br/> original; no quote attribute implies that the quote is left in the text; quote="" implies that there<br/> is no quote character. Attribute for is used in a mmod or rmod to point to the id of the<br/> corresponding ref element.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -135,8 +135,8 @@ public class ExtractStructure extends PopupStructureComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "extractStructure");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "extractStructure");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget extractStructure");
         return span;
     }
@@ -168,52 +168,8 @@ public class ExtractStructure extends PopupStructureComplexType {
     }
 
     // FIELDS ------------------
-    private StringSimpleType startQuoteAttr;
     private StringSimpleType endQuoteAttr;
-
-    /**
-     * Return <code>startQuoteAttr</code> property
-     *
-     * @return startQuoteAttr
-     */
-    public StringSimpleType getStartQuoteAttr() {
-        if (startQuoteAttr == null) {
-            startQuoteAttr = new StringSimpleType();
-            startQuoteAttr.setValue(getElement().getAttribute("startQuote"));
-        }
-
-        return startQuoteAttr;
-    }
-
-    /**
-     * Return <code>startQuoteAttr</code> property in DSL way
-     *
-     * @return startQuoteAttr
-     */
-    public StringSimpleType startQuoteAttr() {
-        return getStartQuoteAttr();
-    }
-
-    /**
-     * Set <code>startQuoteAttr</code> property
-     *
-     * @param startQuoteAttr the new value
-     */
-    public void setStartQuoteAttr(final StringSimpleType startQuoteAttr) {
-        this.startQuoteAttr = startQuoteAttr;
-        getElement().setAttribute("startQuote", startQuoteAttr.getValue());
-    }
-
-    /**
-     * Set <code>startQuoteAttr</code> property in DSL way
-     *
-     * @param startQuoteAttr the new value
-     * @return <code>ExtractStructure</code> instance
-     */
-    public ExtractStructure startQuoteAttr(final StringSimpleType startQuoteAttr) {
-        setStartQuoteAttr(startQuoteAttr);
-        return this;
-    }
+    private StringSimpleType startQuoteAttr;
 
     /**
      * Return <code>endQuoteAttr</code> property
@@ -258,16 +214,71 @@ public class ExtractStructure extends PopupStructureComplexType {
         setEndQuoteAttr(endQuoteAttr);
         return this;
     }
+
+    /**
+     * Return <code>startQuoteAttr</code> property
+     *
+     * @return startQuoteAttr
+     */
+    public StringSimpleType getStartQuoteAttr() {
+        if (startQuoteAttr == null) {
+            startQuoteAttr = new StringSimpleType();
+            startQuoteAttr.setValue(getElement().getAttribute("startQuote"));
+        }
+
+        return startQuoteAttr;
+    }
+
+    /**
+     * Return <code>startQuoteAttr</code> property in DSL way
+     *
+     * @return startQuoteAttr
+     */
+    public StringSimpleType startQuoteAttr() {
+        return getStartQuoteAttr();
+    }
+
+    /**
+     * Set <code>startQuoteAttr</code> property
+     *
+     * @param startQuoteAttr the new value
+     */
+    public void setStartQuoteAttr(final StringSimpleType startQuoteAttr) {
+        this.startQuoteAttr = startQuoteAttr;
+        getElement().setAttribute("startQuote", startQuoteAttr.getValue());
+    }
+
+    /**
+     * Set <code>startQuoteAttr</code> property in DSL way
+     *
+     * @param startQuoteAttr the new value
+     * @return <code>ExtractStructure</code> instance
+     */
+    public ExtractStructure startQuoteAttr(final StringSimpleType startQuoteAttr) {
+        setStartQuoteAttr(startQuoteAttr);
+        return this;
+    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @param idAttr new value
+     * @param alternativeToAttr new value
      * @return <code> ExtractStructure</code> instance
      */
-    public ExtractStructure idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
+    public ExtractStructure alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> ExtractStructure</code> instance
+     */
+    public ExtractStructure classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
         return this;
     }
 
@@ -283,6 +294,17 @@ public class ExtractStructure extends PopupStructureComplexType {
     }
 
     /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> ExtractStructure</code> instance
+     */
+    public ExtractStructure idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
      * Set <code>langAttr</code> property in DSL way
      *
      * @param langAttr new value
@@ -290,6 +312,28 @@ public class ExtractStructure extends PopupStructureComplexType {
      */
     public ExtractStructure langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> ExtractStructure</code> instance
+     */
+    public ExtractStructure periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> ExtractStructure</code> instance
+     */
+    public ExtractStructure refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -305,13 +349,13 @@ public class ExtractStructure extends PopupStructureComplexType {
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>statusAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param statusAttr new value
      * @return <code> ExtractStructure</code> instance
      */
-    public ExtractStructure classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public ExtractStructure statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -349,50 +393,6 @@ public class ExtractStructure extends PopupStructureComplexType {
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> ExtractStructure</code> instance
-     */
-    public ExtractStructure refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr new value
-     * @return <code> ExtractStructure</code> instance
-     */
-    public ExtractStructure statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> ExtractStructure</code> instance
-     */
-    public ExtractStructure alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> ExtractStructure</code> instance
-     */
-    public ExtractStructure periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
-        return this;
-    }
-
-    /**
      * Returns the namespace URI of this amendable widget.
      *
      * @return The namesapce as String
@@ -406,8 +406,8 @@ public class ExtractStructure extends PopupStructureComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("startQuote", getStartQuoteAttr() != null ? getStartQuoteAttr().getValue() : null);
         attrs.put("endQuote", getEndQuoteAttr() != null ? getEndQuoteAttr().getValue() : null);
+        attrs.put("startQuote", getStartQuoteAttr() != null ? getStartQuoteAttr().getValue() : null);
         return attrs;
     }
 

@@ -45,8 +45,8 @@ public class ComponentInfo extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "componentInfo");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "componentInfo");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget componentInfo");
         return span;
     }
@@ -79,7 +79,7 @@ public class ComponentInfo extends OverlayWidgetImpl {
     public java.util.List<ComponentData> getComponentDatas() {
         java.util.List<ComponentData> result = new ArrayList<ComponentData>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ComponentData".equalsIgnoreCase(widget.getType())) {
+            if ("ComponentData".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((ComponentData) widget);
             }
         }

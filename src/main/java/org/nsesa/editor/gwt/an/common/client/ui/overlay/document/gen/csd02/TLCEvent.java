@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element TLCEvent is a metadata reference to the Akoma Ntoso URI of an ontology instance of the class Event
+ * The element TLCEvent is a metadata reference to the Akoma Ntoso URI of an ontology instance of the<br/> class Event
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -42,8 +42,8 @@ public class TLCEvent extends ReferenceTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "TLCEvent");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "TLCEvent");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget TLCEvent");
         return span;
     }
@@ -81,6 +81,17 @@ public class TLCEvent extends ReferenceTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> TLCEvent</code> instance
+     */
+    public TLCEvent evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
      * Set <code>hrefAttr</code> property in DSL way
      *
      * @param hrefAttr new value
@@ -103,13 +114,13 @@ public class TLCEvent extends ReferenceTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>shortFormAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param shortFormAttr new value
      * @return <code> TLCEvent</code> instance
      */
-    public TLCEvent evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public TLCEvent shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -121,17 +132,6 @@ public class TLCEvent extends ReferenceTypeComplexType {
      */
     public TLCEvent showAsAttr(final StringSimpleType showAsAttr) {
         setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>shortFormAttr</code> property in DSL way
-     *
-     * @param shortFormAttr new value
-     * @return <code> TLCEvent</code> instance
-     */
-    public TLCEvent shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
         return this;
     }
 

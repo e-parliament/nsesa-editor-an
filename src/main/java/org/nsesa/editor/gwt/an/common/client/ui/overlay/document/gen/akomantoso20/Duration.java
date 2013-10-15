@@ -41,8 +41,8 @@ public class Duration extends PeriodTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "duration");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "duration");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget duration");
         return span;
     }
@@ -70,24 +70,13 @@ public class Duration extends PeriodTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> Duration</code> instance
      */
-    public Duration wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> Duration</code> instance
-     */
-    public Duration periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public Duration evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -103,13 +92,24 @@ public class Duration extends PeriodTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param periodAttr new value
      * @return <code> Duration</code> instance
      */
-    public Duration evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public Duration periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Duration</code> instance
+     */
+    public Duration wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

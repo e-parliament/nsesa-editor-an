@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element FRBRname is the metadata property containing a string for the title to be used in the work-level URI of this document
+ * The element FRBRname is the metadata property containing a string for the title to be used in the<br/> work-level URI of this document
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -41,8 +41,8 @@ public class FRBRname extends ValueTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "FRBRname");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "FRBRname");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget FRBRname");
         return span;
     }
@@ -89,17 +89,6 @@ public class FRBRname extends ValueTypeComplexType {
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> FRBRname</code> instance
-     */
-    public FRBRname idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
      * Set <code>evolvingIdAttr</code> property in DSL way
      *
      * @param evolvingIdAttr new value
@@ -107,6 +96,17 @@ public class FRBRname extends ValueTypeComplexType {
      */
     public FRBRname evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> FRBRname</code> instance
+     */
+    public FRBRname idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 

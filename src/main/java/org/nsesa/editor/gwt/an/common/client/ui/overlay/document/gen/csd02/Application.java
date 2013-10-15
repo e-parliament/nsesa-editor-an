@@ -41,8 +41,8 @@ public class Application extends PeriodTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "application");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "application");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget application");
         return span;
     }
@@ -70,17 +70,6 @@ public class Application extends PeriodTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Application</code> instance
-     */
-    public Application idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
      * Set <code>evolvingIdAttr</code> property in DSL way
      *
      * @param evolvingIdAttr new value
@@ -92,13 +81,13 @@ public class Application extends PeriodTypeComplexType {
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>idAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param idAttr new value
      * @return <code> Application</code> instance
      */
-    public Application wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Application idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 
@@ -110,6 +99,17 @@ public class Application extends PeriodTypeComplexType {
      */
     public Application periodAttr(final AnyURISimpleType periodAttr) {
         setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Application</code> instance
+     */
+    public Application wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

@@ -139,8 +139,8 @@ public class DocStage extends InlineComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "docStage");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "docStage");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget docStage");
         return span;
     }
@@ -168,13 +168,24 @@ public class DocStage extends InlineComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @param idAttr new value
+     * @param alternativeToAttr new value
      * @return <code> DocStage</code> instance
      */
-    public DocStage idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
+    public DocStage alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> DocStage</code> instance
+     */
+    public DocStage classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
         return this;
     }
 
@@ -190,6 +201,50 @@ public class DocStage extends InlineComplexType {
     }
 
     /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> DocStage</code> instance
+     */
+    public DocStage idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> DocStage</code> instance
+     */
+    public DocStage langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> DocStage</code> instance
+     */
+    public DocStage periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> DocStage</code> instance
+     */
+    public DocStage refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
      * Set <code>statusAttr</code> property in DSL way
      *
      * @param statusAttr new value
@@ -197,28 +252,6 @@ public class DocStage extends InlineComplexType {
      */
     public DocStage statusAttr(final StatusTypeSimpleType statusAttr) {
         setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> DocStage</code> instance
-     */
-    public DocStage wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>classAttr</code> property in DSL way
-     *
-     * @param classAttr new value
-     * @return <code> DocStage</code> instance
-     */
-    public DocStage classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
         return this;
     }
 
@@ -245,46 +278,13 @@ public class DocStage extends InlineComplexType {
     }
 
     /**
-     * Set <code>alternativeToAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param alternativeToAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> DocStage</code> instance
      */
-    public DocStage alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> DocStage</code> instance
-     */
-    public DocStage langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> DocStage</code> instance
-     */
-    public DocStage refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> DocStage</code> instance
-     */
-    public DocStage periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public DocStage wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

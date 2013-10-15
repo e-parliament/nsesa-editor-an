@@ -142,8 +142,8 @@ public class ListConclusion extends InlineComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "listConclusion");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "listConclusion");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget listConclusion");
         return span;
     }
@@ -171,6 +171,50 @@ public class ListConclusion extends InlineComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> ListConclusion</code> instance
+     */
+    public ListConclusion alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> ListConclusion</code> instance
+     */
+    public ListConclusion classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> ListConclusion</code> instance
+     */
+    public ListConclusion evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> ListConclusion</code> instance
+     */
+    public ListConclusion idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
      * Set <code>langAttr</code> property in DSL way
      *
      * @param langAttr new value
@@ -182,24 +226,13 @@ public class ListConclusion extends InlineComplexType {
     }
 
     /**
-     * Set <code>spaceAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param spaceAttr new value
+     * @param periodAttr new value
      * @return <code> ListConclusion</code> instance
      */
-    public ListConclusion spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> ListConclusion</code> instance
-     */
-    public ListConclusion wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public ListConclusion periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -215,13 +248,24 @@ public class ListConclusion extends InlineComplexType {
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>spaceAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param spaceAttr new value
      * @return <code> ListConclusion</code> instance
      */
-    public ListConclusion classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public ListConclusion spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> ListConclusion</code> instance
+     */
+    public ListConclusion statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -248,57 +292,13 @@ public class ListConclusion extends InlineComplexType {
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param statusAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> ListConclusion</code> instance
      */
-    public ListConclusion statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> ListConclusion</code> instance
-     */
-    public ListConclusion idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> ListConclusion</code> instance
-     */
-    public ListConclusion evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> ListConclusion</code> instance
-     */
-    public ListConclusion alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> ListConclusion</code> instance
-     */
-    public ListConclusion periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public ListConclusion wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

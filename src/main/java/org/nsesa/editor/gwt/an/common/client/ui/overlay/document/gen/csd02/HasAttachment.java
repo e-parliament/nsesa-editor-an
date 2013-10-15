@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element hasAttachment is a metadata reference to the Akoma Ntoso URI of an attachment of this document
+ * The element hasAttachment is a metadata reference to the Akoma Ntoso URI of an attachment of this<br/> document
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -42,8 +42,8 @@ public class HasAttachment extends ReferenceTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "hasAttachment");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "hasAttachment");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget hasAttachment");
         return span;
     }
@@ -125,6 +125,17 @@ public class HasAttachment extends ReferenceTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> HasAttachment</code> instance
+     */
+    public HasAttachment evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
      * Set <code>hrefAttr</code> property in DSL way
      *
      * @param hrefAttr new value
@@ -147,13 +158,13 @@ public class HasAttachment extends ReferenceTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>shortFormAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param shortFormAttr new value
      * @return <code> HasAttachment</code> instance
      */
-    public HasAttachment evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public HasAttachment shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -165,17 +176,6 @@ public class HasAttachment extends ReferenceTypeComplexType {
      */
     public HasAttachment showAsAttr(final StringSimpleType showAsAttr) {
         setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>shortFormAttr</code> property in DSL way
-     *
-     * @param shortFormAttr new value
-     * @return <code> HasAttachment</code> instance
-     */
-    public HasAttachment shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
         return this;
     }
 

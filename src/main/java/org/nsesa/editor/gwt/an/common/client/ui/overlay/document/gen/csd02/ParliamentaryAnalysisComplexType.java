@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
- * The complex type parliamentaryAnalysis is a list of all the parliamentary analysis elements that can be used on the analysis of a debate
+ * The complex type parliamentaryAnalysis is a list of all the parliamentary analysis elements that can<br/> be used on the analysis of a debate
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -47,8 +47,8 @@ public class ParliamentaryAnalysisComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "parliamentaryAnalysisComplexType");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "parliamentaryAnalysisComplexType");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget parliamentaryAnalysisComplexType");
         return span;
     }
@@ -72,7 +72,7 @@ public class ParliamentaryAnalysisComplexType extends OverlayWidgetImpl {
     public java.util.List<QuorumVerification> getQuorumVerifications() {
         java.util.List<QuorumVerification> result = new ArrayList<QuorumVerification>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("QuorumVerification".equalsIgnoreCase(widget.getType())) {
+            if ("QuorumVerification".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((QuorumVerification) widget);
             }
         }
@@ -106,7 +106,7 @@ public class ParliamentaryAnalysisComplexType extends OverlayWidgetImpl {
     public java.util.List<Voting> getVotings() {
         java.util.List<Voting> result = new ArrayList<Voting>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Voting".equalsIgnoreCase(widget.getType())) {
+            if ("Voting".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Voting) widget);
             }
         }
@@ -140,7 +140,7 @@ public class ParliamentaryAnalysisComplexType extends OverlayWidgetImpl {
     public java.util.List<Recount> getRecounts() {
         java.util.List<Recount> result = new ArrayList<Recount>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Recount".equalsIgnoreCase(widget.getType())) {
+            if ("Recount".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Recount) widget);
             }
         }

@@ -41,8 +41,8 @@ public class FRBRuri extends ValueTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "FRBRuri");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "FRBRuri");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget FRBRuri");
         return span;
     }
@@ -89,17 +89,6 @@ public class FRBRuri extends ValueTypeComplexType {
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> FRBRuri</code> instance
-     */
-    public FRBRuri idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
      * Set <code>evolvingIdAttr</code> property in DSL way
      *
      * @param evolvingIdAttr new value
@@ -107,6 +96,17 @@ public class FRBRuri extends ValueTypeComplexType {
      */
     public FRBRuri evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> FRBRuri</code> instance
+     */
+    public FRBRuri idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 

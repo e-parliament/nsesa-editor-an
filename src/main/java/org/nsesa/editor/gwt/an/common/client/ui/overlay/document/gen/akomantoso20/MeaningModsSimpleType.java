@@ -18,7 +18,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso
  */
 public enum MeaningModsSimpleType {
 
-// FIELDS ------------------
+// ENUM VALUES ------------------
 
     VARIATION("variation"),
     TERMMODIFICATION("termModification"),
@@ -55,5 +55,11 @@ public enum MeaningModsSimpleType {
             }
         }
         return null;
+    }
+
+    private static final String namespaceURI = "http://www.akomantoso.org/2.0";
+
+    public static String getNamespaceURI() {
+        return namespaceURI;
     }
 }

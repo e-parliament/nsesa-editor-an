@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element keyword is a metadata element specifying a keyword associated to the FRBR expression of the document. Attribute dictionary (required) specifies the thesaurus out of which the keyword has been taken. Attribute href points to the fragment of text this keyword is associated to. Keywords without href attribute refer to the content as a whole.
+ * The element keyword is a metadata element specifying a keyword associated to the FRBR expression of<br/> the document. Attribute dictionary (required) specifies the thesaurus out of which the keyword has<br/> been taken. Attribute href points to the fragment of text this keyword is associated to. Keywords<br/> without href attribute refer to the content as a whole.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -42,8 +42,8 @@ public class Keyword extends MetaoptComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "keyword");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "keyword");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget keyword");
         return span;
     }
@@ -61,11 +61,11 @@ public class Keyword extends MetaoptComplexType {
     /**
      * Constructor with required attributes
      */
-    public Keyword(AnyURISimpleType dictionaryAttr, StringSimpleType valueAttr, StringSimpleType showAsAttr) {
+    public Keyword(AnyURISimpleType dictionaryAttr, StringSimpleType showAsAttr, StringSimpleType valueAttr) {
         this();
         setDictionaryAttr(dictionaryAttr);
-        setValueAttr(valueAttr);
         setShowAsAttr(showAsAttr);
+        setValueAttr(valueAttr);
     }
 
 
@@ -78,10 +78,10 @@ public class Keyword extends MetaoptComplexType {
 
     // FIELDS ------------------
     private AnyURISimpleType dictionaryAttr;
-    private StringSimpleType valueAttr;
     private AnyURISimpleType hrefAttr;
-    private StringSimpleType showAsAttr;
     private StringSimpleType shortFormAttr;
+    private StringSimpleType showAsAttr;
+    private StringSimpleType valueAttr;
 
     /**
      * Return <code>dictionaryAttr</code> property
@@ -124,50 +124,6 @@ public class Keyword extends MetaoptComplexType {
      */
     public Keyword dictionaryAttr(final AnyURISimpleType dictionaryAttr) {
         setDictionaryAttr(dictionaryAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>valueAttr</code> property
-     *
-     * @return valueAttr
-     */
-    public StringSimpleType getValueAttr() {
-        if (valueAttr == null) {
-            valueAttr = new StringSimpleType();
-            valueAttr.setValue(getElement().getAttribute("value"));
-        }
-
-        return valueAttr;
-    }
-
-    /**
-     * Return <code>valueAttr</code> property in DSL way
-     *
-     * @return valueAttr
-     */
-    public StringSimpleType valueAttr() {
-        return getValueAttr();
-    }
-
-    /**
-     * Set <code>valueAttr</code> property
-     *
-     * @param valueAttr the new value
-     */
-    public void setValueAttr(final StringSimpleType valueAttr) {
-        this.valueAttr = valueAttr;
-        getElement().setAttribute("value", valueAttr.getValue());
-    }
-
-    /**
-     * Set <code>valueAttr</code> property in DSL way
-     *
-     * @param valueAttr the new value
-     * @return <code>Keyword</code> instance
-     */
-    public Keyword valueAttr(final StringSimpleType valueAttr) {
-        setValueAttr(valueAttr);
         return this;
     }
 
@@ -216,6 +172,50 @@ public class Keyword extends MetaoptComplexType {
     }
 
     /**
+     * Return <code>shortFormAttr</code> property
+     *
+     * @return shortFormAttr
+     */
+    public StringSimpleType getShortFormAttr() {
+        if (shortFormAttr == null) {
+            shortFormAttr = new StringSimpleType();
+            shortFormAttr.setValue(getElement().getAttribute("shortForm"));
+        }
+
+        return shortFormAttr;
+    }
+
+    /**
+     * Return <code>shortFormAttr</code> property in DSL way
+     *
+     * @return shortFormAttr
+     */
+    public StringSimpleType shortFormAttr() {
+        return getShortFormAttr();
+    }
+
+    /**
+     * Set <code>shortFormAttr</code> property
+     *
+     * @param shortFormAttr the new value
+     */
+    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
+        this.shortFormAttr = shortFormAttr;
+        getElement().setAttribute("shortForm", shortFormAttr.getValue());
+    }
+
+    /**
+     * Set <code>shortFormAttr</code> property in DSL way
+     *
+     * @param shortFormAttr the new value
+     * @return <code>Keyword</code> instance
+     */
+    public Keyword shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    /**
      * Return <code>showAsAttr</code> property
      *
      * @return showAsAttr
@@ -260,60 +260,49 @@ public class Keyword extends MetaoptComplexType {
     }
 
     /**
-     * Return <code>shortFormAttr</code> property
+     * Return <code>valueAttr</code> property
      *
-     * @return shortFormAttr
+     * @return valueAttr
      */
-    public StringSimpleType getShortFormAttr() {
-        if (shortFormAttr == null) {
-            shortFormAttr = new StringSimpleType();
-            shortFormAttr.setValue(getElement().getAttribute("shortForm"));
+    public StringSimpleType getValueAttr() {
+        if (valueAttr == null) {
+            valueAttr = new StringSimpleType();
+            valueAttr.setValue(getElement().getAttribute("value"));
         }
 
-        return shortFormAttr;
+        return valueAttr;
     }
 
     /**
-     * Return <code>shortFormAttr</code> property in DSL way
+     * Return <code>valueAttr</code> property in DSL way
      *
-     * @return shortFormAttr
+     * @return valueAttr
      */
-    public StringSimpleType shortFormAttr() {
-        return getShortFormAttr();
+    public StringSimpleType valueAttr() {
+        return getValueAttr();
     }
 
     /**
-     * Set <code>shortFormAttr</code> property
+     * Set <code>valueAttr</code> property
      *
-     * @param shortFormAttr the new value
+     * @param valueAttr the new value
      */
-    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
-        this.shortFormAttr = shortFormAttr;
-        getElement().setAttribute("shortForm", shortFormAttr.getValue());
+    public void setValueAttr(final StringSimpleType valueAttr) {
+        this.valueAttr = valueAttr;
+        getElement().setAttribute("value", valueAttr.getValue());
     }
 
     /**
-     * Set <code>shortFormAttr</code> property in DSL way
+     * Set <code>valueAttr</code> property in DSL way
      *
-     * @param shortFormAttr the new value
+     * @param valueAttr the new value
      * @return <code>Keyword</code> instance
      */
-    public Keyword shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
+    public Keyword valueAttr(final StringSimpleType valueAttr) {
+        setValueAttr(valueAttr);
         return this;
     }
 //Override all attributes methods to be conformant with DSL approach
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Keyword</code> instance
-     */
-    public Keyword idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
 
     /**
      * Set <code>evolvingIdAttr</code> property in DSL way
@@ -323,6 +312,17 @@ public class Keyword extends MetaoptComplexType {
      */
     public Keyword evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Keyword</code> instance
+     */
+    public Keyword idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 
@@ -352,10 +352,10 @@ public class Keyword extends MetaoptComplexType {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         attrs.put("dictionary", getDictionaryAttr() != null ? getDictionaryAttr().getValue() : null);
-        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
-        attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
+        attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
         return attrs;
     }
 

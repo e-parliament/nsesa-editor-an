@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * this element is a hierarchical container called "alinea" either explicitly or due to the local tradition
+ * this element is a hierarchical container called "alinea" either explicitly or due to the local<br/> tradition
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -81,8 +81,8 @@ public class Alinea extends HierarchyComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "alinea");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "alinea");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget alinea");
         return span;
     }
@@ -118,13 +118,24 @@ public class Alinea extends HierarchyComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @param idAttr new value
+     * @param alternativeToAttr new value
      * @return <code> Alinea</code> instance
      */
-    public Alinea idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
+    public Alinea alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Alinea</code> instance
+     */
+    public Alinea classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
         return this;
     }
 
@@ -140,6 +151,17 @@ public class Alinea extends HierarchyComplexType {
     }
 
     /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Alinea</code> instance
+     */
+    public Alinea idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
      * Set <code>langAttr</code> property in DSL way
      *
      * @param langAttr new value
@@ -147,6 +169,28 @@ public class Alinea extends HierarchyComplexType {
      */
     public Alinea langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Alinea</code> instance
+     */
+    public Alinea periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Alinea</code> instance
+     */
+    public Alinea refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -162,13 +206,13 @@ public class Alinea extends HierarchyComplexType {
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>statusAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param statusAttr new value
      * @return <code> Alinea</code> instance
      */
-    public Alinea classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public Alinea statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -202,50 +246,6 @@ public class Alinea extends HierarchyComplexType {
      */
     public Alinea wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> Alinea</code> instance
-     */
-    public Alinea refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr new value
-     * @return <code> Alinea</code> instance
-     */
-    public Alinea statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> Alinea</code> instance
-     */
-    public Alinea alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> Alinea</code> instance
-     */
-    public Alinea periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
         return this;
     }
 

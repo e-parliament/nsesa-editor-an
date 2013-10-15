@@ -1,0 +1,274 @@
+.preface[data-ns="http://www.akomantoso.org/2.0"] {
+    display: block;
+}
+
+.preface[data-ns="http://www.akomantoso.org/2.0"] .docTitle[data-ns="http://www.akomantoso.org/2.0"] {
+    display: block;
+    text-align: center;
+}
+
+.coverPage[data-ns="http://www.akomantoso.org/2.0"] {
+
+}
+
+.coverPage[data-ns="http://www.akomantoso.org/2.0"] .p[data-ns="http://www.akomantoso.org/2.0"] {
+    display: block;
+}
+
+.docTitle[data-ns="http://www.akomantoso.org/2.0"] {
+    font-weight: bold;
+    line-height: 2.5em;
+}
+
+.docStage[data-ns="http://www.akomantoso.org/2.0"] {
+    display: block;
+    font-size: 1.4em;
+}
+
+.docType[data-ns="http://www.akomantoso.org/2.0"] {
+    display: block;
+    font-size: 1.4em;
+}
+
+.docPurpose[data-ns="http://www.akomantoso.org/2.0"] {
+    display: block;
+    font-size: 1.2em;
+}
+
+.body[data-ns="http://www.akomantoso.org/2.0"] {
+    display: block;
+    margin-top: 20px;
+}
+
+.conclusions[data-ns="http://www.akomantoso.org/2.0"] {
+    display: block;
+    margin-top: 20px;
+}
+
+.chapter[data-ns="http://www.akomantoso.org/2.0"] {
+    display: block;
+    width: 98%;
+}
+
+.chapter[data-ns="http://www.akomantoso.org/2.0"] > .num[data-ns="http://www.akomantoso.org/2.0"] {
+    font-size: 1.0em;
+    display: block;
+    text-align: center;
+}
+
+.chapter[data-ns="http://www.akomantoso.org/2.0"] > .heading[data-ns="http://www.akomantoso.org/2.0"] {
+    font-size: 1.5em;
+    display: block;
+    text-align: center;
+}
+
+.article[data-ns="http://www.akomantoso.org/2.0"] {
+    display: block;
+    width: 98%;
+}
+
+.article[data-ns="http://www.akomantoso.org/2.0"] *[data-ns="http://www.akomantoso.org/2.0"] {
+    text-align: left;
+}
+
+.article[data-ns="http://www.akomantoso.org/2.0"] > .num[data-ns="http://www.akomantoso.org/2.0"] {
+    font-size: 1.0em;
+    text-align: center;
+    display: block;
+}
+
+.article[data-ns="http://www.akomantoso.org/2.0"] >  .heading[data-ns="http://www.akomantoso.org/2.0"] {
+    font-size: 1.3em;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.list[data-ns="http://www.akomantoso.org/2.0"] > .intro[data-ns="http://www.akomantoso.org/2.0"] {
+    display: inline;
+}
+
+.list[data-ns="http://www.akomantoso.org/2.0"] > .point[data-ns="http://www.akomantoso.org/2.0"] {
+    margin-left: 2em;
+}
+
+.docNumber[data-ns="http://www.akomantoso.org/2.0"] {
+    font-weight: bold;
+}
+
+.docDate[data-ns="http://www.akomantoso.org/2.0"] {
+    font-weight: bold;
+}
+
+.item[data-ns="http://www.akomantoso.org/2.0"] {
+    display: block;
+}
+
+.num[data-ns="http://www.akomantoso.org/2.0"] + .widget[data-ns="http://www.akomantoso.org/2.0"] {
+    display: inline;
+}
+
+/*
+ This is used to position the following construct:
+ - num (1.)
+ - subparagraph 1
+ - subparagraph 2
+ - subparagraph 3
+
+ (meaning, no content is to be found near the num, only siblings). We therefore move the underlying
+ siblings to the right (implied by the CSS for subparagraphs) and pull it up to the level of the num.
+
+ Note that this is a gross simplification - better solutions should be out there.
+*/
+.num[data-ns="http://www.akomantoso.org/2.0"] ~ .subparagraph[data-ns="http://www.akomantoso.org/2.0"] {
+    display: inline-block;
+    position: relative;
+    top: -2.7em;
+    margin-top: 0;
+}
+
+.num[data-ns="http://www.akomantoso.org/2.0"]:after {
+    content: " ";
+}
+
+.authorialNote[data-ns="http://www.akomantoso.org/2.0"] {
+    color: blue;
+    font-size: 70%;
+    vertical-align: text-top;
+}
+
+.authorialNote[data-ns="http://www.akomantoso.org/2.0"][marker]:before {
+    content: " " attr(marker);
+}
+
+.authorialNote[data-ns="http://www.akomantoso.org/2.0"] > .p[data-ns="http://www.akomantoso.org/2.0"]:not(:empty):before {
+    content: " [";
+}
+
+.authorialNote[data-ns="http://www.akomantoso.org/2.0"] > .p[data-ns="http://www.akomantoso.org/2.0"]:not(:empty):after {
+    content: "]";
+}
+
+.preamble[data-ns="http://www.akomantoso.org/2.0"] > .p[data-ns="http://www.akomantoso.org/2.0"]:after {
+    content: "\A";
+    white-space: pre;
+    margin-top: 1.5em;
+}
+
+.content[data-ns="http://www.akomantoso.org/2.0"] > .p[data-ns="http://www.akomantoso.org/2.0"]:after {
+    content: "\A";
+    white-space: pre;
+    margin-top: 1.5em;
+}
+
+.eol[data-ns="http://www.akomantoso.org/2.0"]:after {
+    content: "\A";
+    white-space: pre;
+    margin-top: 1.5em;
+}
+
+.eop[data-ns="http://www.akomantoso.org/2.0"]:after {
+    content: "\A\A\A";
+    white-space: pre;
+    page-break-after: always;
+    margin-top: 1.5em;
+}
+
+.br[data-ns="http://www.akomantoso.org/2.0"]:after {
+    content: "\A";
+    white-space: pre;
+}
+
+.notes[data-ns="http://www.akomantoso.org/2.0"]:before {
+    content: "Notes";
+    border: 1px solid #000000;
+    background-color: blue;
+    display: block;
+    text-align: center;
+    font-family: Sans-Serif;
+    font-size: 10pt;
+    left: 90%;
+    color: #fff;
+    width: 90px;
+    border-radius: 3px;
+    margin: 0px;
+    padding: 1px;
+    position: relative;
+}
+
+.date[data-ns="http://www.akomantoso.org/2.0"] {
+    color: #86590a;
+}
+
+.placeholder[data-ns="http://www.akomantoso.org/2.0"] {
+    color: #333;
+    background-color: #888;
+}
+
+.notes[data-ns="http://www.akomantoso.org/2.0"] {
+    color: blue;
+    margin-left: 2em;
+}
+
+/* Listings */
+.ul[data-ns="http://www.akomantoso.org/2.0"] {
+    margin: 1.5em;
+}
+
+.ol[data-ns="http://www.akomantoso.org/2.0"] {
+    margin: 1.5em;
+}
+
+.li[data-ns="http://www.akomantoso.org/2.0"] {
+
+}
+
+.table[data-ns="http://www.akomantoso.org/2.0"] {
+    min-width: 90%;
+    padding: 5px;
+}
+
+.table[data-ns="http://www.akomantoso.org/2.0"] .td[data-ns="http://www.akomantoso.org/2.0"] {
+    padding: 5px;
+}
+
+[data-ns="http://www.akomantoso.org/2.0"][href] {
+    text-decoration: underline;
+    color: blue;
+    font-style: italic;
+}
+
+.validation-error[data-ns="http://www.akomantoso.org/2.0"]:before {
+    position: relative;
+    top: -23px;
+    content: attr(error);
+    font-size: .75em;
+    padding: .15em .45em;
+    border-radius: 1em;
+    background: inherit;
+    background-size: 102% 90em;
+}
+
+.validation-error[data-ns="http://www.akomantoso.org/2.0"] {
+    background-color: red;
+}
+
+.placeholder[data-ns="http://www.akomantoso.org/2.0"] {
+    background-color: #fffacd;
+}
+
+.nsesa-inline[data-ns="http://www.akomantoso.org/2.0"] {
+    background-color: #fffacd;
+}
+
+.mainBody[data-ns="http://www.akomantoso.org/2.0"] > .p[data-ns="http://www.akomantoso.org/2.0"] {
+    display: block;
+}
+
+.block[data-ns="http://www.akomantoso.org/2.0"][name="qstart"] {
+    display: none;
+}
+
+.block[data-ns="http://www.akomantoso.org/2.0"][name="qend"] {
+    display: none;
+}

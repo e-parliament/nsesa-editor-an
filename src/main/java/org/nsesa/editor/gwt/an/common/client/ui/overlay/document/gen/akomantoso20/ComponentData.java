@@ -49,8 +49,8 @@ public class ComponentData extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "componentData");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "componentData");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget componentData");
         return span;
     }
@@ -68,12 +68,12 @@ public class ComponentData extends OverlayWidgetImpl {
     /**
      * Constructor with required attributes
      */
-    public ComponentData(AnyURISimpleType hrefAttr, StringSimpleType showAsAttr, IDSimpleType idAttr, StringSimpleType nameAttr) {
+    public ComponentData(AnyURISimpleType hrefAttr, IDSimpleType idAttr, StringSimpleType nameAttr, StringSimpleType showAsAttr) {
         this();
         setHrefAttr(hrefAttr);
-        setShowAsAttr(showAsAttr);
         setIdAttr(idAttr);
         setNameAttr(nameAttr);
+        setShowAsAttr(showAsAttr);
     }
 
 
@@ -85,13 +85,91 @@ public class ComponentData extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private AnyURISimpleType hrefAttr;
-    private StringSimpleType showAsAttr;
-    private StringSimpleType shortFormAttr;
-    private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private String wildcardContentAttr;
+    private AnyURISimpleType hrefAttr;
+    private IDSimpleType idAttr;
     private StringSimpleType nameAttr;
+    private StringSimpleType shortFormAttr;
+    private StringSimpleType showAsAttr;
+    private String wildcardContentAttr;
+
+    /**
+     * Return <code>java.util.List<ComponentData></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<ComponentData> getComponentDatas() {
+        java.util.List<ComponentData> result = new ArrayList<ComponentData>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("ComponentData".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((ComponentData) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<ComponentData></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<ComponentData> getComponentDataList() {
+        return getComponentDatas();
+    }
+
+    /**
+     * Add <code>java.util.List<ComponentData></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public ComponentData addComponentData(ComponentData componentDataElem) {
+        this.addOverlayWidget(componentDataElem);
+        return componentDataElem;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+        }
+
+        return evolvingIdAttr;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property
+     *
+     * @param evolvingIdAttr the new value
+     */
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr the new value
+     * @return <code>ComponentData</code> instance
+     */
+    public ComponentData evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
 
     /**
      * Return <code>hrefAttr</code> property
@@ -134,94 +212,6 @@ public class ComponentData extends OverlayWidgetImpl {
      */
     public ComponentData hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>showAsAttr</code> property
-     *
-     * @return showAsAttr
-     */
-    public StringSimpleType getShowAsAttr() {
-        if (showAsAttr == null) {
-            showAsAttr = new StringSimpleType();
-            showAsAttr.setValue(getElement().getAttribute("showAs"));
-        }
-
-        return showAsAttr;
-    }
-
-    /**
-     * Return <code>showAsAttr</code> property in DSL way
-     *
-     * @return showAsAttr
-     */
-    public StringSimpleType showAsAttr() {
-        return getShowAsAttr();
-    }
-
-    /**
-     * Set <code>showAsAttr</code> property
-     *
-     * @param showAsAttr the new value
-     */
-    public void setShowAsAttr(final StringSimpleType showAsAttr) {
-        this.showAsAttr = showAsAttr;
-        getElement().setAttribute("showAs", showAsAttr.getValue());
-    }
-
-    /**
-     * Set <code>showAsAttr</code> property in DSL way
-     *
-     * @param showAsAttr the new value
-     * @return <code>ComponentData</code> instance
-     */
-    public ComponentData showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>shortFormAttr</code> property
-     *
-     * @return shortFormAttr
-     */
-    public StringSimpleType getShortFormAttr() {
-        if (shortFormAttr == null) {
-            shortFormAttr = new StringSimpleType();
-            shortFormAttr.setValue(getElement().getAttribute("shortForm"));
-        }
-
-        return shortFormAttr;
-    }
-
-    /**
-     * Return <code>shortFormAttr</code> property in DSL way
-     *
-     * @return shortFormAttr
-     */
-    public StringSimpleType shortFormAttr() {
-        return getShortFormAttr();
-    }
-
-    /**
-     * Set <code>shortFormAttr</code> property
-     *
-     * @param shortFormAttr the new value
-     */
-    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
-        this.shortFormAttr = shortFormAttr;
-        getElement().setAttribute("shortForm", shortFormAttr.getValue());
-    }
-
-    /**
-     * Set <code>shortFormAttr</code> property in DSL way
-     *
-     * @param shortFormAttr the new value
-     * @return <code>ComponentData</code> instance
-     */
-    public ComponentData shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -270,46 +260,134 @@ public class ComponentData extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>evolvingIdAttr</code> property
+     * Return <code>nameAttr</code> property
      *
-     * @return evolvingIdAttr
+     * @return nameAttr
      */
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+    public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+            nameAttr = new StringSimpleType();
+            nameAttr.setValue(getElement().getAttribute("name"));
         }
 
-        return evolvingIdAttr;
+        return nameAttr;
     }
 
     /**
-     * Return <code>evolvingIdAttr</code> property in DSL way
+     * Return <code>nameAttr</code> property in DSL way
      *
-     * @return evolvingIdAttr
+     * @return nameAttr
      */
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
+    public StringSimpleType nameAttr() {
+        return getNameAttr();
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property
+     * Set <code>nameAttr</code> property
      *
-     * @param evolvingIdAttr the new value
+     * @param nameAttr the new value
      */
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+        getElement().setAttribute("name", nameAttr.getValue());
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>nameAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr the new value
+     * @param nameAttr the new value
      * @return <code>ComponentData</code> instance
      */
-    public ComponentData evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public ComponentData nameAttr(final StringSimpleType nameAttr) {
+        setNameAttr(nameAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>shortFormAttr</code> property
+     *
+     * @return shortFormAttr
+     */
+    public StringSimpleType getShortFormAttr() {
+        if (shortFormAttr == null) {
+            shortFormAttr = new StringSimpleType();
+            shortFormAttr.setValue(getElement().getAttribute("shortForm"));
+        }
+
+        return shortFormAttr;
+    }
+
+    /**
+     * Return <code>shortFormAttr</code> property in DSL way
+     *
+     * @return shortFormAttr
+     */
+    public StringSimpleType shortFormAttr() {
+        return getShortFormAttr();
+    }
+
+    /**
+     * Set <code>shortFormAttr</code> property
+     *
+     * @param shortFormAttr the new value
+     */
+    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
+        this.shortFormAttr = shortFormAttr;
+        getElement().setAttribute("shortForm", shortFormAttr.getValue());
+    }
+
+    /**
+     * Set <code>shortFormAttr</code> property in DSL way
+     *
+     * @param shortFormAttr the new value
+     * @return <code>ComponentData</code> instance
+     */
+    public ComponentData shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>showAsAttr</code> property
+     *
+     * @return showAsAttr
+     */
+    public StringSimpleType getShowAsAttr() {
+        if (showAsAttr == null) {
+            showAsAttr = new StringSimpleType();
+            showAsAttr.setValue(getElement().getAttribute("showAs"));
+        }
+
+        return showAsAttr;
+    }
+
+    /**
+     * Return <code>showAsAttr</code> property in DSL way
+     *
+     * @return showAsAttr
+     */
+    public StringSimpleType showAsAttr() {
+        return getShowAsAttr();
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property
+     *
+     * @param showAsAttr the new value
+     */
+    public void setShowAsAttr(final StringSimpleType showAsAttr) {
+        this.showAsAttr = showAsAttr;
+        getElement().setAttribute("showAs", showAsAttr.getValue());
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property in DSL way
+     *
+     * @param showAsAttr the new value
+     * @return <code>ComponentData</code> instance
+     */
+    public ComponentData showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
         return this;
     }
 
@@ -355,85 +433,6 @@ public class ComponentData extends OverlayWidgetImpl {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
-
-    /**
-     * Return <code>nameAttr</code> property
-     *
-     * @return nameAttr
-     */
-    public StringSimpleType getNameAttr() {
-        if (nameAttr == null) {
-            nameAttr = new StringSimpleType();
-            nameAttr.setValue(getElement().getAttribute("name"));
-        }
-
-        return nameAttr;
-    }
-
-    /**
-     * Return <code>nameAttr</code> property in DSL way
-     *
-     * @return nameAttr
-     */
-    public StringSimpleType nameAttr() {
-        return getNameAttr();
-    }
-
-    /**
-     * Set <code>nameAttr</code> property
-     *
-     * @param nameAttr the new value
-     */
-    public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-        getElement().setAttribute("name", nameAttr.getValue());
-    }
-
-    /**
-     * Set <code>nameAttr</code> property in DSL way
-     *
-     * @param nameAttr the new value
-     * @return <code>ComponentData</code> instance
-     */
-    public ComponentData nameAttr(final StringSimpleType nameAttr) {
-        setNameAttr(nameAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>java.util.List<ComponentData></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<ComponentData> getComponentDatas() {
-        java.util.List<ComponentData> result = new ArrayList<ComponentData>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ComponentData".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((ComponentData) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<ComponentData></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<ComponentData> getComponentDataList() {
-        return getComponentDatas();
-    }
-
-    /**
-     * Add <code>java.util.List<ComponentData></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public ComponentData addComponentData(ComponentData componentDataElem) {
-        this.addOverlayWidget(componentDataElem);
-        return componentDataElem;
-    }
-
 //Override all attributes methods to be conformant with DSL approach
 
     /**
@@ -450,13 +449,13 @@ public class ComponentData extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
-        attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
-        attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
+        attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }
 

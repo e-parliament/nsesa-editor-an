@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element extractText is an inline element containing a string used as an extract from another document. Attribute quote is used to specify the quote character used in the original; no quote attribute implies that the quote is left in the text; quote="" implies that there is no quote character.
+ * the element extractText is an inline element containing a string used as an extract from another<br/> document. Attribute quote is used to specify the quote character used in the original; no quote<br/> attribute implies that the quote is left in the text; quote="" implies that there is no quote<br/> character.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -142,8 +142,8 @@ public class ExtractText extends InlineComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "extractText");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "extractText");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget extractText");
         return span;
     }
@@ -167,52 +167,8 @@ public class ExtractText extends InlineComplexType {
     }
 
     // FIELDS ------------------
-    private StringSimpleType startQuoteAttr;
     private StringSimpleType endQuoteAttr;
-
-    /**
-     * Return <code>startQuoteAttr</code> property
-     *
-     * @return startQuoteAttr
-     */
-    public StringSimpleType getStartQuoteAttr() {
-        if (startQuoteAttr == null) {
-            startQuoteAttr = new StringSimpleType();
-            startQuoteAttr.setValue(getElement().getAttribute("startQuote"));
-        }
-
-        return startQuoteAttr;
-    }
-
-    /**
-     * Return <code>startQuoteAttr</code> property in DSL way
-     *
-     * @return startQuoteAttr
-     */
-    public StringSimpleType startQuoteAttr() {
-        return getStartQuoteAttr();
-    }
-
-    /**
-     * Set <code>startQuoteAttr</code> property
-     *
-     * @param startQuoteAttr the new value
-     */
-    public void setStartQuoteAttr(final StringSimpleType startQuoteAttr) {
-        this.startQuoteAttr = startQuoteAttr;
-        getElement().setAttribute("startQuote", startQuoteAttr.getValue());
-    }
-
-    /**
-     * Set <code>startQuoteAttr</code> property in DSL way
-     *
-     * @param startQuoteAttr the new value
-     * @return <code>ExtractText</code> instance
-     */
-    public ExtractText startQuoteAttr(final StringSimpleType startQuoteAttr) {
-        setStartQuoteAttr(startQuoteAttr);
-        return this;
-    }
+    private StringSimpleType startQuoteAttr;
 
     /**
      * Return <code>endQuoteAttr</code> property
@@ -257,7 +213,95 @@ public class ExtractText extends InlineComplexType {
         setEndQuoteAttr(endQuoteAttr);
         return this;
     }
+
+    /**
+     * Return <code>startQuoteAttr</code> property
+     *
+     * @return startQuoteAttr
+     */
+    public StringSimpleType getStartQuoteAttr() {
+        if (startQuoteAttr == null) {
+            startQuoteAttr = new StringSimpleType();
+            startQuoteAttr.setValue(getElement().getAttribute("startQuote"));
+        }
+
+        return startQuoteAttr;
+    }
+
+    /**
+     * Return <code>startQuoteAttr</code> property in DSL way
+     *
+     * @return startQuoteAttr
+     */
+    public StringSimpleType startQuoteAttr() {
+        return getStartQuoteAttr();
+    }
+
+    /**
+     * Set <code>startQuoteAttr</code> property
+     *
+     * @param startQuoteAttr the new value
+     */
+    public void setStartQuoteAttr(final StringSimpleType startQuoteAttr) {
+        this.startQuoteAttr = startQuoteAttr;
+        getElement().setAttribute("startQuote", startQuoteAttr.getValue());
+    }
+
+    /**
+     * Set <code>startQuoteAttr</code> property in DSL way
+     *
+     * @param startQuoteAttr the new value
+     * @return <code>ExtractText</code> instance
+     */
+    public ExtractText startQuoteAttr(final StringSimpleType startQuoteAttr) {
+        setStartQuoteAttr(startQuoteAttr);
+        return this;
+    }
 //Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> ExtractText</code> instance
+     */
+    public ExtractText alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> ExtractText</code> instance
+     */
+    public ExtractText classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> ExtractText</code> instance
+     */
+    public ExtractText evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> ExtractText</code> instance
+     */
+    public ExtractText idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
 
     /**
      * Set <code>langAttr</code> property in DSL way
@@ -271,24 +315,13 @@ public class ExtractText extends InlineComplexType {
     }
 
     /**
-     * Set <code>spaceAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param spaceAttr new value
+     * @param periodAttr new value
      * @return <code> ExtractText</code> instance
      */
-    public ExtractText spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> ExtractText</code> instance
-     */
-    public ExtractText wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public ExtractText periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -304,13 +337,24 @@ public class ExtractText extends InlineComplexType {
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>spaceAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param spaceAttr new value
      * @return <code> ExtractText</code> instance
      */
-    public ExtractText classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public ExtractText spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> ExtractText</code> instance
+     */
+    public ExtractText statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -337,57 +381,13 @@ public class ExtractText extends InlineComplexType {
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param statusAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> ExtractText</code> instance
      */
-    public ExtractText statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> ExtractText</code> instance
-     */
-    public ExtractText idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> ExtractText</code> instance
-     */
-    public ExtractText evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> ExtractText</code> instance
-     */
-    public ExtractText alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> ExtractText</code> instance
-     */
-    public ExtractText periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public ExtractText wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -405,8 +405,8 @@ public class ExtractText extends InlineComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("startQuote", getStartQuoteAttr() != null ? getStartQuoteAttr().getValue() : null);
         attrs.put("endQuote", getEndQuoteAttr() != null ? getEndQuoteAttr().getValue() : null);
+        attrs.put("startQuote", getStartQuoteAttr() != null ? getStartQuoteAttr().getValue() : null);
         return attrs;
     }
 

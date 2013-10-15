@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element passiveRef is a metadata reference to the Akoma Ntoso URI of a document providing modifications on this document (i.e., a passive references)
+ * The element passiveRef is a metadata reference to the Akoma Ntoso URI of a document providing<br/> modifications on this document (i.e., a passive references)
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -42,8 +42,8 @@ public class PassiveRef extends ReferenceTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "passiveRef");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "passiveRef");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget passiveRef");
         return span;
     }
@@ -81,6 +81,17 @@ public class PassiveRef extends ReferenceTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> PassiveRef</code> instance
+     */
+    public PassiveRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
      * Set <code>hrefAttr</code> property in DSL way
      *
      * @param hrefAttr new value
@@ -103,13 +114,13 @@ public class PassiveRef extends ReferenceTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>shortFormAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param shortFormAttr new value
      * @return <code> PassiveRef</code> instance
      */
-    public PassiveRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public PassiveRef shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -121,17 +132,6 @@ public class PassiveRef extends ReferenceTypeComplexType {
      */
     public PassiveRef showAsAttr(final StringSimpleType showAsAttr) {
         setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>shortFormAttr</code> property in DSL way
-     *
-     * @param shortFormAttr new value
-     * @return <code> PassiveRef</code> instance
-     */
-    public PassiveRef shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
         return this;
     }
 

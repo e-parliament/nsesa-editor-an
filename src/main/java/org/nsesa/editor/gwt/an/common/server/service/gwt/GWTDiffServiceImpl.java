@@ -33,15 +33,15 @@ import java.util.ArrayList;
 public class GWTDiffServiceImpl extends SpringRemoteServiceServlet implements GWTDiffService {
 
     // style for BI diffing
-    public static final String originalChangeTemplate = "<span class=\"widget change highlight-diff\" type=\"change\" ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
+    public static final String originalChangeTemplate = "<span class=\"widget change highlight-diff\" data-type=\"change\" data-ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
 
     // style for complex diffing
-    public static final String originalComplexChangeTemplate = "<span class=\"widget change highlight-red\" type=\"change\" ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
-    public static final String complexInsertTemplate = "<span class=\"widget change highlight-ins\" type=\"change\" ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
-    public static final String complexDeleteTemplate = "<span class=\"widget change highlight-del\" type=\"change\" ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
-    public static final String complexInsertNormalTemplate = "<span class=\"widget change highlight-ins-normal\" type=\"change\" ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
-    public static final String complexDeleteNormalTemplate = "<span class=\"widget change highlight-del-normal\" type=\"change\" ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
-    public static final String complexChangeTemplate = "<span class=\"widget change highlight-change\" type=\"change\" ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
+    public static final String originalComplexChangeTemplate = "<span class=\"widget change highlight-red\" data-type=\"change\" data-ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
+    public static final String complexInsertTemplate = "<span class=\"widget change highlight-ins\" data-type=\"change\" data-ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
+    public static final String complexDeleteTemplate = "<span class=\"widget change highlight-del\" data-type=\"change\" data-ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
+    public static final String complexInsertNormalTemplate = "<span class=\"widget change highlight-ins-normal\" data-type=\"change\" data-ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
+    public static final String complexDeleteNormalTemplate = "<span class=\"widget change highlight-del-normal\" data-type=\"change\" data-ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
+    public static final String complexChangeTemplate = "<span class=\"widget change highlight-change\" data-type=\"change\" data-ns=\"http://www.akomantoso.org/2.0\">{0}</span>";
 
     private DiffService diffService;
 

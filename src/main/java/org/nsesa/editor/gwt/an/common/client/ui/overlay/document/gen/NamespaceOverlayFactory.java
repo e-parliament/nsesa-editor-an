@@ -28,6 +28,7 @@ import java.util.logging.Logger;
 public class NamespaceOverlayFactory extends DefaultOverlayFactory {
 
     private final static Logger LOG = Logger.getLogger(NamespaceOverlayFactory.class.getName());
+
     /**
      * the namespace URI of the overlay factory *
      */

@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element recordedTime is an inline element for the specification of an explicit mention of a time (e.g., in a debate)
+ * the element recordedTime is an inline element for the specification of an explicit mention of a time<br/> (e.g., in a debate)
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -142,8 +142,8 @@ public class RecordedTime extends InlineComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "recordedTime");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "recordedTime");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget recordedTime");
         return span;
     }
@@ -175,51 +175,8 @@ public class RecordedTime extends InlineComplexType {
     }
 
     // FIELDS ------------------
-    private TimeTypeSimpleType typeAttr;
     private TimeSimpleType timeAttr;
-
-    /**
-     * Return <code>typeAttr</code> property
-     *
-     * @return typeAttr
-     */
-    public TimeTypeSimpleType getTypeAttr() {
-        if (typeAttr == null) {
-            typeAttr = TimeTypeSimpleType.fromString(getElement().getAttribute("type"));
-        }
-
-        return typeAttr;
-    }
-
-    /**
-     * Return <code>typeAttr</code> property in DSL way
-     *
-     * @return typeAttr
-     */
-    public TimeTypeSimpleType typeAttr() {
-        return getTypeAttr();
-    }
-
-    /**
-     * Set <code>typeAttr</code> property
-     *
-     * @param typeAttr the new value
-     */
-    public void setTypeAttr(final TimeTypeSimpleType typeAttr) {
-        this.typeAttr = typeAttr;
-        getElement().setAttribute("type", typeAttr.value());
-    }
-
-    /**
-     * Set <code>typeAttr</code> property in DSL way
-     *
-     * @param typeAttr the new value
-     * @return <code>RecordedTime</code> instance
-     */
-    public RecordedTime typeAttr(final TimeTypeSimpleType typeAttr) {
-        setTypeAttr(typeAttr);
-        return this;
-    }
+    private TimeTypeSimpleType typeAttr;
 
     /**
      * Return <code>timeAttr</code> property
@@ -264,7 +221,94 @@ public class RecordedTime extends InlineComplexType {
         setTimeAttr(timeAttr);
         return this;
     }
+
+    /**
+     * Return <code>typeAttr</code> property
+     *
+     * @return typeAttr
+     */
+    public TimeTypeSimpleType getTypeAttr() {
+        if (typeAttr == null) {
+            typeAttr = TimeTypeSimpleType.fromString(getElement().getAttribute("type"));
+        }
+
+        return typeAttr;
+    }
+
+    /**
+     * Return <code>typeAttr</code> property in DSL way
+     *
+     * @return typeAttr
+     */
+    public TimeTypeSimpleType typeAttr() {
+        return getTypeAttr();
+    }
+
+    /**
+     * Set <code>typeAttr</code> property
+     *
+     * @param typeAttr the new value
+     */
+    public void setTypeAttr(final TimeTypeSimpleType typeAttr) {
+        this.typeAttr = typeAttr;
+        getElement().setAttribute("type", typeAttr.value());
+    }
+
+    /**
+     * Set <code>typeAttr</code> property in DSL way
+     *
+     * @param typeAttr the new value
+     * @return <code>RecordedTime</code> instance
+     */
+    public RecordedTime typeAttr(final TimeTypeSimpleType typeAttr) {
+        setTypeAttr(typeAttr);
+        return this;
+    }
 //Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> RecordedTime</code> instance
+     */
+    public RecordedTime alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> RecordedTime</code> instance
+     */
+    public RecordedTime classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> RecordedTime</code> instance
+     */
+    public RecordedTime evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> RecordedTime</code> instance
+     */
+    public RecordedTime idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
 
     /**
      * Set <code>langAttr</code> property in DSL way
@@ -278,24 +322,13 @@ public class RecordedTime extends InlineComplexType {
     }
 
     /**
-     * Set <code>spaceAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param spaceAttr new value
+     * @param periodAttr new value
      * @return <code> RecordedTime</code> instance
      */
-    public RecordedTime spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> RecordedTime</code> instance
-     */
-    public RecordedTime wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public RecordedTime periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -311,13 +344,24 @@ public class RecordedTime extends InlineComplexType {
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>spaceAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param spaceAttr new value
      * @return <code> RecordedTime</code> instance
      */
-    public RecordedTime classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public RecordedTime spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> RecordedTime</code> instance
+     */
+    public RecordedTime statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -344,57 +388,13 @@ public class RecordedTime extends InlineComplexType {
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param statusAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> RecordedTime</code> instance
      */
-    public RecordedTime statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> RecordedTime</code> instance
-     */
-    public RecordedTime idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> RecordedTime</code> instance
-     */
-    public RecordedTime evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> RecordedTime</code> instance
-     */
-    public RecordedTime alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> RecordedTime</code> instance
-     */
-    public RecordedTime periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public RecordedTime wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -412,8 +412,8 @@ public class RecordedTime extends InlineComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
         attrs.put("time", getTimeAttr() != null ? getTimeAttr().getValue() : null);
+        attrs.put("type", getTypeAttr() != null ? getTypeAttr().value() : null);
         return attrs;
     }
 

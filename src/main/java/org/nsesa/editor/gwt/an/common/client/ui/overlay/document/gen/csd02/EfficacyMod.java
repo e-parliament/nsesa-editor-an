@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element efficacyMod is a metadata element specifying an (active or passive) modification in efficacy for the document.
+ * The element efficacyMod is a metadata element specifying an (active or passive) modification in<br/> efficacy for the document.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -52,8 +52,8 @@ public class EfficacyMod extends ModificationTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "efficacyMod");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "efficacyMod");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget efficacyMod");
         return span;
     }
@@ -133,6 +133,17 @@ public class EfficacyMod extends ModificationTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> EfficacyMod</code> instance
+     */
+    public EfficacyMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
      * Set <code>exclusionAttr</code> property in DSL way
      *
      * @param exclusionAttr new value
@@ -140,17 +151,6 @@ public class EfficacyMod extends ModificationTypeComplexType {
      */
     public EfficacyMod exclusionAttr(final BooleanSimpleType exclusionAttr) {
         setExclusionAttr(exclusionAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>incompleteAttr</code> property in DSL way
-     *
-     * @param incompleteAttr new value
-     * @return <code> EfficacyMod</code> instance
-     */
-    public EfficacyMod incompleteAttr(final BooleanSimpleType incompleteAttr) {
-        setIncompleteAttr(incompleteAttr);
         return this;
     }
 
@@ -166,13 +166,24 @@ public class EfficacyMod extends ModificationTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>incompleteAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param incompleteAttr new value
      * @return <code> EfficacyMod</code> instance
      */
-    public EfficacyMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public EfficacyMod incompleteAttr(final BooleanSimpleType incompleteAttr) {
+        setIncompleteAttr(incompleteAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> EfficacyMod</code> instance
+     */
+    public EfficacyMod periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -188,17 +199,6 @@ public class EfficacyMod extends ModificationTypeComplexType {
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> EfficacyMod</code> instance
-     */
-    public EfficacyMod wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
      * Set <code>statusAttr</code> property in DSL way
      *
      * @param statusAttr new value
@@ -210,13 +210,13 @@ public class EfficacyMod extends ModificationTypeComplexType {
     }
 
     /**
-     * Set <code>periodAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param periodAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> EfficacyMod</code> instance
      */
-    public EfficacyMod periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public EfficacyMod wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

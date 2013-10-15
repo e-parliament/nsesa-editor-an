@@ -21,7 +21,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * Element documentCollection is used for describing the structure and content of a collection of other documents chosen and combined for any reason whatsoever
+ * Element documentCollection is used for describing the structure and content of a collection of other<br/> documents chosen and combined for any reason whatsoever
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -48,8 +48,8 @@ public class DocumentCollection extends CollectionStructureComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "documentCollection");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "documentCollection");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget documentCollection");
         return span;
     }

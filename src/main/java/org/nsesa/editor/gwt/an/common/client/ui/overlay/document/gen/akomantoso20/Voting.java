@@ -46,8 +46,8 @@ public class Voting extends ParliamentaryAnalysisTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "voting");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "voting");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget voting");
         return span;
     }
@@ -83,24 +83,13 @@ public class Voting extends ParliamentaryAnalysisTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>outcomeAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param outcomeAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> Voting</code> instance
      */
-    public Voting outcomeAttr(final AnyURISimpleType outcomeAttr) {
-        setOutcomeAttr(outcomeAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Voting</code> instance
-     */
-    public Voting wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Voting evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -116,17 +105,6 @@ public class Voting extends ParliamentaryAnalysisTypeComplexType {
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> Voting</code> instance
-     */
-    public Voting refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -138,13 +116,35 @@ public class Voting extends ParliamentaryAnalysisTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>outcomeAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param outcomeAttr new value
      * @return <code> Voting</code> instance
      */
-    public Voting evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public Voting outcomeAttr(final AnyURISimpleType outcomeAttr) {
+        setOutcomeAttr(outcomeAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Voting</code> instance
+     */
+    public Voting refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Voting</code> instance
+     */
+    public Voting wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

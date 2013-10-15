@@ -49,21 +49,50 @@ the web app class loader and the classes that it holds. -->
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     </servlet>
 
+    <!-- Atmosphere -->
+    <servlet>
+        <description>AtmosphereServlet</description>
+        <servlet-name>AtmosphereServlet</servlet-name>
+        <servlet-class>org.atmosphere.cpr.AtmosphereServlet</servlet-class>
+        <init-param>
+            <param-name>org.atmosphere.cpr.AtmosphereInterceptor</param-name>
+            <param-value>org.atmosphere.gwt20.server.GwtRpcInterceptor</param-value>
+        </init-param>
+        <!--<init-param>
+            <param-name>org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        -->
+        <load-on-startup>1</load-on-startup>
+        <!--Uncomment if you want to use Servlet 3.0 Async Support-->
+        <!--<async-supported>true</async-supported>-->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AtmosphereServlet</servlet-name>
+        <url-pattern>/atmosphere/*</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>spring</servlet-name>
         <url-pattern>/remote_logging</url-pattern>
-        <url-pattern>/AkomaNtosoEditor/remote_logging</url-pattern>
-        <url-pattern>/AkomaNtosoEditor/gwtService</url-pattern>
-        <url-pattern>/AkomaNtosoEditor/gwtDiffService</url-pattern>
-        <url-pattern>/AkomaNtosoEditor/gwtDocumentService</url-pattern>
-        <url-pattern>/AkomaNtosoEditor/gwtAmendmentService</url-pattern>
-        <url-pattern>/AkomaNtosoEditor/download/*</url-pattern>
+        <url-pattern>/AmendmentEditor/remote_logging</url-pattern>
+        <url-pattern>/AmendmentEditor/gwtService</url-pattern>
+        <url-pattern>/AmendmentEditor/gwtDiffService</url-pattern>
+        <url-pattern>/AmendmentEditor/gwtDocumentService</url-pattern>
+        <url-pattern>/AmendmentEditor/gwtAmendmentService</url-pattern>
+        <url-pattern>/AmendmentEditor/download/*</url-pattern>
 
         <url-pattern>/DraftingEditor/remote_logging</url-pattern>
         <url-pattern>/DraftingEditor/gwtService</url-pattern>
         <url-pattern>/DraftingEditor/gwtDiffService</url-pattern>
         <url-pattern>/DraftingEditor/gwtDocumentService</url-pattern>
         <url-pattern>/DraftingEditor/download/*</url-pattern>
+
+        <url-pattern>/MarkupEditor/remote_logging</url-pattern>
+        <url-pattern>/MarkupEditor/gwtService</url-pattern>
+        <url-pattern>/MarkupEditor/gwtDiffService</url-pattern>
+        <url-pattern>/MarkupEditor/gwtDocumentService</url-pattern>
+        <url-pattern>/MarkupEditor/download/*</url-pattern>
 
     </servlet-mapping>
 

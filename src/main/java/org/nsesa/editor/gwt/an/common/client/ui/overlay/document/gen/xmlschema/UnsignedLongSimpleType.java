@@ -29,8 +29,8 @@ public class UnsignedLongSimpleType extends NonNegativeIntegerSimpleType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "unsignedLongSimpleType");
-        span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
+        span.setAttribute("data-type", "unsignedLongSimpleType");
+        span.setAttribute("data-ns", "http://www.w3.org/2001/XMLSchema");
         span.setClassName("widget unsignedLongSimpleType");
         return span;
     }

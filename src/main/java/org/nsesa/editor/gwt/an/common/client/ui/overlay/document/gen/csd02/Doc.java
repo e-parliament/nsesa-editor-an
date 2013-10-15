@@ -21,7 +21,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * Element doc is used for describing the structure and content of any other document that is not included in the list of document explicitly managed by Akoma Ntoso
+ * Element doc is used for describing the structure and content of any other document that is not<br/> included in the list of document explicitly managed by Akoma Ntoso
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -49,8 +49,8 @@ public class Doc extends OpenStructureComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "doc");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "doc");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget doc");
         return span;
     }

@@ -32,6 +32,7 @@ import com.google.inject.name.Named;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 import org.nsesa.editor.gwt.an.common.client.mode.StructureViewMode;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BlocksoptComplexType;
 import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEvent;
 import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEventHandler;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
@@ -51,6 +52,7 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.
 import org.nsesa.editor.gwt.core.client.ui.overlay.*;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditor;
+import org.nsesa.editor.gwt.core.shared.DocumentContentDTO;
 import org.nsesa.editor.gwt.core.shared.DocumentDTO;
 import org.nsesa.editor.gwt.inline.client.event.AttachInlineEditorEvent;
 import org.nsesa.editor.gwt.inline.client.event.DetachInlineEditorEvent;
@@ -91,10 +93,14 @@ public class DraftingDocumentController extends DefaultDocumentController {
     private PopupPanel actionBarCreatePanelControllerPopup = new PopupPanel();
 
     // ------------- selector ------------------------
-    private final OverlayWidgetSelector overlayWidgetSelector = new OverlayWidgetSelector() {
+    private final OverlayWidgetSelector upDownOverlayWidgetSelector = new OverlayWidgetSelector() {
         @Override
         public boolean select(OverlayWidget toSelect) {
-            return toSelect instanceof BasehierarchyComplexType || toSelect.getOverlayElement().getClassName().contains("nsesa-inline");
+            return toSelect.getOverlayElement().getClassName().contains("nsesa-inline")
+                    || toSelect instanceof BasehierarchyComplexType
+                    || toSelect instanceof BlocksoptComplexType
+                    || toSelect instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType
+                    || toSelect instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BlocksoptComplexType;
         }
     };
 
@@ -278,7 +284,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                 } else {
                     // this is a sibling
                     event.getParentOverlayWidget().addOverlayWidget(child, event.getReference().getIndex() + 1, true);
-                    DOM.insertChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getReference().getDomIndex());
+                    DOM.insertChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getReference().getDomIndex() + 1);
                     if (!child.isAttached()) child.onAttach();
                 }
 
@@ -418,7 +424,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                         actionBarCreatePanelController.highlightNext();
                     } else if (!inlineEditorController.isShowing()) {
 
-                        final OverlayWidget next = activeOverlayWidget != null ? activeOverlayWidget.next(overlayWidgetSelector) : sourceFileController.getOverlayWidgets().get(0);
+                        final OverlayWidget next = activeOverlayWidget != null ? activeOverlayWidget.next(upDownOverlayWidgetSelector) : sourceFileController.getOverlayWidgets().get(0);
                         if (next != null) {
                             documentEventBus.fireEvent(new OverlayWidgetSelectEvent(next, DraftingDocumentController.this));
                             clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(next.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
@@ -435,7 +441,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                         actionBarCreatePanelController.highlightPrevious();
                     } else if (!inlineEditorController.isShowing()) {
                         if (activeOverlayWidget != null) {
-                            final OverlayWidget previous = activeOverlayWidget.previous(overlayWidgetSelector);
+                            final OverlayWidget previous = activeOverlayWidget.previous(upDownOverlayWidgetSelector);
                             if (previous != null) {
                                 documentEventBus.fireEvent(new OverlayWidgetSelectEvent(previous, DraftingDocumentController.this));
                                 clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(previous.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
@@ -597,8 +603,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
         if (parentOverlayWidget != null) {
 
             // find the target to make active after the deletion
-            OverlayWidget target = overlayWidget.next(overlayWidgetSelector);
-            if (target == null) target = overlayWidget.previous(overlayWidgetSelector);
+            OverlayWidget target = overlayWidget.next(upDownOverlayWidgetSelector);
+            if (target == null) target = overlayWidget.previous(upDownOverlayWidgetSelector);
 
             parentOverlayWidget.removeOverlayWidget(overlayWidget);
             overlayWidget.getOverlayElement().removeFromParent();
@@ -691,7 +697,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
     }
 
     @Override
-    public void onDocumentContentLoaded(String content) {
+    public void onDocumentContentLoaded(DocumentContentDTO content) {
         showLoadingIndicator(true, "Parsing document.");
         sourceFileController.setContent(content);
         showLoadingIndicator(true, "Building document tree.");
@@ -772,6 +778,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
         inlineEditorControllerCancelHandlerRegistration.removeHandler();
     }
 
+    @Override
     public void setInjector(DocumentInjector injector) {
         this.documentEventBus = injector.getDocumentEventBus();
         this.view = injector.getDocumentView();

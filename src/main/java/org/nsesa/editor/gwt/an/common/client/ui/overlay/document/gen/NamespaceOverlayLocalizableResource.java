@@ -23,7 +23,9 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
  * Note: this file is generated. Rather than changing this file, correct the template called <tt>overlayLocalizableResource.ftl</tt>.
  */
 public class NamespaceOverlayLocalizableResource extends DefaultOverlayLocalizableResource {
+
     private static NamespaceOverlayMessages MESSAGES = GWT.create(NamespaceOverlayMessages.class);
+    private final String namespaceURI = "http://www.w3.org/XML/1998/namespace";
 
     @Override
     public String getName(final OverlayWidget widget) {
@@ -41,6 +43,11 @@ public class NamespaceOverlayLocalizableResource extends DefaultOverlayLocalizab
         } else {
             return widget.getType();
         }
+    }
+
+    @Override
+    public String getNamespaceURI() {
+        return namespaceURI;
     }
 
 }

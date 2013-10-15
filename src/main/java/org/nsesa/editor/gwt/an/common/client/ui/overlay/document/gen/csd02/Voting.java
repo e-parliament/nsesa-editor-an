@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element voting is a metadata container containing information about an event of a vote happened within a debate.
+ * The element voting is a metadata container containing information about an event of a vote happened<br/> within a debate.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -46,8 +46,8 @@ public class Voting extends ParliamentaryAnalysisTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "voting");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "voting");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget voting");
         return span;
     }
@@ -83,6 +83,50 @@ public class Voting extends ParliamentaryAnalysisTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Voting</code> instance
+     */
+    public Voting evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> Voting</code> instance
+     */
+    public Voting hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Voting</code> instance
+     */
+    public Voting idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>outcomeAttr</code> property in DSL way
+     *
+     * @param outcomeAttr new value
+     * @return <code> Voting</code> instance
+     */
+    public Voting outcomeAttr(final AnyURISimpleType outcomeAttr) {
+        setOutcomeAttr(outcomeAttr);
+        return this;
+    }
+
+    /**
      * Set <code>refersToAttr</code> property in DSL way
      *
      * @param refersToAttr new value
@@ -101,50 +145,6 @@ public class Voting extends ParliamentaryAnalysisTypeComplexType {
      */
     public Voting wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> Voting</code> instance
-     */
-    public Voting hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>outcomeAttr</code> property in DSL way
-     *
-     * @param outcomeAttr new value
-     * @return <code> Voting</code> instance
-     */
-    public Voting outcomeAttr(final AnyURISimpleType outcomeAttr) {
-        setOutcomeAttr(outcomeAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Voting</code> instance
-     */
-    public Voting idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Voting</code> instance
-     */
-    public Voting evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 

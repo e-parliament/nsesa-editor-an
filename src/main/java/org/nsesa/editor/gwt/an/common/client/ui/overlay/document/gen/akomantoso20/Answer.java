@@ -66,8 +66,8 @@ public class Answer extends SpeechTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "answer");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "answer");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget answer");
         return span;
     }
@@ -103,13 +103,13 @@ public class Answer extends SpeechTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>byAttr</code> property in DSL way
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @param byAttr new value
+     * @param alternativeToAttr new value
      * @return <code> Answer</code> instance
      */
-    public Answer byAttr(final AnyURISimpleType byAttr) {
-        setByAttr(byAttr);
+    public Answer alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
@@ -125,13 +125,24 @@ public class Answer extends SpeechTypeComplexType {
     }
 
     /**
-     * Set <code>startTimeAttr</code> property in DSL way
+     * Set <code>byAttr</code> property in DSL way
      *
-     * @param startTimeAttr new value
+     * @param byAttr new value
      * @return <code> Answer</code> instance
      */
-    public Answer startTimeAttr(final DateTimeSimpleType startTimeAttr) {
-        setStartTimeAttr(startTimeAttr);
+    public Answer byAttr(final AnyURISimpleType byAttr) {
+        setByAttr(byAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Answer</code> instance
+     */
+    public Answer classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
         return this;
     }
 
@@ -147,13 +158,13 @@ public class Answer extends SpeechTypeComplexType {
     }
 
     /**
-     * Set <code>toAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param toAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> Answer</code> instance
      */
-    public Answer toAttr(final AnyURISimpleType toAttr) {
-        setToAttr(toAttr);
+    public Answer evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -169,13 +180,46 @@ public class Answer extends SpeechTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>langAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param langAttr new value
      * @return <code> Answer</code> instance
      */
-    public Answer evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public Answer langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Answer</code> instance
+     */
+    public Answer periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Answer</code> instance
+     */
+    public Answer refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>startTimeAttr</code> property in DSL way
+     *
+     * @param startTimeAttr new value
+     * @return <code> Answer</code> instance
+     */
+    public Answer startTimeAttr(final DateTimeSimpleType startTimeAttr) {
+        setStartTimeAttr(startTimeAttr);
         return this;
     }
 
@@ -187,28 +231,6 @@ public class Answer extends SpeechTypeComplexType {
      */
     public Answer statusAttr(final StatusTypeSimpleType statusAttr) {
         setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Answer</code> instance
-     */
-    public Answer wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>classAttr</code> property in DSL way
-     *
-     * @param classAttr new value
-     * @return <code> Answer</code> instance
-     */
-    public Answer classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
         return this;
     }
 
@@ -235,46 +257,24 @@ public class Answer extends SpeechTypeComplexType {
     }
 
     /**
-     * Set <code>alternativeToAttr</code> property in DSL way
+     * Set <code>toAttr</code> property in DSL way
      *
-     * @param alternativeToAttr new value
+     * @param toAttr new value
      * @return <code> Answer</code> instance
      */
-    public Answer alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
+    public Answer toAttr(final AnyURISimpleType toAttr) {
+        setToAttr(toAttr);
         return this;
     }
 
     /**
-     * Set <code>langAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param langAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> Answer</code> instance
      */
-    public Answer langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> Answer</code> instance
-     */
-    public Answer refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> Answer</code> instance
-     */
-    public Answer periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public Answer wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

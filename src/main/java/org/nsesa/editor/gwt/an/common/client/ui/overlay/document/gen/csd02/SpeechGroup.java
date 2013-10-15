@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element speechGroup is a container of speech elements. This element is meant to pooint out, in a complex sequence of individual speech elements, the main contributor, i.e., the individual speech who was introducedand expected and that is causing the complex sequence that follows. Attributes by, as and to are those of the main speech.
+ * the element speechGroup is a container of speech elements. This element is meant to pooint out, in a<br/> complex sequence of individual speech elements, the main contributor, i.e., the individual speech<br/> who was introducedand expected and that is causing the complex sequence that follows. Attributes by,<br/> as and to are those of the main speech.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -102,8 +102,8 @@ public class SpeechGroup extends AlthierarchyComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "speechGroup");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "speechGroup");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget speechGroup");
         return span;
     }
@@ -136,55 +136,11 @@ public class SpeechGroup extends AlthierarchyComplexType {
     }
 
     // FIELDS ------------------
-    private AnyURISimpleType byAttr;
     private AnyURISimpleType asAttr;
-    private DateTimeSimpleType startTimeAttr;
+    private AnyURISimpleType byAttr;
     private DateTimeSimpleType endTimeAttr;
+    private DateTimeSimpleType startTimeAttr;
     private AnyURISimpleType toAttr;
-
-    /**
-     * Return <code>byAttr</code> property
-     *
-     * @return byAttr
-     */
-    public AnyURISimpleType getByAttr() {
-        if (byAttr == null) {
-            byAttr = new AnyURISimpleType();
-            byAttr.setValue(getElement().getAttribute("by"));
-        }
-
-        return byAttr;
-    }
-
-    /**
-     * Return <code>byAttr</code> property in DSL way
-     *
-     * @return byAttr
-     */
-    public AnyURISimpleType byAttr() {
-        return getByAttr();
-    }
-
-    /**
-     * Set <code>byAttr</code> property
-     *
-     * @param byAttr the new value
-     */
-    public void setByAttr(final AnyURISimpleType byAttr) {
-        this.byAttr = byAttr;
-        getElement().setAttribute("by", byAttr.getValue());
-    }
-
-    /**
-     * Set <code>byAttr</code> property in DSL way
-     *
-     * @param byAttr the new value
-     * @return <code>SpeechGroup</code> instance
-     */
-    public SpeechGroup byAttr(final AnyURISimpleType byAttr) {
-        setByAttr(byAttr);
-        return this;
-    }
 
     /**
      * Return <code>asAttr</code> property
@@ -231,46 +187,46 @@ public class SpeechGroup extends AlthierarchyComplexType {
     }
 
     /**
-     * Return <code>startTimeAttr</code> property
+     * Return <code>byAttr</code> property
      *
-     * @return startTimeAttr
+     * @return byAttr
      */
-    public DateTimeSimpleType getStartTimeAttr() {
-        if (startTimeAttr == null) {
-            startTimeAttr = new DateTimeSimpleType();
-            startTimeAttr.setValue(getElement().getAttribute("startTime"));
+    public AnyURISimpleType getByAttr() {
+        if (byAttr == null) {
+            byAttr = new AnyURISimpleType();
+            byAttr.setValue(getElement().getAttribute("by"));
         }
 
-        return startTimeAttr;
+        return byAttr;
     }
 
     /**
-     * Return <code>startTimeAttr</code> property in DSL way
+     * Return <code>byAttr</code> property in DSL way
      *
-     * @return startTimeAttr
+     * @return byAttr
      */
-    public DateTimeSimpleType startTimeAttr() {
-        return getStartTimeAttr();
+    public AnyURISimpleType byAttr() {
+        return getByAttr();
     }
 
     /**
-     * Set <code>startTimeAttr</code> property
+     * Set <code>byAttr</code> property
      *
-     * @param startTimeAttr the new value
+     * @param byAttr the new value
      */
-    public void setStartTimeAttr(final DateTimeSimpleType startTimeAttr) {
-        this.startTimeAttr = startTimeAttr;
-        getElement().setAttribute("startTime", startTimeAttr.getValue());
+    public void setByAttr(final AnyURISimpleType byAttr) {
+        this.byAttr = byAttr;
+        getElement().setAttribute("by", byAttr.getValue());
     }
 
     /**
-     * Set <code>startTimeAttr</code> property in DSL way
+     * Set <code>byAttr</code> property in DSL way
      *
-     * @param startTimeAttr the new value
+     * @param byAttr the new value
      * @return <code>SpeechGroup</code> instance
      */
-    public SpeechGroup startTimeAttr(final DateTimeSimpleType startTimeAttr) {
-        setStartTimeAttr(startTimeAttr);
+    public SpeechGroup byAttr(final AnyURISimpleType byAttr) {
+        setByAttr(byAttr);
         return this;
     }
 
@@ -315,6 +271,50 @@ public class SpeechGroup extends AlthierarchyComplexType {
      */
     public SpeechGroup endTimeAttr(final DateTimeSimpleType endTimeAttr) {
         setEndTimeAttr(endTimeAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>startTimeAttr</code> property
+     *
+     * @return startTimeAttr
+     */
+    public DateTimeSimpleType getStartTimeAttr() {
+        if (startTimeAttr == null) {
+            startTimeAttr = new DateTimeSimpleType();
+            startTimeAttr.setValue(getElement().getAttribute("startTime"));
+        }
+
+        return startTimeAttr;
+    }
+
+    /**
+     * Return <code>startTimeAttr</code> property in DSL way
+     *
+     * @return startTimeAttr
+     */
+    public DateTimeSimpleType startTimeAttr() {
+        return getStartTimeAttr();
+    }
+
+    /**
+     * Set <code>startTimeAttr</code> property
+     *
+     * @param startTimeAttr the new value
+     */
+    public void setStartTimeAttr(final DateTimeSimpleType startTimeAttr) {
+        this.startTimeAttr = startTimeAttr;
+        getElement().setAttribute("startTime", startTimeAttr.getValue());
+    }
+
+    /**
+     * Set <code>startTimeAttr</code> property in DSL way
+     *
+     * @param startTimeAttr the new value
+     * @return <code>SpeechGroup</code> instance
+     */
+    public SpeechGroup startTimeAttr(final DateTimeSimpleType startTimeAttr) {
+        setStartTimeAttr(startTimeAttr);
         return this;
     }
 
@@ -364,6 +364,17 @@ public class SpeechGroup extends AlthierarchyComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> SpeechGroup</code> instance
+     */
+    public SpeechGroup alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
      * Set <code>classAttr</code> property in DSL way
      *
      * @param classAttr new value
@@ -371,6 +382,83 @@ public class SpeechGroup extends AlthierarchyComplexType {
      */
     public SpeechGroup classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> SpeechGroup</code> instance
+     */
+    public SpeechGroup evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> SpeechGroup</code> instance
+     */
+    public SpeechGroup idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> SpeechGroup</code> instance
+     */
+    public SpeechGroup langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> SpeechGroup</code> instance
+     */
+    public SpeechGroup periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> SpeechGroup</code> instance
+     */
+    public SpeechGroup refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>spaceAttr</code> property in DSL way
+     *
+     * @param spaceAttr new value
+     * @return <code> SpeechGroup</code> instance
+     */
+    public SpeechGroup spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> SpeechGroup</code> instance
+     */
+    public SpeechGroup statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -397,72 +485,6 @@ public class SpeechGroup extends AlthierarchyComplexType {
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> SpeechGroup</code> instance
-     */
-    public SpeechGroup idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> SpeechGroup</code> instance
-     */
-    public SpeechGroup evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> SpeechGroup</code> instance
-     */
-    public SpeechGroup alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr new value
-     * @return <code> SpeechGroup</code> instance
-     */
-    public SpeechGroup statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> SpeechGroup</code> instance
-     */
-    public SpeechGroup langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>spaceAttr</code> property in DSL way
-     *
-     * @param spaceAttr new value
-     * @return <code> SpeechGroup</code> instance
-     */
-    public SpeechGroup spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-    }
-
-    /**
      * Set <code>wildcardContentAttr</code> property in DSL way
      *
      * @param wildcardContentAttr new value
@@ -470,28 +492,6 @@ public class SpeechGroup extends AlthierarchyComplexType {
      */
     public SpeechGroup wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> SpeechGroup</code> instance
-     */
-    public SpeechGroup refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> SpeechGroup</code> instance
-     */
-    public SpeechGroup periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -509,10 +509,10 @@ public class SpeechGroup extends AlthierarchyComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("by", getByAttr() != null ? getByAttr().getValue() : null);
         attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
-        attrs.put("startTime", getStartTimeAttr() != null ? getStartTimeAttr().getValue() : null);
+        attrs.put("by", getByAttr() != null ? getByAttr().getValue() : null);
         attrs.put("endTime", getEndTimeAttr() != null ? getEndTimeAttr().getValue() : null);
+        attrs.put("startTime", getStartTimeAttr() != null ? getStartTimeAttr().getValue() : null);
         attrs.put("to", getToAttr() != null ? getToAttr().getValue() : null);
         return attrs;
     }

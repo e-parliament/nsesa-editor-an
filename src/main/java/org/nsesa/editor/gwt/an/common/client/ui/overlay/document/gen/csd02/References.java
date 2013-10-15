@@ -21,7 +21,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element references is a metadata container of all the references to entities external to the document mentioned in the document. They include references to legal documents of any form,a s well as references to people, organizations, events, roles, concepts, and anything else is managed by the Akoma Ntoso ontology.
+ * The element references is a metadata container of all the references to entities external to the<br/> document mentioned in the document. They include references to legal documents of any form,a s well<br/> as references to people, organizations, events, roles, concepts, and anything else is managed by the<br/> Akoma Ntoso ontology.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -62,8 +62,8 @@ public class References extends RefItemsComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "references");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "references");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget references");
         return span;
     }

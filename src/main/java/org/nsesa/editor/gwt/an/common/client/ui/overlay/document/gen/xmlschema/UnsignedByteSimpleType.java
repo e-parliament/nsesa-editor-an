@@ -29,8 +29,8 @@ public class UnsignedByteSimpleType extends UnsignedShortSimpleType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "unsignedByteSimpleType");
-        span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
+        span.setAttribute("data-type", "unsignedByteSimpleType");
+        span.setAttribute("data-ns", "http://www.w3.org/2001/XMLSchema");
         span.setClassName("widget unsignedByteSimpleType");
         return span;
     }

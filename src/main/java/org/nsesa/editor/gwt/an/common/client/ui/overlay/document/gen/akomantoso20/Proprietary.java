@@ -45,8 +45,8 @@ public class Proprietary extends AnyOtherTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "proprietary");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "proprietary");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget proprietary");
         return span;
     }
@@ -126,6 +126,17 @@ public class Proprietary extends AnyOtherTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Proprietary</code> instance
+     */
+    public Proprietary evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
      * Set <code>hrefAttr</code> property in DSL way
      *
      * @param hrefAttr new value
@@ -133,17 +144,6 @@ public class Proprietary extends AnyOtherTypeComplexType {
      */
     public Proprietary hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Proprietary</code> instance
-     */
-    public Proprietary wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -159,13 +159,13 @@ public class Proprietary extends AnyOtherTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> Proprietary</code> instance
      */
-    public Proprietary evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public Proprietary wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

@@ -9,7 +9,7 @@
     <packaging>war</packaging>
     <name>Akoma Ntoso Amendment Editor</name>
     <url>http://code.at4am.org/nsesa-editor-an</url>
-    <version>0.9</version>
+    <version>0.10</version>
 
     <organization>
         <url>http://www.europarl.europa.eu/</url>
@@ -64,14 +64,14 @@
         <dependency>
             <groupId>org.nsesa</groupId>
             <artifactId>editor</artifactId>
-            <version>0.9</version>
+            <version>0.10</version>
         </dependency>
 
         <!-- server API -->
         <dependency>
             <groupId>org.nsesa</groupId>
             <artifactId>nsesa-server-api</artifactId>
-            <version>0.4</version>
+            <version>0.5</version>
         </dependency>
 
         <!-- Diffing -->
@@ -251,6 +251,16 @@
             <artifactId>gwtquery</artifactId>
             <version>1.2.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.atmosphere.extensions</groupId>
+            <artifactId>atmosphere-gwt20-client</artifactId>
+            <version>1.1.0.RC5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.atmosphere.extensions</groupId>
+            <artifactId>atmosphere-gwt20-server</artifactId>
+            <version>1.1.0.RC5</version>
+        </dependency>
 
         <dependency>
             <groupId>org.fusesource.restygwt</groupId>
@@ -287,6 +297,20 @@
             <groupId>org.xhtmlrenderer</groupId>
             <artifactId>flying-saucer-pdf</artifactId>
             <version>9.0.1</version>
+        </dependency>
+
+        <!-- core module: use can you it on its own if you are not using Spring 3 -->
+        <dependency>
+            <groupId>com.inspire-software.lib.dto.geda</groupId>
+            <artifactId>geda.core</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <!-- spring integration: spring 3 AOP wrapper for core -->
+        <dependency>
+            <groupId>com.inspire-software.lib.dto.geda</groupId>
+            <artifactId>geda.spring-integration</artifactId>
+            <version>3.1.0</version>
         </dependency>
 
         <!-- TEST ONLY DEPENDENCIES -->
@@ -333,7 +357,7 @@
                 </includes>
             </resource>
             <resource>
-                <directory>src/main/java/org/nsesa/editor/gwt/an</directory>
+                <directory>src/main/java</directory>
                 <includes>
                     <include>**/*.java</include>
                     <include>**/*.xml</include>
@@ -343,6 +367,16 @@
 
         </resources>
         <plugins>
+            <!-- ***************************** Resources plugin    ***************************** -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <includeEmptyDirs>true</includeEmptyDirs>
+                </configuration>
+            </plugin>
+
             <!-- ***************************** Configure compiler plugin    ***************************** -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -371,12 +405,13 @@
                     <extraJvmArgs>-Xss2M -XX:MaxPermSize=400M -Xms700M -Xmx700M</extraJvmArgs>
                     <hostedWebapp>web</hostedWebapp>
                     <modules>
-                        <module>org.nsesa.editor.gwt.an.amendments.AkomaNtosoEditor</module>
+                        <module>org.nsesa.editor.gwt.an.amendments.AmendmentEditor</module>
                         <module>org.nsesa.editor.gwt.an.drafting.DraftingEditor</module>
+                        <module>org.nsesa.editor.gwt.an.markup.MarkupEditor</module>
                     </modules>
                     <compileReport>true</compileReport>
                     <strict>true</strict>
-                    <runTarget>editor.html</runTarget>
+                    <runTarget>amendment.html</runTarget>
                 </configuration>
                 <executions>
                     <execution>
@@ -405,9 +440,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.1.1</version>
+                <version>2.4</version>
                 <configuration>
                     <warSourceDirectory>web</warSourceDirectory>
+                    <includeEmptyDirectories>true</includeEmptyDirectories>
                     <webResources>
                         <resource>
                             <!-- this is relative to the pom.xml directory -->
@@ -430,13 +466,20 @@
                     <excludes>
                         <exclude>web/js/**</exclude>
                         <exclude>target/**</exclude>
+                        <!-- excludes anything that comes in via overlays (atmosphere-gwt)-->
+                        <exclude>overlays/**</exclude>
+                        <!-- contains the imported source files from the gwt-selection project -->
+                        <exclude>src/main/java/com/bfr/client/**</exclude>
                         <exclude>src/main/resources/examples/**</exclude>
-                        <exclude>src/main/resources/*.xsd</exclude>
-                        <exclude>src/main/resources/*.dtd</exclude>
+                        <exclude>src/main/resources/**/*.xsd</exclude>
+                        <exclude>src/main/resources/**/*.dtd</exclude>
+                        <exclude>src/main/resources/**/*.xsl</exclude>
+                        <exclude>src/main/resources/**/*.xml</exclude>
                         <exclude>.gitignore</exclude>
+                        <!-- Seems like this is necessary due to the atmosphere integration -->
+                        <exclude>overlays/**</exclude>
                         <!-- automatic header would turn on quirksmode in IE -->
-                        <exclude>web/editor.html</exclude>
-                        <exclude>web/drafter.html</exclude>
+                        <exclude>web/*.html</exclude>
                         <exclude>**/*.css</exclude>
                         <exclude>**/README.md</exclude>
                         <exclude>**/GitMessages.properties</exclude>
@@ -453,6 +496,15 @@
                 </executions>
             </plugin>
 
+            <!-- ***************************** Surefire plugin    ***************************** -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.13</version>
+                <configuration>
+                    <argLine>-Xmx512M -XX:MaxPermSize=128M</argLine>
+                </configuration>
+            </plugin>
             <!-- ***************************** Configure git plugin    ***************************** -->
             <!-- https://github.com/ktoso/maven-git-commit-id-plugin/ -->
             <plugin>

@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element quotedText is an inline element containing a small string that is used either as the text being replaced, or the replacement, or the positioning at which some modification should take place. Attribute quote is used to specify the quote character used in the original; no quote attribute implies that the quote is left in the text; quote="" implies that there is no quote character. Attribute for is used in a mmod or rmod to point to the id of the corresponding ref element.
+ * the element quotedText is an inline element containing a small string that is used either as the<br/> text being replaced, or the replacement, or the positioning at which some modification should take<br/> place. Attribute quote is used to specify the quote character used in the original; no quote<br/> attribute implies that the quote is left in the text; quote="" implies that there is no quote<br/> character. Attribute for is used in a mmod or rmod to point to the id of the corresponding ref<br/> element.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -142,8 +142,8 @@ public class QuotedText extends InlineComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "quotedText");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "quotedText");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget quotedText");
         return span;
     }
@@ -167,9 +167,53 @@ public class QuotedText extends InlineComplexType {
     }
 
     // FIELDS ------------------
+    private StringSimpleType endQuoteAttr;
     private AnyURISimpleType forAttr;
     private StringSimpleType startQuoteAttr;
-    private StringSimpleType endQuoteAttr;
+
+    /**
+     * Return <code>endQuoteAttr</code> property
+     *
+     * @return endQuoteAttr
+     */
+    public StringSimpleType getEndQuoteAttr() {
+        if (endQuoteAttr == null) {
+            endQuoteAttr = new StringSimpleType();
+            endQuoteAttr.setValue(getElement().getAttribute("endQuote"));
+        }
+
+        return endQuoteAttr;
+    }
+
+    /**
+     * Return <code>endQuoteAttr</code> property in DSL way
+     *
+     * @return endQuoteAttr
+     */
+    public StringSimpleType endQuoteAttr() {
+        return getEndQuoteAttr();
+    }
+
+    /**
+     * Set <code>endQuoteAttr</code> property
+     *
+     * @param endQuoteAttr the new value
+     */
+    public void setEndQuoteAttr(final StringSimpleType endQuoteAttr) {
+        this.endQuoteAttr = endQuoteAttr;
+        getElement().setAttribute("endQuote", endQuoteAttr.getValue());
+    }
+
+    /**
+     * Set <code>endQuoteAttr</code> property in DSL way
+     *
+     * @param endQuoteAttr the new value
+     * @return <code>QuotedText</code> instance
+     */
+    public QuotedText endQuoteAttr(final StringSimpleType endQuoteAttr) {
+        setEndQuoteAttr(endQuoteAttr);
+        return this;
+    }
 
     /**
      * Return <code>forAttr</code> property
@@ -258,60 +302,16 @@ public class QuotedText extends InlineComplexType {
         setStartQuoteAttr(startQuoteAttr);
         return this;
     }
-
-    /**
-     * Return <code>endQuoteAttr</code> property
-     *
-     * @return endQuoteAttr
-     */
-    public StringSimpleType getEndQuoteAttr() {
-        if (endQuoteAttr == null) {
-            endQuoteAttr = new StringSimpleType();
-            endQuoteAttr.setValue(getElement().getAttribute("endQuote"));
-        }
-
-        return endQuoteAttr;
-    }
-
-    /**
-     * Return <code>endQuoteAttr</code> property in DSL way
-     *
-     * @return endQuoteAttr
-     */
-    public StringSimpleType endQuoteAttr() {
-        return getEndQuoteAttr();
-    }
-
-    /**
-     * Set <code>endQuoteAttr</code> property
-     *
-     * @param endQuoteAttr the new value
-     */
-    public void setEndQuoteAttr(final StringSimpleType endQuoteAttr) {
-        this.endQuoteAttr = endQuoteAttr;
-        getElement().setAttribute("endQuote", endQuoteAttr.getValue());
-    }
-
-    /**
-     * Set <code>endQuoteAttr</code> property in DSL way
-     *
-     * @param endQuoteAttr the new value
-     * @return <code>QuotedText</code> instance
-     */
-    public QuotedText endQuoteAttr(final StringSimpleType endQuoteAttr) {
-        setEndQuoteAttr(endQuoteAttr);
-        return this;
-    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @param statusAttr new value
+     * @param alternativeToAttr new value
      * @return <code> QuotedText</code> instance
      */
-    public QuotedText statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public QuotedText alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
@@ -323,6 +323,83 @@ public class QuotedText extends InlineComplexType {
      */
     public QuotedText classAttr(final StringSimpleType classAttr) {
         setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> QuotedText</code> instance
+     */
+    public QuotedText evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> QuotedText</code> instance
+     */
+    public QuotedText idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> QuotedText</code> instance
+     */
+    public QuotedText langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> QuotedText</code> instance
+     */
+    public QuotedText periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> QuotedText</code> instance
+     */
+    public QuotedText refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>spaceAttr</code> property in DSL way
+     *
+     * @param spaceAttr new value
+     * @return <code> QuotedText</code> instance
+     */
+    public QuotedText spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> QuotedText</code> instance
+     */
+    public QuotedText statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -349,39 +426,6 @@ public class QuotedText extends InlineComplexType {
     }
 
     /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> QuotedText</code> instance
-     */
-    public QuotedText alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> QuotedText</code> instance
-     */
-    public QuotedText idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> QuotedText</code> instance
-     */
-    public QuotedText evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
      * Set <code>wildcardContentAttr</code> property in DSL way
      *
      * @param wildcardContentAttr new value
@@ -389,50 +433,6 @@ public class QuotedText extends InlineComplexType {
      */
     public QuotedText wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> QuotedText</code> instance
-     */
-    public QuotedText refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> QuotedText</code> instance
-     */
-    public QuotedText langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>spaceAttr</code> property in DSL way
-     *
-     * @param spaceAttr new value
-     * @return <code> QuotedText</code> instance
-     */
-    public QuotedText spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> QuotedText</code> instance
-     */
-    public QuotedText periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -450,9 +450,9 @@ public class QuotedText extends InlineComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("endQuote", getEndQuoteAttr() != null ? getEndQuoteAttr().getValue() : null);
         attrs.put("for", getForAttr() != null ? getForAttr().getValue() : null);
         attrs.put("startQuote", getStartQuoteAttr() != null ? getStartQuoteAttr().getValue() : null);
-        attrs.put("endQuote", getEndQuoteAttr() != null ? getEndQuoteAttr().getValue() : null);
         return attrs;
     }
 

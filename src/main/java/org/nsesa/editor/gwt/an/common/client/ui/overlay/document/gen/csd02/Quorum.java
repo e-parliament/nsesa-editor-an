@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element quorum is a metadata container containing the value of a quorum in a vote or a quorum verification.
+ * The element quorum is a metadata container containing the value of a quorum in a vote or a quorum<br/> verification.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -46,8 +46,8 @@ public class Quorum extends CountTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "quorum");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "quorum");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget quorum");
         return span;
     }
@@ -84,24 +84,24 @@ public class Quorum extends CountTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param refersToAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> Quorum</code> instance
      */
-    public Quorum refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Quorum evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>hrefAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param hrefAttr new value
      * @return <code> Quorum</code> instance
      */
-    public Quorum wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Quorum hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
         return this;
     }
 
@@ -117,13 +117,13 @@ public class Quorum extends CountTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>refersToAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param refersToAttr new value
      * @return <code> Quorum</code> instance
      */
-    public Quorum evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public Quorum refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -139,13 +139,13 @@ public class Quorum extends CountTypeComplexType {
     }
 
     /**
-     * Set <code>hrefAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param hrefAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> Quorum</code> instance
      */
-    public Quorum hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
+    public Quorum wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

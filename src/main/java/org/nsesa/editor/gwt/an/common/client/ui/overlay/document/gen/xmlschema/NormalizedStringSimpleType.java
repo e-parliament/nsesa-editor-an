@@ -29,8 +29,8 @@ public class NormalizedStringSimpleType extends StringSimpleType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "normalizedStringSimpleType");
-        span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
+        span.setAttribute("data-type", "normalizedStringSimpleType");
+        span.setAttribute("data-ns", "http://www.w3.org/2001/XMLSchema");
         span.setClassName("widget normalizedStringSimpleType");
         return span;
     }

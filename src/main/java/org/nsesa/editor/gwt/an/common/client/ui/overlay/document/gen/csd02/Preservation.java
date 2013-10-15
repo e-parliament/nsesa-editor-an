@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element preservation is the metadata property containing an arbitrary list of elements detailing the preservation actions taken for the document is the respective level of the FRBR hierarchy..
+ * The element preservation is the metadata property containing an arbitrary list of elements detailing<br/> the preservation actions taken for the document is the respective level of the FRBR hierarchy..
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -45,8 +45,8 @@ public class Preservation extends AnyOtherTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "preservation");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "preservation");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget preservation");
         return span;
     }
@@ -74,17 +74,6 @@ public class Preservation extends AnyOtherTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Preservation</code> instance
-     */
-    public Preservation idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
      * Set <code>evolvingIdAttr</code> property in DSL way
      *
      * @param evolvingIdAttr new value
@@ -96,17 +85,6 @@ public class Preservation extends AnyOtherTypeComplexType {
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Preservation</code> instance
-     */
-    public Preservation wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
      * Set <code>hrefAttr</code> property in DSL way
      *
      * @param hrefAttr new value
@@ -114,6 +92,28 @@ public class Preservation extends AnyOtherTypeComplexType {
      */
     public Preservation hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Preservation</code> instance
+     */
+    public Preservation idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Preservation</code> instance
+     */
+    public Preservation wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

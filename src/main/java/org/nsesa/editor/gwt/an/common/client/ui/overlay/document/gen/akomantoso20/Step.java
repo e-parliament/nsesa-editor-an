@@ -46,8 +46,8 @@ public class Step extends AnyOtherTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "step");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "step");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget step");
         return span;
     }
@@ -79,10 +79,98 @@ public class Step extends AnyOtherTypeComplexType {
     }
 
     // FIELDS ------------------
+    private AnyURISimpleType actorAttr;
+    private AnyURISimpleType asAttr;
     private DateSimpleType dateAttr;
     private AnyURISimpleType outcomeAttr;
-    private AnyURISimpleType asAttr;
-    private AnyURISimpleType actorAttr;
+
+    /**
+     * Return <code>actorAttr</code> property
+     *
+     * @return actorAttr
+     */
+    public AnyURISimpleType getActorAttr() {
+        if (actorAttr == null) {
+            actorAttr = new AnyURISimpleType();
+            actorAttr.setValue(getElement().getAttribute("actor"));
+        }
+
+        return actorAttr;
+    }
+
+    /**
+     * Return <code>actorAttr</code> property in DSL way
+     *
+     * @return actorAttr
+     */
+    public AnyURISimpleType actorAttr() {
+        return getActorAttr();
+    }
+
+    /**
+     * Set <code>actorAttr</code> property
+     *
+     * @param actorAttr the new value
+     */
+    public void setActorAttr(final AnyURISimpleType actorAttr) {
+        this.actorAttr = actorAttr;
+        getElement().setAttribute("actor", actorAttr.getValue());
+    }
+
+    /**
+     * Set <code>actorAttr</code> property in DSL way
+     *
+     * @param actorAttr the new value
+     * @return <code>Step</code> instance
+     */
+    public Step actorAttr(final AnyURISimpleType actorAttr) {
+        setActorAttr(actorAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>asAttr</code> property
+     *
+     * @return asAttr
+     */
+    public AnyURISimpleType getAsAttr() {
+        if (asAttr == null) {
+            asAttr = new AnyURISimpleType();
+            asAttr.setValue(getElement().getAttribute("as"));
+        }
+
+        return asAttr;
+    }
+
+    /**
+     * Return <code>asAttr</code> property in DSL way
+     *
+     * @return asAttr
+     */
+    public AnyURISimpleType asAttr() {
+        return getAsAttr();
+    }
+
+    /**
+     * Set <code>asAttr</code> property
+     *
+     * @param asAttr the new value
+     */
+    public void setAsAttr(final AnyURISimpleType asAttr) {
+        this.asAttr = asAttr;
+        getElement().setAttribute("as", asAttr.getValue());
+    }
+
+    /**
+     * Set <code>asAttr</code> property in DSL way
+     *
+     * @param asAttr the new value
+     * @return <code>Step</code> instance
+     */
+    public Step asAttr(final AnyURISimpleType asAttr) {
+        setAsAttr(asAttr);
+        return this;
+    }
 
     /**
      * Return <code>dateAttr</code> property
@@ -171,95 +259,18 @@ public class Step extends AnyOtherTypeComplexType {
         setOutcomeAttr(outcomeAttr);
         return this;
     }
-
-    /**
-     * Return <code>asAttr</code> property
-     *
-     * @return asAttr
-     */
-    public AnyURISimpleType getAsAttr() {
-        if (asAttr == null) {
-            asAttr = new AnyURISimpleType();
-            asAttr.setValue(getElement().getAttribute("as"));
-        }
-
-        return asAttr;
-    }
-
-    /**
-     * Return <code>asAttr</code> property in DSL way
-     *
-     * @return asAttr
-     */
-    public AnyURISimpleType asAttr() {
-        return getAsAttr();
-    }
-
-    /**
-     * Set <code>asAttr</code> property
-     *
-     * @param asAttr the new value
-     */
-    public void setAsAttr(final AnyURISimpleType asAttr) {
-        this.asAttr = asAttr;
-        getElement().setAttribute("as", asAttr.getValue());
-    }
-
-    /**
-     * Set <code>asAttr</code> property in DSL way
-     *
-     * @param asAttr the new value
-     * @return <code>Step</code> instance
-     */
-    public Step asAttr(final AnyURISimpleType asAttr) {
-        setAsAttr(asAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>actorAttr</code> property
-     *
-     * @return actorAttr
-     */
-    public AnyURISimpleType getActorAttr() {
-        if (actorAttr == null) {
-            actorAttr = new AnyURISimpleType();
-            actorAttr.setValue(getElement().getAttribute("actor"));
-        }
-
-        return actorAttr;
-    }
-
-    /**
-     * Return <code>actorAttr</code> property in DSL way
-     *
-     * @return actorAttr
-     */
-    public AnyURISimpleType actorAttr() {
-        return getActorAttr();
-    }
-
-    /**
-     * Set <code>actorAttr</code> property
-     *
-     * @param actorAttr the new value
-     */
-    public void setActorAttr(final AnyURISimpleType actorAttr) {
-        this.actorAttr = actorAttr;
-        getElement().setAttribute("actor", actorAttr.getValue());
-    }
-
-    /**
-     * Set <code>actorAttr</code> property in DSL way
-     *
-     * @param actorAttr the new value
-     * @return <code>Step</code> instance
-     */
-    public Step actorAttr(final AnyURISimpleType actorAttr) {
-        setActorAttr(actorAttr);
-        return this;
-    }
 //Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Step</code> instance
+     */
+    public Step evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
 
     /**
      * Set <code>hrefAttr</code> property in DSL way
@@ -269,17 +280,6 @@ public class Step extends AnyOtherTypeComplexType {
      */
     public Step hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Step</code> instance
-     */
-    public Step wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -295,13 +295,13 @@ public class Step extends AnyOtherTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> Step</code> instance
      */
-    public Step evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public Step wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -319,10 +319,10 @@ public class Step extends AnyOtherTypeComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("actor", getActorAttr() != null ? getActorAttr().getValue() : null);
+        attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
         attrs.put("date", getDateAttr() != null ? getDateAttr().getValue() : null);
         attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
-        attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
-        attrs.put("actor", getActorAttr() != null ? getActorAttr().getValue() : null);
         return attrs;
     }
 

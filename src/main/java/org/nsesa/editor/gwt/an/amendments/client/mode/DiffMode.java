@@ -20,7 +20,7 @@ import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerS
 import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerSavedEventHandler;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.an.amendments.client.AmendmentDiffingManager;
-import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmentControllerUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
@@ -71,7 +71,7 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
                     final DiffingManager<AmendmentController> diffingManager = (DiffingManager<AmendmentController>) documentController.getDiffingManager();
                     diffingManager.diff(event.getAmendmentController());
                 } else {
-                    LOG.info("Diff not active, skipping diff on amendment " + event.getAmendmentController().getModel().getId());
+                    LOG.info("Diff not active, skipping diff on amendment " + event.getAmendmentController().getModel().getAmendmentContainerID());
                 }
                 clientFactory.getEventBus().fireEvent(event);
             }
@@ -85,7 +85,7 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
                     final DiffingManager<AmendmentController> diffingManager = (DiffingManager<AmendmentController>) documentController.getDiffingManager();
                     diffingManager.diff(event.getAmendmentController());
                 } else {
-                    LOG.info("Diff not active, skipping diff on amendment " + event.getAmendmentController().getModel().getId());
+                    LOG.info("Diff not active, skipping diff on amendment " + event.getAmendmentController().getModel().getAmendmentContainerID());
                 }
             }
         });
@@ -132,10 +132,10 @@ public class DiffMode implements org.nsesa.editor.gwt.core.client.mode.DiffMode 
                         for (final OverlayWidgetAware temp : visited.getOverlayWidgetAwareList()) {
                             if (temp instanceof AmendmentController) {
                                 final AmendmentController amendmentController = (AmendmentController) temp;
-                                final OverlayWidget originalContentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
-                                AkomaNtoso20AmendmentControllerUtil.setOriginalContentOnViews(amendmentController, originalContentFromModel.getInnerHTML());
-                                final OverlayWidget amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
-                                AkomaNtoso20AmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, amendmentContentFromModel.getInnerHTML());
+                                final OverlayWidget originalContentFromModel = AkomaNtosoAmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
+                                AkomaNtosoAmendmentControllerUtil.setOriginalContentOnViews(amendmentController, originalContentFromModel.getInnerHTML());
+                                final OverlayWidget amendmentContentFromModel = AkomaNtosoAmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
+                                AkomaNtosoAmendmentControllerUtil.setAmendmentContentOnViews(amendmentController, amendmentContentFromModel.getInnerHTML());
                             }
                         }
                     }

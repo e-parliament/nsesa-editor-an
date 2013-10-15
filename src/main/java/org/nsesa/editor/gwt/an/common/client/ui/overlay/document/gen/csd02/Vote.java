@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element vote is an inline that wraps either the name of the voter (when organized by choice) or the vote (when organized by name) in a voting report.
+ * the element vote is an inline that wraps either the name of the voter (when organized by choice) or<br/> the vote (when organized by name) in a voting report.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -142,8 +142,8 @@ public class Vote extends InlineComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "vote");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "vote");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget vote");
         return span;
     }
@@ -175,53 +175,9 @@ public class Vote extends InlineComplexType {
     }
 
     // FIELDS ------------------
-    private AnyURISimpleType byAttr;
     private AnyURISimpleType asAttr;
+    private AnyURISimpleType byAttr;
     private AnyURISimpleType choiceAttr;
-
-    /**
-     * Return <code>byAttr</code> property
-     *
-     * @return byAttr
-     */
-    public AnyURISimpleType getByAttr() {
-        if (byAttr == null) {
-            byAttr = new AnyURISimpleType();
-            byAttr.setValue(getElement().getAttribute("by"));
-        }
-
-        return byAttr;
-    }
-
-    /**
-     * Return <code>byAttr</code> property in DSL way
-     *
-     * @return byAttr
-     */
-    public AnyURISimpleType byAttr() {
-        return getByAttr();
-    }
-
-    /**
-     * Set <code>byAttr</code> property
-     *
-     * @param byAttr the new value
-     */
-    public void setByAttr(final AnyURISimpleType byAttr) {
-        this.byAttr = byAttr;
-        getElement().setAttribute("by", byAttr.getValue());
-    }
-
-    /**
-     * Set <code>byAttr</code> property in DSL way
-     *
-     * @param byAttr the new value
-     * @return <code>Vote</code> instance
-     */
-    public Vote byAttr(final AnyURISimpleType byAttr) {
-        setByAttr(byAttr);
-        return this;
-    }
 
     /**
      * Return <code>asAttr</code> property
@@ -264,6 +220,50 @@ public class Vote extends InlineComplexType {
      */
     public Vote asAttr(final AnyURISimpleType asAttr) {
         setAsAttr(asAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>byAttr</code> property
+     *
+     * @return byAttr
+     */
+    public AnyURISimpleType getByAttr() {
+        if (byAttr == null) {
+            byAttr = new AnyURISimpleType();
+            byAttr.setValue(getElement().getAttribute("by"));
+        }
+
+        return byAttr;
+    }
+
+    /**
+     * Return <code>byAttr</code> property in DSL way
+     *
+     * @return byAttr
+     */
+    public AnyURISimpleType byAttr() {
+        return getByAttr();
+    }
+
+    /**
+     * Set <code>byAttr</code> property
+     *
+     * @param byAttr the new value
+     */
+    public void setByAttr(final AnyURISimpleType byAttr) {
+        this.byAttr = byAttr;
+        getElement().setAttribute("by", byAttr.getValue());
+    }
+
+    /**
+     * Set <code>byAttr</code> property in DSL way
+     *
+     * @param byAttr the new value
+     * @return <code>Vote</code> instance
+     */
+    public Vote byAttr(final AnyURISimpleType byAttr) {
+        setByAttr(byAttr);
         return this;
     }
 
@@ -313,6 +313,50 @@ public class Vote extends InlineComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> Vote</code> instance
+     */
+    public Vote alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Vote</code> instance
+     */
+    public Vote classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Vote</code> instance
+     */
+    public Vote evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Vote</code> instance
+     */
+    public Vote idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
      * Set <code>langAttr</code> property in DSL way
      *
      * @param langAttr new value
@@ -324,24 +368,13 @@ public class Vote extends InlineComplexType {
     }
 
     /**
-     * Set <code>spaceAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param spaceAttr new value
+     * @param periodAttr new value
      * @return <code> Vote</code> instance
      */
-    public Vote spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Vote</code> instance
-     */
-    public Vote wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Vote periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -357,13 +390,24 @@ public class Vote extends InlineComplexType {
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>spaceAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param spaceAttr new value
      * @return <code> Vote</code> instance
      */
-    public Vote classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public Vote spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> Vote</code> instance
+     */
+    public Vote statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -390,57 +434,13 @@ public class Vote extends InlineComplexType {
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param statusAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> Vote</code> instance
      */
-    public Vote statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Vote</code> instance
-     */
-    public Vote idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Vote</code> instance
-     */
-    public Vote evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> Vote</code> instance
-     */
-    public Vote alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> Vote</code> instance
-     */
-    public Vote periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public Vote wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -458,8 +458,8 @@ public class Vote extends InlineComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("by", getByAttr() != null ? getByAttr().getValue() : null);
         attrs.put("as", getAsAttr() != null ? getAsAttr().getValue() : null);
+        attrs.put("by", getByAttr() != null ? getByAttr().getValue() : null);
         attrs.put("choice", getChoiceAttr() != null ? getChoiceAttr().getValue() : null);
         return attrs;
     }

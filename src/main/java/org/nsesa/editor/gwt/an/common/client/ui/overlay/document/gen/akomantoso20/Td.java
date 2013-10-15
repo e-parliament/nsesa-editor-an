@@ -58,8 +58,8 @@ public class Td extends BlocksoptComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "td");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "td");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget td");
         return span;
     }
@@ -83,52 +83,8 @@ public class Td extends BlocksoptComplexType {
     }
 
     // FIELDS ------------------
-    private IntegerSimpleType rowspanAttr;
     private IntegerSimpleType colspanAttr;
-
-    /**
-     * Return <code>rowspanAttr</code> property
-     *
-     * @return rowspanAttr
-     */
-    public IntegerSimpleType getRowspanAttr() {
-        if (rowspanAttr == null) {
-            rowspanAttr = new IntegerSimpleType();
-            rowspanAttr.setValue(getElement().getAttribute("rowspan"));
-        }
-
-        return rowspanAttr;
-    }
-
-    /**
-     * Return <code>rowspanAttr</code> property in DSL way
-     *
-     * @return rowspanAttr
-     */
-    public IntegerSimpleType rowspanAttr() {
-        return getRowspanAttr();
-    }
-
-    /**
-     * Set <code>rowspanAttr</code> property
-     *
-     * @param rowspanAttr the new value
-     */
-    public void setRowspanAttr(final IntegerSimpleType rowspanAttr) {
-        this.rowspanAttr = rowspanAttr;
-        getElement().setAttribute("rowspan", rowspanAttr.getValue());
-    }
-
-    /**
-     * Set <code>rowspanAttr</code> property in DSL way
-     *
-     * @param rowspanAttr the new value
-     * @return <code>Td</code> instance
-     */
-    public Td rowspanAttr(final IntegerSimpleType rowspanAttr) {
-        setRowspanAttr(rowspanAttr);
-        return this;
-    }
+    private IntegerSimpleType rowspanAttr;
 
     /**
      * Return <code>colspanAttr</code> property
@@ -173,16 +129,71 @@ public class Td extends BlocksoptComplexType {
         setColspanAttr(colspanAttr);
         return this;
     }
+
+    /**
+     * Return <code>rowspanAttr</code> property
+     *
+     * @return rowspanAttr
+     */
+    public IntegerSimpleType getRowspanAttr() {
+        if (rowspanAttr == null) {
+            rowspanAttr = new IntegerSimpleType();
+            rowspanAttr.setValue(getElement().getAttribute("rowspan"));
+        }
+
+        return rowspanAttr;
+    }
+
+    /**
+     * Return <code>rowspanAttr</code> property in DSL way
+     *
+     * @return rowspanAttr
+     */
+    public IntegerSimpleType rowspanAttr() {
+        return getRowspanAttr();
+    }
+
+    /**
+     * Set <code>rowspanAttr</code> property
+     *
+     * @param rowspanAttr the new value
+     */
+    public void setRowspanAttr(final IntegerSimpleType rowspanAttr) {
+        this.rowspanAttr = rowspanAttr;
+        getElement().setAttribute("rowspan", rowspanAttr.getValue());
+    }
+
+    /**
+     * Set <code>rowspanAttr</code> property in DSL way
+     *
+     * @param rowspanAttr the new value
+     * @return <code>Td</code> instance
+     */
+    public Td rowspanAttr(final IntegerSimpleType rowspanAttr) {
+        setRowspanAttr(rowspanAttr);
+        return this;
+    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @param idAttr new value
+     * @param alternativeToAttr new value
      * @return <code> Td</code> instance
      */
-    public Td idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
+    public Td alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Td</code> instance
+     */
+    public Td classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
         return this;
     }
 
@@ -198,6 +209,50 @@ public class Td extends BlocksoptComplexType {
     }
 
     /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Td</code> instance
+     */
+    public Td idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>langAttr</code> property in DSL way
+     *
+     * @param langAttr new value
+     * @return <code> Td</code> instance
+     */
+    public Td langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Td</code> instance
+     */
+    public Td periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Td</code> instance
+     */
+    public Td refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
      * Set <code>statusAttr</code> property in DSL way
      *
      * @param statusAttr new value
@@ -205,28 +260,6 @@ public class Td extends BlocksoptComplexType {
      */
     public Td statusAttr(final StatusTypeSimpleType statusAttr) {
         setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Td</code> instance
-     */
-    public Td wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>classAttr</code> property in DSL way
-     *
-     * @param classAttr new value
-     * @return <code> Td</code> instance
-     */
-    public Td classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
         return this;
     }
 
@@ -253,46 +286,13 @@ public class Td extends BlocksoptComplexType {
     }
 
     /**
-     * Set <code>alternativeToAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param alternativeToAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> Td</code> instance
      */
-    public Td alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr new value
-     * @return <code> Td</code> instance
-     */
-    public Td langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> Td</code> instance
-     */
-    public Td refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> Td</code> instance
-     */
-    public Td periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public Td wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -310,8 +310,8 @@ public class Td extends BlocksoptComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("rowspan", getRowspanAttr() != null ? getRowspanAttr().getValue() : null);
         attrs.put("colspan", getColspanAttr() != null ? getColspanAttr().getValue() : null);
+        attrs.put("rowspan", getRowspanAttr() != null ? getRowspanAttr().getValue() : null);
         return attrs;
     }
 

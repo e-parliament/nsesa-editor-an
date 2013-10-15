@@ -55,8 +55,8 @@ public class Meta extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "meta");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "meta");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget meta");
         return span;
     }
@@ -82,174 +82,6 @@ public class Meta extends OverlayWidgetImpl {
 // FIELDS ------------------
 
     /**
-     * Add <code>Identification</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Identification getIdentification() {
-        Identification result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Identification".equalsIgnoreCase(widget.getType())) {
-                result = (Identification) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>identificationElem</code> property in DSL way
-     *
-     * @param identificationElem new value
-     * @return <code>Identification</code> instance
-     */
-    public Identification setIdentification(Identification identificationElem) {
-        Identification result = getIdentification();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(identificationElem);
-
-        return identificationElem;
-    }
-
-    /**
-     * Add <code>Publication</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Publication getPublication() {
-        Publication result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Publication".equalsIgnoreCase(widget.getType())) {
-                result = (Publication) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>publicationElem</code> property in DSL way
-     *
-     * @param publicationElem new value
-     * @return <code>Publication</code> instance
-     */
-    public Publication setPublication(Publication publicationElem) {
-        Publication result = getPublication();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(publicationElem);
-
-        return publicationElem;
-    }
-
-    /**
-     * Return <code>java.util.List<Classification></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Classification> getClassifications() {
-        java.util.List<Classification> result = new ArrayList<Classification>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Classification".equalsIgnoreCase(widget.getType())) {
-                result.add((Classification) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Classification></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Classification> getClassificationList() {
-        return getClassifications();
-    }
-
-    /**
-     * Add <code>java.util.List<Classification></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Classification addClassification(Classification classificationElem) {
-        this.addOverlayWidget(classificationElem);
-        return classificationElem;
-    }
-
-    /**
-     * Return <code>java.util.List<Lifecycle></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Lifecycle> getLifecycles() {
-        java.util.List<Lifecycle> result = new ArrayList<Lifecycle>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Lifecycle".equalsIgnoreCase(widget.getType())) {
-                result.add((Lifecycle) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Lifecycle></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Lifecycle> getLifecycleList() {
-        return getLifecycles();
-    }
-
-    /**
-     * Add <code>java.util.List<Lifecycle></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Lifecycle addLifecycle(Lifecycle lifecycleElem) {
-        this.addOverlayWidget(lifecycleElem);
-        return lifecycleElem;
-    }
-
-    /**
-     * Return <code>java.util.List<Workflow></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Workflow> getWorkflows() {
-        java.util.List<Workflow> result = new ArrayList<Workflow>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Workflow".equalsIgnoreCase(widget.getType())) {
-                result.add((Workflow) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Workflow></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Workflow> getWorkflowList() {
-        return getWorkflows();
-    }
-
-    /**
-     * Add <code>java.util.List<Workflow></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Workflow addWorkflow(Workflow workflowElem) {
-        this.addOverlayWidget(workflowElem);
-        return workflowElem;
-    }
-
-    /**
      * Return <code>java.util.List<Analysis></code> property
      *
      * @return The property as unmodifiable list
@@ -257,7 +89,7 @@ public class Meta extends OverlayWidgetImpl {
     public java.util.List<Analysis> getAnalysises() {
         java.util.List<Analysis> result = new ArrayList<Analysis>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Analysis".equalsIgnoreCase(widget.getType())) {
+            if ("Analysis".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Analysis) widget);
             }
         }
@@ -284,71 +116,104 @@ public class Meta extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>java.util.List<TemporalData></code> property
+     * Return <code>java.util.List<Classification></code> property
      *
      * @return The property as unmodifiable list
      */
-    public java.util.List<TemporalData> getTemporalDatas() {
-        java.util.List<TemporalData> result = new ArrayList<TemporalData>();
+    public java.util.List<Classification> getClassifications() {
+        java.util.List<Classification> result = new ArrayList<Classification>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TemporalData".equalsIgnoreCase(widget.getType())) {
-                result.add((TemporalData) widget);
+            if ("Classification".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Classification) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
     /**
-     * Return <code>java.util.List<TemporalData></code> property in DSL way
+     * Return <code>java.util.List<Classification></code> property in DSL way
      *
      * @return The property as unmodifiable list
      */
-    public java.util.List<TemporalData> getTemporalDataList() {
-        return getTemporalDatas();
+    public java.util.List<Classification> getClassificationList() {
+        return getClassifications();
     }
 
     /**
-     * Add <code>java.util.List<TemporalData></code> property in the list of properties
+     * Add <code>java.util.List<Classification></code> property in the list of properties
      *
      * @return The property as unmodifiable list
      */
-    public TemporalData addTemporalData(TemporalData temporalDataElem) {
-        this.addOverlayWidget(temporalDataElem);
-        return temporalDataElem;
+    public Classification addClassification(Classification classificationElem) {
+        this.addOverlayWidget(classificationElem);
+        return classificationElem;
     }
 
     /**
-     * Return <code>java.util.List<References></code> property
+     * Add <code>Identification</code> property in the list of properties
      *
      * @return The property as unmodifiable list
      */
-    public java.util.List<References> getReferenceses() {
-        java.util.List<References> result = new ArrayList<References>();
+    public Identification getIdentification() {
+        Identification result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("References".equalsIgnoreCase(widget.getType())) {
-                result.add((References) widget);
+            if ("Identification".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Identification) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>identificationElem</code> property in DSL way
+     *
+     * @param identificationElem new value
+     * @return <code>Identification</code> instance
+     */
+    public Identification setIdentification(Identification identificationElem) {
+        Identification result = getIdentification();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(identificationElem);
+
+        return identificationElem;
+    }
+
+    /**
+     * Return <code>java.util.List<Lifecycle></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Lifecycle> getLifecycles() {
+        java.util.List<Lifecycle> result = new ArrayList<Lifecycle>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Lifecycle".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Lifecycle) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
     /**
-     * Return <code>java.util.List<References></code> property in DSL way
+     * Return <code>java.util.List<Lifecycle></code> property in DSL way
      *
      * @return The property as unmodifiable list
      */
-    public java.util.List<References> getReferencesList() {
-        return getReferenceses();
+    public java.util.List<Lifecycle> getLifecycleList() {
+        return getLifecycles();
     }
 
     /**
-     * Add <code>java.util.List<References></code> property in the list of properties
+     * Add <code>java.util.List<Lifecycle></code> property in the list of properties
      *
      * @return The property as unmodifiable list
      */
-    public References addReferences(References referencesElem) {
-        this.addOverlayWidget(referencesElem);
-        return referencesElem;
+    public Lifecycle addLifecycle(Lifecycle lifecycleElem) {
+        this.addOverlayWidget(lifecycleElem);
+        return lifecycleElem;
     }
 
     /**
@@ -359,7 +224,7 @@ public class Meta extends OverlayWidgetImpl {
     public java.util.List<Notes> getNoteses() {
         java.util.List<Notes> result = new ArrayList<Notes>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Notes".equalsIgnoreCase(widget.getType())) {
+            if ("Notes".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Notes) widget);
             }
         }
@@ -386,6 +251,40 @@ public class Meta extends OverlayWidgetImpl {
     }
 
     /**
+     * Return <code>java.util.List<Presentation></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Presentation> getPresentations() {
+        java.util.List<Presentation> result = new ArrayList<Presentation>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Presentation".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Presentation) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Presentation></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Presentation> getPresentationList() {
+        return getPresentations();
+    }
+
+    /**
+     * Add <code>java.util.List<Presentation></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Presentation addPresentation(Presentation presentationElem) {
+        this.addOverlayWidget(presentationElem);
+        return presentationElem;
+    }
+
+    /**
      * Return <code>java.util.List<Proprietary></code> property
      *
      * @return The property as unmodifiable list
@@ -393,7 +292,7 @@ public class Meta extends OverlayWidgetImpl {
     public java.util.List<Proprietary> getProprietaries() {
         java.util.List<Proprietary> result = new ArrayList<Proprietary>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Proprietary".equalsIgnoreCase(widget.getType())) {
+            if ("Proprietary".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Proprietary) widget);
             }
         }
@@ -420,37 +319,138 @@ public class Meta extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>java.util.List<Presentation></code> property
+     * Add <code>Publication</code> property in the list of properties
      *
      * @return The property as unmodifiable list
      */
-    public java.util.List<Presentation> getPresentations() {
-        java.util.List<Presentation> result = new ArrayList<Presentation>();
+    public Publication getPublication() {
+        Publication result = null;
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Presentation".equalsIgnoreCase(widget.getType())) {
-                result.add((Presentation) widget);
+            if ("Publication".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Publication) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>publicationElem</code> property in DSL way
+     *
+     * @param publicationElem new value
+     * @return <code>Publication</code> instance
+     */
+    public Publication setPublication(Publication publicationElem) {
+        Publication result = getPublication();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(publicationElem);
+
+        return publicationElem;
+    }
+
+    /**
+     * Return <code>java.util.List<References></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<References> getReferenceses() {
+        java.util.List<References> result = new ArrayList<References>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("References".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((References) widget);
             }
         }
         return java.util.Collections.unmodifiableList(result);
     }
 
     /**
-     * Return <code>java.util.List<Presentation></code> property in DSL way
+     * Return <code>java.util.List<References></code> property in DSL way
      *
      * @return The property as unmodifiable list
      */
-    public java.util.List<Presentation> getPresentationList() {
-        return getPresentations();
+    public java.util.List<References> getReferencesList() {
+        return getReferenceses();
     }
 
     /**
-     * Add <code>java.util.List<Presentation></code> property in the list of properties
+     * Add <code>java.util.List<References></code> property in the list of properties
      *
      * @return The property as unmodifiable list
      */
-    public Presentation addPresentation(Presentation presentationElem) {
-        this.addOverlayWidget(presentationElem);
-        return presentationElem;
+    public References addReferences(References referencesElem) {
+        this.addOverlayWidget(referencesElem);
+        return referencesElem;
+    }
+
+    /**
+     * Return <code>java.util.List<TemporalData></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<TemporalData> getTemporalDatas() {
+        java.util.List<TemporalData> result = new ArrayList<TemporalData>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("TemporalData".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((TemporalData) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<TemporalData></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<TemporalData> getTemporalDataList() {
+        return getTemporalDatas();
+    }
+
+    /**
+     * Add <code>java.util.List<TemporalData></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public TemporalData addTemporalData(TemporalData temporalDataElem) {
+        this.addOverlayWidget(temporalDataElem);
+        return temporalDataElem;
+    }
+
+    /**
+     * Return <code>java.util.List<Workflow></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Workflow> getWorkflows() {
+        java.util.List<Workflow> result = new ArrayList<Workflow>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Workflow".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Workflow) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Workflow></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Workflow> getWorkflowList() {
+        return getWorkflows();
+    }
+
+    /**
+     * Add <code>java.util.List<Workflow></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Workflow addWorkflow(Workflow workflowElem) {
+        this.addOverlayWidget(workflowElem);
+        return workflowElem;
     }
 
 //Override all attributes methods to be conformant with DSL approach

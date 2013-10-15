@@ -38,4 +38,7 @@ public interface Constants extends com.google.gwt.i18n.client.Constants {
 
     @Key("amendment.action.export.pdf")
     String amendmentActionExportPdf();
+
+    @Key("amendment.action.close")
+    String amendmentActionClose();
 }

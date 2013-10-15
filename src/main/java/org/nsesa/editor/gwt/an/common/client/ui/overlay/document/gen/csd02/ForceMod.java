@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element forceMod is a metadata element specifying an (active or passive) modification in force for the document.
+ * The element forceMod is a metadata element specifying an (active or passive) modification in force<br/> for the document.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -52,8 +52,8 @@ public class ForceMod extends ModificationTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "forceMod");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "forceMod");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget forceMod");
         return span;
     }
@@ -133,6 +133,17 @@ public class ForceMod extends ModificationTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> ForceMod</code> instance
+     */
+    public ForceMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
      * Set <code>exclusionAttr</code> property in DSL way
      *
      * @param exclusionAttr new value
@@ -140,17 +151,6 @@ public class ForceMod extends ModificationTypeComplexType {
      */
     public ForceMod exclusionAttr(final BooleanSimpleType exclusionAttr) {
         setExclusionAttr(exclusionAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>incompleteAttr</code> property in DSL way
-     *
-     * @param incompleteAttr new value
-     * @return <code> ForceMod</code> instance
-     */
-    public ForceMod incompleteAttr(final BooleanSimpleType incompleteAttr) {
-        setIncompleteAttr(incompleteAttr);
         return this;
     }
 
@@ -166,13 +166,24 @@ public class ForceMod extends ModificationTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>incompleteAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param incompleteAttr new value
      * @return <code> ForceMod</code> instance
      */
-    public ForceMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public ForceMod incompleteAttr(final BooleanSimpleType incompleteAttr) {
+        setIncompleteAttr(incompleteAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> ForceMod</code> instance
+     */
+    public ForceMod periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -206,17 +217,6 @@ public class ForceMod extends ModificationTypeComplexType {
      */
     public ForceMod wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> ForceMod</code> instance
-     */
-    public ForceMod periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
         return this;
     }
 

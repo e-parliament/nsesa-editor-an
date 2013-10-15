@@ -46,8 +46,8 @@ public class Recount extends ParliamentaryAnalysisTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "recount");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "recount");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget recount");
         return span;
     }
@@ -83,24 +83,13 @@ public class Recount extends ParliamentaryAnalysisTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>outcomeAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param outcomeAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> Recount</code> instance
      */
-    public Recount outcomeAttr(final AnyURISimpleType outcomeAttr) {
-        setOutcomeAttr(outcomeAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Recount</code> instance
-     */
-    public Recount wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Recount evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -116,17 +105,6 @@ public class Recount extends ParliamentaryAnalysisTypeComplexType {
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr new value
-     * @return <code> Recount</code> instance
-     */
-    public Recount refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
      * Set <code>idAttr</code> property in DSL way
      *
      * @param idAttr new value
@@ -138,13 +116,35 @@ public class Recount extends ParliamentaryAnalysisTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>outcomeAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param outcomeAttr new value
      * @return <code> Recount</code> instance
      */
-    public Recount evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public Recount outcomeAttr(final AnyURISimpleType outcomeAttr) {
+        setOutcomeAttr(outcomeAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Recount</code> instance
+     */
+    public Recount refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Recount</code> instance
+     */
+    public Recount wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

@@ -23,7 +23,9 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
  * Note: this file is generated. Rather than changing this file, correct the template called <tt>overlayLocalizableResource.ftl</tt>.
  */
 public class Csd02OverlayLocalizableResource extends DefaultOverlayLocalizableResource {
+
     private static Csd02OverlayMessages MESSAGES = GWT.create(Csd02OverlayMessages.class);
+    private final String namespaceURI = "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02";
 
     @Override
     public String getName(final OverlayWidget widget) {
@@ -1205,6 +1207,11 @@ public class Csd02OverlayLocalizableResource extends DefaultOverlayLocalizableRe
         } else {
             return widget.getType();
         }
+    }
+
+    @Override
+    public String getNamespaceURI() {
+        return namespaceURI;
     }
 
 }

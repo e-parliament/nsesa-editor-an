@@ -48,8 +48,8 @@ public class Identification extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "identification");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "identification");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget identification");
         return span;
     }
@@ -82,6 +82,138 @@ public class Identification extends OverlayWidgetImpl {
 
     // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
+
+    /**
+     * Add <code>FRBRExpression</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public FRBRExpression getFRBRExpression() {
+        FRBRExpression result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("FRBRExpression".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (FRBRExpression) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>FRBRExpressionElem</code> property in DSL way
+     *
+     * @param FRBRExpressionElem new value
+     * @return <code>FRBRExpression</code> instance
+     */
+    public FRBRExpression setFRBRExpression(FRBRExpression FRBRExpressionElem) {
+        FRBRExpression result = getFRBRExpression();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(FRBRExpressionElem);
+
+        return FRBRExpressionElem;
+    }
+
+    /**
+     * Add <code>FRBRItem</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public FRBRItem getFRBRItem() {
+        FRBRItem result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("FRBRItem".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (FRBRItem) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>FRBRItemElem</code> property in DSL way
+     *
+     * @param FRBRItemElem new value
+     * @return <code>FRBRItem</code> instance
+     */
+    public FRBRItem setFRBRItem(FRBRItem FRBRItemElem) {
+        FRBRItem result = getFRBRItem();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(FRBRItemElem);
+
+        return FRBRItemElem;
+    }
+
+    /**
+     * Add <code>FRBRManifestation</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public FRBRManifestation getFRBRManifestation() {
+        FRBRManifestation result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("FRBRManifestation".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (FRBRManifestation) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>FRBRManifestationElem</code> property in DSL way
+     *
+     * @param FRBRManifestationElem new value
+     * @return <code>FRBRManifestation</code> instance
+     */
+    public FRBRManifestation setFRBRManifestation(FRBRManifestation FRBRManifestationElem) {
+        FRBRManifestation result = getFRBRManifestation();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(FRBRManifestationElem);
+
+        return FRBRManifestationElem;
+    }
+
+    /**
+     * Add <code>FRBRWork</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public FRBRWork getFRBRWork() {
+        FRBRWork result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("FRBRWork".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (FRBRWork) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>FRBRWorkElem</code> property in DSL way
+     *
+     * @param FRBRWorkElem new value
+     * @return <code>FRBRWork</code> instance
+     */
+    public FRBRWork setFRBRWork(FRBRWork FRBRWorkElem) {
+        FRBRWork result = getFRBRWork();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(FRBRWorkElem);
+
+        return FRBRWorkElem;
+    }
 
     /**
      * Return <code>sourceAttr</code> property
@@ -125,138 +257,6 @@ public class Identification extends OverlayWidgetImpl {
     public Identification sourceAttr(final AnyURISimpleType sourceAttr) {
         setSourceAttr(sourceAttr);
         return this;
-    }
-
-    /**
-     * Add <code>FRBRWork</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public FRBRWork getFRBRWork() {
-        FRBRWork result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRWork".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (FRBRWork) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>FRBRWorkElem</code> property in DSL way
-     *
-     * @param FRBRWorkElem new value
-     * @return <code>FRBRWork</code> instance
-     */
-    public FRBRWork setFRBRWork(FRBRWork FRBRWorkElem) {
-        FRBRWork result = getFRBRWork();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(FRBRWorkElem);
-
-        return FRBRWorkElem;
-    }
-
-    /**
-     * Add <code>FRBRExpression</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public FRBRExpression getFRBRExpression() {
-        FRBRExpression result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRExpression".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (FRBRExpression) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>FRBRExpressionElem</code> property in DSL way
-     *
-     * @param FRBRExpressionElem new value
-     * @return <code>FRBRExpression</code> instance
-     */
-    public FRBRExpression setFRBRExpression(FRBRExpression FRBRExpressionElem) {
-        FRBRExpression result = getFRBRExpression();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(FRBRExpressionElem);
-
-        return FRBRExpressionElem;
-    }
-
-    /**
-     * Add <code>FRBRManifestation</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public FRBRManifestation getFRBRManifestation() {
-        FRBRManifestation result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRManifestation".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (FRBRManifestation) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>FRBRManifestationElem</code> property in DSL way
-     *
-     * @param FRBRManifestationElem new value
-     * @return <code>FRBRManifestation</code> instance
-     */
-    public FRBRManifestation setFRBRManifestation(FRBRManifestation FRBRManifestationElem) {
-        FRBRManifestation result = getFRBRManifestation();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(FRBRManifestationElem);
-
-        return FRBRManifestationElem;
-    }
-
-    /**
-     * Add <code>FRBRItem</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public FRBRItem getFRBRItem() {
-        FRBRItem result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FRBRItem".equalsIgnoreCase(widget.getType()) && "http://www.akomantoso.org/2.0".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (FRBRItem) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>FRBRItemElem</code> property in DSL way
-     *
-     * @param FRBRItemElem new value
-     * @return <code>FRBRItem</code> instance
-     */
-    public FRBRItem setFRBRItem(FRBRItem FRBRItemElem) {
-        FRBRItem result = getFRBRItem();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(FRBRItemElem);
-
-        return FRBRItemElem;
     }
 //Override all attributes methods to be conformant with DSL approach
 

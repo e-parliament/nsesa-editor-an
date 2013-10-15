@@ -48,8 +48,8 @@ public class Contrasts extends JudicialArgumentTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "contrasts");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "contrasts");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget contrasts");
         return span;
     }
@@ -85,28 +85,6 @@ public class Contrasts extends JudicialArgumentTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr new value
-     * @return <code> Contrasts</code> instance
-     */
-    public Contrasts statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Contrasts</code> instance
-     */
-    public Contrasts idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
      * Set <code>evolvingIdAttr</code> property in DSL way
      *
      * @param evolvingIdAttr new value
@@ -114,17 +92,6 @@ public class Contrasts extends JudicialArgumentTypeComplexType {
      */
     public Contrasts evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Contrasts</code> instance
-     */
-    public Contrasts wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -140,6 +107,17 @@ public class Contrasts extends JudicialArgumentTypeComplexType {
     }
 
     /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Contrasts</code> instance
+     */
+    public Contrasts idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
      * Set <code>incompleteAttr</code> property in DSL way
      *
      * @param incompleteAttr new value
@@ -147,6 +125,17 @@ public class Contrasts extends JudicialArgumentTypeComplexType {
      */
     public Contrasts incompleteAttr(final BooleanSimpleType incompleteAttr) {
         setIncompleteAttr(incompleteAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Contrasts</code> instance
+     */
+    public Contrasts periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -162,13 +151,24 @@ public class Contrasts extends JudicialArgumentTypeComplexType {
     }
 
     /**
-     * Set <code>periodAttr</code> property in DSL way
+     * Set <code>statusAttr</code> property in DSL way
      *
-     * @param periodAttr new value
+     * @param statusAttr new value
      * @return <code> Contrasts</code> instance
      */
-    public Contrasts periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public Contrasts statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> Contrasts</code> instance
+     */
+    public Contrasts wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

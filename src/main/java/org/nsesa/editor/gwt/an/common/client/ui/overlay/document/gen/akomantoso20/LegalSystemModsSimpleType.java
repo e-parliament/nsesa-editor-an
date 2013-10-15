@@ -18,7 +18,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso
  */
 public enum LegalSystemModsSimpleType {
 
-// FIELDS ------------------
+// ENUM VALUES ------------------
 
     STATICREFERENCE("staticReference"),
     IMPLEMENTATION("implementation"),
@@ -64,5 +64,11 @@ public enum LegalSystemModsSimpleType {
             }
         }
         return null;
+    }
+
+    private static final String namespaceURI = "http://www.akomantoso.org/2.0";
+
+    public static String getNamespaceURI() {
+        return namespaceURI;
     }
 }

@@ -27,8 +27,9 @@ import org.nsesa.editor.gwt.an.amendments.client.handler.common.content.AkomaNto
 import org.nsesa.editor.gwt.an.amendments.client.mode.ColumnMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.ConsolidationMode;
 import org.nsesa.editor.gwt.an.amendments.client.mode.DiffMode;
-import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmentControllerUtil;
 import org.nsesa.editor.gwt.an.common.client.mode.StructureViewMode;
+import org.nsesa.editor.gwt.an.common.client.push.PushManager;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
@@ -40,6 +41,7 @@ import org.nsesa.editor.gwt.core.client.event.widget.OverlayWidgetStructureChang
 import org.nsesa.editor.gwt.core.client.event.widget.OverlayWidgetStructureChangeEventHandler;
 import org.nsesa.editor.gwt.core.client.keyboard.KeyboardListener;
 import org.nsesa.editor.gwt.core.client.mode.ActiveState;
+import org.nsesa.editor.gwt.core.client.ui.document.OverlayWidgetAware;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Creator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Mover;
@@ -67,6 +69,7 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
     private static final Logger LOG = Logger.getLogger(AkomaNtoso20AmendmentDocumentController.class.getName());
 
     private final KeyboardListener keyboardListener;
+    private final PushManager pushManager;
     private AmendmentInjectionPointFinder amendmentInjectionPointFinder;
 
     // --- key combos ---
@@ -85,10 +88,12 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
                                                    final Creator creator,
                                                    final Mover mover,
                                                    final KeyboardListener keyboardListener,
-                                                   final AmendmentInjectionPointFinder amendmentInjectionPointFinder) {
+                                                   final AmendmentInjectionPointFinder amendmentInjectionPointFinder,
+                                                   final PushManager pushManager) {
         super(clientFactory, serviceFactory, overlayFactory, locator, creator, mover);
         this.keyboardListener = keyboardListener;
         this.amendmentInjectionPointFinder = amendmentInjectionPointFinder;
+        this.pushManager = pushManager;
     }
 
     @Override
@@ -128,15 +133,19 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
                 final ArrayList<AmendmentContainerDTO> amendments = new ArrayList<AmendmentContainerDTO>();
                 for (final OverlayWidget widget : event.getAffectedWidgets()) {
                     if (widget.getOverlayWidgetAwareList() != null && !widget.getOverlayWidgetAwareList().isEmpty()) {
-                        AmendmentController controller = (AmendmentController) widget.getOverlayWidgetAwareList().get(0);
-                        boolean needUpdate = updateAmendmentAfterStructuralChange(controller);
-                        if (needUpdate) {
-                            amendments.add(controller.getModel());
+                        for (final OverlayWidgetAware overlayWidgetAware : widget.getOverlayWidgetAwareList()) {
+                            if (overlayWidgetAware instanceof AmendmentController) {
+                                AmendmentController controller = (AmendmentController) overlayWidgetAware;
+                                boolean needUpdate = updateAmendmentAfterStructuralChange(controller);
+                                if (needUpdate) {
+                                    amendments.add(controller.getModel());
+                                }
+                            }
                         }
                     }
                 }
                 if (!amendments.isEmpty()) {
-                    documentEventBus.fireEvent(new AmendmentContainerSaveEvent(amendments.toArray(new AmendmentContainerDTO[0])));
+                    documentEventBus.fireEvent(new AmendmentContainerSaveEvent(amendments.toArray(new AmendmentContainerDTO[amendments.size()])));
                 }
             }
         });
@@ -157,23 +166,28 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
     }
 
     /**
-     * Update an amendment after structural change
+     * Update an amendment after structural change. The idea is that we currently need to rebuild the entire amendment
+     * just to be sure that the content wasn't changed.
+     * <p/>
+     * TODO: this doesn't seem the best idea - this needs a rewrite
      *
-     * @param amendmentController
-     * @return True when the amendment content needs to be changed
+     * @param amendmentController the amendment controller to rebuild
+     * @return <tt>true</tt> when the amendment content needs to be persisted to the backend.
      */
-    private boolean updateAmendmentAfterStructuralChange(AmendmentController amendmentController) {
+    private boolean updateAmendmentAfterStructuralChange(final AmendmentController amendmentController) {
+
+
         //identify the new overlay widget reference to be used when determining widget reference
         final OverlayWidget newWidgetReference = determineWidgetReference(amendmentController.getOverlayWidget());
-        AmendableWidgetReference newReference = amendmentInjectionPointFinder.getInjectionPoint(
+        final AmendableWidgetReference newReference = amendmentInjectionPointFinder.getInjectionPoint(
                 amendmentController.getOverlayWidget().getParentOverlayWidget(),
                 newWidgetReference,
                 amendmentController.getOverlayWidget());
 
-        AmendableWidgetReference oldReference = amendmentController.getModel().getSourceReference();
+        final AmendableWidgetReference oldReference = amendmentController.getModel().getSourceReference();
 
         // oldReference and newReference are the same no need to update the amendment content
-        if (oldReference.getPath().equalsIgnoreCase(newReference.getPath()) && oldReference.getOffset() == newReference.getOffset()) {
+        if (oldReference.getPath().equalsIgnoreCase(newReference.getPath()) && oldReference.getOffset().equals(newReference.getOffset())) {
             return false;
         }
 
@@ -185,7 +199,7 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
         final Preface preface = (Preface) OverlayUtil.findSingle("preface", amendmentBodyOverlayWidget);
         final Container container = preface.getContainers().get(0);
         if (container != null && "authors".equals(container.nameAttr().getValue())) {
-            List<OverlayWidget> docProponents = OverlayUtil.find("docProponent", container);
+            final List<OverlayWidget> docProponents = OverlayUtil.find("docProponent", container);
             for (final OverlayWidget docProponent : docProponents) {
                 if (docProponent instanceof DocProponent) {
                     final DocProponent proponent = (DocProponent) docProponent;
@@ -226,14 +240,14 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
         final String languageIso = amendmentController.getDocumentController().getDocument().getLanguageIso();
         // set the num
         String num = locator.getNum(amendmentController.getOverlayWidget(), clientFactory.getClientContext().getDocumentTranslationLanguageCode(), true);
-        AkomaNtoso20AmendmentControllerUtil.setAmendmentNumOnModel(amendmentController, num);
+        AkomaNtosoAmendmentControllerUtil.setAmendmentNumOnModel(amendmentController, num);
 
-        final OverlayWidget amendmentContentFromModel = AkomaNtoso20AmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
+        final OverlayWidget amendmentContentFromModel = AkomaNtosoAmendmentControllerUtil.getAmendmentContentFromModel(amendmentController);
         String content = amendmentContentFromModel.getInnerHTML();
         final OverlayWidget amendmentOverlayWidget = amendmentController.asAmendableWidget(content);
 
         //build again the amendment
-        final OverlayWidget originalContentFromModel = AkomaNtoso20AmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
+        final OverlayWidget originalContentFromModel = AkomaNtosoAmendmentControllerUtil.getOriginalContentFromModel(amendmentController);
         builder
                 .setOverlayWidget(amendmentController.getOverlayWidget())
                 .setLanguageIso(languageIso)
@@ -246,7 +260,6 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
                 .setNotes(notes);
         amendmentController.getModel().setSourceReference(newReference);
         amendmentController.getModel().setRoot(builder.build());
-
         return true;
     }
 

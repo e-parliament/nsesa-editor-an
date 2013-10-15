@@ -15,13 +15,14 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.namespace;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.DOM;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.LanguageSimpleType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.xmlschema.StringSimpleType;
 
 /**
+ * Generated class
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
-public class LangAttribute extends LanguageSimpleType {
+public class LangAttribute extends StringSimpleType {
 
 
     /**
@@ -29,8 +30,8 @@ public class LangAttribute extends LanguageSimpleType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "langAttribute");
-        span.setAttribute("ns", "http://www.w3.org/XML/1998/namespace");
+        span.setAttribute("data-type", "langAttribute");
+        span.setAttribute("data-ns", "http://www.w3.org/XML/1998/namespace");
         span.setClassName("widget langAttribute");
         return span;
     }

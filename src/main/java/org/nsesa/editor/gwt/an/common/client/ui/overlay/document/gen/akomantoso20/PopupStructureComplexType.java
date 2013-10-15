@@ -133,8 +133,8 @@ public class PopupStructureComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "popupStructureComplexType");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "popupStructureComplexType");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget popupStructureComplexType");
         return span;
     }
@@ -150,14 +150,14 @@ public class PopupStructureComplexType extends OverlayWidgetImpl {
 
     // FIELDS ------------------
     private AnyURISimpleType alternativeToAttr;
-    private StringSimpleType classAttr;
-    private StringSimpleType styleAttr;
-    private StringSimpleType titleAttr;
-    private AnyURISimpleType refersToAttr;
     private String wildcardContentAttr;
     private LanguageSimpleType langAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType refersToAttr;
+    private StringSimpleType classAttr;
+    private StringSimpleType styleAttr;
+    private StringSimpleType titleAttr;
     private StatusTypeSimpleType statusAttr;
     private AnyURISimpleType periodAttr;
 
@@ -512,182 +512,6 @@ public class PopupStructureComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>classAttr</code> property
-     *
-     * @return classAttr
-     */
-    public StringSimpleType getClassAttr() {
-        if (classAttr == null) {
-            classAttr = new StringSimpleType();
-            classAttr.setValue(getElement().getAttribute("class"));
-        }
-
-        return classAttr;
-    }
-
-    /**
-     * Return <code>classAttr</code> property in DSL way
-     *
-     * @return classAttr
-     */
-    public StringSimpleType classAttr() {
-        return getClassAttr();
-    }
-
-    /**
-     * Set <code>classAttr</code> property
-     *
-     * @param classAttr the new value
-     */
-    public void setClassAttr(final StringSimpleType classAttr) {
-        this.classAttr = classAttr;
-        getElement().setAttribute("class", classAttr.getValue());
-    }
-
-    /**
-     * Set <code>classAttr</code> property in DSL way
-     *
-     * @param classAttr the new value
-     * @return <code>PopupStructureComplexType</code> instance
-     */
-    public PopupStructureComplexType classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>styleAttr</code> property
-     *
-     * @return styleAttr
-     */
-    public StringSimpleType getStyleAttr() {
-        if (styleAttr == null) {
-            styleAttr = new StringSimpleType();
-            styleAttr.setValue(getElement().getAttribute("style"));
-        }
-
-        return styleAttr;
-    }
-
-    /**
-     * Return <code>styleAttr</code> property in DSL way
-     *
-     * @return styleAttr
-     */
-    public StringSimpleType styleAttr() {
-        return getStyleAttr();
-    }
-
-    /**
-     * Set <code>styleAttr</code> property
-     *
-     * @param styleAttr the new value
-     */
-    public void setStyleAttr(final StringSimpleType styleAttr) {
-        this.styleAttr = styleAttr;
-        getElement().setAttribute("style", styleAttr.getValue());
-    }
-
-    /**
-     * Set <code>styleAttr</code> property in DSL way
-     *
-     * @param styleAttr the new value
-     * @return <code>PopupStructureComplexType</code> instance
-     */
-    public PopupStructureComplexType styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>titleAttr</code> property
-     *
-     * @return titleAttr
-     */
-    public StringSimpleType getTitleAttr() {
-        if (titleAttr == null) {
-            titleAttr = new StringSimpleType();
-            titleAttr.setValue(getElement().getAttribute("title"));
-        }
-
-        return titleAttr;
-    }
-
-    /**
-     * Return <code>titleAttr</code> property in DSL way
-     *
-     * @return titleAttr
-     */
-    public StringSimpleType titleAttr() {
-        return getTitleAttr();
-    }
-
-    /**
-     * Set <code>titleAttr</code> property
-     *
-     * @param titleAttr the new value
-     */
-    public void setTitleAttr(final StringSimpleType titleAttr) {
-        this.titleAttr = titleAttr;
-        getElement().setAttribute("title", titleAttr.getValue());
-    }
-
-    /**
-     * Set <code>titleAttr</code> property in DSL way
-     *
-     * @param titleAttr the new value
-     * @return <code>PopupStructureComplexType</code> instance
-     */
-    public PopupStructureComplexType titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>refersToAttr</code> property
-     *
-     * @return refersToAttr
-     */
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-    }
-
-    /**
-     * Return <code>refersToAttr</code> property in DSL way
-     *
-     * @return refersToAttr
-     */
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property
-     *
-     * @param refersToAttr the new value
-     */
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr the new value
-     * @return <code>PopupStructureComplexType</code> instance
-     */
-    public PopupStructureComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
      * Return <code>wildcardContentAttr</code> property
      *
      * @return wildcardContentAttr
@@ -859,6 +683,182 @@ public class PopupStructureComplexType extends OverlayWidgetImpl {
      */
     public PopupStructureComplexType evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
         setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property in DSL way
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property
+     *
+     * @param refersToAttr the new value
+     */
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr the new value
+     * @return <code>PopupStructureComplexType</code> instance
+     */
+    public PopupStructureComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>classAttr</code> property
+     *
+     * @return classAttr
+     */
+    public StringSimpleType getClassAttr() {
+        if (classAttr == null) {
+            classAttr = new StringSimpleType();
+            classAttr.setValue(getElement().getAttribute("class"));
+        }
+
+        return classAttr;
+    }
+
+    /**
+     * Return <code>classAttr</code> property in DSL way
+     *
+     * @return classAttr
+     */
+    public StringSimpleType classAttr() {
+        return getClassAttr();
+    }
+
+    /**
+     * Set <code>classAttr</code> property
+     *
+     * @param classAttr the new value
+     */
+    public void setClassAttr(final StringSimpleType classAttr) {
+        this.classAttr = classAttr;
+        getElement().setAttribute("class", classAttr.getValue());
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr the new value
+     * @return <code>PopupStructureComplexType</code> instance
+     */
+    public PopupStructureComplexType classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>styleAttr</code> property
+     *
+     * @return styleAttr
+     */
+    public StringSimpleType getStyleAttr() {
+        if (styleAttr == null) {
+            styleAttr = new StringSimpleType();
+            styleAttr.setValue(getElement().getAttribute("style"));
+        }
+
+        return styleAttr;
+    }
+
+    /**
+     * Return <code>styleAttr</code> property in DSL way
+     *
+     * @return styleAttr
+     */
+    public StringSimpleType styleAttr() {
+        return getStyleAttr();
+    }
+
+    /**
+     * Set <code>styleAttr</code> property
+     *
+     * @param styleAttr the new value
+     */
+    public void setStyleAttr(final StringSimpleType styleAttr) {
+        this.styleAttr = styleAttr;
+        getElement().setAttribute("style", styleAttr.getValue());
+    }
+
+    /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr the new value
+     * @return <code>PopupStructureComplexType</code> instance
+     */
+    public PopupStructureComplexType styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>titleAttr</code> property
+     *
+     * @return titleAttr
+     */
+    public StringSimpleType getTitleAttr() {
+        if (titleAttr == null) {
+            titleAttr = new StringSimpleType();
+            titleAttr.setValue(getElement().getAttribute("title"));
+        }
+
+        return titleAttr;
+    }
+
+    /**
+     * Return <code>titleAttr</code> property in DSL way
+     *
+     * @return titleAttr
+     */
+    public StringSimpleType titleAttr() {
+        return getTitleAttr();
+    }
+
+    /**
+     * Set <code>titleAttr</code> property
+     *
+     * @param titleAttr the new value
+     */
+    public void setTitleAttr(final StringSimpleType titleAttr) {
+        this.titleAttr = titleAttr;
+        getElement().setAttribute("title", titleAttr.getValue());
+    }
+
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr the new value
+     * @return <code>PopupStructureComplexType</code> instance
+     */
+    public PopupStructureComplexType titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
         return this;
     }
 
@@ -3006,14 +3006,14 @@ public class PopupStructureComplexType extends OverlayWidgetImpl {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
         attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
-        attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
-        attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
-        attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
+        attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
+        attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
         attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;

@@ -19,16 +19,19 @@ import com.google.inject.Provides;
 import com.google.inject.Singleton;
 import com.google.inject.TypeLiteral;
 import com.google.inject.name.Names;
+import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
+import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointProvider;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.action.AmendmentActionPanelController;
 import org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentViewImpl;
 import org.nsesa.editor.gwt.amendment.client.ui.document.marker.AmendmentMarkerController;
 import org.nsesa.editor.gwt.amendment.client.ui.pagination.AmendmentPaginationController;
-import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentController;
-import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtoso20AmendmentControllerUtil;
-import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.action.AkomaNtoso20AmendmentActionPanelController;
-import org.nsesa.editor.gwt.an.amendments.client.ui.document.AkomaNtoso20SourceFileHeaderController;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmentController;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmentControllerUtil;
+import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.action.AkomaNtosoAmendmentActionPanelController;
+import org.nsesa.editor.gwt.an.amendments.client.ui.document.AkomaNtosoSourceFileHeaderController;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoOverlayWidgetInjectionStrategy;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.CompositeLocator;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.sourcefile.actionbar.create.AkomaNtosoActionBarCreatePanelController;
 import org.nsesa.editor.gwt.core.client.diffing.DiffingManager;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
@@ -37,6 +40,7 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.header.SourceFileHeaderController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.marker.MarkerController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultSelector;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Selector;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetInjectionStrategy;
 import org.nsesa.editor.gwt.core.client.ui.pagination.PaginationController;
@@ -51,10 +55,10 @@ import org.nsesa.editor.gwt.core.client.undo.UndoManager;
 public class AmendmentDocumentModule extends AbstractGinModule {
     @Override
     protected void configure() {
-        bind(AmendmentController.class).to(AkomaNtoso20AmendmentController.class);
+        bind(AmendmentController.class).to(AkomaNtosoAmendmentController.class);
         bind(DocumentView.class).to(AmendmentDocumentViewImpl.class).in(Singleton.class);
-        bind(SourceFileHeaderController.class).to(AkomaNtoso20SourceFileHeaderController.class).in(Singleton.class);
-        bind(AmendmentActionPanelController.class).to(AkomaNtoso20AmendmentActionPanelController.class).in(Singleton.class);
+        bind(SourceFileHeaderController.class).to(AkomaNtosoSourceFileHeaderController.class).in(Singleton.class);
+        bind(AmendmentActionPanelController.class).to(AkomaNtosoAmendmentActionPanelController.class).in(Singleton.class);
         bind(MarkerController.class).to(AmendmentMarkerController.class).in(Singleton.class);
         bind(OverlayWidgetInjectionStrategy.class).to(AkomaNtosoOverlayWidgetInjectionStrategy.class).in(Singleton.class);
         bind(UndoManager.class).in(Singleton.class);
@@ -65,6 +69,10 @@ public class AmendmentDocumentModule extends AbstractGinModule {
 
         bind(ActionBarCreatePanelController.class).to(AkomaNtosoActionBarCreatePanelController.class).in(Singleton.class);
 
+        bind(AmendmentInjectionPointFinder.class).to(CompositeAmendmentInjectionPointFinder.class).in(Singleton.class);
+        bind(AmendmentInjectionPointProvider.class).to(CompositeAmendmentInjectionPointProvider.class).in(Singleton.class);
+        bind(Locator.class).to(CompositeLocator.class).in(Singleton.class);
+
         bindConstant().annotatedWith(Names.named("default.pathToOriginalContent")).to("//akomaNtoso[0]/amendment[0]/amendmentBody[0]/amendmentContent[0]/block[2]/mod[0]/quotedStructure[0]");
         bindConstant().annotatedWith(Names.named("default.pathToAmendmentContent")).to("//akomaNtoso[0]/amendment[0]/amendmentBody[0]/amendmentContent[0]/block[2]/mod[0]/quotedStructure[1]");
         // bindConstant().annotatedWith(Names.named("single.pathToOriginalContent")).to(null);
@@ -72,7 +80,7 @@ public class AmendmentDocumentModule extends AbstractGinModule {
         // bindConstant().annotatedWith(Names.named("consolidation.pathToOriginalContent")).to(null);
         bindConstant().annotatedWith(Names.named("consolidation.pathToAmendmentContent")).to("//*");
 
-        requestStaticInjection(AkomaNtoso20AmendmentControllerUtil.class);
+        requestStaticInjection(AkomaNtosoAmendmentControllerUtil.class);
 
     }
 

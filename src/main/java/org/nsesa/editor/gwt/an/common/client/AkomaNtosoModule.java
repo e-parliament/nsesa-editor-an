@@ -16,8 +16,8 @@ package org.nsesa.editor.gwt.an.common.client;
 import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Singleton;
 import com.google.inject.name.Names;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtoso20OverlaySnippetFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoCreator;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoOverlaySnippetFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.CompositeLocator;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.CompositeOverlayFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Akomantoso20OverlayFactory;
@@ -49,6 +49,6 @@ public class AkomaNtosoModule extends AbstractGinModule {
 
         bindConstant().annotatedWith(Names.named("caretPositionClassName")).to("caretPosition");
 
-        bind(OverlaySnippetFactory.class).to(AkomaNtoso20OverlaySnippetFactory.class).in(Singleton.class);
+        bind(OverlaySnippetFactory.class).to(AkomaNtosoOverlaySnippetFactory.class).in(Singleton.class);
     }
 }

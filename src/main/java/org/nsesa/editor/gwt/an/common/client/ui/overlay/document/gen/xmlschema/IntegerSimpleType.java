@@ -29,8 +29,8 @@ public class IntegerSimpleType extends DecimalSimpleType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "integerSimpleType");
-        span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
+        span.setAttribute("data-type", "integerSimpleType");
+        span.setAttribute("data-ns", "http://www.w3.org/2001/XMLSchema");
         span.setClassName("widget integerSimpleType");
         return span;
     }

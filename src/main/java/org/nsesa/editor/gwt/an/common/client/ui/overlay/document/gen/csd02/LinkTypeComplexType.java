@@ -25,7 +25,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the complex type linkType defines the empty content model and the list of attributes for Work- or Expression-level references to external resources
+ * the complex type linkType defines the empty content model and the list of attributes for Work- or<br/> Expression-level references to external resources
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -43,8 +43,8 @@ public class LinkTypeComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "linkTypeComplexType");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "linkTypeComplexType");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget linkTypeComplexType");
         return span;
     }
@@ -59,12 +59,100 @@ public class LinkTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
+    private StringSimpleType showAsAttr;
+    private StringSimpleType shortFormAttr;
     private String wildcardContentAttr;
     private AnyURISimpleType hrefAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private StringSimpleType showAsAttr;
-    private StringSimpleType shortFormAttr;
+
+    /**
+     * Return <code>showAsAttr</code> property
+     *
+     * @return showAsAttr
+     */
+    public StringSimpleType getShowAsAttr() {
+        if (showAsAttr == null) {
+            showAsAttr = new StringSimpleType();
+            showAsAttr.setValue(getElement().getAttribute("showAs"));
+        }
+
+        return showAsAttr;
+    }
+
+    /**
+     * Return <code>showAsAttr</code> property in DSL way
+     *
+     * @return showAsAttr
+     */
+    public StringSimpleType showAsAttr() {
+        return getShowAsAttr();
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property
+     *
+     * @param showAsAttr the new value
+     */
+    public void setShowAsAttr(final StringSimpleType showAsAttr) {
+        this.showAsAttr = showAsAttr;
+        getElement().setAttribute("showAs", showAsAttr.getValue());
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property in DSL way
+     *
+     * @param showAsAttr the new value
+     * @return <code>LinkTypeComplexType</code> instance
+     */
+    public LinkTypeComplexType showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>shortFormAttr</code> property
+     *
+     * @return shortFormAttr
+     */
+    public StringSimpleType getShortFormAttr() {
+        if (shortFormAttr == null) {
+            shortFormAttr = new StringSimpleType();
+            shortFormAttr.setValue(getElement().getAttribute("shortForm"));
+        }
+
+        return shortFormAttr;
+    }
+
+    /**
+     * Return <code>shortFormAttr</code> property in DSL way
+     *
+     * @return shortFormAttr
+     */
+    public StringSimpleType shortFormAttr() {
+        return getShortFormAttr();
+    }
+
+    /**
+     * Set <code>shortFormAttr</code> property
+     *
+     * @param shortFormAttr the new value
+     */
+    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
+        this.shortFormAttr = shortFormAttr;
+        getElement().setAttribute("shortForm", shortFormAttr.getValue());
+    }
+
+    /**
+     * Set <code>shortFormAttr</code> property in DSL way
+     *
+     * @param shortFormAttr the new value
+     * @return <code>LinkTypeComplexType</code> instance
+     */
+    public LinkTypeComplexType shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
+        return this;
+    }
 
     /**
      * Return <code>wildcardContentAttr</code> property
@@ -240,94 +328,6 @@ public class LinkTypeComplexType extends OverlayWidgetImpl {
         setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
-
-    /**
-     * Return <code>showAsAttr</code> property
-     *
-     * @return showAsAttr
-     */
-    public StringSimpleType getShowAsAttr() {
-        if (showAsAttr == null) {
-            showAsAttr = new StringSimpleType();
-            showAsAttr.setValue(getElement().getAttribute("showAs"));
-        }
-
-        return showAsAttr;
-    }
-
-    /**
-     * Return <code>showAsAttr</code> property in DSL way
-     *
-     * @return showAsAttr
-     */
-    public StringSimpleType showAsAttr() {
-        return getShowAsAttr();
-    }
-
-    /**
-     * Set <code>showAsAttr</code> property
-     *
-     * @param showAsAttr the new value
-     */
-    public void setShowAsAttr(final StringSimpleType showAsAttr) {
-        this.showAsAttr = showAsAttr;
-        getElement().setAttribute("showAs", showAsAttr.getValue());
-    }
-
-    /**
-     * Set <code>showAsAttr</code> property in DSL way
-     *
-     * @param showAsAttr the new value
-     * @return <code>LinkTypeComplexType</code> instance
-     */
-    public LinkTypeComplexType showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>shortFormAttr</code> property
-     *
-     * @return shortFormAttr
-     */
-    public StringSimpleType getShortFormAttr() {
-        if (shortFormAttr == null) {
-            shortFormAttr = new StringSimpleType();
-            shortFormAttr.setValue(getElement().getAttribute("shortForm"));
-        }
-
-        return shortFormAttr;
-    }
-
-    /**
-     * Return <code>shortFormAttr</code> property in DSL way
-     *
-     * @return shortFormAttr
-     */
-    public StringSimpleType shortFormAttr() {
-        return getShortFormAttr();
-    }
-
-    /**
-     * Set <code>shortFormAttr</code> property
-     *
-     * @param shortFormAttr the new value
-     */
-    public void setShortFormAttr(final StringSimpleType shortFormAttr) {
-        this.shortFormAttr = shortFormAttr;
-        getElement().setAttribute("shortForm", shortFormAttr.getValue());
-    }
-
-    /**
-     * Set <code>shortFormAttr</code> property in DSL way
-     *
-     * @param shortFormAttr the new value
-     * @return <code>LinkTypeComplexType</code> instance
-     */
-    public LinkTypeComplexType shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
-        return this;
-    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
@@ -344,12 +344,12 @@ public class LinkTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
+        attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
-        attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
         return attrs;
     }
 

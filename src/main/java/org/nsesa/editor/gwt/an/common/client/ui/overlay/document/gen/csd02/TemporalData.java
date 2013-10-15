@@ -45,8 +45,8 @@ public class TemporalData extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "temporalData");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "temporalData");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget temporalData");
         return span;
     }
@@ -132,7 +132,7 @@ public class TemporalData extends OverlayWidgetImpl {
     public java.util.List<TemporalGroup> getTemporalGroups() {
         java.util.List<TemporalGroup> result = new ArrayList<TemporalGroup>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("TemporalGroup".equalsIgnoreCase(widget.getType())) {
+            if ("TemporalGroup".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((TemporalGroup) widget);
             }
         }

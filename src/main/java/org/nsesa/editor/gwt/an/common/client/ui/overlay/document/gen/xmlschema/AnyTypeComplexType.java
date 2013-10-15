@@ -45,8 +45,8 @@ public class AnyTypeComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "anyTypeComplexType");
-        span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
+        span.setAttribute("data-type", "anyTypeComplexType");
+        span.setAttribute("data-ns", "http://www.w3.org/2001/XMLSchema");
         span.setClassName("widget anyTypeComplexType");
         return span;
     }
@@ -70,7 +70,7 @@ public class AnyTypeComplexType extends OverlayWidgetImpl {
     public java.util.List<OverlayWidgetImpl> getWildcardContents() {
         java.util.List<OverlayWidgetImpl> result = new ArrayList<OverlayWidgetImpl>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("OverlayWidgetImpl".equalsIgnoreCase(widget.getType())) {
+            if ("OverlayWidgetImpl".equalsIgnoreCase(widget.getType()) && "http://www.w3.org/2001/XMLSchema".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((OverlayWidgetImpl) widget);
             }
         }

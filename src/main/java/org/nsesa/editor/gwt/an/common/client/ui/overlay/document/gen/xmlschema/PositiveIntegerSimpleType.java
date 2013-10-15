@@ -29,8 +29,8 @@ public class PositiveIntegerSimpleType extends NonNegativeIntegerSimpleType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "positiveIntegerSimpleType");
-        span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
+        span.setAttribute("data-type", "positiveIntegerSimpleType");
+        span.setAttribute("data-ns", "http://www.w3.org/2001/XMLSchema");
         span.setClassName("widget positiveIntegerSimpleType");
         return span;
     }

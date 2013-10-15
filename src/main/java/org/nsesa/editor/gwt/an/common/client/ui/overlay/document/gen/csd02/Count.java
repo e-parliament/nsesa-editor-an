@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element count is a metadata container containing the value of a count in a vote or a quorum verification.
+ * The element count is a metadata container containing the value of a count in a vote or a quorum<br/> verification.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -46,8 +46,8 @@ public class Count extends CountTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "count");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "count");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget count");
         return span;
     }
@@ -84,24 +84,24 @@ public class Count extends CountTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param refersToAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> Count</code> instance
      */
-    public Count refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Count evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>hrefAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param hrefAttr new value
      * @return <code> Count</code> instance
      */
-    public Count wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Count hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
         return this;
     }
 
@@ -117,13 +117,13 @@ public class Count extends CountTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>refersToAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param refersToAttr new value
      * @return <code> Count</code> instance
      */
-    public Count evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public Count refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -139,13 +139,13 @@ public class Count extends CountTypeComplexType {
     }
 
     /**
-     * Set <code>hrefAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param hrefAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> Count</code> instance
      */
-    public Count hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
+    public Count wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

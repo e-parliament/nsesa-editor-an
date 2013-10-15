@@ -28,6 +28,7 @@ import java.util.logging.Logger;
 public class XmlschemaOverlayFactory extends DefaultOverlayFactory {
 
     private final static Logger LOG = Logger.getLogger(XmlschemaOverlayFactory.class.getName());
+
     /**
      * the namespace URI of the overlay factory *
      */

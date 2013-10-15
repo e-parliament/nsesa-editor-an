@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
- * the complex type anyOtherType defines an open content model for elements that may use elements from other namespaces.
+ * the complex type anyOtherType defines an open content model for elements that may use elements from<br/> other namespaces.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -48,8 +48,8 @@ public class AnyOtherTypeComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "anyOtherTypeComplexType");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "anyOtherTypeComplexType");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget anyOtherTypeComplexType");
         return span;
     }
@@ -64,10 +64,97 @@ public class AnyOtherTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private IDSimpleType idAttr;
-    private NMTOKENSimpleType evolvingIdAttr;
     private String wildcardContentAttr;
     private AnyURISimpleType hrefAttr;
+    private IDSimpleType idAttr;
+    private NMTOKENSimpleType evolvingIdAttr;
+
+    /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>AnyOtherTypeComplexType</code> instance
+     */
+    public AnyOtherTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>hrefAttr</code> property
+     *
+     * @return hrefAttr
+     */
+    public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(getElement().getAttribute("href"));
+        }
+
+        return hrefAttr;
+    }
+
+    /**
+     * Return <code>hrefAttr</code> property in DSL way
+     *
+     * @return hrefAttr
+     */
+    public AnyURISimpleType hrefAttr() {
+        return getHrefAttr();
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property
+     *
+     * @param hrefAttr the new value
+     */
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+        getElement().setAttribute("href", hrefAttr.getValue());
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr the new value
+     * @return <code>AnyOtherTypeComplexType</code> instance
+     */
+    public AnyOtherTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
 
     /**
      * Return <code>idAttr</code> property
@@ -158,93 +245,6 @@ public class AnyOtherTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property
-     *
-     * @return wildcardContentAttr
-     */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @return wildcardContentAttr
-     */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property
-     *
-     * @param wildcardContentAttr the new value
-     */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr the new value
-     * @return <code>AnyOtherTypeComplexType</code> instance
-     */
-    public AnyOtherTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>hrefAttr</code> property
-     *
-     * @return hrefAttr
-     */
-    public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-            hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(getElement().getAttribute("href"));
-        }
-
-        return hrefAttr;
-    }
-
-    /**
-     * Return <code>hrefAttr</code> property in DSL way
-     *
-     * @return hrefAttr
-     */
-    public AnyURISimpleType hrefAttr() {
-        return getHrefAttr();
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property
-     *
-     * @param hrefAttr the new value
-     */
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-        getElement().setAttribute("href", hrefAttr.getValue());
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr the new value
-     * @return <code>AnyOtherTypeComplexType</code> instance
-     */
-    public AnyOtherTypeComplexType hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
      * Return <code>java.util.List<OverlayWidgetImpl></code> property
      *
      * @return The property as unmodifiable list
@@ -293,10 +293,10 @@ public class AnyOtherTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
-        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
         return attrs;
     }
 

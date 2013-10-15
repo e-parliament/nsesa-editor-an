@@ -161,23 +161,21 @@ public class AkomaNtoso20AmendmentBuilder {
             String documentId = documentController.getDocument().getDocumentID();
             final boolean isRemote = documentId.startsWith("http://") || documentId.startsWith("https://");
             if (isRemote) {
-                references.addActiveRef(new ActiveRef(u(documentId), s(documentController.getDocument().getName()),
-                        id(documentId.substring(documentId.lastIndexOf("/") + 1))));
+                references.addActiveRef(new ActiveRef(u(documentId), id(documentId.substring(documentId.lastIndexOf("/") + 1)), s(documentController.getDocument().getName())));
             } else {
-                references.addActiveRef(new ActiveRef(u("http://at4am.org/xml/"),
-                        s(documentController.getDocument().getName()), id(documentId)));
+                references.addActiveRef(new ActiveRef(u("http://at4am.org/xml/"), id(documentId), s(documentController.getDocument().getName())));
             }
         }
 
         for (final PersonDTO authorial : authors) {
             final IDSimpleType idSimpleType = new IDSimpleType();
-            idSimpleType.setValue("person-" + authorial.getId());
+            idSimpleType.setValue("person-" + authorial.getPersonID());
 
             final StringSimpleType stringSimpleType = new StringSimpleType();
             stringSimpleType.setValue(authorial.getDisplayName());
 
             final AnyURISimpleType anyURISimpleType = new AnyURISimpleType();
-            anyURISimpleType.setValue("urn:lex:eu:parliament:codict:person:" + authorial.getId());
+            anyURISimpleType.setValue("urn:lex:eu:parliament:codict:person:" + authorial.getPersonID());
 
             references.addTLCPerson(new TLCPerson().idAttr(idSimpleType).showAsAttr(stringSimpleType).hrefAttr(anyURISimpleType));
         }
@@ -188,7 +186,7 @@ public class AkomaNtoso20AmendmentBuilder {
         // preface;
         final P p = new P();
         for (final PersonDTO authorial : authors) {
-            final DocProponent docProponent = new DocProponent().refersToAttr(u("#person-" + authorial.getId()));
+            final DocProponent docProponent = new DocProponent().refersToAttr(u("#person-" + authorial.getPersonID()));
             docProponent.html(authorial.getDisplayName());
             p.addDocProponent(docProponent);
         }

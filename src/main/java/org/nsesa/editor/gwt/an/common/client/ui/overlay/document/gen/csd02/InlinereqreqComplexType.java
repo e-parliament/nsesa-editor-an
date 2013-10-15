@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
- * the complex type inlinereq defines the content model and attributes shared by all blocks and inlines. Here the id attribute is required and also the refersTo is required
+ * the complex type inlinereq defines the content model and attributes shared by all blocks and<br/> inlines. Here the id attribute is required and also the refersTo is required
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -145,8 +145,8 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "inlinereqreqComplexType");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "inlinereqreqComplexType");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget inlinereqreqComplexType");
         return span;
     }
@@ -163,15 +163,15 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     // FIELDS ------------------
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType alternativeToAttr;
     private AnyURISimpleType refersToAttr;
+    private StatusTypeSimpleType statusAttr;
+    private AnyURISimpleType alternativeToAttr;
+    private LanguageSimpleType langAttr;
+    private NCNameSimpleType spaceAttr;
     private StringSimpleType classAttr;
     private StringSimpleType styleAttr;
     private StringSimpleType titleAttr;
-    private StatusTypeSimpleType statusAttr;
     private String wildcardContentAttr;
-    private LanguageSimpleType langAttr;
-    private NCNameSimpleType spaceAttr;
     private AnyURISimpleType periodAttr;
 
     /**
@@ -263,6 +263,93 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     }
 
     /**
+     * Return <code>refersToAttr</code> property
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property in DSL way
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property
+     *
+     * @param refersToAttr the new value
+     */
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr the new value
+     * @return <code>InlinereqreqComplexType</code> instance
+     */
+    public InlinereqreqComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>statusAttr</code> property
+     *
+     * @return statusAttr
+     */
+    public StatusTypeSimpleType getStatusAttr() {
+        if (statusAttr == null) {
+            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
+        }
+
+        return statusAttr;
+    }
+
+    /**
+     * Return <code>statusAttr</code> property in DSL way
+     *
+     * @return statusAttr
+     */
+    public StatusTypeSimpleType statusAttr() {
+        return getStatusAttr();
+    }
+
+    /**
+     * Set <code>statusAttr</code> property
+     *
+     * @param statusAttr the new value
+     */
+    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
+        this.statusAttr = statusAttr;
+        getElement().setAttribute("status", statusAttr.value());
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr the new value
+     * @return <code>InlinereqreqComplexType</code> instance
+     */
+    public InlinereqreqComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
+        return this;
+    }
+
+    /**
      * Return <code>alternativeToAttr</code> property
      *
      * @return alternativeToAttr
@@ -307,46 +394,90 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>refersToAttr</code> property
+     * Return <code>langAttr</code> property
      *
-     * @return refersToAttr
+     * @return langAttr
      */
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+    public LanguageSimpleType getLangAttr() {
+        if (langAttr == null) {
+            langAttr = new LanguageSimpleType();
+            langAttr.setValue(getElement().getAttribute("lang"));
         }
 
-        return refersToAttr;
+        return langAttr;
     }
 
     /**
-     * Return <code>refersToAttr</code> property in DSL way
+     * Return <code>langAttr</code> property in DSL way
      *
-     * @return refersToAttr
+     * @return langAttr
      */
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
+    public LanguageSimpleType langAttr() {
+        return getLangAttr();
     }
 
     /**
-     * Set <code>refersToAttr</code> property
+     * Set <code>langAttr</code> property
      *
-     * @param refersToAttr the new value
+     * @param langAttr the new value
      */
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    public void setLangAttr(final LanguageSimpleType langAttr) {
+        this.langAttr = langAttr;
+        getElement().setAttribute("lang", langAttr.getValue());
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>langAttr</code> property in DSL way
      *
-     * @param refersToAttr the new value
+     * @param langAttr the new value
      * @return <code>InlinereqreqComplexType</code> instance
      */
-    public InlinereqreqComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public InlinereqreqComplexType langAttr(final LanguageSimpleType langAttr) {
+        setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>spaceAttr</code> property
+     *
+     * @return spaceAttr
+     */
+    public NCNameSimpleType getSpaceAttr() {
+        if (spaceAttr == null) {
+            spaceAttr = new NCNameSimpleType();
+            spaceAttr.setValue(getElement().getAttribute("space"));
+        }
+
+        return spaceAttr;
+    }
+
+    /**
+     * Return <code>spaceAttr</code> property in DSL way
+     *
+     * @return spaceAttr
+     */
+    public NCNameSimpleType spaceAttr() {
+        return getSpaceAttr();
+    }
+
+    /**
+     * Set <code>spaceAttr</code> property
+     *
+     * @param spaceAttr the new value
+     */
+    public void setSpaceAttr(final NCNameSimpleType spaceAttr) {
+        this.spaceAttr = spaceAttr;
+        getElement().setAttribute("space", spaceAttr.getValue());
+    }
+
+    /**
+     * Set <code>spaceAttr</code> property in DSL way
+     *
+     * @param spaceAttr the new value
+     * @return <code>InlinereqreqComplexType</code> instance
+     */
+    public InlinereqreqComplexType spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
         return this;
     }
 
@@ -483,49 +614,6 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>statusAttr</code> property
-     *
-     * @return statusAttr
-     */
-    public StatusTypeSimpleType getStatusAttr() {
-        if (statusAttr == null) {
-            statusAttr = StatusTypeSimpleType.fromString(getElement().getAttribute("status"));
-        }
-
-        return statusAttr;
-    }
-
-    /**
-     * Return <code>statusAttr</code> property in DSL way
-     *
-     * @return statusAttr
-     */
-    public StatusTypeSimpleType statusAttr() {
-        return getStatusAttr();
-    }
-
-    /**
-     * Set <code>statusAttr</code> property
-     *
-     * @param statusAttr the new value
-     */
-    public void setStatusAttr(final StatusTypeSimpleType statusAttr) {
-        this.statusAttr = statusAttr;
-        getElement().setAttribute("status", statusAttr.value());
-    }
-
-    /**
-     * Set <code>statusAttr</code> property in DSL way
-     *
-     * @param statusAttr the new value
-     * @return <code>InlinereqreqComplexType</code> instance
-     */
-    public InlinereqreqComplexType statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
      * Return <code>wildcardContentAttr</code> property
      *
      * @return wildcardContentAttr
@@ -565,94 +653,6 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
      */
     public InlinereqreqComplexType wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>langAttr</code> property
-     *
-     * @return langAttr
-     */
-    public LanguageSimpleType getLangAttr() {
-        if (langAttr == null) {
-            langAttr = new LanguageSimpleType();
-            langAttr.setValue(getElement().getAttribute("lang"));
-        }
-
-        return langAttr;
-    }
-
-    /**
-     * Return <code>langAttr</code> property in DSL way
-     *
-     * @return langAttr
-     */
-    public LanguageSimpleType langAttr() {
-        return getLangAttr();
-    }
-
-    /**
-     * Set <code>langAttr</code> property
-     *
-     * @param langAttr the new value
-     */
-    public void setLangAttr(final LanguageSimpleType langAttr) {
-        this.langAttr = langAttr;
-        getElement().setAttribute("lang", langAttr.getValue());
-    }
-
-    /**
-     * Set <code>langAttr</code> property in DSL way
-     *
-     * @param langAttr the new value
-     * @return <code>InlinereqreqComplexType</code> instance
-     */
-    public InlinereqreqComplexType langAttr(final LanguageSimpleType langAttr) {
-        setLangAttr(langAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>spaceAttr</code> property
-     *
-     * @return spaceAttr
-     */
-    public NCNameSimpleType getSpaceAttr() {
-        if (spaceAttr == null) {
-            spaceAttr = new NCNameSimpleType();
-            spaceAttr.setValue(getElement().getAttribute("space"));
-        }
-
-        return spaceAttr;
-    }
-
-    /**
-     * Return <code>spaceAttr</code> property in DSL way
-     *
-     * @return spaceAttr
-     */
-    public NCNameSimpleType spaceAttr() {
-        return getSpaceAttr();
-    }
-
-    /**
-     * Set <code>spaceAttr</code> property
-     *
-     * @param spaceAttr the new value
-     */
-    public void setSpaceAttr(final NCNameSimpleType spaceAttr) {
-        this.spaceAttr = spaceAttr;
-        getElement().setAttribute("space", spaceAttr.getValue());
-    }
-
-    /**
-     * Set <code>spaceAttr</code> property in DSL way
-     *
-     * @param spaceAttr the new value
-     * @return <code>InlinereqreqComplexType</code> instance
-     */
-    public InlinereqreqComplexType spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
         return this;
     }
 
@@ -708,7 +708,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Inline> getInlines() {
         java.util.List<Inline> result = new ArrayList<Inline>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Inline".equalsIgnoreCase(widget.getType())) {
+            if ("Inline".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Inline) widget);
             }
         }
@@ -742,7 +742,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Marker> getMarkers() {
         java.util.List<Marker> result = new ArrayList<Marker>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Marker".equalsIgnoreCase(widget.getType())) {
+            if ("Marker".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Marker) widget);
             }
         }
@@ -776,7 +776,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Popup> getPopups() {
         java.util.List<Popup> result = new ArrayList<Popup>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Popup".equalsIgnoreCase(widget.getType())) {
+            if ("Popup".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Popup) widget);
             }
         }
@@ -810,7 +810,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Ref> getRefs() {
         java.util.List<Ref> result = new ArrayList<Ref>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Ref".equalsIgnoreCase(widget.getType())) {
+            if ("Ref".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Ref) widget);
             }
         }
@@ -844,7 +844,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Mref> getMrefs() {
         java.util.List<Mref> result = new ArrayList<Mref>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Mref".equalsIgnoreCase(widget.getType())) {
+            if ("Mref".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Mref) widget);
             }
         }
@@ -878,7 +878,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Rref> getRrefs() {
         java.util.List<Rref> result = new ArrayList<Rref>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Rref".equalsIgnoreCase(widget.getType())) {
+            if ("Rref".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Rref) widget);
             }
         }
@@ -912,7 +912,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Mod> getMods() {
         java.util.List<Mod> result = new ArrayList<Mod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Mod".equalsIgnoreCase(widget.getType())) {
+            if ("Mod".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Mod) widget);
             }
         }
@@ -946,7 +946,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Mmod> getMmods() {
         java.util.List<Mmod> result = new ArrayList<Mmod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Mmod".equalsIgnoreCase(widget.getType())) {
+            if ("Mmod".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Mmod) widget);
             }
         }
@@ -980,7 +980,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Rmod> getRmods() {
         java.util.List<Rmod> result = new ArrayList<Rmod>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Rmod".equalsIgnoreCase(widget.getType())) {
+            if ("Rmod".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Rmod) widget);
             }
         }
@@ -1014,7 +1014,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Remark> getRemarks() {
         java.util.List<Remark> result = new ArrayList<Remark>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Remark".equalsIgnoreCase(widget.getType())) {
+            if ("Remark".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Remark) widget);
             }
         }
@@ -1048,7 +1048,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<RecordedTime> getRecordedTimes() {
         java.util.List<RecordedTime> result = new ArrayList<RecordedTime>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("RecordedTime".equalsIgnoreCase(widget.getType())) {
+            if ("RecordedTime".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((RecordedTime) widget);
             }
         }
@@ -1082,7 +1082,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Vote> getVotes() {
         java.util.List<Vote> result = new ArrayList<Vote>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Vote".equalsIgnoreCase(widget.getType())) {
+            if ("Vote".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Vote) widget);
             }
         }
@@ -1116,7 +1116,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Outcome> getOutcomes() {
         java.util.List<Outcome> result = new ArrayList<Outcome>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Outcome".equalsIgnoreCase(widget.getType())) {
+            if ("Outcome".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Outcome) widget);
             }
         }
@@ -1150,7 +1150,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Ins> getInses() {
         java.util.List<Ins> result = new ArrayList<Ins>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Ins".equalsIgnoreCase(widget.getType())) {
+            if ("Ins".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Ins) widget);
             }
         }
@@ -1184,7 +1184,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Del> getDels() {
         java.util.List<Del> result = new ArrayList<Del>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Del".equalsIgnoreCase(widget.getType())) {
+            if ("Del".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Del) widget);
             }
         }
@@ -1218,7 +1218,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Omissis> getOmissises() {
         java.util.List<Omissis> result = new ArrayList<Omissis>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Omissis".equalsIgnoreCase(widget.getType())) {
+            if ("Omissis".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Omissis) widget);
             }
         }
@@ -1252,7 +1252,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<ExtractText> getExtractTexts() {
         java.util.List<ExtractText> result = new ArrayList<ExtractText>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ExtractText".equalsIgnoreCase(widget.getType())) {
+            if ("ExtractText".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((ExtractText) widget);
             }
         }
@@ -1286,7 +1286,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<ExtractStructure> getExtractStructures() {
         java.util.List<ExtractStructure> result = new ArrayList<ExtractStructure>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ExtractStructure".equalsIgnoreCase(widget.getType())) {
+            if ("ExtractStructure".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((ExtractStructure) widget);
             }
         }
@@ -1320,7 +1320,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Placeholder> getPlaceholders() {
         java.util.List<Placeholder> result = new ArrayList<Placeholder>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Placeholder".equalsIgnoreCase(widget.getType())) {
+            if ("Placeholder".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Placeholder) widget);
             }
         }
@@ -1354,7 +1354,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<FillIn> getFillIns() {
         java.util.List<FillIn> result = new ArrayList<FillIn>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("FillIn".equalsIgnoreCase(widget.getType())) {
+            if ("FillIn".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((FillIn) widget);
             }
         }
@@ -1388,7 +1388,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<B> getBs() {
         java.util.List<B> result = new ArrayList<B>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("B".equalsIgnoreCase(widget.getType())) {
+            if ("B".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((B) widget);
             }
         }
@@ -1422,7 +1422,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<I> getIs() {
         java.util.List<I> result = new ArrayList<I>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("I".equalsIgnoreCase(widget.getType())) {
+            if ("I".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((I) widget);
             }
         }
@@ -1456,7 +1456,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<A> getAs() {
         java.util.List<A> result = new ArrayList<A>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("A".equalsIgnoreCase(widget.getType())) {
+            if ("A".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((A) widget);
             }
         }
@@ -1490,7 +1490,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<U> getUs() {
         java.util.List<U> result = new ArrayList<U>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("U".equalsIgnoreCase(widget.getType())) {
+            if ("U".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((U) widget);
             }
         }
@@ -1524,7 +1524,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Sub> getSubs() {
         java.util.List<Sub> result = new ArrayList<Sub>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Sub".equalsIgnoreCase(widget.getType())) {
+            if ("Sub".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Sub) widget);
             }
         }
@@ -1558,7 +1558,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Sup> getSups() {
         java.util.List<Sup> result = new ArrayList<Sup>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Sup".equalsIgnoreCase(widget.getType())) {
+            if ("Sup".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Sup) widget);
             }
         }
@@ -1592,7 +1592,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Abbr> getAbbrs() {
         java.util.List<Abbr> result = new ArrayList<Abbr>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Abbr".equalsIgnoreCase(widget.getType())) {
+            if ("Abbr".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Abbr) widget);
             }
         }
@@ -1626,7 +1626,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Span> getSpans() {
         java.util.List<Span> result = new ArrayList<Span>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Span".equalsIgnoreCase(widget.getType())) {
+            if ("Span".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Span) widget);
             }
         }
@@ -1660,7 +1660,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<DocType> getDocTypes() {
         java.util.List<DocType> result = new ArrayList<DocType>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocType".equalsIgnoreCase(widget.getType())) {
+            if ("DocType".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((DocType) widget);
             }
         }
@@ -1694,7 +1694,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<DocTitle> getDocTitles() {
         java.util.List<DocTitle> result = new ArrayList<DocTitle>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocTitle".equalsIgnoreCase(widget.getType())) {
+            if ("DocTitle".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((DocTitle) widget);
             }
         }
@@ -1728,7 +1728,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<DocNumber> getDocNumbers() {
         java.util.List<DocNumber> result = new ArrayList<DocNumber>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocNumber".equalsIgnoreCase(widget.getType())) {
+            if ("DocNumber".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((DocNumber) widget);
             }
         }
@@ -1762,7 +1762,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<DocProponent> getDocProponents() {
         java.util.List<DocProponent> result = new ArrayList<DocProponent>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocProponent".equalsIgnoreCase(widget.getType())) {
+            if ("DocProponent".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((DocProponent) widget);
             }
         }
@@ -1796,7 +1796,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<DocDate> getDocDates() {
         java.util.List<DocDate> result = new ArrayList<DocDate>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocDate".equalsIgnoreCase(widget.getType())) {
+            if ("DocDate".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((DocDate) widget);
             }
         }
@@ -1830,7 +1830,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Legislature> getLegislatures() {
         java.util.List<Legislature> result = new ArrayList<Legislature>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Legislature".equalsIgnoreCase(widget.getType())) {
+            if ("Legislature".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Legislature) widget);
             }
         }
@@ -1864,7 +1864,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Session> getSessions() {
         java.util.List<Session> result = new ArrayList<Session>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Session".equalsIgnoreCase(widget.getType())) {
+            if ("Session".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Session) widget);
             }
         }
@@ -1898,7 +1898,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<ShortTitle> getShortTitles() {
         java.util.List<ShortTitle> result = new ArrayList<ShortTitle>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ShortTitle".equalsIgnoreCase(widget.getType())) {
+            if ("ShortTitle".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((ShortTitle) widget);
             }
         }
@@ -1932,7 +1932,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<DocPurpose> getDocPurposes() {
         java.util.List<DocPurpose> result = new ArrayList<DocPurpose>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocPurpose".equalsIgnoreCase(widget.getType())) {
+            if ("DocPurpose".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((DocPurpose) widget);
             }
         }
@@ -1966,7 +1966,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<DocCommittee> getDocCommittees() {
         java.util.List<DocCommittee> result = new ArrayList<DocCommittee>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocCommittee".equalsIgnoreCase(widget.getType())) {
+            if ("DocCommittee".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((DocCommittee) widget);
             }
         }
@@ -2000,7 +2000,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<DocIntroducer> getDocIntroducers() {
         java.util.List<DocIntroducer> result = new ArrayList<DocIntroducer>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocIntroducer".equalsIgnoreCase(widget.getType())) {
+            if ("DocIntroducer".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((DocIntroducer) widget);
             }
         }
@@ -2034,7 +2034,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<DocStage> getDocStages() {
         java.util.List<DocStage> result = new ArrayList<DocStage>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocStage".equalsIgnoreCase(widget.getType())) {
+            if ("DocStage".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((DocStage) widget);
             }
         }
@@ -2068,7 +2068,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<DocStatus> getDocStatuses() {
         java.util.List<DocStatus> result = new ArrayList<DocStatus>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocStatus".equalsIgnoreCase(widget.getType())) {
+            if ("DocStatus".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((DocStatus) widget);
             }
         }
@@ -2102,7 +2102,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<DocJurisdiction> getDocJurisdictions() {
         java.util.List<DocJurisdiction> result = new ArrayList<DocJurisdiction>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocJurisdiction".equalsIgnoreCase(widget.getType())) {
+            if ("DocJurisdiction".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((DocJurisdiction) widget);
             }
         }
@@ -2136,7 +2136,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<DocketNumber> getDocketNumbers() {
         java.util.List<DocketNumber> result = new ArrayList<DocketNumber>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocketNumber".equalsIgnoreCase(widget.getType())) {
+            if ("DocketNumber".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((DocketNumber) widget);
             }
         }
@@ -2170,7 +2170,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Date> getDates() {
         java.util.List<Date> result = new ArrayList<Date>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Date".equalsIgnoreCase(widget.getType())) {
+            if ("Date".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Date) widget);
             }
         }
@@ -2204,7 +2204,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Time> getTimes() {
         java.util.List<Time> result = new ArrayList<Time>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Time".equalsIgnoreCase(widget.getType())) {
+            if ("Time".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Time) widget);
             }
         }
@@ -2238,7 +2238,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Person> getPersons() {
         java.util.List<Person> result = new ArrayList<Person>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Person".equalsIgnoreCase(widget.getType())) {
+            if ("Person".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Person) widget);
             }
         }
@@ -2272,7 +2272,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Organization> getOrganizations() {
         java.util.List<Organization> result = new ArrayList<Organization>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Organization".equalsIgnoreCase(widget.getType())) {
+            if ("Organization".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Organization) widget);
             }
         }
@@ -2306,7 +2306,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Concept> getConcepts() {
         java.util.List<Concept> result = new ArrayList<Concept>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Concept".equalsIgnoreCase(widget.getType())) {
+            if ("Concept".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Concept) widget);
             }
         }
@@ -2340,7 +2340,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Object> getObjects() {
         java.util.List<Object> result = new ArrayList<Object>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Object".equalsIgnoreCase(widget.getType())) {
+            if ("Object".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Object) widget);
             }
         }
@@ -2374,7 +2374,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Event> getEvents() {
         java.util.List<Event> result = new ArrayList<Event>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Event".equalsIgnoreCase(widget.getType())) {
+            if ("Event".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Event) widget);
             }
         }
@@ -2408,7 +2408,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Location> getLocations() {
         java.util.List<Location> result = new ArrayList<Location>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Location".equalsIgnoreCase(widget.getType())) {
+            if ("Location".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Location) widget);
             }
         }
@@ -2442,7 +2442,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Process> getProcesses() {
         java.util.List<Process> result = new ArrayList<Process>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Process".equalsIgnoreCase(widget.getType())) {
+            if ("Process".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Process) widget);
             }
         }
@@ -2476,7 +2476,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Role> getRoles() {
         java.util.List<Role> result = new ArrayList<Role>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Role".equalsIgnoreCase(widget.getType())) {
+            if ("Role".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Role) widget);
             }
         }
@@ -2510,7 +2510,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Term> getTerms() {
         java.util.List<Term> result = new ArrayList<Term>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Term".equalsIgnoreCase(widget.getType())) {
+            if ("Term".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Term) widget);
             }
         }
@@ -2544,7 +2544,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Quantity> getQuantities() {
         java.util.List<Quantity> result = new ArrayList<Quantity>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Quantity".equalsIgnoreCase(widget.getType())) {
+            if ("Quantity".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Quantity) widget);
             }
         }
@@ -2578,7 +2578,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Def> getDefs() {
         java.util.List<Def> result = new ArrayList<Def>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Def".equalsIgnoreCase(widget.getType())) {
+            if ("Def".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Def) widget);
             }
         }
@@ -2612,7 +2612,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Entity> getEntities() {
         java.util.List<Entity> result = new ArrayList<Entity>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Entity".equalsIgnoreCase(widget.getType())) {
+            if ("Entity".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Entity) widget);
             }
         }
@@ -2646,7 +2646,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<CourtType> getCourtTypes() {
         java.util.List<CourtType> result = new ArrayList<CourtType>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("CourtType".equalsIgnoreCase(widget.getType())) {
+            if ("CourtType".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((CourtType) widget);
             }
         }
@@ -2680,7 +2680,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<NeutralCitation> getNeutralCitations() {
         java.util.List<NeutralCitation> result = new ArrayList<NeutralCitation>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("NeutralCitation".equalsIgnoreCase(widget.getType())) {
+            if ("NeutralCitation".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((NeutralCitation) widget);
             }
         }
@@ -2714,7 +2714,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Party> getParties() {
         java.util.List<Party> result = new ArrayList<Party>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Party".equalsIgnoreCase(widget.getType())) {
+            if ("Party".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Party) widget);
             }
         }
@@ -2748,7 +2748,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Judge> getJudges() {
         java.util.List<Judge> result = new ArrayList<Judge>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Judge".equalsIgnoreCase(widget.getType())) {
+            if ("Judge".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Judge) widget);
             }
         }
@@ -2782,7 +2782,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Lawyer> getLawyers() {
         java.util.List<Lawyer> result = new ArrayList<Lawyer>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Lawyer".equalsIgnoreCase(widget.getType())) {
+            if ("Lawyer".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Lawyer) widget);
             }
         }
@@ -2816,7 +2816,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Signature> getSignatures() {
         java.util.List<Signature> result = new ArrayList<Signature>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Signature".equalsIgnoreCase(widget.getType())) {
+            if ("Signature".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Signature) widget);
             }
         }
@@ -2850,7 +2850,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Opinion> getOpinions() {
         java.util.List<Opinion> result = new ArrayList<Opinion>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Opinion".equalsIgnoreCase(widget.getType())) {
+            if ("Opinion".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Opinion) widget);
             }
         }
@@ -2884,7 +2884,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<AffectedDocument> getAffectedDocuments() {
         java.util.List<AffectedDocument> result = new ArrayList<AffectedDocument>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("AffectedDocument".equalsIgnoreCase(widget.getType())) {
+            if ("AffectedDocument".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((AffectedDocument) widget);
             }
         }
@@ -2918,7 +2918,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<RelatedDocument> getRelatedDocuments() {
         java.util.List<RelatedDocument> result = new ArrayList<RelatedDocument>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("RelatedDocument".equalsIgnoreCase(widget.getType())) {
+            if ("RelatedDocument".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((RelatedDocument) widget);
             }
         }
@@ -2952,7 +2952,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Change> getChanges() {
         java.util.List<Change> result = new ArrayList<Change>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Change".equalsIgnoreCase(widget.getType())) {
+            if ("Change".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Change) widget);
             }
         }
@@ -2986,7 +2986,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<NoteRef> getNoteRefs() {
         java.util.List<NoteRef> result = new ArrayList<NoteRef>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("NoteRef".equalsIgnoreCase(widget.getType())) {
+            if ("NoteRef".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((NoteRef) widget);
             }
         }
@@ -3020,7 +3020,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Eol> getEols() {
         java.util.List<Eol> result = new ArrayList<Eol>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Eol".equalsIgnoreCase(widget.getType())) {
+            if ("Eol".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Eol) widget);
             }
         }
@@ -3054,7 +3054,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Eop> getEops() {
         java.util.List<Eop> result = new ArrayList<Eop>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Eop".equalsIgnoreCase(widget.getType())) {
+            if ("Eop".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Eop) widget);
             }
         }
@@ -3088,7 +3088,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Img> getImgs() {
         java.util.List<Img> result = new ArrayList<Img>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Img".equalsIgnoreCase(widget.getType())) {
+            if ("Img".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Img) widget);
             }
         }
@@ -3122,7 +3122,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<Br> getBrs() {
         java.util.List<Br> result = new ArrayList<Br>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Br".equalsIgnoreCase(widget.getType())) {
+            if ("Br".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Br) widget);
             }
         }
@@ -3156,7 +3156,7 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
     public java.util.List<AuthorialNote> getAuthorialNotes() {
         java.util.List<AuthorialNote> result = new ArrayList<AuthorialNote>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("AuthorialNote".equalsIgnoreCase(widget.getType())) {
+            if ("AuthorialNote".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((AuthorialNote) widget);
             }
         }
@@ -3200,15 +3200,15 @@ public class InlinereqreqComplexType extends OverlayWidgetImpl {
         attrs.putAll(super.getAttributes());
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
         attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
+        attrs.put("alternativeTo", getAlternativeToAttr() != null ? getAlternativeToAttr().getValue() : null);
+        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
+        attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
         attrs.put("class", getClassAttr() != null ? getClassAttr().getValue() : null);
         attrs.put("style", getStyleAttr() != null ? getStyleAttr().getValue() : null);
         attrs.put("title", getTitleAttr() != null ? getTitleAttr().getValue() : null);
-        attrs.put("status", getStatusAttr() != null ? getStatusAttr().value() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("lang", getLangAttr() != null ? getLangAttr().getValue() : null);
-        attrs.put("space", getSpaceAttr() != null ? getSpaceAttr().getValue() : null);
         attrs.put("period", getPeriodAttr() != null ? getPeriodAttr().getValue() : null);
         return attrs;
     }

@@ -57,8 +57,8 @@ public class Component extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "component");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "component");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget component");
         return span;
     }
@@ -90,52 +90,272 @@ public class Component extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private IDSimpleType idAttr;
     private String wildcardContentAttr;
 
     /**
-     * Return <code>idAttr</code> property
+     * Add <code>Act</code> property in the list of properties
      *
-     * @return idAttr
+     * @return The property as unmodifiable list
      */
-    public IDSimpleType getIdAttr() {
-        if (idAttr == null) {
-            idAttr = new IDSimpleType();
-            idAttr.setValue(getElement().getAttribute("id"));
+    public Act getAct() {
+        Act result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Act".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Act) widget;
+                break;
+            }
         }
-
-        return idAttr;
+        return result;
     }
 
     /**
-     * Return <code>idAttr</code> property in DSL way
+     * Set <code>actElem</code> property in DSL way
      *
-     * @return idAttr
+     * @param actElem new value
+     * @return <code>Act</code> instance
      */
-    public IDSimpleType idAttr() {
-        return getIdAttr();
+    public Act setAct(Act actElem) {
+        Act result = getAct();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(actElem);
+
+        return actElem;
     }
 
     /**
-     * Set <code>idAttr</code> property
+     * Add <code>Amendment</code> property in the list of properties
      *
-     * @param idAttr the new value
+     * @return The property as unmodifiable list
      */
-    public void setIdAttr(final IDSimpleType idAttr) {
-        this.idAttr = idAttr;
-        getElement().setAttribute("id", idAttr.getValue());
+    public Amendment getAmendment() {
+        Amendment result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Amendment".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Amendment) widget;
+                break;
+            }
+        }
+        return result;
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>amendmentElem</code> property in DSL way
      *
-     * @param idAttr the new value
-     * @return <code>Component</code> instance
+     * @param amendmentElem new value
+     * @return <code>Amendment</code> instance
      */
-    public Component idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
+    public Amendment setAmendment(Amendment amendmentElem) {
+        Amendment result = getAmendment();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(amendmentElem);
+
+        return amendmentElem;
+    }
+
+    /**
+     * Add <code>AmendmentList</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public AmendmentList getAmendmentList() {
+        AmendmentList result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("AmendmentList".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (AmendmentList) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>amendmentListElem</code> property in DSL way
+     *
+     * @param amendmentListElem new value
+     * @return <code>AmendmentList</code> instance
+     */
+    public AmendmentList setAmendmentList(AmendmentList amendmentListElem) {
+        AmendmentList result = getAmendmentList();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(amendmentListElem);
+
+        return amendmentListElem;
+    }
+
+    /**
+     * Add <code>Bill</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Bill getBill() {
+        Bill result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Bill".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Bill) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>billElem</code> property in DSL way
+     *
+     * @param billElem new value
+     * @return <code>Bill</code> instance
+     */
+    public Bill setBill(Bill billElem) {
+        Bill result = getBill();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(billElem);
+
+        return billElem;
+    }
+
+    /**
+     * Add <code>Debate</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Debate getDebate() {
+        Debate result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Debate".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Debate) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>debateElem</code> property in DSL way
+     *
+     * @param debateElem new value
+     * @return <code>Debate</code> instance
+     */
+    public Debate setDebate(Debate debateElem) {
+        Debate result = getDebate();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(debateElem);
+
+        return debateElem;
+    }
+
+    /**
+     * Add <code>DebateReport</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public DebateReport getDebateReport() {
+        DebateReport result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("DebateReport".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (DebateReport) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>debateReportElem</code> property in DSL way
+     *
+     * @param debateReportElem new value
+     * @return <code>DebateReport</code> instance
+     */
+    public DebateReport setDebateReport(DebateReport debateReportElem) {
+        DebateReport result = getDebateReport();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(debateReportElem);
+
+        return debateReportElem;
+    }
+
+    /**
+     * Add <code>Doc</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Doc getDoc() {
+        Doc result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Doc".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Doc) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>docElem</code> property in DSL way
+     *
+     * @param docElem new value
+     * @return <code>Doc</code> instance
+     */
+    public Doc setDoc(Doc docElem) {
+        Doc result = getDoc();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(docElem);
+
+        return docElem;
+    }
+
+    /**
+     * Add <code>DocumentCollection</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public DocumentCollection getDocumentCollection() {
+        DocumentCollection result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("DocumentCollection".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (DocumentCollection) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>documentCollectionElem</code> property in DSL way
+     *
+     * @param documentCollectionElem new value
+     * @return <code>DocumentCollection</code> instance
+     */
+    public DocumentCollection setDocumentCollection(DocumentCollection documentCollectionElem) {
+        DocumentCollection result = getDocumentCollection();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(documentCollectionElem);
+
+        return documentCollectionElem;
     }
 
     /**
@@ -183,6 +403,149 @@ public class Component extends OverlayWidgetImpl {
     }
 
     /**
+     * Add <code>Fragment</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Fragment getFragment() {
+        Fragment result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Fragment".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Fragment) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>fragmentElem</code> property in DSL way
+     *
+     * @param fragmentElem new value
+     * @return <code>Fragment</code> instance
+     */
+    public Fragment setFragment(Fragment fragmentElem) {
+        Fragment result = getFragment();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(fragmentElem);
+
+        return fragmentElem;
+    }
+
+    /**
+     * Return <code>idAttr</code> property
+     *
+     * @return idAttr
+     */
+    public IDSimpleType getIdAttr() {
+        if (idAttr == null) {
+            idAttr = new IDSimpleType();
+            idAttr.setValue(getElement().getAttribute("id"));
+        }
+
+        return idAttr;
+    }
+
+    /**
+     * Return <code>idAttr</code> property in DSL way
+     *
+     * @return idAttr
+     */
+    public IDSimpleType idAttr() {
+        return getIdAttr();
+    }
+
+    /**
+     * Set <code>idAttr</code> property
+     *
+     * @param idAttr the new value
+     */
+    public void setIdAttr(final IDSimpleType idAttr) {
+        this.idAttr = idAttr;
+        getElement().setAttribute("id", idAttr.getValue());
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr the new value
+     * @return <code>Component</code> instance
+     */
+    public Component idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Add <code>Judgement</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Judgement getJudgement() {
+        Judgement result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Judgement".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Judgement) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>judgementElem</code> property in DSL way
+     *
+     * @param judgementElem new value
+     * @return <code>Judgement</code> instance
+     */
+    public Judgement setJudgement(Judgement judgementElem) {
+        Judgement result = getJudgement();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(judgementElem);
+
+        return judgementElem;
+    }
+
+    /**
+     * Add <code>OfficialGazette</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public OfficialGazette getOfficialGazette() {
+        OfficialGazette result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("OfficialGazette".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (OfficialGazette) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>officialGazetteElem</code> property in DSL way
+     *
+     * @param officialGazetteElem new value
+     * @return <code>OfficialGazette</code> instance
+     */
+    public OfficialGazette setOfficialGazette(OfficialGazette officialGazetteElem) {
+        OfficialGazette result = getOfficialGazette();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(officialGazetteElem);
+
+        return officialGazetteElem;
+    }
+
+    /**
      * Return <code>wildcardContentAttr</code> property
      *
      * @return wildcardContentAttr
@@ -224,369 +587,6 @@ public class Component extends OverlayWidgetImpl {
         setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
-
-    /**
-     * Add <code>AmendmentList</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public AmendmentList getAmendmentList() {
-        AmendmentList result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("AmendmentList".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (AmendmentList) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>amendmentListElem</code> property in DSL way
-     *
-     * @param amendmentListElem new value
-     * @return <code>AmendmentList</code> instance
-     */
-    public AmendmentList setAmendmentList(AmendmentList amendmentListElem) {
-        AmendmentList result = getAmendmentList();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(amendmentListElem);
-
-        return amendmentListElem;
-    }
-
-    /**
-     * Add <code>OfficialGazette</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public OfficialGazette getOfficialGazette() {
-        OfficialGazette result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("OfficialGazette".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (OfficialGazette) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>officialGazetteElem</code> property in DSL way
-     *
-     * @param officialGazetteElem new value
-     * @return <code>OfficialGazette</code> instance
-     */
-    public OfficialGazette setOfficialGazette(OfficialGazette officialGazetteElem) {
-        OfficialGazette result = getOfficialGazette();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(officialGazetteElem);
-
-        return officialGazetteElem;
-    }
-
-    /**
-     * Add <code>DocumentCollection</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public DocumentCollection getDocumentCollection() {
-        DocumentCollection result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DocumentCollection".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (DocumentCollection) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>documentCollectionElem</code> property in DSL way
-     *
-     * @param documentCollectionElem new value
-     * @return <code>DocumentCollection</code> instance
-     */
-    public DocumentCollection setDocumentCollection(DocumentCollection documentCollectionElem) {
-        DocumentCollection result = getDocumentCollection();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(documentCollectionElem);
-
-        return documentCollectionElem;
-    }
-
-    /**
-     * Add <code>Act</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Act getAct() {
-        Act result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Act".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Act) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>actElem</code> property in DSL way
-     *
-     * @param actElem new value
-     * @return <code>Act</code> instance
-     */
-    public Act setAct(Act actElem) {
-        Act result = getAct();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(actElem);
-
-        return actElem;
-    }
-
-    /**
-     * Add <code>Bill</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Bill getBill() {
-        Bill result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Bill".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Bill) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>billElem</code> property in DSL way
-     *
-     * @param billElem new value
-     * @return <code>Bill</code> instance
-     */
-    public Bill setBill(Bill billElem) {
-        Bill result = getBill();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(billElem);
-
-        return billElem;
-    }
-
-    /**
-     * Add <code>DebateReport</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public DebateReport getDebateReport() {
-        DebateReport result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("DebateReport".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (DebateReport) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>debateReportElem</code> property in DSL way
-     *
-     * @param debateReportElem new value
-     * @return <code>DebateReport</code> instance
-     */
-    public DebateReport setDebateReport(DebateReport debateReportElem) {
-        DebateReport result = getDebateReport();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(debateReportElem);
-
-        return debateReportElem;
-    }
-
-    /**
-     * Add <code>Debate</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Debate getDebate() {
-        Debate result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Debate".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Debate) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>debateElem</code> property in DSL way
-     *
-     * @param debateElem new value
-     * @return <code>Debate</code> instance
-     */
-    public Debate setDebate(Debate debateElem) {
-        Debate result = getDebate();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(debateElem);
-
-        return debateElem;
-    }
-
-    /**
-     * Add <code>Amendment</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Amendment getAmendment() {
-        Amendment result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Amendment".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Amendment) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>amendmentElem</code> property in DSL way
-     *
-     * @param amendmentElem new value
-     * @return <code>Amendment</code> instance
-     */
-    public Amendment setAmendment(Amendment amendmentElem) {
-        Amendment result = getAmendment();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(amendmentElem);
-
-        return amendmentElem;
-    }
-
-    /**
-     * Add <code>Judgement</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Judgement getJudgement() {
-        Judgement result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Judgement".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Judgement) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>judgementElem</code> property in DSL way
-     *
-     * @param judgementElem new value
-     * @return <code>Judgement</code> instance
-     */
-    public Judgement setJudgement(Judgement judgementElem) {
-        Judgement result = getJudgement();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(judgementElem);
-
-        return judgementElem;
-    }
-
-    /**
-     * Add <code>Fragment</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Fragment getFragment() {
-        Fragment result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Fragment".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Fragment) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>fragmentElem</code> property in DSL way
-     *
-     * @param fragmentElem new value
-     * @return <code>Fragment</code> instance
-     */
-    public Fragment setFragment(Fragment fragmentElem) {
-        Fragment result = getFragment();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(fragmentElem);
-
-        return fragmentElem;
-    }
-
-    /**
-     * Add <code>Doc</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Doc getDoc() {
-        Doc result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Doc".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Doc) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>docElem</code> property in DSL way
-     *
-     * @param docElem new value
-     * @return <code>Doc</code> instance
-     */
-    public Doc setDoc(Doc docElem) {
-        Doc result = getDoc();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(docElem);
-
-        return docElem;
-    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
@@ -603,8 +603,8 @@ public class Component extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }

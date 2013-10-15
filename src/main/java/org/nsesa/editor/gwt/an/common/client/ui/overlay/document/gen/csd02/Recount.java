@@ -23,7 +23,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element recount is a metadata container containing information about an event of a recount happened within a debate.
+ * The element recount is a metadata container containing information about an event of a recount<br/> happened within a debate.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -46,8 +46,8 @@ public class Recount extends ParliamentaryAnalysisTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "recount");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "recount");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget recount");
         return span;
     }
@@ -83,6 +83,50 @@ public class Recount extends ParliamentaryAnalysisTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Recount</code> instance
+     */
+    public Recount evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> Recount</code> instance
+     */
+    public Recount hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Recount</code> instance
+     */
+    public Recount idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>outcomeAttr</code> property in DSL way
+     *
+     * @param outcomeAttr new value
+     * @return <code> Recount</code> instance
+     */
+    public Recount outcomeAttr(final AnyURISimpleType outcomeAttr) {
+        setOutcomeAttr(outcomeAttr);
+        return this;
+    }
+
+    /**
      * Set <code>refersToAttr</code> property in DSL way
      *
      * @param refersToAttr new value
@@ -101,50 +145,6 @@ public class Recount extends ParliamentaryAnalysisTypeComplexType {
      */
     public Recount wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> Recount</code> instance
-     */
-    public Recount hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>outcomeAttr</code> property in DSL way
-     *
-     * @param outcomeAttr new value
-     * @return <code> Recount</code> instance
-     */
-    public Recount outcomeAttr(final AnyURISimpleType outcomeAttr) {
-        setOutcomeAttr(outcomeAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Recount</code> instance
-     */
-    public Recount idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Recount</code> instance
-     */
-    public Recount evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 

@@ -25,7 +25,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element meaningMod is a metadata element specifying an (active or passive) modification in meaning for the document.
+ * The element meaningMod is a metadata element specifying an (active or passive) modification in<br/> meaning for the document.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -57,8 +57,8 @@ public class MeaningMod extends ModificationTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "meaningMod");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "meaningMod");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget meaningMod");
         return span;
     }
@@ -92,6 +92,39 @@ public class MeaningMod extends ModificationTypeComplexType {
 
     // FIELDS ------------------
     private MeaningModsSimpleType typeAttr;
+
+    /**
+     * Add <code>Domain</code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Domain getDomain() {
+        Domain result = null;
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Domain".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result = (Domain) widget;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Set <code>domainElem</code> property in DSL way
+     *
+     * @param domainElem new value
+     * @return <code>Domain</code> instance
+     */
+    public Domain setDomain(Domain domainElem) {
+        Domain result = getDomain();
+        // remove the child of the same type if exist
+        if (result != null) {
+            this.removeOverlayWidget(result);
+        }
+        this.addOverlayWidget(domainElem);
+
+        return domainElem;
+    }
 
     /**
      * Return <code>typeAttr</code> property
@@ -135,40 +168,18 @@ public class MeaningMod extends ModificationTypeComplexType {
         setTypeAttr(typeAttr);
         return this;
     }
-
-    /**
-     * Add <code>Domain</code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Domain getDomain() {
-        Domain result = null;
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Domain".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result = (Domain) widget;
-                break;
-            }
-        }
-        return result;
-    }
-
-    /**
-     * Set <code>domainElem</code> property in DSL way
-     *
-     * @param domainElem new value
-     * @return <code>Domain</code> instance
-     */
-    public Domain setDomain(Domain domainElem) {
-        Domain result = getDomain();
-        // remove the child of the same type if exist
-        if (result != null) {
-            this.removeOverlayWidget(result);
-        }
-        this.addOverlayWidget(domainElem);
-
-        return domainElem;
-    }
 //Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> MeaningMod</code> instance
+     */
+    public MeaningMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
 
     /**
      * Set <code>exclusionAttr</code> property in DSL way
@@ -178,17 +189,6 @@ public class MeaningMod extends ModificationTypeComplexType {
      */
     public MeaningMod exclusionAttr(final BooleanSimpleType exclusionAttr) {
         setExclusionAttr(exclusionAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>incompleteAttr</code> property in DSL way
-     *
-     * @param incompleteAttr new value
-     * @return <code> MeaningMod</code> instance
-     */
-    public MeaningMod incompleteAttr(final BooleanSimpleType incompleteAttr) {
-        setIncompleteAttr(incompleteAttr);
         return this;
     }
 
@@ -204,13 +204,24 @@ public class MeaningMod extends ModificationTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>incompleteAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param incompleteAttr new value
      * @return <code> MeaningMod</code> instance
      */
-    public MeaningMod evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public MeaningMod incompleteAttr(final BooleanSimpleType incompleteAttr) {
+        setIncompleteAttr(incompleteAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> MeaningMod</code> instance
+     */
+    public MeaningMod periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -244,17 +255,6 @@ public class MeaningMod extends ModificationTypeComplexType {
      */
     public MeaningMod wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> MeaningMod</code> instance
-     */
-    public MeaningMod periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
         return this;
     }
 

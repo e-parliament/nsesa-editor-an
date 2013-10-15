@@ -82,6 +82,7 @@
     <util:map id="exportServices" scope="singleton" map-class="java.util.HashMap" key-type="java.lang.String"
               value-type="org.nsesa.editor.gwt.an.amendments.server.service.ExportService">
         <entry key="xml" value-ref="xmlExportService"/>
+        <entry key="odt" value-ref="openOfficeExportService"/>
         <entry key="html" value-ref="htmlExportService"/>
         <entry key="pdf" value-ref="pdfExportService"/>
         <entry key="word" value-ref="wordExportService"/>
@@ -91,4 +92,6 @@
     <bean id="htmlExportService" class="org.nsesa.editor.gwt.an.amendments.server.service.HtmlExportService"/>
     <bean id="pdfExportService" class="org.nsesa.editor.gwt.an.amendments.server.service.PdfExportService"/>
     <bean id="wordExportService" class="org.nsesa.editor.gwt.an.amendments.server.service.WordExportService"/>
+    <bean id="openOfficeExportService"
+          class="org.nsesa.editor.gwt.an.amendments.server.service.OpenOfficeExportService"/>
 </beans>

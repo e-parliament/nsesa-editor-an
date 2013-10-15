@@ -139,8 +139,8 @@ public class Event extends InlinereqreqComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "event");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "event");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget event");
         return span;
     }
@@ -158,10 +158,10 @@ public class Event extends InlinereqreqComplexType {
     /**
      * Constructor with required attributes
      */
-    public Event(AnyURISimpleType refersToAttr, IDSimpleType idAttr) {
+    public Event(IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
         this();
-        setRefersToAttr(refersToAttr);
         setIdAttr(idAttr);
+        setRefersToAttr(refersToAttr);
     }
 
 
@@ -177,6 +177,50 @@ public class Event extends InlinereqreqComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>alternativeToAttr</code> property in DSL way
+     *
+     * @param alternativeToAttr new value
+     * @return <code> Event</code> instance
+     */
+    public Event alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Event</code> instance
+     */
+    public Event classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Event</code> instance
+     */
+    public Event evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Event</code> instance
+     */
+    public Event idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
      * Set <code>langAttr</code> property in DSL way
      *
      * @param langAttr new value
@@ -184,6 +228,17 @@ public class Event extends InlinereqreqComplexType {
      */
     public Event langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Event</code> instance
+     */
+    public Event periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -210,61 +265,6 @@ public class Event extends InlinereqreqComplexType {
     }
 
     /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> Event</code> instance
-     */
-    public Event alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Event</code> instance
-     */
-    public Event idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Event</code> instance
-     */
-    public Event evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Event</code> instance
-     */
-    public Event wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>classAttr</code> property in DSL way
-     *
-     * @param classAttr new value
-     * @return <code> Event</code> instance
-     */
-    public Event classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-    }
-
-    /**
      * Set <code>styleAttr</code> property in DSL way
      *
      * @param styleAttr new value
@@ -287,13 +287,13 @@ public class Event extends InlinereqreqComplexType {
     }
 
     /**
-     * Set <code>periodAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param periodAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> Event</code> instance
      */
-    public Event periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public Event wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

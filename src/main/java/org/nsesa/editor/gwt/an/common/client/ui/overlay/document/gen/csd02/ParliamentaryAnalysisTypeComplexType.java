@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 /**
- * The complex type parliamentaryAnalysisType lists all the properties associated to elements in the parliamentary analysis.
+ * The complex type parliamentaryAnalysisType lists all the properties associated to elements in the<br/> parliamentary analysis.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -49,8 +49,8 @@ public class ParliamentaryAnalysisTypeComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "parliamentaryAnalysisTypeComplexType");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "parliamentaryAnalysisTypeComplexType");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget parliamentaryAnalysisTypeComplexType");
         return span;
     }
@@ -65,12 +65,100 @@ public class ParliamentaryAnalysisTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
+    private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType outcomeAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private AnyURISimpleType outcomeAttr;
-    private AnyURISimpleType hrefAttr;
     private String wildcardContentAttr;
-    private AnyURISimpleType refersToAttr;
+    private AnyURISimpleType hrefAttr;
+
+    /**
+     * Return <code>refersToAttr</code> property
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property in DSL way
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property
+     *
+     * @param refersToAttr the new value
+     */
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr the new value
+     * @return <code>ParliamentaryAnalysisTypeComplexType</code> instance
+     */
+    public ParliamentaryAnalysisTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>outcomeAttr</code> property
+     *
+     * @return outcomeAttr
+     */
+    public AnyURISimpleType getOutcomeAttr() {
+        if (outcomeAttr == null) {
+            outcomeAttr = new AnyURISimpleType();
+            outcomeAttr.setValue(getElement().getAttribute("outcome"));
+        }
+
+        return outcomeAttr;
+    }
+
+    /**
+     * Return <code>outcomeAttr</code> property in DSL way
+     *
+     * @return outcomeAttr
+     */
+    public AnyURISimpleType outcomeAttr() {
+        return getOutcomeAttr();
+    }
+
+    /**
+     * Set <code>outcomeAttr</code> property
+     *
+     * @param outcomeAttr the new value
+     */
+    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
+        this.outcomeAttr = outcomeAttr;
+        getElement().setAttribute("outcome", outcomeAttr.getValue());
+    }
+
+    /**
+     * Set <code>outcomeAttr</code> property in DSL way
+     *
+     * @param outcomeAttr the new value
+     * @return <code>ParliamentaryAnalysisTypeComplexType</code> instance
+     */
+    public ParliamentaryAnalysisTypeComplexType outcomeAttr(final AnyURISimpleType outcomeAttr) {
+        setOutcomeAttr(outcomeAttr);
+        return this;
+    }
 
     /**
      * Return <code>idAttr</code> property
@@ -161,46 +249,45 @@ public class ParliamentaryAnalysisTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>outcomeAttr</code> property
+     * Return <code>wildcardContentAttr</code> property
      *
-     * @return outcomeAttr
+     * @return wildcardContentAttr
      */
-    public AnyURISimpleType getOutcomeAttr() {
-        if (outcomeAttr == null) {
-            outcomeAttr = new AnyURISimpleType();
-            outcomeAttr.setValue(getElement().getAttribute("outcome"));
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return outcomeAttr;
+        return wildcardContentAttr;
     }
 
     /**
-     * Return <code>outcomeAttr</code> property in DSL way
+     * Return <code>wildcardContentAttr</code> property in DSL way
      *
-     * @return outcomeAttr
+     * @return wildcardContentAttr
      */
-    public AnyURISimpleType outcomeAttr() {
-        return getOutcomeAttr();
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
     }
 
     /**
-     * Set <code>outcomeAttr</code> property
+     * Set <code>wildcardContentAttr</code> property
      *
-     * @param outcomeAttr the new value
+     * @param wildcardContentAttr the new value
      */
-    public void setOutcomeAttr(final AnyURISimpleType outcomeAttr) {
-        this.outcomeAttr = outcomeAttr;
-        getElement().setAttribute("outcome", outcomeAttr.getValue());
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
     }
 
     /**
-     * Set <code>outcomeAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param outcomeAttr the new value
+     * @param wildcardContentAttr the new value
      * @return <code>ParliamentaryAnalysisTypeComplexType</code> instance
      */
-    public ParliamentaryAnalysisTypeComplexType outcomeAttr(final AnyURISimpleType outcomeAttr) {
-        setOutcomeAttr(outcomeAttr);
+    public ParliamentaryAnalysisTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -249,93 +336,6 @@ public class ParliamentaryAnalysisTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property
-     *
-     * @return wildcardContentAttr
-     */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @return wildcardContentAttr
-     */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property
-     *
-     * @param wildcardContentAttr the new value
-     */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr the new value
-     * @return <code>ParliamentaryAnalysisTypeComplexType</code> instance
-     */
-    public ParliamentaryAnalysisTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>refersToAttr</code> property
-     *
-     * @return refersToAttr
-     */
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
-        }
-
-        return refersToAttr;
-    }
-
-    /**
-     * Return <code>refersToAttr</code> property in DSL way
-     *
-     * @return refersToAttr
-     */
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property
-     *
-     * @param refersToAttr the new value
-     */
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
-    }
-
-    /**
-     * Set <code>refersToAttr</code> property in DSL way
-     *
-     * @param refersToAttr the new value
-     * @return <code>ParliamentaryAnalysisTypeComplexType</code> instance
-     */
-    public ParliamentaryAnalysisTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
-        return this;
-    }
-
-    /**
      * Return <code>java.util.List<Quorum></code> property
      *
      * @return The property as unmodifiable list
@@ -343,7 +343,7 @@ public class ParliamentaryAnalysisTypeComplexType extends OverlayWidgetImpl {
     public java.util.List<Quorum> getQuorums() {
         java.util.List<Quorum> result = new ArrayList<Quorum>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Quorum".equalsIgnoreCase(widget.getType())) {
+            if ("Quorum".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Quorum) widget);
             }
         }
@@ -377,7 +377,7 @@ public class ParliamentaryAnalysisTypeComplexType extends OverlayWidgetImpl {
     public java.util.List<Count> getCounts() {
         java.util.List<Count> result = new ArrayList<Count>();
         for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Count".equalsIgnoreCase(widget.getType())) {
+            if ("Count".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
                 result.add((Count) widget);
             }
         }
@@ -419,12 +419,12 @@ public class ParliamentaryAnalysisTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("outcome", getOutcomeAttr() != null ? getOutcomeAttr().getValue() : null);
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         return attrs;
     }
 

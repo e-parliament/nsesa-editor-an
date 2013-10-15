@@ -49,8 +49,8 @@ public class ComponentData extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "componentData");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "componentData");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget componentData");
         return span;
     }
@@ -68,11 +68,11 @@ public class ComponentData extends OverlayWidgetImpl {
     /**
      * Constructor with required attributes
      */
-    public ComponentData(AnyURISimpleType hrefAttr, StringSimpleType nameAttr, IDSimpleType idAttr, StringSimpleType showAsAttr) {
+    public ComponentData(AnyURISimpleType hrefAttr, IDSimpleType idAttr, StringSimpleType nameAttr, StringSimpleType showAsAttr) {
         this();
         setHrefAttr(hrefAttr);
-        setNameAttr(nameAttr);
         setIdAttr(idAttr);
+        setNameAttr(nameAttr);
         setShowAsAttr(showAsAttr);
     }
 
@@ -85,54 +85,89 @@ public class ComponentData extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private String wildcardContentAttr;
-    private AnyURISimpleType hrefAttr;
-    private StringSimpleType nameAttr;
-    private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
-    private StringSimpleType showAsAttr;
+    private AnyURISimpleType hrefAttr;
+    private IDSimpleType idAttr;
+    private StringSimpleType nameAttr;
     private StringSimpleType shortFormAttr;
+    private StringSimpleType showAsAttr;
+    private String wildcardContentAttr;
 
     /**
-     * Return <code>wildcardContentAttr</code> property
+     * Return <code>java.util.List<ComponentData></code> property
      *
-     * @return wildcardContentAttr
+     * @return The property as unmodifiable list
      */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
+    public java.util.List<ComponentData> getComponentDatas() {
+        java.util.List<ComponentData> result = new ArrayList<ComponentData>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("ComponentData".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((ComponentData) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<ComponentData></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<ComponentData> getComponentDataList() {
+        return getComponentDatas();
+    }
+
+    /**
+     * Add <code>java.util.List<ComponentData></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public ComponentData addComponentData(ComponentData componentDataElem) {
+        this.addOverlayWidget(componentDataElem);
+        return componentDataElem;
+    }
+
+    /**
+     * Return <code>evolvingIdAttr</code> property
+     *
+     * @return evolvingIdAttr
+     */
+    public NMTOKENSimpleType getEvolvingIdAttr() {
+        if (evolvingIdAttr == null) {
+            evolvingIdAttr = new NMTOKENSimpleType();
+            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
         }
 
-        return wildcardContentAttr;
+        return evolvingIdAttr;
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
+     * Return <code>evolvingIdAttr</code> property in DSL way
      *
-     * @return wildcardContentAttr
+     * @return evolvingIdAttr
      */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
+    public NMTOKENSimpleType evolvingIdAttr() {
+        return getEvolvingIdAttr();
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property
+     * Set <code>evolvingIdAttr</code> property
      *
-     * @param wildcardContentAttr the new value
+     * @param evolvingIdAttr the new value
      */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        this.evolvingIdAttr = evolvingIdAttr;
+        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
     }
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr the new value
+     * @param evolvingIdAttr the new value
      * @return <code>ComponentData</code> instance
      */
-    public ComponentData wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public ComponentData evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -181,50 +216,6 @@ public class ComponentData extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>nameAttr</code> property
-     *
-     * @return nameAttr
-     */
-    public StringSimpleType getNameAttr() {
-        if (nameAttr == null) {
-            nameAttr = new StringSimpleType();
-            nameAttr.setValue(getElement().getAttribute("name"));
-        }
-
-        return nameAttr;
-    }
-
-    /**
-     * Return <code>nameAttr</code> property in DSL way
-     *
-     * @return nameAttr
-     */
-    public StringSimpleType nameAttr() {
-        return getNameAttr();
-    }
-
-    /**
-     * Set <code>nameAttr</code> property
-     *
-     * @param nameAttr the new value
-     */
-    public void setNameAttr(final StringSimpleType nameAttr) {
-        this.nameAttr = nameAttr;
-        getElement().setAttribute("name", nameAttr.getValue());
-    }
-
-    /**
-     * Set <code>nameAttr</code> property in DSL way
-     *
-     * @param nameAttr the new value
-     * @return <code>ComponentData</code> instance
-     */
-    public ComponentData nameAttr(final StringSimpleType nameAttr) {
-        setNameAttr(nameAttr);
-        return this;
-    }
-
-    /**
      * Return <code>idAttr</code> property
      *
      * @return idAttr
@@ -269,90 +260,46 @@ public class ComponentData extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>evolvingIdAttr</code> property
+     * Return <code>nameAttr</code> property
      *
-     * @return evolvingIdAttr
+     * @return nameAttr
      */
-    public NMTOKENSimpleType getEvolvingIdAttr() {
-        if (evolvingIdAttr == null) {
-            evolvingIdAttr = new NMTOKENSimpleType();
-            evolvingIdAttr.setValue(getElement().getAttribute("evolvingId"));
+    public StringSimpleType getNameAttr() {
+        if (nameAttr == null) {
+            nameAttr = new StringSimpleType();
+            nameAttr.setValue(getElement().getAttribute("name"));
         }
 
-        return evolvingIdAttr;
+        return nameAttr;
     }
 
     /**
-     * Return <code>evolvingIdAttr</code> property in DSL way
+     * Return <code>nameAttr</code> property in DSL way
      *
-     * @return evolvingIdAttr
+     * @return nameAttr
      */
-    public NMTOKENSimpleType evolvingIdAttr() {
-        return getEvolvingIdAttr();
+    public StringSimpleType nameAttr() {
+        return getNameAttr();
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property
+     * Set <code>nameAttr</code> property
      *
-     * @param evolvingIdAttr the new value
+     * @param nameAttr the new value
      */
-    public void setEvolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        this.evolvingIdAttr = evolvingIdAttr;
-        getElement().setAttribute("evolvingId", evolvingIdAttr.getValue());
+    public void setNameAttr(final StringSimpleType nameAttr) {
+        this.nameAttr = nameAttr;
+        getElement().setAttribute("name", nameAttr.getValue());
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>nameAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr the new value
+     * @param nameAttr the new value
      * @return <code>ComponentData</code> instance
      */
-    public ComponentData evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Return <code>showAsAttr</code> property
-     *
-     * @return showAsAttr
-     */
-    public StringSimpleType getShowAsAttr() {
-        if (showAsAttr == null) {
-            showAsAttr = new StringSimpleType();
-            showAsAttr.setValue(getElement().getAttribute("showAs"));
-        }
-
-        return showAsAttr;
-    }
-
-    /**
-     * Return <code>showAsAttr</code> property in DSL way
-     *
-     * @return showAsAttr
-     */
-    public StringSimpleType showAsAttr() {
-        return getShowAsAttr();
-    }
-
-    /**
-     * Set <code>showAsAttr</code> property
-     *
-     * @param showAsAttr the new value
-     */
-    public void setShowAsAttr(final StringSimpleType showAsAttr) {
-        this.showAsAttr = showAsAttr;
-        getElement().setAttribute("showAs", showAsAttr.getValue());
-    }
-
-    /**
-     * Set <code>showAsAttr</code> property in DSL way
-     *
-     * @param showAsAttr the new value
-     * @return <code>ComponentData</code> instance
-     */
-    public ComponentData showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
+    public ComponentData nameAttr(final StringSimpleType nameAttr) {
+        setNameAttr(nameAttr);
         return this;
     }
 
@@ -401,39 +348,91 @@ public class ComponentData extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>java.util.List<ComponentData></code> property
+     * Return <code>showAsAttr</code> property
      *
-     * @return The property as unmodifiable list
+     * @return showAsAttr
      */
-    public java.util.List<ComponentData> getComponentDatas() {
-        java.util.List<ComponentData> result = new ArrayList<ComponentData>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("ComponentData".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((ComponentData) widget);
-            }
+    public StringSimpleType getShowAsAttr() {
+        if (showAsAttr == null) {
+            showAsAttr = new StringSimpleType();
+            showAsAttr.setValue(getElement().getAttribute("showAs"));
         }
-        return java.util.Collections.unmodifiableList(result);
+
+        return showAsAttr;
     }
 
     /**
-     * Return <code>java.util.List<ComponentData></code> property in DSL way
+     * Return <code>showAsAttr</code> property in DSL way
      *
-     * @return The property as unmodifiable list
+     * @return showAsAttr
      */
-    public java.util.List<ComponentData> getComponentDataList() {
-        return getComponentDatas();
+    public StringSimpleType showAsAttr() {
+        return getShowAsAttr();
     }
 
     /**
-     * Add <code>java.util.List<ComponentData></code> property in the list of properties
+     * Set <code>showAsAttr</code> property
      *
-     * @return The property as unmodifiable list
+     * @param showAsAttr the new value
      */
-    public ComponentData addComponentData(ComponentData componentDataElem) {
-        this.addOverlayWidget(componentDataElem);
-        return componentDataElem;
+    public void setShowAsAttr(final StringSimpleType showAsAttr) {
+        this.showAsAttr = showAsAttr;
+        getElement().setAttribute("showAs", showAsAttr.getValue());
     }
 
+    /**
+     * Set <code>showAsAttr</code> property in DSL way
+     *
+     * @param showAsAttr the new value
+     * @return <code>ComponentData</code> instance
+     */
+    public ComponentData showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property
+     *
+     * @return wildcardContentAttr
+     */
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
+        }
+
+        return wildcardContentAttr;
+    }
+
+    /**
+     * Return <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @return wildcardContentAttr
+     */
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property
+     *
+     * @param wildcardContentAttr the new value
+     */
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr the new value
+     * @return <code>ComponentData</code> instance
+     */
+    public ComponentData wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
+        return this;
+    }
 //Override all attributes methods to be conformant with DSL approach
 
     /**
@@ -450,13 +449,13 @@ public class ComponentData extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
-        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
-        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
-        attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
+        attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
+        attrs.put("name", getNameAttr() != null ? getNameAttr().getValue() : null);
         attrs.put("shortForm", getShortFormAttr() != null ? getShortFormAttr().getValue() : null);
+        attrs.put("showAs", getShowAsAttr() != null ? getShowAsAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }
 

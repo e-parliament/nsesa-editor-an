@@ -22,7 +22,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element location is an inline element to identify a text fragment introducing or referring to a location in the ontology
+ * The element location is an inline element to identify a text fragment introducing or referring to a<br/> location in the ontology
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -142,8 +142,8 @@ public class Location extends InlinereqreqComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "location");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "location");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget location");
         return span;
     }
@@ -161,10 +161,10 @@ public class Location extends InlinereqreqComplexType {
     /**
      * Constructor with required attributes
      */
-    public Location(AnyURISimpleType refersToAttr, IDSimpleType idAttr) {
+    public Location(IDSimpleType idAttr, AnyURISimpleType refersToAttr) {
         this();
-        setRefersToAttr(refersToAttr);
         setIdAttr(idAttr);
+        setRefersToAttr(refersToAttr);
     }
 
 
@@ -180,39 +180,6 @@ public class Location extends InlinereqreqComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>classAttr</code> property in DSL way
-     *
-     * @param classAttr new value
-     * @return <code> Location</code> instance
-     */
-    public Location classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>styleAttr</code> property in DSL way
-     *
-     * @param styleAttr new value
-     * @return <code> Location</code> instance
-     */
-    public Location styleAttr(final StringSimpleType styleAttr) {
-        setStyleAttr(styleAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>titleAttr</code> property in DSL way
-     *
-     * @param titleAttr new value
-     * @return <code> Location</code> instance
-     */
-    public Location titleAttr(final StringSimpleType titleAttr) {
-        setTitleAttr(titleAttr);
-        return this;
-    }
-
-    /**
      * Set <code>alternativeToAttr</code> property in DSL way
      *
      * @param alternativeToAttr new value
@@ -224,13 +191,35 @@ public class Location extends InlinereqreqComplexType {
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>classAttr</code> property in DSL way
      *
-     * @param refersToAttr new value
+     * @param classAttr new value
      * @return <code> Location</code> instance
      */
-    public Location refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public Location classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Location</code> instance
+     */
+    public Location evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Location</code> instance
+     */
+    public Location idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 
@@ -242,6 +231,28 @@ public class Location extends InlinereqreqComplexType {
      */
     public Location langAttr(final LanguageSimpleType langAttr) {
         setLangAttr(langAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>periodAttr</code> property in DSL way
+     *
+     * @param periodAttr new value
+     * @return <code> Location</code> instance
+     */
+    public Location periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr new value
+     * @return <code> Location</code> instance
+     */
+    public Location refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
         return this;
     }
 
@@ -268,6 +279,28 @@ public class Location extends InlinereqreqComplexType {
     }
 
     /**
+     * Set <code>styleAttr</code> property in DSL way
+     *
+     * @param styleAttr new value
+     * @return <code> Location</code> instance
+     */
+    public Location styleAttr(final StringSimpleType styleAttr) {
+        setStyleAttr(styleAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>titleAttr</code> property in DSL way
+     *
+     * @param titleAttr new value
+     * @return <code> Location</code> instance
+     */
+    public Location titleAttr(final StringSimpleType titleAttr) {
+        setTitleAttr(titleAttr);
+        return this;
+    }
+
+    /**
      * Set <code>wildcardContentAttr</code> property in DSL way
      *
      * @param wildcardContentAttr new value
@@ -275,39 +308,6 @@ public class Location extends InlinereqreqComplexType {
      */
     public Location wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Location</code> instance
-     */
-    public Location idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Location</code> instance
-     */
-    public Location evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> Location</code> instance
-     */
-    public Location periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
         return this;
     }
 

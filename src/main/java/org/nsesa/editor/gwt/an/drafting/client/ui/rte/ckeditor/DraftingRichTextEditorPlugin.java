@@ -14,7 +14,6 @@
 package org.nsesa.editor.gwt.an.drafting.client.ui.rte.ckeditor;
 
 import com.google.inject.Inject;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtoso20OverlaySnippetFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
@@ -25,14 +24,16 @@ import org.nsesa.editor.gwt.core.shared.OverlayWidgetOrigin;
 
 /**
  * A simple plugin to register all the plugins used by Akomantoso 20 editor.
+ *
  * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
- * Date: 11/01/13 12:13
+ *         Date: 11/01/13 12:13
  */
 public class DraftingRichTextEditorPlugin extends CkEditorCompositePlugin {
 
     /**
      * Create <code>Akomantoso20RichTextEditorPlugin</Akomantoso20RichTextEditorPlugin> object and
      * wrap all the available plugins
+     *
      * @param overlayFactory
      * @param clientFactory
      */
@@ -59,7 +60,7 @@ public class DraftingRichTextEditorPlugin extends CkEditorCompositePlugin {
                                 OverlaySnippet snippet = snippetFactory.getSnippet(curr);
                                 if (snippet != null) {
                                     overlaySnippetEvaluator.addEvaluator(
-                                            new AkomaNtoso20OverlaySnippetFactory.NumEvaluator(
+                                            new DefaultNumEvaluator(
                                                     clientFactory,
                                                     overlayWidgetInjectionStrategy,
                                                     locator,
@@ -75,7 +76,9 @@ public class DraftingRichTextEditorPlugin extends CkEditorCompositePlugin {
                             curr = curr.getParentOverlayWidget();
                         }
                         return result;
-                    };
+                    }
+
+                    ;
                 }));
 
         registerPlugin(new CKEditorBasicStylesPlugin(overlayFactory));

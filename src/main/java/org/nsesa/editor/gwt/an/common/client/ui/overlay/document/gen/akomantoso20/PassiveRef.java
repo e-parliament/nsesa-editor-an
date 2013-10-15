@@ -42,8 +42,8 @@ public class PassiveRef extends ReferenceTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "passiveRef");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "passiveRef");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget passiveRef");
         return span;
     }
@@ -61,11 +61,11 @@ public class PassiveRef extends ReferenceTypeComplexType {
     /**
      * Constructor with required attributes
      */
-    public PassiveRef(AnyURISimpleType hrefAttr, StringSimpleType showAsAttr, IDSimpleType idAttr) {
+    public PassiveRef(AnyURISimpleType hrefAttr, IDSimpleType idAttr, StringSimpleType showAsAttr) {
         this();
         setHrefAttr(hrefAttr);
-        setShowAsAttr(showAsAttr);
         setIdAttr(idAttr);
+        setShowAsAttr(showAsAttr);
     }
 
 
@@ -81,6 +81,17 @@ public class PassiveRef extends ReferenceTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> PassiveRef</code> instance
+     */
+    public PassiveRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
      * Set <code>hrefAttr</code> property in DSL way
      *
      * @param hrefAttr new value
@@ -88,39 +99,6 @@ public class PassiveRef extends ReferenceTypeComplexType {
      */
     public PassiveRef hrefAttr(final AnyURISimpleType hrefAttr) {
         setHrefAttr(hrefAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> PassiveRef</code> instance
-     */
-    public PassiveRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>showAsAttr</code> property in DSL way
-     *
-     * @param showAsAttr new value
-     * @return <code> PassiveRef</code> instance
-     */
-    public PassiveRef showAsAttr(final StringSimpleType showAsAttr) {
-        setShowAsAttr(showAsAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>shortFormAttr</code> property in DSL way
-     *
-     * @param shortFormAttr new value
-     * @return <code> PassiveRef</code> instance
-     */
-    public PassiveRef shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -136,13 +114,35 @@ public class PassiveRef extends ReferenceTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>shortFormAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param shortFormAttr new value
      * @return <code> PassiveRef</code> instance
      */
-    public PassiveRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public PassiveRef shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>showAsAttr</code> property in DSL way
+     *
+     * @param showAsAttr new value
+     * @return <code> PassiveRef</code> instance
+     */
+    public PassiveRef showAsAttr(final StringSimpleType showAsAttr) {
+        setShowAsAttr(showAsAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>wildcardContentAttr</code> property in DSL way
+     *
+     * @param wildcardContentAttr new value
+     * @return <code> PassiveRef</code> instance
+     */
+    public PassiveRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

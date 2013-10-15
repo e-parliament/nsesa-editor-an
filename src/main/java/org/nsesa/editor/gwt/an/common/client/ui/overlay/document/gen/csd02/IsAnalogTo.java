@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element isAnalogTo is a metadata element specifying a reference to a source analog to the argument being described.
+ * The element isAnalogTo is a metadata element specifying a reference to a source analog to the<br/> argument being described.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -48,8 +48,8 @@ public class IsAnalogTo extends JudicialArgumentTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "isAnalogTo");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "isAnalogTo");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget isAnalogTo");
         return span;
     }
@@ -85,13 +85,13 @@ public class IsAnalogTo extends JudicialArgumentTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> IsAnalogTo</code> instance
      */
-    public IsAnalogTo wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public IsAnalogTo evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -107,6 +107,17 @@ public class IsAnalogTo extends JudicialArgumentTypeComplexType {
     }
 
     /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> IsAnalogTo</code> instance
+     */
+    public IsAnalogTo idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
      * Set <code>incompleteAttr</code> property in DSL way
      *
      * @param incompleteAttr new value
@@ -118,13 +129,13 @@ public class IsAnalogTo extends JudicialArgumentTypeComplexType {
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param statusAttr new value
+     * @param periodAttr new value
      * @return <code> IsAnalogTo</code> instance
      */
-    public IsAnalogTo statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public IsAnalogTo periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -140,35 +151,24 @@ public class IsAnalogTo extends JudicialArgumentTypeComplexType {
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>statusAttr</code> property in DSL way
      *
-     * @param idAttr new value
+     * @param statusAttr new value
      * @return <code> IsAnalogTo</code> instance
      */
-    public IsAnalogTo idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
+    public IsAnalogTo statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> IsAnalogTo</code> instance
      */
-    public IsAnalogTo evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> IsAnalogTo</code> instance
-     */
-    public IsAnalogTo periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public IsAnalogTo wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

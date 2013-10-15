@@ -49,8 +49,8 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "countTypeComplexType");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "countTypeComplexType");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget countTypeComplexType");
         return span;
     }
@@ -65,54 +65,53 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
     }
 
     // FIELDS ------------------
-    private AnyURISimpleType refersToAttr;
+    private String wildcardContentAttr;
     private IDSimpleType idAttr;
     private NMTOKENSimpleType evolvingIdAttr;
+    private AnyURISimpleType refersToAttr;
     private AnyURISimpleType hrefAttr;
     private StringSimpleType valueAttr;
-    private String wildcardContentAttr;
 
     /**
-     * Return <code>refersToAttr</code> property
+     * Return <code>wildcardContentAttr</code> property
      *
-     * @return refersToAttr
+     * @return wildcardContentAttr
      */
-    public AnyURISimpleType getRefersToAttr() {
-        if (refersToAttr == null) {
-            refersToAttr = new AnyURISimpleType();
-            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+    public String getWildcardContentAttr() {
+        if (wildcardContentAttr == null) {
+            //hmm nothing to do here
         }
 
-        return refersToAttr;
+        return wildcardContentAttr;
     }
 
     /**
-     * Return <code>refersToAttr</code> property in DSL way
+     * Return <code>wildcardContentAttr</code> property in DSL way
      *
-     * @return refersToAttr
+     * @return wildcardContentAttr
      */
-    public AnyURISimpleType refersToAttr() {
-        return getRefersToAttr();
+    public String wildcardContentAttr() {
+        return getWildcardContentAttr();
     }
 
     /**
-     * Set <code>refersToAttr</code> property
+     * Set <code>wildcardContentAttr</code> property
      *
-     * @param refersToAttr the new value
+     * @param wildcardContentAttr the new value
      */
-    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
-        this.refersToAttr = refersToAttr;
-        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    public void setWildcardContentAttr(final String wildcardContentAttr) {
+        this.wildcardContentAttr = wildcardContentAttr;
+        getElement().setAttribute("wildcardContent", wildcardContentAttr);
     }
 
     /**
-     * Set <code>refersToAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param refersToAttr the new value
+     * @param wildcardContentAttr the new value
      * @return <code>CountTypeComplexType</code> instance
      */
-    public CountTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
-        setRefersToAttr(refersToAttr);
+    public CountTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -205,6 +204,50 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
+     * Return <code>refersToAttr</code> property
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType getRefersToAttr() {
+        if (refersToAttr == null) {
+            refersToAttr = new AnyURISimpleType();
+            refersToAttr.setValue(getElement().getAttribute("refersTo"));
+        }
+
+        return refersToAttr;
+    }
+
+    /**
+     * Return <code>refersToAttr</code> property in DSL way
+     *
+     * @return refersToAttr
+     */
+    public AnyURISimpleType refersToAttr() {
+        return getRefersToAttr();
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property
+     *
+     * @param refersToAttr the new value
+     */
+    public void setRefersToAttr(final AnyURISimpleType refersToAttr) {
+        this.refersToAttr = refersToAttr;
+        getElement().setAttribute("refersTo", refersToAttr.getValue());
+    }
+
+    /**
+     * Set <code>refersToAttr</code> property in DSL way
+     *
+     * @param refersToAttr the new value
+     * @return <code>CountTypeComplexType</code> instance
+     */
+    public CountTypeComplexType refersToAttr(final AnyURISimpleType refersToAttr) {
+        setRefersToAttr(refersToAttr);
+        return this;
+    }
+
+    /**
      * Return <code>hrefAttr</code> property
      *
      * @return hrefAttr
@@ -293,49 +336,6 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
     }
 
     /**
-     * Return <code>wildcardContentAttr</code> property
-     *
-     * @return wildcardContentAttr
-     */
-    public String getWildcardContentAttr() {
-        if (wildcardContentAttr == null) {
-            //hmm nothing to do here
-        }
-
-        return wildcardContentAttr;
-    }
-
-    /**
-     * Return <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @return wildcardContentAttr
-     */
-    public String wildcardContentAttr() {
-        return getWildcardContentAttr();
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property
-     *
-     * @param wildcardContentAttr the new value
-     */
-    public void setWildcardContentAttr(final String wildcardContentAttr) {
-        this.wildcardContentAttr = wildcardContentAttr;
-        getElement().setAttribute("wildcardContent", wildcardContentAttr);
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr the new value
-     * @return <code>CountTypeComplexType</code> instance
-     */
-    public CountTypeComplexType wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
      * Return <code>java.util.List<OverlayWidgetImpl></code> property
      *
      * @return The property as unmodifiable list
@@ -384,12 +384,12 @@ public class CountTypeComplexType extends OverlayWidgetImpl {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
-        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
+        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         attrs.put("id", getIdAttr() != null ? getIdAttr().getValue() : null);
         attrs.put("evolvingId", getEvolvingIdAttr() != null ? getEvolvingIdAttr().getValue() : null);
+        attrs.put("refersTo", getRefersToAttr() != null ? getRefersToAttr().getValue() : null);
         attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         attrs.put("value", getValueAttr() != null ? getValueAttr().getValue() : null);
-        attrs.put("wildcardContent", getWildcardContentAttr() != null ? getWildcardContentAttr().toString() : null);
         return attrs;
     }
 

@@ -21,7 +21,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * The element FRBRManifestation is the metadata container of identifying properties related to the Manifestation level according to the FRBR hierarchy
+ * The element FRBRManifestation is the metadata container of identifying properties related to the<br/> Manifestation level according to the FRBR hierarchy
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -55,8 +55,8 @@ public class FRBRManifestation extends CorePropertiesComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "FRBRManifestation");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "FRBRManifestation");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget FRBRManifestation");
         return span;
     }

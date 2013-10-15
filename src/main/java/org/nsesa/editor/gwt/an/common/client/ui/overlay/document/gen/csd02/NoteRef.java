@@ -40,8 +40,8 @@ public class NoteRef extends MarkeroptComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "noteRef");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "noteRef");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget noteRef");
         return span;
     }
@@ -73,10 +73,54 @@ public class NoteRef extends MarkeroptComplexType {
     }
 
     // FIELDS ------------------
+    private AnyURISimpleType hrefAttr;
     private StringSimpleType markerAttr;
     private PlacementTypeSimpleType placementAttr;
     private AnyURISimpleType placementBaseAttr;
-    private AnyURISimpleType hrefAttr;
+
+    /**
+     * Return <code>hrefAttr</code> property
+     *
+     * @return hrefAttr
+     */
+    public AnyURISimpleType getHrefAttr() {
+        if (hrefAttr == null) {
+            hrefAttr = new AnyURISimpleType();
+            hrefAttr.setValue(getElement().getAttribute("href"));
+        }
+
+        return hrefAttr;
+    }
+
+    /**
+     * Return <code>hrefAttr</code> property in DSL way
+     *
+     * @return hrefAttr
+     */
+    public AnyURISimpleType hrefAttr() {
+        return getHrefAttr();
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property
+     *
+     * @param hrefAttr the new value
+     */
+    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
+        this.hrefAttr = hrefAttr;
+        getElement().setAttribute("href", hrefAttr.getValue());
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr the new value
+     * @return <code>NoteRef</code> instance
+     */
+    public NoteRef hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
 
     /**
      * Return <code>markerAttr</code> property
@@ -208,51 +252,51 @@ public class NoteRef extends MarkeroptComplexType {
         setPlacementBaseAttr(placementBaseAttr);
         return this;
     }
+//Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Return <code>hrefAttr</code> property
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @return hrefAttr
+     * @param alternativeToAttr new value
+     * @return <code> NoteRef</code> instance
      */
-    public AnyURISimpleType getHrefAttr() {
-        if (hrefAttr == null) {
-            hrefAttr = new AnyURISimpleType();
-            hrefAttr.setValue(getElement().getAttribute("href"));
-        }
-
-        return hrefAttr;
-    }
-
-    /**
-     * Return <code>hrefAttr</code> property in DSL way
-     *
-     * @return hrefAttr
-     */
-    public AnyURISimpleType hrefAttr() {
-        return getHrefAttr();
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property
-     *
-     * @param hrefAttr the new value
-     */
-    public void setHrefAttr(final AnyURISimpleType hrefAttr) {
-        this.hrefAttr = hrefAttr;
-        getElement().setAttribute("href", hrefAttr.getValue());
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr the new value
-     * @return <code>NoteRef</code> instance
-     */
-    public NoteRef hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
+    public NoteRef alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
-//Override all attributes methods to be conformant with DSL approach
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> NoteRef</code> instance
+     */
+    public NoteRef classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> NoteRef</code> instance
+     */
+    public NoteRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> NoteRef</code> instance
+     */
+    public NoteRef idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
 
     /**
      * Set <code>langAttr</code> property in DSL way
@@ -266,24 +310,13 @@ public class NoteRef extends MarkeroptComplexType {
     }
 
     /**
-     * Set <code>spaceAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param spaceAttr new value
+     * @param periodAttr new value
      * @return <code> NoteRef</code> instance
      */
-    public NoteRef spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> NoteRef</code> instance
-     */
-    public NoteRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public NoteRef periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -299,13 +332,24 @@ public class NoteRef extends MarkeroptComplexType {
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>spaceAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param spaceAttr new value
      * @return <code> NoteRef</code> instance
      */
-    public NoteRef classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public NoteRef spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> NoteRef</code> instance
+     */
+    public NoteRef statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -332,57 +376,13 @@ public class NoteRef extends MarkeroptComplexType {
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param statusAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> NoteRef</code> instance
      */
-    public NoteRef statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> NoteRef</code> instance
-     */
-    public NoteRef idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> NoteRef</code> instance
-     */
-    public NoteRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> NoteRef</code> instance
-     */
-    public NoteRef alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> NoteRef</code> instance
-     */
-    public NoteRef periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public NoteRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 
@@ -400,10 +400,10 @@ public class NoteRef extends MarkeroptComplexType {
     public LinkedHashMap<String, String> getAttributes() {
         final LinkedHashMap<String, String> attrs = new LinkedHashMap<String, String>();
         attrs.putAll(super.getAttributes());
+        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         attrs.put("marker", getMarkerAttr() != null ? getMarkerAttr().getValue() : null);
         attrs.put("placement", getPlacementAttr() != null ? getPlacementAttr().value() : null);
         attrs.put("placementBase", getPlacementBaseAttr() != null ? getPlacementBaseAttr().getValue() : null);
-        attrs.put("href", getHrefAttr() != null ? getHrefAttr().getValue() : null);
         return attrs;
     }
 

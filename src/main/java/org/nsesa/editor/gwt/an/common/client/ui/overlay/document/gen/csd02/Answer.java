@@ -65,8 +65,8 @@ public class Answer extends SpeechTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "answer");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "answer");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget answer");
         return span;
     }
@@ -102,13 +102,13 @@ public class Answer extends SpeechTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>byAttr</code> property in DSL way
+     * Set <code>alternativeToAttr</code> property in DSL way
      *
-     * @param byAttr new value
+     * @param alternativeToAttr new value
      * @return <code> Answer</code> instance
      */
-    public Answer byAttr(final AnyURISimpleType byAttr) {
-        setByAttr(byAttr);
+    public Answer alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
+        setAlternativeToAttr(alternativeToAttr);
         return this;
     }
 
@@ -124,13 +124,24 @@ public class Answer extends SpeechTypeComplexType {
     }
 
     /**
-     * Set <code>startTimeAttr</code> property in DSL way
+     * Set <code>byAttr</code> property in DSL way
      *
-     * @param startTimeAttr new value
+     * @param byAttr new value
      * @return <code> Answer</code> instance
      */
-    public Answer startTimeAttr(final DateTimeSimpleType startTimeAttr) {
-        setStartTimeAttr(startTimeAttr);
+    public Answer byAttr(final AnyURISimpleType byAttr) {
+        setByAttr(byAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>classAttr</code> property in DSL way
+     *
+     * @param classAttr new value
+     * @return <code> Answer</code> instance
+     */
+    public Answer classAttr(final StringSimpleType classAttr) {
+        setClassAttr(classAttr);
         return this;
     }
 
@@ -146,13 +157,24 @@ public class Answer extends SpeechTypeComplexType {
     }
 
     /**
-     * Set <code>toAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param toAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> Answer</code> instance
      */
-    public Answer toAttr(final AnyURISimpleType toAttr) {
-        setToAttr(toAttr);
+    public Answer evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Answer</code> instance
+     */
+    public Answer idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
         return this;
     }
 
@@ -168,24 +190,13 @@ public class Answer extends SpeechTypeComplexType {
     }
 
     /**
-     * Set <code>spaceAttr</code> property in DSL way
+     * Set <code>periodAttr</code> property in DSL way
      *
-     * @param spaceAttr new value
+     * @param periodAttr new value
      * @return <code> Answer</code> instance
      */
-    public Answer spaceAttr(final NCNameSimpleType spaceAttr) {
-        setSpaceAttr(spaceAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
-     *
-     * @param wildcardContentAttr new value
-     * @return <code> Answer</code> instance
-     */
-    public Answer wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public Answer periodAttr(final AnyURISimpleType periodAttr) {
+        setPeriodAttr(periodAttr);
         return this;
     }
 
@@ -201,13 +212,35 @@ public class Answer extends SpeechTypeComplexType {
     }
 
     /**
-     * Set <code>classAttr</code> property in DSL way
+     * Set <code>spaceAttr</code> property in DSL way
      *
-     * @param classAttr new value
+     * @param spaceAttr new value
      * @return <code> Answer</code> instance
      */
-    public Answer classAttr(final StringSimpleType classAttr) {
-        setClassAttr(classAttr);
+    public Answer spaceAttr(final NCNameSimpleType spaceAttr) {
+        setSpaceAttr(spaceAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>startTimeAttr</code> property in DSL way
+     *
+     * @param startTimeAttr new value
+     * @return <code> Answer</code> instance
+     */
+    public Answer startTimeAttr(final DateTimeSimpleType startTimeAttr) {
+        setStartTimeAttr(startTimeAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>statusAttr</code> property in DSL way
+     *
+     * @param statusAttr new value
+     * @return <code> Answer</code> instance
+     */
+    public Answer statusAttr(final StatusTypeSimpleType statusAttr) {
+        setStatusAttr(statusAttr);
         return this;
     }
 
@@ -234,57 +267,24 @@ public class Answer extends SpeechTypeComplexType {
     }
 
     /**
-     * Set <code>statusAttr</code> property in DSL way
+     * Set <code>toAttr</code> property in DSL way
      *
-     * @param statusAttr new value
+     * @param toAttr new value
      * @return <code> Answer</code> instance
      */
-    public Answer statusAttr(final StatusTypeSimpleType statusAttr) {
-        setStatusAttr(statusAttr);
+    public Answer toAttr(final AnyURISimpleType toAttr) {
+        setToAttr(toAttr);
         return this;
     }
 
     /**
-     * Set <code>idAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param idAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> Answer</code> instance
      */
-    public Answer idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Answer</code> instance
-     */
-    public Answer evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>alternativeToAttr</code> property in DSL way
-     *
-     * @param alternativeToAttr new value
-     * @return <code> Answer</code> instance
-     */
-    public Answer alternativeToAttr(final AnyURISimpleType alternativeToAttr) {
-        setAlternativeToAttr(alternativeToAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>periodAttr</code> property in DSL way
-     *
-     * @param periodAttr new value
-     * @return <code> Answer</code> instance
-     */
-    public Answer periodAttr(final AnyURISimpleType periodAttr) {
-        setPeriodAttr(periodAttr);
+    public Answer wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

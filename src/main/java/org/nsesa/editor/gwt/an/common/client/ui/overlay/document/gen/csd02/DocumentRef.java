@@ -24,7 +24,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.StructureIndicator;
 import java.util.LinkedHashMap;
 
 /**
- * the element documentRef is a reference to a separate work- or expression-level resource that should be placed in this position. Actual resources are external (e.g. in the package or even in a different position) and are (an expression or any expression of) a separate Work.
+ * the element documentRef is a reference to a separate work- or expression-level resource that should<br/> be placed in this position. Actual resources are external (e.g. in the package or even in a<br/> different position) and are (an expression or any expression of) a separate Work.
  * This file is generated. Rather than changing this file, correct the template called <tt>overlayClass.ftl</tt>.
  */
 
@@ -42,8 +42,8 @@ public class DocumentRef extends LinkTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "documentRef");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "documentRef");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget documentRef");
         return span;
     }
@@ -81,13 +81,13 @@ public class DocumentRef extends LinkTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
-     * Set <code>wildcardContentAttr</code> property in DSL way
+     * Set <code>evolvingIdAttr</code> property in DSL way
      *
-     * @param wildcardContentAttr new value
+     * @param evolvingIdAttr new value
      * @return <code> DocumentRef</code> instance
      */
-    public DocumentRef wildcardContentAttr(final String wildcardContentAttr) {
-        setWildcardContentAttr(wildcardContentAttr);
+    public DocumentRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
         return this;
     }
 
@@ -114,13 +114,13 @@ public class DocumentRef extends LinkTypeComplexType {
     }
 
     /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
+     * Set <code>shortFormAttr</code> property in DSL way
      *
-     * @param evolvingIdAttr new value
+     * @param shortFormAttr new value
      * @return <code> DocumentRef</code> instance
      */
-    public DocumentRef evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
+    public DocumentRef shortFormAttr(final StringSimpleType shortFormAttr) {
+        setShortFormAttr(shortFormAttr);
         return this;
     }
 
@@ -136,13 +136,13 @@ public class DocumentRef extends LinkTypeComplexType {
     }
 
     /**
-     * Set <code>shortFormAttr</code> property in DSL way
+     * Set <code>wildcardContentAttr</code> property in DSL way
      *
-     * @param shortFormAttr new value
+     * @param wildcardContentAttr new value
      * @return <code> DocumentRef</code> instance
      */
-    public DocumentRef shortFormAttr(final StringSimpleType shortFormAttr) {
-        setShortFormAttr(shortFormAttr);
+    public DocumentRef wildcardContentAttr(final String wildcardContentAttr) {
+        setWildcardContentAttr(wildcardContentAttr);
         return this;
     }
 

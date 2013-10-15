@@ -29,8 +29,8 @@ public class NegativeIntegerSimpleType extends NonPositiveIntegerSimpleType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "negativeIntegerSimpleType");
-        span.setAttribute("ns", "http://www.w3.org/2001/XMLSchema");
+        span.setAttribute("data-type", "negativeIntegerSimpleType");
+        span.setAttribute("data-ns", "http://www.w3.org/2001/XMLSchema");
         span.setClassName("widget negativeIntegerSimpleType");
         return span;
     }

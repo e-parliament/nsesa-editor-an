@@ -46,8 +46,8 @@ public class Classification extends OverlayWidgetImpl {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "classification");
-        span.setAttribute("ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
+        span.setAttribute("data-type", "classification");
+        span.setAttribute("data-ns", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02");
         span.setClassName("widget classification");
         return span;
     }
@@ -80,6 +80,40 @@ public class Classification extends OverlayWidgetImpl {
 
     // FIELDS ------------------
     private AnyURISimpleType sourceAttr;
+
+    /**
+     * Return <code>java.util.List<Keyword></code> property
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Keyword> getKeywords() {
+        java.util.List<Keyword> result = new ArrayList<Keyword>();
+        for (OverlayWidget widget : getChildOverlayWidgets()) {
+            if ("Keyword".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
+                result.add((Keyword) widget);
+            }
+        }
+        return java.util.Collections.unmodifiableList(result);
+    }
+
+    /**
+     * Return <code>java.util.List<Keyword></code> property in DSL way
+     *
+     * @return The property as unmodifiable list
+     */
+    public java.util.List<Keyword> getKeywordList() {
+        return getKeywords();
+    }
+
+    /**
+     * Add <code>java.util.List<Keyword></code> property in the list of properties
+     *
+     * @return The property as unmodifiable list
+     */
+    public Keyword addKeyword(Keyword keywordElem) {
+        this.addOverlayWidget(keywordElem);
+        return keywordElem;
+    }
 
     /**
      * Return <code>sourceAttr</code> property
@@ -124,41 +158,6 @@ public class Classification extends OverlayWidgetImpl {
         setSourceAttr(sourceAttr);
         return this;
     }
-
-    /**
-     * Return <code>java.util.List<Keyword></code> property
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Keyword> getKeywords() {
-        java.util.List<Keyword> result = new ArrayList<Keyword>();
-        for (OverlayWidget widget : getChildOverlayWidgets()) {
-            if ("Keyword".equalsIgnoreCase(widget.getType()) && "http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02".equalsIgnoreCase(widget.getNamespaceURI())) {
-                result.add((Keyword) widget);
-            }
-        }
-        return java.util.Collections.unmodifiableList(result);
-    }
-
-    /**
-     * Return <code>java.util.List<Keyword></code> property in DSL way
-     *
-     * @return The property as unmodifiable list
-     */
-    public java.util.List<Keyword> getKeywordList() {
-        return getKeywords();
-    }
-
-    /**
-     * Add <code>java.util.List<Keyword></code> property in the list of properties
-     *
-     * @return The property as unmodifiable list
-     */
-    public Keyword addKeyword(Keyword keywordElem) {
-        this.addOverlayWidget(keywordElem);
-        return keywordElem;
-    }
-
 //Override all attributes methods to be conformant with DSL approach
 
     /**

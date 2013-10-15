@@ -41,8 +41,8 @@ public class Destination extends ArgumentTypeComplexType {
      */
     public static Element create() {
         com.google.gwt.user.client.Element span = DOM.createSpan();
-        span.setAttribute("type", "destination");
-        span.setAttribute("ns", "http://www.akomantoso.org/2.0");
+        span.setAttribute("data-type", "destination");
+        span.setAttribute("data-ns", "http://www.akomantoso.org/2.0");
         span.setClassName("widget destination");
         return span;
     }
@@ -78,6 +78,50 @@ public class Destination extends ArgumentTypeComplexType {
 //Override all attributes methods to be conformant with DSL approach
 
     /**
+     * Set <code>evolvingIdAttr</code> property in DSL way
+     *
+     * @param evolvingIdAttr new value
+     * @return <code> Destination</code> instance
+     */
+    public Destination evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
+        setEvolvingIdAttr(evolvingIdAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>hrefAttr</code> property in DSL way
+     *
+     * @param hrefAttr new value
+     * @return <code> Destination</code> instance
+     */
+    public Destination hrefAttr(final AnyURISimpleType hrefAttr) {
+        setHrefAttr(hrefAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>idAttr</code> property in DSL way
+     *
+     * @param idAttr new value
+     * @return <code> Destination</code> instance
+     */
+    public Destination idAttr(final IDSimpleType idAttr) {
+        setIdAttr(idAttr);
+        return this;
+    }
+
+    /**
+     * Set <code>posAttr</code> property in DSL way
+     *
+     * @param posAttr new value
+     * @return <code> Destination</code> instance
+     */
+    public Destination posAttr(final PosTypeSimpleType posAttr) {
+        setPosAttr(posAttr);
+        return this;
+    }
+
+    /**
      * Set <code>upToAttr</code> property in DSL way
      *
      * @param upToAttr new value
@@ -96,50 +140,6 @@ public class Destination extends ArgumentTypeComplexType {
      */
     public Destination wildcardContentAttr(final String wildcardContentAttr) {
         setWildcardContentAttr(wildcardContentAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>idAttr</code> property in DSL way
-     *
-     * @param idAttr new value
-     * @return <code> Destination</code> instance
-     */
-    public Destination idAttr(final IDSimpleType idAttr) {
-        setIdAttr(idAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>evolvingIdAttr</code> property in DSL way
-     *
-     * @param evolvingIdAttr new value
-     * @return <code> Destination</code> instance
-     */
-    public Destination evolvingIdAttr(final NMTOKENSimpleType evolvingIdAttr) {
-        setEvolvingIdAttr(evolvingIdAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>posAttr</code> property in DSL way
-     *
-     * @param posAttr new value
-     * @return <code> Destination</code> instance
-     */
-    public Destination posAttr(final PosTypeSimpleType posAttr) {
-        setPosAttr(posAttr);
-        return this;
-    }
-
-    /**
-     * Set <code>hrefAttr</code> property in DSL way
-     *
-     * @param hrefAttr new value
-     * @return <code> Destination</code> instance
-     */
-    public Destination hrefAttr(final AnyURISimpleType hrefAttr) {
-        setHrefAttr(hrefAttr);
         return this;
     }
 

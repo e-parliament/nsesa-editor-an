@@ -26,8 +26,9 @@ import static junit.framework.Assert.assertTrue;
 
 /**
  * A test class for <code>OverlayGenerator</code>.
+ *
  * @author <a href="mailto:stelian.groza@gmail.com">Stelian Groza</a>
- * Date: 15/11/12 11:02
+ *         Date: 15/11/12 11:02
  */
 public class AnOverlayGeneratorTest {
 
@@ -40,14 +41,14 @@ public class AnOverlayGeneratorTest {
 
         OverlayGenerator generator = new OverlayGenerator() {
             @Override
-            public void print() {
+            public void export() {
                 result.add(overlayClassGenerator.getResult());
             }
         };
-        String schema = "akomantoso20.xsd";
+        String schema = "akomaNtoso/akomantoso20.xsd";
         generator.parse(schema);
         generator.analyze();
-        generator.print();
+        generator.export();
         rootClass = result.get(0);
     }
 
@@ -80,7 +81,7 @@ public class AnOverlayGeneratorTest {
         if (hierarchicalStructureClass != null) {
             List<OverlayProperty> props = hierarchicalStructureClass.getProperties();
             List<OverlayProperty> stackProp = new ArrayList<OverlayProperty>(props);
-            while(!stackProp.isEmpty()) {
+            while (!stackProp.isEmpty()) {
                 OverlayProperty prop = stackProp.remove(0);
                 if (prop.getName().equals("coverPage")) {
                     foundCoverPage = true;
