@@ -41,7 +41,7 @@ public class PushManager {
 
         rpcRequestConfig = AtmosphereRequestConfig.create(rpc_serializer);
         rpcRequestConfig.setUrl(GWT.getModuleBaseURL() + "../atmosphere");
-        rpcRequestConfig.setTransport(AtmosphereRequestConfig.Transport.STREAMING);
+        rpcRequestConfig.setTransport(AtmosphereRequestConfig.Transport.WEBSOCKET);
         rpcRequestConfig.setFallbackTransport(AtmosphereRequestConfig.Transport.LONG_POLLING);
         rpcRequestConfig.setOpenHandler(new AtmosphereOpenHandler() {
             @Override
