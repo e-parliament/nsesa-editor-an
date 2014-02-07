@@ -20,6 +20,8 @@ import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 import org.nsesa.editor.gwt.amendment.client.amendment.AmendmentInjectionPointFinder;
 import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerSaveEvent;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerSavedEvent;
+import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerSavedEventHandler;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.AmendmentController;
 import org.nsesa.editor.gwt.amendment.client.ui.document.AmendmentDocumentController;
 import org.nsesa.editor.gwt.an.amendments.client.MyAmendmentDocumentInjector;
@@ -30,6 +32,7 @@ import org.nsesa.editor.gwt.an.amendments.client.mode.DiffMode;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmentControllerUtil;
 import org.nsesa.editor.gwt.an.common.client.mode.StructureViewMode;
 import org.nsesa.editor.gwt.an.common.client.push.PushManager;
+import org.nsesa.editor.gwt.an.common.client.push.SimpleRPCEvent;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
@@ -51,6 +54,7 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetSelecto
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.core.shared.AmendableWidgetReference;
 import org.nsesa.editor.gwt.core.shared.AmendmentContainerDTO;
+import org.nsesa.editor.gwt.core.shared.DocumentDTO;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 
 import java.util.ArrayList;
@@ -79,6 +83,7 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
     private HandlerRegistration documentOverlayCompletedEventHandler;
     private HandlerRegistration keyComboHandlerRegistration;
     private HandlerRegistration structureChangeHandlerRegistration;
+    private HandlerRegistration amendmentContainerSavedEventHandlerRegistration;
 
     @Inject
     public AkomaNtoso20AmendmentDocumentController(final ClientFactory clientFactory,
@@ -127,6 +132,14 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
             }
         });
 
+        amendmentContainerSavedEventHandlerRegistration = documentEventBus.addHandler(AmendmentContainerSavedEvent.TYPE, new AmendmentContainerSavedEventHandler() {
+            @Override
+            public void onEvent(AmendmentContainerSavedEvent event) {
+                String location = locator.getLocation(event.getAmendmentController().getOverlayWidget(), document.getLanguageIso(), true);
+                pushManager.send(new SimpleRPCEvent(clientFactory.getClientContext().getLoggedInPerson().getDisplayName() + " created an amendment on " + location));
+            }
+        });
+
         structureChangeHandlerRegistration = documentEventBus.addHandler(OverlayWidgetStructureChangeEvent.TYPE, new OverlayWidgetStructureChangeEventHandler() {
             @Override
             public void onEvent(OverlayWidgetStructureChangeEvent event) {
@@ -149,7 +162,6 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
                 }
             }
         });
-
     }
 
     @Override
@@ -158,11 +170,18 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
     }
 
     @Override
+    public void onDocumentLoaded(DocumentDTO document) {
+        pushManager.send(new SimpleRPCEvent(clientFactory.getClientContext().getLoggedInPerson().getDisplayName() + " started working on " + document.getName()));
+        super.onDocumentLoaded(document);
+    }
+
+    @Override
     public void removeListeners() {
         super.removeListeners();
         documentOverlayCompletedEventHandler.removeHandler();
         keyComboHandlerRegistration.removeHandler();
         structureChangeHandlerRegistration.removeHandler();
+        amendmentContainerSavedEventHandlerRegistration.removeHandler();
     }
 
     /**
