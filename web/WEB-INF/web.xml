@@ -24,7 +24,7 @@
     <!-- Context Configuration locations for Spring XML files -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/applicationContext*.xml</param-value>
+        <param-value>classpath*:applicationContext*.xml</param-value>
     </context-param>
 
     <!-- Listener to load the root application context. -->
@@ -47,6 +47,10 @@ the web app class loader and the classes that it holds. -->
         <display-name>Spring Framework Dispatcher Servlet</display-name>
         <servlet-name>spring</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring-servlet.xml</param-value>
+        </init-param>
     </servlet>
 
     <!-- Atmosphere -->
