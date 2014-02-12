@@ -397,8 +397,14 @@
                     <include>**/*.properties</include>
                 </includes>
             </resource>
-
         </resources>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>2.5</version>
+            </extension>
+        </extensions>
         <plugins>
             <!-- ***************************** Resources plugin    ***************************** -->
             <plugin>
@@ -435,7 +441,7 @@
                 <version>${gwtplugin.version}</version>
                 <configuration>
                     <!--extraJvmArgs>-Xss2M -XX:MaxPermSize=512M -Xmx2048m -Xdebug </extraJvmArgs-->
-                    <extraJvmArgs>-Xss2M -XX:MaxPermSize=400M -Xms700M -Xmx700M</extraJvmArgs>
+                    <extraJvmArgs>-Xss2M -XX:MaxPermSize=600M -Xms1024M -Xmx1024M</extraJvmArgs>
                     <hostedWebapp>web</hostedWebapp>
                     <modules>
                         <module>org.nsesa.editor.gwt.an.amendments.AmendmentEditor</module>
@@ -648,6 +654,27 @@
                             <goal>site</goal>
                         </goals>
                         <phase>deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- ***************************** Maven SCP plugin    ***************************** -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>wagon-maven-plugin</artifactId>
+                <version>1.0-beta-4</version>
+                <configuration>
+                    <serverid>download.nsesa.org</serverid>
+                    <fromFile>${project.build.directory}/${project.build.finalName}.war</fromFile>
+                    <url>scp://phil@nsesa.org/home/phil/nsesa/www/uploads/${project.build.finalName}/${project.version}</url>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>upload-war-to-server</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>upload-single</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
