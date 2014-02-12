@@ -37,7 +37,7 @@
 
     <!-- reduce permutation to one browser and one language -->
     <!--<set-property name="user.agent" value="gecko1_8"/>-->
-    <!--<set-property name="locale" value="default"/>-->
+    <set-property name="locale" value="default"/>
 
     <entry-point class="org.nsesa.editor.gwt.an.markup.client.MarkupEditor"/>
 </module>
