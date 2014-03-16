@@ -24,15 +24,15 @@
         <div id="footer">
             Authoring Tool for Amendments with Akoma Ntoso 2.0/3.0 support
             |
-            <g:Anchor target="_blank" href="http://code.at4am.org/nsesa-editor-an/commits/{res2.gitCommitIdAbbrev}"
+            <g:Anchor target="_blank" href="https://github.com/e-parliament/nsesa-editor-an/commits/{res2.gitCommitIdAbbrev}"
                       text="#{res2.gitCommitIdAbbrev}"/>
             with
-            <g:Anchor target="_blank" href="http://code.at4am.org/nsesa-editor/commits/{res.gitCommitIdAbbrev}"
+            <g:Anchor target="_blank" href="https://github.com/e-parliament/nsesa-editor/commits/{res.gitCommitIdAbbrev}"
                       text="#{res.gitCommitIdAbbrev}"/>
             | Build date:
             <ui:text from='{res2.gitBuildTime}'/>
             |
-            <a href="http://www.at4am.org" target="_blank">More info</a>
+            <a href="https://github.com/e-parliament/" target="_blank">More info</a>
         </div>
     </g:HTMLPanel>
 </ui:UiBinder>
