@@ -664,7 +664,7 @@
                 <artifactId>wagon-maven-plugin</artifactId>
                 <version>1.0-beta-4</version>
                 <configuration>
-                    <serverid>download.nsesa.org</serverid>
+                    <serverId>download.nsesa.org</serverId>
                     <fromFile>${project.build.directory}/${project.build.finalName}.war</fromFile>
                     <url>scp://phil@nsesa.org/home/phil/nsesa/www/uploads/${project.build.finalName}/${project.version}</url>
                 </configuration>
