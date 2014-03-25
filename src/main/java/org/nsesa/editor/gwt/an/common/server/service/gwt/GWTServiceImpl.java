@@ -13,6 +13,7 @@
  */
 package org.nsesa.editor.gwt.an.common.server.service.gwt;
 
+import com.inspiresoftware.lib.dto.geda.adapter.ValueConverter;
 import com.inspiresoftware.lib.dto.geda.assembler.Assembler;
 import com.inspiresoftware.lib.dto.geda.assembler.DTOAssembler;
 import com.inspiresoftware.lib.dto.geda.assembler.dsl.impl.DefaultDSLRegistry;
@@ -20,6 +21,7 @@ import org.nsesa.editor.gwt.core.client.service.gwt.GWTService;
 import org.nsesa.editor.gwt.core.shared.ClientContext;
 import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.server.service.api.PersonService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -33,7 +35,11 @@ import java.util.UUID;
  */
 public class GWTServiceImpl extends SpringRemoteServiceServlet implements GWTService {
 
-    private PersonService personService;
+    @Autowired
+    PersonService personService;
+
+    @Autowired
+    ValueConverter groupConvertor;
 
     final Assembler personAssembler = DTOAssembler.newAssembler(PersonDTO.class, org.nsesa.server.dto.PersonDTO.class);
 
@@ -72,12 +78,7 @@ public class GWTServiceImpl extends SpringRemoteServiceServlet implements GWTSer
 
     private Map<String, Object> getConvertors() {
         final Map<String, Object> map = new HashMap<String, Object>();
+        map.put("groupConvertor", groupConvertor);
         return map;
-    }
-
-    // SPRING SETTERS ---------------------------
-
-    public void setPersonService(PersonService personService) {
-        this.personService = personService;
     }
 }

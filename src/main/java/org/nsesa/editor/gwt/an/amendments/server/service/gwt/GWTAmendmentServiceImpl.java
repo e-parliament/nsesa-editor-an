@@ -22,10 +22,15 @@ import org.nsesa.editor.gwt.an.common.server.service.gwt.SpringRemoteServiceServ
 import org.nsesa.editor.gwt.core.client.service.gwt.GWTAmendmentService;
 import org.nsesa.editor.gwt.core.client.util.Counter;
 import org.nsesa.editor.gwt.core.shared.*;
+import org.nsesa.editor.gwt.core.shared.AmendmentAction;
+import org.nsesa.editor.gwt.core.shared.AmendmentContainerDTO;
+import org.nsesa.editor.gwt.core.shared.GroupDTO;
+import org.nsesa.editor.gwt.core.shared.PersonDTO;
+import org.nsesa.editor.gwt.core.shared.RevisionDTO;
 import org.nsesa.editor.gwt.core.shared.exception.ResourceNotFoundException;
 import org.nsesa.editor.gwt.core.shared.exception.StaleResourceException;
 import org.nsesa.editor.gwt.core.shared.exception.ValidationException;
-import org.nsesa.server.dto.AmendableWidgetReferenceDTO;
+import org.nsesa.server.dto.*;
 import org.nsesa.server.service.api.AmendmentService;
 import org.nsesa.server.service.api.PersonService;
 import org.slf4j.Logger;
@@ -70,6 +75,15 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
     public AmendmentContainerDTO getAmendmentContainerRevision(ClientContext clientContext, String revisionID) throws UnsupportedOperationException, ResourceNotFoundException {
         try {
             return fromBackend(amendmentService.getAmendmentContainerVersion(revisionID));
+        } catch (org.nsesa.server.exception.ResourceNotFoundException e) {
+            throw new ResourceNotFoundException(e.getMessage(), e.getCause());
+        }
+    }
+
+    @Override
+    public AmendmentContainerDTO shareAmendmentContainer(ClientContext clientContext, String id, String groupID, boolean share) throws UnsupportedOperationException, ResourceNotFoundException {
+        try {
+            return fromBackend(amendmentService.share(id, groupID, share));
         } catch (org.nsesa.server.exception.ResourceNotFoundException e) {
             throw new ResourceNotFoundException(e.getMessage(), e.getCause());
         }
@@ -125,6 +139,12 @@ public class GWTAmendmentServiceImpl extends SpringRemoteServiceServlet implemen
         amendmentContainerDTO.setLanguageISO(b.getLanguageISO());
         amendmentContainerDTO.setRevisionID(b.getRevisionID());
         amendmentContainerDTO.setBundledAmendmentContainerIDs(b.getBundledAmendmentContainerIDs());
+
+        Set<GroupDTO> groups = new HashSet<GroupDTO>();
+        for (org.nsesa.server.dto.GroupDTO fromServer : b.getGroups()) {
+            groups.add(new GroupDTO(fromServer.getGroupID(), fromServer.getName()));
+        }
+        amendmentContainerDTO.setGroups(groups);
 
         try {
             amendmentContainerDTO.setBody(toHTML(amendmentContainerDTO.getBody().getBytes("UTF-8")));

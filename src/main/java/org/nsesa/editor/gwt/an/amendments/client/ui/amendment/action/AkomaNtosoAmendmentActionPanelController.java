@@ -26,6 +26,7 @@ import com.google.inject.Inject;
 import org.nsesa.editor.gwt.amendment.client.event.amendment.AmendmentContainerSaveEvent;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.action.AmendmentActionPanelController;
 import org.nsesa.editor.gwt.amendment.client.ui.amendment.action.AmendmentActionPanelView;
+import org.nsesa.editor.gwt.amendment.client.ui.amendment.share.SharePanelController;
 import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.action.resources.Constants;
 import org.nsesa.editor.gwt.compare.client.event.ShowComparePanelEvent;
 import org.nsesa.editor.gwt.compare.client.ui.compare.ComparisonProvider;
@@ -60,8 +61,10 @@ public class AkomaNtosoAmendmentActionPanelController extends AmendmentActionPan
 
     @Inject
     public AkomaNtosoAmendmentActionPanelController(final AmendmentActionPanelView amendmentActionPanelView,
-                                                    final CoreMessages coreMessages, final Constants constants) {
-        super(amendmentActionPanelView, coreMessages);
+                                                    final CoreMessages coreMessages,
+                                                    final SharePanelController sharePanelController,
+                                                    final Constants constants) {
+        super(amendmentActionPanelView, coreMessages, sharePanelController);
         this.exportPopupPanel.setWidget(mainPanel);
 
         this.mainPanel.setHeight("600px");
