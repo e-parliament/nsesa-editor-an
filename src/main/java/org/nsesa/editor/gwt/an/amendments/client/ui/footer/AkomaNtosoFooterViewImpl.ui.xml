@@ -29,10 +29,10 @@
         <div id="footer">
             Authoring Tool for Amendments with Akoma Ntoso 2.0/3.0 support
             |
-            <g:Anchor target="_blank" href="https://github.com/e-parliament/nsesa-editor-an/commits/{res2.gitCommitIdAbbrev}"
+            <g:Anchor target="_blank" href="https://github.com/e-parliament/nsesa-editor-an/commits/{res2.gitCommitId}"
                       text="#{res2.gitCommitIdAbbrev}" styleName="{style.link}"/>
             with
-            <g:Anchor target="_blank" href="https://github.com/e-parliament/nsesa-editor/commits/{res.gitCommitIdAbbrev}"
+            <g:Anchor target="_blank" href="https://github.com/e-parliament/nsesa-editor/commits/{res.gitCommitId}"
                       text="#{res.gitCommitIdAbbrev}" styleName="{style.link}"/>
             | Build date:
             <ui:text from='{res2.gitBuildTime}'/>
