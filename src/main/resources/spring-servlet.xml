@@ -25,7 +25,7 @@
             http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
     <context:annotation-config/>
-    <context:component-scan base-package="org.nsesa.editor"/>
+    <context:component-scan base-package="org.nsesa.editor, org.nsesa.admin"/>
     <mvc:annotation-driven/>
     <!-- Configure the properties via placeholders. We will first read the properties file on the classpath,
     which can be overridden via another properties file in the local home directory. -->
@@ -51,8 +51,11 @@
                 <prop key="**/gwtDiffService">gwtDiffService</prop>
                 <prop key="**/gwtDocumentService">gwtDocumentService</prop>
                 <prop key="**/gwtAmendmentService">gwtAmendmentService</prop>
+                <!-- web controllers for the admin -->
+                <prop key="/admin">adminController</prop>
             </props>
         </property>
+        <property name="order" value="1"/>
     </bean>
 
     <bean id="gwtService" class="org.nsesa.editor.gwt.an.common.server.service.gwt.GWTServiceImpl" autowire="byName"/>
@@ -79,6 +82,8 @@
         </property>
     </bean>
 
+    <bean id="adminController" class="org.nsesa.admin.web.AdminController"/>
+
     <util:map id="exportServices" scope="singleton" map-class="java.util.HashMap" key-type="java.lang.String"
               value-type="org.nsesa.editor.gwt.an.amendments.server.service.ExportService">
         <entry key="xml" value-ref="xmlExportService"/>
@@ -94,4 +99,21 @@
     <bean id="wordExportService" class="org.nsesa.editor.gwt.an.amendments.server.service.WordExportService"/>
     <bean id="openOfficeExportService"
           class="org.nsesa.editor.gwt.an.amendments.server.service.OpenOfficeExportService"/>
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- one of the properties available; the maximum file size in bytes -->
+        <property name="maxUploadSize" value="5000000000"/>
+    </bean>
+
+
+    <!-- <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/>
+    <mvc:resources mapping="/js/**" location="classpath:/META-INF/resources/js/"/>
+    <mvc:resources mapping="/css/**" location="classpath:/META-INF/resources/css/"/>-->
 </beans>
