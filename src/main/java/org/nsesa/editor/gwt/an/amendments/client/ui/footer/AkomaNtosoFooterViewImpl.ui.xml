@@ -20,19 +20,24 @@
     <ui:with field='res' type='org.nsesa.editor.gwt.core.client.ui.resources.GitMessages'/>
     <ui:with field='res2' type='org.nsesa.editor.gwt.an.amendments.client.ui.resources.GitMessages'/>
     <!-- Note: this size is set in the EditorViewImpl.ui.xml's layout -->
+    <ui:style field="style">
+        .link {
+            color: #ffffff;
+        }
+    </ui:style>
     <g:HTMLPanel>
         <div id="footer">
             Authoring Tool for Amendments with Akoma Ntoso 2.0/3.0 support
             |
-            <g:Anchor target="_blank" href="http://code.at4am.org/nsesa-editor-an/commits/{res2.gitCommitIdAbbrev}"
-                      text="#{res2.gitCommitIdAbbrev}"/>
+            <g:Anchor target="_blank" href="https://github.com/e-parliament/nsesa-editor-an/commits/{res2.gitCommitId}"
+                      text="#{res2.gitCommitIdAbbrev}" styleName="{style.link}"/>
             with
-            <g:Anchor target="_blank" href="http://code.at4am.org/nsesa-editor/commits/{res.gitCommitIdAbbrev}"
-                      text="#{res.gitCommitIdAbbrev}"/>
+            <g:Anchor target="_blank" href="https://github.com/e-parliament/nsesa-editor/commits/{res.gitCommitId}"
+                      text="#{res.gitCommitIdAbbrev}" styleName="{style.link}"/>
             | Build date:
             <ui:text from='{res2.gitBuildTime}'/>
             |
-            <a href="http://www.at4am.org" target="_blank">More info</a>
+            <a href="https://nsesa.org" target="_blank" style="color:white;">More info</a>
         </div>
     </g:HTMLPanel>
 </ui:UiBinder>

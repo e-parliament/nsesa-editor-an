@@ -38,6 +38,18 @@
 }
 
 .amendmentHolder .header {
+    width: 100%;
+}
+.amendmentHolder .header * {
+    display: inline;
+}
+
+.amendmentHolder .header .status, .menu {
+    text-align: right;
+    float: right;
+    margin-right: 10px;
+}
+.amendmentHolder .header .title{
     font-size: 1.3em;
 }
 

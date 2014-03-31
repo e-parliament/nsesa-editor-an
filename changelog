@@ -1,3 +1,25 @@
+Release 0.10 (15-October-2013)
+
+- Small CSS corrections
+- Added first steps towards injection of amendments using NLP of their location rather than element IDs
+- Added markup GWT module
+- Added support for changing the type via a second-long click on the path in the markup module
+- Merged AN 2.0 and 3.0-draft support
+- Amendments are now in 2.0 or 3.0-draft depending on the namespace of the element that is amended
+- Improved snippet factory
+- I18n improvements
+- Renamed modules and html pages
+- Added basic Geda support for Server-DTO-to-GWT-DTO transformation
+- Various bug fixes
+- Initial support for bundling amendments
+- Added support for ordering authors and fixed a bug where the author order was not preserved
+- Added support for AN3-05
+- Added server push support via Atmosphere
+- Switched to new attribute names (data-ns and data-type)
+- Added support for images and tables
+- Added export for OpenOffice (non-functional)
+
+
 Release 0.9 (26-Jun-2013)
 
 - Improved AkomaNtoso amendment builder to include the <activeRef> to point to the amendment document
