@@ -9,7 +9,7 @@
     <packaging>war</packaging>
     <name>Akoma Ntoso Amendment Editor</name>
     <url>http://code.at4am.org/nsesa-editor-an</url>
-    <version>0.11</version>
+    <version>0.12</version>
 
     <organization>
         <url>http://www.europarl.europa.eu/</url>
@@ -92,14 +92,14 @@
         <dependency>
             <groupId>org.nsesa</groupId>
             <artifactId>editor</artifactId>
-            <version>0.11</version>
+            <version>0.12</version>
         </dependency>
 
         <!-- server API -->
         <dependency>
             <groupId>org.nsesa</groupId>
             <artifactId>nsesa-server-api</artifactId>
-            <version>0.6</version>
+            <version>0.7</version>
         </dependency>
 
         <!-- Diffing -->
