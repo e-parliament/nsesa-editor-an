@@ -32,7 +32,7 @@ public class AkomaNtosoOverlayWidgetInjectionStrategy extends DefaultOverlayWidg
 
     @Override
     public int getProposedInjectionPosition(OverlayWidget parent, OverlayWidget reference, OverlayWidget toInject) {
-
+        assert parent != null : "Parent is null!";
         // find index just before the first child block
         final boolean sibling = (parent != reference);
 
