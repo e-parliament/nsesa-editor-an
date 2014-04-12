@@ -40,7 +40,7 @@ public class AkomantosoRichTextEditorConfig extends CKEditorConfig {
         super();
         setDraftingClassName("akomaNtoso-drafting");
         //configure the editor configuration
-        setContentCss(Arrays.asList(new String[]{
+        setContentCss(Arrays.asList(
                 GWT.getModuleBaseURL() + "../" + "css/editor.css",
                 GWT.getModuleBaseURL() + "../" + "css/document.css",
                 GWT.getModuleBaseURL() + "../" + "css/amendment.css",
@@ -52,7 +52,7 @@ public class AkomantosoRichTextEditorConfig extends CKEditorConfig {
                 GWT.getModuleBaseURL() + "../" + "css/akomaNtoso30-override.css",
                 GWT.getModuleBaseURL() + "../" + "css/akomaNtoso30-visual.css",
                 GWT.getModuleBaseURL() + "../" + "css/akomaNtoso30-visual-colors.css",
-                GWT.getModuleBaseURL() + "../" + "css/ckeditor.css"}))
+                GWT.getModuleBaseURL() + "../" + "css/ckeditor.css"))
                 .setBodyClass("akomaNtoso")
                 .setRemovePlugins("elementspath")
                 .setZIndex(30000)
