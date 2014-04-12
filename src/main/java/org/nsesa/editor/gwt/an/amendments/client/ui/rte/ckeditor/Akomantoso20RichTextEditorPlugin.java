@@ -80,8 +80,6 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
                         }
                         return result;
                     }
-
-                    ;
                 }));
 
         registerPlugin(new CKEditorBasicStylesPlugin(overlayFactory));
