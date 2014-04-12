@@ -73,6 +73,11 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         Num num = new Num();
         num.addI(i);
 
+        Heading heading = new Heading();
+        B b = new B();
+        b.html("Heading");
+        heading.addB(b);
+
         P p = new P();
         p.html(messages.placeholderContentDefault());
         setCaret(p);
@@ -82,7 +87,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         Paragraph paragraph = new Paragraph();
         paragraph.setContent_(content);
 
-        return transformer.transform(num) + transformer.transform(paragraph);
+        return transformer.transform(num) + transformer.transform(heading) + transformer.transform(paragraph);
     }
 
     protected String getAN20ParagraphSnippet() {
@@ -142,6 +147,11 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num num = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num();
         num.addI(i);
 
+        org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Heading heading = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Heading();
+        org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.B b = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.B();
+        b.html("Heading");
+        heading.addB(b);
+
         org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.P p = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.P();
         p.html(messages.placeholderContentDefault());
         setCaret(p);
@@ -151,7 +161,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Paragraph paragraph = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Paragraph();
         paragraph.setContent_(content);
 
-        return transformer.transform(num) + transformer.transform(paragraph);
+        return transformer.transform(num) + transformer.transform(heading) + transformer.transform(paragraph);
     }
 
     protected String getAN30ParagraphSnippet() {
