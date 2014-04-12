@@ -28,7 +28,7 @@ import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso2
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Recital;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Subparagraph;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.resources.Messages;
-import org.nsesa.editor.gwt.core.client.ui.overlay.Transformer;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Formatter;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlaySnippetFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippet;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
@@ -48,16 +48,16 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
  */
 public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactory {
 
-    private final Transformer transformer;
+    private final Formatter formatter;
     private final String caretPositionClassName;
     private final Messages messages;
 
     @Inject
-    public AkomaNtosoOverlaySnippetFactory(@Named("html") final Transformer transformer,
+    public AkomaNtosoOverlaySnippetFactory(@Named("html") final Formatter formatter,
                                            @Named("caretPositionClassName") final String caretPositionClassName,
                                            Messages messages) {
 
-        this.transformer = transformer;
+        this.formatter = formatter;
         this.caretPositionClassName = caretPositionClassName;
         this.messages = messages;
 
@@ -100,7 +100,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         Paragraph paragraph = new Paragraph();
         paragraph.setContent_(content);
 
-        return transformer.transform(num) + transformer.transform(heading) + transformer.transform(paragraph);
+        return formatter.format(num) + formatter.format(heading) + formatter.format(paragraph);
     }
 
     protected String getAN20DefaultSnippet() {
@@ -114,7 +114,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         Content content = new Content();
         content.addP(p);
 
-        return transformer.transform(num) + transformer.transform(content);
+        return formatter.format(num) + formatter.format(content);
     }
 
     protected String getAN20RecitalSnippet() {
@@ -125,7 +125,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         // set an empty character - this acts as a caret anchor position.
         p.html(messages.placeholderContentDefault());
         setCaret(p);
-        return transformer.transform(num) + transformer.transform(p);
+        return formatter.format(num) + formatter.format(p);
     }
 
     protected String getAN20DefaultUnnumberedSnippet() {
@@ -137,7 +137,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         Content content = new Content();
         content.addP(p);
 
-        return transformer.transform(content);
+        return formatter.format(content);
     }
 
     protected String getAN30ArticleSnippet() {
@@ -161,7 +161,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Paragraph paragraph = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Paragraph();
         paragraph.setContent_(content);
 
-        return transformer.transform(num) + transformer.transform(heading) + transformer.transform(paragraph);
+        return formatter.format(num) + formatter.format(heading) + formatter.format(paragraph);
     }
 
     protected String getAN30DefaultSnippet() {
@@ -175,7 +175,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Content content = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Content();
         content.addP(p);
 
-        return transformer.transform(num) + transformer.transform(content);
+        return formatter.format(num) + formatter.format(content);
     }
 
     protected String getAN30RecitalSnippet() {
@@ -186,7 +186,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         // set an empty character - this acts as a caret anchor position.
         p.html(messages.placeholderContentDefault());
         setCaret(p);
-        return transformer.transform(num) + transformer.transform(p);
+        return formatter.format(num) + formatter.format(p);
     }
 
     protected String getAN30DefaultUnnumberedSnippet() {
@@ -198,7 +198,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Content content = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Content();
         content.addP(p);
 
-        return transformer.transform(content);
+        return formatter.format(content);
     }
 
     @Override

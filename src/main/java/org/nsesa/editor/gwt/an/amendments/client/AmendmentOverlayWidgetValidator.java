@@ -13,8 +13,8 @@
  */
 package org.nsesa.editor.gwt.an.amendments.client;
 
-import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultTransformer;
-import org.nsesa.editor.gwt.core.client.ui.overlay.Transformer;
+import org.nsesa.editor.gwt.core.client.ui.overlay.DefaultFormatter;
+import org.nsesa.editor.gwt.core.client.ui.overlay.Formatter;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 import org.nsesa.editor.gwt.core.client.validation.OverlayWidgetValidator;
 import org.nsesa.editor.gwt.core.client.validation.ValidationResult;
@@ -39,11 +39,11 @@ public class AmendmentOverlayWidgetValidator implements Validator<OverlayWidget>
         addValidator(new OverlayWidgetValidator());
         addValidator(new Validator<OverlayWidget>() {
             private WellformedValidator wrapped = new WellformedValidator();
-            private Transformer transformer = new DefaultTransformer();
+            private Formatter formatter = new DefaultFormatter();
 
             @Override
             public ValidationResult validate(OverlayWidget toValidate) {
-                return wrapped.validate(transformer.transform(toValidate));
+                return wrapped.validate(formatter.format(toValidate));
             }
         });
     }
