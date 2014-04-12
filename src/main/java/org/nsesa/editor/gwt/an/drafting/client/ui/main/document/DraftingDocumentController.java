@@ -703,6 +703,9 @@ public class DraftingDocumentController extends DefaultDocumentController {
                 OverlayWidget num = OverlayUtil.xpathSingle("//*/num", child);
                 if (num != null) {
                     num.setInnerHTML(locator.getNum(child, document.getLanguageIso(), true));
+                    // force a reset
+                    child.setUnformattedIndex(null);
+                    child.setFormattedIndex(null);
                 }
             }
         }
