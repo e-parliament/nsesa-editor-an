@@ -114,11 +114,13 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         Num num = new Num();
         num.html(messages.placeholderNumDefault());
 
+        Content content = new Content();
         P p = new P();
         // set an empty character - this acts as a caret anchor position.
         p.html(messages.placeholderContentDefault());
         setCaret(p);
-        return transformer.transform(num) + transformer.transform(p);
+        content.addP(p);
+        return transformer.transform(num) + transformer.transform(content);
     }
 
     protected String getAN20CitationSnippet() {
@@ -181,11 +183,14 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num num = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num();
         num.html(messages.placeholderNumDefault());
 
+
+        org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Content content = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Content();
         org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.P p = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.P();
         // set an empty character - this acts as a caret anchor position.
         p.html(messages.placeholderContentDefault());
         setCaret(p);
-        return transformer.transform(num) + transformer.transform(p);
+        content.addP(p);
+        return transformer.transform(num) + transformer.transform(content);
     }
 
     protected String getAN30CitationSnippet() {
