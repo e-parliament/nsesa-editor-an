@@ -18,7 +18,6 @@ import com.google.inject.Inject;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Akomantoso20OverlayFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Csd02OverlayFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Csd05OverlayFactory;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayStrategy;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
@@ -119,9 +118,7 @@ public class CompositeOverlayFactory extends DefaultOverlayFactory {
             overlayWidget.walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                 @Override
                 public boolean visit(OverlayWidget visited) {
-                    final boolean baseHierarchySubclass = (visited instanceof BasehierarchyComplexType
-                            || visited instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType
-                            || visited instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.BasehierarchyComplexType);
+                    final boolean baseHierarchySubclass = AkomaNtosoUtil.representsBlock(visited);
                     // this prevents us from marking all children as amendable if we're in a quotedStructure
                     if (!visited.hasParent(namespaceURI20, "quotedStructure")
                             && !visited.hasParent(namespaceURI30_02, "quotedStructure")

@@ -31,8 +31,7 @@ import com.google.inject.Inject;
 import com.google.inject.name.Named;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 import org.nsesa.editor.gwt.an.common.client.mode.StructureViewMode;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BlocksoptComplexType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoUtil;
 import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEvent;
 import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEventHandler;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
@@ -97,10 +96,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
         @Override
         public boolean select(OverlayWidget toSelect) {
             return toSelect.getOverlayElement().getClassName().contains("nsesa-inline")
-                    || toSelect instanceof BasehierarchyComplexType
-                    || toSelect instanceof BlocksoptComplexType
-                    || toSelect instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType
-                    || toSelect instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BlocksoptComplexType;
+                    || AkomaNtosoUtil.representsBlock(toSelect);
         }
     };
 

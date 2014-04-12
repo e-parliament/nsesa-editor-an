@@ -14,7 +14,7 @@
 package org.nsesa.editor.gwt.an.markup.client.ui.ckeditor;
 
 import com.google.inject.Inject;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoUtil;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Locator;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
@@ -54,7 +54,7 @@ public class MarkupRichTextEditorPlugin extends CkEditorCompositePlugin {
                         OverlayWidget result = null;
                         OverlayWidget curr = widget;
                         while (curr != null) {
-                            if (curr instanceof BasehierarchyComplexType) {
+                            if (AkomaNtosoUtil.representsBlock(curr)) {
                                 result = overlayFactory.getAmendableWidget(curr.getNamespaceURI(), curr.getType());
                                 result.setOrigin(OverlayWidgetOrigin.AMENDMENT);
                                 OverlaySnippet snippet = snippetFactory.getSnippet(curr);

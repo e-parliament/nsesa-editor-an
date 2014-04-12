@@ -33,6 +33,7 @@ import org.nsesa.editor.gwt.an.amendments.client.ui.amendment.AkomaNtosoAmendmen
 import org.nsesa.editor.gwt.an.common.client.mode.StructureViewMode;
 import org.nsesa.editor.gwt.an.common.client.push.PushManager;
 import org.nsesa.editor.gwt.an.common.client.push.SimpleRPCEvent;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoUtil;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
@@ -293,7 +294,7 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
             @Override
             public boolean select(OverlayWidget toSelect) {
                 return !toSelect.isIntroducedByAnAmendment() &&
-                        (toSelect instanceof BasehierarchyComplexType || toSelect instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType);
+                        (AkomaNtosoUtil.representsBlock(toSelect));
             }
         });
         if (reference == null) {
@@ -301,7 +302,7 @@ public class AkomaNtoso20AmendmentDocumentController extends AmendmentDocumentCo
                 @Override
                 public boolean select(OverlayWidget toSelect) {
                     return !toSelect.isIntroducedByAnAmendment() &&
-                            (toSelect instanceof BasehierarchyComplexType || toSelect instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType);
+                            (AkomaNtosoUtil.representsBlock(toSelect));
                 }
             });
         }
