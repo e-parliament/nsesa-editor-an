@@ -56,7 +56,7 @@ public class DraftingRichTextEditorPlugin extends CkEditorCompositePlugin {
                         while (curr != null) {
                             if (AkomaNtosoUtil.representsBlock(curr)) {
                                 result = overlayFactory.getAmendableWidget(curr.getNamespaceURI(), curr.getType());
-                                result.setOrigin(OverlayWidgetOrigin.AMENDMENT);
+                                result.setOrigin(OverlayWidgetOrigin.DOCUMENT);
                                 OverlaySnippet snippet = snippetFactory.getSnippet(curr);
                                 if (snippet != null) {
                                     overlaySnippetEvaluator.addEvaluator(
