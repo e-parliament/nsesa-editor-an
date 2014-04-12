@@ -7,3 +7,9 @@ body {
     margin: 15px;
     font-family: "Times New Roman", serif !important;
 }
+
+*:empty {
+    width: 15px;
+    height: 15px;
+    content: "_";
+}
