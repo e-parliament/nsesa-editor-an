@@ -51,6 +51,7 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.
 import org.nsesa.editor.gwt.core.client.ui.overlay.*;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditor;
+import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.core.shared.DocumentContentDTO;
 import org.nsesa.editor.gwt.core.shared.DocumentDTO;
 import org.nsesa.editor.gwt.inline.client.event.AttachInlineEditorEvent;
@@ -532,6 +533,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                     documentEventBus.fireEvent(new OverlayWidgetSelectEvent(activeOverlayWidget, DraftingDocumentController.this));
                                     clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
                                     // TODO schedule via timer
+                                    reCalculateNumbering(activeOverlayWidget.getParentOverlayWidget());
                                     redrawOutline(activeOverlayWidget.getRoot());
                                 }
                             });
@@ -552,6 +554,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                     documentEventBus.fireEvent(new OverlayWidgetSelectEvent(activeOverlayWidget, DraftingDocumentController.this));
                                     clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
                                     // TODO schedule via timer
+                                    reCalculateNumbering(activeOverlayWidget.getParentOverlayWidget());
                                     redrawOutline(activeOverlayWidget.getRoot());
                                 }
                             });
@@ -609,6 +612,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                 documentEventBus.fireEvent(new OverlayWidgetSelectEvent(target, DraftingDocumentController.this));
             }
             // redraw the outline
+            reCalculateNumbering(parentOverlayWidget);
             redrawOutline(parentOverlayWidget.getRoot());
         }
     }
@@ -685,11 +689,23 @@ public class DraftingDocumentController extends DefaultDocumentController {
         // highlight
         sourceFileController.highlight(overlayWidget.asWidget(), "black", 1);
 
+        reCalculateNumbering(overlayWidget.getParentOverlayWidget());
         redrawOutline(overlayWidget.getRoot());
     }
 
     public void redrawOutline(OverlayWidget root) {
         outlineController.setRootOverlayWidget(root);
+    }
+
+    public void reCalculateNumbering(OverlayWidget parent) {
+        if (parent != null) {
+            for (final OverlayWidget child : parent.getChildOverlayWidgets()) {
+                OverlayWidget num = OverlayUtil.xpathSingle("//*/num", child);
+                if (num != null) {
+                    num.setInnerHTML(locator.getNum(child, document.getLanguageIso(), true));
+                }
+            }
+        }
     }
 
     @Override
