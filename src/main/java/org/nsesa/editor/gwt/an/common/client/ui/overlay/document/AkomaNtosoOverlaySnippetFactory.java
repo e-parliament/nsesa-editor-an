@@ -52,12 +52,14 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
 
         // AN 2.0
 
+        registerSnippet(new Point(), new OverlaySnippet("point", getAN20PointSnippet()));
         registerSnippet(new Citation(), new OverlaySnippet("citation", getAN20CitationSnippet()));
         registerSnippet(new Recital(), new OverlaySnippet("recital", getAN20RecitalSnippet()));
         registerSnippet(new Paragraph(), new OverlaySnippet("paragraph", getAN20ParagraphSnippet()));
         registerSnippet(new Article(), new OverlaySnippet("article", getAN20ArticleSnippet()));
 
         // AN 3.0 - 02
+        registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Point(), new OverlaySnippet("point", getAN30PointSnippet()));
         registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Citation(), new OverlaySnippet("citation", getAN30CitationSnippet()));
         registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Recital(), new OverlaySnippet("recital", getAN30RecitalSnippet()));
         registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Paragraph(), new OverlaySnippet("paragraph", getAN30ParagraphSnippet()));
@@ -98,6 +100,17 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
     }
 
     protected String getAN20RecitalSnippet() {
+        Num num = new Num();
+        num.html(messages.placeholderNumDefault());
+
+        P p = new P();
+        // set an empty character - this acts as a caret anchor position.
+        p.html(messages.placeholderContentDefault());
+        setCaret(p);
+        return transformer.transform(num) + transformer.transform(p);
+    }
+
+    protected String getAN20PointSnippet() {
         Num num = new Num();
         num.html(messages.placeholderNumDefault());
 
@@ -154,6 +167,17 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
     }
 
     protected String getAN30RecitalSnippet() {
+        org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num num = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num();
+        num.html(messages.placeholderNumDefault());
+
+        org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.P p = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.P();
+        // set an empty character - this acts as a caret anchor position.
+        p.html(messages.placeholderContentDefault());
+        setCaret(p);
+        return transformer.transform(num) + transformer.transform(p);
+    }
+
+    protected String getAN30PointSnippet() {
         org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num num = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num();
         num.html(messages.placeholderNumDefault());
 
