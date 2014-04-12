@@ -112,6 +112,10 @@
     content: " ";
 }
 
+.num[data-ns="http://www.akomantoso.org/2.0"] {
+    color: #666;
+}
+
 .authorialNote[data-ns="http://www.akomantoso.org/2.0"] {
     color: blue;
     font-size: 70%;
@@ -179,6 +183,10 @@
 
 .date[data-ns="http://www.akomantoso.org/2.0"] {
     color: #86590a;
+}
+
+.subparagraph[data-ns="http://www.akomantoso.org/2.0"] {
+    margin-left: 2em;
 }
 
 .placeholder[data-ns="http://www.akomantoso.org/2.0"] {

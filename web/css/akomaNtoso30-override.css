@@ -108,6 +108,10 @@
     display: inline;
 }
 
+.num[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    color: #666;
+}
+
 .num[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"]:after {
     content: " ";
 }
@@ -179,6 +183,10 @@
 
 .date[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
     color: #86590a;
+}
+
+.subparagraph[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
+    margin-left: 2em;
 }
 
 .placeholder[data-ns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/CSD02"] {
