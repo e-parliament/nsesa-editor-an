@@ -32,8 +32,8 @@ import com.google.inject.Inject;
 import com.google.inject.name.Named;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 import org.nsesa.editor.gwt.an.common.client.mode.StructureViewMode;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoUtil;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.AkomaNtoso;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.an.markup.client.event.*;
 import org.nsesa.editor.gwt.an.markup.client.mode.WhitespacePreservationMode;
 import org.nsesa.editor.gwt.an.markup.client.ui.main.document.outline.OutlineController;
@@ -105,7 +105,7 @@ public class MarkupDocumentController extends DefaultDocumentController {
     private final OverlayWidgetSelector overlayWidgetSelector = new OverlayWidgetSelector() {
         @Override
         public boolean select(OverlayWidget toSelect) {
-            return toSelect instanceof BasehierarchyComplexType || toSelect.getOverlayElement().getClassName().contains("nsesa-inline");
+            return AkomaNtosoUtil.representsBlock(toSelect) || toSelect.getOverlayElement().getClassName().contains("nsesa-inline");
         }
     };
 

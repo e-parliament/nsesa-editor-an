@@ -60,7 +60,7 @@ public class AkomaNtosoOverlayWidgetInjectionStrategy extends DefaultOverlayWidg
             int position = 0;
             for (final OverlayWidget child : reference.getChildOverlayWidgets()) {
                 if (!child.isIntroducedByAnAmendment()) {
-                    if (child instanceof BasehierarchyComplexType || child instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType) {
+                    if (AkomaNtosoUtil.representsBlock(child)) {
                         LOG.info("Child index: " + position);
                         return position;
                     }
