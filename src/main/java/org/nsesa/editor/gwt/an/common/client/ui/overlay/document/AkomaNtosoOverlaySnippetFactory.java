@@ -15,7 +15,18 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document;
 
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Article;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.B;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Citation;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Content;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Heading;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.I;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Num;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.P;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Paragraph;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Point;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Recital;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Subparagraph;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.resources.Messages;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Transformer;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlaySnippetFactory;
@@ -52,18 +63,20 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
 
         // AN 2.0
 
-        registerSnippet(new Point(), new OverlaySnippet("point", getAN20PointSnippet()));
-        registerSnippet(new Citation(), new OverlaySnippet("citation", getAN20CitationSnippet()));
+        registerSnippet(new Point(), new OverlaySnippet("point", getAN20DefaultSnippet()));
+        registerSnippet(new Citation(), new OverlaySnippet("citation", getAN20DefaultUnnumberedSnippet()));
         registerSnippet(new Recital(), new OverlaySnippet("recital", getAN20RecitalSnippet()));
-        registerSnippet(new Paragraph(), new OverlaySnippet("paragraph", getAN20ParagraphSnippet()));
+        registerSnippet(new Paragraph(), new OverlaySnippet("paragraph", getAN20DefaultSnippet()));
         registerSnippet(new Article(), new OverlaySnippet("article", getAN20ArticleSnippet()));
+        registerSnippet(new Subparagraph(), new OverlaySnippet("subparagraph", getAN20DefaultSnippet()));
 
         // AN 3.0 - 02
-        registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Point(), new OverlaySnippet("point", getAN30PointSnippet()));
-        registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Citation(), new OverlaySnippet("citation", getAN30CitationSnippet()));
+        registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Point(), new OverlaySnippet("point", getAN30DefaultSnippet()));
+        registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Citation(), new OverlaySnippet("citation", getAN30DefaultUnnumberedSnippet()));
         registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Recital(), new OverlaySnippet("recital", getAN30RecitalSnippet()));
-        registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Paragraph(), new OverlaySnippet("paragraph", getAN30ParagraphSnippet()));
+        registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Paragraph(), new OverlaySnippet("paragraph", getAN30DefaultSnippet()));
         registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Article(), new OverlaySnippet("article", getAN30ArticleSnippet()));
+        registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Subparagraph(), new OverlaySnippet("subparagraph", getAN30DefaultSnippet()));
     }
 
     protected String getAN20ArticleSnippet() {
@@ -90,7 +103,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         return transformer.transform(num) + transformer.transform(heading) + transformer.transform(paragraph);
     }
 
-    protected String getAN20ParagraphSnippet() {
+    protected String getAN20DefaultSnippet() {
         Num num = new Num();
         num.html(messages.placeholderNumDefault());
 
@@ -115,20 +128,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         return transformer.transform(num) + transformer.transform(p);
     }
 
-    protected String getAN20PointSnippet() {
-        Num num = new Num();
-        num.html(messages.placeholderNumDefault());
-
-        Content content = new Content();
-        P p = new P();
-        // set an empty character - this acts as a caret anchor position.
-        p.html(messages.placeholderContentDefault());
-        setCaret(p);
-        content.addP(p);
-        return transformer.transform(num) + transformer.transform(content);
-    }
-
-    protected String getAN20CitationSnippet() {
+    protected String getAN20DefaultUnnumberedSnippet() {
 
         P p = new P();
         // set an empty character - this acts as a caret anchor position.
@@ -164,7 +164,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         return transformer.transform(num) + transformer.transform(heading) + transformer.transform(paragraph);
     }
 
-    protected String getAN30ParagraphSnippet() {
+    protected String getAN30DefaultSnippet() {
         org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num num = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num();
         num.html(messages.placeholderNumDefault());
 
@@ -189,21 +189,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         return transformer.transform(num) + transformer.transform(p);
     }
 
-    protected String getAN30PointSnippet() {
-        org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num num = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num();
-        num.html(messages.placeholderNumDefault());
-
-
-        org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Content content = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Content();
-        org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.P p = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.P();
-        // set an empty character - this acts as a caret anchor position.
-        p.html(messages.placeholderContentDefault());
-        setCaret(p);
-        content.addP(p);
-        return transformer.transform(num) + transformer.transform(content);
-    }
-
-    protected String getAN30CitationSnippet() {
+    protected String getAN30DefaultUnnumberedSnippet() {
 
         org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.P p = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.P();
         // set an empty character - this acts as a caret anchor position.
