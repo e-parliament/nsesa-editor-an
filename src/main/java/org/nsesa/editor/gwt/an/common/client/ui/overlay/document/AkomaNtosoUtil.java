@@ -12,13 +12,16 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 public class AkomaNtosoUtil {
     public static boolean representsBlock(final OverlayWidget overlayWidget) {
         return overlayWidget instanceof BasehierarchyComplexType
-                || overlayWidget instanceof BlocksoptComplexType
                 || overlayWidget instanceof Li
                 || overlayWidget instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BasehierarchyComplexType
                 || overlayWidget instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Li
-                || overlayWidget instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BlocksoptComplexType
                 || overlayWidget instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.BasehierarchyComplexType
-                || overlayWidget instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.Li
+                || overlayWidget instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.Li;
+    }
+
+    public static boolean representsContainer(final OverlayWidget overlayWidget) {
+        return overlayWidget instanceof BlocksoptComplexType
+                || overlayWidget instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.BlocksoptComplexType
                 || overlayWidget instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.BlocksoptComplexType;
     }
 }
