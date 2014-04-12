@@ -15,18 +15,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document;
 
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Article;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.B;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Citation;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Content;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Heading;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.I;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Num;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.P;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Paragraph;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Point;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Recital;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Subparagraph;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.*;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.resources.Messages;
 import org.nsesa.editor.gwt.core.client.ui.overlay.Formatter;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.DefaultOverlaySnippetFactory;
@@ -64,6 +53,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         // AN 2.0
 
         registerSnippet(new Point(), new OverlaySnippet("point", getAN20DefaultSnippet()));
+        registerSnippet(new Indent(), new OverlaySnippet("indent", getAN20DefaultSnippet()));
         registerSnippet(new Citation(), new OverlaySnippet("citation", getAN20DefaultUnnumberedSnippet()));
         registerSnippet(new Recital(), new OverlaySnippet("recital", getAN20RecitalSnippet()));
         registerSnippet(new Paragraph(), new OverlaySnippet("paragraph", getAN20DefaultSnippet()));
@@ -72,6 +62,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
 
         // AN 3.0 - 02
         registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Point(), new OverlaySnippet("point", getAN30DefaultSnippet()));
+        registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Indent(), new OverlaySnippet("indent", getAN30DefaultSnippet()));
         registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Citation(), new OverlaySnippet("citation", getAN30DefaultUnnumberedSnippet()));
         registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Recital(), new OverlaySnippet("recital", getAN30RecitalSnippet()));
         registerSnippet(new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Paragraph(), new OverlaySnippet("paragraph", getAN30DefaultSnippet()));
