@@ -40,8 +40,8 @@ public class AkomaNtosoModule extends AbstractGinModule {
         bind(OverlayFactory.class).annotatedWith(Names.named("akomantoso20")).to(Akomantoso20OverlayFactory.class).in(Singleton.class);
         bind(OverlayFactory.class).annotatedWith(Names.named("akomantoso30")).to(Csd02OverlayFactory.class).in(Singleton.class);
 
-        bind(Transformer.class).annotatedWith(Names.named("html")).to(HTMLTransformer.class).in(Singleton.class);
-        bind(Transformer.class).annotatedWith(Names.named("xml")).to(DefaultTransformer.class).in(Singleton.class);
+        bind(Formatter.class).annotatedWith(Names.named("html")).to(HTMLFormatter.class).in(Singleton.class);
+        bind(Formatter.class).annotatedWith(Names.named("xml")).to(DefaultFormatter.class).in(Singleton.class);
 
         bind(Locator.class).to(CompositeLocator.class).in(Singleton.class);
         bind(Creator.class).to(AkomaNtosoCreator.class).in(Singleton.class);

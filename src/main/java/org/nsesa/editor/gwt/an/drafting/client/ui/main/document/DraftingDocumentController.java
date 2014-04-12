@@ -78,7 +78,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
     private final InlineEditorController inlineEditorController;
 
-    private final Transformer transformer;
+    private final Formatter formatter;
 
     private OutlineController outlineController;
 
@@ -145,13 +145,13 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                       final InlineEditorController inlineEditorController,
                                       final OverlaySnippetFactory overlaySnippetFactory,
                                       final OverlaySnippetEvaluator overlaySnippetEvaluator,
-                                      final @Named("xml") Transformer transformer) {
+                                      final @Named("xml") Formatter formatter) {
         super(clientFactory, serviceFactory, overlayFactory, locator, creator, mover);
         this.inlineEditorController = inlineEditorController;
         this.inlineEditorController.registerListeners();
         this.overlaySnippetFactory = overlaySnippetFactory;
         this.overlaySnippetEvaluator = overlaySnippetEvaluator;
-        this.transformer = transformer;
+        this.formatter = formatter;
     }
 
     @Override
@@ -397,7 +397,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
 
                     // ------------- CTRL + s -------------
-                    final String content = transformer.transform(sourceFileController.getOverlayWidgets().get(0));
+                    final String content = formatter.format(sourceFileController.getOverlayWidgets().get(0));
                     serviceFactory.getGwtDocumentService().saveDocumentContent(clientFactory.getClientContext(), document.getDocumentID(), content, new AsyncCallback<Void>() {
                         @Override
                         public void onFailure(Throwable caught) {

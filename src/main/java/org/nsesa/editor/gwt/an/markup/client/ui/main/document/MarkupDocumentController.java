@@ -83,8 +83,8 @@ public class MarkupDocumentController extends DefaultDocumentController {
 
     private final InlineEditorController inlineEditorController;
 
-    private final Transformer xmlTransformer;
-    private final Transformer htmlTransformer;
+    private final Formatter xmlFormatter;
+    private final Formatter htmlFormatter;
 
     private OutlineController outlineController;
 
@@ -150,15 +150,15 @@ public class MarkupDocumentController extends DefaultDocumentController {
                                     final InlineEditorController inlineEditorController,
                                     final OverlaySnippetFactory overlaySnippetFactory,
                                     final OverlaySnippetEvaluator overlaySnippetEvaluator,
-                                    final @Named("xml") Transformer xmlTransformer,
-                                    final @Named("html") Transformer htmlTransformer) {
+                                    final @Named("xml") Formatter xmlFormatter,
+                                    final @Named("html") Formatter htmlFormatter) {
         super(clientFactory, serviceFactory, overlayFactory, locator, creator, mover);
         this.inlineEditorController = inlineEditorController;
         this.inlineEditorController.registerListeners();
         this.overlaySnippetFactory = overlaySnippetFactory;
         this.overlaySnippetEvaluator = overlaySnippetEvaluator;
-        this.xmlTransformer = xmlTransformer;
-        this.htmlTransformer = htmlTransformer;
+        this.xmlFormatter = xmlFormatter;
+        this.htmlFormatter = htmlFormatter;
     }
 
     @Override
@@ -414,7 +414,7 @@ public class MarkupDocumentController extends DefaultDocumentController {
 
 
                     // ------------- CTRL + s -------------
-                    final String content = xmlTransformer.transform(sourceFileController.getOverlayWidgets().get(0));
+                    final String content = xmlFormatter.format(sourceFileController.getOverlayWidgets().get(0));
                     serviceFactory.getGwtDocumentService().saveDocumentContent(clientFactory.getClientContext(), document.getDocumentID(), content, new AsyncCallback<Void>() {
                         @Override
                         public void onFailure(Throwable caught) {
@@ -634,7 +634,7 @@ public class MarkupDocumentController extends DefaultDocumentController {
             akomaNtoso.html(documentContent.getContent());
 
             // replace the original content with the wrapped one
-            documentContent.setContent(htmlTransformer.transform(akomaNtoso));
+            documentContent.setContent(htmlFormatter.format(akomaNtoso));
             sourceFileController.setContent(documentContent);
         } else {
             throw new UnsupportedOperationException("The document content type '" + documentContent.getDocumentContentType()
