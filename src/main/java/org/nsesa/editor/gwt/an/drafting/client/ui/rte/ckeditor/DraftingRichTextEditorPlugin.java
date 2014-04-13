@@ -48,6 +48,7 @@ public class DraftingRichTextEditorPlugin extends CkEditorCompositePlugin {
                                         final Locator locator) {
         //register here the available plugin
         registerPlugin(new CKEditorEnterKeyPlugin(overlayFactory,
+                clientFactory,
                 new CKEditorEnterKeyPlugin.DefaultLineBreakProvider(overlayFactory),
                 CKEditorEnterKeyPlugin.SPLIT_ALWAYS_ENTER_RULE,
                 new CKEditorEnterKeyPlugin.ConversionEnterRule() {
@@ -58,7 +59,7 @@ public class DraftingRichTextEditorPlugin extends CkEditorCompositePlugin {
                         while (curr != null) {
                             if (AkomaNtosoUtil.representsBlock(curr)) {
                                 result = overlayFactory.getAmendableWidget(curr.getNamespaceURI(), curr.getType());
-                                result.setOrigin(OverlayWidgetOrigin.AMENDMENT);
+                                result.setOrigin(OverlayWidgetOrigin.DOCUMENT);
                                 OverlaySnippet snippet = snippetFactory.getSnippet(curr);
                                 if (snippet != null) {
                                     overlaySnippetEvaluator.addEvaluator(

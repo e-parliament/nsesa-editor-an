@@ -48,6 +48,7 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
 
         //register here the available plugin
         registerPlugin(new CKEditorEnterKeyPlugin(overlayFactory,
+                clientFactory,
                 new CKEditorEnterKeyPlugin.DefaultLineBreakProvider(overlayFactory),
                 CKEditorEnterKeyPlugin.SPLIT_ALWAYS_ENTER_RULE,
                 new CKEditorEnterKeyPlugin.ConversionEnterRule() {
