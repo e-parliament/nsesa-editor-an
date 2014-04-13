@@ -51,6 +51,8 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.
 import org.nsesa.editor.gwt.core.client.ui.overlay.*;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditor;
+import org.nsesa.editor.gwt.core.client.ui.rte.event.RTEStructureChangedEvent;
+import org.nsesa.editor.gwt.core.client.ui.rte.event.RTEStructureChangedEventHandler;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
 import org.nsesa.editor.gwt.core.shared.DocumentContentDTO;
 import org.nsesa.editor.gwt.core.shared.DocumentDTO;
@@ -109,6 +111,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
     private HandlerRegistration criticalEventHandlerRegistration;
     private HandlerRegistration overlayWidgetSelectEventHandlerRegistration;
     private HandlerRegistration resizeEventHandlerRegistration;
+    private HandlerRegistration rteStructureChangedEventHandlerRegistration;
     private HandlerRegistration documentScrollToEventHandlerRegistration;
     private HandlerRegistration keyComboHandlerRegistration;
     private HandlerRegistration draftingToggleEventHandlerRegistration;
@@ -183,6 +186,13 @@ public class DraftingDocumentController extends DefaultDocumentController {
             public void onEvent(ResizeEvent event) {
                 documentEventBus.fireEvent(event);
                 view.setDocumentHeight(event.getHeight());
+            }
+        });
+
+        rteStructureChangedEventHandlerRegistration = clientFactory.getEventBus().addHandler(RTEStructureChangedEvent.TYPE, new RTEStructureChangedEventHandler() {
+            @Override
+            public void onEvent(RTEStructureChangedEvent event) {
+                LOG.info("RTE structure changed!" + event.getOverlayWidget());
             }
         });
 
@@ -781,6 +791,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
         criticalEventHandlerRegistration.removeHandler();
         overlayWidgetSelectEventHandlerRegistration.removeHandler();
         resizeEventHandlerRegistration.removeHandler();
+        rteStructureChangedEventHandlerRegistration.removeHandler();
         documentScrollToEventHandlerRegistration.removeHandler();
         documentToggleStructureEventHandler.removeHandler();
         keyComboHandlerRegistration.removeHandler();

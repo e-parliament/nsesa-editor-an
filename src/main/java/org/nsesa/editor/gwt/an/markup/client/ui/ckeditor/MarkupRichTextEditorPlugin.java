@@ -46,6 +46,7 @@ public class MarkupRichTextEditorPlugin extends CkEditorCompositePlugin {
                                       final Locator locator) {
         //register here the available plugin
         registerPlugin(new CKEditorEnterKeyPlugin(overlayFactory,
+                clientFactory,
                 new CKEditorEnterKeyPlugin.DefaultLineBreakProvider(overlayFactory),
                 CKEditorEnterKeyPlugin.SPLIT_ALWAYS_ENTER_RULE,
                 new CKEditorEnterKeyPlugin.ConversionEnterRule() {
