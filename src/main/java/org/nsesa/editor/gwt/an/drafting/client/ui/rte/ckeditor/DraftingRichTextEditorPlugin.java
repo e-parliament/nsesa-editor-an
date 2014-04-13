@@ -31,11 +31,13 @@ import org.nsesa.editor.gwt.core.shared.OverlayWidgetOrigin;
 public class DraftingRichTextEditorPlugin extends CkEditorCompositePlugin {
 
     /**
-     * Create <code>Akomantoso20RichTextEditorPlugin</Akomantoso20RichTextEditorPlugin> object and
-     * wrap all the available plugins
-     *
+     * RTE plugin for the drafting.
      * @param overlayFactory
+     * @param snippetFactory
+     * @param overlaySnippetEvaluator
      * @param clientFactory
+     * @param overlayWidgetInjectionStrategy
+     * @param locator
      */
     @Inject
     public DraftingRichTextEditorPlugin(final OverlayFactory overlayFactory,
@@ -56,7 +58,7 @@ public class DraftingRichTextEditorPlugin extends CkEditorCompositePlugin {
                         while (curr != null) {
                             if (AkomaNtosoUtil.representsBlock(curr)) {
                                 result = overlayFactory.getAmendableWidget(curr.getNamespaceURI(), curr.getType());
-                                result.setOrigin(OverlayWidgetOrigin.DOCUMENT);
+                                result.setOrigin(OverlayWidgetOrigin.AMENDMENT);
                                 OverlaySnippet snippet = snippetFactory.getSnippet(curr);
                                 if (snippet != null) {
                                     overlaySnippetEvaluator.addEvaluator(
@@ -77,8 +79,6 @@ public class DraftingRichTextEditorPlugin extends CkEditorCompositePlugin {
                         }
                         return result;
                     }
-
-                    ;
                 }));
 
         registerPlugin(new CKEditorBasicStylesPlugin(overlayFactory));
