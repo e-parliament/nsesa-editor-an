@@ -191,8 +191,20 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
         rteStructureChangedEventHandlerRegistration = clientFactory.getEventBus().addHandler(RTEStructureChangedEvent.TYPE, new RTEStructureChangedEventHandler() {
             @Override
-            public void onEvent(RTEStructureChangedEvent event) {
-                LOG.info("RTE structure changed!" + event.getOverlayWidget());
+            public void onEvent(final RTEStructureChangedEvent event) {
+                clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
+                    @Override
+                    public void execute() {
+                        LOG.info("RTE structure changed!" + event.getOverlayWidget());
+                        for (final OverlayWidget child : event.getOverlayWidget().getChildOverlayWidgets()) {
+                            OverlayWidget num = OverlayUtil.findSingle("num", child);
+                            if (num != null && num.getParentOverlayWidget() == child) {
+                                num.setInnerHTML(locator.getNum(child, document.getLanguageIso(), true));
+                            }
+                        }
+                    }
+                });
+
             }
         });
 
