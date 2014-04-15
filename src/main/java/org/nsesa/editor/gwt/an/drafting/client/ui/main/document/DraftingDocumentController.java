@@ -195,13 +195,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                 clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
                     @Override
                     public void execute() {
-                        LOG.info("RTE structure changed!" + event.getOverlayWidget());
-                        for (final OverlayWidget child : event.getOverlayWidget().getChildOverlayWidgets()) {
-                            OverlayWidget num = OverlayUtil.findSingle("num", child);
-                            if (num != null && num.getParentOverlayWidget() == child) {
-                                num.setInnerHTML(locator.getNum(child, document.getLanguageIso(), true));
-                            }
-                        }
+                        handleRTEOverlayWidgetModify(event.getOverlayWidget());
                     }
                 });
 
@@ -657,6 +651,15 @@ public class DraftingDocumentController extends DefaultDocumentController {
             });
 
 
+        }
+    }
+
+    public void handleRTEOverlayWidgetModify(final OverlayWidget parent) {
+        for (final OverlayWidget child : parent.getChildOverlayWidgets()) {
+            OverlayWidget num = OverlayUtil.findSingle("num", child);
+            if (num != null && num.getParentOverlayWidget() == child) {
+                num.setInnerHTML(locator.getNum(child, document.getLanguageIso(), true));
+            }
         }
     }
 
