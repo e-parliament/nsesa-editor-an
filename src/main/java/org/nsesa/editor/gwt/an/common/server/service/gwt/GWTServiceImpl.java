@@ -23,6 +23,7 @@ import org.nsesa.editor.gwt.core.shared.PersonDTO;
 import org.nsesa.server.service.api.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -45,15 +46,11 @@ public class GWTServiceImpl extends SpringRemoteServiceServlet implements GWTSer
 
     @Override
     public ClientContext authenticate(final ClientContext clientContext) {
-        String username = clientContext.getParameter("u") != null ? clientContext.getParameter("u")[0] : null;
-        org.nsesa.server.dto.PersonDTO backend;
-        if (username != null) {
-            // see if we can find a person by the username (will be created if it does not yet exist)
-            backend = personService.getPersonByUsername(username);
-        } else {
-            // create a new person based on a random UUID username
-            backend = personService.getPersonByUsername(UUID.randomUUID().toString());
-        }
+        final Principal principal = perThreadRequest.get().getUserPrincipal();
+
+        if (principal == null) throw new SecurityException("No principal found? Is JAAS configured correctly?");
+
+        org.nsesa.server.dto.PersonDTO backend = personService.getPersonByUsername(principal.getName());
 
         PersonDTO person = new PersonDTO();
         personAssembler.assembleDto(person, backend, getConvertors(), new DefaultDSLRegistry());
