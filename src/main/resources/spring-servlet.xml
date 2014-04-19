@@ -111,9 +111,4 @@
         <!-- one of the properties available; the maximum file size in bytes -->
         <property name="maxUploadSize" value="5000000000"/>
     </bean>
-
-
-    <!-- <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/>
-    <mvc:resources mapping="/js/**" location="classpath:/META-INF/resources/js/"/>
-    <mvc:resources mapping="/css/**" location="classpath:/META-INF/resources/css/"/>-->
 </beans>

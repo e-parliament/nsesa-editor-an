@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+    <http create-session="never" use-expressions="true" auto-config="true"
+          entry-point-ref="preAuthenticatedProcessingFilterEntryPoint">
+        <intercept-url pattern="/js/**" access="permitAll"/>
+        <intercept-url pattern="/css/**" access="permitAll"/>
+        <intercept-url pattern="/atmosphere" access="permitAll"/>
+        <intercept-url pattern="/login.jsp" access="permitAll"/>
+        <intercept-url pattern="/**" access="isAuthenticated()"/>
+        <custom-filter position="PRE_AUTH_FILTER" ref="preAuthFilter"/>
+        <!-- Required for Tomcat, will prompt for username / password twice otherwise -->
+        <session-management session-fixation-protection="none"/>
+    </http>
+
+    <beans:bean id="inMemoryAuthenticationUserDetailsService"
+                class="org.springframework.security.web.authentication.preauth.PreAuthenticatedGrantedAuthoritiesUserDetailsService"/>
+
+    <beans:bean id="preAuthenticatedProcessingFilterEntryPoint"
+                class="org.springframework.security.web.authentication.Http403ForbiddenEntryPoint"/>
+
+    <beans:bean id="preAuthenticatedAuthenticationProvider"
+                class="org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider">
+        <beans:property name="preAuthenticatedUserDetailsService" ref="inMemoryAuthenticationUserDetailsService"/>
+    </beans:bean>
+
+    <beans:bean id="simpleAttributes2GrantedAuthoritiesMapper"
+                class="org.springframework.security.core.authority.mapping.SimpleAttributes2GrantedAuthoritiesMapper">
+        <beans:property name="attributePrefix" value="ROLE_"/>
+    </beans:bean>
+    <beans:bean id="mapBasedAttributes2GrantedAuthoritiesMapper"
+                class="org.springframework.security.core.authority.mapping.MapBasedAttributes2GrantedAuthoritiesMapper">
+        <beans:property name="attributes2grantedAuthoritiesMap">
+            <beans:map>
+                <beans:entry key="ROLE_ADMIN" value="ADMIN"/>
+                <beans:entry key="ROLE_USER" value="USER"/>
+            </beans:map>
+        </beans:property>
+    </beans:bean>
+
+    <beans:bean id="webXmlMappableAttributesRetriever"
+                class="org.springframework.security.web.authentication.preauth.j2ee.WebXmlMappableAttributesRetriever"/>
+
+    <beans:bean id="j2eeBasedPreAuthenticatedWebAuthenticationDetailsSource"
+                class="org.springframework.security.web.authentication.preauth.j2ee.J2eeBasedPreAuthenticatedWebAuthenticationDetailsSource">
+        <beans:property name="mappableRolesRetriever" ref="webXmlMappableAttributesRetriever"/>
+        <beans:property name="userRoles2GrantedAuthoritiesMapper" ref="mapBasedAttributes2GrantedAuthoritiesMapper"/>
+    </beans:bean>
+
+    <beans:bean id="preAuthFilter"
+                class="org.springframework.security.web.authentication.preauth.j2ee.J2eePreAuthenticatedProcessingFilter">
+        <beans:property name="authenticationManager" ref="appControlAuthenticationManager"/>
+        <beans:property name="authenticationDetailsSource"
+                        ref="j2eeBasedPreAuthenticatedWebAuthenticationDetailsSource"/>
+    </beans:bean>
+
+    <authentication-manager alias="appControlAuthenticationManager">
+        <authentication-provider ref="preAuthenticatedAuthenticationProvider"/>
+    </authentication-manager>
+</beans:beans>
