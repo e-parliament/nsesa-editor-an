@@ -57,7 +57,7 @@ public class Akomantoso20RichTextEditorPlugin extends CkEditorCompositePlugin {
                         OverlayWidget result = null;
                         OverlayWidget curr = widget;
                         while (curr != null) {
-                            if (AkomaNtosoUtil.representsBlock(curr)) {
+                            if (AkomaNtosoUtil.representsBlock(curr) && curr.getParentOverlayWidget() != null) {
                                 result = overlayFactory.getAmendableWidget(curr.getNamespaceURI(), curr.getType());
                                 result.setOrigin(OverlayWidgetOrigin.AMENDMENT);
                                 OverlaySnippet snippet = snippetFactory.getSnippet(curr);
