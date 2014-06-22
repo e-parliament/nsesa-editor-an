@@ -35,6 +35,7 @@ import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoUtil;
 import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEvent;
 import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEventHandler;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
+import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.source.SourceController;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.event.*;
@@ -84,6 +85,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
     private final Formatter formatter;
 
     private OutlineController outlineController;
+
+    private SourceController sourceController;
 
     private ActionBarController actionBarController;
 
@@ -207,6 +210,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
             public void onEvent(OverlayWidgetSelectEvent event) {
                 final OverlayWidget activeOverlayWidget = event.getOverlayWidget();
                 sourceFileController.setActiveOverlayWidget(activeOverlayWidget);
+
+                sourceController.setOverlayWidget(activeOverlayWidget);
 
                 if (activeOverlayWidget != null) {
                     actionBarCreatePanelController.setOverlayWidget(activeOverlayWidget);
@@ -511,7 +516,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                 documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget, activeOverlayWidget, cloneChild));
                             }
                         }
-                    } else if (activeOverlayWidget != null || !(inlineEditorController.getOverlayWidget().equals(activeOverlayWidget))) {
+                    } else if (activeOverlayWidget != null || !(inlineEditorController.getOverlayWidget() != null && inlineEditorController.getOverlayWidget().equals(activeOverlayWidget))) {
 
                         handleOverlayWidgetModify(activeOverlayWidget);
                     }
@@ -639,14 +644,16 @@ public class DraftingDocumentController extends DefaultDocumentController {
             clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
                 @Override
                 public void execute() {
-                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(overlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
-                    // then attach the inline editor
-                    clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
-                        @Override
-                        public void execute() {
-                            clientFactory.getEventBus().fireEvent(new AttachInlineEditorEvent(overlayWidget, DraftingDocumentController.this));
-                        }
-                    });
+                    if (overlayWidget != null) {
+                        clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(overlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
+                        // then attach the inline editor
+                        clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
+                            @Override
+                            public void execute() {
+                                clientFactory.getEventBus().fireEvent(new AttachInlineEditorEvent(overlayWidget, DraftingDocumentController.this));
+                            }
+                        });
+                    }
                 }
             });
 
@@ -781,6 +788,18 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                 }
                             }
                         });
+
+                        // for giggles, set the document root
+                        clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
+                            @Override
+                            public void execute() {
+                                final List<OverlayWidget> overlayWidgets = sourceFileController.getOverlayWidgets();
+                                if (overlayWidgets != null && !overlayWidgets.isEmpty()) {
+                                    // only display the first one
+                                    sourceController.setOverlayWidget(overlayWidgets.get(0));
+                                }
+                            }
+                        });
                     }
                 });
             }
@@ -833,6 +852,9 @@ public class DraftingDocumentController extends DefaultDocumentController {
             final DraftingDocumentInjector draftingDocumentInjector = (DraftingDocumentInjector) injector;
             this.outlineController = draftingDocumentInjector.getOutlineController();
             this.outlineController.setDocumentController(this);
+            this.sourceController = draftingDocumentInjector.getSourceController();
+            this.sourceController.setDocumentController(this);
+            this.sourceController.setFormatter(formatter);
             this.actionBarController = draftingDocumentInjector.getActionBarController();
             this.actionBarController.setSourceFileController(sourceFileController);
 

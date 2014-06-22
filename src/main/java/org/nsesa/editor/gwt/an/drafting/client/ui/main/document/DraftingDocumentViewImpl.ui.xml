@@ -17,6 +17,7 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:sourcefile='urn:import:org.nsesa.editor.gwt.core.client.ui.document.sourcefile'
              xmlns:outline='urn:import:org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline'
+             xmlns:source='urn:import:org.nsesa.editor.gwt.an.drafting.client.ui.main.document.source'
         >
     <ui:style field="res">
 
@@ -40,12 +41,17 @@
 
         .sourceFile {
             width: 100%;
-            height: 100%;;
+            height: 100%;
         }
 
         .outlineView {
             background-color: #555;
             border-right: 4px solid #333;
+        }
+
+        .sourceView {
+            width: 100%;
+            height: 100%;
         }
     </ui:style>
     <g:DockLayoutPanel ui:field="mainPanel" styleName="{res.mainPanel}" unit="PX">
@@ -60,6 +66,9 @@
                 <sourcefile:SourceFileView ui:field="sourceFileView" styleName="{res.sourceFile}"/>
             </g:HTMLPanel>
         </g:center>
+        <g:east size="400">
+            <source:SourceView ui:field="sourceView" styleName="{res.sourceView}"/>
+        </g:east>
     </g:DockLayoutPanel>
 
 </ui:UiBinder>

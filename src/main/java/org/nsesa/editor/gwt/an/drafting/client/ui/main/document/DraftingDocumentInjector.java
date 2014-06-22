@@ -15,6 +15,7 @@ package org.nsesa.editor.gwt.an.drafting.client.ui.main.document;
 
 import com.google.gwt.inject.client.GinModules;
 import com.google.gwt.inject.client.Ginjector;
+import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.source.SourceController;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentInjector;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.sourcefile.DraftingSourceFileController;
@@ -29,5 +30,6 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.
 @GinModules({DraftingDocumentModule.class})
 public interface DraftingDocumentInjector extends DocumentInjector, Ginjector {
     OutlineController getOutlineController();
+    SourceController getSourceController();
     ActionBarCreatePanelController getActionBarCreatePanelController();
 }

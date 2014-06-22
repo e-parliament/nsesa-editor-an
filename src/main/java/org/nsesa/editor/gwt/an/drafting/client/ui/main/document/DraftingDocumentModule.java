@@ -16,6 +16,7 @@ package org.nsesa.editor.gwt.an.drafting.client.ui.main.document;
 import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Singleton;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.CompositeLocator;
+import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.source.SourceController;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.sourcefile.DraftingSourceFileController;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.sourcefile.DraftingSourceFileViewImpl;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.sourcefile.actionbar.StaticActionBarController;
@@ -44,5 +45,6 @@ public class DraftingDocumentModule extends AbstractGinModule {
         bind(ActionBarView.class).to(StaticActionBarViewImpl.class).in(Singleton.class);
         bind(Locator.class).to(CompositeLocator.class).in(Singleton.class);
         bind(UndoManager.class).in(Singleton.class);
+        bind(SourceController.class).in(Singleton.class);
     }
 }
