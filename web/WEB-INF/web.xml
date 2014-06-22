@@ -106,6 +106,10 @@ the web app class loader and the classes that it holds. -->
             <param-value>org.atmosphere.gwt20.server.GwtRpcInterceptor</param-value>
         </init-param>
         <!--<init-param>
+            <param-name>org.atmosphere.useNative</param-name>
+            <param-value>true</param-value>
+        </init-param>-->
+        <!--<init-param>
             <param-name>org.atmosphere.cpr.AtmosphereInterceptor.disableDefaults</param-name>
             <param-value>true</param-value>
         </init-param>

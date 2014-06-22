@@ -21,6 +21,8 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineView;
+import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.source.SourceController;
+import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.source.SourceView;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileView;
@@ -62,18 +64,23 @@ public class DraftingDocumentViewImpl extends Composite implements DraftingDocum
     @UiField(provided = true)
     OutlineView outlineView;
 
+    @UiField(provided = true)
+    SourceView sourceView;
+
     final SourceFileController sourceFileController;
 
     @Inject
     public DraftingDocumentViewImpl(final DocumentEventBus documentEventBus,
                                     final SourceFileController sourceFileController,
-                                    final OutlineController outlineController
+                                    final OutlineController outlineController,
+                                    final SourceController sourceController
     ) {
 
         this.documentEventBus = documentEventBus;
         this.outlineView = outlineController.getView();
         this.sourceFileController = sourceFileController;
         this.sourceFileView = sourceFileController.getView();
+        this.sourceView = sourceController.getView();
 
         final Widget widget = uiBinder.createAndBindUi(this);
         initWidget(widget);
