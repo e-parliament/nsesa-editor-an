@@ -49,10 +49,6 @@
             border-right: 4px solid #333;
         }
 
-        .sourceView {
-            width: 100%;
-            height: 100%;
-        }
     </ui:style>
     <g:DockLayoutPanel ui:field="mainPanel" styleName="{res.mainPanel}" unit="PX">
         <g:west size="250">
@@ -66,9 +62,6 @@
                 <sourcefile:SourceFileView ui:field="sourceFileView" styleName="{res.sourceFile}"/>
             </g:HTMLPanel>
         </g:center>
-        <g:east size="400">
-            <source:SourceView ui:field="sourceView" styleName="{res.sourceView}"/>
-        </g:east>
     </g:DockLayoutPanel>
 
 </ui:UiBinder>

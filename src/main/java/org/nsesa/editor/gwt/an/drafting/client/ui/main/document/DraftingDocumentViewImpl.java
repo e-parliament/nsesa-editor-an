@@ -64,9 +64,6 @@ public class DraftingDocumentViewImpl extends Composite implements DraftingDocum
     @UiField(provided = true)
     OutlineView outlineView;
 
-    @UiField(provided = true)
-    SourceView sourceView;
-
     final SourceFileController sourceFileController;
 
     @Inject
@@ -80,7 +77,6 @@ public class DraftingDocumentViewImpl extends Composite implements DraftingDocum
         this.outlineView = outlineController.getView();
         this.sourceFileController = sourceFileController;
         this.sourceFileView = sourceFileController.getView();
-        this.sourceView = sourceController.getView();
 
         final Widget widget = uiBinder.createAndBindUi(this);
         initWidget(widget);
