@@ -16,15 +16,13 @@ package org.nsesa.editor.gwt.an.common.client;
 import com.google.gwt.inject.client.AbstractGinModule;
 import com.google.inject.Singleton;
 import com.google.inject.name.Names;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoCreator;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoOverlaySnippetFactory;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.CompositeLocator;
-import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.CompositeOverlayFactory;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.*;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Akomantoso20OverlayFactory;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.Csd02OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.*;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayFactory;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlaySnippetFactory;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetInjectionStrategy;
 
 /**
  * Date: 30/04/13 11:42
@@ -50,5 +48,6 @@ public class AkomaNtosoModule extends AbstractGinModule {
         bindConstant().annotatedWith(Names.named("caretPositionClassName")).to("caretPosition");
 
         bind(OverlaySnippetFactory.class).to(AkomaNtosoOverlaySnippetFactory.class).in(Singleton.class);
+        bind(OverlayWidgetInjectionStrategy.class).to(AkomaNtosoOverlayWidgetInjectionStrategy.class).in(Singleton.class);
     }
 }

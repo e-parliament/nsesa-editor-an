@@ -73,7 +73,6 @@ public class AmendmentModule extends AbstractGinModule {
 
         bind(OverlayLocalizableResource.class).to(CompositeOverlayLocalizableResource.class).in(Singleton.class);
         bind(OverlayStrategy.class).to(AkomaNtosoOverlayStrategy.class).in(Singleton.class);
-        bind(OverlayWidgetInjectionStrategy.class).to(AkomaNtosoOverlayWidgetInjectionStrategy.class).in(Singleton.class);
 
         bind(new TypeLiteral<Validator<OverlayWidget>>() {
         }).to(AmendmentOverlayWidgetValidator.class);
