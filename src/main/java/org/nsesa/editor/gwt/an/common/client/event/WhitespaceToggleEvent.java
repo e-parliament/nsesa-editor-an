@@ -11,7 +11,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the Licence for the specific language governing permissions and limitations under the Licence.
  */
-package org.nsesa.editor.gwt.an.markup.client.event;
+package org.nsesa.editor.gwt.an.common.client.event;
 
 import com.google.gwt.event.shared.GwtEvent;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
@@ -23,25 +23,25 @@ import org.nsesa.editor.gwt.core.client.ui.document.DocumentController;
  * @author <a href="mailto:philip.luppens@gmail.com">Philip Luppens</a>
  * @version $Id$
  */
-public class DocumentToggleStructureEvent extends GwtEvent<DocumentToggleStructureEventHandler> {
+public class WhitespaceToggleEvent extends GwtEvent<WhitespaceToggleEventHandler> {
 
-    public static final Type<DocumentToggleStructureEventHandler> TYPE = new Type<DocumentToggleStructureEventHandler>();
+    public static final Type<WhitespaceToggleEventHandler> TYPE = new Type<WhitespaceToggleEventHandler>();
 
     private final DocumentController documentController;
     private final boolean toggle;
 
-    public DocumentToggleStructureEvent(DocumentController documentController, boolean toggle) {
+    public WhitespaceToggleEvent(DocumentController documentController, boolean toggle) {
         this.documentController = documentController;
         this.toggle = toggle;
     }
 
     @Override
-    public Type<DocumentToggleStructureEventHandler> getAssociatedType() {
+    public Type<WhitespaceToggleEventHandler> getAssociatedType() {
         return TYPE;
     }
 
     @Override
-    protected void dispatch(DocumentToggleStructureEventHandler handler) {
+    protected void dispatch(WhitespaceToggleEventHandler handler) {
         handler.onEvent(this);
     }
 

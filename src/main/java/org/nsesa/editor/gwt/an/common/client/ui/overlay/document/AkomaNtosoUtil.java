@@ -16,6 +16,7 @@ package org.nsesa.editor.gwt.an.common.client.ui.overlay.document;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BasehierarchyComplexType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.BlocksoptComplexType;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Li;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Num;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
 
 /**
@@ -30,6 +31,12 @@ public class AkomaNtosoUtil {
                 || overlayWidget instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Li
                 || overlayWidget instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.BasehierarchyComplexType
                 || overlayWidget instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.Li;
+    }
+
+    public static boolean representsNum(final OverlayWidget overlayWidget) {
+        return overlayWidget instanceof Num
+                || overlayWidget instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num
+                || overlayWidget instanceof org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd05.Num;
     }
 
     public static boolean representsContainer(final OverlayWidget overlayWidget) {

@@ -81,6 +81,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         B b = new B();
         b.html("Heading");
         heading.addB(b);
+        setCaret(b);
 
         P p = new P();
         p.html(messages.placeholderContentDefault());
@@ -142,6 +143,7 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.B b = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.B();
         b.html("Heading");
         heading.addB(b);
+        setCaret(b);
 
         org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.P p = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.P();
         p.html(messages.placeholderContentDefault());
