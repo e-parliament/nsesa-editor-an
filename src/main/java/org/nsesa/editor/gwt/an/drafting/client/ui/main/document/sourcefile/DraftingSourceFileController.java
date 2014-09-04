@@ -62,17 +62,4 @@ public class DraftingSourceFileController extends SourceFileController {
     public void onMouseOver(OverlayWidget sender, Event event) {
         // do nothing
     }
-
-    @Override
-    public void setActiveOverlayWidget(OverlayWidget activeOverlayWidget) {
-        if (this.activeOverlayWidget != null) {
-            this.activeOverlayWidget.asWidget().removeStyleName(style.selected());
-        }
-
-        this.activeOverlayWidget = activeOverlayWidget;
-
-        if (this.activeOverlayWidget != null) {
-            this.activeOverlayWidget.asWidget().addStyleName(style.selected());
-        }
-    }
 }

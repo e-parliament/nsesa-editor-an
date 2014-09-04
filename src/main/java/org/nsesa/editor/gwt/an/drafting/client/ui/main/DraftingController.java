@@ -13,8 +13,11 @@
  */
 package org.nsesa.editor.gwt.an.drafting.client.ui.main;
 
+import com.bfr.client.selection.Selection;
+import com.google.gwt.user.client.Event;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.HandlerRegistration;
+import org.nsesa.editor.gwt.an.common.client.event.SelectionEvent;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.event.BootstrapEvent;
@@ -40,6 +43,7 @@ public class DraftingController {
     private final DraftingView view;
     private Injector injector;
     private HandlerRegistration bootstrapEventHandlerRegistration;
+    private com.google.gwt.event.shared.HandlerRegistration nativeEventHandlerRegistration;
 
     @Inject
     public DraftingController(final ClientFactory clientFactory,
@@ -73,6 +77,21 @@ public class DraftingController {
                 }
             }
         });
+        nativeEventHandlerRegistration = Event.addNativePreviewHandler(new Event.NativePreviewHandler() {
+            @Override
+            public void onPreviewNativeEvent(Event.NativePreviewEvent event) {
+                if ("mouseup".equalsIgnoreCase(event.getNativeEvent().getType())) {
+                    handleSelectionChange();
+                } else if ("keyup".equalsIgnoreCase(event.getNativeEvent().getType())) {
+                    handleSelectionChange();
+                }
+
+            }
+        });
+    }
+
+    private void handleSelectionChange() {
+        clientFactory.getEventBus().fireEvent(new SelectionEvent(Selection.getSelection()));
     }
 
     public void removeListeners() {

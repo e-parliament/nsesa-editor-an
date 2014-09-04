@@ -13,12 +13,16 @@
  */
 package org.nsesa.editor.gwt.an.drafting.client.ui.main.document;
 
+import com.allen_sauer.gwt.dnd.client.DragContext;
+import com.allen_sauer.gwt.dnd.client.PickupDragController;
+import com.allen_sauer.gwt.dnd.client.VetoDragException;
+import com.allen_sauer.gwt.dnd.client.drop.VerticalPanelDropController;
+import com.bfr.client.selection.Range;
+import com.bfr.client.selection.RangeEndPoint;
+import com.bfr.client.selection.Selection;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.Scheduler;
-import com.google.gwt.dom.client.Element;
-import com.google.gwt.dom.client.Node;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.dom.client.Text;
 import com.google.gwt.event.dom.client.KeyCodes;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Window;
@@ -32,6 +36,8 @@ import com.google.inject.name.Named;
 import com.google.web.bindery.event.shared.HandlerRegistration;
 import org.nsesa.editor.gwt.an.common.client.mode.StructureViewMode;
 import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.AkomaNtosoUtil;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Num;
+import org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.akomantoso20.Preface;
 import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEvent;
 import org.nsesa.editor.gwt.an.drafting.client.event.DocumentToggleStructureEventHandler;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
@@ -51,14 +57,14 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.ActionB
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.actionbar.create.ActionBarCreatePanelController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.*;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.*;
-import org.nsesa.editor.gwt.core.client.ui.rte.RichTextEditor;
 import org.nsesa.editor.gwt.core.client.ui.rte.event.RTEStructureChangedEvent;
 import org.nsesa.editor.gwt.core.client.ui.rte.event.RTEStructureChangedEventHandler;
+import org.nsesa.editor.gwt.core.client.util.NodeUtil;
 import org.nsesa.editor.gwt.core.client.util.OverlayUtil;
+import org.nsesa.editor.gwt.core.client.util.OverlayWidgetHolder;
 import org.nsesa.editor.gwt.core.shared.DocumentContentDTO;
 import org.nsesa.editor.gwt.core.shared.DocumentDTO;
-import org.nsesa.editor.gwt.inline.client.event.AttachInlineEditorEvent;
-import org.nsesa.editor.gwt.inline.client.event.DetachInlineEditorEvent;
+import org.nsesa.editor.gwt.core.shared.OverlayWidgetOrigin;
 import org.nsesa.editor.gwt.inline.client.ui.inline.InlineEditorController;
 
 import java.util.List;
@@ -80,7 +86,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
     private final OverlaySnippetEvaluator overlaySnippetEvaluator;
 
-    private final InlineEditorController inlineEditorController;
+    private final OverlayWidgetInjectionStrategy overlayWidgetInjectionStrategy;
 
     private final Formatter formatter;
 
@@ -139,8 +145,6 @@ public class DraftingDocumentController extends DefaultDocumentController {
     private HandlerRegistration overlayWidgetModifyHandlerRegistration;
     private HandlerRegistration overlayWidgetDeleteHandlerRegistration;
     private HandlerRegistration overlayWidgetNewEventHandlerRegistration;
-    private com.google.gwt.event.shared.HandlerRegistration inlineEditorControllerSaveHandlerRegistration;
-    private com.google.gwt.event.shared.HandlerRegistration inlineEditorControllerCancelHandlerRegistration;
 
     @Inject
     public DraftingDocumentController(final ClientFactory clientFactory,
@@ -149,16 +153,15 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                       final Locator locator,
                                       final Creator creator,
                                       final Mover mover,
-                                      final InlineEditorController inlineEditorController,
+                                      final OverlayWidgetInjectionStrategy overlayWidgetInjectionStrategy,
                                       final OverlaySnippetFactory overlaySnippetFactory,
                                       final OverlaySnippetEvaluator overlaySnippetEvaluator,
                                       final @Named("xml") Formatter formatter) {
         super(clientFactory, serviceFactory, overlayFactory, locator, creator, mover);
-        this.inlineEditorController = inlineEditorController;
-        this.inlineEditorController.registerListeners();
         this.overlaySnippetFactory = overlaySnippetFactory;
         this.overlaySnippetEvaluator = overlaySnippetEvaluator;
         this.formatter = formatter;
+        this.overlayWidgetInjectionStrategy = overlayWidgetInjectionStrategy;
     }
 
     @Override
@@ -219,17 +222,63 @@ public class DraftingDocumentController extends DefaultDocumentController {
                     actionBarController.attach(activeOverlayWidget, DraftingDocumentController.this);
                     actionBarController.setLocation(locator.getLocation(activeOverlayWidget, document.getLanguageIso(), true));
 
+                    // set the cursor
+                    final Range browserRange = Selection.getBrowserRange();
+                    if (browserRange != null) {
+
+                        final OverlayWidgetHolder holder = new OverlayWidgetHolder();
+                        activeOverlayWidget.walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
+                            @Override
+                            public boolean visit(OverlayWidget visited) {
+                                if (holder.getOverlayWidget() == null /* only find the first one */ && visited.getOverlayElement().getClassName().contains("caretPosition")) {
+                                    holder.setOverlayWidget(visited);
+                                    return false;
+                                }
+                                return true;
+                            }
+                        });
+                        if (holder.getOverlayWidget() == null) {
+                            activeOverlayWidget.walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
+                                @Override
+                                public boolean visit(OverlayWidget visited) {
+                                    if (holder.getOverlayWidget() == null /* only find the first one */ && activeOverlayWidget != visited) {
+                                        if (AkomaNtosoUtil.representsNum(visited)) {
+                                            holder.setOverlayWidget(visited.getNextSibling(new OverlayWidgetSelector.AnyOverlayWidgetSelector()));
+                                        }
+                                        return false;
+                                    }
+                                    return true;
+                                }
+                            });
+                        }
+                        final OverlayWidget toFocus = holder.getOverlayWidget() != null? holder.getOverlayWidget() : activeOverlayWidget;
+                        activeOverlayWidget.getOverlayElement().focus();
+
+                        final Text text = NodeUtil.getText(toFocus.getOverlayElement(), true);
+
+                        if (text != null) {
+                            Selection.getSelection().setRange(new Range(new RangeEndPoint(text, true), new RangeEndPoint(text, false)));
+                        }
+                        else {
+                            // no text part found? Hmmm ...
+                        }
+
+                        // clean up the caret position
+                        toFocus.getOverlayElement().removeClassName("caretPosition");
+                    }
+
+
                     // check if the sender has the nsesa-inline class element
                     if (activeOverlayWidget.getOverlayElement().getClassName().contains("nsesa-inline")) {
                         // if so, immediately add the inline editor (don't wait for a enter)
 //                        clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(activeOverlayWidget.asWidget(), DraftingDocumentController.this, false, 100));
 
-                        clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
+                        /*clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
                             @Override
                             public void execute() {
-                                handleOverlayWidgetModify(activeOverlayWidget);
+                                handleOverlayWidgetModifyRequest(activeOverlayWidget);
                             }
-                        });
+                        });*/
                     }
                 }
 
@@ -279,7 +328,6 @@ public class DraftingDocumentController extends DefaultDocumentController {
             @Override
             public void onEvent(OverlayWidgetModifyEvent event) {
                 documentEventBus.fireEvent(new OverlayWidgetSelectEvent(event.getOverlayWidget(), DraftingDocumentController.this));
-                clientFactory.getEventBus().fireEvent(new AttachInlineEditorEvent(event.getOverlayWidget(), DraftingDocumentController.this));
             }
         });
 
@@ -293,85 +341,53 @@ public class DraftingDocumentController extends DefaultDocumentController {
         overlayWidgetNewEventHandlerRegistration = documentEventBus.addHandler(OverlayWidgetNewEvent.TYPE, new OverlayWidgetNewEventHandler() {
             @Override
             public void onEvent(final OverlayWidgetNewEvent event) {
-                final OverlayWidget child = event.getChild();
-                if (event.getReference() == event.getParentOverlayWidget()) {
-                    // this is a new child
-                    event.getParentOverlayWidget().addOverlayWidget(child);
-                    DOM.appendChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement());
-                    if (!child.isAttached()) child.onAttach();
-                } else {
-                    // this is a sibling
-                    event.getParentOverlayWidget().addOverlayWidget(child, event.getReference().getIndex() + 1, true);
-                    DOM.insertChild(event.getParentOverlayWidget().asWidget().getElement(), child.asWidget().getElement(), event.getReference().getDomIndex() + 1);
-                    if (!child.isAttached()) child.onAttach();
-                }
 
-                clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
-                    @Override
-                    public void execute() {
-                        documentEventBus.fireEvent(new OverlayWidgetSelectEvent(child, DraftingDocumentController.this));
-                        clientFactory.getEventBus().fireEvent(new AttachInlineEditorEvent(child, DraftingDocumentController.this));
+                final OverlayWidget activeOverlayWidget = sourceFileController.getActiveOverlayWidget();
 
-                        final OverlaySnippet overlaySnippet = overlaySnippetFactory.getSnippet(child);
+                if (AkomaNtosoUtil.representsBlock(activeOverlayWidget)) {
+                    OverlayWidget result = event.getChild();
+                    result.setOrigin(OverlayWidgetOrigin.GENERATED);
+                    OverlaySnippet snippet = overlaySnippetFactory.getSnippet(activeOverlayWidget);
+                    if (snippet != null) {
+                        overlaySnippetEvaluator.addEvaluator(
+                                new DefaultNumEvaluator(
+                                        clientFactory,
+                                        overlayWidgetInjectionStrategy,
+                                        locator,
+                                        result,
+                                        event.getParentOverlayWidget(),
+                                        event.getReference()));
 
-                        if (overlaySnippet != null) {
-                            overlaySnippetEvaluator.addEvaluator(new OverlaySnippetEvaluator.Evaluator() {
+                        final String content = snippet.getContent(overlaySnippetEvaluator);
+                        if (content != null) {
+                            result.getOverlayElement().setInnerHTML(content);
+
+                            result.getChildOverlayWidgets().clear();
+                            result = overlayFactory.getAmendableWidget(result.getOverlayElement());
+
+                            overlayWidgetInjectionStrategy.injectAsSibling(activeOverlayWidget, result);
+
+                            result.walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
                                 @Override
-                                public String getPlaceHolder() {
-                                    return "${widget.num}";
-                                }
-
-                                @Override
-                                public String evaluate() {
-                                    if (child.getNumberingType() == null || child.getFormat() == null) {
-
-                                        if (child.getType().equalsIgnoreCase(event.getReference().getType())) {
-                                            // we're the same type, so inherit the numbering type
-                                            child.setNumberingType(event.getReference().getNumberingType());
-                                            child.setFormat(event.getReference().getFormat());
-                                        } else {
-                                            // find similar type, if any
-                                            final OverlayWidget previous = event.getReference().getPreviousSibling(new OverlayWidgetSelector() {
-                                                @Override
-                                                public boolean select(OverlayWidget toSelect) {
-                                                    return !toSelect.isIntroducedByAnAmendment() && event.getReference().getType().equalsIgnoreCase(toSelect.getType());
-                                                }
-                                            });
-                                            if (previous != null) {
-                                                child.setNumberingType(previous.getNumberingType());
-                                                child.setFormat(previous.getFormat());
-                                            } else {
-                                                final OverlayWidget next = event.getReference().getNextSibling(new OverlayWidgetSelector() {
-                                                    @Override
-                                                    public boolean select(OverlayWidget toSelect) {
-                                                        return !toSelect.isIntroducedByAnAmendment() && event.getReference().getType().equalsIgnoreCase(toSelect.getType());
-                                                    }
-                                                });
-                                                if (next != null) {
-                                                    child.setNumberingType(next.getNumberingType());
-                                                    child.setFormat(next.getFormat());
-                                                } else {
-                                                    // free to choose, but should be different from parent
-                                                    child.setNumberingType(NumberingType.ROMANITO);
-                                                    child.setFormat(Format.BRACKET);
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                    child.setParentOverlayWidget(event.getParentOverlayWidget());
-                                    //add the overlay widget in the parent children collection to compute the num
-                                    String num = locator.getNum(child, document.getLanguageIso(), true);
-                                    return num == null ? "" : num;
+                                public boolean visit(OverlayWidget visited) {
+                                    //if (AkomaNtosoUtil.representsBlock(visited)) {
+                                        visited.setUIListener(sourceFileController);
+                                    //}
+                                    return super.visit(visited);
                                 }
                             });
-                            child.getOverlayElement().setInnerHTML(overlaySnippet.getContent(overlaySnippetEvaluator));
-                        } else {
-                            child.getOverlayElement().setInnerHTML("");
+
+                            // make sure we can edit this
+                            result.setAmendable(true);
+                            markOverlayWidgetAsAmendable(result);
+
+                            documentEventBus.fireEvent(new OverlayWidgetSelectEvent(result, DraftingDocumentController.this));
+
+                            reCalculateNumbering(activeOverlayWidget.getParentOverlayWidget());
+                            redrawOutline(activeOverlayWidget.getRoot());
                         }
-                        inlineEditorController.getRichTextEditor().setHTML(child.getInnerHTML());
                     }
-                });
+                }
             }
         });
 
@@ -389,15 +405,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                     if (!actionBarCreatePanelControllerPopup.isShowing()) {
                         if (activeOverlayWidget != null) {
                             actionBarCreatePanelController.setOverlayWidget(activeOverlayWidget);
-
-                            if (inlineEditorController.isShowing()) {
-                                final RichTextEditor.CaretPosition caretPosition = inlineEditorController.getRichTextEditor().getCaretPosition();
-                                if (caretPosition != null) {
-                                    actionBarCreatePanelControllerPopup.setPopupPosition(caretPosition.getLeft(), caretPosition.getTop());
-                                }
-                            } else {
-                                actionBarCreatePanelControllerPopup.showRelativeTo(actionBarController.getView().getChildHandler());
-                            }
+                            actionBarCreatePanelControllerPopup.showRelativeTo(actionBarController.getView().getChildHandler());
                             actionBarCreatePanelController.getView().asWidget().setVisible(true);
                             actionBarCreatePanelControllerPopup.show();
                             actionBarCreatePanelFocusPanel.setFocus(true);
@@ -411,8 +419,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                     if (actionBarCreatePanelControllerPopup.isShowing()) {
                         actionBarCreatePanelControllerPopup.hide();
                         actionBarCreatePanelFocusPanel.setFocus(false);
-                        inlineEditorController.getRichTextEditor().setFocus(true);
-                    } else if (inlineEditorController.isShowing()) {
+                    } else {
                         cancelModify();
                     }
                 } else if (ctrlS.equals(event.getKeyCombo())) {
@@ -440,7 +447,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                     if (actionBarCreatePanelControllerPopup.isShowing()) {
                         actionBarCreatePanelFocusPanel.setFocus(true);
                         actionBarCreatePanelController.highlightNext();
-                    } else if (!inlineEditorController.isShowing()) {
+                    } else {
 
                         final OverlayWidget next = activeOverlayWidget != null ? activeOverlayWidget.next(upDownOverlayWidgetSelector) : sourceFileController.getOverlayWidgets().get(0);
                         if (next != null) {
@@ -457,7 +464,7 @@ public class DraftingDocumentController extends DefaultDocumentController {
                     if (actionBarCreatePanelControllerPopup.isShowing()) {
                         actionBarCreatePanelFocusPanel.setFocus(true);
                         actionBarCreatePanelController.highlightPrevious();
-                    } else if (!inlineEditorController.isShowing()) {
+                    } else {
                         if (activeOverlayWidget != null) {
                             final OverlayWidget previous = activeOverlayWidget.previous(upDownOverlayWidgetSelector);
                             if (previous != null) {
@@ -468,7 +475,6 @@ public class DraftingDocumentController extends DefaultDocumentController {
                     }
 
                 } else if (enter.equals(event.getKeyCombo())) {
-
 
                     // ------------- Single ENTER -------------
                     if (actionBarCreatePanelControllerPopup.isShowing()) {
@@ -487,16 +493,10 @@ public class DraftingDocumentController extends DefaultDocumentController {
 
                             // number and format get given by the siblings
                             // but they need to be explicitly set to null
-                            cloneSibling.setOverlayStrategy(null);
-                            cloneSibling.setFormat(null);
-                            cloneSibling.setNumberingType(null);
-                            // get the correct index
+                            cloneSibling.setNumberingType(actionBarCreatePanelController.getSelectedSibling().getNumberingType());
+                            cloneSibling.setFormat(actionBarCreatePanelController.getSelectedSibling().getFormat());
 
-                            if (inlineEditorController.isShowing()) {
-                                clientFactory.getEventBus().fireEvent(new VisualStructureInsertionEvent(cloneSibling));
-                            } else {
-                                documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget.getParentOverlayWidget(), activeOverlayWidget, cloneSibling));
-                            }
+                            documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget.getParentOverlayWidget(), activeOverlayWidget, cloneSibling));
 
                         }
 
@@ -510,33 +510,66 @@ public class DraftingDocumentController extends DefaultDocumentController {
                             cloneChild.setNumberingType(actionBarCreatePanelController.getSelectedChild().getNumberingType());
                             cloneChild.setFormat(actionBarCreatePanelController.getSelectedChild().getFormat());
 
-                            if (inlineEditorController.isShowing()) {
-                                clientFactory.getEventBus().fireEvent(new VisualStructureInsertionEvent(cloneChild));
-                            } else {
                                 documentEventBus.fireEvent(new OverlayWidgetNewEvent(activeOverlayWidget, activeOverlayWidget, cloneChild));
+                        }
+                    } else if (activeOverlayWidget != null) {
+
+                        if (AkomaNtosoUtil.representsBlock(activeOverlayWidget)) {
+                            OverlayWidget result = overlayFactory.getAmendableWidget(activeOverlayWidget.getNamespaceURI(), activeOverlayWidget.getType());
+                            result.setOrigin(OverlayWidgetOrigin.GENERATED);
+                            OverlaySnippet snippet = overlaySnippetFactory.getSnippet(activeOverlayWidget);
+                            if (snippet != null) {
+                                overlaySnippetEvaluator.addEvaluator(
+                                        new DefaultNumEvaluator(
+                                                clientFactory,
+                                                overlayWidgetInjectionStrategy,
+                                                locator,
+                                                result,
+                                                activeOverlayWidget.getParentOverlayWidget(),
+                                                activeOverlayWidget));
+
+                                final String content = snippet.getContent(overlaySnippetEvaluator);
+                                if (content != null) {
+                                    result.getOverlayElement().setInnerHTML(content);
+
+                                    result.getChildOverlayWidgets().clear();
+                                    result = overlayFactory.getAmendableWidget(result.getOverlayElement());
+
+                                    overlayWidgetInjectionStrategy.injectAsSibling(activeOverlayWidget, result);
+
+                                    result.walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
+                                        @Override
+                                        public boolean visit(OverlayWidget visited) {
+//                                            if (AkomaNtosoUtil.representsBlock(visited)) {
+                                                visited.setUIListener(sourceFileController);
+//                                            }
+                                            return super.visit(visited);
+                                        }
+                                    });
+
+                                    // make sure we can edit this
+                                    result.setAmendable(true);
+                                    markOverlayWidgetAsAmendable(result);
+
+                                    documentEventBus.fireEvent(new OverlayWidgetSelectEvent(result, DraftingDocumentController.this));
+
+                                    reCalculateNumbering(activeOverlayWidget.getParentOverlayWidget());
+                                    redrawOutline(activeOverlayWidget.getRoot());
+                                }
                             }
                         }
-                    } else if (activeOverlayWidget != null || !(inlineEditorController.getOverlayWidget() != null && inlineEditorController.getOverlayWidget().equals(activeOverlayWidget))) {
 
-                        handleOverlayWidgetModify(activeOverlayWidget);
                     }
                 } else if (tab.equals(event.getKeyCombo())) {
 
 
                     // ------------- Single TAB -------------
-                    if (inlineEditorController.isShowing()) {
-                        // close the editor, copy the value into the overlay widget
-                        modifyOverlayWidget(activeOverlayWidget, inlineEditorController.getRichTextEditor().getHTML());
-                        // and finally destroy the instance
-                        clientFactory.getEventBus().fireEvent(new DetachInlineEditorEvent(DraftingDocumentController.this));
-                        inlineEditorController.getRichTextEditor().setFocus(false);
-                        restoreFocusOnViewPort();
-                    }
+
                 } else if (delete.equals(event.getKeyCombo())) {
 
 
                     // ------------- DELETE -------------
-                    if (!inlineEditorController.isShowing() && activeOverlayWidget != null) {
+                    if (activeOverlayWidget != null) {
                         handleOverlayWidgetDelete(activeOverlayWidget);
                         restoreFocusOnViewPort();
                     }
@@ -589,31 +622,13 @@ public class DraftingDocumentController extends DefaultDocumentController {
         draftingToggleEventHandlerRegistration = clientFactory.getEventBus().addHandler(VisualStructureToggleEvent.TYPE, new VisualStructureToggleEventHandler() {
             @Override
             public void onEvent(VisualStructureToggleEvent event) {
-                inlineEditorController.getRichTextEditor().toggleVisualStructure(event.isShown());
+                //inlineEditorController.getRichTextEditor().toggleVisualStructure(event.isShown());
             }
         });
         draftingAttributesToggleEventHandlerRegistration = clientFactory.getEventBus().addHandler(VisualStructureAttributesToggleEvent.TYPE, new VisualStructureAttributesToggleEventHandler() {
             @Override
             public void onEvent(VisualStructureAttributesToggleEvent event) {
-                inlineEditorController.getRichTextEditor().toggleVisualStructureAttributes(event.isShown());
-            }
-        });
-
-        inlineEditorControllerSaveHandlerRegistration = inlineEditorController.getView().getSaveButton().addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                modifyOverlayWidget(sourceFileController.getActiveOverlayWidget(), inlineEditorController.getRichTextEditor().getHTML());
-                // and finally destroy the instance
-                clientFactory.getEventBus().fireEvent(new DetachInlineEditorEvent(DraftingDocumentController.this));
-                inlineEditorController.getRichTextEditor().setFocus(false);
-                restoreFocusOnViewPort();
-            }
-        });
-
-        inlineEditorControllerCancelHandlerRegistration = inlineEditorController.getView().getCancelAnchor().addClickHandler(new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-                cancelModify();
+                //inlineEditorController.getRichTextEditor().toggleVisualStructureAttributes(event.isShown());
             }
         });
     }
@@ -638,27 +653,22 @@ public class DraftingDocumentController extends DefaultDocumentController {
         }
     }
 
-    public void handleOverlayWidgetModify(final OverlayWidget overlayWidget) {
-        if (!inlineEditorController.isShowing()) {
-            // first scroll to the widget
-            clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
-                @Override
-                public void execute() {
-                    if (overlayWidget != null) {
-                        clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(overlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
-                        // then attach the inline editor
-                        clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
-                            @Override
-                            public void execute() {
-                                clientFactory.getEventBus().fireEvent(new AttachInlineEditorEvent(overlayWidget, DraftingDocumentController.this));
-                            }
-                        });
-                    }
+    public void handleOverlayWidgetModifyRequest(final OverlayWidget overlayWidget) {
+        // first scroll to the widget
+        clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
+            @Override
+            public void execute() {
+                if (overlayWidget != null) {
+                    clientFactory.getEventBus().fireEvent(new DocumentScrollToEvent(overlayWidget.asWidget(), DraftingDocumentController.this, false, SCROLL_TO_OFFSET));
+                    // then attach the inline editor
+                    clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
+                        @Override
+                        public void execute() {
+                        }
+                    });
                 }
-            });
-
-
-        }
+            }
+        });
     }
 
     public void handleRTEOverlayWidgetModify(final OverlayWidget parent) {
@@ -671,14 +681,12 @@ public class DraftingDocumentController extends DefaultDocumentController {
     }
 
     public void cancelModify() {
-        clientFactory.getEventBus().fireEvent(new DetachInlineEditorEvent(DraftingDocumentController.this));
-        inlineEditorController.getRichTextEditor().setFocus(false);
         restoreFocusOnViewPort();
     }
 
     public void modifyOverlayWidget(final OverlayWidget overlayWidget, final String innerHTML) {
 
-        final Element overlayElement = inlineEditorController.getOverlayWidget().getOverlayElement();
+        /*final Element overlayElement = inlineEditorController.getOverlayWidget().getOverlayElement();
 
         // TODO overlay again, and correct the tree
         for (OverlayWidget child : inlineEditorController.getOverlayWidget().getChildOverlayWidgets()) {
@@ -716,10 +724,10 @@ public class DraftingDocumentController extends DefaultDocumentController {
         final String className = overlayElement.getClassName();
         if (className.contains("nsesa-inline")) {
             overlayElement.setClassName(className.replace("nsesa-inline", ""));
-        }
+        }*/
 
         // highlight
-        sourceFileController.highlight(overlayWidget.asWidget(), "black", 1);
+        // sourceFileController.highlight(overlayWidget.asWidget(), "black", 1);
 
         reCalculateNumbering(overlayWidget.getParentOverlayWidget());
         redrawOutline(overlayWidget.getRoot());
@@ -734,7 +742,8 @@ public class DraftingDocumentController extends DefaultDocumentController {
             for (final OverlayWidget child : parent.getChildOverlayWidgets()) {
                 OverlayWidget num = OverlayUtil.xpathSingle("//*/num", child);
                 if (num != null) {
-                    num.setInnerHTML(locator.getNum(child, document.getLanguageIso(), true));
+                    final String formatted = locator.getNum(child, document.getLanguageIso(), true);
+                    num.setInnerHTML(formatted);
                     // force a reset
                     child.setUnformattedIndex(null);
                     child.setFormattedIndex(null);
@@ -800,10 +809,44 @@ public class DraftingDocumentController extends DefaultDocumentController {
                                 }
                             }
                         });
+
+                        // set content editable on certain elements
+                        clientFactory.getScheduler().scheduleDeferred(new Scheduler.ScheduledCommand() {
+                            @Override
+                            public void execute() {
+                                final List<OverlayWidget> overlayWidgets = sourceFileController.getOverlayWidgets();
+                                if (overlayWidgets != null && !overlayWidgets.isEmpty()) {
+                                    for (OverlayWidget root : overlayWidgets) {
+                                        root.walk(new OverlayWidgetWalker.DefaultOverlayWidgetVisitor() {
+                                            @Override
+                                            public boolean visit(OverlayWidget visited) {
+                                                markOverlayWidgetAsAmendable(visited);
+                                                return super.visit(visited);
+                                            }
+                                        });
+                                    }
+                                }
+                            }
+                        });
                     }
                 });
             }
         });
+    }
+
+    private void markOverlayWidgetAsAmendable(OverlayWidget visited) {
+        if (visited.isAmendable()) {
+            visited.getOverlayElement().setAttribute("contenteditable", "true");
+        }
+        if (visited instanceof Preface) {
+            visited.getOverlayElement().setAttribute("contenteditable", "true");
+        }
+        if (visited.isImmutable()) {
+            visited.getOverlayElement().setAttribute("contenteditable", "false");
+        }
+        if (visited instanceof Num) {
+            visited.getOverlayElement().setAttribute("contenteditable", "false");
+        }
     }
 
     @Override
@@ -834,8 +877,6 @@ public class DraftingDocumentController extends DefaultDocumentController {
         overlayWidgetDeleteHandlerRegistration.removeHandler();
         overlayWidgetModifyHandlerRegistration.removeHandler();
         overlayWidgetNewEventHandlerRegistration.removeHandler();
-        inlineEditorControllerSaveHandlerRegistration.removeHandler();
-        inlineEditorControllerCancelHandlerRegistration.removeHandler();
     }
 
     @Override

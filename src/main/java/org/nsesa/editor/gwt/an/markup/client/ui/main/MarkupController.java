@@ -17,7 +17,7 @@ import com.bfr.client.selection.Selection;
 import com.google.gwt.user.client.Event;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.HandlerRegistration;
-import org.nsesa.editor.gwt.an.markup.client.event.SelectionEvent;
+import org.nsesa.editor.gwt.an.common.client.event.SelectionEvent;
 import org.nsesa.editor.gwt.core.client.ClientFactory;
 import org.nsesa.editor.gwt.core.client.ServiceFactory;
 import org.nsesa.editor.gwt.core.client.event.BootstrapEvent;
