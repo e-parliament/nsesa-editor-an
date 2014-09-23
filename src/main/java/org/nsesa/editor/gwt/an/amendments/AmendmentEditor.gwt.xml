@@ -22,6 +22,7 @@
     <inherits name="org.nsesa.editor.gwt.compare.Revision"/>
     <inherits name="org.nsesa.editor.gwt.editor.Editor"/>
     <inherits name="org.nsesa.editor.gwt.an.common.AkomaNtoso"/>
+    <inherits name='com.bfr.client.Selection'/>
 
     <set-property name="gwt.logging.logLevel" value="INFO"/>
     <set-property name="gwt.logging.enabled" value="TRUE"/>

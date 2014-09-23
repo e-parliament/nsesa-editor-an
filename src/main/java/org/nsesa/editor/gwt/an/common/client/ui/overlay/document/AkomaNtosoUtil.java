@@ -24,6 +24,16 @@ import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
  * TODO Complete this class documentation.
  */
 public class AkomaNtosoUtil {
+
+    public static OverlayWidget findEnclosingBlock(final OverlayWidget overlayWidget) {
+        OverlayWidget block = overlayWidget;
+        final OverlayWidget parentOverlayWidget = overlayWidget.getParentOverlayWidget();
+        while (block != null && !AkomaNtosoUtil.representsBlock(block) && parentOverlayWidget != null) {
+            block = block.getParentOverlayWidget();
+        }
+        return block;
+    }
+
     public static boolean representsBlock(final OverlayWidget overlayWidget) {
         return overlayWidget instanceof BasehierarchyComplexType
                 || overlayWidget instanceof Li

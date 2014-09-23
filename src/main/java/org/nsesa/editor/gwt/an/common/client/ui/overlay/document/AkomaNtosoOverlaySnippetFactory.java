@@ -90,6 +90,8 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         content.addP(p);
 
         Paragraph paragraph = new Paragraph();
+        Num numP = new Num();
+        paragraph.setNum(numP);
         paragraph.setContent_(content);
 
         return formatter.format(num) + formatter.format(heading) + formatter.format(paragraph);
@@ -152,6 +154,8 @@ public class AkomaNtosoOverlaySnippetFactory extends DefaultOverlaySnippetFactor
         content.addP(p);
 
         org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Paragraph paragraph = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Paragraph();
+        org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num numP = new org.nsesa.editor.gwt.an.common.client.ui.overlay.document.gen.csd02.Num();
+        paragraph.setNum(numP);
         paragraph.setContent_(content);
 
         return formatter.format(num) + formatter.format(heading) + formatter.format(paragraph);
