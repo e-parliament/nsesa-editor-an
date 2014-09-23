@@ -19,10 +19,16 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.*;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.numbering.NumberingController;
+import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.numbering.NumberingView;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineController;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.outline.OutlineView;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.source.SourceController;
 import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.source.SourceView;
+import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.path.PathController;
+import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.path.PathView;
+import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.picker.PickerController;
+import org.nsesa.editor.gwt.an.drafting.client.ui.main.document.picker.PickerView;
 import org.nsesa.editor.gwt.core.client.ui.document.DocumentEventBus;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.SourceFileView;
@@ -64,19 +70,34 @@ public class DraftingDocumentViewImpl extends Composite implements DraftingDocum
     @UiField(provided = true)
     OutlineView outlineView;
 
+    @UiField(provided = true)
+    PickerView pickerView;
+
+    @UiField(provided = true)
+    NumberingView numberingView;
+
+    @UiField(provided = true)
+    PathView pathView;
+
     final SourceFileController sourceFileController;
 
     @Inject
     public DraftingDocumentViewImpl(final DocumentEventBus documentEventBus,
                                     final SourceFileController sourceFileController,
                                     final OutlineController outlineController,
-                                    final SourceController sourceController
+                                    final SourceController sourceController,
+                                    final NumberingController numberingController,
+                                    final PickerController pickerController,
+                                    final PathController pathController
     ) {
 
         this.documentEventBus = documentEventBus;
         this.outlineView = outlineController.getView();
         this.sourceFileController = sourceFileController;
         this.sourceFileView = sourceFileController.getView();
+        this.pickerView = pickerController.getView();
+        this.pathView = pathController.getView();
+        this.numberingView = numberingController.getView();
 
         final Widget widget = uiBinder.createAndBindUi(this);
         initWidget(widget);

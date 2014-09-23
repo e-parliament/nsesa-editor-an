@@ -13,6 +13,7 @@
  */
 package org.nsesa.editor.gwt.an.drafting.client.ui.main.document.sourcefile;
 
+import com.google.gwt.dom.client.Element;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.user.client.Event;
@@ -28,6 +29,7 @@ import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.content.ContentCo
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.header.SourceFileHeaderController;
 import org.nsesa.editor.gwt.core.client.ui.document.sourcefile.marker.MarkerController;
 import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidget;
+import org.nsesa.editor.gwt.core.client.ui.overlay.document.OverlayWidgetUIListener;
 
 /**
  * Date: 24/03/13 12:45
@@ -61,5 +63,25 @@ public class DraftingSourceFileController extends SourceFileController {
     @Override
     public void onMouseOver(OverlayWidget sender, Event event) {
         // do nothing
+    }
+
+    @Override
+    protected OverlayWidget overlay(final Element element, final OverlayWidgetUIListener UIListener) {
+        final OverlayWidget root = documentController.getOverlayFactory().getAmendableWidget(element);
+        if (root != null) {
+            walk(root, new DefaultOverlayWidgetVisitor() {
+                @Override
+                public boolean visit(OverlayWidget visited) {
+                    if (visited != null) {
+                        final Boolean immutable = visited.isImmutable();
+                        if (immutable != null && !immutable) {
+                            visited.setUIListener(UIListener);
+                        }
+                    }
+                    return true;
+                }
+            });
+        }
+        return root;
     }
 }
