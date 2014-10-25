@@ -1,1 +1,0 @@
-This directory will contain the configuration files specific to the DEV environment.
